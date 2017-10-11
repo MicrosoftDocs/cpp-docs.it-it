@@ -17,26 +17,12 @@ helpviewer_keywords:
 - one's complement operator
 - bitwise-complement operator
 - compl operator
-- ~ operator, syntax
+- ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 918555af04d20be2533b488ee26f031e10a54ca4

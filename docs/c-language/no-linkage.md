@@ -18,25 +18,11 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 28491a83dd80d78ecd15702fd50ce8796cfa0ca9
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 278325c1ad1b31ce20b6a17034be5e4731f6da78
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="no-linkage"></a>Nessun collegamento

@@ -14,7 +14,7 @@ helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
 - destroying objects, destructors
-- ~ operator, specifying destructors
+- ~ operator [C++], specifying destructors
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
@@ -22,20 +22,6 @@ caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975

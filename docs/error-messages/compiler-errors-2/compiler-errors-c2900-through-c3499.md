@@ -85,25 +85,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>C2900 errori del compilatore tramite C2999
@@ -140,8 +126,8 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2921](compiler-error-c2921.md)|ridefinizione: '*tipo*': modello di classe o generico è stato ridichiarato come*dichiarazione*'|  
 |C2922 errore del compilatore|'*interfaccia*': un'interfaccia WinRT non può contenere membri statici|  
 |[Errore del compilatore C2923](compiler-error-c2923.md)|'*tipo*': '*identificatore*'è un argomento di tipo di modello o generico valido per il parametro'*parametro*'|  
-|C2924 errore del compilatore|argomento della routine __declspec(interrupt) non in R2|  
-|C2925 errore del compilatore|la routine __declspec(interrupt) non può utilizzare la virgola mobile|  
+|C2924 errore del compilatore|argomento di routine declspec non in R2|  
+|C2925 errore del compilatore|routine declspec non è possibile utilizzare la virgola mobile|  
 |Errore del compilatore C2926|'*identificatore*': non è consentito un inizializzatore di membro predefinito per un membro di uno struct anonimo all'interno di un'unione|  
 |[Errore del compilatore C2927](compiler-error-c2927.md)|'*identificatore*': un modello di funzione deve essere chiamato con almeno un argomento|  
 |[Errore del compilatore C2928](compiler-error-c2928.md)|creazione di un'istanza esplicita. '*identificatore*'non è una funzione o un membro dati statici della classe modello'*classe*'|  
@@ -150,7 +136,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2931](compiler-error-c2931.md)|'*class1*': modello-id, generico-id ridefinito come funzione membro di '*class2*'|  
 |[Errore del compilatore C2932](compiler-error-c2932.md)|'*tipo*': modello-id, generico-id ridefinito come membro dati di '*identificatore*'|  
 |[Errore del compilatore C2933](compiler-error-c2933.md)|'*tipo*': modello-id, generico-id ridefinito come membro typedef di '*identificatore*'|  
-|[Errore del compilatore C2934](compiler-error-c2934.md)|'*tipo*': id modello/generici-id ridefinito come nidificato '*elemento*'of'*identificatore*'|  
+|[Errore del compilatore C2934](compiler-error-c2934.md)|'*tipo*': template-id, generico-id ridefinito come un tipo annidato '*elemento*'of'*identificatore*'|  
 |[Errore del compilatore C2935](compiler-error-c2935.md)|'*tipo*': id modello/generici-id ridefinito come funzione globale|  
 |[Errore del compilatore C2936](compiler-error-c2936.md)|'*tipo*': modello-id, generico-id ridefinito come variabile dati globale|  
 |[Errore del compilatore C2937](compiler-error-c2937.md)|'*tipo*': id modello/generici-id ridefinito come typedef globale|  
@@ -175,7 +161,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2956 errore del compilatore|deallocazione con dimensione funzione 'operator delete (void *, size_t)' verrà scelta come funzione di deallocazione di posizionamento.|  
 |[Errore del compilatore C2957](compiler-error-c2957.md)|'*token*': delimitatore sinistro non valido: previsto ' <'|  
 |[Errore del compilatore C2958](compiler-error-c2958.md)|sinistra *delimitatore* trovato in '*file*(*riga numero*)' non è stata trovata corrispondenza correttamente|  
-|[Errore del compilatore C2959](compiler-error-c2959.md)|una funzione o classe generica non può essere membro di un modello|  
+|[Errore del compilatore C2959](compiler-error-c2959.md)|una classe generica o una funzione non può essere un membro di un modello|  
 |C2960 errore del compilatore|Obsoleta.|  
 |C2961 errore del compilatore|'*funzione*': incoerente creazioni di istanze esplicite, creazione di un'istanza esplicita precedente non specificava '*argomento*'|  
 |[Errore del compilatore C2962](compiler-error-c2962.md)|Errore di sintassi: '*token*': prevista una definizione di funzione membro di classe di modello per terminare con '}'|  
@@ -196,7 +182,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2977](compiler-error-c2977.md)|'*tipo*': troppi argomenti di modello o generico|  
 |[Errore del compilatore C2978](compiler-error-c2978.md)|Errore di sintassi: previsto '*keyword1*'o'*keyword2*', trovato il tipo'*tipo*'; tipo non parametri non sono supportati in generics|  
 |[Errore del compilatore C2979](compiler-error-c2979.md)|le specializzazioni esplicite non sono supportate in generics|  
-|C2980 errore del compilatore|La gestione delle eccezioni di C++ non è supportata con /kernel|  
+|C2980 errore del compilatore|Gestione delle eccezioni C++ non è supportato con /kernel|  
 |C2981 errore del compilatore|il formato dinamico di '*parola chiave*' non è supportato con /kernel|  
 |C2982 errore del compilatore|'*dichiarazione*': diversi __declspec(code_seg(...)) utilizzato: era '*identifier1*'ora'*identifier2*'|  
 |C2983 errore del compilatore|'*dichiarazione*': tutte le dichiarazioni devono avere un __declspec(code_seg(...)) identici|  

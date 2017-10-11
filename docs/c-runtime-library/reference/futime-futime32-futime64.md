@@ -45,26 +45,11 @@ caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: fe4ae59495ecea19dc14424bd4787db5decfac18
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03eda993cbc087d5dc39f2c9d0f985ac5db48099
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64

@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 570d543c5dfa81fda3d520d2614c708e97c4bc2e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0c02f9b3953abf107cf4e3c33316c9d68f00b7b4
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2232"></a>Errore del compilatore C2232

@@ -14,30 +14,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unary operators, plus
+- unary operators [C++], plus
 - '- operator'
 - negation operator
-- + operator, unary operators
+- + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 9c664cd382685693da7ab12ba85891bc2ab0d7e8

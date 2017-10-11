@@ -22,25 +22,11 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f9eb30e905729d699668d85872ea8ba4c8572982
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: cc0aefab82d9bcb5004cfad776a007977278b3d7
 ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="c-language-reference"></a>Riferimenti del linguaggio C

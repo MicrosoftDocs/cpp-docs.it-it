@@ -37,26 +37,11 @@ caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6dcc32b981c73cda13152f82139a307e4739fe5c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d6db305c6674b974786cd6c17e6bf8b63b304aa2
 ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable

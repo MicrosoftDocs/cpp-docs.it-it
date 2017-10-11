@@ -13,27 +13,13 @@ dev_langs:
 helpviewer_keywords:
 - declarators, pointers
 - declarations, pointers
-- pointers
+- pointers [C++]
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d

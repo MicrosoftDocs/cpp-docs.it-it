@@ -18,25 +18,11 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 16612a32a0e5cb2294f4b74f46c14c206c1cbcbc
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 9abb23be750a4c707b7a2d73ee2650bf3b786731
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="overview-of-functions"></a>Cenni preliminari sulle funzioni

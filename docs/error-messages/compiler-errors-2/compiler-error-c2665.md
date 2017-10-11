@@ -1,39 +1,42 @@
 ---
-title: "Errore del compilatore C2665 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2665"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2665"
+title: Errore del compilatore C2665 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2665
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a349df2c60d746b6b090953362c7c6801e1f2a3
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': nessuno dei 'numero1' overload può convertire il parametro 'numero2' dal tipo 'tipo'  
+---
+# <a name="compiler-error-c2665"></a>Errore del compilatore C2665
+'function': nessuno degli overload number1 può convertire number2 parametro dal tipo 'type'  
   
- Un parametro della funzione in overload non può essere convertito nel tipo richiesto.  Possibili soluzioni:  
+ Un parametro della funzione in overload non può essere convertito nel tipo richiesto.  Soluzioni possibili:  
   
--   Fornire un operatore di conversione.  
+-   Specificare un operatore di conversione.  
   
 -   Utilizzare una conversione esplicita.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2665:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2665.  
   
 ```  
 // C2665.cpp  

@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C2107 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2107"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2107"
+title: Errore del compilatore C2107 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2107
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2107
 ms.assetid: 2866a121-884e-4bb5-8613-36de5817000e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2107
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72ae821ce05d978f2f520b86f5a63b2e4569aabc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-indice non valido. Riferimento indiretto non consentito  
+---
+# <a name="compiler-error-c2107"></a>Errore del compilatore C2107
+indice non valido. riferimento indiretto non consentito  
   
- Un indice viene applicato a un'espressione che non restituisce un puntatore.  
+ Un indice viene applicato a un'espressione che restituisce un puntatore.  
   
-## Esempio  
- L'errore C2107 può verificarsi se si utilizza in modo non corretto il puntatore `this` di un tipo di valore per accedere all'indicizzatore predefinito del tipo.  Per ulteriori informazioni, vedere [Semantica del puntatore this](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+## <a name="example"></a>Esempio  
+ Errore C2107 può verificarsi se si utilizza in modo non corretto di `this` puntatore di tipo valore per l'indicizzatore predefinito del tipo di accesso. Per ulteriori informazioni, vedere [semantica del puntatore](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- Nell'esempio seguente viene generato l'errore C2107:  
+ L'esempio seguente genera l'errore C2107.  
   
 ```  
 // C2107.cpp  

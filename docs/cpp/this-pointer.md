@@ -9,12 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- this
 - this_cpp
 dev_langs:
 - C++
 helpviewer_keywords:
-- nonstatic member functions
+- nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
@@ -22,20 +21,6 @@ caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1

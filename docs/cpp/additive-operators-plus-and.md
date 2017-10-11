@@ -9,35 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
+- +
 - '-'
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], addition
-- subtraction operator, additive operators
-- + operator, additive operators
-- additive operators
+- subtraction operator [C++], additive operators
+- + operator [C++], additive operators
+- additive operators [C++]
 - arithmetic operators [C++], additive operators
-- '- operator, additive operators in C++'
+- '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: a1017985934cbe871617b76f3e5959121b810602
@@ -139,3 +126,4 @@ for( int i = 0; i < 10; ++i )
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
  [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di addizione C](../c-language/c-additive-operators.md)
+

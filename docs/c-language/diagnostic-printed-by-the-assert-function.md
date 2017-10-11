@@ -15,25 +15,11 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 50a41f3b25a616718cffd4dcd8bce0a1ca4e0932
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: d6e5ea4e5f8bae3fda190ac7a7136035aea0c948
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>Diagnostica visualizzata dalla funzione di asserzione

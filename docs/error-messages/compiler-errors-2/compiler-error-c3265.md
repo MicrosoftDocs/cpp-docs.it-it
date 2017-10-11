@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3265 | Documenti di Microsoft
+title: Errore del compilatore C3265 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 1e3de88791b46b242bb4cdb812e3c3349f44d137
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1b136e2f64296d2ca39fb0778898afcd2c0caaba
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3265"></a>Errore del compilatore C3265
-Impossibile dichiarare un 'costrutto gestito' in un costrutto non gestito' gestito'  
+non è possibile dichiarare un 'costrutto gestito' in un costrutto non gestito' non gestito'  
   
 È possibile includere un oggetto gestito in un contesto non gestito.  
   
-Nell'esempio seguente viene generato l'errore C3265:  
+L'esempio seguente viene generato l'errore C3265:  
   
 ```  
 // C3265_2.cpp  

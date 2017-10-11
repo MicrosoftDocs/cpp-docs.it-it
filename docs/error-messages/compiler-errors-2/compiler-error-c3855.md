@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+title: Errore del compilatore C3855 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'classe': il parametro del tipo 'param' è incompatibile con la dichiarazione  
+---
+# <a name="compiler-error-c3855"></a>Errore del compilatore C3855
+'class': parametro di tipo 'param' non è compatibile con la dichiarazione  
   
- Sono stati rilevati parametri di modello non di tipo o parametri generici con nomi diversi.  Ciò può verificarsi quando un parametro di modello specificato nella definizione di una specializzazione del modello non è compatibile con la relativa dichiarazione.  
+ Il compilatore ha rilevato il modello non di tipo o i parametri generici con nomi diversi. Ciò può verificarsi quando non è compatibile con la dichiarazione di un parametro di modello specificato nella definizione di una specializzazione di modello.  
   
- Il seguente codice di esempio genera l'errore C3855:  
+ L'esempio seguente genera l'errore C3855:  
   
 ```  
 // C3855.cpp  
@@ -55,7 +58,7 @@ template <int N>
 void C<N>::f() {}  
 ```  
   
- L'errore C3855 può verificarsi anche quando si utilizzano i generics:  
+ C3855 può verificarsi anche quando si usano i generics:  
   
 ```  
 // C3855c.cpp  

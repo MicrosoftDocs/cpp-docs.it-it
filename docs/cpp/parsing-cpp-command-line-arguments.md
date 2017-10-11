@@ -13,7 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - quotation marks, command-line arguments
 - double quotation marks
-- command line, parsing
+- command line [C++], parsing
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
@@ -21,21 +21,6 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7

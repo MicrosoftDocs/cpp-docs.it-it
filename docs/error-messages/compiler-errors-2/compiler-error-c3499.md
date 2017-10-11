@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a0e4f471b75c39a11ac5684c7c1826321629befe
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6f9f6ad123e111239cbd2c2d1ff2bd886b587b60
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3499"></a>Errore del compilatore C3499

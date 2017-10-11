@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions, exception specifications
-- throwing exceptions, throw keyword
-- C++ exception handling, throwing exceptions
+- exceptions [C++], exception specifications
+- throwing exceptions [C++], throw keyword
+- C++ exception handling [C++], throwing exceptions
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
@@ -21,20 +21,6 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893

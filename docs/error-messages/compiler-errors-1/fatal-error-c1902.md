@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1902 | Documenti di Microsoft
+title: Errore irreversibile C1902 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,30 +19,16 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 79987719614dfa3075f9a9090ca1d97f6546ceb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89354565f67c8704eee8c8b5f9dcb94523800c63
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1902"></a>Errore irreversibile C1902
 mancata corrispondenza del programma database manager; Verificare l'installazione  
   
-Un file di database di programma (PDB) è stato creato utilizzando una versione più recente di mspdb*XXX*. dll di quella rilevata nel sistema. Questo errore indica generalmente che mspdbsrv.exe o mancano o sono una versione diversa da mspdb*XXX*. dll. (Il *XXX* segnaposto nel mspdb*XXX*nome di file. dll cambia con ogni versione del prodotto. In Visual Studio 2015, ad esempio, il nome del file è mspdb140.dll.)  
+Un file di database di programma (PDB) è stato creato utilizzando una versione più recente di mspdb*XXX*DLL di quella a cui il compilatore ha rilevato nel sistema. Questo errore generalmente indica che mspdbsrv.exe o risultano mancanti o che dispongono di versioni diverse di mspdb*XXX*. dll. (Il *XXX* segnaposto nel mspdb*XXX*modifiche al nome di file con estensione dll con ogni versione del prodotto. In Visual Studio 2015, ad esempio, il nome del file è mspdb140.dll.)  
   
-Verificare le versioni corrispondenti di mspdbsrv.exe, mspdbcore e mspdb*XXX*. dll installate nel sistema. Assicurarsi che le versioni non corrispondenti non sono state copiate nella directory che contiene gli strumenti del compilatore e collegamento per la piattaforma di destinazione. Ad esempio, si è copiato i file in modo è possibile richiamare il compilatore o collegamento lo strumento dal prompt dei comandi senza impostare il **percorso** variabile di ambiente di conseguenza.
+Verificare le versioni corrispondenti di mspdbsrv.exe, e mspdb*XXX*DLL installate nel sistema. Verificare che le versioni non corrispondenti non sono state copiate nella directory che contiene gli strumenti del compilatore e collegamento per la piattaforma di destinazione. Ad esempio, è possibile che sono copiati i file in modo è possibile richiamare il compilatore o collegamento lo strumento dal prompt dei comandi senza impostare il **percorso** variabile di ambiente di conseguenza.

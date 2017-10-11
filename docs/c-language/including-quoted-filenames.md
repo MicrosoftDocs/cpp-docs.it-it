@@ -15,25 +15,11 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 70b5e68fc8a3c0c23b291220e4faf387e9aa11c2
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 17c40e74a31341fc3a725c5e5b3823058e403cff
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="including-quoted-filenames"></a>Inclusione di nomi file tra virgolette

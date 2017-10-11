@@ -10,31 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::_com_ptr_t
-- _com_ptr_t._com_ptr_t
 dev_langs:
 - C++
 helpviewer_keywords:
-- _com_ptr_t method
+- _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 99aeb2eb5eff192c24b1f309e7cb62a08213a867

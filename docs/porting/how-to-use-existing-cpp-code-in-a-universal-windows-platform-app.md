@@ -1,5 +1,5 @@
 ---
-title: 'Procedura: Usare codice C++ esistente in un&quot;app della piattaforma UWP (Universal Windows Platform) | Microsoft Docs'
+title: 'Procedura: Usare codice C++ esistente in un''app della piattaforma UWP (Universal Windows Platform) | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,25 +15,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.translationtype: HT
+ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
+ms.openlocfilehash: 10b63f8e7bd7d23e75417e28b45d533832c8426e
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: utilizzare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)

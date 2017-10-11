@@ -35,25 +35,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 524c875f5cf25eb41d09e0f5dc99c32efcae8661
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59379d4916c8414717e886d6fea79e977d31836f
 ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics

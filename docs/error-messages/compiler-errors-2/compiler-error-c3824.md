@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3824 | Documenti di Microsoft
+title: Errore del compilatore C3824 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 546edbeccfee84e91018d0801f0c1ebc7a53a537
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 529e881d8872d3ea1d69da14ac393282c4f3efc1
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3824"></a>Errore del compilatore C3824
-'membro': questo tipo non può apparire in questo contesto (parametro di funzione, il tipo restituito o un membro statico)  
+'member': questo tipo non può trovarsi in questo contesto (parametro di funzione, tipo restituito o un membro statico)  
   
- Puntatori di blocco non possono essere parametri di funzione, tipi restituiti o dichiarate `static`.  
+ Puntatori di blocco non possono essere parametri di funzione, i tipi restituiti o dichiarato `static`.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3824:  
+ L'esempio seguente genera l'errore C3824:  
   
 ```  
 // C3824a.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+title: Errore del compilatore C2864 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Errore del compilatore C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f205aeb886921439360191def0853e33e4eb0fea
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-"variabile": un membro dati statico con un in\-class initializer deve avere un tipo integrale const non volatile  
+---
+# <a name="compiler-error-c2864"></a>Errore del compilatore C2864
+"variabile": un membro dati statico con un in-class initializer deve avere un tipo integrale const non volatile  
   
- Per inizializzare un membro dati `static` definito come `volatile`, non `const` o non come tipo integrale, utilizzare un'istruzione member\-definition.  Non è possibile inizializzarlo in una dichiarazione.  
+ Per inizializzare un membro dati `static` definito come `volatile`, non `const` o non come tipo integrale, utilizzare un'istruzione member-definition. Non è possibile inizializzarlo in una dichiarazione.  
   
- In questo esempio viene generato l'errore C2864:  
+ In questo esempio genera l'errore C2864:  
   
 ```  
 // C2864.cpp  

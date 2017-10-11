@@ -1,38 +1,41 @@
 ---
-title: "Errore del compilatore C3642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3642"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3642"
+title: Errore del compilatore C3642 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3642
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Errore del compilatore C3642
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4b5d73344b99a42dfc4caf2b9f6b8cf7c9dc18bc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'tipo\_restituito\/arg': impossibile chiamare una funzione con la convenzione di chiamata \_\_clrcall dal codice nativo  
+---
+# <a name="compiler-error-c3642"></a>Errore del compilatore C3642
+' return_type/args': non è possibile chiamare una funzione con clrcall convenzione di chiamata da codice nativo  
   
- Non è possibile chiamare una funzione contrassegnata con la convenzione di chiamata [\_\_clrcall](../../cpp/clrcall.md) dal codice nativo \(non gestito\).  
+ Una funzione contrassegnata con il [clrcall](../../cpp/clrcall.md) convenzione di chiamata non può essere chiamato da codice nativo (non gestito).  
   
- *return\_type\/args* è il nome o il tipo della funzione o del tipo di funzione `__clrcall` che si sta tentando di chiamare.  Durante una chiamata tramite un puntatore a funzione viene utilizzato un tipo.  
+ *return_type/args* è il nome della funzione o il tipo di `__clrcall` funzione si sta tentando di chiamare.  Un tipo viene utilizzato durante una chiamata tramite un puntatore a funzione.  
   
- Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che effettuerà la chiamata alla funzione `__clrcall`.  In alternativa, è possibile utilizzare il meccanismo marshalling. Per ulteriori informazioni, vedere [Procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md).  
+ Per chiamare una funzione gestita da un contesto nativo, è possibile aggiungere una funzione "wrapper" che chiamerà la `__clrcall` (funzione). In alternativa, utilizzare il meccanismo di marshalling CLR; vedere [procedura: effettuare il marshalling funzione puntatori utilizzando PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) per ulteriori informazioni.  
   
- Il seguente codice di esempio genera l'errore C3642:  
+ L'esempio seguente genera l'errore C3642:  
   
 ```  
 // C3642.cpp  

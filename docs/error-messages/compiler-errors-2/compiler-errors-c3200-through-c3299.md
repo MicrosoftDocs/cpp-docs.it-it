@@ -47,25 +47,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>Del compilatore C3200 errori tramite C3299
@@ -86,7 +72,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3205](compiler-error-c3205.md)|elenco di argomenti per il parametro di modello '*identificatore*' mancante|  
 |[Errore del compilatore C3206](compiler-error-c3206.md)|'*funzione*': argomento di modello/generici non valido per '*modello*', elenco di argomenti di modello o generico mancante nel modello di classe o generico '*tipo*'|  
 |[Errore del compilatore C3207](compiler-error-c3207.md)|'*funzione*': argomento di modello non valido per '*parametro*', previsto modello di classe|  
-|[Errore del compilatore C3208](compiler-error-c3208.md)|'*funzione*': elenco di parametri di modello per il modello di classe '*modello*'non corrisponde all'elenco di parametri di modello per il parametro di modello'*parametro*'|  
+|[Errore del compilatore C3208](compiler-error-c3208.md)|'*funzione*': elenco di parametri di modello per il modello di classe '*modello*'non corrisponde all'elenco dei parametri per il parametro di modello'*parametro*'|  
 |[Errore del compilatore C3209](compiler-error-c3209.md)|'*tipo*': classe generica deve essere una classe gestita o WinRT|  
 |[Errore del compilatore C3210](compiler-error-c3210.md)|'*identificatore*': dichiarazione di accesso può essere applicata solo a un membro di classe di base|  
 |[Errore del compilatore C3211](compiler-error-c3211.md)|'*funzione*': la specializzazione esplicita utilizza una sintassi di specializzazione parziale, utilizzare invece <> modello|  
@@ -127,7 +113,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3246](compiler-error-c3246.md)|'*classe*': non può ereditare da '*base_class*"così com'è stato dichiarato come'*ereditarietà*'|  
 |[Errore del compilatore C3247](compiler-error-c3247.md)|'*coclasse*': una coclasse non può ereditare da un'altra coclasse*base_class*'|  
 |[Errore del compilatore C3248](compiler-error-c3248.md)|Obsoleta. '*funzione*': funzione dichiarata come 'sealed' non può essere sottoposto a override da '*funzione*'|  
-|C3249 errore del compilatore|la dichiarazione o l'espressione secondaria non è ammessa per la funzione 'constexpr'|  
+|C3249 errore del compilatore|istruzione non valida o l'espressione secondaria per la funzione 'constexpr'|  
 |C3250 errore del compilatore|'*dichiarazione*': dichiarazione non è consentita nel corpo della funzione 'constexpr'|  
 |[Errore del compilatore C3251](compiler-error-c3251.md)|impossibile chiamare un metodo di una classe base su un'istanza di tipo valore|  
 |[Errore del compilatore C3252](compiler-error-c3252.md)|'*funzione*': non è possibile ridurre l'accessibilità di un metodo virtuale in un tipo gestito o WinRT|  
@@ -137,7 +123,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C3256 errore del compilatore|'*funzione*': utilizzo di una variabile non produce un'espressione costante|  
 |Errore del compilatore C3257|Obsoleta.|  
 |Errore del compilatore C3258|Obsoleta.|  
-|C3259 errore del compilatore|le funzioni 'constexpr' possono contenere una sola istruzione return|  
+|C3259 errore del compilatore|le funzioni 'constexpr' possono avere solo un'istruzione return|  
 |C3260 errore del compilatore|'*token*': ignorato token imprevisti prima del corpo dell'espressione lambda|  
 |Errore del compilatore C3261|una funzione che restituisce una matrice gestita o WinRT deve avere una parentesi di matrice alla fine della dichiarazione: '*identificatore*(...) []'|  
 |[Errore del compilatore C3262](compiler-error-c3262.md)|indicizzazione matrice non valida: *numero* dimensioni specificate per *numero*-dimensionale '*tipo*'|  

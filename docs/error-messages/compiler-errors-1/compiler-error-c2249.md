@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2249 | Documenti di Microsoft
+title: Errore del compilatore C2249 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 043c28c9fa11dc28425c58aea2efc6a2cefe4065
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5878c28ed0b4fc2663c17021aa9e277ccaa8ad4e
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2249"></a>Errore del compilatore C2249
-'membro': nessun percorso accessibile per accedere a un membro dichiarato nella base virtuale 'classe'  
+'member': nessun percorso accessibile accedere a un membro dichiarato nella base virtuale 'class'  
   
- Il `member` viene ereditato da un non pubblico `virtual` struttura o classe di base.  
+ Il `member` viene ereditata da un non pubblico `virtual` classe o struttura.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2249.  
+ L'esempio seguente genera l'errore C2249.  
   
 ```  
 // C2249.cpp  
@@ -66,7 +52,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- C2249 può inoltre verificarsi se si tenta di assegnare un flusso dalla libreria C++ Standard in un altro flusso.  Nell'esempio seguente viene generato l'errore C2249.  
+ C2249 può verificarsi anche se si tenta di assegnare un flusso dalla libreria Standard C++ in un altro flusso.  L'esempio seguente genera l'errore C2249.  
   
 ```  
 // C2249_2.cpp  

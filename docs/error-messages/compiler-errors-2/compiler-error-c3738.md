@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3738"
+title: Errore del compilatore C3738 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c143168981ed269a7bf830b4d5f345c1a063c425
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'convenzione\_chiamata': la convenzione di chiamata della creazione di istanza esplicita deve corrispondere a quella del modello la cui istanza è in corso di creazione  
+---
+# <a name="compiler-error-c3738"></a>Errore del compilatore C3738
+'convenzione_chiamata': la convenzione di chiamata di creazione di istanza esplicita deve corrispondere a quello del modello viene creata un'istanza di  
   
- Si consiglia di non specificare una convenzione di chiamata in una creazione di istanza esplicita.  Se tuttavia è necessario farlo, le convenzioni di chiamata devono corrispondere.  
+ È consigliabile che non si specifica una convenzione di chiamata in un'istanza esplicita. Se necessario, tuttavia, le convenzioni di chiamata devono corrispondere.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3738:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3738.  
   
 ```  
 // C3738.cpp  

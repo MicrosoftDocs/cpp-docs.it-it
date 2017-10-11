@@ -24,25 +24,11 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 31118df209db98435a3b9cfb0c38e17dbd818d01
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: a736a1e66fd857b7d959279a6b44a6d0f9ebd6f3
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="structure-and-union-members"></a>Membri di struttura e di unione

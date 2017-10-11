@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 66584dc786a3340deeaf1176362bf64dafacd3b8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71f2bf8ef42896447d48c9cb3581006c2e3d7620
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1352"></a>Errore irreversibile C1352
@@ -48,4 +33,4 @@ Istruzione MSIL non valida o danneggiata nella funzione 'function' del modulo 'f
   
  Il compilatore non controlla tutti i tipi di danneggiamento nei file netmodule,  ma verifica che tutti i percorsi di controllo di una funzione contengano un'istruzione return.  
   
- Per ulteriori informazioni, vedere [file con estensione netmodule come Input del Linker](../../build/reference/netmodule-files-as-linker-input.md).
+ Per altre informazioni, vedere [File con estensione netmodule come input del linker](../../build/reference/netmodule-files-as-linker-input.md).

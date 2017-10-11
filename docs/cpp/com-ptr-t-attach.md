@@ -10,31 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::Attach
-- _com_ptr_t.Attach
 dev_langs:
 - C++
 helpviewer_keywords:
 - COM interfaces, attach pointer
-- Attach method
+- Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: aa14a5fb0e54971e19de1b46317d768e7fc06a2e

@@ -1,5 +1,5 @@
 ---
-title: Classe CNoWorkerThread | Documenti di Microsoft
+title: Classe CNoWorkerThread | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,29 +27,15 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4c38d778849a31d55a657fc1022c2e9f4a370eec
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cnoworkerthread-class"></a>Classe CNoWorkerThread
-Utilizzare questa classe come argomento per il `MonitorClass` parametro di modello classi cache se si desidera disabilitare la manutenzione della cache dinamica.  
+Utilizzare questa classe come argomento per il `MonitorClass` parametro di modello per le classi di cache se si desidera disabilitare la manutenzione della cache dinamica.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -77,7 +63,7 @@ class CNoWorkerThread
 ## <a name="remarks"></a>Note  
  Questa classe fornisce la stessa interfaccia pubblica di [CWorkerThread](../../atl/reference/cworkerthread-class.md). Questa interfaccia è previsto a cura di `MonitorClass` parametro di modello per le classi di cache.  
   
- I metodi in questa classe vengono implementati per non eseguire alcuna operazione. I metodi che restituiscono sempre un valore HRESULT restituiscono S_OK e i metodi che restituiscono sempre un ID thread o HANDLE restituiscono 0.  
+ I metodi in questa classe vengono implementati per non eseguire alcuna operazione. I metodi che restituiscono sempre un valore HRESULT restituiscono S_OK e i metodi che restituiscono sempre un ID di HANDLE o thread restituiscono 0.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  

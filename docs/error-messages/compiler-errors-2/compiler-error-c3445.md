@@ -19,26 +19,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c89d7f1f13829422a330960ac319531fc551fb97
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e880eca87816973d531a2662486dde0ae7c77987
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3445"></a>C3445 errore del compilatore
@@ -46,7 +31,7 @@ inizializzazione di elenco copia di '*tipo*' non è possibile utilizzare un cost
   
 Secondo lo standard C++ 17 ISO, il compilatore deve prendere in considerazione un costruttore esplicito per la risoluzione dell'overload in elenco-inizializzazione di copia, ma deve generare un errore se tale overload scelto.  
   
-A partire da Visual Studio 2017, il compilatore rileva errori relativi alla creazione di oggetti utilizzando un elenco di inizializzatori non trovate da Visual Studio 2015. Questi errori potrebbero causare un comportamento non definito in fase di esecuzione o di arresti anomali del sistema.
+A partire da Visual Studio 2017, il compilatore rileva errori relativi alla creazione di un oggetto utilizzando un elenco di inizializzatori non trovate da Visual Studio 2015. Questi errori potrebbero causare un comportamento non definito in fase di esecuzione o di arresti anomali del sistema.
 
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3445.  

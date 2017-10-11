@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: it-it
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
@@ -40,7 +37,7 @@ Se si riscontrano problemi con il compilatore, il linker o altri strumenti di Vi
   
  I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Visual C++.  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> Come preparare il report  
+##  <a name="prepare"></a> Come preparare il report  
  È importante creare un report esaustivo in quanto è molto difficile riprodurre il problema riscontrato nei computer utente senza avere informazioni complete. Più il report è completo, più alta è la probabilità che si possa ricreare il problema ed eseguire la diagnosi.  
   
  Il report deve contenere almeno le informazioni seguenti  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> Arresto anomalo del back-end (generazione del codice)  
+####  <a name="backend_crash"></a> Arresto anomalo del back-end (generazione del codice)  
  Gli arresti anomali del back-end si verificano durante la fase di generazione del codice del compilatore. In genere il compilatore crea l'[errore irreversibile C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e non sempre segnala il file del codice sorgente e il numero della riga in cui si è verificato l'errore. Viene spesso indicato un file compiler\utc\src\p2\main.c, dettaglio che può essere tuttavia tralasciato.  
   
  Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link_repro) se si usa la Generazione codice in fase di collegamento, diversamente inviare una [procedura di riproduzione pre-elaborata](#preprocessed_repro). La Generazione codice in fase di collegamento è abilitata dall'argomento della riga di comando `/GL` per cl.exe.  
@@ -217,7 +214,7 @@ CONTEXT:
   
  Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link_repro) se si usa la Generazione codice in fase di collegamento, diversamente inviare una [procedura di riproduzione pre-elaborata](#preprocessed_repro). La Generazione codice in fase di collegamento è abilitata dall'argomento della riga di comando `/GL` per cl.exe.  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> Modi per inviare il report  
+##  <a name="send"></a> Modi per inviare il report  
  Esistono diversi modi per inviare il report a Microsoft. È possibile segnalare un bug in Microsoft Connect, inviarlo tramite posta elettronica a Microsoft oppure usare lo strumento predefinito di Visual Studio Segnala un problema. La scelta dipende dal tipo di problema riscontrato, da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento Segnala un problema può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Microsoft Connect può essere usato anche per segnalare questi altri tipi di errore. Non offre tuttavia le funzionalità aggiuntive disponibili invece nello strumento Segnala un problema. Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> Generazione di procedure di riproduzione  
+##  <a name="generate"></a> Generazione di procedure di riproduzione  
  Una procedura di riproduzione è un esempio di codice completo e indipendente, che illustra il problema segnalato. Una procedura di riproduzione **non** è un frammento di codice. Deve invece essere un esempio completo di codice che viene, o dovrebbe, essere compilato, eccezione fatta per gli errori generati dal problema che si segnala. Deve contenere tutte le direttive #include necessarie, anche per le intestazioni standard.  
   
  Caratteristiche di una buona procedura di riproduzione  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  Di seguito sono disponibili le istruzioni per la generazione dei vari tipi di procedure di riproduzione che verranno usate per segnalare i diversi problemi.  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> Procedure di riproduzione pre-elaborate  
+###  <a name="preprocessed_repro"></a> Procedure di riproduzione pre-elaborate  
  Una procedura di riproduzione pre-elaborata è un unico file di origine che illustra un problema e che è stato generato dall'output del preprocessore C durante l'elaborazione del file di origine. Questo processo comprende le intestazioni incluse per rimuovere le dipendenze da altri file di origine e di intestazione e risolve anche macro, #ifdefs e altri comandi del preprocessore che potrebbero dipendere dall'ambiente locale.  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  Alla fine allegare questa procedura di riproduzione al report.  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> Procedura di riproduzione del collegamento  
+###  <a name="link_repro"></a> Procedura di riproduzione del collegamento  
  Una procedura di riproduzione del collegamento è una singola directory che contiene gli artefatti di compilazione che insieme illustrano un problema che si verifica in fase di collegamento, ad esempio un arresto anomalo del back-end che coinvolge la Generazione codice in fase di collegamento o un arresto anomalo del linker. La procedura di riproduzione include quegli artefatti di compilazione necessari come input per il linker perché possa riprodurre il problema. È possibile creare facilmente le procedure di riproduzione del collegamento tramite le funzionalità disponibili nel linker.  
   
 ##### <a name="to-generate-a-link-repro"></a>Per generare una procedura di riproduzione del collegamento:  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  Infine comprimere l'intera directory della procedura di riproduzione in un file con estensione zip o simile e allegarla al report.  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> Altre procedure di riproduzione  
+###  <a name="other_repros"></a> Altre procedure di riproduzione  
  Se il problema non può essere ridotto a un singolo file di origine o a una procedura di riproduzione pre-elaborata, e non è necessaria una procedura di riproduzione del collegamento per testare il problema, è possibile analizzare un progetto IDE. Il codice contenuto nel progetto deve essere minimo. Tutto il materiale sussidiario descritto in questo documento è applicabile anche in questo caso.  
   
  Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'intera struttura della directory in un file con estensione zip o simile e allegarla al report.
-
-
-<!--HONumber=Feb17_HO4-->
-
-

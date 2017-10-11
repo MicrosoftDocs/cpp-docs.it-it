@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2594 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2594"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2594"
+title: Errore del compilatore C2594 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2594
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Errore del compilatore C2594
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'operatore': conversioni ambigue da 'tipo1' a 'tipo2'  
+---
+# <a name="compiler-error-c2594"></a>Errore del compilatore C2594
+'operator': conversioni ambigue da 'type1' a 'type2'  
   
- Nessuna conversione da *type1* a *type2* è stata più diretta delle altre.  Si suggeriscono due possibili soluzioni per la conversione da *type1* a *type2*.  La prima opzione consiste nel definire una conversione diretta da *type1* a *type2*, la seconda nello specificare una sequenza di conversioni da *type1* a *type2*.  
+ Nessuna conversione da *type1* a *type2* è stata più diretta rispetto a qualsiasi altro. Si consiglia di due possibili soluzioni per la conversione da *type1* a *type2*. La prima opzione consiste nel definire una conversione diretta da *type1* a *type2*, e la seconda opzione consiste nella specificazione di una sequenza di conversioni da *type1* a  *type2*.  
   
- Nell'esempio seguente viene generato l'errore C2594.  La risoluzione suggerita dell'errore consiste in una sequenza di conversioni:  
+ L'esempio seguente genera l'errore C2594. La risoluzione suggerita per l'errore è una sequenza di conversioni:  
   
 ```  
 // C2594.cpp  

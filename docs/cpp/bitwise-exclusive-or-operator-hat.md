@@ -14,29 +14,15 @@ helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
 - XOR operator
-- bitwise operators, OR operator
+- bitwise operators [C++], OR operator
 - ^ operator
-- OR operator, bitwise exclusive
+- OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: c6d7713a28fa6c0dbe7a5543afa65cd927f614e7

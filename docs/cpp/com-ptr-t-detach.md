@@ -10,30 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::Detach
-- _com_ptr_t.Detach
 dev_langs:
 - C++
 helpviewer_keywords:
-- Detach method
+- Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: f61b0fb05f182ef2723fdcc564fd697f490aed20

@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3764 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3764"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3764"
+title: Errore del compilatore C3764 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3764
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C3764
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60317bb31b5021d4b9b1b6568d77ae92e06880ce
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione\_override': impossibile eseguire l'override del metodo della classe base 'funzione\_classe\_base'  
+---
+# <a name="compiler-error-c3764"></a>Errore del compilatore C3764
+'funzione_override': Impossibile eseguire l'override di metodo della classe base 'funzione_classe_base'  
   
- Il compilatore ha rilevato un override in formato non corretto.  Ad esempio, la funzione della classe base non è `virtual`.  Per ulteriori informazioni, vedere [override](../../windows/override-cpp-component-extensions.md).  
+ Il compilatore ha rilevato un override valido. Ad esempio, la funzione di classe di base non `virtual`. Per ulteriori informazioni, vedere [override](../../windows/override-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3764:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3764.  
   
 ```  
 // C3764.cpp  
@@ -45,8 +48,8 @@ public ref struct B : A {
 };  
 ```  
   
-## Esempio  
- L'errore C3764 può verificarsi anche quando un metodo di una classe base viene sottoposto a override esplicito e denominato.  Nell'esempio seguente viene generato l'errore C3764:  
+## <a name="example"></a>Esempio  
+ C3764 può verificarsi anche quando un metodo della classe base è sia in modo esplicito e denominato sottoposto a override. L'esempio seguente genera l'errore C3764.  
   
 ```  
 // C3764_b.cpp  

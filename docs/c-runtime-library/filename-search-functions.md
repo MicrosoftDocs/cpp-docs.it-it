@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
@@ -116,7 +101,7 @@ Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:
   
  `_findfirst` e `_findnext` usano il tipo Time a 64 bit. Se è necessario usare il precedente tipo Time a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. Le versioni di queste funzioni che contengono il suffisso `32` nei nomi usano il tipo Time a 32 bit, mentre quelle con il suffisso `64` usano il tipo Time a 64 bit.  
   
- Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfindnext32i64` si comportano in modo analogo alle versioni di tipo Time a 32 bit ma usano e restituiscono lunghezze di file a 64 bit. Le funzioni `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32` e `_wfindnext64i32` usano il tipo Time a 64 bit ma lunghezze di file a 32 bit. Queste funzioni usano le varianti appropriate del tipo `_finddata_t` in cui i campi hanno tipi diversi per Time e File size.  
+ Anche le funzioni `_findfirst32i64`, `_findnext32i64`, `_wfindfirst32i64`e `_wfindnext32i64` si comportano in modo analogo alle versioni di tipo Time a 32 bit ma usano e restituiscono lunghezze di file a 64 bit. Anche le funzioni `_findfirst64i32`, `_findnext64i32`, `_wfindfirst64i32`e `_wfindnext64i32` usano il tipo Time a 64 bit ma lunghezze di file a 32 bit. Queste funzioni usano le varianti appropriate del tipo `_finddata_t` in cui i campi hanno tipi diversi per Time e File size.  
   
  `_finddata_t` è una macro che restituisce `_finddata64i32_t` (o `_finddata32_t` se `_USE_32BIT_TIME_T` è definito). La tabella seguente riepiloga le variazioni in `_finddata_t`:  
   

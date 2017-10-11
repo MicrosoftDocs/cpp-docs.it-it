@@ -10,11 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
-- throw
 - try_cpp
-- try
 - throw_cpp
-- catch
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,30 +22,16 @@ helpviewer_keywords:
 - throw keyword [C++]
 - try-catch keyword [C++]
 - try-catch keyword [C++], exception handling
-- throwing exceptions, throw keyword
+- throwing exceptions [C++], throw keyword
 - try-catch keyword [C++], throw keyword [C++]s
-- throwing exceptions, implementing C++ exception handling
-- throwing exceptions
+- throwing exceptions [C++], implementing C++ exception handling
+- throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 89db418a92239460379d1ea41d2d49a8073095c2

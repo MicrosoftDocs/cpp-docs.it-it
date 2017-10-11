@@ -10,30 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - bad_typeid
+- bad_typeid_cpp
 dev_langs:
 - C++
 helpviewer_keywords:
 - bad_typeid exception
-- exceptions, bad_typeid
+- exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84

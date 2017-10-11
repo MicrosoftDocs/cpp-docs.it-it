@@ -1,40 +1,43 @@
 ---
-title: "Errore del compilatore C2356 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2356"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2356"
+title: Errore del compilatore C2356 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2356
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2356
 ms.assetid: 84d5a816-9a61-4d45-9978-38e485bbf767
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2356
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99f29fb1e651c8182c8aa4dc037fc8cd6af6c6cc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-il segmento di inizializzazione non deve cambiare durante l'unità di conversione  
+---
+# <a name="compiler-error-c2356"></a>Errore del compilatore C2356
+il segmento di inizializzazione non deve essere modificato durante l'unità di conversione  
   
  Possibili cause:  
   
--   `#pragma init_seg` è preceduto dal codice di inizializzazione del segmento  
+-   `#pragma init_seg`preceduto dal codice di inizializzazione di segmento  
   
--   `#pragma init_seg` è preceduto da un altro oggetto `#pragma init_seg`  
+-   `#pragma init_seg`preceduto da un altro`#pragma init_seg`  
   
- Per correggere l'errore, spostare il codice di inizializzazione del segmento all'inizio del modulo.  Per inizializzare più aree, spostarle in moduli distinti.  
+ Per risolvere, spostare il codice di inizializzazione del segmento all'inizio del modulo. Se è necessario inizializzare più aree, spostarli per separare i moduli.  
   
- Il seguente codice di esempio genera l'errore C2356:  
+ L'esempio seguente genera l'errore C2356:  
   
 ```  
 // C2356.cpp  

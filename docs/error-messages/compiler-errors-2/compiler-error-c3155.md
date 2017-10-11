@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3155 | Documenti di Microsoft
+title: Errore del compilatore C3155 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,25 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 651eb1a03eed55a3d383a32f027991a4a56d4371
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75156c7b4611038b522501a20468595de10863af
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3155"></a>Errore del compilatore C3155
@@ -46,7 +32,7 @@ attributi non consentiti in un indicizzatore di proprietà
 Una proprietà indicizzata è stata dichiarata in modo non corretto. Per ulteriori informazioni, vedere [procedura: utilizzare le proprietà in C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C3155.  
+L'esempio seguente genera l'errore C3155.  
   
 ```  
 // C3155.cpp  

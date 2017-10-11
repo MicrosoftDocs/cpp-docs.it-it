@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3821 | Documenti di Microsoft
+title: Errore del compilatore C3821 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3821"></a>Errore del compilatore C3821
-'funzione': funzione o un tipo gestito non può essere utilizzato in una funzione non gestita  
+'function': funzione o un tipo gestito non può essere utilizzato in una funzione non gestita  
   
- Funzioni con assembly inline o [setjmp](../../c-runtime-library/reference/setjmp.md) non può contenere tipi di valore o classi gestite. Per correggere questo errore, rimuovere l'assembly inline e `setjmp` o rimuovere gli oggetti gestiti.  
+ Funzioni con assembly inline o [setjmp](../../c-runtime-library/reference/setjmp.md) non può contenere tipi di valore o classi gestite. Per correggere l'errore, rimuovere l'assembly inline e `setjmp` o rimuovere gli oggetti gestiti.  
   
- C3821 può inoltre verificarsi se si tenta di utilizzare l'archiviazione automatica in una funzione vararg.  Per ulteriori informazioni, vedere [elenchi di argomenti variabili (...) (C + C++ /CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [semantica dello Stack C++ per i tipi riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ C3821 può verificarsi anche se si tenta di utilizzare l'archiviazione automatica in una funzione vararg.  Per ulteriori informazioni, vedere [elenchi di argomenti variabili (...) (C + C++ /CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) e [semantica dello Stack C++ per i tipi riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3821.  
+ L'esempio seguente genera l'errore C3821.  
   
 ```  
 // C3821a.cpp  
@@ -60,7 +46,7 @@ void test1(...) {
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3821.  
+ L'esempio seguente genera l'errore C3821.  
   
 ```  
 // C3821b.cpp  

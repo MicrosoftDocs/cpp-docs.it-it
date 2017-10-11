@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3364 | Documenti di Microsoft
+title: Errore del compilatore C3364 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 783e05439168a63c21a3900c993813dd973a642a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3364"></a>Errore del compilatore C3364
-'delegato': il costruttore di delegato: argomento non valido per la funzione membro di classe gestita o una funzione globale  
+'delegato': costruttore di delegato: l'argomento deve essere puntatore a funzione membro di classe gestita o una funzione globale  
   
- Il secondo parametro del costruttore del delegato accetta l'indirizzo di una funzione membro o l'indirizzo di una funzione membro statico di una classe. Entrambi vengono trattati come semplici indirizzi.  
+ Il secondo parametro del costruttore del delegato accetta l'indirizzo di una funzione membro o l'indirizzo di una funzione membro statico di una qualsiasi classe. Entrambi sono trattati come semplici indirizzi.  
   
- Nell'esempio seguente viene generato l'errore C3364:  
+ L'esempio seguente genera l'errore C3364:  
   
 ```  
 // C3364_2.cpp  

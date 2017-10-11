@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d46ae164ee0a2ce17305cf75164eccf183d69a9a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fafe0e3131512aff530f88daf023d76a47b7d3ab
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3340"></a>Errore del compilatore C3340
 'interface': l'interfaccia non può essere sia 'restricted' che 'default' nella coclasse 'class'  
   
- Il [limitato](../../windows/restricted.md) attributo e il [predefinito](../../windows/default-cpp.md) attributo si escludono a vicenda.  
+ Gli attributi [restricted](../../windows/restricted.md) e [default](../../windows/default-cpp.md) si escludono reciprocamente.  
   
  L'esempio seguente genera l'errore C3340:  
   

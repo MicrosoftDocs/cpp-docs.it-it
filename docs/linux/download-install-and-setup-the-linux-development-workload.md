@@ -12,25 +12,11 @@ ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: 09ce0024b7a98729b28968fff081ed105b5463e1
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 338f1bd87dbaaf4caf6a788cd45b3d011bbf40f0
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 

@@ -15,26 +15,12 @@ dev_langs:
 helpviewer_keywords:
 - BSTR object
 - _bstr_t class
-- BSTR object, COM encapsulation
+- BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: ce63f8243bc46d77116dbacdf82f821333cba785

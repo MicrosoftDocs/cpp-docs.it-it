@@ -17,25 +17,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 8aadc8b14104b3bc74905b5187c7dfe76fa8d2f4
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL

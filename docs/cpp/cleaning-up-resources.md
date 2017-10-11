@@ -11,31 +11,17 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- termination handlers, cleaning up resources
-- exception handling, cleaning up resources
+- termination handlers [C++], cleaning up resources
+- exception handling [C++], cleaning up resources
 - C++ exception handling, termination handlers
 - resources [C++], cleaning up
-- exception handling, cleanup code
+- exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 830fd773536b9ab16aeced2b64d2a4062961bd1b

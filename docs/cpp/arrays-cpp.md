@@ -11,28 +11,14 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- declaring arrays, about declaring arrays
-- multidimensional arrays
+- declaring arrays [C++], about declaring arrays
+- multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e

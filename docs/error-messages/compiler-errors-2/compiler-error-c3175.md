@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3175 | Documenti di Microsoft
+title: Errore del compilatore C3175 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 098a3c1fc910f28a2e3f7902c8a109adc5add710
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b2b8ff8052a9d54e12a4eca6a54701708096352a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3175"></a>Errore del compilatore C3175
-'funzione1': Impossibile chiamare un metodo di un tipo gestito dalla funzione non gestita 'funzione2'  
+'function1': Impossibile chiamare un metodo di un tipo gestito dalla funzione non gestita 'function2'  
   
- Funzioni non gestite non possono chiamare funzioni membro delle classi gestite.  
+ Funzioni non gestite non è possibile chiamare funzioni membro delle classi gestite.  
   
- Nell'esempio seguente viene generato l'errore C3175:  
+ L'esempio seguente genera l'errore C3175:  
   
 ```  
 // C3175_2.cpp  

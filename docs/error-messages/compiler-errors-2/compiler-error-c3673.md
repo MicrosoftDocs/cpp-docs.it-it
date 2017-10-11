@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3673"
+title: Errore del compilatore C3673 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3673
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C3673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4958f3652119e105ed327d5476c084ad6707fb9a
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'tipo': la classe non ha un costruttore di copia  
+---
+# <a name="compiler-error-c3673"></a>Errore del compilatore C3673
+'type': classe non dispone di un costruttore di copia  
   
- Per copiare oggetti di tipi di riferimento CLR è necessario un costruttore definito dall'utente.  Per ulteriori informazioni, vedere [Semantica dello stack C\+\+ per i tipi di riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ Un costruttore definito dall'utente è necessario copiare oggetti di tipi di riferimento CLR. Per ulteriori informazioni, vedere [semantica dello Stack C++ per i tipi riferimento](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3673.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3673.  
   
 ```  
 // C3673.cpp  
@@ -47,8 +50,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3673.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3673.  
   
 ```  
 // C3673_b.cpp  

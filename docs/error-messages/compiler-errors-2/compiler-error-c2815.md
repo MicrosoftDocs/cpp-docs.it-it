@@ -19,25 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b6c438512dae910e0a42831e5f863f7b1766c097
 ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2815"></a>Errore del compilatore C2815

@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2009"
+title: Errore del compilatore C2009 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2009
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2bbae441d7b4c9e57a4080dd643f6563eed6c48e
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-riutilizzo di 'identificatore' come parametro formale della macro  
+---
+# <a name="compiler-error-c2009"></a>Errore del compilatore C2009
+riutilizzo di 'identifier' come parametro formale della macro  
   
- L'identificatore viene utilizzato più volte all'interno dell'elenco dei parametri formali di una definizione di macro.  È necessario che gli identificatori di tale elenco siano univoci.  
+ Elenco di parametri formali di una definizione di macro utilizza l'identificatore più volte. Gli identificatori nell'elenco di parametri della macro devono essere univoci.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C2009:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2009:  
   
 ```  
 // C2009.cpp  
@@ -43,7 +46,7 @@ int main()
 }  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Possibile soluzione:  
   
 ```  

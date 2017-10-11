@@ -1,5 +1,5 @@
 ---
-title: Classe CElementTraitsBase | Documenti di Microsoft
+title: Classe CElementTraitsBase | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>Classe CElementTraitsBase
-Questa classe fornisce copia predefinita e sposta i metodi per una classe di raccolte.  
+Questa classe fornisce copia predefinita e sposta i metodi per una classe di raccolta.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,17 +52,17 @@ class CElementTraitsBase
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CElementTraitsBase::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Chiamare questo metodo per copiare gli elementi archiviati in un oggetto classe di raccolta.|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|Chiamare questo metodo per spostare gli elementi archiviati in un oggetto classe di raccolta.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Chiamare questo metodo per copiare gli elementi archiviati in un oggetto di classe di raccolta.|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|Chiamare questo metodo per spostare elementi archiviati in un oggetto di classe di raccolta.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe di base definisce i metodi per la copia e spostamento di elementi in una classe di raccolta. Utilizzato dalle classi [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Questa classe di base definisce i metodi per la copia e il riposizionamento di elementi in una classe di raccolta. Viene utilizzato dalle classi [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), e [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -84,7 +70,7 @@ class CElementTraitsBase
  **Intestazione:** atlcoll. h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- Chiamare questo metodo per copiare gli elementi archiviati in un oggetto classe di raccolta.  
+ Chiamare questo metodo per copiare gli elementi archiviati in un oggetto di classe di raccolta.  
   
 ```
 static void CopyElements(
@@ -107,7 +93,7 @@ static void CopyElements(
  Gli elementi di origine e di destinazione non devono sovrapporsi.  
   
 ##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
- Il tipo di dati da utilizzare per l'aggiunta di elementi alla raccolta.  
+ Il tipo di dati da usare per aggiungere elementi alla raccolta.  
   
 ```
 typedef const T& INARGTYPE;
@@ -121,7 +107,7 @@ typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
- Chiamare questo metodo per spostare gli elementi archiviati in un oggetto classe di raccolta.  
+ Chiamare questo metodo per spostare elementi archiviati in un oggetto di classe di raccolta.  
   
 ```
 static void RelocateElements(
@@ -141,7 +127,7 @@ static void RelocateElements(
  Il numero di elementi da spostare.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo chiama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), che è sufficiente per la maggior parte dei tipi di dati. Se gli oggetti da spostare contengono puntatori ai rispettivi membri, sarà necessario eseguire l'override di questo metodo.  
+ Questo metodo chiama [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), che è sufficiente per la maggior parte dei tipi di dati. Se gli oggetti da spostare contengono puntatori ai rispettivi membri, è necessario eseguire l'override di questo metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)

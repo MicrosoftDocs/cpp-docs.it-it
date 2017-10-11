@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3380 | Documenti di Microsoft
+title: Errore del compilatore C3380 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fbc75caa22d3c46b5a7a487662119a43b27eaf2b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b06f57795cea7dda7b3ba2797f7c57026a9acf60
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3380"></a>Errore del compilatore C3380
 'class': identificatore di accesso assembly non valido. Consentiti solo 'public' o 'private'  
   
- Quando applicato a una classe o struttura gestita, il [pubblica](../../cpp/public-cpp.md) e [privata](../../cpp/private-cpp.md) parole chiave indicano se la classe verrà esposta tramite i metadati dell'assembly. Solo `public` o `private` può essere applicato a una classe in un programma compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Quando vengono applicate a una classe o struttura gestita, le parole chiave [public](../../cpp/public-cpp.md) e [private](../../cpp/private-cpp.md) indicano se la classe verrà esposta tramite i metadati dell'assembly. Solo `public` o `private` può essere applicata a una classe in un programma compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- Il `ref` e `value` parole chiave, se utilizzato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md), indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).  
+ Il `ref` e `value` parole chiave, se utilizzata con [/clr](../../build/reference/clr-common-language-runtime-compilation.md), indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
  L'esempio seguente genera l'errore C3380:  
   

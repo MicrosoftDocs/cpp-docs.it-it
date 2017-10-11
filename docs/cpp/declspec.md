@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
-- __declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,20 +19,6 @@ caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df

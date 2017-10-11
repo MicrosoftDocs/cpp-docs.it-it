@@ -9,32 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- _com_error.Source
 - _com_error::Source
-- source
 dev_langs:
 - C++
 helpviewer_keywords:
-- Source method
+- Source method [C++]
 ms.assetid: 55353741-fabc-4b0c-9787-b5a69bb189f2
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 848d402e83c09ff85537115437c8a190d160f984

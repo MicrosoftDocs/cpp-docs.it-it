@@ -1,29 +1,32 @@
 ---
-title: "Errore del compilatore C2646 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2646"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2646"
+title: Errore del compilatore C2646 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2646
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2646
 ms.assetid: 92ff1f02-5eaf-40a5-8b7a-a682f149e967
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C2646
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 353f65b4d9702ed82ff92eae63fcedaa6adba227
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2646"></a>Errore del compilatore C2646
 nell'ambito globale o dello spazio dei nomi una struct o unione anonima deve essere dichiarata come statica  
   
  Una struct o unione anonima dispone dell'ambito globale o dello spazio dei nomi, ma non è dichiarata come `static`.  

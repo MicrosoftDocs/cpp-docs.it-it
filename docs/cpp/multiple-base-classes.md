@@ -11,29 +11,15 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- base classes, multiple
-- derived classes, multiple bases
+- base classes [C++], multiple
+- derived classes [C++], multiple bases
 - multiple inheritance, class declaration
-- multiple base classes
+- multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 947084ca5bf59494a3574950f5148f5b4d3f0770

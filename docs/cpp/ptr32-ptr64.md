@@ -11,8 +11,6 @@ ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
-- __ptr32
-- __ptr64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,20 +25,6 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: d722f8403efbe1172fefbe8a792c95d4063e893f

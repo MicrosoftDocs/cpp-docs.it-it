@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3818 | Documenti di Microsoft
+title: Errore del compilatore C3818 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 51aadb095d035a18249a344a402f51abc839feba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fb85a6e4835ca064eea5682ccb8af055302d269
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3818"></a>Errore del compilatore C3818
-dichiarazione di proprietà di matrice 'proprietà1' non eseguire l'overload di una proprietà di indice 'property2'  
+dichiarazione di proprietà di matrice 'proprietà1' non eseguire l'overload di una proprietà di indice 'proprietà2'  
   
- Un overload non è possibile per le proprietà quando è un indicizzatore e l'altro è una proprietà di matrice. 
+ Un overload non è possibile per le proprietà quando uno è un indicizzatore e l'altro è una proprietà di matrice. 
   
- C3818 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+ C3818 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
 

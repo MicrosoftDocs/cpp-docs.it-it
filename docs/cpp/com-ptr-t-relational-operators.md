@@ -11,56 +11,36 @@ ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::operator>
 - _com_ptr_t::operator>=
-- _com_ptr_t.operator<=
-- _com_ptr_t.operator!=
 - _com_ptr_t::operator<=
-- _com_ptr_t.operator>
-- _com_ptr_t.operator<
-- _com_ptr_t.operator==
 - _com_ptr_t::operator==
-- _com_ptr_t.operator>=
 - _com_ptr_t::operator!=
 - _com_ptr_t::operator<
 dev_langs:
 - C++
 helpviewer_keywords:
-- '>= operator, comparing specific objects'
+- '>= operator [C++], comparing specific objects'
 - '!= operator'
-- operator >, pointers
-- operator>=, pointers
-- operator <, pointers
-- operator!=, relational operators
-- < operator, comparing specific objects
-- operator==, pointers
-- operator ==, pointers
-- <= operator, with specific objects
-- relational operators, _com_ptr_t class
-- operator >=, pointers
-- operator !=, relational operators
-- operator <=, pointers
-- '> operator, comparing specific objects'
-- operator<=, pointers
-- operator<, pointers
-- == operator, with specific Visual C++ objects
+- operator > [C++], pointers
+- operator>= [C++], pointers
+- operator < [C++], pointers
+- operator!= [C++], relational operators
+- < operator [C++], comparing specific objects
+- operator== [C++], pointers
+- operator == [C++], pointers
+- <= operator [C++], with specific objects
+- relational operators [C++], _com_ptr_t class
+- operator >= [C++], pointers
+- operator != [C++], relational operators
+- operator <= [C++], pointers
+- '> operator [C++], comparing specific objects'
+- operator<= [C++], pointers
+- operator< [C++], pointers
+- == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 25ec5c27afcc6374f4f450a3fc290aad2cf6bfac

@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2073"
+title: Errore del compilatore C2073 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2073
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2073
 ms.assetid: 57908234-be7a-4ce9-b0a7-8b1ad621865e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C2073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 28f44a0a51e5b1ff1c6cb39e8a330c4ac0bd3154
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'identificatore': gli elementi di una matrice parzialmente inizializzata devono avere un costruttore predefinito  
+---
+# <a name="compiler-error-c2073"></a>Errore del compilatore C2073
+'identifier': gli elementi della matrice parzialmente inizializzata devono avere un costruttore predefinito  
   
- È stato specificato un numero insufficiente di inizializzatori per una matrice di costanti o tipi definiti dall'utente.  Se per un membro di matrice non vengono specificati un inizializzatore esplicito e il costruttore corrispondente, sarà necessario fornire un costruttore predefinito.  
+ Numero insufficiente di inizializzatori sono stato specificato per una matrice di tipi definiti dall'utente o costanti. Se un inizializzatore esplicito e il costruttore corrispondente non sono specificati per un membro di matrice, è necessario specificare un costruttore predefinito.  
   
- Il seguente codice di esempio genera l'errore C2073:  
+ L'esempio seguente genera l'errore C2073:  
   
 ```  
 // C2073.cpp  

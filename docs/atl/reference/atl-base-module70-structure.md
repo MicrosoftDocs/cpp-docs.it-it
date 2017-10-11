@@ -1,5 +1,5 @@
 ---
-title: Struttura _ATL_BASE_MODULE70 | Documenti di Microsoft
+title: Struttura _ATL_BASE_MODULE70 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>Struttura _ATL_BASE_MODULE70
-Utilizzato da qualsiasi progetto che utilizza ATL.  
+Usato da qualsiasi progetto che utilizza ATL.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,10 +49,10 @@ struct _ATL_BASE_MODULE70 {
   
 ## <a name="members"></a>Membri  
  `cbSize`  
- La dimensione della struttura, utilizzata per il controllo delle versioni.  
+ Le dimensioni della struttura, utilizzata per il controllo delle versioni.  
   
  `m_hInst`  
- Il **hInstance** per il modulo (exe o dll).  
+ Il **hInstance** per questo modulo (exe o dll).  
   
  `m_hInstResource`  
  Handle di risorsa istanza predefinita.  
@@ -81,16 +67,16 @@ struct _ATL_BASE_MODULE70 {
  GUID interno ATL.  
   
  **m_csResource**  
- Utilizzato per sincronizzare l'accesso per il **m_rgResourceInstance** matrice. Utilizzato internamente da ATL.  
+ Usato per sincronizzare l'accesso per il **m_rgResourceInstance** matrice. Utilizzato internamente da ATL.  
   
  **m_rgResourceInstance**  
- Matrice usata per eseguire la ricerca di risorse in tutte le istanze di risorse di cui è compatibile con ATL. Utilizzato internamente da ATL.  
+ Matrice utilizzata per cercare le risorse in tutte le istanze di risorse di cui è compatibile con ATL. Utilizzato internamente da ATL.  
   
 ## <a name="remarks"></a>Note  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) è definito come typedef di `_ATL_BASE_MODULE70`.  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) è definito come un typedef di `_ATL_BASE_MODULE70`.  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcore. h  
+ **Intestazione:** atlcore  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture](../../atl/reference/atl-structures.md)

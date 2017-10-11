@@ -1,46 +1,49 @@
 ---
-title: "xor_eq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "std.xor_eq"
-  - "xor_eq"
-  - "std::xor_eq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "xor_eq (funzione)"
+title: xor_eq | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- std.xor_eq
+- xor_eq
+- std::xor_eq
+dev_langs:
+- C++
+helpviewer_keywords:
+- xor_eq function
 ms.assetid: eca4b6b4-b77a-4d44-a09a-5a7e69fdb56c
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# xor_eq
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 3111d5aa92b56e659849fd7c7da7be987ca1e99e
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-Alternativa all'operatore ^\=.  
+---
+# <a name="xoreq"></a>xor_eq
+Alternativa all'operatore ^=.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -48,10 +51,10 @@ Alternativa all'operatore ^\=.
   
 ```  
   
-## Note  
- La macro restituisce l'operatore ^\=.  
+## <a name="remarks"></a>Note  
+ La macro restituisce l'operatore ^=.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // iso646_xor_eq.cpp  
@@ -75,7 +78,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## Requisiti  
- **Intestazione:** \<iso646.h\>
+```Output  
+1  
+1  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<iso646.h>

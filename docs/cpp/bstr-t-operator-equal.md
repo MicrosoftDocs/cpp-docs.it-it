@@ -13,28 +13,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator =, bstr
-- operator=, bstr
-- = operator, with specific Visual C++ objects
+- operator = [C++], bstr
+- operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 445c18ece9b998d5cfa75a1c9fe5bde3b60b2e52

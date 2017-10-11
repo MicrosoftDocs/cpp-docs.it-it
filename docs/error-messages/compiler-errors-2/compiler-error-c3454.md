@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 68d0930b7c80dfa997eddb55b01f9d9c313b611e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 026b77ca4f9488c1178a2815ffb0a9c7c71bdf54
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3454"></a>Errore del compilatore C3454
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  Per poter essere un attributo è necessario che una classe sia definita.  
   
- Per ulteriori informazioni, vedere [attributo](../../windows/attribute.md).  
+ Per altre informazioni, vedere [attribute](../../windows/attribute.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3454.  

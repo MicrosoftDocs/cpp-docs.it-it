@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3028"
+title: Errore del compilatore C3028 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56d1ed561b4f414cc85c7b0d7f2c112648ae6281
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'membro': in una clausola di condivisione dati è possibile utilizzare solo un membro dati statici o variabili  
+---
+# <a name="compiler-error-c3028"></a>Errore del compilatore C3028
+'member': solo un membro dati statici o variabili può essere utilizzato in una clausola di condivisione dei dati  
   
- Alla clausola reduction è stato passato un simbolo diverso da un membro dati static o da una variabile.  
+ Un simbolo diverso da un membro dati statici o variabili è stato passato alla clausola reduction.  
   
- Il seguente codice di esempio genera l'errore C3028:  
+ L'esempio seguente genera l'errore C3028:  
   
 ```  
 // C3028.cpp  

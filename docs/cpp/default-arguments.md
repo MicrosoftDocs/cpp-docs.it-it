@@ -14,7 +14,7 @@ helpviewer_keywords:
 - arguments [C++], function
 - function declarators
 - functions [C++], default arguments
-- declaring functions, declarators
+- declaring functions [C++], declarators
 - default arguments
 - arguments [C++], default
 - defaults [C++], arguments
@@ -23,20 +23,6 @@ caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85

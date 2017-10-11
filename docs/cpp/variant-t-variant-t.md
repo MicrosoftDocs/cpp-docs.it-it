@@ -10,31 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _variant_t::_variant_t
-- _variant_t._variant_t
 dev_langs:
 - C++
 helpviewer_keywords:
-- _variant_t class, constructor
-- _variant_t method
+- _variant_t class [C++], constructor
+- _variant_t method [C++]
 ms.assetid: a50e5b33-d4c6-4a26-8e7e-a0a25fd9895b
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 6bd29401970d3beffcac6d29247138aa65d6a338

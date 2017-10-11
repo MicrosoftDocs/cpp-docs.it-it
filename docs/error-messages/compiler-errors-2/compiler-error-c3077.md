@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3077 | Documenti di Microsoft
+title: Errore del compilatore C3077 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: c7647e3700036e360858fd616df330e6db964835
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9b966ac5941887369d8c15b7d9e2cf8f7e70f535
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3077"></a>Errore del compilatore C3077
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  È possibile dichiarare un finalizzatore in un tipo nativo o di valore.  
   
- Per ulteriori informazioni, vedere [distruttori e finalizzatori in Procedura: definire e utilizzare classi e struct (C + c++ /CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Per ulteriori informazioni, vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3077.  

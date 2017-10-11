@@ -10,30 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::CreateInstance
-- _com_ptr_t.CreateInstance
 dev_langs:
 - C++
 helpviewer_keywords:
-- CreateInstance method
+- CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 1c07f7366c76c96580fc989475bd7f5ea23a38fe

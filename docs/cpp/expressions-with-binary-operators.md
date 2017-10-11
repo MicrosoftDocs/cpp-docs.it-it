@@ -12,27 +12,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], binary
-- binary operators
+- binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: cedb72a925b21c6bf121092626bc52214fc9c0f0

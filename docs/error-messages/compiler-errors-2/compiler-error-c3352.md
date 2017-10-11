@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3352 | Documenti di Microsoft
+title: Errore del compilatore C3352 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fb65402b78f777d4a2dcfce2a4366444a259e5d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65643abc883cfd0674dbb908c8ab26f274f65cd4
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3352"></a>Errore del compilatore C3352
-'funzione': la funzione specificata non corrisponde al tipo di delegato 'type'  
+'function': la funzione specificata non corrisponde al tipo di delegato 'type'  
   
  Gli elenchi di parametri per `function` e il delegato non corrispondono.  
   
  Per ulteriori informazioni, vedere [delegato (estensioni del componente C++)](../../windows/delegate-cpp-component-extensions.md).  
   
- Nell'esempio seguente viene generato l'errore C3352:  
+ L'esempio seguente genera l'errore C3352:  
   
 ```  
 // C3352.cpp  

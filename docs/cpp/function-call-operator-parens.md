@@ -14,29 +14,15 @@ helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
 - () function call operator
-- postfix operators
+- postfix operators [C++]
 - function calls, operator
 - functions [C++], function-call operator
-- function call operator ( )
+- function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a

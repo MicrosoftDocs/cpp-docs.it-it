@@ -1,39 +1,42 @@
 ---
-title: "Errore del compilatore C3531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3531"
+title: Errore del compilatore C3531 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C3531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'simbolo': un simbolo il cui tipo contiene 'auto' deve disporre di un inizializzatore  
+---
+# <a name="compiler-error-c3531"></a>Errore del compilatore C3531
+'symbol': un simbolo il cui tipo contiene 'auto' deve avere un inizializzatore  
   
- La variabile specificata non dispone di un'espressione di inizializzazione.  
+ La variabile specificata non dispone di un'espressione dell'inizializzatore.  
   
-### Per correggere l'errore  
+### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Specificare un'espressione di inizializzazione, ad esempio un'assegnazione semplice che utilizza la sintassi del segno di uguale, quando si dichiara la variabile.  
+1.  Specificare un'espressione dell'inizializzatore, ad esempio un'assegnazione semplice che utilizza la sintassi di segno di uguale, quando si dichiara la variabile.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3531 perché le variabili `x1`, `y1, y2, y3`e `z2` non sono state inizializzate.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene generato l'errore C3531 perché le variabili `x1`, `y1, y2, y3`, e `z2` non inizializzate.  
   
 ```  
 // C3531.cpp  
@@ -47,5 +50,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Parola chiave auto](../../cpp/auto-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+ [Auto (parola chiave)](../../cpp/auto-keyword.md)

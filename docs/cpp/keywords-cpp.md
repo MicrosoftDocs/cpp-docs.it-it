@@ -8,52 +8,6 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords:
-- _raise
-- _value
-- _interface
-- _assume
-- _declspec
-- _if_exists
-- cdecl
-- _sealed
-- _box
-- _nogc
-- _ptr64
-- _fastcall
-- _alignof
-- _stdcall
-- _single_inheritance
-- _event
-- _noop
-- _based
-- _cdecl
-- _m64
-- _virtual_inheritance
-- _inline
-- _delegate
-- _int64
-- _multiple_inheritance
-- _m128d
-- _try_cast
-- _asm
-- _int16
-- _hook
-- _int32
-- _property
-- _m128
-- _m128i
-- _int8
-- _identifier
-- _forceinline
-- _gc
-- _unaligned
-- _uuidof
-- _if_not_exists
-- _unhook
-- _pin
-- _super
-- _abstract
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,20 +21,6 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: dd09e3b7ca574203b381edb524037d5f462b5ad1

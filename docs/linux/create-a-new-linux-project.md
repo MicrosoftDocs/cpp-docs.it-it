@@ -12,20 +12,6 @@ ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 86fae508ea7be012e7491420faf10302f4eb11a9
 ms.openlocfilehash: f738ba6f85f7ba5c75fa32251efc9989e151258b

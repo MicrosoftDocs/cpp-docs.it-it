@@ -12,27 +12,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - expressions [C++], unary operators
-- unary operators, expressions with
+- unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: adde5e6fdb20924b633de60eba07390edad57907

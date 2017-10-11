@@ -25,16 +25,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: f09027c947478aa07cbefe13114edde8932c4a2d
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f075d164608bece510c8da2166d2e9f8f7a17d12
 ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="visual-c-help-and-community"></a>Guida e community di Visual C++

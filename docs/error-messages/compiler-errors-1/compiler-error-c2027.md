@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2027 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2027"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2027"
+title: Errore del compilatore C2027 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2027
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2027
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2a2fec9194858127ca08ecc0a891a81a91de48fa
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-utilizzo di tipo non definito 'tipo'  
+---
+# <a name="compiler-error-c2027"></a>Errore del compilatore C2027
+utilizzo di tipo non definito 'type'  
   
- Non è possibile utilizzare un tipo finché non viene definito.  Per correggere l'errore, accertarsi che la definizione del tipo sia completa prima di farvi riferimento.  
+ Un tipo non può essere utilizzato fino a quando non è definito. Per risolvere l'errore, assicurarsi che il tipo è completamente definito prima di farvi riferimento.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2027:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2027.  
   
 ```  
 // C2027.cpp  
@@ -49,10 +52,10 @@ int main() {
 }  
 ```  
   
-## Esempio  
- È possibile dichiarare un puntatore a un tipo dichiarato, purché si tratti di un tipo non definito.  Visual C\+\+ non consente tuttavia riferimenti a tipi non definiti.  
+## <a name="example"></a>Esempio  
+ È possibile dichiarare un puntatore a un tipo dichiarato ma non definito.  Ma Visual C++ non consente un riferimento a un tipo non definito.  
   
- Nell'esempio seguente viene generato l'errore C2027:  
+ L'esempio seguente genera l'errore C2027.  
   
 ```  
 // C2027_b.cpp  

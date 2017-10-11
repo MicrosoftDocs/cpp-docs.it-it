@@ -28,7 +28,7 @@ helpviewer_keywords:
 - or_eq operator
 - '&= operator'
 - operators [C++], assignment
-- assignment operators, C++
+- assignment operators [C++], C++
 - xor_eq operator
 - += operator
 - and_eq operator
@@ -40,7 +40,7 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators
+- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
@@ -49,20 +49,6 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 34ed921ed7eb690372f1635ed845271fa7520a86

@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+title: Errore del compilatore C3918 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bf9cf676cf7435eaf1f0b924fbadcaddef842b4
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'membro' deve essere un membro dati  
+---
+# <a name="compiler-error-c3918"></a>Errore del compilatore C3918
+è necessario 'membro' deve essere un membro dati  
   
- L'errore C3918 può verificarsi per vari motivi associati al tipo di evento.  
+ C3918 può verificarsi per diversi motivi correlati agli eventi.  
   
-## Esempio  
- Può verificarsi perché nel contesto corrente è necessario un membro di una classe.  Nell'esempio seguente viene generato l'errore C3918:  
+## <a name="example"></a>Esempio  
+ C3918 può verificarsi perché un membro di classe è necessaria nel contesto corrente. L'esempio seguente genera l'errore C3918.  
   
 ```  
 // C3918.cpp  
@@ -49,10 +52,10 @@ public:
 };  
 ```  
   
-## Esempio  
- Può inoltre essere generato nel caso in cui si tenti di verificare la presenza del valore null in un evento semplice \(il nome dell'evento non fornirà più l'accesso diretto al delegato dell'evento nell'archivio di backup\).  
+## <a name="example"></a>Esempio  
+ C3918 viene inoltre generato se si tenta di archiviare un evento semplice per i valori null (il nome dell'evento non fornirà più l'accesso diretto al delegato dell'archivio di backup per l'evento).  
   
- Nell'esempio seguente viene generato l'errore C3918:  
+ L'esempio seguente genera l'errore C3918.  
   
 ```  
 // C3918_2.cpp  
@@ -73,8 +76,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## Esempio  
- L'errore C3918 può anche verificarsi se la sottoscrizione a un evento non viene eseguita correttamente.  Nell'esempio seguente viene generato l'errore C3918:  
+## <a name="example"></a>Esempio  
+ C3918 può verificarsi anche se si sottoscrive un evento in modo non corretto. L'esempio seguente genera l'errore C3918.  
   
 ```  
 // C3918_3.cpp  

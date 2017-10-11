@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3203"
+title: Errore del compilatore C3203 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatore C3203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3203"></a>Errore del compilatore C3203
 'type' : impossibile utilizzare il modello di classe o il generico non specializzato come argomento di modello o generico per il parametro di modello o generico 'param'. Previsto un tipo reale  
   
- È stato passato un argomento non valido a un modello di classe o a un generico.  Il modello di classe o il generico prevede un tipo come parametro.  
+ È stato passato un argomento non valido a un modello di classe o a un generico. Il modello di classe o il generico prevede un tipo come parametro.  
   
- Questo errore può essere generato in seguito alle operazioni di conformità del compilatore eseguite per Visual C\+\+ 2005: un modello di classe non specializzato non può essere usato come argomento di modello in un elenco di classi di base.  Per risolvere l'errore C3203, aggiungere in modo esplicito uno o più parametri di tipo modello al nome della classe modello quando la si usa come parametro di modello in un elenco di classi di base.  
+ Questo errore può essere generato in seguito alle operazioni di conformità del compilatore eseguite per Visual C++ 2005: un modello di classe non specializzato non può essere usato come argomento di modello in un elenco di classi di base. Per risolvere l'errore C3203, aggiungere in modo esplicito uno o più parametri di tipo modello al nome della classe modello quando la si usa come parametro di modello in un elenco di classi di base.  
   
 ```  
 // C3203.cpp  

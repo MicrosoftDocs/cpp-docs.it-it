@@ -19,25 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dc8436664038d3f53f3a01d5006c41c3d0e4c8f0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ab7406a9c161d47e431cb0af8183d99eac7bfe86
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4335"></a>Avviso del compilatore C4335

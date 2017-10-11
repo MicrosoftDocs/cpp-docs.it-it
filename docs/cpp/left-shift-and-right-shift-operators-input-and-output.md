@@ -14,32 +14,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- << operator, with specific objects
-- left shift operators
-- right shift operators
-- bitwise-shift operators
+- << operator [C++], with specific objects
+- left shift operators [C++]
+- right shift operators [C++]
+- bitwise-shift operators [C++]
 - '>> operator'
-- shift operators
+- shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d

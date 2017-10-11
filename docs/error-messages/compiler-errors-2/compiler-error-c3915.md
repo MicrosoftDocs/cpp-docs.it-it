@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: Errore del compilatore C3915 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'tipo' non ha una proprietà indicizzata predefinita \(indicizzatore di classe\)  
+---
+# <a name="compiler-error-c3915"></a>Errore del compilatore C3915
+'type' non dispone di alcuna proprietà indicizzata predefinita (indicizzatore di classe)  
   
- Un tipo è privo di una proprietà indicizzata predefinita.  
+ Un tipo non dispone di una proprietà indicizzata predefinita.  
   
- Per ulteriori informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).  
+ Per altre informazioni, vedere [property](../../windows/property-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3915:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3915.  
   
 ```  
 // C3915.cpp  
@@ -54,10 +57,10 @@ int main() {
 }  
 ```  
   
-## Esempio  
- L'errore C3915 può inoltre verificarsi se si tenta di utilizzare un indicizzatore predefinito nello stesso modulo in cui era stato definito con <xref:System.Reflection.DefaultMemberAttribute>.  
+## <a name="example"></a>Esempio  
+ C3915 può verificarsi anche se si tenta di utilizzare un indicizzatore predefinito nello stesso modulo in cui è stato definito con <xref:System.Reflection.DefaultMemberAttribute>.  
   
- Nell'esempio seguente viene generato l'errore C3915:  
+ L'esempio seguente genera l'errore C3915.  
   
 ```  
 // C3915_b.cpp  

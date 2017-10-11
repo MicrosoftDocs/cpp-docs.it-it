@@ -17,25 +17,11 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 85e9d8c04280b6f40081b1362a46bf27b62bcc28
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: f86bd3feacbabdd11d6c8ec04b4aec96ec2f5e1a
 ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="c-sequence-points"></a>Punti di sequenza C
@@ -64,4 +50,4 @@ Il valore di un oggetto può essere modificato una sola volta da un'espressione 
 -   L'espressione in un'istruzione `return`. L'espressione viene valutata completamente e tutti gli effetti collaterali vengono completati prima che il controllo torni alla funzione chiamante.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Valutazione di un'espressione](../c-language/expression-evaluation-c.md)
+ [Valutazione dell'espressione](../c-language/expression-evaluation-c.md)

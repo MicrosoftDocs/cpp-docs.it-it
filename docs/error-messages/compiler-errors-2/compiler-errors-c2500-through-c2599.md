@@ -65,25 +65,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 errori del compilatore a C2599
@@ -145,11 +131,11 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2546 errore del compilatore|'*identificatore*': quando un tipo viene definito in un assembly di interoperabilità primario sia un assembly di interoperabilità primario è necessario fare riferimento innanzitutto no-PIA|  
 |C2547 errore del compilatore|'*identificatore*': tutti i parametri di un metodo pubblicato devono essere denominati in modo esplicito nella dichiarazione|  
 |[Errore del compilatore C2548](compiler-error-C2548.md)|'*funzione*': valore predefinito mancante per il parametro *parametro*|  
-|[Errore del compilatore C2549](compiler-error-C2549.md)|una conversione definita dall'utente non può specificare un tipo restituito|  
+|[Errore del compilatore C2549](compiler-error-C2549.md)|conversione definita dall'utente non è possibile specificare un tipo restituito|  
 |[Errore del compilatore C2550](compiler-error-C2550.md)|'*identificatore*': gli elenchi di inizializzatori di costruttore sono consentiti solo nella definizione del costruttore|  
 |[Errore del compilatore C2551](compiler-error-C2551.md)|il tipo 'void *' richiede un cast esplicito|  
 |[Errore del compilatore C2552](compiler-error-C2552.md)|'*identificatore*': non aggregati non possono essere inizializzati con un elenco di inizializzatori|  
-|[Errore del compilatore C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*funzione*': è diverso dal tipo restituito di funzione virtual in override '*tipo* *base_class*::*funzione*'|  
+|[Errore del compilatore C2553](compiler-error-C2553.md)|'*tipo* *derived_class*::*funzione*': tipo restituito della funzione virtual in override differisce da '*tipo* *base_ classe*::*funzione*'|  
 |[Errore del compilatore C2555](compiler-error-C2555.md)|'*derived_class*::*funzione*': funzione virtual in override restituito di tipo covariante e differisce non da '*base_class*::*funzione*'|  
 |[Errore del compilatore C2556](compiler-error-C2556.md)|'*type1* *classe*::*funzione*': funzione in overload differisce solo per il tipo restituito da '*type2* *classe*::*funzione*'|  
 |[Errore del compilatore C2557](compiler-error-C2557.md)|'*identificatore*': Impossibile inizializzare i membri privati e protetti senza un costruttore|  
@@ -158,7 +144,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2560 errore del compilatore|'*identificatore*': Impossibile eseguire l'overload di una funzione membro con qualificatore di riferimento con una funzione membro senza qualificatore di riferimento|  
 |[Errore del compilatore C2561](compiler-error-C2561.md)|'*funzione*': funzione deve restituire un valore|  
 |[Errore del compilatore C2562](compiler-error-C2562.md)|'*funzione*': funzione 'void' restituisce un valore|  
-|[Errore del compilatore C2563](compiler-error-C2563.md)|errore di corrispondenza nell'elenco di parametri formali|  
+|[Errore del compilatore C2563](compiler-error-C2563.md)|mancata corrispondenza nell'elenco di parametri formali|  
 |Errore del compilatore C2564|Obsoleta.|  
 |C2565 errore del compilatore|'*identificatore*': qualificatore di riferimento non è valido per costruttori e distruttori|  
 |[Errore del compilatore C2566](compiler-error-C2566.md)|funzione in overload in espressione condizionale|  
@@ -181,7 +167,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2583](compiler-error-C2583.md)|'*identificatore*': ' const/volatile' puntatore 'this' non è valido per costruttori e distruttori|  
 |[Errore del compilatore C2584](compiler-error-C2584.md)|'*classe*': classe base diretta '*base_class2*' non è accessibile; già base di '*base_class1*'|  
 |[Errore del compilatore C2585](compiler-error-C2585.md)|la conversione esplicita a '*tipo*' è ambiguo|  
-|[Errore del compilatore C2586](compiler-error-C2586.md)|sintassi di conversione definita dall'utente errata: riferimenti indiretti non validi|  
+|[Errore del compilatore C2586](compiler-error-C2586.md)|sintassi di conversione definito dall'utente errata: riferimenti indiretti non validi|  
 |[Errore del compilatore C2587](compiler-error-C2587.md)|'*identificatore*': Impossibile utilizzare una variabile locale come parametro predefinito|  
 |[Errore del compilatore C2588](compiler-error-C2588.md)|':: ~*identificatore*': distruttore/finalizzatore globale non valido|  
 |[Errore del compilatore C2589](compiler-error-C2589.md)|'*identificatore*': token non valido a destra di ':: '|  
@@ -193,5 +179,5 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2595 errore del compilatore|'*identificatore*' WinRT di un tipo di attributo deve essere sealed|  
 |C2596 errore del compilatore|'*identificatore*' un campo attributo WinRT può essere solo un 'public enum class', 'int', 'unsigned int', 'bool', 'Platform:: Type', 'Platform:: String' o 'Windows:: Foundation:: HResult'|  
 |[Errore del compilatore C2597](compiler-error-C2597.md)|riferimento non valido al membro non statico '*identificatore*'|  
-|[Errore del compilatore C2598](compiler-error-C2598.md)|le specifiche di collegamento devono risiedere in ambito globale|  
+|[Errore del compilatore C2598](compiler-error-C2598.md)|Specifica di collegamento deve essere in ambito globale|  
 |[Errore del compilatore C2599](compiler-error-C2599.md)|'*identificatore*': la dichiarazione con prototipo di un'enumerazione gestita o WinRT non è consentita.|  

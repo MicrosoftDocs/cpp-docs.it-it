@@ -113,25 +113,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 errori del compilatore tramite C3399
@@ -155,7 +141,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C3308 errore del compilatore|' *funzione*': indirizzare chiamata tramite la classe importata non è supportata|  
 |[Errore del compilatore C3309](compiler-error-c3309.md)|'*macro*/*parola chiave*': nome del modulo non può essere una macro o una parola chiave|  
 |C3310 errore del compilatore|'*identificatore*': conflitto di nomi di modulo|  
-|C3311 errore del compilatore|un attributo module deve essere definito in ambito globale|  
+|C3311 errore del compilatore|attributo module deve essere definito in ambito globale|  
 |C3312 errore del compilatore|non richiamabile '*identificatore*'funzione trovato per il tipo'*tipo*'|  
 |C3313 errore del compilatore|'*identificatore*': variabile non può avere il tipo '*tipo*'|  
 |C3314 errore del compilatore|'*simbolo*': tipo non supportato IDL modulo|  
@@ -180,10 +166,10 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3333](compiler-error-c3333.md)|'*libreria*': Impossibile #import libreria dei tipi danneggiata|  
 |[Errore del compilatore C3334](compiler-error-c3334.md)|impossibile eseguire #import su una libreria dei tipi danneggiata|  
 |C3335 errore del compilatore|'*identificatore*': può esistere al massimo una sola interfaccia predefinita per di una coclasse*classe*'|  
-|C3336 errore del compilatore|Questa operazione deve essere eseguita in ambito classe|  
+|C3336 errore del compilatore|Questa operazione deve essere eseguita nell'ambito di classe|  
 |C3337 errore del compilatore|'*identificatore*': defaultvtable deve essere un'origine evento per di una coclasse*classe*'|  
 |C3338 errore del compilatore|'*identificatore*': può esistere al massimo una sola interfaccia predefinita che è anche un'origine evento per di una coclasse*classe*'|  
-|C3339 errore del compilatore|con il parametro template del modello è necessario specificare 'class' o 'typename' dopo l'elenco dei parametri|  
+|C3339 errore del compilatore|il parametro di modello richiede 'class' o 'typename' dopo l'elenco di parametri|  
 |[Errore del compilatore C3340](compiler-error-c3340.md)|'*identificatore*': interfaccia non può essere sia 'restricted' che 'default' nella coclasse*classe*'|  
 |C3341 errore del compilatore|'*interfaccia*': un'interfaccia defaultvtable deve essere 'dual' o 'custom'|  
 |[Errore del compilatore C3342](compiler-error-c3342.md)|'*identificatore*': attributo ambiguo|  
@@ -221,7 +207,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3374](compiler-error-c3374.md)|Impossibile accettare l'indirizzo di ' *funzione*' Se non si crea l'istanza del delegato|  
 |[Errore del compilatore C3375](compiler-error-c3375.md)|'*funzione*': funzione di delegato ambigua|  
 |Errore C3376 errore del compilatore|'*modello*': sono consentiti solo i modelli di membro dati statici|  
-|C3377 errore del compilatore|'decltype(auto)' non è consentito in un elemento new-expression|  
+|C3377 errore del compilatore|'decltype (Auto)' non è consentita in un'espressione new|  
 |Errore C3378 errore del compilatore|una dichiarazione può essere esportata solo da un'unità di interfaccia del modulo|  
 |[Errore del compilatore C3379](compiler-error-c3379.md)|'*classe*': una classe annidata non può avere un identificatore di accesso assembly come parte della relativa dichiarazione|  
 |[Errore del compilatore C3380](compiler-error-c3380.md)|'*identificatore*': identificatore di accesso assembly non valido solo 'public' o 'private' sono consentite.|  
@@ -240,7 +226,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3393](compiler-error-c3393.md)|Errore di sintassi nella clausola constraint: '*identificatore*' non è un tipo|  
 |[Errore del compilatore C3394](compiler-error-c3394.md)|Errore di sintassi nella clausola constraint: trovato '*simbolo*' previsto un tipo|  
 |[Errore del compilatore C3395](compiler-error-c3395.md)|' *funzione*': dllexport non può essere applicato a una funzione con la clrcall convenzione di chiamata|  
-|[Errore del compilatore C3396](compiler-error-c3396.md)|'*class*. *membro*': attributo personalizzato non trovato in '*dello spazio dei nomi*'|  
+|[Errore del compilatore C3396](compiler-error-c3396.md)|'*classe*. *membro*': attributo personalizzato non trovato in '*dello spazio dei nomi*'|  
 |[Errore del compilatore C3397](compiler-error-c3397.md)|Inizializzazione aggregata non consentita in argomenti predefiniti|  
 |[Errore del compilatore C3398](compiler-error-c3398.md)|'*operatore*': Impossibile convertire da '*tipo*'a'*tipo*'. L'espressione di origine deve essere un simbolo funzione|  
 |[Errore del compilatore C3399](compiler-error-c3399.md)|'*tipo*': Impossibile specificare argomenti durante la creazione di un'istanza di un parametro generico|  

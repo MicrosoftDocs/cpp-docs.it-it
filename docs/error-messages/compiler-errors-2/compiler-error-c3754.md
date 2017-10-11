@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3754 | Documenti di Microsoft
+title: Errore del compilatore C3754 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2a72db01b88f062f2b8866109cab6375930121ef
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 01fe6b5568da2e55d5ade4eca22a84ea4a0041e7
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3754"></a>Errore del compilatore C3754
-costruttore di delegato: Impossibile chiamare la funzione membro 'funzione' in un'istanza di tipo 'type'  
+costruttore di delegato: Impossibile chiamare la funzione membro 'function' in un'istanza di tipo 'type'  
   
- È stata effettuata una chiamata a una funzione tramite un puntatore a un tipo che non contiene la funzione.  
+ È stata eseguita una chiamata a una funzione tramite un puntatore a un tipo che non contiene la funzione.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3754:  
+ L'esempio seguente genera l'errore C3754:  
   
 ```  
 // C3754a.cpp  

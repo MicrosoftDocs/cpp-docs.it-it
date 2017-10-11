@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2757 | Documenti di Microsoft
+title: Errore del compilatore C2757 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 993b67c619cd56e4245b0195e1f8446577b7ecc8
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e10d357679fc7a0d1a5e183bdc1eb95a7a597c00
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2757"></a>Errore del compilatore C2757
-'simbolo': un simbolo con questo nome esiste già e pertanto questo nome non può essere utilizzato come nome dello spazio dei nomi  
+'symbol': un simbolo con questo nome esiste già e pertanto questo nome non può essere utilizzato come nome dello spazio dei nomi  
   
- Un simbolo utilizzato nella compilazione corrente come un identificatore dello spazio dei nomi è già in uso in un assembly di riferimento.  
+ Un simbolo usato nella compilazione corrente come un identificatore dello spazio dei nomi è già in uso in un assembly di riferimento.  
   
- Nell'esempio seguente viene generato l'errore C2757:  
+ L'esempio seguente genera l'errore C2757:  
   
 ```  
 // C2757a.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C2593 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2593"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2593"
+title: Errore del compilatore C2593 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2593
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2593
 ms.assetid: 4a0fe9bb-2163-447d-91f6-1890ed8250f6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2593
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cb0b752259503f7e14cd78298e487f5304e13a0d
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'operator identificatore' ambiguo  
+---
+# <a name="compiler-error-c2593"></a>Errore del compilatore C2593
+'operatore identifier' è ambiguo  
   
- Sono stati definiti più operatori possibili per un operatore di overload.  
+ Esistono più possibili è definito per un operatore di overload.  
   
- È possibile correggere l'errore utilizzando un cast esplicito su uno o più parametri effettivi.  
+ Questo errore può essere fissato se si utilizza un cast esplicito in uno o più parametri effettivi.  
   
- Il seguente codice di esempio genera l'errore C2593:  
+ L'esempio seguente genera l'errore C2593:  
   
 ```  
 // C2593.cpp  
@@ -48,9 +51,9 @@ int main() {
 }  
 ```  
   
- Questo errore può essere causato dalla serializzazione di una variabile a virgola mobile tramite un oggetto `CArchive`.  L'operatore `<<` viene identificato come ambiguo.  I soli tipi C\+\+ primitivi che `CArchive` può serializzare sono i tipi a dimensione fissa `BYTE`, `WORD`, `DWORD` e `LONG`.  Per la serializzazione di ogni tipo integer, è necessario eseguirne il cast su uno di questi tipi.  I tipi a virgola mobile devono essere archiviati utilizzando la funzione membro `CArchive::Write()`.  
+ Questo errore può essere causato dalla serializzazione di una variabile a virgola mobile utilizzando una `CArchive` oggetto. Il compilatore identifica il `<<` operatore venga contrassegnata come ambigua. I soli tipi C++ primitivi che `CArchive` può serializzare i tipi di dimensioni fisse `BYTE`, `WORD`, `DWORD`, e `LONG`. Tutti i tipi integer devono essere impostati su uno di questi tipi per la serializzazione. Tipi a virgola mobile devono essere archiviati utilizzando il `CArchive::Write()` funzione membro.  
   
- Nell'esempio seguente viene illustrato come archiviare una variabile a virgola mobile \(`f`\) nell'archivio `ar`:  
+ Nell'esempio seguente viene illustrato come archiviare una variabile a virgola mobile (`f`) archivio `ar`:  
   
 ```  
 ar.Write(&f, sizeof( float ));  

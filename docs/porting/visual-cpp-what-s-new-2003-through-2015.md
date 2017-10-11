@@ -16,11 +16,6 @@ caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
 ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b

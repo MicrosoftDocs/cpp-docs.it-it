@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3836 | Documenti di Microsoft
+title: Errore del compilatore C3836 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0708b8c9bf59e1c2ea3751fbb91192d6b873d8ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43f7972efc5e8b930811817f5cef9c415a60cb5d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3836"></a>Errore del compilatore C3836
-costruttore statico non è consentito disporre di un elenco di inizializzatori di membro  
+costruttore statico non è possibile avere un elenco di inizializzatori di membro  
   
- Una classe gestita non può avere un costruttore statico che include anche un elenco di inizializzazione di membri. Costruttori di classe statici vengono chiamati da common language runtime per l'inizializzazione, inizializzazione dei membri dati statici delle classi.  
+ Una classe gestita non può avere un costruttore statico che dispone anche di un elenco di inizializzazione del membro. Costruttori di classe statici vengono chiamati da common language runtime per l'inizializzazione, l'inizializzazione dei membri dati statici delle classi.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3836:  
+ L'esempio seguente genera l'errore C3836:  
   
 ```  
 // C3836a.cpp  

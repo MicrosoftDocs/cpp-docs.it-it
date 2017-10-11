@@ -1,32 +1,35 @@
 ---
-title: "Compiler Error C2921 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2921"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2921"
+title: Errore del compilatore C2921 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2921
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2921
 ms.assetid: 323642a0-bfc4-4942-9f41-c3adf5c54296
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Compiler Error C2921
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e67921dab2b76f752bdf77184c16be2549bd3127
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2921"></a>Errore del compilatore C2921
 ridefinizione: 'class': modello di classe o generico in corso di nuova dichiarazione come 'type'  
   
- Un generico o un modello di classe dispone di più dichiarazioni che non sono equivalenti.  Per correggere l'errore, usare un nome diverso per ogni tipo o rimuovere la ridefinizione del nome del tipo.  
+ Un generico o un modello di classe dispone di più dichiarazioni che non sono equivalenti. Per correggere l'errore, usare un nome diverso per ogni tipo o rimuovere la ridefinizione del nome del tipo.  
   
  L'esempio seguente genera l'errore C2921:  
   

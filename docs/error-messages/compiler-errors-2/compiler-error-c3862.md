@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3862 | Documenti di Microsoft
+title: Errore del compilatore C3862 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 48dbae62c367616a437db0607d84fa89e8006021
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af959252ce5b404d8646ad61e02c5e480b41ed83
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3862"></a>Errore del compilatore C3862
-'funzione': non è possibile compilare una funzione non gestita con /clr: pure o /CLR: safe  
+'function': non è possibile compilare una funzione non gestita con /clr: pure o /CLR: safe  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
- Una compilazione con **/clr: pure** o **/CLR: safe** genererà solo un'immagine MSIL, un'immagine senza codice nativo (non gestito).  Pertanto, è possibile utilizzare il `unmanaged` pragma in una **/clr: pure** o **/CLR: safe** compilazione.  
+ Una compilazione con **/clr: pure** o **/CLR: safe** produrrà solo un'immagine MSIL, un'immagine senza codice nativo (non gestito).  Pertanto, è possibile utilizzare il `unmanaged` pragma in un **/clr: pure** o **/CLR: safe** compilazione.  
   
  Per ulteriori informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [managed, unmanaged](../../preprocessor/managed-unmanaged.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3862:  
+ L'esempio seguente genera l'errore C3862:  
   
 ```  
 // C3862.cpp  

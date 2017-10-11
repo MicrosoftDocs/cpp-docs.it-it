@@ -1,29 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4015 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4015"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4015"
+title: Compilatore (livello 1) Avviso C4015 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4015
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4015
 ms.assetid: 7242ab90-c869-482f-8152-46728575837e
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Avviso del compilatore (livello 1) C4015
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0a13084b55a780af59950e0f38d6400796f1ab6
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'identificatore': il tipo del campo di bit deve essere integrale  
+---
+# <a name="compiler-warning-level-1-c4015"></a>Compilatore (livello 1) Avviso C4015
+'identifier': tipo di campo di bit deve essere integrale  
   
- Il campo di bit non è dichiarato come tipo intero.  Il compilatore considera senza segno il tipo di base del campo di bit.  I campi di bit devono essere dichiarati tipi interi senza segno.
+ Il campo di bit non è dichiarato come tipo integer. Il compilatore presuppone che il tipo di base del campo di bit senza segno. I campi di bit devono essere dichiarati come tipo integer senza segno.

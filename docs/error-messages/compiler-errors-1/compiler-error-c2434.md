@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2434 | Documenti di Microsoft
+title: Errore del compilatore C2434 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,36 +19,22 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 65aac590a3282f2fd71c460d14927f5695fcdc5a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 954ef1f8db47c5cd9c420e8099cc3060ebb8a32b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2434"></a>Errore del compilatore C2434
-'simbolo': Impossibile inizializzare in modo dinamico un simbolo dichiarato con declspec (Process) in /clr: pure modalità  
+'symbol': un simbolo dichiarato con declspec (Process) può essere inizializzato in modo dinamico in /clr: pure modalità  
   
- Il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015.  
+ Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
  Non è possibile inizializzare dinamicamente una variabile per ogni processo in **/clr: pure**. Per ulteriori informazioni, vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) e [processo](../../cpp/process.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2434.  
+ L'esempio seguente genera l'errore C2434.  
   
 ```  
 // C2434.cpp  

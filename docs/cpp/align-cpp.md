@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- align
 - align_cpp
 dev_langs:
 - C++
@@ -21,20 +20,6 @@ caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: a805d53a043a4b502cae4490ae01e2ff47a7cdb1
@@ -268,3 +253,4 @@ struct S {
  [declspec](../cpp/declspec.md)   
  [Panoramica delle convenzioni ABI ARM](../build/overview-of-arm-abi-conventions.md)   
  [Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)
+

@@ -22,25 +22,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a88b87f8f370f0429d01eae604e3a0ab9481107e
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 3220b96f66465af8348fc50f0c702423439d34bb
 ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="internationalization"></a>Internazionalizzazione

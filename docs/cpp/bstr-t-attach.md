@@ -13,26 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Attach method
+- Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 0541fadf224fd3f13377111d1bb1b7f5aca2f995

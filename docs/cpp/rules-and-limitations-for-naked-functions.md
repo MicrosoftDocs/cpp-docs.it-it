@@ -11,26 +11,12 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- naked functions
+- naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: a02eb245ffae169f75f5d8edb261d0af9618856d

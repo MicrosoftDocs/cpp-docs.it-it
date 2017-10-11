@@ -12,34 +12,20 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - run-time errors, treating as exceptions
-- exception handling, errors as exceptions
-- exceptions, flagging errors as exceptions
+- exception handling [C++], errors as exceptions
+- exceptions [C++], flagging errors as exceptions
 - errors [C++], treating as exceptions
-- exception handling, detecting errors
-- structured exception handling, errors as exceptions
-- exceptions, software
+- exception handling [C++], detecting errors
+- structured exception handling [C++], errors as exceptions
+- exceptions [C++], software
 - RaiseException function
-- software exceptions
+- software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 333db5bf60d8b542a69efb3dba9d39c624e8b605

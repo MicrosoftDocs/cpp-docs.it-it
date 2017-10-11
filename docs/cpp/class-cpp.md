@@ -10,31 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - class_cpp
-- class
 dev_langs:
 - C++
 helpviewer_keywords:
-- class types, class statements
+- class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 7cdd7b7cefcd9f3826cfe426008bdf1eefde82f6

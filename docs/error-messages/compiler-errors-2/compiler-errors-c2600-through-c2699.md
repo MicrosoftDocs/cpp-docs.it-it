@@ -67,26 +67,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Errori del compilatore da C2600 a C2699
@@ -144,7 +129,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2642 errore del compilatore|Obsoleta.|  
 |C2643 errore del compilatore|Obsoleta.|  
 |C2644 errore del compilatore|Obsoleta.|  
-|[Errore del compilatore C2645](compiler-error-c2645.md)|nessun nome completo per un puntatore a membro. Trovato ':: *'|  
+|[Errore del compilatore C2645](compiler-error-c2645.md)|Nessun nome completo per un puntatore a membro (trovato ':: *')|  
 |[Errore del compilatore C2646](compiler-error-c2646.md)|una struct/union anonima globale o l'ambito dello spazio dei nomi devono essere dichiarata come statico|  
 |[Errore del compilatore C2647](compiler-error-c2647.md)|'*operatore*': impossibile dereferenziare un '*type1*' in un '*type2*'|  
 |[Errore del compilatore C2648](compiler-error-c2648.md)|'*identificatore*': i membri utilizzati come parametri predefiniti devono essere membri statici|  
@@ -168,12 +153,12 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2666](compiler-error-c2666.md)|'*funzione*': *numero* overload presentano conversioni simili|  
 |[Errore del compilatore C2667](compiler-error-c2667.md)|'*funzione*': nessuno dei *numero* overload presentano una conversione ottimale|  
 |[Errore del compilatore C2668](compiler-error-c2668.md)|'*funzione*': chiamata ambigua a funzione in overload|  
-|[Errore del compilatore C2669](compiler-error-c2669.md)|funzione membro non consentita in un'unione anonima|  
+|[Errore del compilatore C2669](compiler-error-c2669.md)|funzione membro non consentite nelle unioni anonime|  
 |[Errore del compilatore C2670](compiler-error-c2670.md)|'*funzione*': il modello di funzione non è possibile convertire il parametro *numero* dal tipo '*tipo*'|  
 |[Errore del compilatore C2671](compiler-error-c2671.md)|'*funzione*': le funzioni membro statiche non hanno puntatori 'this'|  
 |C2672 errore del compilatore|'*funzione*': non corrisponde ad alcuna funzione in overload trovata|  
 |[Errore del compilatore C2673](compiler-error-c2673.md)|'*funzione*': le funzioni globali non hanno puntatori 'this'|  
-|[Errore del compilatore C2674](compiler-error-c2674.md)|dichiarazione generica non consentita in questo contesto|  
+|[Errore del compilatore C2674](compiler-error-c2674.md)|una dichiarazione generica non è consentita in questo contesto|  
 |[Errore del compilatore C2675](compiler-error-c2675.md)|unario '*operatore*': '*tipo*' non definisce questo operatore né una conversione in un tipo accettabile dall'operatore predefinito|  
 |[Errore del compilatore C2676](compiler-error-c2676.md)|binario '*operatore*': '*tipo*' non definisce questo operatore né una conversione in un tipo accettabile dall'operatore predefinito|  
 |[Errore del compilatore C2677](compiler-error-c2677.md)|binario '*operatore*': è stato trovato alcun operatore globale che accetta il tipo '*tipo*' (o nessuna conversione accettabile)|  
@@ -185,7 +170,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2683](compiler-error-c2683.md)|'*cast*': '*tipo*' non è un tipo polimorfico|  
 |C2684 errore del compilatore|'*dichiaratore*': le funzioni eliminate o impostate come predefinite non sono supportate nelle classi gestite o WinRT|  
 |C2685 errore del compilatore|'*dichiaratore*': le funzioni eliminate o impostate come predefinite non sono supportate con identificatori di restrizioni espliciti|  
-|C2686 errore del compilatore|impossibile eseguire l'overload di funzioni membro statiche e non statiche con gli stessi tipi di parametri|  
+|C2686 errore del compilatore|Impossibile eseguire l'overload di funzioni membro statiche e non statiche con gli stessi tipi di parametro|  
 |[Errore del compilatore C2687](compiler-error-c2687.md)|'*tipo*': dichiarazione di eccezione non può essere 'void' o indicare un tipo incompleto o un puntatore o un riferimento a un tipo incompleto|  
 |[Errore del compilatore C2688](compiler-error-c2688.md)|'*tipo*::*membro*': tipo restituito da covariante con più o ereditarietà virtuale non è supportato per le funzioni varargs|  
 |[Errore del compilatore C2689](compiler-error-c2689.md)|'*funzione*': una funzione friend non può essere definita all'interno di una classe locale|  

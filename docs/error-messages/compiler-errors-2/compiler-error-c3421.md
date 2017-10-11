@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3421 | Documenti di Microsoft
+title: Errore del compilatore C3421 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 8f7a25ee2cb8b36c8e56edf4edb2bf152d6bfd9e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c70d062f90410f6af170af45e8213c65777d3977
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3421"></a>Errore del compilatore C3421
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  Un finalizzatore è implicitamente privato, quindi non può essere chiamato dall'esterno del tipo che lo contiene.  
   
- Per ulteriori informazioni, vedere [distruttori e finalizzatori in Procedura: definire e utilizzare classi e struct (C + c++ /CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Per ulteriori informazioni, vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3421.  

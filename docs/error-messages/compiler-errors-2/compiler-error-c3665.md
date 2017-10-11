@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C3665 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3665"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3665"
+title: Errore del compilatore C3665 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Errore del compilatore C3665
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cf969622909c45a12b4f01c10782ed6a571def05
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'distruttore': indicatore di override 'parola chiave' non consentito con un distruttore\/finalizzatore  
+---
+# <a name="compiler-error-c3665"></a>Errore del compilatore C3665
+'distruttore': identificatore 'keyword' non consentito in un distruttore/finalizzatore di override  
   
- È stata utilizzata una parola chiave non consentita con un distruttore o un finalizzatore.  
+ È stata utilizzata una parola chiave che non è consentito in un distruttore o un finalizzatore.  
   
- In un distruttore o in un finalizzatore, ad esempio, non può essere richiesto un nuovo slot.  Per ulteriori informazioni, vedere [Override esplicito](../../windows/explicit-overrides-cpp-component-extensions.md) e [Distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Ad esempio, un nuovo slot non può essere richiesto in un distruttore o un finalizzatore.  Per ulteriori informazioni, vedere [override espliciti](../../windows/explicit-overrides-cpp-component-extensions.md) e [distruttori e finalizzatori](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
- Il seguente codice di esempio genera l'errore C3665:  
+ L'esempio seguente genera l'errore C3665:  
   
 ```  
 // C3665.cpp  

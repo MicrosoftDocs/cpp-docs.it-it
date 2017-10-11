@@ -1,38 +1,41 @@
 ---
-title: "Errore del compilatore C2500 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2500"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2500"
+title: Errore del compilatore C2500 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2500
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C2500
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2b869ca0ba959e9b774a005298ef4456d0995156
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'identificatore1': 'identificatore2' è già una classe base diretta  
+---
+# <a name="compiler-error-c2500"></a>Errore del compilatore C2500
+'identifier1': 'identifier2' è già una classe base diretta  
   
- Una classe o una struttura compare più volte in un elenco di classi base.  
+ Una classe o struttura viene visualizzato più volte in un elenco delle classi base.  
   
- Una classe base diretta è presente nell'elenco di classi base.  Una classe base indiretta è una classe base di una delle classi dell'elenco di classi base.  
+ Una classe base diretta è presente nell'elenco di base. Base indiretta è una classe di base di una delle classi nell'elenco di base.  
   
- Una classe non può essere specificata più volte come classe base diretta,  mentre può essere utilizzata più volte come classe base indiretta.  
+ Una classe non può essere specificata più volte come una classe base diretta. Una classe può essere utilizzata come classe base indiretta più volte.  
   
- Il seguente codice di esempio genera l'errore C2500:  
+ L'esempio seguente genera l'errore C2500:  
   
 ```  
 // C2500.cpp  

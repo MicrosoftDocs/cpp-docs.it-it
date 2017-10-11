@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 09c62f455bc666296222a2079ef6b0b97c507d85
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc07da3d6fa994bfba9588b1169287da8c0d738b
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3247"></a>Errore del compilatore C3247
 'class1': una coclasse non può ereditare da un'altra coclasse 'class2'  
   
- Una classe contrassegnata con il [coclasse](../../windows/coclass.md) attributo non può ereditare da un'altra classe contrassegnata con il `coclass` attributo.  
+ Una classe contrassegnata con l'attributo [coclass](../../windows/coclass.md) non può derivare da un'altra classe contrassegnata con l'attributo `coclass` .  
   
  L'esempio seguente genera l'errore C3247:  
   

@@ -19,25 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b70ebf347e2d5b6af8938e348a5e789412241256
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2435"></a>Errore del compilatore C2435
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/01/2017
   
  Inizializzazione di variabili globali per dominio di applicazione richiede la libreria CRT compilata con `/clr:pure`, che non genera un'immagine verificabile.  
   
- Per ulteriori informazioni, vedere [appdomain](../../cpp/appdomain.md) e [processo](../../cpp/process.md).  
+ Per altre informazioni, vedere [appdomain](../../cpp/appdomain.md) e [process](../../cpp/process.md).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C2435:  

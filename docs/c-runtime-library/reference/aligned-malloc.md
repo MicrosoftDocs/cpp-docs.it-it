@@ -1,49 +1,52 @@
 ---
-title: "_aligned_malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_malloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_malloc"
-  - "alligned_malloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_malloc (funzione)"
-  - "aligned_malloc (funzione)"
+title: _aligned_malloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_malloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_malloc
+- alligned_malloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_malloc function
+- _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _aligned_malloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="alignedmalloc"></a>_aligned_malloc
 Alloca la memoria in un limite di allineamento specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void * _aligned_malloc(  
@@ -52,30 +55,30 @@ void * _aligned_malloc(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `size`  
  Dimensione dell'allocazione della memoria necessaria.  
   
  `alignment`  
  Valore di allineamento, che deve essere un esponente intero di 2.  
   
-## Valore restituito  
- Puntatore al blocco di memoria allocato o `NULL` se l'operazione non è riuscita.  Il puntatore è un multiplo di `alignment`.  
+## <a name="return-value"></a>Valore restituito  
+ Puntatore al blocco di memoria allocato o `NULL` se l'operazione non è riuscita. Il puntatore è un multiplo di `alignment`.  
   
-## Note  
+## <a name="remarks"></a>Note  
  `_aligned_malloc` è basato su [malloc](../../c-runtime-library/reference/malloc.md).  
   
- `_aligned_malloc` è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)`, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias.  Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
+ `_aligned_malloc` è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)`, pertanto la funzione non modifica le variabili globali e il puntatore restituito non viene associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   
- La funzione imposta `errno` su `ENOMEM` se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`.  Per altre informazioni su `errno`, vedere [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  `_aligned_malloc`, inoltre, convalida i propri parametri.  Se `alignment` non è una potenza di 2 o `size` è uguale a 0, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce `NULL` e imposta `errno` su `EINVAL`.  
+ La funzione imposta `errno` su `ENOMEM` se l'allocazione di memoria non riesce o se la dimensione richiesta è maggiore di `_HEAP_MAXREQ`. Per altre informazioni su `errno`, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). `_aligned_malloc`, inoltre, convalida i propri parametri. Se `alignment` non è una potenza di 2 o `size` è uguale a 0, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce `NULL` e imposta `errno` su `EINVAL`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_aligned_malloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_malloc`|\<malloc.h>|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_aligned_malloc.c  
@@ -150,9 +153,12 @@ int main() {
 }  
 ```  
   
-  **This pointer, 3280880, is aligned on 16**  
-**This pointer, 3280880, is aligned on 16**  
-**This pointer, 3280891, is offset by 5 on alignment of 16**  
-**This pointer, 3280891, is offset by 5 on alignment of 16**   
-## Vedere anche  
+```Output  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Allineamento dati](../../c-runtime-library/data-alignment.md)

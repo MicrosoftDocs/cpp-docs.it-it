@@ -25,11 +25,6 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
 ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76

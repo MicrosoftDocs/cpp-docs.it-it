@@ -14,6 +14,11 @@ f1_keywords:
 ms.assetid: 57d6f15f-f0b7-4e2f-80fe-31d3c320ee33
 caps.latest.revision: 11
 manager: ghogen
+helpviewer_keywords:
+- std::generic_category
+- std::make_error_code
+- std::make_error_condition
+- std::system_category
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
 ms.openlocfilehash: bcc9ee1b015699ab0c44bb362bcf82bc0597eb22

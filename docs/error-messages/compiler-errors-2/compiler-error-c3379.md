@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3379 | Documenti di Microsoft
+title: Errore del compilatore C3379 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>Errore del compilatore C3379
-'classe': una classe annidata non può avere un identificatore di accesso assembly come parte della relativa dichiarazione  
+'class': una classe annidata non può avere un identificatore di accesso assembly come parte della relativa dichiarazione  
   
- Quando applicato a un tipo gestito, ad esempio di classe o struttura, il [pubblica](../../cpp/public-cpp.md) e [privata](../../cpp/private-cpp.md) parole chiave indicano se la classe verrà esposta tramite i metadati dell'assembly. `public`o `private` non può essere applicato a una classe annidata, che erediterà l'accesso all'assembly della classe contenitore.  
+ Quando applicato a un tipo gestito, ad esempio di classe o struttura, il [pubblica](../../cpp/public-cpp.md) e [privata](../../cpp/private-cpp.md) parole chiave indicano se la classe verrà esposta tramite i metadati dell'assembly. `public`o `private` non è possibile applicare a una classe annidata, che erediterà l'accesso all'assembly della classe contenitore.  
   
- Se utilizzato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md), `ref` e `value` parole chiave indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).  
+ Se usato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md), `ref` e `value` parole chiave indicano che una classe è gestita (vedere [classi e struct](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
- Nell'esempio seguente viene generato l'errore C3379:  
+ L'esempio seguente genera l'errore C3379:  
   
 ```  
 // C3379a.cpp  

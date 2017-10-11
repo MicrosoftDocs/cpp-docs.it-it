@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3654 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3654"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3654"
+title: Errore del compilatore C3654 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3654
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3654
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e7f96f3e1703c0d43964ba8e5941000e227bde52
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'testo': errore di sintassi nell'override esplicito  
+---
+# <a name="compiler-error-c3654"></a>Errore del compilatore C3654
+'text': errore di sintassi nell'override esplicito  
   
- È stata rilevata una stringa non prevista in un override esplicito.  Per ulteriori informazioni, vedere [Override espliciti](../../windows/explicit-overrides-cpp-component-extensions.md).  
+ Una stringa imprevista è stato in un override esplicito. Per ulteriori informazioni, vedere [override espliciti](../../windows/explicit-overrides-cpp-component-extensions.md).  
   
- Il seguente codice di esempio genera l'errore C3654:  
+ L'esempio seguente genera l'errore C3654:  
   
 ```  
 // C3654.cpp  

@@ -1,43 +1,44 @@
 ---
-title: "gcvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "gcvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "gcvt"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "gcvt (funzione)"
+title: gcvt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- gcvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- gcvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- gcvt function
 ms.assetid: 913478fd-ef22-4dee-b558-ff2bd6d72f3d
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# gcvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b6a5006f14cfb7f44e416e69f7a05b2e5f8eb3a1
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-Questa funzione POSIX è deprecata.  Utilizzare l'ISO C\+\+ conforme [\_gcvt](../../c-runtime-library/reference/gcvt.md) o sicurezza\-avanzato  [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md) anziché.
+---
+# <a name="gcvt"></a>gcvt
+Questa funzione POSIX è deprecata. In alternativa, usare [_gcvt](../../c-runtime-library/reference/gcvt.md) conforme a ISO C++ o [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md) con sicurezza avanzata.

@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C3170 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3170"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3170"
+title: Errore del compilatore C3170 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3170
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3170
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aa11ac93ab7e5637153a063a892d99e127b80f54
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-impossibile avere identificatori di moduli diversi nello stesso progetto  
+---
+# <a name="compiler-error-c3170"></a>Errore del compilatore C3170
+non può avere identificatori di moduli diversi in un progetto  
   
- Sono stati rilevati attributi [module](../../windows/module-cpp.md) con nomi diversi in due file di una compilazione.  È possibile specificare un solo attributo `module` univoco per ogni compilazione.  
+ [modulo](../../windows/module-cpp.md) sono stati trovati attributi con nomi diversi in due dei file in una compilazione. Solo uno univoco `module` attributo può essere specificato per ogni compilazione.  
   
- Attributi `module` identici possono essere specificati in più file di codice sorgente.  
+ Identico `module` attributi possono essere specificati in più di un file di codice sorgente.  
   
- Se, ad esempio, vengono rilevati i seguenti attributi module:  
+ Ad esempio, se sono stati rilevati i seguenti attributi di modulo:  
   
 ```  
 // C3170.cpp  
@@ -38,7 +41,7 @@ impossibile avere identificatori di moduli diversi nello stesso progetto
 int main() {}  
 ```  
   
- quindi  
+ E quindi,  
   
 ```  
 // C3170b.cpp  
@@ -47,4 +50,4 @@ int main() {}
 [ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];  
 ```  
   
- verrà generato l'errore C3170 \(notare che i nomi sono diversi\).
+ il compilatore genera C3170 (prendere nota dei nomi diversi).

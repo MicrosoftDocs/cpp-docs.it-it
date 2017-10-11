@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3831 | Documenti di Microsoft
+title: Errore del compilatore C3831 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 9b0dc2a5da701c94408e79053df721af38cada62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 27b330e82c952bd02de7499e8dffe548acfe819c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3831"></a>Errore del compilatore C3831
-'membro': 'classe' non può avere un membro dati bloccato o una funzione membro che restituisce un puntatore di blocco  
+'member': 'class' non può avere un membro dati bloccato o una funzione membro che restituisce un puntatore di blocco  
   
- [pin_ptr (C + c++ /CLI)](../../windows/pin-ptr-cpp-cli.md) è stato utilizzato in modo errato.  
+ [pin_ptr (C + + CLI)](../../windows/pin-ptr-cpp-cli.md) è stato utilizzato in modo corretto.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C3831:  
+ L'esempio seguente genera l'errore C3831:  
   
 ```  
 // C3831a.cpp  

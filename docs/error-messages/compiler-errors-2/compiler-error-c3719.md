@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+title: Errore del compilatore C3719 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'interfaccia': un'origine eventi basata su un'interfaccia può essere utilizzata solo per eventi COM  
+---
+# <a name="compiler-error-c3719"></a>Errore del compilatore C3719
+'interface': un'origine eventi basata su un'interfaccia utilizzabile solo per eventi COM  
   
  È stata dichiarata un'interfaccia in un contesto non COM.  
   
- Il seguente codice di esempio genera l'errore C3719:  
+ L'esempio seguente genera l'errore C3719:  
   
 ```  
 // C3719a.cpp  
@@ -55,7 +58,7 @@ int main() {
 }  
 ```  
   
- Per correggere questo errore, applicare gli attributi [object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event\_source](../../windows/event-source.md) e [event\_receiver](../../windows/event-receiver.md) in modo appropriato per rendere COM le classi in cui si utilizza l'interfaccia.  Di seguito è riportato un esempio.  
+ Per correggere l'errore, applicare il [oggetto](../../windows/object-cpp.md), [coclasse](../../windows/coclass.md), [event_source](../../windows/event-source.md), e [event_receiver](../../windows/event-receiver.md) attributi in modo appropriato per rendere il classi in cui si utilizza l'interfaccia COM. Ad esempio:  
   
 ```  
 // C3719b.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2691 | Documenti di Microsoft
+title: Errore del compilatore C2691 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: eb9610c1540b07485a8fa4b4124346b4ee4281d6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84babddf11901649b602ee1a2d005fd1133be2b2
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2691"></a>Errore del compilatore C2691
-'tipo di dati': un oggetto gestito o WinRTarray non può avere questo tipo di elemento  
+'data type': un tipo gestito o WinRTarray non può avere questo tipo di elemento  
   
  Il tipo di un elemento di matrice gestita o WinRT può essere un tipo di valore o un tipo riferimento.  
   

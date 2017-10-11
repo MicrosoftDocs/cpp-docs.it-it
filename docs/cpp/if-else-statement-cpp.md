@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
-- else
 - if_cpp
-- if
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -1,37 +1,40 @@
 ---
-title: "Errore del compilatore C2108 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2108"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2108"
+title: Errore del compilatore C2108 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2108
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2108
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 936c7f53ba112d2fc7bf03d76acac27bd8b4c372
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-indice non di tipo integrale  
+---
+# <a name="compiler-error-c2108"></a>Errore del compilatore C2108
+indice non è di tipo integrale  
   
- L'indice di matrice è un'espressione non intera.  
+ L'indice di matrice è un'espressione noninteger.  
   
-## Esempio  
- L'errore C2108 può verificarsi se si utilizza in modo non corretto il puntatore `this` di un tipo di valore per accedere all'indicizzatore predefinito del tipo.  Per ulteriori informazioni, vedere [Semantica del puntatore this](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+## <a name="example"></a>Esempio  
+ C2108 può verificarsi se si utilizza in modo non corretto di `this` puntatore di tipo valore per l'indicizzatore predefinito del tipo di accesso. Per ulteriori informazioni, vedere [semantica del puntatore](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- Il codice di esempio seguente genera l'errore C2108.  
+ L'esempio seguente genera l'errore C2108.  
   
 ```  
 // C2108.cpp  

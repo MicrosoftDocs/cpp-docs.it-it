@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2743 | Documenti di Microsoft
+title: Errore del compilatore C2743 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,38 +19,24 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>Errore del compilatore C2743
-'tipo': Impossibile rilevare un tipo nativo con distruttore clrcall o costruttore di copia  
+'type': Impossibile intercettare un tipo nativo con distruttore clrcall o costruttore di copia  
   
- Un modulo compilato con **/clr** ha tentato di intercettare un'eccezione di tipo nativo in distruttore del tipo o un costruttore di copia utilizza `__clrcall` la convenzione di chiamata.  
+ Un modulo compilato con **/clr** ha tentato di intercettare un'eccezione di tipo nativo in un distruttore o costruttore di copia del tipo utilizza `__clrcall` convenzione di chiamata.  
   
- Quando viene compilato con **/clr**, la gestione delle eccezioni si prevede che le funzioni membro in un tipo nativo da [cdecl](../../cpp/cdecl.md) e non [clrcall](../../cpp/clrcall.md). I tipi nativi con funzioni membro che utilizzano `__clrcall` la convenzione di chiamata non può essere intercettati in un modulo compilato con **/clr**.  
+ Quando viene compilato con **/clr**, la gestione delle eccezioni prevede che le funzioni membro in un tipo nativo da [cdecl](../../cpp/cdecl.md) e non [clrcall](../../cpp/clrcall.md). I tipi nativi con funzioni membro tramite `__clrcall` la convenzione di chiamata non può essere intercettato in un modulo compilato con **/clr**.  
   
  Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C2743.  
+ L'esempio seguente genera l'errore C2743.  
   
 ```  
 // C2743.cpp  

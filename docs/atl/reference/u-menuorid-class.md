@@ -1,5 +1,5 @@
 ---
-title: Classe _U_MENUorID | Documenti di Microsoft
+title: Classe _U_MENUorID | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,26 +22,11 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="umenuorid-class"></a>Classe _U_MENUorID
@@ -71,9 +56,9 @@ class _U_MENUorID
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Un handle a un menu.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe di argomenti dell'adapter consente l'ID ( **UINT**s) o gli handle di menu ( `HMENU`s) deve essere passato a una funzione senza un cast esplicito della parte del chiamante.  
+ Classe di adattatori di questo argomento consente di entrambi gli ID ( **UINT**s) o gli handle di menu ( `HMENU`s) deve essere passato a una funzione senza un cast esplicito della parte del chiamante.  
   
- Questa classe è progettata per implementare il wrapper per l'API di Windows, in particolare il [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) le funzioni che accettano un `HMENU` argomento che può essere un identificatore di finestra figlio ( **UINT**) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro per [CWindowImpl::Create](cwindowimpl-class.md#create).  
+ Questa classe è progettata per l'implementazione di wrapper per l'API di Windows, in particolare il [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) e [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) funzioni che accettano un `HMENU` argomento che può essere un elemento figlio Identificatore di finestra ( **UINT**) anziché un handle di menu. Ad esempio, è possibile visualizzare questa classe in uso come parametro a [CWindowImpl::Create](cwindowimpl-class.md#create).  
 
   
  La classe definisce due overload del costruttore: uno accetta un **UINT** argomento e l'altro accetta un `HMENU` argomento. Il **UINT** argomento è sufficiente eseguire il cast a un `HMENU` nel costruttore e il risultato memorizzato nel membro dati della classe, [m_hMenu](#_u_menuorid__m_hmenu). L'argomento di `HMENU` costruttore verrà archiviato direttamente senza conversione.  
@@ -98,7 +83,7 @@ _U_MENUorID(HMENU hMenu);
   
 ### <a name="parameters"></a>Parametri  
  `nID`  
- Un identificatore di finestra figlio.  
+ Identificatore di una finestra figlio.  
   
  `hMenu`  
  Handle di menu.  

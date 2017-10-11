@@ -14,26 +14,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- QueryInterface method
+- QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 6b5c8fb9ca1d628b178c19b677b90f17cc992373

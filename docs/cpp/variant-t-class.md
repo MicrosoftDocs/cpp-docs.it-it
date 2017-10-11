@@ -9,35 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- Variant
 - _variant_t
 dev_langs:
 - C++
 helpviewer_keywords:
-- _variant_t class, operators
+- _variant_t class [C++], operators
 - _variant_t class
-- _variant_t class, member functions
+- _variant_t class [C++], member functions
 - VARIANT object
-- VARIANT object, COM encapsulation
+- VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 3c074061955adbb1682bb7d96345a31fcf8f04e7

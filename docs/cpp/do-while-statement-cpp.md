@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- do-while_cpp
-- do-while
-- do
-- while_cpp
 - do_cpp
-- while
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,20 +22,6 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 8c81bbeea9f841a834d59186017b2932f83de862
@@ -54,10 +35,9 @@ Esegue un *istruzione* ripetutamente finché la condizione di chiusura specifica
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      do  
+do  
    statement  
-   while ( expression ) ;  
+while ( expression ) ;  
 ```  
   
 ## <a name="remarks"></a>Note  

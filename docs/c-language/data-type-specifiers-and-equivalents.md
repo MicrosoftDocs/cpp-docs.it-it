@@ -25,25 +25,11 @@ caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: de625abc04fcfde9d39205d024f09dc64d6c82ae
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 0fbc76f70eba6fab46e709978bbadcd10312af6e
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>Identificatori ed equivalenti di tipi di dati

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3624 | Documenti di Microsoft
+title: Errore del compilatore C3624 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b7862590432e2aaa5c41126abb1ebd92ebeb05a3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ce571a05b801361f8e0a5f21c9dba1c159bbf88
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3624"></a>Errore del compilatore C3624
-'tipo': utilizzo di questo tipo richiede un riferimento all'assembly 'assembly'  
+'type': utilizzo di questo tipo richiede un riferimento all'assembly 'assembly'  
   
- Non è stato specificato un assembly (riferimenti) necessario per compilare il codice; passare al [#using](../../preprocessor/hash-using-directive-cpp.md) (direttiva).  
+ Non è stato specificato un assembly (riferimenti) necessario per compilare il codice; passare al [#using](../../preprocessor/hash-using-directive-cpp.md) direttiva.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C3624:  
+L'esempio seguente genera l'errore C3624:  
   
 ```  
 // C3624.cpp  

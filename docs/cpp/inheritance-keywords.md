@@ -19,32 +19,18 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - __single_inheritance keyword [C++]
-- declaring derived classes
+- declaring derived classes [C++]
 - keywords [C++], inheritance keywords
 - __multiple_inheritance keyword [C++]
 - __virtual_inheritance keyword [C++]
 - inheritance, declaring derived classes
-- derived classes, declaring
+- derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 6286d8e3082f0a4a3ce3e00fb3de1ad4ca41589a
@@ -56,8 +42,9 @@ ms.lasthandoff: 09/25/2017
 **Sezione specifica Microsoft**  
   
 ```  
-  
-class [__single_inheritance] class-name;class [__multiple_inheritance] class-name;class [__virtual_inheritance] class-name;  
+class [__single_inheritance] class-name;
+class [__multiple_inheritance] class-name;
+class [__virtual_inheritance] class-name;  
 ```  
   
  dove:  

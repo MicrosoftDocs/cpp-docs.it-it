@@ -18,20 +18,6 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: Human Translation
 ms.sourcegitcommit: e775744188a895a11c09de03848f621b6e3ecee8
 ms.openlocfilehash: c2cc376776b79b4a20d8d98e9d97a56db008d433
@@ -93,7 +79,7 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
     size_t result = fnv_offset_basis;
     for (size_t next = 0; next < count; ++next)
-        {    // fold in another byte
+        {   // fold in another byte
         result ^= (size_t)first[next];
         result *= fnv_prime;
         }

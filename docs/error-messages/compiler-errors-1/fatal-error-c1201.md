@@ -1,5 +1,5 @@
 ---
-title: Errore irreversibile C1201 | Documenti di Microsoft
+title: Errore irreversibile C1201 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 3635ff0ba3280dcca3419caf85795bfaec7ff7ac
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 693f560f066d4957fa50ac413f93c0f56e5062cf
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1201"></a>Errore irreversibile C1201
@@ -46,4 +31,4 @@ impossibile continuare: errore di sintassi nella definizione di modello di class
   
  Si è verificato un errore imprevisto durante l'analisi di una definizione di modello di classe.  
   
- Correggere eventuali altri errori e ricompilare. Se che ha esito negativo, nota delle circostanze dell'errore, provare a isolare il problema e creare un test case riproducibile, quindi contattare [il servizio supporto tecnico clienti Microsoft](/visualstudio/ide/talk-to-us).
+ Correggere eventuali altri errori e ricompilare. Se il problema persiste, prendere nota delle circostanze dell'errore, provare a isolare il problema e creare un test case riproducibile, quindi contattare il [Servizio supporto tecnico Microsoft](/visualstudio/ide/talk-to-us).

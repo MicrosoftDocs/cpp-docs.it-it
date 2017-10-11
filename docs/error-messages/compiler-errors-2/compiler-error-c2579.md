@@ -1,29 +1,32 @@
 ---
-title: "Errore del compilatore C2579 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2759"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2759"
+title: Errore del compilatore C2579 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2759
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2759
 ms.assetid: ab090a8d-5462-4046-a1a6-8007e354dedb
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Errore del compilatore C2579
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9b2515518859368ca4ee138f5a2c3b3675a35dbd
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-Impossibile risolvere il tipo 'tipo' \(offset\).Previsto in 'file'  
+---
+# <a name="compiler-error-c2579"></a>Errore del compilatore C2579
+Impossibile risolvere il tipo 'type' (offset). È previsto nel file  
   
- L'errore C2579 viene sempre restituito in seguito all'errore C4691.  Per ulteriori informazioni, vedere [Avviso del compilatore \(livello 1\) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).
+ C2579 segue sempre C4691. Per ulteriori informazioni, vedere [avviso del compilatore (livello 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md).

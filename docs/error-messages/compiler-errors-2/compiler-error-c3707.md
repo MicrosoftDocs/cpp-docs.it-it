@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3707 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3707"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3707"
+title: Errore del compilatore C3707 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3707
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C3707
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7167ea0df9bc0846de16be40d722c63bfea11c32
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': il metodo di interfaccia dispatch deve avere un dispid  
+---
+# <a name="compiler-error-c3707"></a>Errore del compilatore C3707
+'function': il metodo di interfaccia dispatch deve avere un dispid  
   
- Se si utilizza un metodo `dispinterface`, è necessario assegnargli un `dispid`.  Per risolvere il problema, assegnare un `dispid` al metodo `dispinterface`, ad esempio rimuovendo il commento dall'attributo `id` nel metodo dell'esempio riportato di seguito.  Per ulteriori informazioni sugli attributi, vedere gli attributi [dispinterface](../../windows/dispinterface.md) e [id](../../windows/id.md).  
+ Se si utilizza un `dispinterface` (metodo), è necessario assegnargli una `dispid`. Per risolvere questo problema, assegnare un `dispid` per il `dispinterface` metodo, ad esempio, rimuovendo il `id` attributo del metodo nell'esempio seguente. Per ulteriori informazioni, vedere gli attributi [dispinterface](../../windows/dispinterface.md) e [id](../../windows/id.md).  
   
- Il seguente codice di esempio genera l'errore C3707:  
+ L'esempio seguente genera l'errore C3707:  
   
 ```  
 // C3707.cpp  

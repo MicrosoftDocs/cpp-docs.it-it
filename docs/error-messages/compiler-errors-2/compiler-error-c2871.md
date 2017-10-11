@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2871 | Documenti di Microsoft
+title: Errore del compilatore C2871 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,20 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 7f26c189dc1e8b22d328c6fc65c6dd825f4720d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0003f04a32ff017234607a90162465549092a013
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2871"></a>Errore del compilatore C2871
-'nome': uno spazio dei nomi con questo nome non esiste  
+'name': non esiste uno spazio dei nomi con questo nome  
   
-Questo errore si verifica quando viene passato un identificatore che non è uno spazio dei nomi a un [utilizzando](../../cpp/namespaces-cpp.md#using_directives) (direttiva).  
+Questo errore si verifica quando viene passato un identificatore che non è uno spazio dei nomi per un [utilizzando](../../cpp/namespaces-cpp.md#using_directives) direttiva.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C2871:  
+L'esempio seguente genera l'errore C2871:  
   
 ```cpp  
 // C2871.cpp  

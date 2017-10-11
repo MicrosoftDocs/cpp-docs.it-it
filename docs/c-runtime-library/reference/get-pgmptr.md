@@ -38,25 +38,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: bb04c82492a241c8a1089e2414358a11b54fff70
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: cb47626c825adb6560ffbe98e4456ab60afb609a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
@@ -86,7 +72,7 @@ errno_t _get_pgmptr(
 |-------------|---------------------|  
 |`_get_pgmptr`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)

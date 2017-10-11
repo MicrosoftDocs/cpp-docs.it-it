@@ -9,32 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- address-of
+- '&'
 dev_langs:
 - C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
-- '& operator, address-of operator'
+- '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
@@ -46,7 +32,6 @@ ms.lasthandoff: 09/25/2017
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
 & cast-expression  
 ```  
   
@@ -136,3 +121,4 @@ int main() {
  [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Dichiaratore di riferimento lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Operatori address-of e di riferimento indiretto](../c-language/indirection-and-address-of-operators.md)
+

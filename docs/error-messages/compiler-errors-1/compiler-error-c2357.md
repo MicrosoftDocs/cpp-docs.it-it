@@ -1,40 +1,43 @@
 ---
-title: "Errore del compilatore C2357 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2357"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2357"
+title: Errore del compilatore C2357 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2357
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2357
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3804f0ee55284aabcd46b0f45c557ccc79cbb8a
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'identificatore': deve essere una funzione di tipo 'tipo'  
+---
+# <a name="compiler-error-c2357"></a>Errore del compilatore C2357
+'identifier': deve essere una funzione di tipo 'type'  
   
- La versione della funzione `atexit` dichiarata nel codice non corrisponde a quella dichiarata internamente dal compilatore.  Dichiarare `atexit` nel modo seguente:  
+ Il codice dichiara una versione di `atexit` funzione che non corrisponde a quella dichiarata internamente dal compilatore. Dichiarare `atexit` come indicato di seguito:  
   
 ```  
 int __cdecl atexit(void (__cdecl *)());  
 ```  
   
- Per ulteriori informazioni, vedere [init\_seg](../../preprocessor/init-seg.md).  
+ Per ulteriori informazioni, vedere [init_seg](../../preprocessor/init-seg.md).  
   
- Il seguente codice di esempio genera l'errore C2357:  
+ L'esempio seguente genera l'errore C2357:  
   
 ```  
 // C2357.cpp  

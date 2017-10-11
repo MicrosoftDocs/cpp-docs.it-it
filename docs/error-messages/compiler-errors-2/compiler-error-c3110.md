@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3110"
+title: Errore del compilatore C3110 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3110
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C3110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'nome\_funzione': impossibile eseguire l'overload di un metodo di un'interfaccia COM  
+---
+# <a name="compiler-error-c3110"></a>Errore del compilatore C3110
+'nome_funzione': Impossibile eseguire l'overload di un metodo di interfaccia COM  
   
- Un'interfaccia preceduta da un attributo di interfaccia, ad esempio  
+ Un'interfaccia che è preceduta da un attributo di interfaccia, ad esempio:  
   
--   [personalizzati](../../windows/custom-cpp.md)  
+-   [personalizzato](../../windows/custom-cpp.md)  
   
 -   [dispinterface](../../windows/dispinterface.md)  
   
@@ -36,7 +39,7 @@ caps.handback.revision: 7
   
 -   [object](../../windows/object-cpp.md)  
   
- non può essere sottoposta a overload.  Di seguito è riportato un esempio.  
+ Impossibile eseguire l'overload. Ad esempio:  
   
 ```  
 // C3110.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2775 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2775"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2775"
+title: Errore del compilatore C2775 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2775
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2775
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 823b6886e87a6c5d1a6aaedd7ab8e9b3ad67adb0
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'identificatore': nessun metodo 'get' associato a questa proprietà  
+---
+# <a name="compiler-error-c2775"></a>Errore del compilatore C2775
+'identifier': nessun metodo 'get' è associato a questa proprietà  
   
- Per un membro dati dichiarato con l'attributo esteso [property](../../cpp/property-cpp.md) non è stata specificata una funzione `get`, mentre un'espressione tenta di recuperarne il valore.  
+ Un membro dati dichiarato con la [proprietà](../../cpp/property-cpp.md) attributo esteso non è un `get` funzione specificata, ma un'espressione tenta di recuperare il relativo valore.  
   
- Il seguente codice di esempio genera l'errore C2775:  
+ L'esempio seguente genera l'errore C2775:  
   
 ```  
 // C2775.cpp  

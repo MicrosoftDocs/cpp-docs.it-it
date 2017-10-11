@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C2879 | Documenti di Microsoft
+title: Errore del compilatore C2879 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: b09a83e77e906a4a65efa12cf51a067361fad95a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4bb972ffa8bee016dd158490d123353bd6f46a8e
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2879"></a>Errore del compilatore C2879
-'simbolo': solo uno spazio dei nomi può essere attribuito un nome alternativo per una definizione di alias dello spazio dei nomi  
+'symbol': solo uno spazio dei nomi può essere assegnato un nome alternativo per una definizione di alias dello spazio dei nomi  
   
  Non è possibile creare un [alias dello spazio dei nomi](../../cpp/namespaces-cpp.md#namespace_aliases) a un simbolo diverso da uno spazio dei nomi.  
   
- Nell'esempio seguente viene generato l'errore C2879:  
+ L'esempio seguente genera l'errore C2879:  
   
 ```  
 // C2879.cpp  

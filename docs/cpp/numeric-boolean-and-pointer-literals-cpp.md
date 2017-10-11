@@ -13,26 +13,12 @@ dev_langs:
 helpviewer_keywords:
 - literals, C++
 - constants, literals
-- literals
+- literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8

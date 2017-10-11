@@ -1,29 +1,32 @@
 ---
-title: "Errore del compilatore C2219 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2219"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2219"
+title: Errore del compilatore C2219 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2219
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2219
 ms.assetid: 2cfe9a75-6890-46a1-a127-79a7def78e94
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2219
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8c371777da76af5d17b2ad99cd87703d3c9799f4
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-errore di sintassi: '\*' deve essere seguito da un qualificatore di tipo  
+---
+# <a name="compiler-error-c2219"></a>Errore del compilatore C2219
+Errore di sintassi: qualificatore di tipo deve essere dopo ' *'  
   
- È presente un qualificatore di tipo \(`const` o `volatile`\) in una posizione in cui non è consentito.
+ Qualificatore di tipo (`const` o `volatile`) in cui non è consentito.

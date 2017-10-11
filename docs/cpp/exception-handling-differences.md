@@ -11,30 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- structured exception handling, vs. C++ exception handling
-- structured exception handling, vs. unstructured
-- exceptions, wrapper class
-- C++ exception handling, vs. structured exception handling
-- wrapper classes, C exception
+- structured exception handling [C++], vs. C++ exception handling
+- structured exception handling [C++], vs. unstructured
+- exceptions [C++], wrapper class
+- C++ exception handling [C++], vs. structured exception handling
+- wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d

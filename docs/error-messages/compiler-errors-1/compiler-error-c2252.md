@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2252 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2252"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2252"
+title: Errore del compilatore C2252 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2252
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2252
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c390c4d72d2f9919a07087e71b687ac832521b11
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-impossibile creare esplicitamente istanze di template nell'ambito corrente  
+---
+# <a name="compiler-error-c2252"></a>Errore del compilatore C2252
+non è possibile creare in modo esplicito un'istanza di modello nell'ambito corrente  
   
- È stato rilevato un problema relativo alla creazione esplicita di un'istanza di un template.  Non è possibile, ad esempio, creare esplicitamente istanze di un modello in una funzione.  
+ Il compilatore ha rilevato un problema con un'istanza esplicita di un modello.  Ad esempio, non è possibile creare in modo esplicito un modello in una funzione.  
   
- Il seguente codice di esempio genera l'errore C2252:  
+ L'esempio seguente genera l'errore C2252:  
   
 ```  
 // C2252.cpp  

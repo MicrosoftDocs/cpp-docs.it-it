@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
 ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3490"></a>Errore del compilatore C3490
@@ -51,7 +36,7 @@ impossibile modificare 'var' perché l'accesso viene effettuato tramite un ogget
 -   Rimuovere il modificatore `const` dalla dichiarazione di metodo.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente genera l'errore C3490 perché modifica la variabile membro `_i` in un `const` metodo:  
+ L'esempio seguente genera l'errore C3490 perché modifica la variabile membro `_i` in un metodo `const` :  
   
 ```  
 // C3490a.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3767 | Documenti di Microsoft
+title: Errore del compilatore C3767 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,22 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3767"></a>Errore del compilatore C3767
-funzione o funzioni candidate 'funzione' non è accessibile  
+funzione o funzioni candidate 'function' non è accessibile  
   
- Una funzione friend definita in una classe non deve essere trattato come se fosse definita e dichiarata nell'ambito dello spazio dei nomi globale. È possibile, tuttavia, essere trovati dalla ricerca dipendente dall'argomento.  
+ Una funzione friend definita in una classe non è progettato per essere considerato come se fosse definita e dichiarata nell'ambito dello spazio dei nomi globale. È possibile, tuttavia, essere trovato dalla ricerca dipendente dall'argomento.  
   
- L'errore C3767 può essere causato anche da un'importante modifica: i tipi nativi sono ora privati per impostazione predefinita in un **/clr** la compilazione, vedere [digitare visibilità](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per ulteriori informazioni.  
+ L'errore C3767 può anche essere causato da una modifica di rilievo: i tipi nativi sono ora privati per impostazione predefinita in un **/clr** compilazione, vedere [digitare visibilità](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per ulteriori informazioni.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente genera l'errore C3767:  
+ L'esempio seguente genera l'errore C3767:  
   
 ```  
 // C3767a.cpp  
@@ -80,7 +65,7 @@ int main() {
 };  
 ```  
   
- Nell'esempio seguente genera l'errore C3767:  
+ L'esempio seguente genera l'errore C3767:  
   
 ```  
 // C3767c.cpp  
@@ -102,9 +87,9 @@ ref class Der : public Base {
 };  
 ```  
   
- In Visual C++ .NET 2002, il compilatore modifica l'aspetto dei simboli. In alcuni casi, avrebbe cercato automaticamente per i simboli in uno spazio dei nomi specificato. A questo punto, Usa ricerca dipendente dall'argomento.  
+ In Visual C++ .NET 2002, il compilatore modifica la modalità di che ricerca dei simboli. In alcuni casi, verrà cercato automaticamente i simboli in uno spazio dei nomi specificato. A questo punto, Usa la ricerca dipendente dall'argomento.  
   
- Nell'esempio seguente genera l'errore C3767:  
+ L'esempio seguente genera l'errore C3767:  
   
 ```  
 // C3767e.cpp  

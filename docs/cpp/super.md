@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __super_cpp
-- __super
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,20 +19,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 64600f8cf642b0c7906873a73aa4da41897a57f5

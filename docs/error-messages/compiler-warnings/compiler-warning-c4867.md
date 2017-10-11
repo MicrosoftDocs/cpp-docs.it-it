@@ -19,25 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 352b38744d83b3dc163125ff5ec8d80165f60c9a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>Avviso del compilatore C4867
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/12/2017
   
  Questo avviso può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2005: conformità avanzata di puntatore a membro.  Il codice compilato prima di Visual C++ 2005 ora genererà C4867.  
   
- Questo avviso viene sempre generato come errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma per disabilitare questo avviso. Per ulteriori informazioni sull'avviso C4867 e MFC/ATL, vedere [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).  
+ Questo avviso viene sempre generato come errore. Usare il pragma [warning](../../preprocessor/warning.md) per disabilitare l'avviso. Per ulteriori informazioni sull'avviso C4867 e MFC/ATL, vedere [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning).  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C4867.  

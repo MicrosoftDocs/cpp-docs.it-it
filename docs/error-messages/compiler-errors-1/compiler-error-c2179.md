@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C2179 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2179"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2179"
+title: Errore del compilatore C2179 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2179
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2179
 ms.assetid: f929bfc6-3964-4e54-87d6-7529b9b6c0b9
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Errore del compilatore C2179
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c0f311bcdbbdaa721e3897eae0a90ae892cf75d8
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'tipo': un argomento di attributo non può utilizzare parametri di tipo  
+---
+# <a name="compiler-error-c2179"></a>Errore del compilatore C2179
+'type': argomento di attributo non è possibile utilizzare parametri di tipo  
   
- Un tipo generico viene risolto in fase di esecuzione,  mentre un parametro di attributo deve essere risolto in fase di compilazione.  Non è pertanto possibile utilizzare un parametro di tipo generico come argomento di un attributo.  
+ Un parametro di tipo generico viene risolto in fase di esecuzione. Tuttavia, un parametro di attributo deve essere risolto in fase di compilazione. Pertanto, è possibile utilizzare un parametro di tipo generico come argomento a un attributo.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2179:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2179.  
   
 ```  
 // C2179.cpp  

@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3181 | Documenti di Microsoft
+title: Errore del compilatore C3181 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,35 +19,21 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 4229a9d9811bad46035451c5d64b7ed06da476d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 84f725f64e22dc5da1736eb64696b03b0b7ea36a
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3181"></a>Errore del compilatore C3181
-'tipo': operando non valido per l'operatore  
+'type': operando non valido per l'operatore  
   
 È stato passato un parametro non valido per il [typeid](../../windows/typeid-cpp-component-extensions.md) operatore. Il parametro deve essere un tipo gestito.  
   
-Si noti che il compilatore utilizza gli alias per i tipi nativi mappati ai tipi in common language runtime.  
+Si noti che il compilatore utilizza gli alias per i tipi nativi che eseguono il mapping a tipi in common language runtime.  
   
-Nell'esempio seguente viene generato l'errore C3181:  
+L'esempio seguente genera l'errore C3181:  
   
 ```  
 // C3181a.cpp  

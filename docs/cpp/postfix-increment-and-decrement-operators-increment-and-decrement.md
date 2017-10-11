@@ -14,33 +14,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- increment operators, syntax
-- member-selection operators
-- -- operator, postfix decrement operators
-- postfix operators
-- ++ operator, postfix increment operators
-- decrement operators, syntax
+- increment operators [C++], syntax
+- member-selection operators [C++]
+- -- operator [C++], postfix decrement operators
+- postfix operators [C++]
+- ++ operator [C++], postfix increment operators
+- decrement operators [C++], syntax
 - operators [C++], postfix
-- decrement operators
+- decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf

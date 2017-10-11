@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: af2d6ef4fe93730265de6081fcb83f074dc6e4ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3162ab8241781cda521fa4fc9dc51f14fa42897
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3039"></a>Errore del compilatore C3039
 'var': la variabile di indice nell'istruzione 'for' OpenMP non può essere una variabile di riduzione  
   
- Una variabile di indice è implicitamente privata, pertanto la variabile non può essere utilizzata un [riduzione](../../parallel/openmp/reference/reduction.md) clausola che li racchiude [parallela](../../parallel/openmp/reference/parallel.md) direttiva.  
+ Una variabile di indice è implicitamente privata, pertanto non può essere usata in una clausola [reduction](../../parallel/openmp/reference/reduction.md) nella direttiva [parallel](../../parallel/openmp/reference/parallel.md) di inclusione.  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C3039:  

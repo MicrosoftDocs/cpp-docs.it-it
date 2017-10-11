@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords:
 - asterisk wildcard
 - _setargv function
-- command line, processing arguments
-- command line, wildcards
+- command line [C++], processing arguments
+- command line [C++], wildcards
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
@@ -24,20 +24,6 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 779a788cae6523a48a82694e55edf3c1da5519d7

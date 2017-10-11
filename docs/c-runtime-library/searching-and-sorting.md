@@ -22,25 +22,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d3eb356b47c29c4d81361cf87e94d7a5722f7108
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 352930af34a0fc10831e5862a3013b703e56b153
 ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="searching-and-sorting"></a>Ricerca e ordinamento

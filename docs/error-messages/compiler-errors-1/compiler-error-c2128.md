@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C2128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c2128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2128"
+title: Errore del compilatore C2128 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- c2128
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C2128
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0739af6c84b2dc1a7f86c5cb4843ce66e85bf85
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'funzione': alloc\_text\/same\_seg applicabili solo a funzioni con collegamento C  
+---
+# <a name="compiler-error-c2128"></a>Errore del compilatore C2128
+'function': alloc_text/same_seg applicabili solo a funzioni con collegamento C  
   
- È possibile utilizzare `pragma` `alloc_text`  solo con funzioni dichiarate con collegamento C.  
+ `pragma``alloc_text` può essere utilizzato solo con le funzioni dichiarate con collegamento C.  
   
- Il seguente codice di esempio genera l'errore C2128:  
+ L'esempio seguente genera l'errore C2128:  
   
 ```  
 // C2128.cpp  

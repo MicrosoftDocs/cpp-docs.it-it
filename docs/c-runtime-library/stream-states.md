@@ -17,25 +17,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f2d1b9a6f4a25423f5e3f418604a8f05e83e1b31
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 2e97f9a7f6d8953107e08b92189115213303e8ac
 ms.contentlocale: it-it
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="stream-states"></a>Stati di flusso

@@ -1,5 +1,5 @@
 ---
-title: Classe CDefaultCompareTraits | Documenti di Microsoft
+title: Classe CDefaultCompareTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,29 +22,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultcomparetraits-class"></a>Classe CDefaultCompareTraits
-Questa classe fornisce funzioni di confronto elemento predefinite.  
+Questa classe fornisce funzioni di confronto di elemento predefinite.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,10 +50,10 @@ class CDefaultCompareTraits
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CDefaultCompareTraits::CompareElements](#compareelements)|(Statico) Chiamare questa funzione per confrontare due elementi per stabilirne l'uguaglianza.|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per determinare l'elemento supera e inferiore.|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|(Statico) Chiamare questa funzione per determinare l'elemento superiore e inferiore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe contiene due funzioni statiche per il confronto di elementi archiviati in un oggetto classe di raccolta. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
+ Questa classe contiene due funzioni statiche per il confronto di elementi archiviati in un oggetto di classe di raccolta. Questa classe viene utilizzata per la [CDefaultElementTraits classe](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -92,10 +78,10 @@ static bool CompareElements(const T& element1, const T& element2);
  Restituisce true se gli elementi sono uguali, false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita di questa funzione è l'uguaglianza ( `==`) (operatore). Per gli oggetti diversi dai tipi di dati semplici, questa funzione potrebbe essere necessario eseguire l'override.  
+ L'implementazione predefinita di questa funzione è l'uguaglianza ( `==`) (operatore). Per gli oggetti diversi dai tipi di dati semplice, questa funzione potrebbe essere necessario eseguire l'override.  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
- Chiamare questa funzione per determinare l'elemento supera e inferiore.  
+ Chiamare questa funzione per determinare l'elemento superiore e inferiore.  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -109,7 +95,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
  Il secondo elemento.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un valore integer in base alla tabella seguente:  
+ Restituisce un intero in base alla tabella seguente:  
   
 |Condizione|Valore restituito|  
 |---------------|------------------|  
@@ -118,7 +104,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>Note  
- L'implementazione predefinita di questa funzione utilizza il `==`, ** \< **, e ** > ** operatori. Per gli oggetti diversi dai tipi di dati semplici, questa funzione potrebbe essere necessario eseguire l'override.  
+ L'implementazione predefinita di questa funzione utilizza il `==`,  **\<** , e  **>**  operatori. Per gli oggetti diversi dai tipi di dati semplice, questa funzione potrebbe essere necessario eseguire l'override.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)

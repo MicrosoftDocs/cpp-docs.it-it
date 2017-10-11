@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3159 | Documenti di Microsoft
+title: Errore del compilatore C3159 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 50377379bb7e51d99494df7f4519f25aaf859ed4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3fae27175bf5d973d899cf3fa4d07c433f1a26c
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3159"></a>Errore del compilatore C3159
-'puntatore': Impossibile dichiarare matrici di puntatori al tipo di valore  
+'pointer': non può essere dichiarato come matrice di puntatori al tipo di valore  
   
- Non è possibile dichiarare una matrice di puntatori a un tipo di valore.  
+ Impossibile dichiarare una matrice di puntatori a un tipo valore.  
   
- C3159 è raggiungibile tramite l'opzione del compilatore obsoleta **oldSyntax**.  
+ C3159 solo è raggiungibile anche tramite l'opzione del compilatore obsoleta **oldSyntax**.  
 

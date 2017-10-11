@@ -51,25 +51,11 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>C3000 errori del compilatore tramite C3099
@@ -101,12 +87,12 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3016](compiler-error-c3016.md)|'*identificatore*': variabile di indice nell'OpenMP 'istruzione for' deve avere un tipo integrale firmato|  
 |[Errore del compilatore C3017](compiler-error-c3017.md)|il formato del test di terminazione nell'istruzione 'for' OpenMP non è valido|  
 |[Errore del compilatore C3018](compiler-error-c3018.md)|'*identificatore*': 'for' test o l'incremento OpenMP deve utilizzare la variabile di indice '*variabile*'|  
-|[Errore del compilatore C3019](compiler-error-c3019.md)|formato non valido dell'incremento nell'istruzione 'for' OpenMP|  
+|[Errore del compilatore C3019](compiler-error-c3019.md)|incremento 'istruzione for' OpenMP non ha un formato|  
 |[Errore del compilatore C3020](compiler-error-c3020.md)|'*variabile*': variabile di indice OpenMP 'ciclo for' non può essere modificata nel corpo del ciclo|  
 |[Errore del compilatore C3021](compiler-error-c3021.md)|'*argomento*': argomento è vuoto in OpenMP '*direttiva*' (direttiva)|  
 |[Errore del compilatore C3022](compiler-error-c3022.md)|'*direttiva*': tipo di pianificazione non valido di '*direttiva*'on 'OpenMP*direttiva*' (direttiva)|  
 |[Errore del compilatore C3023](compiler-error-c3023.md)|'*argomento*': rilevato token imprevisto nell'argomento per OpenMP '*direttiva*' clausola|  
-|[Errore del compilatore C3024](compiler-error-c3024.md)|'schedule(runtime)': espressione chunk_size non consentita|  
+|[Errore del compilatore C3024](compiler-error-c3024.md)|'Schedule (Runtime)': espressione chunk_size non consentita|  
 |[Errore del compilatore C3025](compiler-error-c3025.md)|'*clausola*': prevista espressione integrale|  
 |[Errore del compilatore C3026](compiler-error-c3026.md)|'*clausola*': espressione costante deve essere positiva|  
 |[Errore del compilatore C3027](compiler-error-c3027.md)|'*clausola*': prevista espressione aritmetica o del puntatore|  
@@ -126,7 +112,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3041](compiler-error-c3041.md)|'*identificatore*': la variabile nella clausola 'copyprivate' deve essere privata nel contesto di inclusione|  
 |[Errore del compilatore C3042](compiler-error-c3042.md)|le clausole 'copyprivate' e 'nowait' non possono apparire contemporaneamente nella OpenMP '*direttiva*' (direttiva)|  
 |[Errore del compilatore C3043](compiler-error-c3043.md)|la direttiva 'critical' OpenMP non può essere annidata in una direttiva 'critical' con lo stesso nome|  
-|[Errore del compilatore C3044](compiler-error-c3044.md)|'section': consentita solo se annidata direttamente in una direttiva 'sections' OpenMP|  
+|[Errore del compilatore C3044](compiler-error-c3044.md)|'section': consentita solo annidata direttamente in una direttiva 'sections' OpenMP|  
 |[Errore del compilatore C3045](compiler-error-c3045.md)|Prevista un'istruzione composta dopo la direttiva 'sections' OpenMP seguente. '{' mancante|  
 |[Errore del compilatore C3046](compiler-error-c3046.md)|Blocco strutturato mancante in un'area '#pragma omp sections' OpenMP|  
 |[Errore del compilatore C3047](compiler-error-c3047.md)|Un blocco strutturato in un'area 'sections' OpenMP deve essere preceduto da '#pragma omp section'|  
@@ -148,7 +134,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3063](compiler-error-c3063.md)|operatore '*operatore*': tutti gli operandi devono avere lo stesso tipo di enumerazione|  
 |C3064 errore del compilatore|'*identificatore*': deve essere un tipo semplice o risolversi in un|  
 |[Errore del compilatore C3065](compiler-error-c3065.md)|la dichiarazione di proprietà in ambito non di classe non è consentita|  
-|[Errore del compilatore C3066](compiler-error-c3066.md)|un oggetto di questo tipo può essere chiamato con questi argomenti in più modi|  
+|[Errore del compilatore C3066](compiler-error-c3066.md)|Esistono diversi modi, che un oggetto di questo tipo può essere chiamato con questi argomenti|  
 |C3067 errore del compilatore|un elenco di inizializzatori non può essere utilizzato con l'operatore predefinito]|  
 |[Errore del compilatore C3068](compiler-error-c3068.md)|'*identificatore*': una funzione 'naked' non può contenere oggetti che richiedono la rimozione se si è verificata un'eccezione C++|  
 |[Errore del compilatore C3069](compiler-error-c3069.md)|operatore '*operatore*': non consentito per il tipo di enumerazione|  
@@ -156,19 +142,19 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3071](compiler-error-c3071.md)|operatore '*operatore*' può essere applicato solo a un'istanza di una classe di riferimento o un tipo di valore|  
 |[Errore del compilatore C3072](compiler-error-c3072.md)|operatore '*operatore*' non è possibile applicare a un'istanza di un utilizzo della classe ref classe l'operatore unario '%' per convertire un'istanza di un riferimento a un tipo di handle|  
 |[Errore del compilatore C3073](compiler-error-c3073.md)|'*identificatore*': classe di riferimento dispone di un costruttore di copia definito dall'utente|  
-|C3074 errore del compilatore|non è possibile inizializzare una matrice con un inizializzatore tra parentesi|  
+|C3074 errore del compilatore|Impossibile inizializzare una matrice con un inizializzatore tra parentesi|  
 |[Errore del compilatore C3075](compiler-error-c3075.md)|'*identificatore*': non è possibile incorporare un'istanza di un tipo riferimento, '*tipo*', in un tipo di valore|  
 |[Errore del compilatore C3076](compiler-error-c3076.md)|'*identificatore*': non è possibile incorporare un'istanza di un tipo riferimento, '*tipo*', in un tipo nativo|  
 |[Errore del compilatore C3077](compiler-error-c3077.md)|'*identificatore*': un finalizzatore può essere solo un membro di un tipo riferimento|  
 |C3078 errore del compilatore|dimensione di matrice deve essere specificata nelle espressioni di nuovo|  
-|C3079 errore del compilatore|non è possibile usare un elenco di inizializzatori come operando destro dell'operatore di assegnazione|  
+|C3079 errore del compilatore|Impossibile utilizzare un elenco di inizializzatori come operando destro dell'operatore di assegnazione|  
 |[Errore del compilatore C3080](compiler-error-c3080.md)|'*finalizzatore*': un finalizzatore non può avere un identificatore di classe di archiviazione|  
 |C3081 errore del compilatore|Obsoleta.|  
 |Errore del compilatore C3082|Obsoleta.|  
 |[Errore del compilatore C3083](compiler-error-c3083.md)|'*identificatore*': il simbolo a sinistra di un ':: ' deve essere un tipo|  
 |[Errore del compilatore C3084](compiler-error-c3084.md)|'*identificatore*': un distruttore/finalizzatore non può essere '*parola chiave*'|  
 |[Errore del compilatore C3085](compiler-error-c3085.md)|'*identificatore*': un costruttore non può essere '*parola chiave*'|  
-|C3086 errore del compilatore|impossibile trovare 'std::initializer_list': è necessario #include <initializer_list>|  
+|C3086 errore del compilatore|Impossibile trovare 'std:: initializer_list': è necessario #include < initializer_list >|  
 |[Errore del compilatore C3087](compiler-error-c3087.md)|'*identificatore*': chiamata di '*dichiarazione*' Inizializza già questo membro|  
 |C3088 errore del compilatore|'*classe*': costruttore di attributo deve avere argomenti formali denominati|  
 |C3089 errore del compilatore|'*identificatore*': nome del parametro non corrisponde il nome di qualsiasi membro dati|  

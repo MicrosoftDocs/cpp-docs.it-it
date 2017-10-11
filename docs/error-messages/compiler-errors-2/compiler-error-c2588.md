@@ -1,36 +1,39 @@
 ---
-title: "Errore del compilatore C2588 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2588"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2588"
+title: Errore del compilatore C2588 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2588
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2588
 ms.assetid: 19a0cabd-ca13-44a5-9be3-ee676abf9bc4
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Errore del compilatore C2588
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d71e5bfe442f2b3f2225cd4dc6cb88fc73d24a
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'::~identificatore': distruttore globale non valido  
+---
+# <a name="compiler-error-c2588"></a>Errore del compilatore C2588
+':: ~ identifier': distruttore globale non valido  
   
- Il distruttore è definito per un elemento diverso da una classe, una struttura o un'unione,  ma questa operazione non è consentita.  
+ Il distruttore è definito per un elemento diverso da una classe, struttura o unione. ma questa operazione non è consentita.  
   
- Questo errore può essere causato dalla mancanza del nome di una struttura, classe o unione a sinistra dell'operatore di risoluzione dell'ambito \(`::`\).  
+ Questo errore può essere causato da una classe mancante, struttura o unione nome sul lato sinistro della risoluzione dell'ambito (`::`) (operatore).  
   
- Il seguente codice di esempio genera l'errore C2588:  
+ L'esempio seguente genera l'errore C2588:  
   
 ```  
 // C2588.cpp  

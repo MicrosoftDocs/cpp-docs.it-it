@@ -1,39 +1,42 @@
 ---
-title: "Errore del compilatore C2385 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2385"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2385"
+title: Errore del compilatore C2385 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2385
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C2385
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f36b2bf3800e0f95fa35ad2a72cead4018c69dbb
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-accesso ambiguo di 'membro'  
+---
+# <a name="compiler-error-c2385"></a>Errore del compilatore C2385
+accesso ambiguo di 'member'  
   
- È possibile che il membro derivi da più oggetti \(viene ereditato da più oggetti\).  Per correggere questo errore:  
+ Il membro può derivare da più di un oggetto (ereditato da più di un oggetto).  Per risolvere questo errore,  
   
--   Eliminare l'ambiguità del membro fornendo un cast.  
+-   Impostare il membro ambiguo fornendo un cast.  
   
--   Rinominare i membri ambigui nelle classi base.  
+-   Rinominare i membri ambigui nelle classi di base.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C2385:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2385.  
   
 ```  
 // C2385.cpp  

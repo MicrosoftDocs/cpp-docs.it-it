@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f7cde1151bd220415b950dcce089265be118de34
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89413ece25d2a60b821765ec6e07d4ab574ea81a
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4959"></a>Avviso del compilatore C4959
@@ -48,7 +33,7 @@ impossibile definire struct 'type' non gestito in /clr:safe perché l'accesso ai
   
  Per ulteriori informazioni, vedere [codice Pure e verificabile (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Questo avviso viene generato come errore e può essere disabilitato tramite il [avviso](../../preprocessor/warning.md) pragma o [/wd](../../build/reference/compiler-option-warning-level.md) l'opzione del compilatore.  
+ Questo avviso viene generato come errore e può essere disabilitato tramite il pragma [warning](../../preprocessor/warning.md) o l'opzione del compilatore [/wd](../../build/reference/compiler-option-warning-level.md) .  
   
  L'esempio seguente genera l'errore C4959:  
   

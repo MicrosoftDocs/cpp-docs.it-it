@@ -1,41 +1,44 @@
 ---
-title: "Errore del compilatore C2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2001"
+title: Errore del compilatore C2001 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Errore del compilatore C2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aedba438451089aa2d71e06da7ce189ab97d4190
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2001"></a>Errore del compilatore C2001
 nuova riga nella costante  
   
- Una costante di stringa non può continuare su una seconda riga, a meno che non si proceda come indicato di seguito.  
+ Una costante di stringa non può continuare sulla seconda riga, a meno che eseguire le operazioni seguenti:  
   
 -   Terminare la prima riga con una barra rovesciata.  
   
--   Chiudere la stringa nella prima riga con le virgolette doppie e aprire la stringa sulla riga successiva con un altro segno di virgolette doppie.  
+-   Chiudere la stringa nella prima riga con un segno di virgolette doppie e aprire la stringa nella riga successiva con un altro segno di virgolette doppie.  
   
- Non è sufficiente terminare la prima riga con il segno \\n.  
+ Terminare la prima riga con \n non è sufficiente.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C2001:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2001:  
   
 ```  
 // C2001.cpp  
@@ -51,8 +54,8 @@ int main()
 }  
 ```  
   
-## Esempio  
- Gli spazi all'inizio della riga successiva dopo un carattere di continuazione di riga sono inclusi nella costante di stringa.  In nessuno degli esempi sopra riportati è incluso un segno di nuova riga nella costante di stringa.  È possibile incorporare tale segno come illustrato di seguito.  
+## <a name="example"></a>Esempio  
+ Gli spazi all'inizio della riga successiva dopo un carattere di continuazione di riga sono inclusi nella costante di stringa. Nessuno degli esempi sopra riportati incorporare un carattere di nuova riga nella costante di stringa. È possibile incorporare un carattere di nuova riga, come illustrato di seguito:  
   
 ```  
 // C2001b.cpp  

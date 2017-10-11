@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d20934732a3b04bcd49485c3e0ba5b3562b147c5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 75d81462324690ae126938ffeab5a8eea9334426
 ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3347"></a>Errore del compilatore C3347
 'arg': argomento obbligatorio non specificato nell'attributo idl_module  
   
- Non è stato passato un argomento obbligatorio per il [idl_module](../../windows/idl-module.md) attributo.  
+ Un argomento obbligatorio non è stato passato all'attributo [idl_module](../../windows/idl-module.md) .  
   
  L'esempio seguente genera l'errore C3347:  
   

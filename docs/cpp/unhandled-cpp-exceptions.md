@@ -11,30 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- event handlers, unhandled exceptions
+- event handlers [C++], unhandled exceptions
 - catch keyword [C++], handler not found
-- exceptions, unhandled
+- exceptions [C++], unhandled
 - C++ exception handling, unhandled exceptions
-- unhandled exceptions
+- unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 590dc46e5cf761f02ba85dba950c04a2da4df022

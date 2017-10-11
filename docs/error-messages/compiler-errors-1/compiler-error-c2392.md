@@ -1,34 +1,37 @@
 ---
-title: "Compiler Error C2392 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2392"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2392"
+title: Errore del compilatore C2392 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2392
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Compiler Error C2392
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fa5164028a622b03eb770e24a91c4b07968c3bc
+ms.contentlocale: it-it
+ms.lasthandoff: 10/09/2017
 
-'method1': i tipi restituiti di covariante non sono supportati nei tipi gestiti o WinRT, altrimenti verrebbe eseguito l'override di 'method2'  
+---
+# <a name="compiler-error-c2392"></a>Errore del compilatore C2392
+'method1': restituiti di covariante non sono supportati in gestiti o WinRTtypes, in caso contrario 'method2' verrebbe eseguito l'override  
   
- I tipi restituiti di covariante non sono consentiti per le funzioni membro di Windows Runtime o quando si esegue la compilazione con l'opzione [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Tipi restituiti di covariante non sono consentiti per funzioni membro di Windows Runtime o durante la compilazione con il [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) opzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C2392 e mostra come risolverlo.  
   
 ```  

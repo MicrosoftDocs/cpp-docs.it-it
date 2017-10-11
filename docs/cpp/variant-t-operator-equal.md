@@ -9,33 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- _variant_t.operator=
 - _variant_t::operator=
 dev_langs:
 - C++
 helpviewer_keywords:
-- operator=, variant
-- operator =, variant
-- = operator, with specific Visual C++ objects
+- operator= [C++], variant
+- operator = [C++], variant
+- = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb

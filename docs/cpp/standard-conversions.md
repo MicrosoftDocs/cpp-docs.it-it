@@ -12,28 +12,13 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - standard conversions, categories of
-- L-values
+- L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95

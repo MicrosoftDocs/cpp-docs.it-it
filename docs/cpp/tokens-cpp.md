@@ -11,7 +11,7 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- tokens
+- tokens [C++]
 - parsing, C++ tokens
 - translation units
 - white space, in C++ tokens
@@ -20,21 +20,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 041750d86f12f82e0f905c65f0a75d6a32f37cdf

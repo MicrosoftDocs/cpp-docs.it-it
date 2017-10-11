@@ -9,38 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __alignof
-- alignof
-- alignas
+- alignas_cpp
 - __alignof_cpp
 - alignof_cpp
 dev_langs:
 - C++
 helpviewer_keywords:
-- alignas
+- alignas [C++]
 - alignment of structures
 - __alignof keyword [C++]
-- alignof
+- alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f

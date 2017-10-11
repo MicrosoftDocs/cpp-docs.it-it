@@ -12,26 +12,12 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], casting
-- casting operators
+- casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: a516297b687db349a6bcc867fc94dcd85118a8a5

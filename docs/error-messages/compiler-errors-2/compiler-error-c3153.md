@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3153 | Documenti di Microsoft
+title: Errore del compilatore C3153 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e7755c5924af2d2266fdf5e97a76eac3d229aa79
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d6a2ad948ae8d5517f7b98316b4e3c67bea5afb
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3153"></a>Errore del compilatore C3153
-'interfaccia': non è possibile creare un'istanza di un'interfaccia  
+'interface': non è possibile creare un'istanza di un'interfaccia  
   
  Non è possibile creare un'istanza di un'interfaccia. Per utilizzare i membri di un'interfaccia, una classe derivata dall'interfaccia, implementare i membri di interfaccia e quindi utilizzare i membri.  
   
- Nell'esempio seguente viene generato l'errore C3153:  
+ L'esempio seguente genera l'errore C3153:  
   
 ```  
 // C3153.cpp  

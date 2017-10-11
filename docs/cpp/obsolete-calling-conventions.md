@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINAPI
+- WINAPI [C++]
 - __syscall keyword [C++]
 - __pascal keyword [C++]
 - __fortran keyword [C++]
@@ -25,20 +25,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 90f328552677bc0f41accc316433365467dd7673

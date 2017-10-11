@@ -1,39 +1,42 @@
 ---
-title: "Errore del compilatore C2785 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2785"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2785"
+title: Errore del compilatore C2785 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2785
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Errore del compilatore C2785
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a545935e06d958502fb3b97cb8969f92172ca6b6
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2785"></a>Errore del compilatore C2785
 'dichiarazione1' e 'dichiarazione2' hanno tipi restituiti diversi  
   
- Il tipo restituito della specializzazione del template di funzione è diverso dal tipo restituito del template di funzione primario.  
+ Il tipo restituito di una specializzazione di modello di funzione è diverso dal tipo restituito del modello di funzione primaria.  
   
-### Per correggere l'errore  
+### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Controllare tutte le specializzazioni del template di funzione per ottenere tipi coerenti.  
+1.  Controllare tutte le specializzazioni del modello di funzione per la coerenza.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C2785:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C2785:  
   
 ```  
 // C2785.cpp  

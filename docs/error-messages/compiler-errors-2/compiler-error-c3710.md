@@ -1,35 +1,38 @@
 ---
-title: "Errore del compilatore C3710 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3710"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3710"
+title: Errore del compilatore C3710 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3710
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Errore del compilatore C3710
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc39cd77bc9316024d0980be3a432e332f09cbb7
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione': sintassi non corretta per la specifica di un gestore eventi in \_\_hook\/\_\_unhook  
+---
+# <a name="compiler-error-c3710"></a>Errore del compilatore C3710
+'function': sintassi non corretta per la specifica di gestore eventi in hook /\__unhook  
   
- Quando si specifica un gestore eventi con [\_\_hook](../../cpp/hook.md) o [\_\_unhook](../../cpp/unhook.md), è necessario che il gestore sia un metodo valido.  
+ Quando si specifica un gestore eventi con [hook](../../cpp/hook.md) o [unhook](../../cpp/unhook.md), il gestore deve essere un metodo valido.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C3710:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C3710  
   
 ```  
 // C3710.cpp  

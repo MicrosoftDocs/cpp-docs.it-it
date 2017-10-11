@@ -1,5 +1,5 @@
 ---
-title: Struttura _ATL_MODULE70 | Documenti di Microsoft
+title: Struttura _ATL_MODULE70 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,25 +22,11 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>Struttura _ATL_MODULE70
@@ -59,7 +45,7 @@ struct _ATL_MODULE70 {
   
 ## <a name="members"></a>Membri  
  `cbSize`  
- La dimensione della struttura, utilizzata per il controllo delle versioni.  
+ Le dimensioni della struttura, utilizzata per il controllo delle versioni.  
   
  `m_nLockCnt`  
  Conteggio dei riferimenti per determinare quanto tempo il modulo deve rimanere attivo.  
@@ -68,10 +54,10 @@ struct _ATL_MODULE70 {
  Funzioni di tracce che sono state registrate da chiamare quando viene arrestato ATL.  
   
  **m_csStaticDataInitAndTypeInfo**  
- Utilizzato per coordinare l'accesso ai dati interni in situazioni multithread.  
+ Utilizzato per coordinare l'accesso ai dati interni in situazioni con multithreading.  
   
 ## <a name="remarks"></a>Note  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) è definito come typedef di `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) è definito come un typedef di `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  

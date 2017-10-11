@@ -14,27 +14,13 @@ helpviewer_keywords:
 - overriding, functions
 - function templates, specialization
 - explicit specialization of function templates
-- declaring functions, specialization of function template
+- declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
 ms.openlocfilehash: c5caabae41383edbdc92806249026ce8a0daa5d5

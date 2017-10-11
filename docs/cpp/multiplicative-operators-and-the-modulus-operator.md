@@ -16,9 +16,9 @@ dev_langs:
 helpviewer_keywords:
 - operators [C++], multiplicative
 - arithmetic operators [C++], multiplicative operators
-- modulus operator, C+
+- modulus operator [C++]
 - '* operator'
-- division operator, multiplicative operators
+- division operator [C++], multiplicative operators
 - '% operator'
 - multiplication operator [C++], multiplicative operators
 - multiplicative operators [C++]
@@ -28,20 +28,6 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: b63a36817bb0366d21fba11c5e1e4eccbcc6951f

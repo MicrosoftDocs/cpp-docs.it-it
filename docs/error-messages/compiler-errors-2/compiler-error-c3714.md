@@ -1,34 +1,37 @@
 ---
-title: "Errore del compilatore C3714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3714"
+title: Errore del compilatore C3714 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Errore del compilatore C3714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'metodo': un metodo per la gestione degli eventi deve avere la stessa convenzione di chiamata dell'origine 'metodo'  
+---
+# <a name="compiler-error-c3714"></a>Errore del compilatore C3714
+'method': un metodo del gestore eventi deve avere la stessa convenzione di chiamata dell'origine 'metodo'  
   
- È stato definito un metodo per la gestione degli eventi che non utilizza la stessa convenzione di chiamata del metodo dell'origine eventi.  Per correggere questo errore, assegnare al metodo per la gestione degli eventi la stessa convenzione di chiamata del metodo dell'origine eventi.  Nel codice che segue, ad esempio, fare corrispondere le convenzioni di chiamata di `handler1` ed `event1` \([\_\_cdecl](../../cpp/cdecl.md), [\_\_stdcall](../../cpp/stdcall.md) o altre\).  La rimozione delle parole chiave delle convenzioni di chiamata da entrambe le dichiarazioni risolve il problema e fa in modo che `event1` e `handler1` utilizzino l'impostazione predefinita, ovvero la convenzione di chiamata [thiscall](../../cpp/thiscall.md).  Per ulteriori informazioni , vedere [Convenzioni di chiamata](../../cpp/calling-conventions.md).  
+ È stato definito un metodo del gestore eventi che non utilizza la stessa convenzione di chiamata del metodo di evento di origine. Per correggere l'errore, fornire il metodo del gestore eventi le stesse convenzioni di chiamata a quelli del metodo dell'origine eventi. Ad esempio, effettuare le convenzioni di chiamata di codice riportato di seguito, `handler1` e `event1` corrispondono ([cdecl](../../cpp/cdecl.md) o [stdcall](../../cpp/stdcall.md) o di altri utenti). Rimozione di parole chiave delle convenzioni di chiamata da entrambe le dichiarazioni verrà inoltre risolvere il problema e causare `event1` e `handler1` per impostazione predefinita il [thiscall](../../cpp/thiscall.md) convenzione di chiamata. Vedere [convenzioni di chiamata](../../cpp/calling-conventions.md) per ulteriori informazioni.  
   
- Il seguente codice di esempio genera l'errore C3714:  
+ L'esempio seguente genera l'errore C3714:  
   
 ```  
 // C3714.cpp  

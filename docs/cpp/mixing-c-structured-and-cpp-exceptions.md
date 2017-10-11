@@ -11,9 +11,9 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions, mixed C and C++
+- exceptions [C++], mixed C and C++
 - C++ exception handling, mixed-language
-- structured exception handling, mixed C and C++
+- structured exception handling [C++], mixed C and C++
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
@@ -21,20 +21,6 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 074ff13ed281d30caeede227cdab2cff090fab1e

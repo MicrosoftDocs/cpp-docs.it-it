@@ -11,33 +11,19 @@ ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- structured exception handling, termination handlers
-- exceptions, terminating
-- termination handlers, writing
-- handlers
-- handlers, termination
+- structured exception handling [C++], termination handlers
+- exceptions [C++], terminating
+- termination handlers [C++], writing
+- handlers [C++]
+- handlers [C++], termination
 - termination handlers
-- exception handling, termination handlers
+- exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
 caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 06fb01f2ee2782f8786308554923b3c5597a4574

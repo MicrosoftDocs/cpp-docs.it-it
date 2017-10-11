@@ -1,45 +1,48 @@
 ---
-title: "Avviso del compilatore C4484 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4484"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4484"
+title: Avviso del compilatore C4484 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4484
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Avviso del compilatore C4484
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06246c811c59ff126cd61d5c10d0d30a68857c2c
+ms.contentlocale: it-it
+ms.lasthandoff: 10/10/2017
 
-'funzione\_override': corrisponde al metodo di classe base di riferimento 'funzione\_classe\_base', ma non è contrassegnato 'virtual', 'new' o 'override'; verrà utilizzato 'new' \(e non 'virtual'\)  
+---
+# <a name="compiler-warning-c4484"></a>Avviso del compilatore C4484
+'funzione_override': corrisponde al metodo di classe di base di riferimento 'funzione_classe_base', ma non è contrassegnato 'virtual', 'new' o 'override'; verrà utilizzato 'new' (e non 'virtual')  
   
- Durante la compilazione con **\/clr**, l'override di una funzione della classe base non verrà eseguito in modo implicito e nella tabella vtable della funzione verrà pertanto inserito un nuovo slot.  Per correggere l'errore, specificare in modo esplicito che la funzione è un override.  
+ Durante la compilazione con **/clr**, il compilatore non sostituirà in modo implicito una funzione di classe di base, ovvero la funzione verrà visualizzato un nuovo slot in vtable. Per risolvere, specificare in modo esplicito se una funzione è una sostituzione.  
   
- Per ulteriori informazioni, vedere:  
+ Per altre informazioni, vedere:  
   
--   [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/CLR (compilazione common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [override](../../windows/override-cpp-component-extensions.md)  
   
--   [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [New (nuovo slot in vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
- L'avviso C4484 viene sempre generato come errore.  Per non visualizzarlo, utilizzare il pragma [warning](../../preprocessor/warning.md).  
+ C4484 viene sempre generato come errore. Utilizzare il [avviso](../../preprocessor/warning.md) pragma C4484 di esclusione.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4484:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4484.  
   
 ```  
 // C4484.cpp  

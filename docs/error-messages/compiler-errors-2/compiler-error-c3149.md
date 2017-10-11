@@ -1,5 +1,5 @@
 ---
-title: Errore del compilatore C3149 | Documenti di Microsoft
+title: Errore del compilatore C3149 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,37 +19,23 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>Errore del compilatore C3149
-'tipo': Impossibile utilizzare questo tipo senza un livello superiore 'char'  
+'type': Impossibile utilizzare questo tipo senza un livello superiore 'char'  
   
  Una dichiarazione non è stata specificata correttamente.  
   
- Ad esempio, potrebbe avere definito un tipo CLR in ambito globale e ha tentato di creare una variabile del tipo come parte della definizione. Poiché non sono consentite le variabili globali dei tipi CLR, il compilatore genererà C3149.  
+ Ad esempio, potrebbe avere definito un tipo CLR in ambito globale e ha tentato di creare una variabile del tipo come parte della definizione. Poiché non sono consentite le variabili globali di tipi CLR, il compilatore genererà C3149.  
   
- Per risolvere questo errore, dichiarare le variabili di tipi CLR all'interno di una definizione di funzione o un tipo.  
+ Per correggere l'errore, dichiarare le variabili di tipi CLR all'interno di una definizione di funzione o un tipo.  
   
- Nell'esempio seguente viene generato l'errore C3149:  
+ L'esempio seguente genera l'errore C3149:  
   
 ```  
 // C3149.cpp  
@@ -62,7 +48,7 @@ int main() {
 }  
 ```  
   
- Nell'esempio seguente viene generato l'errore C3149:  
+ L'esempio seguente genera l'errore C3149:  
   
 ```  
 // C3149b.cpp  

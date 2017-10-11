@@ -10,31 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - __hook_cpp
-- __hook
 dev_langs:
 - C++
 helpviewer_keywords:
 - __hook keyword [C++]
-- event handlers, connecting events to
+- event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a

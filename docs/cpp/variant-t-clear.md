@@ -14,28 +14,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- VARIANT object, clear
-- Clear method
+- VARIANT object [C++], clear
+- Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 11a64f66a7fec270b61eee1b79df179980d41a79

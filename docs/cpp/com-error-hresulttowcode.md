@@ -9,32 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- HRESULTToWCode
-- _com_error.HRESULTToWCode
 - _com_error::HRESULTToWCode
 dev_langs:
 - C++
 helpviewer_keywords:
-- HRESULTToWCode method
+- HRESULTToWCode method [C++]
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 296c6f43c1bc840ae13bdf4ad355d7f41e2cc3fd

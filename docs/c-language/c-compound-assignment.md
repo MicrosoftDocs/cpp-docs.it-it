@@ -19,25 +19,11 @@ caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 85fb149dcfb104a9b2e094deef83c3b33d1b7b6c
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 8771aba4328cef785347712f037ea21c5a46cfad
 ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="c-compound-assignment"></a>Assegnazione composta C

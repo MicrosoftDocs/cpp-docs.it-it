@@ -30,29 +30,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
-Questa classe fornisce una base per le classi di puntatore intelligente con routine memoria basato su COM.  
+Questa classe fornisce una base per le classi di puntatore intelligente utilizzo della memoria basato su COM routine.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -93,11 +79,11 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|L'operatore di cast.|  
 |[CComPtrBase::operator!](#operator_not)|L'operatore NOT.|  
-|[CComPtrBase::operator /](#operator_amp)|L'operatore /.|  
+|[CComPtrBase::operator &](#operator_amp)|Il & (operatore).|  
 |[CComPtrBase::operator *](#operator_star)|Il * (operatore).|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|Minore di-operatore.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Minore di-operatore.|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|L'operatore di uguaglianza.|  
-|[CComPtrBase::operator->](#operator_ptr)|L'operatore di puntatore ai membri.|  
+|[CComPtrBase::operator ->](#operator_ptr)|L'operatore di puntatore ai membri.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Parametri  
  `pOther`  
- Il **IUnknown \*** da confrontare.  
+ Il **IUnknown \***  da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se gli oggetti sono identici, false in caso contrario.  
@@ -254,7 +240,7 @@ bool operator!() const throw();
  Restituisce true se il `CComHeapPtr` puntatore è uguale a NULL, false in caso contrario.  
   
 ##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
- L'operatore /.  
+ Il & (operatore).  
   
 ```
 T** operator&() throw();

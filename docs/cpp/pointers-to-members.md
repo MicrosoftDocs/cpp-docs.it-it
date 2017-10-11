@@ -12,29 +12,15 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, pointers
-- class members, pointers to
+- class members [C++], pointers to
 - pointers, to members
-- members, pointers to
+- members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233

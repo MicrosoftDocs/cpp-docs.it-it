@@ -9,32 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- auto
 - auto_cpp
 dev_langs:
 - C++
 helpviewer_keywords:
-- automatic storage class, auto keyword
-- auto keyword
+- automatic storage class [C++], auto keyword
+- auto keyword [C++]
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
 ms.translationtype: HT
 ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
 ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c

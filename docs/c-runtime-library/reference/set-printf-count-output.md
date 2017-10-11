@@ -37,25 +37,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 8229146184b4d4d0cfbccd60f6c4209356db5f8f
 ms.contentlocale: it-it
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
