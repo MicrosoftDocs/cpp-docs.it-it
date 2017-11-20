@@ -4,49 +4,68 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3556
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3556
+f1_keywords: C3556
+dev_langs: C++
+helpviewer_keywords: C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d4612c76c662cb1f271e2c85c9403bf957e72dbc
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 4bdb2c292eaa2c89496cf64a36b917af09e381b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3556"></a>Errore del compilatore C3556
-'expression': argomento di 'decltype' non corretto  
   
- Il compilatore non può dedurre il tipo dell'espressione che corrisponde all'argomento dell'identificatore di tipo `decltype(``expression``)` . Nell'esempio di codice seguente il compilatore non può dedurre il tipo dell'argomento `myFunction` perché `myFunction` è in overload.  
+> '*espressione*': argomento di 'decltype' non corretto  
   
-```  
-void myFunction();  
+Il compilatore non può dedurre il tipo dell'espressione che corrisponde all'argomento dell'identificatore di tipo `decltype(`*expression*`)` .  
+  
+## <a name="example"></a>Esempio  
+  
+Nell'esempio di codice seguente il compilatore non può dedurre il tipo dell'argomento `myFunction` perché `myFunction` è in overload. Per risolvere questo problema, è possibile utilizzare `static_cast` per creare un'istanza di un puntatore per la particolare overload della funzione per specificare il `decltype` espressione.  
+  
+```cpp  
+// C3556.cpp
+// compile with: cl /W4 /EHsc C3556.cpp
+#include <iostream>
+
 void myFunction(int);  
-decltype(myFunction); // C3556  
+void myFunction(float, float); 
+
+void callsMyFunction(decltype(myFunction) fn); // C3556
+// One way to fix is to comment out the line above, and
+// use static_cast to create specialized function pointer 
+// instances:
+auto myFunctionInt = static_cast<void(*)(int)>(myFunction);
+auto myFunctionFloatFloat = static_cast<void(*)(float,float)>(myFunction);
+void callsMyFunction(decltype(myFunctionInt) fn, int n);
+void callsMyFunction(decltype(myFunctionFloatFloat) fn, float f, float g);
+
+void myFunction(int i) { 
+    std::cout << "called myFunction(" << i << ")" << std::endl; 
+} 
+
+void myFunction(float f, float g) { 
+    std::cout << "called myFunction(" << f << ", " << g << ")" << std::endl; 
+}  
+
+void callsMyFunction(decltype(myFunctionInt) fn, int n) {
+    fn(n);
+}
+
+void callsMyFunction(decltype(myFunctionFloatFloat) fn, float f, float g) {
+    fn(f, g);
+}
+
+int main() {
+    callsMyFunction(myFunction, 42);
+    callsMyFunction(myFunction, 0.1f, 2.3f);
+}
 ```

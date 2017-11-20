@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1561
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1561
+f1_keywords: LNK1561
+dev_langs: C++
+helpviewer_keywords: LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: f918c51e6f4539c020bc59ad28c867f8e2d1ae75
-ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: b3a6ad889969292a65afb7b363412eaf7d7a6430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk1561"></a>Errore degli strumenti del linker LNK1561
-il punto d'ingresso deve essere definito  
+punto di ingresso deve essere definito  
   
 Il linker non ha trovato un *punto di ingresso*, la funzione iniziale a chiamare nell'eseguibile. Per impostazione predefinita, il linker cerca un `main` o `wmain` funzione per un'applicazione console, un `WinMain` o `wWinMain` funzione per un'app di Windows, o `DllMain` per una DLL che richiede l'inizializzazione. È possibile specificare un'altra funzione utilizzando il [/ENTRY](../../build/reference/entry-entry-point-symbol.md) l'opzione del linker.  
   

@@ -1,33 +1,32 @@
 ---
-title: "CRowsetImpl::m_rgRowData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl.m_rgRowData"
-  - "CRowsetImpl::m_rgRowData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_rgRowData"
+title: 'CRowsetImpl:: M_rgrowdata | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl.m_rgRowData
+- CRowsetImpl::m_rgRowData
+dev_langs: C++
+helpviewer_keywords: m_rgRowData
 ms.assetid: e4e75ca7-12e8-4a0b-94e8-e395c21385b2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cb6c4c3a993e439eeae4abf8ec4830ea1fb47372
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CRowsetImpl::m_rgRowData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per impostazione predefinita, `CAtlArray` che templatizes nell'argomento di template record utente a `CRowsetImpl`.  
+# <a name="crowsetimplmrgrowdata"></a>CRowsetImpl::m_rgRowData
+Per impostazione predefinita, un `CAtlArray` che templatizes per l'argomento di modello di record utente per `CRowsetImpl`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,13 +34,13 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
   
 ```  
   
-## Note  
- **ArrayType** è un parametro di modello a `CRowsetImpl`.  
+## <a name="remarks"></a>Note  
+ **ArrayType** è un parametro di modello `CRowsetImpl`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRowsetImpl](../../data/oledb/crowsetimpl-class.md)   
- [CRowsetImpl::m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
- [CRowsetImpl::m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)
+ [CRowsetImpl:: M_strcommandtext](../../data/oledb/crowsetimpl-m-strcommandtext.md)   
+ [CRowsetImpl::m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)

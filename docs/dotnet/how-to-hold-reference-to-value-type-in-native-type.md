@@ -1,31 +1,31 @@
 ---
-title: "Procedura: mantenere riferimenti al tipo di valore nel tipo nativo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "riferimento al tipo di valore nel tipo nativo"
-  - "riferimento al tipo di valore nel tipo nativo"
+title: 'Procedura: riferimento al tipo di valore nel tipo nativo | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- value type reference in native type
+- reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17730011c8e13416ed84f7731fdf5469fc918c64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: mantenere riferimenti al tipo di valore nel tipo nativo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare `gcroot` sul tipo boxed per mantenere un riferimento a un tipo di valore in un tipo nativo.  
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>Procedura: mantenere riferimenti al tipo di valore nel tipo nativo
+Utilizzare `gcroot` sul tipo boxed per contenere un riferimento a un tipo di valore in un tipo nativo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // reference_to_value_in_native.cpp  
@@ -53,6 +53,9 @@ int main() {
 }  
 ```  
   
-  **Stringa in V: Hello**   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+String in V: Hello  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

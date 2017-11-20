@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - try-catch keyword [C++], catchable types
 - catch keyword [C++], types of catch handlers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1098529effb3a15d8f6260ed7167c5553b226857
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 3af6c63ab571738f2c963c3e9b90b9aae4b644eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Modalità di valutazione dei blocchi catch (C++)
 C++ consente di generare eccezioni di qualsiasi tipo, sebbene in genere sia consigliabile generare i tipi derivati da std::exception. Un'eccezione C++ può essere rilevata da un **catch** gestore che specifica lo stesso tipo dell'eccezione generata o da un gestore che è possibile intercettare qualsiasi tipo di eccezione.  

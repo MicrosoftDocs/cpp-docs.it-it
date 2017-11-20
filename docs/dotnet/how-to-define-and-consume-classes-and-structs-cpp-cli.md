@@ -1,39 +1,38 @@
 ---
-title: "Procedura: definire e utilizzare classi e struct (C++ /CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "struct [C++]"
-  - "classi [C++], creazione di istanze"
+title: 'Procedura: definire e usare classi e struct (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- structs [C++]
+- classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd322aa1cacfb9f1fa97f4e15d90bf6a8b30f472
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: Definire e usare classi e struct (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo articolo viene illustrato come definire e utilizzare i tipi di riferimento e i tipi di valore definiti dall'utente in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedura: Definire e usare classi e struct (C++/CLI)
+In questo articolo viene illustrato come definire e utilizzare i tipi di riferimento definita dall'utente e tipi di valore in C + + CLI.  
   
-##  <a name="a-namebkmkcontentsa-contents"></a><a name="BKMK_Contents"></a> Contenuto  
+##  <a name="BKMK_Contents"></a> Contenuto  
  [Creazione di istanze di oggetto](#BKMK_Object_instantiation)  
   
  [Classi implicitamente astratte](#BKMK_Implicitly_abstract_classes)  
   
- [Visibilità dei tipi](#BKMK_Type_visibility)  
+ [Visibilità del tipo](#BKMK_Type_visibility)  
   
- [Visibilità dei membri](#BKMK_Member_visibility)  
+ [Visibilità di membri](#BKMK_Member_visibility)  
   
  [Classi native pubbliche e private](#BKMK_Public_and_private_native_classes)  
   
@@ -47,7 +46,7 @@ In questo articolo viene illustrato come definire e utilizzare i tipi di riferim
   
  [Distruttori e finalizzatori](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="a-namebkmkobjectinstantiationa-object-instantiation"></a><a name="BKMK_Object_instantiation"></a> Creazione di istanze di oggetto  
+##  <a name="BKMK_Object_instantiation"></a>Creazione di istanze di oggetto  
  È possibile creare istanze dei tipi di riferimento (ref) e dei tipi di valore solo nell'heap gestito, non nello stack o nell'heap nativo.  
   
 ```  
@@ -101,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmkimplicitlyabstractclassesa-implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a> Classi implicitamente astratte  
+##  <a name="BKMK_Implicitly_abstract_classes"></a>Classi implicitamente astratte  
  Un *classe implicitamente astratta* non può essere creata un'istanza. Una classe è implicitamente astratta se il tipo di base della classe è un'interfaccia e la classe non implementa tutte le funzioni membro dell'interfaccia stessa.  
   
  Se non si riesce a costruire degli oggetti da una classe che deriva da un'interfaccia, il motivo potrebbe essere che la classe è implicitamente astratta. Per ulteriori informazioni sulle classi astratte, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
@@ -128,14 +127,14 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmktypevisibilitya-type-visibility"></a><a name="BKMK_Type_visibility"></a> Visibilità dei tipi  
+##  <a name="BKMK_Type_visibility"></a>Visibilità del tipo  
  È possibile controllare la visibilità dei tipi CLR (Common Language Runtime) in modo che, se viene fatto riferimento a un assembly, i tipi nell'assembly possono essere visibili o non visibili all'esterno dell'assembly.  
   
- `public` indica che un tipo è visibile ai file di origine che contiene un `#using` direttiva dell'assembly che contiene il tipo.  `private` indica che un tipo non è visibile ai file di origine che contengono un `#using` direttiva dell'assembly che contiene il tipo. Tuttavia, i tipi privati sono visibili all'interno dello stesso assembly. Per impostazione predefinita, la visibilità di una classe è `private`.  
+ `public`indica che un tipo è visibile a qualsiasi file di origine che contiene un `#using` direttiva per l'assembly che contiene il tipo.  `private`indica che un tipo non è visibile ai file di origine che contengono un `#using` direttiva per l'assembly che contiene il tipo. Tuttavia, i tipi privati sono visibili all'interno dello stesso assembly. Per impostazione predefinita, la visibilità di una classe è `private`.  
   
- Per impostazione predefinita, prima di Visual C++ 2005 i tipi nativi avevano accessibilità pubblica all'esterno dell'assembly. Abilitare [Avviso del compilatore (livello 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) che consentono di vedere in tipi nativi privati vengono utilizzati in modo non corretto. Utilizzare il [make_public](../preprocessor/make-public.md) pragma per consentire l'accessibilità pubblica a un tipo nativo in un file di codice sorgente che non è possibile modificare.  
+ Per impostazione predefinita, prima di Visual C++ 2005 i tipi nativi avevano accessibilità pubblica all'esterno dell'assembly. Abilitare [avviso del compilatore (livello 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) consentono di vedere in tipi nativi privati vengono usati in modo non corretto. Utilizzare il [make_public](../preprocessor/make-public.md) pragma per consentire l'accessibilità pubblica a un tipo nativo in un file di codice sorgente che non è possibile modificare.  
   
- Per ulteriori informazioni, vedere [#using (direttiva)](../preprocessor/hash-using-directive-cpp.md).  
+ Per ulteriori informazioni, vedere [# direttiva using](../preprocessor/hash-using-directive-cpp.md).  
   
  Nell'esempio seguente viene illustrato come dichiarare i tipi, specificarne l'accessibilità e quindi accedere a questi tipi all'interno dell'assembly. Naturalmente, se viene fatto riferimento a un assembly contenente tipi privati tramite `#using`, sono visibili solo i tipi pubblici nell'assembly.  
   
@@ -224,19 +223,19 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="a-namebkmkmembervisibilitya-member-visibility"></a><a name="BKMK_Member_visibility"></a> Visibilità dei membri  
+##  <a name="BKMK_Member_visibility"></a>Visibilità di membri  
  È possibile rendere l'accesso a un membro di una classe pubblica dall'interno dello stesso assembly diverso dall'accesso dall'esterno dell'assembly utilizzando coppie di identificatori di accesso `public`, `protected` e `private`  
   
  In questa tabella sono riepilogati gli effetti dei vari identificatori di accesso:  
   
 |Identificatore|Effetto|  
 |---------------|------------|  
-|public|Il membro è accessibile all'interno e all'esterno dell'assembly.  Vedere [pubblico](../cpp/public-cpp.md) Per ulteriori informazioni.|  
-|private|Non è possibile accedere al membro, né all'interno né all'esterno dell'assembly.  Vedere [privata](../cpp/private-cpp.md) Per ulteriori informazioni.|  
-|protected|È possibile accedere al membro all'esterno e all'interno dell'assembly, ma solo per i tipi derivati.  Vedere [protetti](../cpp/protected-cpp.md) Per ulteriori informazioni.|  
-|internal|Membro è pubblico nell'assembly, ma privato all'esterno dell'assembly.  `internal` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
-|pubblico - o - protetto protetto pubblico|Il membro è pubblico nell'assembly, ma protetto all'esterno dell'assembly.|  
-|privato protetto - o - protetto privato|Il membro è protetto all'interno dell'assembly, ma privato all'esterno dell'assembly.|  
+|public|Il membro è accessibile all'interno e all'esterno dell'assembly.  Vedere [pubblica](../cpp/public-cpp.md) per ulteriori informazioni.|  
+|private|Non è possibile accedere al membro, né all'interno né all'esterno dell'assembly.  Vedere [privata](../cpp/private-cpp.md) per ulteriori informazioni.|  
+|protected|È possibile accedere al membro all'esterno e all'interno dell'assembly, ma solo per i tipi derivati.  Vedere [protetti](../cpp/protected-cpp.md) per ulteriori informazioni.|  
+|internal|Il membro è pubblico nell'assembly ma privato all'esterno dell'assembly.  `internal` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).|  
+|pubblico - oppure - protetto protetto pubblico|Il membro è pubblico nell'assembly, ma protetto all'esterno dell'assembly.|  
+|privato protetto - oppure - protetto privato|Il membro è protetto all'interno dell'assembly, ma privato all'esterno dell'assembly.|  
   
  Nell'esempio seguente viene illustrato un tipo pubblico che dispone di membri che vengono dichiarati con le diverse accessibilità e successivamente viene mostrata la modalità di accesso a questi membri dall'interno dell'assembly.  
   
@@ -414,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="a-namebkmkpublicandprivatenativeclassesa-public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a> Classi native pubbliche e private  
+##  <a name="BKMK_Public_and_private_native_classes"></a>Classi native pubbliche e private  
  È possibile fare riferimento a un tipo nativo da un tipo gestito.  Ad esempio, una funzione in un tipo gestito può accettare un parametro il cui tipo è uno struct nativo.  Se il tipo e la funzione gestiti sono pubblici in un assembly, anche il tipo nativo deve essere pubblico.  
   
 ```  
@@ -455,7 +454,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namebkmkstaticconstructorsa-static-constructors"></a><a name="BKMK_Static_constructors"></a> Costruttori statici  
+##  <a name="BKMK_Static_constructors"></a> Costruttori statici  
  Un tipo CLR, ad esempio una classe o uno struct, può avere un costruttore statico che può essere utilizzato per inizializzare i membri dati statici.  Un costruttore statico viene chiamato al massimo una volta e viene chiamato prima del primo accesso a un qualsiasi membro statico del tipo.  
   
  Un costruttore di istanza viene eseguito sempre dopo un costruttore statico.  
@@ -464,7 +463,7 @@ int main() {
   
  Definire un costruttore statico come funzione membro privata, poiché ha lo scopo di essere chiamato solo da CLR.  
   
- Per ulteriori informazioni sui costruttori statici, vedere [procedura: definire un costruttore statico di interfaccia (C + c++ /CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
+ Per ulteriori informazioni su costruttori statici, vedere [procedura: definire un costruttore statico di interfaccia (C + + CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .  
   
 ```  
   
@@ -501,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="a-namebkmksemanticsofthethispointera-semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a> Semantica del puntatore  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a>Semantica del puntatore  
  Quando si utilizza Visual C++ per definire i tipi, il puntatore `this` in un tipo di riferimento è di tipo "handle". Il puntatore `this` in un tipo di valore è di tipo "puntatore interno".  
   
  Queste diverse semantiche del puntatore `this` possono generare un comportamento imprevisto quando viene chiamato un indicizzatore predefinito. Nell'esempio seguente viene illustrato il modo corretto per accedere a un indicizzatore predefinito sia in un tipo di riferimento che in un tipo di valore.  
@@ -510,9 +509,7 @@ in static constructor
   
 -   [Operatore handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)  
   
--   [interior_ptr (C + c++ /CLI)](../windows/interior-ptr-cpp-cli.md)  
-  
--   [Procedura: utilizzare proprietà indicizzate](../misc/how-to-use-indexed-properties.md)  
+-   [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)  
   
 ```  
   
@@ -558,10 +555,10 @@ int main() {
 10.89  
 ```  
   
-##  <a name="a-namebkmkhidebysignaturefunctionsa-hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a> Funzioni Hide-by-signature  
- Nel linguaggio C++ standard, una funzione in una classe base viene nascosta da una funzione con lo stesso nome in una classe derivata, anche se la funzione della classe derivata non dispone dello stesso numero o tipo di parametri. Questa è detta *hide-by-name* semantica. In un tipo riferimento, una funzione in una classe base può essere nascosta solo da una funzione in una classe derivata se il nome e l'elenco dei parametri sono gli stessi. Ciò è noto come *hide-by-signature* semantica.  
+##  <a name="BKMK_Hide_by_signature_functions"></a>Funzioni Hide-by-signature  
+ Nel linguaggio C++ standard, una funzione in una classe base viene nascosta da una funzione con lo stesso nome in una classe derivata, anche se la funzione della classe derivata non dispone dello stesso numero o tipo di parametri. Ciò è detto *hide-by-name* semantica. In un tipo riferimento, una funzione in una classe base può essere nascosta solo da una funzione in una classe derivata se il nome e l'elenco dei parametri sono gli stessi. Questo è noto come *hide-by-signature* semantica.  
   
- La classe è considerata una classe hide-by-signature quando tutte le relative funzioni sono contrassegnate nei metadati come `hidebysig`. Per impostazione predefinita, tutte le classi che vengono create sotto **/clr** hanno `hidebysig` funzioni. Tuttavia, una classe che viene compilata mediante **oldSyntax** non dispone di `hidebysig` funzioni; al contrario, sono funzioni hide-by-name. Quando la classe dispone di funzioni `hidebysig`, il compilatore non nasconde le funzioni per nome in tutte le classi base dirette, ma se rileva una classe hide-by-name in una catena di ereditarietà, continua il comportamento hide-by-name.  
+ La classe è considerata una classe hide-by-signature quando tutte le relative funzioni sono contrassegnate nei metadati come `hidebysig`. Per impostazione predefinita, tutte le classi che vengono creati in **/clr** hanno `hidebysig` funzioni. Quando la classe dispone di funzioni `hidebysig`, il compilatore non nasconde le funzioni per nome in tutte le classi base dirette, ma se rileva una classe hide-by-name in una catena di ereditarietà, continua il comportamento hide-by-name.  
   
  Nella semantica hide-by-signature, quando una funzione viene chiamata su un oggetto, il compilatore identifica la classe più derivata che contiene una funzione la quale può soddisfare la chiamata di funzione. Se è presente solo una funzione nella classe che può soddisfare la chiamata, il compilatore chiama questa funzione. Se è disponibile più di una funzione nella classe che può soddisfare la chiamata, il compilatore utilizza le regole di risoluzione di overload per determinare quale funzione chiamare. Per ulteriori informazioni sulle regole di overload, vedere [overload di funzioni](../cpp/function-overloading.md).  
   
@@ -668,54 +665,12 @@ Derived::Test4
 97  
 ```  
   
- Nell'esempio seguente definisce un componente che viene compilato mediante **oldSyntax**. Le classi definite tramite le estensioni gestite per C++ hanno funzioni membro hide-by-name.  
-  
-```  
-  
-// compile with: /clr:oldSyntax /LD  
-using namespace System;  
-public __gc struct Base0 {  
-   void Test() {   
-      Console::WriteLine("in Base0::Test");  
-   }  
-};  
-  
-public __gc struct Base1 : public Base0 {  
-   void Test(int i) {   
-      Console::WriteLine("in Base1::Test");  
-   }  
-};  
-```  
-  
- Nell'esempio seguente viene utilizzato il componente compilato nell'esempio precedente. Si noti come hide-by-signature funzionalità non viene applicata alle classi base di tipi che vengono compilati tramite **oldSyntax**.  
-  
-```  
-  
-// compile with: /clr:oldSyntax /LD  
-// compile with: /clr  
-using namespace System;  
-#using "hide_by_signature_4.dll"  
-  
-ref struct Derived : public Base1 {  
-   void Test(int i, int j) {   
-      Console::WriteLine("Derived::Test");  
-   }  
-};  
-  
-int main() {  
-   Derived ^ t = gcnew Derived;  
-   t->Test(8, 8);   // OK  
-   t->Test(8);   // OK  
-   t->Test();   // C2661  
-}  
-```  
-  
-##  <a name="a-namebkmkcopyconstructorsa-copy-constructors"></a><a name="BKMK_Copy_constructors"></a> Costruttori di copia  
+##  <a name="BKMK_Copy_constructors"></a>Costruttori di copia  
  Nel linguaggio C++ standard, un costruttore di copia viene chiamato quando un oggetto viene spostato. In questo modo un oggetto viene creato ed eliminato definitivamente allo stesso indirizzo.  
   
- Tuttavia, quando **/clr** viene utilizzato per la compilazione e una funzione compilata in MSIL chiama una funzione nativa in cui una classe nativa, o più, viene passato per valore e in cui la classe nativa ha un costruttore di copia e/o un distruttore, viene chiamato alcun costruttore di copia e l'oggetto viene eliminato in un indirizzo diverso da quello in cui è stato creato. Ciò potrebbe causare problemi se la classe dispone di un puntatore in se stessa o se il codice tiene traccia degli oggetti in base all'indirizzo.  
+ Tuttavia, quando **/clr** viene utilizzato per la compilazione e una funzione compilata in MSIL chiama una funzione nativa in cui una classe nativa, o più, viene passato per valore e in cui la classe nativa ha un costruttore di copia e/o distruttore, nessun copia costruttore viene chiamato e l'oggetto viene eliminato in un indirizzo diverso da quello in cui è stato creato. Ciò potrebbe causare problemi se la classe dispone di un puntatore in se stessa o se il codice tiene traccia degli oggetti in base all'indirizzo.  
   
- Per altre informazioni, vedere [/clr (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
  Nell'esempio seguente viene illustrato quando un costruttore di copia non viene generato.  
   
@@ -775,8 +730,8 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="a-namebkmkdestructorsandfinalizersa-destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a> Distruttori e finalizzatori  
- I distruttori in un tipo di riferimento eseguono una pulitura deterministica delle risorse. I finalizzatori puliscono le risorse non gestite e possono essere chiamati in modo deterministico dal distruttore o da Garbage Collector in modo non deterministico. Per informazioni sui distruttori in C++ standard, vedere [distruttori](../cpp/destructors-cpp.md).  
+##  <a name="BKMK_Destructors_and_finalizers"></a>Distruttori e finalizzatori  
+ I distruttori in un tipo di riferimento eseguono una pulitura deterministica delle risorse. I finalizzatori puliscono le risorse non gestite e possono essere chiamati in modo deterministico dal distruttore o da Garbage Collector in modo non deterministico. Per informazioni su distruttori in C++ standard, vedere [distruttori](../cpp/destructors-cpp.md).  
   
 ```  
 class classname {  
@@ -789,9 +744,9 @@ class classname {
   
  Garbage Collector di CLR elimina gli oggetti gestiti inutilizzati e ne libera la memoria quando non sono più necessari. Tuttavia, è possibile che un tipo utilizzi risorse che Garbage Collector non sa come rilasciare. Queste risorse sono note come risorse non gestite (ad esempio, gli handle di file nativi). Si consiglia di rilasciare tutte le risorse non gestite nel finalizzatore. Poiché le risorse gestite vengono rilasciate in maniera non deterministica da Garbage Collector, non è sicuro fare riferimento alle risorse gestite in un finalizzatore poiché è possibile che Garbage Collector le abbia già pulite.  
   
- Un finalizzatore di Visual C++ non corrisponde la <xref:System.Object.Finalize%2A> metodo. (Documentazione di CLR utilizza il finalizzatore e <xref:System.Object.Finalize%2A> metodo come sinonimi). Il <xref:System.Object.Finalize%2A> metodo viene chiamato da garbage collector, che richiama ciascun finalizzatore nella catena di ereditarietà di classe. A differenza dei distruttori Visual C++, una chiamata del finalizzatore della classe derivata non indica al compilatore di richiamare il finalizzatore in tutte le classi base.  
+ Un finalizzatore di Visual C++ non corrisponde al metodo <xref:System.Object.Finalize%2A>. La documentazione di CLR utilizza il finalizzatore e il metodo <xref:System.Object.Finalize%2A> come sinonimi. Il metodo <xref:System.Object.Finalize%2A> viene chiamato da Garbage Collector, che richiama ciascun finalizzatore nella catena di ereditarietà della classe. A differenza dei distruttori Visual C++, una chiamata del finalizzatore della classe derivata non indica al compilatore di richiamare il finalizzatore in tutte le classi base.  
   
- Poiché il compilatore Visual C++ supporta il rilascio deterministico delle risorse, non tentare di implementare il <xref:System.IDisposable.Dispose%2A> o <xref:System.Object.Finalize%2A> metodi. Tuttavia, se si ha familiarità con questi metodi, ecco come eseguire il mapping di un finalizzatore di Visual C++ e un distruttore che chiama il finalizzatore per il <xref:System.IDisposable.Dispose%2A> modello:  
+ Poiché il compilatore di Visual C++ supporta il rilascio deterministico delle risorse, non tentare di implementare i metodi <xref:System.IDisposable.Dispose%2A> e <xref:System.Object.Finalize%2A>. Tuttavia, se si ha dimestichezza con questi metodi, di seguito è mostrato come un finalizzatore di Visual C++ e un distruttore che chiama il finalizzatore eseguono il mapping al modello <xref:System.IDisposable.Dispose%2A>:  
   
 ```  
 // Visual C++ code  
@@ -841,11 +796,11 @@ ref struct A {
   
  La presenza di un distruttore non implica la presenza di un finalizzatore. Tuttavia, la presenza di quest'ultimo implica la necessità di definire un distruttore e di chiamare il finalizzatore da tale distruttore. In questo modo viene effettuato il rilascio deterministico delle risorse non gestite.  
   
- La chiamata del distruttore Annulla, tramite <xref:System.GC.SuppressFinalize%2A>ovvero la finalizzazione dell'oggetto. Se il distruttore non viene chiamato, il finalizzatore del tipo verrà chiamato da Garbage Collector.  
+ La chiamata del distruttore annulla, tramite <xref:System.GC.SuppressFinalize%2A>, la finalizzazione dell'oggetto. Se il distruttore non viene chiamato, il finalizzatore del tipo verrà chiamato da Garbage Collector.  
   
  La pulizia delle risorse dell'oggetto in modo deterministico tramite la chiamata del distruttore può migliorare le prestazioni rispetto alla finalizzazione dell'oggetto da parte di CLR in modo non deterministico.  
   
- Codice scritto in Visual C++ e compilato utilizzando **/clr** esegue il distruttore del tipo se:  
+ Codice scritto in Visual C++ e compilato con **/clr** viene eseguito il distruttore di un tipo se:  
   
 -   Un oggetto creato mediante la semantica dello stack esce dall'ambito. Per ulteriori informazioni, vedere [semantica dello Stack C++ per i tipi riferimento](../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
@@ -853,7 +808,7 @@ ref struct A {
   
 -   L'oggetto è un membro di un oggetto il cui distruttore è in esecuzione.  
   
--   Si chiama il [eliminare](../cpp/delete-operator-cpp.md) operatore su un handle ([operatore Handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).  
+-   Chiamare il [eliminare](../cpp/delete-operator-cpp.md) operatore su un handle ([operatore Handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).  
   
 -   Si chiama esplicitamente il distruttore.  
   
@@ -865,7 +820,7 @@ ref struct A {
   
 -   Se il tipo esce dall'ambito in un'istruzione `using` di C#.  
   
- Se si crea un oggetto di un tipo di riferimento nell'heap gestito (non mediante la semantica dello stack per i tipi riferimento), utilizzare [try-finally](../cpp/try-finally-statement.md) sintassi per garantire che un'eccezione non impedisca il distruttore in esecuzione.  
+ Se si crea un oggetto di un tipo di riferimento nell'heap gestito (non mediante la semantica dello stack per i tipi riferimento), utilizzare [try-finally](../cpp/try-finally-statement.md) la sintassi per verificare che un'eccezione non impedisca il distruttore in esecuzione.  
   
 ```  
   
@@ -885,11 +840,11 @@ int main() {
 }  
 ```  
   
- Se il tipo ha un distruttore, il compilatore genera un `Dispose` metodo che implementa <xref:System.IDisposable>. Se un tipo è scritto in Visual C++ e ha un distruttore utilizzato da un altro linguaggio, la chiamata di `IDisposable::Dispose` su tale tipo determina la chiamata del distruttore del tipo. Quando il tipo viene utilizzato da un client Visual C++, non è possibile chiamare direttamente `Dispose`; invece, chiamare il distruttore utilizzando l'operatore `delete`.  
+ Se il tipo dispone di un distruttore, il compilatore genera un metodo `Dispose` che implementa <xref:System.IDisposable>. Se un tipo è scritto in Visual C++ e ha un distruttore utilizzato da un altro linguaggio, la chiamata di `IDisposable::Dispose` su tale tipo determina la chiamata del distruttore del tipo. Quando il tipo viene utilizzato da un client Visual C++, non è possibile chiamare direttamente `Dispose`; invece, chiamare il distruttore utilizzando l'operatore `delete`.  
   
- Se il tipo presenta un finalizzatore, il compilatore genera un `Finalize(void)` metodo che esegue l'override <xref:System.Object.Finalize%2A>.  
+ Se il tipo presenta un finalizzatore, il compilatore genera un metodo `Finalize(void)` che esegue l'override di <xref:System.Object.Finalize%2A>.  
   
- Se un tipo ha un finalizzatore o un distruttore, il compilatore genera un metodo `Dispose(bool)`, a seconda del modello di progettazione. (Per informazioni, vedere [Modello Dispose](../Topic/Dispose%20Pattern.md)). Non è possibile creare o chiamare esplicitamente `Dispose(bool)` in Visual C++.  
+ Se un tipo ha un finalizzatore o un distruttore, il compilatore genera un metodo `Dispose(bool)`, a seconda del modello di progettazione. (Per informazioni, vedere [modello Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). Non è possibile creare o chiamare esplicitamente `Dispose(bool)` in Visual C++.  
   
  Se un tipo ha una classe base conforme al modello di progettazione, vengono chiamati i distruttori di tutte le classi base quando viene chiamato il distruttore della classe derivata. Se il tipo è scritto in Visual C++, il compilatore assicura che i tipi implementino questo modello. In altre parole, il distruttore di una classe di riferimento si concatena ai relativi membri e basi come specificato dal linguaggio C++ standard. Innanzitutto viene eseguito il distruttore della classe, quindi vengono eseguiti i distruttori per i relativi membri nell'ordine inverso in cui sono stati creati e infine vengono eseguiti i distruttori per le relative classi base nell'ordine inverso in cui sono stati creati.  
   
@@ -899,7 +854,7 @@ int main() {
   
  Una volta eseguito il finalizzatore di un oggetto, vengono chiamati anche i finalizzatori in ogni classe base a partire dal tipo meno derivato. I finalizzatori per i membri dati non vengono automaticamente concatenati dal finalizzatore di classe.  
   
- Se un finalizzatore Elimina un puntatore nativo in un tipo gestito, è necessario assicurarsi che i riferimenti a o attraverso il puntatore nativo non vengono raccolti in anticipo; chiamare il distruttore sul tipo gestito anziché <xref:System.GC.KeepAlive%2A>.  
+ Se un finalizzatore elimina un puntatore nativo in un tipo gestito, è necessario assicurarsi che i riferimenti al puntatore nativo o attraverso questo non vengano raccolti in anticipo; chiamare il distruttore sul tipo gestito anziché utilizzare <xref:System.GC.KeepAlive%2A>.  
   
  In fase di compilazione, è possibile individuare se un tipo ha un finalizzatore o un distruttore. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   

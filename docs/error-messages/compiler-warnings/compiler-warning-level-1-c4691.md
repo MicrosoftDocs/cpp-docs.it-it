@@ -1,39 +1,37 @@
 ---
-title: "Avviso del compilatore (livello 1) C4691 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4691"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4691"
+title: Compilatore avviso (livello 1) C4691 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4691
+dev_langs: C++
+helpviewer_keywords: C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 04276d7e45e4f6e7460a2dedee3973fb6523c9c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4691
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'tipo': tipo di riferimento previsto in assembly 'file' non di riferimento, utilizzato il tipo definito nell'unità di conversione corrente  
+# <a name="compiler-warning-level-1-c4691"></a>Avviso del compilatore (livello 1) C4691
+'type': tipo di riferimento previsto nell'assembly senza riferimenti 'file', tipo definito in unità di conversione corrente utilizzato  
   
- Il file di metadati contenente la definizione di tipo originale non include riferimenti e viene quindi utilizzata la definizione di tipo locale.  
+ Il file di metadati che contiene la definizione del tipo originale non viene fatto riferimento e il compilatore Usa una definizione di tipo locale.  
   
- Se è in corso la ricompilazione del *file*, è possibile ignorare l'avviso C4691 o disattivarne la visualizzazione con il pragma [warning](../../preprocessor/warning.md).  Ovvero, l'avviso può essere ignorato se il file in corso di generazione è lo stesso file in cui il compilatore prevede di trovare la definizione di tipo.  
+ Nel caso in cui la ricompilazione *file*, C4691 possono essere ignorati o disattivato il pragma [avviso](../../preprocessor/warning.md).  Se il file che si sta compilando corrisponde al file in cui il compilatore prevede di trovare la definizione di tipo, vale a dire, è possibile ignorare C4691.  
   
- È comunque possibile che si verifichi un comportamento non previsto se viene utilizzata una definizione non inclusa nell'assembly a cui si riferimento nei metadati: i tipi CLR sono tipizzati non solo dal nome del tipo, ma anche dall'assembly.  Un tipo Z di un assembly z.dll è quindi diverso dal tipo Z di un assembly y.dll.  
+ Tuttavia, possono verificarsi comportamenti imprevisti se il compilatore utilizza una definizione che non è allo stesso assembly a cui fa riferimento nei metadati. Tipi CLR sono tipizzati non solo per il nome del tipo, ma anche l'assembly.  Un tipo Z di DLL di assembly è diverso da un tipo Z di assembly y.  
   
-## Esempio  
- In questo esempio è inclusa la definizione di tipo originale.  
+## <a name="example"></a>Esempio  
+ In questo esempio contiene la definizione del tipo originale.  
   
 ```  
 // C4691_a.cpp  
@@ -41,8 +39,8 @@ caps.handback.revision: 11
 public ref class Original_Type {};  
 ```  
   
-## Esempio  
- In questo esempio, che fa riferimento a C4691\_a.dll, viene dichiarato un campo di tipo Original\_Type.  
+## <a name="example"></a>Esempio  
+ In questo esempio fa riferimento a C4691_a. dll e dichiara un campo di tipo Original_Type.  
   
 ```  
 // C4691_b.cpp  
@@ -54,10 +52,10 @@ public:
 };  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4691:  Si noti che in questo esempio è inclusa una definizione per Original\_Type e non si fa riferimento a C4691a.dll.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4691.  Si noti in questo esempio include una definizione per Original_Type e non fa riferimento a C4691a.  
   
- Per correggere l'errore, fare riferimento al file di metadati contenente la definizione di tipo originale e rimuovere la definizione e la dichiarazione locali.  
+ Per risolvere, fare riferimento al file di metadati che contiene la definizione del tipo originale e rimuovere la dichiarazione locale e la definizione.  
   
 ```  
 // C4691_c.cpp  

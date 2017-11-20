@@ -1,32 +1,32 @@
 ---
-title: "Scorrimento di un rowset semplice | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni di accesso [C++], rowset"
-  - "accesso ai dati [C++], rowset"
-  - "consumer OLE DB [C++], attributi database"
-  - "rowset [C++], accesso"
-  - "rowset semplici"
+title: Scorrimento di un Rowset semplice | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], rowsets
+- rowsets [C++], accessing
+- simple rowsets
+- OLE DB consumers [C++], database attributes
+- accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Scorrimento di un rowset semplice
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio che segue viene mostrato un tipo di accesso rapido e semplice a un database senza l'utilizzo di comandi.  Nella situazione considerata, il codice del consumer, in un progetto ATL, recupera record da una tabella di un database di Microsoft Access denominata *Artists* tramite il provider Microsoft OLE DB per ODBC.  Mediante tale codice viene creato un oggetto tabella [CTable](../../data/oledb/ctable-class.md) con una funzione di accesso basata sulla classe di record utente `CArtists`.  Vengono aperte una connessione, una sessione sulla connessione e la tabella sulla sessione.  
+# <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
+Nell'esempio seguente viene illustrato un accesso semplice e rapido database che non implica i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *artisti* in Microsoft Access, database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto della tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  
   
 ```  
 #include <atldbcli.h>  
@@ -51,7 +51,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record utente `CArtists` ha il seguente formato:  
+ Il record dell'utente, `CArtists`, simile al seguente:  
   
 ```  
 class CArtists  
@@ -70,5 +70,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## Vedere anche  
- [Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

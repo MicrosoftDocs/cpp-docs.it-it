@@ -1,39 +1,38 @@
 ---
-title: "Metodo HString::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::Release"
-dev_langs: 
-  - "C++"
+title: 'Metodo hstring:: Release | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::Release
+dev_langs: C++
 ms.assetid: b7ed0276-c65d-4601-a3dd-d9c57ef5340c
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1a7db502f5e0f9e5ccf4e2015cd288c32e617e78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HString::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Elimina il valore stringa sottostante e inizializza l'oggetto corrente di HString ad un valore void.  
+# <a name="hstringrelease-method"></a>Metodo HString::Release
+Elimina il valore string sottostante e inizializza l'oggetto HString corrente su un valore vuoto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void Release() throw()  
 ```  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HString](../windows/hstring-class.md)

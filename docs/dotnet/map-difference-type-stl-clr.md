@@ -1,41 +1,39 @@
 ---
-title: "map::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membro) [STL/CLR]"
+title: 'Map:: difference_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 22c80391-f97b-4ac4-9e2d-7f4caa2c5ac8
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0b28b6fe57be020e6f602a562ffd6df52aa14a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I tipi di una distanza con segno tra due elementi.  
+# <a name="mapdifferencetype-stlclr"></a>map::difference_type (STL/CLR)
+I tipi di una distanza signed tra due elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Note  
- Il tipo descrive un possibile conteggio di elemento non negativo.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un conteggio di elementi eventualmente negativo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_difference_type.cpp   
@@ -71,14 +69,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## Requisiti  
- **Intestazione:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::size\_type](../dotnet/map-size-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size_type (STL/CLR)](../dotnet/map-size-type-stl-clr.md)

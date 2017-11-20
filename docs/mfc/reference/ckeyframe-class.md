@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CKeyFrame [MFC], CKeyFrame
 - CKeyFrame [MFC], AddToStoryboard
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 69ec01c3ad488dc9236369719fcd5060ba75e13d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 67121027293171c9692362fd148a8598f649cfe2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ckeyframe-class"></a>Classe CKeyFrame
 Rappresenta un fotogramma chiave di animazione.  
@@ -248,4 +245,3 @@ CBaseTransition* m_pTransition;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

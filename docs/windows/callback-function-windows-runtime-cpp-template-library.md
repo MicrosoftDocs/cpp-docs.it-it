@@ -1,31 +1,29 @@
 ---
-title: "Funzione di callback (Libreria modelli C++ per Windows Runtime) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: Funzione di callback (libreria modelli C++ di Windows Runtime) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 49d97371b351abdac85767853c034ada9b1fa116
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Funzione di callback (Libreria modelli C++ per Windows Runtime)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Funzione di callback (Libreria modelli C++ per Windows Runtime)
 Crea un oggetto la cui funzione membro è un metodo di callback.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -198,7 +196,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `TDelegateInterface`  
  Parametro di modello che specifica l'interfaccia del delegato da chiamare quando si verifica un evento.  
   
@@ -244,16 +242,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  La funzione membro da chiamare quando si verifica un evento.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Oggetto la cui funzione membro è il metodo di callback specificato.  
   
-## Note  
+## <a name="remarks"></a>Note  
  La base di un oggetto delegato deve essere IUnknown, non IInspectable.  
   
-## Requisiti  
- **Intestazione:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

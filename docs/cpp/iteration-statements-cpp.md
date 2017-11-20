@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - iteration statements
 - loop structures, iteration statements
 ms.assetid: bf6d75f7-ead2-426a-9c47-33847f59b8c7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e00939a9ff383be4cf84c098ee7e93af307a1536
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iteration-statements-c"></a>Istruzioni di iterazione (C++)
 Le istruzioni di iterazione determinano l'esecuzione di istruzioni (o istruzioni composte) nessuna o più volte, soggette ad alcuni criteri di ciclo-chiusura. Quando queste istruzioni sono composte, vengono eseguiti in ordine, tranne quando entrambi i [interruzione](../cpp/break-statement-cpp.md) istruzione o [continuare](../cpp/continue-statement-cpp.md) viene rilevata un'istruzione.  

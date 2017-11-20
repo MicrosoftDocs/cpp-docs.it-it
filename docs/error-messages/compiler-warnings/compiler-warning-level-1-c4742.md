@@ -1,39 +1,37 @@
 ---
-title: "Avviso del compilatore (livello 1) C4742 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4742"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4742"
+title: Compilatore avviso (livello 1) C4742 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4742
+dev_langs: C++
+helpviewer_keywords: C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 934c7d14d95d0b90cfdcdb694f743e6b13abd0e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4742
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var' ha un diverso allineamento in 'file1' e 'file2': numero e numero  
+# <a name="compiler-warning-level-1-c4742"></a>Avviso del compilatore (livello 1) C4742
+'var' ha un diverso allineamento in 'file1' e 'file2': numero e il numero  
   
- Una variabile esterna presenta un allineamento diverso all'interno dei due file in cui viene definita o in cui vi viene fatto riferimento.  Questo avviso viene generato quando il compilatore rileva che il valore `__alignof` per la variabile in *file1* è diverso da quello di `__alignof` per la variabile in *file2*.  Questo può essere dovuto all'utilizzo di tipi incompatibili durante la dichiarazione della variabile in file diversi o all'utilizzo di `#pragma pack` non corrispondenti in file diversi.  
+ Una variabile esterna a cui fa riferimento o definita in due file ha un diverso allineamento in tali file. Questo avviso viene generato quando il compilatore rileva che `__alignof` per la variabile nella *file1* è diverso da `__alignof` per la variabile nella *file2*. È possibile che con tipi incompatibili durante la dichiarazione di variabile in file diversi, o non corrispondenti `#pragma pack` in file diversi.  
   
- Per risolvere il problema, utilizzare la stessa definizione di tipo o assegnare nomi diversi alle variabili.  
+ Per risolvere il problema, utilizzare la stessa definizione di tipo o usare un nome diverso per le variabili.  
   
- Per ulteriori informazioni, vedere [pack](../../preprocessor/pack.md) e [Operatore \_\_alignof](../../cpp/alignof-operator.md).  
+ Per ulteriori informazioni, vedere [pack](../../preprocessor/pack.md) e [operatore alignof](../../cpp/alignof-operator.md).  
   
-## Esempio  
- Di seguito viene riportato il primo file che definisce il tipo.  
+## <a name="example"></a>Esempio  
+ Questo è il primo file che definisce il tipo.  
   
 ```  
 // C4742a.c  
@@ -43,8 +41,8 @@ struct X {
 } global;  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4742:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4742.  
   
 ```  
 // C4742b.c  

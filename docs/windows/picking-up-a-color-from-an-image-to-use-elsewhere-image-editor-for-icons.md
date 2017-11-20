@@ -1,55 +1,54 @@
 ---
-title: "Picking up a Color from an Image to Use Elsewhere (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.color"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], image"
-  - "images [C++], colors"
-  - "colors [C++], selection tools"
-  - "Image editor [C++], colors"
-  - "Select Color tool"
+title: Selezione di un colore di un'immagine da utilizzare altrove (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.color
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], image
+- images [C++], colors
+- colors [C++], selection tools
+- Image editor [C++], colors
+- Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99a3bf23770c4696f707b5c5f5e3ea9d5afbdd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Picking up a Color from an Image to Use Elsewhere (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lo strumento **Seleziona colore**, corrispondente al selettore dei colori, consente di impostare qualsiasi colore dell'immagine come colore di primo piano o di sfondo corrente, a seconda che si faccia clic con il pulsante sinistro o con il pulsante destro del mouse.  Per disattivare lo strumento **Seleziona colore**, selezionare un altro strumento.  
+# <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Selezione di un colore di un'immagine da utilizzare altrove (Editor di immagini per le icone)
+Il **Seleziona colore**, o selezione colori, lo strumento consente di crea colori dell'immagine il colore di primo piano corrente o il colore di sfondo, a seconda se si preme il pulsante destro del mouse o sinistra. Per annullare il **Seleziona colore** strumento, scegliere un altro strumento.  
   
 > [!TIP]
->  Il suggerimento viene visualizzato quando si passa il cursore sui pulsanti della barra degli strumenti.  che consentono di identificare facilmente la funzione di ciascun pulsante.  
+>  Descrizioni comandi vengono visualizzati quando si passa il cursore su un pulsante della barra degli strumenti. Questi suggerimenti consente di identificare la funzione di ogni pulsante.  
   
-### Per selezionare un colore  
+### <a name="to-pick-up-a-color"></a>Per selezionare un colore  
   
-1.  Selezionare lo strumento **Seleziona colore** sulla barra degli strumenti dell'editor di immagini o mediante l'opzione **Strumenti** del menu **Immagine**.  
+1.  Nel **Editor di immagini** barra degli strumenti (o dal **immagine** dal menu **strumenti** comando), fare clic su di **Seleziona colore** strumento.  
   
-2.  Selezionare il colore desiderato dall'immagine.  
+2.  Selezionare il colore desiderato possono essere prelevati dall'immagine.  
   
     > [!NOTE]
-    >  Una volta selezionato un colore, nell'editor di immagini viene riattivato l'ultimo strumento utilizzato.  
+    >  Quando si seleziona un colore, l'editor di immagini riattiva lo strumento utilizzato più di recente.  
   
-3.  Disegnare utilizzando il pulsante sinistro del mouse se si desidera utilizzare il colore di primo piano oppure il pulsante destro per il colore di sfondo.  
+3.  Disegnare utilizzando il pulsante sinistro del mouse per il colore primo piano o il pulsante destro del mouse per il colore di sfondo.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

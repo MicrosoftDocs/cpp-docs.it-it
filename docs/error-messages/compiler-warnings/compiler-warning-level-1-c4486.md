@@ -1,35 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4486"
+title: Compilatore avviso (livello 1) C4486 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4486
+dev_langs: C++
+helpviewer_keywords: C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d8819029a9fc5a40281f875ab12595c7a73f0e09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'funzione': un metodo virtuale privato di una classe di riferimento o di valori dovrebbe essere contrassegnato 'sealed'  
+# <a name="compiler-warning-level-1-c4486"></a>Avviso del compilatore (livello 1) C4486
+'function': un metodo virtuale privato di una classe di riferimento o una classe di valore deve essere contrassegnato 'sealed'  
   
- Poiché non è possibile accedervi né eseguirne l'override, le funzioni membro virtuali private di una classe o di una struttura gestita devono essere contrassegnate come [sealed](../../windows/sealed-cpp-component-extensions.md).  
+ Poiché una funzione membro virtuale privata di una classe o struttura gestita non è possibile accedere o sottoposto a override, deve essere contrassegnato [sealed](../../windows/sealed-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4486:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4486.  
   
 ```  
 // C4486.cpp  
@@ -41,8 +39,8 @@ private:
 };  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene indicato un possibile utilizzo di una funzione virtuale privata di tipo sealed.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente viene illustrato un possibile utilizzo di una funzione sealed, virtual privata.  
   
 ```  
 // C4486_b.cpp  

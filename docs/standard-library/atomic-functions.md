@@ -37,7 +37,7 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -71,12 +71,11 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 75dff27cd050ae1a218cb8d61abaffff05d38661
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 ||||  
@@ -886,7 +885,6 @@ Ty kill_dependency(Ty Arg) noexcept;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<atomic>](../standard-library/atomic.md)
-
 
 
 

@@ -1,27 +1,26 @@
 ---
-title: "A.2   Specifying Conditional Compilation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Specifica di compilazione condizionale. 2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: de4a21b9-f987-4738-9f13-c4795f6f2dff
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0888a8bfc3d920ed3338b2ab6182c09cb75097a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# A.2   Specifying Conditional Compilation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Negli esempi seguenti viene illustrato l'utilizzo di compilazione condizionale utilizzando la macro di OpenMP `_OPENMP` \([parte 2,2](../../parallel/openmp/2-2-conditional-compilation.md) a pagina 8\).  Con la compilazione di OpenMP, `_OPENMP` la macro viene definita.  
+# <a name="a2---specifying-conditional-compilation"></a>A.2   Specifica della compilazione condizionale
+Nell'esempio seguente viene illustrato l'utilizzo della compilazione condizionale utilizzando la macro OpenMP `_OPENMP` ([sezione 2.2](../../parallel/openmp/2-2-conditional-compilation.md) nella pagina 8). Con la compilazione OpenMP il `_OPENMP` macro viene definita.  
   
 ```  
 # ifdef _OPENMP   
@@ -29,7 +28,7 @@ Negli esempi seguenti viene illustrato l'utilizzo di compilazione condizionale u
 # endif  
 ```  
   
- L'operatore definito per il preprocessore consente più di una macro dal test in un'unica direttiva.  
+ L'operatore del preprocessore definito consente più di una macro da sottoporre a test in una singola direttiva.  
   
 ```  
 # if defined(_OPENMP) && defined(VERBOSE)  

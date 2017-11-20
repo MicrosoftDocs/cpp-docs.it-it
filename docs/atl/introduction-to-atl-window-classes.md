@@ -1,50 +1,50 @@
 ---
-title: "Introduction to ATL Window Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "window classes"
+title: Introduzione alle classi di finestra ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 253c7145f9b312890f20eddb6bb8eab425fd60c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Introduction to ATL Window Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le seguenti classi ATL sono progettate per implementare e modificare le finestre:  
+# <a name="introduction-to-atl-window-classes"></a>Introduzione alle classi di finestra ATL
+Le seguenti classi ATL sono progettate per l'implementazione e la modifica di windows:  
   
--   [CWindow](../atl/reference/cwindow-class.md) sarà possibile collegarla l'handle della finestraoggetto `CWindow`.  Chiamare i metodi `CWindow` per modificare la finestra.  
+-   [CWindow](../atl/reference/cwindow-class.md) consente di associare un handle di finestra per il `CWindow` oggetto. Chiamare quindi `CWindow` metodi per modificare la finestra.  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di distribuire una nuova finestra e messaggi considerati con una mappa messaggi.  È possibile creare una finestra basata su una nuova classe, superclasse una classe esistente, o sottoclasse di Windows una finestra esistente.  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md) consente di implementare una nuova finestra ed elaborare i messaggi con una mappa messaggi. È possibile creare una finestra in base a una nuova classe, una classe esistente superclasse o sottoclasse Windows una finestra esistente.  
   
--   [CDialogImpl](../atl/reference/cdialogimpl-class.md) consente di distribuire i messaggi modali o finestra di dialogo non modale e di processo con una mappa messaggi.  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md) consente di implementare modale o una finestra di dialogo non modale ed elaborare messaggi con una mappa messaggi.  
   
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) è una classe esistente che implementa una finestra di cui la mappa messaggi è contenuta in un'altra classe.  Utilizzando `CContainedWindowT` consente di gestire centralmente l'elaborazione dei messaggi in una classe.  
+-   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) è una classe che implementa una finestra che mappa il cui messaggio è contenuto in un'altra classe. Utilizzando `CContainedWindowT` consente di centralizzare l'elaborazione dei messaggi in una classe.  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) consente di distribuire una finestra di dialogo \(modale o non modale\) che ospitano controlli ActiveX.  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) consente di implementare una finestra di dialogo (modale o non modale) che ospita controlli ActiveX.  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) consente di distribuire una finestra di dialogo modale con funzionalità di base.  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md) consente di implementare una finestra di dialogo modale con funzionalità di base.  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) consente di distribuire una finestra che ospita un controllo ActiveX.  
+-   [CAxWindow](../atl/reference/caxwindow-class.md) consente di implementare una finestra che ospita un controllo ActiveX.  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) consente di distribuire una finestra che ospita un controllo ActiveX con licenza.  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) consente di implementare una finestra che ospita un controllo ActiveX con licenza.  
   
- Oltre alle classi di finestre specifiche, ATL fornisce diverse classi progettate per semplificare l'implementazione di un oggetto window ATL più semplice.  Esse sono:  
+ Oltre alle classi di finestra specifica, ATL fornisce molte classi progettate per semplificare l'implementazione di un oggetto finestra ATL. Le visualizzazioni sono le seguenti:  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gestisce le informazioni della nuova classe della finestra.  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) gestisce le informazioni di una nuova classe di finestra.  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) forniscono un metodo semplice di standardizzazione dei tratti di un oggetto window ATL.  
+-   [CWinTraits](../atl/reference/cwintraits-class.md) e [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) offrono un metodo semplice di standardizzare i tratti di un oggetto finestra ATL.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classi di finestra](../atl/atl-window-classes.md)
+

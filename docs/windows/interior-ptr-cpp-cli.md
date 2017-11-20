@@ -1,97 +1,95 @@
 ---
-title: "interior_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "stdcli::language::interior_ptr"
-  - "interior_ptr_cpp"
-  - "interior_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interior_ptr keyword [C++]"
+title: interior_ptr (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- stdcli::language::interior_ptr
+- interior_ptr_cpp
+- interior_ptr
+dev_langs: C++
+helpviewer_keywords: interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: edb506b17cce617c438bc518bfbd5410b9dabbe2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un *puntatore interno* dichiara un puntatore in un tipo di riferimento, ma non all'oggetto stesso.  Un puntatore interno può puntare ad un handle di riferimento, ad un tipo di valore, ad un handle di tipo boxed, ad un membro di un tipo gestito o ad un elemento di un array gestito.  
+# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+Un *puntatore interno* dichiara un puntatore all'interno di un tipo riferimento, ma non all'oggetto stesso. Un puntatore interno può puntare a un handle di riferimento, un tipo di valore, un handle di tipo boxed, un membro di un tipo gestito o un elemento di una matrice gestita.  
   
-## Tutti i runtime  
- \(Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime\).  
+## <a name="all-runtimes"></a>Tutti i runtime  
+ Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
   
-## Windows Runtime  
+## <a name="windows-runtime"></a>Windows Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## Common Language Runtime  
- L'esempio di sintassi seguente illustra un puntatore interno.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Nell'esempio di sintassi seguente viene illustrato un puntatore interno.  
   
-### Sintassi  
+### <a name="syntax"></a>Sintassi  
   
 ```cpp  
 cli::interior_ptr<cv_qualifier type> var = &initializer;  
 ```  
   
-### Parametri  
- *cv\_qualifier*  
- **const** o qualificatori di `volatile`.  
+### <a name="parameters"></a>Parametri  
+ *cv_qualifier*  
+ **const** o `volatile` qualificatori.  
   
  *type*  
- Tipo di *initializer*.  
+ Il tipo di *inizializzatore*.  
   
  *var*  
- Il nome della variabile `interior_ptr`.  
+ Nome della variabile `interior_ptr`.  
   
  *initializer*  
- Un membro di un tipo di riferimento, di un elemento di un array gestito o di un qualsiasi altro oggetto che è possibile assegnare ad un puntatore nativo.  
+ Membro di un tipo di riferimento, elemento di una matrice gestita o qualsiasi altro oggetto che è possibile assegnare a un puntatore nativo.  
   
-### Osservazioni  
- Un puntatore nativo non può tracciare un elemento se la sua posizione cambia nell'heap gestito, il quale deriva da istanze di spostamento del Garbage Collector di un oggetto.  Affinché un puntatore faccia riferimento correttamente all'istanza, il runtime deve aggiornare il puntatore all'oggetto appena posizionato.  
+### <a name="remarks"></a>Note  
+ Tramite un puntatore nativo non è possibile tenere traccia di un elemento mentre la relativa posizione cambia nell'heap gestito a causa dello spostamento di istanze di un oggetto da parte del Garbage Collector. Affinché il riferimento di un puntatore all'istanza sia corretto, il puntatore deve essere aggiornato dal runtime in base all'oggetto appena posizionato.  
   
- Un `interior_ptr` rappresenta un superset della funzionalità di un puntatore nativo.  Pertanto, qualsiasi cosa che possa essere assegnata ad un puntatore nativo può anche essere assegnata ad un `interior_ptr`.  Un puntatore interno può eseguire lo stesso gruppo di operazioni dei puntatori nativi, incluso il confronto e l'aritmetica dei puntatori.  
+ Un oggetto `interior_ptr` rappresenta un superset della funzionalità di un puntatore nativo.  Pertanto, qualsiasi elemento che può essere assegnato a un puntatore nativo può anche essere assegnato a un oggetto `interior_ptr`.  In un puntatore interno può essere eseguito lo stesso set di operazioni dei puntatori nativi, inclusi il confronto e l'aritmetica dei puntatori.  
   
- Un puntatore interno può essere dichiarato solo nello stack.  Un puntatore interno non può essere dichiarato come membro di una classe.  
+ Un puntatore interno può essere dichiarato solo nello stack  e non come membro di una classe.  
   
- Poiché i puntatori interni sono disponibili solo nello stack, prendere l'indirizzo di un puntatore interno genera un puntatore non gestito.  
+ Poiché i puntatori interni sono disponibili solo nello stack, se si accetta l'indirizzo di un puntatore interno viene generato un puntatore non gestito.  
   
- `interior_ptr` ha una conversione implicita a `bool`, che consente di utilizzarlo nelle istruzioni condizionali.  
+ L'oggetto `interior_ptr` dispone di una conversione implicita a `bool` che consente di utilizzarlo nelle istruzioni condizionali.  
   
- Per informazioni su come dichiarare un puntatore interno che punta in un oggetto che non può essere spostato sull'heap del garbage collection, vedere [pin\_ptr](../windows/pin-ptr-cpp-cli.md).  
+ Per informazioni su come dichiarare un puntatore interno che punta a un oggetto che non può essere spostato nell'heap sottoposto a garbage collection, vedere [pin_ptr](../windows/pin-ptr-cpp-cli.md).  
   
- `interior_ptr` è nello spazio dei nomi cli.  Per ulteriori informazioni, vedere [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `interior_ptr` è nello spazio dei nomi cli.  Vedere [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) per ulteriori informazioni.  
   
  Per ulteriori informazioni sui puntatori interni, vedere  
   
--   [How to: Declare and Use Interior Pointers and Managed Arrays \(C\+\+\/CLI\)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
+-   [Procedura: Dichiarare e usare i puntatori interni e le matrici gestite (C++/CLI)](../windows/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)  
   
--   [How to: Declare Value Types with the interior\_ptr Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
+-   [Procedura: Dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)](../windows/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)  
   
--   [How to: Overload Functions with Interior Pointers and Native Pointers \(C\+\+\/CLI\)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
+-   [Procedura: Eseguire l'overload di funzioni con puntatori interni e puntatori nativi (C++/CLI)](../windows/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)  
   
--   [How to: Declare Interior Pointers with the const Keyword \(C\+\+\/CLI\)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
+-   [Procedura: Dichiarare i puntatori interni con la parola chiave const (C++/CLI)](../windows/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Il seguente codice di esempio mostra come dichiarare e utilizzare un puntatore interno in un tipo di riferimento.  
+ Nell'esempio riportato di seguito viene mostrato come dichiarare e utilizzare un puntatore interno in un tipo di riferimento.  
   
 ```cpp  
 // interior_ptr.cpp  
@@ -121,8 +119,11 @@ int main() {
   
  **Output**  
   
- **1**   
-**2**   
-**3**   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+2  
+3  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

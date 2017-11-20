@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_tzname
+apiname: _get_tzname
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _get_tzname
 - get_tzname
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _get_tzname function
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 7061018f217aec8a758b63697f3ef45dfbbdfa82
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 Recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario o del nome del fuso orario dell'ora legale.  

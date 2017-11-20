@@ -1,53 +1,53 @@
 ---
-title: "Trasferimento di campi di record: utilizzo del codice della creazione guidata | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoFieldExchange (metodo), override"
-  - "membri dati di campi"
-  - "membri dati di campi, dichiarazione"
-  - "m_nFields (membro dati)"
-  - "m_nFields (membro dati), inizializzazione"
-  - "m_nParams (membro dati)"
-  - "m_nParams (membro dati), inizializzazione"
-  - "ODBC, RFX"
-  - "override, DoFieldExchange"
-  - "RFX (ODBC), implementazione"
-  - "RFX (ODBC), codice creazione guidata"
-  - "Unicode, con classi di database"
+title: 'Campi di record: Utilizzo del codice della procedura guidata | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DoFieldExchange method, overriding
+- Unicode, with database classes
+- field data members, declaring
+- RFX (ODBC), wizard code
+- RFX (ODBC), implementing
+- field data members
+- ODBC, RFX
+- m_nParams data member, initializing
+- m_nFields data member
+- m_nParams data member
+- overriding, DoFieldExchange
+- m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e611bee4962a64ff725ca086a28583fe9a3b30e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Trasferimento di campi di record: utilizzo del codice della creazione guidata
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato il codice scritto dalla Creazione guidata applicazioni MFC e tramite il comando **Aggiungi classe** \(come descritto in [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)\) per supportare RFX e la modalità di modifica di tale codice.  
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Trasferimento di campi di record: utilizzo del codice della creazione guidata
+In questo argomento viene illustrato il codice che la creazione guidata applicazione MFC e **Aggiungi classe** (come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) per supportare RFX e modalità di modifica di tale codice.  
   
 > [!NOTE]
->  L'argomento è relativo alle classi derivate da `CRecordset` per cui il recupero di massa di righe non è ancora stato implementato.  Se si sta utilizzando il recupero di massa di righe, verrà implementato l'RFX di massa.  L'RFX di massa è simile all'RFX.  Per comprenderne le differenze, vedere [Recordset: recupero di massa di record \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Questo argomento si applica alle classi derivate da `CRecordset` in quale riga bulk recupero non è stato implementato. Se si utilizza il recupero di massa di righe, viene implementata exchange di massa di campi di record (RFX di massa). RFX di massa è simile a RFX. Per comprendere le differenze, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Quando si crea una classe recordset con la Creazione guidata applicazioni MFC o con il comando **Aggiungi classe**, vengono automaticamente scritti i seguenti elementi relativi a RFX, in base all'origine dati, alla tabella e alle colonne specificate nella procedura guidata.  
+ Quando si crea una classe recordset con la creazione guidata applicazione MFC o **Aggiungi classe**, la procedura guidata scrive i seguenti elementi relativi RFX per utente, in base all'origine dati, tabella e colonna scelte effettuate nella procedura guidata:  
   
--   Dichiarazioni dei membri dati di campo del recordset nella classe recordset.  
+-   Dichiarazioni di membri dati di campo del recordset della classe recordset  
   
--   Un override di `CRecordset::DoFieldExchange`.  
+-   Un override di`CRecordset::DoFieldExchange`  
   
--   L'inizializzazione dei membri dati di campo del recordset nel costruttore della classe recordset.  
+-   Inizializzazione dei membri di dati di campo recordset nel costruttore della classe recordset  
   
-##  <a name="_core_the_field_data_member_declarations"></a> Dichiarazioni dei membri dati di campo  
- Le procedure guidate scrivono una dichiarazione della classe recordset in un file con estensione h che, per la classe `CSections`, è simile al seguente:  
+##  <a name="_core_the_field_data_member_declarations"></a>Dichiarazioni dei membri di campo dati  
+ Le procedure guidate di scrivono una dichiarazione di classe recordset in un file con estensione h simile al seguente per la classe `CSections`:  
   
 ```  
 class CSections : public CRecordset  
@@ -79,14 +79,15 @@ public:
 };  
 ```  
   
- Se si aggiungono e si associano membri dati di parametro o nuovi membri dati di campo, si consiglia di aggiungere tali elementi dopo quelli generati dalla procedura guidata.  
+ Se si aggiungono membri dati di parametro o i nuovi membri dati di campo che associano manualmente, aggiungerli dopo quelli generati dalla procedura guidata.  
   
- Inoltre, si tenga presente che la procedura guidata eseguirà l'override della funzione membro `DoFieldExchange` della classe `CRecordset`.  
+ Inoltre, si noti che la procedura guidata esegue l'override di `DoFieldExchange` funzione membro di classe `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a> Override di DoFieldExchange  
- [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) rappresenta il fulcro del meccanismo RFX.  Il framework chiama `DoFieldExchange` tutte le volte che è necessario spostare dati dall'origine dati al recordset o viceversa.  `DoFieldExchange` supporta anche l'acquisizione di informazioni sui membri dati del campo tramite le funzioni membro [IsFieldDirty](../Topic/CRecordset::IsFieldDirty.md) e [IsFieldNull](../Topic/CRecordset::IsFieldNull.md).  
+##  <a name="_core_the_dofieldexchange_override"></a>Override di DoFieldExchange  
+
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) rappresenta il fulcro di RFX. Il framework chiama `DoFieldExchange` ogni volta che è necessario spostare i dati dall'origine dati al recordset o dal recordset all'origine dati. `DoFieldExchange`inoltre supporta il recupero di informazioni sul campo membri di dati tramite il [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) e [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) funzioni membro.  
   
- L'override di `DoFieldExchange` riportato di seguito è relativo alla classe `CSections`.  La procedura guidata scriverà la funzione nel file con estensione cpp per la classe recordset.  
+ Nell'esempio `DoFieldExchange` override è per la `CSections` classe. La procedura guidata scrive la funzione nel file con estensione cpp per la classe recordset.  
   
 ```  
 void CSections::DoFieldExchange(CFieldExchange* pFX)  
@@ -100,27 +101,27 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Di seguito sono riportate le caratteristiche principali della funzione.  
+ Tenere presente le seguenti funzionalità principali della funzione:  
   
--   Questa sezione della funzione è denominata mappa dei campi.  
+-   In questa sezione della funzione viene chiamata il mapping dei campi.  
   
--   Una chiamata a `CFieldExchange::SetFieldType` mediante il puntatore `pFX`.  Questa chiamata specifica che tutte le chiamate a funzioni RFX fino alla fine di `DoFieldExchange` o fino alla chiamata successiva a `SetFieldType` sono colonne di output.  Per ulteriori informazioni, vedere [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md).  
+-   Una chiamata a `CFieldExchange::SetFieldType`, tramite il `pFX` puntatore. Questa chiamata specifica che tutte le funzioni RFX viene chiamato alla fine di `DoFieldExchange` o la chiamata successiva a `SetFieldType` sono colonne di output. Per ulteriori informazioni, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
--   Diverse chiamate alla funzione globale `RFX_Text`, una per ciascun membro dati di campo \(nell'esempio riportato, tutte le chiamate sono variabili `CString`\).  Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro dati di campo.  Le funzioni RFX eseguono l'effettivo trasferimento dei dati.  La libreria di classi fornisce funzioni RFX per tutti i tipi di dati comuni.  Per ulteriori informazioni sulle funzioni RFX, vedere [Trasferimento di campi di record: utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
+-   Più chiamate al `RFX_Text` funzione globale, ovvero uno per ogni campo dati membro (tutti i quali è `CString` variabili nell'esempio). Queste chiamate specificano la relazione tra un nome di colonna nell'origine dati e un membro dati di campo. Le funzioni RFX di eseguono il trasferimento dei dati effettivi. La libreria di classi fornisce funzioni RFX per tutti i tipi di dati comuni. Per ulteriori informazioni sulle funzioni RFX, vedere [campi di record: utilizzo delle funzioni RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
   
     > [!NOTE]
-    >  È necessario che vi sia corrispondenza tra l'ordine delle chiamate alle funzioni RFX in `DoFieldExchange` e l'ordine delle colonne nel gruppo dei risultati.  
+    >  L'ordine delle colonne del set di risultati deve corrispondere all'ordine delle chiamate alle funzioni RFX in `DoFieldExchange`.  
   
--   Il puntatore `pFX` a un oggetto [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) passato dal framework durante la chiamata a `DoFieldExchange`.  L'oggetto `CFieldExchange` specifica l'operazione che `DoFieldExchange` eseguirà, la direzione di trasferimento e altre informazioni sul contesto.  
+-   Il `pFX` puntatore a un [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) oggetto passato dal framework quando viene chiamata `DoFieldExchange`. Il `CFieldExchange` oggetto specifica l'operazione che `DoFieldExchange` consiste nell'eseguire, la direzione del trasferimento e altre informazioni sul contesto.  
   
-##  <a name="_core_the_recordset_constructor"></a> Costruttore del recordset  
+##  <a name="_core_the_recordset_constructor"></a>Costruttore del recordset  
  Il costruttore del recordset creato dalla procedura guidata contiene due elementi relativi a RFX:  
   
--   Una inizializzazione per ciascun membro dati di campo  
+-   Inizializzazione di una per ogni membro dati di campo  
   
--   Una inizializzazione per il membro dati [m\_nFields](../Topic/CRecordset::m_nFields.md), contenente il numero di membri dati di campo  
+-   Un'inizializzazione per il [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) membro dati, che contiene il numero di membri dati di campo  
   
- Di seguito è riportato un esempio di costruttore per il recordset `CSections`.  
+ Il costruttore per il `CSections` esempio recordset è simile al seguente:  
   
 ```  
 CSections::CSections(CDatabase* pdb)  
@@ -136,13 +137,14 @@ CSections::CSections(CDatabase* pdb)
 ```  
   
 > [!NOTE]
->  Se si aggiungono membri dati di campo manualmente, come è possibile fare quando si associano nuove colonne in modo dinamico, sarà necessario incrementare `m_nFields`.  Eseguire questa operazione aggiungendo un'altra riga di codice, come la seguente:  
+>  Se si aggiungono membri dati di campo manualmente, come si farebbe se si associano nuove colonne in modo dinamico, è necessario incrementare `m_nFields`. A tale scopo, aggiungere un'altra riga di codice, ad esempio:  
   
 ```  
 m_nFields += 3;  
 ```  
+
+ Si tratta del codice per l'aggiunta di tre nuovi campi. Se si aggiunge un membro dati di parametro, è necessario inizializzare il [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) membro dati, che contiene il numero di membri dati di parametro. Inserire il `m_nParams` inizializzazione all'esterno delle parentesi.  
+
   
- Si tratta del codice per l'aggiunta di tre nuovi campi.  Se si aggiunge un membro dati di parametro, sarà necessario inizializzare il membro dati [m\_nParams](../Topic/CRecordset::m_nParams.md), che contiene il numero dei membri dati di parametro.  Collocare l'inizializzazione di `m_nParams` all'esterno delle parentesi.  
-  
-## Vedere anche  
- [Trasferimento di campi di record \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)
+## <a name="see-also"></a>Vedere anche  
+ [Trasferimento di campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

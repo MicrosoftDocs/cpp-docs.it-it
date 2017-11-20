@@ -13,10 +13,9 @@ f1_keywords:
 - queue/std::operator&lt;
 - queue/std::operator&lt;=
 - queue/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (queue)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c3d30f04ad3b8f330c70b75ca21bdab44913f336
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 ||||  
@@ -408,5 +406,4 @@ The queue q1 is greater than or equal to the queue q3.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<queue>](../standard-library/queue.md)
-
 

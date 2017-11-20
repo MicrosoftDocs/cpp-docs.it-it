@@ -1,35 +1,34 @@
 ---
-title: "auto_handle::auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::auto_handle"
-  - "msclr.auto_handle.auto_handle"
-  - "auto_handle.auto_handle"
-  - "msclr::auto_handle::auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle (metodo)"
+title: auto_handle::auto_handle | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::auto_handle
+- msclr.auto_handle.auto_handle
+- auto_handle.auto_handle
+- msclr::auto_handle::auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle method
 ms.assetid: 0b68ab31-023c-4224-9601-9231412c4e13
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f74f327bacc3ec96ad4fd3f41b4714ab3669456c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruttore `auto_handle`.  
+# <a name="autohandleautohandle"></a>auto_handle::auto_handle
+Il `auto_handle` costruttore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 auto_handle();  
@@ -45,14 +44,14 @@ auto_handle(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_ptr`  
- Oggetto da tenere.  
+ L'oggetto proprietario.  
   
  `_right`  
- Classe `auto_handle` esistente.  
+ Oggetto `auto_handle` esistente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_handle_auto_handle.cpp  
@@ -105,21 +104,24 @@ int main()
 }  
 ```  
   
-  **in RefClassA constructor: first**  
-**Hello from first A\!**  
-**in RefClassA destructor: first**  
-**in RefClassA constructor: second**  
-**Hello from second B\!**  
-**Hello from second A\!**  
-**Hello from second A\!**  
-**in RefClassA destructor: second**  
-**done**   
-## Requisiti  
- **File di intestazione** \<msclr\\auto\_handle.h\>  
+```Output  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- **Spazio dei nomi** msclr  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_handle.h >  
   
-## Vedere anche  
- [Membri auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\=](../dotnet/auto-handle-operator-assign.md)   
- [auto\_handle::~auto\_handle](../dotnet/auto-handle-tilde-auto-handle.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator =](../dotnet/auto-handle-operator-assign.md)   
+ [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

@@ -1,29 +1,27 @@
 ---
-title: "Avviso del compilatore (livello 1) C4409 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4409"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4409"
+title: Compilatore avviso (livello 1) C4409 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4409
+dev_langs: C++
+helpviewer_keywords: C4409
 ms.assetid: 2be63c86-d9c9-4073-ab71-e654dd9f450f
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 29aac8468d298882c579d81a4463c5a3bf6eb4cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4409
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4409"></a>Avviso del compilatore (livello 1) C4409
 dimensione istruzione non valida  
   
- La forma dell'istruzione non rispetta la dimensione specificata.  È stata utilizzata la più piccola dimensione valida.
+ L'istruzione non dispone di un form con le dimensioni specificate. È stata utilizzata la dimensione di valida più piccolo.

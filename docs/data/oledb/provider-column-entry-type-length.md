@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_TYPE_LENGTH (macro)"
+title: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_TYPE_LENGTH macro
 ms.assetid: a60b1a8b-0903-4ff4-91ec-ed62126449fb
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b7f072c2a83bb476c4e088d36643e21bd075473
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta una determinata colonna supportati dal provider.  
+# <a name="providercolumnentrytypelength"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+Rappresenta una colonna specifica è supportata dal provider.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,31 +33,31 @@ name
 , ordinal, dbtype, size, member )  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *name*  
   
- \[in\] nome della colonna.  
+ [in] Il nome della colonna.  
   
  `ordinal`  
- \[in\] numero di colonne.  A meno che la colonna sia una colonna bookmark, il numero di colonne non deve essere 0.  
+ [in] Numero di colonna. A meno che la colonna è una colonna del segnalibro, il numero di colonna non deve essere 0.  
   
  `dbtype`  
- \[in\] tipo di dati in [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+ [in] Il tipo di dati [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
   
  `size`  
- \[in\] dimensione della colonna in byte.  
+ [in] Le dimensioni di colonna in byte.  
   
  `member`  
- \[in\] la variabile membro della classe di dati in cui vengono archiviati i dati.  
+ [in] La variabile membro nella classe di dati che archiviano i dati.  
   
-## Note  
- Simile a [PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md) ma consente inoltre di specificare il tipo di dati nonché la dimensione della colonna.  
+## <a name="remarks"></a>Note  
+ Simile a [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) ma consente anche di specificare il tipo di dati della colonna così come dimensione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: ffeaf473155d0a24bd0e1b14c4191d276bed5190
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c0a9b850100d78a18e39e5cc552cb8461b3726a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iterators"></a>Iteratori
 Un iteratore è un oggetto in grado di eseguire l'iterazione sugli elementi di un contenitore della libreria standard C++ e fornire accesso ai singoli elementi. Tutti i contenitori della libreria standard C++ forniscono iteratori che consentono agli algoritmi di accedere ai relativi elementi in maniera standard, senza doversi preoccupare del tipo di contenitore in cui sono archiviati gli elementi.  
@@ -121,10 +104,9 @@ forward iterator
 > [!NOTE]
 >  È possibile evitare l'utilizzo di iteratori in modo esplicito utilizzando cicli range-for. Per altre informazioni, vedere [Loops (Modern C++)](http://msdn.microsoft.com/en-us/b1b2779c-750e-4576-a514-a84178eae9da) (Cicli in Modern C++).  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] ora offre iteratori verificati e iteratori di debug per garantire che i limiti del contenitore non vengano sovrascritti. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md) e [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).  
+ Visual C++ ora offre iteratori verificati e iteratori di debug per assicurano che non vengano sovrascritti i limiti del contenitore. Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md) e [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)   
  [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

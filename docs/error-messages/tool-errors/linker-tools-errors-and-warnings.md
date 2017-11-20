@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: d1c6b1b4a84dcdcc10f387f885726b51faa25535
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Errori e avvisi degli strumenti del linker
 COLLEGAMENTO, LIB, DUMPBIN ed EDITBIN generare questi errori e avvisi. Per ottenere informazioni su un determinato messaggio di errore, fare clic sul corrispondente numero di errore nella finestra di Output e premere F1, digitare il numero di errore nel **cercare** dell'indice oppure fare clic su un collegamento di seguito.  

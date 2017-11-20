@@ -1,33 +1,31 @@
 ---
-title: "Errore di compilazione progetto PRJ0008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0008"
+title: Progetto PRJ0008 errore di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0008
+dev_langs: C++
+helpviewer_keywords: PRJ0008
 ms.assetid: 6bf7f17a-d2a8-4826-99c7-d600d846952f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 41410c2ddecd6798a994114a70192441abe675a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore di compilazione progetto PRJ0008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Impossibile eliminare il file "file".  
+# <a name="project-build-error-prj0008"></a>Errore di compilazione progetto PRJ0008
+Impossibile eliminare il file 'file'.  
   
- **Accertarsi che il file non sia aperto da un altro processo e che non sia protetto da scrittura.**  
+ **Assicurarsi che il file non sia aperto da un altro processo e non è protetto da scrittura.**  
   
- Durante un'operazione di ricompilazione o pulizia, vengono eliminati tutti i file intermedi e di output utilizzati per la compilazione, nonché i file che soddisfano le specifiche sui caratteri jolly elencati in **Estensioni da eliminare durante la pulizia** nella [pagina delle proprietà Impostazioni di configurazione\/Generale](../../ide/general-property-page-project.md).  
+ Durante la ricompilazione o pulizia, Visual C++ consente di eliminare tutti i file intermedi e di output utilizzati per la compilazione, nonché i file che soddisfano specifiche dei caratteri jolly nel **estensioni da eliminare durante la pulizia** proprietà il [generale Pagina di proprietà delle impostazioni di configurazione](../../ide/general-property-page-project.md).  
   
- Questo errore viene visualizzato quando non è possibile eliminare un file in Visual C\+\+.  Per risolvere il problema, rendere il file e la relativa directory accessibili in scrittura per l'utente che effettua la compilazione.
+ Questo errore si verifica se Visual C++ non è in grado di eliminare un file. Per risolvere l'errore, verificare il file e la relativa directory scrivibile per l'utente che esegue la compilazione.

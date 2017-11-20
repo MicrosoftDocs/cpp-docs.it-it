@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _RTC_GetErrDesc
+apiname: _RTC_GetErrDesc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - RTC_GetErrDesc
 - _RTC_GetErrDesc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 00098336be0198102b6154a7d6252b024b3cf949
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 792407af9497148bea95333ee18028e0f8c953e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 Restituisce una breve descrizione di un tipo di controllo degli errori di runtime (RTC).  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapmin
+apiname: _heapmin
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -36,30 +33,15 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 1318e8d18ddeb5031efdf3066f9fa3020c8e9afd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="heapmin"></a>_heapmin
 Rilascia la memoria heap inutilizzata al sistema operativo.  

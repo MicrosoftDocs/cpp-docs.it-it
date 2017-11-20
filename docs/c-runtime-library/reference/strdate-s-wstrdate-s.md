@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -42,31 +40,15 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5b1701f41b2f66ccbc2601763c09a4db0523c2ed
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: e4d3f6b2b7617705b38c0b8e13ca2ed65fcf8d81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 Copia la data di sistema corrente in un buffer. Queste sono versioni di [_strdate, _wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  

@@ -1,49 +1,30 @@
 ---
-title: Compilatore (livello 1) Avviso C4190 | Documenti di Microsoft
+title: Compilatore (livello 1) Avviso C4190 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4190
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4190
+f1_keywords: C4190
+dev_langs: C++
+helpviewer_keywords: C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: bf45c0737f52da93f93c1f95d313771f0e92a10e
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 1f01997ecd685942123b9e5c07db1a2dd59b6618
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4190"></a>Compilatore (livello 1) Avviso C4190
-'identifier1' ha specificato il collegamento C, ma restituisce 'identificatore2' non è compatibile con C tipo definito dall'utente  
+'identifier1' è specificato il collegamento C, ma restituisce 'identifier2' non è compatibile con C tipo definito dall'utente  
   
- Una funzione o un puntatore a funzione contiene un tipo definito dall'utente (definita dall'utente tipo, ovvero una classe, struttura, enum o union) come tipo restituito e `extern` collegamento "C". Tale operazione è valida se:  
+ Una funzione o un puntatore a funzione è un tipo definito dal definito dall'utente, ovvero una classe, struttura, enum o unione come tipo restituito e `extern` collegamento "C". Tale operazione è valida se:  
   
 -   Tutte le chiamate a questa funzione si verificano da C++.  
   

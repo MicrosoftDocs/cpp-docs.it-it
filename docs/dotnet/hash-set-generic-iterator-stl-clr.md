@@ -1,32 +1,30 @@
 ---
-title: "hash_set::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator (membro) [STL/CLR]"
+title: hash_set::generic_iterator (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 9d6ac06d-d70c-4343-b959-553885a9cb53
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1d27012a1a0bc1ed64d621b5fc4909a604dafe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di iteratore per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="hashsetgenericiterator-stlclr"></a>hash_set::generic_iterator (STL/CLR)
+Il tipo di iteratore per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## Note  
- Il tipo viene descritto un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_set_generic_iterator.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_container](../dotnet/hash-set-generic-container-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)

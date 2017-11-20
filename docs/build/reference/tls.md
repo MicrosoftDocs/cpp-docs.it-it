@@ -1,38 +1,37 @@
 ---
-title: "/TLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/TLS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TLS (opzione dumpbin)"
-  - "-TLS (opzione dumpbin)"
+title: -TLS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /TLS
+dev_langs: C++
+helpviewer_keywords:
+- /TLS dumpbin option
+- -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: da65c67a38d9517ed2671fcea69a583b9ba65d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /TLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visualizza la struttura IMAGE\_TLS\_DIRECTORY da un file eseguibile.  
+# <a name="tls"></a>/TLS
+Visualizza la struttura IMAGE_TLS_DIRECTORY da un file eseguibile.  
   
-## Note  
- \/TLS visualizza i campi della struttura TLS nonché gli indirizzi delle funzioni di callback TLS.  
+## <a name="remarks"></a>Note  
+ / TLS Visualizza i campi della struttura di TLS e gli indirizzi delle funzioni di callback TLS.  
   
- Se un programma non utilizza la memoria locale dei thread, la relativa immagine non conterrà una struttura TLS.  Per ulteriori informazioni, vedere [thread](../../cpp/thread.md).  
+ Se un programma non utilizza l'archiviazione locale di thread, l'immagine non conterrà una struttura TLS.  Vedere [thread](../../cpp/thread.md) per ulteriori informazioni.  
   
- La struttura IMAGE\_TLS\_DIRECTORY è definita in winnt.h.  
+ IMAGE_TLS_DIRECTORY è definito in Winnt. h.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

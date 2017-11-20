@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,10 +13,7 @@ f1_keywords:
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-- random/std::random_device::entropy
-- random/std::random_device::operator()
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -25,16 +21,15 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 790a47c8449694a6c82aa1f9564b1d935ef9e39e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f4256ac0a58f3cc21322ff84565838d36174a00a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="randomdevice-class"></a>Classe random_device
 Genera una sequenza casuale da un dispositivo esterno.  
@@ -151,5 +146,4 @@ Restituisce valori distribuiti in modo uniforme nell'intervallo chiuso [ `min, m
   
 ## <a name="see-also"></a>Vedere anche  
 [\<random>](../standard-library/random.md)
-
 

@@ -1,45 +1,43 @@
 ---
-title: "vector::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at (membro) [STL/CLR]"
+title: 'Vector:: AT (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af9f829-48b8-4906-ba4a-b43454acb2c7
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 902652b8b74c11f79aad09079ea3ebb42d0d2ff0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorat-stlclr"></a>vector::at (STL/CLR)
 Accede a un elemento in una posizione specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Parametri  
- posizione  
+#### <a name="parameters"></a>Parametri  
+ pos  
  Posizione dell'elemento a cui accedere.  
   
-## Note  
- La funzione membro restituisce un riferimento all'elemento della sequenza selezionata nella posizione `pos`.  Utilizzarla per leggere o scrivere un elemento di cui il percorso noto.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un riferimento all'elemento della sequenza controllata nella posizione `pos`. Utilizzarlo per leggere o scrivere un elemento la cui posizione noto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_at.cpp   
@@ -68,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **una x c**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+a b c  
+a x c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::operator](../dotnet/vector-operator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator(STL/CLR)](../dotnet/vector-operator-stl-clr.md)

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tokens [C++]
 - parsing, C++ tokens
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 041750d86f12f82e0f905c65f0a75d6a32f37cdf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 349cc44f35a98385cbd186c6991e5a6b39724014
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tokens-c"></a>Token (C++)
 Un token è il più piccolo elemento di un programma C++ significativo per il compilatore. Il parser C++ riconosce questi tipi di token: identificatori, parole chiave, valori letterali, operatori, segni di punteggiatura e altri separatori. Un flusso di questi token costituisce un'unità di conversione.  

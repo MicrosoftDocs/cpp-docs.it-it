@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.dlg.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.dlg.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 003cda9f3b0916cb7c86dfce874840268a64dbff
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-dialog-wizard"></a>Creazione guidata finestra di dialogo ATL
 Questa procedura guidata consente di inserire nel progetto un oggetto finestra di dialogo ATL, derivato da [CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md). Una finestra di dialogo è derivato da `CAxDialogImpl` può ospitare controlli ActiveX.  
@@ -52,5 +48,4 @@ Questa procedura guidata consente di inserire nel progetto un oggetto finestra d
   
 ## <a name="see-also"></a>Vedere anche  
  [La finestra di dialogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)
-
 

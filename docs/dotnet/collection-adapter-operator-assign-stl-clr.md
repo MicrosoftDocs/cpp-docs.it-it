@@ -1,46 +1,43 @@
 ---
-title: "collection_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (membro) [STL/CLR]"
+title: collection_adapter::operator = (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 45365a33-3b56-4cb7-962f-81c20d8901d3
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ebc0fd2b3d13227cec2db5a755bed8a6739674
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sostituisce handle memorizzato di BCL.  
+# <a name="collectionadapteroperator-stlclr"></a>collection_adapter::operator= (STL/CLR)
+Sostituisce l'handle memorizzato BCL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  right  
- Adattatore da copiare.  
+ Adapter da copiare.  
   
-## Note  
- Il membro che l'operatore copia `right` all'oggetto, quindi restituisce `*this`.  Viene utilizzato per sostituire handle memorizzato di BCL con una copia di handle di BCL archiviate in `right`.  
+## <a name="remarks"></a>Note  
+ Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Usarlo per sostituire l'handle BCL stored con una copia dell'handle BCL stored in `right`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_collection_adapter_operator_as.cpp   
@@ -74,12 +71,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
-## Vedere anche  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -1,41 +1,39 @@
 ---
-title: "multiset::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type (membro) [STL/CLR]"
+title: 'multiset:: KEY_TYPE (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: 8b243eb3-889b-405c-a2bd-2c2c5dfaafcd
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8eb1a69cc0022b0e3fb1d49ec0033c7357f8921b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di una chiave di ordinamento.  
+# <a name="multisetkeytype-stlclr"></a>multiset::key_type (STL/CLR)
+Tipo di una chiave di ordinamento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## Note  
- Il tipo è sinonimo del parametro di template `Key`.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo del parametro di modello `Key`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multiset_key_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

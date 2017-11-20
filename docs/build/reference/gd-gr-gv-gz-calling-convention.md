@@ -1,47 +1,47 @@
 ---
-title: "/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gr"
-  - "/Gv"
-  - "/gz"
-  - "/Gd"
-  - "VC.Project.VCCLCompilerTool.CallingConvention"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gd (opzione del compilatore) [C++]"
-  - "/Gr (opzione del compilatore) [C++]"
-  - "/Gv (opzione del compilatore) [C++]"
-  - "/Gz (opzione del compilatore) [C++]"
-  - "Gd (opzione del compilatore) [C++]"
-  - "-Gd (opzione del compilatore) [C++]"
-  - "Gr (opzione del compilatore) [C++]"
-  - "-Gr (opzione del compilatore) [C++]"
-  - "Gv (opzione del compilatore) [C++]"
-  - "-Gv (opzione del compilatore) [C++]"
-  - "Gz (opzione del compilatore) [C++]"
-  - "-Gz (opzione del compilatore) [C++]"
+title: -Gd, - Gr, - Gv, - Gz (convenzione di chiamata) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gr
+- /Gv
+- /gz
+- /Gd
+- VC.Project.VCCLCompilerTool.CallingConvention
+dev_langs: C++
+helpviewer_keywords:
+- -Gd compiler option [C++]
+- -Gv compiler option [C++]
+- /Gv compiler option [C++]
+- -Gr compiler option [C++]
+- Gd compiler option [C++]
+- Gr compiler option [C++]
+- /Gz compiler option [C++]
+- -Gz compiler option [C++]
+- /Gd compiler option [C++]
+- Gz compiler option [C++]
+- Gv compiler option [C++]
+- /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9e06ca944768f8c4af2b207a75b923f5e1278943
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Queste opzioni determinano l'ordine di inserimento delle funzioni nello stack, stabiliscono se la funzione chiamante o la funzione chiamata rimuove gli argomenti dallo stack alla fine della chiamata e indicano la convenzione di decorazione dei nomi utilizzata dal compilatore per identificare le singole funzioni.  
+# <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convenzione di chiamata)
+Queste opzioni determinano l'ordine in cui funzione gli argomenti vengono inseriti nello stack, se la funzione chiamante o chiamata di funzione rimuove gli argomenti dallo stack alla fine della chiamata e la convenzione di decorazione dei nomi utilizzato per identificare il compilatore singole funzioni.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Gd  
@@ -50,79 +50,79 @@ Queste opzioni determinano l'ordine di inserimento delle funzioni nello stack, s
 /Gz  
 ```  
   
-## Note  
- **\/Gd**, l'impostazione predefinita, specifica la convenzione di chiamata [\_\_cdecl](../../cpp/cdecl.md) per tutte le funzioni ad eccezione delle funzioni membro C\+\+ e delle funzioni contrassegnate come [\_\_stdcall](../../cpp/stdcall.md), [\_\_fastcall](../../cpp/fastcall.md), o [\_\_vectorcall](../../cpp/vectorcall.md).  
+## <a name="remarks"></a>Note  
+ **/GD**, l'impostazione predefinita, specifica il [cdecl](../../cpp/cdecl.md) la convenzione di chiamata per tutte le funzioni membro C++ ad eccezione di funzioni e che sono contrassegnati [stdcall](../../cpp/stdcall.md), [_ fastcall](../../cpp/fastcall.md), o [vectorcall](../../cpp/vectorcall.md).  
   
- **\/Gr** specifica la convenzione di chiamata `__fastcall` per tutte le funzioni ad eccezione delle funzioni membro C\+\+, delle funzioni denominate `main`, e delle funzioni contrassegnate come `__cdecl`, `__stdcall`, o `__vectorcall`.  Tutte le funzioni `__fastcall` devono avere dei prototipi.  Questa convenzione di chiamata è disponibile solo nei compilatori destinati a x86 ed è ignorata dai compilatori destinati ad altre architetture.  
+ **/GR** specifica il `__fastcall` la convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++, denominato funzioni `main`e le funzioni contrassegnate `__cdecl`, `__stdcall`, o `__vectorcall`. Tutti `__fastcall` funzioni devono avere prototipi. Questa convenzione di chiamata è disponibile solo in compilatori x86 e viene ignorata dai compilatori destinati altre architetture.  
   
- **\/Gz** specifica la convenzione di chiamata `__stdcall` per tutte le funzioni ad eccezione delle funzioni membro C\+\+, delle funzioni denominate `main`, e delle funzioni contrassegnate come `__cdecl`, `__fastcall`, o `__vectorcall`.  Tutte le funzioni `__stdcall` devono avere dei prototipi.  Questa convenzione di chiamata è disponibile solo nei compilatori destinati a x86 ed è ignorata dai compilatori destinati ad altre architetture.  
+ **/GZ** specifica il `__stdcall` la convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++, denominato funzioni `main`e le funzioni contrassegnate `__cdecl`, `__fastcall`, o `__vectorcall`. Tutti `__stdcall` funzioni devono avere prototipi. Questa convenzione di chiamata è disponibile solo in compilatori x86 e viene ignorata dai compilatori destinati altre architetture.  
   
- **\/Gv** specifica la convenzione di chiamata `__vectorcall` per tutte le funzioni tranne che per le funzioni membro di C\+\+, le funzioni denominate main, le funzioni con un elenco di argomenti variabile `vararg` oppure che sono contrassegnate con `__cdecl`, `__stdcall` in conflitto o l'attributo `__fastcall`.  Questa convenzione di chiamata è disponibile solo nelle architetture x86 e x64 che supportano \/arch:SSE2 e versioni successive e viene ignorata dai compilatori destinati all'architettura ARM.  
+ **/GV** specifica il `__vectorcall` la convenzione di chiamata per tutte le funzioni ad eccezione delle funzioni membro C++, le funzioni denominata main, funzioni con un `vararg` elenco di argomenti variabili o funzioni che sono contrassegnate con un conflitto `__cdecl`, `__stdcall`, o `__fastcall` attributo. Questa convenzione di chiamata è disponibile solo su architetture x86 e x64 che supportano /arch: SSE2 e versioni successive e viene ignorata dai compilatori che utilizzano l'architettura ARM.  
   
- Le funzioni che accettano un numero variabile di argomenti devono essere contrassegnate come `__cdecl`.  
+ Funzioni che accettano un numero variabile di argomenti devono essere contrassegnate `__cdecl`.  
   
- **\/Gd**, **\/Gr**, **\/Gv** e **\/Gz** non sono compatibili con [\/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md) o **\/clr:pure**.  
-  
-> [!NOTE]
->  Per impostazione predefinita, per i processori x86 le funzioni membro C\+\+ utilizzano [\_\_thiscall](../../cpp/thiscall.md).  
-  
- Per tutti i processori, una funzione membro contrassegnata in modo esplicito come `__cdecl`, `__fastcall`, `__vectorcall` o `__stdcall` utilizza la convenzione di chiamata specificata se non viene ignorata in tale architettura.  Una funzione membro che prende un numero variabile di argomenti utilizza sempre la convenzione di chiamata `__cdecl`.  
-  
- Queste opzioni di compilazione non hanno effetto sulla decorazione dei nomi di metodi e funzioni C\+\+.  A meno che non vengano dichiarati come `extern "C"`, i metodi e le funzioni C\+\+ utilizzano uno schema di decorazione dei nomi differente.  Per ulteriori informazioni, vedere [Nomi decorati](../../build/reference/decorated-names.md).  
-  
- Per ulteriori informazioni sulle convenzioni di chiamata, vedere [Convenzioni di chiamata](../../cpp/calling-conventions.md).  
-  
-## Specifiche di \_\_cdecl  
- Nei processori x86, tutti gli argomenti della funzione vengono passati alo stack da destra a sinistra.  Nelle architetture ARM e x64, alcuni argomenti vengono passati dal registro e il resto viene passato sullo stack da destra a sinistra.  La routine di chiamata determina l'estrazione degli argomenti dallo stack.  
-  
- Per C, la convenzione di denominazione `__cdecl` utilizza il nome della funzione preceduto da un carattere di sottolineatura \(`_`\). Non viene effettuata alcuna conversione maiuscolo\/minuscolo.  A meno che non vengano dichiarate come `extern "C"`, le funzioni C\+\+ utilizzano uno schema di decorazione dei nomi differente.  Per ulteriori informazioni, vedere [Nomi decorati](../../build/reference/decorated-names.md).  
-  
-## Specifiche di \_\_fastcall  
- Alcuni argomenti di una funzione `__fastcall` vengono passati nei registri \(per i processori x86, ECX e EDX\), mentre gli altri vengono inseriti nello stack da destra a sinistra.  La routine chiamata visualizza questi argomenti dallo stack prima della restituzione.  In genere, **\/Gr** riduce il tempo di esecuzione.  
+ **/GD**, **/Gr**, **/Gv** e **/Gz** non sono compatibili con [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) o **/clr: pure**. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
 > [!NOTE]
->  Prestare attenzione nell'utilizzo della convenzione di chiamata `__fastcall`per qualsiasi funzione scritta in linguaggio assembly inline.  L'utilizzo dei registri potrebbe entrare in conflitto con l'utilizzo del compilatore.  
+>  Per impostazione predefinita per x86 processori, utilizzano le funzioni membro C++ [thiscall](../../cpp/thiscall.md).  
   
- Per C, la convenzione di denominazione `__fastcall` utilizza il nome della funzione preceduto da un simbolo di chiocciola \(`@`\) seguito dalla dimensione in byte degli argomenti della funzione.  Non viene effettuata alcuna conversione maiuscolo\/minuscolo.  Il compilatore utilizza il seguente modello per la convenzione di denominazione:  
+ Per tutti i processori, una funzione membro contrassegnata in modo esplicito come `__cdecl`, `__fastcall`, `__vectorcall`, o `__stdcall` utilizza la convenzione di chiamata specificata, se non viene ignorata su tale architettura. Una funzione membro che accetta un numero variabile di argomenti sempre utilizzato il `__cdecl` convenzione di chiamata.  
   
-```c  
+ Queste opzioni del compilatore non hanno effetto sulla decorazione di metodi e funzioni C++. A meno che non dichiarati come `extern "C"`, metodi e funzioni C++ utilizzano uno schema di decorazione dei nomi differente. Per ulteriori informazioni, vedere [nomi decorati](../../build/reference/decorated-names.md).  
+  
+ Per ulteriori informazioni sulle convenzioni di chiamata, vedere [convenzioni di chiamata](../../cpp/calling-conventions.md).  
+  
+## <a name="cdecl-specifics"></a>specifiche di cdecl  
+ X86 processori, tutti gli argomenti di funzione vengono passati nello stack da destra a sinistra. Su ARM e x64 architetture, alcuni argomenti vengono passate dal registro e il resto vengono passati nello stack da destra a sinistra. La routine chiamata estrae gli argomenti dallo stack.  
+  
+ Per C, il `__cdecl` Usa convenzione di denominazione il nome della funzione preceduto da un carattere di sottolineatura ( `_` ); non viene eseguita alcuna conversione maiuscolo / minuscolo. A meno che non dichiarati come `extern "C"`, le funzioni C++ utilizzano uno schema di decorazione dei nomi diversi. Per ulteriori informazioni, vedere [nomi decorati](../../build/reference/decorated-names.md).  
+  
+## <a name="fastcall-specifics"></a>specifiche di fastcall  
+ Alcune di un `__fastcall` degli argomenti della funzione vengono passati nei registri (x86 a processori, ECX ed EDX), mentre gli altri vengono inseriti nello stack da destra a sinistra. La routine chiamata estrae gli argomenti dallo stack prima della restituzione. In genere, **/Gr** riduce il tempo di esecuzione.  
+  
+> [!NOTE]
+>  Prestare attenzione quando si utilizza il `__fastcall` convenzione di chiamata per qualsiasi funzione che viene scritto in linguaggio assembly inline. L'utilizzo dei registri potrebbe essere in conflitto con l'utilizzo del compilatore.  
+  
+ Per C, il `__fastcall` Usa convenzione di denominazione il nome della funzione preceduto da un simbolo di chiocciola (`@`) seguito dalla dimensione in byte degli argomenti della funzione. Non viene eseguita alcuna conversione maiuscolo / minuscolo. Il compilatore Usa questo modello per la convenzione di denominazione:  
+  
+```  
 @function_name@number  
 ```  
   
- Quando si utilizza la convenzione di denominazione `__fastcall`, utilizzare i file di inclusione standard.  Altrimenti si otterranno riferimenti esterni non risolti.  
+ Quando si utilizza il `__fastcall` convenzione di denominazione, utilizzare i file di inclusione standard. In caso contrario, si otterranno riferimenti esterni non risolti.  
   
-## Specifiche di \_\_stdcall  
- Gli altri argomenti della funzione `__stdcall` vengono inseriti nello stack da destra a sinistra e la funzione chiamata visualizza gli argomenti dallo stack prima della restituzione.  
+## <a name="stdcall-specifics"></a>specifiche di stdcall  
+ Oggetto `__stdcall` gli argomenti della funzione vengono inseriti nello stack da destra a sinistra e la funzione chiamata estrae gli argomenti dallo stack prima della restituzione.  
   
- Per C, la convenzione di denominazione `__stdcall` utilizza il nome della funzione preceduto da un carattere di sottolineatura \(`_`\) e seguito da un simbolo di chiocciola \(@\) e dalla dimensione in byte degli argomenti della funzione.  Non viene effettuata alcuna conversione maiuscolo\/minuscolo.  Il compilatore utilizza il seguente modello per la convenzione di denominazione:  
+ Per C, il `__stdcall` Usa convenzione di denominazione il nome della funzione preceduto da un carattere di sottolineatura ( `_` ) seguita da un simbolo di chiocciola (@) e le dimensioni in byte degli argomenti della funzione. Non viene effettuata alcuna conversione maiuscolo/minuscolo. Il compilatore Usa questo modello per la convenzione di denominazione:  
   
-```c  
+```  
 _functionname@number  
 ```  
   
-## Specifiche di \_\_vectorcall  
- Gli argomenti Integer di una funzione `__vectorcall` vengono passati in base al valore, utilizzando fino a due \(su x86\) o quattro \(x64\) registri di Integer e fino a sei registri XMM per i valori a virgola mobile e i valori dei vettori, mentre il resto viene passato sullo stack da destra verso sinistra.  La funzione chiamata pulisce lo stack prima della restituzione.  I valori restituiti di vettore e a virgola mobile sono restituiti in XMM0.  
+## <a name="vectorcall-specifics"></a>specifiche di vectorcall  
+ Oggetto `__vectorcall` degli argomenti di tipo integer della funzione vengono passati per valore, utilizzando fino a due (su x86) o quattro (su x64) intero registra e fino a sei XMM Registra per a virgola mobile e valori vettore e gli altri vengono passati nello stack da destra a sinistra. La funzione chiamata pulisce dallo stack prima della restituzione. Vettore e valori restituiti a virgola mobile vengono restituiti in XMM0.  
   
- Per C, la convenzione di denominazione `__vectorcall` utilizza il nome della funzione preceduto da due simboli di chiocciola \(@@\) seguiti dalla dimensione in byte degli argomenti della funzione.  Non viene effettuata alcuna conversione maiuscolo\/minuscolo.  Il compilatore utilizza il seguente modello per la convenzione di denominazione:  
+ Per C, il `__vectorcall` convenzione di denominazione utilizza il nome della funzione seguito da due Chiocciole (@ @) e le dimensioni in byte degli argomenti della funzione. Non viene effettuata alcuna conversione maiuscolo/minuscolo. Il compilatore Usa questo modello per la convenzione di denominazione:  
   
-```c  
+```  
 functionname@@number  
 ```  
   
-### To set this compiler option in the Visual Studio development environment  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Open the project's **Property Pages** dialog box.  For details, see [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Select the **C\/C\+\+** folder.  
+2.  Selezionare il **C/C++** cartella.  
   
-3.  Select the **Advanced** property page.  
+3.  Selezionare il **avanzate** pagina delle proprietà.  
   
-4.  Modify the **Calling Convention** property.  
+4.  Modificare il **convenzione di chiamata** proprietà.  
   
-### To set this compiler option programmatically  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
--   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.  
+-   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

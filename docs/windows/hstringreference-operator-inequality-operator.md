@@ -1,34 +1,31 @@
 ---
-title: "Operatore HStringReference::Operator!= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!="
-dev_langs: 
-  - "C++"
+title: 'Hstringreference:: operator! = (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!=
+dev_langs: C++
 ms.assetid: 01ab6691-1fc7-4feb-85f0-fe795593a160
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3c55b115c0a0d02df7cebbb9c91a828afcb6c81e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore HStringReference::Operator!=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringreferenceoperator-operator"></a>Operatore HStringReference::Operator!=
 Indica se i due parametri non sono uguali.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-  
 inline bool operator==(  
                const HStringReference& lhs,   
                const HSTRING& rhs) throw()  
@@ -47,20 +44,20 @@ inline bool operator!=(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `lhs`  
- Il primo parametro da confrontare.  `lhs` può essere un oggetto HStringReference o un handle HSTRING.  
+ Il primo parametro da confrontare. `lhs`può essere un oggetto HStringReference o un handle HSTRING.  
   
  `rhs`  
- Il secondo parametro da confrontare. `rhs` può essere un oggetto di HStringReference, o un handle di HSTRING.  
+ Il secondo parametro da confrontare.  `rhs`può essere un oggetto HStringReference o un handle HSTRING.  
   
-## Valore restituito  
- `true` se i parametri `lhs` e `rhs` non sono equivalenti. In caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se il `lhs` e `rhs` parametri non sono uguali; in caso contrario, `false`.  
   
-## Requisiti  
- **Intestazione:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HStringReference](../windows/hstringreference-class.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - examples [C++], results of calling
 - results, thiscall call
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - results, __cdecl call
 - results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5a1d6bf1c1d3cf2a57a74b7994766e940488a8e8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 960dab7458af70d79fbcbc575e2fcd0e5678c3c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="results-of-calling-example"></a>Esempio di risultati di chiamata
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

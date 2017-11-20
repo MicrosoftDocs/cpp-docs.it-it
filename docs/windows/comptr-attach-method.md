@@ -1,32 +1,30 @@
 ---
-title: "Metodo ComPtr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach (metodo)"
+title: 'Metodo comptr:: Attach | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 5b911f2d-9830-4dc7-b9e3-527abd55d2c8
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c000fe3bd00b0b16143f538720cc022df3654efe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo ComPtr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Associa questo ComPtr con il tipo di interfaccia specificato dal parametro di tipo corrente del modello.  
+# <a name="comptrattach-method"></a>Metodo ComPtr::Attach
+Associa questo ComPtr con il tipo di interfaccia specificato dal parametro del tipo di modello corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void Attach(  
@@ -34,14 +32,14 @@ void Attach(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `other`  
- Tipo di interfaccia.  
+ Un tipo di interfaccia.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ComPtr](../windows/comptr-class.md)

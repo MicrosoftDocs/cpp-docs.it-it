@@ -1,32 +1,30 @@
 ---
-title: "Metodo HANDLETraits::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close (metodo)"
+title: 'Metodo handletraits:: Close | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 3c631a7c-ccce-472a-b1da-aab8fa815c13
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1acb5125f8d38704b805885ad318c2bd301bcb7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HANDLETraits::Close
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Chiudere l'handle specificato.  
+# <a name="handletraitsclose-method"></a>Metodo HANDLETraits::Close
+Chiude l'handle specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 inline static bool Close(  
@@ -34,17 +32,17 @@ inline static bool Close(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `h`  
- L'handle da chiudere.  
+ Chiudere l'handle.  
   
-## Valore restituito  
- **true** se l'handle `h` si chiude correttamente; in caso contrario, **false**.  
+## <a name="return-value"></a>Valore restituito  
+ **true** se gestire `h` chiusa correttamente; in caso contrario, **false**.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura HANDLETraits](../windows/handletraits-structure.md)

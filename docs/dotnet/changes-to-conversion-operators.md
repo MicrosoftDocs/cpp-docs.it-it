@@ -1,34 +1,34 @@
 ---
-title: "Modifiche agli operatori di conversione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatori di conversione"
-  - "conversioni, esplicita"
-  - "explicit (parola chiave) [C++]"
-  - "operatori [C++], conversione esplicita di tipi"
-  - "tipo (conversione), conversioni esplicite"
+title: Modifiche agli operatori di conversione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- conversion operators
+- operators [C++], explicit type conversion
+- type conversion, explicit conversions
+- conversions, explicit
+- explicit keyword [C++]
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ab69a7dbba33e37d23a880a6a9b36f7ed37d7d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Modifiche agli operatori di conversione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintassi degli operatori di conversione è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="changes-to-conversion-operators"></a>Modifiche agli operatori di conversione
+La sintassi per gli operatori di conversione è stata modificata dalle estensioni gestite per C++ a Visual C++.  
   
- Un esempio è scrivere `op_Implicit` per specificare una conversione.  Di seguito è riportato un esempio di definizione di `MyDouble` tratto dalla specifica di linguaggio:  
+ Un esempio consiste nello scrivere `op_Implicit` per specificare una conversione. Ecco una definizione di `MyDouble` tratto dalla specifica di linguaggio:  
   
 ```  
 __gc struct MyDouble {  
@@ -38,9 +38,9 @@ __gc struct MyDouble {
 };  
 ```  
   
- Tale codice indica che, dato un Integer, l'algoritmo per convertire tale Integer in un `MyDouble` viene fornito dall'operatore `op_Implicit`.  Tale conversione verrà inoltre eseguita in modo implicito dal compilatore.  Analogamente, dato un oggetto `MyDouble`, i due operatori `op_Explicit` forniscono i rispettivi algoritmi per la conversione di tale oggetto in un Integer o in un'entità `String` gestita.  Tuttavia, il compilatore non eseguirà alcuna conversione, a meno che questa non venga esplicitamente richiesta dall'utente.  
+ Ciò indica che, dato un numero intero, l'algoritmo per la conversione di integer in un `MyDouble` viene fornito dal `op_Implicit` operatore. Inoltre, tale conversione verrà eseguita in modo implicito dal compilatore. Analogamente, dato un `MyDouble` oggetto, i due `op_Explicit` operatori forniscono i rispettivi algoritmi per la conversione di tale oggetto in un numero intero o un oggetto gestito `String` entità. Tuttavia, il compilatore non eseguirà la conversione a meno che non richiesto in modo esplicito dall'utente.  
   
- In C\# questa situazione viene rappresentata come segue:  
+ In c#, questa è simile al seguente:  
   
 ```  
 class MyDouble {  
@@ -50,13 +50,13 @@ class MyDouble {
 };  
 ```  
   
- Il codice C\# è più simile a C\+\+ che le estensioni gestite di C\+\+.  Ciò non è vero nella nuova sintassi.  
+ Il codice c# è più simile C++ rispetto a quello di estensioni gestite per C++. Non è questo il caso nella nuova sintassi.  
   
- Il comitato ISO\-C\+\+ ha introdotto una parola chiave, `explicit`, per mitigare le eventuali conseguenze impreviste. Ad esempio, una classe `Array` che assume un unico argomento integer come dimensione convertirà implicitamente qualsiasi Integer in un oggetto `Array`, anche quando questo rappresenta il risultato meno desiderabile.  Un modo per impedire questo fenomeno è l'utilizzo di un linguaggio di progettazione relativo a un secondo argomento fittizio per un costruttore  
+ Il comitato ISO C++ introdotto una parola chiave, `explicit`, per ridurre le conseguenze impreviste, ad esempio, un `Array` classe che accetta un argomento integer singolo, come una dimensione in modo implicito convertirà qualsiasi numero intero in un `Array` che l'oggetto è non si desidera. Per evitare questo problema, è un linguaggio di progettazione di un secondo argomento fittizio per un costruttore  
   
- D'altra parte, non si deve fornire una coppia di conversione quando si progetta un tipo di classe in C\+\+.  L'esempio migliore è costituito dalla classe String standard.  Nella conversione implicita il costruttore con un singolo argomento assume una stringa di tipo C.  Non viene tuttavia fornito il corrispondente operatore di conversione implicito, ovvero quello che esegue la conversione di un oggetto stringa in una stringa di tipo C, ma viene invece richiesto all'utente di chiamare in modo esplicito una funzione denominata, in questo caso `c_str()`.  
+ D'altra parte, non è necessario fornire una coppia di conversione durante la progettazione di un tipo di classe in C++. L'esempio migliore è la classe di stringa standard. La conversione implicita è il costruttore ad argomento singolo accetta una stringa di tipo C. Tuttavia, non fornisce l'operatore di conversione implicita corrispondente - che di conversione di una stringa dell'oggetto in una stringa di tipo C, ma è invece richiesto all'utente di richiamare in modo esplicito una funzione denominata, in questo caso, `c_str()`.  
   
- Di conseguenza, la possibilità di associare un comportamento implicito\/esplicito in un operatore di conversione \(e di incapsulare l'insieme di conversioni in un unico form di dichiarazione\) sembra rappresentare un miglioramento rispetto al supporto originale fornito da C\+\+ per gli operatori di conversione. A ciò ha quindi fatto seguito la creazione della parola chiave `explicit`.  Il supporto del linguaggio [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] per gli operatori di conversione ha l'aspetto indicato di seguito, che risulta leggermente meno dettagliato rispetto a C\#, grazie al comportamento predefinito dell'operatore che supporta un'applicazione implicita dell'algoritmo di conversione:  
+ In tal caso, associare un comportamento implicito o esplicito su un operatore di conversione (e come che incapsula il set di conversioni di un singolo modulo di dichiarazione) sembra essere un miglioramento per il supporto originale di C++ per gli operatori di conversione, per il `explicit` (parola chiave). Il supporto del linguaggio Visual C++ per gli operatori di conversione è simile al seguente, che a causa il comportamento predefinito dell'operatore che supporta un'applicazione implicita dell'algoritmo di conversione è leggermente meno dettagliati rispetto a quella di c#:  
   
 ```  
 ref struct MyDouble {  
@@ -67,7 +67,7 @@ public:
 };  
 ```  
   
- In seguito a un'ulteriore modifica, un costruttore con un singolo argomento viene considerato come se fosse dichiarato `explicit`.  Questo significa che, per attivarne le chiamate, è necessario un cast esplicito.  È tuttavia importante sottolineare che, se si definisce un operatore di conversione esplicito, sarà questo a essere chiamato e non il costruttore con un singolo argomento.  
+ È un'altra modifica che viene considerato un costruttore ad argomento singolo come se fosse dichiarato `explicit`. Ciò significa che, per attivare le chiamate, è necessario un cast esplicito. Si noti, tuttavia, se viene definito un operatore di conversione esplicita e non il costruttore ad argomento singolo, viene richiamato.  
   
-## Vedere anche  
- [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni di membri in una classe o interfaccia (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
-dev_langs:
-- C++
-helpviewer_keywords:
-- sync_per_container class
+dev_langs: C++
+helpviewer_keywords: sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: b62c3a7423cb9e9f273dca3079b80571a71d60f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8628d2866fa4a180975cde1f0ea161378afc6d50
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="syncpercontainer-class"></a>Classe sync_per_container
 Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che fornisce un oggetto cache separato per ogni oggetto allocatore.  
@@ -76,7 +72,6 @@ bool equals(const sync_per_container<Cache>& Other) const;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

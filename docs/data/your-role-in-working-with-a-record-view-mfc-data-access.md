@@ -1,45 +1,45 @@
 ---
-title: "Ruolo del programmatore nell&#39;uso di una visualizzazione di record (accesso ai dati MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, visualizzazioni di record"
-  - "visualizzazioni di record, personalizzazione di codice predefinito"
+title: Ruolo del programmatore nell'uso di una visualizzazione di Record (accesso ai dati MFC) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- record views, customizing default code
+- MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 81fdd3069f6e8deeca616c85542a76d89c20202d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Ruolo del programmatore nell&#39;uso di una visualizzazione di record (accesso ai dati MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Ruolo del programmatore nell'uso di una visualizzazione di record (accesso ai dati MFC)
 La tabella seguente illustra le operazioni più comuni che vengono eseguite dal programmatore per lavorare con una visualizzazione di record e le operazioni che vengono eseguite dal framework.  
   
-### Uso di una visualizzazione di record: programmatore e framework  
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Uso di una visualizzazione di record: programmatore e framework  
   
 |Programmatore|Framework|  
-|-------------------|---------------|  
-|Uso dell'editor di finestre di Visual C\+\+ per progettare il form.|Creazione di una risorsa modello di finestra di dialogo con controlli.|  
-|Uso della [Creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md) per creare classi derivate da [CRecordView](../mfc/reference/crecordview-class.md) e [CRecordset](../mfc/reference/crecordset-class.md) o da [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) e [CDaoRecordset](../mfc/reference/cdaorecordset-class.md).|Creazione automatica delle classi.|  
+|---------|-------------------|  
+|Uso dell'editor di finestre di Visual C++ per progettare il form.|Creazione di una risorsa modello di finestra di dialogo con controlli.|  
+|Utilizzare il [Creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md) per creare classi derivate da [CRecordView](../mfc/reference/crecordview-class.md) e [CRecordset](../mfc/reference/crecordset-class.md).|Creazione automatica delle classi.|  
 |Mapping dei controlli della visualizzazione di record ai membri dati di campo del recordset.|Disponibilità del meccanismo DDX tra i controlli e i campi del recordset.|  
-||Disponibilità dei gestori di comando predefiniti per i comandi **Move First**, **Move Last**, **Move Next** e **Move Previous** accessibili da menu o mediante pulsanti di barre degli strumenti.|  
+||Fornisce predefinita per i gestori di comandi **Move First**, **Move Last**, **Move Next**, e **Move Previous** i comandi di menu o sulla barra degli strumenti pulsanti.|  
 ||Aggiornamento delle modifiche nell'origine dati.|  
-|\[Facoltativo\] Scrittura di codice per inserire i dati provenienti da un secondo recordset in caselle di riepilogo, caselle combinate o altri controlli.||  
-|\[Facoltativo\] Scrittura di codice per eventuali convalide particolari.||  
-|\[Facoltativo\] Scrittura di codice per aggiungere o eliminare record.||  
+|[Facoltativo] Scrittura di codice per inserire i dati provenienti da un secondo recordset in caselle di riepilogo, caselle combinate o altri controlli.||  
+|[Facoltativo] Scrittura di codice per eventuali convalide particolari.||  
+|[Facoltativo] Scrittura di codice per aggiungere o eliminare record.||  
   
- La programmazione basata su form è solo una delle modalità di uso dei database.  Per informazioni sulle applicazioni che usano altre interfacce utente o che non ne usano alcuna, vedere [MFC: uso di classi di database con documenti e visualizzazioni](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: uso di classi di database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md).  Per informazioni su come visualizzare i record di database in altri modi, vedere le classi [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).  
+ La programmazione basata su form è solo una delle modalità di uso dei database. Per informazioni sulle applicazioni che usano altre interfacce utente oppure senza interfaccia utente, vedere [MFC: utilizzo di classi di Database con documenti e visualizzazioni](../data/mfc-using-database-classes-with-documents-and-views.md) e [MFC: utilizzo di classi di Database senza documenti e visualizzazioni](../data/mfc-using-database-classes-without-documents-and-views.md). Per metodi alternativi per la visualizzazione di record del database, vedere le classi [CListView](../mfc/reference/clistview-class.md) e [CTreeView](../mfc/reference/ctreeview-class.md).  
   
-## Vedere anche  
- [Visualizzazioni di record \(accesso ai dati MFC\)](../data/record-views-mfc-data-access.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzazioni di record (accesso ai dati MFC)](../data/record-views-mfc-data-access.md)   
  [Elenco dei driver ODBC](../data/odbc/odbc-driver-list.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_new_mode
+apiname: _set_new_mode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - set_new_mode
 - _set_new_mode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - handler modes
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 31a738319507f13dc26346b237447b37ee60ce0c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setnewmode"></a>_set_new_mode
 Imposta una nuova modalità del gestore per `malloc`.  
@@ -93,7 +75,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_set_new_mode`|\<new.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Memory Allocation](../../c-runtime-library/memory-allocation.md)  (Allocazione di memoria)  

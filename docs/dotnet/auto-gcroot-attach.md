@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.attach"
-  - "auto_gcroot::attach"
-  - "msclr::auto_gcroot::attach"
-  - "msclr.auto_gcroot.attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::attach"
+title: auto_gcroot::Attach | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.attach
+- auto_gcroot::attach
+- msclr::auto_gcroot::attach
+- msclr.auto_gcroot.attach
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::attach
 ms.assetid: 996ede65-bcb5-41f2-bfbf-507f8a578241
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 776d504af3f2b657629604323670fd59d0bb18c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Connessione `auto_gcroot` a un oggetto.  
+# <a name="autogcrootattach"></a>auto_gcroot::attach
+Collegare `auto_gcroot` a un oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 auto_gcroot<_element_type> & attach(  
@@ -44,17 +43,17 @@ auto_gcroot<_element_type> & attach(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_right`  
- L'oggetto dell'associazione, o `auto_gcroot` contenente l'oggetto su connetti.  
+ Oggetto da connettere, o un `auto_gcroot` contenente l'oggetto da connettere.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Oggetto `auto_gcroot` corrente.  
   
-## Note  
- Se `_right` è `auto_gcroot`, rilascia la proprietà dell'oggetto prima che verrà allegato a `auto_gcroot`corrente.  
+## <a name="remarks"></a>Note  
+ Se `_right` è un `auto_gcroot`, rilascia la proprietà dell'oggetto prima che l'oggetto è connesso all'oggetto corrente `auto_gcroot`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_gcroot_attach.cpp  
@@ -103,25 +102,28 @@ int main() {
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Fare attenzione innanzitutto A\!**  
-**in ClassA constructor:second**  
-**in ClassA destructor:first**  
-**Hello dal secondo A\!**  
-**in ClassA constructor:third**  
-**in ClassA destructor:second**  
-**Hello da terzo A\!**  
-**in ClassA constructor:fourth**  
-**Hello dalla quarta B\!**  
-**in ClassA destructor:third**  
-**Hello da quarto A\!**  
-**in ClassA destructor:fourth**   
-## Requisiti  
- msclr \<\\ auto\_gcroot.h di**File di intestazione** \>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+in ClassA constructor:second  
+in ClassA destructor:first  
+Hello from second A!  
+in ClassA constructor:third  
+in ClassA destructor:second  
+Hello from third A!  
+in ClassA constructor:fourth  
+Hello from fourth B!  
+in ClassA destructor:third  
+Hello from fourth A!  
+in ClassA destructor:fourth  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_gcroot.h >  
   
-## Vedere anche  
- [Membri auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::release](../dotnet/auto-gcroot-release.md)

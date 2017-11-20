@@ -1,48 +1,47 @@
 ---
-title: "/REBASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rebase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/REBASE (opzione editbin) [C++]"
-  - "indirizzi di base [C++]"
-  - "DLL [C++], collegamento"
-  - "file eseguibili [C++], indirizzo di base"
-  - "REBASE (opzione editbin)"
-  - "-REBASE (opzione editbin)"
+title: -REBASE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /rebase
+dev_langs: C++
+helpviewer_keywords:
+- base addresses [C++]
+- -REBASE editbin option
+- REBASE editbin option
+- DLLs [C++], linking
+- executable files [C++], base address
+- /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /REBASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rebase"></a>/REBASE
 ```  
 /REBASE[:modifiers]  
 ```  
   
-## Note  
- Questa opzione consente di impostare gli indirizzi di base dei file specificati.  In EDITBIN vengono assegnati nuovi indirizzi di base in uno spazio degli indirizzi contiguo in base alla dimensione di ciascun file arrotondata a 64 KB.  Per informazioni dettagliate sugli indirizzi di base, vedere l'opzione del linker [Indirizzo di base](../../build/reference/base-base-address.md) \(\/BASE\).  
+## <a name="remarks"></a>Note  
+ Questa opzione imposta gli indirizzi di base per i file specificati. EDITBIN assegna nuovi indirizzi di base in uno spazio di indirizzi contiguo in base alle dimensioni di ogni file arrotondata di 64 KB più vicino. Per informazioni dettagliate sugli indirizzi di base, vedere il [indirizzo di Base](../../build/reference/base-base-address.md) (/base) l'opzione del linker.  
   
- Specificare i file eseguibili e le DLL del programma nell'argomento *files* sulla riga di comando di EDITBIN secondo l'ordine desiderato per l'assegnazione degli indirizzi di base.  È possibile specificare facoltativamente uno o più modificatore, separandoli con una virgola \(**,**\):  
+ Specificare i file eseguibili del programma e DLL nel *file* argomento nella riga di comando EDITBIN nell'ordine in cui vengono baserà. È possibile specificare facoltativamente uno o più *modificatori*, ciascuno separato da una virgola (**,**):  
   
 |Modificatore|Azione|  
-|------------------|------------|  
-|BASE**\=***address*|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base ai file.  Specificare *address* in notazione decimale o in linguaggio C.  Se BASE non è specificato, l'indirizzo di base iniziale predefinito sarà 0x400000.  Se si utilizza DOWN, sarà necessario specificare BASE. *address* imposterà il termine dell'intervallo degli indirizzi di base.|  
-|BASEFILE|Consente di creare un file denominato COFFBASE.TXT, che rappresenta un file di testo nel formato previsto dall'opzione \/BASE di LINK.|  
-|DOWN|Consente di richiedere a EDITBIN di riassegnare gli indirizzi di base verso il basso a partire da un indirizzo finale.  Ai file vengono riassegnati gli indirizzi nell'ordine specificato, con il primo file posizionato nel primo indirizzo disponibile dopo la fine dell'intervallo di indirizzi.  È necessario utilizzare BASE con DOWN per garantire uno spazio degli indirizzi sufficiente per l'assegnazione di indirizzi di base ai file.  Per determinare lo spazio degli indirizzi necessario per i file specificati, eseguire EDITBIN con l'opzione \/REBASE sui file e aggiungere 64 KB alla dimensione totale visualizzata.|  
+|--------------|------------|  
+|BASE**=***indirizzo*|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base per i file. Specificare *indirizzo* in notazione decimale o in linguaggio C. Se non si specifica BASE, il valore predefinito l'indirizzo di base iniziale è 0x400000. Specificare se verso il basso viene utilizzato, BASE, e *indirizzo* imposta la fine dell'intervallo di indirizzi di base.|  
+|BASEFILE|Crea un file denominato COFFBASE. TXT, che è un file di testo nel formato previsto dal collegamento/opzione di BASE.|  
+|GIÙ|Indica a EDITBIN riassegnare gli indirizzi di base verso il basso da un indirizzo finale. I file vengono riassegnati nell'ordine specificato, con il primo file che si trova nell'indirizzo più alto possibile oltre la fine dell'intervallo di indirizzi. BASE deve essere utilizzata con verso il basso per garantire una sufficiente spazio di indirizzi per basare i file. Per determinare lo spazio di indirizzi necessario per i file specificati, eseguire EDITBIN con /REBASE nei file e aggiungere 64 KB per le dimensioni totali visualizzate.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)

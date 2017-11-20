@@ -1,45 +1,43 @@
 ---
-title: "hash_multimap::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap (membro) [STL/CLR]"
+title: 'hash_multimap:: swap (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 4baa60c2-865a-4e17-acd5-01b7c3c5cd44
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 522918e123a606783fc0703853bb2c9baf40ea6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapswap-stlclr"></a>hash_multimap::swap (STL/CLR)
 Scambia il contenuto di due contenitori.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void swap(hash_multimap<Key, Mapped>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  right  
- Contenitore con cui scambiare i contenuti.  
+ Contenitore con cui scambiare il contenuto.  
   
-## Note  
- La funzione membro scambia le sequenze controllate tra `this` e `right`.  Esegue questa operazione nel tempo costante e non genera eccezioni.  Utilizzarla come soluzione rapida scambiare il contenuto di due contenitori.  
+## <a name="remarks"></a>Note  
+ La funzione membro scambia le sequenze controllate tra `this` e `right`. Esegue l'operazione in un tempo costante e non genera alcuna eccezione. Utilizzato come un modo rapido per scambiare il contenuto di due contenitori.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_swap.cpp   
@@ -82,15 +80,18 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
- **d \[4\] e \[5\] \[f 6\]**  
- **d \[4\] e \[5\] \[f 6\]**  
- **un \[1\] \[b \[2\]c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

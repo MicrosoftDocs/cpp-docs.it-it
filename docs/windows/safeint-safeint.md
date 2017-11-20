@@ -1,34 +1,33 @@
 ---
-title: "SafeInt::SafeInt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeInt::SafeInt"
-  - "SafeInt"
-  - "SafeInt.SafeInt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeInt (classe), costruttore"
+title: 'SafeInt:: SafeInt | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- SafeInt::SafeInt
+- SafeInt
+- SafeInt.SafeInt
+dev_langs: C++
+helpviewer_keywords: SafeInt class, constructor
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 77ff8395aee764c67a3f90b69f33f4299de4f550
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# SafeInt::SafeInt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeintsafeint"></a>SafeInt::SafeInt
 Costruisce un oggetto `SafeInt`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 SafeInt() throw  
@@ -52,34 +51,34 @@ SafeInt (
 )  
 ```  
   
-#### Parametri  
- \[in\] `i`  
- Il valore per il nuovo oggetto `SafeInt`.  Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.  
+#### <a name="parameters"></a>Parametri  
+ [in] `i`  
+ Il valore per il nuovo `SafeInt` oggetto. Deve trattarsi di un parametro di tipo T o U, a seconda del costruttore.  
   
- \[in\] `b`  
- Il valore booleano per il nuovo oggetto `SafeInt`.  
+ [in] `b`  
+ Il valore booleano per il nuovo `SafeInt` oggetto.  
   
- \[in\] `u`  
- Un `SafeInt` di tipo U.  Il nuovo oggetto `SafeInt` avrà lo stesso valore di `u`, ma sarà di tipo T.  
+ [in] `u`  
+ Oggetto `SafeInt` di tipo U. Il nuovo `SafeInt` oggetto avrà lo stesso valore di `u`, ma sarà di tipo T.  
   
- U  
- Il tipo di dati memorizzati nell'oggetto `SafeInt`.  Può trattarsi di un tipo booleano, carattere, o intero.  Se è un tipo intero, può essere con o senza segno ed essere compreso tra 8 e 64 bit.  
+ G  
+ Il tipo di dati archiviati nel `SafeInt`. Può trattarsi di un valore booleano, un carattere o integer di tipo. Se è un tipo integer, può essere firmato o non firmato e compreso tra 8 e a 64 bit.  
   
-## Note  
- Per ulteriori informazioni sui tipi di modelli `T` ed `E` vedere [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni sui tipi di modello `T` e `E`, vedere [classe SafeInt](../windows/safeint-class.md).  
   
- Il parametro di input per il costruttore, `i` o `u`, deve essere un tipo booleano, un carattere, o un intero.  Se è un altro tipo di parametro, la classe `SafeInt` chiama [static\_assert](../cpp/static-assert.md) ad indicare un parametro di input non valido.  
+ Il parametro di input per il costruttore, `i` o `u`, deve essere un tipo booleano, un carattere o integer. In caso di un altro tipo di parametro, il `SafeInt` classe chiamate [static_assert](../cpp/static-assert.md) per indicare un parametro di input non valido.  
   
- I costruttori che utilizzano il tipo di modello `U` convertono automaticamente il parametro di input al tipo specificato da `T`.  La classe `SafeInt` converte i dati senza alcuna perdita di dati.  Riporta al gestore errori `E` se non è possibile convertire i dati al tipo `T` senza perdita di dati.  
+ I costruttori che utilizzano il tipo di modello `U` convertire automaticamente il parametro di input nel tipo specificato da `T`. La `SafeInt` classe converte i dati senza alcuna perdita di dati. Segnala al gestore errori `E` se non è possibile convertire i dati al tipo `T` senza perdita di dati.  
   
- Se si crea un `SafeInt` da un parametro booleano, è necessario inizializzare il valore immediatamente.  Non è possibile creare `SafeInt` utilizzando il codice `SafeInt<bool> sb;`.  Ciò andrà a generare un errore di compilazione.  
+ Se si crea un `SafeInt` da un parametro booleano, è necessario inizializzare il valore immediatamente. Non è possibile costruire un `SafeInt` utilizzando il codice `SafeInt<bool> sb;`. Verrà generato un errore di compilazione.  
   
-## Requisiti  
- **Intestazione:** safeint.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** SafeInt. h  
   
- **Spazio dei nomi:** msl::utilities  
+ **Namespace:** msl::utilities  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)   
+ [SafeInt (classe)](../windows/safeint-class.md)   
  [Classe SafeIntException](../windows/safeintexception-class.md)

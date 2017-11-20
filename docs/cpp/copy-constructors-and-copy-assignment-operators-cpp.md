@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b84bb6f0558b58bd83819fbef7e8e9e9c392bd94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Costruttori di copia e operatori di assegnazione di copia (C++)
 > [!NOTE]
@@ -82,14 +79,14 @@ int main()
 ```  
   
 > [!NOTE]
->  Rendere il tipo di argomento del costruttore di copia *const-nome della classe* ** & ** laddove possibile. Ciò impedisce al costruttore di copia di modificare accidentalmente l'oggetto da cui viene copiato. Consente inoltre la copia da **const** oggetti.  
+>  Rendere il tipo di argomento del costruttore di copia *const-nome della classe*  **&**  laddove possibile. Ciò impedisce al costruttore di copia di modificare accidentalmente l'oggetto da cui viene copiato. Consente inoltre la copia da **const** oggetti.  
   
 ## <a name="compiler-generated-copy-constructors"></a>Costruttori di copia generati dal compilatore  
  Costruttori di copia generato dal compilatore, ad esempio i costruttori di copia definito dall'utente, dispongono di un singolo argomento di tipo "riferimento a *del nome della classe*." Un'eccezione è quando tutte le classi base e le classi di membro hanno costruttori di copia dichiarati come accettando un singolo argomento di tipo **const** *del nome della classe***&**. In tal caso, è anche argomento del costruttore di copia generato dal compilatore **const**.  
   
  Quando il tipo di argomento del costruttore di copia non è **const**, l'inizializzazione copiando un **const** oggetto genera un errore. Non è vero il contrario: se l'argomento è **const**, è possibile inizializzare copiando un oggetto che non è **const**.  
   
- Operatori di assegnazione generato dal compilatore seguono lo stesso modello in relazione alla **const.** Accettano un unico argomento di tipo *del nome della classe* ** & ** , a meno che gli operatori di assegnazione in tutte le classi di base e di membro accettino argomenti di tipo **const** *del nome della classe &.* In questo caso, la classe generato assegnazione operatore accetta un **const** argomento.  
+ Operatori di assegnazione generato dal compilatore seguono lo stesso modello in relazione alla **const.** Accettano un unico argomento di tipo *del nome della classe*  **&**  , a meno che gli operatori di assegnazione in tutte le classi di base e di membro accettino argomenti di tipo **const** *del nome della classe &.* In questo caso, la classe generato assegnazione operatore accetta un **const** argomento.  
   
 > [!NOTE]
 >  Quando le classi base virtuali vengono inizializzate dai costruttori di copia, generate dal compilatore o definite dall'utente, vengono inizializzate una sola volta: nel punto in cui vengono costruite.  
@@ -98,4 +95,3 @@ int main()
   
  Per ulteriori informazioni sugli operatori di assegnazione di overload, vedere [assegnazione](../cpp/assignment.md).  
   
-

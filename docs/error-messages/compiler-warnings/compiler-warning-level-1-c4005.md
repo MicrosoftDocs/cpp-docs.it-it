@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4005
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4005
+f1_keywords: C4005
+dev_langs: C++
+helpviewer_keywords: C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 21023cf79a2ec25f94dc68cd3a55f722fa8316d8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4005"></a>Compilatore (livello 1) Avviso C4005
 'identifier': ridefinizione (macro)  

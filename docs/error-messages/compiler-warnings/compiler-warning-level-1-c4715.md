@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4715 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4715"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4715"
+title: Compilatore avviso (livello 1) C4715 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 66f748aaf29365c9a49e5ee5eaa9b7fec8d1de41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4715
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'funzione': non tutti i percorsi di controllo restituiscono un valore  
+# <a name="compiler-warning-level-1-c4715"></a>Avviso del compilatore (livello 1) C4715
+'function': non tutti i percorsi di controllo restituiscono un valore  
   
- È possibile che la funzione specificata non restituisca alcun valore.  
+ La funzione specificata potenzialmente non può restituire un valore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // C4715a.cpp  
@@ -40,7 +38,7 @@ int func1( int i )
 }  
 ```  
   
- Per evitare la visualizzazione dell'avviso, modificare il codice in modo che tutti i percorsi assegnino un valore restituito alla funzione:  
+ Per evitare questo avviso, modificare il codice in modo che tutti i percorsi di assegnino un valore restituito della funzione:  
   
 ```  
 // C4715b.cpp  
@@ -52,7 +50,7 @@ int func1( int i )
 }  
 ```  
   
- È possibile che il codice contenga una chiamata a una funzione che non termina mai, come nell'esempio seguente:  
+ È possibile che il codice può contenere una chiamata a una funzione che non restituisce mai, come nell'esempio seguente:  
   
 ```  
 // C4715c.cpp  
@@ -71,4 +69,4 @@ int glue()
 }  
 ```  
   
- Anche nel codice riportato come esempio viene generato un avviso perché il compilatore non riconosce `fatal` come funzione che non termina mai.  Per evitare che venga generato il messaggio di errore, dichiarare `fatal` con [\_\_declspec\(noreturn\)](../../cpp/noreturn.md).
+ Questo codice genera un avviso, anche perché il compilatore non riconosce che `fatal` non restituisce mai. Per impedire che questo codice di generazione di un messaggio di errore, dichiarare `fatal` utilizzando [__declspec(noreturn)](../../cpp/noreturn.md).

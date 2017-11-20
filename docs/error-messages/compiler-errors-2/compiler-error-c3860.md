@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3860
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3860
+f1_keywords: C3860
+dev_langs: C++
+helpviewer_keywords: C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3860"></a>Errore del compilatore C3860
 elenco di argomenti di tipo nome del tipo di classe seguito necessario elencare i parametri nell'ordine utilizzato nell'elenco di parametri di tipo  

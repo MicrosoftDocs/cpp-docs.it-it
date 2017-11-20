@@ -1,48 +1,47 @@
 ---
-title: "&lt;paramref&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "paramref"
-  - "<paramref>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<paramref> C++ (tag XML)"
-  - "paramref C++ (tag XML)"
+title: '&lt;paramref&gt; (Visual C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- paramref
+- <paramref>
+dev_langs: C++
+helpviewer_keywords:
+- paramref C++ XML tag
+- <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e1212116611273bd0abd20169e3b25201f356bd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;paramref&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tag di \<paramref\> fornisce una modalità per indicare che la parola è un parametro.  Il file XML può essere elaborato per formattare il parametro in alcune modalità distinte.  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
+Il \<paramref > tag offre un modo per indicare che una parola è un parametro. Il file con estensione XML può essere elaborato per formattare questo parametro in modo specifico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <paramref name="name"/>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `name`  
- Nome del parametro a cui fare riferimento.  Racchiuderlo tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.  
+ Nome del parametro a cui fare riferimento.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `name`.  
   
-## Note  
- Eseguire la compilazione con [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare in un file i commenti per la creazione della documentazione.  
+## <a name="remarks"></a>Note  
+ Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // xml_paramref_tag.cpp  
@@ -57,5 +56,5 @@ public ref class MyClass {
 };  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

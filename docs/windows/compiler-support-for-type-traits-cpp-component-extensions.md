@@ -1,94 +1,93 @@
 ---
-title: "Supporto del compilatore per tratti di tipo (Estensioni del componente C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class (parola chiave) [C++]"
-  - "__is_pod (parola chiave) [C++]"
-  - "__is_delegate (parola chiave) [C++]"
-  - "__is_value_class (parola chiave) [C++]"
-  - "__has_copy (parola chiave) [C++]"
-  - "__has_nothrow_copy (parola chiave) [C++]"
-  - "__is_interface_class (parola chiave) [C++]"
-  - "__is_sealed (parola chiave) [C++]"
-  - "__is_convertible_to (parola chiave) [C++]"
-  - "__is_ref_class (parola chiave) [C++]"
-  - "__has_trivial_copy (parola chiave) [C++]"
-  - "__has_user_destructor (parola chiave) [C++]"
-  - "__is_abstract (parola chiave) [C++]"
-  - "__is_empty (parola chiave) [C++]"
-  - "__has_trivial_assign (parola chiave) [C++]"
-  - "__has_nothrow_constructor (parola chiave) [C++]"
-  - "__is_ref_array (parola chiave) [C++]"
-  - "__is_base_of (parola chiave) [C++]"
-  - "__has_nothrow_assign (parola chiave) [C++]"
-  - "__has_virtual_destructor (parola chiave) [C++]"
-  - "__has_finalizer (parola chiave) [C++]"
-  - "__is_union (parola chiave) [C++]"
-  - "__has_assign (parola chiave) [C++]"
-  - "__has_trivial_destructor (parola chiave) [C++]"
-  - "__is_polymorphic (parola chiave) [C++]"
-  - "__is_enum (parola chiave) [C++]"
-  - "__is_simple_value_class (parola chiave) [C++]"
-  - "__has_trivial_constructor (parola chiave) [C++]"
+title: Supporto del compilatore per tratti di tipo (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80801671644275b482b6b10a9f977704c2b523cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Supporto del compilatore per tratti di tipo (Estensioni del componente C++)
 Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di un tipo in fase di compilazione.  
   
 ## <a name="all-runtimes"></a>Tutti i runtime  
- **Sezione Osservazioni**  
+ **Note**  
   
  Tratti di tipo sono particolarmente utili per i programmatori che scrivono librerie.  
   
- Nell'elenco seguente contiene i tratti di tipo supportate dal compilatore. Tutti i tratti di tipo restituiscono `false` se non viene soddisfatta la condizione specificata dal nome del tratto di tipo.  
+ Nell'elenco seguente contiene i tratti di tipo supportati dal compilatore. Tutti i tratti di tipo restituiscono `false` se non viene soddisfatta la condizione specificata dal nome del tratto di tipo.  
   
- (Nell'elenco seguente, gli esempi di codice sono scritti solo in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]. Ma il tratto di tipo corrispondente è supportato anche in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], se non diversamente specificato. Il termine "tipo di piattaforma" fa riferimento ai tipi [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] o ai tipi Common Language Runtime.)  
+ (Nell'elenco seguente, esempi di codice vengono scritti solo in C + + CLI. Ma il tratto di tipo corrispondente è supportato anche in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], se non diversamente specificato. Il termine "tipo di piattaforma" si riferisce a tipi di Windows Runtime o tipi common language runtime.)  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +123,7 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
   
 -   `__has_finalizer(` `type` `)`  
   
-     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce true se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori in Visual C++](../misc/destructors-and-finalizers-in-visual-cpp.md) Per ulteriori informazioni.  
+     (Non supportato in [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)].) Restituisce true se il tipo CLR ha un finalizzatore. Vedere [distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) per ulteriori informazioni.  
   
     ```  
   
@@ -302,9 +301,9 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
   
 -   `__is_abstract(` `type` `)`  
   
-     Restituisce true se il tipo è un tipo astratto. Per ulteriori informazioni sui tipi astratti native, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
+     Restituisce true se il tipo è un tipo astratto. Per ulteriori informazioni sui tipi astratti nativi, vedere [astratta](../windows/abstract-cpp-component-extensions.md).  
   
-     `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per ulteriori informazioni sui tipi astratti piattaforma, vedere [classi astratte](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` funziona anche per i tipi di piattaforma. Un'interfaccia con almeno un membro è un tipo astratto perché è un tipo riferimento con almeno un membro astratto. Per ulteriori informazioni sui tipi di piattaforma astratta, vedere [classi astratte](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -582,16 +581,16 @@ Il compilatore supporta *digitare tratti*, che indicano varie caratteristiche di
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Sezione Osservazioni**  
+## <a name="windows-runtime"></a>Windows Runtime  
+ **Note**  
   
- Il `__has_finalizer(`*tipo*`)` tratto di tipo non è supportato perché questa piattaforma non supporta i finalizzatori.  
+ Il `__has_finalizer(` *tipo* `)` tratto di tipo non è supportato perché questa piattaforma non supporta i finalizzatori.  
   
 ### <a name="requirements"></a>Requisiti  
  Opzione del compilatore: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Sezione Osservazioni**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Note**  
   
  Non esistono commenti specifici della piattaforma per questa funzionalità.  
   
@@ -630,4 +629,4 @@ R is a ref class
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni del componente per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

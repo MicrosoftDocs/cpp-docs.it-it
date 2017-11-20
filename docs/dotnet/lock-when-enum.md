@@ -1,34 +1,33 @@
 ---
-title: "Enumerazione lock_when | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::lock_when"
-  - "msclr.lock_when"
-  - "lock_when"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock_when (enumerazione)"
+title: Enumerazione lock_when | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::lock_when
+- msclr.lock_when
+- lock_when
+dev_langs: C++
+helpviewer_keywords: lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c13325f92f3b17f5881be1deffd9710108ecf4be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Enumerazione lock_when
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vincolo ha posticipato il blocco.  
+# <a name="lockwhen-enum"></a>Enumerazione lock_when
+Specifica il blocco posticipata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 enum lock_when {  
@@ -36,11 +35,11 @@ enum lock_when {
 };  
 ```  
   
-## Note  
- Una volta passato a [lock::lock](../dotnet/lock-lock.md), `lock_later` specifica che il blocco non è ora possibile eseguire.  
+## <a name="remarks"></a>Note  
+ Quando viene passato a [lock::lock](../dotnet/lock-lock.md), `lock_later` specifica che il blocco non deve essere eseguita ora.  
   
-## Esempio  
- In questo esempio viene utilizzata una sola istanza di una classe in più thread.  La classe utilizza un blocco stesso per garantire che accede ai dati interni siano utilizzate per ogni thread.  Il thread principale dell'applicazione viene utilizzato un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se i thread di lavoro sono ancora presenti e attende per uscire da finché tutti i thread di lavoro non ha completato le attività.  
+## <a name="example"></a>Esempio  
+ Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  
   
 ```  
 // msl_lock_lock_when.cpp  
@@ -114,21 +113,24 @@ int main() {
 }  
 ```  
   
-  **In thread 3, contatore \= 0**  
-**In thread 3, contatore \= 10**  
-**In thread 5, contatore \= 0**  
-**In thread 5, contatore \= 10**  
-**In thread 7, contatore \= 0**  
-**In thread 7, contatore \= 10**  
-**In thread 4, contatore \= 0**  
-**In thread 4, contatore \= 10**  
-**In thread 6, contatore \= 0**  
-**In thread 6, contatore \= 10**  
-**Tutti i thread completati.**   
-## Requisiti  
- msclr \<\\ lock.h di**File di intestazione** \>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\lock.h >  
   
-## Vedere anche  
- [blocco](../dotnet/lock.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [lock](../dotnet/lock.md)

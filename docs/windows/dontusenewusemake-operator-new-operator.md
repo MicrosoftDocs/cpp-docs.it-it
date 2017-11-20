@@ -1,32 +1,30 @@
 ---
-title: "Operatore DontUseNewUseMake::operator new | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator new (operatore)"
+title: 'Nuovo operatore dontusenewusemake:: operator | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new
+dev_langs: C++
+helpviewer_keywords: operator new operator
 ms.assetid: 6af07a0d-2271-430c-9d9b-5a4223fed049
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5424108692bd97bdea890aff85ab7428276dd430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore DontUseNewUseMake::operator new
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="dontusenewusemakeoperator-new-operator"></a>Operatore DontUseNewUseMake::operator new
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void* operator new(  
@@ -35,24 +33,24 @@ void* operator new(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `__unnamed0`  
  Un parametro senza nome che specifica il numero di byte di memoria da allocare.  
   
  `placement`  
- Tipo da allocare.  
+ Il tipo deve essere allocata.  
   
-## Valore restituito  
- Consente di passare argomenti aggiuntivi se si esegue l'overload dell'operatore `new`.  
+## <a name="return-value"></a>Valore restituito  
+ Fornisce un modo per passare argomenti aggiuntivi se si esegue l'overload di operatore `new`.  
   
-## Note  
- Esegue l'overload dell'operatore `new` e gli impedisce di essere utilizzato in RuntimeClass.  
+## <a name="remarks"></a>Note  
+ Esegue l'overload di operatore `new` e impedisce venga utilizzato in RuntimeClass.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe DontUseNewUseMake](../windows/dontusenewusemake-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [DontUseNewUseMake (classe)](../windows/dontusenewusemake-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

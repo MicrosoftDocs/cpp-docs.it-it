@@ -1,41 +1,39 @@
 ---
-title: "map::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator (membro) [STL/CLR]"
+title: 'Map:: Iterator (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: b2953b9b-0e6d-49f3-a28f-47d04d16d5f6
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b34c5d93fffd236cd16843fd074b5c1b8181c4b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un iteratore della sequenza controllata.  
+# <a name="mapiterator-stlclr"></a>map::iterator (STL/CLR)
+Tipo di un iteratore per la sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## Note  
- Il tipo viene descritto un oggetto di tipo non specificato `T1` che può essere utilizzata come iteratore bidirezionale per la sequenza selezionata.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un oggetto di tipo non specificato `T1` che può essere utilizzato come un iteratore bidirezionale per la sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::const\_iterator](../dotnet/map-const-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)

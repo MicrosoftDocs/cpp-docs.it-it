@@ -1,32 +1,30 @@
 ---
-title: "import | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.import"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "import attribute"
+title: importare | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.import
+dev_langs: C++
+helpviewer_keywords: import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82556f4af2f47c209685b377e94e62ea56a2cb6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# import
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica un altro IDL, .odl, o file di intestazione contenente le definizioni cui si desidera fare riferimento da IDL principale.  
+# <a name="import"></a>importazione
+Specifica un altro file di intestazione, ODL o IDL contenente le definizioni che si desidera fare riferimento dal principale IDL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,16 +33,16 @@ Specifica un altro IDL, .odl, o file di intestazione contenente le definizioni c
 ) ];  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `idl_file`  
- Il nome di un file IDL che si desidera importato nella libreria dei tipi di progetto corrente.  
+ Il nome di un file IDL che si desidera importare nella libreria dei tipi del progetto corrente.  
   
-## Note  
- **importazione** l'attributo di C\+\+ causa  `#import` istruzione da inserire in  `import "docobj.idl"` istruzione nel file generato con estensione .idl.  **importazione** l'attributo presenta la stessa funzionalità di  [importazione](http://msdn.microsoft.com/library/windows/desktop/aa367047) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **importare** attributo C++ causa un `#import` istruzione inserita sotto la `import "docobj.idl"` istruzione nel file IDL generato. Il **importare** presenta la stessa funzionalità come il [importare](http://msdn.microsoft.com/library/windows/desktop/aa367047) attributo MIDL.  
   
- **importazione** l'attributo consente solo il file specificato nel file IDL che verrà generato dal progetto;   **importazione** l'attributo non consente di chiamare i costrutti nel file specificato dal codice sorgente del progetto.  Per chiamare i costrutti nel file specificato dal codice sorgente del progetto, utilizzare [\#import](../preprocessor/hash-import-directive-cpp.md) e  `embedded_idl` l'attributo o è possibile includere il file h per  `idl_file`, se un file h esiste.  
+ Il **importare** attributo colloca solo il file specificato nel file IDL che verrà generato dal progetto; il **importare** attributo non è possibile chiamare costrutti nel file specificato dal codice sorgente nel progetto.  Per chiamare costrutti nel file specificato dal codice sorgente nel progetto, utilizzare [#import](../preprocessor/hash-import-directive-cpp.md) e `embedded_idl` attributo oppure è possibile includere il file h di `idl_file`, se esiste un file con estensione h.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente:  
   
 ```  
@@ -54,7 +52,7 @@ Specifica un altro IDL, .odl, o file di intestazione contenente le definizioni c
 [import(import.idl)];  
 ```  
   
- scrive il codice seguente nel file generato con estensione .idl:  
+ Genera il seguente codice nel file IDL generato:  
   
 ```  
 import "docobj.idl";  
@@ -67,24 +65,23 @@ library MyLib {
 ...  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [includere](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

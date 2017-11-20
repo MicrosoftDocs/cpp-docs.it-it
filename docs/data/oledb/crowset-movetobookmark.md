@@ -1,70 +1,69 @@
 ---
-title: "CRowset::MoveToBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::MoveToBookmark"
-  - "ATL::CRowset<TAccessor>::MoveToBookmark"
-  - "ATL.CRowset.MoveToBookmark"
-  - "ATL.CRowset<TAccessor>.MoveToBookmark"
-  - "MoveToBookmark"
-  - "CRowset::MoveToBookmark"
-  - "CRowset.MoveToBookmark"
-  - "CRowset<TAccessor>::MoveToBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToBookmark (metodo)"
+title: 'CRowset:: MoveToBookmark | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::MoveToBookmark
+- ATL::CRowset<TAccessor>::MoveToBookmark
+- ATL.CRowset.MoveToBookmark
+- ATL.CRowset<TAccessor>.MoveToBookmark
+- MoveToBookmark
+- CRowset::MoveToBookmark
+- CRowset.MoveToBookmark
+- CRowset<TAccessor>::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4edbfd018cadeb47691ac4fd70d5e518f8008f04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::MoveToBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera la riga contrassegnata da un segnalibro o la riga in un offset specificato \(`lSkip`\) dal bookmark.  
+# <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
+Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato (`lSkip`) da tale segnalibro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT MoveToBookmark(   
-   const CBookmarkBase& bookmark,   
-   LONG lSkip = 0    
+      HRESULT MoveToBookmark(   
+   const CBookmarkBase& bookmark,   
+   LONG lSkip = 0    
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `bookmark`  
- \[in\] segnalibro A che contrassegna la posizione da cui si desidera recuperare i dati.  
+ [in] Un segnalibro che contrassegna la posizione da cui si desidera recuperare i dati.  
   
  `lSkip`  
- \[in\] numero di numero di righe dal segnalibro nella riga di destinazione.  Se `lSkip` è zero, la prima riga viene recuperata la riga contrassegnata con il segnalibro.  Se `lSkip` è 1, la prima riga viene recuperata la riga dopo la riga contrassegnata con il segnalibro.  Se `lSkip` è a 1, la prima riga recuperata è la riga prima della riga contrassegnata con il segnalibro.  
+ [in] Il numero conteggio delle righe dal segnalibro nella riga di destinazione. Se `lSkip` è zero, la prima riga recuperata è la riga con segnalibro. Se `lSkip` è 1, la prima riga recuperata è la riga dopo la riga con segnalibro. Se `lSkip` è -1, la prima riga recuperata è la riga che precede la riga con segnalibro.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate`, che potrebbe non essere supportata in tutti i provider; in questo caso, il metodo restituisce **E\_NOINTERFACE**.  È inoltre necessario disporre **DBPROP\_IRowsetLocate** a `VARIANT_TRUE` e a **DBPROP\_CANFETCHBACKWARDS** insieme a `VARIANT_TRUE` chiamare **Apri** la tabella o il comando che contiene il rowset.  
+## <a name="remarks"></a>Note  
+ Questo metodo richiede l'interfaccia facoltativa `IRowsetLocate`, che potrebbe non essere supportato in tutti i provider; in questo caso, il metodo restituisce **E_NOINTERFACE**. È inoltre necessario impostare **DBPROP_IRowsetLocate** a `VARIANT_TRUE` e impostare **DBPROP_CANFETCHBACKWARDS** a `VARIANT_TRUE` prima di chiamare **aprire** la tabella o un comando che contiene il set di righe.  
   
- Per informazioni sull'utilizzo dei segnalibri in consumer, vedere [Utilizzo dei bookmark](../../data/oledb/using-bookmarks.md).  
+ Per informazioni sull'utilizzo di segnalibri degli utenti, vedere [mediante segnalibri](../../data/oledb/using-bookmarks.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CRowset](../../data/oledb/crowset-class.md)   
- [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
- [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
- [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
- [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
+ [CRowset:: MoveNext](../../data/oledb/crowset-movenext.md)   
+ [CRowset:: MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [IRowsetLocate:: GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
+ [CRowset:: MovePrev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

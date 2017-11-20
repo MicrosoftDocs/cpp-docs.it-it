@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/stdext::cvt::wbuffer_convert
-dev_langs:
-- C++
-helpviewer_keywords:
-- wbuffer_convert class
+f1_keywords: xlocmon/stdext::cvt::wbuffer_convert
+dev_langs: C++
+helpviewer_keywords: wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 1c5cc15339b70af44a8acee8ba7ee2e74278fc3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 502b532fc0c2dfe4ba19844b35e6c301c2764a8b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wbufferconvert-class"></a>Classe wbuffer_convert
 Descrive un buffer del flusso che controlla la trasmissione di elementi da e verso un buffer del flusso di byte.  
@@ -55,4 +50,3 @@ class wbuffer_convert
 -   Un puntatore al buffer del flusso di byte sottostante  
   
 -   Un puntatore all'oggetto di conversione allocato, che viene liberato quando viene eliminato definitivamente l'oggetto [wbuffer_convert](../standard-library/wbuffer-convert-class.md).
-

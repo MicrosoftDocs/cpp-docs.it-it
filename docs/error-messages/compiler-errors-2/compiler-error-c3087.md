@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3087
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3087
+f1_keywords: C3087
+dev_langs: C++
+helpviewer_keywords: C3087
 ms.assetid: 4f5bdd52-a853-4f02-b160-6868e9190b9d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: d786cb3f8c04e5d8ff32aebe30915d4aca3cfb2f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3087"></a>Errore del compilatore C3087
 'named_argument': la chiamata di 'attribute' inizializza già questo membro  

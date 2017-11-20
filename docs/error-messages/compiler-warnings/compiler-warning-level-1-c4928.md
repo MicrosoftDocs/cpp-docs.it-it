@@ -1,36 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4928 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4928"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4928"
+title: Compilatore avviso (livello 1) C4928 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4928
+dev_langs: C++
+helpviewer_keywords: C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9f77553d024fcfbe305bdc8cc9653cd567356108
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4928
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4928"></a>Avviso del compilatore (livello 1) C4928
 inizializzazione di copia non valida; sono state implicitamente applicate più conversioni definite dall'utente  
   
- Sono state rilevate più routine di conversione definite dall'utente.  È stato eseguito il codice in tutte le routine.  
+ È stata trovata più di una routine di conversione definita dall'utente. È stato eseguito il codice in tutte le routine.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Il seguente codice di esempio genera l'errore C4928:  
+ L'esempio seguente genera l'errore C4928:  
   
 ```  
 // C4928.cpp  

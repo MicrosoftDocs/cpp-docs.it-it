@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2229
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2229
+f1_keywords: C2229
+dev_langs: C++
+helpviewer_keywords: C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: c54e3affb39cb396df1caaafe6450d5c6ac80f6e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2229"></a>Errore del compilatore C2229
 tipo 'identifier' ha una matrice di dimensioni zero non valida  

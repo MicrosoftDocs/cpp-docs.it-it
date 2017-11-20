@@ -12,14 +12,13 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 683d3f5848ab86a9a80c25a09ac110b2abb2f5e2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-typedefs"></a>Typedefs &lt;string&gt;
 ||||  
@@ -96,7 +95,6 @@ basic_string<wchar_t> wstr(L"");
   
 ## <a name="see-also"></a>Vedere anche  
  [\<string>](../standard-library/string.md)
-
 
 
 

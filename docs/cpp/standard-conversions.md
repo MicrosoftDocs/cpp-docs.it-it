@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per ulteriori informazioni sui tipi, tipi standard e tipi derivati, vedere [tipi](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -80,11 +77,11 @@ long_num2 = int_num * long_num2;
   
  Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Possono, però, produrre risultati diversi qualora l'oggetto promosso sia uno dei seguenti:  
   
--   Un operando di ** / **, `%`, `/=`, `%=`, ** < **, ** \< = **, ** > **, o**>=**  
+-   Un operando di  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o**>=**  
   
      Questi operatori si basano sul segno per determinare il risultato. Di conseguenza, le promozioni a mantenimento del valore e le promozioni che mantengono il segno portano a risultati diversi, se applicate a tali operandi.  
   
--   L'operando sinistro del ** >> ** o**>>=**  
+-   L'operando sinistro del  **>>**  o**>>=**  
   
      Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.  
   
@@ -253,12 +250,12 @@ int main()
  Il puntatore `pA` è di tipo `A *`, che può essere interpretato con il significato di "puntatore a un oggetto di tipo `A`". I membri di `bObject` `(`, ad esempio `BComponent` e `BMemberFunc`) sono univoci `B` e sono pertanto inaccessibili mediante `pA`. Il puntatore `pA` consente l'accesso solo a quelle caratteristiche (funzioni membro e dati) dell'oggetto definite nella classe `A`.  
   
 ### <a name="pointer-to-function"></a>Puntatore a funzione  
- Un puntatore a una funzione può essere convertito nel tipo **void \* **, se tipo **void \* ** è sufficientemente grande da contenere tale puntatore.  
+ Un puntatore a una funzione può essere convertito nel tipo **void \*** , se tipo **void \***  è sufficientemente grande da contenere tale puntatore.  
   
 ### <a name="pointer-to-void"></a>Puntatore a void  
  I puntatori al tipo `void` possono essere convertiti in puntatori a qualsiasi altro tipo, ma solo con un cast di tipo esplicito (diversamente da quello che avviene in C). (Vedere [espressioni con conversioni di tipi esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per ulteriori informazioni sui cast di tipo.) Un puntatore a qualsiasi tipo può essere convertito implicitamente a un tipo `void`. Un puntatore a un oggetto incompleto di un tipo può essere convertito in un puntatore a `void` (implicitamente) e viceversa (esplicitamente). Il risultato di tale conversione è uguale al valore del puntatore originale. Un oggetto è considerato incompleto se viene dichiarato ma le informazioni disponibili sono insufficienti per determinarne la dimensione o la classe base.  
   
- Un puntatore a un oggetto che non è **const** o `volatile` può essere convertito in modo implicito in un puntatore di tipo **void \* **.  
+ Un puntatore a un oggetto che non è **const** o `volatile` può essere convertito in modo implicito in un puntatore di tipo **void \*** .  
   
 ### <a name="const-and-volatile-pointers"></a>Puntatori const e volatile  
  C++ non fornisce una conversione standard da un **const** o `volatile` tipo a un tipo che non è **const** o `volatile`. Tuttavia, qualsiasi tipo di conversione può essere specificato usando i cast di tipo espliciti (comprese le conversioni non sicure).  

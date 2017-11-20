@@ -1,32 +1,30 @@
 ---
-title: "map::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert (membro) [STL/CLR]"
+title: 'Map:: Insert (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: 599c702e-7db0-45b8-8247-4ff041a3639c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a92483a66bf890b1bf0ca775ce010eb60ecffe33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapinsert-stlclr"></a>map::insert (STL/CLR)
 Aggiunge elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cliext::pair<iterator, bool> insert(value_type val);  
@@ -36,36 +34,36 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
 ```  
   
-#### Parametri  
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+#### <a name="parameters"></a>Parametri  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  right  
  Enumerazione da inserire.  
   
- val  
+ Val  
  Valore della chiave da inserire.  
   
- where  
- Dove inserire nel contenitore \(suggerimento solo\).  
+ dove  
+ Posizione in cui nel contenitore per inserire (solo hint).  
   
-## Note  
- Ognuna delle funzioni membro inserire una sequenza specificata dagli operandi rimanenti.  
+## <a name="remarks"></a>Note  
+ Tutte le funzioni membro inserisce una sequenza specificata dagli operandi rimanenti.  
   
- La prima funzione membro tenta di inserire un elemento con valore `val` e restituisce una coppia di valori `X`.  Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario `X.first` definisce un elemento con l'ordine equivalente che esiste già e non nuovo elemento viene inserito.  Viene utilizzato per inserire un singolo elemento.  
+ La prima funzione membro incentrati inserire un elemento con valore `val`e restituisce una coppia di valori `X`. Se `X.second` è true, `X.first` definisce l'elemento appena inserito; in caso contrario `X.first` definisce un elemento con l'equivalente di ordinamento che già esiste e non viene inserito alcun nuovo elemento. Utilizzarla per inserire un singolo elemento.  
   
- La seconda funzione membro inserire un elemento con valore `val`, utilizzando `where` come suggerimento \(per migliorare le prestazioni\) e restituisce un iteratore che definisce l'elemento appena inserito.  Utilizzarla per inserire un singolo elemento che può essere adiacenti a un elemento valido.  
+ La seconda funzione membro inserisce un elemento con valore `val`, utilizzando `where` come un suggerimento (per migliorare le prestazioni) e restituisce un iteratore che definisce l'elemento appena inserito. Utilizzarla per inserire un singolo elemento che può essere adiacente a un elemento a cui che si è certi.  
   
- La terza funzione membro incollare la sequenza `[``first``,` `last``)`.  Utilizzarla per inserire zero o più elementi copiati da un'altra sequenza.  
+ La terza funzione membro inserisce la sequenza [`first`, `last`). Utilizzarla per l'inserimento di zero o più elementi copiati da un'altra sequenza.  
   
- La quarta funzione membro incollare la sequenza definita da `right`.  Utilizzarla per inserire una sequenza descritta da un enumeratore.  
+ La quarta funzione membro inserisce la sequenza designata dal `right`. Utilizzarla per inserire una sequenza descritta dall'enumeratore.  
   
- Ogni inserimento di elementi richiede tempo proporzionale al logaritmo del numero di elementi della sequenza selezionata.  L'inserimento può verificarsi nel tempo costante ammortizzato, tuttavia, dato un suggerimento che definisce un elemento accanto al punto di inserimento.  
+ Ogni inserimento di elementi tempo proporzionale al logaritmo del numero di elementi nella sequenza controllata. Inserimento può avvenire in tempo costante ammortizzato, tuttavia, dato un suggerimento che designa un elemento adiacente al punto di inserimento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_insert.cpp   
@@ -130,18 +128,21 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**insert \(L'x \[24\]\) \= \[\[X 24\] True\]**  
-**inserimento L'b \(\[2\]\) \= \[\[B 2\] False\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
-**insert\(begin\(\), L'y \[25\]\) \= \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\]**  
- **\[a 1\] \[b 2\] \[c 3\] \[x 24\] \[y 25\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [[x 24] True]  
+insert([L'b' 2]) = [[b 2] False]  
+ [a 1] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [map (STL/CLR)](../dotnet/map-stl-clr.md)

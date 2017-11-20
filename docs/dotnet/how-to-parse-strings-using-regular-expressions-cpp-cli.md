@@ -1,34 +1,33 @@
 ---
-title: "Procedura: analizzare le stringhe mediante espressioni regolari (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "esempi [C++], stringhe"
-  - "analisi di stringhe [C++]"
-  - "espressioni regolari [C++], analisi di stringhe"
-  - "stringhe [C++], analisi"
+title: 'Procedura: analizzare stringhe tramite espressioni regolari (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- strings [C++], parsing
 ms.assetid: 5b0c7ca3-9bba-4389-a45c-6d373cff91b0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fed9fd05ed9916e4d285c64a398b48b82d99f884
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: analizzare le stringhe mediante espressioni regolari (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come analizzare semplici stringhe utilizzando la classe <xref:System.Text.RegularExpressions.Regex> nello spazio dei nomi <xref:System.Text.RegularExpressions?displayProperty=fullName>.  Viene innanzitutto costruita una stringa contenente più tipi di descrittori di parole.  La stringa viene quindi analizzata utilizzando le classi <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match>.  Infine, ciascuna parola nella frase viene visualizzata separatamente.  
+# <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Procedura: analizzare le stringhe mediante espressioni regolari (C++/CLI)
+Esempio di codice riportato di seguito viene illustrato come analizzare semplici stringhe utilizzando il <xref:System.Text.RegularExpressions.Regex> classe il <xref:System.Text.RegularExpressions?displayProperty=fullName> dello spazio dei nomi. Stringa che contiene più tipi di descrittori di parole viene costruita. La stringa viene quindi analizzata utilizzando il <xref:System.Text.RegularExpressions.Regex> classe in combinazione con la <xref:System.Text.RegularExpressions.Match> classe. Quindi, ogni parola della frase viene visualizzato separatamente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // regex_parse.cpp  
@@ -62,6 +61,6 @@ int main( )
 }  
 ```  
   
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

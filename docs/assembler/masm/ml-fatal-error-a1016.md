@@ -1,34 +1,32 @@
 ---
-title: "ML Fatal Error A1016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1016"
+title: Errore ML irreversibile A1016 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1016
+dev_langs: C++
+helpviewer_keywords: A1016
 ms.assetid: 440b3750-ba0b-44d8-b82d-d581f62c08b2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f05389c6ebe106daf19e4e72e917eacaa32fa8b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ML Fatal Error A1016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**errore interno dell'assemblatore**  
+# <a name="ml-fatal-error-a1016"></a>Errore ML irreversibile A1016
+**Errore interno dell'Assembler**  
   
- Il driver di MASM, denominato ML.exe, generato un errore del sistema.  
+ Il driver MASM, denominato ML.exe, generato un errore di sistema.  
   
- Si notino le condizioni di errore e notificare a Microsoft Corporation.  Product servizio supporto tecnico sono disponibili [http:\/\/support.microsoft.com\/](http://support.microsoft.com/).  
+ Prendere nota delle circostanze dell'errore e contattare Microsoft Corporation. Il servizio supporto tecnico è disponibile all'indirizzo [http://support.microsoft.com/](http://support.microsoft.com/).  
   
-## Vedere anche  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>Vedere anche  
+ [Messaggi di errore ML](../../assembler/masm/ml-error-messages.md)

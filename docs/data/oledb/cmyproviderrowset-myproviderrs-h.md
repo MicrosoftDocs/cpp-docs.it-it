@@ -1,33 +1,32 @@
 ---
-title: "CMyProviderRowset (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderrowset"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderRowset (classe) in MyProviderRS.H"
-  - "provider OLE DB, file generati dalla procedura guidata"
+title: CMyProviderRowset (MyProviderRS. H) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyproviderrowset
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderRowset class in MyProviderRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8a099ed08075877b7ca611e15994c2d68c25137
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CMyProviderRowset (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Con la procedura guidata viene generata una voce per l'oggetto Rowset.  In questo caso,verrà chiamata `CMyProviderRowset`.  La classe `CMyProviderRowset` eredita da una classe del provider OLE DB denominata `CRowsetImpl`, che implementa tutte le interfacce necessarie per l'oggetto rowset.  Nel codice che segue è illustrata la catena di ereditarietà di `CRowsetImpl`.  
+# <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
+La procedura guidata genera una voce per l'oggetto set di righe. In questo caso,verrà chiamata `CMyProviderRowset`. Il `CMyProviderRowset` classe eredita da una classe di provider OLE DB denominata `CRowsetImpl`, che implementa le interfacce necessarie per l'oggetto set di righe. Il codice seguente mostra la catena di ereditarietà per `CRowsetImpl`:  
   
 ```  
 template <class T, class Storage, class CreatorClass,   
@@ -37,13 +36,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T > >  
 ```  
   
- `CRowsetImpl` utilizza le interfacce `IAccessor` e `IColumnsInfo` per i campi di output delle tabelle.  La classe fornisce inoltre un'implementazione per **IRowsetIdentity**, che consente al consumer di determinare se due righe sono identiche.  L'interfaccia `IRowsetInfo` implementa le proprietà dell'oggetto Rowset.  L'interfaccia **IConvertType** consente al provider di risolvere le differenze tra i tipi di dati richiesti dal consumer e quelli utilizzati dal provider.  
+ `CRowsetImpl`utilizza inoltre il `IAccessor` e `IColumnsInfo` interfacce. Usa queste interfacce per i campi nelle tabelle di output. La classe fornisce anche un'implementazione per **IRowsetIdentity**, che consente al consumer di determinare se due righe sono identiche. Il `IRowsetInfo` interfaccia implementa le proprietà per l'oggetto set di righe. Il **IConvertType** interfaccia consente al provider di risolvere le differenze tra tipi di dati richiesti dal consumer e quelli utilizzati dal provider.  
   
- L'interfaccia `IRowset` gestisce il recupero dei dati.  Il consumer chiama in primo luogo un metodo denominato `GetNextRows` per restituire un handle a una riga, noto come **HROW**.  Quindi chiama **IRowset::GetData** con **HROW** per recuperare i dati richiesti.  
+ Il `IRowset` interfaccia gestisce il recupero dei dati. Il consumer chiama innanzitutto un metodo denominato `GetNextRows` per restituire un handle a una riga, nota come un **HROW**. Il consumer chiama quindi **IRowset:: GetData** con quella **HROW** per recuperare i dati richiesti.  
   
- `CRowsetImpl` accetta diversi parametri per il modello.  Questi parametri consentono di determinare il modo in cui la classe `CRowsetImpl` gestirà i dati.  L'argomento `ArrayType` consente di determinare il meccanismo di archiviazione utilizzato per memorizzare i dati della riga.  Il parametro **RowClass** specifica la classe che contiene un **HROW**.  
+ `CRowsetImpl`accetta inoltre diversi parametri di modello. Questi parametri consentono di determinare come `CRowsetImpl` classe gestisce i dati. Il `ArrayType` argomento consente di determinare il meccanismo di archiviazione utilizzato per archiviare i dati di riga. Il **RowClass** parametro specifica la classe che contiene un **HROW**.  
   
- Il parametro **RowsetInterface** consente di utilizzare anche l'interfaccia `IRowsetLocate` o `IRowsetScroll` che ereditano entrambe da `IRowset`.  È pertanto necessario che i modelli provider OLE DB forniscano una gestione speciale per queste interfacce.  Se si desidera utilizzare una di queste due interfacce, sarà necessario utilizzare questo parametro.  
+ Il **RowsetInterface** parametro consente di usare anche il `IRowsetLocate` o `IRowsetScroll` interfaccia. Il `IRowsetLocate` e `IRowsetScroll` ereditano entrambe da `IRowset`. Di conseguenza, i modelli di provider OLE DB devono fornire una gestione speciale per queste interfacce. Se si desidera utilizzare una di queste interfacce, è necessario utilizzare questo parametro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File del provider generati tramite procedura guidata](../../data/oledb/provider-wizard-generated-files.md)

@@ -1,39 +1,40 @@
 ---
-title: "Introduzione a ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL"
-  - "oggetti COM, creazione in ATL"
+title: Introduzione ad ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords:
+- COM objects, creating in ATL
+- ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5acbd7fbeccf89b13be9a1ed6c6084ce4b4b73a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Introduzione a ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="introduction-to-atl"></a>Introduzione ad ATL
+ATL è Active Template Library, un set di basate su modelli C++ le classi con cui è possibile creare facilmente piccolo, fast oggetti modello COM (Component Object). Dispone del supporto speciale per le principali funzionalità COM incluse: implementazioni predefinite di [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), e `IDispatch`; è doppia interfacce. interfacce di enumeratore COM standard. punti di connessione. interfacce tear-off; e i controlli ActiveX.  
+  
+ Codice ATL può essere usato per creare gli oggetti a thread singolo, gli oggetti del modello di apartment, gli oggetti del modello a thread libero o gli oggetti a thread libero e modello di apartment.  
+  
+ Gli argomenti trattati in questa sezione includono:  
+  
+-   Come un [libreria di modelli](../atl/using-a-template-library.md) differisce da una libreria standard.  
+  
+-   Ciò che si [può e non può fare con ATL](../atl/scope-of-atl.md).  
+  
+-   [Suggerimenti per la scelta tra ATL e MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione a COM e a ATL](../atl/introduction-to-com-and-atl.md)
 
-ATL è le Active Template Library, un set di classi C\+\+ basate su modelli con cui è possibile creare facilmente piccoli, oggetti veloci di Component Object Model \(COM\).  Offre supporto speciale alle funzionalità principali COM includono: implementazioni predefinite [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)e `IDispatch`; interfacce duali, interfacce standard dell'enumeratore COM, punti di connessione, un'interfaccia tear\-off, e controlli ActiveX.  
-  
- Il codice ATL può essere utilizzato per creare oggetti a thread singolo, gli oggetti del apartment\- modello, oggetti modello a thread libero, sia oggetti di apartment\- modello a thread libero.  
-  
- Negli argomenti trattati in questa sezione includono:  
-  
--   Come [libreria di modelli](../atl/using-a-template-library.md) differisce da una libreria C\+\+ standard.  
-  
--   Qual è [è e non può fare con ATL](../atl/scope-of-atl.md).  
-  
--   [Requisiti per scegliere tra ATL e MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).  
-  
-## Vedere anche  
- [Introduction to COM and ATL](../atl/introduction-to-com-and-atl.md)

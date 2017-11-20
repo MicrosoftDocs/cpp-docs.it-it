@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b7af430bd8c509713d5be76ea0f64601a91c35cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lambda-expressions-in-c"></a>Espressioni lambda in C++
 In C++ 11 e versioni successive, un'espressione lambda, spesso chiamato un *lambda*, è utile definire un oggetto funzione anonima (un *chiusura*) nella posizione in cui viene richiamato o passato come argomento a una funzione. In genere le lambda vengono usate per incapsulare alcune righe di codice passate agli algoritmi o ai metodi asincroni. In questo articolo vengono definite le espressioni lambda confrontandole con altre tecniche di programmazione, vengono illustrati i vantaggi che offrono e viene fornito un esempio di base.  
@@ -141,7 +138,7 @@ pNums = make_unique<vector<int>>(nums);
  Oltre ad acquisire le variabili, una lambda può accettare parametri di input. Un elenco di parametri (*dichiaratore lambda* nella sintassi Standard) è facoltativo e in molti aspetti simile a elenco di parametri per una funzione.  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  
@@ -159,7 +156,7 @@ auto y = [] (auto first, auto second)
   
  Un'espressione lambda può accettare un'altra espressione lambda come argomento. Per ulteriori informazioni, vedere "Espressioni Lambda di ordine superiore" nell'argomento [esempi di espressioni Lambda](../cpp/examples-of-lambda-expressions.md).  
   
- Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il dichiaratore di espressione lambda non contiene *specifica di eccezione*, * trailing-return-type*, o `mutable`.  
+ Poiché un elenco di parametri è facoltativo, è possibile omettere le parentesi vuote se non si passano argomenti all'espressione lambda e il dichiaratore di espressione lambda non contiene *specifica di eccezione*,  *trailing-return-type*, o `mutable`.  
   
 ### <a name="mutable-specification"></a>Specifica modificabile  
  Generalmente l'operatore di chiamata di funzione di un'espressione lambda è const-by-value, ma questo viene annullato dall'uso della parola chiave `mutable`. Non produce membri dati modificabili. La specifica modificabile consente al corpo di un'espressione lambda di modificare le variabili acquisite per valore. L'uso di `mutable` viene illustrato in alcuni degli esempi riportati più avanti in questo articolo.  

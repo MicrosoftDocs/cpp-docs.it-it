@@ -1,32 +1,30 @@
 ---
-title: "entry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "entry attribute"
+title: voce | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.entry
+dev_langs: C++
+helpviewer_keywords: entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d586e2ceaeb922d5f9f96aaa175a5e33ad6ed64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# entry
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica una funzione o una costante esportata in un modulo identificando il punto di ingresso nella DLL.  
+# <a name="entry"></a>entry
+Specifica una costante o alla funzione esportata in un modulo identificando il punto di ingresso nella DLL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,29 +33,28 @@ Specifica una funzione o una costante esportata in un modulo identificando il pu
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `id`  
- ID del punto di ingresso.  
+ L'ID del punto di ingresso.  
   
-## Note  
- **voce** L'attributo di C\+\+ ha la stessa funzionalità di  [voce](http://msdn.microsoft.com/library/windows/desktop/aa366815) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **voce** attributo C++ ha la stessa funzionalità come il [voce](http://msdn.microsoft.com/library/windows/desktop/aa366815) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [idl\_module](../windows/idl-module.md) per un esempio di utilizzo  **voce**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [idl_module](../windows/idl-module.md) per ad esempio **voce**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Attributo `idl_module`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   

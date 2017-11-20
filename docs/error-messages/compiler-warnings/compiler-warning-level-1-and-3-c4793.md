@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4793
-dev_langs:
-- C++
+f1_keywords: C4793
+dev_langs: C++
 helpviewer_keywords:
 - C6634
 - C6635
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: f2c133848adf634935287589c09b94ed871c93f5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>Avviso del compilatore (livelli 1 e 3) C4793
 'function': funzione compilata come codice nativo: 'motivo'  

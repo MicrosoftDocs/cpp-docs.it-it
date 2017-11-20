@@ -1,31 +1,31 @@
 ---
-title: "Utilizzo dei modelli provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, modelli"
-  - "OLE DB, modelli di provider"
-  - "riferimento, modelli del provider OLE DB"
-  - "modelli, provider OLE DB"
+title: Utilizzo dei modelli Provider OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reference, OLE DB provider templates
+- OLE DB, provider templates
+- templates, OLE DB provider
+- OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9158351892c8a8d097f0eccd498c05b2833d862
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizzo dei modelli provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per informazioni sull'utilizzo dei modelli provider OLE DB, vedere gli argomenti riportati di seguito:  
+# <a name="working-with-ole-db-provider-templates"></a>Utilizzo dei modelli provider OLE DB
+Per informazioni su come lavorare con i modelli di provider OLE DB, vedere gli argomenti seguenti:  
   
 -   [Aggiunta di un'interfaccia al provider](../../data/oledb/adding-an-interface-to-your-provider.md)  
   
@@ -43,6 +43,6 @@ Per informazioni sull'utilizzo dei modelli provider OLE DB, vedere gli argomenti
   
 -   [Conversione di dati non supportati dal provider](../../data/oledb/converting-data-not-supported-by-the-provider.md)  
   
-## Vedere anche  
- [Riferimenti ai modelli del provider OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti ai modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)   
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

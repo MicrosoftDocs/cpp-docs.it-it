@@ -1,31 +1,30 @@
 ---
-title: "File EXE come input del linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".exe (file)"
-  - "file eseguibili, come output del linker"
+title: . File exe come Input del Linker | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- executable files, as linker output
+- .exe files
 ms.assetid: 73714c30-6f03-4e72-881e-090e5240ba93
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6db04d7742d31198cf61f124f251fa5c32100f86
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# File EXE come input del linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'opzione [Nome file stub MS\-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) \(\/STUB\) consente di specificare il nome di un file exe eseguibile con MS\-DOS.  In LINK il file specificato viene esaminato per verificare che si tratti di un programma MS\-DOS valido.  
+# <a name="exe-files-as-linker-input"></a>File EXE come input del linker
+Il [nome File Stub MS-DOS](../../build/reference/stub-ms-dos-stub-file-name.md) (/stub) opzione specifica il nome di un file .exe che viene eseguito con MS-DOS. COLLEGAMENTO esamina il file specificato per verificare che sia un programma MS-DOS valido.  
   
-## Vedere anche  
- [File di input LINK](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Vedere anche  
+ [File di Input LINK](../../build/reference/link-input-files.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

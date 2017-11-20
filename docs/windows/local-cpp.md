@@ -1,33 +1,30 @@
 ---
-title: "local (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.local"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "local attribute"
+title: locale (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.local
+dev_langs: C++
+helpviewer_keywords: local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 007d95d5db0785deae08744b46738d7188e4da70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# local (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una volta utilizzato nell'intestazione dell'interfaccia, consente di utilizzare il compilatore MIDL come generatore di intestazione.  Quando viene utilizzato in una singola funzione, definisce una routine locale per il quale non stub viene generato.  
+# <a name="local-c"></a>local (C++)
+Quando utilizzato nell'intestazione di interfaccia, consente di usare il compilatore MIDL come generatore di intestazione. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,28 +32,27 @@ Una volta utilizzato nell'intestazione dell'interfaccia, consente di utilizzare 
   
 ```  
   
-## Note  
- `local` L'attributo di C\+\+ ha la stessa funzionalità di  [locale](http://msdn.microsoft.com/library/windows/desktop/aa367071) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il `local` attributo C++ ha la stessa funzionalità come il [locale](http://msdn.microsoft.com/library/windows/desktop/aa367071) attributo MIDL.  
   
-## Esempio  
- vedere [call\_as](../windows/call-as.md) per un esempio di utilizzo  `local`.  
+## <a name="example"></a>Esempio  
+ Vedere [call_as](../windows/call-as.md) per un esempio di come utilizzare `local`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`, un metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**dispinterface**|  
+|**Si applica a**|`interface`, metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**dispinterface**|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [call\_as](../windows/call-as.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
+ [call_as](../windows/call-as.md)   

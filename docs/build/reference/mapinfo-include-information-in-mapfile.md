@@ -1,55 +1,55 @@
 ---
-title: "/MAPINFO (Include informazioni in file MAP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.MapLines"
-  - "VC.Project.VCLinkerTool.MapInfoFixups"
-  - "VC.Project.VCLinkerTool.MapExports"
-  - "/mapinfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAPINFO (opzione del linker)"
-  - "MAPINFO (opzione del linker)"
-  - "-MAPINFO (opzione del linker)"
+title: -MAPINFO (informazioni in file MAP) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.MapLines
+- VC.Project.VCLinkerTool.MapInfoFixups
+- VC.Project.VCLinkerTool.MapExports
+- /mapinfo
+dev_langs: C++
+helpviewer_keywords:
+- /MAPINFO linker option
+- MAPINFO linker option
+- -MAPINFO linker option
 ms.assetid: 533d2bce-f9b7-4fea-ae1c-0b4864c9d10b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 81f85149af6f8774106530d4878679247d66f42e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /MAPINFO (Include informazioni in file MAP)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapinfo-include-information-in-mapfile"></a>/MAPINFO (Include informazioni in file MAP)
 ```  
 /MAPINFO:EXPORTS  
 ```  
   
-## Note  
- L'opzione \/MAPINFO indica al linker che è necessario includere le informazioni specificate in un file MAP, creato se si specifica l'opzione [\/MAP](../../build/reference/map-generate-mapfile.md).  EXPORTS indica al linker di includere le funzioni esportate.  
+## <a name="remarks"></a>Note  
+ L'opzione /MAPINFO indica al linker di includere le informazioni specificate in un file di mapping, viene creato se si specifica il [/Map](../../build/reference/map-generate-mapfile.md) opzione.  EXPORTS indica al linker di includere le funzioni esportate.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Debug**.  
+3.  Fare clic su di **Debug** pagina delle proprietà.  
   
-4.  Modificare una delle proprietà **Esportazioni map**.  
+4.  Modifica del **esportazioni Map** proprietà:  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapExports%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

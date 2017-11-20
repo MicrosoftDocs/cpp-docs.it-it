@@ -1,46 +1,43 @@
 ---
-title: "vector::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (membro) [STL/CLR]"
+title: 'Vector:: operator = (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: c2de9d74-9de7-4560-866f-3d55952e9bd7
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 06e19f92d347e4b2ced4afa01c5b769b5141c2b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sostituisce la sequenza selezionata.  
+# <a name="vectoroperator-stlclr"></a>vector::operator= (STL/CLR)
+Sostituisce la sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 vector<Value>% operator=(vector<Value>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  right  
  Contenitore da copiare.  
   
-## Note  
- Il membro che l'operatore copia `right` all'oggetto, quindi restituisce `*this`.  Viene utilizzato per sostituire la sequenza selezionata con una copia della sequenza selezionata in `right`.  
+## <a name="remarks"></a>Note  
+ Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_operator_as.cpp   
@@ -70,13 +67,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::assign](../dotnet/vector-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)

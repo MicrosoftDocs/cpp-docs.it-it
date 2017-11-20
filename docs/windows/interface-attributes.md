@@ -1,63 +1,63 @@
 ---
-title: "Interface Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], reference topics"
-  - "interface attributes"
+title: Attributi di interfaccia | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], reference topics
+- interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cb8b42161e10aa0e6fcc06e7540487862ffc77a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Interface Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I seguenti attributi vengono applicati a [interfaccia \(o \_\_interface\)](../cpp/interface.md) Parola chiave C\+\+.  
+# <a name="interface-attributes"></a>Attributi di interfaccia
+Gli attributi seguenti riguardano la [interfaccia (o Interface)](../cpp/interface.md) parola chiave di C++.  
   
 |Attributo|Descrizione|  
 |---------------|-----------------|  
-|[async\_uuid](../windows/async-uuid.md)|Specifica il UUID che indica al compilatore MIDL per definire sia le versioni sincrone che asincrone di un'interfaccia COM.|  
-|[custom](../windows/custom-cpp.md)|Consente di definire diventi proprietaria degli attributi.|  
-|[dispinterface](../windows/dispinterface.md)|Posiziona un'interfaccia nel file IDL come interfaccia dispatch.|  
-|[dual](../windows/dual.md)|Posiziona un'interfaccia nel file IDL come interfaccia duale.|  
-|[export](../windows/export.md)|Determina una struttura di dati venga inserita nel file IDL.|  
-|[helpcontext](../windows/helpcontext.md)|Specifica un ID di contesto che consente di visualizzare le informazioni utente su questo elemento nel file della Guida.|  
-|[file di](../windows/helpfile.md)|Imposta il nome del file della Guida per una libreria dei tipi.|  
-|[helpstring](../windows/helpstring.md)|Consente di specificare la stringa di caratteri utilizzata per descrivere l'elemento cui è associata.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Specifica l'ID di un argomento della Guida in un file CHM o di .hlp.|  
-|[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da utilizzare per eseguire la ricerca di stringhe di documento \(localizzazione\).|  
-|[hidden](../windows/hidden.md)|Indica che l'elemento esiste ma non deve essere visualizzata in un browser orientati a tramite.|  
-|[library\_block](../windows/library-block.md)|Inserisce un costrutto nel blocco di libreria del file IDL.|  
-|[local](../windows/local-cpp.md)|Consente di utilizzare il compilatore MIDL come generatore di intestazione una volta utilizzato nell'intestazione dell'interfaccia.  Quando viene utilizzato in una singola funzione, definisce una routine locale per il quale non stub viene generato.|  
-|[non estensibile](../windows/nonextensible.md)|specifica che `IDispatch` l'implementazione include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e non può essere estesa con i membri aggiuntivi in fase di esecuzione.  Questo attributo è valido solo su un oggetto [doppio](../windows/dual.md) interfaccia.|  
-|[odl](../windows/odl.md)|identifica un'interfaccia come interfaccia \(ODL\) di ODL.|  
-|[object](../windows/object-cpp.md)|identifica un'interfaccia personalizzata.|  
+|[async_uuid](../windows/async-uuid.md)|Specifica l'UUID che indica al compilatore MIDL per definire versioni sincrone e asincrone di un'interfaccia COM.|  
+|[personalizzato](../windows/custom-cpp.md)|Consente di definire attributi personalizzati.|  
+|[dispinterface](../windows/dispinterface.md)|Inserisce un'interfaccia nel file con estensione idl come interfaccia di dispatch.|  
+|[dual](../windows/dual.md)|Inserisce un'interfaccia nel file IDL come un'interfaccia duale.|  
+|[export](../windows/export.md)|Fa sì che una struttura di dati da inserire nel file IDL.|  
+|[helpcontext](../windows/helpcontext.md)|Specifica un ID di contesto che consente di visualizzare informazioni su questo elemento nel file della Guida.|  
+|[helpfile](../windows/helpfile.md)|Imposta il nome del file della Guida per una libreria dei tipi.|  
+|[helpstring](../windows/helpstring.md)|Specifica una stringa di caratteri utilizzato per descrivere l'elemento a cui viene applicata.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Specifica l'ID di un argomento della Guida in un file hlp o chm.|  
+|[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da utilizzare per eseguire la ricerca della stringa di documento (localizzazione).|  
+|[hidden](../windows/hidden.md)|Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzatore per utente.|  
+|[library_block](../windows/library-block.md)|Inserisce un costrutto di blocco di libreria del file IDL.|  
+|[locale](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  
+|[nonextensible](../windows/nonextensible.md)|Specifica che il `IDispatch` implementazione include solo le proprietà e metodi elencati nella descrizione dell'interfaccia e non possono essere esteso con altri membri in fase di esecuzione. Questo attributo è valido solo su un [dual](../windows/dual.md) interfaccia.|  
+|[odl](../windows/odl.md)|Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL ().|  
+|[object](../windows/object-cpp.md)|Identifica un'interfaccia personalizzata.|  
 |[oleautomation](../windows/oleautomation.md)|Indica che un'interfaccia è compatibile con l'automazione.|  
-|[pointer\_default](../windows/pointer-default.md)|Specifica l'attributo predefinito del puntatore per tutti i puntatori a eccezione dei puntatori di livello superiore che vengono visualizzati gli elenchi di parametri.|  
-|[stampante](../windows/ptr.md)|definisce un puntatore come puntatore completo.|  
-|[restricted](../windows/restricted.md)|Definisce i membri della raccolta non possono essere chiamati in modo arbitrario.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Fornisce ID univoco per la raccolta|  
+|[pointer_default](../windows/pointer-default.md)|Specifica l'attributo di puntatore predefinito per tutti i puntatori ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.|  
+|[ptr](../windows/ptr.md)|Indica un puntatore come un puntatore completo.|  
+|[restricted](../windows/restricted.md)|Indica quali membri della raccolta non possono essere chiamati in modo arbitrario.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Fornisce l'ID univoco per la libreria|  
   
- È necessario rispettare le seguenti regole per la definizione dell'interfaccia:  
+ È necessario rispettare queste regole per la definizione di un'interfaccia:  
   
--   la convenzione di chiamata predefinita è [\_\_stdcall](../cpp/stdcall.md).  
+-   Convenzione di chiamata predefinita è [stdcall](../cpp/stdcall.md).  
   
--   Un GUID fornito automaticamente se non viene fornito uno.  
+-   Un GUID viene fornito automaticamente se non viene fornito uno.  
   
--   Nessun metodo di overload è consentita.  
+-   Metodi di overload non sono consentiti.  
   
- In non specificare [uuid](../windows/uuid-cpp-attributes.md) attributo e utilizzando lo stesso nome dell'interfaccia in progetti diversi di attributo, lo stesso GUID viene generato.  
+ Quando non si specifica il [uuid](../windows/uuid-cpp-attributes.md) attributo e utilizza lo stesso nome di interfaccia in progetti di attributo diverso, viene generato lo stesso GUID.  
   
-## Vedere anche  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi per utilizzo](../windows/attributes-by-usage.md)

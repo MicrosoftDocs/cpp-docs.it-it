@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _pipe
+apiname: _pipe
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,45 +24,28 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 23bcf7a96dfbfa7719b20f2a035ddcbc93c835ee
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 7c46eff8faabb52f514e2711a065d7fc1fed8b75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pipe"></a>_pipe
 Crea un pipe per la lettura e la scrittura.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   

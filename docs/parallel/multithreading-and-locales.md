@@ -1,48 +1,48 @@
 ---
-title: "Multithreading e impostazioni locali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "impostazioni locali [C++], multithreading"
-  - "multithreading [C++], impostazioni locali"
-  - "impostazione locale per thread"
-  - "threading [C++], impostazioni locali"
+title: Multithreading e impostazioni locali | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- locales [C++], multithreading
+- multithreading [C++], locales
+- threading [C++], locales
+- per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e60083aa67cc640dafb5c096b83d3097df04db1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Multithreading e impostazioni locali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sia la libreria di runtime C che la libreria standard di C\+\+ forniscono supporto per la modifica delle impostazioni locali del programma in uso.  In questo argomento vengono illustrati i problemi che possono sorgere durante l'utilizzo della funzionalità relativa alle impostazioni locali di entrambe le librerie in un'applicazione multithreading.  
+# <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
+Libreria di Runtime C sia la libreria Standard C++ forniscono supporto per la modifica delle impostazioni locali del programma. In questo argomento vengono illustrati i problemi che si verificano quando si utilizza la funzionalità delle impostazioni locali di entrambe le librerie in un'applicazione multithreading.  
   
-## Note  
- La libreria di runtime C consente di creare applicazioni multithreading utilizzando le funzioni `_beginthread` e `_beginthreadex`.  In questo argomento vengono illustrate solo le applicazioni multithreading create mediante queste funzioni.  Per ulteriori informazioni, vedere [\_beginthread, \_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
+## <a name="remarks"></a>Note  
+ La libreria di Runtime C, è possibile creare applicazioni multithreading utilizzando il `_beginthread` e `_beginthreadex` funzioni. In questo argomento descrive solo applicazioni multithreading create utilizzando queste funzioni. Per ulteriori informazioni, vedere [beginthread, beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Per modificare le impostazioni locali mediante la libreria di runtime C, utilizzare la funzione [setlocale](../preprocessor/setlocale.md).  Nelle versioni precedenti di [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] questa funzione consente di modificare le impostazioni locali dell'intera applicazione.  La nuova versione supporta invece la modifica delle impostazioni locali per thread  mediante la funzione [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md).  Per specificare la modifica delle impostazioni locali tramite [setlocale](../preprocessor/setlocale.md) solo nel thread corrente, chiamare `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in tale thread.  Se invece si chiama `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`, nel thread verranno utilizzate le impostazioni locali globali e tutte le chiamate a [setlocale](../preprocessor/setlocale.md) nel thread comporteranno la modifica delle impostazioni locali in tutti i thread nei quali non siano state esplicitamente abilitate le impostazioni locali per thread.  
+ Per modificare le impostazioni locali mediante la libreria di Runtime C, usare il [setlocale](../preprocessor/setlocale.md) (funzione). Nelle versioni precedenti di Visual C++, questa funzione consente di modificare le impostazioni locali dell'intera applicazione. È ora supportata per la configurazione delle impostazioni locali in base al thread. Questa operazione viene eseguita utilizzando il [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) (funzione). Per specificare che [setlocale](../preprocessor/setlocale.md) devono essere modificati solo le impostazioni locali del thread corrente, chiamata `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` in tale thread. Al contrario, la chiamata `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` causerà thread verranno utilizzate le impostazioni locali globali e tutte le chiamate a [setlocale](../preprocessor/setlocale.md) in thread modificherà le impostazioni locali in tutti i thread che non sono abilitati in modo esplicito le impostazioni locali per thread.  
   
- Per modificare le impostazioni locali mediante la libreria di runtime C\+\+, utilizzare la funzione [Classe locale](../standard-library/locale-class.md).  Il metodo [locale::global](../Topic/locale::global.md) consente di modificare le impostazioni locali in tutti i thread per i quali non siano state esplicitamente abilitate le impostazioni locali per thread.  Per modificare le impostazioni locali in un solo thread o in una parte di un'applicazione, è sufficiente creare un'istanza di un oggetto `locale` nel thread o nella parte di codice.  
+ Per modificare le impostazioni locali mediante la libreria di Runtime C++, utilizzare il [internazionali classe](../standard-library/locale-class.md). Chiamando il [Global](../standard-library/locale-class.md#global) (metodo), modificare le impostazioni locali in tutti i thread che non è abilitato in modo esplicito le impostazioni locali per thread. Per modificare le impostazioni locali in un thread singolo o una parte di un'applicazione, è sufficiente creare un'istanza di un `locale` oggetto nel thread o parte del codice.  
   
 > [!NOTE]
->  Il metodo [locale::global](../Topic/locale::global.md) consente di modificare le impostazioni locali per la libreria standard di C\+\+ e per la libreria di runtime C.  Se si chiama [setlocale](../preprocessor/setlocale.md), tuttavia, verranno modificate solo le impostazioni locali per la libreria di runtime C, mentre la libreria standard di C\+\+ non verrà interessata.  
+>  La chiamata [Global](../standard-library/locale-class.md#global) modifica le impostazioni locali per la libreria Standard C++ e libreria di Runtime C. Tuttavia, la chiamata [setlocale](../preprocessor/setlocale.md) cambia solo le impostazioni locali per la libreria di Runtime C, la libreria Standard C++ non è interessata.  
   
- Negli esempi riportati di seguito viene illustrato l'utilizzo delle funzioni [setlocale](../preprocessor/setlocale.md), [Classe locale](../standard-library/locale-class.md) e [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) per modificare le impostazioni locali di un'applicazione in diversi scenari.  
+ Nell'esempio seguente viene illustrato come utilizzare il [setlocale](../preprocessor/setlocale.md) funzione, il [classe locale](../standard-library/locale-class.md)e [configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) funzione per modificare le impostazioni locali di un'applicazione in numerosi scenari diversi.  
   
-## Esempio  
- In questo esempio il thread principale genera due thread figlio.  Nel primo, Thread A, sono abilitate le impostazioni locali per thread mediante la chiamata a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Nel secondo thread, Thread B, come per il thread principale, le impostazioni locali per thread non sono abilitate.  Nel Thread A le impostazioni locali vengono modificate mediante la funzione [setlocale](../preprocessor/setlocale.md) della libreria di runtime C.  
+## <a name="example"></a>Esempio  
+ In questo esempio, il thread principale genera due thread figlio. Nel primo thread, A, abilita le impostazioni locali per thread chiamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Il secondo thread, Thread B, nonché il thread principale, non abilitare le impostazioni locali per thread. Nel thread per modificare le impostazioni locali mediante la [setlocale](../preprocessor/setlocale.md) funzione della libreria di Runtime C.  
   
- Poiché per il Thread A le impostazioni locali sono configurate per thread, solo per le funzioni della libreria di runtime nel Thread A vengono utilizzate le impostazioni locali per il francese.  Le funzioni della libreria di runtime C nel Thread B e nel thread principale continueranno a utilizzare le impostazioni locali "C".  La funzione [setlocale](../preprocessor/setlocale.md) inoltre non influenza le impostazioni locali della libreria standard di C\+\+, pertanto in tutti gli oggetti della libreria standard C\+\+ verranno utilizzate le impostazioni locali "C".  
+ Poiché il Thread è abilitata, impostazioni locali per thread solo le funzioni della libreria di Runtime C di avviare il Thread utilizza le impostazioni locali di "francese". Le funzioni della libreria di Runtime C nel Thread B e nel thread principale continuano a utilizzare le impostazioni locali "C". Inoltre, dato che [setlocale](../preprocessor/setlocale.md) non influiscono sulle impostazioni locali della libreria Standard C++, tutti libreria Standard di C++ gli oggetti continuano a utilizzare le impostazioni locali "C".  
   
 ```  
 // multithread_locale_1.cpp  
@@ -123,19 +123,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Thread A\] Per\-thread locale is enabled.**  
-**\[Thread A\] CRT locale is set to "French\_France.1252"**  
-**\[Thread A\] locale::global is set to "C"**  
-**\[Thread B\] Per\-thread locale is NOT enabled.**  
-**\[Thread B\] CRT locale is set to "C"**  
-**\[Thread B\] locale::global is set to "C"**  
-**\[Thread main\] Per\-thread locale is NOT enabled.**  
-**\[Thread main\] CRT locale is set to "C"**  
-**\[Thread main\] locale::global is set to "C"**   
-## Esempio  
- In questo esempio il thread principale genera due thread figlio.  Nel primo, Thread A, sono abilitate le impostazioni locali per thread mediante la chiamata a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Nel secondo thread, Thread B, come per il thread principale, le impostazioni locali per thread non sono abilitate.  Nel Thread A le impostazioni locali vengono modificate mediante il metodo [locale::global](../Topic/locale::global.md) della libreria standard di C\+\+.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "C"  
   
- Poiché per il Thread A le impostazioni locali sono configurate per thread, solo per le funzioni della libreria di runtime nel Thread A vengono utilizzate le impostazioni locali per il francese.  Le funzioni della libreria di runtime C nel Thread B e nel thread principale continueranno a utilizzare le impostazioni locali "C".  Poiché tuttavia il metodo [locale::global](../Topic/locale::global.md) modifica le impostazioni locali globalmente, tutti gli oggetti della libreria standard di C\+\+ in tutti i thread utilizzeranno le impostazioni locali per il francese.  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Esempio  
+ In questo esempio, il thread principale genera due thread figlio. Nel primo thread, A, abilita le impostazioni locali per thread chiamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Il secondo thread, Thread B, nonché il thread principale, non abilitare le impostazioni locali per thread. Nel thread per modificare le impostazioni locali mediante la [Global](../standard-library/locale-class.md#global) metodo della libreria Standard C++.  
+  
+ Poiché il Thread è abilitata, impostazioni locali per thread solo le funzioni della libreria di Runtime C di avviare il Thread utilizza le impostazioni locali di "francese". Le funzioni della libreria di Runtime C nel Thread B e nel thread principale continuano a utilizzare le impostazioni locali "C". Tuttavia, poiché il [Global](../standard-library/locale-class.md#global) metodo modifica le impostazioni locali "globale", tutti gli oggetti della libreria Standard C++ in tutti i thread iniziare a usare le impostazioni locali di "francese".  
   
 ```  
 // multithread_locale_2.cpp  
@@ -216,19 +221,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Thread A\] Per\-thread locale is enabled.**  
-**\[Thread A\] CRT locale is set to "French\_France.1252"**  
-**\[Thread A\] locale::global is set to "French\_France.1252"**  
-**\[Thread B\] Per\-thread locale is NOT enabled.**  
-**\[Thread B\] CRT locale is set to "C"**  
-**\[Thread B\] locale::global is set to "French\_France.1252"**  
-**\[Thread main\] Per\-thread locale is NOT enabled.**  
-**\[Thread main\] CRT locale is set to "C"**  
-**\[Thread main\] locale::global is set to "French\_France.1252"**   
-## Esempio  
- In questo esempio il thread principale genera due thread figlio.  Nel primo, Thread A, sono abilitate le impostazioni locali per thread mediante la chiamata a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Nel secondo thread, Thread B, come per il thread principale, le impostazioni locali per thread non sono abilitate.  Nel Thread B le impostazioni locali vengono modificate mediante la funzione [setlocale](../preprocessor/setlocale.md) della libreria di runtime C.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "French_France.1252"  
   
- Poiché nel Thread B non sono abilitate le impostazioni locali per thread, le funzioni della libreria di runtime C nel Thread B e nel thread principale utilizzeranno le impostazioni locali per il francese.  Le funzioni della libreria di runtime C nel Thread A continueranno a utilizzare le impostazioni locali "C" poiché nel Thread A sono attivate le impostazioni locali per thread.  La funzione [setlocale](../preprocessor/setlocale.md) inoltre non influenza le impostazioni locali della libreria standard di C\+\+, pertanto in tutti gli oggetti della libreria standard C\+\+ verranno utilizzate le impostazioni locali "C".  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="example"></a>Esempio  
+ In questo esempio, il thread principale genera due thread figlio. Nel primo thread, A, abilita le impostazioni locali per thread chiamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Il secondo thread, Thread B, nonché il thread principale, non abilitare le impostazioni locali per thread. Thread B quindi procede a modificare le impostazioni locali mediante la [setlocale](../preprocessor/setlocale.md) funzione della libreria di Runtime C.  
+  
+ Poiché nel Thread B sono abilitate le impostazioni locali per thread, le funzioni della libreria di Runtime C nel Thread B e nel thread principale iniziare a usare le impostazioni locali di "francese". Le funzioni della libreria di Runtime C nel Thread a continueranno a utilizzare le impostazioni locali "C", poiché il Thread è abilitate le impostazioni locali per thread. Inoltre, dato che [setlocale](../preprocessor/setlocale.md) non influiscono sulle impostazioni locali della libreria Standard C++, tutti libreria Standard di C++ gli oggetti continuano a utilizzare le impostazioni locali "C".  
   
 ```  
 // multithread_locale_3.cpp  
@@ -313,19 +323,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Thread B\] Per\-thread locale is NOT enabled.**  
-**\[Thread B\] CRT locale is set to "French\_France.1252"**  
-**\[Thread B\] locale::global is set to "C"**  
-**\[Thread A\] Per\-thread locale is enabled.**  
-**\[Thread A\] CRT locale is set to "C"**  
-**\[Thread A\] locale::global is set to "C"**  
-**\[Thread main\] Per\-thread locale is NOT enabled.**  
-**\[Thread main\] CRT locale is set to "French\_France.1252"**  
-**\[Thread main\] locale::global is set to "C"**   
-## Esempio  
- In questo esempio il thread principale genera due thread figlio.  Nel primo, Thread A, sono abilitate le impostazioni locali per thread mediante la chiamata a `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Nel secondo thread, Thread B, come per il thread principale, le impostazioni locali per thread non sono abilitate.  Nel Thread B le impostazioni locali vengono modificate mediante il metodo [locale::global](../Topic/locale::global.md) della libreria standard di C\+\+.  
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "C"  
   
- Poiché nel Thread B non sono abilitate le impostazioni locali per thread, le funzioni della libreria di runtime C nel Thread B e nel thread principale utilizzeranno le impostazioni locali per il francese.  Le funzioni della libreria di runtime C nel Thread A continueranno a utilizzare le impostazioni locali "C" poiché nel Thread A sono attivate le impostazioni locali per thread.  Poiché tuttavia il metodo [locale::global](../Topic/locale::global.md) modifica le impostazioni locali globalmente, tutti gli oggetti della libreria standard di C\+\+ in tutti i thread utilizzeranno le impostazioni locali per il francese.  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Esempio  
+ In questo esempio, il thread principale genera due thread figlio. Nel primo thread, A, abilita le impostazioni locali per thread chiamando `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Il secondo thread, Thread B, nonché il thread principale, non abilitare le impostazioni locali per thread. Thread B quindi procede a modificare le impostazioni locali mediante la [Global](../standard-library/locale-class.md#global) metodo della libreria Standard C++.  
+  
+ Poiché nel Thread B sono abilitate le impostazioni locali per thread, le funzioni della libreria di Runtime C nel Thread B e nel thread principale iniziare a usare le impostazioni locali di "francese". Le funzioni della libreria di Runtime C nel Thread a continueranno a utilizzare le impostazioni locali "C", poiché il Thread è abilitate le impostazioni locali per thread. Tuttavia, poiché il [Global](../standard-library/locale-class.md#global) metodo modifica le impostazioni locali "globale", tutti gli oggetti della libreria Standard C++ in tutti i thread iniziare a usare le impostazioni locali di "francese".  
   
 ```  
 // multithread_locale_4.cpp  
@@ -410,22 +425,27 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Thread B\] Per\-thread locale is NOT enabled.**  
-**\[Thread B\] CRT locale is set to "French\_France.1252"**  
-**\[Thread B\] locale::global is set to "French\_France.1252"**  
-**\[Thread A\] Per\-thread locale is enabled.**  
-**\[Thread A\] CRT locale is set to "C"**  
-**\[Thread A\] locale::global is set to "French\_France.1252"**  
-**\[Thread main\] Per\-thread locale is NOT enabled.**  
-**\[Thread main\] CRT locale is set to "French\_France.1252"**  
-**\[Thread main\] locale::global is set to "French\_France.1252"**   
-## Vedere anche  
- [Supporto del multithreading per il codice precedente \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [\_beginthread, \_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
- [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Supporto del multithreading per il codice precedente (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+ [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
  [setlocale](../preprocessor/setlocale.md)   
  [Internazionalizzazione](../c-runtime-library/internationalization.md)   
  [Impostazioni locali](../c-runtime-library/locale.md)   
- [\<clocale\>](../standard-library/clocale.md)   
- [\<locale\>](../standard-library/locale.md)   
+ [\<clocale >](../standard-library/clocale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [Classe locale](../standard-library/locale-class.md)

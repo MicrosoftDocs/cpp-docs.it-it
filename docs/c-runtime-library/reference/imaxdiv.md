@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- imaxdiv
+apiname: imaxdiv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- imaxdiv
-dev_langs:
-- C++
-helpviewer_keywords:
-- imaxdiv function
+f1_keywords: imaxdiv
+dev_langs: C++
+helpviewer_keywords: imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f2d79bcdb10d150b236290d3d5439331516a923f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 65c7b71030bff65a2806d20690554a9828871268
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="imaxdiv"></a>imaxdiv
 Calcola il quoziente e il resto di due interi di qualsiasi dimensione come singola operazione.  
@@ -78,7 +58,7 @@ imaxdiv_t imaxdiv(
  La funzione `imaxdiv` chiamata con argomenti di tipo [intmax_t](../../c-runtime-library/standard-types.md) restituisce una struttura di tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) che include il quoziente e il resto.  
   
 ## <a name="remarks"></a>Note  
- La funzione `imaxdiv` divide `numer` per `denom` e pertanto calcola il quoziente e il resto. La struttura `imaxdiv_t` contiene il quoziente, `intmax_t``quot`, e il resto, `intmax_t``rem`. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.  
+ La funzione `imaxdiv` divide `numer` per `denom` e pertanto calcola il quoziente e il resto. La struttura `imaxdiv_t` contiene il quoziente, `intmax_t quot`, e il resto, `intmax_t rem`. Il segno del quoziente è uguale a quello del quoziente matematico. Il valore assoluto del quoziente è l'intero più grande che è minore del valore assoluto del quoziente matematico. Se il denominatore è 0, il programma termina con un messaggio di errore.  
   
 ## <a name="requirements"></a>Requisiti  
   

@@ -1,41 +1,39 @@
 ---
-title: "hash_multiset::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (membro) [STL/CLR]"
+title: 'hash_multiset:: Empty (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: e1c738eb-9ac9-426b-88b0-2997c9476001
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf7f561d241d408c0f29ea295a83a296d3dfa6b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di verificare se non sono presenti elementi.  
+# <a name="hashmultisetempty-stlclr"></a>hash_multiset::empty (STL/CLR)
+Verifica se sono presenti o meno degli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool empty();  
 ```  
   
-## Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  Equivale a [hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`.  Utilizzarla per verificare se il hash\_multiset è vuoto.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [hash_multiset:: Size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se l'hash_multiset è vuoto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multiset_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::size](../dotnet/hash-multiset-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::size (STL/CLR)](../dotnet/hash-multiset-size-stl-clr.md)

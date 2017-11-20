@@ -1,44 +1,43 @@
 ---
-title: "auto_gcroot::get | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::get"
-  - "msclr.auto_gcroot.get"
-  - "auto_gcroot::get"
-  - "auto_gcroot.get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::get"
+title: auto_gcroot::Get | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::get
+- msclr.auto_gcroot.get
+- auto_gcroot::get
+- auto_gcroot.get
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::get
 ms.assetid: 0e922019-1cf5-4220-b5ab-6c4a2a6b40ec
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c5dbf86956de4a4df226bd87e970197f300f03b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootget"></a>auto_gcroot::get
 Ottiene l'oggetto contenuto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _element_type get() const;  
 ```  
   
-## Valore restituito  
- L'oggetto contenuto.  
+## <a name="return-value"></a>Valore restituito  
+ Oggetto contenuto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_gcroot_get.cpp  
@@ -78,15 +77,18 @@ int main() {
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Hello from first A\!**  
-**Hello from first A\!**  
-**Hello from first A\!**  
-**in ClassA destructor:first**   
-## Requisiti  
- **File di intestazione** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+Hello from first A!  
+Hello from first A!  
+in ClassA destructor:first  
+```  
   
- **Spazio dei nomi** msclr  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_gcroot.h >  
   
-## Vedere anche  
- [Membri auto\_gcroot](../dotnet/auto-gcroot-members.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_gcroot](../dotnet/auto-gcroot-members.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,22 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
 - CAnimationManagerEventHandler [MFC], CreateInstance
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: fcb3021f3473fdaf7bd182325e5e4b130ebccd58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d44e0060f22f99ffff4e6fb8d4209dd166922e11
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationmanagereventhandler-class"></a>Classe CAnimationManagerEventHandler
 Implementa un callback, chiamato dall'API di animazione quando viene modificato uno stato di gestione animazione.  
@@ -138,4 +135,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

@@ -1,45 +1,43 @@
 ---
-title: "hash_multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::Count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count (membro) [STL/CLR]"
+title: 'hash_multimap:: Count (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::Count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: a4bc5b19-e025-4063-9797-304ab4ba08aa
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53f8249f112064b49fc159439078f16d7e1f58ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Trova il numero di elementi che corrispondono a una chiave specificata.  
+# <a name="hashmultimapcount-stlclr"></a>hash_multimap::count (STL/CLR)
+Trova il numero di elementi corrispondenti a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro restituisce il numero di elementi della sequenza selezionata con ordine equivalente a `key`.  Viene utilizzata per determinare il numero di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce il numero di elementi nella sequenza controllata che hanno un ordinamento equivalente con `key`. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**conteggio \(L'A\) \= 0**  
-**conteggio \(L'b\) \= 1**  
-**conteggio \(L'C\) \= 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)

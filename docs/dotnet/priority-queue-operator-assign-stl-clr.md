@@ -1,46 +1,43 @@
 ---
-title: "priority_queue::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (membro) [STL/CLR]"
+title: priority_queue::operator = (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 796b4ad2-3e40-49e8-8462-87460d086fe4
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b5f5a3709dbcf42142f306c1934373cc9b246a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sostituisce la sequenza selezionata.  
+# <a name="priorityqueueoperator-stlclr"></a>priority_queue::operator= (STL/CLR)
+Sostituisce la sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  right  
- Adattatore del contenitore da copiare.  
+ Scheda contenitore da copiare.  
   
-## Note  
- Il membro che l'operatore copia `right` all'oggetto, quindi restituisce `*this`.  Viene utilizzato per sostituire la sequenza selezionata con una copia della sequenza selezionata in `right`.  
+## <a name="remarks"></a>Note  
+ Le copie di operatore membro `right` all'oggetto, quindi restituisce `*this`. Viene usato per sostituire la sequenza controllata con una copia della sequenza controllata in `right`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_priority_queue_operator_as.cpp   
@@ -71,13 +68,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)

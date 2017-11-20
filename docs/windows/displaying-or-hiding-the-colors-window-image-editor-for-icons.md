@@ -1,50 +1,50 @@
 ---
-title: "Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colori, finestra Colori"
-  - "Finestra Colori, disattivazione della visualizzazione dei colori"
-  - "Visualizza finestra colori (comando)"
-  - "Finestra Colori, visualizzazione dei colori"
+title: Attivazione o disattivazione della finestra colori (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors, Colors window
+- Colors window, hiding colors
+- Show Colors Window command
+- Colors window, displaying colors
 ms.assetid: 43ba728d-2b69-47a1-a23a-94f82d88a26d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8b006f6081d88481bdb697d8209014d8296fbea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per attivare la visualizzazione della finestra Colori  
+# <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>Attivazione o disattivazione della finestra Colori (Editor di immagini per le icone)
+### <a name="to-display-colors-window"></a>Per visualizzare la finestra colori  
   
-1.  Fare clic con il pulsante destro del mouse in un riquadro dell'**Editor immagini** e scegliere **Visualizza finestra colori** dal menu di scelta rapida.  
+1.  Pulsante destro del mouse un **Editor di immagini** riquadro e scegliere **Visualizza finestra colori** dal menu di scelta rapida.  
   
-     \- oppure \-  
+     \- oppure -  
   
-2.  Scegliere **Visualizza finestra colori** dal [menu Immagine](../mfc/image-menu-image-editor-for-icons.md).  
+2.  Fare clic su **Visualizza finestra colori** sul [menu immagine](../windows/image-menu-image-editor-for-icons.md).  
   
-### Per disattivare la visualizzazione della finestra Colori  
+### <a name="to-hide-the-colors-window"></a>Per nascondere la finestra colori  
   
-1.  Sbloccare la finestra.  In questo modo, quando non viene utilizzata, la finestra verrà nascosta automaticamente.  Per ulteriori informazioni, vedere [Disposizione delle finestre](../misc/how-to-arrange-and-dock-windows.md).  
+1.  Sbloccare la finestra. In questo modo la finestra per l'opzione Nascondi automaticamente quando non è in uso.  
   
- \- oppure \-  
+ \- oppure -  
   
--   Scegliere il pulsante **Chiudi**.  
+-   Fare clic su di **Chiudi** pulsante.  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Finestra Colori](../windows/colors-window-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Finestra colori](../windows/colors-window-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

@@ -1,60 +1,60 @@
 ---
-title: "/MERGE (Combina sezioni) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/merge"
-  - "VC.Project.VCLinkerTool.MergeSections"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MERGE (opzione del linker)"
-  - "MERGE (opzione del linker)"
-  - "-MERGE (opzione del linker)"
-  - "sezioni"
-  - "sezioni, combinazione"
-  - "sezioni, denominazione"
+title: -MERGE (Combina sezioni) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /merge
+- VC.Project.VCLinkerTool.MergeSections
+dev_langs: C++
+helpviewer_keywords:
+- sections, combining
+- /MERGE linker option
+- sections, naming
+- sections
+- -MERGE linker option
+- MERGE linker option
 ms.assetid: 10fb20c2-0b3f-4c8d-98a8-f69aedf03d52
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 936af84fea09f129cd5f455a0b57731393600e02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /MERGE (Combina sezioni)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="merge-combine-sections"></a>/MERGE (Combina sezioni)
 ```  
 /MERGE:from=to  
 ```  
   
-## Note  
- L'opzione \/MERGE consente di unire la prima sezione \(*from*\) alla seconda sezione \(*to*\), assegnando alla sezione ottenuta il nome *to*.  Ad esempio `/merge:.rdata=.text`.  
+## <a name="remarks"></a>Note  
+ L'opzione /MERGE consente di combinare la prima sezione (*da*) con la seconda sezione (*a*), assegnando alla sezione risultante *a*. Ad esempio `/merge:.rdata=.text`.  
   
- Se la seconda sezione non esiste, la sezione *from* verrà automaticamente rinominata in *to*.  
+ Se la seconda sezione non esiste, verrà automaticamente rinominata la sezione *da* come *a*.  
   
- L'opzione \/MERGE risulta utile per la creazione di VxD e per eseguire l'override dei nomi di sezione generati nel compilatore.  
+ L'opzione /MERGE è utile per la creazione di VxD ed eseguendo l'override di nomi di sezione generato dal compilatore.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+3.  Fare clic su di **avanzate** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Esegui merge sezioni**.  
+4.  Modificare il **Merge sezioni** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MergeSections%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

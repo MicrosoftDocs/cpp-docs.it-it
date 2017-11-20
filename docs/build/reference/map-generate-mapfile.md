@@ -1,81 +1,81 @@
 ---
-title: "/MAP (Genera file MAP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/map"
-  - "VC.Project.VCLinkerTool.MapFileName"
-  - "VC.Project.VCLinkerTool.GenerateMapFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAP (opzione del linker)"
-  - "Genera file map (opzione del linker)"
-  - "MAP (opzione del linker)"
-  - "-MAP (opzione del linker)"
-  - "mapfile (opzione del linker)"
-  - "file MAP, creazione del linker"
-  - "file MAP, informazioni sul programma collegato"
-  - "file MAP, specifica del nome file"
+title: -MAP (genera file MAP) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /map
+- VC.Project.VCLinkerTool.MapFileName
+- VC.Project.VCLinkerTool.GenerateMapFile
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles, creating linker
+- generate mapfile linker option
+- mapfile linker option
+- mapfiles, information about program being linked
+- MAP linker option
+- -MAP linker option
+- mapfiles, specifying file name
+- /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2e776803ab6f7046b2db1f80899ee6e465deb399
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /MAP (Genera file MAP)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="map-generate-mapfile"></a>/MAP (Genera file MAP)
 ```  
 /MAP[:filename]  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove:  
   
  *filename*  
- Nome specificato dall'utente per il file di mapping.  Sostituisce il nome predefinito.  
+ Un nome utente specificato per il file MAP. Sostituisce il nome predefinito.  
   
-## Note  
- L'opzione \/MAP indica al linker di creare un file di mapping.  
+## <a name="remarks"></a>Note  
+ L'opzione /MAP indica al linker di creare un file di mapping.  
   
- Per impostazione predefinita al file MAP viene assegnato un nome composto dal nome di base del programma e dall'estensione MAP.  Il *filename* facoltativo consente di eseguire l'override del nome predefinito di un file MAP.  
+ Per impostazione predefinita, il linker i nomi file di mapping con il nome base del programma e dall'estensione Map. Facoltativo *filename* consente di ignorare il nome predefinito per un file di mapping.  
   
- Un file MAP è un file di testo contenente le seguenti informazioni sul programma collegato:  
+ Un file di mapping è un file di testo che contiene le informazioni sul programma in corso il collegamento seguente:  
   
--   Il nome del modulo, ovvero il nome di base del file  
+-   Il nome del modulo, ovvero il nome del file di base  
   
--   Il timestamp dell'intestazione del file del programma \(non del file system\)  
+-   Il timestamp dall'intestazione del file di programma (non dal file system)  
   
--   L'elenco dei gruppi del programma, con l'indirizzo iniziale \(nel formato *sezione*:*offset*\), la lunghezza, il nome e la classe di ciascun gruppo  
+-   Un elenco di gruppi nel programma, con l'indirizzo iniziale di ogni gruppo (come *sezione*:*offset*), lunghezza, nome del gruppo e classe  
   
--   Un elenco di simboli pubblici con ciascun indirizzo \(nel formato *sezione*:*offset*\), nome del simbolo, indirizzo di tipo flat e file obj in cui è definito il simbolo  
+-   Un elenco di simboli pubblici, con ogni indirizzo (come *sezione*:*offset*), simbolo nome, indirizzo di tipo flat e il file con estensione obj in cui è definito il simbolo  
   
--   Il punto di ingresso \(nel formato *sezione*:*offset*\)  
+-   Il punto di ingresso (come *sezione*:*offset*)  
   
- L'opzione [\/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) consente di specificare informazioni aggiuntive da includere nel file MAP.  
+ Il [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) opzione specifica informazioni aggiuntive da includere nel file di mapping.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Debug**.  
+3.  Fare clic su di **Debug** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Genera file MAP**.  
+4.  Modificare il **genera File Map** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

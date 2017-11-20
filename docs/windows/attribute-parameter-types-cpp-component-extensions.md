@@ -1,29 +1,27 @@
 ---
-title: "Attribute Parameter Types  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "custom attributes, parameter types"
+title: Attributo di tipi di parametro (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb54467e0cf37281fab18ad88c6f0c96984dad6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Attribute Parameter Types  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I valori passati agli attributi devono essere noti al compilatore in fase di compilazione.  I parametri dell'attributo possono essere dei seguenti tipi:  
+# <a name="attribute-parameter-types--c-component-extensions"></a>Tipi di parametri degli attributi (Estensioni del componente C++)
+I valori passati agli attributi devono essere noti al compilatore in fase di compilazione.  I tipi dei parametri dell'attributo possono essere i seguenti:  
   
 -   `bool`  
   
@@ -41,7 +39,7 @@ I valori passati agli attributi devono essere noti al compilatore in fase di com
   
 -   `wchar_t`  
   
--   `char*` o `wchar_t*` o `System::String*`  
+-   `char*`o `wchar_t*` o`System::String*`  
   
 -   `System::Type ^`  
   
@@ -49,9 +47,9 @@ I valori passati agli attributi devono essere noti al compilatore in fase di com
   
 -   `enum`  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // attribute_parameter_types.cpp  
@@ -74,12 +72,12 @@ ref struct MyStruct {
 };  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Quando si specificano gli attributi, tutti gli argomenti \(posizionali\) senza nome devono precedere ogni argomento con nome.  
+### <a name="description"></a>Descrizione  
+ Quando si specificano gli attributi, tutti gli argomenti senza nome (posizionali) devono precedere quelli con nome.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // extending_metadata_c.cpp  
@@ -107,12 +105,12 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- I parametri dell'attributo possono essere array unidimensionali dei tipi precedenti.  
+### <a name="description"></a>Descrizione  
+ I parametri dell'attributo possono essere matrici unidimensionali dei tipi precedenti.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // extending_metadata_d.cpp  
@@ -129,5 +127,5 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## Vedere anche  
- [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi definiti dall'utente](../windows/user-defined-attributes-cpp-component-extensions.md)

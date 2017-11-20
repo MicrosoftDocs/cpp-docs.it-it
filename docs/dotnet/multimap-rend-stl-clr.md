@@ -1,41 +1,39 @@
 ---
-title: "multimap::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend (membro) [STL/CLR]"
+title: 'multimap:: rend (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: f8d3f683-eeab-4a8b-af3f-fb6653114594
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 72ca29c14f4395f6505386efdda7f27e637219eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce la fine della sequenza inversa controllata.  
+# <a name="multimaprend-stlclr"></a>multimap::rend (STL/CLR)
+Indica la fine della sequenza controllata inversa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore inverso che punta oltre all'inizio della sequenza selezionata.  Definisce quindi l'oggetto `end` della sequenza inversa.  Viene utilizzato per ottenere un iteratore che definisce la fine `current` della sequenza controllata considerata in ordine inverso, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. È utilizzato per ottenere un iteratore che definisce il `current` fine della sequenza controllata considerata in ordine inverso, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multimap_rend.cpp   
@@ -69,16 +67,19 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**\*\-\- \-\-rend\(\) \= \[b 2\]**  
-**\*\-\-rend\(\) \= \[un 1\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --rend() = [b 2]  
+*--rend() = [a 1]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::begin](../dotnet/multimap-begin-stl-clr.md)   
- [multimap::end](../dotnet/multimap-end-stl-clr.md)   
- [multimap::rbegin](../dotnet/multimap-rbegin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: Begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)   
+ [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)   
+ [multimap::rbegin (STL/CLR)](../dotnet/multimap-rbegin-stl-clr.md)

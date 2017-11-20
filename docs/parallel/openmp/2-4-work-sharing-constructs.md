@@ -1,34 +1,33 @@
 ---
-title: "2.4 Work-sharing Constructs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.4 condivisione del lavoro costrutti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 25bb4ded-8466-4daa-a863-766b5a99b995
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5353bc51f6a701201520f700057ef76ce7778191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4 Work-sharing Constructs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un costrutto di suddivisione del lavoro distribuisce l'esecuzione dell'istruzione associato tra i membri del team che lo si confrontano.  Le direttive di suddivisione del lavoro non iniziano nuovi thread e non esiste una barriera implicita all'ingresso in un costrutto di suddivisione del lavoro.  
+# <a name="24-work-sharing-constructs"></a>2.4 Costrutti per la condivisione del lavoro
+Un costrutto di condivisione del lavoro distribuisce l'esecuzione dell'istruzione associati tra i membri del team che ha rilevato. Le direttive di condivisione del lavoro non verranno avviati i nuovi thread ed non è implicita barriera all'ingresso in un costrutto di condivisione del lavoro.  
   
- La sequenza di costrutti di suddivisione del lavoro e **barriera** le direttive via devono essere uguali per ogni thread in un team.  
+ Costruisce la sequenza di condivisione del lavoro e **barriera** direttive rilevate devono essere uguale per ogni thread in un team.  
   
- OpenMP definisce i seguenti costrutti di suddivisione del lavoro e sono descritti nelle sezioni che seguono:  
+ OpenMP definisce i seguenti costrutti di condivisione del lavoro e descritti nelle sezioni che seguono:  
   
--   **per** direttiva  
+-   **per** (direttiva)  
   
--   **sezioni** direttiva  
+-   **Nelle sezioni** (direttiva)  
   
--   **singolo** direttiva
+-   **singolo** (direttiva)

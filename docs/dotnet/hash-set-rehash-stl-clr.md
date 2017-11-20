@@ -1,41 +1,39 @@
 ---
-title: "hash_set::rehash (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::rehash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rehash (membro) [STL/CLR]"
+title: hash_set::rehash (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::rehash
+dev_langs: C++
+helpviewer_keywords: rehash member [STL/CLR]
 ms.assetid: f62bae81-4321-44e1-97d0-77174a13e0de
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee2dfb7a8976d43093d4d40345171a8b889fe2e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::rehash (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetrehash-stlclr"></a>hash_set::rehash (STL/CLR)
 Ricompila la tabella hash.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void rehash();  
 ```  
   
-## Note  
- La funzione membro ricompila la tabella hash, assicurante tale [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)`() <=` [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md).  In caso contrario, il hash la tabella integra dimension solo in base alle esigenze dopo un inserimento. \(Mai automaticamente nelle dimensioni ridotte.\) Utilizzarla per modificare le dimensioni della tabella hash.  
+## <a name="remarks"></a>Note  
+ La funzione membro Ricompila la tabella hash, assicurando che [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md). In caso contrario, la tabella hash aumenta le dimensioni solo se necessario, dopo un inserimento. (Mai automaticamente riduce le dimensioni.) Utilizzarla per regolare le dimensioni della tabella hash.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_set_rehash.cpp   
@@ -81,23 +79,28 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0,1875**  
-**max\_load\_factor\(\) \= 0,25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0,0234375**  
-**max\_load\_factor\(\) \= 0,25**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **Spazio dei nomi:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## Vedere anche  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)   
- [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)   
- [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)   
+ [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)   
+ [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)

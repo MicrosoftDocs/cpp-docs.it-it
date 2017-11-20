@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -41,16 +39,15 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 03eda993cbc087d5dc39f2c9d0f985ac5db48099
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="futime-futime32-futime64"></a>_futime, _futime32, _futime64
 Imposta la data di modifica in un file aperto.  

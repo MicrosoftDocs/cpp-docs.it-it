@@ -1,44 +1,43 @@
 ---
-title: "Supporto per le DLL a caricamento ritardato nel linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caricamento ritardato di DLL, supporto del linker"
+title: Supporto per le DLL a caricamento ritardato nel linker | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Supporto per le DLL a caricamento ritardato nel linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il linker di Visual C\+\+ supporta il caricamento ritardato delle DLL  rendendo pertanto inutile l'utilizzo delle funzioni **LoadLibrary** e **GetProcAddress** di [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+# <a name="linker-support-for-delay-loaded-dlls"></a>Supporto per le DLL a caricamento ritardato nel linker
+Il linker Visual C++ supporta ora il caricamento ritardato di DLL. Questo elimina la necessità di utilizzare le funzioni di Windows SDK **LoadLibrary** e **GetProcAddress** per implementare una DLL a caricamento ritardato.  
   
- Prima del rilascio di Visual C\+\+ 6.0, l'unico metodo per caricare una DLL in fase di esecuzione consisteva nell'utilizzo di **LoadLibrary** e **GetProcAddress**. Nel sistema operativo la DLL veniva caricata al momento del caricamento dell'eseguibile o della DLL attiva.  
+ Prima di Visual C++ 6.0, l'unico modo per caricare una DLL in fase di esecuzione è tramite **LoadLibrary** e **GetProcAddress**; carica la DLL del sistema operativo quando il file eseguibile o DLL tramite è stato caricato.  
   
- A partire da Visual C\+\+ 6.0, in caso di collegamento statico a una DLL il linker fornisce opzioni che consentono di ritardare il caricamento della DLL fino al momento della chiamata di una funzione in essa contenuta.  
+ A partire da Visual C++ 6.0, quando il collegamento statico a una DLL, il linker fornisce opzioni di attesa del caricamento della DLL fino a quando il programma chiama una funzione nella DLL.  
   
- Un'applicazione consente di eseguire il caricamento ritardato di una DLL utilizzando l'opzione del linker [\/DELAYLOAD \(Delay Load Import\)](../../build/reference/delayload-delay-load-import.md) con una funzione di supporto \(implementazione predefinita fornita da Visual C\+\+\).  La DLL verrà caricata dalla funzione di supporto in fase di esecuzione mediante una chiamata a **LoadLibrary** e **GetProcAddress**.  
+ Un'applicazione può ritardare caricare una DLL utilizzando il [/DELAYLOAD (caricamento ritardato)](../../build/reference/delayload-delay-load-import.md) l'opzione del linker con una funzione di supporto (implementazione predefinita fornita da Visual C++). La funzione di supporto DLL verrà caricata in fase di esecuzione chiamando **LoadLibrary** e **GetProcAddress** automaticamente.  
   
- È consigliabile prendere in considerazione il caricamento ritardato della DLL quando:  
+ È necessario considerare se una DLL a caricamento ritardato:  
   
--   Non è possibile chiamare una funzione nella DLL.  
+-   Il programma non può chiamare una funzione nella DLL.  
   
--   Una funzione contenuta nella DLL può essere chiamata solo in una fase successiva dell'esecuzione del programma.  
+-   Una funzione nella DLL può essere chiamata finché in ritardo nell'esecuzione del programma.  
   
- Il caricamento ritardato di una DLL può essere specificato durante la compilazione di un progetto EXE o DLL.  È tuttavia consigliabile che i progetti DLL con caricamento ritardato di una o più DLL non chiamino a loro volta un punto di ingresso a caricamento ritardato in Dllmain.  
+ Il caricamento ritardato di una DLL può essere specificato durante la compilazione di una. File EXE o. Progetto DLL. A. Progetto DLL che ritarda il caricamento di uno o più DLL non stesso chiami un punto di ingresso a caricamento ritardato in Dllmain.  
   
- Nei seguenti argomenti viene descritto il caricamento ritardato delle DLL:  
+ Gli argomenti seguenti descrivono caricamento ritardato di DLL:  
   
 -   [Specifica delle DLL per il caricamento ritardato](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -54,10 +53,10 @@ Il linker di Visual C\+\+ supporta il caricamento ritardato delle DLL  rendendo 
   
 -   [Vincoli delle DLL a caricamento ritardato](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [Informazioni sulla funzione di supporto](http://msdn.microsoft.com/it-it/6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [Informazioni sulla funzione di supporto](understanding-the-helper-function.md)  
   
 -   [Sviluppo di una funzione di supporto personalizzata](../../build/reference/developing-your-own-helper-function.md)  
   
-## Vedere anche  
- [DLL in Visual C\+\+](../../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [DLL in Visual C++](../../build/dlls-in-visual-cpp.md)   
  [Collegamento](../../build/reference/linking.md)

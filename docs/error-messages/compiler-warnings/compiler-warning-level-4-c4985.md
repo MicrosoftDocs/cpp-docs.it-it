@@ -4,40 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4985
+dev_langs: C++
+helpviewer_keywords: C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4a36692420ea9d5547f236c1e5dfeaa269afbb67
-ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: af8717f8b821311814a8aa4ee2f5b3e6ead89eef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4985"></a>Avviso del compilatore (livello 4) C4985
 'symbol name': attributi non presenti nella dichiarazione precedente.  
@@ -46,7 +27,7 @@ ms.lasthandoff: 04/12/2017
   
  Il linguaggio di annotazione del codice sorgente Microsoft (SAL) fornisce un set di annotazioni per descrivere come una funzione usa i parametri, le ipotesi che fa su di essi e le garanzie che produce in fase di completamento. Il file di intestazione sal.h definisce le annotazioni.  
   
- Si noti che le macro SAL non si espanderanno, a meno che il progetto contenga il [/ANALYZE](../../build/reference/analyze-code-analysis.md) flag specificato. Quando si specifica **/analyze**, il compilatore può generare l'errore C4985, anche se non è stato visualizzato alcun avviso o errore senza **/analyze**.  
+ Si noti che le macro SAL non si espanderanno, a meno che il progetto contenga il flag [/analyze](../../build/reference/analyze-code-analysis.md) specificato. Quando si specifica **/analyze**, il compilatore può generare l'errore C4985, anche se non è stato visualizzato alcun avviso o errore senza **/analyze**.  
   
 ### <a name="to-correct-this-error"></a>Per correggere l'errore  
   

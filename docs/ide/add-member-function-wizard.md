@@ -1,35 +1,33 @@
 ---
-title: "Aggiunta guidata funzione membro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.function.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aggiunta guidata funzione membro [C++]"
+title: Aggiunta guidata funzione membro | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.function.overview
+dev_langs: C++
+helpviewer_keywords: Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 001af91af02f5b24e58737181258f036fe73a407
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Aggiunta guidata funzione membro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare questa procedura guidata per aggiungere una dichiarazione di funzione membro al file di intestazione e un'implementazione della funzione membro stub al file di implementazione per la classe selezionata.  
+# <a name="add-member-function-wizard"></a>Aggiunta guidata funzione membro
+Questa procedura guidata consente di aggiungere una dichiarazione di funzione membro per il file di intestazione e un'implementazione della funzione membro stub al file di implementazione per la classe selezionata.  
   
- Dopo aver aggiunto la funzione membro mediante la procedura guidata, è possibile modificare il codice nell'ambiente di sviluppo.  
+ Dopo aver aggiunto la funzione membro utilizzando la procedura guidata, è possibile modificare il codice nell'ambiente di sviluppo.  
   
  **Tipo restituito**  
- Consente di impostare il tipo restituito della funzione membro che si sta aggiungendo.  È possibile immettere un tipo restituito personalizzato o selezionarlo dall'elenco dei tipi disponibili.  Per informazioni sui tipi, vedere [Tipi fondamentali](../cpp/fundamental-types-cpp.md).  
+ Imposta il tipo restituito per la funzione membro che si sta aggiungendo. È possibile fornire un tipo restituito personalizzato oppure è possibile selezionare dall'elenco dei tipi disponibili. Per informazioni sui tipi, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).  
   
 ||||  
 |-|-|-|  
@@ -38,11 +36,11 @@ caps.handback.revision: 6
 |**float**|**short**|`void`|  
 |`HRESULT`|`unsigned char`||  
   
- **Nome funzione**  
- Consente di impostare il nome della funzione membro che si sta aggiungendo.  
+ **Nome della funzione**  
+ Imposta il nome della funzione membro che si sta aggiungendo.  
   
  **Tipo di parametro**  
- Consente di impostare il tipo per ogni parametro aggiunto per la funzione membro se quest'ultima dispone di parametri.  È possibile immettere un tipo di parametro personalizzato o selezionarlo dall'elenco dei tipi disponibili.  
+ Imposta il tipo di parametro, che si aggiunge per la funzione membro, se la funzione membro dispone di parametri. È possibile fornire un tipo di parametro o è possibile selezionare dall'elenco dei tipi disponibili.  
   
 ||||  
 |-|-|-|  
@@ -50,14 +48,14 @@ caps.handback.revision: 6
 |**double**|**long**|`unsigned int`|  
 |**float**|**short**|`unsigned long`|  
   
- **Nome parametro**  
- Consente di impostare il nome del parametro aggiunto per la funzione membro se quest'ultima dispone di parametri.  
+ **Nome del parametro**  
+ Imposta il nome di un parametro che si aggiunge per la funzione membro, se la funzione membro dispone di parametri.  
   
- **Elenco parametri**  
- Consente di visualizzare un elenco di parametri aggiunti alla funzione membro.  Per aggiungere un parametro all'elenco, immettere un tipo e un nome rispettivamente nelle caselle **Tipo parametro** e **Nome parametro**, quindi scegliere **Aggiungi**.  Per rimuovere un parametro dall'elenco, selezionarlo e scegliere **Rimuovi**.  
+ **Elenco di parametri**  
+ Visualizza un elenco dei parametri che aggiunti alla funzione membro. Per aggiungere un parametro all'elenco, fornire un tipo e nome di **tipo di parametro** e **nome del parametro** caselle e fare clic su **Aggiungi**. Per rimuovere un parametro dall'elenco, selezionare il parametro e fare clic su **rimuovere**.  
   
  **Accesso**  
- Consente di impostare l'accesso alla funzione membro.  I modificatori di accesso sono parole chiave che specificano l'accesso di altre classi alla funzione membro.  Per ulteriori informazioni sulla definizione dell'accesso, vedere [Controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md).  Per impostazione predefinita, il livello di accesso a ogni funzione membro è impostato su **public**.  
+ Imposta l'accesso alla funzione membro. Modificatori di accesso sono parole chiave che specificano l'accesso alla funzione membro altre classi. Vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md) per ulteriori informazioni sull'impostazione di accesso. Il livello di accesso di funzione membro è impostato su **pubblica** per impostazione predefinita.  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -65,23 +63,23 @@ caps.handback.revision: 6
   
 -   [private](../cpp/private-cpp.md)  
   
- Impostare la nuova funzione membro come Static o Virtual, Inline o Pure.  Se la funzione membro è impostata come Pure, la casella di controllo `Virtual` sarà selezionata, mentre la casella **Inline** non sarà disponibile.  L'impostazione predefinita è una funzione membro non virtual e non static.  
+ Controllare se la nuova funzione membro è statico o virtuale e sia in linea o puro. Se si imposta la funzione membro, come pure, la `Virtual` casella di controllo è selezionata e **Inline** casella di controllo non è più disponibile. Il valore predefinito è una funzione membro non statico, non virtuale.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|[Static](../misc/static-cpp.md)|Utilizzare questa opzione per specificare che la funzione è globale e può essere chiamata all'esterno della classe, anche senza creare un'istanza della classe.  La funzione membro non ha accesso a membri non static.  Una funzione membro `Static` non può essere virtual.|  
-|[Modalità virtuale](../cpp/virtual-cpp.md)|Utilizzare questa opzione per assicurare la chiamata alla funzione membro corretta per un oggetto, indipendentemente dall'espressione utilizzata per effettuare la chiamata.  Una funzione membro `Virtual` non può essere static.|  
-|**Pure**|Utilizzare questa opzione per indicare che non viene fornita alcuna implementazione per la funzione membro virtual dichiarata; **Pure** pertanto può essere specificata solo su funzioni membro virtual.  Per ulteriori informazioni, vedere [Sintassi delle dichiarazioni di membri di classe](../misc/class-member-declaration-syntax.md).<br /><br /> Una classe che contiene almeno una funzione membro virtual pure è considerata astratta.  Le classi derivate dalla classe astratta sono anch'esse astratte se non implementano la funzione membro virtual pure.|  
-|[Inline](../cpp/inline-functions-cpp.md)|Utilizzare questa opzione per indicare al compilatore di inserire una copia del codice funzione membro in ogni posizione in cui viene chiamata la funzione membro.  Una funzione membro **Inline** non può essere pure.|  
+|------------|-----------------|  
+|[Static](../cpp/storage-classes-cpp.md)|Specifica che la funzione è globale e può essere chiamata all'esterno della classe, anche se non la creazione di istanze. La funzione membro non ha accesso a membri non statici. Una funzione membro `Static` non può essere virtuale.|  
+|[Virtuale](../cpp/virtual-cpp.md)|Assicura che la funzione membro corretto viene chiamata per un oggetto, indipendentemente dall'espressione utilizzata per rendere la funzione membro chiamata. Una funzione membro `Virtual` non può essere statico.|  
+|**Pure**|Indica che viene fornita alcuna implementazione per la funzione membro virtuale dichiarata; Pertanto, **Pure** può essere specificato solo per funzioni membro virtuali. Una classe che contiene almeno una funzione membro virtuale pura è considerata una classe astratta. Le classi derivate dalla classe astratta devono implementare la funzione membro virtuale pura o, troppo, sono classi astratte.|  
+|[Inline](../cpp/inline-functions-cpp.md)|Indica al compilatore di inserire una copia del corpo della funzione membro in ogni posizione in cui che viene chiamata la funzione membro. Una funzione membro **Inline** non può essere puro.|  
   
- **File CPP**  
- Consente di impostare la posizione del file in cui è scritta l'implementazione della funzione membro stub.  Per impostazione predefinita, si tratta del file CPP della classe alla quale viene aggiunta la funzione membro.  Fare clic sul pulsante con i puntini di sospensione per modificare il nome del file.  L'implementazione della funzione membro viene aggiunta al contenuto del file selezionato.  
+ **file con estensione cpp**  
+ Imposta il percorso del file in cui viene scritta l'implementazione della funzione membro stub. Per impostazione predefinita, che venga scritto nel file con estensione cpp per la classe a cui viene aggiunta la funzione membro. Fare clic sul pulsante con puntini di sospensione per modificare il nome del file. L'implementazione della funzione membro viene aggiunto al contenuto del file selezionato.  
   
- **Commento**  
- Consente di fornire un commento nel file di intestazione per la funzione membro.  
+ **Commentoo**  
+ Fornisce un commento nel file di intestazione per la funzione membro.  
   
- **Firma funzione**  
- Consente di visualizzare la funzione membro così come compare nel codice quando si sceglie **Fine**.  Non è possibile modificare il testo di questa casella.  Per modificare la funzione membro, modificare il testo delle caselle appropriate della procedura guidata.  
+ **Firma della funzione**  
+ Visualizza la funzione membro, così come appare nel codice, quando si fa clic **fine**. È possibile modificare il testo in questa casella. Per modificare la funzione membro, modificare le caselle appropriate nella procedura guidata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)

@@ -1,66 +1,64 @@
 ---
-title: "Aggiunta di funzionalit&#224; con creazioni guidate codice | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "creazioni guidate classi [C++]"
-  - "creazioni guidate codice [C++]"
-  - "progetti [C++], aggiunta di funzionalità"
-  - "progetti Visual C++, aggiunta di funzionalità"
-  - "procedure guidate [C++], codice"
+title: "Aggiunta di funzionalità con creazioni guidate codice (C++) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes
+dev_langs: C++
+helpviewer_keywords:
+- code wizards [C++]
+- wizards [C++], code
+- Visual C++ projects, adding functionality
+- projects [C++], adding functionality
+- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53fa4efec4d30753613c02705869c766a5c251eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Aggiunta di funzionalit&#224; con creazioni guidate codice
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dopo aver creato un progetto, è possibile che si desideri modificarlo o aggiungervi delle funzionalità,  ad esempio creando nuove classi, aggiungendo nuove variabili e funzioni membro oppure metodi e proprietà di automazione.  È possibile eseguire queste operazioni mediante le creazioni guidate codice.  
+# <a name="adding-functionality-with-code-wizards-c"></a>Aggiunta di funzionalità con creazioni guidate codice (C++)
+Dopo aver creato un progetto, è possibile modificare o aggiungere funzionalità del progetto. Tali attività includono la creazione di nuove classi, aggiunta di nuove funzioni membro e variabili e l'aggiunta di metodi di automazione e proprietà. Le creazioni guidate codice sono progettate per consentire di effettuare tutte queste operazioni.  
   
 > [!NOTE]
->  È ora possibile aggiungere gestori di messaggi ai quali associare i messaggi ed eseguire l'override delle funzioni virtuali MFC mediante la [finestra Proprietà](../Topic/Properties%20Window.md).  
+>  È ora possibile aggiungere gestori di messaggi e associare messaggi ed eseguire l'override di funzioni virtuali MFC mediante la [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
-## Accesso alle creazioni guidate codice di Visual C\+\+  
- È possibile accedere alle creazioni guidate codice di Visual C\+\+ nei tre modi descritti di seguito.  
+## <a name="accessing-visual-c-code-wizards"></a>Procedure guidate di accesso al codice Visual C++  
+ Sono disponibili tre percorsi in cui è possibile accedere creazioni guidate codice Visual C++:  
   
--   Utilizzare il comando **Aggiungi nuovo elemento** del menu **Progetto** per visualizzare la finestra di dialogo `Add New Item`, in cui è possibile aggiungere nuovi file al progetto.  Utilizzare il comando **Aggiungi classe** per visualizzare la finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md), che consente di avviare le procedure guidate per ogni tipo di classe che è possibile aggiungere al progetto.  Utilizzare il comando **Aggiungi risorsa** per visualizzare la finestra di dialogo [Aggiungi risorsa](../windows/add-resource-dialog-box.md), nella quale creare o selezionare una risorsa da aggiungere al progetto.  
+-   Nel **progetto** dal menu di **Aggiungi nuovo elemento** comando consente di visualizzare il `Add New Item` nella finestra di dialogo in cui è possibile aggiungere nuovi file al progetto. Il **Aggiungi classe** comando Visualizza il [Aggiungi classe](../ide/add-class-dialog-box.md) nella finestra di dialogo che consente di avviare le procedure guidate per ogni classe di tipi, è possibile aggiungere al progetto. Il **Aggiungi risorsa** comando Visualizza il [Aggiungi risorsa](../windows/add-resource-dialog-box.md) della finestra di dialogo da cui è possibile creare o selezionare una risorsa da aggiungere al progetto.  
   
-     Se si seleziona una classe o un'interfaccia del progetto in Visualizzazione classi, nel menu **Progetto** saranno disponibili anche i seguenti comandi:  
+     Se si seleziona una classe o un'interfaccia nel progetto in visualizzazione classi, il **progetto** menu Visualizza anche i comandi seguenti:  
   
-    -   **Implementa interfaccia** \(solo da una classe Control\)  
+    -   **Implementare l'interfaccia** (da una classe solo di controllo)  
   
-    -   **Aggiungi funzione**  
+    -   **Add (funzione)**  
   
     -   **Aggiungi variabile**  
   
-    -   **Aggiungi punto di connessione** \(solo da una classe ATL\)  
+    -   **Aggiungere il punto di connessione** (solo da una classe ATL)  
   
-    -   **Aggiungi metodo** \(solo da un'interfaccia\)  
+    -   **Metodo Add** (solo da un'interfaccia)  
   
-    -   **Aggiungi proprietà** \(solo da un'interfaccia\)  
+    -   **Aggiungere proprietà** (solo da un'interfaccia)  
   
-    -   **Aggiungi evento** \(solo da una classe Control\)  
+    -   **Aggiungere l'evento** (da una classe solo di controllo)  
   
--   In **Esplora soluzioni** fare clic con il pulsante destro del mouse su una cartella qualsiasi e scegliere **Aggiungi** dal menu di scelta rapida per aggiungere al progetto file nuovi o esistenti, cartelle, elementi, classi, risorse e riferimenti Web.  
+-   In **Esplora**, facendo clic su qualsiasi cartella e fare clic su **Aggiungi** dal collegamento menu consente di aggiungere file nuovi o esistenti, altre cartelle, gli elementi, classi, le risorse e riferimenti Web per il progetto.  
   
--   Nella [finestra Visualizzazione classi](http://msdn.microsoft.com/it-it/8d7430a9-3e33-454c-a9e1-a85e3d2db925) fare clic con il pulsante destro del mouse sul nodo appropriato e scegliere **Aggiungi** dal menu di scelta rapida per aggiungere al progetto funzioni, variabili, classi, proprietà, metodi, eventi, interfacce, punti di connessione o altro codice.  
+-   Dal [finestra Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), facendo clic sul nodo appropriato e facendo clic su **Aggiungi** dal collegamento menu consente di aggiungere funzioni, variabili, classi, proprietà, metodi, eventi, interfacce, punti di connessione o altro codice al progetto.  
   
     > [!NOTE]
-    >  In Visual Studio non sono disponibili procedure guidate per l'aggiunta di un'interfaccia a un progetto.  Per aggiungere un'interfaccia a un progetto ATL o [aggiungere supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md), aggiungere un oggetto semplice mediante la [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md).  In alternativa, aprire il file IDL del progetto e creare l'interfaccia immettendo quanto segue:  
+    >  Visual Studio non fornisce una procedura guidata per aggiungere un'interfaccia a un progetto. È possibile aggiungere un'interfaccia a un progetto ATL o a un [aggiunta del supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) mediante l'aggiunta di un oggetto semplice mediante il [guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md). In alternativa, aprire il file IDL del progetto e creare l'interfaccia digitando:  
   
     ```  
     interface IMyInterface {  
@@ -68,17 +66,17 @@ Dopo aver creato un progetto, è possibile che si desideri modificarlo o aggiung
   
     ```  
   
-     Per ulteriori informazioni, vedere [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
+     Vedere [che implementa un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [aggiunta di oggetti e i controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) per ulteriori informazioni.  
   
-    |Accesso alla creazione guidata da|Descrizione|  
-    |---------------------------------------|-----------------|  
-    |Aggiungi nuovo elemento|Mediante le creazioni guidate codice Aggiungi nuovo elemento è possibile aggiungere file di origine al progetto.  Se necessario, vengono create directory aggiuntive per facilitare il reperimento dei file da parte del motore di compilazione del progetto.  Utilizzando le creazioni guidate codice accessibili mediante l'icona Aggiungi elemento è possibile effettuare le seguenti operazioni:<br /><br /> -   Aggiungere i file di origine C\+\+ \(con estensioni cpp, h, idl, rc, srf, def, rgs\).<br />-   Aggiungere i file di sviluppo Web  \(con estensioni html, asp, css, xml\).<br />-   Aggiungere i file di utilità e risorse \(con estensioni bmp, cur, ico, rct, sql, txt\).<br /><br /> In genere non è necessario fornire alcuna informazione. Alla struttura ad albero di sviluppo viene automaticamente aggiunto un file,  che può essere rinominato nella finestra delle proprietà.|  
-    |Esplora soluzioni|A seconda della posizione in cui si trova il cursore quando si fa clic con il pulsante destro del mouse su un elemento, in Esplora soluzioni sono disponibili diverse creazioni guidate codice.  Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore della struttura ad albero di sviluppo e riprovare.  Mediante le creazioni guidate codice è possibile inserire il codice aggiuntivo nella posizione corretta all'interno della struttura ad albero di sviluppo, indipendentemente dalla posizione del cursore.  In Esplora soluzioni sono disponibili le seguenti creazioni guidate:<br /><br /> -   Aggiungi classe \(apre la finestra di dialogo **Aggiungi classe** che contiene le nuove creazioni guidate di codice\).<br />-   Aggiungi risorsa \(Nuova, Importa o Personalizza\).<br />-   Aggiungi riferimento Web.|  
-    |Visualizzazione classi|A seconda della posizione in cui si trova il cursore quando si fa clic con il pulsante destro del mouse su un elemento, in  Visualizzazione classi sono disponibili diverse creazioni guidate codice.  Se l'opzione **Aggiungi** non viene visualizzata quando si fa clic con il pulsante destro del mouse su un elemento, spostare il cursore al livello superiore della struttura ad albero della classe e riprovare.  Mediante le creazioni guidate codice è possibile inserire il codice aggiuntivo nella posizione corretta all'interno della struttura ad albero di sviluppo, indipendentemente dalla posizione del cursore.  In Visualizzazione classi sono disponibili le seguenti creazioni guidate:<br /><br /> -   [Funzione Aggiungi membro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Variabile Aggiungi membro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Aggiungi classe](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementa interfaccia](../ide/implement-interface-wizard.md) \(solo da una classe di controllo\)<br />-   [Aggiungi punto di connessione](../ide/implement-connection-point-wizard.md)\(solo da una classe ATL\)<br />-   [Aggiungi metodo](../ide/add-method-wizard.md)\(solo da un'interfaccia\)<br />-   [Aggiungi proprietà](../ide/names-add-property-wizard.md) \(solo da un'interfaccia\)<br />-   [Aggiungi evento](../ide/add-event-wizard.md) \(solo da una classe Control\)<br /><br /> Fare clic su Aggiungi classe per visualizzare la finestra di dialogo **Aggiungi classe**, che consente di accedere a tutte le nuove creazioni guidate codice Aggiungi classe.|  
+    |Procedura guidata di codice di accesso da|Descrizione|  
+    |-----------------------------|-----------------|  
+    |Aggiungi nuovo elemento|Le creazioni guidate codice Aggiungi nuovo elemento consente di aggiungere i file di origine al progetto. Se necessario, vengono create directory aggiuntive per i file di cui il motore di compilazione progetto prevede per individuarli. Creazioni guidate codice disponibile dall'icona Aggiungi elemento includono:<br /><br /> -Aggiungere file di origine C++ (. cpp, h, IDL, rc, SRF, def, con estensione RGS).<br />-Aggiungere file di sviluppo Web (HTML, ASP, CSS, con estensione XML).<br />-Aggiungere utilità e file di risorse (file con estensione bmp, cur, ico, RCT, con estensione SQL, con estensione txt).<br /><br /> Queste procedure guidate di codice in genere non è necessario per tutte le informazioni ma è aggiungere un file alla struttura ad albero di sviluppo. È possibile rinominare il file nella finestra delle proprietà.|  
+    |Esplora soluzioni|Le creazioni guidate codice disponibili in Esplora soluzioni variano a seconda di dove si trova il cursore è quando si fa clic su un elemento. Se il **Aggiungi** opzione non viene visualizzata quando si fa clic su un elemento, quindi spostare il cursore al superiore livello nella struttura di sviluppo e riprovare. Le creazioni guidate codice saranno possibile inserire il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente in cui il cursore si trova. Creazioni guidate codice disponibili in Esplora soluzioni includono:<br /><br /> -Aggiungere classe (apre il **Aggiungi classe** la finestra di dialogo contenente le creazioni guidate codice nuovo).<br />-Aggiungi risorsa (nuovo, importare o personalizzato).<br />-Aggiungi riferimento Web.|  
+    |Visualizzazione classi|Le creazioni guidate codice disponibile in visualizzazione classi variano a seconda di dove si trova il cursore è quando si destro del mouse su un elemento. Se il **Aggiungi** opzione non viene visualizzata quando si destro fare clic su un elemento, quindi spostare il cursore al superiore livello nella struttura della classe e riprovare. Le creazioni guidate codice saranno possibile inserire il codice aggiuntivo nella posizione appropriata all'interno della struttura di sviluppo, indipendentemente in cui il cursore si trova. Creazioni guidate codice disponibile in visualizzazione classi includono:<br /><br /> -   [Aggiungere la funzione membro](../ide/adding-a-member-function-visual-cpp.md).<br />-   [Aggiungere una variabile membro](../ide/adding-a-member-variable-visual-cpp.md).<br />-   [Aggiungi classe](../ide/adding-a-class-visual-cpp.md).<br />-   [Implementare l'interfaccia](../ide/implement-interface-wizard.md) (da una classe solo di controllo)<br />-   [Aggiungere il punto di connessione](../ide/implement-connection-point-wizard.md) (solo da una classe ATL)<br />-   [Metodo Add](../ide/add-method-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere proprietà](../ide/names-add-property-wizard.md) (solo da un'interfaccia)<br />-   [Aggiungere l'evento](../ide/add-event-wizard.md) (da una classe solo di controllo)<br /><br /> Verrà visualizzata la selezione di Aggiungi classe di **Aggiungi classe** nella finestra di dialogo consente di accedere a tutte le nuove creazioni guidate codice Aggiungi classe.|  
   
-## Vedere anche  
- [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Esplorazione della struttura delle classi](../ide/navigating-the-class-structure-visual-cpp.md)   
- [Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Tipi di progetto Visual C\+\+](../ide/visual-cpp-project-types.md)   
- [Tipi di file creati per i progetti di Visual C\+\+](../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>Vedere anche  
+ [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Esplorazione della struttura di classe](../ide/navigating-the-class-structure-visual-cpp.md)   
+ [Creazione di progetti Desktop mediante creazioni guidate applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Tipi di progetto di Visual C++](../ide/visual-cpp-project-types.md)   
+ [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

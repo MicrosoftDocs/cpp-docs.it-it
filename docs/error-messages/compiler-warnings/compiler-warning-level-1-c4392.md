@@ -1,36 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4392 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4392"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4392"
+title: Compilatore avviso (livello 1) C4392 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4392
+dev_langs: C++
+helpviewer_keywords: C4392
 ms.assetid: 817806ad-06a6-4b9e-8355-e25687c782dc
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9166a6ea3fc210d0e430c79dc517cadac6a84895
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4392
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'firma': numero non corretto di argomenti per la funzione intrinseca, previsti 'numero' argomenti  
+# <a name="compiler-warning-level-1-c4392"></a>Avviso del compilatore (livello 1) C4392
+'signature': numero errato di argomenti per una funzione intrinseca, previsto 'number' argomenti  
   
- Una dichiarazione di funzione per una funzione intrinseca del compilatore contiene un numero di argomenti errato.  È possibile che l'immagine risultante non funzioni correttamente.  
+ Una dichiarazione di funzione per un intrinseco del compilatore contiene un numero errato di argomenti. L'immagine risultante potrebbe non funzionare correttamente.  
   
- Per risolvere il problema, correggere la dichiarazione o eliminarla e aggiungere il file di intestazione appropriato mediante l'istruzione \#include.  
+ Per risolvere questo problema, correggere la dichiarazione o eliminare la dichiarazione in modo semplice e #include il file di intestazione appropriati.  
   
- Il seguente codice di esempio genera l'errore C4392:  
+ L'esempio seguente genera l'errore C4392:  
   
 ```  
 // C4392.cpp  

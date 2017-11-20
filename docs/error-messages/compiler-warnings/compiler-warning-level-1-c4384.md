@@ -1,35 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4384 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4384"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4384"
+title: Compilatore avviso (livello 1) C4384 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4384
+dev_langs: C++
+helpviewer_keywords: C4384
 ms.assetid: fafa8eb2-cbfc-4edb-8b0f-511ff5d37ac0
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7e7c38a6346a4b17a0a30bbe323866d9423474f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4384
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#pragma 'make\_public' dovrebbe essere utilizzato solo in ambito globale  
+# <a name="compiler-warning-level-1-c4384"></a>Avviso del compilatore (livello 1) C4384
+\#pragma 'make_public' deve essere utilizzato solo in ambito globale  
   
- Il pragma [make\_public](../../preprocessor/make-public.md) è stato applicato in modo non corretto.  
+ Il [make_public](../../preprocessor/make-public.md) pragma è stato applicato in modo non corretto.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4384:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4384.  
   
 ```  
 // C4384.cpp  

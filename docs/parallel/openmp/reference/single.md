@@ -1,46 +1,44 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: singolo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 898a175963698d1f44f90f08c21015a765892017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Consente di specificare che una sezione di codice deve essere eseguito in un unico thread, non necessariamente il thread master.  
+# <a name="single"></a>singola
+Consente di specificare che una sezione di codice deve essere eseguita su un thread singolo, non necessariamente il thread principale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### Parametri  
- `clause` \(facoltativo\)  
- zero o più clausole.  Vedere la sezione relativa alle osservazioni per un elenco delle clausole supportate da **scegliere**.  
+#### <a name="parameters"></a>Parametri  
+ `clause` (facoltativo)  
+ Zero o più clausole. Vedere la sezione Osservazioni per un elenco di clausole supportate da **singolo**.  
   
-## Note  
- **singolo** la direttiva supporta le clausole seguenti di OpenMP:  
+## <a name="remarks"></a>Note  
+ Il **singolo** direttiva supporta le clausole OpenMP seguenti:  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
   
@@ -50,11 +48,11 @@ Consente di specificare che una sezione di codice deve essere eseguito in un uni
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [master](../../../parallel/openmp/reference/master.md) la direttiva consente di specificare che una sezione di codice deve essere eseguito solo sul thread master.  
+ Il [master](../../../parallel/openmp/reference/master.md) direttiva consente di specificare che una sezione di codice deve essere eseguita solo sul thread master.  
   
- Per ulteriori informazioni, vedere [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Per ulteriori informazioni, vedere [singolo 2.4.3 costrutto](../../../parallel/openmp/2-4-3-single-construct.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +77,12 @@ int main() {
 }  
 ```  
   
-  **input lettura**  
-**risultati di calcolo**  
-**risultati di calcolo**  
-**scrivere l'output**   
-## Vedere anche  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive](../../../parallel/openmp/reference/openmp-directives.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3451
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3451
+f1_keywords: C3451
+dev_langs: C++
+helpviewer_keywords: C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: c1c0f9de919fbe646eaa6303fa5b1e9fcba886eb
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3451"></a>Errore del compilatore C3451
 'attribute': non è possibile applicare l'attributo non gestito a 'type'  

@@ -1,72 +1,71 @@
 ---
-title: "1.2 Definition of Terms | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 1.2 definizione dei termini | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21c4bcafe89fda7e09333b014da20e1d483125e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 1.2 Definition of Terms
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I seguenti termini utilizzati in questo documento:  
+# <a name="12-definition-of-terms"></a>1.2 Definizione dei termini
+In questo documento vengono utilizzati i seguenti termini:  
   
- barriera  
- un punto di sincronizzazione che deve essere raggiunto da tutti i thread in un team.  Attende di ogni thread fino a tutti i thread del team segnala in questa fase.  Esistono barriere esplicite identificate le direttive e barriere implicite creato dall'implementazione.  
+ barrier  
+ Un punto di sincronizzazione che deve essere raggiunto da tutti i thread in un team.  Ogni thread attende l'arrivano di tutti i thread del team a questo punto. Sono presenti ostacoli espliciti identificati da direttive e barriere implicite create dall'implementazione.  
   
- costrutto  
- Un costrutto è un'istruzione.  È costituito da una direttiva e il blocco strutturato successivo.  si noti che alcune direttive non fanno parte di un costrutto.  \(Vedere openmp\-direttiva in [Appendice C\#](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)\).  
+ construct  
+ Un costrutto è un'istruzione. È costituito da una direttiva e il successivo blocco strutturato. Si noti che alcune direttive non fanno parte di un costrutto. (Vedere *direttiva openmp* in [appendice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)).  
   
  direttiva  
- Tipo c o C\+\+ **\#pragma** seguito da  **omp** identificatore, altro testo e una nuova riga.  La direttiva specifica il comportamento del programma.  
+ Una C o C++ **#pragma** aggiungendo il **omp** identificatore, altre stringhe di testo e una nuova riga. La direttiva specifica il comportamento del programma.  
   
- ambito dinamico  
- Le istruzioni in *ambito lessicale*, all'interno di una funzione che viene eseguito come risultato dell'esecuzione di istruzioni nell'ambito lessicale.  Un ambito dinamico è anche detto a *area*.  
+ extent dinamica  
+ Tutte le istruzioni di *extent lessicale*, oltre a qualsiasi istruzione all'interno di una funzione che viene eseguita come risultato dell'esecuzione di istruzioni all'interno di extent lessicale. Un extent dinamico è detta anche un *area*.  
   
- ambito lessicale  
- Istruzioni contenuto lessicale all'interno di un oggetto *blocco strutturato*.  
+ extent lessicale  
+ Istruzioni lessicale contenute all'interno di un *blocco strutturato*.  
   
  thread master  
- il thread che crea un team quando a *area parallela* verrà inserito.  
+ Il thread che crea un team quando un *area parallela* viene immesso.  
   
  area parallela  
- Istruzioni che associano a un costrutto parallelo di OpenMP e possono essere eseguiti da più thread.  
+ Istruzioni che associare a un costrutto parallelo OpenMP e possono essere eseguite da più thread.  
   
  private  
- Nomi di variabili private un blocco di archiviazione univoche al thread che ha creato il riferimento.  Si noti che esistono diversi modi per specificare che una variabile è privata: una definizione all'interno di un'area parallela, a **threadprivate** direttiva.  
+ Una variabile privata denomina un blocco di memoria che è univoco per il thread che effettua il riferimento. Si noti che esistono diversi modi per specificare che una variabile privata: una definizione in un'area parallela, un **threadprivate** direttiva, un **privata**, **firstprivate**, **lastprivate**, o **riduzione** clausola o l'utilizzo della variabile, come un **per**variabile di controllo del ciclo in un **per** ciclo subito dopo un **per** o **parallela per** direttiva.  
   
  area  
- un ambito dinamico.  
+ Un extent dinamico.  
   
  area seriale  
- Istruzioni eseguiti solo da *thread master* i dinamico di qualsiasi *area parallela*.  
+ Le istruzioni eseguite solo dal *master thread* di fuori di extent dinamica di qualsiasi *area parallela*.  
   
- serializzare  
- Per eseguire un costrutto parallelo con un team di thread che sono costituite solo di un singolo thread \(il thread master per tale costrutto parallelo\), con un ordine seriale di esecuzione delle istruzioni all'interno del blocco strutturato \(lo stesso ordine come se il blocco non faccia parte di un costrutto parallelo\) e senza effetto sul valore restituito da **omp\_in\_parallel \(\)** \(oltre agli effetti dei costrutti paralleli annidati\).  
+ Serializzare  
+ Per eseguire un costrutto parallelo con un team di thread costituito da un solo thread (ovvero il thread principale per tale costrutto parallelo), serial ordine di esecuzione per le istruzioni all'interno del blocco strutturato (lo stesso ordine come se il blocco non è stato in parte di un costrutto parallelo) e senza alcun effetto sul valore restituito da **omp_in_parallel()** (oltre gli effetti di qualsiasi costrutti paralleli annidati).  
   
- condiviso  
- Nomi di variabili condivise un unico blocco di archiviazione.  Tutti i thread del team che accedono a questa variabile accederanno questo singolo blocco di archiviazione.  
+ shared  
+ Una variabile condivisa denomina un singolo blocco di archiviazione. Tutti i thread in un team di accedono a questa variabile avrà accesso questo singolo blocco di archiviazione.  
   
  blocco strutturato  
- Un blocco strutturato è un'istruzione \(singolo o composta\) con una sola voce e una singola uscita.  Nessun istruzione un blocco strutturato se c " è un ramo in o da tale istruzione \(denominata anche a **longjmp**\(3C\) o l'utilizzo di  **generare**, ma una chiamata a  **uscita** è consentito\).  Un'istruzione composta è un blocco strutturato se l'esecuzione inizia sempre all'apertura **{** e termina sempre la chiusura **}**.  Un'istruzione di espressione, istruzione di selezione, istruzione iterazione, o **prova** il blocco è un blocco strutturato se l'istruzione composto corrispondente ottenuto accludendolo in  **{** e **}**essere un blocco strutturato.  Un'istruzione di salto, contrassegnati istruzione, o un'istruzione di dichiarazione sia un blocco strutturato.  
+ Un blocco strutturato è un'istruzione (singola o composita) che dispone di una singola voce e una singola chiusura. Istruzione non è un blocco strutturato se è presente un collegamento interno o all'esterno di tale istruzione (inclusa una chiamata a **longjmp**(3 C) o l'utilizzo di **generare**, ma una chiamata a **uscire** è consentito). Un'istruzione composta è un blocco strutturato se l'esecuzione sempre inizia in corrispondenza dell'apertura **{** e termina sempre con la chiusura **}**. Un'istruzione di espressione, istruzioni di selezione, l'istruzione di iterazione o **provare** blocco è un blocco strutturato se l'istruzione composta corrispondente includendolo in **{** e **}** sarebbe un blocco strutturato. Un'istruzione di salto, l'istruzione con etichetta o istruzione di dichiarazione non è un blocco strutturato.  
   
- team  
- Uno o più thread che prevedono l'esecuzione di un costrutto.  
+ Team  
+ Uno o più thread che hanno collaborato durante l'esecuzione di un costrutto.  
   
  thread  
- Un'entità di esecuzione che ha un flusso seriale di controllo, un set di variabili private e di un accesso alle variabili condivise.  
+ Un'entità di esecuzione con un flusso di controllo seriale, un set di variabili private e l'accesso alle variabili condivise.  
   
  variabile  
- Un identificatore, eventualmente qualificato dai nomi dello spazio dei nomi, che indica un oggetto.
+ Un identificatore qualificato facoltativamente con spazi dei nomi, che denomina un oggetto.

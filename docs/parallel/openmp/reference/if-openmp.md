@@ -1,55 +1,53 @@
 ---
-title: "if (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "if OpenMP clause"
+title: Se (/openmp) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: if
+dev_langs: C++
+helpviewer_keywords: if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 381347686d8e63681b5d179e191546b8a5bf2f8b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# if (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Specifica se un ciclo deve essere eseguito in parallelo o in serie.  
+# <a name="if-openmp"></a>if (OpenMP)
+Specifica se un ciclo deve essere eseguito in parallelo o seriale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 if(expression)  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
  `expression`  
- Un'espressione integrale che, se restituisce true \(diverso da zero, fa in modo che il codice nell'area parallela a eseguire in parallelo.  Se l'espressione restituisce false \(zero\), area parallela viene eseguita in serie \(da un singolo thread\).  
+ Un'espressione integrale che, se restituisce true (diverso da zero), fa sì che il codice in tale area per eseguire in parallelo. Se l'espressione restituisce false (zero), l'area parallela viene eseguito in serie (da un singolo thread).  
   
-## Note  
- `if` si applica alle direttive seguenti:  
+## <a name="remarks"></a>Note  
+ `if`si applica alle direttive seguenti:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Per ulteriori informazioni, vedere [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Per ulteriori informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_if.cpp  
@@ -80,7 +78,10 @@ int main( )
 }  
 ```  
   
-  **\= 0 val, serializzato**  
-**\= 2 val, parallelizzato con 2 thread**   
-## Vedere anche  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+val = 0, serialized  
+val = 2, parallelized with 2 threads  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

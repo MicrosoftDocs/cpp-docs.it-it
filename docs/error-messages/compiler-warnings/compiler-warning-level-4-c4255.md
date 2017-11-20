@@ -1,36 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 4) C4255 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4255"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4255"
+title: Compilatore avviso (livello 4) C4255 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4255
+dev_langs: C++
+helpviewer_keywords: C4255
 ms.assetid: 2087b635-4b4c-4182-8a01-c26770d2bb88
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d572e2166275a9839b6a7c79310e081a4ea1d86f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4255
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'funzione': nessun prototipo di funzione dato. Conversione di '\(\)' in '\(void\)'  
+# <a name="compiler-warning-level-4-c4255"></a>Avviso del compilatore (livello 4) C4255
+'function': nessun prototipo di funzione dato: conversione (')' in '(void)'  
   
- Non è stato trovato un elenco esplicito di argomenti per una funzione.  Questo avviso si riferisce solo al compilatore C.  
+ Il compilatore non è stato trovato un elenco esplicito di argomenti di una funzione. Questo avviso viene generato solo il compilatore C.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Il seguente codice di esempio genera l'errore C4255:  
+ L'esempio seguente genera l'errore C4255:  
   
 ```  
 // C4255.c  

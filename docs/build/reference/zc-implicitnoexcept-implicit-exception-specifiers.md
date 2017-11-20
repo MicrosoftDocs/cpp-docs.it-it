@@ -1,49 +1,48 @@
 ---
-title: "/Zc:implicitNoexcept (identificatori di eccezioni implicite) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:implicitNoexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc:implicitNoexcept"
-  - "Zc:implicitNoexcept"
-  - "-Zc:implicitNoexcept"
+title: '-Zc: implicitNoexcept (identificatori di eccezioni implicite) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Zc:implicitNoexcept
+dev_langs: C++
+helpviewer_keywords:
+- /Zc:implicitNoexcept
+- Zc:implicitNoexcept
+- -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 20789d226ace8ba41a9635f0039274b68d37922c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:implicitNoexcept (identificatori di eccezioni implicite)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Quando l'opzione **\/Zc:implicitNoexcept** è specificata, il compilatore aggiunge un identificatore di eccezione [noexcept](../../cpp/noexcept-cpp.md) implicita a speciali funzioni membro definite dal compilatore e a distruttori e deallocatori definiti dall'utente.  Per impostazione predefinita, **\/Zc:implicitNoexcept** è abilitata in modo conforme allo standard ISO C\+\+11.  La disattivazione di questa opzione disabilita l'eccezione `noexcept` implicita in distruttori e deallocatori definiti dall'utente e in speciali funzioni membro definite dal compilatore.  
+# <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (identificatori di eccezioni implicite)
+Quando il **/Zc: implicitnoexcept** è specificata l'opzione, il compilatore aggiunge implicita [noexcept](../../cpp/noexcept-cpp.md) identificatore di eccezione per le funzioni membro speciali definite dal compilatore e i distruttori definiti dall'utente e deallocatori. Per impostazione predefinita, **/Zc: implicitnoexcept** è abilitata in modo conforme a ISO C++ 11 standard. La disattivazione di questa opzione disabilita l'eccezione `noexcept` implicita in distruttori e deallocatori definiti dall'utente e in speciali funzioni membro definite dal compilatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```vb  
+```cpp  
 /Zc:implicitNoexcept[-]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
-## Note  
- Per impostazione predefinita e se **\/Zc:implicitNoexcept** è specificata, il compilatore segue la sezione 15.4 dello standard ISO C\+\+11 e aggiunge in modo implicito un identificatore di eccezione `noexcept` a ogni speciale funzione membro dichiarata implicitamente o impostata esplicitamente come predefinita \(costruttore predefinito, costruttore di copia, costruttore di spostamento, distruttore, operatore di assegnazione di copia o operatore di assegnazione di spostamento\) e a ogni funzione distruttore o deallocatore definita dall'utente.  Un deallocatore definito dall'utente ha un identificatore di eccezione `noexcept(true)` implicita.  Per i distruttori definiti dall'utente, l'identificatore di eccezione implicita è `noexcept(true)`, a meno che una classe di membro contenuta o una classe di base non abbia un distruttore diverso da `noexcept(true)`.  Per le speciali funzioni membro generate dal compilatore, se una funzione richiamata direttamente da questa funzione è effettivamente `noexcept(false)`, l'identificatore di eccezione implicita è `noexcept(false)`.  In caso contrario, l'identificatore di eccezione implicita è `noexcept(true)`.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita e se **/Zc: implicitnoexcept** è specificato, il compilatore segue sezione 15.4 della ISO standard C++ 11 e aggiunge in modo implicito un `noexcept` identificatore di eccezione a ogni dichiarato in modo implicito o esplicito impostate come predefinite funzione membro speciale, ovvero il costruttore predefinito, costruttore di copia, costruttore di spostamento, distruttore, operatore di assegnazione di copia o operatore di assegnazione di spostamento e ogni funzione distruttore o deallocatore definita dall'utente. Un deallocatore definito dall'utente ha un identificatore di eccezione `noexcept(true)` implicita. Per i distruttori definiti dall'utente, l'identificatore di eccezione implicita è `noexcept(true)`, a meno che una classe di membro contenuta o una classe di base non abbia un distruttore diverso da `noexcept(true)`. Per le speciali funzioni membro generate dal compilatore, se una funzione richiamata direttamente da questa funzione è effettivamente `noexcept(false)`, l'identificatore di eccezione implicita è `noexcept(false)`. In caso contrario, l'identificatore di eccezione implicita è `noexcept(true)`.  
   
  Il compilatore non genera un identificatore di eccezione implicita per le funzioni dichiarate usando gli identificatori `noexcept` o `throw` espliciti o un attributo `__declspec(nothrow)`.  
   
- Se l'opzione viene disabilitata specificando **\/Zc:implicitNoexcept\-**, nessun identificatore di eccezione implicita viene generato dal compilatore.  Questo comportamento è identico in Visual Studio 2013, dove i distruttori e i deallocatori senza identificatori di eccezione possono avere istruzioni `throw`.  Per impostazione predefinita e quando **\/Zc:implicitNoexcept** è specificata, se un'istruzione `throw` viene rilevata in fase di esecuzione in una funzione con un identificatore `noexcept(true)` implicito, viene effettuata una chiamata immediata di `std::terminate` e non è garantito il normale comportamento di rimozione per i gestori di eccezioni.  Per permettere di identificare questa situazione, il compilatore genera l'[Avviso del compilatore \(livello 1\) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md).  Se `throw` è intenzionale, è consigliabile modificare la dichiarazione di funzione per disporre di un identificatore `noexcept(false)` esplicito invece di usare **\/Zc:implicitNoexcept\-**.  
+ Se l'opzione è disabilitata specificando **/Zc:implicitNoexcept-**, gli identificatori di eccezione implicita non vengono generati dal compilatore. Questo comportamento è identico in Visual Studio 2013, dove i distruttori e i deallocatori senza identificatori di eccezione possono avere istruzioni `throw`. Per impostazione predefinita e quando **/Zc: implicitnoexcept** è specificato, se un `throw` viene rilevata l'istruzione in fase di esecuzione in una funzione con implicita `noexcept(true)` identificatore, fa sì che una chiamata immediata di `std::terminate`, e non è garantito normale comportamento di rimozione per gestori di eccezioni. Per identificare questa situazione, il compilatore genera [avviso del compilatore (livello 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md). Se il `throw` è intenzionale, si consiglia di modificare la dichiarazione di funzione per avere un attributo esplicito `noexcept(false)` identificatore anziché **/Zc:implicitNoexcept-**.  
   
- Questo esempio mostra il comportamento di un distruttore definito dall'utente senza identificatori di eccezione esplicita quando l'opzione **\/Zc:implicitNoexcept** è impostata o è disabilitato.  Per mostrare il comportamento quando è impostata, eseguire la compilazione usando `cl /EHsc /W4 implicitNoexcept.cpp`.  Per mostrare il comportamento quando è disabilitata, eseguire la compilazione usando `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.  
+ Questo esempio viene illustrato come si comporta un distruttore definito dall'utente che non dispone di alcun identificatore di eccezione esplicita quando la **/Zc: implicitnoexcept** opzione è impostata o è disabilitato. Viene illustrato il comportamento quando è impostato, esegue la compilazione con `cl /EHsc /W4 implicitNoexcept.cpp`. Per visualizzare il comportamento quando è disabilitata, esegue la compilazione con `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`.  
   
 ```  
 // implicitNoexcept.cpp  
@@ -120,28 +119,36 @@ int main()
   
 ```  
   
- Quando la compilazione viene eseguita usando l'impostazione predefinita **\/Zc:implicitNoexcept**, l'esempio genera questo output:  
+ Quando viene compilato utilizzando l'impostazione predefinita **/Zc: implicitnoexcept**, l'esempio genera questo output:  
   
-  **~B Exception caught**  
-**Unexpected throw caused std::terminate**  
-**Exit returning EXIT\_FAILURE** Quando la compilazione viene eseguita usando l'impostazione **\/Zc:implicitNoexcept\-**, l'esempio genera questo output:  
+```Output  
+~B Exception caught  
+Unexpected throw caused std::terminate  
+Exit returning EXIT_FAILURE  
+```  
   
-  **~B Exception caught**  
-**~D Exception caught**  
-**Exit returning EXIT\_SUCCESS** Per altre informazioni sui problemi di conformità in Visual C\+\+, vedere [Comportamento non standard](../../cpp/nonstandard-behavior.md).  
+ Quando viene compilato tramite l'impostazione **/Zc:implicitNoexcept-**, l'esempio genera questo output:  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+```Output  
+~B Exception caught  
+~D Exception caught  
+Exit returning EXIT_SUCCESS  
+```  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
+ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-2.  Selezionare la cartella **C\/C\+\+**.  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-3.  Selezionare la pagina delle proprietà **Riga di comando**.  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-4.  Modificare la proprietà **Opzioni aggiuntive** in modo da includere **\/Zc:implicitNoexcept** o **\/Zc:implicitNoexcept\-** e quindi fare clic su **OK**.  
+2.  Selezionare il **C/C++** cartella.  
   
-## Vedere anche  
- [\/Zc \(Conformità\)](../../build/reference/zc-conformance.md)   
+3.  Selezionare il **riga di comando** pagina delle proprietà.  
+  
+4.  Modificare il **opzioni aggiuntive** proprietà da includere **/Zc: implicitnoexcept** o **/Zc:implicitNoexcept-** e quindi scegliere **OK**.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [/Zc (conformità)](../../build/reference/zc-conformance.md)   
  [noexcept](../../cpp/noexcept-cpp.md)   
- [Specifiche di eccezioni \(generazione\)](../../cpp/exception-specifications-throw-cpp.md)   
- [terminate](../Topic/terminate%20\(%3Cexception%3E\).md)
+ [Specifiche di eccezioni (generazione)](../../cpp/exception-specifications-throw-cpp.md)   
+ [terminate](../../standard-library/exception-functions.md#terminate)

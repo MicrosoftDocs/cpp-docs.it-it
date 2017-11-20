@@ -1,45 +1,44 @@
 ---
-title: "Finestra di dialogo Nuova risorsa barra degli strumenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newtoolbarresource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Nuova risorsa barra degli strumenti (finestra di dialogo)"
+title: Finestra di dialogo Nuova risorsa barra degli strumenti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newtoolbarresource
+dev_langs: C++
+helpviewer_keywords: New Toolbar Resource dialog box
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0b9b1a21a9d5c38f876e74d5da859804f1816c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Finestra di dialogo Nuova risorsa barra degli strumenti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La finestra di dialogo Nuova risorsa barra degli strumenti consente di specificare la larghezza e l'altezza dei pulsanti che vengono aggiunti a una risorsa barra degli strumenti.  L'impostazione predefinita è 16 × 15 pixel.  
+# <a name="new-toolbar-resource-dialog-box"></a>Nuova risorsa barra degli strumenti (finestra di dialogo)
+La finestra di dialogo Nuova risorsa barra degli strumenti consente di specificare la larghezza e altezza del pulsante per aggiungere una risorsa barra degli strumenti. Il valore predefinito è 16 × 15 pixel.  
   
- Un'immagine bitmap utilizzata per la creazione di una barra degli strumenti ha una larghezza massima di 2048.  Pertanto, se l'opzione **Larghezza pulsante** viene impostata su 512, è possibile disporre soltanto di quattro pulsanti.  Se la larghezza viene impostata su 513, è possibile disporre soltanto di tre pulsanti.  
+ Bitmap che viene utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048. Pertanto, se si imposta la **larghezza del pulsante** a 512, è possibile avere solo quattro pulsanti. Se si imposta la larghezza su 513, può avere solo tre pulsanti.  
   
- **Larghezza pulsante**  
- Consente di immettere la larghezza dei pulsanti della barra degli strumenti di cui viene effettuata la conversione da una risorsa bitmap a una risorsa barra degli strumenti.  Le icone vengono ritagliate in base alla larghezza e all'altezza specificate e i colori vengono regolati in modo da utilizzare i colori standard della barra degli strumenti \(16 colori\).  
+ **Larghezza del pulsante**  
+ Fornisce uno spazio per immettere la larghezza dei pulsanti della barra degli strumenti che Esegui la conversione da una risorsa bitmap a una risorsa barra degli strumenti. Le immagini vengono ritagliate per la larghezza e l'altezza specificata e i colori vengono regolati per utilizzare i colori della barra degli strumenti standard (16 colori).  
   
- **Altezza pulsante**  
- Consente di immettere l'altezza dei pulsanti della barra degli strumenti di cui viene effettuata la conversione da una risorsa bitmap a una risorsa barra degli strumenti.  Le icone vengono ritagliate in base alla larghezza e all'altezza specificate e i colori vengono regolati in modo da utilizzare i colori standard della barra degli strumenti \(16 colori\).  
+ **Altezza del pulsante**  
+ Fornisce uno spazio per immettere l'altezza dei pulsanti della barra degli strumenti che Esegui la conversione da una risorsa bitmap a una risorsa barra degli strumenti. Le immagini vengono ritagliate per la larghezza e l'altezza specificata e i colori vengono regolati per utilizzare i colori della barra degli strumenti standard (16 colori).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  MFC o ATL  
   
-## Vedere anche  
- [Toolbar Button Properties](../mfc/toolbar-button-properties.md)   
- [Converting Bitmaps to Toolbars](../mfc/converting-bitmaps-to-toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Proprietà dei pulsanti della barra degli strumenti](../windows/toolbar-button-properties.md)   
+ [Conversione di bitmap in barre degli strumenti](../windows/converting-bitmaps-to-toolbars.md)   
+ [Editor barra degli strumenti](../windows/toolbar-editor.md)
+

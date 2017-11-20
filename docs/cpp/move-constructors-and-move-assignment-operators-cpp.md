@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- move constructor
+dev_langs: C++
+helpviewer_keywords: move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 62008713d096825c7fa9dca5b1542122909f0939
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Costruttori di spostamento e operatori di assegnazione di spostamento (C++)
 In questo argomento viene descritto come scrivere un *costruttore di spostamento* e un operatore di assegnazione di spostamento per una classe C++. Un costruttore di spostamento consente di implementare la semantica di spostamento. Questo può migliorare significativamente le prestazioni delle applicazioni in uso. Per ulteriori informazioni sulla semantica di spostamento, vedere [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  

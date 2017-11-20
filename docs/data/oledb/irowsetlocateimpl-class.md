@@ -1,34 +1,33 @@
 ---
-title: "Classe IRowsetLocateImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "segnalibri, OLE DB"
-  - "IRowsetLocateImpl (classe)"
-  - "provider, segnalibri"
+title: Classe IRowsetLocateImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetLocateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, bookmarks
+- IRowsetLocateImpl class
+- bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ff76d78cd3f624e3bdb0d21af550a340a2aa498e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IRowsetLocateImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Implementa l'interfaccia OLE DB [L'interfaccia IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx), che recupera le righe arbitrarie di un rowset.  
+# <a name="irowsetlocateimpl-class"></a>Classe IRowsetLocateImpl
+Implementa OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaccia, che recupera righe arbitrarie da un set di righe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -48,60 +47,60 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 >  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Classe derivata da `IRowsetLocateImpl`.  
+ Una classe derivata da `IRowsetLocateImpl`.  
   
  `RowsetInterface`  
- Classe derivata da `IRowsetImpl`.  
+ Una classe derivata da `IRowsetImpl`.  
   
  `RowClass`  
- L'unità di archiviazione per **HROW**.  
+ L'unità di archiviazione per il **HROW**.  
   
  `MapClass`  
- L'unità di archiviazione per tutti gli handle di riga utilizzate dal provider.  
+ L'unità di archiviazione per tutti gli handle di riga mantenuti dal provider.  
   
  `BookmarkKeyType`  
- Il tipo del segnalibro, ad esempio un LONG o una stringa.  I segnalibri comuni devono avere una lunghezza almeno due byte. \(La lunghezza a byte singolo è riservata per OLE DB [segnalibri standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK\_FIRST**, **DBBMK\_LAST** e **DBBMK\_INVALID**\).  
+ Il tipo del segnalibro, ad esempio un valore LONG o una stringa. I segnalibri ordinari devono avere una lunghezza di almeno due byte. (A byte singolo è riservato per OLE DB [segnalibri standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, e **DBBMK_INVALID**.)  
   
  `BookmarkType`  
- Il meccanismo di mapping per gestire le relazioni di segnalibro a dati.  
+ Il meccanismo di mapping per la gestione delle relazioni nei dati segnalibro.  
   
  `BookmarkMapClass`  
- L'unità di archiviazione per tutti gli handle di riga utilizzate dal segnalibro.  
+ L'unità di archiviazione per tutti gli handle di riga mantenuto dal segnalibro.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi di interfaccia  
-  
-|||  
-|-|-|  
-|[Confronto](../../data/oledb/irowsetlocateimpl-compare.md)|Confronta due segnalibri.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Le raccolte da iniziare con la riga specificata da un offset da un segnalibro.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Recupera le righe che corrispondono ai segnalibri specificati.|  
-|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Restituisce i valori hash per i bookmark specificati.|  
-  
-### Membri di dati  
+### <a name="interface-methods"></a>Metodi di interfaccia  
   
 |||  
 |-|-|  
-|[m\_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Una matrice segnalibri.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Confronta due segnalibri.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Recupera le righe a partire dalla riga specificata da un offset da un segnalibro.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Recupera le righe che soddisfano i segnalibri specificati.|  
+|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|Restituisce i valori per i segnalibri specificati hash.|  
   
-## Note  
- `IRowsetLocateImpl` è l'implementazione dei modelli OLE DB dell'interfaccia di [L'interfaccia IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx).  `IRowsetLocate` viene utilizzato per recuperare le righe arbitrarie di un rowset.  Un rowset che non implementa questa interfaccia è un rowset di `sequential`.  Quando `IRowsetLocate` è presente in un rowset, la colonna 0 è il segnalibro per le righe; la lettura di questa colonna visualizzerà un valore del segnalibro che può essere utilizzato per riposizionare la stessa riga.  
+### <a name="data-members"></a>Membri di dati  
   
- `IRowsetLocateImpl` viene utilizzato per implementare il supporto per i bookmark nel provider.  I segnalibri sono segnaposto \(indici in un rowset che consente al consumer per restituire rapidamente a una riga, consentendo l'accesso ai dati ad alta velocità.  Il provider determina che segnalibri possono identificare in modo univoco una riga.  Utilizzando i metodi di `IRowsetLocateImpl`, è possibile confrontare i segnalibri, le righe di recupero da offset, le righe di recupero dal segnalibro e i valori hash di tornare ai segnalibri.  
+|||  
+|-|-|  
+|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Matrice di segnalibri.|  
   
- Per supportare i segnalibri OLE DB in un rowset, sul rowset ereditare dalla classe.  
+## <a name="remarks"></a>Note  
+ `IRowsetLocateImpl`è l'implementazione di modelli OLE DB del [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) interfaccia. `IRowsetLocate`viene utilizzato per recuperare le righe arbitrarie da un set di righe. Un set di righe che non implementa questa interfaccia è un `sequential` set di righe. Quando `IRowsetLocate` è presente un set di righe, colonna 0 è il segnalibro per le righe, la lettura di questa colonna otterrà il valore di un segnalibro che può essere usato per riposizionare alla stessa riga.  
   
- Per informazioni sull'implementazione del supporto per i bookmark, vedere [Supporto dei bookmark nel provider](../../data/oledb/provider-support-for-bookmarks.md) in *Visual C\+\+ Programmer's Guide* e [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx) in *OLE DB Programmer's Reference* in `Platform``SDK`.  
+ `IRowsetLocateImpl`viene utilizzato per implementare il supporto per segnalibro nel provider. I segnalibri sono segnaposti (indici in un set di righe) che consentono al consumer di tornare rapidamente a una riga, che consente l'accesso ai dati ad alta velocità. Il provider determina i segnalibri disponibili in modo univoco una riga. Utilizzando `IRowsetLocateImpl` metodi, è possibile confrontare i segnalibri, recupero righe di offset, fetch righe dal segnalibro e restituiscono i valori hash per i segnalibri.  
   
-## Requisiti  
- **Intestazione**: atldb.h  
+ Per supportare i segnalibri di OLE DB in un set di righe, assicurarsi che il set di righe erediti da questa classe.  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+ Per informazioni sull'implementazione di supporto per segnalibro, vedere [Provider supporto dei bookmark](../../data/oledb/provider-support-for-bookmarks.md) nel *Guida per programmatori Visual C++* e [segnalibri](https://msdn.microsoft.com/en-us/library/ms709728.aspx) nel *Di riferimento per programmatori OLE DB* in Platform SDK.  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione**: Atldb. h  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
  [Supporto dei bookmark nel provider](../../data/oledb/provider-support-for-bookmarks.md)   
- [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [Segnalibri](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

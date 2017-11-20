@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1128
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1128
+f1_keywords: C1128
+dev_langs: C++
+helpviewer_keywords: C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 83ec855a3280b1169ce3537ecf85944939449316
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1128"></a>Errore irreversibile C1128
 numero di sezioni ha superato il limite di formato file oggetto: compilare con /bigobj  

@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xutility/std::random_access_iterator_tag
-- random_access_iterator_tag
-dev_langs:
-- C++
+f1_keywords: xutility/std::random_access_iterator_tag
+dev_langs: C++
 helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 394b40a61a8404d65555680ce110f8f3b3a9fae0
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b7d45bba5c61948bb77dd2136687d47f8b4e9b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="randomaccessiteratortag-struct"></a>Struct random_access_iterator_tag
 Classe che fornisce un tipo restituito per una funzione **iterator_category** che rappresenta un iteratore ad accesso casuale.  
@@ -130,7 +111,6 @@ The iterators are not the same.
  [Struct bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)   
  [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

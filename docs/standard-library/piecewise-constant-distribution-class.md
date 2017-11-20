@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator!=
-- random/std::piecewise_constant_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::piecewise_constant_distribution [C++]
 - std::piecewise_constant_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 076585831b2a0e74b73982b6415cc9ea46fdf4b2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 056ee4bacc0614cb8be0e023dd59e7d93e36c8c0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Classe piecewise_constant_distribution
 Genera una distribuzione costante a tratti con intervalli di larghezza diversa e probabilità uniforme in ogni intervallo.  
@@ -351,6 +347,5 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
 ## <a name="see-also"></a>Vedere anche  
 [\<random>](../standard-library/random.md)   
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
-
 
 

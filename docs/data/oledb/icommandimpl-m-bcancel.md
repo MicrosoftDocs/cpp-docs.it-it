@@ -1,36 +1,35 @@
 ---
-title: "ICommandImpl::m_bCancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::m_bCancel"
-  - "ICommandImpl.m_bCancel"
-  - "m_bCancel"
-  - "ATL::ICommandImpl::m_bCancel"
-  - "ATL.ICommandImpl.m_bCancel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCancel"
+title: 'ICommandImpl:: M_bcancel | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::m_bCancel
+- ICommandImpl.m_bCancel
+- m_bCancel
+- ATL::ICommandImpl::m_bCancel
+- ATL.ICommandImpl.m_bCancel
+dev_langs: C++
+helpviewer_keywords: m_bCancel
 ms.assetid: f3b6fb60-4de4-4d81-a5d2-4052c41be0de
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e19b81818d564b3b6e3f7a1623482ef6458defd5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::m_bCancel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indica se il comando è annullato.  
+# <a name="icommandimplmbcancel"></a>ICommandImpl::m_bCancel
+Indica se il comando è stato annullato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,12 +37,12 @@ unsigned m_bCancel:1;
   
 ```  
   
-## Note  
- È possibile recuperare questa variabile nel metodo di **Esegui** della classe di comando e l'annullamento in base alle proprie esigenze.  
+## <a name="remarks"></a>Note  
+ È possibile recuperare questa variabile nel **Execute** metodo di classe di comando e Annulla come appropriato.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Classe ICommandImpl](../../data/oledb/icommandimpl-class.md)   
- [ICommandImpl::m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)
+## <a name="see-also"></a>Vedere anche  
+ [ICommandImpl (classe)](../../data/oledb/icommandimpl-class.md)   
+ [ICommandImpl::m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)

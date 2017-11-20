@@ -1,32 +1,30 @@
 ---
-title: "map::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator (membro) [STL/CLR]"
+title: Map::generic_reverse_iterator (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: b1b38fa8-89a7-4f39-9c80-b24eccfe339f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fa8295ea5557170fb940b0a9a2e446e9f29a533
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di iteratore inverso per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="mapgenericreverseiterator-stlclr"></a>map::generic_reverse_iterator (STL/CLR)
+Il tipo di un iteratore inverso per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;  
 ```  
   
-## Note  
- Il tipo viene descritto un iteratore inverso generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un iteratore inverso generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_generic_reverse_iterator.cpp   
@@ -72,15 +70,18 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::generic\_iterator](../dotnet/map-generic-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::generic_iterator (STL/CLR)](../dotnet/map-generic-iterator-stl-clr.md)

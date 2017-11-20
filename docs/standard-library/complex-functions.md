@@ -28,7 +28,7 @@ f1_keywords:
 - xcomplex/std::tan
 - xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -49,12 +49,11 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcomplexgt-functions"></a>Funzioni &lt;complex&gt;
 ||||  
@@ -1485,5 +1484,4 @@ The complex components tanh (vci), where abs (vci) = 1
   
 ## <a name="see-also"></a>Vedere anche  
  [\<complex>](../standard-library/complex.md)
-
 

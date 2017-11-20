@@ -1,52 +1,53 @@
 ---
-title: "Creating, Moving, and Editing Toolbar Buttons | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "buttons, custom toolbars"
-  - "toolbar buttons (in Toolbar editor), editing"
-  - "buttons"
-  - "toolbar buttons (in Toolbar editor), creating"
+title: Creazione, spostamento e i pulsanti della barra degli strumenti per la modifica | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buttons, custom toolbars
+- toolbar buttons (in Toolbar editor), editing
+- buttons
+- toolbar buttons (in Toolbar editor), creating
 ms.assetid: d0f0c6c6-9d7e-42b5-a86a-7558127386e7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b5142cc8408577a66931b3e7ff9443998352eef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Creating, Moving, and Editing Toolbar Buttons
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile creare, spostare, copiare e modificare facilmente i pulsanti delle barre degli strumenti.  
+# <a name="creating-moving-and-editing-toolbar-buttons"></a>Creazione, spostamento e modifica dei pulsanti delle barre degli strumenti
+È facilmente possibile creare, spostare, copiare e modificare i pulsanti della barra degli strumenti.  
   
- Per impostazione predefinita, un pulsante nuovo o vuoto viene visualizzato all'estremità destra della barra degli strumenti.  È possibile spostare il pulsante prima della modifica.  Quando viene creato un nuovo pulsante, viene visualizzato un altro pulsante vuoto a destra del pulsante modificato.  Quando la barra degli strumenti viene salvata, il pulsante vuoto non viene salvato.  
+ Per impostazione predefinita, un pulsante nuovo o vuoto viene visualizzato all'estremità destra della barra degli strumenti. Questo pulsante è possibile spostare prima di modificarlo. Quando si crea un nuovo pulsante, viene visualizzato un altro pulsante vuoto a destra del pulsante modificato. Quando si salva una barra degli strumenti, il pulsante vuoto non viene salvato.  
   
--   [Creazione di un nuovo pulsante della barra degli strumenti](../mfc/creating-a-new-toolbar-button.md)  
+-   [Crea un nuovo pulsante della barra degli strumenti](creating-a-new-toolbar-button.md)  
   
--   [Spostamento di un pulsante della barra degli strumenti](../mfc/moving-a-toolbar-button.md)  
+-   [Spostare un pulsante della barra degli strumenti](moving-a-toolbar-button.md)  
   
--   [Copia di pulsanti da una risorsa barra degli strumenti](../mfc/copying-buttons-from-a-toolbar.md)  
+-   [Copia di pulsanti da una risorsa barra degli strumenti](../windows/copying-buttons-from-a-toolbar.md)  
   
--   [Eliminazione di un pulsante della barra degli strumenti](../mfc/deleting-a-toolbar-button.md)  
+-   [Eliminazione di un pulsante della barra degli strumenti](deleting-a-toolbar-button.md)  
   
--   [Inserimento di uno spazio tra i pulsanti in una risorsa barra degli strumenti](../mfc/inserting-a-space-between-buttons-on-a-toolbar.md)  
+-   [Inserisci uno spazio tra i pulsanti su una risorsa barra degli strumenti](../windows/inserting-a-space-between-buttons-on-a-toolbar.md)  
   
--   [Rimozione di uno spazio tra i pulsanti di una barra degli strumenti](../mfc/removing-space-between-buttons-on-a-toolbar.md)  
+-   [Uno spazio tra i pulsanti di una barra degli strumenti](../windows/removing-space-between-buttons-on-a-toolbar.md)  
   
--   [Modifica delle proprietà di un pulsante di una barra degli strumenti](../mfc/changing-the-properties-of-a-toolbar-button.md)  
+-   [Modifica delle proprietà di una barra degli strumenti](../windows/changing-the-properties-of-a-toolbar-button.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  MFC o ATL  
   
-## Vedere anche  
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Editor barra degli strumenti](../windows/toolbar-editor.md)
+

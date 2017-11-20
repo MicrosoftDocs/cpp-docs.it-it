@@ -1,61 +1,61 @@
 ---
-title: "Procedura: unire pi&#249; profili PGO in un unico profilo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unione profili"
-  - "ottimizzazioni PGO, unione profili"
+title: "Procedura: unire più profili PGO in un unico profilo | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- merging profiles
+- profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dcd10c25e4512683b840bd2feeee287995ab8776
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: unire pi&#249; profili PGO in un unico profilo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'ottimizzazione PGO \(Profile\-guided optimization\) è uno strumento altamente funzionale per la creazione di file binari ottimizati in base a uno scenario con profilo.  È tuttavia interessante analizzare le possibili soluzioni e le modalità di creazione di un singolo profilo che potrà essere utilizzato da PGO per più scenari diversi nel caso in cui si disponga di un'applicazione con numerosi scenari importanti, ma distinti.  In Visual Studio queste attività vengono eseguite automaticamente da Microsoft PGO Manager \(Pgomgr.exe\).  
+# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>Procedura: unire più profili PGO in un unico profilo
+Ottimizzazione guidata da profilo (PGO) è un ottimo strumento per la creazione di file binari ottimizzati in base a uno scenario di analisi. Ma cosa accade se si dispone di un'applicazione che dispone di diversi scenari importanti, ma distinti. come si crea un unico profilo che è possibile utilizzare l'ottimizzazione PGO da scenari diversi? In Visual Studio, il gestore di ottimizzazione PGO, Pgomgr.exe, non il processo per l'utente.  
   
- La sintassi per l'unione dei profili è la seguente:  
+ La sintassi per l'unione dei profili è:  
   
 ```  
 pgomgr /merge[:num] [.pgc_files] .pgd_files  
 ```  
   
- in cui `num` rappresenta un peso facoltativo utilizzato per questa unione.  I pesi sono comunemente utilizzati in presenza di scenari più importanti rispetto ad altri o in presenza di scenari che devono essere eseguiti più volte.  
+ dove `num` rappresenta un peso facoltativo utilizzato per l'unione. I pesi vengono comunemente usati se sono presenti alcuni scenari che sono più importanti o se esistono scenari in cui devono essere eseguiti più volte.  
   
 > [!NOTE]
->  Microsoft PGO Manager non potrà essere utilizzato con dati di profilo non aggiornati.  Per unire un file pgc in un file pgd, è necessario che il file pgc sia generato da un eseguibile creato tramite la stessa chiamata al collegamento con cui era stato generato il file pgd.  
+>  La gestione di ottimizzazione PGO non funzionerà con i dati di profilo non aggiornati. Per unire un file pgc in un file pgd, il file pgc deve essere generato da un eseguibile a cui è stato creato con la stessa chiamata di collegamento che ha generato il file pgd.  
   
-## Esempio  
- Nell'esempio riportato di seguito, Microsoft PGO Manager aggiungerà pgcFile.pgc a pgdFile.pgd sei volte.  
+## <a name="example"></a>Esempio  
+ In questo esempio, l'ottimizzazione PGO Manager aggiungerà riportato pgdFile sei volte.  
   
 ```  
 pgomgr /merge:6 pgcFile.pgc pgdFile.pgd  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito, Microsoft PGO Manager aggiungerà pgcFile1.pgc e pgcFile2.pgc a pgdFile.pgd, due volte per ogni file pgc.  
+## <a name="example"></a>Esempio  
+ In questo esempio, il Manager PGO aggiungerà pgcFile1. pgc e pgcFile2. pgc pgdFile, due volte per ogni file. pgc.  
   
 ```  
 pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd  
 ```  
   
-## Esempio  
- Se Microsoft PGO Manager viene eseguito senza un file pgc, cercherà nella directory locale tutti i file pgc aventi lo stesso nome del file pgd contrassegnato da un punto esclamativo \(\!\) seguito da caratteri arbitrari.  Se nella directory locale sono presenti file test.pgd, test\!1.pgc, test2.pgc e test\!hello.pgc e il comando successivo viene eseguito dalla directory locale, test\!1.pgc e test\!hello.pgc verranno uniti in test.pgd.  
+## <a name="example"></a>Esempio  
+ Se è in esecuzione senza un file pgc PGO Manager cercherà la directory locale per tutti i file pgc che hanno lo stesso nome del file pgd aggiunto con un punto esclamativo (!) seguito da caratteri arbitrari. Se nella directory locale sono presenti, test!1.pgc, test2 e file pgd e viene eseguito il comando seguente dalla directory locale, quindi test!1.pgc e presenti verranno unite in pgd.  
   
 ```  
 pgomgr /merge test.pgd  
 ```  
   
-## Vedere anche  
- [Ottimizzazioni guidate da profilo \(PGO\)](../../build/reference/profile-guided-optimizations.md)
+## <a name="see-also"></a>Vedere anche  
+ [Ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md)

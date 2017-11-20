@@ -1,34 +1,33 @@
 ---
-title: "1.3 Execution Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 1.3 modello di esecuzione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dddc4c10a77ca5dd277435837169478e0d5daca5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 1.3 Execution Model
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OpenMP utilizza il modello fork\-join dell'esecuzione parallela.  Sebbene questo modello fork\-join possa risultare utile per la soluzione di vari problemi, è adatto anziché per le grandi dimensioni alle applicazioni basate su matrici.  OpenMP è destinato ai programmi di supporto che eseguiranno correttamente sia come programmi paralleli \(thread di esecuzione di una raccolta completa di supporto OpenMP\) e come programmi sequenziali \(direttive ignorate e un OpenMP semplice viene generato la raccolta\).  Tuttavia, è possibile e valida elaborare un programma che non funziona correttamente quando viene eseguito in sequenza.  Inoltre, i livelli diversi di parallelismo possono dare risultati numerici diversi a causa delle modifiche verrà associato delle operazioni numeriche.  Ad esempio, una riduzione di addizione seriale può avere un modello diverso di associazioni di addizione che una riduzione parallela.  Queste associazioni diversi possono modificare i risultati di addizione a virgola mobile.  
+# <a name="13-execution-model"></a>1.3 Modello di esecuzione
+OpenMP utilizza il modello fork-join dell'esecuzione parallela. Sebbene il modello fork-join possa risultare utile per risolvere vari problemi, piuttosto progettato per applicazioni basate su matrici di grandi dimensioni. OpenMP è progettato per applicazioni di supporto che verranno eseguito correttamente entrambe come i programmi parallelo (più thread di esecuzione e una libreria di supporto OpenMP completa) e come i programmi sequenziali (direttive ignorate e una libreria di stub OpenMP semplice). Tuttavia, è possibile ed è consentito per lo sviluppo di un programma che non si comporta correttamente quando eseguita in modo sequenziale. Inoltre, diversi gradi di parallelismo potrebbe risultati numerici diversi a causa delle modifiche nell'associazione di operazioni numeriche. Ad esempio, una riduzione dell'addizione seriale potrebbe essere un modello di associazioni di aggiunta di una riduzione parallela. Queste associazioni diverse possono modificare i risultati di addizione a virgola mobile.  
   
- Un programma scritto con l'esecuzione di inizio di OpenMP C\/C\+\+ API come singolo thread di esecuzione ha chiamato *thread master*.  Il thread master esegue in un'area seriale fino al raggiungimento del primo costrutto parallelo.  In OpenMP C\/C\+\+ API, **parallelo** la direttiva costituisce un costrutto parallelo.  Quando un costrutto parallelo viene rilevato, il thread principale crea un team di thread e il master diventa la pagina master del team.  Ogni thread del team esegue le istruzioni in dinamico di un'area parallela, ad eccezione dei costrutti di suddivisione del lavoro.  I costrutti di suddivisione del lavoro devono essere rilevati da tutti i thread del team nello stesso ordine e istruzioni all'interno del blocco strutturato associato vengono eseguiti da uno o più thread.  La barriera implicita alla fine di un costrutto di suddivisione del lavoro senza `nowait` la clausola viene eseguita da tutti i thread del team.  
+ Un programma scritto con l'API di C/C++ OpenMP inizia l'esecuzione come un singolo thread di esecuzione chiamato il *master thread*. Il thread principale viene eseguito in un'area seriale finché non viene rilevato un costrutto parallelo prima. Nell'API di C/C++ OpenMP, il **parallela** direttiva costituisce un costrutto parallelo. Quando viene rilevato un costrutto parallelo, il thread principale crea un team di thread e il master diventa master del team. Ogni thread del team esegue le istruzioni dell'extent dinamica di un'area parallela, tranne i costrutti di condivisione del lavoro. Costrutti di condivisione del lavoro devono essere rilevati da tutti i thread del team nello stesso ordine e le istruzioni all'interno del blocco strutturato associato vengono eseguite da uno o più thread. La barriera implicita alla fine di un costrutto di condivisione lavoro senza un `nowait` clausola viene eseguita da tutti i thread del team.  
   
- Se un thread modifica un oggetto condiviso, influisce non solo il proprio ambiente di esecuzione, ma anche quelli degli altri thread nel programma.  La modifica è sempre completa, dal punto di vista di uno degli altri thread, i punti di sequenza seguente \(come definito nel linguaggio di base\) solo se l'oggetto è dichiarata sia volatile.  In caso contrario, la modifica è sempre completo dopo innanzitutto il thread modificando quindi \(o contemporaneamente\) gli altri thread, incontrano un oggetto **arrossir** direttiva che specifica l'oggetto \(in modo implicito o esplicito\).  si noti che quando **arrossir** le direttive che sono interessate da altre direttive di OpenMP non sono sufficienti per garantire ordine desiderato degli effetti collaterali, è responsabilità del programmatore di fornire aggiuntivo, esplicito  **arrossir** direttive.  
+ Se un thread viene modificato un oggetto condiviso, influisce su non solo il proprio ambiente di esecuzione, ma anche quelli di altri thread nel programma. La modifica è completo, dal punto di vista di uno degli altri thread, nel punto di sequenza successivo (come definito nella lingua di base) solo se l'oggetto è dichiarato come volatile. In caso contrario, la modifica è garantita per il completamento dopo la modifica del primo, e quindi (o contemporaneamente) verificarsi altri thread, un **scaricamento** direttiva che specifica l'oggetto (in modo implicito o esplicito). Si noti che quando il **scaricamento** direttive impliciti di altre direttive OpenMP non sono sufficienti per garantire l'ordinamento desiderato degli effetti collaterali, è compito del programmatore di fornire ulteriori espliciti  **scaricare** direttive.  
   
- Al termine del costrutto parallelo, i thread nel team di sincronizzazione a una barriera implicita e solo il thread master l'esecuzione continua.  Qualsiasi numero di costrutti paralleli possono essere specificati in un unico programma.  Di conseguenza, un programma può biforcarsi e unire più volte durante l'esecuzione.  
+ Al termine di un costrutto parallelo, sincronizzano i thread del team in una barriera implicita e continua l'esecuzione solo il thread principale. In un programma singolo, è possibile specificare un numero qualsiasi di costrutti paralleli. Di conseguenza, un programma può fork e join più volte durante l'esecuzione.  
   
- Il OpenMP C\/C\+\+ l'api consente ai programmatori le direttive di utilizzo nelle funzioni chiamate dall'interno dei costrutti paralleli.  Le direttive che non vengono visualizzati nell'ambito lessicale di un costrutto parallelo ma possono rientrare in dinamico sono chiamate *orfano* direttive.  Le direttive orfane forniscono a programmatori la possibilità di eseguire le parti importanti del programma in parallelo solo con modifiche minime del programma sequenziale.  Con questa funzionalità, gli utenti possono codificare costrutti paralleli ai livelli della struttura ad albero delle chiamate del programma e utilizzare direttive per controllare l'esecuzione nelle funzioni chiamate.  
+ L'API di C/C++ OpenMP consente ai programmatori di utilizzare le direttive nelle funzioni chiamate all'interno di costrutti paralleli. Le direttive che non sono visualizzati in quanto lessicale di un costrutto parallelo, ma possono trovarsi in quanto dinamica vengono chiamate *orfani* direttive. Direttive orfane programmatori hanno la possibilità di eseguire le parti principali del programma in parallelo solo modifiche minime per il programma sequenza. Con questa funzionalità, gli utenti possono paralleli costrutti di livello superiore il programma dell'albero delle chiamate del codice e utilizzare direttive per controllare l'esecuzione delle funzioni chiamate.  
   
- Le chiamate non sincronizzate le funzioni di output e C\+\+ che scrivono nello stesso file possono generare l'output in cui i dati letti da thread diversi vengono visualizzate in ordine non deterministico.  Analogamente, le chiamate non sincronizzate le funzioni di input che leggono dallo stesso file possono leggere i dati in ordine non deterministico.  L'utilizzo non sincronizzato I\/O, in modo che ogni thread accede a un file diverso, produce gli stessi risultati dell'esecuzione in serie di funzioni di I\/O.
+ Chiamate non sincronizzate a C e C++ di output possono comportare le funzioni che scrivono allo stesso file di output in cui i dati scritti da thread diversi vengono visualizzati nell'ordine non deterministico. Analogamente, non sincronizzate le chiamate a funzioni che leggono allo stesso file di input possono leggere i dati in ordine non deterministico. Utilizzo non sincronizzata dei / o, in modo che ogni thread accede a un altro file, produce gli stessi risultati di esecuzione seriale delle funzioni dei / o.

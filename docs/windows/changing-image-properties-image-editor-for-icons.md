@@ -1,55 +1,56 @@
 ---
-title: "Changing Image Properties (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], properties"
-  - "Image editor [C++], Properties window"
-  - "Image editor [C++], image properties"
-  - "Properties window, image editor"
+title: "Modifica le proprietà dell'immagine (Editor di immagini per le icone) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], properties
+- Image editor [C++], Properties window
+- Image editor [C++], image properties
+- Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7320d385976ecc401decb8551b420fe8b210b04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Changing Image Properties (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le proprietà di un'immagine possono essere impostate o modificate mediante la [finestra Proprietà](../Topic/Properties%20Window.md).  
+# <a name="changing-image-properties-image-editor-for-icons"></a>Modifica delle proprietà di immagini (Editor di immagini per le icone)
+È possibile impostare o modificare le proprietà di un'immagine utilizzando il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
-### Per modificare le proprietà di un'immagine  
+### <a name="to-change-an-images-properties"></a>Per modificare le proprietà di un'immagine  
   
-1.  Aprire l'immagine nell'editor di immagini.  
+1.  Aprire l'immagine di **immagine** editor.  
   
-2.  Modificare una proprietà o tutte le proprietà dell'immagine nella finestra **Proprietà**.  
+2.  Nel **proprietà** finestra, modificare o le proprietà per l'immagine.  
   
     |Proprietà|Descrizione|  
-    |---------------|-----------------|  
-    |**Colori**|Consente di specificare la combinazione di colori per l'immagine.  È possibile selezionare l'impostazione monocromatica, a 16 colori, oppure a 256 o 16,8 milioni di colori.  Se l'immagine è già stata disegnata con una tavolozza da 16 colori, la selezione dell'impostazione monocromatica determinerà la sostituzione in bianco e nero dei colori dell'immagine.  Non sempre il contrasto viene mantenuto. Le aree adiacenti in rosso e verde, ad esempio, vengono entrambe convertite in nero.|  
-    |**Filename**|Consente di specificare il nome del file di immagine.  Per impostazione predefinita, Visual Studio assegna un nome di file di base creato rimuovendo i primi quattro caratteri \("IDB\_"\) dall'identificatore di risorsa predefinito \(IDB\_BITMAP1\) e aggiungendo l'estensione appropriata.  Il nome di file dell'immagine considerata nell'esempio sarebbe quindi BITMAP1.bmp.  Il file potrebbe essere rinominato MIABITMAP1.bmp.|  
-    |**Altezza**|Consente di impostare l'altezza dell'immagine in pixel.  Il valore predefinito è 48.  L'immagine viene ritagliata oppure viene aggiunto uno spazio vuoto al di sotto dell'immagine esistente.|  
-    |**ID**|Consente di impostare l'identificatore della risorsa.  Per impostazione predefinita, Microsoft Visual Studio assegna a un'immagine l'identificatore disponibile successivo in una serie: IDB\_BITMAP1, IDB\_BITMAP2 e così via.  Nomi analoghi vengono utilizzati anche per icone e cursori.|  
-    |**Palette**|Consente di modificare le proprietà dei colori.  Fare doppio clic per selezionare un colore e visualizzare la [finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md).  Definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriate.|  
-    |**SaveCompressed**|Indica se l'immagine è in un formato compresso.  Questa proprietà è in sola lettura.  Poiché Visual Studio non consente il salvataggio di immagini in un formato compresso, il valore di questa proprietà sarà **False** per tutte le immagini create in Visual Studio,  mentre se si apre in Visual Studio un'immagine compressa creata in un altro programma, questa proprietà risulterà impostata su **True**.  Se si salva un'immagine compressa utilizzando Visual Studio, l'immagine verrà decompressa e questa proprietà reimpostata su **False**.|  
-    |**Larghezza**|Consente di impostare la larghezza dell'immagine in pixel.  Il valore predefinito per le bitmap è 48.  L'immagine viene ritagliata oppure viene aggiunto uno spazio vuoto a destra dell'immagine esistente.|  
+    |--------------|-----------------|  
+    |**Colori**|Specifica la combinazione di colori per l'immagine. Seleziona colore a monocromatico, 16, o 256 o True. Se è già stata disegnata l'immagine con una tavolozza a 16 colori, selezionando monocromatica, le sostituzioni di nero e bianco per i colori dell'immagine. Non viene mantenuto sempre contrasto: ad esempio, le aree adiacenti del rosso e verde sono entrambi convertite in nero.|  
+    |**Nome file**|Specifica il nome del file di immagine. Per impostazione predefinita, Visual Studio assegna un nome di base creato rimuovendo i primi quattro caratteri ("IDB _") di identificatore di risorsa predefinito (IDB_BITMAP1) e aggiungere l'estensione appropriata. Il nome del file per l'immagine in questo esempio sarebbe BITMAP1. È stato possibile rinominare la cartella MIABITMAP1.|  
+    |**Altezza**|Imposta l'altezza dell'immagine (in pixel). Il valore predefinito è 48. L'immagine viene ritagliata o viene aggiunto uno spazio vuoto sotto l'immagine esistente.|  
+    |**ID**|Imposta l'identificatore della risorsa. Per un'immagine, Microsoft Visual Studio, per impostazione predefinita, viene assegnato il successivo identificatore disponibile in una serie: IDB_BITMAP1, IDB_BITMAP2 e così via. Per le icone e cursori, vengono utilizzati nomi simili.|  
+    |**Tavolozza**|Proprietà dei colori delle modifiche. Fare doppio clic per selezionare un colore e visualizzare il [la finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definire il colore digitando i valori RGB o HSL nelle caselle di testo appropriato.|  
+    |**SaveCompressed**|Indica se l'immagine è in un formato compresso. Questa proprietà è di sola lettura. Visual Studio non consente di salvare le immagini in un formato compresso, in modo per tutte le immagini create in Visual Studio, questa proprietà sarà **False**. Se si apre un'immagine compressa (creata in un altro programma) in Visual Studio, questa proprietà sarà **True**. Se si salva un'immagine compressa utilizzando Visual Studio, sarà non compressa e questa proprietà verrà ripristinata **False**.|  
+    |**Larghezza**|Imposta la larghezza dell'immagine (in pixel). Il valore predefinito per le bitmap è 48. L'immagine viene ritagliata o viene aggiunto uno spazio vuoto a destra dell'immagine esistente.|  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+

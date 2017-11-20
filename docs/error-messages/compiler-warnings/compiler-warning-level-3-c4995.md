@@ -1,35 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 3) C4995 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4995"
+title: Compilatore avviso (livello 3) C4995 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4995
+dev_langs: C++
+helpviewer_keywords: C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 65fcab42a09de35db8df82ed3d4b5c16a5d60177
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 3) C4995
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'funzione': nome contrassegnato come \#pragma deprecated  
+# <a name="compiler-warning-level-3-c4995"></a>Compilatore avviso (livello 3) C4995
+'function': nome contrassegnato come obsoleto #pragma  
   
- È stata rilevata una funzione contrassegnata con pragma [deprecated](../../preprocessor/deprecated-c-cpp.md).  È possibile che tale funzione non sia più supportata in una versione futura.  Disattivare l'avviso con il pragma [warning](../../preprocessor/warning.md), come illustrato nell'esempio seguente.  
+ Il compilatore ha rilevato una funzione contrassegnata con il pragma [deprecato](../../preprocessor/deprecated-c-cpp.md). È possibile che tale funzione non sia più supportata in una versione futura. È possibile disattivare questo avviso con il [avviso](../../preprocessor/warning.md) pragma (ad esempio riportato di seguito).  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C4995:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4995:  
   
 ```  
 // C4995.cpp  

@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- swap method
+dev_langs: C++
+helpviewer_keywords: swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 33ec601dcc8d32b85c2c38ed3fc5a07842a056fc
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 13d083c596dcbaa275ed8d0f05ded2c5cb5547eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="container-classswap"></a>Container Class::swap
 > [!NOTE]
@@ -55,4 +37,3 @@ Se **\*this.get\_allocator ==** _right_**.get_allocator**, esegue uno scambio in
   
 ## <a name="see-also"></a>Vedere anche  
 [Sample Container Class](../standard-library/sample-container-class.md) (Classe contenitore di esempio)
-

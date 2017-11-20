@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declarations, pointers
 - class members [C++], pointers to
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 98a6db086443c15964a1dcf0a345b2fbaccfa233
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d8a8a8c4d88f0ccd7c879eb361643ea22e2ec41b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointers-to-members"></a>Puntatori a membri
 Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del puntatore.  Le funzioni vengono dichiarate tramite la seguente sequenza:  
@@ -52,7 +49,7 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
   
     -   Operatore ::.  
   
-    -   Il ** \* ** operatore.  
+    -   Il  **\***  operatore.  
   
     -   Parametro facoltativo **const** e/o `volatile` identificatori.  
   
@@ -60,9 +57,9 @@ Le dichiarazioni dei puntatori ai membri sono casi speciali di dichiarazioni del
   
     -   Inizializzatore facoltativo:  
   
- Il ** = ** operatore.  
+ Il  **=**  operatore.  
   
- Il ** & ** operatore.  
+ Il  **&**  operatore.  
   
  Nome completo della classe.  
   
@@ -116,9 +113,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- La differenza tra il **.\* ** e ** -> \* ** operatori (gli operatori puntatore a membro) consiste nel fatto che il **.\* ** operatore Seleziona membri dato un oggetto o un riferimento, mentre il ** -> \* ** operatore seleziona i membri tramite un puntatore. (Per altre informazioni su questi operatori, vedere [espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ La differenza tra il **.\***  e  **-> \***  operatori (gli operatori puntatore a membro) consiste nel fatto che il **.\***  operatore Seleziona membri dato un oggetto o un riferimento, mentre il  **-> \***  operatore seleziona i membri tramite un puntatore. (Per altre informazioni su questi operatori, vedere [espressioni con operatori puntatore a membro](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
- Il risultato degli operatori puntatore a membro è il tipo del membro, in questo caso, **char \* **.  
+ Il risultato degli operatori puntatore a membro è il tipo del membro, in questo caso, **char \*** .  
   
  Il frammento di codice seguente richiama le funzioni membro `GetCaption` e `SetCaption` tramite puntatori a membri:  
   

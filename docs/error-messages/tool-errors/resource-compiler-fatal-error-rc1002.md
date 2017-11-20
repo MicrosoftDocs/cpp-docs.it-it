@@ -1,35 +1,33 @@
 ---
-title: "Errore irreversibile del compilatore di risorse RC1002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1002"
+title: Errore irreversibile del compilatore di risorse RC1002 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1002
+dev_langs: C++
+helpviewer_keywords: RC1002
 ms.assetid: b43dfece-0dc3-4d0b-9d8f-509699b9ae80
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1ff7b578bc347076e26317e6c7d8381aa09a92d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore irreversibile del compilatore di risorse RC1002
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="resource-compiler-fatal-error-rc1002"></a>Errore irreversibile del compilatore di risorse RC1002
 spazio dell'heap insufficiente  
   
-### Per correggere valutando le seguenti possibili soluzioni  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
   
-1.  Aumentare lo spazio disponibile per il file di scambio di Windows.  Per ulteriori informazioni sulle modalità di aumento dello spazio per il file di scambio, vedere gli argomenti relativi alla memoria virtuale nella Guida di Windows.  
+1.  Aumentare lo spazio file di scambio di Windows. Per ulteriori informazioni su come aumentare lo spazio del file di scambio, vedere la memoria virtuale nella Guida di Windows.  
   
-2.  Dividere il file corrente in più file e compilare questi ultimi separatamente.  
+2.  Suddividere il file corrente in file più piccoli e compilarle separatamente.  
   
-3.  Rimuovere altri programmi o driver in esecuzione nel sistema.
+3.  Rimuovere altri programmi o i driver in esecuzione nel sistema.

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- statements [C++], C++
+dev_langs: C++
+helpviewer_keywords: statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: fe9bff3b9705e560d61f2a64a931c79f9ccc8602
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2e6d2579eb6d86c53f72d3910c1dd83f973905ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="statements-c"></a>Istruzioni (C++)
 Le istruzioni di C++ sono gli elementi di un programma che controllano l'ordine e il modo in cui gli oggetti vengono modificati. Contenuto della sezione  

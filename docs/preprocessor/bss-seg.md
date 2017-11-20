@@ -1,63 +1,63 @@
 ---
-title: "bss_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.bss_seg"
-  - "bss_seg_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bss_seg (pragma)"
-  - "pragma, bss_seg"
+title: bss_seg | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.bss_seg
+- bss_seg_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, bss_seg
+- bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 95fbd0b845bc3e827e2e62c4bd2e97f5cff220d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# bss_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bssseg"></a>bss_seg
 Specifica il segmento in cui le variabili non inizializzate vengono archiviate nel file obj.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 #pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
 ```  
   
-## Note  
- I file obj possono essere visualizzati con l'applicazione [dumpbin](../build/reference/dumpbin-command-line.md).  Il segmento predefinito nel file obj per i dati non inizializzati è bss.  In alcuni casi, l'utilizzo di **bss\_seg** può velocizzare i tempi di carico mediante il raggruppamento dei dati inizializzati in una sezione.  
+## <a name="remarks"></a>Note  
+ File con estensione obj possono essere visualizzati con il [dumpbin](../build/reference/dumpbin-command-line.md) dell'applicazione. Il segmento predefinito nel file obj per i dati non inizializzati è bss. In alcuni casi l'uso di **bss_seg** può velocizzare tempi di caricamento mediante il raggruppamento di dati non inizializzati in una sezione.  
   
- **bss\_seg** senza parametri consente di reimpostare il segmento su bss.  
+ **bss_seg** senza parametri Reimposta il segmento su BSS.  
   
- **push** \(facoltativo\)  
- Inserisce un record nello stack interno del compilatore.  Un elemento **push** può avere *identifier* e *segment\-name*.  
+ **push**(facoltativo)  
+ Inserisce un record nello stack interno del compilatore. Oggetto **push** può avere un *identificatore* e *nome segmento*.  
   
- **pop** \(facoltativo\)  
+ **POP** (facoltativo)  
  Rimuove un record dall'inizio dello stack interno del compilatore.  
   
- *identifier* \(facoltativo\)  
- Se utilizzato con **push**, assegna un nome al record nello stack interno del compilatore.  Se utilizzato con **pop**, estrae record dallo stack interno finché non viene rimosso *identifier*; se *identifier* non viene trovato nello stack interno, non viene estratto alcun elemento.  
+ *Identificatore* (facoltativo)  
+ Se usato con **push**, assegna un nome al record nello stack del compilatore interno. Se usato con **pop**, estrae record dallo stack interno finché non *identificatore* viene rimosso; se *identificatore* non trovato nello stack interno, nulla viene estratto.  
   
- *identifier* consente di visualizzare più record con un unico comando **pop** .  
+ *Identificatore* consente a più record con un singolo **pop** comando.  
   
- *"segment\-name"* \(facoltativo\)  
- Nome di un segmento*.* Se utilizzato con **pop**, viene estratto un elemento dallo stack e *segment\-name* diventa il nome di un segmento attivo.  
+ *"segment-name"*(facoltativo)  
+ Nome di un segmento. Se usato con **pop**, viene visualizzato lo stack e *nome segmento* diventa il nome del segmento attivo.  
   
- *"segment\-class"*  \(facoltativo\)  
- Incluso per la compatibilità con le versioni di C\+\+ precedenti alla versione 2.0.  Ignorato.  
+ *"classe del segmento"* (facoltativo)  
+ Incluso per la compatibilità con le versioni di C++ precedenti alla versione 2.0. Ignorato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // pragma_directive_bss_seg.cpp  
@@ -75,11 +75,11 @@ int main() {
 }  
 ```  
   
- È inoltre possibile specificare le sezioni per i dati inizializzati \([data\_seg](../preprocessor/data-seg.md)\), le funzioni \([code\_seg](../preprocessor/code-seg.md)\) e le variabili const \([const\_seg](../preprocessor/const-seg.md)\).  
+ È inoltre possibile specificare le sezioni per i dati inizializzati ([data_seg](../preprocessor/data-seg.md)), le funzioni ([code_seg](../preprocessor/code-seg.md)) e le variabili const ([const_seg](../preprocessor/const-seg.md)).  
   
- I dati allocati mediante il pragma **bss\_seg** non mantengono le informazioni sulla posizione.  
+ I dati allocati mediante il **bss_seg** pragma non mantengono le informazioni sulla posizione.  
   
- Per un elenco di nomi che non è necessario utilizzare quando si crea una sezione, vedere [\/SECTION](../build/reference/section-specify-section-attributes.md).  
+ Vedere [/sezione](../build/reference/section-specify-section-attributes.md) per un elenco di nomi di non utilizzare durante la creazione di una sezione.  
   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

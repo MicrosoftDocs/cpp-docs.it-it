@@ -1,51 +1,49 @@
 ---
-title: "Creazione guidata gestore eventi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.eventhandler.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata gestore eventi [C++]"
+title: Creazione guidata gestore eventi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.eventhandler.overview
+dev_langs: C++
+helpviewer_keywords: Event Handler Wizard [C++]
 ms.assetid: af8e1835-94b1-4d9a-b353-c519e011d3a1
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f2f871381f64627caa76c28c5195143e1b391f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Creazione guidata gestore eventi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Questa creazione guidata consente di aggiungere un gestore eventi relativo a un controllo finestra di dialogo alla classe scelta.  Se si aggiunge un gestore eventi dalla [finestra Proprietà](../Topic/Properties%20Window.md), sarà possibile aggiungerlo solo alla classe che implementa la finestra di dialogo.  Per ulteriori informazioni, vedere [Aggiunta di gestori eventi per i controlli finestra di dialogo](../mfc/adding-event-handlers-for-dialog-box-controls.md).  
+# <a name="event-handler-wizard"></a>Creazione guidata gestore eventi
+Questa procedura guidata aggiunge un gestore eventi per un controllo di finestra di dialogo per la classe di propria scelta. Se si aggiunge un gestore eventi dal [finestra proprietà](/visualstudio/ide/reference/properties-window), è possibile aggiungerlo solo la classe che implementa la finestra di dialogo. Vedere [aggiunta di gestori eventi per i controlli della finestra di dialogo](../windows/adding-event-handlers-for-dialog-box-controls.md) per ulteriori informazioni.  
   
- **Nome comando**  
- Identifica il controllo selezionato, per il quale viene aggiunto il gestore eventi.  Questa casella non è disponibile.  
+ **Nome del comando**  
+ Identifica il controllo selezionato, per il quale viene aggiunto il gestore dell'evento. Questa casella è disponibile.  
   
- **Tipo messaggio**  
+ **Tipo di messaggio**  
  Visualizza l'elenco dei possibili gestori messaggi correnti per il controllo selezionato.  
   
- **Nome gestore funzioni**  
- Visualizza il nome della funzione aggiunta per gestire l'evento.  Per impostazione predefinita il nome è basato sul tipo di messaggio e sul comando, preceduto da "On".  Per il pulsante chiamato `IDC_BUTTON1`, ad esempio, il tipo di messaggio `BN_CLICKED` visualizza il nome del gestore funzioni `OnBnClickedButton1`.  
+ **Nome del gestore (funzione)**  
+ Visualizza il nome della funzione che viene aggiunto per gestire l'evento. Per impostazione predefinita, il nome è basato sul tipo di messaggio e il comando, preceduto da "On". Ad esempio, per il pulsante chiamato `IDC_BUTTON1`, il tipo di messaggio `BN_CLICKED` Visualizza il nome del gestore `OnBnClickedButton1`.  
   
- **Elenco classi**  
- Visualizza le classi disponibili cui è possibile aggiungere un gestore eventi.  La classe relativa alla finestra di dialogo selezionata è visualizzata in rosso.  
+ **Classe elenco**  
+ Visualizza le classi disponibili a cui è possibile aggiungere un gestore eventi. La classe per la finestra di dialogo selezionato viene visualizzata in rosso.  
   
- **Descrizione gestore**  
- Fornisce una descrizione della voce selezionata nella casella **Tipo messaggio**.  Questa casella non è disponibile.  
+ **Descrizione del gestore**  
+ Fornisce una descrizione per l'elemento selezionato nel **tipo di messaggio** casella. Questa casella è disponibile.  
   
- **Aggiungi e modifica**  
- Aggiunge il gestore messaggi alla classe o all'oggetto selezionato, quindi apre l'editor di testo sulla nuova funzione, in modo che sia possibile aggiungere il codice per la gestione della notifica del controllo.  
+ **Aggiungere e modificare**  
+ Aggiunge il gestore di messaggi per la classe o oggetto selezionato e quindi apre l'editor di testo per la nuova funzione, è possibile aggiungere il codice del gestore di controllo notifica.  
   
- **Modifica codice**  
- Apre l'editor di testo sulla funzione esistente selezionata in modo che sia possibile aggiungere o modificare il codice per la gestione della notifica del controllo.  
+ **Modificare il codice**  
+ Apre l'editor di testo per la funzione esistente selezionata in modo è possibile aggiungere o modificare il codice del gestore di notifica del controllo.  
   
-## Vedere anche  
- [Aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Aggiunta di un gestore di evento](../ide/adding-an-event-handler-visual-cpp.md)

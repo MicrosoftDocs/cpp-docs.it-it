@@ -1,37 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: Compilatore avviso (livello 1) C4581 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f5c8e5c103c7da2cca580fb4f2c12f7ae25dd89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-comportamento deprecato: stringa1' sostituito con 'stringa2' per elaborare l'attributo  
+# <a name="compiler-warning-level-1-c4581"></a>Avviso del compilatore (livello 1) C4581
+comportamento deprecato: '"string1" ' sostituito con 'stringa2' per elaborare l'attributo  
   
- Questo errore può essere generato in seguito alle operazioni di conformità eseguite per Visual C\+\+ 2005: controllo dei parametri per gli attributi di Visual C\+\+.  
+ Questo errore può essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ 2005: controllo dei parametri per gli attributi di Visual C++.  
   
- Nelle versioni precedenti i valori di attributo vengono accettati indipendentemente dal fatto che siano racchiusi tra virgolette o meno.  Se il valore è un'enumerazione, non deve essere racchiuso tra virgolette.  
+ Nelle versioni precedenti, i valori di attributo sono stati accettati o a meno che siano racchiusi tra virgolette. Se il valore è un'enumerazione, è necessario non racchiuderlo tra virgolette.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4581:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4581.  
   
 ```  
 // C4581.cpp  

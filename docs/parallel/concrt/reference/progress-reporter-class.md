@@ -1,11 +1,10 @@
 ---
-title: Classe progress_reporter | Documenti di Microsoft
+title: Classe progress_reporter | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - PPLTASKS/concurrency::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::report
-dev_langs:
-- C++
-helpviewer_keywords:
-- progress_reporter class
+dev_langs: C++
+helpviewer_keywords: progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 98856e26c82d01433e6f8eb0d76110aff1535936
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a72250bcb35b625276d0b8692ce1ec9d13a20ade
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="progressreporter-class"></a>Classe progress_reporter
 La classe del reporter dello stato di avanzamento consente la segnalazione di notifiche di stato di un tipo specifico. Ogni oggetto progress_reporter è associato a una particolare operazione o azione asincrona.  
@@ -98,8 +80,7 @@ void report(const _ProgressType& val) const;
   
 ### <a name="parameters"></a>Parametri  
  `val`  
- Il payload di report tramite una notifica di stato di avanzamento.  
+ Il payload al report tramite una notifica di stato di avanzamento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

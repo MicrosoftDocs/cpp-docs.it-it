@@ -1,47 +1,45 @@
 ---
-title: "Impostazioni applicazione, Creazione guidata progetto makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.makefile.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata progetto makefile, impostazioni applicazione"
+title: Impostazioni applicazione, creazione guidata progetto Makefile | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.makefile.appset
+dev_langs: C++
+helpviewer_keywords: Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8dee0ebbec9393bcf0cbc271e22e107ef7c93387
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Impostazioni applicazione, Creazione guidata progetto makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fornire le informazioni relative al progetto.  Le opzioni specificate vengono riportate nella [pagina delle proprietà](../ide/working-with-project-properties.md) del progetto.  Una volta creato il progetto, nella schermata **Nmake** della pagina delle proprietà è possibile visualizzare e modificare ognuna delle opzioni riportate di seguito.  
+# <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
+Fornire le informazioni per il progetto. Le opzioni vengono applicate al progetto [pagina delle proprietà](../ide/working-with-project-properties.md). Dopo aver creato il progetto, è possibile visualizzare e modificare ognuna delle seguenti opzioni di **Nmake** pagina della pagina delle proprietà del progetto.  
   
- **Riga di comando per la compilazione**  
- Consente di specificare la riga di comando che deve essere eseguita quando l'utente sceglie **Compila** dal menu **Compila**.  Viene visualizzata nella casella **Compila da riga di comando** della schermata **Nmake** della pagina delle proprietà del progetto.  
+ **Riga di comando di compilazione**  
+ Specifica la riga di comando da eseguire quando l'utente seleziona **compilare** dal **compilare** menu. Nella **riga di comando di compilazione** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
  **Output**  
- Consente di specificare il nome del file contenente l'output per la riga di comando.  Per impostazione predefinita, l'opzione si basa sul nome del progetto.  Viene visualizzata nella casella **Output** della schermata **Nmake** della pagina delle proprietà del progetto.  
+ Specifica il nome del file che conterrà l'output per la riga di comando. Per impostazione predefinita, questa opzione è basata sul nome del progetto. Nella **Output** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
  **Comandi per la pulitura**  
- Consente di specificare la riga di comando da eseguire quando l'utente sceglie **Pulisci** dal menu **Compila**.  Vengono visualizzati nella casella **Pulisci da riga di comando** della schermata **Nmake** della pagina delle proprietà del progetto.  
+ Specifica la riga di comando da eseguire quando l'utente seleziona **Pulisci** dal **compilare** menu. Nella **Pulisci da riga di comando** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
- **Riga di comando per la ricompilazione**  
- Consente di specificare la riga di comando da eseguire quando l'utente sceglie **Ricompila** dal menu **Compila**.  Viene visualizzata nella casella **Ricompila tutto da riga di comando** della schermata **Nmake** della pagina delle proprietà del progetto.  
+ **Ricompila la riga di comando**  
+ Specifica la riga di comando da eseguire quando l'utente seleziona **ricompilare** dal **compilare** menu. Nella **Ricompila tutto da riga di comando** nel campo il **Nmake** pagina della pagina delle proprietà del progetto.  
   
-## Vedere anche  
- [Creazione guidata progetto MakeFile](../ide/makefile-project-wizard.md)   
- [Creazione di un progetto makefile](../ide/creating-a-makefile-project.md)   
- [Tipi di progetto Visual C\+\+](../ide/visual-cpp-project-types.md)   
- [Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creazione guidata progetto makefile](../ide/makefile-project-wizard.md)   
+ [Creazione di un progetto Makefile](../ide/creating-a-makefile-project.md)   
+ [Tipi di progetto di Visual C++](../ide/visual-cpp-project-types.md)   
+ [Creazione di progetti Desktop mediante creazioni guidate applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/it-it/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Distribuzione di applicazioni](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

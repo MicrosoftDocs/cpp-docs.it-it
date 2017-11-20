@@ -1,54 +1,52 @@
 ---
-title: "__readcr3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readcr3"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readcr3 (funzione intrinseca)"
+title: __readcr3 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readcr3
+dev_langs: C++
+helpviewer_keywords: __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4769a6391724e8881182b1c9a78191a2f0ca089
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __readcr3
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="readcr3"></a>__readcr3
+**Sezione specifica Microsoft**  
   
- Legge il log CR3 e restituisce il valore.  
+ Legge il registro CR3 e restituisce il relativo valore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned __int64 __readcr3(void);  
 ```  
   
-## Valore restituito  
- Il valore nel registro CR3.  
+## <a name="return-value"></a>Valore restituito  
+ Il valore del registro CR3.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__readcr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa funzione intrinseca è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questo intrinseco è disponibile solo in modalità kernel e la routine è disponibile solo come intrinseco.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

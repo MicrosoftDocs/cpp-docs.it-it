@@ -1,31 +1,29 @@
 ---
-title: "Errore di compilazione progetto PRJ0030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0030"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0030"
+title: Progetto PRJ0030 errore di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0030
+dev_langs: C++
+helpviewer_keywords: PRJ0030
 ms.assetid: c48b3727-e166-46e7-bcd7-3e5b2ac5c1d4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c81dd4bccb8b964e6665d95d1599aeb4044a80a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore di compilazione progetto PRJ0030
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Errore di espansione di una macro.La valutazione della ricorsione supera i 32 livelli per $\(macro\).  
+# <a name="project-build-error-prj0030"></a>Errore di compilazione progetto PRJ0030
+Errore di espansione di macro. Valutazione della ricorsione superata i 32 livelli per $(macro).  
   
- Questo errore viene generato dalla ricorsione nelle macro.  Se, ad esempio, si imposta la proprietà **Directory intermedia** \(vedere [Pagina delle proprietà Generale \(Progetto\)](../../ide/general-property-page-project.md)\) su $\(IntDir\), si otterrà una ricorsione.  
+ Questo errore è causato dalla ricorsione nelle macro. Ad esempio, se si imposta la **Directory intermedia** proprietà (vedere [pagina delle proprietà Generale (progetto)](../../ide/general-property-page-project.md)) su $(IntDir), si otterrà una ricorsione.  
   
- Per risolvere questo errore è necessario evitare di definire, nei termini delle macro, macro e proprietà utilizzate per definirle.
+ Per correggere l'errore, non definire macro o alle proprietà in termini vengono utilizzati per definire macro.

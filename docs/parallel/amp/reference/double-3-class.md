@@ -1,11 +1,10 @@
 ---
-title: Classe double_3 | Documenti di Microsoft
+title: Classe double_3 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4ead4c4bd9aac91c4a0db7e2dfbc4976664120bd
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 50f85b5582fbafa3d79a611f92009d9254b58101
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="double3-class"></a>Classe double_3
 Rappresenta uno short vector di tre valori Double.  
@@ -127,7 +110,7 @@ class double_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore double_3](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore double_3](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -234,7 +217,7 @@ class double_3;
   
 ##  <a name="ctor"></a>double_3 
 
- Predefinito costruttore inizializza tutti gli elementi con 0.  
+ Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 double_3() restrict(amp,
@@ -297,7 +280,7 @@ explicit inline double_3(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ##  <a name="double_3__size"></a>dimensioni 
 
@@ -307,4 +290,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

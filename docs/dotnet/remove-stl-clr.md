@@ -1,45 +1,43 @@
 ---
-title: "remove (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::remove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove (funzione) [STL/CLR]"
+title: rimuovere (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::remove
+dev_langs: C++
+helpviewer_keywords: remove function [STL/CLR]
 ms.assetid: 85a11883-3e25-49aa-b4a0-b2cffd6dc110
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11badfc92a6b307c64f1fb9d4b24373173cae7a3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# remove (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rimuove un valore specificato da un intervallo specificato senza pregiudicare l'ordine degli elementi rimanenti e restituire la fine del nuovo intervallo esente dal valore specificato.  
+# <a name="remove-stlclr"></a>remove (STL/CLR)
+Elimina un valore specificato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
     _FwdIt remove(_FwdIt _First, _FwdIt _Last, const _Ty% _Val);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `remove`STL.  Per ulteriori informazioni, vedere [rimozione](../Topic/remove.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `remove`. Per ulteriori informazioni, vedere [rimuovere](http://msdn.microsoft.com/Library/77e2585c-441e-448d-bd1d-c893d1356ed8).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

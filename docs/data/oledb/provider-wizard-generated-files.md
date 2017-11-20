@@ -1,36 +1,35 @@
 ---
-title: "File del provider generati tramite procedura guidata | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, file generati dalla procedura guidata"
+title: File generato dalla creazione guidata provider | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 24da0ab4b3ab27cdb9a70c0f9cc05e3ca86e117d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# File del provider generati tramite procedura guidata
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Con la Creazione guidata provider OLE DB ATL vengono generati i file elencati di seguito.  Sebbene negli argomenti che seguono venga utilizzato il nome breve "MyProvider", i nomi file reali dipenderanno dal nome immesso durante la creazione del provider.  
+# <a name="provider-wizard-generated-files"></a>File del provider generati tramite procedura guidata
+La creazione guidata Provider OLE DB ATL genera i seguenti file. Gli argomenti seguenti di utilizzare il nome breve "MyProvider", ma i nomi esatti del file dipenderanno la scelta effettuata quando si crea il provider.  
   
 |Nome file|Descrizione|  
 |---------------|-----------------|  
-|MyProviderRS.cpp|Contiene il metodo `Execute` per il supporto comandi e la mappa delle colonne del provider.|  
-|MyProviderDS.h|Implementa l'oggetto DataSource.  Questo file di intestazione contiene la mappa delle proprietà dell'origine dati.|  
-|MyProviderRS.h|Implementa gli oggetti Command e Rowset.  Questo file di intestazione contiene la mappa delle proprietà del rowset e dei comandi.|  
-|MyProviderSess.h|Implementa l'oggetto Session.  Questo file di intestazione contiene la mappa delle proprietà della sessione.|  
-|MyProvider.rgs|Contiene gli oggetti registrati generati dalla Creazione guidata provider OLE DB ATL.|  
+|MyProviderRS. cpp|Contiene il supporto di comandi `Execute` metodo e la mappa delle colonne del provider.|  
+|MyProviderDS. H|Implementa l'oggetto origine dati. Questo file di intestazione contiene il mapping di proprietà dell'origine dati.|  
+|MyProviderRS. H|Implementa gli oggetti comando e set di righe. Questo file di intestazione contiene il mapping di proprietà per proprietà rowset e comando.|  
+|MyProviderSess. H|Implementa l'oggetto di sessione. Questo file di intestazione contiene il mapping di proprietà per proprietà della sessione.|  
+|MyProvider|Contiene gli oggetti registrati generati dalla creazione guidata Provider OLE DB.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

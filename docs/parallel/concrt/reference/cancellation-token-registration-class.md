@@ -1,46 +1,28 @@
 ---
-title: Classe cancellation_token_registration | Documenti di Microsoft
+title: Classe cancellation_token_registration | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration::cancellation_token_registration
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_registration class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1dd55aff292926b930271257bda583a2f93aba92
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: c2d80255803c4d2ca2aec05af8115ac887f7258b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokenregistration-class"></a>Classe cancellation_token_registration
 La classe `cancellation_token_registration` rappresenta una notifica di callback da `cancellation_token`. Quando il metodo `register` in `cancellation_token` viene utilizzato per ricevere la notifica dell'annullamento, un oggetto `cancellation_token_registration` viene restituito al callback come handle, in modo che da parte del chiamante possa essere richiesto di non eseguire più un callback specifico tramite l'utilizzo del metodo `deregister`.  
@@ -72,7 +54,7 @@ class cancellation_token_registration;
  `cancellation_token_registration`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** cancellation_token. h  
+ **Intestazione:** pplconcrt  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -106,7 +88,7 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operator = 
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -132,4 +114,3 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

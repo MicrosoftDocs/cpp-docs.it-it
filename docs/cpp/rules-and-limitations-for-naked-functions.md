@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- naked functions [C++]
+dev_langs: C++
+helpviewer_keywords: naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a02eb245ffae169f75f5d8edb261d0af9618856d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 827585c5c6695b30c090c95d8c135a4a40b301c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Regole e limitazioni per le funzioni naked
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

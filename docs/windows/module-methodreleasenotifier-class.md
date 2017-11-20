@@ -1,30 +1,28 @@
 ---
-title: "Classe Module::MethodReleaseNotifier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier (classe)"
+title: 'Classe Module:: methodreleasenotifier | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 474d4f82b41eaab43c5e87ca335b911db0b4e64e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe Module::MethodReleaseNotifier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto nel modulo corrente. Il gestore dell'evento è specificato da un oggetto e il relativo membro puntatore al metodo.  
+# <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
+Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto del modulo corrente. Il gestore dell'evento è specificato da un oggetto e il relativo membro puntatore al metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,13 +49,13 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Methodreleasenotifier:: Invoke (metodo)](../windows/module-methodreleasenotifier-invoke-method.md)|Chiama il gestore dell'evento associato all'oggetto methodreleasenotifier corrente.|  
+|[Metodo Module::MethodReleaseNotifier::Invoke](../windows/module-methodreleasenotifier-invoke-method.md)|Chiama il gestore dell'evento associato all'oggetto methodreleasenotifier corrente.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contiene un puntatore al gestore eventi per l'oggetto methodreleasenotifier corrente.|  
+|[Membro dati Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contiene un puntatore al gestore dell'evento per l'oggetto methodreleasenotifier corrente.|  
 |[Membro dati Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contiene un puntatore all'oggetto la cui funzione membro è il gestore eventi per l'oggetto methodreleasenotifier corrente.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -71,4 +69,4 @@ class MethodReleaseNotifier : public ReleaseNotifier;
  **Spazio dei nomi:** Microsoft::WRL
  
  ## <a name="see-also"></a>Vedere anche
- [Module (classe)](../windows/module-class.md)
+ [Classe Module](../windows/module-class.md)

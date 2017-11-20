@@ -1,53 +1,52 @@
 ---
-title: "CXMLAccessor::GetXMLColumnData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CXMLAccessor.GetXMLColumnData"
-  - "CXMLAccessor::GetXMLColumnData"
-  - "CXMLAccessor.GetXMLColumnData"
-  - "ATL::CXMLAccessor::GetXMLColumnData"
-  - "GetXMLColumnData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLColumnData (metodo)"
+title: 'CXMLAccessor:: GetXMLColumnData | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+dev_langs: C++
+helpviewer_keywords: GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0e0d34a9e726912cd631972091df65157de061d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CXMLAccessor::GetXMLColumnData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera le informazioni sul tipo di una tabella in formato stringa XML, dalla colonna.  
+# <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
+Recupera le informazioni sul tipo di colonna di una tabella di dati stringa in formato XML, dalla colonna.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT GetXMLColumnData(   
-   CSimpleStringW& strOutput    
+      HRESULT GetXMLColumnData(   
+   CSimpleStringW& strOutput    
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `strOutput`  
- \[out\] riferimento A un buffer di stringa contenente le informazioni sul tipo di colonna da recuperare.  La stringa formattata con i nomi dei tag XML che corrispondono ai nomi di colonna dell'archivio dati.  
+ [out] Un riferimento a un buffer di stringa contenente le informazioni sul tipo di colonna da recuperare. La stringa viene formattata con nomi di tag XML che corrispondono a nomi di colonna dell'archivio dati.  
   
-## Valore restituito  
- Uno dei valori standard di `HRESULT`.  
+## <a name="return-value"></a>Valore restituito  
+ Uno degli standard `HRESULT` valori.  
   
-## Note  
- Di seguito viene illustrato come le informazioni sul tipo di colonna sono formattate in XML.  `type` specifica il tipo di dati della colonna.  Si noti che i tipi di dati sono basati sui tipi di dati OLE DB, non quelli del database a cui si accede.  
+## <a name="remarks"></a>Note  
+ Di seguito viene illustrato come le informazioni sul tipo di colonna è formattati in XML. `type`Specifica il tipo di dati della colonna. Si noti che i tipi di dati sono basati sui tipi di dati OLE DB, non quelli del database di cui si accede.  
   
  `<columninfo>`  
   
@@ -55,8 +54,8 @@ Recupera le informazioni sul tipo di una tabella in formato stringa XML, dalla c
   
  `</columninfo>`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)

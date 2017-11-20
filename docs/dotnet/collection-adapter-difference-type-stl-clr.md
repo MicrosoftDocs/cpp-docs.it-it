@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membro) [STL/CLR]"
+title: collection_adapter::difference_type (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: ef263e3f-f932-4d64-9d27-429c7b8ba279
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20d5954935db3d96c63153af1cb115fc1acd0c4d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I tipi di distanze con segno compreso tra due elementi.  
+# <a name="collectionadapterdifferencetype-stlclr"></a>collection_adapter::difference_type (STL/CLR)
+I tipi di una distanza signed tra due elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Note  
- Il tipo viene descritto un conteggio con firma dell'elemento.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un conteggio di elementi con segno.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_collection_adapter_difference_type.cpp   
@@ -69,13 +67,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\- inizio \(\) \= 3**   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
-## Vedere anche  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::size\_type](../dotnet/collection-adapter-size-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::size_type (STL/CLR)](../dotnet/collection-adapter-size-type-stl-clr.md)

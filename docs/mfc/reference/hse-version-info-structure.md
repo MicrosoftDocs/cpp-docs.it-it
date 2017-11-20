@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- HSE_VERSION_INFO
-dev_langs:
-- C++
-helpviewer_keywords:
-- HSE_VERSION_INFO structure [MFC]
+f1_keywords: HSE_VERSION_INFO
+dev_langs: C++
+helpviewer_keywords: HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 78b1ed79093db179e00f262b61934ff9c293ff18
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="hseversioninfo-structure"></a>Struttura HSE_VERSION_INFO
 Questa struttura viene fatto riferimento tramite il `pVer` parametro il `CHttpServer::GetExtensionVersion` funzione membro. Fornisce il numero di versione ISA e una descrizione di testo di ISA.  
@@ -50,5 +45,4 @@ typedef struct _HSE_VERSION_INFO {
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture, stili, callback e mappe messaggi](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-
 

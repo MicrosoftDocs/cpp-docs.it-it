@@ -1,36 +1,35 @@
 ---
-title: "queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/queue> (intestazione) [STL/CLR]"
-  - "<queue> (intestazione) [STL/CLR]"
-  - "queue (classe) [STL/CLR]"
+title: coda (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue
+dev_langs: C++
+helpviewer_keywords:
+- <queue> header [STL/CLR]
+- queue class [STL/CLR]
+- <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e55cb83461ed1a0229babf98c384b74de357aeb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe modello descrive un oggetto che comandi di una sequenza variare lunghezza di elementi con primo\/uscita in accesso FIFO \(first\-in primo.  Utilizzare l'adattatore `queue` contenitore per gestire un contenitore sottostante come coda.  
+# <a name="queue-stlclr"></a>queue (STL/CLR)
+La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone dell'accesso first-in First-Out. Si utilizza l'adapter contenitore `queue` per gestire un contenitore sottostante come una coda.  
   
- In descrizione di seguito, `GValue` sono gli stessi di `Value` eccetto l'ultimo sia un tipo di riferimento, nel qual caso viene `Value^`.  Analogamente, `GContainer` sono gli stessi di `Container` eccetto l'ultimo sia un tipo di riferimento, nel qual caso viene `Container^`.  
+ Nella sezione successiva, `GValue` equivale `Value` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Value^`. Analogamente, `GContainer` equivale `Container` , a meno che quest'ultimo è un tipo riferimento, nel qual caso è `Container^`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Value,  
@@ -42,73 +41,73 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  Valore  
  Tipo di un elemento nella sequenza controllata.  
   
  Contenitore  
  Tipo del contenitore sottostante.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-|Definizione del tipo|Descrizione|  
-|--------------------------|-----------------|  
-|[queue::const\_reference](../dotnet/queue-const-reference-stl-clr.md)|Il tipo di un riferimento costante a un elemento.|  
-|[queue::container\_type](../dotnet/queue-container-type-stl-clr.md)|Tipo del contenitore sottostante.|  
-|[queue::difference\_type](../dotnet/queue-difference-type-stl-clr.md)|Il tipo di una distanza con segno tra due elementi.|  
-|[queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)|Il tipo dell'interfaccia generica per l'adattatore del contenitore.|  
-|[queue::generic\_value](../dotnet/queue-generic-value-stl-clr.md)|Il tipo di elemento dell'interfaccia generica per l'adattatore del contenitore.|  
-|[queue::reference](../dotnet/queue-reference-stl-clr.md)|Il tipo di un riferimento a un elemento.|  
-|[queue::size\_type](../dotnet/queue-size-type-stl-clr.md)|Il tipo di una distanza con segno tra due elementi.|  
-|[queue::value\_type](../dotnet/queue-value-type-stl-clr.md)|Il tipo di un elemento.|  
+|Definizione dei tipi|Descrizione|  
+|---------------------|-----------------|  
+|[queue::const_reference (STL/CLR)](../dotnet/queue-const-reference-stl-clr.md)|Tipo di un riferimento costante a un elemento.|  
+|[queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)|Tipo del contenitore sottostante.|  
+|[queue::difference_type (STL/CLR)](../dotnet/queue-difference-type-stl-clr.md)|Tipo di una distanza Signed tra due elementi.|  
+|[queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)|Il tipo dell'interfaccia generica per l'adapter di contenitore.|  
+|[queue::generic_value (STL/CLR)](../dotnet/queue-generic-value-stl-clr.md)|Il tipo di un elemento per l'interfaccia generica per l'adapter di contenitore.|  
+|[queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)|Tipo di un riferimento a un elemento.|  
+|[queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)|Tipo di una distanza Signed tra due elementi.|  
+|[queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)|Tipo di un elemento.|  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
-|[queue::assign](../dotnet/queue-assign-stl-clr.md)|Sostituisce tutti gli elementi.|  
-|[queue::back](../dotnet/queue-back-stl-clr.md)|Accede all'ultimo.|  
-|[queue::empty](../dotnet/queue-empty-stl-clr.md)|Consente di verificare se non sono presenti elementi.|  
-|[queue::front](../dotnet/queue-front-stl-clr.md)|Accede al primo elemento.|  
-|[queue::get\_container](../dotnet/queue-get-container-stl-clr.md)|Accede al contenitore sottostante.|  
-|[queue::pop](../dotnet/queue-pop-stl-clr.md)|Rimuove il primo elemento.|  
-|[queue::push](../dotnet/queue-push-stl-clr.md)|Aggiunge un nuovo ultimo elemento.|  
-|[queue::queue](../dotnet/queue-queue-stl-clr.md)|Costruisce un oggetto contenitore.|  
-|[queue::size](../dotnet/queue-size-stl-clr.md)|Conta il numero di elementi.|  
-|[queue::to\_array](../dotnet/queue-to-array-stl-clr.md)|Copia la sequenza selezionata una nuova matrice.|  
+|[queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)|Sostituisce tutti gli elementi.|  
+|[queue::back (STL/CLR)](../dotnet/queue-back-stl-clr.md)|Accede all'ultimo elemento.|  
+|[queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)|Verifica se sono presenti o meno degli elementi.|  
+|[queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)|Accede al primo elemento.|  
+|[queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)|Accede al contenitore sottostante.|  
+|[queue::pop (STL/CLR)](../dotnet/queue-pop-stl-clr.md)|Rimuove il primo elemento.|  
+|[queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)|Aggiunge un nuovo ultimo elemento.|  
+|[queue::queue (STL/CLR)](../dotnet/queue-queue-stl-clr.md)|Costruisce un oggetto contenitore.|  
+|[queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)|Conta il numero di elementi.|  
+|[queue::to_array (STL/CLR)](../dotnet/queue-to-array-stl-clr.md)|La sequenza controllata viene copiata in una nuova matrice.|  
   
 |Proprietà|Descrizione|  
-|---------------|-----------------|  
-|[queue::back\_item](../dotnet/queue-back-item-stl-clr.md)|Accede all'ultimo.|  
-|[queue::front\_item](../dotnet/queue-front-item-stl-clr.md)|Accede al primo elemento.|  
+|--------------|-----------------|  
+|[queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)|Accede all'ultimo elemento.|  
+|[queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)|Accede al primo elemento.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|[queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)|Sostituisce la sequenza selezionata.|  
-|[operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)|Determina se un oggetto di `queue` non equivale a un altro oggetto di `queue`.|  
-|[operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)|Determina se un oggetto di `queue` è inferiore a un altro oggetto di `queue`.|  
-|[operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Determina se un oggetto di `queue` è minore o uguale a un altro oggetto di `queue`.|  
-|[operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)|Determina se un oggetto di `queue` equivale a un altro oggetto di `queue`.|  
-|[operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)|Determina se un oggetto di `queue` è maggiore di un altro oggetto di `queue`.|  
-|[operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Determina se un oggetto di `queue` è maggiore o uguale a un altro oggetto di `queue`.|  
+|--------------|-----------------|  
+|[queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)|Sostituisce la sequenza controllata.|  
+|[operator!= (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)|Determina se un `queue` oggetto non è uguale a un altro `queue` oggetto.|  
+|[operator< (queue) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)|Determina se un `queue` oggetto è minore di un altro `queue` oggetto.|  
+|[operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)|Determina se un `queue` oggetto è minore o uguale a un altro `queue` oggetto.|  
+|[operator== (queue) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)|Determina se un `queue` è uguale a un altro oggetto `queue` oggetto.|  
+|[operator> (queue) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)|Determina se un `queue` è maggiore di un altro oggetto `queue` oggetto.|  
+|[operator>= (queue) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)|Determina se un `queue` oggetto è maggiore o uguale a un altro `queue` oggetto.|  
   
-## Interfacce  
+## <a name="interfaces"></a>Interfacce  
   
 |Interfaccia|Descrizione|  
-|-----------------|-----------------|  
+|---------------|-----------------|  
 |<xref:System.ICloneable>|Duplicare un oggetto.|  
-|IQueueValue\<, contenitore\>|Gestione dell'adattatore di contenitore generico.|  
+|ICoda\<valore, contenitore >|Gestire gli adattatori del contenitore generico.|  
   
-## Note  
- L'oggetto alloca e libera la memoria per la sequenza di controllo in un contenitore sottostante, di tipo `Container`, che contiene gli elementi di `Value` e aumenta su richiesta.  L'oggetto limita l'accesso solo a incremento del primo elemento e a prelevare l'ultimo elemento, implementando un primo\/uscita in coda first out prima \(denominata anche una coda FIFO, o semplicemente una coda\).  
+## <a name="remarks"></a>Note  
+ L'oggetto alloca e libera spazio di archiviazione per la sequenza da esso controllata tramite un contenitore sottostante, di tipo `Container`, che archivia `Value` elementi e aumento delle dimensioni su richiesta. L'oggetto limita l'accesso alla pressione solo il primo elemento e si estraggono l'ultimo elemento, che implementa un first in First-Out coda (noto anche come una coda FIFO, o semplicemente una coda).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [stack](../dotnet/stack-stl-clr.md)   
- [vettore](../dotnet/vector-stl-clr.md)   
- [Libreria STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)

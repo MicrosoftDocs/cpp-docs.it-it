@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - std.value_compare
 - map/std::value_compare
 - value_compare
-dev_langs:
-- C++
-helpviewer_keywords:
-- value_compare class
+dev_langs: C++
+helpviewer_keywords: std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c46338445598ef77e6b8a4c1c261962fe9e7ff0f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: dedc859a140b99d76b98a5109f9fdc56c1c1f90c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="valuecompare-class-ltmapgt"></a>Classe value_compare (&lt;map&gt;)
 Fornisce un oggetto funzione in grado di confrontare gli elementi di un oggetto map confrontando i valori delle chiavi per determinarne l'ordine relativo nell'oggetto map.  
@@ -76,7 +58,6 @@ protected:
  [Struct binary_function](../standard-library/binary-function-struct.md)   
  [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

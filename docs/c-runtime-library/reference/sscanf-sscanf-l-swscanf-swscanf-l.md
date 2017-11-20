@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -49,30 +47,15 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b124ba5aa0fef8efd6d44b405fbc608709e05d72
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 487ea05ad72ec1854255b05f3da3acf64d399115
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
 Legge i dati formattati da una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).  

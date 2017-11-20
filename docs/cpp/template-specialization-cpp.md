@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- partial specialization of class templates
+dev_langs: C++
+helpviewer_keywords: partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 822dfdd718d420189a97e3aaaaac81de793f08f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="template-specialization-c"></a>Specializzazione di modello (C++)
 
@@ -341,4 +337,3 @@ Sorted list:
 {101, banana}  
 {103, dog}  
 ```  
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- srand
+apiname: srand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- srand
-dev_langs:
-- C++
+f1_keywords: srand
+dev_langs: C++
 helpviewer_keywords:
 - random starting point
 - random starting point, setting
@@ -38,30 +34,15 @@ helpviewer_keywords:
 - starting points, setting random
 - starting points
 ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e86ea8aa561af584a6825d4225820aca7baeced2
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 99847da3be2e311ac9cb0da301ed4729705ad9fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="srand"></a>srand
 Imposta il valore di inizializzazione iniziale per il generatore di numeri pseudocasuali.  

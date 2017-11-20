@@ -4,47 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_iterator
 - regex/std::regex_iterator
 - regex/std::regex_iterator::operator==
 - regex/std::regex_iterator::operator!=
 - regex/std::regex_iterator::operator*
 - regex/std::regex_iterator::operator->
 - regex/std::regex_iterator::operator++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- regex_iterator class
+- std::regex_iterator
+- std::regex_iterator::operator==
+- std::regex_iterator::operator!=
+- std::regex_iterator::operator*
+- std::regex_iterator::operator->
+- std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e73e90efd7248c6e8af5bfb406481623457c33c3
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: ef28175227bc35641909af71268a86804218649e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regexiterator-class"></a>Classe regex_iterator
 Classe iterator per le corrispondenze.  
@@ -794,4 +781,3 @@ match == a
 [Typedef \<regex>](../standard-library/regex-typedefs.md)  
 
   
-

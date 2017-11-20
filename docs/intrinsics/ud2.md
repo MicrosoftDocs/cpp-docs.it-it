@@ -1,57 +1,56 @@
 ---
-title: "__ud2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ud2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UD2 (istruzione)"
-  - "__ud2 (funzione intrinseca)"
+title: __ud2 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ud2
+dev_langs: C++
+helpviewer_keywords:
+- UD2 instruction
+- __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699e575d283f830d94c123f7748f7fdaa6272ff5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __ud2
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="ud2"></a>__ud2
+**Sezione specifica Microsoft**  
   
  Genera un'istruzione non definita.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __ud2();  
 ```  
   
-## Note  
- Il processore genera un'eccezione non valida di codice operativo se si esegue un'istruzione non definita.  
+## <a name="remarks"></a>Note  
+ Se si esegue un'istruzione non definita, il processore genera un'eccezione di codice operativo non valido.  
   
- La funzione di `__ud2` equivale all'istruzione macchina di `UD2` ed è disponibile solo in modalità kernel.  Per ulteriori informazioni, ricerca del documento, il “manuale di sviluppo di software di architettura Intel, volume 2: Riferimento dell'insieme di istruzioni,„ [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) del sito.  
+ Il `__ud2` è equivalente alla funzione di `UD2` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento al Set (istruzione)," al [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sito.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__ud2`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Esempio  
- Nell'esempio seguente viene eseguita un'istruzione non definita, che genera un'eccezione.  Il gestore di eccezioni quindi modificare il codice restituito da zero a uno.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene eseguita un'istruzione non definita, che genera un'eccezione. Il gestore di eccezioni passa quindi il codice restituito da zero a uno.  
   
 ```  
 // __ud2_intrinsic.cpp  
@@ -83,10 +82,11 @@ int main() {
 }  
 ```  
   
-  **prima di \_\_ud2 \(\).**  
- **codice restituito \= 0.**  
- **Il gestore di eccezioni.**  
- **dopo \_\_ud2 \(\).**  
- **codice restituito \= 1.**   
-## Vedere anche  
+```Output  
+Before __ud2(). Return code = 0.  
+  In the exception handler.  
+After __ud2().  Return code = 1.  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

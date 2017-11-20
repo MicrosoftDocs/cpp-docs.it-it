@@ -1,5 +1,5 @@
 ---
-title: 'Funzioni dello spazio dei nomi Concurrency:: Direct3D (AMP) | Documenti di Microsoft'
+title: 'Funzioni dello spazio dei nomi Concurrency:: Direct3D (AMP) | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,18 +24,17 @@ f1_keywords:
 - amp/Concurrency::direct3d::smoothstep
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: b0e2d2de89bab2f4d0c6f23882f294c148886bcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency:: Direct3D (AMP)
 ||||  
@@ -45,7 +44,7 @@ ms.lasthandoff: 03/17/2017
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[IMAX](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[MAD](#mad)|[make_array](#make_array)|[rumore](#noise)|  
+|[MAD](#mad)|[make_array](#make_array)|[Noise](#noise)|  
 |[radianti](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[accesso](#sign)|[smoothstep](#smoothstep)|  
 |[passaggio](#step)|[UMAX](#umax)|[umin](#umin)|  
@@ -62,7 +61,7 @@ inline int abs(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore assoluto dell'argomento.  
@@ -94,7 +93,7 @@ inline int clamp(
  Il limite superiore dell'intervallo di bloccaggio.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il valore fissato `_X`.  
+ Il valore di fissati `_X`.  
   
 ##  <a name="countbits"></a>countbits  
  Conta il numero di bit impostati in x  
@@ -128,30 +127,30 @@ accelerator_view create_accelerator_view(
   
 #### <a name="parameters"></a>Parametri  
  `_Accelerator`  
- Tasto di scelta rapida in cui viene creato il nuovo accelerator_view.  
+ Tasto di scelta rapida in cui si desidera creare il nuovo accelerator_view.  
   
  `_D3D_device`  
- Puntatore all'interfaccia dispositivo Direct3D.  
+ Puntatore all'interfaccia del dispositivo Direct3D.  
   
  `_Disable_timeout`  
- Un parametro booleano che specifica se i timeout deve essere disabilitato per accelerator_view appena creato. Questo corrisponde al flag D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT per creare un dispositivo Direct3D e viene utilizzato per indicare se il sistema operativo deve consentire carichi di lavoro che richiedono più di 2 secondi per eseguire senza reimpostare il dispositivo per il rilevamento di timeout di Windows e il meccanismo di ripristino. È consigliabile utilizzare questo flag se è necessario eseguire attività di tempo il accelerator_view.  
+ Un parametro booleano che specifica se i timeout deve essere disabilitato per il accelerator_view appena creato. Questo corrisponde al flag D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT per la creazione di un dispositivo Direct3D e viene utilizzato per indicare se il sistema operativo deve consentire carichi di lavoro che accettano più di due secondi per l'esecuzione senza reimpostare il dispositivo per il timeout di Windows meccanismo di rilevamento e ripristino. Se è necessario eseguire attività di tempo il accelerator_view, è consigliabile usare questo flag.  
   
  `_Qmode`  
- Il [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) da utilizzare per accelerator_view appena creato. Questo parametro ha un valore predefinito di `queuing_mode_automatic`.  
+ Il [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) da utilizzare per il accelerator_view appena creato. Questo parametro ha un valore predefinito di `queuing_mode_automatic`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Il `accelerator_view` oggetto creato tramite l'interfaccia del dispositivo Direct3D passato.  
+ Il `accelerator_view` oggetto creato dall'interfaccia del dispositivo Direct3D passato.  
   
 ## <a name="remarks"></a>Note  
- Questa funzione crea un nuovo `accelerator_view` oggetto da un puntatore esistente a un'interfaccia del dispositivo Direct3D. Se la chiamata di funzione ha esito positivo, viene incrementato il conteggio dei riferimenti del parametro per mezzo di un `AddRef` chiamata all'interfaccia. È possibile rilasciare l'oggetto in modo sicuro quando non è più necessario nel codice DirectX. Se la chiamata al metodo non riesce, un [runtime_exception](runtime-exception-class.md) viene generata un'eccezione.  
+ Questa funzione crea un nuovo `accelerator_view` oggetto da un indicatore di misura esistente a un'interfaccia del dispositivo Direct3D. Se la chiamata di funzione ha esito positivo, il conteggio dei riferimenti del parametro viene incrementato per mezzo di un `AddRef` chiamata all'interfaccia. È possibile rilasciare l'oggetto in modo sicuro quando non è più necessario nel codice DirectX. Se la chiamata al metodo non riesce, un [runtime_exception](runtime-exception-class.md) viene generata un'eccezione.  
   
- Il `accelerator_view` che l'oggetto creato mediante questa funzione è thread-safe. È necessario sincronizzare contemporaneamente il `accelerator_view` oggetto. Non sincronizzate utilizzo simultaneo di `accelerator_view` oggetto e l'interfaccia ID3D11Device raw genera un comportamento indefinito.  
+ Il `accelerator_view` che l'oggetto creato mediante questa funzione è thread-safe. È necessario sincronizzare l'utilizzo simultaneo del `accelerator_view` oggetto. Uso simultaneo di sincronizzato il `accelerator_view` oggetto e l'interfaccia raw ID3D11Device causa un comportamento indefinito.  
   
- Il runtime di C++ AMP fornisce informazioni dettagliate sull'errore in modalità debug tramite il livello D3D Debug se si utilizza il `D3D11_CREATE_DEVICE_DEBUG` flag.  
+ Il runtime C++ AMP fornisce informazioni dettagliate sull'errore in modalità di debug tramite il livello di D3D Debug se si utilizza il `D3D11_CREATE_DEVICE_DEBUG` flag.  
   
   
 ##  <a name="d3d_access_lock"></a>d3d_access_lock  
- Acquisire un blocco su un accelerator_view per eseguire in modo sicuro D3D operazioni sulle risorse condivise con il accelerator_view. Il accelerator_view e tutte le risorse di C++ AMP associate a questo accelerator_view internamente accettano questo blocco quando si eseguono operazioni e verranno bloccati mentre un altro thread è responsabile del blocco di accesso D3D. Questo blocco è non ricorsiva: è un comportamento non definito per chiamare questa funzione da un thread già proprietario del blocco. È un comportamento non definito per eseguire operazioni in qualsiasi contenitore di dati associato accelerator_view dal thread che causa il blocco di accesso D3D o il accelerator_view. Vedere anche scoped_d3d_access_lock, una classe di stile RAII per un blocco di accesso basata sull'ambito D3D.  
+ Acquisire un blocco su un accelerator_view per eseguire in modo sicuro le operazioni di D3D su risorse condivise con il accelerator_view. Il accelerator_view e tutte le risorse di C++ AMP associate a questo accelerator_view internamente richiedere questo blocco quando si eseguono operazioni e verranno bloccati mentre un altro thread è responsabile del blocco di accesso D3D. Questo blocco è non ricorsiva: si tratta di un comportamento indefinito per chiamare questa funzione da un thread che contiene già il blocco. È un comportamento non definito per eseguire operazioni sul accelerator_view o qualsiasi contenitore di dati associato il accelerator_view dal thread che contiene il blocco di accesso D3D. Vedere anche scoped_d3d_access_lock, una classe di tipo RAII per un blocco di accesso basati sull'ambito D3D.  
   
 ```  
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -162,7 +161,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  Accelerator_view di blocco.  
   
 ##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
- Tenta di acquisire il blocco di accesso D3D su un accelerator_view senza bloccare.  
+ Tentativo di acquisire il blocco di accesso D3D su un accelerator_view senza bloccare.  
   
 ```  
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
@@ -176,7 +175,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
  true se è stato acquisito il blocco, oppure false se è stato mantenuto attivo da un altro thread.  
   
 ##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
- Rilasciare il blocco accesso D3D accelerator_view specificato. Se il thread chiamante non aspetta il blocco di accelerator_view i risultati sono indefiniti.  
+ Rilasciare il blocco accesso D3D il accelerator_view specificato. Se il thread chiamante non viene mantenuto il blocco di accelerator_view i risultati sono indefiniti.  
   
 ```  
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
@@ -187,7 +186,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  Accelerator_view per cui viene rilasciato il blocco.  
   
 ##  <a name="firstbithigh"></a>firstbithigh  
- Ottiene la posizione del primo bit impostato in x, che inizia con il bit di ordine più alto e verso il bit di ordine più basso.  
+ Ottiene la posizione del primo set di bit in x, che inizia con il bit di ordine più alto e verso il bit di ordine più basso.  
   
 ```  
 inline int firstbithigh(int _X) restrict(amp);
@@ -195,13 +194,13 @@ inline int firstbithigh(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  La posizione del primo set di bit  
   
 ##  <a name="firstbitlow"></a>firstbitlow  
- Ottiene la posizione del primo bit impostato in x, partire con il bit di ordine più basso e procedendo verso il bit più significativo.  
+ Ottiene la posizione del primo set di bit in x, partire con il bit di ordine più basso e procedendo verso il bit più significativo.  
   
 ```  
 inline int firstbitlow(int _X) restrict(amp);
@@ -209,10 +208,10 @@ inline int firstbitlow(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la posizione del primo bit impostato  
+ Restituisce la posizione del primo set di bit  
   
 ##  <a name="get_buffer"></a>get_buffer  
  Ottenere l'interfaccia di buffer Direct3D sottostante nella matrice specificata.  
@@ -234,13 +233,13 @@ IUnknown *get_buffer(
  Il numero di dimensioni della matrice.  
   
  `_Array`  
- Una matrice con un accelerator_view Direct3D per il quale viene restituito l'interfaccia di buffer Direct3D sottostante.  
+ Matrice in un accelerator_view Direct3D di cui viene restituita l'interfaccia di buffer Direct3D sottostante.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a interfaccia IUnknown corrispondente al buffer di Direct3D sottostante della matrice.  
   
 ##  <a name="imax"></a>IMAX  
- Determinare il valore numerico massimo degli argomenti  
+ Determinare il valore numerico massimo di argomenti  
   
 ```  
 inline int imax(
@@ -250,16 +249,16 @@ inline int imax(
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico massimo degli argomenti  
+ Restituisce il valore numerico massimo di argomenti  
   
 ##  <a name="imin"></a>imin  
- Determinare il valore numerico minimo degli argomenti  
+ Determinare il valore numerico minimo di argomenti  
   
 ```  
 inline int imin(
@@ -269,16 +268,16 @@ inline int imin(
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico minimo degli argomenti  
+ Restituisce il valore numerico minimo di argomenti  
   
 ##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
- Restituisce un flag booleano che indica se i timeout è disabilitato per accelerator_view specificato. Corrisponde al flag D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT per creare un dispositivo Direct3D.  
+ Restituisce un flag booleano che indica se i timeout è disabilitato per il accelerator_view specificato. Corrisponde al flag D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT per la creazione di un dispositivo Direct3D.  
   
 ```  
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
@@ -286,10 +285,10 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
   
 ### <a name="parameters"></a>Parametri  
  `_Accelerator_view`  
- Accelerator_view per cui è possibile eseguire una query timeout disabilitato l'impostazione.  
+ Accelerator_view per il quale il timeout disabilitato l'impostazione è eseguire una query.  
   
 ### <a name="return-value"></a>Valore restituito  
- Flag booleano che indica se i timeout è disabilitato per accelerator_view specificato.  
+ Flag booleano che indica se i timeout è disabilitato per il accelerator_view specificato.  
   
 ##  <a name="mad"></a>MAD  
  Calcola il prodotto del primo e il secondo argomento specificato, quindi aggiunge il terzo argomento specificato.  
@@ -330,7 +329,7 @@ inline unsigned int mad(
  Il terzo argomento specificato.  
   
 ### <a name="return-value"></a>Valore restituito  
- The result of `_X` * `_Y` + `_Z`.  
+ Il risultato di `_X`  *  `_Y`  +  `_Z`.  
   
 ##  <a name="make_array"></a>make_array  
  Creare una matrice da un puntatore a interfaccia buffer Direct3D.  
@@ -357,16 +356,16 @@ array<value_type, _Rank> make_array(
  Un extent che descrive la forma della funzione di aggregazione di matrice.  
   
  `_Rv`  
- Una vista D3D tasti di scelta rapida in cui si desidera creare la matrice.  
+ Una vista D3D tasti di scelta rapida in cui è possibile creare la matrice.  
   
  `_D3D_buffer`  
  Puntatore a interfaccia IUnknown del buffer da cui creare la matrice D3D.  
   
 ### <a name="return-value"></a>Valore restituito  
- Una matrice creata utilizzando il buffer fornito Direct3D.  
+ Una matrice creata utilizzando il buffer fornito di Direct3D.  
   
-##  <a name="noise"></a>rumore  
- Genera un valore casuale utilizzando l'algoritmo di disturbo Perlin  
+##  <a name="noise"></a>Noise  
+ Genera un valore casuale usando l'algoritmo di disturbo Perlin  
   
 ```  
 inline float noise(float _X) restrict(amp);
@@ -377,10 +376,10 @@ inline float noise(float _X) restrict(amp);
  Valore a virgola mobile da cui generare il disturbo Perlin  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce Perlin il rumore valore all'interno di un intervallo compreso tra -1 e 1  
+ Restituisce Perlin il valore di disturbo in un intervallo compreso tra -1 e 1  
   
 ##  <a name="radians"></a>radianti  
- Converte i x da gradi in radianti  
+ Converte x gradi in radianti  
   
 ```  
 inline float radians(float _X) restrict(amp);
@@ -391,10 +390,10 @@ inline float radians(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x convertito da gradi in radianti  
+ Restituisce x convertito gradi in radianti  
   
 ##  <a name="rcp"></a>rcp  
- Calcola il reciproco dell'argomento specificato con un'approssimazione rapida.  
+ Calcola il reciproco dell'argomento specificato con un'approssimazione veloce.  
   
 ```  
 inline float rcp(float _X) restrict(amp);
@@ -422,10 +421,10 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
  Valore intero senza segno  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore con l'ordine di bit invertito x  
+ Restituisce il valore con l'ordine di bit invertito in x  
   
 ##  <a name="saturate"></a>saturate  
- Applica x all'interno dell'intervallo da 0 a 1  
+ Fissa x all'interno dell'intervallo da 0 a 1  
   
 ```  
 inline float saturate(float _X) restrict(amp);
@@ -447,13 +446,13 @@ inline int sign(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Il segno dell'argomento.  
   
 ##  <a name="smoothstep"></a>smoothstep  
- Restituisce un'interpolazione Hermite smooth compreso tra 0 e 1, se x è compreso nell'intervallo [ min, massimo].  
+ Restituisce un'interpolazione Hermite smooth compreso tra 0 e 1, se è compreso nell'intervallo [ min, massimo] x.  
   
 ```  
 inline float smoothstep(
@@ -476,7 +475,7 @@ inline float smoothstep(
  Restituisce 0 se x è minore di Min; 1 se x è maggiore di massimo; in caso contrario, un valore compreso tra 0 e 1 se x è compreso nell'intervallo [ min, massimo]  
   
 ##  <a name="step"></a>passaggio  
- Confronta due valori, restituisce 0 o 1 in base alla quale valore maggiore  
+ Confronta due valori, restituisce 0 o 1, in base a cui valore è maggiore di  
   
 ```  
 inline float step(
@@ -492,10 +491,10 @@ inline float step(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce 1 se la x è maggiore o uguale a y; in caso contrario, 0  
+ Restituisce 1 se il x è maggiore o uguale a y; in caso contrario, 0  
   
 ##  <a name="umax"></a>UMAX  
- Determinare il valore numerico massimo degli argomenti  
+ Determinare il valore numerico massimo di argomenti  
   
 ```  
 inline unsigned int umax(
@@ -505,16 +504,16 @@ inline unsigned int umax(
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico massimo degli argomenti  
+ Restituisce il valore numerico massimo di argomenti  
   
 ##  <a name="umin"></a>umin  
- Determinare il valore numerico minimo degli argomenti  
+ Determinare il valore numerico minimo di argomenti  
   
 ```  
 inline unsigned int umin(
@@ -524,14 +523,13 @@ inline unsigned int umin(
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico minimo degli argomenti  
+ Restituisce il valore numerico minimo di argomenti  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::direct3d](concurrency-direct3d-namespace.md)
-

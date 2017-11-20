@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- insertion operators
+dev_langs: C++
+helpviewer_keywords: insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 2860a0bfd050c4e2a86e948c7008327d237bc5ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilizzo degli operatori di inserimento e controllo del formato
 Questo argomento illustra come controllare il formato e creare gli operatori di inserimento per le classi personalizzate. L'operatore di inserimento (**<<**), che è preprogrammato per tutti i tipi di dati C++ standard, invia byte a un oggetto del flusso di output. Gli operatori di inserimento funzionano con "manipolatori" predefiniti, cioè elementi che modificano il formato predefinito di argomenti Integer.  
@@ -238,5 +220,4 @@ std::cout <<extracted;   //   This
   
 ## <a name="see-also"></a>Vedere anche  
  [Output Streams](../standard-library/output-streams.md) (Flussi di output)   
-
 

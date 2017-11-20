@@ -1,109 +1,93 @@
 ---
-title: "Arrays (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "cli::array"
-  - "details::array"
-  - "lang::array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array keyword [C++]"
-  - "declaring arrays, about declaring arrays"
-  - "arrays [C++], multidimensional"
-  - "multidimensional arrays"
-  - "arrays [C++]"
+title: Matrici (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- cli::array
+- details::array
+- lang::array
+dev_langs: C++
+helpviewer_keywords:
+- array keyword [C++]
+- declaring arrays, about declaring arrays
+- arrays [C++], multidimensional
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 34
-caps.handback.revision: 34
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "34"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a2f0f4100344fbb2990e9feeb2b455642852c320
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Arrays (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo `Platform::Array<T>` in [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)] o la parola chiave `array` in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)], dichiara un array di un tipo e valore iniziale specificati.  
+# <a name="arrays-c-component-extensions"></a>Matrici (Estensioni del componente C++)
+Il `Platform::Array<T>` tipo in C + + CX, o `array` parola chiave in C + + CLI, dichiara una matrice di un tipo specificato e il valore iniziale.  
   
-## Tutte le piattaforme  
- L'array deve essere dichiarato utilizzando il modificatore dell'handle a oggetto \(^\) dopo la chiusura delle parentesi angolari \(\>\) nella dichiarazione.  
+## <a name="all-platforms"></a>Tutte le piattaforme  
+ La matrice deve essere dichiarata utilizzando il modificatore handle a oggetto (^) dopo la parentesi angolare di chiusura (>) nella dichiarazione.  
+ Il numero di elementi della matrice non è parte del tipo. Una variabile di matrice può fare riferimento alle matrici di dimensioni diverse.  
   
- Il numero di elementi dell'array non fa parte del tipo.  Una variabile array può fare riferimento ad array di diverse dimensioni.  
+ A differenza di C++ standard, l'indice non è un sinonimo per operazioni aritmetiche e non è commutativa.  
   
- Diversamente dallo standard C\+\+, la sottoscrizione non è sinonimo dell'aritmetica dei puntatori e non è commutativa.  
+ Per ulteriori informazioni sulle matrici, vedere:  
   
- Per ulteriori informazioni sugli array, vedere:  
+-   [Procedura: Usare matrici in C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+    
+-   [Elenchi di argomenti variabili (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
--   [Vovariante di matrici](../misc/array-covariance.md)  
+## <a name="windows-runtime"></a>Windows Runtime  
+ Le matrici sono membri del `Platform` dello spazio dei nomi. Le matrici possono essere solo unidimensionale.  
   
--   [Procedura: utilizzare matrici in C\+\+\/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+### <a name="syntax"></a>Sintassi  
   
--   [Procedura: creare matrici multidimensionali](../misc/how-to-create-multidimension-arrays.md)  
-  
--   [Procedura: creare matrici di matrici gestite \(matrici irregolari\)](../misc/how-to-create-arrays-of-managed-arrays-jagged-arrays.md)  
-  
--   [Procedura: trasformare typedef per matrici gestite](../misc/how-to-make-typedefs-for-managed-arrays.md)  
-  
--   [Procedura: utilizzare matrici gestite come parametri di tipo modello](../misc/how-to-use-managed-arrays-as-template-type-parameters.md)  
-  
--   [Variable Argument Lists \(...\) \(C\+\+\/CLI\)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
-  
--   [Procedura: ordinare matrici](../misc/how-to-sort-arrays.md)  
-  
--   [Procedura: ordinare matrici mediante criteri personalizzati](../misc/how-to-sort-arrays-using-custom-criteria.md)  
-  
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Gli array sono membri dello spazio dei nomi `Platform`.  Gli array possono essere solo unidimensionali.  
-  
- **Sintassi**  
-  
- Il primo esempio della sintassi utilizza la parola chiave di aggregazione `ref new` per allocare un array.  Il secondo esempio dichiara un array locale.  
+ Il primo esempio di sintassi utilizza il `ref new` parola chiave aggregata per allocare una matrice. Nel secondo esempio dichiara una matrice locale.  
   
 ```  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
-        [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = ref new [Platform::]Array< initialization-type > [{initialization-list [,...]}]  
-  
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = {initialization-list [,...]}  
-  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
 ```  
   
- *qualifiers* \[facoltativo\]  
- Uno o più di questi identificatori di classe di archiviazione: [mutabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [esterno](../cpp/using-extern-to-specify-linkage.md), [statico](../misc/static-cpp.md).  
+ *qualificatori* [facoltativo]  
+ Uno o più di questi identificatori di classe di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Il tipo della variabile dell'array.  I tipi validi sono classi di [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e i tipi fondamentali, classi e strutture di riferimento, classi e strutture di valore e puntatori nativi \(`type``*`\).  
+ Il tipo della variabile di matrice. I tipi validi sono classi di Windows Runtime e tipi fondamentali, classi di riferimento e strutture, classi di valore e le strutture e puntatori nativi (`type*`).  
   
- `rank` \[facoltativo\]  
- Numero di dimensioni della matrice.  Deve essere 1.  
+ `rank`[facoltativo]  
+ Il numero di dimensioni della matrice. Deve essere 1.  
   
  `identifier`  
- Il nome della variabile array.  
+ Il nome della variabile di matrice.  
   
  `initialization-type`  
- Il tipo dei valori che inizializzano l'array.  In genere, `array-type` e `initialization-type` sono lo stesso tipo.  Tuttavia, i tipi possono essere differenti se esiste una conversione da `initialization-type` a `array-type`, ad esempio se `initialization-type` è derivato da `array-type`.  
+ Il tipo dei valori che consentono di inizializzare la matrice. In genere, `array-type` e `initialization-type` sono dello stesso tipo. Tuttavia, i tipi possono essere diversi se esiste una conversione da `initialization-type` a `array-type`, ad esempio, se `initialization-type` è derivato da `array-type`.  
   
- `initialization-list` \[facoltativo\]  
- Un elenco di valori delimitati da virgole tra parentesi curve che inizializza gli elementi dell'array.  Ad esempio, se `rank-size-list` fosse `(3)`, che dichiara un array unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`.  
+ `initialization-list`[facoltativo]  
+ Un elenco delimitato da virgole dei valori in parentesi graffe che inizializza gli elementi della matrice. Ad esempio, se `rank-size-list` sono stati `(3)`, che dichiara una matrice unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`.  
   
- **Osservazioni**  
+### <a name="remarks"></a>Note  
   
- È possibile rilevare in fase di compilazione se un tipo è un array di riferimento calcolato con `__is_ref_array(``type``)`.  Per ulteriori informazioni, vedere [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ È possibile rilevare in fase di compilazione se un tipo è una matrice con conteggio dei riferimenti con `__is_ref_array(type)`. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-### Esempi  
- L'esempio seguente crea un array unidimensionale con 100 elementi.  
+### <a name="examples"></a>Esempi  
+ L'esempio seguente crea una matrice unidimensionale che contiene 100 elementi.  
   
-```  
+```cpp  
 // cwr_array.cpp  
 // compile with: /ZW  
 using namespace Platform;  
@@ -115,63 +99,64 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Sintassi**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
   
- Il primo esempio della sintassi utilizza la parola chiave `gcnew` per allocare un array.  Il secondo esempio dichiara un array locale.  
+### <a name="syntax"></a>Sintassi  
   
-```  
-  
-        [qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = gcnew [cli::]array< initialization-type [,rank] >(rank-size-list[,...]) [{initialization-list [,...]}]  
-  
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = {initialization-list [,...]}  
+ Il primo esempio di sintassi utilizza il `gcnew` (parola chiave) da allocare una matrice. Nel secondo esempio dichiara una matrice locale.  
   
 ```  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
- *qualifiers* \[facoltativo\]  
- Uno o più di questi identificatori di classe di archiviazione: [mutabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [esterno](../cpp/using-extern-to-specify-linkage.md), [statico](../misc/static-cpp.md).  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
+```  
+  
+ *qualificatori* [facoltativo]  
+ Uno o più di questi identificatori di classe di archiviazione: [modificabile](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [statico](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Il tipo della variabile dell'array.  I tipi validi sono classi di [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e tipi di base, classi e strutture di riferimento, classi e strutture di valore, puntatori nativi \(`type``*`\) e tipi nativi POD \(dati non aggiornati\) normali.  
+ Il tipo della variabile di matrice. I tipi validi sono classi di Windows Runtime e tipi fondamentali, classi di riferimento e struct, classi e struct, puntatori nativi (`type*`) e i tipi nativi POD (dati non aggiornati).  
   
- `rank` \[facoltativo\]  
- Numero di dimensioni della matrice.  L'impostazione predefinita è 1; il valore massimo è 32.  Ogni dimensione dell'array è essa stessa un array.  
+ `rank`[facoltativo]  
+ Il numero di dimensioni della matrice. Il valore predefinito è 1. il valore massimo è 32. Ogni dimensione della matrice è una matrice.  
   
  `identifier`  
- Il nome della variabile array.  
+ Il nome della variabile di matrice.  
   
  `initialization-type`  
- Il tipo dei valori che inizializzano l'array.  In genere, `array-type` e `initialization-type` sono lo stesso tipo.  Tuttavia, i tipi possono essere differenti se esiste una conversione da `initialization-type` a `array-type`, ad esempio se `initialization-type` è derivato da `array-type`.  
+ Il tipo dei valori che consentono di inizializzare la matrice. In genere, `array-type` e `initialization-type` sono dello stesso tipo. Tuttavia, i tipi possono essere diversi se esiste una conversione da `initialization-type` a `array-type`, ad esempio, se `initialization-type` è derivato da `array-type`.  
   
  `rank-size-list`  
- Un elenco delimitato da virgole della dimensione di ogni dimensione dell'array.  In alternativa, se il parametro di `initialization-list` viene specificato, il compilatore può dedurre la misura di ciascuna dimensione e `rank-size-list` può essere omesso.  Per ulteriori informazioni, vedere [Procedura: creare matrici multidimensionali](../misc/how-to-create-multidimension-arrays.md).  
+ Un elenco delimitato da virgole delle dimensioni di ciascuna dimensione della matrice. In alternativa, se il `initialization-list` viene specificato, il compilatore può dedurre le dimensioni di ogni dimensione e `rank-size-list` può essere omesso. 
   
- `initialization-list` \[facoltativo\]  
- Un elenco di valori delimitati da virgole tra parentesi curve che inizializza gli elementi dell'array.  O un elenco delimitato da virgole di elementi annidati di *initialization\-list* che inizializzano gli elementi in un array multidimensionale.  
+ `initialization-list`[facoltativo]  
+ Un elenco delimitato da virgole dei valori in parentesi graffe che inizializza gli elementi della matrice. O annidato in un elenco delimitato da virgole di *elenco di inizializzazione* gli elementi che consentono di inizializzare gli elementi in una matrice multidimensionale.  
   
- Ad esempio, se `rank-size-list` fosse `(3)`, che dichiara un array unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`.  Se `rank-size-list` fosse `(3,2,4)`, che dichiara un array tridimensionale di 3 elementi nella prima dimensione, 2 elementi nella seconda e 4 elementi nella terza, `initialization-list` potrebbe essere `{{1,2,3},{0,0},{-5,10,-21,99}}`\).  
+ Ad esempio, se `rank-size-list` sono stati `(3)`, che dichiara una matrice unidimensionale di 3 elementi, `initialization list` potrebbe essere `{1,2,3}`. Se `rank-size-list` sono stati `(3,2,4)`, che dichiara una matrice tridimensionale di 3 elementi nella prima dimensione, 2 elementi nel secondo e 4 nella terza `initialization-list` potrebbe essere `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
- **Osservazioni**  
+### <a name="remarks"></a>Note  
   
- `array` è nello spazio dei nomi [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `array`nel [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) dello spazio dei nomi.  
   
- Come C\+\+ standard, gli indici di un array sono in base zero e un array è sottoscritto utilizzando le parentesi quadre \(\[\]\).  Diversamente dallo standard C\+\+, gli indici di un array multidimensionale vengono specificati in un elenco di indici per ogni dimensione anziché un set di operatori di parentesi quadra \(\[\]\) per ogni dimensione.  Ad esempio, *identifier*\[*index1*, *index2*\] al posto di *identifier*\[*index1*\]\[ *index2*\].  
+ Ad esempio C++ standard, gli indici di una matrice sono in base zero e una matrice è con l'indice utilizzando le parentesi quadre ([]). A differenza di C++ standard, vengono specificati gli indici di una matrice multidimensionale in un elenco di indici per ogni dimensione anziché in un set di operatori tra parentesi quadre ([]) per ogni dimensione. Ad esempio, *identificatore*[*index1*, *index2*] invece di *identificatore*[*index1*] [ *index2*].  
   
- Tutte gli array gestiti ereditano da `System::Array`.  Qualsiasi metodo o proprietà di `System::Array` può essere applicata direttamente alla variabile di array.  
+ Ereditano tutte le matrici gestite `System::Array`. Qualsiasi metodo o proprietà di `System::Array` può essere applicato direttamente alla variabile di matrice.  
   
- Quando si alloca un array il cui tipo di elemento è puntatore ad una classe gestita, gli elementi sono inizializzati a 0.  
+ Quando si alloca una matrice il cui tipo di elemento è puntatore-a una classe gestita, gli elementi sono inizializzate su 0.  
   
- Quando si alloca un array il cui tipo di elemento è un tipo di valore `V`, il costruttore predefinito per `V` viene applicato a ogni elemento dell'array.  Per ulteriori informazioni, vedere [.Equivalenti di .NET Framework a tipi nativi C\+\+](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
+ Quando si alloca una matrice il cui tipo di elemento è un tipo valore `V`, il costruttore predefinito per `V` viene applicato a ogni elemento della matrice. Per ulteriori informazioni, vedere [equivalenti di .NET Framework a tipi nativi C++ (C + + CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
   
- In fase di compilazione, è possibile rilevare se un tipo è un array di Common Language Runtime \(CLR\) con `__is_ref_array(``type``)`.  Per ulteriori informazioni, vedere [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ In fase di compilazione, è possibile rilevare se un tipo è una matrice di runtime (CLR) di linguaggio comuni con `__is_ref_array(type)`. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
- L'esempio seguente crea un array unidimensionale con 100 elementi e un array tridimensionale con 3 elementi nella prima dimensione, 5 elementi nella seconda e 6 elementi nella terza.  
+### <a name="examples"></a>Esempi  
+ L'esempio seguente crea una matrice unidimensionale che contiene 100 elementi e una matrice tridimensionale con 3 elementi nella prima dimensione 5 elementi nel secondo e nel terzo 6 elementi.  
   
-```  
+```cpp  
 // clr_array.cpp  
 // compile with: /clr  
 ref class MyClass {};  
@@ -186,5 +171,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

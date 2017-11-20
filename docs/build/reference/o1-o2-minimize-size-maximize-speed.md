@@ -1,99 +1,77 @@
 ---
-title: "/O1, /O2 (Riduci dimensione, Ottimizza velocit&#224;) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/o2"
-  - "/o1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/O1 (opzione del compilatore) [C++]"
-  - "/O2 (opzione del compilatore) [C++]"
-  - "velocità codice"
-  - "Ottimizza velocità (opzione del compilatore) [C++]"
-  - "Riduci dimensione (opzione del compilatore) [C++]"
-  - "O1 (opzione del compilatore) [C++]"
-  - "-O1 (opzione del compilatore) [C++]"
-  - "O2 (opzione del compilatore) [C++]"
-  - "-O2 (opzione del compilatore) [C++]"
-  - "dimensione codice"
+title: "-/O1, /O2 (Riduci dimensione, Ottimizza velocità) | Documenti Microsoft"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /o2
+- /o1
+dev_langs: C++
+helpviewer_keywords:
+- maximize speed compiler option [C++]
+- minimize size compiler option [C++]
+- -O2 compiler option [C++]
+- fast code
+- small code
+- O2 compiler option [C++]
+- /O2 compiler option [C++]
+- -O1 compiler option [C++]
+- O1 compiler option [C++]
+- /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4498f19e6a228bdfb23103ab2ee25d69fcfae1e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /O1, /O2 (Riduci dimensione, Ottimizza velocit&#224;)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Riduci dimensione, Ottimizza velocità)
 
-Seleziona un insieme predefinito di opzioni che influiscono sulle dimensioni e la velocità dei file.  
-  
-## Sintassi  
-  
-```  
-/O1  
-/O2  
-```  
-  
-## Note  
- Nella tabella riportata di seguito vengono descritte le opzioni **\/O1** e **\/O2**.  
-  
-|Opzione|Equivalente a|Commento|  
-|-------------|-------------------|--------------|  
-|**\/O1** \(Riduci dimensione\)|**\/Og \/Os \/Oy \/Ob2 \/Gs \/GF \/Gy**|Crea il codice di dimensioni più piccole nella maggior parte dei casi.|  
-|**\/O2** \(Ottimizza velocità\)|**\/Og \/Oi \/Ot \/Oy \/Ob2 \/Gs \/GF \/Gy**|Crea il codice più veloce nella maggior parte dei casi. Si tratta dell'impostazione predefinita per le build di rilascio.|  
-  
- Le opzioni **\/O1** e **\/O2** attivano inoltre l'ottimizzazione del valore restituito denominato, che elimina il distruttore e il costruttore di copia di un valore restituito basato sullo stack.  Si consideri l'esempio riportato di seguito.  La funzione `Test` non creerà il distruttore né il costruttore di copia.  Per esaminare gli effetti dell'ottimizzazione del valore restituito denominato durante l'esecuzione del programma, aggiungere istruzioni di output al costruttore, al distruttore e al costruttore di copia.  Per ulteriori informazioni, vedere [Ottimizzazione denominata di valore restituito in Visual C\+\+ 2005](http://go.microsoft.com/fwlink/?linkid=131571).  
-  
-```  
-// O1_O2_NRVO.cpp  
-// compile with: /O1  
-struct A {  
-   A() {}  
-   ~A() {}  
-   A(const A& aa) {}  
-};  
-  
-A Test() {  
-   A a;  
-   return a;  
-}  
-int main() {  
-   A aa;  
-   aa = Test();  
-}  
-```  
-  
- **Sezione specifico x86**  
-  
- Tali opzioni presuppongono l'utilizzo dell'opzione Omissione dei puntatori ai frame \([\/Oy](../../build/reference/oy-frame-pointer-omission.md)\).  
-  
- **END x86 Specific**  
-  
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Fare clic sulla cartella **C\/C\+\+**.  
-  
-3.  Fare clic sulla pagina delle proprietà **Ottimizzazione**.  
-  
-4.  Modificare la proprietà **Ottimizzazione**.  
-  
-### Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.  
-  
-## Vedere anche  
- [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md)   
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [\/EH \(Modello di gestione delle eccezioni\)](../../build/reference/eh-exception-handling-model.md)
+Seleziona un set predefinito di opzioni che influiscono sulle dimensioni e la velocità del codice generato.
+
+## <a name="syntax"></a>Sintassi
+
+> /O1  
+> /O2
+
+## <a name="remarks"></a>Note
+
+Il **/O1** e **/O2** opzioni del compilatore sono un modo rapido per impostare diverse opzioni di ottimizzazione specifiche in una sola volta. Il **/O1** opzione consente di impostare le opzioni di ottimizzazione singoli che crea il codice più piccolo nella maggior parte dei casi. Il **/O2** opzione consente di impostare le opzioni per creare il codice più veloce nella maggior parte dei casi. Il **/O2** è l'impostazione predefinita nelle build di rilascio. Questa tabella mostra le opzioni impostate da **/O1** e **/O2**:
+
+|Opzione|Equivale a|
+|------------|-------------------|
+|**/O1** (Riduci dimensione)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/O2** (Ottimizza velocità)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/Gs](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+
+**/O1** e **/O2** si escludono a vicenda.
+
+> [!NOTE]  
+> **x86 specifico**  
+> Tali opzioni presuppongono l'uso dell'omissione di puntatori ai Frame ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) opzione.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+
+1. In **le proprietà di configurazione**aprire **C/C++** e quindi scegliere il **ottimizzazione** pagina delle proprietà.
+
+1. Modificare il **ottimizzazione** proprietà.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)  
+[Opzioni del compilatore](../../build/reference/compiler-options.md)  
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)  
+[/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)

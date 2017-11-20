@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,25 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::packaged_task [C++]
+- std::packaged_task [C++], packaged_task
+- std::packaged_task [C++], get_future
+- std::packaged_task [C++], make_ready_at_thread_exit
+- std::packaged_task [C++], reset
+- std::packaged_task [C++], swap
+- std::packaged_task [C++], valid
+ms.openlocfilehash: 74960f3078788e6ae627d29d06f6999d48f57d98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="packagedtask-class"></a>Classe packaged_task
 Descrive un *provider asincrono* che è un wrapper di chiamata la cui firma di chiamata è `Ty(ArgTypes...)`. Lo *stato asincrono associato* contiene una copia dell'oggetto chiamabile oltre al potenziale risultato.  
@@ -234,7 +225,6 @@ bool valid() const;
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
-
 
 
 

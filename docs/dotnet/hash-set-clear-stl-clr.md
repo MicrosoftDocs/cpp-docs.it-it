@@ -1,41 +1,39 @@
 ---
-title: "hash_set::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear (membro) [STL/CLR]"
+title: 'hash_set:: Clear (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 9f38b72a-5db8-485a-b41a-7d47ac57f4a9
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3175588d49c02d960067864a4d3ff35db0464c5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetclear-stlclr"></a>hash_set::clear (STL/CLR)
 Rimuove tutti gli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void clear();  
 ```  
   
-## Note  
- La funzione membro effettivamente chiama [hash\_set::erase](../dotnet/hash-set-erase-stl-clr.md)`(` [hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)`(),` [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`())`.  Utilizzarla per assicurarsi che la sequenza selezionata è vuota.  
+## <a name="remarks"></a>Note  
+ La funzione membro chiama in modo efficace [hash_set:: Erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: Begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())`. Utilizzarla per garantire che la sequenza controllata vuota.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_set_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::erase](../dotnet/hash-set-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)

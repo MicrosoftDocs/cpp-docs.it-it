@@ -1,89 +1,87 @@
 ---
-title: "Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni della riga di comando [C++], codice gestito"
-  - "compilazione di programmi [C++]"
-  - "codice gestito [C++]"
-  - "Visual C++, codice gestito"
+title: Compilazione di un programma C++ destinato a CLR | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command-line applications [C++], managed code
+- compiling programs [C++]
+- Visual C++, managed code
+- managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 40
-caps.handback.revision: 40
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "40"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 152d26874af277d742b106db29a4d9dd9c254c9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile creare programmi Visual C\+\+ che utilizzano classi .NET e compilarli nell'ambiente di sviluppo di Visual Studio.  
+# <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio
+È possibile creare programmi Visual C++ che utilizzano classi .NET e compilarle con l'ambiente di sviluppo di Visual Studio.  
   
- Per questa procedura è possibile digitare un programma Visual C\+\+ personalizzato o utilizzare uno di quelli di esempio.  Con l'esempio di programma utilizzato in questa procedura viene creato un file di testo denominato textfile.txt che viene salvato nella directory del progetto.  
+ Per questa procedura è possibile digitare il proprio programma Visual C++ o usare uno dei programmi di esempio. Il programma di esempio utilizzati in questa procedura crea un file di testo denominato textfile. txt e lo salva nella directory del progetto.  
   
-## Prerequisiti  
- In questi argomenti si presuppone la conoscenza delle nozioni di base del linguaggio C\+\+.  
+## <a name="prerequisites"></a>Prerequisiti  
+ Questi argomenti si supponga di aver compreso le nozioni di base del linguaggio C++.  
   
-### Per creare un nuovo progetto in Visual Studio e aggiungere un nuovo file di origine  
+### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Per creare un nuovo progetto in Visual Studio e aggiungere un nuovo file di origine  
   
-1.  Creare un nuovo progetto.  Scegliere **Nuovo** dal menu **File** e quindi **Progetto...**.  
+1.  Creare un nuovo progetto. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  Dai tipi di progetto Visual C\+\+, scegliere **CLR** e quindi **Progetto CLR vuoto**.  
+2.  I tipi di progetto Visual C++, fare clic su **CLR**, quindi fare clic su **progetto CLR vuoto**.  
   
 3.  Digitare un nome di progetto.  
   
-     Per impostazione predefinita, la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, benché sia possibile immetterne uno diverso.  Se lo si desidera, è possibile immettere un percorso diverso per il progetto.  
+     Per impostazione predefinita, la soluzione che contiene il progetto ha lo stesso nome del nuovo progetto, ma è possibile immettere un nome diverso. Se si desidera, è possibile immettere un percorso diverso per il progetto.  
   
-     Scegliere **OK** per creare il nuovo progetto.  
+     Fare clic su **OK** per creare il nuovo progetto.  
   
-4.  Se Esplora soluzioni non è visibile, scegliere **Esplora soluzioni** dal menu **Visualizza**.  
+4.  Se Esplora soluzioni non è visibile, fare clic su **Esplora** sul **vista** menu.  
   
 5.  Aggiungere un nuovo file di origine al progetto:  
   
-    -   Fare clic con il pulsante destro del mouse sulla cartella **File di origine** in Esplora soluzioni, scegliere **Aggiungi** e quindi **Nuovo elemento…**.  
+    -   Fare doppio clic su di **i file di origine** cartella in Esplora soluzioni, scegliere **Aggiungi** e fare clic su **nuovo elemento**.  
   
-    -   Fare clic su **File di C\+\+ \(.cpp\)** e immettere un nome di file, quindi scegliere **Aggiungi**.  
+    -   Fare clic su **File C++ (. cpp)** e digitare un nome di file e quindi fare clic su **Aggiungi**.  
   
-     Il file **.cpp** verrà visualizzato nella cartella **File di origine** in Esplora soluzioni e verrà visualizzata una finestra a schede nella quale digitare il codice che si desidera immettere in tale file.  
+     Il **. cpp** file viene visualizzato nel **i file di origine** cartella in Esplora soluzioni e una finestra a schede viene visualizzata in cui si digita il codice desiderato nel file.  
   
-6.  Fare clic sulla scheda appena creata in Visual Studio e digitare un programma Visual C\+\+ valido oppure copiare e incollare un esempio di programma.  
+6.  Fare clic su scheda appena creata in Visual Studio e digitare un programma Visual C++ valido, oppure copiare e incollare uno dei programmi di esempio.  
   
-     È possibile, ad esempio, utilizzare l'esempio di programma [Procedura: scrivere un file di testo](../dotnet/how-to-write-a-text-file-cpp-cli.md), accessibile dal nodo **Gestione di file e I\/O** della Guida di programmazione.  
+     Ad esempio, è possibile utilizzare il [come: scrivere un File di testo (C + + CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md) programma di esempio (nel **gestione File e i/o** nodo della Guida di programmazione).  
   
-     Se si utilizza un esempio di programma, si noti che viene utilizzata la parola chiave `gcnew` ``  anziché `new` per la creazione di un oggetto .NET e che `gcnew` restituisce un handle \(`^`\) anziché un puntatore \(`*`\):  
+     Se si utilizza il programma di esempio, si noti che viene utilizzata la `gcnew` (parola chiave) anziché `new` quando si crea un oggetto .NET e che `gcnew` restituisce un handle (`^`) anziché un puntatore (`*`):  
   
      `StreamWriter^ sw = gcnew StreamWriter(fileName);`  
   
-     Per ulteriori informazioni sulla nuova sintassi di Visual C\+\+, vedere [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md).  
+     Per ulteriori informazioni sulla nuova sintassi di Visual C++, vedere [estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md).  
   
 7.  Scegliere **Compila soluzione** dal menu **Compila**.  
   
-     Nella finestra di output vengono visualizzate informazioni relative allo stato della compilazione, ad esempio il percorso del log di compilazione e un messaggio indicante la riuscita dell'operazione.  
+     Il **Output** finestra vengono visualizzate informazioni sullo stato di avanzamento di compilazione, ad esempio il percorso del log di compilazione e un messaggio che indica lo stato della compilazione.  
   
-     Se si apportano modifiche e si esegue il programma senza eseguire una compilazione, è possibile che venga visualizzata una finestra di dialogo che segnala che il progetto non è aggiornato.  Selezionare la casella di controllo in questa finestra di dialogo prima di scegliere **OK** affinché in Visual Studio vengano sempre utilizzate le versioni correnti dei file senza visualizzare messaggi di richiesta durante la compilazione.  
+     Se si apportano modifiche e si esegue il programma senza eseguire una compilazione, una finestra di dialogo potrebbe indicare che il progetto è obsoleto. Selezionare la casella di controllo in questa finestra di dialogo prima di scegliere **OK** se desideri che Visual Studio per utilizzare sempre le versioni correnti dei file anziché la richiesta ogni volta che compila l'applicazione.  
   
-8.  Scegliere **Avvia senza eseguire debug** dal menu **Debug**.  
+8.  Nel **Debug** menu, fare clic su **Avvia senza eseguire debug**.  
   
-9. Se è stato utilizzato l'esempio di programma, durante l'esecuzione verrà visualizzata una finestra di comando che indica che il file di testo è stato creato.  Premere un tasto qualsiasi per chiudere la finestra di comando.  
+9. Se è stato utilizzato il programma di esempio, quando si esegue il programma viene visualizzata una finestra di comando che indica che il file di testo è stato creato. Premere un tasto qualsiasi per chiudere la finestra di comando.  
   
-     Il file di testo **textfile.txt** creato si trova ora nella directory del progetto e  può essere aperto in Blocco note.  
+     Il **textfile. txt** file di testo è ora disponibile nella directory del progetto. È possibile aprire questo file utilizzando blocco note.  
   
     > [!NOTE]
-    >  La scelta del modello di progetto CLR vuoto imposta automaticamente l'opzione del compilatore **\/clr**.  Per verificare questa impostazione, fare clic con il pulsante destro del mouse sul progetto in **Esplora soluzioni** e scegliere **Proprietà**, quindi selezionare **Supporto di Common Language Runtime** nel nodo **Generale** di **Proprietà di configurazione**.  
+    >  Scelta di CLR vuoto modello di progetto impostata automaticamente la **/clr** l'opzione del compilatore. Per verificare questa condizione, fare clic sul progetto in **Esplora** e facendo clic su **proprietà**e quindi controllare il **supporto Common Language Runtime** opzione il  **Generale** nodo di **le proprietà di configurazione**.  
   
-## Argomenti successivi  
- **Precedente:** [Procedura dettagliata: compilazione di un programma C\+\+ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **Successivo:** [Procedura dettagliata: Compilazione di un programma in C dalla riga di comando](../Topic/Walkthrough:%20Compiling%20a%20C%20Program%20on%20the%20Command%20Line.md)  
+## <a name="whats-next"></a>Argomenti successivi  
+ **Precedente:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **Avanti:**[procedura dettagliata: compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
-## Vedere anche  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/it-it/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Riferimenti del linguaggio C\+\+](../cpp/cpp-language-reference.md)   
- [Compilazione di programmi C\/C\+\+](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
+ [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)

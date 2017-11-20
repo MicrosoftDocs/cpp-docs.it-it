@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
 - AFXWIN/CMFCPreviewCtrlImpl::m_font
 - AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], CMFCPreviewCtrlImpl
 - CMFCPreviewCtrlImpl [MFC], Create
@@ -45,16 +43,15 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: ab328ca6f114ffb390ad99b6684e26a7d2d56266
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: df96faf5d4df30024e93ed701b956984399a8c3e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Classe CMFCPreviewCtrlImpl
 Questa classe implementa una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  
@@ -321,4 +318,3 @@ Distrugge un oggetto di controllo di anteprima.
 virtual ~CMFCPreviewCtrlImpl();  
 ```  
   
-

@@ -1,29 +1,27 @@
 ---
-title: "Avviso del compilatore (livello 1) C4157 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4157"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4157"
+title: Compilatore (livello 1) Avviso C4157 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4157
+dev_langs: C++
+helpviewer_keywords: C4157
 ms.assetid: 6dabc303-eba1-4a8e-a124-a6e1dc84f4bd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e9895c930fdbb83a257d7fdfef5ebaf20f96b27e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4157
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4157"></a>Compilatore (livello 1) Avviso C4157
 pragma ignorato dal compilatore C  
   
- Solo il compilatore C\+\+ riconosce **init\_seg\(\)**.
+ Solo il compilatore C++ riconosce **init_seg ()**.

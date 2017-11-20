@@ -1,44 +1,42 @@
 ---
-title: "Metodo HANDLETraits::GetInvalidValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInvalidValue (metodo)"
+title: 'Metodo handletraits:: Getinvalidvalue | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue
+dev_langs: C++
+helpviewer_keywords: GetInvalidValue method
 ms.assetid: e95d2cc1-e70f-463f-8ff0-183cdeac1138
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c5685a9fd16aab5b04251358254b9c1b3a7f975c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HANDLETraits::GetInvalidValue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta un handle invalido.  
+# <a name="handletraitsgetinvalidvalue-method"></a>Metodo HANDLETraits::GetInvalidValue
+Rappresenta un handle non valido.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 inline static HANDLE GetInvalidValue();  
 ```  
   
-## Valore restituito  
- Restituisce sempre INVALID\_HANDLE\_VALUE. \(INVALID\_HANDLE\_VALUE è definito da Windows.\)  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce sempre INVALID_HANDLE_VALUE. (INVALID_HANDLE_VALUE è definito da Windows)  
   
-## Requisiti  
- **Intestazione:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers::HandleTraits  
+ **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura HANDLETraits](../windows/handletraits-structure.md)

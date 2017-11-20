@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4789 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4789"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4789"
+title: Compilatore avviso (livello 1) C4789 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4789
+dev_langs: C++
+helpviewer_keywords: C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 673d1059babf9e14528711053fd97686e3add1cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4789
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4789"></a>Avviso del compilatore (livello 1) C4789
 verrà eseguito l'overrun del buffer 'identifier' di dimensioni pari a N byte; M byte verranno scritti a partire dall'offset L  
   
- Genera un avviso sull'overrun del buffer quando vengono usate funzioni di specifiche di runtime del linguaggio C \(CRT\), vengono passati parametri e vengono eseguite assegnazioni, in modo che le dimensioni dei dati siano note in fase di compilazione.  Questo avviso è relativo alle situazioni in cui potrebbe essere eluso il normale rilevamento di dimensioni non corrispondenti dei dati.  
+ Genera un avviso sull'overrun del buffer quando vengono usate funzioni di specifiche di runtime del linguaggio C (CRT), vengono passati parametri e vengono eseguite assegnazioni, in modo che le dimensioni dei dati siano note in fase di compilazione. Questo avviso è relativo alle situazioni in cui potrebbe essere eluso il normale rilevamento di dimensioni non corrispondenti dei dati.  
   
- L'avviso viene visualizzato quando dei dati, la cui lunghezza è nota in fase di compilazione, vengono copiati e inseriti in un blocco di dati le cui dimensioni sono note come insufficienti in fase di compilazione.  La copia deve essere eseguita usando il formato intrinseco di una delle funzioni CRT seguenti:  
+ L'avviso viene visualizzato quando dei dati, la cui lunghezza è nota in fase di compilazione, vengono copiati e inseriti in un blocco di dati le cui dimensioni sono note come insufficienti in fase di compilazione. La copia deve essere eseguita usando il formato intrinseco di una delle funzioni CRT seguenti:  
   
 -   [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)  
   
@@ -38,7 +36,7 @@ verrà eseguito l'overrun del buffer 'identifier' di dimensioni pari a N byte; M
   
  L'avviso viene visualizzato anche quando un tipo di dati di un parametro non corrisponde a causa dell'uso di un cast e quindi viene tentata l'assegnazione di una copia da un riferimento lvalue.  
   
- Visual C\+\+ può generare questo avviso per un percorso di codice che non viene mai eseguito.  È possibile disabilitare temporaneamente l'avviso usando `#pragma`, come mostrato in questo esempio:  
+ Visual C++ può generare questo avviso per un percorso di codice che non viene mai eseguito. È possibile disabilitare temporaneamente l'avviso usando `#pragma`, come mostrato in questo esempio:  
   
  `#pragma(push)`  
   
@@ -48,9 +46,9 @@ verrà eseguito l'overrun del buffer 'identifier' di dimensioni pari a N byte; M
   
  `#pragma(pop)`  
   
- Questo impedisce a Visual C\+\+ di generare l'avviso per quello specifico blocco di codice.  `#pragma(push)` mantiene lo stato esistente prima che `#pragma warning(disable: 4789)` lo modifichi.  `#pragma(pop)` ripristina lo stato di cui è stato eseguito il push ed elimina gli effetti di `#pragma warning(disable:4789)`.  Per altre informazioni sulla direttiva `#pragma` del preprocessore C\+\+, vedere [warning](../../preprocessor/warning.md) e [Direttive pragma e parola chiave \_\_Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+ Questo impedisce a Visual C++ di generare l'avviso per quello specifico blocco di codice. `#pragma(push)` mantiene lo stato esistente prima che `#pragma warning(disable: 4789)` lo modifichi. `#pragma(pop)` ripristina lo stato di cui è stato eseguito il push ed elimina gli effetti di `#pragma warning(disable:4789)`. Per ulteriori informazioni sulla direttiva del preprocessore C++ `#pragma`, vedere [avviso](../../preprocessor/warning.md) e [direttive Pragma e parola chiave pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  L'esempio seguente genera l'errore C4789.  
   
 ```  
@@ -73,7 +71,7 @@ int main()
 }  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Anche l'esempio seguente genera l'errore C4789.  
   
 ```  

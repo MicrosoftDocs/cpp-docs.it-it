@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], limitations
 - restrictions, termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 8b1cb481-303f-4e79-b409-57a002a9fa9e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0c7be69cf8371b354f13863177d48cbb00f647b0
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 593cb54298682c53f534e92f6553d86d2118d98b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="restrictions-on-termination-handlers"></a>Limitazioni ai gestori di terminazione
 Non è possibile utilizzare un'istruzione `goto` per eseguire un salto in un blocco di istruzioni `__try` o `__finally`. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È tuttavia possibile eseguire un salto da un blocco di istruzioni `__try`. Non è inoltre possibile annidare un gestore eccezioni o un gestore di terminazione all'interno di un blocco `__finally`.  

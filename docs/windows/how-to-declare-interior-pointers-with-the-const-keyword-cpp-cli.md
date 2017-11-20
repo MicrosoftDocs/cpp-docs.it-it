@@ -1,34 +1,32 @@
 ---
-title: "How to: Declare Interior Pointers with the const Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
+title: 'Procedura: dichiarare i puntatori interni con la parola chiave const (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db90a74bc73c548dcc3cca71cf3631bd9499ac27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Declare Interior Pointers with the const Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il seguente codice di esempio mostra come utilizzare `const` nella dichiarazione di un puntatore interno.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Procedura: dichiarare i puntatori interni con la parola chiave const (C++/CLI)
+L'esempio seguente viene illustrato come utilizzare `const` nella dichiarazione di un puntatore interno.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore **\/clr**, ma non dall'opzione del compilatore di **\/ZW**.  
+>  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +85,5 @@ int main() {
 };  
 ```  
   
-## Vedere anche  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

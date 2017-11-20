@@ -4,32 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- partial ordering of function templates
+dev_langs: C++
+helpviewer_keywords: partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 252f80416f581ecc2c126bc44ab22c1b63c50130
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d211a3ab33377b817c23734f01947cde92f8aad7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="partial-ordering-of-function-templates-c"></a>Ordinamento parziale di modelli di funzione (C++)
 
 Possono essere disponibili più modelli di funzioni corrispondente all'elenco di argomenti di una chiamata di funzione. In C++ viene definito un ordinamento parziale dei modelli di funzione per specificare la funzione che deve essere chiamata. L'ordinamento è parziale perché possono essere presenti alcuni modelli considerati ugualmente specializzati.
 
-Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Ad esempio, se un modello di funzione accetta un tipo __T__e un altro modello di funzione richiede __T\* __ è disponibile, il __T\* __ versione viene definita per essere più specializzata ed è preferibile generica __T__ versione ogni volta che l'argomento è un tipo di puntatore, anche se entrambe sarebbero corrispondenze consentite.
+Il compilatore sceglie la funzione del modello più specializzato disponibile tra le possibili corrispondenze. Ad esempio, se un modello di funzione accetta un tipo __T__e un altro modello di funzione richiede __T\*__  è disponibile, il __T\*__  versione viene definita per essere più specializzata ed è preferibile generica __T__ versione ogni volta che l'argomento è un tipo di puntatore, anche se entrambe sarebbero corrispondenze consentite.
 
 Utilizzare la procedura seguente per determinare se un candidato di modello di funzione è più specializzato:
 
@@ -47,11 +42,11 @@ Utilizzare la procedura seguente per determinare se un candidato di modello di f
 
      1. Una specializzazione di modello per un tipo specifico è più specializzata di una che accetta un argomento tipo generico.
 
-     2. Un modello richiede solo __T\* __ è più specializzato di prendere una __T__, perché il tipo di un ipotetico __X\* __ è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\* __ argomento di modello.
+     2. Un modello richiede solo __T\*__  è più specializzato di prendere una __T__, perché il tipo di un ipotetico __X\*__  è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __T\*__  argomento di modello.
 
      3. __const T__ è più specializzato di __T__perché __const X__ è un argomento valido per un __T__ argomento di modello, ma __X__ non è un argomento valido per un __const T__ argomento di modello.
 
-     4. __const T\* __ è più specializzato di __T\*__perché __const X\* __ è un argomento valido per un __T\* __ argomento di modello, ma __X\* __ non è un argomento valido per un __const T\* __ argomento di modello.
+     4. __const T\*__  è più specializzato di __T\*__perché __const X\*__  è un argomento valido per un __T\*__  argomento di modello, ma __X\*__  non è un argomento valido per un __const T\*__  argomento di modello.
 
 ## <a name="example"></a>Esempio
 
@@ -99,4 +94,3 @@ Even more specialized function for const T*
 ## <a name="see-also"></a>Vedere anche
 
 [Modelli di funzioni](../cpp/function-templates.md)
-

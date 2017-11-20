@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _variant_t::operator=
-dev_langs:
-- C++
+f1_keywords: _variant_t::operator=
+dev_langs: C++
 helpviewer_keywords:
 - operator= [C++], variant
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 57ada98b0171711ea93fa8639e7c6c7aa1d7060a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="varianttoperator-"></a>_variant_t::operator =
 **Sezione specifica Microsoft**  
@@ -131,37 +127,37 @@ _variant_t& operator=(
 ## <a name="remarks"></a>Note  
  L'operatore consente di assegnare un nuovo valore all'oggetto `_variant_t`:  
   
--   **operatore = (***varSrc***)** assegna un oggetto esistente **VARIANT** per un `_variant_t` oggetto.      
+-   **operatore = (***varSrc***)** assegna un oggetto esistente **VARIANT** per un `_variant_t` oggetto.  
   
--   **operatore = (***pVarSrc***)** assegna un oggetto esistente **VARIANT** per un `_variant_t` oggetto.      
+-   **operatore = (***pVarSrc***)** assegna un oggetto esistente **VARIANT** per un `_variant_t` oggetto.  
   
--   **operatore = (***var_t_Src***)** assegna un oggetto esistente `_variant_t` l'oggetto in un `_variant_t` oggetto.      
+-   **operatore = (***var_t_Src***)** assegna un oggetto esistente `_variant_t` l'oggetto in un `_variant_t` oggetto.  
   
--   **operatore = (***sSrc***)** assegna un **breve** valore intero da un `_variant_t` oggetto.      
+-   **operatore = (***sSrc***)** assegna un **breve** valore intero da un `_variant_t` oggetto.  
   
--   **operatore = (**`lSrc`**)** assegna un **lungo** valore intero da un `_variant_t` oggetto.      
+-   **operatore = (**`lSrc`**)** assegna un **lungo** valore intero da un `_variant_t` oggetto.  
   
--   **operatore = (***fltSrc***)** assegna un **float** valore numerico da un `_variant_t` oggetto.      
+-   **operatore = (***fltSrc***)** assegna un **float** valore numerico da un `_variant_t` oggetto.  
   
--   **operatore = (***dblSrc***)** assegna un **doppie** valore numerico da un `_variant_t` oggetto.      
+-   **operatore = (***dblSrc***)** assegna un **doppie** valore numerico da un `_variant_t` oggetto.  
   
--   **operatore = (***cySrc***)** assegna un **CY** l'oggetto in un `_variant_t` oggetto.      
+-   **operatore = (***cySrc***)** assegna un **CY** l'oggetto in un `_variant_t` oggetto.  
   
--   **operatore = (***bstrSrc***)** assegna un `BSTR` l'oggetto in un `_variant_t` oggetto.      
+-   **operatore = (***bstrSrc***)** assegna un `BSTR` l'oggetto in un `_variant_t` oggetto.  
   
--   **operatore = (***wstrSrc***)** assegna una stringa Unicode a un `_variant_t` oggetto.      
+-   **operatore = (***wstrSrc***)** assegna una stringa Unicode a un `_variant_t` oggetto.  
   
--   **operatore = (**`strSrc`**)** assegna una stringa multibyte da una `_variant_t` oggetto.      
+-   **operatore = (**`strSrc`**)** assegna una stringa multibyte da una `_variant_t` oggetto.  
   
--   **operatore = (** `bSrc` **)** assegna un `bool` valore un `_variant_t` oggetto.    
+-   **operatore = (** `bSrc` **)** assegna un `bool` valore un `_variant_t` oggetto.  
   
--   **operatore = (***pDispSrc***)** assegna un **VT_DISPATCH** l'oggetto in un `_variant_t` oggetto.      
+-   **operatore = (***pDispSrc***)** assegna un **VT_DISPATCH** l'oggetto in un `_variant_t` oggetto.  
   
--   **operatore = (***pIUnknownSrc***)** assegna un **VT_UNKNOWN** l'oggetto in un `_variant_t` oggetto.      
+-   **operatore = (***pIUnknownSrc***)** assegna un **VT_UNKNOWN** l'oggetto in un `_variant_t` oggetto.  
   
--   **operatore = (***decSrc***)** assegna un **decimale** valore un `_variant_t` oggetto.      
+-   **operatore = (***decSrc***)** assegna un **decimale** valore un `_variant_t` oggetto.  
   
--   **operatore = (** `bSrc` **)** assegna un **BYTE** valore un `_variant_t` oggetto.    
+-   **operatore = (** `bSrc` **)** assegna un **BYTE** valore un `_variant_t` oggetto.  
   
  **Fine sezione specifica Microsoft**  
   

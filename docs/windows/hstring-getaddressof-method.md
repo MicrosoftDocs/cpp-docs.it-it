@@ -1,45 +1,44 @@
 ---
-title: "Metodo HString::GetAddressOf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf"
-dev_langs: 
-  - "C++"
+title: 'Metodo hstring:: Getaddressof | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
+dev_langs: C++
 ms.assetid: 6050decf-5f99-49f0-9497-1c8192c485ae
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0432a8f5966f6544808ffa4668777d2900ee5066
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HString::GetAddressOf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntatore all'handle sottostante di HSTRING.  
+# <a name="hstringgetaddressof-method"></a>Metodo HString::GetAddressOf
+Recupera un puntatore all'handle HSTRING sottostante.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 HSTRING* GetAddressOf() throw()  
 ```  
   
-## Valore restituito  
- Un puntatore all'handle sottostante di HSTRING.  
+## <a name="return-value"></a>Valore restituito  
+ Un puntatore all'handle HSTRING sottostante.  
   
-## Note  
- Dopo questa operazione, il valore della stringa dell'handle sottostante di HSTRING viene eliminato.  
+## <a name="remarks"></a>Note  
+ Dopo questa operazione, il valore di stringa dell'handle HSTRING sottostante viene eliminato definitivamente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HString](../windows/hstring-class.md)

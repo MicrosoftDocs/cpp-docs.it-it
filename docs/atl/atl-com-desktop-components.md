@@ -1,70 +1,71 @@
 ---
-title: "ATL COM Desktop Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, informazioni su ATL"
-  - "ATL, riferimento"
+title: I componenti COM Desktop ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, reference
+- ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ATL COM Desktop Components
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Documenti di riferimento ATL le Active Template Library \(ATL\), un insieme di classi C\+\+ basate su modelli che semplificano la programmazione \(Component Object Model \(COM\) oggetti.  Per usufruire completamente ATL, una conoscenza funzionante a COM si consiglia.  
+# <a name="atl-com-desktop-components"></a>Per altre informazioni, vedere Applicazioni desktop ATL COM.
+Il riferimento ATL documenta il modello libreria ATL (Active), un set di classi C++ basate su modelli che semplificano la programmazione di oggetti modello COM (Component Object). Per sfruttare appieno i vantaggi di ATL, è consigliabile una conoscenza del funzionamento con COM.  
   
-## In questa sezione  
- [I cenni preliminari sulle classi ATL](../atl/atl-class-overview.md)  
- Vengono forniti collegamenti a e in brevi descrizioni delle classi ATL organizzate per categoria.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Panoramica sulle classi ATL](../atl/atl-class-overview.md)  
+ Vengono forniti collegamenti a brevi descrizioni delle classi ATL organizzate per categoria.  
   
  [Classi ATL](../atl/reference/atl-classes.md)  
- Viene fornito materiale di riferimento sulle classi organizzate in ordine alfabetico.  
+ Fornisce materiale di riferimento per le classi organizzate in ordine alfabetico.  
   
- [Funzioni di ATL](../atl/reference/atl-functions.md)  
- Viene fornito materiale di riferimento sulle funzioni globali organizzate in ordine alfabetico.  Sono inclusi argomenti che consentono di organizzare le funzioni in categorie.  
+ [Funzioni ATL](../atl/reference/atl-functions.md)  
+ Fornisce materiale di riferimento sulle funzioni globali organizzate in ordine alfabetico. Sono inclusi argomenti organizzare le funzioni in categorie.  
   
  [Variabili globali ATL](../atl/reference/atl-global-variables.md)  
- Viene fornito materiale di riferimento sulle variabili globali organizzate in ordine alfabetico.  
+ Fornisce materiale di riferimento sulle variabili globali organizzate in ordine alfabetico.  
   
  [Macro ATL](../atl/reference/atl-macros.md)  
- Viene fornito materiale di riferimento sulle macro organizzate in ordine alfabetico.  Sono inclusi argomenti che consentono di organizzare le macro in categorie.  
+ Fornisce materiale di riferimento sulle macro organizzate in ordine alfabetico. Sono inclusi argomenti organizzare le macro in categorie.  
   
  [Strutture ATL](../atl/reference/atl-structures.md)  
- Viene fornito materiale di riferimento sulle strutture organizzate in ordine alfabetico.  
+ Fornisce materiale di riferimento sulle strutture organizzate in ordine alfabetico.  
   
- [Typedef ATL](../atl/reference/atl-typedefs.md)  
- Viene fornito materiale di riferimento sui typedef organizzati in ordine alfabetico  
+ [TypeDef ATL](../atl/reference/atl-typedefs.md)  
+ Fornisce materiale di riferimento sui typedef organizzati in ordine alfabetico  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- Vengono forniti collegamenti ad archetipi ATL, ovvero classi teoriche che forniscono una raccolta di metodi, di membri dati, di funzioni statiche, typedef, o di altre funzionalità, elencati in ordine alfabetico.  
+ [Archetipi](../atl/reference/atl-archetypes.md)  
+ Vengono forniti collegamenti a archetipi di ATL, che sono classi teoriche che forniscono un insieme di metodi, i membri di dati, funzioni statiche, typedef o altre funzionalità, elencate in ordine alfabetico.  
   
- [Argomenti obsoleti ATL](http://msdn.microsoft.com/it-it/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- Viene fornito materiale di riferimento per le classi, macro e le funzioni che sono recenti o deprecate.  
+ [Argomenti relativi ad ATL obsoleta](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
+ Fornisce materiale di riferimento sulle classi, macro e funzioni che sono deprecati.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti argomenti su come programmare utilizzando ATL \(Active Template Library \(ATL\).  
+ Fornisce argomenti su come programmare utilizzando la libreria ATL (Active Template).  
   
- [L'esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
- Vengono fornite le informazioni per creare un controllo e alcune nozioni fondamentali su ATL relative al processo.  
+ [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
+ Illustra la creazione di un controllo e alcune nozioni ATL nel processo.  
   
- [Esempi relativi ad ATL](../top/visual-cpp-samples.md)  
- Codice di esempio che mostra come utilizzare ATL per scrivere gli oggetti COM.  
+ [Esempi di ATL](../visual-cpp-samples.md)  
+ Codice di esempio in cui viene illustrato come utilizzare ATL per scrivere oggetti COM.  
   
  [Modelli OLE DB](../data/oledb/ole-db-templates.md)  
- Viene fornito materiale di riferimento per i modelli consumer e i modelli provider OLE DB, un insieme di classi modello che implementa numerose interfacce OLE DB di frequente utilizzo.  
+ Fornisce materiale di riferimento per i modelli consumer e provider OLE DB, un set di classi modello che implementa molte interfacce OLE DB usate più di frequente.  
   
- [Librerie di Visual C\+\+](http://msdn.microsoft.com/it-it/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Vengono forniti collegamenti alle varie librerie fornite con Visual C\+\+, ad esempio ATL, MFC, i modelli OLE DB, la libreria di runtime C e standard C\+\+.
+ [Librerie di Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad esempio ATL, MFC, modelli OLE DB, la libreria di runtime del linguaggio C e la libreria standard C++.
+

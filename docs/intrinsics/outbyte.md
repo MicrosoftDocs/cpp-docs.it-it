@@ -1,62 +1,61 @@
 ---
-title: "__outbyte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outbyte"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "out (istruzione)"
-  - "__outbyte (funzione intrinseca)"
+title: __outbyte | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outbyte
+dev_langs: C++
+helpviewer_keywords:
+- out instruction
+- __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 19de5a430ea344f00922d670e38f9232d8729dac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __outbyte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="outbyte"></a>__outbyte
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione di `out` , che invia 1 byte specificato da `Data` alla porta di I\/O specificate da `Port`.  
+ Genera il `out` (istruzione), che consente di inviare a 1 byte specificato da `Data` attraverso la porta dei / o specificata da `Port`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __outbyte(   
-   unsigned short Port,   
-   unsigned char Data   
+void __outbyte(   
+   unsigned short Port,   
+   unsigned char Data   
 );  
 ```  
   
-#### Parametri  
- \[in\] `Port`  
- La porta per inviare i dati a.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Port`  
+ La porta per inviare i dati.  
   
- \[in\] `Data`  
- Il byte da spedire la porta specificata.  
+ [in] `Data`  
+ Byte da inviare alla porta specificata.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__outbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

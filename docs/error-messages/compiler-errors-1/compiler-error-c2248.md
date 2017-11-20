@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2248
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2248
+f1_keywords: C2248
+dev_langs: C++
+helpviewer_keywords: C2248
 ms.assetid: 7a3ba0e8-d3b9-4bb9-95db-81ef17e31d23
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: a6023532a7644753f1aaff957232fde70d01426f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2248"></a>Errore del compilatore C2248
 '*membro*': Impossibile accedere '*access_level*'membro dichiarato nella classe'*classe*'  

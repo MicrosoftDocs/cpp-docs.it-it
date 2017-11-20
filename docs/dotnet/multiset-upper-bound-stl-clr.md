@@ -1,45 +1,43 @@
 ---
-title: "multiset::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound (membro) [STL/CLR]"
+title: 'multiset:: upper_bound (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: 4a5af99f-a2a1-45be-9b01-c0055d4d0e35
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7bccfbd395b2a6dfb20cb7a87e8860f23a591907
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fine preleva di temporizzazione che corrisponde a una chiave specificata.  
+# <a name="multisetupperbound-stlclr"></a>multiset::upper_bound (STL/CLR)
+Trova fine dell'intervallo che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro determinato l'ultimo elemento `X` sequenza selezionata con ordine equivalente a `key`.  Se tale elemento non esiste, o se `X` è l'ultimo elemento della sequenza selezionata, restituisce [multiset::end](../dotnet/multiset-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`.  Utilizzarla per individuare attualmente la fine di una sequenza di elementi della sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`. Utilizzarla per individuare la fine di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multiset_upper_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound \(L'a\) \= b**  
-**\*upper\_bound \(L'b\) \= c**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::count](../dotnet/multiset-count-stl-clr.md)   
- [multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)   
- [multiset::find](../dotnet/multiset-find-stl-clr.md)   
- [multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: Count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)   
+ [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   
+ [multiset:: Find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)   
+ [multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)

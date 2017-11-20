@@ -1,65 +1,64 @@
 ---
-title: "/CLRUNMANAGEDCODECHECK (Aggiunge SupressUnmanagedCodeSecurityAttribute) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRUNMANAGEDCODECHECK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRUNMANAGEDCODECHECK (opzione del linker)"
-  - "-CLRUNMANAGEDCODECHECK (opzione del linker)"
+title: -/CLRUNMANAGEDCODECHECK (aggiunge SupressUnmanagedCodeSecurityAttribute) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRUNMANAGEDCODECHECK
+dev_langs: C++
+helpviewer_keywords:
+- -CLRUNMANAGEDCODECHECK linker option
+- /CLRUNMANAGEDCODECHECK linker option
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f4810da2a1dd24893a1e69a35091b3a7c89b527e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRUNMANAGEDCODECHECK (Aggiunge SupressUnmanagedCodeSecurityAttribute)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/CLRUNMANAGEDCODECHECK** specifica se il linker applicherà <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> alle chiamate `PInvoke` generate dal linker dal codice gestito alle DLL native.  
+# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (Aggiunge SupressUnmanagedCodeSecurityAttribute)
+**/CLRUNMANAGEDCODECHECK** specifica se il linker applicherà <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> a generate dal linker `PInvoke` chiamate dal codice gestito in DLL native.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /CLRUNMANAGEDCODECHECK[:NO]  
 ```  
   
-## Note  
- Per impostazione predefinita, il linker applica SuppressUnmanagedCodeSecurityAttribute alle chiamate `PInvoke` generate dal linker.  Quando **\/CLRUNMANAGEDCODECHECK** è in effetto, SuppressUnmanagedCodeSecurityAttribute non viene applicato.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, il linker applica SuppressUnmanagedCodeSecurityAttribute generate dal linker `PInvoke` chiamate. Quando **/CLRUNMANAGEDCODECHECK** è in effetti, non è stato applicato SuppressUnmanagedCodeSecurityAttribute.  
   
- Il linker si limita ad aggiungere l'attributo agli oggetti compilati con **\/clr** o **\/clr:pure** e non genera chiamate `PInvoke` in oggetti compilati con **\/clr:safe**.  Per ulteriori informazioni, vedere [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Il linker aggiunge solo l'attributo agli oggetti compilati con **/clr** o **/clr: pure**. Il linker genera `PInvoke` chiama in oggetti compilati con **/CLR: safe**. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
- Una chiamata `PInvoke` viene generata quando il linker non è in grado di trovare un simbolo gestito che soddisfi il riferimento da un chiamante gestito, ma solo un simbolo nativo.  Per ulteriori informazioni su `PInvoke`, vedere [Chiamata a funzioni native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md).  
+ Oggetto `PInvoke` chiamata viene generata dal linker quando il linker non è possibile trovare un simbolo gestito per soddisfare un riferimento da un chiamante gestito ma solo un simbolo nativo. Per ulteriori informazioni su `PInvoke`, vedere [chiamata a funzioni Native da codice gestito](../../dotnet/calling-native-functions-from-managed-code.md).  
   
- Se si utilizza <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare **\/CLRUNMANAGEDCODECHECK** in modo esplicito.  Un'immagine contenente entrambi gli attributi SuppressUnmanagedCodeSecurity e AllowPartiallyTrustedCallers rappresenta un potenziale problema di sicurezza.  
+ Si noti che se si utilizza <xref:System.Security.AllowPartiallyTrustedCallersAttribute> nel codice, è necessario impostare in modo esplicito **/CLRUNMANAGEDCODECHECK**. Se un'immagine contiene entrambi gli attributi SuppressUnmanagedCodeSecurity e AllowPartiallyTrustedCallers è potenziale vulnerabilità di sicurezza.  
   
- Per ulteriori informazioni sulle conseguenze dell'utilizzo di SuppressUnmanagedCodeSecurityAttribute, vedere [Security Optimizations](http://msdn.microsoft.com/it-it/cf255069-d85d-4de3-914a-e4625215a7c0).  
+ Vedere [Secure linee guida di codifica per il codice non gestito](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code) per ulteriori informazioni sulle implicazioni dell'utilizzo di SuppressUnmanagedCodeSecurityAttribute.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il nodo **Proprietà di configurazione**.  
+2.  Espandere il **le proprietà di configurazione** nodo.  
   
-3.  Espandere il nodo **Linker**.  
+3.  Espandere il **Linker** nodo.  
   
-4.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+4.  Selezionare il **avanzate** pagina delle proprietà.  
   
-5.  Modificare la proprietà **Controllo codice non gestito CLR**.  
+5.  Modificare il **controllo codice non gestito CLR** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

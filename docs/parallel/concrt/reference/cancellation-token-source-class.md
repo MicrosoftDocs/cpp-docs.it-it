@@ -1,11 +1,10 @@
 ---
-title: Classe cancellation_token_source | Documenti di Microsoft
+title: Classe cancellation_token_source | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_source class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 La classe `cancellation_token_source` rappresenta la possibilità di annullare una determinata operazione annullabile.  
@@ -83,7 +65,7 @@ class cancellation_token_source;
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** cancellation_token. h  
+ **Intestazione:** pplconcrt  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -134,10 +116,10 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
  Token il cui annullamento determina l'annullamento del token restituito. Si noti che l'origine del token restituita può anche essere annullata indipendentemente dall'origine contenuta nel parametro.  
   
  `_Begin`  
- L'iteratore di libreria Standard C++ corrispondente all'inizio dell'intervallo dei token per l'ascolto per l'annullamento.  
+ Iteratore della libreria Standard C++ corrispondente all'inizio dell'intervallo di token da ascoltare per l'annullamento.  
   
  `_End`  
- L'iteratore di libreria Standard C++ corrispondente alla fine dell'intervallo dei token per l'ascolto per l'annullamento.  
+ Iteratore della libreria Standard C++ corrispondente alla fine dell'intervallo dei token da ascoltare per l'annullamento.  
   
 ### <a name="return-value"></a>Valore restituito  
  `cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.  
@@ -164,7 +146,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operator = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -190,4 +172,3 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

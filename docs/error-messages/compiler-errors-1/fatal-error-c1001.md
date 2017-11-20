@@ -1,35 +1,34 @@
 ---
-title: "Errore irreversibile C1001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1001"
+title: Errore irreversibile C1001 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C1001
+dev_langs: C++
+helpviewer_keywords: C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6726b348c27e60c9e76718cd3106ef1213719d18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore irreversibile C1001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="fatal-error-c1001"></a>Errore irreversibile C1001
 
-ERRORE INTERNO DEL COMPILATORE \(file file, riga numero\)  
+> INTERNO del compilatore ERROR(compiler file *file*, line *number*)  
   
- Il compilatore non è in grado di generare il codice corretto per un costrutto, probabilmente a causa della combinazione di un'espressione con un'opzione di ottimizzazione.  Provare a rimuovere una o più opzioni di ottimizzazione e a compilare nuovamente la funzione che contiene la riga indicata nel messaggio di errore.  
-  
- È probabilmente possibile risolvere il problema rimuovendo una o più opzioni di ottimizzazione.  Per determinare l'opzione in cui viene generato l'errore, rimuovere le opzioni una alla volta e compilare nuovamente finché il messaggio di errore non viene più visualizzato.  Le opzioni da cui viene generato più comunemente questo messaggio sono **\/Og**, **\/Oi** e `/Oa`.  Dopo aver determinato l'opzione responsabile, sarà possibile disabilitarla utilizzando il pragma [optimize](../../preprocessor/optimize.md) per la funzione in cui si verifica l'errore e continuare a utilizzare l'opzione per la parte restante del modulo.  
-  
- Microsoft Knowledge Base ha ulteriori informazioni sull'errore C1001; vedere [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;134650](http://support.microsoft.com/default.aspx?scid=kb;en-us;134650).  
-  
- Provare a riscrivere la riga in cui viene segnalato l'errore o alcune righe di codice immediatamente precedenti e successive.
+Il compilatore non è possibile generare il codice corretto per un costrutto, spesso a causa di combinazione di una particolare espressione e di un'opzione di ottimizzazione o di un problema durante l'analisi. Se il file del compilatore elencato dispone di un'ora utc o segmento di percorso C2, è probabilmente un errore di ottimizzazione. Se il file contiene un segmento di percorso cxxfe o c1xx o è msc1.cpp, è probabilmente un errore del parser. Se il file denominato cl.exe, non è disponibile alcuna informazione.  
+
+Spesso, è possibile risolvere un problema di ottimizzazione tramite la rimozione di uno o più opzioni di ottimizzazione. Per determinare quale opzione è in errore, rimuovere le opzioni una alla volta e ricompilazione fino a quando il messaggio di errore scompare. Le opzioni più comunemente sono [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) e [/Oi (genera funzioni intrinseche)](../../build/reference/oi-generate-intrinsic-functions.md). Dopo aver determinato quale opzione di ottimizzazione è responsabile, è possibile disabilitarla per la funzione in cui l'errore si verifica con la [ottimizzare](../../preprocessor/optimize.md) pragma e continuare a usare l'opzione per il resto del modulo. Per ulteriori informazioni sulle opzioni di ottimizzazione, vedere [suggerimenti per l'ottimizzazione](../../build/reference/optimization-best-practices.md).
+
+Se le ottimizzazioni non sono responsabile per l'errore, provare a riscrivere la riga in cui l'errore viene segnalato o più righe di codice circostanti tale riga. Per visualizzare il codice nello stesso modo il compilatore visualizzati dopo la pre-elaborazione, è possibile utilizzare il [/P (pre-elabora in un file)](../../build/reference/p-preprocess-to-a-file.md) opzione.
+
+Per ulteriori informazioni su come isolare l'origine dell'errore e come segnalare un errore interno del compilatore a Microsoft, vedere [come segnalare un problema con il set di strumenti Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).

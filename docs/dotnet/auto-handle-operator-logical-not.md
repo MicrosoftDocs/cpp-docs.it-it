@@ -1,45 +1,43 @@
 ---
-title: "auto_handle::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator!"
-  - "msclr::auto_handle::operator!"
-  - "auto_handle.operator!"
-  - "auto_handle::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!"
+title: auto_handle::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator!
+- msclr::auto_handle::operator!
+- auto_handle.operator!
+- auto_handle::operator!
+dev_langs: C++
+helpviewer_keywords: operator!
 ms.assetid: 3f6c7729-3260-4842-87f9-c491c140b299
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f0cd9ef88895b8fa85bd89775c030aedaa5c042
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operatore per utilizzare `auto_handle` in un'espressione condizionale.  
+# <a name="autohandleoperator"></a>auto_handle::operator!
+Operatore per l'utilizzo di `auto_handle` in un'espressione condizionale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool operator!();  
 ```  
   
-## Valore restituito  
- `true` se l'oggetto di cui è stato eseguito il wrapping non è valido; `false` in caso contrario.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se l'oggetto sottoposto a wrapping è valido. `false` in caso contrario.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_handle_operator_not.cpp  
@@ -62,14 +60,17 @@ int main() {
 }  
 ```  
   
-  **s1 non è valido**  
-**s2 è valido**  
-**s2 ora non è valido**   
-## Requisiti  
- msclr \<\\ auto\_handle.h di**File di intestazione** \>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_handle.h >  
   
-## Vedere anche  
- [Membri auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator bool](../dotnet/auto-handle-operator-bool.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator bool](../dotnet/auto-handle-operator-bool.md)

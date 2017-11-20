@@ -1,34 +1,32 @@
 ---
-title: "Procedura: utilizzare riferimenti di rilevamento in C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR (tipi), passaggio per riferimento"
+title: 'Procedura: utilizzare riferimenti di rilevamento in C + + CLI | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: utilizzare riferimenti di rilevamento in C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo articolo viene illustrato come utilizzare un riferimento di rilevamento \(%\) in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] per passare i tipi Common Language Runtime \(CLR\) per riferimento.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>Procedura: utilizzare riferimenti di rilevamento in C++/CLI
+In questo articolo viene illustrato come utilizzare un riferimento di rilevamento (%) in C + + CLI per passare a common language runtime (CLR) tipi per riferimento.  
   
-## Per passare i tipi CLR per riferimento  
- Il seguente codice di esempio mostra come utilizzare un riferimento di rilevamento ai tipi CLR della sessione per riferimento.  
+## <a name="to-pass-clr-types-by-reference"></a>Per passare tipi CLR per riferimento  
+ L'esempio seguente viene illustrato come utilizzare un riferimento di rilevamento per passare tipi CLR per riferimento.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **\=\= 20100 zip** L'esempio seguente mostra che che accetta l'indirizzo di ritorno di un riferimento di rilevamento e [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)illustrato come modificare e l'accesso ai dati con un riferimento di rilevamento.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ L'esempio successivo mostra che l'utilizzo dell'indirizzo di un riferimento di rilevamento restituisce un [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md)e viene illustrato come modificare e accedere ai dati tramite un riferimento di rilevamento.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **costruttore: R \(int\)**  
-**costruttore: N \(int i\)**   
-## Riferimento di rilevamento e puntatori interni  
- Nell'esempio di codice viene illustrato che è possibile convertire tra i riferimenti di rilevamento e puntatori interni.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>Riferimenti di rilevamento e puntatori interni  
+ Nell'esempio seguente viene illustrato che è possibile convertire tra i riferimenti di rilevamento e puntatori interni.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **costruttore: R \(int\)**  
-**costruttore: N \(int i\)**   
-## Riferimento di rilevamento e tipi di valore  
- In questo esempio viene illustrata la conversione boxing semplice con un riferimento di rilevamento a un tipo di valore:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- Nell'esempio seguente viene illustrato che è possibile disporre sia dei riferimenti di rilevamento che i riferimenti nativi a tipi di valore.  
+## <a name="tracking-references-and-value-types"></a>Riferimenti di rilevamento e tipi di valore  
+ Questo esempio viene illustrato il boxing semplice attraverso un riferimento di rilevamento per un tipo di valore:  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ Nell'esempio successivo viene illustrato che è possibile disporre sia di riferimenti di rilevamento e di riferimenti nativi per tipi di valore.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **13**  
-**13**  
-**13** Nell'esempio seguente viene illustrato che è possibile utilizzare i riferimenti di rilevamento insieme ai tipi di valore e tipi nativi.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ L'esempio seguente viene illustrato che è possibile utilizzare riferimenti di rilevamento con tipi di valore e tipi nativi.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **4**  
-**4**  
-**5**  
-**5** In questo esempio viene illustrato che è possibile associare un riferimento di rilevamento a un tipo di valore nell'heap sottoposto a garbage collection:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ Questo esempio viene illustrato che è possibile associare un riferimento di rilevamento per un tipo di valore nell'heap sottoposto a garbage collection:  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **V originale: 2, riferimento di rilevamento del boxing V: 1**  
-**Il riferimento di rilevamento del boxing V: 3**  
-**Nuova copia boxed V: 1**  
-**V originale: 4, riferimento all'handle di V originariamente boxed: 1**   
-## Il modello viene eseguito che accetta nativo, il valore, o i parametri ref  
- Tramite un riferimento di rilevamento nella firma di una funzione modello, si garantisce che la funzione può essere chiamata da un parametro il cui tipo nativo, un valore di CLR, o un riferimento CLR.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Funzioni di modello che accettano native, valore o i parametri per riferimento  
+ Utilizzando un riferimento di rilevamento nella firma della funzione di modello, assicurarsi che la funzione può essere chiamata da un parametro di tipo nativo, un valore CLR o un riferimento CLR.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **% T**  
-**% T**  
-**T &**   
-## Vedere anche  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md)

@@ -1,52 +1,50 @@
 ---
-title: "Metodo MakeAllocator::Allocate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator::Allocate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Allocate (metodo)"
+title: 'Metodo makeallocator:: allocate | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator::Allocate
+dev_langs: C++
+helpviewer_keywords: Allocate method
 ms.assetid: a01997bc-4ff1-4ed0-9def-e4aaa15b0598
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 997386e42851c6d4e15aceac006b4e27eea35c44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo MakeAllocator::Allocate
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="makeallocatorallocate-method"></a>Metodo MakeAllocator::Allocate
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 __forceinline void* Allocate();  
 ```  
   
-## Valore restituito  
- Se l'operazione riesce, un puntatore alla memoria allocata, in caso contrario, `nullptr`.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, un puntatore alla memoria allocata; in caso contrario, `nullptr`.  
   
-## Note  
- Alloca memoria e lo associa all'oggetto corrente di MakeAllocator.  
+## <a name="remarks"></a>Note  
+ Alloca memoria e lo associa all'oggetto MakeAllocator corrente.  
   
- La dimensione della memoria allocata è la dimensione del tipo specificato dal parametro di modello corrente di MakeAllocator.  
+ Le dimensioni della memoria allocata sono la dimensione del tipo specificato dal parametro di modello MakeAllocator corrente.  
   
- Uno sviluppatore deve solo per eseguire l'override del metodo di allocare \(\) per implementare un modello di allocazione della memoria diverso.  
+ Lo sviluppatore dovrà eseguire l'override solo il metodo Allocate() per implementare un modello di allocazione di memoria diverse.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe MakeAllocator](../windows/makeallocator-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [MakeAllocator (classe)](../windows/makeallocator-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

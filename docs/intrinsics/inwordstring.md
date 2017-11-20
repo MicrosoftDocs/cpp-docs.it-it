@@ -1,36 +1,36 @@
 ---
-title: "__inwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inwordstring"
-  - "__inwordstring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__inwordstring (funzione intrinseca)"
-  - "rep insw (istruzione)"
+title: __inwordstring | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inwordstring
+- __inwordstring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __inwordstring intrinsic
+- rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b1fd523a9d954b3ec42cec565d94f49511904f28
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __inwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="inwordstring"></a>__inwordstring
+**Sezione specifica Microsoft**  
   
- Legge i dati dalla porta specificata utilizzando l'istruzione di `rep insw` .  
+ Legge i dati dalla porta specificata utilizzando il `rep insw` istruzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __inwordstring(  
@@ -40,28 +40,28 @@ void __inwordstring(
 );  
 ```  
   
-#### Parametri  
- \[in\] `Port`  
- La porta da leggere.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Port`  
+ La porta da cui leggere.  
   
- \[out\] `Buffer`  
- I dati letti dalla porta vengono scritti in questo argomento.  
+ [out] `Buffer`  
+ I dati letti dalla porta viene scritto in questo caso.  
   
- \[in\] `Count`  
- Il numero delle parole dei dati da leggere.  
+ [in] `Count`  
+ Il numero di parole di dati da leggere.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

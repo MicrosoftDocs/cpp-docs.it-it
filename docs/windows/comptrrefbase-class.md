@@ -1,32 +1,30 @@
 ---
-title: "Classe ComPtrRefBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRefBase (classe)"
+title: Classe ComPtrRefBase | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase
+dev_langs: C++
+helpviewer_keywords: ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe ComPtrRefBase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -35,41 +33,41 @@ template <
 class ComPtrRefBase;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Un tipo [ComPtr\<T\>](../windows/comptr-class.md) o un tipo derivato da esso, non solamente l'interfaccia rappresentata dal ComPtr.  
+ Oggetto [ComPtr\<T >](../windows/comptr-class.md) tipo o un tipo derivato da esso, non solamente l'interfaccia rappresentata dal ComPtr.  
   
-## Note  
- Rappresenta la classe di base per la classe [ComPtrRef](../windows/comptrref-class.md).  
+## <a name="remarks"></a>Note  
+ Rappresenta la classe base per il [ComPtrRef](../windows/comptrref-class.md) classe.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`InterfaceType`|Un sinonimo del tipo di parametro di modello `T`.|  
   
-### Operatori pubblici  
+### <a name="public-operators"></a>Operatori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore ComPtrRefBase::operator IInspectable\*\*](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Esegue il cast del membro dati corrente [ptr\_](../windows/comptrrefbase-ptr-data-member.md) a un puntatore dell'interfaccia di IInspectable.|  
-|[Operatore ComPtrRefBase::operator IUnknown\*\*](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Esegue il cast del membro dati corrente [ptr\_](../windows/comptrrefbase-ptr-data-member.md) a un puntatore dell'interfaccia di IUnknown.|  
+|[Operatore ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Esegue il cast corrente [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati da un puntatore a un-puntatore-all'interfaccia IInspectable.|  
+|[Operatore ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Esegue il cast corrente [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati da un puntatore a un-puntatore-a interfaccia IUnknown.|  
   
-### Membri di dati protetti  
+### <a name="protected-data-members"></a>Membri dati protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati ComPtrRefBase::ptr\_](../windows/comptrrefbase-ptr-data-member.md)|Puntatore al tipo specificato dal modello di parametro corrente.|  
+|[Membro dati ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Puntatore al tipo specificato dal parametro di modello corrente.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `ComPtrRefBase`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
   
- **Spazio dei nomi:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

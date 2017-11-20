@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_copy_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_copy_constructible
+f1_keywords: type_traits/std::is_copy_constructible
+dev_langs: C++
+helpviewer_keywords: is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6b5e3a6d40ff0f8ac000714606a1fbbd3c7d2a21
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 34d5132a9fde90d48a4105fd20acf4ad76cf94d1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iscopyconstructible-class"></a>Classe is_copy_constructible
 Verifica se il tipo ha un costruttore di copia.  
@@ -85,5 +80,4 @@ is_copy_constructible<NotCopyable > == false
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 

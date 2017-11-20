@@ -1,53 +1,33 @@
 ---
-title: Compilatore (livello 1) Avviso C4655 | Documenti di Microsoft
+title: Compilatore avviso (livello 1) C4655 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4655
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4655
+f1_keywords: C4655
+dev_langs: C++
+helpviewer_keywords: C4655
 ms.assetid: 540f2c7a-e4a1-49af-84b4-03eeea1bbf41
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 058086bb4617f59f53de706b38477bd868e297d3
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 891fe3c68e93defba011d4ad4c90daf25fe3a799
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4655"></a>Avviso del compilatore (livello 1) C4655
 **'**   
- ***simbolo* ': tipo di variabile nuovo rispetto all'ultima generazione o definito diversamente altrove**  
+ ***simbolo* ': tipo di variabile nuovo rispetto all'ultima compilazione o definito diversamente altrove**  
   
  È stato modificato o aggiunto un nuovo tipo di dati dall'ultima compilazione completata. Modifica e continuazione non supporta le modifiche ai tipi di dati.  
   
- Questo avviso è seguito da un [errore irreversibile C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Per ulteriori informazioni, vedere il [modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).  
+ Questo avviso è seguito da un [Errore irreversibile C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md). Per altre informazioni, vedere [Modifiche al codice supportate](/visualstudio/debugger/supported-code-changes-cpp).  
   
 ### <a name="to-remove-this-warning-without-ending-the-current-debug-session"></a>Per rimuovere questo avviso senza terminare la sessione di debug corrente  
   

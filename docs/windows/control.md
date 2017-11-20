@@ -1,32 +1,30 @@
 ---
-title: "control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Control attribute"
+title: controllo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.control
+dev_langs: C++
+helpviewer_keywords: Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 72326b5ce7aedfd03f93688e7890fdfab9b827f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="control"></a>controllo
 Specifica che il tipo definito dall'utente è un controllo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,10 +32,10 @@ Specifica che il tipo definito dall'utente è un controllo.
   
 ```  
   
-## Note  
- **controllare** l'attributo implica  [coclasse](../windows/coclass.md) attributo.  **controllare** L'attributo di C\+\+ ha la stessa funzionalità di  [controllare](http://msdn.microsoft.com/library/windows/desktop/aa366764) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **controllo** attributo implica il [coclasse](../windows/coclass.md) attributo. Il **controllo** attributo C++ ha la stessa funzionalità come il [controllo](http://msdn.microsoft.com/library/windows/desktop/aa366764) attributo MIDL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_control.cpp  
@@ -54,21 +52,20 @@ __interface ICustom {
 class CTest : public ICustom {};  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**,  `struct`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|**class**, `struct`|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi Typedef, Enum, Union e Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

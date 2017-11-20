@@ -1,32 +1,30 @@
 ---
-title: "hash_set::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membro) [STL/CLR]"
+title: hash_set::generic_container (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 7883af0b-e9ad-47fb-8ecc-14c563948e83
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56cf36d249f6539b2c95747819d46c990896e0a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo dell'interfaccia generica del contenitore.  
+# <a name="hashsetgenericcontainer-stlclr"></a>hash_set::generic_container (STL/CLR)
+Il tipo dell'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Note  
- Il tipo viene descritta l'interfaccia generica per questa classe di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_set_generic_container.cpp   
@@ -79,15 +77,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b e c d**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::generic\_iterator](../dotnet/hash-set-generic-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::generic_iterator (STL/CLR)](../dotnet/hash-set-generic-iterator-stl-clr.md)

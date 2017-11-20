@@ -1,28 +1,28 @@
 ---
-title: "Avviso del compilatore (livello 4) C4437 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilatore avviso (livello 4) C4437 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 88873faa9978da7c068d35cb88cc92317b7509d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4437
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-dynamic\_cast da base virtuale 'classe1' a 'classe2' potrebbe non riuscire in alcuni contesti        Compilare con \/vd2 oppure definire 'classe2' con il \#pragma vtordisp\(2\) in effetti  
+# <a name="compiler-warning-level-4-c4437"></a>Avviso del compilatore (livello 4) C4437
+dynamic_cast dalla base virtuale 'class1' in 'class2' potrebbe non riuscire in alcuni contesti compilazione con /vd2 o definire attiva 'class2' con #pragma vtordisp (2)  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Il compilatore ha rilevato un'operazione `dynamic_cast` con le seguenti caratteristiche.  
   
@@ -30,14 +30,14 @@ dynamic\_cast da base virtuale 'classe1' a 'classe2' potrebbe non riuscire in al
   
 -   La classe derivata eredita virtualmente la classe base.  
   
--   La classe derivata non ha un campo `vtordisp` per la base virtuale.  
+-   La classe derivata non include un campo `vtordisp` per la base virtuale.  
   
--   Il cast non viene trovato in un costruttore o un distruttore della classe derivata, o in una classe che ulteriormente eredita dalla classe derivata \(altrimenti, l'avviso del compilatore C4436 sarà generato\).  
+-   Il cast non viene trovato in un costruttore o distruttore della classe derivata o una classe che ulteriormente eredita dalla classe derivata (avviso del compilatore in caso contrario, verrà generato C4436).  
   
- L'avviso indica che `dynamic_cast` potrebbe non essere eseguito correttamente, se si utilizza un oggetto parzialmente costruito.  Questa situazione si verifica quando la funzione contenitore viene chiamata da un costruttore o un distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai più derivata, o la funzione contenitore non viene chiamata durante la costruzione o la distruzione di un oggetto, l'avviso può essere ignorato.  
+ L'avviso indica che il `dynamic_cast` potrebbe non funzionare correttamente se sta operando in un oggetto parzialmente costruito.  Questa situazione si verifica quando viene chiamata la funzione contiene un costruttore o distruttore di una classe che eredita la classe derivata denominata nell'avviso.  Se la classe derivata denominata nell'avviso non è mai più derivata, o della funzione contenitore non viene chiamata durante la costruzione di oggetti o eliminazione, l'avviso può essere ignorato.  
   
-## Esempio  
- Nell'esempio seguente viene generato C4437 e viene illustrato il problema di generazione del codice che risulta dal campo mancante `vtordisp`.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4437 e viene illustrato il problema di generazione di codice che deriva dal mancante `vtordisp` campo.  
   
 ```cpp  
 // C4437.cpp  
@@ -85,7 +85,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Operatore dynamic\_cast](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Operatore dynamic_cast](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Avviso del compilatore \(livello 1\) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+ [Avviso del compilatore (livello 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

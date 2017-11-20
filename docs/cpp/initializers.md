@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 17231b9d541163d5b14509bafb991fcd32215fca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initializers"></a>Inizializzatori
 Un inizializzatore specifica il valore iniziale di una variabile. È possibile inizializzare le variabili nei contesti seguenti:  
@@ -530,11 +527,10 @@ int main()
  ![Grafico delle decisioni per l'inizializzazione dei tipi di riferimento](../cpp/media/vc38s71.gif "vc38S71")  
 Grafico decisionale per l'inizializzazione dei tipi di riferimento  
   
- I riferimenti a `volatile` tipi (dichiarati come `volatile` *typename* ** & ** *identificatore*) può essere inizializzato con `volatile` gli oggetti dello stesso tipo o con gli oggetti che non sono stati dichiarati come `volatile`. Possono, tuttavia, essere inizializzati con **const** oggetti di quel tipo. Analogamente, i riferimenti a **const** tipi (dichiarati come **const** *typename* ** & ** *identificatore *) può essere inizializzato con **const** oggetti dello stesso tipo (o qualsiasi elemento che dispone di una conversione a quel tipo o con gli oggetti che non sono stati dichiarati come **const**). Non possono, tuttavia, essere inizializzati con oggetti `volatile` di quel tipo.  
+ I riferimenti a `volatile` tipi (dichiarati come `volatile` *typename*  **&**  *identificatore*) può essere inizializzato con `volatile` gli oggetti dello stesso tipo o con gli oggetti che non sono stati dichiarati come `volatile`. Possono, tuttavia, essere inizializzati con **const** oggetti di quel tipo. Analogamente, i riferimenti a **const** tipi (dichiarati come **const** *typename*  **&**  *identificatore* ) può essere inizializzato con **const** oggetti dello stesso tipo (o qualsiasi elemento che dispone di una conversione a quel tipo o con gli oggetti che non sono stati dichiarati come **const**). Non possono, tuttavia, essere inizializzati con oggetti `volatile` di quel tipo.  
   
  I riferimenti che non sono qualificati con il **const** o `volatile` parola chiave può essere inizializzato solo con gli oggetti dichiarati come **const** né `volatile`.  
   
 ### <a name="initialization-of-external-variables"></a>Inizializzazione di variabili esterne  
  Le dichiarazioni delle variabili automatiche, statiche ed esterne possono contenere inizializzatori. Tuttavia, le dichiarazioni di variabili esterne possono contenere inizializzatori solo se le variabili non vengono dichiarate come `extern`.
   
-

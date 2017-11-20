@@ -1,32 +1,30 @@
 ---
-title: "aggregatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.aggregatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregatable attribute"
+title: aggregabile | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.aggregatable
+dev_langs: C++
+helpviewer_keywords: aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 357cc266b34f445bb333826ca68afd75fdd8f963
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# aggregatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica che la classe supporta aggregato.  
+# <a name="aggregatable"></a>aggregatable
+Indica che la classe supporta l'aggregazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,32 +33,32 @@ Indica che la classe supporta aggregato.
 ) ]  
 ```  
   
-#### Parametri  
- *valore* \(facoltativo\)  
- un parametro per indicare quando l'oggetto COM può essere aggregatoe:  
+#### <a name="parameters"></a>Parametri  
+ *valore* (facoltativo)  
+ Un parametro per indicare quando l'oggetto COM può essere aggregato:  
   
--   **mai** l'oggetto COM non può essere aggregatoe.  
+-   **mai** l'oggetto COM non può essere aggregata.  
   
--   **concedere** L'oggetto COM può essere creato direttamente o può essere aggregatoe.  Questa è l'impostazione predefinita.  
+-   **consentito** l'oggetto COM può essere creato direttamente o può essere aggregato. Questa è l'impostazione predefinita.  
   
--   **sempre** L'oggetto COM non può essere creato direttamente e può essere aggregatoe solo.  Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'oggetto aggregante  **IUnknown** interfaccia \(il controllo  **IUnknown**\).  
+-   **sempre** l'oggetto COM non è possibile creare direttamente e possono solo essere aggregato. Quando si chiama `CoCreateInstance` per questo oggetto, è necessario specificare l'oggetto aggregazione **IUnknown** interfaccia (il controllo **IUnknown**).  
   
-## Note  
- **cui aggregatable** L'attributo di C\+\+ ha la stessa funzionalità di  [cui aggregatable](http://msdn.microsoft.com/library/windows/desktop/aa366721) Attributo MIDL.  Ciò significa che il passaggio **cui aggregatable** attributo al file generato con estensione .idl.  
+## <a name="remarks"></a>Note  
+ Il **aggregabile** attributo C++ ha la stessa funzionalità come il [aggregabile](http://msdn.microsoft.com/library/windows/desktop/aa366721) attributo MIDL. Ciò significa che il compilatore passerà il **aggregabile** attributo tramite il file IDL generato.  
   
- L'attributo richiede che [coclasse](../windows/coclass.md),  [progid](../windows/progid.md), o  [vi\_progid](../windows/vi-progid.md) attributo o un altro attributo che implica uno di questi\) viene applicato anche allo stesso elemento.  Se qualsiasi singolo attributo viene utilizzato, gli altri due vengono applicate automaticamente.  Ad esempio, se **progid** viene applicato,  **vi\_progid** e  **coclasse** anche applicati.  
+ Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se viene usato **progid** , vengono applicati anche **vi_progid** e **coclass** .  
   
  **Progetti ATL**  
   
- Se questo attributo viene utilizzato in un progetto che utilizza ATL, il comportamento dell'attributo viene modificato.  Oltre al comportamento descritto in precedenza, l'attributo viene aggiunta una delle macro nella classe di destinazione:  
+ Se questo attributo viene usato in un progetto che usa ATL, il comportamento dell'attributo cambia. Oltre al comportamento descritto in precedenza, l'attributo aggiunge anche una delle seguenti macro per la classe di destinazione:  
   
-|Valore del parametro|Macro di comando|  
-|--------------------------|----------------------|  
-|**Mai**|[DECLARE\_NOT\_AGGREGATABLE](../Topic/DECLARE_NOT_AGGREGATABLE.md)|  
-|**Consentito**|[DECLARE\_POLY\_AGGREGATABLE](../Topic/DECLARE_POLY_AGGREGATABLE.md)|  
-|**Sempre**|[DECLARE\_ONLY\_AGGREGATABLE](../Topic/DECLARE_ONLY_AGGREGATABLE.md)|  
+|Valore del parametro|Inserito (macro)|  
+|---------------------|--------------------|  
+|**Mai**|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|**È consentito**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|**Sempre**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_aggregatable.cpp  
@@ -76,22 +74,21 @@ Indica che la classe supporta aggregato.
 class CMyClass {};  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**,  `struct`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Uno o più dei seguenti elementi: **coclasse**,  **progid**, o  **vi\_progid**.|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|**class**, `struct`|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558)   

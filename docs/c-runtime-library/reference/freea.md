@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _freea
+apiname: _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,38 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 50d1c551f0ae51daafb3d83075091fa299db0fed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="freea"></a>_freea
 Dealloca o libera un blocco di memoria.  

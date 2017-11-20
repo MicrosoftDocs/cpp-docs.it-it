@@ -1,39 +1,39 @@
 ---
-title: "Cenni preliminari sugli assembler inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], chiamata dell'assembler inline"
-  - "assembler inline"
-  - "assembly inline, assembler inline"
-  - "chiamata dell'assembler inline"
+title: Panoramica sull'inline Assembler | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembler
+- __asm keyword [C++], invoking inline assembler
+- invoking inline assembler
+- inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7733398f5a444fa5e7461ea52295624d6d16f9a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Cenni preliminari sugli assembler inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="inline-assembler-overview"></a>Panoramica sull'assembler inline
+**Sezione specifica Microsoft**  
   
- L'assembler inline consente di incorporare istruzioni in linguaggio assembly nelle applicazioni di origine C e C\+\+ senza ulteriori operazioni di assemblaggio e collegamento.  L'assembler inline è incorporata nel compilatore, ovvero non è necessario un assembler separato, ad esempio Microsoft Macro Assembler \(MASM\).  
+ È possibile utilizzare l'assembler inline per incorporare le istruzioni in linguaggio assembly nei programmi di origine C e C++ senza effettuare dei passaggi aggiuntivi di collegamento e di assembly. L'assembler inline è incorporato nel compilatore, pertanto non è necessario utilizzare un assembler separato come Microsoft Macro Assembler (MASM).  
   
- Poiché l'assembler inline non richiede assembly separato e fasi del collegamento, è più comodo rispetto a un assembler separato.  Codice assembly inline è possibile utilizzare qualsiasi nome variabile o una funzione C o C\+\+ che si trova nell'ambito, pertanto è facile integrarlo con il codice del programma C e C\+\+.  E poiché il codice dell'assembly può essere combinato con le istruzioni di C e C\+\+, può eseguire attività complesse o impossibili in C o C\+\+ solo.  
+ Poiché l'assembler inline non richiede un assembly separato e operazioni di collegamento, è più conveniente di un assembly separato. Il codice assembly inline può utilizzare qualsiasi nome funzione o variabile di C o C++ incluso nell'ambito, in modo che sia facile integrarlo con il codice C e C++ del programma. E poiché il codice assembly può essere combinato con istruzioni di C++ e C, può effettuare attività che sono complesse o impossibili in C o C++ da solo.  
   
- Il  [asm](../../assembler/inline/asm.md) parola chiave richiama l'assembler inline e può essere presente ovunque un'istruzione C o C\+\+ è consentita.  Non può essere di per sé.  Deve essere seguita da un'istruzione assembly, un gruppo di istruzioni racchiuse tra parentesi graffe, o, come minimo, una coppia di parentesi graffe vuota.  Il termine " `__asm` blocco" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, o meno tra parentesi graffe.  
+ Il [ASM](../../assembler/inline/asm.md) (parola chiave) richiama l'assembler inline e può trovarsi ovunque un'istruzione C o C++ sia valida. Non può essere visualizzata da sola. Deve essere seguita da un'istruzione dell'assembly, da un gruppo di istruzioni racchiuse tra parentesi graffe o almeno da una coppia di parentesi graffe vuote. Il termine "`__asm` block" qui si riferisce a qualsiasi istruzione o gruppo di istruzioni, racchiuso o meno tra parentesi graffe.  
   
- Il codice seguente è un semplice  `__asm`blocco racchiuso tra parentesi graffe.  \(Il codice è una sequenza di prologo della funzione personalizzata\).  
+ Il codice seguente è un semplice blocco `__asm` racchiuso tra parentesi graffe. Il codice è una sequenza di prologo di funzione personalizzata.  
   
 ```  
 // asm_overview.cpp  
@@ -55,7 +55,7 @@ void __declspec(naked) main()
 }  
 ```  
   
- In alternativa, è possibile inserire  `__asm`davanti a ciascuna istruzione assembly:  
+ In alternativa, è possibile inserire `__asm` davanti a ogni istruzione dell'assembly:  
   
 ```  
 __asm push ebp  
@@ -63,13 +63,13 @@ __asm mov  ebp, esp
 __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- Poiché la  `__asm`la parola chiave è un separatore di istruzione, è anche possibile inserire istruzioni in linguaggio assembly sulla stessa riga:  
+ Poiché la parola chiave `__asm` è un separatore di istruzione, è anche possibile inserire le istruzioni di assembly nella stessa riga:  
   
 ```  
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE  
 ```  
   
- **FINE specifico di Microsoft**  
+ **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembler inline](../../assembler/inline/inline-assembler.md)

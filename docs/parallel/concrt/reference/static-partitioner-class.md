@@ -1,46 +1,28 @@
 ---
-title: Classe static_partitioner | Documenti di Microsoft
+title: Classe static_partitioner | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - static_partitioner
 - PPL/concurrency::static_partitioner
 - PPL/concurrency::static_partitioner::static_partitioner
-dev_langs:
-- C++
-helpviewer_keywords:
-- static_partitioner class
+dev_langs: C++
+helpviewer_keywords: static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 84cdbb30068f8dd9d2a1130e53d06d9b718b0c02
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 110091a414f9cfeebcdf236b7eed6a9e46e06ea2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="staticpartitioner-class"></a>Classe static_partitioner
 La classe `static_partitioner` rappresenta il partizionamento statico dell'intervallo iterato da `parallel_for`. Il partitioner divide l'intervallo nello stesso numero di blocchi delle unità di lavoro disponibili all'utilità di pianificazione sottostante.  
@@ -86,4 +68,3 @@ static_partitioner();
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

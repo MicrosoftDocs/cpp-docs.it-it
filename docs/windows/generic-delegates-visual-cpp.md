@@ -1,32 +1,31 @@
 ---
-title: "Generic Delegates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic delegates"
-  - "delegates, generic [C++]"
+title: Delegati generici (Visual C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic delegates
+- delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d09aa9d2ea4df90ad8a74b426942d21ea1d2f6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Generic Delegates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si possono utilizzare parametri generici di tipo con delegati.  Per ulteriori informazioni sui delegati, vedere [delegato](../windows/delegate-cpp-component-extensions.md).  
+# <a name="generic-delegates-visual-c"></a>Delegati generici (Visual C++)
+È possibile utilizzare parametri di tipo generico con i delegati. Per ulteriori informazioni sui delegati, vedere [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 [attributes]   
@@ -36,30 +35,30 @@ generic < [class | typename] type-parameter-identifiers >
 ([formal-parameters]);  
 ```  
   
-#### Parametri  
- `attributes` \(facoltativo\)  
- Informazioni dichiarative aggiuntive.  Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
+#### <a name="parameters"></a>Parametri  
+ `attributes`(Facoltativo)  
+ Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere Attributi.  
   
- *identificatori di parametro di tipo*  
+ *tipo-parametro-identificatori*  
  Elenco delimitato da virgole degli identificatori per i parametri di tipo.  
   
  `type-parameter-constraints-clauses`  
- Assume il formato specificato in [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
+ Assume il formato specificato in [vincoli sui parametri di tipo generico (C + c++ /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *modificatori di accessibilità* \(Facoltativo\)  
- Modificatori di accessibilità \(ad esempio  **public**, `private`\).  
+ *i modificatori di accessibilità* (facoltativo)  
+ I modificatori di accessibilità (ad esempio **pubblica**, `private`).  
   
- *tipo del risultato*  
- Il tipo restituito del delegato.  
+ *tipo di risultato*  
+ Tipo restituito del delegato.  
   
- *identificatore*  
- Nome del delegato.  
+ *identifier*  
+ Il nome del delegato.  
   
- *parametri formali* \(Facoltativo\)  
- La lista di parametri del delegato.  
+ *parametri formali di* (facoltativo)  
+ Elenco di parametri del delegato.  
   
-## Esempio  
- I parametri di tipo delegato sono specificati nel punto in cui un oggetto delegato viene creato.  Sia il delegato che il metodo associato ad esso devono avere la stessa firma.  Il seguente è un esempio di una dichiarazione di delegato generica.  
+## <a name="example"></a>Esempio  
+ I parametri di tipo delegato sono specificati nel punto in cui viene creato un oggetto delegato. Sia il delegato sia il metodo associato a esso devono avere la stessa firma. Di seguito è riportato un esempio di una dichiarazione di delegato generico.  
   
 ```  
 // generics_generic_delegate1.cpp  
@@ -68,14 +67,14 @@ generic < class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
-## Esempio  
- L'esempio seguente mostra che  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene mostrato che:  
   
--   Non è possibile utilizzare lo stesso oggetto delegato con diversi tipi costruiti.  Creare oggetti delegati diversi per tipi diversi.  
+-   Non è possibile utilizzare lo stesso oggetto delegato con tipi costruiti diversi. Creare oggetti delegati diversi per tipi differenti.  
   
--   È possibile associare un delegato generico ad un metodo generico.  
+-   È possibile associare un delegato generico a un metodo generico.  
   
--   Quando un metodo generico viene chiamato senza specificare gli argomenti di tipo, il compilatore tenta di dedurre gli argomenti di tipo per la chiamata.  
+-   Quando un metodo generico viene chiamato senza specificare gli argomenti tipo, tramite il compilatore viene eseguito il tentativo di dedurre gli argomenti tipo per la chiamata.  
   
 ```  
 // generics_generic_delegate2.cpp  
@@ -111,8 +110,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- L'esempio seguente dichiara un delegato generico `GenDelegate<ItemType>`quindi lo istanzia associandolo al metodo `MyMethod` che utilizza il parametro di tipo `ItemType`.  Due istanze del delegato \(una Integer e una double\) vengono create e invocate.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene dichiarato un delegato generico `GenDelegate<ItemType>` di cui, successivamente, viene creata un'istanza associandolo al metodo `MyMethod` in cui viene utilizzato il parametro di tipo `ItemType`. Vengono create e richiamate due istanze del delegato (Integer e double).  
   
 ```  
 // generics_generic_delegate.cpp  
@@ -162,7 +161,10 @@ int main() {
 }  
 ```  
   
-  **Invocando il delegato Integer: i \= 123, j \= 123**  
-**Invocando il delegato double: m \= 0.123, n \= 0.123**   
-## Vedere anche  
+```Output  
+Invoking the integer delegate: i = 123, j = 123  
+Invoking the double delegate: m = 0.123, n = 0.123  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Generics](../windows/generics-cpp-component-extensions.md)

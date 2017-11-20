@@ -1,33 +1,32 @@
 ---
-title: "CDynamicStringAccessor::GetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor.GetString"
-  - "CDynamicStringAccessor::GetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetString (metodo)"
+title: 'CDynamicStringAccessor:: GetString | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor.GetString
+- CDynamicStringAccessor::GetString
+dev_langs: C++
+helpviewer_keywords: GetString method
 ms.assetid: 4af27f27-7589-49f5-93d8-6ef05c023c8a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b77819f0d9314518b4e7afd4ca8769bf001c48d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicStringAccessor::GetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicstringaccessorgetstring"></a>CDynamicStringAccessor::GetString
 Recupera i dati specificati di colonna come stringa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -42,21 +41,21 @@ BaseType* GetString(
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nColumn`  
- \[in\] numero di colonne.  I numeri di colonne iniziano con 1.  Un valore 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore 0 si intende la colonna del segnalibro, se presente.  
   
  `pColumnName`  
- \[in\] puntatore A una stringa di caratteri che contiene il nome della colonna.  
+ [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.  
   
-## Valore restituito  
- Un puntatore al valore stringa recuperato dalla colonna specificata.  Il valore è di tipo ***BaseType***, che sono **CHAR**  o **WCHAR** come se \_UNICODE è definito o meno.  Torna ANNULLANO se la colonna specificata non viene trovata.  
+## <a name="return-value"></a>Valore restituito  
+ Un puntatore al valore stringa recuperato dalla colonna specificata. Il valore è di tipo ***BaseType***, che sarà **CHAR** o **WCHAR** a seconda se viene definito Unicode o meno. Restituisce NULL se non è possibile trovare la colonna specificata.  
   
-## Note  
- La seconda forma di override accetta il nome della colonna come stringa ANSI.  Il terzo form override accetta il nome della colonna come stringhe Unicode.  
+## <a name="remarks"></a>Note  
+ Il secondo override modulo accetta il nome della colonna come una stringa ANSI. Il terzo di eseguire l'override modulo accetta il nome della colonna come stringa Unicode.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 Convertire una stringa di caratteri multibyte nelle impostazioni locali correnti in una rappresentazione di stringa di caratteri wide. Una versione di [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) con miglioramenti per la sicurezza. come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,13 +103,13 @@ errno_t mbsrtowcs_s(
   
  Se `count` è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), `mbsrtowcs_s` converte la porzione di stringa più ampia possibile che può essere inclusa nel buffer di destinazione, lasciando però spazio per un carattere di terminazione Null.  
   
- Se `mbsrtowcs_s` converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita e il carattere di terminazione Null in `*``pReturnValue`, a condizione che `pReturnValue` non sia un puntatore Null. Ciò si verifica anche quando l'argomento `wcstr` è un puntatore Null e permette di determinare le dimensioni del buffer richieste. Se `wcstr` è un puntatore Null, `count` viene ignorato.  
+ Se `mbsrtowcs_s` converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita e il carattere di terminazione Null in `*pReturnValue`, a condizione che `pReturnValue` non sia un puntatore Null. Ciò si verifica anche quando l'argomento `wcstr` è un puntatore Null e permette di determinare le dimensioni del buffer richieste. Se `wcstr` è un puntatore Null, `count` viene ignorato.  
   
  Se `wcstr` non è un puntatore Null, all'oggetto puntatore a cui punta `mbstr` viene assegnato un puntatore Null se la conversione è stata arrestata in quanto è stato raggiunto un carattere di terminazione Null. In caso contrario, viene assegnato l'indirizzo subito dopo l'ultimo carattere multibyte convertito, se presente. Ciò consente a una chiamata di funzione successiva di riavviare la conversione nel punto in cui la chiamata è stata arrestata.  
   
  Se `mbstate` è un puntatore Null, viene usato l'oggetto statico dello stato di conversione `mbstate_t` della libreria interna. Poiché l'oggetto statico interno non è thread-safe, è consigliabile passare un valore `mbstate` fornito dall'utente.  
   
- Se `mbsrtowcs_s` rileva un carattere multibyte non valido nelle impostazioni locali correnti, inserisce -1 in `*``pReturnValue`, imposta il buffer di destinazione `wcstr` su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
+ Se `mbsrtowcs_s` rileva un carattere multibyte non valido nelle impostazioni locali correnti, inserisce -1 in `*pReturnValue`, imposta il buffer di destinazione `wcstr` su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
   
  Se le sequenze a cui punta `mbstr` e `wcstr` si sovrappongono, il comportamento di `mbsrtowcs_s` non è definito. `mbsrtowcs_s` viene influenzato dalla categoria LC_TYPE delle impostazioni locali correnti.  
   

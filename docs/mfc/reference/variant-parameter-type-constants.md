@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - VTS_OPTEXCLUSIVE
 - VTS_YSIZE_PIXELS
 - VTS_XSIZE_PIXELS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - VTS_XPOS_HIMETRIC constant [MFC]
 - VTS_FONT constant [MFC]
@@ -44,16 +42,15 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: cc8daf0853a97e8903b47d29f70e190430931fd5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="variant-parameter-type-constants"></a>Costanti di tipi di parametri varianti
 Questo argomento elenca le nuove costanti che indicano i tipi di parametri varianti progettati per l'uso con le classi di controlli OLE della libreria di classi Microsoft Foundation.  
@@ -98,4 +95,3 @@ Questo argomento elenca le nuove costanti che indicano i tipi di parametri varia
   
 ## <a name="see-also"></a>Vedere anche  
  [Macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md)
-

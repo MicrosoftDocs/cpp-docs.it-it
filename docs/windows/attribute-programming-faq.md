@@ -1,68 +1,68 @@
 ---
-title: "Attribute Programming FAQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributed programming"
-  - "attributes [C++], frequently asked questions"
-  - "FAQs (frequently asked questions), attributed programming [C++]"
+title: Domande frequenti sulla programmazione dell'attributo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- attributed programming
+- attributes [C++], frequently asked questions
+- FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c61ced7e0931f1dba46a7a6b760755f799d29b6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Attribute Programming FAQ
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento vengono fornite risposte alle domande frequenti:  
+# <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
+Questo argomento sono incluse le seguenti domande frequenti:  
   
--   [Qual è un HRESULT?](#vcconattributeprogrammmingfaqanchor1)  
+-   [Che cos'è un valore HRESULT?](#vcconattributeprogrammmingfaqanchor1)  
   
--   [Quando è specificare il nome del parametro per un attributo?](#vcconattributeprogrammmingfaqanchor2)  
+-   [Quando è necessario specificare il nome del parametro per un attributo?](#vcconattributeprogrammmingfaqanchor2)  
   
 -   [È possibile utilizzare i commenti in un blocco di attributi?](#vcconattributeprogrammmingfaqanchor3)  
   
--   [come gli attributi interagiscono con ereditarietà?](#vcconattributeprogrammmingfaqanchor4)  
+-   [Interagiscono di attributi con ereditarietà](#vcconattributeprogrammmingfaqanchor4)  
   
--   [Come è possibile utilizzare gli attributi in un progetto senza attributi ATL?](#vcconattributeprogrammmingfaqanchor5)  
+-   [Come è possibile utilizzare gli attributi in un progetto ATL senza attributo?](#vcconattributeprogrammmingfaqanchor5)  
   
 -   [Come è possibile utilizzare un file idl in un progetto con attributi?](#vcconattributeprogrammmingfaqanchor6)  
   
--   [È possibile modificare il codice che verrà inserito da un attributo?](#vcconattributeprogrammmingfaqanchor7)  
+-   [È possibile modificare il codice che viene inserito da un attributo?](#vcconattributeprogrammmingfaqanchor7)  
   
--   [Come è possibile inoltrare dichiaro un'interfaccia con attributi?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
+-   [Come è possibile dichiarare in avanti un'interfaccia con attributi?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)  
   
--   [È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza gli attributi?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
+-   [È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza attributi?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Qual è un HRESULT?  
- `HRESULT` è un tipo di dati semplice che viene spesso utilizzato come valore restituito dagli attributi e da ATL in generale.  Nella tabella seguente vengono descritti i vari valori.  Più valori sono contenuti nel file di intestazione winerror.h.  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Che cos'è un valore HRESULT?  
+ Un `HRESULT` è un tipo di dati semplici che viene spesso utilizzato come valore restituito da attributi e ATL in generale. Nella tabella seguente vengono descritti i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.  
   
 |Nome|Descrizione|Valore|  
-|----------|-----------------|------------|  
-|S\_OK|operazione riuscita|0x00000000|  
-|E\_UNEXPECTED|errore imprevisto|0x8000FFFF|  
-|E\_NOTIMPL|non implementato|0x80004001|  
-|E\_OUTOFMEMORY|Ha esito negativo per allocare memoria necessaria|0x8007000E|  
-|E\_INVALIDARG|Uno o più argomenti non sono validi|0x80070057|  
-|E\_NOINTERFACE|nessun tali interfaccia supportata|0x80004002|  
-|E\_POINTER|puntatore non valido|0x80004003|  
-|E\_HANDLE|handle non valide|0x80070006|  
-|E\_ABORT|operazione interrotta|0x80004004|  
-|E\_FAIL|errore non specificato|0x80004005|  
-|E\_ACCESSDENIED|Errore di accesso negato di generale|0x80070005|  
+|----------|-----------------|-----------|  
+|S_OK|Operazione riuscita|0x00000000|  
+|E_UNEXPECTED|Errore imprevisto|0x8000ffff|  
+|E_NOTIMPL|Non implementato|0x80004001|  
+|E_OUTOFMEMORY|Non è stato possibile allocare la memoria necessaria|0x8007000E|  
+|E_INVALIDARG|Uno o più argomenti non sono validi|0x80070057|  
+|E_NOINTERFACE|Interfaccia non supportata|0x80004002|  
+|E_POINTER|Puntatore non valido|0x80004003|  
+|E_HANDLE|Handle non valido|0x80070006|  
+|E_ABORT|Operazione interrotta|0x80004004|  
+|E_FAIL|Errore non specificato|0x80004005|  
+|E_ACCESSDENIED|Accesso generale negato|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Quando è specificare il nome del parametro per un attributo?  
- Nella maggior parte dei casi, se l'attributo dispone di un solo parametro, il parametro è denominato.  Il nome non è obbligatorio quando si inserisce l'attributo nel codice.  Ad esempio, il seguente utilizzo di [cui aggregatable](../windows/aggregatable.md) attributo:  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a>Quando è necessario specificare il nome del parametro per un attributo?  
+ Nella maggior parte dei casi, se l'attributo ha un solo parametro, tale parametro è denominato. Questo nome non è obbligatorio quando si inserisce l'attributo nel codice. Ad esempio, la seguente sintassi del [aggregabile](../windows/aggregatable.md) attributo:  
   
 ```  
 [coclass, aggregatable(value=allowed)]  
@@ -72,7 +72,7 @@ class CMyClass
 };  
 ```  
   
- è esattamente lo stesso di:  
+ è esattamente identico:  
   
 ```  
 [coclass, aggregatable(allowed)]  
@@ -82,26 +82,26 @@ class CMyClass
 };  
 ```  
   
- tuttavia, i seguenti attributi hanno singoli, parametri senza nome:  
+ Tuttavia, gli attributi seguenti presentano parametri singoli senza:  
   
 ||||  
 |-|-|-|  
-|[call\_as](../windows/call-as.md)|[case](../windows/case-cpp.md)|[cpp\_quote](../windows/cpp-quote.md)|  
-|[default](../windows/default-cpp.md)|[valore predefinito](../windows/defaultvalue.md)|[defaultvtable](../windows/defaultvtable.md)|  
-|[emitidl](../windows/emitidl.md)|[voce](../windows/entry.md)|[first\_is](../windows/first-is.md)|  
-|[helpcontext](../windows/helpcontext.md)|[file di](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
+|[call_as](../windows/call-as.md)|[case](../windows/case-cpp.md)|[cpp_quote](../windows/cpp-quote.md)|  
+|[default](../windows/default-cpp.md)|[defaultvalue](../windows/defaultvalue.md)|[defaultvtable](../windows/defaultvtable.md)|  
+|[emitidl](../windows/emitidl.md)|[entry](../windows/entry.md)|[first_is](../windows/first-is.md)|  
+|[helpcontext](../windows/helpcontext.md)|[helpfile](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
 |[helpstringcontext](../windows/helpstringcontext.md)|[helpstringdll](../windows/helpstringdll.md)|[id](../windows/id.md)|  
-|[iid\_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
-|[importare](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last\_is](../windows/last-is.md)|  
-|[length\_is](../windows/length-is.md)|[max\_is](../windows/max-is.md)|[no\_injected\_text](../windows/no-injected-text.md)|  
-|[pointer\_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
-|[size\_is](../windows/size-is.md)|[source](../windows/source-cpp.md)|[switch\_is](../windows/switch-is.md)|  
-|[switch\_type](../windows/switch-type.md)|[transmit\_as](../windows/transmit-as.md)|[wire\_marshal](../windows/wire-marshal.md)|  
+|[iid_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
+|[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
+|[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  
+|[pointer_default](../windows/pointer-default.md)|[pragma](../windows/pragma.md)|[restricted](../windows/restricted.md)|  
+|[size_is](../windows/size-is.md)|[origine](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
+|[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> È possibile utilizzare i commenti in un blocco di attributi?  
- È possibile utilizzare sia commenti a riga singola che su più righe all'interno di un blocco di attributi.  Tuttavia, non è possibile utilizzare qualsiasi stile del commento all'interno delle parentesi di utilizzare i parametri per un attributo.  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a>È possibile utilizzare i commenti in un blocco di attributi?  
+ È possibile utilizzare i commenti a riga singola sia su più righe all'interno di un blocco di attributi. Tuttavia, è possibile utilizzare due tipi di commento all'interno delle parentesi che contiene i parametri a un attributo.  
   
- L'esempio seguente è consentito:  
+ È consentito:  
   
 ```  
 [ coclass,  
@@ -111,7 +111,7 @@ class CMyClass
 ]  
 ```  
   
- L'esempio seguente è disattivata:  
+ Di seguito non è consentito:  
   
 ```  
 [ coclass,  
@@ -120,19 +120,19 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> come gli attributi interagiscono con ereditarietà?  
- È possibile ereditare da classi gli attributi che senza attributi da altre classi, che possono essere stesse gli attributi o meno.  Il risultato di derivare da una classe con attributi dalla derivazione dalla classe dopo che il provider di attributo ha passato nel codice.  Gli attributi non vengono trasmessi alle classi derivate con ereditarietà di C\+\+.  Un codice di trasformazioni del provider di attributo solo in vicinanze dei relativi attributi.  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a>Interagiscono di attributi con ereditarietà  
+ Da altre classi, che possono stessi essere attribuiti o non è possibile ereditare le classi con e senza Attribute. Il risultato di derivazione da una classe con attributa è quella della derivazione da tale classe dopo la trasformazione del codice con il provider di attributi. Gli attributi non vengono trasmessi alle classi derivate mediante l'ereditarietà di C++. Un provider di attributi Trasforma solo codice in prossimità dei relativi attributi.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Come è possibile utilizzare gli attributi in un progetto senza attributi ATL?  
- È possibile disporre di un progetto senza attributi ATL, che dispone di un file IDL e può essere opportuno avviare gli oggetti con attributi aggiunta.  In questo caso, utilizzare la procedura guidata della classe aggiunta per fornire il codice.  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a>Come è possibile utilizzare gli attributi in un progetto ATL senza attributo?  
+ È possibile un progetto ATL senza attributo, che dispone di un file IDL, e si consiglia di iniziare ad aggiungere oggetti con attributi. In questo caso, è possibile utilizzare l'aggiunta guidata classe per fornire il codice.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Come è possibile utilizzare un file idl in un progetto con attributi?  
- È possibile disporre di un file idl da utilizzare nel progetto con attributi ATL.  In questo caso, si utilizzava [importidl](../windows/importidl.md) l'attributo, compilare il file IDL a un file con estensione h \(vedere  [Pagine delle proprietà MIDL](../ide/midl-property-pages.md) nella finestra di dialogo pagine delle proprietà del progetto\) e quindi includere il file h nel progetto.  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a>Come è possibile utilizzare un file idl in un progetto con attributi?  
+ Potrebbe essere un file IDL che si desidera utilizzare nel progetto ATL con attributi. In questo caso, si utilizzerebbe il [importidl](../windows/importidl.md) , compilare il file idl in un file con estensione h (vedere il [pagine delle proprietà MIDL](../ide/midl-property-pages.md) nella finestra di dialogo Pagine delle proprietà del progetto) e quindi includere file h nel progetto .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> È possibile modificare il codice che verrà inserito da un attributo?  
- Alcuni attributi è invece possibile inserire il codice nel progetto.  È possibile visualizzare il codice inserito tramite [\/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore.  È anche possibile copiare il codice dal file inserito e incollarlo nel codice sorgente.  Ciò consente di modificare il comportamento dell'attributo.  Tuttavia, potrebbe essere necessario modificare altre parti del codice anche.  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a>È possibile modificare il codice che viene inserito da un attributo?  
+ Alcuni attributi di inseriscono il codice nel progetto. È possibile visualizzare il codice inserito utilizzando il [/Fx](../build/reference/fx-merge-injected-code.md) l'opzione del compilatore. È inoltre possibile copiare il file inserito codice e incollarlo nel codice sorgente. Ciò consente di modificare il comportamento dell'attributo. Tuttavia, è possibile modificare altre parti del codice anche.  
   
- Nell'esempio è il risultato di copiare il codice inserito in un file di codice sorgente:  
+ L'esempio seguente è il risultato di copiare il codice inserito in un file di codice sorgente:  
   
 ```  
 // attr_injected.cpp  
@@ -252,11 +252,11 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Come è possibile inoltrare dichiaro un'interfaccia con attributi?  
- Se si desidera apportare una dichiarazione con prototipo di un'interfaccia con attributi, è necessario applicare gli stessi attributi alla dichiarazione con prototipo che si applicano alla dichiarazione dell'interfaccia.  È inoltre necessario applicare [export](../windows/export.md) attributo alla dichiarazione con prototipo.  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Come è possibile dichiarare in avanti un'interfaccia con attributi?  
+ Se si desidera effettuare una dichiarazione con prototipo di un'interfaccia con attributa, è necessario applicare gli stessi attributi per la dichiarazione con prototipo applicabili alla dichiarazione di interfaccia effettivo. È inoltre necessario applicare il [esportare](../windows/export.md) attributo per la dichiarazione con prototipo.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza gli attributi?  
- No, utilizzando gli attributi in una classe derivata da una classe che utilizza gli attributi non è supportato.  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>È possibile utilizzare gli attributi in una classe derivata da una classe che utilizza attributi?  
+ No, l'utilizzo degli attributi in una classe derivata da una classe che utilizza gli attributi non è supportata.  
   
-## Vedere anche  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concetti](../windows/attributed-programming-concepts.md)

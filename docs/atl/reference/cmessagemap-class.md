@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CMessageMap
 - ATLWIN/ATL::CMessageMap
 - ATLWIN/ATL::CMessageMap::ProcessWindowMessage
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMessageMap class
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2726e73d35d01c942ac3d251579fe350be549800
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d60befb61e86c2ba8abc18a6eca1578df87b777f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cmessagemap-class"></a>Classe CMessageMap
 Questa classe consente di che mappe messaggi di un oggetto per l'accesso da un altro oggetto.  
@@ -62,14 +45,14 @@ class ATL_NO_VTABLE CMessageMap
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Accede a una mappa dei messaggi nel `CMessageMap`-classe derivata.|  
+|[CMessageMap::ProcessWindowMessage](#processwindowmessage)|Accede a una mappa messaggi di `CMessageMap`-classe derivata.|  
   
 ## <a name="remarks"></a>Note  
  `CMessageMap`è una classe base astratta che consente i messaggi di un oggetto viene eseguito il mapping per l'accesso da un altro oggetto. Affinché un oggetto di esporre le mappe messaggi, la classe deve derivare da `CMessageMap`.  
   
  Utilizza ATL `CMessageMap` a windows di contenuti di supporto e il concatenamento della mappa messaggi dinamici. Ad esempio, qualsiasi classe che contiene un [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) oggetto deve derivare da `CMessageMap`. Il codice seguente è tratto dal [SUBEDIT](../../visual-cpp-samples.md) esempio. Tramite [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` classe deriva automaticamente da `CMessageMap`.  
   
- [!code-cpp[NVC_ATL_Windowing #90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
  Poiché la finestra contenuta `m_EditCtrl`, utilizzerà una mappa messaggi nella classe che contiene, `CAtlEdit` deriva da `CMessageMap`.  
   
@@ -93,7 +76,7 @@ virtual BOOL ProcessWindowMessage(
   
 ### <a name="parameters"></a>Parametri  
  `hWnd`  
- [in] Handle di finestra di ricezione del messaggio.  
+ [in] L'handle della finestra che riceve il messaggio.  
   
  `uMsg`  
  [in] Il messaggio inviato alla finestra.  
@@ -121,4 +104,3 @@ virtual BOOL ProcessWindowMessage(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

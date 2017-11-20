@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -106,19 +105,17 @@ helpviewer_keywords:
 - C3376
 - C3377
 - C3378
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>C3300 errori del compilatore tramite C3399
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -230,4 +227,3 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C3397](compiler-error-c3397.md)|Inizializzazione aggregata non consentita in argomenti predefiniti|  
 |[Errore del compilatore C3398](compiler-error-c3398.md)|'*operatore*': Impossibile convertire da '*tipo*'a'*tipo*'. L'espressione di origine deve essere un simbolo funzione|  
 |[Errore del compilatore C3399](compiler-error-c3399.md)|'*tipo*': Impossibile specificare argomenti durante la creazione di un'istanza di un parametro generico|  
-

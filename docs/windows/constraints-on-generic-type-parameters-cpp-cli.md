@@ -1,63 +1,61 @@
 ---
-title: "Constraints on Generic Type Parameters (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "where"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "where keyword [C++]"
-  - "constraints, C++"
+title: Parametri di tipo generico di vincoli (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: where
+dev_langs: C++
+helpviewer_keywords:
+- where keyword [C++]
+- constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 25
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 01cd21e00cbf8947f5eb2ff8d2f578ab4912a03a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Constraints on Generic Type Parameters (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nel tipo o nelle dichiarazioni di metodo generiche, è possibile qualificare un parametro di tipo con vincoli.  Un vincolo è un requisito che i tipi utilizzati come argomenti di tipo devono soddisfare.  Ad esempio, un vincolo può essere l'argomento di tipo che deve implementare una determinata interfaccia o ereditare da una classe specifica.  
+# <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
+Nelle dichiarazioni di metodo o di tipo generico è possibile qualificare un parametro di tipo con vincoli. Un vincolo è un requisito che deve essere soddisfatto dai tipi utilizzati come argomenti di tipo. Ad esempio, un vincolo potrebbe essere l'implementazione obbligatoria di una determinata interfaccia o l'eredità da una classe specifica da parte dell'argomento di tipo.  
   
- I vincoli sono facoltativi; non specificare un vincolo su un parametro è equivalente a vincolare il parametro a <xref:System.Object>.  
+ I vincoli sono facoltativi; la mancata specifica di un vincolo per un parametro equivale a vincolare quel parametro a <xref:System.Object>.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 where type-parameter: constraint list  
 ```  
   
-#### Parametri  
- *parametro di tipo*.  
- Uno dei parametri di tipo, da vincolare.  
+#### <a name="parameters"></a>Parametri  
+ *parametro di tipo*  
+ Uno dei parametri di tipo da vincolare.  
   
  *elenco di vincoli*  
- *elenco di vincoli* è un elenco delimitato da virgole di specifiche del vincolo.  L'elenco può includere le interfacce da implementare dal parametro di tipo.  
+ *elenco di vincoli* è un elenco delimitato da virgole di specifiche del vincolo. Nell'elenco possono essere incluse le interfacce che devono essere implementate dal parametro di tipo.  
   
- L'elenco può includere anche una classe.  Perché l'argomento di tipo soddisfi un vincolo della classe base, deve essere la stessa classe del vincolo o derivare dal vincolo.  
+ Inoltre può essere compresa una classe. Affinché l'argomento di tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.  
   
- È inoltre possibile specificare `gcnew()` per indicare che l'argomento di tipo deve disporre di un costruttore pubblico senza parametri; o `ref class` per indicare che l'argomento di tipo deve essere un tipo di riferimento, incluso ogni tipo delegato, classe, interfaccia o array; o `value class` per indicare che l'argomento di tipo deve essere un tipo di valore.  Può essere specificato ogni tipo valore tranne Nullable\<T\>.  
+ È inoltre possibile specificare `gcnew()` per indicare che per l'argomento di tipo deve essere disponibile un costruttore pubblico senza parametri oppure `ref class` per indicare che l'argomento di tipo deve essere un tipo di riferimento, inclusi qualsiasi classe, interfaccia, delegato o tipo di matrice oppure `value class` per indicare che l'argomento di tipo deve essere un tipo di valore. Qualsiasi tipo di valore tranne Nullable\<T > può essere specificato.  
   
- È inoltre possibile specificare un parametro generico come vincolo.  L'argomento di tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo.  Questo viene chiamato un vincolo di tipo naked.  
+ È inoltre possibile specificare un parametro generico come vincolo. L'argomento di tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo. Ciò viene definito vincolo di tipo naked.  
   
-## Note  
- La clausola di vincolo è costituita da **where** seguito da un parametro di tipo, dai due punti \(**:**\) e dal vincolo, che specifica la natura della restrizione sul parametro di tipo.  **where** è una parola chiave sensibile al contesto; vedere [Parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per ulteriori informazioni.  Separare più clausole **where** con uno spazio.  
+## <a name="remarks"></a>Note  
+ La clausola di vincolo è costituito da **in** seguito da un parametro di tipo, i due punti (**:**) e dal vincolo tramite cui viene specificata la natura della restrizione per il parametro di tipo. **dove** è una parola chiave sensibile al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per ulteriori informazioni. Separare più **dove** clausole con uno spazio.  
   
- I vincoli vengono applicati ai parametri di tipo per mettere limitazioni sui tipi che possono essere utilizzati come argomenti di un tipo o metodo generico.  
+ I vincoli vengono applicati ai parametri di tipo per impostare limitazioni per i tipi che possono essere utilizzati come argomenti per un tipo o metodo generico.  
   
- Vincoli di classe e di interfaccia specificano che i tipi di argomento devono corrispondere o ereditare da una classe specificata o implementare un'interfaccia specificata.  
+ Tramite i vincoli di classe e interfaccia viene specificato che i tipi di argomento devono corrispondere o ereditare da una classe specificata o implementare un'interfaccia specificata.  
   
- L'applicazione dei vincoli ad un tipo o metodo generico permette al codice in quel tipo o metodo di approfittare delle funzionalità note dei tipi vincolati.  Ad esempio si può dichiarare una classe generica come quella che il parametro di tipo implementa l'interfaccia **IComparable\<T\>**:  
+ L'applicazione di vincoli a un tipo o metodo generico consente l'utilizzo delle funzionalità note dei tipi vincolati nel codice di quel tipo o metodo. Ad esempio, è possibile dichiarare una classe generica in modo che il parametro di tipo implementi il **IComparable\<T >** interfaccia:  
   
 ```  
 // generics_constraints_1.cpp  
@@ -68,15 +66,15 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- Questo vincolo richiede che un argomento di tipo utilizzato per  `T` implementi `IComparable<T>` in fase di compilazione.  Consente inoltre che vengano chiamati metodi di interfaccia, come **CompareTo**.  Non è necessario alcun cast su un'istanza del parametro di tipo per chiamare i metodi di interfaccia.  
+ Questo vincolo viene richiesto che un argomento di tipo utilizzato per `T` implementa `IComparable<T>` in fase di compilazione. Consente inoltre i metodi di interfaccia, ad esempio **CompareTo**, da chiamare. Non è necessario alcun cast a un'istanza del parametro di tipo per chiamare i metodi di interfaccia.  
   
- I metodi statici nella classe di argomenti di tipo non possono essere chiamati tramite il parametro di tipo; essi possono essere chiamati solo tramite l'effettivo tipo denominato.  
+ I metodi statici nella classe dell'argomento tipo non possono essere chiamati tramite il parametro di tipo, ma soltanto tramite il tipo denominato effettivo.  
   
- Un vincolo non può essere un tipo di valore, inclusi i tipi incorporati come `int` o **double**.  Poiché i tipi di valore non possono avere classi derivate, solo una classe potrebbe soddisfare il vincolo.  In tal caso, il generic può essere riscritto con il parametro di tipo sostituito dal tipo di valore specifico.  
+ Un vincolo non può essere un tipo di valore, inclusi i tipi incorporati, ad esempio `int` o **double**. Poiché ai tipi di valore non possono essere associate classi derivate, solo una classe potrebbe soddisfare il vincolo. In questo caso, il generico può essere riscritto con il parametro di tipo sostituito dal tipo di valore specifico.  
   
  I vincoli sono richiesti in alcuni casi poiché il compilatore non consente l'utilizzo di metodi o altre funzionalità di un tipo sconosciuto a meno che i vincoli implichino che il tipo sconosciuto supporti i metodi o le interfacce.  
   
- Più vincoli per lo stesso parametro di tipo possono essere specificati in un elenco delimitato da virgole  
+ È possibile specificare più vincoli per lo stesso parametro di tipo usando un elenco delimitato da virgole  
   
 ```  
 // generics_constraints_2.cpp  
@@ -88,7 +86,7 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- Con più parametri di tipo, utilizzare una clausola **where** per ogni parametro di tipo.  Di seguito è riportato un esempio.  
+ Con più parametri di tipo, utilizzare uno **dove** clausola per ogni parametro di tipo. Ad esempio:  
   
 ```  
 // generics_constraints_3.cpp  
@@ -104,11 +102,11 @@ ref class Dictionary {};
   
  Riassumendo, utilizzare vincoli nel codice in base alle regole seguenti:  
   
--   Se sono elencati più vincoli, i vincoli possono essere visualizzati in qualsiasi ordine.  
+-   Se sono elencati più vincoli, questi possono essere visualizzati in qualsiasi ordine.  
   
--   I vincoli possono anche essere tipi di classe come classi base astratte.  Tuttavia, i vincoli non possono essere tipi di valore o classi sealed.  
+-   I vincoli possono anche essere tipi di classe, ad esempio classi base astratte. Tuttavia, i vincoli non possono essere tipi di valore o classi sealed.  
   
--   I vincoli non possono essere essi stessi parametri di tipo, ma possono includere parametri di tipo in un tipo costruito aperto.  Di seguito è riportato un esempio.  
+-   I vincoli non possono essere parametri di tipo, ma tramite essi questi ultimi possono essere coinvolti in un tipo costruito aperto. Ad esempio:  
   
     ```  
     // generics_constraints_4.cpp  
@@ -121,8 +119,8 @@ ref class Dictionary {};
     ref class G2{};  
     ```  
   
-## Esempio  
- L'esempio seguente mostra l'utilizzo dei vincoli per chiamare metodi di istanza sui parametri di tipo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato l'utilizzo di vincoli per chiamare metodi di istanza nei parametri di tipo.  
   
 ```  
 // generics_constraints_5.cpp  
@@ -177,14 +175,17 @@ int main() {
 }  
 ```  
   
-  **"padre" non è un anziano**  
-**"nonno" è un anziano**   
-## Esempio  
- Quando un parametro di tipo generico viene utilizzato come vincolo, viene chiamato un vincolo di tipo naked.  I vincoli di tipo naked sono utili quando una funzione membro con il relativo parametro di tipo necessita di vincolare quel parametro al parametro di tipo del tipo contenitore.  
+```Output  
+"parent" is not a senior  
+"grandfather" is a senior  
+```  
   
- Nell'esempio seguente, T è un vincolo di tipo naked nel contesto del metodo Add.  
+## <a name="example"></a>Esempio  
+ Quando un parametro di tipo generico viene utilizzato come vincolo, viene definito vincolo di tipo naked. I vincoli di tipo naked sono utili quando per una funzione membro con il relativo parametro di tipo è necessario vincolare quel parametro al parametro di tipo del tipo contenitore.  
   
- I vincoli di tipo naked possono anche essere utilizzati in definizioni di classi generiche.  I vincoli di tipo naked risultano meno utili se utilizzati in classi generiche poiché il compilatore non è in grado di dedurre alcuna informazione sul vincolo di tipo naked, tranne il fatto che deriva da <xref:System.Object>.  Utilizzare vincoli di tipo naked su classi generiche negli scenari nei quali si desidera imporre una relazione di ereditarietà tra due parametri di tipo.  
+ Nell'esempio seguente T è un vincolo di tipo naked nel contesto del metodo Add.  
+  
+ I vincoli di tipo naked possono essere utilizzati anche in definizioni di classi generiche. I vincoli di tipo naked risultano meno utili con le classi generiche poiché tramite il compilatore non è possibile presupporre alcuna informazione su un vincolo di tipo naked, tranne la derivazione da <xref:System.Object>. Utilizzare vincoli di tipo naked per le classi generiche negli scenari in cui si desidera imporre una relazione di ereditarietà tra due parametri di tipo.  
   
 ```  
 // generics_constraints_6.cpp  
@@ -201,5 +202,5 @@ where A : C
 ref struct SampleClass {};  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Generics](../windows/generics-cpp-component-extensions.md)

@@ -1,74 +1,74 @@
 ---
-title: "Adding Values to a Combo Box Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.combo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combo boxes [C++], Data property"
-  - "controls [Visual Studio], testing values in combo boxes"
-  - "combo boxes [C++], adding values"
-  - "combo boxes [C++], previewing values"
-  - "controls [C++], testing values in combo boxes"
-  - "Data property"
-  - "combo boxes [C++], testing values"
+title: Aggiunta di valori a un controllo casella combinata | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.combo
+dev_langs: C++
+helpviewer_keywords:
+- combo boxes [C++], Data property
+- controls [Visual Studio], testing values in combo boxes
+- combo boxes [C++], adding values
+- combo boxes [C++], previewing values
+- controls [C++], testing values in combo boxes
+- Data property
+- combo boxes [C++], testing values
 ms.assetid: 22a78f98-fada-48b3-90d8-7fa0d8e4de51
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f63f0e9466ec8a6649e14976e40d6c509af5fb2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Values to a Combo Box Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile aggiungere valori a un controllo casella combinata, a condizione che l'editor finestre sia aperto.  
+# <a name="adding-values-to-a-combo-box-control"></a>Aggiunta di valori a un controllo casella combinata
+Fino a quando è aperto l'editor finestre, è possibile aggiungere valori a un controllo casella combinata.  
   
 > [!TIP]
->  Si consiglia di aggiungere tutti i valori alla casella combinata *prima* di ridimensionare la casella dell'Editor finestre. In caso contrario, il testo da visualizzare nel controllo casella combinata potrebbe risultare troncato.  
+>  È consigliabile aggiungere tutti i valori nella casella combinata *prima* di ridimensionare la casella nell'editor finestre, oppure è possibile troncare il testo che deve essere visualizzato nel controllo di riepilogo.  
   
-#### Per immettere valori in un controllo casella combinata  
+#### <a name="to-enter-values-into-a-combo-box-control"></a>Per immettere valori in un controllo casella combinata  
   
-1.  Fare clic sul controllo casella combinata.  
+1.  Selezionare la casella combinata facendo clic su di esso.  
   
-2.  Nella [finestra Proprietà](../Topic/Properties%20Window.md) scorrere verso il basso fino a visualizzare la proprietà **Data**.  
-  
-    > [!NOTE]
-    >  Se le proprietà visualizzate sono raggruppate per tipo, la proprietà **Data** verrà visualizzata tra le proprietà **Varie**.  
-  
-3.  Fare clic nell'area del valore relativa alla proprietà **Data** e digitare i valori di dati, separati da punti e virgola.  
+2.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), scorrere verso il basso il **dati** proprietà.  
   
     > [!NOTE]
-    >  Non inserire spazi tra i valori, poiché gli spazi interferiscono con l'ordinamento alfabetico nell'elenco a discesa.  
+    >  Se si visualizzano le proprietà raggruppate per tipo, **dati** è presente il **varie** proprietà.  
   
-4.  Quando tutti i valori sono stati aggiunti, premere **Invio**.  
+3.  Fare clic nell'area del valore per il **dati** proprietà e digitare i valori di dati, separati da punti e virgola.  
   
- Per ulteriori informazioni sull'ingrandimento dell'area a discesa di una casella combinata, vedere [Impostazione della dimensione di una casella combinata e dell'elenco a discesa](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
+    > [!NOTE]
+    >  Non inserire spazi tra i valori poiché gli spazi interferiscono con l'ordinamento alfabetico nell'elenco a discesa.  
+  
+4.  Fare clic su **invio** dopo aver terminato l'aggiunta di valori.  
+  
+ Per informazioni sull'ingrandimento dell'area di riepilogo a discesa di una casella combinata, vedere [impostazione delle dimensioni della casella combinata e dell'elenco a discesa](setting-the-size-of-the-combo-box-and-its-drop-down-list.md).  
   
 > [!NOTE]
->  Non è possibile aggiungere valori ai progetti Win32 mediante questa procedura, poiché la proprietà **Data** non è disponibile per i progetti Win32.  Poiché i progetti Win32 non dispongono di librerie che aggiungono questa funzionalità, in un progetto Win32 è necessario aggiungere valori a una casella combinata a livello di codice.  
+>  Non è possibile aggiungere valori per i progetti Win32 mediante questa procedura (il **dati** proprietà non è disponibile per i progetti Win32). Progetti Win32 non dispone di librerie che aggiungono questa funzionalità, è necessario aggiungere valori a livello di codice in una casella combinata con un progetto Win32.  
   
-#### Per verificare l'aspetto dei valori in una casella combinata  
+#### <a name="to-test-the-appearance-of-values-in-a-combo-box"></a>Per verificare l'aspetto dei valori in una casella combinata  
   
-1.  Dopo avere immesso i valori nella proprietà **Data**, scegliere il pulsante **Test** sulla [barra degli strumenti dell'editor finestre](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md).  
+1.  Dopo l'immissione di valori di **dati** proprietà, fare clic sul **Test** pulsante il [barra degli strumenti finestra di dialogo Editor](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
-     Scorrere verso il basso l'intero elenco di valori.  I valori vengono visualizzati esattamente come sono stati digitati nella proprietà **Data** della finestra Proprietà.  Non viene effettuato alcun controllo ortografico o delle lettere maiuscole e minuscole.  
+     Scorrere verso il basso l'intero elenco di valori. I valori vengono visualizzati esattamente come vengono digitati nel **dati** proprietà nella finestra Proprietà. Non è presente alcun ortografia o controllo maiuscole/minuscole.  
   
-     Premere ESC per tornare all'editor finestre.  
+     Premere ESC per tornare alla finestra di dialogo.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-### Requisiti  
+### <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

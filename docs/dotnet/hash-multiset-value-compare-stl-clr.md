@@ -1,42 +1,40 @@
 ---
-title: "hash_multiset::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare (membro) [STL/CLR]"
+title: 'hash_multiset:: value_compare (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 87f7df53-832b-4932-987b-1300943ad299
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 067c068504fbac21f7d80a776c74d7a84d2eaeed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il delegato dell'ordine per due valori degli elementi.  
+# <a name="hashmultisetvaluecompare-stlclr"></a>hash_multiset::value_compare (STL/CLR)
+Il delegato di ordinamento per valori di due elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Note  
- Il tipo è sinonimo del delegato che determina l'ordine degli argomenti di valore.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo per il delegato che determina l'ordine dei relativi argomenti di valore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multiset_value_compare.cpp   
@@ -61,16 +59,19 @@ int main()
   
 ```  
   
-  **confronta \(L'a, L'a\) \= True**  
-**confronta \(L'a, L'b\) \= True**  
-**confronta \(L'b, L'a\) \= False**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::key\_compare](../dotnet/hash-multiset-key-compare-stl-clr.md)   
- [hash\_multiset::value\_comp](../dotnet/hash-multiset-value-comp-stl-clr.md)   
- [hash\_multiset::value\_type](../dotnet/hash-multiset-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)   
+ [hash_multiset:: value_comp (STL/CLR)](../dotnet/hash-multiset-value-comp-stl-clr.md)   
+ [hash_multiset::value_type (STL/CLR)](../dotnet/hash-multiset-value-type-stl-clr.md)

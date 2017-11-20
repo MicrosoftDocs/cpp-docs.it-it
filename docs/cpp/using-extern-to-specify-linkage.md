@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- extern
-dev_langs:
-- C++
+f1_keywords: extern
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C++], linkage to non-C++ functions
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a62c394b857dfe3ac5cee557c50c2f9e5d6293bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="using-extern-to-specify-linkage"></a>Utilizzo di extern per specificare un collegamento
 ## <a name="syntax"></a>Sintassi  

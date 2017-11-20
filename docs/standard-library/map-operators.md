@@ -13,10 +13,9 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 ||||  
@@ -778,7 +776,6 @@ The multimap m1 is greater than or equal to the multimap m4.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<map>](../standard-library/map.md)
-
 
 
 

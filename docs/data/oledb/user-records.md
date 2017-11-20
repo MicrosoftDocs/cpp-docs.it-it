@@ -1,43 +1,42 @@
 ---
-title: "Record utente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni di accesso [C++], rowset"
-  - "funzioni di accesso [C++], statiche"
-  - "BEGIN_ACCESSOR (macro), esempio"
-  - "BEGIN_ACCESSOR_MAP (macro)"
-  - "CAccessor (classe), esempio"
-  - "COLUMN_ENTRY (macro)"
-  - "COLUMN_ENTRY_MAP (macro)"
-  - "OLE DB (modelli consumer), record utente"
-  - "rowset [C++], funzioni di accesso"
-  - "record utente, OLE DB (modelli consumer)"
+title: Record utente | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_MAP
+dev_langs: C++
+helpviewer_keywords:
+- rowsets [C++], accessors
+- COLUMN_ENTRY macro
+- COLUMN_ENTRY_MAP macro
+- user records, OLE DB consumer templates
+- OLE DB consumer templates, user records
+- CAccessor class, example
+- BEGIN_ACCESSOR_MAP macro
+- accessors [C++], rowsets
+- accessors [C++], static
+- BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9acb0a85ce469351ce1dcd34707f2125815f6c92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Record utente
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per utilizzare una funzione di accesso statica, ovvero una funzione di accesso derivata da **CAccessor**, il consumer deve includere un record utente.  Il record utente è una classe C\+\+ che contiene dati per gestire l'input o l'output.  La Creazione guidata consumer OLE DB ATL genera un record utente per il consumer.  È possibile aggiungere metodi al record utente per ottenere funzionalità facoltative, ad esempio la gestione dei comandi.  
+# <a name="user-records"></a>Record utente
+Per utilizzare una funzione di accesso statica (ovvero, una funzione di accesso derivata da **CAccessor)**, il consumer deve includere un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. La creazione guidata Consumer OLE DB ATL genera un record utente per il consumer. È possibile aggiungere metodi per il record utente per attività facoltative, ad esempio gestione dei comandi.  
   
- Nel codice che segue viene mostrato un esempio di record che gestisce un comando.  Nel record utente, `BEGIN_COLUMN_MAP` rappresenta un rowset di dati passato al consumer da un provider.  `BEGIN_PARAM_MAP` rappresenta un set di parametri dei comandi.  In questo esempio viene utilizzata una classe [CCommand](../../data/oledb/ccommand-class.md) per gestire i parametri di comando.  I membri dati nelle voci della mappa rappresentano gli offset in un blocco di memoria contiguo per ogni istanza della classe.  Le macro `COLUMN_ENTRY` corrispondono alle macro `PROVIDER_COLUMN_ENTRY` del lato provider.  
+ Il codice seguente viene illustrato un esempio di record che gestisce i comandi. Nel record utente, `BEGIN_COLUMN_MAP` rappresenta un set di righe di dati passato al consumer da un provider. `BEGIN_PARAM_MAP`rappresenta un set di parametri del comando. Questo esempio viene utilizzato un [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci di mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Il `COLUMN_ENTRY` macro corrispondono al `PROVIDER_COLUMN_ENTRY` macro sul lato del provider.  
   
- Per ulteriori informazioni sulle macro **COLUMN\_MAP** e **PARAM\_MAP**, vedere [Macro per i modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
+ Per ulteriori informazioni sul **COLUMN_MAP** e **PARAM_MAP** macro, vedere [macro per i modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   
 ```  
 class CArtists  
@@ -62,13 +61,13 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Record utente generati mediante procedura guidata  
- Se si decide di generare un consumer mediante la Creazione guidata consumer OLE DB ATL, si può scegliere di utilizzare i modelli OLE DB oppure gli attributi OLE DB.  Il codice generato per ciascuno dei casi sarà differente.  Per ulteriori informazioni su tale codice, vedere [Classi generate mediante la Creazione guidata consumer](../../data/oledb/consumer-wizard-generated-classes.md).  
+## <a name="wizard-generated-user-records"></a>Record utente generato dalla procedura guidata  
+ Se si utilizza la creazione guidata Consumer OLE DB ATL per generare un consumer, è possibile scegliere di utilizzare i modelli OLE DB o gli attributi OLE DB. Il codice generato è diverso in ogni caso. Per ulteriori informazioni su questo codice, vedere [classi generate](../../data/oledb/consumer-wizard-generated-classes.md).  
   
-## Supporto dei record utente per più funzioni di accesso  
- Per una discussione dettagliata sugli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [Utilizzo di più funzioni di accesso per un rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
+## <a name="user-record-support-for-multiple-accessors"></a>Supporto di Record utente per più funzioni di accesso  
+ Per una descrizione dettagliata degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [utilizzo di più funzioni di accesso per un Rowset](../../data/oledb/using-multiple-accessors-on-a-rowset.md).  
   
- Nell'esempio riportato di seguito viene illustrata la modifica del record utente necessaria per supportare più funzioni di accesso per il rowset.  Anziché `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP`, vengono utilizzate [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso.  La macro `BEGIN_ACCESSOR` specifica il numero della funzione di accesso \(offset rispetto a zero\) e se la funzione di accesso sia automatica o meno.  Le funzioni di accesso automatiche chiamano `GetData` per recuperare i dati automaticamente con una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md).  Le funzioni di accesso non automatiche richiedono invece il recupero esplicito dei dati.  Si consiglia di utilizzare una funzione di accesso non automatica se si effettua l'associazione a un campo dati di grandi dimensioni, ad esempio un'immagine bitmap, che è preferibile non recuperare per ogni record.  
+ Nell'esempio seguente viene modificato per supportare più funzioni di accesso nel set di righe il record dell'utente. Invece di `BEGIN_COLUMN_MAP` e `END_COLUMN_MAP`, Usa [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) e [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) per ogni funzione di accesso. Il `BEGIN_ACCESSOR` (macro) specifica il numero di funzioni di accesso (offset da zero) e indica se la funzione di accesso è un sia automatica o meno. Chiamata di Autoaccessors `GetData` per recuperare i dati automaticamente con una chiamata a [MoveNext](../../data/oledb/crowset-movenext.md). Le funzioni di accesso è necessario recuperare in modo esplicito i dati. Utilizzare una funzione di accesso si se si desidera associare a un campo di dati di grandi dimensioni (ad esempio un'immagine bitmap) che potrebbe non desidera recuperare per ogni record.  
   
 ```  
 class CMultiArtists  
@@ -92,5 +91,5 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

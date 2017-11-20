@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 3) C4306 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4306"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4306"
+title: Compilatore avviso (livello 3) C4306 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4306
+dev_langs: C++
+helpviewer_keywords: C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2545a039244d90d3f32a82e2beb950dcddb5185c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 3) C4306
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-3-c4306"></a>Avviso del compilatore (livello 3) C4306
 **'**   
- ***identificatore* ': conversione da '**   
- ***tipo1* ' a '**   
- ***tipo2* ' di dimensioni maggiori**  
+ ***Identificatore* ': conversione da '**   
+ ***type1* 'a'**   
+ ***type2* ' di dimensioni maggiori**  
   
- È stato effettuato il cast di tipo dell'identificatore in un puntatore più grande.  I bit alti non riempiti del nuovo tipo saranno riempiti con zero.  
+ L'identificatore è di tipo cast a un puntatore di dimensioni maggiore. Non soddisfatta bit superiori del nuovo tipo sarà riempiti con zero.  
   
- L'avviso può segnalare una conversione non desiderata.  È possibile che il puntatore risultante non sia valido.
+ Questo avviso può indicare una conversione non desiderata. Il puntatore risultante potrebbe non essere valido.

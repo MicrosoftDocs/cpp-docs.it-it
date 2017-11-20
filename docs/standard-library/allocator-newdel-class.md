@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::allocators::allocator_newdel
 - allocators/stdext::allocator_newdel
 - stdext::allocators::allocator_newdel
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 76ecf50e5f8e120dd4139d47b28688a79cda3791
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 9a86e9f1939c455e4dd9a3bb5c0c2fd252438fba
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="allocatornewdel-class"></a>Classe allocator_newdel
 Implementa un allocatore che usa `operator delete` per deallocare un blocco di memoria e `operator new` per allocare un blocco di memoria.  
@@ -55,7 +52,6 @@ class allocator_newdel;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

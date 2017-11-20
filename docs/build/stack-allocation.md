@@ -1,38 +1,38 @@
 ---
-title: "Allocazione nello stack | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Stack di allocazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 866a5183a50f13472167f912691804a995e90023
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Allocazione nello stack
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il prologo di una funzione è responsabile dell'allocazione nello stack delle variabili locali, dei registri salvati, dei parametri di stack e dei parametri di registro.  
+# <a name="stack-allocation"></a>Allocazione nello stack
+Prologo di una funzione è responsabile dell'allocazione di spazio dello stack per le variabili locali, i registri salvati, dello stack di parametri e dei parametri di registro.  
   
- Poiché si trova sempre nella parte inferiore dello stack \(anche se si utilizza l'istruzione alloca\), l'area dei parametri sarà sempre adiacente all'indirizzo di ritorno durante una qualsiasi chiamata di funzione.  Questa area contiene almeno quattro voci, ma deve avere sempre spazio sufficiente per contenere tutti i parametri richiesti da una qualsiasi funzione che possa essere chiamata.  Tenere presente che per i parametri di registro viene sempre allocato spazio, anche se tali parametri non vengono mai trasferiti nello stack. Questo assicura che un chiamato disporrà sempre di spazio allocato per tutti i propri parametri.  Poiché gli argomenti di registro richiedono indirizzi iniziali, occorre che sia disponibile un'area contigua nel caso in cui la funzione chiamata debba accettare l'indirizzo dell'elenco di argomenti \(va\_list\) o di un singolo argomento.  Questa area può essere inoltre utilizzata per salvare gli argomenti di registro durante l'esecuzione dei thunk e come opzione di debug, facilitando ad esempio la ricerca degli argomenti durante il debug se sono archiviati nei relativi indirizzi iniziali nel codice di prologo.  Anche se la funzione chiamata ha meno di 4 parametri, queste 4 posizioni dello stack vengono effettivamente assegnate alla funzione chiamata, che può quindi utilizzarle per scopi diversi dal salvataggio dei valori dei parametri di registro.  Per questo motivo, il chiamante non può salvare informazioni in questa area dello stack durante una chiamata di funzione.  
+ L'area dei parametri è sempre nella parte inferiore dello stack (anche se viene usato l'allocazione), in modo che sarà sempre adiacente all'indirizzo del mittente durante qualsiasi chiamata di funzione. Contiene le voci di almeno quattro, ma sempre spazio sufficiente per contenere tutti i parametri necessari da qualsiasi funzione che può essere chiamato. Si noti che è sempre allocato per i parametri del registro, anche se tali parametri non vengono mai trasferiti nello stack. un oggetto chiamato è garantito che sia stato allocato spazio per tutti i relativi parametri. Gli indirizzi personali sono necessari per gli argomenti dei registri in modo da un'area contigua disponibile nel caso in cui la funzione chiamata deve accettare l'indirizzo dell'elenco di argomenti (va_list) o un singolo argomento. Quest'area inoltre offre la possibilità per salvare gli argomenti di registro durante l'esecuzione del thunk e come opzione di debug (ad esempio, consente gli argomenti di trovare facilmente durante il debug se sono memorizzate nei relativi indirizzi iniziali nel codice di prologo). Anche se la funzione chiamata dispone di meno di 4 parametri, questi percorsi 4 stack sono di proprietà in modo efficace dalla funzione chiamata e possono essere utilizzati dalla funzione chiamata per altri scopi oltre il salvataggio di valori del Registro di parametro.  In questo modo il chiamante non può salvare informazioni in questa area dello stack in una chiamata di funzione.  
   
- Se lo spazio viene allocato dinamicamente \(istruzione alloca\) in una funzione, è necessario utilizzare un registro non volatile come puntatore ai frame per contrassegnare la base della parte fissa dello stack e tale registro deve essere salvato e inizializzato nel prologo.  Quando si utilizza l'istruzione alloca, è possibile che le chiamate effettuate allo stesso chiamato dallo stesso chiamante abbiano indirizzi iniziali differenti per i relativi parametri di registro.  
+ Se lo spazio viene allocato dinamicamente (allocazione) in una funzione, quindi un registro non volatile deve essere utilizzato come puntatore ai frame per contrassegnare la base della parte fissa dello stack e tale registro deve essere salvato e inizializzato nel prologo. Si noti che quando viene utilizzato l'allocazione, chiamate allo stesso chiamato dallo stesso chiamante possono avere indirizzi iniziali differenti per i parametri del registro.  
   
- Lo stack verrà sempre mantenuto allineato a 16 byte, tranne che all'interno del prologo, ad esempio dopo l'inserimento dell'indirizzo di ritorno, e quando indicato in [Tipi di funzioni](../build/function-types.md) per una determinata classe di funzioni frame.  
+ Lo stack verrà sempre mantenuto a 16 byte allineati, tranne che all'interno del prologo (ad esempio, dopo che viene inserito l'indirizzo del mittente) e quando indicato in [tipi di funzione](../build/function-types.md) per una determinata classe di funzioni frame.  
   
- Di seguito è riportato un esempio del layout stack in cui una funzione A chiama una funzione non foglia B.  Il prologo della funzione A ha già allocato lo spazio per tutti i parametri di registro e di stack richiesti da B nella parte inferiore dello stack.  La chiamata inserisce l'indirizzo di ritorno nello stack mentre il prologo di B alloca lo spazio per le variabili locali e i registri non volatili della funzione, oltre allo spazio necessario per chiamare le funzioni.  Se B utilizza l'istruzione alloca, lo spazio verrà allocato tra l'area di salvataggio delle variabili locali e dei registri non volatili e l'area dei parametri di stack.  
+ Di seguito è riportato un esempio di layout dello stack di chiamate di funzione non foglia funzionano where prologo b è già allocato spazio per tutti i parametri di registro e di stack richiesti da B nella parte inferiore dello stack. La chiamata inserisce l'indirizzo del mittente e prologo B alloca spazio per le variabili locali, i registri non volatili e lo spazio necessario per chiamare le funzioni. Se B utilizza l'istruzione alloca, lo spazio viene allocato tra il registro non volatile di variabile/locale Salva area e l'area dello stack del parametro.  
   
- ![Esempio di conversione AMD](../build/media/vcamd_conv_ex_5.png "vcAmd\_conv\_ex\_5")  
+ ![Esempio di conversione AMD](../build/media/vcamd_conv_ex_5.png "vcAmd_conv_ex_5")  
   
- Quando B chiama un'altra funzione, l'indirizzo di ritorno viene inserito subito dopo l'indirizzo iniziale di RCX.  
+ Quando la funzione B chiama un'altra funzione, viene inserito l'indirizzo del mittente sotto l'indirizzo dell'abitazione di RCX.  
   
-## Vedere anche  
- [Utilizzo dello stack](../build/stack-usage.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dello stack](../build/stack-usage.md)

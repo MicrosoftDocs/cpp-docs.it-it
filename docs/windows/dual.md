@@ -1,32 +1,30 @@
 ---
-title: "dual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dual attribute"
+title: doppia | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dual
+dev_langs: C++
+helpviewer_keywords: dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7213f6d784c0591531a3f6141aa34eb39122c30c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# dual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Posiziona un'interfaccia nel file IDL come interfaccia duale.  
+# <a name="dual"></a>dual
+Inserisce un'interfaccia nel file IDL come un'interfaccia duale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,11 +32,11 @@ Posiziona un'interfaccia nel file IDL come interfaccia duale.
   
 ```  
   
-## Note  
- quando **doppio** L'attributo di C\+\+ precede un'interfaccia, causa l'interfaccia venga inserita nel blocco di libreria nel file generato con estensione .idl.  
+## <a name="remarks"></a>Note  
+ Quando il **dual** attributo C++ precede un'interfaccia, fa sì che l'interfaccia per essere inserito all'interno del blocco di libreria nel file IDL generato.  
   
-## Esempio  
- Il codice seguente è un blocco di attributi che utilizza **doppio** prima di una definizione di interfaccia:  
+## <a name="example"></a>Esempio  
+ Il codice seguente è un blocco di attributi che utilizza **dual** prima di una definizione di interfaccia:  
   
 ```  
 // cpp_attr_ref_dual.cpp  
@@ -72,24 +70,23 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**dispinterface**|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**dispinterface**|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [custom](../windows/custom-cpp.md)   
- [dispinterface](../windows/dispinterface.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi dall'utilizzo](../windows/attributes-by-usage.md)   
+ [personalizzato](../windows/custom-cpp.md)   
+ [interfaccia dispatch](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [__interface](../cpp/interface.md)   

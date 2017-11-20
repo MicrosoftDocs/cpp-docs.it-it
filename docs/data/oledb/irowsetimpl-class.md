@@ -1,92 +1,90 @@
 ---
-title: "Classe IRowsetImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetImpl (classe)"
+title: Classe IRowsetImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c934ce36ae20727340ea9d2e6bd4d95272c908f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IRowsetImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 Fornisce un'implementazione dell'interfaccia `IRowset`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
-   class T,   
+   class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
+      RowClass*   
    >  
 >  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  La classe, derivata da `IRowsetImpl`.  
   
  `RowsetInterface`  
- Classe derivata da `IRowsetImpl`.  
+ Una classe derivata da `IRowsetImpl`.  
   
  `RowClass`  
- Unità di archiviazione per **HROW**.  
+ Unità di archiviazione per il **HROW**.  
   
  `MapClass`  
- Unità di archiviazione per tutti gli handle di riga utilizzate dal provider.  
+ Unità di archiviazione per tutti gli handle di riga mantenuti dal provider.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)|Aggiunge un conteggio dei riferimenti a un handle di riga esistente.|  
-|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Chiamato da [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) per allocare nuovo **HROW**.  Non chiamato direttamente dall'utente.|  
-|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Recupera dati dalla copia della riga del set di righe.|  
-|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|Restituisce lo stato del campo specificato.|  
+|[CreateRow](../../data/oledb/irowsetimpl-createrow.md)|Chiamato da [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) per allocare un nuovo **HROW**. Non è chiamato direttamente dall'utente.|  
+|[GetData](../../data/oledb/irowsetimpl-getdata.md)|Recupera dati da una copia del set di righe della riga.|  
+|[GetDBStatus](../../data/oledb/irowsetimpl-getdbstatus.md)|Restituisce lo stato per il campo specificato.|  
 |[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)|Recupera le righe in sequenza, memorizzando la posizione precedente.|  
-|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|Costruttore.  Non chiamato direttamente dall'utente.|  
-|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Chiamato da [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e da [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md).  Non chiamato direttamente dall'utente.|  
-|[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Rilascia righe.|  
-|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Riposizionare la posizione di recupero successivo alla posizione iniziale; ovvero la posizione in cui il rowset innanzitutto è stato creato.|  
-|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Imposta flag di stato per il campo specificato.|  
+|[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|Costruttore. Non è chiamato direttamente dall'utente.|  
+|[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Chiamato da [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Non è chiamato direttamente dall'utente.|  
+|[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Rilascia le righe.|  
+|[Esecuzione di RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Riposiziona posizione del recupero successivo per la posizione iniziale. vale a dire la posizione quando il set di righe è stato inizialmente creato.|  
+|[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Imposta i flag di stato per il campo specificato.|  
   
-### Membri di dati  
+### <a name="data-members"></a>Membri di dati  
   
 |||  
 |-|-|  
-|[m\_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|Indica se un provider supporta da recuperare.|  
-|[m\_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|Indica se un provider può eseguire lo scorrimento indietro cursore.|  
-|[m\_bReset](../../data/oledb/irowsetimpl-m-breset.md)|Indica se un provider può reimpostare la posizione del cursore.  Ciò ha un significato particolare quando si esegue lo scorrimento indietro o recuperando indietro in [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|  
-|[m\_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|Un indice nel rowset, che rappresenta il cursore.|  
-|[m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|Un elenco di handle di riga.|  
+|[m_bCanFetchBack](../../data/oledb/irowsetimpl-m-bcanfetchback.md)|Indica se un provider supporta il recupero di massa con le versioni precedenti.|  
+|[m_bCanScrollBack](../../data/oledb/irowsetimpl-m-bcanscrollback.md)|Indica se un provider può disporre di scorrere il cursore con le versioni precedenti.|  
+|[m_bReset](../../data/oledb/irowsetimpl-m-breset.md)|Indica se un provider ha reimpostato la posizione del cursore. Questo ha un significato speciale quando lo scorrimento all'indietro o il recupero di massa con le versioni precedenti in [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|  
+|[m_iRowset](../../data/oledb/irowsetimpl-m-irowset.md)|Un indice al set di righe, che rappresenta il cursore.|  
+|[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)|Un elenco di handle di riga.|  
   
-## Note  
- [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) è l'interfaccia base del rowset.  
+## <a name="remarks"></a>Note  
+ [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) è l'interfaccia di base del set di righe.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

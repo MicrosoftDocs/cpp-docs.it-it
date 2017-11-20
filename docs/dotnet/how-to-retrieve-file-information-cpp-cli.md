@@ -1,34 +1,33 @@
 ---
-title: "Procedura: recuperare informazioni sui file (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FileInfo (classe)"
-  - "file [C++], recupero di informazioni su"
+title: 'Procedura: recuperare informazioni sui File (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], retrieving information about
+- FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cf196fe21c70bbceec90acf3242a995548fe845
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: recuperare informazioni sui file (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrata la classe <xref:System.IO.FileInfo>.  Conoscendo il nome di un file, è possibile utilizzare questa classe per recuperare informazioni sul file, ad esempio la dimensione, la directory, il nome completo, la data e l'ora di creazione e dell'ultima modifica.  
+# <a name="how-to-retrieve-file-information-ccli"></a>Procedura: recuperare informazioni sui file (C++/CLI)
+L'esempio di codice seguente illustra la <xref:System.IO.FileInfo> classe. Quando si conoscono il nome di un file, è possibile utilizzare questa classe per recuperare informazioni sul file, ad esempio le dimensioni del file, directory, il nome completo e data e ora di creazione e dell'ultima modifica.  
   
- Nell'esempio di codice riportato di seguito vengono recuperate informazioni sul file Notepad.exe.  
+ Questo codice consente di recuperare informazioni sui file per Notepad.exe.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // file_info.cpp  
@@ -63,6 +62,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [I\/O di file e di flussi](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

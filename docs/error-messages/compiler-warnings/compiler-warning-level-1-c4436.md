@@ -1,26 +1,26 @@
 ---
-title: "Avviso del compilatore (livello 1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: Compilatore avviso (livello 1) C4436 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e727159cbd0f87d8ae01813b7ac2a0ed57362b08
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-dynamic\_cast da base virtuale "classe1" a "classe2" nel costruttore o distruttore potrebbe non riuscire con oggetti parzialmente costruiti        Compilare con \/vd2 oppure definire "classe2" con il \#pragma vtordisp\(2\) in effetti  
+# <a name="compiler-warning-level-1-c4436"></a>Avviso del compilatore (livello 1) C4436
+dynamic_cast da base virtuale "classe1" a "classe2" nel costruttore o distruttore potrebbe non riuscire con oggetti parzialmente costruiti Compilare con /vd2 oppure definire "classe2" con il #pragma vtordisp(2) in effetto  
   
  Il compilatore ha rilevato un'operazione `dynamic_cast` con le seguenti caratteristiche.  
   
@@ -28,13 +28,13 @@ dynamic\_cast da base virtuale "classe1" a "classe2" nel costruttore o distrutto
   
 -   La classe derivata eredita virtualmente la classe base.  
   
--   La classe derivata non ha un campo `vtordisp` per la base virtuale.  
+-   La classe derivata non include un campo `vtordisp` per la base virtuale.  
   
--   Il cast viene trovato in un costruttore o distruttore della classe derivata, o in una classe che ulteriormente eredita dalla classe derivata.  
+-   Il cast viene trovato in un costruttore o distruttore della classe derivata oppure in una classe che ulteriormente eredita dalla classe derivata.  
   
- L'avviso indica che `dynamic_cast` potrebbe non essere eseguito correttamente, se si utilizza un oggetto parzialmente costruito.  Ciò si verifica se il costruttore\/distruttore derivato utilizza un sotto\-oggetto di un ulteriore oggetto derivato.  Se la classe derivata denominata nell'avviso non è mai più derivata, l'avviso può essere ignorato.  
+ L'avviso indica che `dynamic_cast` potrebbe non essere eseguito correttamente se si utilizza un oggetto parzialmente costruito.  Ciò si verifica se il costruttore/distruttore derivato utilizza un sottooggetto di un oggetto ulteriormente derivato.  Se la classe derivata denominata nell'avviso non è mai più derivata, l'avviso può essere ignorato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene generato C4436 e viene illustrato il problema di generazione del codice che risulta dal campo mancante `vtordisp`.  
   
 ```cpp  
@@ -77,7 +77,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Operatore dynamic\_cast](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Operatore dynamic_cast](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [Avviso del compilatore \(livello 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+ [Avviso del compilatore (livello 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

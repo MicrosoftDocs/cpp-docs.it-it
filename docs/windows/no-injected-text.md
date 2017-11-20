@@ -1,32 +1,30 @@
 ---
-title: "no_injected_text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.no_injected_text"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "no_injected_text attribute"
+title: no_injected_text | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.no_injected_text
+dev_langs: C++
+helpviewer_keywords: no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7856da95c8bd7563d66fc901bdac1f2a931b7384
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# no_injected_text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Impedisce il compilatore di inserire il codice riportato di seguito all'utilizzo dell'attributo.  
+# <a name="noinjectedtext"></a>no_injected_text
+Impedisce al compilatore di codice in seguito a uso dell'attributo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,26 +33,25 @@ Impedisce il compilatore di inserire il codice riportato di seguito all'utilizzo
 ) ];  
 ```  
   
-#### Parametri  
- `boolean`\(facoltativo\)  
- **true** se non si desidera codice inserito,  **false** per consentire codice da inserire.  **true** è l'impostazione predefinita.  
+#### <a name="parameters"></a>Parametri  
+ `boolean`(facoltativo)  
+ **true** se non si desidera alcun codice inserito, **false** per consentire al codice di essere inseriti. **true** è l'impostazione predefinita.  
   
-## Note  
- La maggior parte di utilizzo comune di **no\_injected\_text** L'attributo C\+\+ è da  [\/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore, che inserisce  **no\_injected\_text** attributo nel file di .mrg.  
+## <a name="remarks"></a>Note  
+ L'utilizzo più comune del **no_injected_text** attributo C++ è il [/Fx](../build/reference/fx-merge-injected-code.md) opzione del compilatore, che inserisce il **no_injected_text** attributo nel file mrg.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi del compilatore](../windows/compiler-attributes.md)   

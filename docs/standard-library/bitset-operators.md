@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,11 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 09c3ac2317fce1e539ed02a501078fe83c217ca1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltbitsetgt-operators"></a>Operatori &lt;bitset&gt;
 ||||  
@@ -322,5 +320,4 @@ bitset 3: 0111
   
 ## <a name="see-also"></a>Vedere anche  
  [\<bitset>](../standard-library/bitset.md)
-
 

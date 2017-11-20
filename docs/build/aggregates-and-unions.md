@@ -1,68 +1,67 @@
 ---
-title: "Aggregati e unioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregati [C++], e unioni"
+title: Aggregati e unioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e1eee05a9a206d3c02f34d619cf78822aaa4ed61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Aggregati e unioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per altri tipi, ad esempio matrici, strutture e unioni, sono definiti requisiti di allineamento più rigorosi che assicurano la coerenza delle operazioni di archiviazione e recupero dati per aggregati e unioni.  Di seguito sono riportate le definizioni di matrice, struttura e unione:  
+# <a name="aggregates-and-unions"></a>Aggregati e unioni
+Altri tipi, ad esempio matrici, strutture e unioni presentano requisiti più vincolanti di allineamento che garantiscono coerenza unione e aggregazione archiviazione e recupero dei dati. Di seguito sono riportate le definizioni per la matrice, struttura e unione:  
   
  Matrice  
- Contiene un gruppo ordinato di oggetti dati adiacenti.  Ciascun oggetto è denominato elemento.  Tutti gli elementi all'interno di una matrice hanno la stessa dimensione e lo stesso tipo di dati.  
+ Contiene un gruppo ordinato di oggetti dati adiacenti. Ogni oggetto viene definito un elemento. Tutti gli elementi all'interno di una matrice hanno lo stesso tipo di dati e dimensioni.  
   
  Struttura  
- Contiene un gruppo ordinato di oggetti dati.  A differenza degli elementi di una matrice, gli oggetti dati all'interno di una struttura possono avere dimensione e tipo di dati differenti.  Ciascun oggetto dati in una struttura è denominato membro.  
+ Contiene un gruppo di oggetti dati ordinato. A differenza degli elementi di una matrice, gli oggetti di dati all'interno di una struttura possono avere dimensioni e tipi di dati diversi. Ogni oggetto in una struttura di dati viene chiamato un membro.  
   
  Unione  
- Oggetto contenente un qualsiasi insieme di membri denominati.  I membri dell'insieme possono essere di qualsiasi tipo.  Lo spazio di archiviazione allocato per un'unione è uguale allo spazio di archiviazione necessario per il membro più grande di tale unione, più l'eventuale spaziatura interna richiesta per l'allineamento.  
+ Oggetto che contiene uno di un set di membri denominati. I membri del set denominato possono essere di qualsiasi tipo. Lo spazio di archiviazione allocato per un'unione è uguale allo spazio di archiviazione necessario per il membro più grande di tale unione, oltre a qualsiasi richiesta per l'allineamento di riempimento.  
   
- Nella tabella riportata di seguito è indicato l'allineamento consigliato per i membri scalari di unioni e strutture.  
+ La tabella seguente illustra l'allineamento consigliato per i membri di strutture e unioni scalari.  
   
 ||||  
 |-|-|-|  
-|Tipo scalare|Tipo di dati di C|Allineamento consigliato|  
+|Tipi scalari|Tipo di dati C|Allineamento richiesto|  
 |**INT8**|`char`|Byte|  
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**int, long**|Double word|  
-|**UINT32**|**unsigned int, unsigned long**|Double word|  
-|**INT64**|`__int64`|Quad word|  
-|**UINT64**|**unsigned \_\_int64**|Quad word|  
-|**FP32 \(precisione singola\)**|**float**|Double word|  
-|**FP64 \(precisione doppia\)**|**double**|Quad word|  
-|**POINTER**|**\***|Quad word|  
-|`__m64`|**struct \_\_m64**|Quad word|  
-|`__m128`|**struct \_\_m128**|Octa word|  
+|**INT32**|**int, long**|Double Word|  
+|**UINT32**|**valore unsigned int, long senza segno**|Double Word|  
+|**INT64**|`__int64`|Parola quadrupla|  
+|**UINT64**|**unsigned __int64**|Parola quadrupla|  
+|**FP32 (precisione singola)**|**float**|Double Word|  
+|**FP64 (precisione doppia)**|**double**|Parola quadrupla|  
+|**PUNTATORE**|**\***|Parola quadrupla|  
+|`__m64`|**m64 struct**|Parola quadrupla|  
+|`__m128`|**m128 struct**|Octaword|  
   
- Di seguito sono riportate le regole di allineamento valide per gli aggregati:  
+ Si applicano le regole di allineamento di aggregazione seguenti:  
   
--   L'allineamento di una matrice è uguale all'allineamento di uno degli elementi della matrice.  
+-   L'allineamento di una matrice è lo stesso come l'allineamento di uno degli elementi della matrice.  
   
--   L'allineamento dell'inizio di una struttura o di un'unione corrisponde all'allineamento massimo di un qualsiasi membro.  Ciascun membro all'interno della struttura o dell'unione deve essere posizionato con il relativo allineamento corretto, come definito nella tabella precedente. Questa condizione può richiedere l'inserimento di una spaziatura interna implicita, a seconda del membro precedente.  
+-   L'allineamento dell'inizio di una struttura o un'unione è l'allineamento massimo tra i singoli membri. Ogni membro all'interno della struttura o unione deve trovarsi il relativo allineamento corretto come definito nella tabella precedente, che può richiedere una spaziatura interna implicita, a seconda del membro precedente.  
   
--   La dimensione di una struttura deve essere un multiplo integrale del relativo allineamento. Questa condizione può richiedere l'inserimento di una spaziatura dopo l'ultimo membro.  Poiché le strutture e le unioni possono essere raggruppate in matrici, ciascun elemento della matrice di una struttura o un'unione deve iniziare e terminare con l'allineamento corretto indicato precedentemente.  
+-   Dimensione della struttura deve essere un multiplo dell'allineamento, che può richiedere una spaziatura interna dopo l'ultimo membro. Poiché nelle matrici, strutture e unioni possono essere raggruppate, ogni elemento della matrice di una struttura o unione deve iniziare e terminare l'allineamento corretto indicato in precedenza è stato determinato.  
   
--   È possibile allineare i dati in modo da utilizzare un valore maggiore rispetto ai requisiti di allineamento, purché siano rispettate le regole indicate sopra.  
+-   È possibile allineare i dati in modo da essere maggiore di requisiti di allineamento, purché le regole precedenti vengono mantenute.  
   
--   Un singolo compilatore può regolare il livello di compressione di una struttura per motivi di ridimensionamento.  Ad esempio, [\/Zp \(Allineamento membri struct\)](../build/reference/zp-struct-member-alignment.md) consente la regolazione della compressione delle strutture.  
+-   Un singolo compilatore può regolare la compressione di una struttura per motivi di dimensioni. Ad esempio [/Zp (Allineamento membri Struct)](../build/reference/zp-struct-member-alignment.md) consente la regolazione della compressione di strutture.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tipi e archiviazione](../build/types-and-storage.md)

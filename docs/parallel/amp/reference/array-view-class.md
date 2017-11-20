@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,18 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d0378e35d182409cd4077b3f7c6fc270d116f18c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrayview-class"></a>Classe array_view
 Rappresenta una vista N-dimensionale dei dati contenuti in un altro contenitore.  
@@ -149,7 +131,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 -   Una vista in una matrice a cui che si trova in un acceleratore avviene nella CPU.  
   
- In uno di questi scenari, le viste a cui fa riferimento vengono copiate dal runtime per il percorso remoto e, se modificato dalle chiamate al `array_view` dell'oggetto, vengono copiati nel percorso locale. Il runtime potrebbe ottimizzare il processo di copia di nuovo le modifiche, potrebbe essere copiare solo gli elementi modificati o potrebbe anche la copia invariate parti. Sovrapposizione `array_view` oggetti su un'origine dati non vengono garantiti l'integrità referenziale in una posizione remota.  
+ In uno di questi scenari, le viste a cui fa riferimento vengono copiate dal runtime per il percorso remoto e, se modificato dalle chiamate al `array_view` dell'oggetto, vengono copiati nel percorso locale. Il runtime potrebbe ottimizzare il processo di copia di nuovo le modifiche, può copiare solo gli elementi modificati o potrebbe anche la copia invariate parti. Sovrapposizione `array_view` oggetti su un'origine dati non vengono garantiti l'integrità referenziale in una posizione remota.  
   
  È necessario sincronizzare l'accesso multithreading alla stessa origine dati.  
   
@@ -159,7 +141,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 -   Tutti gli accessi ben sincronizzati sovrapposti `array_view` oggetti stesso tasto di scelta rapida in una singola `array` oggetto sono stati creati alias tramite il `array` oggetto. Provocano un totale si verifica-prima relazione secondo l'ordine del programma. Non vi è nessuna memorizzazione nella cache. Se il `array_view` gli oggetti sono in esecuzione su diversi tasti di scelta rapida, l'ordine di accesso è definito, la creazione di una race condition.  
   
- Quando si crea un `array_view` oggetto mediante un puntatore in memoria di sistema, è necessario modificare la visualizzazione `array_view` oggetto solo tramite il `array_view` puntatore. In alternativa, è necessario chiamare `refresh()` su uno del `array_view` oggetti associati a un puntatore di sistema se la memoria nativa sottostante viene modificata direttamente, anziché tramite il `array_view` oggetto.  
+ Quando si crea un `array_view` oggetto mediante un puntatore in memoria di sistema, è necessario modificare la visualizzazione `array_view` oggetto solo attraverso il `array_view` puntatore. In alternativa, è necessario chiamare `refresh()` su uno del `array_view` oggetti associati a un puntatore di sistema se la memoria nativa sottostante viene modificata direttamente, anziché tramite il `array_view` oggetto.  
   
  Notifica a entrambe le azioni di `array_view` dell'oggetto che la memoria nativa sottostante viene modificata e che tutte le copie che si trovano su un tasto di scelta rapida sono aggiornate. Se si seguono queste linee guida, le viste basate su puntatore sono identiche a quelli forniti per le visualizzazioni di matrici di dati in parallelo.  
   
@@ -566,7 +548,7 @@ value_type& operator[] (
   
 ##  <a name="operator_eq"></a>operator = 
 
- Copia il contenuto dell'oggetto specificato `array_view` oggetto al seguente.  
+ Copia il contenuto dell'oggetto specificato `array_view` questo oggetto.  
   
 ```  
 array_view& operator= (
@@ -844,4 +826,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

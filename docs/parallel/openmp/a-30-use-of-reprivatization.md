@@ -1,27 +1,26 @@
 ---
-title: "A.30   Use of Reprivatization | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Utilizzo A.30 di Reprivatization | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 26529090-6c39-40f2-b806-e12374d6b5f8
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ab359fdc63d90494b686684d26cc73e0135c886
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# A.30   Use of Reprivatization
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio seguente viene illustrato il reprivatization delle variabili.  le variabili private possono essere contrassegnate `private` nuovamente in una direttiva annidata.  Non devono essere condivisi nell'area parallela di inclusione.  
+# <a name="a30---use-of-reprivatization"></a>A.30   Utilizzo della riprivatizzazione
+L'esempio seguente illustra il reprivatization delle variabili. È possibile contrassegnare le variabili private `private` nuovamente in una direttiva annidata. Non devono essere condivisi in tale area che lo contiene.  
   
 ```  
 int i, a;  

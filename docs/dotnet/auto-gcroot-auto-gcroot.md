@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::auto_gcroot"
-  - "auto_gcroot::auto_gcroot"
-  - "auto_gcroot.auto_gcroot"
-  - "msclr.auto_gcroot.auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::auto_gcroot"
+title: auto_gcroot::auto_gcroot | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::auto_gcroot
+- auto_gcroot::auto_gcroot
+- auto_gcroot.auto_gcroot
+- msclr.auto_gcroot.auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::auto_gcroot
 ms.assetid: 27faa42a-64ea-4d31-836f-073a55145735
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3113ea5c2644c3e06a6435b7f088943ff22a2207
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruttore `auto_gcroot`.  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
+Il `auto_gcroot` costruttore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 auto_gcroot(  
@@ -44,17 +43,17 @@ auto_gcroot(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_ptr`  
- Oggetto da tenere.  
+ L'oggetto proprietario.  
   
  `_right`  
- Classe `auto_gcroot` esistente.  
+ Oggetto `auto_gcroot` esistente.  
   
-## Note  
- Nel costruire un `auto_gcroot` da un `auto_gcroot` esistente, il `auto_gcroot` esistente rilascia il relativo oggetto prima di trasferire la proprietà dell'oggetto al nuovo `auto_gcroot`.  
+## <a name="remarks"></a>Note  
+ Quando si crea un `auto_gcroot` da un oggetto esistente `auto_gcroot`, esistente `auto_gcroot` rilascia l'oggetto prima di trasferire la proprietà dell'oggetto per il nuovo `auto_gcroot`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_gcroot_auto_gcroot.cpp  
@@ -126,25 +125,28 @@ int main()
 }  
 ```  
   
-  **in RefClassA constructor: unmanaged**  
-**Hello from unmanaged A\!**  
-**in RefClassA destructor: unmanaged**  
-**in RefClassA constructor: first**  
-**Hello from first A\!**  
-**in RefClassA destructor: first**  
-**in RefClassA constructor: second**  
-**Hello from second B\!**  
-**Hello from second A\!**  
-**Hello from second A\!**  
-**in RefClassA destructor: second**  
-**done**   
-## Requisiti  
- **File di intestazione** \<msclr\\auto\_gcroot.h\>  
+```Output  
+in RefClassA constructor: unmanaged  
+Hello from unmanaged A!  
+in RefClassA destructor: unmanaged  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- **Spazio dei nomi** msclr  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_gcroot.h >  
   
-## Vedere anche  
- [Membri auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::Attach](../dotnet/auto-gcroot-attach.md)   
+ [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

@@ -1,44 +1,43 @@
 ---
-title: "auto_gcroot::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::release"
-  - "auto_gcroot::release"
-  - "auto_gcroot.release"
-  - "msclr.auto_gcroot.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "release (metodo)"
+title: auto_gcroot::Release | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::release
+- auto_gcroot::release
+- auto_gcroot.release
+- msclr.auto_gcroot.release
+dev_langs: C++
+helpviewer_keywords: release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8c1c6134f1d92bad3dcf60e6253818a85f1b88b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rilascia l'oggetto da gestione di `auto_gcroot`.  
+# <a name="autogcrootrelease"></a>auto_gcroot::release
+Rilascia l'oggetto da `auto_gcroot` management.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _element_type release();  
 ```  
   
-## Valore restituito  
- L'oggetto trascinato.  
+## <a name="return-value"></a>Valore restituito  
+ L'oggetto rilasciato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_gcroot_release.cpp  
@@ -81,16 +80,19 @@ int main()
 }  
 ```  
   
-  **Costruttore di ClassA: innanzitutto**  
-**Costruttore di ClassA: in secondo luogo**  
-**Distruttore di ClassA: in secondo luogo**  
-**Fare attenzione innanzitutto A\!**  
-**done**   
-## Requisiti  
- msclr \<\\ auto\_gcroot.h di**File di intestazione** \>  
+```Output  
+ClassA constructor: first  
+ClassA constructor: second  
+ClassA destructor: second  
+Hello from first A!  
+done  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_gcroot.h >  
   
-## Vedere anche  
- [Membri auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

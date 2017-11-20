@@ -1,66 +1,65 @@
 ---
-title: "/NXCOMPAT (compatibile con Protezione esecuzione programmi) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/NXCOMPAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NXCOMPAT (opzione del linker)"
-  - "NXCOMPAT (opzione del linker)"
-  - "-NXCOMPAT (opzione del linker)"
+title: -NXCOMPAT (compatibile con protezione esecuzione programmi) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /NXCOMPAT
+dev_langs: C++
+helpviewer_keywords:
+- /NXCOMPAT linker option
+- -NXCOMPAT linker option
+- NXCOMPAT linker option
 ms.assetid: 5858e7ff-24d3-4ac3-9046-af2c9e220d9b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d97b1b84ef6894e4ec161dbcecef47f6b676af23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /NXCOMPAT (compatibile con Protezione esecuzione programmi)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Viene indicato che è stato eseguito il test di un eseguibile per verificarne la compatibilità con la funzionalità Protezione esecuzione programmi di Windows.  
+# <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatibile con Protezione esecuzione programmi)
+Indica che un file eseguibile è stato testato per essere compatibile con la funzionalità Protezione esecuzione programmi di Windows.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /NXCOMPAT[:NO]  
 ```  
   
-## Note  
- L'opzione **\/NXCOMPAT** è attiva per impostazione predefinita.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, **/NXCOMPAT** si trova in.  
   
- **\/NXCOMPAT:NO** può essere utilizzato per specificare in modo esplicito che un eseguibile non è compatibile con la modalità Protezione esecuzione programmi.  
+ **/NXCOMPAT: No** può essere utilizzato per specificare in modo esplicito un eseguibile non è compatibile con protezione esecuzione programmi.  
   
- Per ulteriori informazioni su Protezione esecuzione programmi, vedere i seguenti articoli:  
+ Per ulteriori informazioni sulla protezione esecuzione programmi, vedere i seguenti articoli:  
   
--   [Una descrizione dettagliata della funzionalità Protezione esecuzione programmi \(DEP\)](http://go.microsoft.com/fwlink/?LinkID=157771) sul sito Web della Guida e del supporto tecnico Microsoft  
+-   [Una descrizione dettagliata della funzionalità (Protezione esecuzione programmi)](http://go.microsoft.com/fwlink/?LinkID=157771) nel sito Web del supporto tecnico Microsoft Help  
   
--   [Protezione esecuzione programmi](http://go.microsoft.com/fwlink/?LinkID=157770) sul sito Web MSDN  
+-   [Protezione esecuzione programmi](http://go.microsoft.com/fwlink/?LinkID=157770) nel sito Web MSDN  
   
--   [Protezione esecuzione programmi \(Windows Embedded\)](http://go.microsoft.com/fwlink/?LinkID=157768) sul sito Web MSDN  
+-   [Protezione esecuzione programmi (con Windows Embedded)](http://go.microsoft.com/fwlink/?LinkID=157768) nel sito Web MSDN  
   
-### Per impostare questa opzione del linker in Visual Studio  
+### <a name="to-set-this-linker-option-in-visual-studio"></a>Per impostare questa opzione del linker in Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione nella **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

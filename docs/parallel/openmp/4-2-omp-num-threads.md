@@ -1,31 +1,30 @@
 ---
-title: "4.2 OMP_NUM_THREADS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4.2 OMP_NUM_THREADS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 49dd55dd-25d5-4a5a-a998-cc7f47b2dae2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e02f29aeda7d555b7ac2678b030d2ff3475b639
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 4.2 OMP_NUM_THREADS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**OMP\_NUM\_THREADS** la variabile di ambiente imposta il numero predefinito di thread da utilizzare durante l'esecuzione, a meno che tale numero in modo esplicito la modifica chiamando  **omp\_set\_num\_threads** routine di libreria o da un oggetto esplicito  **num\_threads** clausola in per  **parallelo** direttiva.  
+# <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
+Il **OMP_NUM_THREADS** variabile di ambiente imposta il numero predefinito di thread da utilizzare durante l'esecuzione, a meno che tale numero viene modificato in modo esplicito chiamando il **omp_set_num_threads** routine di libreria o da esplicita **num_threads** clausola in un **parallela** direttiva.  
   
- Il valore di **OMP\_NUM\_THREADS** la variabile di ambiente deve essere un numero intero positivo.  L'effetto dipende su se la modifica dinamica del numero di thread è abilitata.  Per un set completo di regole sull'interazione tra **OMP\_NUM\_THREADS** la variabile di ambiente e la modifica dinamica dei thread, vedere la sezione 2,3 a pagina 8.  
+ Il valore di **OMP_NUM_THREADS** variabile di ambiente deve essere un numero intero positivo. L'effetto dipende se è abilitata la regolazione dinamica del numero di thread. Per un set completo di regole che stabiliscono l'interazione tra il **OMP_NUM_THREADS** ambiente regolazione dinamica e variabile di thread, vedere sezione 2.3 nella pagina 8.  
   
- Se non viene specificato alcun valore per **OMP\_NUM\_THREADS** la variabile di ambiente o, se il valore specificato non è un numero intero positivo, o se il valore è maggiore del numero massimo di thread del sistema può supportare, il numero di thread da utilizzare è implementazione\-definita.  
+ Se viene specificato alcun valore per il **OMP_NUM_THREADS** variabile di ambiente, o se il valore specificato non è un numero intero positivo oppure se il valore è maggiore del numero massimo di thread di sistema può supportare, il numero di thread da usare è definito dall'implementazione.  
   
  Esempio:  
   
@@ -33,10 +32,10 @@ manager: "ghogen"
 setenv OMP_NUM_THREADS 16  
 ```  
   
-## riferimenti incrociati:  
+## <a name="cross-references"></a>Riferimenti:  
   
--   **num\_threads** la clausola, vedere  [parte 2,3](../../parallel/openmp/2-3-parallel-construct.md) nella pagina 8.  
+-   **num_threads** clausola, vedere [sezione 2.3](../../parallel/openmp/2-3-parallel-construct.md) nella pagina 8.  
   
--   **omp\_set\_num\_threads** la funzione, vedere  [parte 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) nella pagina 36.  
+-   **omp_set_num_threads** funzione, vedere [sezione 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) nella pagina 36.  
   
--   **omp\_set\_dynamic** la funzione, vedere  [parte 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39.
+-   **omp_set_dynamic** funzione, vedere [sezione 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39.

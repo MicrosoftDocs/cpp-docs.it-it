@@ -1,41 +1,39 @@
 ---
-title: "vector::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back (membro) [STL/CLR]"
+title: 'Vector:: back (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 5edb3fcc-74c5-4f04-b8dd-edab49ba45a0
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 540a4f32a3fbf4bad11cec284d5571a55739c8f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accede all'ultimo.  
+# <a name="vectorback-stlclr"></a>vector::back (STL/CLR)
+Accede all'ultimo elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reference back();  
 ```  
   
-## Note  
- La funzione membro restituisce un riferimento all'ultimo elemento della sequenza selezionata, che deve essere non vuota.  Utilizzarla per accedere all'ultimo elemento, quando si sa che esiste.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento quando si è certi che esista.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_back.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= c**  
- **una x b**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::back\_item](../dotnet/vector-back-item-stl-clr.md)   
- [vector::front](../dotnet/vector-front-stl-clr.md)   
- [vector::front\_item](../dotnet/vector-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   
+ [Vector:: front (STL/CLR)](../dotnet/vector-front-stl-clr.md)   
+ [vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)

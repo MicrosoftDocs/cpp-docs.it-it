@@ -1,41 +1,39 @@
 ---
-title: "hash_map::hash_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_delegate (membro) [STL/CLR]"
+title: hash_map::hash_delegate (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: ae451fbe-a10c-457f-9b54-94dd9d93e8c4
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f233c01642c49fa98de5371c5f3fc14574ef1fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::hash_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Viene trovato un elemento che corrisponde alla chiave specificata.  
+# <a name="hashmaphashdelegate-stlclr"></a>hash_map::hash_delegate (STL/CLR)
+Trova un elemento che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## Note  
- La funzione membro restituisce il delegato utilizzato per convertire un valore di chiave in integer.  Utilizzarla per l'hashing una chiave.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce il delegato utilizzato per convertire un valore di chiave in un intero. È utilizzato per una chiave hash.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_hash_delegate.cpp   
@@ -55,13 +53,16 @@ int main()
   
 ```  
   
-  **hash \(L'a\) \= 1616896120**  
-**hash \(L'b\) \= 570892832**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::hasher](../dotnet/hash-map-hasher-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::hasher (STL/CLR)](../dotnet/hash-map-hasher-stl-clr.md)

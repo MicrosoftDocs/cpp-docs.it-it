@@ -1,41 +1,39 @@
 ---
-title: "multimap::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reference (membro) [STL/CLR]"
+title: 'multimap:: Reference (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: bc402641-8310-479f-b345-b9646e534c00
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9dfe2c55dad90160f3cd86712daf051ff2b97c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un riferimento a un elemento.  
+# <a name="multimapreference-stlclr"></a>multimap::reference (STL/CLR)
+Tipo di un riferimento a un elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Note  
- Il tipo viene descritto un riferimento a un elemento.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un riferimento a un elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multimap_reference.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::const\_reference](../dotnet/multimap-const-reference-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

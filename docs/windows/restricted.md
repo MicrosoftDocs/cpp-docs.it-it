@@ -1,32 +1,30 @@
 ---
-title: "restricted | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.restricted"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "restricted attribute"
+title: con restrizioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.restricted
+dev_langs: C++
+helpviewer_keywords: restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6a6b0172b0078dee659964b36ec37464ec1705d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# restricted
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica che un membro di un modulo, di un'interfaccia, o di un'interfaccia dispatch non può essere chiamato in modo arbitrario.  
+# <a name="restricted"></a>restricted
+Specifica che un membro di un modulo, interfaccia o interfaccia dispatch non può essere chiamato in modo arbitrario.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,15 +33,15 @@ Specifica che un membro di un modulo, di un'interfaccia, o di un'interfaccia dis
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `interfaces`  
- Una o più interfacce che non possono essere chiamate arbitrariamente su un oggetto COM.  Questo parametro è valido solo una volta applicato a una classe.  
+ Una o più interfacce che non è possibile chiamare in modo arbitrario in un oggetto COM. Questo parametro è valido solo quando viene applicato a una classe.  
   
-## Note  
- **limitato** L'attributo di C\+\+ ha la stessa funzionalità di  [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **limitato** attributo C++ ha la stessa funzionalità come il [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) attributo MIDL.  
   
-## Esempio  
- Nel codice seguente viene illustrato come utilizzare **limitato** attributo:  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato come utilizzare il **limitato** attributo:  
   
 ```  
 // cpp_attr_ref_restricted.cpp  
@@ -68,21 +66,20 @@ class c : public a, public b
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|metodo di interfaccia, `interface`,  **classe**,  `struct`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|**coclasse** \(se applicato a  **classe** o  `struct`\)|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Metodo di interfaccia `interface`, **classe**,`struct`|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   
+ [Attributi di metodo](../windows/method-attributes.md)   

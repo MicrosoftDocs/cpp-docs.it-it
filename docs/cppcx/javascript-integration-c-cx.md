@@ -1,22 +1,26 @@
 ---
-title: "Integrazione JavaScript (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Integrazione JavaScript (C + + CX) | Documenti Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.prod: windows-client-threshold
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5b3b4406-e20e-4c40-9d1d-5dcd860beeac
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 2408ef6186553a38d9d7dc0d9fd35bfd9d9dbb55
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Integrazione JavaScript (C++/CX)
-Vedere [Creazione di componenti Windows Runtime](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133).  
+# <a name="javascript-integration-ccx"></a>Integrazione JavaScript (C++/CX)
+Per altre informazioni, vedere [Creating Windows Runtime Components in C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Interoperabilità con altri linguaggi](../cppcx/interoperating-with-other-languages-c-cx.md)

@@ -1,32 +1,30 @@
 ---
-title: "omp_set_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_dynamic OpenMP function"
+title: omp_set_dynamic | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# omp_set_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Indica che il numero di thread disponibili nell'area parallela successiva può essere regolato dal runtime.  
+# <a name="ompsetdynamic"></a>omp_set_dynamic
+Indica che il numero di thread disponibili nell'area parallela successivi possa essere adattato per la fase di esecuzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void omp_set_dynamic(  
@@ -34,22 +32,22 @@ void omp_set_dynamic(
 );  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
  `val`  
- Un valore che indica se il numero di thread disponibili nell'area parallela successiva può essere regolato dal runtime.  Se singole da zero, il runtime può modificare il numero di thread, se zero, il runtime non vengono adattate in modo dinamico il numero di thread.  
+ Un valore che indica se il numero di thread disponibili nell'area parallela successivo può essere regolato dal runtime.  Se diverso da zero, che il runtime è possibile modificare il numero di thread, se è zero, il runtime non regolerà dinamicamente il numero di thread.  
   
-## Note  
- Il numero di thread non supera mai il set di valori da [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o da  [OMP\_NUM\_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
+## <a name="remarks"></a>Note  
+ Il numero di thread non supererà mai il valore impostato da [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- utilizzo [omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) per visualizzare l'impostazione corrente di  `omp_set_dynamic`.  
+ Utilizzare [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) per visualizzare l'impostazione corrente di `omp_set_dynamic`.  
   
- l'impostazione per `omp_set_dynamic` eseguirà l'override dell'impostazione di  [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) variabile di ambiente.  
+ L'impostazione per `omp_set_dynamic` sostituirà l'impostazione del [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) variabile di ambiente.  
   
- Per ulteriori informazioni, vedere [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
+ Per ulteriori informazioni, vedere [3.1.7 funzione omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_set_dynamic.cpp  
@@ -70,7 +68,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**1**   
-## Vedere anche  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

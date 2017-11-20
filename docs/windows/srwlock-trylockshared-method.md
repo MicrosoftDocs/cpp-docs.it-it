@@ -1,32 +1,30 @@
 ---
-title: "Metodo SRWLock::TryLockShared | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLockShared (metodo)"
+title: 'Metodo SRWLOCK:: Trylockshared | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::TryLockShared
+dev_langs: C++
+helpviewer_keywords: TryLockShared method
 ms.assetid: 10cc198d-39a0-4d18-aa78-706744948668
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 375e4f583531ad1e4eb16b29307445f04d982aea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo SRWLock::TryLockShared
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tenta di acquisire un oggetto SRWLock in modalità condivisa per l'oggetto SRWLock corrente o specificato.  
+# <a name="srwlocktrylockshared-method"></a>Metodo SRWLock::TryLockShared
+Tenta di acquisire un oggetto SRWLock in modalità condivisa per l'oggetto SRWLock corrente o specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW SyncLockShared TryLockShared();  
@@ -35,17 +33,17 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `lock`  
- Puntatore a un oggetto SRWLock .  
+ Puntatore a un oggetto SRWLock.  
   
-## Valore restituito  
- Se l'operazione riesce, un oggetto SRWLock in modalità condivisa e il thread chiamante ha la proprietà del blocco.  In caso contrario, un oggetto SRWLock dello stato non è valido.  
+## <a name="return-value"></a>Valore restituito  
+ Se ha esito positivo, un oggetto SRWLock in modalità condivisa e il thread chiamante diventa proprietario del blocco. In caso contrario, un SRWLock oggetto il cui stato non è valido.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe SRWLock](../windows/srwlock-class.md)

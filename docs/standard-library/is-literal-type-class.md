@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_literal_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_literal_type
+f1_keywords: type_traits/std::is_literal_type
+dev_langs: C++
+helpviewer_keywords: is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a1311d9cfa8cf089a2649b7fcd65d6e0ed224c45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c8aca3719c6a4534f92a5bf44ad8219d9d4e3141
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isliteraltype-class"></a>Classe is_literal_type
 Verifica se un tipo può essere usato come variabile `constexpr` oppure costruito, usato o restituito da funzioni `constexpr`.  
@@ -51,7 +47,6 @@ struct is_literal_type;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

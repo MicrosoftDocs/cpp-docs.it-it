@@ -1,54 +1,54 @@
 ---
-title: "Test di un provider in sola lettura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, chiamata"
-  - "provider OLE DB, test"
-  - "verifica provider"
-  - "test, provider OLE DB"
+title: Test del Provider di sola lettura | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, calling
+- OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Test di un provider in sola lettura
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per eseguire il test di un provider è necessario un consumer  che presenti, preferibilmente, funzionalità corrispondenti a quelle del provider.  I modelli consumer OLE DB sono wrapper di OLE DB e corrispondono agli oggetti COM del provider.  Dal momento che con i modelli consumer viene fornito anche il codice sorgente, è facile utilizzare tali modelli per effettuare il debug di un provider.  I modelli consumer hanno inoltre dimensioni estremamente ridotte e consentono di sviluppare velocemente applicazioni consumer.  
+# <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
+Per testare un provider, è necessario un consumer. È utile se il consumer può corrispondere a con il provider. I modelli consumer OLE DB sono wrapper di OLE DB e corrispondano con gli oggetti COM di provider. Poiché l'origine viene fornito con i modelli consumer, è facile eseguire il debug di un provider con essi. I modelli consumer sono inoltre un modo molto ridotti e più rapido per sviluppare applicazioni consumer.  
   
- Nell'esempio illustrato in questo argomento tramite la Creazione guidata applicazione MFC viene creata un'applicazione per un consumer di test.  L'applicazione di test è una semplice finestra di dialogo in cui viene aggiunto il codice del modello consumer OLE DB.  
+ Nell'esempio di questo argomento consente di creare un'applicazione di creazione guidata applicazione MFC predefinito per un consumer di test. L'applicazione di test è una semplice finestra di dialogo con codice di modello consumer OLE DB aggiunto.  
   
-### Per creare l'applicazione di test  
+### <a name="to-create-the-test-application"></a>Per creare l'applicazione di test  
   
 1.  Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.  
   
-2.  Nel riquadro Tipi progetto selezionare la cartella **Progetti di Visual C\+\+**.  Nel riquadro Modelli fare clic su **Applicazione MFC**.  
+2.  Nel riquadro Tipi progetto selezionare la **progetti Visual C++** cartella. Nel riquadro Modelli selezionare **applicazione MFC**.  
   
-3.  Come nome progetto immettere **TestProv** e scegliere **OK**.  
+3.  Immettere il nome del progetto, **TestProv**, quindi fare clic su **OK**.  
   
-     Verrà visualizzata la Creazione guidata applicazione MFC.  
+     Verrà visualizzata la creazione guidata applicazione MFC.  
   
-4.  Nella pagina **Tipo di applicazione** selezionare **Basato su finestra di dialogo**.  
+4.  Nel **tipo di applicazione** selezionare **basato su finestra di dialogo**.  
   
-5.  Nella pagina **Funzionalità avanzate** selezionare **Automazione** e fare clic su **Fine**.  
+5.  Nel **funzionalità avanzate** selezionare **automazione**, quindi fare clic su **fine**.  
   
 > [!NOTE]
->  L'applicazione non necessita del supporto dell'automazione se si aggiunge **CoInitialize** in **CTestProvApp::InitInstance**.  
+>  L'applicazione non richiede il supporto di automazione se si aggiungono **CoInitialize** in **CTestProvApp:: InitInstance**.  
   
- È possibile visualizzare e modificare la finestra di dialogo TestProv \(IDD\_TESTPROV\_DIALOG\) selezionandola in Visualizzazione risorse.  Aggiungere alla finestra di dialogo due caselle di riepilogo, una per ciascuna stringa del rowset.  Disattivare la proprietà sort per entrambe le caselle di riepilogo premendo ALT\+INVIO quando è selezionata una casella di riepilogo, quindi facendo clic sulla scheda **Stili** e deselezionando la casella di controllo **Ordina**.  Aggiungere inoltre un pulsante **Esegui** nella finestra di dialogo per recuperare il file.  La finestra di dialogo TestProv finale dovrà presentare due caselle di riepilogo denominate, rispettivamente, "String 1" e "String 2", nonché i pulsanti **OK**, **Annulla** ed **Esegui**.  
+ È possibile visualizzare e modificare la finestra di dialogo TestProv (IDD_TESTPROV_DIALOG) selezionandola in visualizzazione risorse. Nella finestra di dialogo, inserire due caselle di riepilogo, uno per ogni stringa del set di righe. Disabilitare la proprietà di ordinamento per entrambi caselle di riepilogo premendo ALT + INVIO quando è selezionata una casella di riepilogo, fare clic su di **stili** scheda e la cancellazione di **ordinamento** casella di controllo. Inoltre, inserire un **eseguire** pulsante nella finestra di dialogo per recuperare il file. Nella finestra di dialogo TestProv termine deve avere due caselle di riepilogo con l'etichetta "String 1" e "String 2", rispettivamente. include inoltre **OK**, **Annulla**, e **eseguire** pulsanti.  
   
- Aprire il file di intestazione della classe della finestra di dialogo, in questo caso TestProvDlg.h.  Aggiungere il codice che segue al di fuori di eventuali dichiarazioni di classe:  
+ Aprire il file di intestazione per la classe di finestra di dialogo (in questo caso TestProvDlg). Aggiungere il codice seguente al file di intestazione (di fuori di qualsiasi dichiarazione di classe):  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -69,9 +69,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- Il codice rappresenta un record utente che definisce le colonne che verranno inserite nel rowset.  Quando il client chiama **IAccessor::CreateAccessor**, vengono utilizzate queste voci per specificare le colonne da associare.  I modelli consumer OLE DB consentono inoltre di associare le colonne in modo dinamico.  Le macro COLUMN\_ENTRY rappresentano la versione del lato client delle macro PROVIDER\_COLUMN\_ENTRY.  Le due macro COLUMN\_ENTRY specificano l'ordinale, il tipo, la lunghezza e il membro dati delle due stringhe.  
+ Il codice rappresenta un record dell'utente che definisce le colonne nel set di righe. Quando il client chiama **IAccessor:: CreateAccessor**, vengono utilizzate queste voci per specificare le colonne da associare. I modelli consumer OLE DB consentono inoltre di associare le colonne in modo dinamico. Le macro COLUMN_ENTRY rappresentano la versione sul lato client delle macro PROVIDER_COLUMN_ENTRY. Le due macro COLUMN_ENTRY specificano il numero ordinale di tipo, lunghezza e il membro dati per le due stringhe.  
   
- Aggiungere una funzione di gestione per il pulsante **Esegui** premendo CTRL e facendo doppio clic sul pulsante stesso.  Inserire il seguente codice nella funzione:  
+ Aggiungere una funzione del gestore per il **eseguire** premendo CTRL e fare doppio clic sul pulsante di **eseguire** pulsante. Inserire il codice seguente nella funzione:  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -100,7 +100,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- Le classi `CCommand`, `CDataSource` e `CSession` appartengono tutte ai modelli consumer OLE DB.  Ogni classe corrisponde a un oggetto COM del provider.  L'oggetto `CCommand` accetta la classe `CProvider`, dichiarata nel file di intestazione, come parametro del modello.  Il parametro `CProvider` rappresenta le associazioni che verranno utilizzate per accedere ai dati dal provider.  Di seguito è riportato il codice di `Open` per l'origine dati, la sessione e del comando:  
+ Il `CCommand`, `CDataSource`, e `CSession` classi appartengono tutti i modelli consumer OLE DB. Ogni classe corrisponde a un oggetto COM nel provider. Il `CCommand` oggetto accetta il `CProvider` (classe), dichiarati nel file di intestazione, come un parametro di modello. Il `CProvider` parametro rappresenta le associazioni che consentono di accedere ai dati dal provider. Ecco il `Open` codice per l'origine dati, sessione e comando:  
   
 ```  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -113,13 +113,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- Con le righe di codice che consentono di aprire ciascuna classe viene creato il relativo oggetto COM nel provider.  Per individuare il provider, utilizzare il ProgID del provider stesso.  È possibile ottenere il ProgID dal Registro di sistema oppure dal file MyProvider.rgs. Aprire la directory del provider e cercare la chiave ProgID.  
+ Le righe per aprire ciascuna delle classi di creano ciascun oggetto COM nel provider. Per individuare il provider, utilizzare il valore ProgID del provider. È possibile ottenere il valore ProgID dal Registro di sistema o cercare i file MyProvider (aprire directory e cercare la chiave ProgID del provider).  
   
- Il file MyData.txt è incluso nell'esempio MyProv.  Per creare un file personalizzato, utilizzare un editor e digitare un numero pari di stringhe, premendo INVIO tra una stringa e l'altra.  Se si sposta il file, specificare il nuovo percorso.  
+ Il file mydata è incluso nell'esempio MyProv. Per creare un file personalizzati, utilizzare un editor e digitare un numero pari di stringhe, premendo INVIO tra una stringa. Se si sposta il file, modificare il nome del percorso.  
   
- Passare la stringa "c:\\\\samples\\\\myprov\\\\MyData.txt" alla riga `table.Open`.  Se si eseguono le istruzioni della chiamata `Open`, si noterà che questa stringa viene passata al metodo `SetCommandText` nel provider.  Tale stringa era stata utilizzata dal metodo `ICommandText::Execute`.  
+ Passare la stringa "c:\\\samples\\\myprov\\\MyData.txt" nel `table.Open` riga. Se si esegue il `Open` chiamata, vedere questa stringa viene passata per il `SetCommandText` metodo nel provider. Si noti che il `ICommandText::Execute` metodo utilizzato tale stringa.  
   
- Per recuperare i dati, chiamare `MoveNext` sulla tabella.  `MoveNext` chiama le funzioni **IRowset::GetNextRows**, `GetRowCount` e `GetData`.  Se non sono presenti altre righe, ovvero se la posizione corrente all'interno del rowset è maggiore del valore di `GetRowCount`, il ciclo ha termine:  
+ Per recuperare i dati, chiamare `MoveNext` nella tabella. `MoveNext`chiamate di **IRowset:: GetNextRows**, `GetRowCount`, e `GetData` funzioni. Quando non sono presenti più righe (vale a dire la posizione corrente nel set di righe è maggiore di `GetRowCount`), il ciclo termina:  
   
 ```  
 while (table.MoveNext() == S_OK)  
@@ -129,9 +129,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- Se non sono presenti altre righe, i provider restituiscono **DB\_S\_ENDOFROWSET**.  Il valore **DB\_S\_ENDOFROWSET** non è pertanto un errore.  È sempre opportuno eseguire una verifica con `S_OK` prima di annullare un ciclo di recupero dati e non utilizzare la macro SUCCEEDED.  
+ Si noti che se non sono presenti altre righe, i provider restituiscono **DB_S_ENDOFROWSET**. Il **DB_S_ENDOFROWSET** valore non è un errore. È sempre consigliabile verificare `S_OK` per annullare un ciclo di recupero di dati e non utilizzare la macro SUCCEEDED.  
   
- Sarà ora possibile compilare il programma ed eseguirne il test.  
+ È ora possibile compilare e testare il programma.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

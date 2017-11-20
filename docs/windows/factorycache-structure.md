@@ -1,56 +1,54 @@
 ---
-title: "Struttura FactoryCache | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FactoryCache (struttura)"
+title: FactoryCache (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache
+dev_langs: C++
+helpviewer_keywords: FactoryCache structure
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbb6b32fbd34794c13d2f4b7dc75e242464bc7b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Struttura FactoryCache
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] e non si può utilizzare direttamente dal codice.  
+# <a name="factorycache-structure"></a>FactoryCache (struttura)
+Supporta l'infrastruttura di libreria di modelli di Windows Runtime C++ e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 struct FactoryCache;  
 ```  
   
-## Note  
- Contiene la posizione della class factory e un valore che identifica un oggetto registrato wrt o di classe COM.  
+## <a name="remarks"></a>Note  
+ Contiene il percorso di una class factory e un valore che identifica un registrati wrt o oggetto di classe COM.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Membri dati pubblici  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati FactoryCache::cookie](../windows/factorycache-cookie-data-member.md)|Contiene un valore che identifica un [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] registrato o un oggetto della classe COM e successivamente viene utilizzato per annullare la registrazione di un oggetto.|  
-|[Membro dati FactoryCache::factory](../windows/factorycache-factory-data-member.md)|Punta a [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] o una factory di classe COM.|  
+|[Membro dati FactoryCache::cookie](../windows/factorycache-cookie-data-member.md)|Contiene un valore che identifica un oggetto di classe di Windows Runtime o COM registrato e viene successivamente utilizzato per annullare la registrazione dell'oggetto.|  
+|[Membro dati FactoryCache::factory](../windows/factorycache-factory-data-member.md)|Punta a una class factory COM o Windows Runtime.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `FactoryCache`  
   
-## Requisiti  
- **Header:** module.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** module.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

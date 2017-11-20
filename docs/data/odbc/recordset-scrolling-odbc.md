@@ -1,73 +1,73 @@
 ---
-title: "Recordset: scorrimento (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move (recordset del metodo)"
-  - "navigazione [C++], recordset"
-  - "recordset ODBC, scorrimento"
-  - "recordset [C++], inizio"
-  - "recordset [C++], fine"
-  - "recordset [C++], spostamento di record"
-  - "recordset [C++], esplorazione"
-  - "scorrimento [C++], recordset"
+title: 'Recordset: Scorrimento (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets [C++], end of
+- recordsets [C++], beginning of
+- navigation [C++], recordsets
+- recordsets [C++], moving to records
+- ODBC recordsets, scrolling
+- recordsets [C++], navigating
+- scrolling [C++], recordsets
+- Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bb5e426e17c0a91c53abf5393b3c98bef02da14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset: scorrimento (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-scrolling-odbc"></a>Recordset: scorrimento (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- Una volta aperto un recordset, è necessario accedere ai record per visualizzare valori, eseguire calcoli, generare report e così via.  Mediante lo scorrimento è possibile passare da un record a un altro all'interno del recordset.  
+ Dopo aver aperto un recordset, è necessario accedere ai record per visualizzare i valori, eseguire calcoli, generare report e così via. Lo scorrimento è che possibile passare da un record a altro all'interno del recordset.  
   
- In questo argomento vengono fornite informazioni su:  
+ Questo argomento viene illustrato:  
   
--   [Scorrimento di record in un recordset](#_core_scrolling_from_one_record_to_another)  
+-   [La modalità di scorrimento da un record a altro in un recordset](#_core_scrolling_from_one_record_to_another).  
   
--   [Supporto dello scorrimento](#_core_when_scrolling_is_supported)  
+-   [In quali circostanze lo scorrimento è e non è supportate](#_core_when_scrolling_is_supported).  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a> Scorrimento di record  
- La classe `CRecordset` include le funzioni membro **Move** per eseguire lo scorrimento all'interno di un recordset.  Queste funzioni consentono di spostare il record corrente per rowset.  Se si è implementato il recupero di massa di righe, tramite un'operazione **Move** il recordset viene riposizionato in base alle dimensioni del rowset.  Se il recupero di massa di righe non è stato implementato, mediante una chiamata alla funzione **Move** il recordset viene spostato di un record alla volta.  Per ulteriori informazioni sul recupero di massa di righe, vedere [Recordset: recupero di massa di record \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+##  <a name="_core_scrolling_from_one_record_to_another"></a>Scorrimento da un Record a altro  
+ Classe `CRecordset` fornisce il **spostare** le funzioni membro per lo scorrimento all'interno di un recordset. Queste funzioni consentono di spostare il record corrente dal set di righe. Se è stato implementato il recupero di massa di righe, un **spostare** operazione Riposiziona il recordset dalle dimensioni del set di righe. Se non è stato implementato il recupero di massa, una chiamata a di massa di righe un **spostare** funzione viene spostato il recordset da un record alla volta. Per ulteriori informazioni sulle righe di massa, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  Quando ci si sposta all'interno di un recordset, non è possibile ignorare i record eliminati.  Per ulteriori informazioni, vedere la funzione membro [IsDeleted](../Topic/CRecordset::IsDeleted.md).  
+>  Quando si sposta all'interno di un recordset, non è possibile ignorare i record eliminati. Per ulteriori informazioni, vedere il [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) funzione membro.  
   
- Oltre alle funzioni **Move**, `CRecordset` fornisce funzioni membro che consentono di verificare se lo scorrimento è stato eseguito oltre la fine o prima dell'inizio del recordset.  
+ Oltre al **spostare** funzioni, `CRecordset` fornisce funzioni membro di verificare se è eseguito lo scorrimento oltre la fine o prima dell'inizio del recordset.  
   
- Per determinare se è possibile eseguire lo scorrimento nel recordset, chiamare la funzione membro `CanScroll`.  
+ Per determinare se lo scorrimento è possibile nel recordset, chiamare il `CanScroll` funzione membro.  
   
-#### Per eseguire lo scorrimento  
+#### <a name="to-scroll"></a>Scorrimento  
   
-1.  Per passare al record o al rowset successivo, chiamare la funzione membro [MoveNext](../Topic/CRecordset::MoveNext.md).  
+1.  Per passare un record o un set di righe: chiamare il [MoveNext](../../mfc/reference/crecordset-class.md#movenext) funzione membro.  
   
-2.  Per tornare al record o al rowset precedente, chiamare la funzione membro [MovePrev](../Topic/CRecordset::MovePrev.md).  
+2.  Record o un set di righe: chiamare il [MovePrev](../../mfc/reference/crecordset-class.md#moveprev) funzione membro.  
   
-3.  Per passare al primo record del recordset, chiamare la funzione membro [MoveFirst](../Topic/CRecordset::MoveFirst.md).  
+3.  Al primo record del recordset: chiamare il [MoveFirst](../../mfc/reference/crecordset-class.md#movefirst) funzione membro.  
   
-4.  Per passare all'ultimo record del recordset o all'ultimo rowset, chiamare la funzione membro [MoveLast](../Topic/CRecordset::MoveLast.md).  
+4.  All'ultimo record del recordset o all'ultimo rowset: chiamare il [MoveLast](../../mfc/reference/crecordset-class.md#movelast) funzione membro.  
   
-5.  Per spostarsi di *N* record rispetto alla posizione corrente, chiamare la funzione membro [Move](../Topic/CRecordset::Move.md).  
+5.  *N* record relazione alla posizione corrente: chiamare il [spostare](../../mfc/reference/crecordset-class.md#move) funzione membro.  
   
-#### Per verificare la fine o l'inizio del recordset  
+#### <a name="to-test-for-the-end-or-the-beginning-of-the-recordset"></a>Per verificare se la fine o all'inizio del recordset  
   
-1.  Nel caso si sia eseguito lo scorrimento in avanti oltre l'ultimo record,  chiamare la funzione membro [IsEOF](../Topic/CRecordset::IsEOF.md).  
+1.  È eseguito lo scorrimento oltre l'ultimo record? Chiamare il [IsEOF](../../mfc/reference/crecordset-class.md#iseof) funzione membro.  
   
-2.  Nel caso si sia eseguito lo scorrimento indietro oltre il primo record,  chiamare la funzione membro [IsBOF](../Topic/CRecordset::IsBOF.md).  
+2.  Scorre prima del primo record (spostamento all'indietro)? Chiamare il [IsBOF](../../mfc/reference/crecordset-class.md#isbof) funzione membro.  
   
- Nell'esempio di codice riportato di seguito vengono utilizzate le funzioni membro `IsBOF` e `IsEOF` per il rilevamento dei limiti di un recordset quando si esegue lo scorrimento in entrambe le direzioni.  
+ Nell'esempio di codice viene illustrato come utilizzare `IsBOF` e `IsEOF` per rilevare i limiti di un recordset durante lo scorrimento in entrambe le direzioni.  
   
 ```  
 // Open a recordset; first record is current  
@@ -95,21 +95,21 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF` restituisce un valore diverso da zero se il recordset è posizionato dopo l'ultimo record.  `IsBOF` restituisce un valore diverso da zero se il recordset è posizionato prima del primo record, ovvero prima di tutti i record.  In entrambi i casi, non è disponibile alcun record corrente da utilizzare.  Se si chiama `MovePrev` quando `IsBOF` è già impostato su **TRUE** o si chiama `MoveNext` quando `IsEOF` è già impostato su **TRUE**, il framework genera l'eccezione `CDBException`.  È inoltre possibile utilizzare `IsBOF` e `IsEOF` per verificare l'esistenza di un recordset vuoto.  
+ `IsEOF`Restituisce un valore diverso da zero se il recordset è posizionato oltre l'ultimo record. `IsBOF`Restituisce un valore diverso da zero se il recordset è posizionato prima del primo record (prima tutti i record). In entrambi i casi, non sono presenti record corrente su cui operare. Se si chiama `MovePrev` quando `IsBOF` già **TRUE** o chiamare `MoveNext` quando `IsEOF` già **TRUE**, il framework genera un `CDBException`. È inoltre possibile utilizzare `IsBOF` e `IsEOF` per verificare la presenza di un recordset vuoto.  
   
- Per ulteriori informazioni sulla navigazione all'interno di un recordset, vedere [Recordset: bookmark e absolute position \(ODBC\)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
+ Per ulteriori informazioni sulla navigazione del recordset, vedere [Recordset: Bookmark e Absolute Position (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="_core_when_scrolling_is_supported"></a> Supporto dello scorrimento  
- ODBC estende le capacità di scorrimento rispetto a SQL, originariamente progettato per supportare solo lo scorrimento in avanti.  Il livello di supporto disponibile per lo scorrimento dipende dai driver ODBC utilizzati dall'applicazione, dal livello di conformità dell'API ODBC del driver utilizzato e dal caricamento in memoria o meno della libreria di cursori ODBC.  Per ulteriori informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+##  <a name="_core_when_scrolling_is_supported"></a>Supporto dello scorrimento  
+ Come, originariamente progettato SQL fornita solo scorrimento in avanti, ma ODBC estende le funzionalità di scorrimento. Il livello di supporto per lo scorrimento disponibile dipende dal driver ODBC l'applicazione funzioni con livello di conformità del driver ODBC API, e se la libreria di cursori ODBC viene caricata in memoria. Per ulteriori informazioni, vedere [ODBC](../../data/odbc/odbc-basics.md) e [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
 > [!TIP]
->  È possibile determinare se la libreria di cursori è in uso  controllando i parametri `bUseCursorLib` e `dwOptions` per [CDatabase::Open](../Topic/CDatabase::Open.md).  
+>  È possibile controllare se viene utilizzata la libreria di cursori. Vedere il `bUseCursorLib` e `dwOptions` parametri [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).  
   
 > [!NOTE]
->  A differenza delle classi DAO MFC, le classi ODBC MFC non includono un insieme di funzioni **Find** per l'individuazione del record successivo o precedente che soddisfa i criteri specificati.  
+>  A differenza delle classi DAO MFC, le classi ODBC MFC non forniscono un set di **trovare** funzioni per l'individuazione del record successivo (o precedente) che soddisfi i criteri specificati.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [CRecordset::CanScroll](../Topic/CRecordset::CanScroll.md)   
- [CRecordset::CheckRowsetError](../Topic/CRecordset::CheckRowsetError.md)   
- [Recordset: applicazione di filtri ai record \(ODBC\)](../../data/odbc/recordset-filtering-records-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)   
+ [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)   
+ [Recordset: applicazione di filtri ai record (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)

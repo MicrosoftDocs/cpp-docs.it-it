@@ -14,14 +14,13 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 493850d78e72e6b95408964a5e28d090a1dc58f1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiosgt-typedefs"></a>Typedef &lt;ios&gt;
 ||||  
@@ -163,5 +162,4 @@ int main( )
   
 ## <a name="see-also"></a>Vedere anche  
  [\<ios>](../standard-library/ios.md)
-
 

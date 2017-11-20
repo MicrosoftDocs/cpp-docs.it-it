@@ -1,45 +1,43 @@
 ---
-title: "multimap::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound (membro) [STL/CLR]"
+title: 'multimap:: lower_bound (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: b8f9b2c2-ebcd-4553-b410-75fd8d472a49
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d1eb75c97c94a08b452609f4fe4b1137b8057843
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Individuare l'inizio dell'intervallo che corrisponde a una chiave specificata.  
+# <a name="multimaplowerbound-stlclr"></a>multimap::lower_bound (STL/CLR)
+Consente di trovare l'inizio dell'intervallo che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro determina il primo elemento `X` sequenza selezionata con ordine equivalente a `key`.  Se tale elemento non esiste, restituisce [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce `X`.  Viene utilizzato per individuare attualmente l'inizio di una sequenza di elementi della sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro determina il primo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste, restituisce [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce `X`. Utilizzarla per individuare l'inizio di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multimap_lower_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound \(L'a\) \= \[un 1\]**  
-**\*lower\_bound \(L'b\) \= \[b 2\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::count](../dotnet/multimap-count-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)   
- [multimap::find](../dotnet/multimap-find-stl-clr.md)   
- [multimap::upper\_bound](../dotnet/multimap-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: Count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
+ [multimap:: equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   
+ [multimap:: Find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)   
+ [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)

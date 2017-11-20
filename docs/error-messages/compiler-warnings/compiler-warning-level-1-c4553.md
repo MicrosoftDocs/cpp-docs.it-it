@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4553 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4553"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4553"
+title: Compilatore avviso (livello 1) C4553 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4553
+dev_langs: C++
+helpviewer_keywords: C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a15efc1ab043d7927bf45c886c6dcef61551b76f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4553
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operatore': l'operatore non ha effetto. Si intendeva 'operatore'?  
+# <a name="compiler-warning-level-1-c4553"></a>Avviso del compilatore (livello 1) C4553
+'operator': operatore non ha effetto. si intendeva 'operator'?  
   
- Se nella parte iniziale di un'istruzione di espressione è presente un operatore senza effetti collaterali, si tratta probabilmente di un errore.  
+ Se un'istruzione di espressione ha un operatore senza effetti collaterali di inizio dell'espressione, si tratta probabilmente di un errore.  
   
- Il seguente codice di esempio genera l'errore C4553:  
+ L'esempio seguente genera l'errore C4553:  
   
 ```  
 // C4553.cpp  

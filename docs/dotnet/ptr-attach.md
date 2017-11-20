@@ -1,35 +1,34 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach (metodo)"
+title: PTR::Attach | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a776a19d3b06fce5c7355ba512693d63e529d3b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Associa un oggetto COM a `com::ptr`.  
+# <a name="ptrattach"></a>ptr::Attach
+Associa un oggetto COM per un `com::ptr`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void Attach(  
@@ -37,20 +36,20 @@ void Attach(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_right`  
- Il puntatore all'interfaccia COM da associare.  
+ Puntatore a interfaccia COM da collegare.  
   
-## Eccezioni  
- Se `com::ptr` già possiede un riferimento a un oggetto COM, `Attach` genera <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>Eccezioni  
+ Se il `com::ptr` possiede già un riferimento a un oggetto COM, `Attach` genera <xref:System.InvalidOperationException>.  
   
-## Note  
- Una chiamata a `Attach` fa riferimento all'oggetto COM ma non rilascia il riferimento del chiamante.  
+## <a name="remarks"></a>Note  
+ Una chiamata a `Attach` fa riferimento all'oggetto COM ma non comporta il rilascio di riferimento del chiamante.  
   
- Passando `NULL` a `Attach` comporta alcuna azione che viene inserita.  
+ Il passaggio di `NULL` a `Attach` comporta viene eseguita alcuna azione.  
   
-## Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto di `IXMLDOMDocument` il membro privato.  Le prime chiamate di funzione membro di `ReplaceDocument``Release` su qualsiasi oggetto precedentemente di proprietà e quindi chiamare `Attach` per associare un oggetto del nuovo documento.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `ReplaceDocument` chiamate prima di funzione membro `Release` su qualsiasi proprietà in precedenza e viene quindi chiamato `Attach` per collegare un nuovo oggetto documento.  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +123,12 @@ int main() {
 }  
 ```  
   
-## Requisiti  
- **Header file**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\com\ptr.h >  
   
- msclr::com di**Spazio dei nomi**  
+ **Namespace** msclr:: com  
   
-## Vedere anche  
- [Membri ptr](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Membri PTR](../dotnet/ptr-members.md)   
+ [PTR::operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

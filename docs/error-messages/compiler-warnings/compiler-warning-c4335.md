@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4335
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4335
+f1_keywords: C4335
+dev_langs: C++
+helpviewer_keywords: C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: ab7406a9c161d47e431cb0af8183d99eac7bfe86
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-c4335"></a>Avviso del compilatore C4335
 Rilevato formato di file Mac: convertire il file di origine in formato DOS o UNIX  

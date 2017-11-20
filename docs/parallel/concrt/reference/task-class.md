@@ -1,11 +1,10 @@
 ---
-title: Classe Task (Runtime di concorrenza) | Documenti di Microsoft
+title: Classe Task (Runtime di concorrenza) | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,38 +17,21 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a44245ea212a770902787e01d1896612b7cb37b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
-Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. Può anche essere composta con altre attività usando le continuazioni ( `then`) e di join ( `when_all`) e choice ( `when_any`) modelli.  
+Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. Possono anche essere composte con altre attività usando le continuazioni ( `then`), join e ( `when_all`) e choice ( `when_any`) pattern.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -128,10 +110,10 @@ void get() const;
  Risultato dell'attività.  
   
 ### <a name="remarks"></a>Note  
- Se l'attività viene annullata, una chiamata a `get` genererà un [task_canceled](task-canceled-class.md) (eccezione). Se l'attività ha rilevato un'eccezione diversa o un'eccezione è stata propagata a essa da un'attività precedente, una chiamata a `get` genererà questa eccezione.  
+ Se l'attività viene annullata, una chiamata a `get` genererà un [task_canceled](task-canceled-class.md) eccezione. Se l'attività ha rilevato un'eccezione diversa o un'eccezione è stata propagata a essa da un'attività precedente, una chiamata a `get` genererà questa eccezione.  
   
 > [!IMPORTANT]
->  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare [concurrency::task::wait](#wait) o `get` ( `wait` chiamate `get`) nel codice in esecuzione su sta il. In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questi metodi bloccare il thread corrente e può provocare l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il `get` per ricevere il risultato dell'attività precedente in una continuazione basata su attività poiché il risultato è immediatamente disponibile.  
+>  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare [concurrency::task::wait](#wait) o `get` ( `wait` chiamate `get`) nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questi metodi di bloccare il thread corrente e può provocare l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il `get` metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività, poiché il risultato è immediatamente disponibile.  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -152,10 +134,10 @@ bool is_done() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- True se l'attività è completata, false in caso contrario.  
+ True se l'attività è stata completata, false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- La funzione restituisce true se l'attività viene completato o annullato (con o senza eccezione utente).  
+ La funzione restituisce true se l'attività è stata completata o annullata (con o senza eccezione utente).  
   
 ##  <a name="operator_neq"></a>operatore! = 
 
@@ -173,7 +155,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti si riferiscono ad attività sottostanti diverse e `false` in caso contrario.  
   
-##  <a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operator = 
 
  Sostituisce il contenuto di un oggetto `task` con un altro.  
   
@@ -254,7 +236,7 @@ task(
  Oggetto `task` di origine.  
   
 ### <a name="remarks"></a>Note  
- Il costruttore predefinito per `task` è presente solo per consentire l'utilizzo delle attività di essere all'interno di contenitori. Un'attività costruita predefinita non può essere utilizzata fino a quando non le verrà assegnata un'attività valida. Metodi, ad esempio `get`, `wait` o `then` genererà un [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione quando viene chiamato su un'attività costruita predefinita.  
+ Il costruttore predefinito per `task` è presente solo per consentire l'utilizzo delle attività di essere all'interno di contenitori. Un'attività costruita predefinita non può essere utilizzata fino a quando non le verrà assegnata un'attività valida. I metodi come `get`, `wait` o `then` genererà un [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione quando viene chiamato su un'attività costruita predefinita.  
   
  Un'attività creata da `task_completion_event` verrà completata (e le relative continuazioni verranno pianificate) una volta impostato l'evento di completamento dell'attività.  
   
@@ -327,7 +309,7 @@ __declspec(
 ### <a name="remarks"></a>Note  
  Gli overload di `then` che accettano un'espressione lambda o functor che restituisce un'interfaccia Windows::Foundation::IAsyncInfo, sono disponibili solo per le applicazioni Windows Store.  
   
- Per ulteriori informazioni sull'utilizzo delle continuazioni di attività per comporre un lavoro asincrono, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Per ulteriori informazioni sull'utilizzo delle continuazioni di attività per comporre operazioni asincrone, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
 ##  <a name="wait"></a>attesa 
 
@@ -343,8 +325,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare `wait` nel codice in esecuzione su sta il. In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il [concurrency::task::get](#get) metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività.  
+>  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare `wait` nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il [concurrency::task::get](#get) metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

@@ -1,11 +1,10 @@
 ---
-title: Classe Location | Documenti di Microsoft
+title: Classe Location | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
-helpviewer_keywords:
-- location class
+dev_langs: C++
+helpviewer_keywords: location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="location-class"></a>Classe location
 Un'astrazione di una posizione fisica sull'hardware.  
@@ -75,13 +57,13 @@ class location;
 |----------|-----------------|  
 |[operator!=](#operator_neq)|Determina se due oggetti `location` rappresentano posizioni diverse.|  
 |[operator=](#operator_eq)|Assegna il contenuto di un oggetto `location` differente a questo oggetto.|  
-|[operator==](#operator_eq_eq)|Determina se due `location` gli oggetti rappresentano lo stesso percorso.|  
+|[operator==](#operator_eq_eq)|Determina se due `location` oggetti rappresentano lo stesso percorso.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `location`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -160,7 +142,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se le due posizioni sono diverse; in caso contrario `false`.  
   
-##  <a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operator = 
 
  Assegna il contenuto di un oggetto `location` differente a questo oggetto.  
   
@@ -176,7 +158,7 @@ location& operator= (const location& _Rhs);
   
 ##  <a name="operator_eq_eq"></a>operatore = = 
 
- Determina se due `location` gli oggetti rappresentano lo stesso percorso.  
+ Determina se due `location` oggetti rappresentano lo stesso percorso.  
   
 ```
 bool operator== (const location& _Rhs) const;
@@ -186,8 +168,7 @@ bool operator== (const location& _Rhs) const;
  `_Rhs`  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se le due posizioni sono identiche, e `false` in caso contrario.  
+ `true`Se i due percorsi sono identici, e `false` in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

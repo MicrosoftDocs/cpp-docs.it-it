@@ -1,49 +1,47 @@
 ---
-title: "Delimitatori per i tag della documentazione di Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "documentazione XML, delimitatori"
+title: Delimitatori per tag della documentazione di Visual C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 967ab7a95ba2f3f0b617db7f88eabf00b48efcd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Delimitatori per i tag della documentazione di Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'utilizzo di tag della documentazione richiede i delimitatori, che indica al compilatore in cui un commento relativo alla documentazione inizia e termina.  
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitatori per i tag della documentazione di Visual C++
+L'utilizzo di tag della documentazione richiede delimitatori per indicare al compilatore in un commento di documentazione inizia e finisce.  
   
- I tipi di delimitatore utilizzabili con i tag della documentazione XML sono:  
+ È possibile usare con i tag della documentazione XML i tipi di delimitatori seguenti:  
   
  `///`  
- Si tratta del form come illustrato negli esempi della documentazione e utilizzato dai modelli di progetto di Visual C\+\+.  
+ Questo è il modulo illustrato negli esempi di documentazione e utilizzato per i modelli di progetto Visual C++.  
   
  `/** */`  
- Questi delimitatori sono su più righe.  
+ Si tratta di delimitatori su più righe.  
   
- Esistono alcune regole di formattazione quando si utilizzano i delimitatori di `/** */` \*\/:  
+ Esistono regole di formattazione quando si utilizza il `/** */` delimitatori:  
   
--   Per la riga che contiene il delimitatore di `/**`, se il resto della riga è vuoto, la riga non viene elaborata per commenti.  Se il primo carattere è vuota, il bianco carattere di spazio vuoto viene ignorato e il resto della riga viene elaborato.  In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
+-   Per la riga che contiene il `/**` delimitatore, se il resto della riga è uno spazio vuoto, la riga non verrà elaborati per i commenti. Se il primo carattere è uno spazio, tale spazio vuoto viene ignorato e viene elaborato il resto della riga. In caso contrario, l'intero testo della riga dopo il delimitatore `/**` viene elaborato come parte del commento.  
   
--   Per la riga che contiene il delimitatore di `*/`, se sono spetta solo uno spazio vuoto al delimitatore di `*/`, la riga viene ignorata.  In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
+-   Per la riga che contiene il `*/` delimitatore, se è solo spazi vuoti fino al `*/` delimitatore, la riga viene ignorato. In caso contrario, il testo contenuto nella riga fino al delimitatore `*/` viene elaborato come parte del commento, in base alle regole dei criteri di ricerca descritte nel punto che segue.  
   
--   Per riga dopo che inizia con il delimitatore di `/**`, il compilatore cerca un modello comune all'inizio di ogni riga che contiene lo spazio vuoto facoltativo e un asterisco \(`*`\), seguita da uno spazio vuoto più facoltativo.  Se il compilatore rileva un insieme di caratteri inizio di ogni riga, ignorati da tale modello per tutte le righe dopo il delimitatore di `/**`, fino a ed eventualmente inclusa la riga che contiene il delimitatore di `*/`.  
+-   Per le righe successive a quella che inizia con il `/**` delimitatore, il compilatore cerca un modello comune all'inizio di ogni riga che include uno spazio vuoto facoltativo e un asterisco (`*`), seguito da più spazi facoltativi. Se il compilatore rileva un set comune di caratteri all'inizio di ogni riga, il criterio per tutte le righe successive verrà ignorato il `/**` delimitatore, fino a e, possibilmente, tra cui la riga che contiene il `*/` delimitatore.  
   
- Di seguito sono riportati alcuni esempi:  
+ Ecco alcuni esempi:  
   
--   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`.  I due formati di tag formuleranno le stesse commenti:  
+-   La sola parte del commento riportato di seguito che verrà elaborata è la riga che inizia con `<summary>`. I formati di due tag seguente produrrà gli stessi commenti:  
   
     ```  
     /**  
@@ -52,7 +50,7 @@ L'utilizzo di tag della documentazione richiede i delimitatori, che indica al co
     /** <summary>text</summary> */  
     ```  
   
--   Il compilatore impone un modello di “\*„ per ignorare la parte superiore della seconda e la terza linea.  
+-   Il compilatore applica un modello di "*" per ignorare all'inizio delle linee secondo e terzo.  
   
     ```  
     /**  
@@ -60,7 +58,7 @@ L'utilizzo di tag della documentazione richiede i delimitatori, che indica al co
      *  text </summary>*/  
     ```  
   
--   Il compilatore non trova modello in questo commento perché non esiste un asterisco la seconda riga.  Di conseguenza, qualsiasi testo sulla seconda e la terza linea, fino a `*/`, verrà elaborato come parte del commento.  
+-   Il compilatore non trova alcun criterio in questo commento perché non vi è alcun asterisco nella seconda riga. Di conseguenza, tutto il testo nelle righe di secondo e terzo fino il `*/`, verrà elaborato come parte del commento.  
   
     ```  
     /**  
@@ -68,7 +66,7 @@ L'utilizzo di tag della documentazione richiede i delimitatori, che indica al co
        text </summary>*/  
     ```  
   
--   Il compilatore non trova modello in questo commento per due motivi.  Innanzitutto, non esiste alcuna riga che inizia con un numero coerente di spazi prima dell'asterisco.  Inoltre, la quinta riga inizia con una tabulazione, che non corrisponde agli spazi.  Di conseguenza, qualsiasi testo dalla seconda riga fino a `*/` verrà elaborato come parte del commento.  
+-   In questo commento non viene rilevato alcun criterio per due motivi. In primo luogo, non vi è alcuna riga che inizia con un numero coerente di spazi prima dell'asterisco. In secondo luogo, la quinta riga inizia con una tabulazione senza corrispondenza degli spazi. Di conseguenza, tutto il testo dalla seconda riga fino a quando il `*/` verrà elaborato come parte del commento.  
   
     ```  
     /**  
@@ -79,5 +77,5 @@ L'utilizzo di tag della documentazione richiede i delimitatori, che indica al co
     */  
     ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,20 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: ef42f4ff5ae719ea84ef972b7462816f1f094d9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 6cab28e78b24333614eaeaa817f5aacbc59a1da5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationvariablechangehandler-class"></a>Classe CAnimationVariableChangeHandler
 Implementa un callback, chiamato dall'API di animazione quando viene modificato il valore di una variabile di animazione.  
@@ -108,4 +105,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

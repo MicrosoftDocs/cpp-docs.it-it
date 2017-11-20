@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR (macro)"
+title: PROVIDER_COLUMN_ENTRY_WSTR | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_WSTR
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_WSTR macro
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cee2a21b91a01e73c980bd29902ad3cec85c6e82
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_WSTR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta una determinata colonna supportati dal provider.  
+# <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+Rappresenta una colonna specifica è supportata dal provider.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,24 +33,24 @@ name
 , ordinal, member )  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *name*  
- \[in\] nome della colonna.  
+ [in] Il nome della colonna.  
   
  `ordinal`  
- \[in\] numero di colonne.  A meno che la colonna sia una colonna bookmark, il numero di colonne non deve essere 0.  
+ [in] Numero di colonna. A meno che la colonna è una colonna del segnalibro, il numero di colonna non deve essere 0.  
   
  `member`  
- \[in\] la variabile membro della classe di dati in cui vengono archiviati i dati.  
+ [in] La variabile membro nella classe di dati che archiviano i dati.  
   
-## Note  
- Utilizzare questa macro quando i dati della colonna corrispondono a una stringa con terminazione null di caratteri unicode, [DBTYPE\_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
+## <a name="remarks"></a>Note  
+ Utilizzare questa macro quando i dati della colonna sono una stringa di caratteri Unicode con terminazione di un valore null [DBTYPE_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

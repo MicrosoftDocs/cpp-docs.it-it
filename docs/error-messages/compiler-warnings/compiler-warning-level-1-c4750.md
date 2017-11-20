@@ -1,60 +1,40 @@
 ---
-title: Avviso (livello 1) del compilatore C4750 | Documenti di Microsoft
+title: Compilatore avviso (livello 1) C4750 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4750
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4750
+f1_keywords: C4750
+dev_langs: C++
+helpviewer_keywords: C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 84f0628de933344eb23dc6325679abdcd3699c3a
-ms.openlocfilehash: 6e22ef89b92a5b584979abbd370f82b482cf74e0
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d944f055d9332fe5c1923f57f6800dfee6fc119e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4750"></a>Avviso del compilatore (livello 1) C4750
 'identifier': funzione con _alloca() resa inline in un ciclo  
   
- La funzione 'identificatore' impone l'espansione inline del [alloca](../../c-runtime-library/reference/alloca.md) funzione all'interno di un ciclo, che potrebbe causare un overflow dello stack quando viene eseguito il ciclo.  
+ La funzione 'identifier' impone l'espansione inline della funzione [_alloca](../../c-runtime-library/reference/alloca.md) all'interno di un ciclo, che può provocare un overflow dello stack all'esecuzione del ciclo.  
   
 ### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Assicurarsi che la funzione 'identificatore' non è modificata con la [forceinline](../../cpp/inline-functions-cpp.md) identificatore.  
+1.  Verificare che la funzione 'identifier' non venga modificata con l'identificatore [__forceinline](../../cpp/inline-functions-cpp.md) .  
   
-2.  Assicurarsi che la funzione 'identificatore' non contiene un [alloca](../../c-runtime-library/reference/alloca.md) funzione contenuta in un ciclo.  
+2.  Verificare che la funzione 'identifier' non contenga una funzione [_alloca](../../c-runtime-library/reference/alloca.md) all'interno di un ciclo.  
   
-3.  Non si specifica il [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/Ox](../../build/reference/ox-full-optimization.md), o [/Og](../../build/reference/og-global-optimizations.md) opzione di compilazione.  
+3.  Non specificare l'opzione di compilazione [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/Ox](../../build/reference/ox-full-optimization.md)o [/Og](../../build/reference/og-global-optimizations.md) .  
   
-4.  Sul posto di [alloca](../../c-runtime-library/reference/alloca.md) funzione un [provare-ad eccezione di istruzione](../../cpp/try-except-statement.md) che intercetterà un overflow dello stack.  
+4.  Inserire la funzione [_alloca](../../c-runtime-library/reference/alloca.md) in un'istruzione [try-except](../../cpp/try-except-statement.md) che intercetterà un overflow dello stack.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice seguente viene chiamato `MyFunction` in un ciclo e `MyFunction` chiama la funzione `_alloca` . Il modificatore `__forceinline` provoca l'espansione inline della funzione `_alloca` .  

@@ -1,32 +1,30 @@
 ---
-title: "list::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator (membro) [STL/CLR]"
+title: List::generic_iterator (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 4d54a5f4-a792-48a2-9142-34c4a09bd305
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 598efbfa495583f10a4b09e5c43f554cb4fef2d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# list::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di iteratore per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="listgenericiterator-stlclr"></a>list::generic_iterator (STL/CLR)
+Il tipo di iteratore per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## Note  
- Il tipo viene descritto un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_generic_iterator.cpp   
@@ -74,15 +72,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **una c**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)

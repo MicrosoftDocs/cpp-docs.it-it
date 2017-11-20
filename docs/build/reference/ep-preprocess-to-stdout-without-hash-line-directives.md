@@ -1,77 +1,76 @@
 ---
-title: "/EP (Pre-elabora in stdout senza direttive #line) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ep"
-  - "VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EP (opzione del compilatore) [C++]"
-  - "copia dell'output del preprocessore in stdout"
-  - "EP (opzione del compilatore) [C++]"
-  - "-EP (opzione del compilatore) [C++]"
-  - "output del preprocessore, copia in stdout"
+title: '-EP (pre-elabora in stdout senza direttive #line) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ep
+- VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
+dev_langs: C++
+helpviewer_keywords:
+- copy preprocessor output to stdout
+- preprocessor output, copy to stdout
+- -EP compiler option [C++]
+- EP compiler option [C++]
+- /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f57a4fb9fb35c60f051642120e2fc62d2306da7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /EP (Pre-elabora in stdout senza direttive #line)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Pre\-elabora i file di origine C e C\+\+ e copia i file pre\-elaborati nella periferica di output standard.  
+# <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (Pre-elabora in stdout senza direttive #line)
+Pre-elabora i file di origine C e C++ e copia i file pre-elaborati per il dispositivo di output standard.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /EP  
 ```  
   
-## Note  
- Durante questa operazione tutte le direttive del preprocessore e le espansioni delle macro vengono eseguite e i commenti vengono rimossi.  Per mantenere i commenti nell'output pre\-elaborato, utilizzare l'opzione [\/C \(Conserva i commenti durante la pre\-elaborazione\)](../../build/reference/c-preserve-comments-during-preprocessing.md) con **\/EP**.  
+## <a name="remarks"></a>Note  
+ Nel processo, vengono eseguite tutte le direttive del preprocessore, espansioni della macro vengono eseguite e i commenti vengono rimossi. Per mantenere i commenti nell'output pre-elaborato, utilizzare il [/C (mantenere i commenti durante la pre-elaborazione)](../../build/reference/c-preserve-comments-during-preprocessing.md) con **/EP**.  
   
- L'opzione **\/EP** disattiva la compilazione.  È necessario inviare di nuovo il file pre\-elaborato per la compilazione.  L'opzione **\/EP** elimina anche i file di output dalle opzioni **\/FA**, **\/Fa** e **\/Fm**.  Per ulteriori informazioni, vedere [\/FA, \/Fa \(File di listato\)](../../build/reference/fa-fa-listing-file.md) e [\/Fm \(Specifica file map\)](../../build/reference/fm-name-mapfile.md).  
+ Il **/EP** opzione disattiva la compilazione. È necessario inviare nuovamente il file pre-elaborato per la compilazione. **/EP** inoltre si eliminano i file di output dal **/FA**, **/Fa**, e **/Fm** opzioni. Per ulteriori informazioni, vedere [/FA, /Fa (File di listato)](../../build/reference/fa-fa-listing-file.md) e [/Fm (nome file MAP)](../../build/reference/fm-name-mapfile.md).  
   
- Gli errori generati durante le fasi successive dell'elaborazione fanno riferimento ai numeri di riga del file pre\-elaborato anziché al file di origine.  Se si desidera che i numeri di riga facciano riferimento al file di origine, utilizzare [\/E \(Pre\-elabora in stdout\)](../../build/reference/e-preprocess-to-stdout.md).  A tale scopo, l'opzione **\/E** aggiunge le direttive `#line` all'output.  
+ Gli errori generati durante le fasi successive dell'elaborazione di fare riferimento ai numeri di riga del file pre-elaborato anziché il file di origine. Se si desidera fare riferimento al file di origine originale i numeri di riga, utilizzare [/E (pre-elabora in stdout)](../../build/reference/e-preprocess-to-stdout.md) invece. Il **/E** opzione aggiunge `#line` direttive all'output per questo scopo.  
   
- Per inviare l'output pre\-elaborato in un file con le direttive `#line`, utilizzare l'opzione [\/P \(Pre\-elabora in un file\)](../../build/reference/p-preprocess-to-a-file.md).  
+ Per inviare l'output pre-elaborato, con `#line` direttive, in un file, utilizzano il [/P (pre-elabora in un File)](../../build/reference/p-preprocess-to-a-file.md) opzione.  
   
- Per inviare l'output pre\-elaborato a stdout con le direttive `#line`, utilizzare **\/P** e **\/EP** congiuntamente.  
+ Per inviare l'output pre-elaborato a stdout con `#line` direttive, utilizzare **/p** e **/EP** insieme.  
   
- Non è possibile utilizzare intestazioni precompilate con l'opzione **\/EP**.  
+ Non è possibile utilizzare le intestazioni precompilate con il **/EP** opzione.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Preprocessore**.  
+3.  Fare clic su di **preprocessore** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Genera file pre\-elaborati**.  
+4.  Modificare il **genera File pre-elaborato** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>.  
   
-## Esempio  
- Nella riga di comando che segue il file `ADD.C` viene pre\-elaborato, i commenti vengono conservati e il risultato viene visualizzato sulla periferica di output standard:  
+## <a name="example"></a>Esempio  
+ La seguente riga di comando pre-elabora file `ADD.C`, conserva i commenti e viene visualizzato il risultato del dispositivo di output standard:  
   
 ```  
 CL /EP /C ADD.C  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

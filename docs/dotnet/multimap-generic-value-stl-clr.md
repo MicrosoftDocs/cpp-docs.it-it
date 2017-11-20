@@ -1,41 +1,39 @@
 ---
-title: "multimap::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value (membro) [STL/CLR]"
+title: multimap::generic_value (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: e403233f-5132-45ca-be04-2c85e923f37d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 18fa41591af7cc86a6ad85b998ddb398681010f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di elemento per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="multimapgenericvalue-stlclr"></a>multimap::generic_value (STL/CLR)
+Il tipo di elemento per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Note  
- Il tipo viene descritto un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da utilizzare con l'interfaccia generica per questa classe di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'utilizzo con l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multimap_generic_value.cpp   
@@ -70,16 +68,19 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[un 1\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::generic\_container](../dotnet/multimap-generic-container-stl-clr.md)   
- [multimap::generic\_iterator](../dotnet/multimap-generic-iterator-stl-clr.md)   
- [multimap::generic\_reverse\_iterator](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::generic_container (STL/CLR)](../dotnet/multimap-generic-container-stl-clr.md)   
+ [multimap::generic_iterator (STL/CLR)](../dotnet/multimap-generic-iterator-stl-clr.md)   
+ [multimap::generic_reverse_iterator (STL/CLR)](../dotnet/multimap-generic-reverse-iterator-stl-clr.md)

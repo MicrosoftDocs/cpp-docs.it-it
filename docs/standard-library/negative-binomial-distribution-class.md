@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::negative_binomial_distribution::param_type::p
 - random/std::negative_binomial_distribution::param_type::operator==
 - random/std::negative_binomial_distribution::param_type::operator!=
-- random/std::negative_binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::negative_binomial_distribution [C++]
 - std::negative_binomial_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a3d5e3b04a86e6e82cccdc2da93d6a1f379010a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8146fd33f4a955404fbe06f8d977ff63d9bfef8d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="negativebinomialdistribution-class"></a>Classe negative_binomial_distribution
 Genera una distribuzione binomiale negativa.  
@@ -282,4 +278,3 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-

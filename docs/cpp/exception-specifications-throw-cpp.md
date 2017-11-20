@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Le specifiche di eccezione (throw, noexcept) (C++)
 Specifiche di eccezione sono una funzionalità del linguaggio C++ che indicano lo scopo del programmatore sui tipi di eccezioni che possono essere propagati da una funzione. È possibile specificare che una funzione può o non può uscire da un'eccezione utilizzando un *specifica di eccezione*. Il compilatore può usare queste informazioni per ottimizzare le chiamate alla funzione e la funzione di escape per terminare il programma se un'eccezione imprevista. Esistono due tipi di specifica di eccezione. Il *noexcept specifica* è una novità in C++ 11. Specifica se il set di potenziali eccezioni da fare in modo che la funzione è vuoto. Il *specifica di eccezione dinamiche*, o `throw(optional_type_list)` specifica, è deprecata in C++ 11 ed è supportato solo parzialmente da Visual Studio. Questa specifica di eccezione è stata progettata per fornire informazioni di riepilogo sulle eccezioni che possono essere generate da una funzione, ma in pratica è stato trovato un problema. Stato di non condizionale di una specifica di eccezione dinamiche che è risultata piuttosto utile `throw()` specifica. Ad esempio, la dichiarazione di funzione:  

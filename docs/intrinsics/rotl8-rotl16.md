@@ -1,64 +1,71 @@
 ---
-title: "_rotl8, _rotl16 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_rotl8"
-  - "_rotl16"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_rotl16 intrinsic"
-  - "_rotl8 intrinsic"
+title: _rotl8, _rotl16 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _rotl8
+- _rotl16
+dev_langs: C++
+helpviewer_keywords:
+- _rotl8 intrinsic
+- _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f44ce838feab8fd03cbc7ad459617f1b6d52beba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _rotl8, _rotl16
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Sezione specifica Microsoft**  
   
- Ruotare i valori di input a sinistra del bit più significativo \(MSB\) di un numero specificato di posizioni di bit.  
+ Ruotare i valori di input a sinistra del bit più significativo (MSB) di un numero specificato di posizioni di bit.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned char _rotl8(     unsigned char value,     unsigned char shift  ); unsigned short _rotl16(     unsigned short value,     unsigned char shift  );  
+unsigned char _rotl8(   
+   unsigned char value,   
+   unsigned char shift   
+);  
+unsigned short _rotl16(   
+   unsigned short value,   
+   unsigned char shift   
+);  
 ```  
   
-#### Parametri  
- \[in\] `value`  
+#### <a name="parameters"></a>Parametri  
+ [in] `value`  
  Valore da ruotare.  
   
- \[in\] `shift`  
+ [in] `shift`  
  Numero di bit da ruotare.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Il valore ruotato.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`_rotl8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_rotl16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
+## <a name="remarks"></a>Note  
  A differenza di un'operazione di spostamento a sinistra, quando si esegue una rotazione a sinistra, i bit più significativi che superano il limite superiore vengono spostati nelle posizioni dei bit meno significativi.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // rotl.cpp  
@@ -85,17 +92,20 @@ int main()
 }  
 ```  
   
-  **La rotazione a sinistra di 0x41 di 0 bit dà come risultato 0x41**  
-**La rotazione a sinistra di 0x41 di 1 bit dà come risultato 0x82**  
-**La rotazione a sinistra di 0x41 di 2 bit dà come risultato 0x5**  
-**La rotazione a sinistra di 0x41 di 3 bit dà come risultato 0xa**  
-**La rotazione a sinistra di 0x41 di 4 bit dà come risultato 0x14**  
-**La rotazione a sinistra di 0x41 di 5 bit dà come risultato 0x28**  
-**La rotazione a sinistra di 0x41 di 6 bit dà come risultato 0x50**  
-**La rotazione a sinistra di 0x41 di 7 bit dà come risultato 0xa0**  
-**La rotazione a destra del valore short senza segno 0x12 di 10 bit dà come risultato 0x4800**   
-## Fine sezione specifica Microsoft  
+```Output  
+Rotating 0x41 left by 0 bits gives 0x41  
+Rotating 0x41 left by 1 bits gives 0x82  
+Rotating 0x41 left by 2 bits gives 0x5  
+Rotating 0x41 left by 3 bits gives 0xa  
+Rotating 0x41 left by 4 bits gives 0x14  
+Rotating 0x41 left by 5 bits gives 0x28  
+Rotating 0x41 left by 6 bits gives 0x50  
+Rotating 0x41 left by 7 bits gives 0xa0  
+Rotating unsigned short 0x12 left by 10 bits gives 0x4800  
+```  
   
-## Vedere anche  
- [\_rotr8, \_rotr16](../intrinsics/rotr8-rotr16.md)   
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
+ [_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

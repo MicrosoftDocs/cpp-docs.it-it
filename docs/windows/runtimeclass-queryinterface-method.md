@@ -1,32 +1,30 @@
 ---
-title: "Metodo RuntimeClass::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (metodo)"
+title: 'Metodo runtimeclass:: QueryInterface | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 8f01f4a1-3fa2-4a8e-88c6-03629236cb9f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6d3684c377cc5d56e6e3da78f5b57983f32c2c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo RuntimeClass::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntatore all'interfaccia ID.  
+# <a name="runtimeclassqueryinterface-method"></a>Metodo RuntimeClass::QueryInterface
+Recupera un puntatore all'ID di interfaccia specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,20 +35,20 @@ STDMETHOD(
    _Deref_out_ void **ppvObject);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- Un ID di interfaccia.  
+ ID di interfaccia.  
   
  `ppvObject`  
- Quando l'operazione viene completata, un puntatore all'interfaccia specificata dal parametro `riid`.  
+ Al termine di questo opereation, un puntatore a interfaccia specificato per il `riid` parametro.  
   
-## Valore restituito  
- S\_OK se ha esito positivo; in caso contrario, un HRESULT, che indica l'errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe RuntimeClass](../windows/runtimeclass-class.md)

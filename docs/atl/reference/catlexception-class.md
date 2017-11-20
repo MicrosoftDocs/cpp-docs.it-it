@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLEXCEPT/ATL::CAtlException
 - ATLEXCEPT/ATL::CAtlException::CAtlException
 - ATLEXCEPT/ATL::CAtlException::m_hr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlException class
+dev_langs: C++
+helpviewer_keywords: CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b0a22b1918f255290ae6b47604aa57ef484a9527
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlexception-class"></a>Classe CAtlException
 Questa classe definisce un'eccezione di ATL.  
@@ -112,4 +94,3 @@ HRESULT m_hr;
 ## <a name="see-also"></a>Vedere anche  
  [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

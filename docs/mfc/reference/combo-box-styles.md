@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - CBS_HASSTRINGS
 - CBS_DISABLENOSCROLL
 - CBS_OWNERDRAWFIXED
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBS_OWNERDRAWVARIABLE constant [MFC]
 - CBS_NOINTEGRALHEIGHT constant [MFC]
@@ -40,16 +38,15 @@ helpviewer_keywords:
 - CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 52cfd21df2f0f72da10589745fb3a8be3e0b24e1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="combo-box-styles"></a>Stili casella combinata
 I seguenti stili casella combinata sono disponibili in MFC.  
@@ -83,7 +80,6 @@ I seguenti stili casella combinata sono disponibili in MFC.
 ## <a name="see-also"></a>Vedere anche  
  [Stili utilizzati da MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CComboBox::Create] (ccombobox__create di # ccombobox class.md   
-
 
 
 

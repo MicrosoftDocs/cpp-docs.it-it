@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <allocators>
-dev_langs:
-- C++
-helpviewer_keywords:
-- allocators header
+f1_keywords: <allocators>
+dev_langs: C++
+helpviewer_keywords: allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: c4c6ad648aff3503272760675a8db99cd1889d9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cf6f722eaa4f71a808ec416aa7646c7fe4de2689
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 Definisce diversi modelli che consentono di allocare e liberare blocchi di memoria per contenitori basati su nodi.  
@@ -177,7 +172,6 @@ Definisce diversi modelli che consentono di allocare e liberare blocchi di memor
   
 ## <a name="see-also"></a>Vedere anche  
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
-
 
 
 

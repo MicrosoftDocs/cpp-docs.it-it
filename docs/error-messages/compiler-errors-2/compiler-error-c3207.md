@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3207
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3207
+f1_keywords: C3207
+dev_langs: C++
+helpviewer_keywords: C3207
 ms.assetid: 4a28b976-142a-4cff-aa2f-480b892c50ca
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7d0f50d73f32a388669ea49af737b69b57d6a64d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3207"></a>Errore del compilatore C3207
 'function': argomento di modello non valido per 'arg'. Previsto modello di classe  

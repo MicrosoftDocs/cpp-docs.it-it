@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +49,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationController::ScheduleGroup
 - AFXANIMATIONCONTROLLER/CAnimationController::SetRelatedWnd
 - AFXANIMATIONCONTROLLER/CAnimationController::UpdateAnimationManager
-- AFXANIMATIONCONTROLLER/CAnimationController::CleanUpGroup
 - AFXANIMATIONCONTROLLER/CAnimationController::OnAfterSchedule
 - AFXANIMATIONCONTROLLER/CAnimationController::gkeyframeStoryboardStart
 - AFXANIMATIONCONTROLLER/CAnimationController::m_bIsValid
@@ -60,8 +58,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pRelatedWnd
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionFactory
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionLibrary
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationController [MFC], CAnimationController
 - CAnimationController [MFC], AddAnimationObject
@@ -113,16 +110,15 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: e8f76e8ace4eff6bd02efeba8a42554a27618bc1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 7f749a38e052edbed456503ef2ac320743e68186
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationcontroller-class"></a>Classe CAnimationController
 Implementa il controller di animazione che fornisce un'interfaccia centrale per la creazione e la gestione delle animazioni.  
@@ -1004,4 +1000,3 @@ virtual void UpdateAnimationManager();
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

@@ -1,37 +1,35 @@
 ---
-title: "Installazione e introduzione a ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "installazione di ODBC"
-  - "ODBC, installazione"
+title: L'installazione e Introduzione a ODBC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- installing ODBC
+- ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9c97e1215ce7380ec917166622e12bcefebd5083
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Installazione e introduzione a ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Negli argomenti riportati di seguito vengono fornite informazioni sull'installazione dei componenti necessari per l'utilizzo di ODBC.  
+# <a name="installing-and-getting-started-with-odbc"></a>Installazione e introduzione a ODBC
+Gli argomenti seguenti consentono di installare i componenti necessari per iniziare a lavorare con Open Database Connectivity (ODBC).  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Installare il supporto per database ODBC MFC](../../data/installing-mfc-database-support.md)  
+-   [Installare il driver ODBC forniti con Visual C++](../../data/odbc/odbc-administrator.md)  
   
--   [Installare i driver ODBC forniti con Visual C\+\+](../../data/odbc/odbc-administrator.md)  
+-   [Ridistribuire i componenti ODBC ai clienti](../../data/odbc/odbc-basics.md)  
   
--   [Ridistribuire componenti ODBC ai clienti](../../data/odbc/odbc-basics.md)  
-  
-## Vedere anche  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

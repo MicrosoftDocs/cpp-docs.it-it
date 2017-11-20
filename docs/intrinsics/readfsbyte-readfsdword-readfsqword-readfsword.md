@@ -1,83 +1,83 @@
 ---
-title: "__readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readfsword"
-  - "__readfsdword"
-  - "__readfsbyte"
-  - "__readfsqword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__readfsword (funzione intrinseca)"
-  - "readfsword (funzione intrinseca)"
-  - "__readfsdword (funzione intrinseca)"
-  - "readfsbyte (funzione intrinseca)"
-  - "__readfsbyte (funzione intrinseca)"
-  - "readfsdword (funzione intrinseca)"
-  - "readfsqword (funzione intrinseca)"
-  - "__readfsqword (funzione intrinseca)"
+title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __readfsword
+- __readfsdword
+- __readfsbyte
+- __readfsqword
+dev_langs: C++
+helpviewer_keywords:
+- __readfsword intrinsic
+- readfsword intrinsic
+- __readfsdword intrinsic
+- readfsbyte intrinsic
+- __readfsbyte intrinsic
+- readfsdword intrinsic
+- readfsqword intrinsic
+- __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3681e5493fcfd1997485da804eb8cf2e517b4227
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __readfsbyte, __readfsdword, __readfsqword, __readfsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+**Sezione specifica Microsoft**  
   
- Memoria letti da una posizione specificata da un offset relativo all'inizio del segmento di definizione.  
+ Leggere la memoria da una posizione specificata da un offset relativo all'inizio del segmento di ADFS.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned char __readfsbyte(   
-   unsigned long Offset   
+unsigned char __readfsbyte(   
+   unsigned long Offset   
 );  
-unsigned short __readfsword(   
-   unsigned long Offset   
+unsigned short __readfsword(   
+   unsigned long Offset   
 );  
-unsigned long __readfsdword(   
+unsigned long __readfsdword(   
    unsigned long Offset  
 );  
-unsigned __int64 __readfsqword(   
-   unsigned long Offset   
+unsigned __int64 __readfsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Parametri  
- \[in\] `Offset`  
- L'offset dall'inizio di `FS` da leggere.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Offset`  
+ L'offset dall'inizio del `FS` da cui leggere.  
   
-## Valore restituito  
- Il contenuto della memoria di byte, della parola, i primi quattro byte, o del quadword \(come indicato dal nome della funzione chiamata\) nella posizione `FS:[``Offset``]`.  
+## <a name="return-value"></a>Valore restituito  
+ Il contenuto della memoria del byte, word, parola doppia oppure parola quadrupla (come indicato dal nome della funzione chiamata) in corrispondenza della posizione `FS:[Offset]`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__readfsbyte`|x86|  
 |`__readfsdword`|x86|  
 |`__readfsqword`|x86|  
 |`__readfsword`|x86|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Queste procedure sono disponibili solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Queste routine sono disponibili solo come funzioni intrinseche.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+## <a name="see-also"></a>Vedere anche  
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

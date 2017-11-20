@@ -1,70 +1,73 @@
 ---
-title: "/Oy (Omissione dei puntatori ai frame) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.OmitFramePointers"
-  - "/oy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Oy (opzione del compilatore) [C++]"
-  - "Attiva l'omissione dei puntatori ai frame (opzione del compilatore) [C++]"
-  - "omissione dei puntatori ai frame"
-  - "Oy (opzione del compilatore) [C++]"
-  - "-Oy (opzione del compilatore) [C++]"
-  - "Puntatore allo stack frame (opzione del compilatore) [C++]"
-  - "annullamento della creazione di puntatori ai frame"
+title: -Oy (omissione dei puntatori Frame) | Documenti Microsoft
+ms.custom: 
+ms.date: 09/22/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.OmitFramePointers
+- /oy
+dev_langs: C++
+helpviewer_keywords:
+- omit frame pointer
+- Oy compiler option [C++]
+- stack frame pointer compiler option [C++]
+- -Oy compiler option [C++]
+- frame pointer omission compiler option [C++]
+- suppress frame pointer creation
+- /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dbcd92697ebdf5a0db0581c4f4a5925b7fa542a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Oy (Omissione dei puntatori ai frame)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="oy-frame-pointer-omission"></a>/Oy (Omissione dei puntatori ai frame)
 
-Disabilita la creazione di puntatori ai frame nello stack di chiamate.  
-  
-## Sintassi  
-  
-```  
-/Oy[-]  
-```  
-  
-## Note  
- Questa opzione consente di velocizzare l'esecuzione delle chiamate di funzione in quanto non è necessario impostare e rimuovere alcun puntatore ai frame.  Libera inoltre un ulteriore registro, EBP sul processore Intel 386 o versioni successive, per l'archiviazione delle variabili e delle sottoespressioni utilizzate di frequente.  
-  
- L'opzione **\/Oy** abilita l'omissione dei puntatori ai frame, l'opzione **\/Oy\-** la disabilita. **\/Oy** è disponibile solo nei compilatori x86.  
-  
- Se il codice richiede l'indirizzamento basato su EBP, è possibile specificare l'opzione **\/Oy–** dopo  **\/Ox** oppure utilizzare [optimize](../../preprocessor/optimize.md) con gli argomenti "**y**" e **off** per ottenere la migliore ottimizzazione con tale tipo di indirizzamento.  Il compilatore rileva la maggior parte dei casi in cui l'indirizzamento basato su EBP è necessario, ad esempio con le funzioni `_alloca` e `setjmp` e con la gestione delle eccezioni strutturate.  
-  
- Le opzioni [\/Ox \(Ottimizzazione completa\)](../../build/reference/ox-full-optimization.md) e [\/O1, \/O2 \(Riduci dimensione, Ottimizza velocità\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) implicano **\/Oy**.  Se si specifica **\/Oy–** dopo l'opzione **\/Ox**, **\/O1** o **\/O2**, l'opzione **\/Oy** viene disabilitata, che sia esplicita o implicita.  
-  
- L'opzione del compilatore **\/Oy** rende più complesso l'utilizzo del debugger perché il compilatore sopprime le informazioni relative ai puntatori ai frame.  Se si specifica un'opzione del compilatore per il debug \([\/Z7, \/Zi, \/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)\), è consigliabile specificare l'opzione **\/Oy\-** dopo eventuali opzioni del compilatore relative all'ottimizzazione.  
-  
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
-  
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Fare clic sulla cartella **C\/C\+\+**.  
-  
-3.  Fare clic sulla pagina delle proprietà **Ottimizzazione**.  
-  
-4.  Modificare la proprietà **Ometti puntatori ai frame**.  Questa proprietà consente di aggiungere o rimuovere solo l'opzione **\/Oy**.  Se si desidera aggiungere l'opzione **\/Oy\-**, fare clic su **Riga di comando** e modificare le **Opzioni aggiuntive**.  
-  
-### Per impostare l'opzione del compilatore a livello di codice  
-  
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.  
-  
-## Vedere anche  
- [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md)   
- [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+Disabilita la creazione di puntatori ai frame nello stack di chiamate.
+
+## <a name="syntax"></a>Sintassi
+
+> /Oy [-]
+
+## <a name="remarks"></a>Note
+
+Questa opzione consente di velocizzare l'esecuzione delle chiamate di funzione in quanto non è necessario impostare e rimuovere alcun puntatore ai frame. Libera inoltre un ulteriore registro, EBP sul processore Intel 386 o versioni successive, per l'archiviazione delle variabili e delle sottoespressioni utilizzate di frequente.
+
+**/Oy** consente l'omissione dei puntatori di frame e **/Oy-** Disabilita omissione. **/Oy** è disponibile solo in x86 compilatori.
+
+Se il codice richiede l'indirizzamento basato su EBP, è possibile specificare il **/Oy-** dopo il **/Ox** o utilizzare [ottimizzare](../../preprocessor/optimize.md) con la "**y**" e **off** argomenti per ottenere la massima ottimizzazione con l'indirizzamento basato su EBP. Il compilatore rileva la maggior parte dei casi in cui l'indirizzamento basato su EBP è necessario, ad esempio con le funzioni `_alloca` e `setjmp` e con la gestione delle eccezioni strutturate.
+
+Il [/Ox (abilitare più velocità ottimizzazioni)](../../build/reference/ox-full-optimization.md) e [/O1, /O2 (Riduci dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opzioni presuppongono **/Oy**. Specifica di **/Oy-** dopo il **/Ox**, **/O1**, o **/O2** opzione Disabilita **/Oy**, se si tratta di esplicita o implicita.
+
+Il **/Oy** rende opzione del compilatore utilizzando il debugger più difficile perché il compilatore elimina le informazioni sul puntatore di frame. Se si specifica un'opzione del compilatore di debug ([/Z7, /Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)), è consigliabile specificare il **/Oy-** opzione dopo eventuali altre opzioni di ottimizzazione del compilatore.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
+
+1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
+
+1. Fare clic sulla cartella **C/C++** .
+
+1. Fare clic su di **ottimizzazione** pagina delle proprietà.
+
+1. Modificare il **Ometti puntatori ai Frame** proprietà. Questa proprietà consente di aggiungere o rimuovere solo il **/Oy** opzione. Se si desidera aggiungere il **/Oy-** opzione, fare clic su **riga di comando** e modificare **opzioni aggiuntive**.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice
+
+- Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitFramePointers%2A>.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)
+
+[Opzioni del compilatore](../../build/reference/compiler-options.md)
+
+[Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

@@ -1,38 +1,37 @@
 ---
-title: "CDataSource::OpenWithServiceComponents | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource::OpenWithServiceComponents"
-  - "OpenWithServiceComponents"
-  - "CDataSource.OpenWithServiceComponents"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenWithServiceComponents (metodo)"
+title: 'CDataSource:: Openwithservicecomponents | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource::OpenWithServiceComponents
+- OpenWithServiceComponents
+- CDataSource.OpenWithServiceComponents
+dev_langs: C++
+helpviewer_keywords: OpenWithServiceComponents method
 ms.assetid: 49c1d037-36ae-4fde-8e54-ced623abe1a9
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ce2f96937bfd037cc949142bf357447ac29c0ace
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::OpenWithServiceComponents
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdatasourceopenwithservicecomponents"></a>CDataSource::OpenWithServiceComponents
 Apre un oggetto origine dati usando i componenti del servizio in oledb32.dll.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-        HRESULT OpenWithServiceComponents (  
+      HRESULT OpenWithServiceComponents (  
    const CLSID clsid,  
    DBPROPSET* pPropset = NULL,  
    ULONG ulPropSets = 1   
@@ -44,27 +43,27 @@ HRESULT OpenWithServiceComponents (
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `clsid`  
- \[in\] **CLSID** di un provider di dati.  
+ [in] Il **CLSID** di un provider di dati.  
   
  `szProgID`  
- \[in\] ID programma di un provider di dati.  
+ [in] ID programma di un provider di dati.  
   
  `pPropset`  
- \[in\] Puntatore a una matrice di strutture [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) che contiene le proprietà e i valori da impostare.  Vedere [Set di proprietà e gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx) nelle *informazioni di riferimento per programmatori OLE DB* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  Se l'oggetto origine dati viene inizializzato, le proprietà devono appartenere al gruppo di proprietà Data Source.  Se si specifica la stessa proprietà più di una volta in `pPropset`, il valore usato dipende dal provider.  Se `ulPropSets` è zero, questo parametro viene ignorato.  
+ [in] Un puntatore a una matrice di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture contenenti le proprietà e valori da impostare. Vedere [set di proprietà e i gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx) nel *di riferimento per programmatori OLE DB* in Windows SDK. Se l'oggetto origine dati viene inizializzato, le proprietà devono appartenere al gruppo di proprietà Data Source. Se si specifica la stessa proprietà più di una volta in `pPropset`, il valore usato dipende dal provider. Se `ulPropSets` è zero, questo parametro viene ignorato.  
   
  `ulPropSets`  
- \[in\] Numero di strutture [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) passate nell'argomento *pPropSet*.  Se è zero, il provider ignora `pPropset`.  
+ [in] Il numero di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture passato il *pPropSet* argomento. Se è zero, il provider ignora `pPropset`.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  `HRESULT` standard.  
   
-## Note  
- Questo metodo apre un oggetto origine dati usando i componenti del servizio in oledb32.dll. Questa DLL contiene l'implementazione delle funzionalità dei componenti del servizio, come il pool di risorse, l'inserimento automatico delle transazioni e così via.  Per altre informazioni, vedere "Servizi OLE DB" nelle informazioni di riferimento per programmatori OLE DB all'indirizzo [http:\/\/msdn.microsoft.com\/library\/default.asp?url\=\/library\/oledb\/htm\/oledbole\_db\_services.asp?frame\=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
+## <a name="remarks"></a>Note  
+ Questo metodo apre un oggetto origine dati usando i componenti del servizio in oledb32.dll. Questa DLL contiene l'implementazione delle funzionalità dei componenti del servizio, come il pool di risorse, l'inserimento automatico delle transazioni e così via. Per ulteriori informazioni, vedere "Servizi OLE DB" nel riferimento di OLE DB Programmer in [http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDataSource](../../data/oledb/cdatasource-class.md)

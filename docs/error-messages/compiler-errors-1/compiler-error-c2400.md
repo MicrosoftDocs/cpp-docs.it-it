@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2400
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2400
+f1_keywords: C2400
+dev_langs: C++
+helpviewer_keywords: C2400
 ms.assetid: 1ba441ee-73f9-42a5-bfe9-fbeab93808eb
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: b819c81a3475a541fb672094bbdfa62b2fcfe6d6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2400"></a>Errore del compilatore C2400
 Errore di sintassi dell'assembler inline in 'context'; trovato 'token'  

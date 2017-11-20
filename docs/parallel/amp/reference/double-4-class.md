@@ -1,11 +1,10 @@
 ---
-title: Classe double_4 | Documenti di Microsoft
+title: Classe double_4 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7a55f3f39562481ba7a4b189293dfe59891740fe
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: f1c1750c7c2e372bf296311cdd13467aaa98a888
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="double4-class"></a>Classe double_4
 Rappresenta uno short vector di quattro valori Double.  
@@ -323,7 +306,7 @@ class double_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore double_4](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore double_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -628,7 +611,7 @@ class double_4;
   
 ##  <a name="ctor"></a>double_4 
 
- Predefinito costruttore inizializza tutti gli elementi con 0.  
+ Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 double_4() restrict(amp,
@@ -695,7 +678,7 @@ explicit inline double_4(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ##  <a name="double_4__size"></a>dimensioni 
 
@@ -705,4 +688,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

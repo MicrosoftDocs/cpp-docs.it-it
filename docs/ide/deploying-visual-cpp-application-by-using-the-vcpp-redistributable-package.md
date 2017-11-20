@@ -1,98 +1,96 @@
 ---
-title: "Procedura dettagliata: distribuire un&#39;applicazione Visual C++ tramite Visual C++ Redistributable Package | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "procedura dettagliata, distribuzione di un'applicazione Visual C++ tramite il pacchetto ridistribuibile"
+title: Distribuire un'App usando il pacchetto ridistribuibile (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 57fb700ef65a0929431eeb3e2230853c651ef25a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura dettagliata: distribuire un&#39;applicazione Visual C++ tramite Visual C++ Redistributable Package
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo articolo dettagliato viene descritto come utilizzare Visual C\+\+ Redistributable Package per distribuire un'applicazione di Visual C\+\+.  
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Procedura dettagliata: distribuire un'applicazione Visual C++ tramite Visual C++ Redistributable Package
+In questo articolo viene descritto come usare Visual C++ Redistributable Package per distribuire un'applicazione Visual C++.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
  È necessario che questi componenti per completare questa procedura dettagliata:  
   
--   Un computer con Visual Studio installata.  
+-   Un computer in cui è installato Visual Studio.  
   
--   Un computer aggiuntivo che non dispone delle librerie Visual C\+\+.  
+-   Un computer aggiuntivo che non dispone delle librerie Visual C++.  
   
-### Per utilizzare Visual C\+\+ Redistributable Package per distribuire un'applicazione  
+### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Per usare Visual C++ Redistributable Package per distribuire un'applicazione  
   
-1.  Creare e compilare un'applicazione MFC seguendo i primi tre passaggi in [Walkthrough: Deploying a Visual C\+\+ Application By Using a Setup Project](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+1.  Creare e compilare un'applicazione MFC seguendo i primi tre passaggi [procedura dettagliata: distribuzione di un Visual C++ applicazione mediante un progetto di installazione](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
-2.  Creare un file, denominarlo setup.bat e aggiungere i controlli seguenti a.  Modificare `MyMFCApplication` al nome del progetto.  
+2.  Creare un file, denominarla setup.bat e aggiungervi i comandi seguenti. Modifica `MyMFCApplication` per il nome del progetto.  
   
-    ```  
+    ```cmd
     @echo off  
     vcredist_x86.exe  
     mkdir "C:\Program Files\MyMFCApplication"  
     copy MyMFCApplication.exe "C:\Program Files\MyMFCApplication"  
     ```  
   
-3.  Creare un file di installazione autoestraente:  
+3.  Creare un file autoestraente di programma di installazione:  
   
-    1.  Al prompt dei comandi o nella finestra **Esegui**, eseguire iexpress.exe.  
+    1.  A un prompt dei comandi o nel **eseguire** finestra, eseguire iexpress.exe.  
   
-    2.  **Crea nuovo file SED** quindi selezionare il pulsante **Avanti**.  
+    2.  Selezionare **Crea nuovo file SED** e quindi scegliere il **Avanti** pulsante.  
   
-    3.  **Estrazione file ed esecuzione comando di installazione** quindi scegliere **Avanti**.  
+    3.  Selezionare **estrarre file ed eseguire un comando di installazione** e quindi scegliere **Avanti**.  
   
-    4.  Nella casella di testo, il nome dell'applicazione MFC e quindi scegliere **Avanti**.  
+    4.  Nella casella di testo, immettere il nome dell'applicazione MFC e quindi scegliere **Avanti**.  
   
-    5.  Nella pagina **Richiesta di conferma**, **Senza richiesta** quindi scegliere **Avanti**.  
+    5.  Nel **richiesta di conferma** selezionare **nessuna richiesta** e quindi scegliere **Avanti**.  
   
-    6.  Nella pagina **Contratto di Licenza**, **Non visualizzare alcun contratto** quindi scegliere **Avanti**.  
+    6.  Nel **contratto di licenza** selezionare **non è disponibile una licenza** e quindi scegliere **Avanti**.  
   
-    7.  Nella pagina **File del pacchetto** aggiungere i file seguenti, quindi scegliere **Avanti**.  
+    7.  Nel **incluso nel pacchetto di file** pagina, aggiungere i file seguenti e quindi scegliere **Avanti**.  
   
-        -   L'applicazione MFC \(file EXE\).  
+        -   Applicazione MFC (file .exe).  
   
-        -   vcredist\_x86.exe.  Questo file si trova in \\Program Files\\Microsoft SDKs\\Windows\\v7.0A\\Bootstrapper\\Packages\\vcredist\_x86\\.  
+        -   vcredist_x86.exe. Questo file si trova in \Programmi\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages\vcredist_x86\\.  
   
-        -   Il file setup.bat creato al passaggio precedente.  
+        -   Il file setup.bat che è stato creato nel passaggio precedente.  
   
-    8.  Nella pagina **Programma di installazione**, nella casella di testo **Programma di installazione**, immettere la seguente riga di comando e quindi scegliere **Avanti**.  
+    8.  Nel **programma di installazione** nella pagina di **programma di installazione** casella di testo, immettere la riga di comando seguente e quindi scegliere **Avanti**.  
   
-         **cmd.exe \/c "setup.bat"**  
+         **cmd.exe /c "setup.bat"**  
   
-    9. Nella pagina **Mostra finestra**, **Predefinito** quindi scegliere **Avanti**.  
+    9. Nel **Mostra finestra** selezionare **predefinito** e quindi scegliere **Avanti**.  
   
-    10. Nella pagina **Messaggio finale**, **Nessun messaggio** selezionato quin**Avanti**.  
+    10. Nel **messaggio finale** selezionare **alcun messaggio** e quindi scegliere **Avanti**.  
   
-    11. Nella pagina **Nome e opzioni del pacchetto** l, un nome per il file di installazione autoestraente, selezionare l'opzione **Salva file con nomi file lunghi all'interno del pacchetto** quindi scegliere **Avanti**.  La fine del nome file deve essere esempio di Setup.exe\-for, MyMFCApplicationSetup.exe.  
+    11. Nel **nome del pacchetto e le opzioni** pagina, immettere un nome per il file autoestraente il programma di installazione, seleziona il **archiviare i file con nomi File lunghi all'interno del pacchetto** opzione e quindi scegliere **Avanti**. La fine del nome file deve essere Setup.exe—for esempio MyMFCApplicationSetup.exe.  
   
-    12. Nella pagina **Configurazione riavvio del computer**, **Nessun riavvio** quindi scegliere **Avanti**.  
+    12. Nel **configurare riavvio** selezionare **Nessun riavvio** e quindi scegliere **Avanti**.  
   
-    13. Nella pagina **Salvataggio file SED**, **Salva file SED** quindi scegliere **Avanti**.  
+    13. Nel **salvare SED** selezionare **file Salva Self estrazione direttiva SED** e quindi scegliere **Avanti**.  
   
-    14. Nella pagina **Crea pacchetto**, scegliere **Avanti**.  
+    14. Nel **creare il pacchetto** pagina, scegliere **Avanti**.  
   
-4.  Verificare il file di installazione autoestraente in un altro computer, che non dispone delle librerie di Visual C\+\+:  
+4.  Verificare il file di programma di installazione autoestraente in altro computer, che non include le librerie Visual C++:  
   
-    1.  Un altro computer, scaricare una copia del file di installazione e quindi installarlo eseguendolo e dopo i passaggi che garantiscono.  
+    1.  In altro computer, scaricare una copia del file di installazione e quindi installarlo in esecuzione, e seguendo i passaggi che offre.  
   
     2.  Eseguire l'applicazione MFC.  
   
-         Il file di installazione autoestraente installa l'applicazione MFC situato nella cartella specificata nel passaggio 2.  L'applicazione verrà eseguita correttamente perché il programma di installazione Visual C\+\+ Redistributable Package è incluso nel file di installazione autoestraente.  
+         Il file di programma di installazione autoestraente installa l'applicazione MFC che si trova nella cartella specificata nel passaggio 2. L'applicazione verrà eseguita correttamente perché il programma di installazione di Visual C++ Redistributable Package è incluso nel file di installazione autoestraente.  
   
         > [!IMPORTANT]
-        >  Per determinare la versione del runtime viene installato, il programma di installazione controlla la chiave del Registro di sistema \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\11.0\\VC\\Runtimes\\\[platform\].  Se la versione attualmente installata è più recente della versione che il programma di installazione tenta di installare, il programma di installazione restituisce il successo senza installare la versione precedente e consente una voce aggiuntiva nella pagina installata di programmi nel Pannello di controllo.  
+        >  Per determinare la versione del runtime installata, il programma di installazione controlla il \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes chiave del Registro di sistema\\[piattaforma]. Se la versione attualmente installata è più recente della versione che si sta tentando di installare il programma di installazione, il programma di installazione ha esito positivo senza installare la versione precedente e lascia una voce aggiuntiva nella pagina dei programmi installati nel Pannello di controllo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esempi di distribuzione](../ide/deployment-examples.md)

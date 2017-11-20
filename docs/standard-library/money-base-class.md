@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/std::money_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- money_base class
+f1_keywords: xlocmon/std::money_base
+dev_langs: C++
+helpviewer_keywords: money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: de697e26d04e9d70cb1bbbdf4ecbf269d6918e4e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b9c41737288a4d323057b42f809dcbf4a3f2ff2c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="moneybase-class"></a>Classe money_base
 Questa classe descrive un'enumerazione e una struttura comuni a tutte le specializzazioni della classe modello [moneypunct](../standard-library/moneypunct-class.md).  
@@ -56,7 +51,6 @@ struct pattern
   
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 
 
 

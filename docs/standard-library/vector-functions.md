@@ -6,19 +6,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vector/std::swap
+f1_keywords: vector/std::swap
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
-helpviewer_keywords:
-- std::swap [vector]
-caps.latest.revision: 10
+helpviewer_keywords: std::swap [vector]
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 239ac662d19e3d0aa788e830557c28bc84835828
-ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: e031d39204dd019281b52fd8d3a0127ecbc0424e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvectorgt-functions"></a>Funzioni &lt;vector&gt;
 
@@ -46,5 +43,4 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
   
 ## <a name="see-also"></a>Vedere anche  
  [\<vector>](../standard-library/vector.md)
-
 

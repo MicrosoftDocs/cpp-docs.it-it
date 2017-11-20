@@ -1,46 +1,44 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: ordinati (direttive OpenMP) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 85e4b969c7cf47e2243418db52bbdf2299bdafd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Specifica il codice in parallelizzato per il ciclo deve essere eseguito come un ciclo sequenziale.  
+# <a name="ordered-openmp-directives"></a>ordered (direttive OpenMP)
+Specifica il codice in un parallelo per ciclo deve essere eseguito come un ciclo sequenziale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## Note  
- **ordinato** la direttiva deve essere in l dinamico di un oggetto  [for](../../../parallel/openmp/reference/for-openmp.md) o  **parallelo per** costrutto con  **ordinato** clausola.  
+## <a name="remarks"></a>Note  
+ Il **ordinati** direttiva deve essere compresa l'estensione dinamica di un [per](../../../parallel/openmp/reference/for-openmp.md) o **parallela per** costruire con un **ordinati** clausola.  
   
- **ordinato** la direttiva non supporta clausole di OpenMP.  
+ Il **ordinati** direttiva non supporta clausole OpenMP.  
   
- Per ulteriori informazioni, vedere [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md).  
+ Per ulteriori informazioni, vedere [2.6.6 costrutto ordered](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +80,17 @@ int main( )
 }  
 ```  
   
-  **verificare \(\) iterazione 1**  
-**verificare \(\) iterazione 3**  
-**verificare \(\) iterazione 5**  
-**verificare \(\) iterazione 7**  
-**test1 e test2 ha una durata \(\) iterazione 0**  
-**test1 e test2 ha una durata \(\) iterazione 1**  
-**test1 e test2 ha una durata \(\) iterazione 2**  
-**test1 e test2 ha una durata \(\) iterazione 3**  
-**test1 e test2 ha una durata \(\) iterazione 4**   
-## Vedere anche  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive](../../../parallel/openmp/reference/openmp-directives.md)

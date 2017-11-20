@@ -1,46 +1,45 @@
 ---
-title: "Selecting Foreground or Background Colors (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.color"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], colors"
-  - "colors [C++], Image editor"
+title: Selezione dei colori di sfondo (Editor di immagini per le icone) e in primo piano | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.color
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], colors
+- colors [C++], Image editor
 ms.assetid: 95b3673e-1f1f-40fe-9afd-da914a6d005f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6829b393bdf6b0b9b36256c86b66003c63e1311
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Selecting Foreground or Background Colors (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fatta eccezione per lo strumento **Gomma** sulla barra degli strumenti **Editor di immagini**, disegnare con il colore di primo piano o di sfondo corrente quando si preme rispettivamente il pulsante sinistro o destro del mouse.  
+# <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Selezione dei colori di primo piano e di sfondo (Editor di immagini per le icone)
+Ad eccezione del **gomma**, strumenti di **Editor di immagini** barra degli strumenti di disegno con il colore di primo piano o di sfondo corrente quando si preme il pulsante sinistro o destro del mouse, rispettivamente.  
   
-### Per selezionare un colore primo piano  
+### <a name="to-select-a-foreground-color"></a>Per selezionare un colore primo piano  
   
-1.  Con il pulsante sinistro del mouse, fare clic sul colore desiderato nella [Tavolozza colori](../windows/colors-window-image-editor-for-icons.md).  
+1.  Con il pulsante sinistro del mouse, fare clic sul colore desiderato di [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md).  
   
-### Per selezionare un colore di sfondo  
+### <a name="to-select-a-background-color"></a>Per selezionare un colore di sfondo  
   
-1.  Con il pulsante destro del mouse, fare clic sul colore desiderato nella **Tavolozza colori**.  
+1.  Con il pulsante destro del mouse, fare clic sul colore desiderato di **colori** tavolozza.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

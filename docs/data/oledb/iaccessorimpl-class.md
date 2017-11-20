@@ -1,32 +1,30 @@
 ---
-title: "Classe IAccessorImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IAccessorImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAccessorImpl (classe)"
+title: Classe IAccessorImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IAccessorImpl
+dev_langs: C++
+helpviewer_keywords: IAccessorImpl class
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9601c60f9942719a5360b30acb0c98d86b9300df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IAccessorImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un'implementazione dell'interfaccia di [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx).  
+# <a name="iaccessorimpl-class"></a>Classe IAccessorImpl
+Fornisce un'implementazione del [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) interfaccia.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -40,39 +38,39 @@ template <
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- La classe di oggetto comando o del rowset.  
+ La classe di oggetto set di righe o di comando.  
   
  `BindType`  
- Unità di registrazione per le informazioni di associazione.  L'impostazione predefinita è la struttura di **ATLBINDINGS** \(vedere atldb.h\).  
+ Unità di archiviazione per le informazioni di associazione. Il valore predefinito è il **ATLBINDINGS** struttura (vedere Atldb. h).  
   
  `BindingVector`  
- Unità di registrazione per informazioni sulla colonna.  L'impostazione predefinita è [CAtlMap](../../atl/reference/catlmap-class.md) in cui l'elemento chiave è un valore di **HACCESSOR** e l'elemento value è un puntatore a una struttura di `BindType`.  
+ Unità di archiviazione di informazioni sulle colonne. Il valore predefinito è [CAtlMap](../../atl/reference/catlmap-class.md) in cui l'elemento principale è un **HACCESSOR** valore e l'elemento value è un puntatore a un `BindType` struttura.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)|Costruttore.|  
   
-### Metodi di interfaccia  
+### <a name="interface-methods"></a>Metodi di interfaccia  
   
 |||  
 |-|-|  
 |[AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)|Aggiunge un conteggio dei riferimenti a una funzione di accesso esistente.|  
-|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Crea una funzione di accesso da un insieme di associazioni.|  
-|[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Restituisce le associazioni contenute in una funzione di accesso.|  
+|[CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)|Crea una funzione di accesso da un set di associazioni.|  
+|[GetBindings](../../data/oledb/iaccessorimpl-getbindings.md)|Restituisce le associazioni in una funzione di accesso.|  
 |[ReleaseAccessor](../../data/oledb/iaccessorimpl-releaseaccessor.md)|Rilascia una funzione di accesso.|  
   
-## Note  
- Questa condizione è obbligatoria sui rowset e controlli.  OLE DB richiede i provider di implementare **HACCESSOR**, un tag a una matrice di strutture [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx).  **HACCESSOR**s fornito da `IAccessorImpl` è indirizzi di strutture di `BindType`.  Per impostazione predefinita, `BindType` viene definito come **ATLBINDINGS** nella definizione del modello di `IAccessorImpl`.  `BindType` fornisce un meccanismo utilizzato da `IAccessorImpl` per tenere traccia del numero di elementi nella matrice di **DBBINDING** nonché flag di funzioni di accesso e un conteggio dei riferimenti.  
+## <a name="remarks"></a>Note  
+ Questo campo è obbligatorio nel set di righe e i comandi. OLE DB Provider richiede che implementano un **HACCESSOR**, che è un tag a una matrice di [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) strutture. **HACCESSOR**s forniti da `IAccessorImpl` sono gli indirizzi del `BindType` strutture. Per impostazione predefinita, `BindType` è definito come un **ATLBINDINGS** in `IAccessorImpl`della definizione di modello. `BindType`fornisce un meccanismo utilizzato da `IAccessorImpl` per tenere traccia del numero di elementi nel relativo **DBBINDING** nonché un flag di conteggio e delle funzioni di accesso di riferimento della matrice.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

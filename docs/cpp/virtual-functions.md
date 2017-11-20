@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9c0607bdc502e8478784c1e9e3a884e0c3d3a537
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b2061f887c9f0b391e05ed0c3d2cf3e3c2a5434e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="virtual-functions"></a>Funzioni virtuali
 Una funzione virtuale è una funzione membro che si prevede venga ridefinita nelle classi derivate. Quando si fa riferimento a un oggetto della classe derivata usando un puntatore o un riferimento alla classe base, è possibile chiamare una funzione virtuale per quell'oggetto ed eseguire la versione della classe derivata della funzione.  
@@ -173,4 +170,3 @@ pAccount->Account::PrintBalance();   //  Explicit qualification.
   
  Entrambe le chiamate a `PrintBalance` nell'esempio precedente eliminano il meccanismo di chiamata di funzione virtuale.  
   
-

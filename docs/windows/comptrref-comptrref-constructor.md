@@ -1,32 +1,30 @@
 ---
-title: "Costruttore ComPtrRef::ComPtrRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::ComPtrRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRef, costruttore"
+title: 'Costruttore comptrref:: Comptrref | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::ComPtrRef
+dev_langs: C++
+helpviewer_keywords: ComPtrRef, constructor
 ms.assetid: ce2d2533-fef6-4b2d-b088-6f3db01df5a5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1a23af63156650aa215ca65610a3c8f54bf39461
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Costruttore ComPtrRef::ComPtrRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="comptrrefcomptrref-constructor"></a>Costruttore ComPtrRef::ComPtrRef
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 ComPtrRef(  
@@ -34,18 +32,18 @@ ComPtrRef(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ptr`  
- Il valore sottostante di un altro oggetto di ComPtrRef.  
+ Il valore sottostante di un altro oggetto ComPtrRef.  
   
-## Note  
- Inizializza una nuova istanza della classe di ComPtrRef da un puntatore specificato a un altro oggetto di ComPtrRef.  
+## <a name="remarks"></a>Note  
+ Inizializza una nuova istanza della classe ComPtrRef dal puntatore specificato a un altro oggetto ComPtrRef.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Comptrref (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

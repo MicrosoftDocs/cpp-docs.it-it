@@ -1,73 +1,72 @@
 ---
-title: "Pagina delle propriet&#224; NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.ReBuildCommandLine"
-  - "VC.Project.VCNMakeTool.CleanCommandLine"
-  - "VC.Project.VCNMakeTool.Output"
-  - "VC.Project.VCNMakeTool.BuildCommandLine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMake (pagina delle proprietà)"
+title: "Pagina delle proprietà NMake | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCNMakeTool.ReBuildCommandLine
+- VC.Project.VCNMakeTool.CleanCommandLine
+- VC.Project.VCNMakeTool.Output
+- VC.Project.VCNMakeTool.BuildCommandLine
+dev_langs: C++
+helpviewer_keywords: NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c487cf7218f11ba6a6a27ddcf5e7b6b575b1499
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Pagina delle propriet&#224; NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le pagine delle proprietà **NMake** consentono di specificare le impostazioni di compilazione per i progetti NMake.  
+# <a name="nmake-property-page"></a>NMake (pagina delle proprietà)
+Il **NMake** pagina delle proprietà consente di specificare le impostazioni di compilazione per i progetti NMake.  
   
- Per ulteriori informazioni sui progetti NMAKE, vedere [Creazione di un progetto makefile](../ide/creating-a-makefile-project.md).  
+ Per ulteriori informazioni sui progetti NMake, vedere [creazione di un progetto Makefile](../ide/creating-a-makefile-project.md).  
   
- Nella pagina delle proprietà **NMake** sono disponibili le seguenti proprietà.  
+ Il **NMake** pagina delle proprietà contiene le proprietà seguenti.  
   
-## Elenco UIElement  
- **Compila da riga di comando**  
- Consente di specificare il comando da eseguire quando si sceglie **Compila** dal menu **Compila**.  
+## <a name="uielement-list"></a>Elenco UIElement  
+ **Riga di comando di compilazione**  
+ Specifica il comando da eseguire quando **compilare** si fa clic su di **compilare** menu.  
   
  **Ricompila tutto da riga di comando**  
- Consente di specificare il comando da eseguire quando si sceglie **Ricompila tutto** dal menu **Compila**.  
+ Specifica il comando da eseguire quando **Ricompila tutto** si fa clic su di **compilare** menu.  
   
- **Pulisci da riga di comando**  
- Consente di specificare il comando da eseguire quando si sceglie **Pulisci** dal menu **Compila**.  
+ **Eseguire la pulizia della riga di comando**  
+ Specifica il comando da eseguire quando **Pulisci** si fa clic su di **compilare** menu.  
   
  **Output**  
- Consente di specificare il nome del file contenente l'output per la riga di comando.  Per impostazione predefinita, questo nome di file si basa sul nome del progetto.  
+ Specifica il nome del file che conterrà l'output per la riga di comando. Per impostazione predefinita, questo nome di file è basato sul nome del progetto.  
   
- **Definizioni preprocessore**  
- Specifica ogni definizione del preprocessore utilizzata nei file d'origine.  Il valore predefinito è determinato dalla piattaforma e dalla configurazione correnti.  
+ **Definizioni del preprocessore**  
+ Specifica le definizioni del preprocessore che utilizzato dai file di origine. Il valore predefinito è la piattaforma corrente e la configurazione.  
   
- **Percorsi di ricerca**  
- Specifica le directory dove il compilatore cerca file di inclusione.  
+ **Percorso di ricerca**  
+ Specifica la directory in cui il compilatore cerca i file di inclusione.  
   
- **Imposti**  
- Specifica file che il preprocessore elabora automaticamente anche se non sono inclusi nei file di progetto.  
+ **Forzato include**  
+ Specifica i file che il preprocessore elabora automaticamente anche se non vengono inclusi nei file di progetto.  
   
- **Percorsi di ricerca dell'assembly**  
- Specifica le directory dove cerca .NET Framework quando tenta di risolvere assembly .NET.  
+ **Percorso di ricerca assembly**  
+ Specifica le directory in cui .NET Framework Cerca quando si tenta di risolvere l'assembly .NET.  
   
- **Assembly imposti**  
- Specifica assembly che .NET Framework elabora automaticamente.  
+ **Forzare l'utilizzo di assembly**  
+ Specifica gli assembly .NET Framework elabora automaticamente.  
   
  **Opzioni aggiuntive**  
- Specifica qualsiasi opzione del compilatore aggiuntiva affinché IntelliSense la utilizzi quando analizza file C\+\+.  
+ Specifica le opzioni aggiuntive del compilatore per IntelliSense da usare quando si analizza file C++.  
   
- Per informazioni sull'accesso alla pagina delle proprietà **NMake**, vedere [Procedura: specificare le proprietà dei progetti tramite Pagine delle proprietà](../misc/how-to-specify-project-properties-with-property-pages.md).  
+ Per informazioni sulle modalità di accesso di **NMake** pagina delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
   
  Per informazioni su come accedere a livello di codice ai membri di questo oggetto, vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [Procedura: abilitare IntelliSense per progetti makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)
+ [Procedura: Abilitare IntelliSense per progetti makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)

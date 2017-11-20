@@ -1,34 +1,35 @@
 ---
-title: "Using a Window | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, finestre"
-  - "CWindow class, about CWindow class"
-  - "windows [C++], ATL"
+title: Utilizzare una finestra (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- CWindow class, about CWindow class
+- windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e4cc64dd524615c003619466f66f4bf92ab62f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Using a Window
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe [CWindow](../atl/reference/cwindow-class.md) consente di utilizzare una finestra.  Una volta che si associa una finestra a un oggetto `CWindow`, è possibile chiamare i metodi `CWindow` per modificare la finestra.  `CWindow` contiene anche un operatore `HWND` per convertire un oggetto `CWindow` a `HWND`.  È possibile passare un oggetto `CWindow` a qualsiasi funzione che richiede un handle a una finestra.  È possibile combinare chiamate al metodo `CWindow` e le chiamate di funzione Win32, senza creare oggetti temporanei.  
+# <a name="using-a-window"></a>Utilizzare una finestra
+Classe [CWindow](../atl/reference/cwindow-class.md) consente di utilizzare una finestra. Dopo aver collegato una finestra per un `CWindow` dell'oggetto, è quindi possibile chiamare `CWindow` metodi per modificare la finestra. `CWindow`contiene inoltre un `HWND` per convertire un `CWindow` l'oggetto in un `HWND`. È quindi possibile passare un `CWindow` oggetto a qualsiasi funzione che richiede un handle a una finestra. È possibile combinare facilmente `CWindow` chiamate al metodo e chiamate di funzione Win32, senza creare oggetti temporanei.  
   
- Poiché `CWindow` dispone di due membri dati \(un handle di finestra e le dimensioni di impostazione predefinita\), non richiedono un sovraccarico al codice.  Inoltre, molti dei metodi `CWindow` eseguono il wrapping con le corrispondenti funzioni API Win32.  Utilizzando `CWindow`, il membro `HWND` viene passato automaticamente alla funzione Win32.  
+ Poiché `CWindow` ha solo due membri dati, un handle di finestra e le dimensioni predefinite, non è previsto un overhead nel codice. Inoltre, molte del `CWindow` semplicemente eseguono il wrapping di funzioni API Win32 corrispondenti. Utilizzando `CWindow`, `HWND` membro automaticamente è passato alla funzione Win32.  
   
- Oltre a utilizzare `CWindow` direttamente, è anche possibile derivare da per aggiungere dati o il codice alla classe.  ATL stesso deriva da tre classi `CWindow`: [CWindowImpl](../atl/implementing-a-window.md), [CDialogImpl](../atl/implementing-a-dialog-box.md)e [CContainedWindowT](../atl/using-contained-windows.md).  
+ Oltre a utilizzare `CWindow` direttamente, è anche possibile derivare da esso per aggiungere dati o codice alla classe. ATL stesso deriva tre classi da `CWindow`: [CWindowImpl](../atl/implementing-a-window.md), [CDialogImpl](../atl/implementing-a-dialog-box.md), e [CContainedWindowT](../atl/using-contained-windows.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classi di finestra](../atl/atl-window-classes.md)
+

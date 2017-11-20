@@ -1,48 +1,30 @@
 ---
-title: Struttura short_vector | Documenti di Microsoft
+title: Struttura short_vector | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - short_vector
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: f8df5600c8af80b4d279fc1fde0cc4c2ab9337eb
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8245c5ebf1013f226bcef5050e3a91680b837b67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="shortvector-structure"></a>Struttura short_vector
-short_vector fornisce definizioni di metaprogrammazione che risultano utili per la programmazione generica short Vector.  
+short_vector fornisce definizioni di metaprogrammazione basato su cui sono utili per la programmazione in modo generico short Vector.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -135,5 +117,4 @@ short_vector();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
-
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

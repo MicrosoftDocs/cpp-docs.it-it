@@ -1,28 +1,28 @@
 ---
-title: "Classe DeferrableEventArgs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: Classe DeferrableEventArgs | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27107c794dfd4987eb0519dfeaa9762f47d0417c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe DeferrableEventArgs
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="deferrableeventargs-class"></a>Classe DeferrableEventArgs
 Classe di modello usata per i tipi di argomento evento per rinvii.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 template <  
@@ -33,31 +33,31 @@ class DeferrableEventArgs : public TEventArgsInterface
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `TEventArgsInterface`  
  Tipo di interfaccia che dichiara gli argomenti per un evento posticipato.  
   
  `TEventArgsClass`  
  Classe che implementa `TEventArgsInterface`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo DeferrableEventArgs::GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)|Ottiene un riferimento all'oggetto [Deferral](http://go.microsoft.com/fwlink/?LinkId=526520) che rappresenta un evento posticipato.|  
+|[Metodo DeferrableEventArgs::GetDeferral](../windows/deferrableeventargs-getdeferral-method.md)|Ottiene un riferimento di [rinvio](http://go.microsoft.com/fwlink/?LinkId=526520) oggetto che rappresenta un evento posticipato.|  
 |[Metodo DeferrableEventArgs::InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md)|Chiamato per indicare il completamento dell'elaborazione per la gestione di un evento posticipato.|  
   
-## Note  
- Istanze di questa classe vengono passate ai gestori eventi per eventi posticipati.  I parametri del modello rappresentano un'interfaccia che definisce i dettagli degli argomenti dell'evento per un tipo specifico di evento posticipato e una classe che implementa tale interfaccia.  
+## <a name="remarks"></a>Note  
+ Istanze di questa classe vengono passate ai gestori eventi per eventi posticipati. I parametri del modello rappresentano un'interfaccia che definisce i dettagli degli argomenti dell'evento per un tipo specifico di evento posticipato e una classe che implementa tale interfaccia.  
   
- La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato.  È possibile chiamare il metodo [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) per ottenere l'oggetto [Deferral](http://go.microsoft.com/fwlink/?LinkId=526520) da cui è possibile ottenere tutte le informazioni sull'evento posticipato.  Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral.  È necessario quindi chiamare [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati sia comunicato correttamente.  
+ La classe viene visualizzata come primo argomento a un gestore eventi per un evento posticipato. È possibile chiamare il [GetDeferral](../windows/deferrableeventargs-getdeferral-method.md) metodo per ottenere il [rinvio](http://go.microsoft.com/fwlink/?LinkId=526520) oggetto da cui è possibile ottenere tutte le informazioni sull'evento posticipato. Dopo aver completato la gestione degli eventi, è necessario chiamare Complete sull'oggetto Deferral. È necessario chiamare [InvokeAllFinished](../windows/deferrableeventargs-invokeallfinished-method.md) alla fine del metodo del gestore eventi, che assicura che il completamento di tutti gli eventi posticipati sia comunicato correttamente.  
   
-## Requisiti  
- **Intestazione:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -1,44 +1,43 @@
 ---
-title: "Pagine delle propriet&#224; HLSL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.FXCompilerTool.AdditionalOptionsPage"
-dev_langs: 
-  - "C++"
+title: "Pagine delle proprietà HLSL | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.FXCompilerTool.AdditionalOptionsPage
+dev_langs: C++
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-caps.latest.revision: 8
-author: "BrianPeek"
-ms.author: "brpeek"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33c40b6f240d89c9f38b1fba075679da26b1cb21
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Pagine delle propriet&#224; HLSL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare le pagine delle proprietà del compilatore di HLSL \(fxc.exe\) per configurare come singoli file di shader di HLSL sono compilati.  Le proprietà sono suddivise in tre categorie:  
+# <a name="hlsl-property-pages"></a>Pagine delle proprietà HLSL
+È possibile utilizzare le pagine delle proprietà HLSL del compilatore (fxc.exe) per configurare gli shader HLSL come singoli file vengono compilati. Le proprietà sono divise in tre categorie:  
   
 -   [Pagine delle proprietà HLSL: Generale](../ide/hlsl-property-pages-general.md)  
   
-     Fornisce proprietà per specificare le opzioni utilizzate più frequentemente per il compilatore di HLSL.  
+     Fornisce proprietà per specificare le opzioni di uso comune per il compilatore HLSL.  
   
 -   [Pagine delle proprietà HLSL: Avanzate](../ide/hlsl-property-pages-advanced.md)  
   
-     Fornisce proprietà per specificare ulteriori opzioni del compilatore di HLSL.  
+     Fornisce proprietà per specificare opzioni aggiuntive per il compilatore HLSL.  
   
 -   [Pagine delle proprietà HLSL: file di output](../ide/hlsl-property-pages-output-files.md)  
   
-     Fornisce proprietà per specificare quali file sono restituiti dal compilatore di HLSL.  
+     Fornisce proprietà per specificare la modalità file di output del compilatore HLSL.  
   
- È possibile specificare gli argomenti della riga di comando al compilatore di HLSL utilizzando la proprietà **Opzioni aggiuntive** della pagina delle proprietà **Riga di comando** ; sono inclusi gli argomenti non possono essere configurati mediante altre proprietà delle pagine delle proprietà di HLSL.  Per informazioni sul compilatore di HLSL, vedere [Strumento di Effetto\- compilatore](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ È possibile specificare argomenti della riga di comando nel compilatore HLSL usando il **opzioni aggiuntive** proprietà del **riga di comando** pagina delle proprietà; inclusi gli argomenti che non possono essere configurati tramite altre proprietà delle pagine delle proprietà HLSL. Per informazioni sul compilatore HLSL, vedere [strumento compilatore](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [Pagine delle proprietà Riga di comando](../ide/command-line-property-pages.md)   
- [Compilazione di shader](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+ [Pagine delle proprietà riga di comando](../ide/command-line-property-pages.md)   
+ [La compilazione di shader](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

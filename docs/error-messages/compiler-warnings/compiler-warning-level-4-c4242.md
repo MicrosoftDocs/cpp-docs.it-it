@@ -1,38 +1,36 @@
 ---
-title: "Avviso del compilatore (livello 4) C4242 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4242"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4242"
+title: Compilatore (livello 4) avviso C4242 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4242
+dev_langs: C++
+helpviewer_keywords: C4242
 ms.assetid: 8df742e1-fbf1-42f3-8e93-c0e1c222dc7e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b0e51952a615037b4df3a43fb37cd4f3dc3e717e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4242
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificatore': conversione da 'tipo1' a 'tipo2'. Possibile perdita di dati  
+# <a name="compiler-warning-level-4-c4242"></a>Avviso del compilatore (livello 4) C4242
+'identifier': conversione da 'type1' a 'type2', possibile perdita di dati  
   
- Se i tipi sono diversi,  la conversione di tipo, eseguita dal compilatore, può provocare  la perdita di dati.  
+ I tipi sono diversi. Conversione di tipo può comportare la perdita di dati. Il compilatore effettua la conversione del tipo.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Per ulteriori informazioni sull'avviso C4242, vedere la sezione relativa agli errori comuni del compilatore[winprog64.common\_compiler\_errors](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
+ Per ulteriori informazioni sull'avviso C4242, vedere [errori comuni del compilatore](http://msdn.microsoft.com/library/windows/desktop/aa384160).  
   
- Il seguente codice di esempio genera l'errore C4242:  
+ L'esempio seguente genera l'errore C4242:  
   
 ```  
 // C4242.cpp  

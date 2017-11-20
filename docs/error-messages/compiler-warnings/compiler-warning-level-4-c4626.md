@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 4) C4626 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4626"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4626"
+title: Compilatore avviso (livello 4) C4626 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4626
+dev_langs: C++
+helpviewer_keywords: C4626
 ms.assetid: 7f822ff4-a4a3-4f17-b45b-e8b7b4659a14
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a280faadea23ced85c5b8256fd6b00c8d84370f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4626
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4626"></a>Avviso del compilatore (livello 4) C4626
 'derived class': l'operatore di assegnazione è stato definito in modo implicito come eliminato perché un operatore di assegnazione della classe di base è inaccessibile o è stato eliminato  
   
- Un operatore di assegnazione è stato eliminato o non è accessibile in una classe di base e quindi non è stato generato per una classe derivata.  Qualsiasi tentativo di assegnare oggetti di questo tipo causerà un errore del compilatore.  
+ Un operatore di assegnazione è stato eliminato o non è accessibile in una classe di base e quindi non è stato generato per una classe derivata. Qualsiasi tentativo di assegnare oggetti di questo tipo causerà un errore del compilatore.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  L'esempio seguente genera l'errore C4626 e mostra come risolverlo:  
   

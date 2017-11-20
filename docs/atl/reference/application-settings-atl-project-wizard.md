@@ -1,62 +1,61 @@
 ---
-title: "Impostazioni applicazione, Creazione guidata progetto ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.atl.com.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata progetto ATL, impostazioni applicazione"
+title: Creazione guidata progetto di impostazioni applicazione, ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.appwiz.atl.com.appset
+dev_langs: C++
+helpviewer_keywords: ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 312c2b879f19e670d9737bfa530e0cc2a35bfe58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Impostazioni applicazione, Creazione guidata progetto ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per progettare e aggiungere funzionalità di base per un nuovo progetto ATL, utilizzare la pagina **Impostazioni applicazione** della Creazione guidata progetto ATL.  
+# <a name="application-settings-atl-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto ATL
+Utilizzare il **le impostazioni dell'applicazione** pagina della creazione guidata progetto ATL per progettare e aggiungere funzionalità di base a un nuovo progetto ATL.  
   
-## Tipo di server  
- È possibile selezionare uno dei tre tipi di server riportati di seguito.  
+## <a name="server-type"></a>Tipo di server  
+ Scegliere uno dei tre tipi di server:  
   
- **Libreria a collegamento dinamico \(DLL\)**  
- Selezionare questa opzione per creare un server in\-process.  
+ **Libreria di collegamento dinamico (DLL)**  
+ Selezionare questa opzione per creare un server in-process.  
   
- **Eseguibile \(EXE\)**  
- Selezionare questa opzione per creare un server out\-of\-process locale.  Questa opzione non consente il supporto di MFC o COM\+ 1.0,  né il merge con il codice proxy\/stub.  
+ **File eseguibile (EXE)**  
+ Selezionare questa opzione per creare un server out-of-process locale. Questa opzione non consente il supporto per MFC o COM+ 1.0. Non consente l'unione di codice proxy/stub.  
   
- **Servizio \(EXE\)**  
- Selezionare questa opzione per creare un'applicazione Windows eseguita in background all'avvio di Windows.  Questa opzione non consente il supporto di MFC o COM\+ 1.0, né il merge con il codice proxy\/stub.  
+ **Servizio (con estensione EXE)**  
+ Selezionare questa opzione per creare un'applicazione Windows che viene eseguito in background all'avvio di Windows. Questa opzione non consente il supporto per COM+ 1.0 o MFC o non consente l'unione di codice proxy/stub.  
   
-## Opzioni aggiuntive  
+## <a name="additional-options"></a>Opzioni aggiuntive  
   
 > [!NOTE]
->  Tutte le opzioni aggiuntive sono disponibili soltanto per i progetti DLL.  
+>  Tutte le opzioni aggiuntive sono disponibili per i progetti DLL solo.  
   
- **Consenti merge di codice proxy\/stub**  
- La selezione della casella di controllo **Consenti merge di codice proxy\/stub** può essere utile quando è richiesto il marshalling delle interfacce.  Con questa opzione, il codice stub e proxy generato da MIDL viene inserito nello stesso eseguibile del server.  
+ **Consenti merge di codice proxy/stub**  
+ Selezionare il **Consenti merge di codice proxy/stub** casella di controllo è utile quando è necessario il marshalling di interfacce. Questa opzione viene inserito il codice proxy e stub generato da MIDL nello stesso eseguibile del server.  
   
- **MFC supporto tecnico**  
- Selezionare questa opzione per includere nell'oggetto il supporto di MFC.  Con questa opzione, il progetto viene collegato alle librerie MFC ed è quindi possibile accedere alle classi e alle funzioni in esse contenute.  
+ **Supporto MFC**  
+ Selezionare questa opzione per specificare che l'oggetto include il supporto MFC. Questa opzione i collegamenti del progetto per le librerie MFC in modo che è possibile accedere alle classi e funzioni che contengono.  
   
- **Supporto COM\+ 1.0**  
- Selezionare questa opzione per modificare le impostazioni di compilazione del progetto in modo da supportare i componenti COM\+ 1.0.  Oltre all'elenco standard di librerie, la creazione guidata aggiunge la libreria specifica dei componenti COM\+ 1.0 comsvcs.lib.  
+ **Supporto COM+ 1.0**  
+ Selezionare questa opzione per modificare le impostazioni di compilazione progetto per supportare i componenti COM+ 1.0. Oltre all'elenco standard di librerie, la procedura guidata aggiunge il comsvcs.lib di libreria specifico del componente COM+ 1.0  
   
- All'avvio dell'applicazione, viene inoltre eseguito il caricamento ritardato della libreria mtxex.dll sul sistema host.  
+ Inoltre, il MTXEX è caricata nel sistema host quando viene avviata l'applicazione di ritardo.  
   
--   **Il registrar di registrar del componente di supporto** Se il progetto ATL fornisce supporto per i componenti COM\+ 1,0, è possibile impostare questa opzione.  La funzionalità di registrazione dei componenti consente all'oggetto COM\+ 1.0 di ottenere un elenco dei componenti ed effettuarne o annullarne la registrazione, singolarmente o globalmente.  
+-   **Supporta la registrazione dei componenti** se il progetto ATL contiene supporto per i componenti COM+ 1.0, è possibile impostare questa opzione. La registrazione del componente consente all'oggetto di COM+ 1.0 ottenere un elenco dei componenti, componenti di registrare o annullare la registrazione di componenti (singolarmente o in una sola volta).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md)   
  [Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)   
- [Configurazioni predefinite di progetti ATL](../../atl/reference/default-atl-project-configurations.md)
+ [Configurazioni progetto ATL predefinite](../../atl/reference/default-atl-project-configurations.md)
+

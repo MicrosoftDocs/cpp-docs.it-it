@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __thiscall
 - __thiscall_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __thiscall keyword [C++]
+dev_langs: C++
+helpviewer_keywords: __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 41dd6d823d9889f5ce0216b27ad01a8d29bc57f6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 84922f71433276157342dca8d91293b3c97b0717
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

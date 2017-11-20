@@ -1,27 +1,26 @@
 ---
-title: "A.10   Specifying Sequential Ordering | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Impostazione dell'ordinamento sequenziale A.10 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5c65a9b1-0fc5-4cad-a5a9-9ce10b25d25c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0718147c013ca09c67f3093820ee71b1cef32653
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# A.10   Specifying Sequential Ordering
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-sezioni ordinate \([parte 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22\) essere utile per ordinare in sequenza l'output di lavoro che viene eseguito in parallelo.  Il seguente programma stampa gli indici in ordine sequenziale:  
+# <a name="a10---specifying-sequential-ordering"></a>A.10   Specifica dell'ordinamento sequenziale
+Ordinare le sezioni ([sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22) sono utili per l'ordinamento in sequenza l'output dal lavoro che viene eseguita in parallelo. Il seguente programma stampa gli indici in ordine sequenziale:  
   
 ```  
 #pragma omp for ordered schedule(dynamic)  

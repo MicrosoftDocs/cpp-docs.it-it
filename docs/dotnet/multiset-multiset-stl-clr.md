@@ -1,32 +1,30 @@
 ---
-title: "multiset::multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multiset (membro) [STL/CLR]"
+title: 'multiset:: multiset (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::multiset
+dev_langs: C++
+helpviewer_keywords: multiset member [STL/CLR]
 ms.assetid: a6ddb2df-d7cd-4b12-aee7-81da1f67f57f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43101507218ebc2ab938ee23a12bc2524af81d85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetmultiset-stlclr"></a>multiset::multiset (STL/CLR)
 Costruisce un oggetto contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 multiset();  
@@ -43,79 +41,71 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parametri  
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+#### <a name="parameters"></a>Parametri  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  pred  
- Predicato utilizzato per ordinare la sequenza selezionata.  
+ Ordinamento di predicato per la sequenza controllata.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `multiset();`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `key_compare()`dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato dell'ordinamento predefinito `key_compare()`. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `explicit multiset(key_compare^ pred);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato specificato dell'ordine.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
  `multiset(multiset<Key>% right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``.`[multiset::begin](../dotnet/multiset-begin-stl-clr.md)`(),` `right``.`[multiset::end](../dotnet/multiset-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`di multi\-insieme, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata per l'oggetto multiset `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `multiset(multiset<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``->`[multiset::begin](../dotnet/multiset-begin-stl-clr.md)`(),` `right``->`[multiset::end](../dotnet/multiset-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`di multi\-insieme, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata per l'oggetto multiset `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> multiset(InIter first, InIter last);`  
   
- `multiset(InIter first, InIter last);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`  
   
- `multiset(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato specificato dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
  `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato.  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato specificato dell'ordine.  
+## <a name="example"></a>Esempio  
   
-## Esempio  
-  
-```  
+```cpp  
 // cliext_multiset_construct.cpp   
 // compile with: /clr   
 #include <cliext/set>   
@@ -187,22 +177,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c a b**  
- **a b c**  
- **c a b**  
- **a b c**  
- **c a b**  
- **c a b**  
- **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+ a b c  
+ c b a  
+ a b c  
+ c b a  
+ c b a  
+ a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)   
- [multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)   
+ [multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)

@@ -1,40 +1,39 @@
 ---
-title: "Utilizzo di C o C++ in blocchi __asm | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], elementi di C/C++"
-  - "commenti, blocchi __asm"
-  - "costanti, blocchi __asm"
-  - "assembly inline, combinazione di istruzioni con istruzioni C/C++"
-  - "macro, __asm (blocchi)"
-  - "direttive del preprocessore"
-  - "direttive del preprocessore, blocchi __asm"
-  - "preprocessore, direttive"
-  - "simboli, blocchi __asm"
-  - "nomi di tipi, blocchi __asm"
-  - "nomi typedef, blocchi __asm"
+title: Utilizzo di C o C++ in blocchi asm | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly, mixing instructions with C/C++ statements
+- symbols, in __asm blocks
+- macros, __asm blocks
+- preprocessor directives, used in __asm blocks
+- type names, used in __asm blocks
+- preprocessor directives
+- preprocessor, directives
+- constants, in __asm blocks
+- comments, in __asm blocks
+- typedef names, used in __asm blocks
+- __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fbdb081e10ad08d20580aeec7d42028fbc119560
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizzo di C o C++ in blocchi __asm
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sezione specifica Microsoft  
- Poiché le istruzioni assembly inline possono essere combinate con le istruzioni C\+\+ o C, le stesse possono riferirsi alle variabili C\+\+ o C indicandole per nome e utilizzare molti altri elementi di tali linguaggi.  
+# <a name="using-c-or-c-in-asm-blocks"></a>Utilizzo di C o C++ in blocchi __asm
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Poiché le istruzioni assembly inline possono essere combinate con le istruzioni C++ o C, le stesse possono riferirsi alle variabili C++ o C indicandole per nome e utilizzare molti altri elementi di tali linguaggi.  
   
  Un blocco `__asm` può utilizzare i seguenti elementi di linguaggio:  
   
@@ -44,25 +43,25 @@ manager: "ghogen"
   
 -   Direttive per il preprocessore e macro  
   
--   Commenti \(sia **\/\* \*\/** che **\/\/** \)  
+-   Commenti (sia  **/ \* \* /**  e  **//**  )  
   
--   Nomi dei tipi \(laddove sia possibile utilizzare i tipi MASM\)  
+-   Nomi dei tipi (laddove sia possibile utilizzare i tipi MASM)  
   
--   Nomi `typedef`, in genere utilizzati con operatori come **PTR** e **TYPE** o per specificare membri di struttura o di unione  
+-   `typedef`i nomi, in genere utilizzati con gli operatori, ad esempio **PTR** e **tipo** o per specificare membri di struttura o unione  
   
- All'interno di un blocco `__asm` è possibile specificare le costanti Integer sia con la notazione C che con la notazione base dell'assembler \(ad esempio, 0x100 e 100h sono equivalenti\).  Ciò consente di definire \(utilizzando `#define`\) una costante in C e utilizzarla in seguito nelle parti dell'assembly del programma C o C\+\+.  È inoltre possibile specificare le costanti nel formato ottale precedendole con 0.  Ad esempio, 0777 specifica una costante ottale.  
+ All'interno di un blocco `__asm` è possibile specificare le costanti Integer sia con la notazione C che con la notazione base dell'assembler (ad esempio, 0x100 e 100h sono equivalenti). Ciò consente di definire (utilizzando `#define`) una costante in C e utilizzarla in seguito nelle parti dell'assembly del programma C o C++. È inoltre possibile specificare le costanti nel formato ottale precedendole con 0. Ad esempio, 0777 specifica una costante ottale.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
--   [Utilizzo degli operatori in blocchi \_\_asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
+-   [Uso degli operatori in blocchi __asm](../../assembler/inline/using-operators-in-asm-blocks.md)  
   
--   [Utilizzo di simboli C o C\+\+ in blocchi \_\_asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
+-   [Utilizzo di simboli C o C++ blocchi asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)  
   
--   [Accesso a dati C o C\+\+ in blocchi \_\_asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
+-   [Accesso a dati C o C++ in blocchi __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)  
   
 -   [Scrittura di funzioni con assembly inline](../../assembler/inline/writing-functions-with-inline-assembly.md)  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembler inline](../../assembler/inline/inline-assembler.md)

@@ -1,46 +1,28 @@
 ---
-title: Classe invalid_scheduler_policy_key | Documenti di Microsoft
+title: Classe invalid_scheduler_policy_key | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_scheduler_policy_key
 - CONCRT/concurrency::invalid_scheduler_policy_key
 - CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_scheduler_policy_key class
+dev_langs: C++
+helpviewer_keywords: invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc16ee5aceb8c81c7c745cf535a4cefb5d3b827e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: e260306a896c39f070be6794cf2f63a307b7cd99
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidschedulerpolicykey-class"></a>Classe invalid_scheduler_policy_key
 Questa classe descrive un'eccezione generata quando una chiave non valida o sconosciuta viene passata a un costruttore dell'oggetto `SchedulerPolicy` o il metodo `SetPolicyValue` di un oggetto `SchedulerPolicy` viene passato a una chiave che deve essere modificata mediante altri mezzi come, ad esempio, il metodo `SetConcurrencyLimits`.  
@@ -65,7 +47,7 @@ class invalid_scheduler_policy_key : public std::exception;
  `invalid_scheduler_policy_key`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -86,4 +68,3 @@ invalid_scheduler_policy_key() throw();
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe SchedulerPolicy](schedulerpolicy-class.md)
-

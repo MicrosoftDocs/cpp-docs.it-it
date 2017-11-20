@@ -1,32 +1,30 @@
 ---
-title: "set::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator (membro) [STL/CLR]"
+title: set::generic_iterator (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 2ecc9fde-9fad-49a5-821e-e79304be6c3b
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 93b3dc5855f25766d390083d090cc366a0f02ab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# set::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un iteratore per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="setgenericiterator-stlclr"></a>set::generic_iterator (STL/CLR)
+Il tipo di iteratore per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## Note  
- Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe contenitore del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un iteratore generico che può essere utilizzato con l'interfaccia generica per questa classe di contenitori di modelli.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_set_generic_iterator.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## Requisiti  
- **Intestazione:** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_container](../dotnet/set-generic-container-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)

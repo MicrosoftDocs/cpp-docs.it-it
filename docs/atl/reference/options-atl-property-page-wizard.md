@@ -1,50 +1,49 @@
 ---
-title: "Opzioni, Creazione guidata pagina delle propriet&#224; ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.ppg.options"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata pagina delle proprietà ATL, opzioni"
+title: "Opzioni, creazione guidata pagina delle proprietà ATL | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.codewiz.class.atl.ppg.options
+dev_langs: C++
+helpviewer_keywords: ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 07e8ad589e2b06605e2891ad4233479a0f89ae01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Opzioni, Creazione guidata pagina delle propriet&#224; ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare questa schermata della procedura guidata per definire il modello di threading e il livello di aggregazione della pagina delle proprietà che si sta creando.  
+# <a name="options-atl-property-page-wizard"></a>Opzioni, Creazione guidata pagina delle proprietà ATL
+Utilizzare questa pagina della procedura guidata per definire il livello di aggregazione e modello di threading della pagina delle proprietà che si sta creando.  
   
  **Modello di threading**  
- Consente di specificare il modello di threading utilizzato dalla pagina delle proprietà.  
+ Specifica il modello di threading utilizzato dalla pagina delle proprietà.  
   
- Per ulteriori informazioni, vedere [Specifica del modello di threading del progetto](../../atl/specifying-the-threading-model-for-a-project-atl.md).  
+ Vedere [specifica modello del progetto di Threading](../../atl/specifying-the-threading-model-for-a-project-atl.md) per ulteriori informazioni.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|`Single`|La pagina delle proprietà viene eseguita solo nel thread COM primario.|  
-|**Apartment**|È possibile creare la pagina delle proprietà in qualsiasi Single Thread Apartment.  Valore predefinito.|  
+|------------|-----------------|  
+|`Single`|La pagina delle proprietà viene eseguito solo nel thread COM primario.|  
+|**Apartment**|La pagina delle proprietà può essere creata in un apartment a thread singolo. Valore predefinito.|  
   
  **Aggregazione**  
- Consente di aggiungere il supporto dell'aggregazione per la pagina delle proprietà creata.  Per ulteriori informazioni, vedere [Aggregazione](../../atl/aggregation.md).  
+ Aggiunge il supporto di aggregazione per la pagina delle proprietà che si sta creando. Vedere [aggregazione](../../atl/aggregation.md) per ulteriori informazioni.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Sì**|Utilizzare questa opzione per creare una pagina delle proprietà che è possibile aggregare.|  
-|**No**|Utilizzare questa opzione per creare una pagina delle proprietà che non è possibile aggregare.|  
-|**Solo**|Utilizzare questa opzione per creare una pagina delle proprietà di cui è possibile creare un'istanza solo tramite l'aggregazione.|  
+|------------|-----------------|  
+|**Sì**|Creare una pagina delle proprietà che può essere aggregata.|  
+|**No**|Creare una pagina delle proprietà che non può essere aggregata.|  
+|**Solo**|Creare una pagina delle proprietà che è possibile creare istanze solo tramite l'aggregazione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata pagina delle proprietà ATL](../../atl/reference/atl-property-page-wizard.md)   
- [Stringhe, Creazione guidata pagina delle proprietà ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+ [Stringhe, creazione guidata pagina delle proprietà ATL](../../atl/reference/strings-atl-property-page-wizard.md)
+

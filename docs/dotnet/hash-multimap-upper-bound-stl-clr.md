@@ -1,45 +1,43 @@
 ---
-title: "hash_multimap::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound (membro) [STL/CLR]"
+title: 'hash_multimap:: upper_bound (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: 4fa58df6-63ec-411d-bcf9-301d3c88569a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7f66a0bbbfe37fa14b5c902aea5abd0970b65986
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fine preleva di temporizzazione che corrisponde a una chiave specificata.  
+# <a name="hashmultimapupperbound-stlclr"></a>hash_multimap::upper_bound (STL/CLR)
+Trova fine dell'intervallo che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro determinato l'ultimo elemento `X` sequenza controllata che esegue l'hashing allo stesso bucket di `key` e ha ordine equivalente a `key`.  Se tale elemento non esiste, o se `X` è l'ultimo elemento della sequenza selezionata, restituisce [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`.  Utilizzarla per individuare attualmente la fine di una sequenza di elementi della sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che genera un hash allo stesso bucket di `key` e ha un ordinamento equivalente a `key`. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`. Utilizzarla per individuare la fine di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound \(L'a\) \= \[b 2\]**  
-**\*upper\_bound \(L'b\) \= \[c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::count](../dotnet/hash-multimap-count-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)   
- [hash\_multimap::find](../dotnet/hash-multimap-find-stl-clr.md)   
- [hash\_multimap::lower\_bound](../dotnet/hash-multimap-lower-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: Count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)   
+ [hash_multimap:: equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)   
+ [hash_multimap:: Find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)   
+ [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)

@@ -1,48 +1,46 @@
 ---
-title: "C-Style Casts with /clr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C-style casts and /clr"
+title: -CLR esegue il cast di tipo C (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a47dddb9950378d2b76e30893560dc0c364d7cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# C-Style Casts with /clr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'argomento si applica solo a Common Language Runtime.  
+# <a name="c-style-casts-with-clr-ccli"></a>Cast di tipo C con /clr (C++/CLI)
+L'argomento seguente si applica solo a Common Language Runtime.  
   
- Una volta utilizzato con i tipi CLR, il compilatore tenta di associare il cast di tipo C a uno dei cast elencati di seguito, nell'ordine seguente:  
+ Se utilizzato con tipi CLR, il compilatore tenta di eseguire il mapping tra i cast elencati di seguito, nell'ordine seguente cast di tipo C:  
   
-1.  const\_cast  
+1.  const_cast  
   
-2.  safe\_cast  
+2.  safe_cast  
   
-3.  safe\_cast più const\_cast  
+3.  safe_cast più const_cast  
   
-4.  static\_cast  
+4.  static_cast  
   
-5.  static\_cast più const\_cast  
+5.  static_cast più const_cast  
   
- Se nessuno dei cast elencati in precedenza è valido e se il tipo dell'espressione e il tipo di destinazione sono tipi di riferimento CLR, mappe di cast di tipo C al controllo a runtime \(istruzione MSIL di castclass\).  In caso contrario, un cast di tipo C è considerato non valido e il compilatore segnala un errore.  
+ Se nessuno dei cast elencate in precedenza è valido e se il tipo dell'espressione e il tipo di destinazione siano tipi riferimento CLR, cast di tipo C esegue il mapping a un controllo di runtime (istruzione MSIL castclass). In caso contrario, un cast di tipo C è considerato non valido e il compilatore genera un errore.  
   
-## Note  
- Un cast di tipo C non è consigliato.  Quando si compila con [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md), utilizzare [safe\_cast](../windows/safe-cast-cpp-component-extensions.md).  
+## <a name="remarks"></a>Note  
+ Un cast di tipo C non è consigliato. Durante la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), utilizzare [safe_cast](../windows/safe-cast-cpp-component-extensions.md).  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping ad un `const_cast`.  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `const_cast`.  
   
 ```  
 // cstyle_casts_1.cpp  
@@ -56,7 +54,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping ad un `safe_cast`.  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `safe_cast`.  
   
 ```  
 // cstyle_casts_2.cpp  
@@ -68,7 +66,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping ad un `safe_cast` più `const_cast`..  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `safe_cast` più `const_cast`.  
   
 ```  
 // cstyle_casts_3.cpp  
@@ -89,7 +87,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping ad un `static_cast`.  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `static_cast`.  
   
 ```  
 // cstyle_casts_4.cpp  
@@ -110,7 +108,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping ad un `static_cast` più `const_cast`..  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un `static_cast` più `const_cast`.  
   
 ```  
 // cstyle_casts_5.cpp  
@@ -131,7 +129,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C che esegue il mapping a un controllo in fase di esecuzione.  
+ L'esempio seguente viene illustrato un cast di tipo C che esegue il mapping a un controllo in fase di esecuzione.  
   
 ```  
 // cstyle_casts_6.cpp  
@@ -152,7 +150,7 @@ int main() {
 }  
 ```  
   
- L'esempio seguente mostra un cast di tipo C non valido, il quale causa un errore dal compilatore.  
+ L'esempio seguente viene illustrato un valido cast di tipo C, che indica al compilatore per l'emissione di un errore.  
   
 ```  
 // cstyle_casts_7.cpp  
@@ -164,8 +162,8 @@ int main() {
 }  
 ```  
   
-## Requisiti  
- Opzione del compilatore: **\/clr**  
+## <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

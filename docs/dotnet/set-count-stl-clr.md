@@ -1,45 +1,43 @@
 ---
-title: "set::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::Count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count (membro) [STL/CLR]"
+title: 'set:: Count (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::Count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 78855f8c-3de5-4d3e-800b-0bbea5e829dd
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 573f278abbfce51fe25f6ae8caa5bc4007bb7213
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# set::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Trova il numero di elementi che corrispondono a una chiave specificata.  
+# <a name="setcount-stlclr"></a>set::count (STL/CLR)
+Trova il numero di elementi corrispondenti a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro restituisce il numero di elementi della sequenza selezionata con ordine equivalente a `key`.  Viene utilizzata per determinare il numero di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce il numero di elementi nella sequenza controllata che hanno un ordinamento equivalente con `key`. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_set_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**conteggio \(L'A\) \= 0**  
-**conteggio \(L'b\) \= 1**  
-**conteggio \(L'C\) \= 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [set](../dotnet/set-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)

@@ -1,46 +1,28 @@
 ---
-title: Classe scheduler_worker_creation_error | Documenti di Microsoft
+title: Classe scheduler_worker_creation_error | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_worker_creation_error class
+dev_langs: C++
+helpviewer_keywords: scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 0a628d0ce3d85a2bdcae9c7d25550cbd36386e67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
 Questa classe descrive un'eccezione generata a causa di un errore nella creazione di un contesto di esecuzione del lavoro nel runtime di concorrenza.  
@@ -70,7 +52,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
  `scheduler_worker_creation_error`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -92,8 +74,7 @@ explicit _CRTIMP scheduler_worker_creation_error(
  Messaggio descrittivo dell'errore.  
   
  `_Hresult`  
- Il `HRESULT` valore di errore che ha causato l'eccezione.  
+ Il `HRESULT` valore dell'errore che ha causato l'eccezione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

@@ -1,41 +1,39 @@
 ---
-title: "vector::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin (membro) [STL/CLR]"
+title: 'Vector:: Begin (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: f9cdf854-0770-4334-a3dd-7f4d728a42bd
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7a8aca79296cdc8dd3eb0361ff26c02dff0b2cad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce l'inizio della sequenza controllata.  
+# <a name="vectorbegin-stlclr"></a>vector::begin (STL/CLR)
+Indica l'inizio della sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator begin();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore di accesso casuale che definisce il primo elemento della sequenza selezionata, ovvero poco oltre la fine di una sequenza vuota.  Viene utilizzato per ottenere un iteratore che definisce l'inizio `current` della sequenza controllata, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore ad accesso casuale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. È utilizzato per ottenere un iteratore che definisce il `current` inizio della sequenza controllata, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_begin.cpp   
@@ -70,17 +68,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a.**  
-**\*\+\+begin\(\) \= b**  
- **c x\-y**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::end](../dotnet/vector-end-stl-clr.md)   
- [vector::front](../dotnet/vector-front-stl-clr.md)   
- [vector::front\_item](../dotnet/vector-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)   
+ [Vector:: front (STL/CLR)](../dotnet/vector-front-stl-clr.md)   
+ [vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)

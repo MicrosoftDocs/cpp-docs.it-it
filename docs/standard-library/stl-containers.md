@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 86e856a47baa9df0da78e4db926ef64cd47284f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-standard-library-containers"></a>Contenitori della libreria standard C++
 La libreria standard fornisce vari contenitori indipendenti dai tipi per archiviare le raccolte di oggetti correlati. I contenitori sono modelli di classe. Quando si dichiara una variabile del contenitore, è necessario specificare il tipo degli elementi che saranno inclusi nel contenitore. I contenitori possono essere costruiti con un elenco di inizializzatori. Hanno funzioni membro per l'aggiunta e la rimozione di elementi e l'esecuzione di altre operazioni.  
@@ -182,15 +165,14 @@ int main()
 >  È inoltre possibile usare i [cicli for basati sull'intervallo](../cpp/range-based-for-statement-cpp.md) per scorrere le raccolte STL.  
   
 ## <a name="comparing-containers"></a>Confronto tra contenitori  
- Tutti i contenitori sottopongono a overload l'operatore == per confrontare due contenitori dello stesso tipo che hanno lo stesso tipo di elemento. È possibile usare == per confrontare un oggetto vector\<string> con un altro oggetto vector\<string>, ma non è possibile usarlo per confrontare un oggetto vector\<string> con un oggetto list\<string> o un oggetto vector\<string> con un oggetto vector\<char*>.  In C++98/03 è possibile usare [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) o [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) per confrontare tipi di contenitori e/o tipi di elemento dissimili. In C++&11; è anche possibile usare [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f). Ma in tutti questi casi le funzioni presuppongono che i contenitori siano della stessa lunghezza. Se il secondo intervallo è più breve del primo, ne risulta un comportamento indefinito. Se il secondo intervallo è più lungo, i risultati possono ancora risultare errati perché il confronto non va oltre la fine del primo intervallo.  
+ Tutti i contenitori sottopongono a overload l'operatore == per confrontare due contenitori dello stesso tipo che hanno lo stesso tipo di elemento. È possibile usare == per confrontare un oggetto vector\<string> con un altro oggetto vector\<string>, ma non è possibile usarlo per confrontare un oggetto vector\<string> con un oggetto list\<string> o un oggetto vector\<string> con un oggetto vector\<char*>.  In C++98/03 è possibile usare [std::equal](algorithm-functions.md#equal) o [std::mismatch](algorithm-functions.md#mismatch) per confrontare tipi di contenitori e/o tipi di elemento dissimili. In C++ 11 è anche possibile usare [std::is_permutation](algorithm-functions.md#is_permutation). Ma in tutti questi casi le funzioni presuppongono che i contenitori siano della stessa lunghezza. Se il secondo intervallo è più breve del primo, ne risulta un comportamento indefinito. Se il secondo intervallo è più lungo, i risultati possono ancora risultare errati perché il confronto non va oltre la fine del primo intervallo.  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>Confronto tra contenitori dissimili (C++14)  
- In C++14 e versioni successive è possibile confrontare i diversi contenitori e/o tipi di elementi diversi usando uno degli overload delle funzioni [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae), [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) o [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) che impiegano due intervalli completi. Questi overload consentono di confrontare i contenitori con lunghezze diverse. Questi overload sono molto meno soggetti a errori e ottimizzati in modo da restituire false in un tempo costante quando vengono confrontati i contenitori di lunghezze diverse. Di conseguenza, è consigliabile usare questi overload a meno che (1) si abbia un motivo molto chiaro per non farlo; (2) si usa un contenitore [std::list](../standard-library/list-class.md), che non trae vantaggio dalle ottimizzazioni a doppio intervallo.  
+ In C++14 e versioni successive è possibile confrontare i diversi contenitori e/o tipi di elementi diversi usando uno degli overload delle funzioni **std::equal**, **std::mismatch** o **std::is_permutation** che impiegano due intervalli completi. Questi overload consentono di confrontare i contenitori con lunghezze diverse. Questi overload sono molto meno soggetti a errori e ottimizzati in modo da restituire false in un tempo costante quando vengono confrontati i contenitori di lunghezze diverse. Di conseguenza, è consigliabile usare questi overload a meno che (1) si abbia un motivo molto chiaro per non farlo; (2) si usa un contenitore [std::list](../standard-library/list-class.md), che non trae vantaggio dalle ottimizzazioni a doppio intervallo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenitori](../cpp/containers-modern-cpp.md)   
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)   
  [\<sample container>](../standard-library/sample-container.md)   
  [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,36 +1,35 @@
 ---
-title: "IRowsetIdentityImpl::IsSameRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsSameRow"
-  - "IRowsetIdentityImpl.IsSameRow"
-  - "ATL.IRowsetIdentityImpl.IsSameRow"
-  - "IRowsetIdentityImpl::IsSameRow"
-  - "ATL::IRowsetIdentityImpl::IsSameRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSameRow (metodo)"
+title: 'Irowsetidentityimpl:: Issamerow | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
+dev_langs: C++
+helpviewer_keywords: IsSameRow method
 ms.assetid: e35ad54e-73f1-4dc0-8d8c-9e98202baf0a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: baab48b21ab624d285fecac0e888f8d32e86342b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetIdentityImpl::IsSameRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Confronta due handle di riga per verificare se puntano alla stessa riga.  
+# <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
+Confronta due handle di riga per vedere se fanno riferimento alla stessa riga.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,14 +39,14 @@ Confronta due handle di riga per verificare se puntano alla stessa riga.
 );  
 ```  
   
-#### Parametri  
- Vedere [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx)*in OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Note  
- Per confrontare un handle di riga, questo metodo esegue il cast di un handle di **HROW** ai membri di **RowClass** e chiama `memcmp` su puntatori.  
+## <a name="remarks"></a>Note  
+ Per confrontare gli handle di riga, questo metodo esegue il cast di **HROW** handle a **RowClass** membri e chiama `memcmp` sui puntatori.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)

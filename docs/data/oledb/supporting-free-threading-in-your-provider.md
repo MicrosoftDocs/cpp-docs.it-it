@@ -1,31 +1,31 @@
 ---
-title: "Supporto del modello di threading Free nel provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, multithreading"
-  - "threading [C++], provider"
+title: Modello di Threading Free nel Provider di supporto | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, multithreaded
+- threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7d062a17fd71d53451aa8de3aa7d498f8a5ec68a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Supporto del modello di threading Free nel provider
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Tutte le classi dei provider OLE DB sono thread\-safe e le voci del Registro di sistema vengono impostate di conseguenza.  Per garantire prestazioni di livello superiore in situazioni multiutente, si consiglia di supportare il modello di threading Free.  Per garantire che il provider rimanga thread\-safe, è necessario verificare che il codice sia bloccato adeguatamente.  Ogni volta che si scrivono o si memorizzano dati, è necessario bloccare l'accesso a sezioni critiche.  
+# <a name="supporting-free-threading-in-your-provider"></a>Supporto del modello di threading Free nel provider
+Tutte le classi del provider OLE DB sono thread-safe e voci del Registro di sistema vengono impostate di conseguenza. È consigliabile per supportare modelli di threading free per fornire un livello elevato di prestazioni in situazioni multiutente. Per mantenere il provider di thread-safe, è necessario verificare che il codice è stato bloccato in modo corretto. Ogni volta che si scrivono o archiviare i dati, è necessario bloccare l'accesso con le sezioni critiche.  
   
- Ciascun modello provider OLE DB presenta una sezione critica.  Per facilitarne il blocco, ogni nuova classe creata dovrà essere una classe modello che accetta come argomento il nome della classe padre.  
+ Ogni oggetto modello di provider OLE DB è una sezione critica. Per rendere il blocco, ogni nuova classe creata deve essere una classe di modello che accetta la classe padre nome come argomento.  
   
  Nell'esempio seguente viene illustrato come bloccare il codice:  
   
@@ -48,7 +48,7 @@ HRESULT MyObject::MyMethod(void)
   
  Per ulteriori informazioni su come proteggere le sezioni critiche con `Lock` e `Unlock`, vedere [Multithreading: utilizzo delle classi di sincronizzazione](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
- È inoltre necessario verificare che eventuali metodi di cui si esegue l'override, ad esempio `Execute`, siano thread\-safe.  
+ È inoltre necessario verificare che tutti i metodi eseguire l'override (ad esempio `Execute`) sono thread-safe.  
   
-## Vedere anche  
- [Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,35 +1,33 @@
 ---
-title: "Pagine delle propriet&#224; Riga di comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.project.AdditionalOptionsPage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Riga di comando (pagine delle proprietà)"
+title: "Pagine delle proprietà riga di comando | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.project.AdditionalOptionsPage
+dev_langs: C++
+helpviewer_keywords: Command Line property pages
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 320e3ac5126ec1e60d768e7c109f32610103f93b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Pagine delle propriet&#224; Riga di comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nella maggior parte delle cartelle di pagine delle proprietà è disponibile una pagina delle proprietà **Riga di comando**,  che consente di visualizzare le proprietà impostate nella cartella.  Nella pagina delle proprietà **Riga di comando** è inoltre disponibile una casella **Opzioni aggiuntive** in cui è possibile specificare le proprietà che sono valide per lo strumento ma per le quali non esistono proprietà nella cartella.  
+# <a name="command-line-property-pages"></a>Riga di comando (pagine delle proprietà)
+La maggior parte delle cartelle di pagine delle proprietà contengano un **riga di comando** pagina delle proprietà. Consente di visualizzare le proprietà impostate nella cartella. Il **riga di comando** pagina delle proprietà contiene inoltre un **opzioni aggiuntive** casella in cui è possibile specificare le proprietà che sono valide per lo strumento, ma per cui non è disponibile alcuna proprietà nella cartella.  
   
- Tutti i comandi immessi nella casella di testo verranno passati allo strumento relativo alla cartella.  Non viene effettuato alcun controllo o verifica dell'input né delle dipendenze.  
+ Qualsiasi comando immesso nella casella di modifica verrà passato tramite lo strumento per la cartella. Nessun controllo o verifica non verrà eseguito per l'input, né saranno disponibili delle dipendenze.  
   
- Per informazioni sull'accesso alle pagine delle proprietà **Riga di comando**, vedere [Procedura: specificare le proprietà del progetto tramite le pagine delle proprietà](../misc/how-to-specify-project-properties-with-property-pages.md).  
+ Per informazioni su come accedere il **riga di comando** pagine delle proprietà, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../ide/property-pages-visual-cpp.md)   
- [File lib come input del linker](../build/reference/dot-lib-files-as-linker-input.md)
+ [File LIB come input del linker](../build/reference/dot-lib-files-as-linker-input.md)

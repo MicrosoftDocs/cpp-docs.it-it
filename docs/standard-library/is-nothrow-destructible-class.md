@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_nothrow_destructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_destructible
+f1_keywords: type_traits/std::is_nothrow_destructible
+dev_langs: C++
+helpviewer_keywords: is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 37f085f0a330af04c4167b381ea43608c693a02a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 857d37d89ff61dd7e6f0768796024565b03c920f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnothrowdestructible-class"></a>Classe is_nothrow_destructible
 Verifica se il tipo è distruttibile e se il distruttore è noto al compilatore come elemento che non genera eccezioni.  
@@ -51,7 +47,6 @@ struct is_nothrow_destructible;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

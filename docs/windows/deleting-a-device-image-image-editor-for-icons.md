@@ -1,46 +1,47 @@
 ---
-title: "Deleting a Device Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursors, deleting"
-  - "display devices, deleting device image"
-  - "icons, erasing"
-  - "icons, deleting"
-  - "cursors, undoing changes"
-  - "icons, undoing changes"
+title: L'eliminazione di un'immagine per dispositivo (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- cursors, deleting
+- display devices, deleting device image
+- icons, erasing
+- icons, deleting
+- cursors, undoing changes
+- icons, undoing changes
 ms.assetid: aab1031c-da95-49cf-aabc-46e127b11399
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 66e2a832cc146dc0fb06f87ec18b2ded124b4ba6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Deleting a Device Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per eliminare un'immagine per periferica  
+# <a name="deleting-a-device-image-image-editor-for-icons"></a>Eliminazione di un'immagine per dispositivo (Editor di immagini per le icone)
+### <a name="to-delete-a-device-image"></a>Per eliminare un'immagine per dispositivo  
   
-1.  Mentre l'immagine icona è visualizzata nell'editor di immagini, scegliere **Elimina tipo di immagine** dal menu **Immagine**.  Quando si elimina l'ultima immagine icona contenuta nella risorsa, verrà eliminata anche la risorsa stessa.  
+1.  Mentre l'immagine dell'icona è visualizzata nel **immagine** editor, selezionare **Elimina immagine dispositivo** dal **immagine** menu. Quando si elimina l'ultima immagine dell'icona nella risorsa, la risorsa viene anche eliminata.  
   
     > [!NOTE]
-    >  Quando si preme CANC, le immagini e i colori disegnati nell'icona vengono eliminati, mentre l'icona rimane disponibile e può essere ridisegnata.  Se si preme erroneamente CANC, è possibile annullare l'operazione premendo CTRL\+Z.  
+    >  Quando si preme il tasto CANC, le immagini e i colori disegnati su un'icona vengono eliminati ma l'icona resta; è ora possibile riprogettare il. Se si preme CANC per errore, è possibile premere CTRL + Z per annullare l'azione.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

@@ -1,41 +1,39 @@
 ---
-title: "deque::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back (membro) [STL/CLR]"
+title: 'deque:: back (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 5608cdda-212d-42f6-866b-b04aec04ef8e
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d262b25279cd9fcd330779a42161acd1881188e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# deque::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Accede all'ultimo.  
+# <a name="dequeback-stlclr"></a>deque::back (STL/CLR)
+Accede all'ultimo elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reference back();  
 ```  
   
-## Note  
- La funzione membro restituisce un riferimento all'ultimo elemento della sequenza selezionata, che deve essere non vuota.  Utilizzarla per accedere all'ultimo elemento, quando si sa che esiste.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un riferimento all'ultimo elemento della sequenza controllata, che deve essere non vuoto. Usarlo per accedere all'ultimo elemento quando si è certi che esista.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_deque_back.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= c**  
- **una x b**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::front](../dotnet/deque-front-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque:: front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

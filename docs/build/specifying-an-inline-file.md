@@ -1,39 +1,39 @@
 ---
-title: "Specifica di un file inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file [C++], inline"
-  - "file inline [C++], specifica NMAKE"
-  - "NMAKE (programma), inline (file)"
+title: Specificare un File Inline | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, inline files
+- inline files [C++], specifying NMAKE
+- files [C++], inline
 ms.assetid: 393eccfb-3fc9-4bac-a30c-8ac8d221cca3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cb38558254ff900af798aebd2960047df0d89df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Specifica di un file inline
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specificare due parentesi angolari \(\<\<\) nel comando in cui deve essere visualizzato *filename*.  Le parentesi angolari non possono essere espansioni di macro.  
+# <a name="specifying-an-inline-file"></a>Specifica di un file inline
+Specificare due parentesi angolari (<<) nel comando dove *filename* viene visualizzato. Le parentesi uncinate non può essere un'espansione di macro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <<[filename]  
 ```  
   
-## Note  
- Al momento dell'esecuzione del comando, le parentesi angolari vengono sostituite da *filename*, se specificato, oppure da un nome univoco generato da NMAKE.  Se specificato, *filename* deve seguire le parentesi angolari, senza spazi o tabulazioni.  È consentito indicare un percorso.  Non è richiesta né sottintesa alcuna estensione.  Se *filename* è specificato, il file viene creato nella directory corrente o in quella specificata, sovrascrivendo gli eventuali file esistenti con lo stesso nome. In caso contrario, il file viene creato nella directory TMP o nella directory corrente se la variabile di ambiente TMP non è definita.  Se viene riutilizzato un *filename* precedente, NMAKE sostituisce il file precedente.  
+## <a name="remarks"></a>Note  
+ Quando viene eseguito il comando, le parentesi angolari vengono sostituite da *filename*, se specificato, o da un nome univoco generato NMAKE. Se specificato, *filename* deve seguire angolari, senza spazi o tabulazioni. È consentito un percorso. Nessuna estensione è necessaria o presuppone. Se *filename* viene specificato, il file viene creato nella classe corrente o la directory specificata, sovrascrivendo eventuali file con lo stesso nome; in caso contrario, viene creato nella directory TMP (o la directory corrente, se la variabile di ambiente TMP non è definito). Se un precedente *filename* viene riutilizzato, NMAKE sostituisce il file precedente.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File inline in un makefile](../build/inline-files-in-a-makefile.md)

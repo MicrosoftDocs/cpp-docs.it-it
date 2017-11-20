@@ -1,37 +1,37 @@
 ---
-title: "__cpuid, __cpuidex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__cpuid_cpp"
-  - "__cpuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__cpuid intrinsic"
-  - "cpuid instruction"
-  - "cpuid intrinsic"
+title: CPUID, __cpuidex | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __cpuid_cpp
+- __cpuid
+dev_langs: C++
+helpviewer_keywords:
+- __cpuid intrinsic
+- cpuid instruction
+- cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-caps.latest.revision: 38
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
+caps.latest.revision: "38"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e986b471f10ed53b7428c498b5ec802f81e368f1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __cpuid, __cpuidex
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 **Sezione specifica Microsoft**  
   
- Genera l'istruzione `cpuid` disponibile in x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Questa istruzione esegue query nel processore per ottenere informazioni sulle funzionalità supportate e sul tipo di CPU.  
+ Genera l'istruzione `cpuid` disponibile in x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Questa istruzione esegue query nel processore per ottenere informazioni sulle funzionalità supportate e sul tipo di CPU.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __cpuid(  
@@ -46,42 +46,42 @@ void __cpuidex(
 );  
 ```  
   
-#### Parametri  
- \[out\] `cpuInfo`  
+#### <a name="parameters"></a>Parametri  
+ [out] `cpuInfo`  
  Matrice di quattro valori Integer che include le informazioni restituite in EAX, EBX, ECX e EDX sulle funzionalità supportate della CPU.  
   
- \[in\] `function_id`  
+ [in] `function_id`  
  Codice che specifica le informazioni da recuperare, passato in EAX.  
   
- \[in\] `subfunction_id`  
+ [in] `subfunction_id`  
  Codice aggiuntivo che specifica le informazioni da recuperare, passato in ECX.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`__cpuid`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__cpuidex`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa funzione intrinseca archivia le informazioni su funzionalità supportate e CPU restituite dall'istruzione `cpuid` in `cpuInfo`, una matrice di quattro valori Integer a 32 bit in cui sono inseriti i valori dei registri EAX, EBX, ECX e EDX, in quest'ordine.  Il significato delle informazioni restituite dipende dal valore passato come parametro `function_id`.  Le informazioni restituite con diversi valori di `function_id` dipendono dal processore.  
+## <a name="remarks"></a>Note  
+ Questa funzione intrinseca archivia le informazioni su funzionalità supportate e CPU restituite dall'istruzione `cpuid` in `cpuInfo`, una matrice di quattro valori Integer a 32 bit in cui sono inseriti i valori dei registri EAX, EBX, ECX e EDX, in quest'ordine. Il significato delle informazioni restituite dipende dal valore passato come parametro `function_id`. Le informazioni restituite con diversi valori di `function_id` dipendono dal processore.  
   
- La funzione intrinseca `__cpuid` cancella il registro ECX prima di chiamare l'istruzione `cpuid`.  La funzione intrinseca `__cpuidex` imposta il valore del registro ECX su `subfunction_id` prima di generare l'istruzione `cpuid`.  Ciò permette di raccogliere informazioni aggiuntive sul processore.  
+ La funzione intrinseca `__cpuid` cancella il registro ECX prima di chiamare l'istruzione `cpuid`. La funzione intrinseca `__cpuidex` imposta il valore del registro ECX su `subfunction_id` prima di generare l'istruzione `cpuid`. Ciò permette di raccogliere informazioni aggiuntive sul processore.  
   
- Per altre informazioni sui parametri specifici da usare e sui valori restituiti da queste funzioni intrinseche su processori Intel, vedere la documentazione relativa all'istruzione `cpuid` nei [riferimenti ai set di istruzioni del Volume 2 del manuale per sviluppatori di architetture software per Intel 64 e IA32](http://go.microsoft.com/fwlink/p/?LinkID=510021) e in [Riferimento alla programmazione delle estensioni dei set di istruzioni dell'architettura Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627).  I termini "leaf" e "subleaf" nella documentazione Intel indicano i parametri `function_id` e `subfunction_id` passati in EAX e ECX.  
+ Per ulteriori informazioni sui parametri specifici da utilizzare e i valori restituiti da queste funzioni intrinseche su processori Intel, vedere la documentazione per il `cpuid` istruzione [Intel 64 e IA-32 architetture Software sviluppatori manuale Volume 2: Riferimento dei Set di istruzioni](http://go.microsoft.com/fwlink/p/?LinkID=510021) e [estensioni riferimento alla programmazione dei Set di istruzioni dell'architettura Intel](http://go.microsoft.com/fwlink/p/?LinkID=506627). I termini "leaf" e "subleaf" nella documentazione Intel indicano i parametri `function_id` e `subfunction_id` passati in EAX e ECX.  
   
- Per altre informazioni sui parametri specifici da usare e sui valori restituiti da queste funzioni intrinseche su processori AMD, vedere la documentazione relativa all'istruzione `cpuid` nelle [istruzioni di sistema e generali disponibili nel Volume 3 del manuale per programmatori dell'architettura AMD64](http://go.microsoft.com/fwlink/p/?LinkId=510023) e nelle [guide di revisione](http://go.microsoft.com/fwlink/p/?LinkId=510023) per famiglie di processori specifiche.  I termini "function number" e "subfunction number" nella documentazione AMD indicano i parametri `function_id` e `subfunction_id` passati in EAX e ECX.  
+ Per ulteriori informazioni sui parametri specifici da utilizzare e i valori restituiti da queste funzioni intrinseche su processori AMD, vedere la documentazione per il `cpuid` istruzione [3 di Volume manuale del programmatore di architettura AMD64: Uso generale e le istruzioni di sistema](http://go.microsoft.com/fwlink/p/?LinkId=510023) e nel [le guide di revisione](http://go.microsoft.com/fwlink/p/?LinkId=510023) per le famiglie di processori specifico. I termini "function number" e "subfunction number" nella documentazione AMD indicano i parametri `function_id` e `subfunction_id` passati in EAX e ECX.  
   
- Quando l'argomento di `function_id` è 0, `cpuInfo[0]` restituisce il parametro `function_id` non esteso più alto disponibile supportato dal processore.  Il produttore del processore è codificato in `cpuInfo[1]`, `cpuInfo[2]` e cpuInfo\[3\].  
+ Quando l'argomento di `function_id` è 0, `cpuInfo[0]` restituisce il parametro `function_id` non esteso più alto disponibile supportato dal processore. Il produttore del processore è codificato in `cpuInfo[1]`, `cpuInfo[2]` e cpuInfo[3].  
   
- Il supporto per estensioni dei set di istruzioni e funzionalità della CPU specifiche è codificato nei risultati di `cpuInfo` restituiti per i valori di function\_id più alti.  Per altre informazioni, vedere i manuali collegati indicati sopra e l'esempio di codice seguente.  
+ Il supporto per estensioni dei set di istruzioni e funzionalità della CPU specifiche è codificato nei risultati di `cpuInfo` restituiti per i valori di function_id più alti. Per altre informazioni, vedere i manuali collegati indicati sopra e l'esempio di codice seguente.  
   
- Alcuni processori supportano le informazioni relative alle funzioni estese CPUID.  Se sono supportate, i valori `function_id` da 0x80000000 potranno essere usati per restituire informazioni.  Per determinare il valore significativo massimo permesso, impostare `function_id` su 0x80000000.  Il valore massimo di `function_id` supportato per le funzioni estese verrà scritto in `cpuInfo[0]`.  
+ Alcuni processori supportano le informazioni relative alle funzioni estese CPUID. Se sono supportate, i valori `function_id` da 0x80000000 potranno essere usati per restituire informazioni. Per determinare il valore significativo massimo permesso, impostare `function_id` su 0x80000000. Il valore massimo di `function_id` supportato per le funzioni estese verrà scritto in `cpuInfo[0]`.  
   
-## Esempio  
- Questo esempio illustra alcune delle informazioni disponibili tramite le funzioni intrinseche `__cpuid` e `__cpuidex`.  L'app elenca le estensioni dei set di istruzioni supportate dal processore corrente.  L'output mostra un risultato possibile per un determinato processore.  
+## <a name="example"></a>Esempio  
+ Questo esempio illustra alcune delle informazioni disponibili tramite le funzioni intrinseche `__cpuid` e `__cpuidex`. L'app elenca le estensioni dei set di istruzioni supportate dal processore corrente. L'output mostra un risultato possibile per un determinato processore.  
   
 ```  
 // InstructionSet.cpp   
@@ -346,60 +346,64 @@ int main()
 }  
 ```  
   
-  **GenuineIntel**  
- **Intel\(R\) Core\(TM\) i5\-2500 CPU @ 3.30GHz**  
-**3DNOW not supported**  
-**3DNOWEXT not supported**  
-**ABM not supported**  
-**ADX not supported**  
-**AES supported**  
-**AVX supported**  
-**AVX2 not supported**  
-**AVX512CD not supported**  
-**AVX512ER not supported**  
-**AVX512F not supported**  
-**AVX512PF not supported**  
-**BMI1 not supported**  
-**BMI2 not supported**  
-**CLFSH supported**  
-**CMPXCHG16B supported**  
-**CX8 supported**  
-**ERMS not supported**  
-**F16C not supported**  
-**FMA not supported**  
-**FSGSBASE not supported**  
-**FXSR supported**  
-**HLE not supported**  
-**INVPCID not supported**  
-**LAHF supported**  
-**LZCNT not supported**  
-**MMX supported**  
-**MMXEXT not supported**  
-**MONITOR not supported**  
-**MOVBE not supported**  
-**MSR supported**  
-**OSXSAVE supported**  
-**PCLMULQDQ supported**  
-**POPCNT supported**  
-**PREFETCHWT1 not supported**  
-**RDRAND not supported**  
-**RDSEED not supported**  
-**RDTSCP supported**  
-**RTM not supported**  
-**SEP supported**  
-**SHA not supported**  
-**SSE supported**  
-**SSE2 supported**  
-**SSE3 supported**  
-**SSE4.1 supported**  
-**SSE4.2 supported**  
-**SSE4a not supported**  
-**SSSE3 supported**  
-**SYSCALL supported**  
-**TBM not supported**  
-**XOP not supported**  
-**XSAVE supported**   
-## Fine sezione specifica Microsoft  
+```Output  
+GenuineIntel  
+        Intel(R) Core(TM) i5-2500 CPU @ 3.30GHz  
+3DNOW not supported  
+3DNOWEXT not supported  
+ABM not supported  
+ADX not supported  
+AES supported  
+AVX supported  
+AVX2 not supported  
+AVX512CD not supported  
+AVX512ER not supported  
+AVX512F not supported  
+AVX512PF not supported  
+BMI1 not supported  
+BMI2 not supported  
+CLFSH supported  
+CMPXCHG16B supported  
+CX8 supported  
+ERMS not supported  
+F16C not supported  
+FMA not supported  
+FSGSBASE not supported  
+FXSR supported  
+HLE not supported  
+INVPCID not supported  
+LAHF supported  
+LZCNT not supported  
+MMX supported  
+MMXEXT not supported  
+MONITOR not supported  
+MOVBE not supported  
+MSR supported  
+OSXSAVE supported  
+PCLMULQDQ supported  
+POPCNT supported  
+PREFETCHWT1 not supported  
+RDRAND not supported  
+RDSEED not supported  
+RDTSCP supported  
+RTM not supported  
+SEP supported  
+SHA not supported  
+SSE supported  
+SSE2 supported  
+SSE3 supported  
+SSE4.1 supported  
+SSE4.2 supported  
+SSE4a not supported  
+SSSE3 supported  
+SYSCALL supported  
+TBM not supported  
+XOP not supported  
+XSAVE supported  
   
-## Vedere anche  
+```  
+  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

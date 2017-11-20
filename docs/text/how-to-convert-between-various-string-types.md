@@ -1,39 +1,39 @@
 ---
-title: "Procedura: convertire vari tipi di stringhe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversione di tipi di stringa"
-  - "stringhe (conversione) [C++]"
-  - "stringhe [C++], conversione"
+title: 'Procedura: eseguire la conversione tra i vari tipi di stringa | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- converting string types
+- string conversion [C++]
+- strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 13
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d48e8e41d48b7a663f9dff37adc79f87f9a0c3d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: convertire vari tipi di stringhe
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come convertire diversi tipi di stringhe Visual C\+\+ in altre stringhe.  I tipi di stringhe trattati includono `char *`, `wchar_t*`, [\_bstr\_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic\_string](../standard-library/basic-string-class.md) e <xref:System.String?displayProperty=fullName>.  In tutti i casi, quando si converte una stringa in un nuovo tipo ne viene eseguita una copia.  Tutte le modifiche apportate alla stringa nuova non avranno effetto sulla stringa originale, e viceversa.  
+# <a name="how-to-convert-between-various-string-types"></a>Procedura: convertire vari tipi di stringhe
+In questo argomento viene illustrato come convertire vari tipi di stringa di Visual C++ in altre stringhe. I tipi di stringhe che vengono trattati includono `char *`, `wchar_t*`, [bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), e <xref:System.String?displayProperty=fullName>. In tutti i casi, viene creata una copia della stringa quando convertito nel nuovo tipo. Tutte le modifiche apportate alla nuova stringa non influirà la stringa originale e viceversa.  
   
-## Conversione da char \*  
+## <a name="converting-from-char-"></a>Conversione da char *  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `char *` agli altri tipi di stringa sopra elencati.  Una stringa `char *` \(anche nota come stringa di tipo C\) utilizza un carattere null per indicare la fine della stringa.  Le stringhe di tipo C richiedono generalmente un byte per carattere, ma possono utilizzare anche due byte.  Negli esempi seguenti le stringhe `char *` vengono talvolta definite stringhe di caratteri a più byte a causa dei dati in formato stringa risultanti dalla conversione dalle stringhe Unicode.  Le funzioni di caratteri a un byte o multibyte \(`MBCS`\) possono essere utilizzate nelle stringhe `char *`.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `char *` per altri tipi di stringa sopra elencati. Oggetto `char *` stringa (noto anche come stringa di tipo C) utilizza un carattere null per indicare la fine della stringa. In genere stringhe di tipo C richiedono un byte per carattere, ma possono anche usare due byte. Negli esempi seguenti, `char *` stringhe sono dette stringhe di caratteri multibyte a causa dei dati stringa risultante dalla conversione di stringhe Unicode. Carattere a byte e multibyte (`MBCS`) funzioni possono essere applicate a `char *` stringhe.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_char.cpp  
@@ -115,7 +115,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (char *)  
@@ -128,14 +128,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da wchar\_t \*  
+## <a name="converting-from-wchart-"></a>Conversione da wchar_t *  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `wchar_t *` agli altri tipi di stringa sopra elencati.  Diversi tipi di stringa, incluso `wchar_t *`, implementano i formati dei caratteri di tipo "wide".  Per effettuare la conversione di una stringa da un formato di carattere multibyte a un formato "wide", è possibile utilizzare una sola chiamata di funzione come `mbstowcs_s` o una chiamata del costruttore per una classe come `CStringA`.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `wchar_t *` per altri tipi di stringa sopra elencati. Diversi tipi di stringa, inclusi `wchar_t *`, implementare i formati di caratteri "wide". Per convertire una stringa tra un multibyte e un formato di carattere wide, è possibile utilizzare una sola chiamata di funzione come `mbstowcs_s` o una chiamata del costruttore per una classe, ad esempio `CStringA`.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_wchar_t.cpp  
@@ -240,7 +240,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (wchar_t *)  
@@ -253,14 +253,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da \_bstr\_t  
+## <a name="converting-from-bstrt"></a>Conversione da bstr_t  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `_bstr_t` agli altri tipi di stringa sopra elencati.  L'oggetto `_bstr_t` è un modo per incapsulare le stringhe `BSTR` di caratteri di tipo "wide".  Una stringa BSTR dispone di un valore di lunghezza e non utilizza un carattere null per terminare la stringa, che potrebbe tuttavia essere richiesto dal tipo di stringa in cui viene eseguita la conversione.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `_bstr_t` per altri tipi di stringa sopra elencati. Il `_bstr_t` oggetto è un modo per incapsulare un carattere wide `BSTR` stringhe. Una stringa BSTR ha un valore di lunghezza e non utilizza un carattere null di terminazione della stringa, ma il tipo di stringa che è convertire potrebbe richiedere un carattere di terminazione null.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_bstr_t.cpp  
@@ -341,7 +341,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (_bstr_t)  
@@ -354,14 +354,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da CComBSTR  
+## <a name="converting-from-ccombstr"></a>Conversione da CComBSTR  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `CComBSTR` agli altri tipi di stringa sopra elencati.  Come \_bstr\_t, un oggetto `CComBSTR` è un modo per incapsulare le stringhe BSTR di caratteri di tipo "wide".  Una stringa BSTR dispone di un valore di lunghezza e non utilizza un carattere null per terminare la stringa, che potrebbe tuttavia essere richiesto dal tipo di stringa in cui viene eseguita la conversione.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `CComBSTR` per altri tipi di stringa sopra elencati. Come bstr_t, un `CComBSTR` oggetto è un modo per incapsulare le stringhe di caratteri wide BSTR. Una stringa BSTR ha un valore di lunghezza e non utilizza un carattere null di terminazione della stringa, ma il tipo di stringa che è convertire potrebbe richiedere un carattere di terminazione null.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_ccombstr.cpp  
@@ -452,7 +452,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (CComBSTR)  
@@ -465,16 +465,16 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da CString  
+## <a name="converting-from-cstring"></a>Conversione da CString  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `CString` agli altri tipi di stringa sopra elencati.  `CString` si basa sul tipo di dati TCHAR, che a sua volta dipende dal fatto che il simbolo `_UNICODE` sia definito.  Se `_UNICODE` non è definito, `TCHAR` viene definito come char e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito `wchar_t` e `CString` contiene una stringa di caratteri di tipo "wide".  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `CString` per altri tipi di stringa sopra elencati. `CString`è basato sul tipo di dati TCHAR, che a sua volta dipende dal fatto che il simbolo `_UNICODE` è definito. Se `_UNICODE` non è definito, `TCHAR` viene definita come char e `CString` contiene una stringa di caratteri multibyte; se `_UNICODE` è definito, `TCHAR` viene definito come `wchar_t` e `CString` contiene un carattere wide stringa.  
   
- `CStringA` è sempre la versione della stringa multibyte di `CString`, `CStringW` è l'unica versione della stringa di caratteri di tipo "wide".  Né `CStringA` né `CStringW` utilizzano `_UNICODE` per determinare la modalità di compilazione.  `CStringA` e `CStringW` vengono utilizzati in questo esempio per chiarire le differenze meno significative nell'allocazione della dimensione del buffer e nella gestione dell'output.  
+ `CStringA`stringa multibyte sempre versione `CString`, `CStringW` è l'unica versione della stringa di caratteri "wide". Né `CStringA` né `CStringW` utilizzare `_UNICODE` per determinare la modalità di compilazione. `CStringA`e `CStringW` vengono utilizzati in questo esempio per chiarire le differenze di allocazione delle dimensioni del buffer e nella gestione dell'output.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_cstring.cpp  
@@ -597,7 +597,7 @@ delete systemstring;
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (CStringA)  
@@ -614,14 +614,14 @@ Hello, World! (basic_string)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da basic\_string  
+## <a name="converting-from-basicstring"></a>Conversione da basic_string  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da `basic_string` agli altri tipi di stringa sopra elencati.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un `basic_string` per altri tipi di stringa sopra elencati.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_basic_string.cpp  
@@ -698,7 +698,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (basic_string)  
@@ -711,14 +711,14 @@ Hello, World! (CStringW)
 Hello, World! (System::String)  
 ```  
   
-## Conversione da System::String  
+## <a name="converting-from-systemstring"></a>Conversione da System:: String  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In questo esempio viene illustrato come effettuare la conversione da un carattere di tipo "wide" \(Unicode\) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) agli altri tipi di stringa sopra elencati.  
+### <a name="description"></a>Descrizione  
+ In questo esempio viene illustrato come eseguire la conversione da un carattere wide (Unicode) [System:: String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) per altri tipi di stringa sopra elencati.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // convert_from_system_string.cpp  
@@ -806,7 +806,7 @@ int main()
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 Hello, World! (System::String)  
@@ -819,16 +819,15 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)  
 ```  
   
-## Vedere anche  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/it-it/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [ATL and MFC String Conversion Macros](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)   
- [CString Operations Relating to C\-Style Strings](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
- [Procedura: convertire stringhe standard in System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
- [Procedura: convertire System::String in stringhe standard](../dotnet/how-to-convert-system-string-to-standard-string.md)   
- [Procedura: convertire System::String in wchar\_t\* o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro di conversione di stringhe MFC e ATL](../atl/reference/string-conversion-macros.md)   
+ [Operazioni di CString relative alle stringhe di tipo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
+ [Procedura: convertire stringhe Standard in System:: String](../dotnet/how-to-convert-standard-string-to-system-string.md)   
+ [Procedura: convertire System:: String in stringhe Standard](../dotnet/how-to-convert-system-string-to-standard-string.md)   
+ [Procedura: convertire System:: String in wchar_t * o char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)   
  [Programmazione con CComBSTR](../atl/programming-with-ccombstr-atl.md)   
- [mbstowcs\_s, \_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
- [wcstombs\_s, \_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
- [strcpy\_s, wcscpy\_s, \_mbscpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
- [strcat\_s, wcscat\_s, \_mbscat\_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+ [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)   
+ [wcstombs_s, wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)   
+ [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)   
+ [strcat_s, wcscat_s, _mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

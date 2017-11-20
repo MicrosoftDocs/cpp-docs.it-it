@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-differences"></a>Differenze nella gestione eccezioni
 La differenza principale tra gestione delle eccezioni strutturata e gestione delle eccezioni C++ è che il modello di gestione delle eccezioni C++ gestisce i tipi, mentre il modello di gestione delle eccezioni strutturata di C gestisce le eccezioni di un solo tipo (in particolare, `unsigned int`). In altre parole, le eccezioni C sono identificate da un intero senza segno, mentre le eccezioni C++ sono identificate dal tipo di dati. Quando viene generata un'eccezione in C, ogni possibile gestore esegue un filtro che esamina il contesto di eccezione C e determina se accettare l'eccezione, passarla a un altro gestore o ignorarla. Quando viene generata un'eccezione in C++, può essere di qualsiasi tipo.  
@@ -71,7 +68,7 @@ Caught a C exception.
 ```  
   
 ##  <a name="_core_c_exception_wrapper_class"></a>Classe Wrapper di eccezione C  
- In un semplice esempio di come il precedente, l'eccezione C può essere rilevata solo dai puntini di sospensione (**... **) **catch** gestore. Nessuna informazione sul tipo o la natura dell'eccezione viene comunicata al gestore. Quando viene utilizzato questo metodo, in alcuni casi, potrebbe essere necessario definire una trasformazione tra i due modelli di gestione delle eccezioni in modo da associare ogni eccezione C a una classe specifica. A tale scopo, è possibile definire la classe "wrapper" di eccezione C che può essere utilizzata o da cui può essere derivata per associare un tipo di classe specifico a un'eccezione C. In questo modo, ogni eccezione C può essere gestita da C++ **catch** gestore più separatamente che nell'esempio precedente.  
+ In un semplice esempio di come il precedente, l'eccezione C può essere rilevata solo dai puntini di sospensione (**...** ) **catch** gestore. Nessuna informazione sul tipo o la natura dell'eccezione viene comunicata al gestore. Quando viene utilizzato questo metodo, in alcuni casi, potrebbe essere necessario definire una trasformazione tra i due modelli di gestione delle eccezioni in modo da associare ogni eccezione C a una classe specifica. A tale scopo, è possibile definire la classe "wrapper" di eccezione C che può essere utilizzata o da cui può essere derivata per associare un tipo di classe specifico a un'eccezione C. In questo modo, ogni eccezione C può essere gestita da C++ **catch** gestore più separatamente che nell'esempio precedente.  
   
  La classe wrapper potrebbe avere un'interfaccia composta da alcune funzioni membro che determinano il valore dell'eccezione e che accedono alle informazioni sul contesto delle eccezioni estese fornite dal modello di eccezione C. È inoltre possibile definire un costruttore predefinito, un costruttore che accetta un argomento `unsigned int` (per fornire la rappresentazione dell'eccezione C sottostante) e un costruttore di copia bit per bit. Di seguito è riportata una possibile implementazione di una classe wrapper di eccezione C:  
   

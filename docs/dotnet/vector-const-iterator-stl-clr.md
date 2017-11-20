@@ -1,41 +1,39 @@
 ---
-title: "vector::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator (membro) [STL/CLR]"
+title: 'Vector:: const_iterator (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 09c0ae0b-248b-463c-8f57-59c77eba1eaa
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99e90dcac5893136a95feedbd3b8fae8780ccc11
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un iteratore costante della sequenza controllata.  
+# <a name="vectorconstiterator-stlclr"></a>vector::const_iterator (STL/CLR)
+Tipo di un iteratore costante per la sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Note  
- Il tipo descrive un oggetto di tipo non specificato `T2` che può essere utilizzato come iteratore costante ad accesso casuale per la sequenza controllata.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un oggetto di tipo non specificato `T2` che può essere utilizzato come un iteratore ad accesso casuale costante per la sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_const_iterator.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/vector\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::iterator](../dotnet/vector-iterator-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)

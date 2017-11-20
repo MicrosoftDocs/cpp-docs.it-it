@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: dd09e3b7ca574203b381edb524037d5f462b5ad1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 58551edf5663d7ecbaf50f4ce0660247c00249c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="keywords-c"></a>Parole chiave (C++)
 Le parole chiave sono identificatori riservati predefiniti che hanno un significato particolare. Nel programma non è possibile usarle come identificatori. Le seguenti parole chiave sono riservate a Microsoft C++. I nomi con caratteri di sottolineatura iniziali sono estensioni Microsoft.  
@@ -108,4 +105,3 @@ Le parole chiave sono identificatori riservati predefiniti che hanno un signific
 ## <a name="see-also"></a>Vedere anche  
  [Convenzioni lessicali](../cpp/lexical-conventions.md)   
  [Operatori predefiniti C++, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

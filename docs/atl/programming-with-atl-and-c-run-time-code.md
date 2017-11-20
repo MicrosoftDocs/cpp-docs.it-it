@@ -1,48 +1,49 @@
 ---
-title: "Programmazione con il codice runtime C e ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MIN_CRT (macro)"
-  - "ATL, Libreria di runtime C (CRT)"
-  - "ATL_MIN_CRT (macro)"
-  - "CRT, utilizzo con ATL"
+title: Programmazione con codice di runtime C e ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL_MIN_CRT macro
+- CRT, using with ATL
+- _ATL_MIN_CRT macro
+- ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Programmazione con il codice runtime C e ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione vengono illustrati i vantaggi della libreria di runtime C \(CRT\) con collegamento statico o dinamico.  
+# <a name="programming-with-atl-and-c-run-time-code"></a>Programmazione con il codice runtime C e ATL
+Questa sezione illustra i vantaggi dell'uso di libreria di Run-Time C (CRT) con il collegamento statico o dinamico.  
   
-## Argomenti della sezione  
- [Vantaggi e compromessi del metodo utilizzato per accedere a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
- Vengono riepilogati i vantaggi e i compromessi coinvolti in collegata a CRT o nel collegamento dinamico.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Vantaggi e compromessi del metodo usato per collegarsi a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
+ Riepiloga i vantaggi e gli svantaggi relativi collegamento statico alla libreria CRT o il collegamento in modo dinamico.  
   
  [Collegamento a CRT nel progetto ATL](../atl/linking-to-the-crt-in-your-atl-project.md)  
- Vengono illustrate le impostazioni del progetto e le opzioni del linker per accedere a CRT, vengono inoltre forniti dettagli sul collegamento a influenza di CRT l'immagine del programma.  
+ Vengono illustrate le impostazioni di progetto e le opzioni del linker per il collegamento a CRT. Inoltre, fornisce informazioni dettagliate su come collegamento alla libreria CRT influisce su immagine del programma.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali sulla programmazione mediante Active Template Library.  
+ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
   
- [Funzionamento della libreria di runtime](../build/run-time-library-behavior.md)  
- Vengono fornite informazioni dettagliate sul funzionamento del codice di avvio.  
+ [DLL e comportamento delle librerie di runtime Visual C++](../build/run-time-library-behavior.md)  
+ Fornisce informazioni dettagliate sul funzionamento del codice di avvio VCRuntime e CRT.  
   
  [Librerie di runtime C](../c-runtime-library/crt-library-features.md)  
- Vengono descritti i diversi file lib che includono le librerie di runtime C ed elenca le opzioni del compilatore e direttive per il preprocessore collegate.  
+ Descrive i vari file lib che costituiscono le librerie di runtime C e sono elencate le opzioni del compilatore associate e le direttive del preprocessore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

@@ -1,69 +1,68 @@
 ---
-title: "/PROFILE (Profiler strumenti di prestazioni) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.Profile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/PROFILE (opzione del linker)"
-  - "-PROFILE (opzione del linker)"
+title: -PROFILE (Profiler strumenti di prestazioni) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.Profile
+dev_langs: C++
+helpviewer_keywords:
+- -PROFILE linker option
+- /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 352f4c2242c762a745ba204b31ed0492b9533165
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /PROFILE (Profiler strumenti di prestazioni)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Produce un file di output utilizzabile con il profiler di Strumenti per le prestazioni.  
+# <a name="profile-performance-tools-profiler"></a>/PROFILE (Profiler strumenti di prestazioni)
+Produce un file di output che può essere usato con il profiler di Strumenti per le prestazioni.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /PROFILE  
 ```  
   
-## Note  
- \/PROFILE implica le opzioni del linker riportate di seguito:  
+## <a name="remarks"></a>Note  
+ /Profile implica le seguenti opzioni del linker:  
   
--   [\/OPT:REF](../../build/reference/opt-optimizations.md)  
+-   [/OPT: REF](../../build/reference/opt-optimizations.md)  
   
--   \/OPT:NOICF  
+-   /OPT: NOICF  
   
--   [\/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)  
+-   [/INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)  
   
--   [\/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)  
+-   [/FIXED: NO](../../build/reference/fixed-fixed-base-address.md)  
   
- \/PROFILE determina la generazione di una sezione di rilocazione nell'immagine del programma.  Una sezione di rilocazione consente al profiler di trasformare l'immagine del programma al fine di ottenere i dati di profilo.  
+ O il profilo indica al linker di generare una sezione di rilocazione nell'immagine del programma.  Una sezione di rilocazione consente al profiler di trasformare l'immagine di programma per ottenere dati di profilo.  
   
- **\/PROFILE** è disponibile solo nelle versioni Enterprise per team di sviluppo.  Per ulteriori informazioni su PREfast, vedere [Cenni preliminari sull'analisi del codice per C\/C\+\+](../Topic/Code%20Analysis%20for%20C-C++%20Overview.md).  
+ **/ PROFILO** è disponibile solo nelle versioni Enterprise per team di sviluppo.  Per ulteriori informazioni su PREfast, vedere [analisi del codice per C/C++ Panoramica](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Espandere il nodo **Proprietà di configurazione**.  
+2.  Espandere il **le proprietà di configurazione** nodo.  
   
-3.  Espandere il nodo **Linker**.  
+3.  Espandere il **Linker** nodo.  
   
-4.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+4.  Selezionare il **avanzate** pagina delle proprietà.  
   
-5.  Modificare la proprietà **Profilo**.  
+5.  Modificare il **profilo** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

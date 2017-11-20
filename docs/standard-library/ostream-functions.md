@@ -12,19 +12,18 @@ f1_keywords:
 - ostream/std::ends
 - ostream/std::flush
 ms.assetid: d6e56cc0-c8df-4dbe-be10-98e14c35ed3a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 manager: ghogen
 helpviewer_keywords:
 - std::swap [C++]
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 252a178f1ce71c30bdd830811cbce59b22acc791
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltostreamgt-functions"></a>Funzioni &lt;ostream&gt;
 ||||  
@@ -179,5 +178,4 @@ void swap(
   
 ## <a name="see-also"></a>Vedere anche  
  [\<ostream>](../standard-library/ostream.md)
-
 

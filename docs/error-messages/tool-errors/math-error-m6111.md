@@ -1,34 +1,32 @@
 ---
-title: "Errore matematico M6111 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "M6111"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "M6111"
+title: Errore matematico M6111 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: M6111
+dev_langs: C++
+helpviewer_keywords: M6111
 ms.assetid: c0fc13f8-33c8-4e3f-a440-126cc623441b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 80bca2ae3462bf67bc017de0f77ce56b4a45994b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore matematico M6111
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Underflow dello stack.  
+# <a name="math-error-m6111"></a>Errore matematico M6111
+underflow dello stack  
   
- Un'operazione a virgola mobile ha causato un underflow dello stack sul coprocessore 8087\/287\/387 o sull'emulatore.  
+ Un'operazione a virgola mobile ha restituito un underflow dello stack del coprocessore 8087/287/387 o l'emulatore.  
   
- Questo errore è spesso provocato da una chiamata a una funzione `long double` che non restituisce un valore.  L'errore viene, ad esempio, generato dalla stringa seguente quando viene compilata ed eseguita:  
+ Questo errore è spesso causato da una chiamata a un `long double` funzione che restituisce un valore. Ad esempio, di seguito genera questo errore quando compilato ed eseguito:  
   
 ```  
 long double ld() {};  
@@ -38,4 +36,4 @@ main ()
 }  
 ```  
   
- Il programma termina con codice di uscita 139.
+ Il programma termina con il codice di uscita 139.

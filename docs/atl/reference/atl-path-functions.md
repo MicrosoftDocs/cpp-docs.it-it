@@ -1,26 +1,25 @@
 ---
-title: Funzioni percorso ATL | Documenti di Microsoft
+title: Funzioni percorso ATL | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- ATL, percorso
+keywords: ATL, un percorso
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 97d585eb8bbe59a8ccd92b866819fb869d35f64c
-ms.lasthandoff: 02/24/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-path-functions"></a>Funzioni percorso ATL
 
-ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPathT](cpatht-class.md). Questo codice è disponibile in atlpath. h.  
+ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPathT](cpatht-class.md). Questo codice è reperibile in atlpath. h.  
   
 ### <a name="related-classes"></a>Classi correlate  
   
@@ -80,7 +79,7 @@ ATL fornisce la classe ATLPath per la modifica dei percorsi sotto forma di [CPat
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlpath. h  
 
-## <a name="a-nameaddbackslasha-atlpathaddbackslash"></a><a name="addbackslash"></a>ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath::AddBackSlash
 
 Questa funzione è un wrapper di overload per [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
@@ -97,7 +96,7 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
  
   
 
-## <a name="a-nameaddextensiona-atlpathaddextension"></a><a name="addextension"></a>ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath::AddExtension
  Questa funzione è un wrapper di overload per [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -110,7 +109,7 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ### <a name="remarks"></a>Note  
  Vedere [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) per informazioni dettagliate. 
   
-## <a name="a-nameappenda-atlpathappend"></a><a name="append"></a>ATLPath::Append
+## <a name="append"></a>ATLPath::Append
  Questa funzione è un wrapper di overload per [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -126,7 +125,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
  
   
 
-## <a name="a-namebuildroota-atlpathbuildroot"></a><a name="buildroot"></a>ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath::BuildRoot
  Questa funzione è un wrapper di overload per [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -142,7 +141,7 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
  
   
 
-## <a name="a-namecanonicalizea-atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath::Canonicalize
  Questa funzione è un wrapper di overload per [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -158,7 +157,7 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
  
   
 
-## <a name="a-namecombinea-atlpathcombine"></a><a name="combine"></a>ATLPath::Combine 
+## <a name="combine"></a>ATLPath::Combine 
 Questa funzione è un wrapper di overload per [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Sintassi  
@@ -178,7 +177,7 @@ inline wchar_t* Combine(
 Per informazioni dettagliate, vedere PathCombine.
 
 
-## <a name="a-namecommonprefixa-atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath::CommonPrefix
+## <a name="commonprefix"></a>ATLPath::CommonPrefix
  Questa funzione è un wrapper di overload per [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -201,7 +200,7 @@ inline int CommonPrefix(
  
   
 
-## <a name="a-namecompactpatha-atlpathcompactpath"></a><a name="compactpath"></a>ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath::CompactPath
  Questa funzione è un wrapper di overload per [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -224,7 +223,7 @@ inline BOOL CompactPath(
  
   
 
-## <a name="a-namecompactpathexa-atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath::CompactPathEx
  Questa funzione è un wrapper di overload per [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -249,7 +248,7 @@ inline BOOL CompactPathEx(
  
   
 
-## <a name="a-namefileexistsa-atlpathfileexists"></a><a name="fileexists"></a>ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath::FileExists
  Questa funzione è un wrapper di overload per [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -265,7 +264,7 @@ inline BOOL FileExists(const wchar_t* pszPath);
  
   
 
-## <a name="a-namefindextensiona-atlpathfindextension"></a><a name="findextension"></a>ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath::FindExtension
  Questa funzione è un wrapper di overload per [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -281,7 +280,7 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
  
   
 
-## <a name="a-namefindfilenamea-atlpathfindfilename"></a><a name="findfilename"></a>ATLPath::FindFileName
+## <a name="findfilename"></a>ATLPath::FindFileName
  Questa funzione è un wrapper di overload per [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -297,7 +296,7 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
  
   
 
-## <a name="a-namegetdrivenumbera-atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
+## <a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
  Questa funzione è un wrapper di overload per [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -313,7 +312,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
  
 
 
-## <a name="a-nameisdirectorya--atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath::IsDirectory 
+## <a name="isdirectory"></a>ATLPath::IsDirectory 
 Questa funzione è un wrapper di overload per [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
 
 ```  
@@ -323,7 +322,7 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 ### <a name="remarks"></a>Note
 Per informazioni dettagliate, vedere PathIsDirectory.  
 
-## <a name="a-nameisfilespeca-atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath::IsFileSpec
+## <a name="isfilespec"></a>ATLPath::IsFileSpec
  Questa funzione è un wrapper di overload per [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -339,7 +338,7 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisprefixa-atlpathisprefix"></a><a name="isprefix"></a>ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath::IsPrefix
  Questa funzione è un wrapper di overload per [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -355,7 +354,7 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisrelativea-atlpathisrelative"></a><a name="isrelative"></a>ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath::IsRelative
  Questa funzione è un wrapper di overload per [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -371,7 +370,7 @@ inline BOOL IsRelative(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisroota-atlpathisroot"></a><a name="isroot"></a>ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath::IsRoot
  Questa funzione è un wrapper di overload per [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -387,7 +386,7 @@ inline BOOL IsRoot(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameissameroota-atlpathissameroot"></a><a name="issameroot"></a>ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath::IsSameRoot
  Questa funzione è un wrapper di overload per [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -403,7 +402,7 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
  
   
 
-## <a name="a-nameisunca-atlpathisunc"></a><a name="isunc"></a>ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath::IsUNC
  Questa funzione è un wrapper di overload per [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -419,7 +418,7 @@ inline BOOL IsUNC(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisuncservera-atlpathisuncserver"></a><a name="isuncserver"></a>ATLPath::IsUNCServer
+## <a name="isuncserver"></a>ATLPath::IsUNCServer
  Questa funzione è un wrapper di overload per [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -435,7 +434,7 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisuncserversharea-atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>ATLPath::IsUNCServerShare
  Questa funzione è un wrapper di overload per [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -451,7 +450,7 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
  
   
 
-## <a name="a-namemakeprettya-atlpathmakepretty"></a><a name="makepretty"></a>ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath::MakePretty
  Questa funzione è un wrapper di overload per [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -467,7 +466,7 @@ inline BOOL MakePretty(wchar_t* pszPath);
  
   
 
-## <a name="a-namematchspeca-atlpathmatchspec"></a><a name="matchspec"></a>ATLPath::MatchSpec  
+## <a name="matchspec"></a>ATLPath::MatchSpec  
  Questa funzione è un wrapper di overload per [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -483,7 +482,7 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
  
   
 
-## <a name="a-namequotespacesa-atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath::QuoteSpaces  
+## <a name="quotespaces"></a>ATLPath::QuoteSpaces  
  Questa funzione è un wrapper di overload per [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -499,7 +498,7 @@ inline void QuoteSpaces(wchar_t* pszPath);
  
   
 
-## <a name="a-namerelativepathtoa-atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath::RelativePathTo
  Questa funzione è un wrapper di overload per [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -526,7 +525,7 @@ inline BOOL RelativePathTo(
  
   
 
-## <a name="a-nameremoveargsa-atlpathremoveargs"></a><a name="removeargs"></a>ATLPath::RemoveArgs  
+## <a name="removeargs"></a>ATLPath::RemoveArgs  
  Questa funzione è un wrapper di overload per [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -542,7 +541,7 @@ inline void RemoveArgs(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremovebackslasha-atlpathremovebackslash"></a><a name="removebackslash"></a>ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath::RemoveBackslash
  Questa funzione è un wrapper di overload per [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -558,7 +557,7 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremoveblanksa-atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath::RemoveBlanks
  Questa funzione è un wrapper di overload per [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -574,7 +573,7 @@ inline void RemoveBlanks(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremoveextensiona-atlpathremoveextension"></a><a name="removeextension"></a>ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath::RemoveExtension
  Questa funzione è un wrapper di overload per [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -590,7 +589,7 @@ inline void RemoveExtension(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremovefilespeca-atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
  Questa funzione è un wrapper di overload per [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -606,7 +605,7 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
  
   
 
-## <a name="a-namerenameextensiona-atlpathrenameextension"></a><a name="renameextension"></a>ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath::RenameExtension
  Questa funzione è un wrapper di overload per [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -622,7 +621,7 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
  
   
 
-## <a name="a-nameskiproota-atlpathskiproot"></a><a name="skiproot"></a>ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath::SkipRoot
  Questa funzione è un wrapper di overload per [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -638,7 +637,7 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
  
   
 
-## <a name="a-namestrippatha-atlpathstrippath"></a><a name="strippath"></a>ATLPath::StripPath
+## <a name="strippath"></a>ATLPath::StripPath
  Questa funzione è un wrapper di overload per [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -655,7 +654,7 @@ inline void StripPath(wchar_t* pszPath);
   
 
 
-## <a name="a-namestriptoroota-atlpathstriptoroot"></a><a name="striptoroot"></a>ATLPath::StripToRoot
+## <a name="striptoroot"></a>ATLPath::StripToRoot
  Questa funzione è un wrapper di overload per [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -671,7 +670,7 @@ inline BOOL StripToRoot(wchar_t* pszPath);
  
   
 
-## <a name="a-nameunquotespacesa-atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath::UnquoteSpaces
  Questa funzione è un wrapper di overload per [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
 ### <a name="syntax"></a>Sintassi  
@@ -687,4 +686,3 @@ inline void UnquoteSpaces(wchar_t* pszPath);
  
   
  
-

@@ -1,34 +1,33 @@
 ---
-title: "Procedura: scrivere un file di testo (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file [C++], testo"
-  - "testo (file), scrittura in C++"
+title: 'Procedura: scrivere un File di testo (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], text
+- text files, writing in C++
 ms.assetid: 39ecdba6-84e0-485c-a202-84cf6d7b8d4a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: scrivere un file di testo (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come creare un file di testo e scrivere in tale file utilizzando la classe <xref:System.IO.StreamWriter>, definita nello spazio dei nomi <xref:System.IO>.  Il costruttore <xref:System.IO.StreamWriter> accetta il nome del file da creare.  Se il file esiste, viene sovrascritto \(a meno che non venga passato il valore True come secondo argomento del costruttore <xref:System.IO.StringWriter>\).  
+# <a name="how-to-write-a-text-file-ccli"></a>Procedura: scrivere un file di testo (C++/CLI)
+Esempio di codice riportato di seguito viene illustrato come creare un file di testo e scrivere il testo utilizzando il <xref:System.IO.StreamWriter> (classe), che è definito nel <xref:System.IO> dello spazio dei nomi. Il <xref:System.IO.StreamWriter> costruttore accetta il nome del file da creare. Se il file esiste, viene sovrascritto (a meno che non passare True come secondo <xref:System.IO.StringWriter> argomento del costruttore).  
   
- Il file viene quindi archiviato utilizzando le funzioni <xref:System.IO.StreamWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A>.  
+ Il file viene quindi archiviato utilizzando il <xref:System.IO.StreamWriter.Write%2A> e <xref:System.IO.TextWriter.WriteLine%2A> funzioni.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // text_write.cpp  
@@ -54,6 +53,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [I\/O di file e di flussi](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

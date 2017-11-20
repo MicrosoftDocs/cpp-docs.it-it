@@ -1,33 +1,32 @@
 ---
-title: "Opening a Resource for Binary Editing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary data, editing"
-  - "resources [Visual Studio], opening for binary editing"
+title: Apertura di una risorsa per la modifica binaria | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- binary data, editing
+- resources [Visual Studio], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c05aa708691ae88a9fe9f345825b54d445683110
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Opening a Resource for Binary Editing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per aprire una risorsa desktop di Windows per la modifica binaria  
+# <a name="opening-a-resource-for-binary-editing"></a>Apertura di una risorsa per la modifica binaria
+### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Per aprire una risorsa desktop di Windows per la modifica binaria  
   
-1.  In [Visualizzazione risorse](../windows/resource-view-window.md) selezionare il file di risorse che si vuole modificare.  
+1.  In [Visualizzazione risorse](../windows/resource-view-window.md)selezionare il file di risorse che si vuole modificare.  
   
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
@@ -37,7 +36,7 @@ caps.handback.revision: 9
     > [!NOTE]
     >  Se si usa la finestra [Visualizzazione risorse](../windows/resource-view-window.md) per aprire una risorsa in un formato che Visual Studio non riconosce, ad esempio RCDATA o una risorsa personalizzata, la risorsa viene aperta automaticamente nell'editor binario.  
   
-### Per aprire una risorsa gestita per la modifica binaria  
+### <a name="to-open-a-managed-resource-for-binary-editing"></a>Per aprire una risorsa gestita per la modifica binaria  
   
 1.  In Esplora soluzioni selezionare il file di risorse specifico che si vuole modificare.  
   
@@ -46,15 +45,15 @@ caps.handback.revision: 9
 3.  Nella finestra di dialogo **Apri con** scegliere **Editor binario**.  
   
     > [!NOTE]
-    >  È possibile usare l'[Editor immagini](../mfc/image-editor-for-icons.md) e l'[Editor binario](../mfc/binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.  
+    >  È possibile usare l' [Editor immagini](../windows/image-editor-for-icons.md) e l' [Editor binario](binary-editor.md) per usare i file di risorse nei progetti gestiti. Per modificare le risorse gestite è necessario che siano collegate. Negli editor di risorse di Visual Studio non è supportata la modifica di risorse incorporate.  
   
     > [!NOTE]
-    >  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+    >  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).   
   
  ![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
 Dati binari per una finestra di dialogo visualizzata nell'editor binario  
   
- Nell'editor binario vengono rappresentati solo alcuni valori ASCII \(da 0x20 a 0x7E\). I caratteri estesi vengono visualizzati come punti nella sezione Valore ASCII dell'editor binario \(riquadro a destra\). I caratteri "stampabili" sono valori ASCII da 32 a 126.  
+ Nell'editor binario vengono rappresentati solo alcuni valori ASCII (da 0x20 a 0x7E). I caratteri estesi vengono visualizzati come punti nella sezione Valore ASCII dell'editor binario (riquadro a destra). I caratteri "stampabili" sono valori ASCII da 32 a 126.  
   
 > [!NOTE]
 >  Se si vuole usare l'editor binario su una risorsa già modificata in un'altra finestra dell'editor, chiudere l'altra finestra.  
@@ -63,5 +62,6 @@ Dati binari per una finestra di dialogo visualizzata nell'editor binario
   
  Nessuno  
   
-## Vedere anche  
- [Binary Editor](../mfc/binary-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Binary Editor](binary-editor.md)
+

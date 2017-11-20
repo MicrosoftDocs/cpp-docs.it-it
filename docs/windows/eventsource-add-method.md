@@ -1,30 +1,28 @@
 ---
-title: "Metodo EventSource::Add | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::Add"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Add (metodo)"
+title: 'Metodo EventSource:: Add | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::Add
+dev_langs: C++
+helpviewer_keywords: Add method
 ms.assetid: 8bded85b-929e-4425-a464-e5de67bb774c
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dca2e67baccfedea10f7faae9ac49ebb0e5bdb14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo EventSource::Add
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato al set di gestori eventi per l'oggetto EventSource corrente.  
+# <a name="eventsourceadd-method"></a>Metodo EventSource::Add
+Aggiunge il gestore dell'evento rappresentato dall'interfaccia del delegato specificato all'insieme di gestori eventi per l'oggetto EventSource corrente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -40,7 +38,7 @@ HRESULT Add(
  L'interfaccia per un oggetto delegato, che rappresenta un gestore eventi.  
   
  `token`  
- Quando questa operazione viene completata, un handle che rappresenta l'evento. Usare questo token come parametro per il [Remove](../windows/eventsource-remove-method.md) metodo per rimuovere il gestore dell'evento.  
+ Al termine di questa operazione, un handle che rappresenta l'evento. Usare questo token come parametro per il [Remove ()](../windows/eventsource-remove-method.md) metodo rimuovere il gestore dell'evento.  
   
 ## <a name="return-value"></a>Valore restituito  
  S_OK se riesce; in caso contrario, HRESULT indica un errore.  
@@ -51,4 +49,4 @@ HRESULT Add(
  **Spazio dei nomi:** Microsoft::WRL
  
  ## <a name="see-also"></a>Vedere anche
- [EventSource (classe)](../windows/eventsource-class.md)
+ [Classe EventSource](../windows/eventsource-class.md)

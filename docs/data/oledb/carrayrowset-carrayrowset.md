@@ -1,53 +1,52 @@
 ---
-title: "CArrayRowset::CArrayRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CArrayRowset::CArrayRowset"
-  - "CArrayRowset.CArrayRowset"
-  - "ATL.CArrayRowset.CArrayRowset"
-  - "ATL.CArrayRowset<TAccessor>.CArrayRowset"
-  - "CArrayRowset::CArrayRowset"
-  - "CArrayRowset"
-  - "CArrayRowset<TAccessor>::CArrayRowset"
-  - "ATL::CArrayRowset<TAccessor>::CArrayRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArrayRowset (classe), costruttore"
+title: 'CArrayRowset:: CArrayRowset | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CArrayRowset::CArrayRowset
+- CArrayRowset.CArrayRowset
+- ATL.CArrayRowset.CArrayRowset
+- ATL.CArrayRowset<TAccessor>.CArrayRowset
+- CArrayRowset::CArrayRowset
+- CArrayRowset
+- CArrayRowset<TAccessor>::CArrayRowset
+- ATL::CArrayRowset<TAccessor>::CArrayRowset
+dev_langs: C++
+helpviewer_keywords: CArrayRowset class, constructor
 ms.assetid: 189076f3-4a7f-4284-ba96-aa0b284fd8f0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 652fff2a1cfcc15257f8eebb5a4c3ac8cddedd33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CArrayRowset::CArrayRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="carrayrowsetcarrayrowset"></a>CArrayRowset::CArrayRowset
 Crea un nuovo oggetto `CArrayRowset`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      CArrayRowset(   
-   int nMax = 100000    
+      CArrayRowset(   
+   int nMax = 100000    
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nMax`  
- \[in\] numero massimo di righe nel rowset.  
+ [in] Numero massimo di righe nel rowset.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CArrayRowset](../../data/oledb/carrayrowset-class.md)

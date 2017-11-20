@@ -1,139 +1,135 @@
 ---
-title: "delegato (Estensioni del componente C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "delegate_cpp"
-  - "delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "delegate (parola chiave) [C++]"
+title: delegato (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- delegate_cpp
+- delegate
+dev_langs: C++
+helpviewer_keywords: delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 43bab2679e958dbf8ffbd0f76b0d683636ba88de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# delegato (Estensioni del componente C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="delegate--c-component-extensions"></a>delegato (Estensioni del componente C++)
 Dichiara un tipo che rappresenta un puntatore a funzione.  
   
-## Tutti i runtime  
- Sia [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] che Common Language Runtime supportano i delegati.  
+## <a name="all-runtimes"></a>Tutti i runtime  
+ Windows Runtime e common language runtime supporta i delegati.  
   
-### Osservazioni  
- `delegate` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [Parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+### <a name="remarks"></a>Note  
+ `delegate` è una parola chiave sensibile al contesto. Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
- Per rilevare in fase di compilazione se un tipo è un delegato, utilizzare il tratto di tipo `__is_delegate()`.  Per ulteriori informazioni, vedere [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Per rilevare in fase di compilazione se un tipo è un delegato, utilizzare il `__is_delegate()` tratto di tipo. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-## Windows Runtime  
- C\+\+\/CX supporta i delegati utilizzando la seguente sintassi.  
+## <a name="windows-runtime"></a>Windows Runtime  
+ C + + CX supporta i delegati con la sintassi seguente.  
   
-### Sintassi  
-  
-```cpp  
-  
-access delegate return-type delegate-type-identifier ([ parameters ])  
-```  
-  
-### Parametri  
- *access*  
- \(facoltativo\) L'accessibilità del delegato, che può essere `public` \(impostazione predefinita\) o `private`.  Il prototipo di funzione può anche essere qualificato con le parole chiave `volatile` o `const`.  
-  
- *return\-type*  
- Il tipo restituito del prototipo della funzione.  
-  
- *delegate\-type\-identifier*  
- Il nome del tipo delegato dichiarato.  
-  
- *parameters*  
- \(Facoltativo\) Tipi e identificatori dei prototipi di funzione.  
-  
-### Osservazioni  
- Utilizzare *delegate\-type\-identifier* per dichiarare un evento con lo stesso prototipo del delegato.  Per ulteriori informazioni, vedere i [delegati \(C\+\+\/CX\)](../Topic/Delegates%20\(C++-CX\).md).  
-  
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
-  
-## Common Language Runtime  
- Il Common Language Runtime supporta i delegati con la seguente sintassi.  
-  
-### Sintassi  
+### <a name="syntax"></a>Sintassi  
   
 ```cpp  
+access  
+delegate  
+return-type  
+delegate-type-identifier  
+(  
+[ parameters ]  
+)  
   
-access delegate function_declaration  
 ```  
   
-### Parametri  
+### <a name="parameters"></a>Parametri  
  *access*  
- \(facoltativo\) L'accessibilità del delegato al di fuori dell'assembly può essere public o private.  Il valore predefinito è private.  In una classe, un delegato può avere qualsiasi accessibilità.  
+ (facoltativo) L'accessibilità del delegato, che può essere `public` (impostazione predefinita) o `private`. Il prototipo di funzione può inoltre essere qualificato con il `const` o `volatile` parole chiave.  
   
- *function\_declaration*  
- La firma della funzione che può essere associata al delegato.  Il tipo restituito di un delegato può essere qualsiasi tipo gestito.  Per motivi di interoperabilità, il tipo restituito di un delegato dovrebbe essere un tipo CLS.  
+ *tipo restituito*  
+ Il tipo restituito del prototipo di funzione.  
   
- Per definire un delegato non associato, il primo parametro di *function\_declaration* deve essere il tipo del puntatore `this` per l'oggetto.  Per ulteriori informazioni, vedere [Delegati non associati](../misc/unbound-delegates.md).  
+ *Identificatore di tipo delegato*  
+ Il nome del tipo delegato dichiarata.  
   
-### Osservazioni  
- I delegati sono multicast: il "puntatore a funzione" può essere associato a uno o più metodi all'interno di una classe gestita.  La parola chiave **delegate** definisce un tipo delegato multicast con una specifica firma del metodo.  
+ *parametri*  
+ (Facoltativo) I tipi e gli identificatori del prototipo di funzione.  
   
- Un delegato può anche essere associato a un metodo di una classe di valori, ad esempio ad un metodo statico.  
+### <a name="remarks"></a>Note  
+ Utilizzare il *identificatore di tipo delegato* per dichiarare un evento con lo stesso prototipo del delegato. Per ulteriori informazioni, vedere [delegati (C + + CX)](../cppcx/delegates-c-cx.md).  
   
- Un delegato presenta le caratteristiche descritte di seguito:  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
--   Eredita da **System::MulticastDelegate**.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Common language runtime supporta i delegati con la sintassi seguente.  
   
--   Ha un costruttore che accetta due argomenti: un puntatore a una classe gestita o a **NULL** \(nel caso di associazione ad un metodo statico\) e un metodo completamente qualificato del tipo specificato.  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+access  
+delegate  
+function_declaration  
+  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ *access*  
+ (facoltativo) L'accessibilità del delegato all'esterno dell'assembly può essere pubblico o privato.  Il valore predefinito è privato.  All'interno di una classe, un delegato può avere qualsiasi tipo di accessibilità.  
+  
+ *function_declaration*  
+ La firma della funzione che può essere associata al delegato. Il tipo restituito di un delegato può essere qualsiasi tipo gestito. Per motivi di interoperabilità, è consigliabile che il tipo restituito di un delegato sia un tipo a CLS.  
+  
+ Per definire un delegato non associato, il primo parametro *function_declaration* deve essere il tipo del `this` puntatore per l'oggetto. 
+  
+### <a name="remarks"></a>Note  
+ I delegati sono multicast: il "puntatore a funzione" può essere associato a uno o più metodi all'interno di una classe gestita. Il **delegato** (parola chiave) definisce un tipo di delegato multicast con una firma di metodo specifico.  
+  
+ Un delegato può inoltre essere associato a un metodo di una classe di valore, ad esempio un metodo statico.  
+  
+ Un delegato presenta le caratteristiche seguenti:  
+  
+-   Eredita da **System:: MulticastDelegate**.  
+  
+-   Ha un costruttore che accetta due argomenti: un puntatore a una classe gestita o **NULL** (nel caso di associazione a un metodo statico) e un metodo completamente qualificato del tipo specificato.  
   
 -   Ha un metodo denominato `Invoke`, la cui firma corrisponde alla firma del delegato dichiarata.  
   
- Quando il delegato viene invocato, le relative funzioni vengono chiamate nell'ordine in cui sono state associate.  
+ Quando un delegato viene richiamato, la funzione o funzioni vengono chiamati in ordine in cui sono stati collegati.  
   
- Il valore restituito di un delegato è il valore restituito dall'ultima funzione membro associata.  
+ Il valore restituito di un delegato è il valore restituito dal relativo ultima funzione membro associato.  
   
- I delegati non possono essere sottoposti a overload.  
+ Delegati non possono essere sottoposti a overload.  
   
- I delegati possono essere associati o non associati.  
+ Delegati possono essere associati o non associati.  
   
- Quando viene creata un'istanza di un delegato associato, il primo argomento è un riferimento ad un oggetto.  Il secondo argomento per la creazione di un'istanza del delegato è l'indirizzo di un metodo di un oggetto di una classe gestita o un puntatore a un metodo di un tipo di valore.   Il secondo argomento per la creazione di un'istanza del delegato deve assegnare un nome al metodo utilizzando la sintassi completa dell'ambito della classe e applicando l'operatore address\-of.  
+ Quando si crea un'istanza di un delegato associato, il primo argomento deve essere un riferimento all'oggetto.  Il secondo argomento della creazione di un'istanza di delegato deve essere di essere l'indirizzo di un metodo di un oggetto di classe gestita o un puntatore a un metodo di un tipo di valore.   Il secondo argomento della creazione di un'istanza di delegato deve assegnare un nome di metodo con la sintassi di ambito di classe completo e applicare l'operatore address-of.  
   
- Quando viene creata un'istanza di un delegato non associato, il primo argomento è l'indirizzo di un metodo di un oggetto di una classe gestita o un puntatore a un metodo di un tipo di valore.   L'argomento deve assegnare un nome al metodo utilizzando la sintassi completa dell'ambito della classe e applicando l'operatore address\-of.  
+ Quando si crea un'istanza di un delegato non associato, il primo argomento deve essere l'indirizzo di un metodo di un oggetto di classe gestita o un puntatore a un metodo di un tipo valore.   L'argomento deve assegnare un nome di metodo con la sintassi di ambito di classe completo e applicare l'operatore address-of.  
   
- Quando si crea un delegato per una funzione statica o globale, un solo parametro è obbligatorio: la funzione \(l'indirizzo della funzione è facoltativo\).  
+ Quando si crea un delegato a una funzione globale o statica, è necessario un solo parametro: la funzione (facoltativamente, l'indirizzo della funzione).  
   
  Per ulteriori informazioni sui delegati, vedere  
   
--   [Delegati non associati](../misc/unbound-delegates.md)  
+-   [Procedura: Definire e usare delegati (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
   
--   [Procedura: definire e utilizzare delegati](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)  
+-   [Delegati generici (Visual C++)](../windows/generic-delegates-visual-cpp.md)  
   
--   [Delegato a un membro di una classe di valore](../misc/how-to-associate-delegates-to-members-of-a-value-class.md)  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
--   [Delegato a una funzione non gestita](../misc/how-to-associate-delegates-to-unmanaged-functions.md)  
-  
--   [Delegati composti](../misc/how-to-compose-delegates.md)  
-  
--   [Procedura: passare un delegato a una funzione nativa per la quale è previsto un puntatore a funzione](../misc/how-to-pass-a-delegate-hat-to-a-native-function-expecting-a-function-pointer.md)  
-  
--   [Generic Delegates \(Visual C\+\+\)](../windows/generic-delegates-visual-cpp.md)  
-  
-### Requisiti  
- Opzione del compilatore: **\/clr**  
-  
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio che segue viene illustrato come dichiarare, inizializzare ed invocare i delegati.  
+ Nell'esempio seguente viene illustrato come dichiarare e inizializzare richiamare delegati.  
   
 ```cpp  
 // mcppv2_delegate.cpp  
@@ -194,10 +190,17 @@ int main () {
   
  **Output**  
   
-  **in func1 8**  
- **in func1 9**  
- **in func2 9**  
- **in func2 10**  
- **in func3 statica 11**   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+in func1 8  
+  
+in func1 9  
+  
+in func2 9  
+  
+in func2 10  
+  
+in static func3 11  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

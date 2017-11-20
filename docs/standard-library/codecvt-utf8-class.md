@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- codecvt/std::codecvt_utf8
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt_utf8 class
+f1_keywords: codecvt/std::codecvt_utf8
+dev_langs: C++
+helpviewer_keywords: codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: da936d5a454557ef0a5934472b329cf60df66b41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 873a4e1834b13ac69370223339dd395b650eb679
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 Rappresenta un facet di [impostazioni locali](../standard-library/locale-class.md) che esegue la conversione tra caratteri wide codificati come UCS-2 o UCS-4 e un flusso di byte codificato come UTF-8.
@@ -50,4 +45,3 @@ Il flusso di byte può essere scritto in un file binario o un file di testo.
 ## <a name="requirements"></a>Requisiti
 
 Intestazione: <codecvt> Spazio dei nomi: std
-

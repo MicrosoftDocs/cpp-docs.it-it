@@ -1,33 +1,32 @@
 ---
-title: "Procedura: utilizzare espressioni regolari per convalidare la formattazione dei dati (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dati [C++], formattazione"
-  - "espressioni regolari [C++], convalida della formattazione di dati"
-  - "stringhe [C++], formattazione"
+title: Utilizzare le espressioni regolari per convalidare la formattazione (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], formatting
+- data [C++], formatting
+- regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db15abf9aca532b8c0fb712733c4e87350b58747
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: utilizzare espressioni regolari per convalidare la formattazione dei dati (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come utilizzare le espressioni regolari per verificare la formattazione di una stringa.  In questo esempio, la stringa deve contenere un numero di telefono valido.  Viene utilizzata la stringa "\\d{3}\-\\d{3}\-\\d{4}" per indicare che ciascun campo rappresenta un numero di telefono valido.  La lettera "d" nella stringa indica una cifra, mentre l'argomento dopo ciascuna lettera "d" indica il numero di cifre che devono essere presenti.  In questo caso, il numero deve essere separato da trattini.  
+# <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>Procedura: utilizzare espressioni regolari per convalidare la formattazione dei dati (C++/CLI)
+Esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per verificare la formattazione della stringa. Nell'esempio di codice seguente, la stringa deve contenere un numero di telefono valido. Esempio di codice seguente usa la stringa "\d{3}-\d{3}-\d{4}" per indicare che ogni campo rappresenta un numero di telefono valido. "D" nella stringa indica una cifra e l'argomento dopo ciascuna "d" indica il numero di cifre che deve essere presente. In questo caso, il numero deve essere separati da trattini.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // regex_validate.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

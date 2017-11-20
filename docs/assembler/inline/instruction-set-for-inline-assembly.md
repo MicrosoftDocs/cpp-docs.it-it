@@ -1,34 +1,34 @@
 ---
-title: "Set di istruzioni per l&#39;assembly inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembler [C++], set di istruzioni"
-  - "assembly inline [C++], set di istruzioni"
-  - "set di istruzioni [C++]"
-  - "set di istruzioni [C++], assembly inline"
+title: Set di istruzioni per Assembly Inline | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline assembly [C++], instruction set
+- instruction set [C++], inline assembly
+- assembler [C++], instruction set
+- instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f48b48e31bae85c4fbf6ebadd3b0df952356ebed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Set di istruzioni per l&#39;assembly inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sezione specifica Microsoft  
- Il compilatore Visual C\+\+ supporta tutti i codici operativi fino a Pentium 4 e AMD Athlon.  È possibile creare istruzioni aggiuntive supportate dal processore di destinazione attraverso [Pseudoistruzione \_emit](../../assembler/inline/emit-pseudoinstruction.md).  
+# <a name="instruction-set-for-inline-assembly"></a>Set di istruzioni per assembly inline
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Il compilatore Visual C++ supporta tutti i codici operativi fino a Pentium 4 e AMD Athlon. È possibile creare istruzioni aggiuntive supportate dal processore di destinazione con il [pseudoistruzione Emit](../../assembler/inline/emit-pseudoinstruction.md).  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Utilizzo di linguaggio assembly in blocchi \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

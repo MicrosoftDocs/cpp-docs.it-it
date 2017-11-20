@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- template_cpp
-dev_langs:
-- C++
+f1_keywords: template_cpp
+dev_langs: C++
 helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6ce40029e40906441ebd7c64ff9011a61f26045b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="templates-c"></a>Modelli (C++)
 I modelli costituiscono la base per la programmazione generica in C++. In C++ è necessario come un linguaggio fortemente tipizzato, tutte le variabili per un tipo specifico, in modo esplicito dichiarata dal programmatore o dedotto dal compilatore. Tuttavia, molte strutture di dati e algoritmi lo stesso aspetto indipendentemente dal tipo operino su. Attivazione modelli di definire le operazioni di una classe o funzione e consentono di specificare quali concreto tipi tali operazioni dovrebbe funzionare in.  

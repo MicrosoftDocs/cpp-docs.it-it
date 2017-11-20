@@ -1,48 +1,46 @@
 ---
-title: "Avviso del compilatore (livello 4) C4512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4512"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4512"
+title: Compilatore (livello 4) avviso C4512 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4512
+dev_langs: C++
+helpviewer_keywords: C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3cf776d5908b747d63d17134e80a7da750852043
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4512
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4512"></a>Avviso del compilatore (livello 4) C4512
 'classe': impossibile generare un operatore di assegnazione  
   
- Il compilatore non può generare un operatore di assegnazione per la classe specificata.  Non è stato creato alcun operatore di assegnazione.  
+ Il compilatore non può generare un operatore di assegnazione per la classe specificata. Non è stato creato alcun operatore di assegnazione.  
   
  L'avviso può essere generato da un operatore di assegnazione per la classe base non accessibile dalla classe derivata.  
   
  Per evitare la visualizzazione dell'avviso, specificare un operatore di assegnazione definito dall'utente per la classe.  
   
- Verrà inoltre generata una funzione di operatore di assegnazione per una classe che non ne definisce nessuna.  L'operatore di assegnazione è una copia membro per membro dei membri dati di un oggetto.  Poiché dopo l'inizializzazione non è possibile modificare gli elementi di dati `const`, se la classe contiene un elemento `const`, l'operatore di assegnazione predefinito non funzionerà.  Un'altra causa dell'avviso di C4512 è una dichiarazione di un membro dati non statico di tipo di riferimento.  Se l'intento è quello di creare un tipo non copiabile, è necessario anche impedire la creazione di un costruttore di copia predefinito.  
+ Verrà inoltre generata una funzione di operatore di assegnazione per una classe che non ne definisce nessuna. L'operatore di assegnazione è una copia membro per membro dei membri dati di un oggetto. Poiché dopo l'inizializzazione non è possibile modificare gli elementi di dati `const`, se la classe contiene un elemento `const`, l'operatore di assegnazione predefinito non funzionerà. Un'altra causa dell'avviso di C4512 è una dichiarazione di un membro dati non statico di tipo di riferimento. Se l'intento è quello di creare un tipo non copiabile, è necessario anche impedire la creazione di un costruttore di copia predefinito.  
   
  Per evitare la visualizzazione dell'avviso C4512 per il codice, sono possibili tre soluzioni:  
   
 -   Definire in modo esplicito un operatore di assegnazione per la classe.  
   
--   Rimuovere **const** o l'operatore del riferimento dall'elemento dati nella classe.  
+-   Rimuovere **const** o l'operatore di riferimento dell'elemento di dati nella classe.  
   
--   Usare l'istruzione \#pragma [warning](../../preprocessor/warning.md) per eliminare l'avviso.  
+-   Utilizzare il #pragma [avviso](../../preprocessor/warning.md) istruzione per eliminare l'avviso.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Nell'esempio seguente viene generato l'errore C4512.  
   
 ```  
@@ -94,5 +92,4 @@ int main() {
    Base3 first3(c);  
    Base3 second3 = first3; // C2280 if no default copy ctor  
 }  
-  
 ```

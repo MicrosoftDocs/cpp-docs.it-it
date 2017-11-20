@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_destructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_destructible
+f1_keywords: type_traits/std::is_destructible
+dev_langs: C++
+helpviewer_keywords: is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 1b673ae9c46479723684a22205853229f913573d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 438af85bce45bb0fe7d1386fdc46f1fab0217999
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isdestructible-class"></a>Classe is_destructible
 Verifica se il tipo è destructible.  
@@ -51,7 +47,6 @@ struct is_destructible;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

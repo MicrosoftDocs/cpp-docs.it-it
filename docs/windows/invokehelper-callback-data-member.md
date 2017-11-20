@@ -1,47 +1,45 @@
 ---
-title: "Membro dati InvokeHelper::callback_ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper::callback_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "callback_ (membro dati)"
+title: Membro dati InvokeHelper::callback_ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper::callback_
+dev_langs: C++
+helpviewer_keywords: callback_ data member
 ms.assetid: 6f0cbf6d-0448-46f8-ba71-bd6fd8702e3a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6fc6f6876bffbad693d05c4f1154df2dbba77811
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Membro dati InvokeHelper::callback_
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="invokehelpercallback-data-member"></a>Membro dati InvokeHelper::callback_
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 TCallback callback_;  
 ```  
   
-## Note  
- Rappresenta il gestore eventi da chiamare quando si verifica un evento .  
+## <a name="remarks"></a>Note  
+ Rappresenta il gestore eventi da chiamare quando si verifica un evento.  
   
- Il parametro del modello `TCallback` specifica il tipo del gestore eventi.  
+ Il `TCallback` modello parametro specifica il tipo del gestore dell'evento.  
   
-## Requisiti  
- **Header:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Struttura InvokeHelper](../windows/invokehelper-structure.md)   
+## <a name="see-also"></a>Vedere anche  
+ [InvokeHelper (struttura)](../windows/invokehelper-structure.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

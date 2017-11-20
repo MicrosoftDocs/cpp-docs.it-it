@@ -1,63 +1,63 @@
 ---
-title: "Supporto delle transazioni in OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "database [C++], transazioni"
-  - "transazioni distribuite [C++]"
-  - "transazioni annidate [C++]"
-  - "OLE DB [C++], supporto della transazione"
-  - "modelli consumer OLE DB [C++], supporto della transazione"
-  - "transazioni [C++], supporto OLE DB funzioni di accesso"
+title: Supporto delle transazioni in OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates [C++], transaction support
+- transactions [C++], OLE DB support for
+- nested transactions [C++]
+- OLE DB [C++], transaction support
+- databases [C++], transactions
+- distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9a7b1e937a7fa1ab33ff74d3c4e42856928320fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Supporto delle transazioni in OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Una [transazione](../../data/transactions-mfc-data-access.md) è una soluzione per raggruppare una serie di aggiornamenti relativi a un'origine dati, in modo che il commit di tutti gli aggiornamenti venga eseguito in un'unica operazione oppure che, nel caso di esito negativo anche di un solo aggiornamento, non venga eseguito alcun commit e l'intera transazione venga annullata.  Questo processo assicura l'integrità dei risultati dell'origine dati.  
+# <a name="supporting-transactions-in-ole-db"></a>Supporto delle transazioni in OLE DB
+Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per raggruppare o batch, una serie di aggiornamenti a un'origine dati in modo che tutti esito positivo e viene eseguito il commit in una sola volta oppure (se uno di essi ha esito negativo) non viene eseguito il commit e viene eseguito il rollback dell'intera transazione. Questo processo assicura l'integrità del risultato nell'origine dati.  
   
- In OLE DB le transazioni vengono supportate con i tre metodi seguenti:  
+ OLE DB supporta le transazioni con i tre metodi seguenti:  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="0699a86bb6d6316bff035b804a56f0aa" class\="tgtSentence"\>ITransactionLocal::StartTransaction\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal:: StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="39299b0fea086b86052550bd165334f7" class\="tgtSentence"\>ITransaction::Commit\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction:: commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="8e992150c28ae247d532408ca7828bfe" class\="tgtSentence"\>ITransaction::Abort\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction:: Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   
-## Relazione tra sessioni e transazioni  
- Un singolo oggetto origine dati può creare uno o più oggetti sessione, ciascuno dei quali può trovarsi all'interno o all'esterno dell'ambito di una transazione in un determinato momento.  
+## <a name="relationship-of-sessions-and-transactions"></a>Relazione tra le sessioni e transazioni  
+ Un singolo oggetto origine dati è possibile creare uno o più oggetti di sessione, ognuno dei quali può trovarsi all'interno o all'esterno dell'ambito di una transazione in un determinato momento.  
   
- Quando una sessione non rientra in una transazione, tutte le operazioni eseguite all'interno della sessione riguardanti l'archivio dati vengono confermate immediatamente in corrispondenza della chiamata di ciascun metodo. Questo meccanismo viene a volte definito commit automatico o modalità implicita.  
+ Quando una sessione non immette una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati vengano immediatamente eseguito il commit in ogni chiamata al metodo. (Questo è talvolta detta modalità autocommit o implicite.)  
   
- Quando una sessione rientra in una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati diventano parte della transazione e vengono confermate o annullate in un'unica operazione. Questo meccanismo viene a volte definito commit manuale.  
+ Quando una sessione accede una transazione, tutte le operazioni eseguite all'interno di tale sessione sull'archivio dati fa parte di tale transazione vengano eseguito il commit e interromperle come unità singola. (Questo è talvolta detta modalità di commit manuale.)  
   
- Il supporto delle transazioni è specifico del provider.  Se il provider in uso supporta le transazioni, un oggetto sessione in grado di supportare **ITransaction** e **ITransactionLocal** potrà fare parte di una transazione semplice, ovvero non annidata.  La classe [CSession](../../data/oledb/csession-class.md) dei modelli OLE DB supporta queste interfacce ed è la soluzione consigliata per implementare il supporto delle transazioni in Visual C\+\+.  
+ Supporto delle transazioni è specifico del provider. Se il provider in uso supporta le transazioni, un oggetto di sessione che supporta **ITransaction** e **ITransactionLocal** possibile immettere una semplice (vale a dire non annidati) delle transazioni. La classe di modelli OLE DB [CSession](../../data/oledb/csession-class.md) supporta queste interfacce ed è lo strumento consigliato per implementare il supporto delle transazioni in Visual C++.  
   
-## Avvio e terminazione di una transazione  
- I metodi `StartTransaction`, **Commit** e **Abort** vengono chiamati nell'oggetto rowset del consumer.  
+## <a name="starting-and-ending-the-transaction"></a>Inizio e fine della transazione  
+ Chiamare il `StartTransaction`, **Commit**, e **Abort** metodi nell'oggetto set di righe del consumer.  
   
- Quando si chiama **ITransactionLocal::StartTransaction**, viene avviata una nuova transazione locale.  Quando si avvia la transazione, le modifiche apportate dalle operazioni successive verranno effettivamente applicate all'archivio dati solo dopo il commit della transazione.  
+ La chiamata **ITransactionLocal:: StartTransaction** avvia una nuova transazione locale. Quando si avvia la transazione, le modifiche apportate dalle operazioni successive non vengono effettivamente applicate all'archivio dati fino a quando non si esegue il commit della transazione.  
   
- Quando si chiama **ITransaction::Commit** o **ITransaction::Abort**, la transazione viene terminata.  **Commit** applica all'archivio dati tutte le modifiche che rientrano nell'ambito della transazione.  **Abort** annulla tutte le modifiche che rientrano nell'ambito della transazione. L'archivio dati rimane nello stato in cui si trovava prima dell'avvio della transazione.  
+ La chiamata **ITransaction:: commit** o **ITransaction:: Abort** termina la transazione. **Eseguire il commit** tutte le modifiche all'interno dell'ambito della transazione da applicare all'archivio dati. **Interrompere** cause tutte le modifiche all'interno dell'ambito della transazione deve essere annullato e l'archivio dati viene lasciato nello stato avevano prima dell'avvio della transazione.  
   
-## Transazioni annidate  
- Una [transazione annidata](https://msdn.microsoft.com/en-us/library/ms716985.aspx) si verifica se si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione.  La nuova transazione viene avviata come transazione annidata rispetto alla transazione corrente.  Se il provider non supporta le transazioni annidate e si chiama `StartTransaction` quando è già presente una transazione attiva sulla sessione, viene restituito **XACT\_E\_XTIONEXISTS**.  
+## <a name="nested-transactions"></a>Transazioni nidificate  
+ Oggetto [transazione annidata](https://msdn.microsoft.com/en-us/library/ms716985.aspx) si verifica quando si avvia una nuova transazione locale quando esiste già una transazione attiva nella sessione. La nuova transazione viene avviata come una transazione nidificata rispetto alla transazione corrente. Se il provider non supporta le transazioni nidificate, la chiamata `StartTransaction` quando è già presente una transazione attiva nella sessione restituisce **XACT_E_XTIONEXISTS**.  
   
-## Transazioni distribuite  
- Una transazione distribuita è una transazione che aggiorna dati distribuiti, ovvero dati memorizzati su più sistemi di computer connessi in rete.  Se si desidera supportare le transazioni su un sistema distribuito, è necessario utilizzare Microsoft .NET Framework anziché il sistema di supporto delle transazioni di OLE DB.  
+## <a name="distributed-transactions"></a>Transazioni distribuite  
+ Una transazione distribuita è una transazione che aggiorna i dati distribuiti; ovvero, i dati in più computer in rete. Se si desidera supportare le transazioni in un sistema distribuito, è necessario utilizzare .NET Framework anziché il supporto delle transazioni di OLE DB.  
   
-## Vedere anche  
- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

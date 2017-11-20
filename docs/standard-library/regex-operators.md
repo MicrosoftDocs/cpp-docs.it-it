@@ -14,17 +14,15 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 ||||  
@@ -773,6 +771,5 @@ sub >= 'a' == true
 [Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
 [Classe regex_traits](../standard-library/regex-traits-class.md)  
 [Typedef \<regex>](../standard-library/regex-typedefs.md)  
-
 
 

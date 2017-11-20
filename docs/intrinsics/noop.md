@@ -1,38 +1,37 @@
 ---
-title: "__noop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__noop_cpp"
-  - "__noop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__noop keyword [C++]"
+title: NOOP | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __noop_cpp
+- __noop
+dev_langs: C++
+helpviewer_keywords: __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7bdd595ac7fb70ef00865485a38e9d11cfd0181c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __noop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="noop"></a>__noop
+**Sezione specifica Microsoft**  
   
- La funzione intrinseca di `__noop` specifica che una funzione deve essere ignorato e l'elenco di argomenti viene analizzato e nessun codice viene generato per gli argomenti.  È stata progettata per essere utilizzata in debug globale una funzione che accetta un numero variabile di argomenti.  
+ Il `__noop` intrinseco specifica che una funzione deve essere ignorata e analizzare l'elenco di argomenti, ma nessun codice generato per gli argomenti. Serve per l'utilizzo nelle funzioni globali di debug che accettano un numero variabile di argomenti.  
   
- Il compilatore converte la funzione intrinseca di `__noop` a 0 in fase di compilazione.  
+ Il compilatore converte il `__noop` intrinseci su 0 in fase di compilazione.  
   
-## Esempio  
- Nel codice seguente viene illustrato come utilizzare `__noop`.  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato come è possibile usare `__noop`.  
   
 ```  
 // compiler_intrinsics__noop.cpp  
@@ -50,6 +49,6 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,83 +1,83 @@
 ---
-title: "/I (Directory di inclusione aggiuntive) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/I (opzione del compilatore) [C++]"
-  - "Directory di inclusione aggiuntive (opzione del compilatore)"
-  - "I (opzione del compilatore) [C++]"
-  - "-I (opzione del compilatore) [C++]"
-  - "directory di inclusione, opzione del compilatore [C++]"
-  - "impostazione delle directory di inclusione"
+title: -I (altre directory di inclusione) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 91868a657e4b537c286378276701915c1e160a77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /I (Directory di inclusione aggiuntive)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aggiunge una directory all'elenco di directory in cui viene eseguita la ricerca dei file di inclusione.  
+# <a name="i-additional-include-directories"></a>/I (Directory di inclusione aggiuntive)
+Aggiunge una directory all'elenco delle directory ricercato i file di inclusione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /I[ ]directory  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `directory`  
- La directory da aggiungere all'elenco di directory in cui viene eseguita la ricerca dei file di inclusione.  
+ La directory da aggiungere all'elenco delle directory ricerca i file di inclusione.  
   
-## Note  
- Per aggiungere più di una directory, utilizzare l'opzione più di una volta.  La ricerca viene eseguita nelle directory solo fino a quando viene trovato il file di inclusione specificato.  
+## <a name="remarks"></a>Note  
+ Per aggiungere più di una directory, utilizzare questa opzione più volte. La ricerca di directory vengono eseguite solo fino a quando non viene trovato il file di inclusione specificato.  
   
- È possibile utilizzare questa opzione con l'opzione Ignora percorsi di inclusione standard \([\/X \(Ignora percorso di inclusione standard\)](../../build/reference/x-ignore-standard-include-paths.md)\).  
+ È possibile utilizzare questa opzione con le Ignora percorsi di inclusione Standard ([/X (Ignora a percorsi di inclusione Standard)](../../build/reference/x-ignore-standard-include-paths.md)) opzione.  
   
- Il compilatore ricerca le directory nel seguente ordine:  
+ Il compilatore cerca per le directory nell'ordine seguente:  
   
-1.  Directory contenenti il file di origine.  
+1.  Directory contenente il file di origine.  
   
-2.  Directory specificate con l'opzione **\/I**, nell'ordine in cui vengono rilevate da CL.  
+2.  Directory specificate con il **/I** opzione, nell'ordine che vengono rilevate da CL.  
   
-3.  Directory specificate nella variabile di ambiente **INCLUDE**.  
+3.  Directory specificate nel **INCLUDE** variabile di ambiente.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Generale**.  
+3.  Fare clic su di **generale** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Directory di inclusione aggiuntive**.  
+4.  Modificare il **directory di inclusione aggiuntive** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>.  
   
-## Esempio  
- Il comando che segue cerca i file di inclusione richiesti da MAIN.c nel seguente ordine: prima nella directory contenente MAIN.c, quindi nella directory \\INCLUDE, quindi nella directory \\MY\\INCLUDE, infine nelle directory assegnate alla variabile di ambiente INCLUDE.  
+## <a name="example"></a>Esempio  
+ Il comando seguente esegue la ricerca di file di inclusione richiesti da Main. c nell'ordine seguente: prima nella directory contenente Main. c, quindi nella directory \INCLUDE, quindi nella directory \MY\INCLUDE e infine nelle directory assegnato a di inclusione variabile di ambiente.  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

@@ -1,31 +1,31 @@
 ---
-title: "Modifica dell&#39;ereditariet&#224; di RMyProviderRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ereditarietà [C++]"
-  - "RMyProviderRowset"
+title: "Modifica dell'ereditarietà di RMyProviderRowset | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- RMyProviderRowset
+- inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Modifica dell&#39;ereditariet&#224; di RMyProviderRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per aggiungere l'interfaccia `IRowsetLocate` all'esempio del provider semplice in sola lettura, modificare l'ereditarietà di **RMyProviderRowset**.  Inizialmente **RMyProviderRowset** eredita da `CRowsetImpl`.  È necessario modificare l'ereditarietà in modo che erediti da **CRowsetBaseImpl**.  
+# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Modifica dell'ereditarietà di RMyProviderRowset
+Per aggiungere il `IRowsetLocate` l'interfaccia per l'esempio di un provider semplice in sola lettura, modificare l'ereditarietà di **RMyProviderRowset**. Inizialmente, **RMyProviderRowset** eredita da `CRowsetImpl`. È necessario modificare in modo che erediti da **CRowsetBaseImpl**.  
   
- Creare una nuova classe, `CMyRowsetImpl`, in MyProviderRS.h:  
+ A tale scopo, creare una nuova classe, `CMyRowsetImpl`, in MyProviderRS. H:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -39,7 +39,7 @@ class CMyRowsetImpl:
 };  
 ```  
   
- Modificare quindi la mappa dell'interfaccia COM in MyProviderRS.h come segue:  
+ A questo punto, modificare la mappa dell'interfaccia COM in MyProviderRS. H come segue:  
   
 ```  
 BEGIN_COM_MAP(CMyRowsetImpl)  
@@ -48,17 +48,17 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()  
 ```  
   
- Verrà creata una mappa dell'interfaccia COM che comunica a `CMyRowsetImpl` di chiamare **QueryInterface** sia per l'interfaccia `IRowset` che per l'interfaccia `IRowsetLocate`.  Per ottenere l'intera implementazione per le altre classi del rowset, nella mappa la classe `CMyRowsetImpl` viene collegata di nuovo alla classe **CRowsetBaseImpl** definita dai Modelli OLE DB. Nella mappa viene utilizzata la macro COM\_INTERFACE\_ENTRY\_CHAIN che comunica ai modelli OLE DB di esaminare la mappa COM in **CRowsetBaseImpl** in risposta a una chiamata di `QueryInterface`.  
+ Crea una mappa dell'interfaccia COM che comunica `CMyRowsetImpl` chiamare **QueryInterface** sia per il `IRowset` e `IRowsetLocate` interfacce. Per ottenere l'implementazione per l'altro set di righe tutte le classi, i collegamenti della mappa di `CMyRowsetImpl` classe eseguire il backup per il **CRowsetBaseImpl** classe definiti tramite i modelli OLE DB, la mappa usa la macro COM_INTERFACE_ENTRY_CHAIN, che indica Eseguire il mapping di modelli OLE DB per analizzare il modello COM in **CRowsetBaseImpl** in risposta a un `QueryInterface` chiamare.  
   
- Collegare infine `RAgentRowset` a `CMyRowsetBaseImpl` modificando `RAgentRowset` in modo che erediti da `CMyRowsetImpl`, come segue:  
+ Collegare infine `RAgentRowset` a `CMyRowsetBaseImpl` modificando `RAgentRowset` da cui ereditare `CMyRowsetImpl`, come segue:  
   
 ```  
 class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
 ```  
   
- `RAgentRowset` potrà quindi utilizzare sia l'interfaccia `IRowsetLocate`, sia il resto dell'implementazione della classe del rowset.  
+ `RAgentRowset`ora è possibile utilizzare il `IRowsetLocate` interfaccia mentre il resto dell'implementazione della classe di rowset.  
   
- Al termine di questa operazione, sarà possibile [determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Quando questa operazione, è possibile [determinare in modo dinamico le colonne restituite al consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

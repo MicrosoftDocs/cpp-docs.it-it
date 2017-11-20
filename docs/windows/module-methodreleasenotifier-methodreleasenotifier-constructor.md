@@ -1,32 +1,30 @@
 ---
-title: "Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MethodReleaseNotifier, costruttore"
+title: Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: MethodReleaseNotifier, constructor
 ms.assetid: 762e2ca4-0a92-49de-9ff5-d3efa0f067c0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d40c05faa3ecc551904d2f267078ba342ea42b46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inizializza una nuova istanza della classe Modulo::MethodReleaseNotifier.  
+# <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Costruttore Module::MethodReleaseNotifier::MethodReleaseNotifier
+Inizializza una nuova istanza della classe methodreleasenotifier.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,20 +36,20 @@ MethodReleaseNotifier(
             method_(method);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `object`  
- Un oggetto la cui funzione membro è un gestore di eventi.  
+ Oggetto la cui funzione membro è un gestore eventi.  
   
  `method`  
- La funzione membro del parametro `object` che rappresenta il gestore eventi.  
+ La funzione membro del parametro `object` che rappresenta il gestore dell'evento.  
   
  `release`  
- Specifica `true` per abilitare la chiamata del metodo sottostante [Module::ReleaseNotifier::Release \(\)](../windows/module-releasenotifier-release.md) ; in caso contrario, specifica `false`.  
+ Specificare `true` per consentire la chiamata sottostante [Module:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md) metodo; in caso contrario, specificare `false`.  
   
-## Requisiti  
- **Header:** module.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)

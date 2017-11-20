@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 493b622bf49ddd148e0877b15659e10646f46d4e
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7a470c96670753fd98b97f9b9d5daffbb8c3eba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chrono-literals"></a>valori letterali chrono
 (C++14) L'intestazione \<chrono> definisce 12 [valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md) per facilitare l'uso di valori letterali che rappresentano le ore, i minuti, i secondi, i millisecondi, i microsecondi e i nanosecondi. Ogni valore letterale definito dall'utente presenta un integrale e un overload a virgola mobile. I valori letterali sono definiti nello spazio dei nomi inline literals::chrono_literals che viene inserito nell'ambito automaticamente quando std::chrono rientra nell'ambito.  
@@ -103,5 +86,4 @@ constexpr auto my_duration_unit = 108ms;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<chrono>](../standard-library/chrono.md)
-
 

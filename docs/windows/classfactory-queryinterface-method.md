@@ -1,32 +1,30 @@
 ---
-title: "Metodo ClassFactory::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (metodo)"
+title: 'Metodo ClassFactory:: QueryInterface | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 9593881f-4585-4d70-8ca6-b328918d4d6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df452908cfaf8526a8a0e50dc628674e199f6e60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo ClassFactory::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntatore a interfaccia specificata dal parametro.  
+# <a name="classfactoryqueryinterface-method"></a>Metodo ClassFactory::QueryInterface
+Recupera un puntatore a interfaccia specificato dal parametro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHOD(  
@@ -34,20 +32,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- Un ID di interfaccia.  
+ ID di interfaccia.  
   
  `ppvObject`  
- Quando questa operazione completa, un puntatore all'interfaccia specificata dal parametro `riid`.  
+ Al termine di questa operazione, un puntatore a interfaccia specificato dal parametro `riid`.  
   
-## Valore restituito  
- S\_OK se ha avuto successo, in caso contrario un HRESULT, che descrive perchè l'operazione è fallita.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
-## Requisiti  
- **Header:** module.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ClassFactory](../windows/classfactory-class.md)

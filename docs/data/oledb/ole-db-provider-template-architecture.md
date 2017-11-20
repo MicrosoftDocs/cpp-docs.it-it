@@ -1,67 +1,67 @@
 ---
-title: "Architettura dei modelli di provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "architettura [C++], provider OLE DB"
-  - "OLE DB [C++], modello a oggetti"
-  - "modelli del provider OLE DB, modello a oggetti"
+title: Architettura dei modelli Provider OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB [C++], object model
+- architecture [C++], OLE DB Provider
+- OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Architettura dei modelli di provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Origini dati e sessioni  
- L'architettura dei provider OLE DB include un oggetto DataSource \(origine dati\) e uno o più oggetti Session per le sessioni.  L'oggetto DataSource è l'oggetto iniziale di cui ciascun provider deve creare un'istanza.  Quando un'applicazione consumer necessita di dati, viene creato l'oggetto DataSource per avviare il provider.  L'oggetto DataSource a sua volta crea un oggetto Session mediante l'interfaccia **IDBCreateSession** affinché il consumer possa eseguire la connessione all'oggetto DataSource.  Per i programmatori ODBC l'oggetto DataSource può essere considerato come l'equivalente di **HENV**, mentre l'oggetto Session corrisponde a **HDBC**.  
+# <a name="ole-db-provider-template-architecture"></a>Architettura dei modelli di provider OLE DB
+## <a name="data-sources-and-sessions"></a>Origini dati e sessioni  
+ L'architettura del provider OLE DB include un oggetto origine dati e una o più sessioni. L'oggetto origine dati è l'oggetto iniziale che è necessario creare un'istanza di ogni provider. Quando un'applicazione consumer necessita di dati, creato l'oggetto origine dati per avviare il provider. L'oggetto origine dati crea un oggetto sessione (utilizzando la **IDBCreateSession** interface) tramite cui il consumer si connette all'oggetto di origine dati. Per i programmatori ODBC possono essere considerato l'oggetto origine dati come l'equivalente del **HENV** e l'oggetto di sessione come equivalente al **HDBC**.  
   
- ![Architettura del provider](../../data/oledb/media/vc4twb1.gif "vc4TWB1")  
+ ![Architettura del provider](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- Con i file di origine generati dalla Creazione guidata provider OLE DB ATL i modelli OLE DB implementano un oggetto DataSource.  Una sessione è un oggetto che corrisponde a **TSession** OLE DB.  
+ Con i file di origine creati dalla creazione guidata Provider OLE DB, i modelli OLE DB implementano un oggetto origine dati. Una sessione è un oggetto che corrisponde a OLE DB **TSession**.  
   
-## Interfacce facoltative e obbligatorie  
- I modelli provider OLE DB offrono implementazioni precostituite di tutte le interfacce obbligatorie.  Le interfacce facoltative e obbligatorie vengono definite da OLE DB per diversi tipi di oggetti:  
+## <a name="mandatory-and-optional-interfaces"></a>Interfacce facoltative e obbligatorie  
+ I modelli di provider OLE DB offrono le implementazioni predefinite per tutte le interfacce richieste. Le interfacce obbligatorie e facoltative vengono definite da OLE DB per diversi tipi di oggetti:  
   
 -   [Origine dati](../../data/oledb/data-source-object-interfaces.md)  
   
--   [Session](../../data/oledb/session-object-interfaces.md)  
+-   [Sessione](../../data/oledb/session-object-interfaces.md)  
   
--   [Rowset](../../data/oledb/rowset-object-interfaces.md)  
+-   [Set di righe](../../data/oledb/rowset-object-interfaces.md)  
   
 -   [Comando](../../data/oledb/command-object-interfaces.md)  
   
 -   [Transazione](../../data/oledb/transaction-object-interfaces.md)  
   
- Come si può notare, i modelli provider OLE DB non implementano gli oggetti Row e Storage.  
+ Si noti che i modelli di provider OLE DB non implementano oggetti row e archiviazione.  
   
- Nella tabella riportata di seguito sono elencate le interfacce facoltative e obbligatorie per gli oggetti sopra indicati, in base alla [documentazione SDK su OLE DB 2.6](https://msdn.microsoft.com/en-us/library/ms722784.aspx):  
+ La tabella seguente elenca le interfacce obbligatorie e facoltative per gli oggetti elencati in precedenza, in base al [OLE DB 2.6 documentazione SDK](https://msdn.microsoft.com/en-us/library/ms722784.aspx).  
   
 |Componente|Interfaccia|Commento|  
-|----------------|-----------------|--------------|  
-|[DataSource](../../data/oledb/data-source-object-interfaces.md) \([CDataSource](../../data/oledb/cdatasource-class.md)\)|\[obbligatoria\] **IDBCreateSession**<br /><br /> \[obbligatoria\] **IDBInitialize**<br /><br /> \[obbligatoria\] `IDBProperties`<br /><br /> \[obbligatoria\] `IPersist`<br /><br /> \[facoltativa\] **IConnectionPointContainer**<br /><br /> \[facoltativa\] **IDBAsynchStatus**<br /><br /> \[facoltativa\] **IDBDataSourceAdmin**<br /><br /> \[facoltativa\] **IDBInfo**<br /><br /> \[facoltativa\] `IPersistFile`<br /><br /> \[facoltativa\] **ISupportErrorInfo**|Connessione dal consumer al provider.  L'oggetto viene utilizzato per specificare le proprietà relative alla connessione, quali ID utente, password e DSN.  È inoltre possibile utilizzare l'oggetto per amministrare un'origine dati \(creazione, aggiornamento, eliminazione, tabelle e così via\).|  
-|[Session](../../data/oledb/session-object-interfaces.md) \([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md)\)|\[obbligatoria\] **IGetDataSource**<br /><br /> \[obbligatoria\] `IOpenRowset`<br /><br /> \[obbligatoria\] **ISessionProperties**<br /><br /> \[facoltativa\] **IAlterIndex**<br /><br /> \[facoltativa\] **IAlterTable**<br /><br /> \[facoltativa\] **IBindResource**<br /><br /> \[facoltativa\] **ICreateRow**<br /><br /> \[facoltativa\] **IDBCreateCommand**<br /><br /> \[facoltativa\] **IDBSchemaRowset**<br /><br /> \[facoltativa\] **IIndexDefinition**<br /><br /> \[facoltativa\] **ISupportErrorInfo**<br /><br /> \[facoltativa\] **ITableCreation**<br /><br /> \[facoltativa\] **ITableDefinition**<br /><br /> \[facoltativa\] **ITableDefinitionWithConstraints**<br /><br /> \[facoltativa\] **ITransaction**<br /><br /> \[facoltativa\] **ITransactionJoin**<br /><br /> \[facoltativa\] **ITransactionLocal**<br /><br /> \[facoltativa\] **ITransactionObject**|L'oggetto Session rappresenta una singola conversazione tra un consumer e un provider.  Per vari aspetti è simile a **HSTMT** ODBC, in quanto possono essere presenti più sessioni contemporaneamente.<br /><br /> L'oggetto Session è il principale collegamento per la funzionalità OLE DB.  Per accedere a un oggetto Command, Transaction o Rowset, è necessario passare dall'oggetto Session.|  
-|[Rowset](../../data/oledb/rowset-object-interfaces.md) \([CRowset](../../data/oledb/crowset-class.md)\)|\[obbligatoria\] `IAccessor`<br /><br /> \[obbligatoria\] `IColumnsInfo`<br /><br /> \[obbligatoria\] **IConvertType**<br /><br /> \[obbligatoria\] `IRowset`<br /><br /> \[obbligatoria\] `IRowsetInfo`<br /><br /> \[facoltativa\] **IChapteredRowset**<br /><br /> \[facoltativa\] **IColumnsInfo2**<br /><br /> \[facoltativa\] **IColumnsRowset**<br /><br /> \[facoltativa\] **IConnectionPointContainer**<br /><br /> \[facoltativa\] **IDBAsynchStatus**<br /><br /> \[facoltativa\] **IGetRow**<br /><br /> \[facoltativa\] `IRowsetChange`<br /><br /> \[facoltativa\] **IRowsetChapterMember**<br /><br /> \[facoltativa\] **IRowsetCurrentIndex**<br /><br /> \[facoltativa\] **IRowsetFind**<br /><br /> \[facoltativa\] **IRowsetIdentity**<br /><br /> \[facoltativa\] **IRowsetIndex**<br /><br /> \[facoltativa\] `IRowsetLocate`<br /><br /> \[facoltativa\] **IRowsetRefresh**<br /><br /> \[facoltativa\] `IRowsetScroll`<br /><br /> \[facoltativa\] `IRowsetUpdate`<br /><br /> \[facoltativa\] **IRowsetView**<br /><br /> \[facoltativa\] **ISupportErrorInfo**<br /><br /> \[facoltativa\] **IRowsetBookmark**|L'oggetto Rowset rappresenta i dati provenienti dall'origine dati.  L'oggetto effettua le associazioni di tali dati, nonché di qualsiasi operazione base \(aggiornamento, recupero, spostamento e altre\) eseguita sui dati.  È sempre necessario disporre di un oggetto Rowset per contenere e modificare i dati.|  
-|[Command](../../data/oledb/command-object-interfaces.md) \([CCommand](http://msdn.microsoft.com/it-it/52bef5da-c1a0-4223-b4e6-9e464b6db409)\)|\[obbligatoria\] `IAccessor`<br /><br /> \[obbligatoria\] `IColumnsInfo`<br /><br /> \[obbligatoria\] `ICommand`<br /><br /> \[obbligatoria\] **ICommandProperties**<br /><br /> \[obbligatoria\] `ICommandText`<br /><br /> \[obbligatoria\] **IConvertType**<br /><br /> \[facoltativa\] **IColumnsRowset**<br /><br /> \[facoltativa\] **ICommandPersist**<br /><br /> \[facoltativa\] **ICommandPrepare**<br /><br /> \[facoltativa\] `ICommandWithParameters`<br /><br /> \[facoltativa\] **ISupportErrorInfo**<br /><br /> \[facoltativa\] **ICommandStream**|L'oggetto Command gestisce le operazioni sui dati, quali ad esempio le query.  È in grado di gestire istruzioni con o senza parametri.<br /><br /> È inoltre utilizzato per la gestione delle associazioni per parametri e colonne di output.  Un'associazione è una struttura che contiene informazioni sulle modalità di recupero di una colonna in un rowset,  quali la posizione ordinale, il tipo di dati, la lunghezza e lo stato.|  
-|[Transaction](../../data/oledb/transaction-object-interfaces.md) \(facoltativo\)|\[obbligatoria\] **IConnectionPointContainer**<br /><br /> \[obbligatoria\] **ITransaction**<br /><br /> \[facoltativa\] **ISupportErrorInfo**|L'oggetto Transaction definisce un'unità atomica di lavoro su un'origine dati e determina le relazioni tra le unità di lavoro.  Questo oggetto non è supportato direttamente dai modelli provider OLE DB, ma deve essere creato manualmente.|  
+|---------------|---------------|-------------|  
+|[Origine dati](../../data/oledb/data-source-object-interfaces.md) ([CDataSource](../../data/oledb/cdatasource-class.md))|[obbligatorio] **IDBCreateSession**<br /><br /> [obbligatorio] **IDBInitialize**<br /><br /> [obbligatorio]`IDBProperties`<br /><br /> [obbligatorio]`IPersist`<br /><br /> [facoltativo] **IConnectionPointContainer**<br /><br /> [facoltativo] **IDBAsynchStatus**<br /><br /> [facoltativo] **IDBDataSourceAdmin**<br /><br /> [facoltativo] **IDBInfo**<br /><br /> [facoltativo]`IPersistFile`<br /><br /> [facoltativo] **ISupportErrorInfo**|Connessione al provider del consumer. L'oggetto viene utilizzato per specificare le proprietà per la connessione ad esempio il nome di origine dati, password e ID utente. L'oggetto può essere utilizzato anche per amministrare un'origine dati (creare, aggiornare, eliminare, tabelle e così via).|  
+|[Sessione](../../data/oledb/session-object-interfaces.md) ([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[obbligatorio] **IGetDataSource**<br /><br /> [obbligatorio]`IOpenRowset`<br /><br /> [obbligatorio] **ISessionProperties**<br /><br /> [facoltativo] **IAlterIndex**<br /><br /> [facoltativo] **IAlterTable**<br /><br /> [facoltativo] **IBindResource**<br /><br /> [facoltativo] **ICreateRow**<br /><br /> [facoltativo] **IDBCreateCommand**<br /><br /> [facoltativo] **IDBSchemaRowset**<br /><br /> [facoltativo] **IIndexDefinition**<br /><br /> [facoltativo] **ISupportErrorInfo**<br /><br /> [facoltativo] **ITableCreation**<br /><br /> [facoltativo] **ITableDefinition**<br /><br /> [facoltativo] **ITableDefinitionWithConstraints**<br /><br /> [facoltativo] **ITransaction**<br /><br /> [facoltativo] **ITransactionJoin**<br /><br /> [facoltativo] **ITransactionLocal**<br /><br /> [facoltativo] **ITransactionObject**|L'oggetto sessione rappresenta una singola conversazione tra un provider e consumer. È simile a ODBC **HSTMT** in quanto possono essere presenti più sessioni contemporaneamente.<br /><br /> L'oggetto di sessione è il collegamento primario per la funzionalità OLE DB. Per accedere a un comando, una transazione o un oggetto set di righe, si scorre l'oggetto di sessione.|  
+|[Set di righe](../../data/oledb/rowset-object-interfaces.md) ([CRowset](../../data/oledb/crowset-class.md))|[obbligatorio]`IAccessor`<br /><br /> [obbligatorio]`IColumnsInfo`<br /><br /> [obbligatorio] **IConvertType**<br /><br /> [obbligatorio]`IRowset`<br /><br /> [obbligatorio]`IRowsetInfo`<br /><br /> [facoltativo] **IChapteredRowset**<br /><br /> [facoltativo] **IColumnsInfo2**<br /><br /> [facoltativo] **IColumnsRowset**<br /><br /> [facoltativo] **IConnectionPointContainer**<br /><br /> [facoltativo] **IDBAsynchStatus**<br /><br /> [facoltativo] **IGetRow**<br /><br /> [facoltativo]`IRowsetChange`<br /><br /> [facoltativo] **IRowsetChapterMember**<br /><br /> [facoltativo] **IRowsetCurrentIndex**<br /><br /> [facoltativo] **IRowsetFind**<br /><br /> [facoltativo] **IRowsetIdentity**<br /><br /> [facoltativo] **IRowsetIndex**<br /><br /> [facoltativo]`IRowsetLocate`<br /><br /> [facoltativo] **IRowsetRefresh**<br /><br /> [facoltativo]`IRowsetScroll`<br /><br /> [facoltativo]`IRowsetUpdate`<br /><br /> [facoltativo] **IRowsetView**<br /><br /> [facoltativo] **ISupportErrorInfo**<br /><br /> [facoltativo] **IRowsetBookmark**|Oggetto set di righe rappresenta i dati dall'origine dati. L'oggetto è responsabile per le associazioni di dati e le operazioni di base (update, fetch, lo spostamento e altri) sui dati. È sempre un oggetto set di righe per contenere e modificare i dati.|  
+|[Comando](../../data/oledb/command-object-interfaces.md) ([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[obbligatorio]`IAccessor`<br /><br /> [obbligatorio]`IColumnsInfo`<br /><br /> [obbligatorio]`ICommand`<br /><br /> [obbligatorio] **ICommandProperties**<br /><br /> [obbligatorio]`ICommandText`<br /><br /> [obbligatorio] **IConvertType**<br /><br /> [facoltativo] **IColumnsRowset**<br /><br /> [facoltativo] **ICommandPersist**<br /><br /> [facoltativo] **ICommandPrepare**<br /><br /> [facoltativo]`ICommandWithParameters`<br /><br /> [facoltativo] **ISupportErrorInfo**<br /><br /> [facoltativo] **ICommandStream**|L'oggetto comando gestisce le operazioni sui dati, ad esempio le query. È possibile gestire istruzioni con parametri o senza parametri.<br /><br /> L'oggetto comando è inoltre responsabile per la gestione delle associazioni per i parametri e colonne di output. Un'associazione è una struttura che contiene informazioni sulle modalità di recupero di una colonna, in un set di righe. Contiene informazioni quali il numero ordinale, tipo di dati, lunghezza e stato.|  
+|[Transazione](../../data/oledb/transaction-object-interfaces.md) (facoltativo)|[obbligatorio] **IConnectionPointContainer**<br /><br /> [obbligatorio] **ITransaction**<br /><br /> [facoltativo] **ISupportErrorInfo**|Oggetto di transazione definisce un'unità atomica di lavoro su un'origine dati e determina come le unità di lavoro correlati tra loro. Questo oggetto non è supportato direttamente tramite i modelli di provider OLE DB (ovvero, si crea il proprio oggetto).|  
   
- Per ulteriori informazioni, vedere i seguenti argomenti:  
+ Per altre informazioni, vedere i seguenti argomenti:  
   
 -   [Mappe delle proprietà](../../data/oledb/property-maps.md)  
   
 -   [Record utente](../../data/oledb/user-record.md)  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB Interfaces](https://msdn.microsoft.com/en-us/library/ms709709.aspx)
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Interfacce OLE DB](https://msdn.microsoft.com/en-us/library/ms709709.aspx)

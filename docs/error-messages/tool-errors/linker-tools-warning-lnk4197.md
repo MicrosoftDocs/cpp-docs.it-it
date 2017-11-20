@@ -1,38 +1,36 @@
 ---
-title: "Avviso degli strumenti del linker LNK4197 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4197"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4197"
+title: Strumenti del linker LNK4197 avviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4197
+dev_langs: C++
+helpviewer_keywords: LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5977095609dc123866afc39ac610bb0ff9d1619c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso degli strumenti del linker LNK4197
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-esportazione 'nomeesportazione' specificata più volte; verrà utilizzata la prima specifica  
+# <a name="linker-tools-warning-lnk4197"></a>Avviso degli strumenti del linker LNK4197
+esportazione 'nomeesportazione' specificato più volte. utilizzata la prima specifica  
   
- Un'esportazione è stata specificata più volte in modi diversi.  Viene utilizzata la prima specifica, mentre le altre vengono ignorate.  
+ Un'esportazione è stata specificata più e diversi modi. Il linker utilizza la prima specifica e ignora il resto.  
   
- Se si ricompila la libreria di runtime del linguaggio C, è possibile ignorare questo messaggio.  
+ Se si rigenera la libreria di runtime C, è possibile ignorare questo messaggio.  
   
- Se un'esportazione viene specificata più volte nello stesso modo, non viene generato alcun avviso.  
+ Se un'esportazione è specificata più volte di esattamente nello stesso modo, il linker non emetterà un avviso.  
   
- I seguenti dati in un file def provocano la visualizzazione di questo avviso:  
+ Ad esempio, il seguente contenuto di un file con estensione def causerebbe questo avviso:  
   
 ```  
 EXPORTS  
@@ -40,8 +38,8 @@ EXPORTS
    functioname      @10  
 ```  
   
-### Possibili cause  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
-1.  La stessa esportazione viene specificata sia sulla riga di comando \(con export:\) che nel file def.  
+1.  Viene specificata la stessa esportazione entrambi nella riga di comando (tramite esportazione:) e nel file. def  
   
-2.  La stessa esportazione viene elencata due volte nel file def con attributi diversi.
+2.  La stessa esportazione viene elencata due volte nel file con estensione def con attributi diversi.

@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '%'
 - /
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], multiplicative
 - arithmetic operators [C++], multiplicative operators
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b63a36817bb0366d21fba11c5e1e4eccbcc6951f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4bd6110eba235963c4508e5a39a134ca0cc017ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>Operatori di moltiplicazione e operatori modulo
 ## <a name="syntax"></a>Sintassi  

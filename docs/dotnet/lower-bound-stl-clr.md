@@ -1,32 +1,30 @@
 ---
-title: "lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound (funzione) [STL/CLR]"
+title: lower_bound (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound function [STL/CLR]
 ms.assetid: 841b70b5-1f54-4ecf-8faa-7dda32a24c54
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 44ba30cf55df27b08d47b7dc7d540fcefced266d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Cerca la posizione del primo elemento in un intervallo ordinato con un valore minore di o equivalente a un valore specificato, dove il criterio di ordinamento può essere specificato da un predicato binario.  
+# <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
+Trova la posizione del primo elemento in un intervallo ordinato con un valore inferiore o equivalente a un valore specificato, in cui il criterio di ordinamento può essere specificato da un predicato binario.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -36,13 +34,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `lower_bound`STL.  Per ulteriori informazioni, vedere [lower\_bound](../Topic/lower_bound.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `lower_bound`. Per ulteriori informazioni, vedere [lower_bound](../standard-library/algorithm-functions.md#lower_bound).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

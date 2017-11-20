@@ -1,66 +1,65 @@
 ---
-title: "/Fm (Specifica file map) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fm"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fm (opzione del compilatore) [C++]"
-  - "file [C++], creazione della mappa"
-  - "Fm (opzione del compilatore) [C++]"
-  - "-Fm (opzione del compilatore) [C++]"
-  - "file MAP [C++], creazione del linker"
+title: -Fm (nome file MAP) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fm
+dev_langs: C++
+helpviewer_keywords:
+- -Fm compiler option [C++]
+- mapfiles [C++], creating linker
+- files [C++], creating map
+- Fm compiler option [C++]
+- /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 153a91d25a45a86f01885b679f039f41390dc291
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Fm (Specifica file map)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Indica al linker di produrre un file map contenente un elenco di segmenti nell'ordine in cui sono indicati nel file exe o nella DLL corrispondente.  
+# <a name="fm-name-mapfile"></a>/Fm (Specifica file map)
+Indica al linker di generare un file MAP contenente un elenco di segmenti nell'ordine in cui appaiono nel file .exe corrispondente o DLL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Fmpathname  
 ```  
   
-## Note  
- Per impostazione predefinita, al file map viene assegnato il nome di base del corrispondente file di origine C o C\+\+ con un'estensione map.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, i file di mapping viene assegnato il nome base del file di origine corrispondente di C o C++ con una. Eseguire il mapping di estensione.  
   
- La specifica di **\/Fm** produce lo stesso effetto dell'opzione del linker [\/MAP \(Genera file MAP\)](../../build/reference/map-generate-mapfile.md).  
+ Specifica di **/Fm** ha lo stesso effetto come se fosse stato specificato il [/MAP (genera file MAP)](../../build/reference/map-generate-mapfile.md) l'opzione del linker.  
   
- Se si specifica [\/c \(Compila senza collegamenti\)](../../build/reference/c-compile-without-linking.md) per disattivare il collegamento, **\/Fm** non è attiva.  
+ Se si specifica [/c (compila senza collegamenti)](../../build/reference/c-compile-without-linking.md) per disattivare il collegamento, **/Fm** non ha alcun effetto.  
   
- I simboli globali presenti in un file map generalmente contengono uno o più caratteri di sottolineatura iniziali in quanto il compilatore ne aggiunge uno ai nomi di variabili.  Molti dei simboli globali che appaiono nel file map vengono utilizzati internamente dal compilatore e dalle librerie standard.  
+ In genere, i simboli globali in un file MAP hanno uno o più caratteri di sottolineatura iniziali perché il compilatore aggiunge un carattere di sottolineatura per i nomi delle variabili. Molti dei simboli globali presenti nel file di mapping vengono utilizzati internamente dal compilatore e librerie standard.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Opzioni del file di output \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [File di output (/ F) opzioni](../../build/reference/output-file-f-options.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
  [Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)

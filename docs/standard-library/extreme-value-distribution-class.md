@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-- random/std::extreme_value_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d53e49ae0a28201ac32cd1eb722c9889258f23b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5cf43efdbe6f7c0cd79bee18e8a696986d0b5446
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 Genera una distribuzione dei valori estremi.  
@@ -245,7 +241,6 @@ struct param_type {
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 
 
 

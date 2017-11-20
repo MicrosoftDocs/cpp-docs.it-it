@@ -1,40 +1,40 @@
 ---
-title: "Parametri di output | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, stored procedure"
-  - "chiamate a procedure"
-  - "chiamate a procedure, stored procedure"
-  - "stored procedure, chiamata"
-  - "stored procedure, parametri"
+title: I parametri di output | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, calling
+- stored procedures, parameters
+- procedure calls
+- procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Parametri di output
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La chiamata a una stored procedure è simile alla chiamata a un comando SQL.  La differenza principale sta nel fatto che le stored procedure utilizzano i parametri di output e i valori restituiti.  
+# <a name="output-parameters"></a>Parametri di output
+La chiamata di una stored procedure è simile alla chiamata a un comando SQL. La differenza principale è che le stored procedure utilizzano parametri di output (o "output") e valori restituiscono.  
   
- Nella stored procedure riportata di seguito, il primo '?' corrisponde al valore restituito \(numero telefonico\) e il secondo corrisponde al parametro di input \(nome\):  
+ Nella seguente stored procedure, il primo '? 'è il valore restituito (phone) e il secondo'?' è il parametro di input (nome):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- I parametri di input e di output vengono specificati nella mappa dei parametri:  
+ Specificare i parametri di input e nella mappa di parametri:  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,12 +45,12 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- L'applicazione deve gestire l'output restituito dalle stored procedure.  Provider OLE DB diversi restituiscono parametri di output e valori in momenti diversi durante l'elaborazione dei risultati.  Il provider Microsoft OLE DB per SQL Server \(SQLOLEDB\), ad esempio, non fornisce parametri di output e codice restituito fino a quando il consumer non ha recuperato o annullato i gruppi di risultati restituiti dalla stored procedure.  L'output viene restituito nell'ultimo pacchetto TDS proveniente dal server.  
+ L'applicazione deve gestire l'output restituito dalle stored procedure. Provider OLE DB diversi restituiscono parametri di output e restituire valori in momenti diversi durante l'elaborazione dei risultati. Il provider Microsoft OLE DB per SQL Server (SQLOLEDB), ad esempio, non fornire i parametri di output e codice restituito fino a quando il consumer ha recuperato o annullato i set di risultati restituiti dalla stored procedure. L'output viene restituito nell'ultimo pacchetto TDS dal server.  
   
-## Conteggio righe  
- Se si utilizzano i modelli consumer OLE DB per eseguire una stored procedure con parametri di output, il conteggio delle righe non verrà impostato fino a quando non si chiude il rowset.  
+## <a name="row-count"></a>Conteggio delle righe  
+ Se si utilizza i modelli Consumer OLE DB per eseguire una stored procedure con parametri di output, non è impostato il numero di righe finché non si chiude il set di righe.  
   
- Si consideri ad esempio una stored procedure con un rowset e un parametro di output:  
+ Si consideri ad esempio una stored procedure con un set di righe e un parametro di output:  
   
 ```  
 create procedure sp_test  
@@ -61,7 +61,7 @@ as
 return 0  
 ```  
   
- Il parametro di output @\_rowcount indica il numero delle righe effettivamente restituite dalla tabella test.  Tuttavia, questa stored procedure limita il numero di righe a 50.  Ad esempio, se fossero presenti 100 righe nel test, il conteggio delle righe sarebbe 50 \(perché questo codice recupera solo le prime 50 righe\).  Se fossero presenti solo 30 righe nella tabella, il conteggio delle righe sarebbe 30.  È necessario chiamare **Close** o **CloseAll** per popolare il parametro out prima di recuperare il relativo valore.  
+ Il @_rowcount parametro di output restituisce il numero di righe effettivamente restituito dalla tabella di prova. Tuttavia, questa stored procedure limita il numero di righe da un massimo di 50. Ad esempio, se vi sono 100 righe nel test, il conteggio delle righe sarebbe 50 (perché il codice recupera solo le prime 50 righe). Se sono stati solo 30 righe nella tabella, il conteggio delle righe sarebbe 30. È necessario chiamare **Chiudi** o **CloseAll** per popolare il parametro di output prima di recuperare il relativo valore.  
   
-## Vedere anche  
- [Utilizzo delle stored procedure](../../data/oledb/using-stored-procedures.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle stored procedure](../../data/oledb/using-stored-procedures.md)

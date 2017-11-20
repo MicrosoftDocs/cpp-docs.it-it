@@ -1,69 +1,68 @@
 ---
-title: "__movsd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep movsd (istruzione)"
-  - "__movsd (funzione intrinseca)"
-  - "movsd (istruzione)"
+title: __movsd | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsd
+dev_langs: C++
+helpviewer_keywords:
+- rep movsd instruction
+- __movsd intrinsic
+- movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 38771656be017cadf9d12dd1279e6b0a53d29d37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __movsd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="movsd"></a>__movsd
+**Sezione specifica Microsoft**  
   
- Genera un'istruzione della stringa di spostamento \(`rep movsd`\).  
+ Genera una stringa di spostare (`rep movsd`) (istruzione).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __movsd(   
-   unsigned long* Dest,   
-   unsigned long* Source,   
-   size_t Count   
+void __movsd(   
+   unsigned long* Dest,   
+   unsigned long* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parametri  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parametri  
+ [out] `Dest`  
  La destinazione dell'operazione.  
   
- \[in\] `Source`  
+ [in] `Source`  
  L'origine dell'operazione.  
   
- \[in\] `Count`  
- Il numero dei primi quattro byte da copiare.  
+ [in] `Count`  
+ Il numero di parole doppie da copiare.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__movsd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il risultato è che i primi primi quattro byte di `Count` operazioni da `Source` vengono copiati nella stringa di `Dest` .  
+## <a name="remarks"></a>Note  
+ Il risultato è che il primo `Count` Double Word a cui puntava `Source` vengono copiati il `Dest` stringa.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // movsd.cpp  
@@ -86,8 +85,11 @@ int main()
 }  
 ```  
   
-  **950 850 750 650 550 450 350 250 150 50**    
-## Microsoft FINALE specifico  
+```Output  
+950 850 750 650 550 450 350 250 150 50   
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

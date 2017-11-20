@@ -1,32 +1,32 @@
 ---
-title: "Override di una funzione di accesso dinamica | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni di accesso [C++], dinamiche"
-  - "funzioni di accesso dinamiche"
-  - "override, funzioni di accesso dinamiche"
+title: Si esegue l'override di una funzione di accesso dinamico | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Override di una funzione di accesso dinamica
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Quando si utilizza una funzione di accesso dinamica quale `CDynamicAccessor`, il metodo di comando **Open** crea una funzione di accesso automaticamente, in base alle informazioni di colonna del rowset aperto.  È possibile eseguire l'override della funzione di accesso dinamica per controllare con precisione il modo in cui le colonne vengono associate.  
+# <a name="overriding-a-dynamic-accessor"></a>Override di una funzione di accesso dinamica
+Quando si utilizza una funzione di accesso dinamico, ad esempio `CDynamicAccessor`, il comando **aprire** metodo crea una funzione di accesso per automaticamente, in base alle informazioni di colonna del set di righe aperto. È possibile sostituire la funzione di accesso dinamico per controllare esattamente come le colonne sono associate.  
   
- Per eseguire l'override della funzione di accesso dinamica, passare **false** come ultimo parametro al metodo `CCommand::Open`.  In tal modo, è possibile evitare che la funzione di accesso venga creata automaticamente da **Open**.  A questo punto è possibile chiamare `GetColumnInfo` e `AddBindEntry` per ogni colonna che si desidera associare.  Nel codice che segue viene mostrato come eseguire questa operazione:  
+ Per eseguire l'override di funzioni di accesso dinamiche, passare **false** come ultimo parametro per il `CCommand::Open` metodo. In questo modo **aprire** dalla creazione automatica di una funzione di accesso. È quindi possibile chiamare `GetColumnInfo` e chiamare `AddBindEntry` per ogni colonna che si desidera associare. Il codice seguente viene illustrato come eseguire questa operazione:  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +76,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

@@ -1,51 +1,51 @@
 ---
-title: "Esercitazione relativa alla Libreria ATL (Active Template Library) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL (progetti), esercitazioni"
-  - "esercitazione (ATL)"
-  - "ATL, esercitazioni"
-  - "controlli [ATL], esercitazioni"
-  - "esercitazioni [ATL]"
+title: Active Template Library (ATL) esercitazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, tutorials
+- controls [ATL], tutorials
+- ATL tutorial
+- tutorials [ATL]
+- ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 858534a72dbd7d8f9849f95aa3c6e4bef070dd26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Esercitazione relativa alla Libreria ATL (Active Template Library)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL è progettato per semplificare il processo di creazione efficiente, comandi flessibili e leggeri.  Questa esercitazione vengono descritti mediante la creazione di un controllo ActiveX, illustrare più principi COM e ATL.  
+# <a name="active-template-library-atl-tutorial"></a>Esercitazione relativa alla Libreria ATL (Active Template Library)
+ATL è progettato per semplificare il processo di creazione di controlli efficienti, flessibile e semplici. In questa esercitazione illustra la creazione di un controllo ActiveX, che illustra molti nozioni fondamentali su ATL e COM.  
   
- Seguendo questa esercitazione, verrà illustrato come aggiungere un controllo a un progetto ATL con cui viene disegnato un cerchio e un poligono pieno.  Si aggiungerà quindi una proprietà per indicare il numero di lati il poligono avrà e crea codice di disegno per aggiornare il controllo quando la proprietà viene modificata.  Il controllo viene visualizzato in una pagina Web utilizzando un certo VBScript per farvi rispondere agli eventi.  
+ Seguendo questa esercitazione, si apprenderà come aggiungere un controllo a un progetto ATL che consente di disegnare un cerchio e un poligono. Aggiungere quindi una proprietà che indica il numero di lati il poligono e creare codice di disegno per l'aggiornamento del controllo alla modifica della proprietà. Il controllo verrà quindi visualizzato in una pagina Web con alcuni VBScript per renderlo rispondere agli eventi.  
   
- L'esercitazione è suddivisa in sette passaggi.  È necessario eseguire ogni operazione in ordine mentre i passaggi successivi dipendono dalle attività completate in precedenza.  Prima di iniziare, è necessario confermare che si desidera richiedere i privilegi per registrare un componente ActiveX nel computer specifico.  Questo rappresenta in genere solo delicata se si esegue Visual Studio .NET. su una connessione di servizi terminal.  
+ L'esercitazione è suddivisa in sette passaggi. Passaggi successivi dipendono le attività completate in precedenza, è consigliabile eseguire ogni passaggio nell'ordine. Prima di iniziare, è necessario verificare di disporre dei privilegi necessari per registrare un componente ActiveX sul computer. Si tratta in genere solo un problema se si esegue Visual Studio .NET attraverso una connessione di servizi Terminal.  
   
--   [Passaggio 1: creare il progetto](../atl/creating-the-project-atl-tutorial-part-1.md)  
+-   [Passaggio 1: Creazione del progetto](../atl/creating-the-project-atl-tutorial-part-1.md)  
   
--   [Passaggio 2: Aggiungere un controllo al progetto](../atl/adding-a-control-atl-tutorial-part-2.md)  
+-   [Passaggio 2: Aggiunta di un controllo al progetto](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
--   [Passaggio 3.  
-                  Aggiunta di una proprietà al controllo](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+-   [Passaggio 3. Aggiunta di una proprietà al controllo](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 -   [Passaggio 4: Modificare il codice di disegno del controllo](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
--   [Passaggio 5: Aggiunta dell'evento](../atl/adding-an-event-atl-tutorial-part-5.md)  
+-   [Passaggio 5: Aggiunta di un evento](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
--   [Passaggio 6: Aggiunta della pagina delle proprietà](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+-   [Passaggio 6: Aggiunta di una pagina delle proprietà](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
--   [Passaggio 7: Inserire il controllo in una pagina Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+-   [Passaggio 7: Inserimento del controllo in una pagina Web](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

@@ -1,46 +1,44 @@
 ---
-title: "Avanzate, Strumento Manifesto, Propriet&#224; di configurazione, finestra di dialogo Pagine delle propriet&#224; di &lt;nomeprogetto&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.KeyFile"
-  - "VC.Project.VCManifestTool.UpdateFileHashes"
-  - "VC.Project.VCManifestTool.UpdateFileHashesSearchPath"
-  - "VC.Project.VCManifestTool.ValidateSignature"
-  - "VC.Project.VCManifestTool.KeyContainer"
-dev_langs: 
-  - "C++"
+title: "Avanzate, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.KeyFile
+- VC.Project.VCManifestTool.UpdateFileHashes
+- VC.Project.VCManifestTool.UpdateFileHashesSearchPath
+- VC.Project.VCManifestTool.ValidateSignature
+- VC.Project.VCManifestTool.KeyContainer
+dev_langs: C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83f78603825cc8880063c8cfb4d750f6109c5d6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avanzate, Strumento Manifesto, Propriet&#224; di configurazione, finestra di dialogo Pagine delle propriet&#224; di &lt;nomeprogetto&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare questa finestra di dialogo per specificare le opzioni avanzate di [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Avanzate, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
+Utilizzare questa finestra di dialogo per specificare le opzioni avanzate per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Per accedere alla finestra di dialogo, aprire le pagine delle proprietà del progetto o la finestra delle proprietà.  Espandere il nodo **Strumento Manifesto** in **Proprietà di configurazione**, quindi selezionare **Avanzate**.  
+ Per accedere a questa finestra di dialogo pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il **strumento manifesto** nodo **le proprietà di configurazione**, quindi selezionare **avanzate**.  
   
-## Elenco UIElement  
- **Aggiorna hash dei file**  
- Utilizza l'opzione \/hashupdate per specificare che lo strumento Manifesto dovrà calcolare l'hash dei file specificati negli elementi `<file>`, quindi aggiornare gli attributi hash con i valori ottenuti.  
+## <a name="uielement-list"></a>Elenco UIElement  
+ **Aggiorna hash dei File**  
+ Utilizza l'opzione /hashupdate per specificare che lo strumento manifesto per calcolare l'hash del file specificati `<file>` gli elementi e quindi aggiornare gli attributi hash con il valore calcolato.  
   
- **Percorso di ricerca aggiornamento hash dei file**  
- Specifica il percorso dei file indicati negli elementi `<file>`.  Questa opzione utilizza anche l'opzione \/hashupdate.  
+ **Aggiornare il percorso di ricerca di File hash**  
+ Specifica il percorso di ricerca per i file che fanno riferimento a `<file>` elementi. Questa opzione utilizza anche l'opzione /hashupdate.  
   
-## Vedere anche  
- [\<file\> Element](../Topic/%3Cfile%3E%20Element%20\(ClickOnce%20Application\).md)   
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
- [Procedura: aprire le pagine delle proprietà dei progetti](../misc/how-to-open-project-property-pages.md)   
- [Procedura: modificare finestre delle proprietà di progetto](../misc/how-to-edit-project-property-sheets.md)
+## <a name="see-also"></a>Vedere anche  
+ [\<file > elemento](/visualstudio/deployment/file-element-clickonce-application)   
+ [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
+ [Pagine delle proprietà dello strumento manifesto](../ide/manifest-tool-property-pages.md)   
+ [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   

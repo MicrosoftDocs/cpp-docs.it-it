@@ -1,38 +1,36 @@
 ---
-title: "Avviso degli strumenti del linker LNK4217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4217"
+title: Strumenti del linker LNK4217 avviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4217
+dev_langs: C++
+helpviewer_keywords: LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 35b82a1f5f21cdaad6dfd7d5d970a65e10e0b0a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso degli strumenti del linker LNK4217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-simbolo 'simbolo' definito localmente importato nella funzione 'funzione'  
+# <a name="linker-tools-warning-lnk4217"></a>Avviso degli strumenti del linker LNK4217
+simbolo 'symbol' importato nella funzione 'function' definito localmente  
   
- È stato specificato [\_\_declspec\(dllimport\)](../../cpp/dllexport-dllimport.md) per un simbolo anche se questo è definito localmente.  Rimuovere `__declspec` per risolvere questo avviso.  
+ [declspec](../../cpp/dllexport-dllimport.md) anche se il simbolo è definito localmente è stato specificato per un simbolo. Rimuovere il `__declspec` modificatore per risolvere il problema.  
   
- `symbol` è il nome del simbolo definito all'interno dell'immagine.  `function` è la funzione che sta importando il simbolo.  
+ `symbol`è il nome del simbolo definito all'interno dell'immagine. `function`è la funzione che viene importato il simbolo.  
   
- Questo avviso non verrà visualizzato quando si esegue la compilazione utilizzando l'opzione [\/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Questo avviso non verrà visualizzato quando esegue la compilazione utilizzando l'opzione [/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
   
- L'avviso LNK4217 viene inoltre visualizzato quando si tenta di collegare due moduli anziché compilare il secondo con la libreria di importazione del primo.  
+ LNK4217 può verificarsi anche se si tenta di collegare due moduli, quando invece è necessario compilare il secondo modulo con la libreria di importazione del modulo prima.  
   
 ```  
 // LNK4217.cpp  
@@ -41,7 +39,7 @@ simbolo 'simbolo' definito localmente importato nella funzione 'funzione'
 __declspec(dllexport) void func(unsigned short*) {}  
 ```  
   
- quindi  
+ E quindi,  
   
 ```  
 // LNK4217b.cpp  
@@ -50,4 +48,4 @@ __declspec(dllexport) void func(unsigned short*) {}
 __declspec(dllexport) void func(unsigned short*) {}  
 ```  
   
- Il tentativo di collegare questi due moduli genererà l'avviso LNK4217. Per evitarlo, compilare il secondo modulo con la libreria di importazione del primo esempio.
+ Tentativo di collegare i due moduli consente di ottenere in LNK4217, compilare il secondo esempio con la libreria di importazione dell'esempio prima di risolvere.

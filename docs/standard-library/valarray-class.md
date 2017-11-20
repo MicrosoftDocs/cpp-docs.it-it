@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -37,16 +35,15 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 0fe6762e9e8f98895deda9ac8cbbe9a6fe3bb4fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 171b30710f6135a6aee13a12c035b957ec038bbb
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="valarray-class"></a>Classe valarray
 La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo **Type** archiviati come matrice, progettati per l'esecuzione di operazioni matematiche ad alta velocità e ottimizzati per le prestazioni di calcolo.  
@@ -1891,5 +1888,4 @@ The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
   
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 

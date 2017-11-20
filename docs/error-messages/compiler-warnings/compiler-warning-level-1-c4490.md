@@ -1,37 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 1) C4490 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4490"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4490"
+title: Compilatore avviso (livello 1) C4490 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4490
+dev_langs: C++
+helpviewer_keywords: C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 544c02ab08d18cf1596f588439183bba8a6edc57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4490
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'override': utilizzo non corretto dell'identificatore di override; 'funzione' non corrisponde a un metodo di classe base di riferimento  
+# <a name="compiler-warning-level-1-c4490"></a>Avviso del compilatore (livello 1) C4490
+'override': utilizzo non corretto dell'identificatore di override; 'function' non corrisponde a un metodo della classe base di riferimento  
   
- Un identificatore di override è stato utilizzato in modo non corretto.  Le funzioni di interfaccia, ad esempio, non devono essere sottoposte a override ma implementate.  
+ Un identificatore di override è stato usato in modo non corretto. Ad esempio, non si esegue l'override di una funzione di interfaccia, viene implementata.  
   
- Per ulteriori informazioni, vedere [Identificatori di override](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Per ulteriori informazioni, vedere [gli identificatori di Override](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4490:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4490.  
   
 ```  
 // C4490.cpp  

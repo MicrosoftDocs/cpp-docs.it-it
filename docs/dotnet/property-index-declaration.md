@@ -1,33 +1,33 @@
 ---
-title: "Dichiarazione degli indici di propriet&#224; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indicizzatori predefiniti"
-  - "impostazioni predefinite, indicizzatori"
-  - "proprietà indicizzate, C++"
-  - "indicizzatori"
+title: "Dichiarazione di proprietà indice | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c832f14b7a466e84eaabbd1efdadf67d4e0fc9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Dichiarazione degli indici di propriet&#224;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintassi per la dichiarazione di una proprietà indicizzata è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="property-index-declaration"></a>Dichiarazione degli indici di proprietà
+La sintassi per la dichiarazione di una proprietà indicizzata è stata modificata dalle estensioni gestite per C++ a Visual C++.  
   
- Il principale limite del supporto delle proprietà indicizzate nelle estensioni gestite è l'incapacità di fornire indici a livello di classe. In altre parole, tutte le proprietà indicizzate devono avere un nome e non è possibile, ad esempio, fornire un operatore di indice gestito applicabile direttamente a un oggetto della classe `Vector` o `Matrix`.  Un ulteriore limite, benché meno significativo, è la difficoltà visiva di distinguere le proprietà dalle proprietà indicizzate, poiché l'unica differenza è data dal numero dei parametri.  Nelle proprietà indicizzate, infine, come nelle proprietà non indicizzate, le funzioni di accesso non vengono trattate come unità atomica, ma separate in singoli metodi.  Di seguito è riportato un esempio.  
+ Il principale limite del supporto lingua estensioni gestite di proprietà indicizzate è l'impossibilità di fornire l'indice a livello di classe; vale a dire tutte le proprietà indicizzate devono avere un nome e pertanto non è, ad esempio, per fornire un operatore di indice gestito che può essere applicato direttamente a un `Vector` o `Matrix` oggetto della classe. Un secondo meno punti deboli è che visivamente difficile distinguere una proprietà da una proprietà indicizzata, il numero di parametri è l'unica indicazione. Infine, le proprietà indicizzate subiscono gli stessi problemi come quelli di proprietà non indicizzate, le funzioni di accesso non vengono considerati come un'unità atomica, ma separate in singoli metodi.  Ad esempio:  
   
 ```  
 public __gc class Vector;  
@@ -43,7 +43,7 @@ public:
 };  
 ```  
   
- Gli indicizzatori si distinguono solo per i parametri aggiuntivi che specificano indici a una o due dimensioni.  Nella nuova sintassi, gli indicizzatori sono racchiusi tra parentesi quadre \(\[,\]\) dopo il nome dell'indicizzatore e con l'indicazione del numero e del tipo di ciascun indice:  
+ Come può notare, gli indicizzatori si distinguono solo per i parametri aggiuntivi per specificare due o singolo indice della dimensione. Nella nuova sintassi, gli indicizzatori sono racchiusi tra parentesi quadre ([,]) dopo il nome dell'indicizzatore e che indica il numero e tipo di ogni indice:  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +64,7 @@ public:
 };  
 ```  
   
- Per indicare un indicizzatore a livello di classe applicabile direttamente agli oggetti della classe nella nuova sintassi, viene riutilizzata la parola chiave `default` in sostituzione di un nome esplicito.  Di seguito è riportato un esempio.  
+ Per indicare un indicizzatore di livello di classe che può essere applicato direttamente agli oggetti della classe nella nuova sintassi, il `default` parola chiave viene riutilizzato in sostituzione di un nome esplicito. Ad esempio:  
   
 ```  
 public ref class Matrix {  
@@ -74,10 +74,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +91,10 @@ public:
 };  
 ```  
   
- Nella nuova sintassi, quando viene specificata la proprietà predefinita indicizzata, i due seguenti nomi sono riservati: `get_Item` e `set_Item`,  perché si tratta dei nomi sottostanti generati per la proprietà indicizzata predefinita.  
+ Nella nuova sintassi, quando il valore predefinito è indicizzato proprietà viene specificata, i due seguenti nomi sono riservati: `get_Item` e `set_Item`. Questo avviene perché questi sono i nomi sottostanti generati per la proprietà indicizzata predefinita.  
   
- Tenere presente che non è disponibile una sintassi di indice semplice analoga alla sintassi di proprietà semplice.  
+ Si noti che non è disponibile alcun indice semplice sintassi analoga alla sintassi di proprietà semplice.  
   
-## Vedere anche  
- [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [Procedura: utilizzare proprietà indicizzate](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni di membri in una classe o interfaccia (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

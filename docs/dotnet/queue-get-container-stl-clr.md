@@ -1,41 +1,39 @@
 ---
-title: "queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container (membro) [STL/CLR]"
+title: 'Queue:: get_container (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: d87e7433-a352-4bea-8041-1ffc03287436
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1badd817ab433a8bf6ca24d488a7ee8823005c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuegetcontainer-stlclr"></a>queue::get_container (STL/CLR)
 Accede al contenitore sottostante.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## Note  
- La funzione membro restituisce il contenitore sottostante.  Utilizzarla per ignorare le restrizioni imposte dal wrapper del contenitore.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce il contenitore sottostante. È utilizzato per ignorare le restrizioni imposte dal wrapper del contenitore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_queue_get_container.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::container\_type](../dotnet/queue-container-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [coda (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)

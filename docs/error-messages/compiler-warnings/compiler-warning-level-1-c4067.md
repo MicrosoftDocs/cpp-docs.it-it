@@ -1,32 +1,30 @@
 ---
-title: "Avviso del compilatore (livello 1) C4067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4067"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4067"
+title: Compilatore (livello 1) Avviso C4067 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4067
+dev_langs: C++
+helpviewer_keywords: C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 90c29e7bc63096a6e46d4febda9c66d2759bb06a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4067
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-token imprevisti dopo una direttiva per il preprocessore. Prevista un'interruzione di riga.  
+# <a name="compiler-warning-level-1-c4067"></a>Compilatore (livello 1) Avviso C4067
+token imprevisti seguente direttiva per il preprocessore: previsto un carattere di nuova riga  
   
- Sono stati trovati e ignorati caratteri supplementari dopo una direttiva del preprocessore.  Questo avviso viene visualizzato solo in compatibilità ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Il compilatore trovato e ignorati caratteri supplementari dopo una direttiva del preprocessore. Questo avviso viene visualizzato solo in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
 ```  
 // C4067a.cpp  
@@ -40,9 +38,9 @@ int main()
 }  
 ```  
   
-### Per risolvere questo avviso, effettuare quanto segue:  
+### <a name="to-resolve-this-warning-try-the-following"></a>Per risolvere il problema, procedere come segue:  
   
-1.  Compilare con **\/Ze**.  
+1.  Eseguire la compilazione con **/Ze**.  
   
 2.  Utilizzare i delimitatori di commento:  
   

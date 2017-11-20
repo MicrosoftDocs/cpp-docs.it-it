@@ -1,48 +1,30 @@
 ---
-title: Classe Norm | Documenti di Microsoft
+title: Classe Norm | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - norm
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 7d35bc7781b1a57fdc0b8b68c5d4f78046d19134
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="norm-class"></a>Classe norm
-Rappresenta un numero di norma. Ogni elemento è a virgola mobile punto numero compreso nell'intervallo [-1.0 f, 1.0 f].  
+Rappresenta un numero di norma. Ogni elemento è mobile punto numero compreso nell'intervallo [-1.0 f, 1.0 f].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +38,7 @@ class norm;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. Inizializzare a 0,0 f.|  
+|[Costruttore Norm](#ctor)|Di overload. Costruttore predefinito. L'inizializzazione su 0, 0F.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -64,7 +46,7 @@ class norm;
 |----------|-----------------|  
 |NORM::operator-||  
 |NORM::operator:||  
-|float Norm::operator|Operatore di conversione. Convertire il numero di norma a virgola mobile valore.|  
+|NORM::operator float|Operatore di conversione. Convertire il numero di norma mobile valore punto.|  
 |NORM::operator * =||  
 |NORM::operator / =||  
 |NORM::operator + +||  
@@ -82,7 +64,7 @@ class norm;
   
 ##  <a name="ctor"></a>Norm 
 
- Costruttore predefinito. Inizializzare a 0,0 f.  
+ Costruttore predefinito. L'inizializzazione su 0, 0F.  
   
 ```  
 norm(
@@ -125,8 +107,7 @@ norm(
  Il valore utilizzato per inizializzare.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

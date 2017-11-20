@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4958
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4958
+f1_keywords: C4958
+dev_langs: C++
+helpviewer_keywords: C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 932f12c5465d08db22c7bac977dfeab94d61f1f4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-c4958"></a>Avviso del compilatore C4958
 'operation': aritmetica dei puntatori non verificabile  

@@ -1,41 +1,39 @@
 ---
-title: "hash_map::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type (membro) [STL/CLR]"
+title: 'hash_map:: difference_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 7c85c347-245d-4d2c-a507-e13599fbeff8
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d9c484c97c28092668b6efa1d3e92afee000e86
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I tipi di distanze con segno compreso tra due elementi.  
+# <a name="hashmapdifferencetype-stlclr"></a>hash_map::difference_type (STL/CLR)
+I tipi di una distanza signed tra due elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Note  
- Il tipo viene descritto un conteggio di elementi eventualmente negativo.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un conteggio di elementi eventualmente negativo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_difference_type.cpp   
@@ -71,14 +69,17 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**end\(\)\- inizio \(\) \= 3**  
-**begin\(\)\- fine \(\) \= \-3**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::size\_type](../dotnet/hash-map-size-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)

@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4191
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4191
+f1_keywords: C4191
+dev_langs: C++
+helpviewer_keywords: C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5cdd66e6318867a7f4df8ff70b6440ae6e7bfa3a
-ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 91e93f1e596a1ec05095cb0850e979dba86071ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Avviso del compilatore (livello 3) C4191
 'operator/operation': conversione non affidabile da 'type of expression' in 'type required'  
@@ -60,7 +40,7 @@ ms.lasthandoff: 04/12/2017
   
  La chiamata di questa funzione tramite il puntatore risultante può causare l'arresto anomalo del programma.  
   
- Per impostazione predefinita, questo avviso non è attivo. Vedere [gli avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) per ulteriori informazioni.  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  L'esempio seguente genera l'errore C4191:  
   

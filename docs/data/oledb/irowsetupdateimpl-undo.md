@@ -1,35 +1,34 @@
 ---
-title: "IRowsetUpdateImpl::Undo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetUpdateImpl.Undo"
-  - "ATL::IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl::Undo"
-  - "IRowsetUpdateImpl.Undo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Undo (metodo)"
+title: 'IRowsetUpdateImpl:: Undo | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetUpdateImpl.Undo
+- ATL::IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl::Undo
+- IRowsetUpdateImpl.Undo
+dev_langs: C++
+helpviewer_keywords: Undo method
 ms.assetid: f3dc7764-050c-4322-9b2f-9ca772a0fb88
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a0ad20f5d326d89ce004254713c861bec784b3d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::Undo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Annulla tutte le modifiche alla riga dall'ultima raccolta o aggiornamento.  
+# <a name="irowsetupdateimplundo"></a>IRowsetUpdateImpl::Undo
+Annulla le modifiche alla riga dopo l'ultimo recupero o l'aggiornamento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -43,20 +42,20 @@ Annulla tutte le modifiche alla riga dall'ultima raccolta o aggiornamento.
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `hReserved`  
- \[in\] corrisponde al parametro di `hChapter` in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [in] Corrisponde alla `hChapter` parametro [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
   
  *pcRowsUndone*  
- \[out\] corrisponde al parametro di `pcRows` in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [out] Corrisponde alla `pcRows` parametro [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
   
  *prgRowsUndone*  
- \[in\] corrisponde al parametro *di prgRows* in [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
+ [in] Corrisponde alla *prgRows* parametro [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx).  
   
- Per altri parametri, vedere [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)*in OLE DB Programmer's Reference*.  
+ Per altri parametri, vedere [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx) nel *riferimento per programmatori OLE DB*.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)

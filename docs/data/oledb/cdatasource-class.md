@@ -1,63 +1,62 @@
 ---
-title: "Classe CDataSource | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDataSource"
-  - "ATL::CDataSource"
-  - "CDataSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataSource (classe)"
+title: Classe CDataSource | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDataSource
+- ATL::CDataSource
+- CDataSource
+dev_langs: C++
+helpviewer_keywords: CDataSource class
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: feb829812bd4223ca7c348f3a2825ad3b11839a5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CDataSource
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Corrisponde a un oggetto origine dati OLE DB, che rappresenta una connessione tramite un provider a un'origine dati.  
+# <a name="cdatasource-class"></a>Classe CDataSource
+Corrisponde a un oggetto di origine dati OLE DB, che rappresenta una connessione tramite un provider a un'origine dati.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CDataSource  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[Chiudi](../../data/oledb/cdatasource-close.md)|Chiude la connessione.|  
-|[GetInitializationString](../../data/oledb/cdatasource-getinitializationstring.md)|Recuperare la stringa dell'inizializzazione dell'origine dati attualmente aperta.|  
-|[GetProperties](../../data/oledb/cdatasource-getproperties.md)|Ottiene i valori delle proprietà già impostate per l'origine dati collegata.|  
-|[GetProperty](../../data/oledb/cdatasource-getproperty.md)|Ottiene il valore di una singola proprietà attualmente impostata per l'origine dati collegata.|  
-|[Aprire](../../data/oledb/cdatasource-open.md)|Crea una connessione a un provider \(origine dati\) utilizzando **CLSID**, **ProgID**, o un moniker di `CEnumerator` fornito dal chiamante.|  
-|[OpenFromFileName](../../data/oledb/cdatasource-openfromfilename.md)|Aprire un'origine dati da un file specificato dal nome file fornito dall'utente.|  
-|[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)|Aprire l'origine dati specificata da una stringa di inizializzazione.|  
-|[OpenWithPromptFileName](../../data/oledb/cdatasource-openwithpromptfilename.md)|Consente di selezionare un file creato in precedenza data link per aprire l'origine dati corrispondente.|  
-|[OpenWithServiceComponents](../../data/oledb/cdatasource-openwithservicecomponents.md)|Apre un oggetto origine dati utilizzando la finestra di dialogo data link.|  
+|[GetInitializationString](../../data/oledb/cdatasource-getinitializationstring.md)|Recupera la stringa di inizializzazione dell'origine dati che è attualmente aperto.|  
+|[GetProperties](../../data/oledb/cdatasource-getproperties.md)|Ottiene i valori delle proprietà attualmente impostata per l'origine dati connessa.|  
+|[GetProperty](../../data/oledb/cdatasource-getproperty.md)|Ottiene il valore di una singola proprietà attualmente impostata per l'origine dati connessa.|  
+|[Apri](../../data/oledb/cdatasource-open.md)|Crea una connessione a un provider (origine dati) utilizzando un **CLSID**, **ProgID**, o un `CEnumerator` moniker fornito dal chiamante.|  
+|[OpenFromFileName](../../data/oledb/cdatasource-openfromfilename.md)|Apre un'origine dati da un file specificato dal nome file fornito dall'utente.|  
+|[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)|Apre l'origine dati specificata da una stringa di inizializzazione.|  
+|[OpenWithPromptFileName](../../data/oledb/cdatasource-openwithpromptfilename.md)|Consente all'utente di selezionare un file di collegamento dati creato in precedenza per aprire l'origine dati corrispondente.|  
+|[OpenWithServiceComponents](../../data/oledb/cdatasource-openwithservicecomponents.md)|Apre un oggetto di origine dati utilizzando la finestra di dialogo collegamenti dati.|  
   
-## Note  
- Una o più sessioni di database possono essere create per una sola connessione.  Queste sessioni vengono rappresentate da `CSession`.  È necessario chiamare [CDataSource::Open](../../data/oledb/cdatasource-open.md) per aprire la connessione prima di creare una sessione di `CSession::Open`.  
+## <a name="remarks"></a>Note  
+ È possibile creare una o più sessioni di database per una singola connessione. Queste sessioni vengono rappresentate da `CSession`. È necessario chiamare [CDataSource:: Open](../../data/oledb/cdatasource-open.md) per aprire la connessione prima di creare una sessione con `CSession::Open`.  
   
- Per un esempio di come utilizzare `CDataSource`, vedere l'esempio di [CatDB](../../top/visual-cpp-samples.md).  
+ Per un esempio di come utilizzare `CDataSource`, vedere il [CatDB](../../visual-cpp-samples.md) esempio.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

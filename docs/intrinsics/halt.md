@@ -1,53 +1,53 @@
 ---
-title: "__halt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__halt"
-  - "__halt_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__halt (funzione intrinseca)"
-  - "HLT (istruzione)"
+title: __halt | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __halt
+- __halt_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __halt intrinsic
+- HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4153bf3a1cf219d50d8e412eec8a0113409f5f8e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __halt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="halt"></a>__halt
+**Sezione specifica Microsoft**  
   
- Interrompe il microprocessore finché un'interruzione attivata, un'interruzione \(NMI\) nonmaskable, o una tabella non si verifichi.  
+ Arresta il microprocessore finché non si verifica un interrupt abilitato, un interrupt non mascherabile (NMI) o un ripristino.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __halt( void );  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- La funzione di `__halt` equivale all'istruzione macchina di `HLT` ed è disponibile solo in modalità kernel.  Per ulteriori informazioni, ricerca del documento, il “manuale di sviluppo di software di architettura Intel, volume 2: Riferimento dell'insieme di istruzioni,„ [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) del sito.  
+## <a name="remarks"></a>Note  
+ Il `__halt` è equivalente alla funzione di `HLT` istruzioni in linguaggio macchina ed è disponibile solo in modalità kernel. Per ulteriori informazioni, cercare il documento, "manuale dello sviluppatore di Software architettura Intel, Volume 2: riferimento al Set (istruzione)," al [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sito.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

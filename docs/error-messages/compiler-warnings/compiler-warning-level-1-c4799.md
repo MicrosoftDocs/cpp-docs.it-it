@@ -1,33 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4799"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4799"
+title: Compilatore avviso (livello 1) C4799 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4799
+dev_langs: C++
+helpviewer_keywords: C4799
 ms.assetid: 8ecbd06f-c778-4371-a2fb-c690b6743ec8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6b73cd3ee4fd530618179f05b5ab22fe8b29346f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nessuna istruzione EMMS alla fine della funzione 'funzione'  
+# <a name="compiler-warning-level-1-c4799"></a>Avviso del compilatore (livello 1) C4799  
   
- La funzione contiene almeno un'istruzione MMX, ma nessuna istruzione EMMS.  Quando si utilizza un'istruzione multimediale, è necessario utilizzare anche un'istruzione EMMS per cancellare il tag multimediale alla fine del codice MMX.  Per ulteriori informazioni sulle istruzioni EMMS, vedere [Indicazioni per l'utilizzo di EMMS](http://msdn.microsoft.com/it-it/a0c3b1e4-01a4-419c-a58f-ff1e97dea7d3).  
+> Nessuna istruzione EMMS alla fine della funzione '*funzione*'  
   
- L'avviso C4799 può essere generato quando si utilizza ivec.h, per indicare che nel codice non viene eseguita correttamente l'istruzione EMMS prima del termine.  L'avviso non è corretto per queste intestazioni.  È possibile disattivare le intestazioni definendo \_SILENCE\_IVEC\_C4799 in ivec.h.  Con questa operazione, tuttavia, non verranno generati neanche gli avvisi corretti di questo tipo.  
+La funzione dispone almeno di istruzioni MMX, ma non esiste un `EMMS` istruzione. Quando viene utilizzata un'istruzione multimediale, un `EMMS` istruzione o `_mm_empty` intrinseco deve essere utilizzato anche per cancellare la parola tag multimediale alla fine del codice MMX.  
   
- Per informazioni correlate, vedere [Set di istruzioni per MMX Intel](../../assembler/inline/intel-s-mmx-instruction-set.md).
+È possibile ottenere C4799 quando utilizza ivec. h, che indica che il codice non utilizza correttamente eseguire l'istruzione EMMS prima della restituzione. Si tratta di un avviso per le intestazioni. È possibile disattivarli definendo SILENCE_IVEC_C4799 in ivec. Tuttavia, tenere presente che questo sarà anche impedire al compilatore fornendo avvisi corretti di questo tipo.  
+  
+Per informazioni correlate, vedere [Set di istruzioni MMX Intel](../../assembler/inline/intel-s-mmx-instruction-set.md).

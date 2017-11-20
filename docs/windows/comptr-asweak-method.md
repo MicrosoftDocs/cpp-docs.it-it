@@ -1,32 +1,30 @@
 ---
-title: "Metodo ComPtr::AsWeak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak (metodo)"
+title: 'Metodo comptr:: Asweak | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak method
 ms.assetid: 23e29dcd-39cb-423f-abe6-6df4428213bf
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d4bdf9e6f2e3a484af825cea7facc78830b0cc48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo ComPtr::AsWeak
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un riferimento debole all'oggetto corrente.  
+# <a name="comptrasweak-method"></a>Metodo ComPtr::AsWeak
+Restituisce un riferimento debole all'oggetto corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 HRESULT AsWeak(  
@@ -34,17 +32,17 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pWeakRef`  
- Quando questa operazione termina, un puntatore al riferimento debole dell'oggetto.  
+ Quando questa operazione viene completata, un puntatore a un oggetto di riferimento debole.  
   
-## Valore restituito  
- S\_OK se ha esito positivo; in caso contrario, un HRESULT, che indica l'errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se riesce; in caso contrario, HRESULT indica un errore.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ComPtr](../windows/comptr-class.md)

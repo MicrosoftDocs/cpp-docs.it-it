@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivially_copyable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_copyable
+f1_keywords: type_traits/std::is_trivially_copyable
+dev_langs: C++
+helpviewer_keywords: is_trivially_copyable
 ms.assetid: 89a53bf8-036c-4108-91e1-fe34adbde8b3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: a5cfb92693d0bc5d120e2c1bb46eceb4822fd0ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: bf4387901e53dee51ae3c700a756358c63f8631a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="istriviallycopyable-class"></a>Classe is_trivially_copyable
 Verifica se il tipo è facilmente copiabile.  
@@ -51,7 +47,6 @@ struct is_trivially_copyable;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

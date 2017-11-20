@@ -1,11 +1,10 @@
 ---
-title: Classe unorm_4 | Documenti di Microsoft
+title: Classe unorm_4 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 20e8a0ca1291b36ee8b2b3b3aa836eae67fe33fd
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: fb24f92747a91b81b53c18bc07949f06ff21a14f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unorm4-class"></a>Classe unorm_4
-Rappresenta un vettore di quattro numeri normali unsigned short.  
+Rappresenta uno short vector di quattro numeri normale senza segno.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -323,7 +306,7 @@ class unorm_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore unorm_4](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore unorm_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -628,7 +611,7 @@ class unorm_4;
   
 ##  <a name="ctor"></a>unorm_4 
 
- Predefinito costruttore inizializza tutti gli elementi con 0.  
+ Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 unorm_4() restrict(amp,
@@ -708,7 +691,7 @@ explicit inline unorm_4(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ##  <a name="unorm_4__size"></a>dimensioni 
 
@@ -718,4 +701,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

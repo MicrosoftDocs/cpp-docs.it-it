@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3711
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3711
+f1_keywords: C3711
+dev_langs: C++
+helpviewer_keywords: C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3711"></a>Errore del compilatore C3711
 'method': un metodo di origine di eventi non gestito deve restituire void o un tipo integrale  

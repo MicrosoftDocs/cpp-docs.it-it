@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2677
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2677
+f1_keywords: C2677
+dev_langs: C++
+helpviewer_keywords: C2677
 ms.assetid: 76bc0b65-f52a-45a6-b6d6-0555f89da9a8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 4362fdb85c6700c9f9592b9bbf626738e6c4d4b5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2677"></a>Errore del compilatore C2677
 'operator' binario: è stato trovato alcun operatore globale che accetta il tipo 'type' (o nessuna conversione accettabile)  

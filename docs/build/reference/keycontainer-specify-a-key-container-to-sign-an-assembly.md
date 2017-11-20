@@ -1,75 +1,75 @@
 ---
-title: "/KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.KeyContainer"
-  - "/keycontainer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/KEYCONTAINER (opzione del linker)"
-  - "KEYCONTAINER (opzione del linker)"
-  - "-KEYCONTAINER (opzione del linker)"
+title: -KEYCONTAINER (specifica un contenitore di chiavi per firmare un Assembly) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.KeyContainer
+- /keycontainer
+dev_langs: C++
+helpviewer_keywords:
+- KEYCONTAINER linker option
+- /KEYCONTAINER linker option
+- -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c8aa93168b2ad5bf76eab5417a03bc4903777db8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (Specifica un contenitore di chiavi per firmare un assembly)
 ```  
 /KEYCONTAINER:name  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove  
   
  *name*  
- Il contenitore che contiene la chiave.  Se la stringa contiene uno spazio, racchiuderla tra doppie virgolette \(" "\).  
+ Contenitore che contiene la chiave. Racchiudere la stringa tra virgolette doppie ("") se contiene uno spazio.  
   
-## Note  
- Il linker crea un assembly firmato mediante l'inserimento di una chiave pubblica nel manifesto dell'assembly e la firma dell'assembly finale con la chiave privata.  Per generare un file di chiave, immettere [sn \-k](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) `file` sulla riga di comando.  L'opzione **sn \-i** installa la coppia di chiavi in un contenitore.  
+## <a name="remarks"></a>Note  
+ Il linker crea un assembly firmato inserendo una chiave pubblica nel manifesto dell'assembly e firmare l'assembly finale con la chiave privata. Per generare un file di chiave, digitare [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* nella riga di comando. **sn -i** installa la coppia di chiavi in un contenitore.  
   
- Se si esegue la compilazione con [\/LN](../../build/reference/ln-create-msil-module.md), il nome del file di chiave è contenuto nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly che include un riferimento esplicito al modulo, mediante [\#using](../../preprocessor/hash-using-directive-cpp.md), oppure quando si esegue il collegamento con [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
+ Se si compila con [/LN](../../build/reference/ln-create-msil-module.md), il nome del file di chiave verrà conservato nel modulo e incorporato nell'assembly che viene creato quando si compila un assembly che include un riferimento esplicito al modulo, tramite [#using](../../preprocessor/hash-using-directive-cpp.md), o durante il collegamento con [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
   
- È anche possibile passare al compilatore le informazioni di crittografia mediante [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md).  Utilizzare [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) per ottenere un assembly parzialmente firmato.  Per ulteriori informazioni sulla firma di un assembly, vedere [Assembly con nome sicuro \(firma degli assembly\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ È inoltre possibile passare le informazioni di crittografia per il compilatore con [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Utilizzare [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md) se si desidera che un assembly parzialmente firmato. Vedere [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) per ulteriori informazioni su come firmare un assembly.  
   
- Di seguito sono elencate altre opzioni del linker che hanno effetto sulla generazione dell'assembly.  
+ Altre opzioni dei linker che influiscono sulla generazione di assembly sono:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

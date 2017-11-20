@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '[]'
-dev_langs:
-- C++
+f1_keywords: '[]'
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21831cbd727477336c53e9d72e4bea95e123aa81
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e1b40b16c3ee349419259ae1e2240e28e3e7e911
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="subscript-operator"></a>Operatore di indice inferiore:
 ## <a name="syntax"></a>Sintassi  
@@ -52,7 +48,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  Nell'esempio precedente l'espressione `nArray[2]` è identica a `2[nArray]`. Il motivo è che il risultato di un'espressione di indice *e1***[** *e2* **]** è dato da:  
   
- **\*((** *e2* **)** * + * **(***e1***))**  
+ **\*((** *e2* **)**  *+*  **(***e1***))**  
   
  Non è l'indirizzo restituito dall'espressione *e2* byte dall'indirizzo *e1*. Piuttosto, l'indirizzo è ridimensionato per ottenere l'oggetto successivo nella matrice *e2*. Ad esempio:  
   

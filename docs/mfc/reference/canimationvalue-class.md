@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
 - AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationValue::m_value
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationValue [MFC], CAnimationValue
 - CAnimationValue [MFC], AddTransition
@@ -29,16 +27,15 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 6abda25cf23e83873d1611e45f78ef7c51e87709
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e56217b4cf92583d965b221360803ce4b4de3b44
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationvalue-class"></a>Classe CAnimationValue
 Implementa la funzionalità di oggetto di animazione con un valore.  
@@ -257,4 +254,3 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3798
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3798
+f1_keywords: C3798
+dev_langs: C++
+helpviewer_keywords: C3798
 ms.assetid: b2f8b1d8-8812-49b8-a346-28e48f02ba5c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 8841ad9429fb9561952cce1320e030c64eb3a74b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3798"></a>Errore del compilatore C3798
 'identificatore': dichiarazione di proprietà non può avere l'identificatore di override (da posizionare invece con i metodi get/set proprietà)  

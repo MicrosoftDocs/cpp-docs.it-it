@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (membro) [STL/CLR]"
+title: 'hash_multimap:: Empty (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 5fd29e90-e33a-460f-9d42-491b82dbaa40
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ef6161cfc7a4051dc25e60648cd68f927f1ef205
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di verificare se non sono presenti elementi.  
+# <a name="hashmultimapempty-stlclr"></a>hash_multimap::empty (STL/CLR)
+Verifica se sono presenti o meno degli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool empty();  
 ```  
   
-## Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  Equivale a [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`.  Utilizzarla per verificare se il hash\_multimap è vuoto.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [hash_multimap:: Size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se hash_multimap è vuoto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)

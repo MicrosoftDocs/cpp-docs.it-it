@@ -1,33 +1,32 @@
 ---
-title: "2.6.4 Costrutto atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.4 costrutto atomic | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e4232ef1-4058-42ce-9de0-0ca788312aba
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea1cc2474a8420227dcf2b6b6e87f255ce144cf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 2.6.4 Costrutto atomic
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il `atomic` direttiva assicura che una determinata posizione di memoria viene aggiornata in modo atomico, anziché esporre la possibilità di più thread di scrittura simultanee. La sintassi del `atomic` direttiva è come segue:  
+# <a name="264-atomic-construct"></a>2.6.4 Costrutto atomic
+Il `atomic` direttiva assicura che una determinata posizione di memoria viene aggiornata in modo atomico, anziché esporlo la possibilità di più thread di scrittura simultanee. La sintassi del `atomic` direttiva è come segue:  
   
 ```  
 #pragma omp atomic new-lineexpression-stmt  
 ```  
   
- L'istruzione di espressione deve essere uno dei seguenti formati:  
+ L'istruzione di espressione deve avere uno dei formati seguenti:  
   
  *x binop*= *expr*  
   
@@ -35,25 +34,25 @@ Il `atomic` direttiva assicura che una determinata posizione di memoria viene ag
   
  + + x  
   
- x:  
+ x-  
   
  --x  
   
  Nelle espressioni precedente:  
   
--   *x* rappresenta un'espressione lvalue con un tipo scalare.  
+-   *x* è un'espressione lvalue con tipo scalare.  
   
 -   *Expr* è un'espressione con tipo scalare e non fa riferimento l'oggetto specificato da *x*.  
   
--   `binop` non è un operatore di overload ed è uno dei +, *, -, / &, ^, &#124; <\<, o >>.  
+-   `binop`non è un operatore di overload e fa parte di +, *, -, / &, ^, &#124; <\<, o >>.  
   
- Anche se è definito dall'implementazione se un'implementazione sostituisce tutti `atomic` direttive con **critico** direttive che hanno lo stesso oggetto univoco *nome*,  `atomic` direttiva consente una migliore ottimizzazione. Spesso le istruzioni di hardware sono disponibili in grado di eseguire l'aggiornamento atomico con un sovraccarico minimo.  
+ Anche se è definito dall'implementazione se un'implementazione sostituisce tutte `atomic` direttive con **critico** direttive che hanno lo stesso oggetto univoco *nome*, `atomic` (direttiva) consente una maggiore ottimizzazione. Spesso le istruzioni di hardware sono disponibili in grado di eseguire l'aggiornamento atomico con un sovraccarico minimo.  
   
- Solo il caricamento e l'archivio di oggetto definito dal *x* sono atomica, la valutazione di *expr* non è atomico. Per evitare situazioni di race condition, tutti gli aggiornamenti della posizione in parallelo devono essere protetti con la `atomic` direttiva, ad eccezione di quelli che sono noti privo di race condition.  
+ Solo il carico e l'archivio dell'oggetto definito dal *x* sono atomica; la valutazione di *expr* non è atomico. Per evitare situazioni di race condition, tutti gli aggiornamenti della posizione in parallelo devono essere protetto con il `atomic` direttiva, ad eccezione di quelli che sono note privo di race condition.  
   
- Restrizioni per il `atomic` (direttiva) sono i seguenti:  
+ Restrizioni per il `atomic` direttiva sono i seguenti:  
   
--   Tutti i riferimenti atomici al percorso di archiviazione x in tutto il programma devono disporre di un tipo compatibile.  
+-   Tutti i riferimenti atomici al percorso di archiviazione x in tutto il programma devono avere un tipo compatibile.  
   
 ## <a name="examples"></a>Esempi:  
   

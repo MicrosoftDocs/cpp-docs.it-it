@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Includere l'intestazione \<filesystem> per accedere alle classi e funzioni che modificano e recuperano informazioni su percorsi, file e directory.  
+Includere l'intestazione &lt;filesystem> per accedere alle classi e funzioni che modificano e recuperano informazioni su percorsi, file e directory.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  Fino alla versione di Visual Studio 2017, l'intestazione \<experimental/filesystem> non era ancora uno standard di C++. Visual C++ 2017 implementa gli standard della bozza finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  A partire dalla versione di Visual Studio 2017, il \<filesystem > intestazione non è ancora uno standard di C++. Visual C++ 2017 implementa gli standard della bozza finale, disponibile in [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Questa intestazione supporta file system per uno di due ampie classi di sistemi operativi host: Microsoft Windows e Posix.  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   Un oggetto di classe path archivia il percorso nel modulo nativo, ma supporta la semplice conversione tra questo modulo archiviato e diversi moduli esterni.  
   
-    -   Una sequenza con terminazione Null di char, codificata come preferita dal sistema operativo.  
+-   Una sequenza con terminazione Null di char, codificata come preferita dal sistema operativo.  
   
-    -   Una sequenza con terminazione Null di char, codificata come UTF-8.  
+-   Una sequenza con terminazione Null di char, codificata come UTF-8.  
   
-    -   Una sequenza con terminazione Null di wchar_t, codificata come preferita dal sistema operativo.  
+-   Una sequenza con terminazione Null di wchar_t, codificata come preferita dal sistema operativo.  
   
-    -   Una sequenza con terminazione Null di char16_t, codificata come UTF-16.  
+-   Una sequenza con terminazione Null di char16_t, codificata come UTF-16.  
   
-    -   Una sequenza con terminazione Null di char32_t, codificata come UTF-32.  
+-   Una sequenza con terminazione Null di char32_t, codificata come UTF-32.  
   
  Le conversioni reciproche tra queste rappresentazioni vengono mediate, come necessario, dall'uso di uno o più facet `codecvt`. Se non viene definito un oggetto specifico delle impostazioni locali, questi facet vengono ottenuti dalle impostazioni locali globali.  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) che determina il comportamento nel caso in cui un file di destinazione esista già.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) che determina il comportamento nel caso in cui un file di destinazione esista già.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumerazione che specifica le opzioni per gli iteratori di directory.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumerazione di tipi di file.|  
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo di maschera di bit usato per trasferire le autorizzazioni e le opzioni per le autorizzazioni|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
-
 
 
 

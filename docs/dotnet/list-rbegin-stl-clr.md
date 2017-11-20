@@ -1,41 +1,39 @@
 ---
-title: "list::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin (membro) [STL/CLR]"
+title: 'List:: rbegin (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: 99637376-8ac3-4e39-844a-b4f324a7c6ba
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a826f4dc891a24a6e0e45c1a03de3e1fd77cafd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# list::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce l'inizio della sequenza inversa controllata.  
+# <a name="listrbegin-stlclr"></a>list::rbegin (STL/CLR)
+Indica l'inizio della sequenza controllata inversa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore inverso che definisce l'ultimo elemento della sequenza selezionata, ovvero poco oltre all'avvio di una sequenza vuota.  Definisce quindi l'oggetto `beginning` della sequenza inversa.  Viene utilizzato per ottenere un iteratore che definisce l'inizio `current` della sequenza controllata considerata in ordine inverso, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore inverso che definisce l'ultimo elemento della sequenza controllata o appena oltre l'inizio di una sequenza vuota. Di conseguenza, indica il `beginning` della sequenza inversa. È utilizzato per ottenere un iteratore che definisce il `current` inizio della sequenza controllata considerata in ordine inverso, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_rbegin.cpp   
@@ -70,17 +68,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**  
- **y x**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+ a y x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)   
- [list::begin](../dotnet/list-begin-stl-clr.md)   
- [list::end](../dotnet/list-end-stl-clr.md)   
- [list::rend](../dotnet/list-rend-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)   
+ [List:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)   
+ [list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)

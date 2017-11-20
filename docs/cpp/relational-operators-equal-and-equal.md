@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <
 - '>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '> operator'
 - less than operator
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56eead68e733a3950915af2227cbeb0a1bfabbd4
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 25ff07e3f80d51a0bfe06ae3b1c6dc7d5728bcf0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="relational-operators-lt-gt-lt-and-gt"></a>Gli operatori relazionali: &lt;, &gt;, &lt;=, e&gt;=
 ## <a name="syntax"></a>Sintassi  

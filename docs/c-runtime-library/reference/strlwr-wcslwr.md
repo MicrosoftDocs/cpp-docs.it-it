@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,22 +25,20 @@ apitype: DLLExport
 f1_keywords:
 - wcslwr
 - strlwr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strlwr function
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7b79af253e3308511dd5860a9515f617dad1fc14
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strlwr-wcslwr"></a>strlwr, wcslwr
 Queste funzioni POSIX sono deprecate. In alternativa, usare le funzioni [strlwr, wcslwr, mbslwr, strlwr_l, wcslwr_l, mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) conformi a ISO C++ o le funzioni con sicurezza avanzata [strlwr_s, strlwr_s_l, mbslwr_s, mbslwr_s_l, wcslwr_s, wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).

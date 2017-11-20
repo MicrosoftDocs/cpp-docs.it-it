@@ -10,14 +10,13 @@ f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-caps.latest.revision: 6
+caps.latest.revision: "6"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7972ff0d03f0c7b2378f87c311db633dff2a5d13
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmapgt-functions"></a>Funzioni &lt;map&gt;
 |||  
@@ -72,4 +71,3 @@ void swap(
   
 ## <a name="see-also"></a>Vedere anche  
  [\<map>](../standard-library/map.md)
-

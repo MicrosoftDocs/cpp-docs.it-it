@@ -1,91 +1,91 @@
 ---
-title: "CKeyColumns, CKeyColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szConstraintCatalog"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "COLUMN_GUID"
-  - "CKeyColumnInfo"
-  - "CONSTRAINT_NAME"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szConstraintSchema"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "CKeyColumns"
-  - "m_szTableName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "m_szConstraintName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CKeyColumnInfo (classe di parametri)"
-  - "CKeyColumns (classe typedef)"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_nOrdinalPosition"
-  - "m_szColumnName"
-  - "m_szConstraintCatalog"
-  - "m_szConstraintName"
-  - "m_szConstraintSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "ORDINAL_POSITION"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CKeyColumns, CKeyColumnInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szConstraintCatalog
+- m_nColumnPropID
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- COLUMN_GUID
+- CKeyColumnInfo
+- CONSTRAINT_NAME
+- m_szColumnName
+- m_szTableCatalog
+- m_szConstraintSchema
+- COLUMN_PROPID
+- m_guidColumn
+- CKeyColumns
+- m_szTableName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- m_szConstraintName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- ORDINAL_POSITION
+- m_szConstraintCatalog
+- CONSTRAINT_CATALOG
+- m_szTableSchema
+- TABLE_CATALOG
+- CKeyColumnInfo parameter class
+- TABLE_NAME
+- CONSTRAINT_NAME
+- m_nOrdinalPosition
+- m_nColumnPropID
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szConstraintName
+- CKeyColumns typedef class
+- m_szTableName
+- m_szConstraintSchema
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: 40525a4f-a9cf-4e9f-886d-8a6ddd18a3d6
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 65112e8daab1923f296d65637cd67ce93ee22cc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CKeyColumns, CKeyColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CKeyColumns** typedef per implementare la propria classe di parametri **CKeyColumnInfo**.  
+# <a name="ckeycolumns-ckeycolumninfo"></a>CKeyColumns, CKeyColumnInfo
+Chiamare la classe typedef **CKeyColumns** per implementare la relativa classe di parametro **CKeyColumnInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica le colonne, definite nel catalogo, che sono vincolate come chiavi da un utente specificato.  
+ Questa classe identifica le colonne, definite nel catalogo, che sono vincolate come chiavi di un determinato utente.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di KEY\_COLUMN\_USAGE](https://msdn.microsoft.com/en-us/library/ms712990.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe KEY_COLUMN_USAGE](https://msdn.microsoft.com/en-us/library/ms712990.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szConstraintCatalog|CONSTRAINT\_CATALOG|  
-|m\_szConstraintSchema|CONSTRAINT\_SCHEMA|  
-|m\_szConstraintName|CONSTRAINT\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
+|------------------|--------------------|  
+|m_szConstraintCatalog|CONSTRAINT_CATALOG|  
+|m_szConstraintSchema|CONSTRAINT_SCHEMA|  
+|m_szConstraintName|CONSTRAINT_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

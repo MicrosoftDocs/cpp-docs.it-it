@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- functional/std::is_bind_expression
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_bind_expression class
+f1_keywords: functional/std::is_bind_expression
+dev_langs: C++
+helpviewer_keywords: is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: f8a21e0f59be12286fa10f5fe862f01eb3cef216
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 691a4a3d60e46fdc1ac5f98c60bd03f44065e63f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isbindexpression-class"></a>Classe is_bind_expression
 Verifica se il tipo viene generato chiamando `bind`.  
@@ -79,5 +74,4 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche  
  [bind](../standard-library/functional-functions.md#bind)
-
 

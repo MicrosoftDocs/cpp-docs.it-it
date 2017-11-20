@@ -1,57 +1,56 @@
 ---
-title: "&lt;seealso&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<seealso>"
-  - "seealso"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<seealso> C++ (tag XML)"
-  - "seealso C++ (tag XML)"
+title: '&lt;seealso&gt; (Visual C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <seealso>
+- seealso
+dev_langs: C++
+helpviewer_keywords:
+- seealso C++ XML tag
+- <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bd43a5252481a8b21220dac14248ac5ae9f01d09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;seealso&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tag \<seealso\> consente di specificare il testo che si desidera visualizzare in una sezione Vedere anche.  Utilizzare [\<see\>](../ide/see-visual-cpp.md) per specificare un collegamento nel testo.  
+# <a name="ltseealsogt-visual-c"></a>&lt;seealso&gt; (Visual C++)
+Il tag \<seealso> consente di specificare il testo da visualizzare in una sezione Vedere anche. Usare [\<see>](../ide/see-visual-cpp.md) per specificare un collegamento nel testo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <seealso cref="member"/>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `member`  
- Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambiente di compilazione corrente.  Racchiuderlo tra virgolette singole o doppie.  
+ Riferimento a un membro o a un campo disponibile per essere chiamato dall'ambiente di compilazione corrente.  Racchiudere il nome tra virgolette singole o doppie.  
   
- Il compilatore controlla che l'elemento di codice specificato esiste e risolve `member` al nome dell'elemento nell'output XML.  Il compilatore genera un avviso se non trova `member`.  
+ Il compilatore controlla che l'elemento di codice specificata esista e che risolve `member` al nome dell'elemento XML di output.  Il compilatore genera un avviso se non trova `member`.  
   
- Per informazioni sulla creazione di un riferimento cref a un tipo generico, vedere [\<see\>](../ide/see-visual-cpp.md).  
+ Per informazioni su come creare un riferimento cref a un tipo generico, vedere [\<see>](../ide/see-visual-cpp.md).  
   
-## Note  
- Eseguire la compilazione con [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare in un file i commenti per la creazione della documentazione.  
+## <a name="remarks"></a>Note  
+ Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
- Vedere [\<summary\>](../ide/summary-visual-cpp.md) per un esempio di utilizzo \<seealso\>.  
+ Per un esempio d'uso di \<seealso>, vedere [\<summary>](../ide/summary-visual-cpp.md).  
   
- Il compilatore di Visual C\+\+ tenta di risolvere i riferimenti cref in una sessione con i commenti della documentazione.  Pertanto, se si utilizza la ricerca di C\+\+ regole, un simbolo non viene trovato che il riferimento verrà contrassegnato come non risolto.  
+ Il compilatore di Visual C++ tenta di risolvere i riferimenti cref in un passaggio tramite i commenti della documentazione.  Pertanto, se si utilizzano le regole di ricerca di C++, un simbolo non viene trovato dal compilatore e il riferimento verrà contrassegnato come non risolto.  
   
-## Esempio  
- Nell'esempio seguente, un simbolo non risolto viene fatto riferimento in un cref.  Il commento XML per il cref a B::Test verrà `<seealso cref="!:B::Test" />`, mentre il riferimento a A::Test è `<seealso cref="M:A.Test" />`corretto.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, un cref fa riferimento un simbolo non risolto. Il commento XML per cref per B::Test sarà `<seealso cref="!:B::Test" />`, mentre il riferimento a A::Test è ben formato `<seealso cref="M:A.Test" />`.  
   
 ```  
 // xml_seealso_tag.cpp  
@@ -75,5 +74,5 @@ public ref struct B {
 };  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

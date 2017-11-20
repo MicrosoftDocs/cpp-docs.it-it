@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationRect [MFC], CAnimationRect
 - CAnimationRect [MFC], AddTransition
@@ -47,16 +45,15 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 44727722c843e91d6ee924c2cffa6c4c465becad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a3fd5f20fae543583a0307b81a3b7310a300e167
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 Implementa la funzionalità di un rettangolo i cui lati possono essere animati.  
@@ -406,4 +403,3 @@ void SetDefaultValue(const CRect& rect);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

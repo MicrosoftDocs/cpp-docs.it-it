@@ -1,35 +1,34 @@
 ---
-title: "__vmx_vmclear | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmclear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMCLEAR (istruzione)"
-  - "__vmx_vmclear (funzione intrinseca)"
+title: __vmx_vmclear | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmclear
+dev_langs: C++
+helpviewer_keywords:
+- VMCLEAR instruction
+- __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: aa331ebc9ae1d7d18ccb5dd613e55cb1303d4c94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmclear
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="vmxvmclear"></a>__vmx_vmclear
+**Sezione specifica Microsoft**  
   
- Inizializza la struttura di controllo specificata della \(VMCS\) macchina virtuale e imposta lo stato originale a `Clear`.  
+ Inizializza la struttura di controllo della macchina virtuale specificata (VMCS) e imposta lo stato di avvio su `Clear`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned char __vmx_vmclear(  
@@ -37,36 +36,36 @@ unsigned char __vmx_vmclear(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|\[in\] `VmcsPhysicalAddress`|Un puntatore a una posizione di memoria a 64 bit che contiene l'indirizzo fisico di VMCS per cancellare.|  
+|[in] `VmcsPhysicalAddress`|Puntatore a una posizione di memoria a 64 bit che contiene l'indirizzo fisico della VMCS da cancellare.|  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
   
 |Valore|Significato|  
-|------------|-----------------|  
-|0|L'operazione è riuscita.|  
-|1|L'operazione non riesce con lo stato esteso disponibile in `VM-instruction error field` corrente VMCS.|  
-|2|L'operazione non riesce senza stato disponibile.|  
+|-----------|-------------|  
+|0|Operazione completata.|  
+|1|Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.|  
+|2|Operazione non riuscita senza stato disponibile.|  
   
-## Note  
- Un'applicazione può eseguire un'operazione di VM\-immettere utilizzando [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) o la funzione di [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) .  La funzione di [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) può essere utilizzata solo con un VMCS con lo stato originale viene `Clear`e la funzione di [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) può essere utilizzata solo con un VMCS con lo stato originale viene `Launched`.  Di conseguenza, utilizzare la funzione di [\_\_vmx\_vmclear](../intrinsics/vmx-vmclear.md) per impostare lo stato originale di un VMCS a `Clear`.  Utilizzare la funzione di [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md) per la prima VM\-immettono l'operazione e la funzione di [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md) per le successive VM\-immette le operazioni.  
+## <a name="remarks"></a>Note  
+ Un'applicazione può eseguire un'operazione di accesso VM utilizzando il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) o [__vmx_vmresume](../intrinsics/vmx-vmresume.md) (funzione). Il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Clear`e [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione può essere utilizzata solo con una VMCS il cui stato di avvio è `Launched`. Di conseguenza, utilizzare il [__vmx_vmclear](../intrinsics/vmx-vmclear.md) funzione per impostare lo stato di avvio di una VMCS a `Clear`. Utilizzare il [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) funzione per la prima operazione immettere VM e [__vmx_vmresume](../intrinsics/vmx-vmresume.md) funzione per le operazioni di accesso VM successive.  
   
- La funzione di `__vmx_vmclear` equivale all'istruzione macchina di `VMCLEAR` .  Questa funzione supporta l'interazione di monitoraggio della macchina virtuale dell'host con un sistema operativo guest e le relative applicazioni.  Per ulteriori informazioni, ricerca del documento, “caratteristica tecnica di virtualizzazione Intel per l'architettura di IA\-32 Intel,„ numero di documento C97063\-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) al sito.  
+ Il `__vmx_vmclear` è equivalente alla funzione di `VMCLEAR` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) sito.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__vmx_vmclear`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
- [\_\_vmx\_vmresume](../intrinsics/vmx-vmresume.md)
+ [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
+ [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

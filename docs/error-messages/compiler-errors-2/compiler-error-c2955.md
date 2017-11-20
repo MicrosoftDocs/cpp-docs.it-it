@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2955
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2955
+f1_keywords: C2955
+dev_langs: C++
+helpviewer_keywords: C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: af3f53545aa70e738f14c902a7a75afc48275b57
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2955"></a>Errore del compilatore C2955
 'identifier': l'utilizzo di modello di classe o alias generico richiede un elenco di argomenti di modello o generici  
@@ -92,4 +87,3 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 
 // correct:  template <class T, ListNodeMember<T> M> class ListHead;
 ```
-

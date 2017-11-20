@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4002
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4002
+f1_keywords: C4002
+dev_langs: C++
+helpviewer_keywords: C4002
 ms.assetid: 6bda1dfe-e2e4-4771-9794-5a404c466dd5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4002"></a>Avviso del compilatore (livello 1) C4002
 troppi parametri effettivi per la macro 'identifier'  

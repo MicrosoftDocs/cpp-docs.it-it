@@ -1,48 +1,48 @@
 ---
-title: "Utilizzo delle stored procedure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli del provider OLE DB, stored procedure"
-  - "OLE DB, stored procedure"
-  - "stored procedure, informazioni"
-  - "stored procedure, OLE DB"
-  - "stored procedure, Visual C++"
+title: Utilizzo di Stored procedure | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, Visual C++
+- stored procedures, about stored procedures
+- OLE DB provider templates, stored procedures
+- stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b7707234d0a1bf8abd37ae6751060ed7c7109fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizzo delle stored procedure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Una stored procedure è un oggetto eseguibile memorizzato in un database.  La chiamata a una stored procedure è simile alla chiamata a un comando SQL.  L'utilizzo di stored procedure in un'origine dati in alternativa all'esecuzione o alla preparazione di un'istruzione nell'applicazione client, può offrire diversi vantaggi, tra cui migliori prestazioni, overhead di rete ridotto e maggiore coerenza e precisione.  
+# <a name="using-stored-procedures"></a>Utilizzo delle stored procedure
+Una stored procedure è un oggetto eseguibile archiviato in un database. La chiamata di una stored procedure è simile alla chiamata a un comando SQL. Utilizzo di stored procedure sull'origine dati (anziché l'esecuzione o la preparazione di un'istruzione nell'applicazione client), è possibile fornire diversi vantaggi, tra cui prestazioni superiori, overhead di rete ridotto e maggiore uniformità e accuratezza.  
   
- Una stored procedure può includere un numero qualsiasi, incluso zero, di parametri di input o output e può passare un valore restituito.  È possibile impostare i valori dei parametri a livello di codice come valori specifici oppure utilizzare un marcatore di parametro, cioè un punto di domanda "?".  
+ Una stored procedure può avere un numero qualsiasi di, incluso zero, input o i parametri di output e passare il valore restituito. È anche possibile impostare i valori dei parametri hardcoded come valori specifici oppure utilizzano un marcatore di parametro (un punto interrogativo '?').  
   
 > [!NOTE]
->  Le stored procedure CLR SQL Server create con Visual C\+\+ devono essere compilate con l'opzione del compilatore **\/clr:safe**.  
+>  Le stored procedure create con Visual C++ devono essere compilate con CLR SQL Server il **/CLR: safe** l'opzione del compilatore.  
   
- Il provider OLE DB per SQL Server \(SQLOLEDB\) supporta i seguenti meccanismi utilizzati dalle stored procedure per restituire i dati:  
+ Il provider OLE DB per SQL Server (SQLOLEDB) supporta i seguenti meccanismi utilizzati dalle stored procedure per restituire i dati:  
   
--   Ogni istruzione SELECT della stored procedure genera un gruppo di risultati.  
+-   Ogni istruzione SELECT nella procedura genera un set di risultati.  
   
--   La stored procedure può restituire dati tramite parametri di output.  
+-   La procedura può restituire dati tramite i parametri di output.  
   
--   La stored procedure può avere codice restituito di tipo integer.  
+-   La procedura può avere un numero intero codice restituito.  
   
 > [!NOTE]
->  Non è possibile utilizzare le stored procedure con il provider OLE DB per Jet, in quanto da questo non supportate. Nelle stringhe delle query sono infatti ammesse solo costanti.  
+>  È possibile utilizzare stored procedure con il provider OLE DB per Jet perché tale provider non supporta stored procedure. solo le costanti sono consentite nelle stringhe di query.  
   
-## Vedere anche  
- [Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

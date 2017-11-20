@@ -1,43 +1,40 @@
 ---
-title: "Finestra di dialogo dell&#39;immagine personalizzata (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.customimage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Immagine personalizzata (finestra di dialogo)"
+title: La finestra di dialogo immagine personalizzata (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.customimage
+dev_langs: C++
+helpviewer_keywords: Custom Image dialog box
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84b05f0ac4270e19eee14f1a16683d82d082cda1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Finestra di dialogo dell&#39;immagine personalizzata (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di creare una nuova immagine con dimensioni e numero di colori personalizzati.  Per ulteriori informazioni sulle dimensioni delle icone utilizzate da Windows, vedere [Icone](_win32_Icons_cpp) nella documentazione di Windows SDK.  
-  
+# <a name="custom-image-dialog-box-image-editor-for-icons"></a>Finestra di dialogo dell'immagine personalizzata (Editor di immagini per le icone)
+Consente di creare una nuova immagine con dimensioni personalizzate e numero di colori.
  **Larghezza**  
- Consente di immettere la larghezza in pixel \(da 1 a 512, con limite di 2048\) dell'immagine personalizzata.  
+ Fornisce uno spazio per immettere la larghezza dell'immagine personalizzata in pixel (1-512, con limite di 2048).  
   
  **Altezza**  
- Consente di immettere l'altezza in pixel \(da 1 a 512, con limite di 2048\) dell'immagine personalizzata.  
+ Fornisce uno spazio per immettere l'altezza dell'immagine personalizzata in pixel (1-512, con limite di 2048).  
   
  **Colori**  
- Consente di scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.  
+ Fornisce uno spazio, è possibile scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Nessuno  
   
-## Vedere anche  
- [Finestra di dialogo Nuovo tipo di immagine \<Dispositivo\>](../mfc/new-device-image-type-dialog-box-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Nuovo \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,22 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::Create
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_duration
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_period
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], CSinusoidalTransitionFromVelocity
 - CSinusoidalTransitionFromVelocity [MFC], Create
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: d3eff9a1314f5ea69e6dbc0685bdc01c60482d17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 41011ad9814837d38a8d4e229123f447802b323d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Classe CSinusoidalTransitionFromVelocity
 Incapsula una transizione a velocità sinusoidale con un'ampiezza determinata dalla velocità iniziale della variabile di animazione.  
@@ -125,4 +122,3 @@ UI_ANIMATION_SECONDS m_period;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

@@ -1,32 +1,31 @@
 ---
-title: "Errore dell‘analizzatore di espressioni CXX0050 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0050"
-  - "CXX0050"
+title: Errore dell'analizzatore di espressioni CXX0050 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0050
+dev_langs: C++
+helpviewer_keywords:
+- CAN0050
+- CXX0050
 ms.assetid: 214cd193-c6dc-41b9-9ebe-5a4b1689d3ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73f2ec08092c49c5a3df55e534807ae8071e55c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore dell‘analizzatore di espressioni CXX0050
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-il lato sinistro di :: deve essere di tipo classe\/struttura\/unione  
+# <a name="expression-evaluator-error-cxx0050"></a>Errore dell‘analizzatore di espressioni CXX0050
+il lato sinistro di:: deve essere una classe, struct o unione  
   
- Il simbolo presente sul lato sinistro dell'operatore di risoluzione dell'ambito \(`::`\) non è una classe, una struttura o una unione.  
+ Il simbolo a sinistra dell'operatore di risoluzione dell'ambito (`::`) non è una classe, struttura o unione.  
   
  Questo errore è identico all'errore CAN0050.

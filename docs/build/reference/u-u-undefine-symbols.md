@@ -1,85 +1,85 @@
 ---
-title: "/U, /u (Annulla la definizione dei simboli) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions"
-  - "VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions"
-  - "VC.Project.VCCLCompilerTool.UndefineAllPreprocessorDefinitions"
-  - "/u"
-  - "VC.Project.VCCLWCECompilerTool.UndefineAllPreprocessorDefinitions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/U (opzione del compilatore) [C++]"
-  - "U (opzione del compilatore) [C++]"
-  - "-U (opzione del compilatore) [C++]"
-  - "Annulla definizione dei simboli (opzione del compilatore)"
+title: -U, -u (Rimuove simboli) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
+- VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
+- VC.Project.VCCLCompilerTool.UndefineAllPreprocessorDefinitions
+- /u
+- VC.Project.VCCLWCECompilerTool.UndefineAllPreprocessorDefinitions
+dev_langs: C++
+helpviewer_keywords:
+- -U compiler option [C++]
+- Undefine Symbols compiler option
+- /U compiler option [C++]
+- U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 35064566c7a6b1c2e5ad468e9b32f58dcba40808
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /U, /u (Annulla la definizione dei simboli)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'opzione del compilatore **\/U** non definisce il simbolo del preprocessore specificato.  L'opzione del compilatore **\/u** rimuove la definizione dei simboli specifici Microsoft definiti dal compilatore.  
+# <a name="u-u-undefine-symbols"></a>/U, /u (Annulla la definizione dei simboli)
+Il **/u** l'opzione del compilatore di non definisce il simbolo del preprocessore specificato. Il **/u** l'opzione del compilatore definizioni dei simboli Microsoft specifici definiti dal compilatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /U[ ]symbol  
 /u  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `symbol`  
- Simbolo del preprocessore di cui rimuovere la definizione.  
+ Il simbolo del preprocessore per rimuovere la definizione.  
   
-## Note  
- L'opzione **\/U** o **\/u** può rimuovere la definizione di un simbolo creato tramite la direttiva **\#define**.  
+## <a name="remarks"></a>Note  
+ Né il **/u** o **/u** opzione possibile rimuovere la definizione di un simbolo creato utilizzando il **#define** direttiva.  
   
- L'opzione **\/U** può rimuovere la definizione di un simbolo precedentemente definito tramite l'opzione **\/D**.  
+ Il **/u** opzione possibile rimuovere la definizione di un simbolo definito in precedenza tramite il **/D** opzione.  
   
  Per impostazione predefinita, il compilatore definisce i simboli specifici Microsoft seguenti.  
   
 |Simbolo|Funzione|  
-|-------------|--------------|  
-|\_CHAR\_UNSIGNED|Il tipo char predefinito è senza segno.  Definito se è specificata l'opzione [\/J](../../build/reference/j-default-char-type-is-unsigned.md).|  
-|\_CPPRTTI|Definito per il codice compilato con l'opzione [\/GR](../../build/reference/gr-enable-run-time-type-information.md).|  
-|\_CPPUNWIND|Definito per il codice compilato con l'opzione [\/EHsc](../../build/reference/eh-exception-handling-model.md).|  
-|\_DLL|Definito se è specificata l'opzione [\/MD](../../build/reference/md-mt-ld-use-run-time-library.md).|  
-|\_M\_IX86|Per impostazione predefinita, definito su 60 per destinazioni x86.|  
-|\_MSC\_VER|Per ulteriori informazioni, vedere [Macro predefinite](../../preprocessor/predefined-macros.md).|  
-|\_WIN32|Definito per applicazioni WIN32.  Sempre definita.|  
-|\_MT|Definito se è specificata l'opzione [\/MD o \/MT](../../build/reference/md-mt-ld-use-run-time-library.md).|  
+|------------|--------------|  
+|CHAR_UNSIGNED|Tipo char predefinito è senza segno. Definita quando il [/J](../../build/reference/j-default-char-type-is-unsigned.md) opzione specificata.|  
+|CPPRTTI|Definito per il codice compilato con la [/GR](../../build/reference/gr-enable-run-time-type-information.md) opzione.|  
+|CPPUNWIND|Definito per il codice compilato con la [/EHsc](../../build/reference/eh-exception-handling-model.md) opzione.|  
+|DLL|Definita quando il [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|  
+|M_IX86|Per impostazione predefinita, definita a 600 x86 a destinazioni.|  
+|MSC_VER|Per altre informazioni, vedere [Predefined Macros](../../preprocessor/predefined-macros.md).|  
+|WIN32|Definito per le applicazioni WIN32. Sempre definita.|  
+|_MT|Definita quando il [/MD o /MT](../../build/reference/md-mt-ld-use-run-time-library.md) opzione specificata.|  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+3.  Fare clic su di **avanzate** pagina delle proprietà.  
   
-4.  Modificare le proprietà **Rimuovi definizioni per il preprocessore** o **Rimuovi tutte le definizioni per il processore**.  
+4.  Modificare il **Rimuovi definizioni preprocessore** o **Rimuovi tutte le definizioni di preprocessore** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A> o <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [\/J \(Il tipo char predefinito è unsigned\)](../../build/reference/j-default-char-type-is-unsigned.md)   
- [\/GR \(Attiva informazioni sui tipi in fase di esecuzione\)](../../build/reference/gr-enable-run-time-type-information.md)   
- [\/EH \(Modello di gestione delle eccezioni\)](../../build/reference/eh-exception-handling-model.md)   
- [\/MD, \/MT, \/LD \(Utilizza la libreria di runtime\)](../../build/reference/md-mt-ld-use-run-time-library.md)
+ [/J (char predefinito è di tipo unsigned)](../../build/reference/j-default-char-type-is-unsigned.md)   
+ [/GR (Attiva informazioni di Run-Time Type)](../../build/reference/gr-enable-run-time-type-information.md)   
+ [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)   
+ [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md)

@@ -1,51 +1,49 @@
 ---
-title: "VCPROFILE_ALLOC_SCALE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VCPROFILE_ALLOC_SCALE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VCPROFILE_ALLOC_SCALE (variabile di ambiente)"
+title: VCPROFILE_ALLOC_SCALE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VCPROFILE_ALLOC_SCALE
+dev_langs: C++
+helpviewer_keywords: VCPROFILE_ALLOC_SCALE environment variable
 ms.assetid: 5cb5ce27-f9b8-489b-b46c-d6e9bcab2d34
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ed767299778b65a7275bbfd225daaf46ec0e98be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# VCPROFILE_ALLOC_SCALE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Modifica la quantità di memoria allocata per contenere i dati del profilo.  
+# <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+Modificare la quantità di memoria allocata per conservare i dati di profilo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 VCPROFILE_ALLOC_SCALE=scale_value  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `scale_value`  
- Valore di scala per la quantità di memoria che si desidera allocare per l'esecuzione degli scenari di test.  Il valore predefinito è 1.  
+ Il valore di scala per la quantità di memoria che si desidera per l'esecuzione di scenari di test.  Il valore predefinito è 1.  
   
-## Note  
- In rari casi, la quantità di memoria non sarà sufficiente per il supporto della raccolta dei dati profilo durante l'esecuzione degli scenari di test,  ma potrà essere aumentata con `VCPROFILE_ALLOC_SCALE`.  
+## <a name="remarks"></a>Note  
+ In rari casi, non sarà disponibile memoria sufficiente supportare la raccolta dei dati di profilo durante l'esecuzione di scenari di test.  In questi casi, è possibile aumentare la quantità di memoria con `VCPROFILE_ALLOC_SCALE`.  
   
- Se durante un'esecuzione di test viene visualizzato un messaggio di errore per segnalare che la memoria non è sufficiente, assegnare un valore sempre più grande a `VCPROFILE_ALLOC_SCALE`, finché l'esecuzione non viene completata senza errori di memoria insufficiente.  
+ Se si riceve un messaggio di errore durante l'esecuzione di un test che indica la presenza di memoria insufficiente, assegnare un valore maggiore di `VCPROFILE_ALLOC_SCALE`, fino a quando non viene eseguito il test completato senza errori di memoria insufficiente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 set VCPROFILE_ALLOC_SCALE=2  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Variabili d'ambiente per le ottimizzazioni GPO](../../build/reference/environment-variables-for-profile-guided-optimizations.md)

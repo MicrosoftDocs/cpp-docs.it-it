@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - explicit data type conversion operator
 - conversions [C++], explicit
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 09afbed7f5a399b9ca192ff57be1c866baf59626
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: fcc1a9d3ff1846960128e47a1d5d1acecf7711f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="explicit-type-conversion-operator-"></a>Operatore di conversione esplicita di tipi: ()
 Il linguaggio C++ consente la conversione esplicita del tipo mediante una sintassi simile a quella della chiamata di funzione.  

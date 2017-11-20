@@ -1,34 +1,33 @@
 ---
-title: "CCommand::ReleaseCommand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.ReleaseCommand"
-  - "ReleaseCommand"
-  - "CCommand::ReleaseCommand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseCommand (metodo)"
+title: 'CCommand:: ReleaseCommand | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.ReleaseCommand
+- ReleaseCommand
+- CCommand::ReleaseCommand
+dev_langs: C++
+helpviewer_keywords: ReleaseCommand method
 ms.assetid: 3b58230c-13d5-45c5-b43e-bb013ecc3019
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 756e85d0fd3c00b65c3fee2f1f225327cf63a32a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::ReleaseCommand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Elimina la funzione di accesso parametro, quindi rilascia il comando stesso.  
+# <a name="ccommandreleasecommand"></a>CCommand::ReleaseCommand
+Rilascia la funzione di accesso di parametro, quindi rilascia il comando stesso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,12 +35,12 @@ void CCommandBase::ReleaseCommand( ) throw( );
   
 ```  
   
-## Note  
- `ReleaseCommand` viene utilizzato insieme a **Chiudi**.  Vedere [Chiudi](../../data/oledb/ccommand-close.md) per i dettagli di utilizzo.  
+## <a name="remarks"></a>Note  
+ `ReleaseCommand`viene usato in combinazione con **Chiudi**. Vedere [Chiudi](../../data/oledb/ccommand-close.md) per informazioni dettagliate sull'utilizzo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CCommand](../../data/oledb/ccommand-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CCommand (classe)](../../data/oledb/ccommand-class.md)   
  [CCommand::Close](../../data/oledb/ccommand-close.md)

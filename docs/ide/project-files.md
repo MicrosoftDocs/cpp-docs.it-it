@@ -1,34 +1,34 @@
 ---
-title: "File di progetto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VCPROJ (file)"
-  - "file di progetto [C++], formato di file VCPROJ"
-  - "VCPROJ (formato di file di progetto Visual C++)"
-  - "progetti Visual C++, formato dei file di progetto"
+title: File di progetto | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .vcproj files
+- Visual C++ projects, project file format
+- VCPROJ (Visual C++ project file) format
+- project files [C++], .vcproj file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 55b18debe0418695cb64e28526790b9e2484d803
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# File di progetto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I file di progetto di Visual C\+\+ sono file basati su XML con estensione di file vcxproj che contengono informazioni necessarie alla compilazione di progetti di Visual C\+\+.  
+# <a name="project-files"></a>File di progetto
+Un file di progetto Visual C++ è un file basato su XML che ha l'estensione del nome file con estensione vcxproj e contiene le informazioni necessarie per compilare un progetto di Visual C++.  
   
-## Esempio  
- Il seguente file di esempio con estensione vcxproj è stato prodotto specificando **Progetto console Win32** nella finestra di dialogo **Nuovo progetto**.  Per elaborare un file di progetto, utilizzare lo strumento msbuild.exe dalla riga di comando o il comando **Compila** in [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. Questo esempio non può essere elaborato perché l'origine e i file di intestazione necessari non sono forniti. Per ulteriori informazioni sugli elementi XML in un file di progetto, vedere [Project File Schema Reference](../Topic/MSBuild%20Project%20File%20Schema%20Reference.md).  
+## <a name="example"></a>Esempio  
+ È stato generato il file con estensione vcxproj di esempio seguente, specificando un **applicazione Console Win32** nel **nuovo progetto** la finestra di dialogo. Per l'elaborazione di un progetto di file di utilizzare lo strumento di msbuild.exe nella riga di comando, o **compilare** comando il [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (In questo esempio Impossibile elaborare il file di intestazione e di origine necessari non disponibili.) Per ulteriori informazioni sugli elementi XML di un file di progetto, vedere [riferimenti dello Schema di File di progetto](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,6 +128,6 @@ I file di progetto di Visual C\+\+ sono file basati su XML con estensione di fil
 </Project>  
 ```  
   
-## Vedere anche  
- [Compilazione di progetti C\+\+ in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
- [Utilizzo di proprietà di progetto](../ide/working-with-project-properties.md)
+## <a name="see-also"></a>Vedere anche  
+ [Compilazione di progetti C++ in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
+ [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)

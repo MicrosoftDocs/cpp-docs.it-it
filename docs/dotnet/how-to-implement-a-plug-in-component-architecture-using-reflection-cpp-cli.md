@@ -1,39 +1,38 @@
 ---
-title: "Procedura: implementare un&#39;architettura plug-in tramite reflection (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "plug-in [C++]"
-  - "Reflection [C++], plug-in"
+title: Implementare un'architettura plug-in (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d959702a7de8df9d90ca6dd855725901543dc92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: implementare un&#39;architettura plug-in tramite reflection (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Negli esempi di codice riportati di seguito viene illustrato come utilizzare la reflection per implementare una semplice architettura "plug\-in".  Il primo elenco corrisponde all'applicazione e il secondo al plug\-in.  L'applicazione è costituita da un form a più documenti in cui vengono inseriti automaticamente i dati utilizzando le eventuali classi basate su form trovate nella DLL plug\-in fornita come argomento della riga di comando.  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>Procedura: implementare un'architettura plug-in tramite reflection (C++/CLI)
+Gli esempi di codice seguenti illustrano l'uso della reflection per implementare una semplice architettura "plug-in". Il primo listato è l'applicazione e il secondo è il plug-in. L'applicazione è un form che vengono inserite automaticamente utilizzando le eventuali classi basate su form trovate nella DLL del plug-in fornita come argomento della riga di comando.  
   
- L'applicazione tenta di caricare l'assembly fornito utilizzando il metodo <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>.  Se l'operazione riesce, i tipi all'interno dell'assembly vengono enumerati utilizzando il metodo <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>.  Viene quindi verificata la compatibilità di ciascun tipo utilizzando il metodo <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>.  In questo esempio, affinché l'assembly fornito venga qualificato come plug\-in, è necessario che le classi trovate nell'assembly siano derivate dalla classe <xref:System.Windows.Forms.Form>.  
+ L'applicazione tenta di caricare l'assembly specificato utilizzando il <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> metodo. Se ha esito positivo, i tipi all'interno dell'assembly vengono enumerati utilizzando il <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> metodo. Ogni tipo viene quindi verificata la compatibilità con le <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> metodo. In questo esempio, le classi dell'assembly specificato devono essere derivate dalla <xref:System.Windows.Forms.Form> classe per essere considerata un plug-in.  
   
- Vengono quindi create istanze per le classi compatibili utilizzando il metodo <xref:System.Activator.CreateInstance%2A?displayProperty=fullName>, che accetta un oggetto <xref:System.Type> come argomento e restituisce un puntatore a una nuova istanza.  Ogni nuova istanza viene quindi associata al form e visualizzata.  
+ Vengono quindi creata un'istanza delle classi compatibile con il <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> metodo che accetta un <xref:System.Type> come argomento e restituisce un puntatore a una nuova istanza. Ogni nuova istanza viene quindi associato al form e visualizzato.  
   
- Tenere presente che il metodo <xref:System.Reflection.Assembly.Load%2A> non accetta nomi di assembly con estensione di file.  Tuttavia, poiché la funzione Main nell'applicazione elimina le eventuali estensioni fornite, l'esempio di codice riportato di seguito funzionerà in entrambi i casi.  
+ Si noti che il <xref:System.Reflection.Assembly.Load%2A> metodo non accetta i nomi di assembly che includono l'estensione di file. La funzione principale dell'applicazione elimina le eventuali estensioni fornite, in modo l'esempio di codice seguente funziona in entrambi i casi.  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene definita l'applicazione che accetta i plug\-in.  Come primo argomento deve essere fornito il nome dell'assembly.  Quest'ultimo deve contenere almeno un tipo derivato <xref:System.Windows.Forms.Form> pubblico.  
+## <a name="example"></a>Esempio  
+ Il codice seguente definisce l'applicazione che accetta i plug-in. Come primo argomento, è necessario specificare un nome di assembly. Questo assembly deve contenere almeno una pubblica <xref:System.Windows.Forms.Form> tipo derivato.  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +76,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito vengono definite tre classi derivate da <xref:System.Windows.Forms.Form>.  Quando il nome dell'assembly risultante viene passato all'eseguibile nel listato precedente, ognuna di queste tre classi verrà rilevata e verrà creata un'istanza, nonostante che tali classi non fossero note all'applicazione host in fase di compilazione.  
+## <a name="example"></a>Esempio  
+ Il codice seguente definisce tre classi derivate da <xref:System.Windows.Forms.Form>. Quando il nome del nome dell'assembly risultante viene passato al file eseguibile nell'elenco precedente, ognuna di queste tre classi verrà individuato e creata un'istanza, nonostante il fatto che sono stati tutti sconosciuti all'applicazione host in fase di compilazione.  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +127,5 @@ protected:
 };  
 ```  
   
-## Vedere anche  
- [Reflection](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)

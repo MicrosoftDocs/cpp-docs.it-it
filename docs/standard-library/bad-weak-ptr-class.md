@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- memory/std::bad_weak_ptr
-dev_langs:
-- C++
+f1_keywords: memory/std::bad_weak_ptr
+dev_langs: C++
 helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 5cd4d1b82b4736b49c476d2f336a4b03db27bd51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 940a497217ffb4788adb24f1a4a67ce3eb04bc12
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="badweakptr-class"></a>Classe bad_weak_ptr
 Segnala un'eccezione weak_ptr non valida.  
@@ -89,4 +85,3 @@ bad weak pointer
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe weak_ptr](../standard-library/weak-ptr-class.md)
-

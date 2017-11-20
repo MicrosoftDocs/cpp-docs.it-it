@@ -1,41 +1,39 @@
 ---
-title: "multiset::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend (membro) [STL/CLR]"
+title: 'multiset:: rend (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: db84e142-efa7-4171-bad6-8132f3f5f741
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cdabdd4a9edcaf0cf2b4eef6cee9dd19b04d79b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce la fine della sequenza inversa controllata.  
+# <a name="multisetrend-stlclr"></a>multiset::rend (STL/CLR)
+Indica la fine della sequenza controllata inversa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore inverso che punta oltre all'inizio della sequenza selezionata.  Definisce quindi l'oggetto `end` della sequenza inversa.  Viene utilizzato per ottenere un iteratore che definisce la fine `current` della sequenza controllata considerata in ordine inverso, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore inverso che punta appena oltre l'inizio della sequenza controllata. Di conseguenza, indica il `end` della sequenza inversa. È utilizzato per ottenere un iteratore che definisce il `current` fine della sequenza controllata considerata in ordine inverso, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multiset_rend.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a.**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::begin](../dotnet/multiset-begin-stl-clr.md)   
- [multiset::end](../dotnet/multiset-end-stl-clr.md)   
- [multiset::rbegin](../dotnet/multiset-rbegin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: Begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)   
+ [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)   
+ [multiset::rbegin (STL/CLR)](../dotnet/multiset-rbegin-stl-clr.md)

@@ -1,104 +1,101 @@
 ---
-title: "Generic Functions (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "functions [C++], generic"
-  - "generic methods"
-  - "generics [C++], functions"
-  - "methods [C++], generic"
-  - "generic functions"
+title: Funzioni generiche (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], generic
+- generic methods
+- generics [C++], functions
+- methods [C++], generic
+- generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2ffaee4b452b6f7eb31ad81a8b7b1216eb670e7f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Generic Functions (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una funzione generica è una funzione dichiarata con i parametri di tipo.  Una volta chiamata, i tipi effettivi vengono utilizzati al posto dei parametri di tipo.  
+# <a name="generic-functions-ccli"></a>Funzioni generiche (C++/CLI)
+Una funzione generica è una funzione dichiarata con parametri di tipo. Quando viene chiamato, vengono utilizzati i tipi effettivi anziché i parametri di tipo.  
   
-## Tutte le piattaforme  
- **Osservazioni**  
+## <a name="all-platforms"></a>Tutte le piattaforme  
+ **Note**  
   
- Questa funzionalità non si applica a tutte le piattaforme.  
+ Questa funzionalità non è applicabile a tutte le piattaforme.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Osservazioni**  
+## <a name="windows-runtime"></a>Windows Runtime  
+ **Note**  
   
- Questa funzionalità non è supportata in [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+ Questa funzionalità non è supportata in Windows Runtime.  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Una funzione generica è una funzione dichiarata con i parametri di tipo.  Una volta chiamata, i tipi effettivi vengono utilizzati al posto dei parametri di tipo.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Una funzione generica è una funzione dichiarata con parametri di tipo. Quando viene chiamato, vengono utilizzati i tipi effettivi anziché i parametri di tipo.  
   
  **Sintassi**  
   
 ```  
 [attributes] [modifiers]  
-return-type identifier <type-parameter identifier(s)>  
+return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
   
 ([formal-parameters])  
-{  
-   function-body  
-}  
+{function-body}  
 ```  
   
  **Parametri**  
   
- *attributes* \(facoltativo\)  
- Informazioni dichiarative aggiuntive.  Per ulteriori informazioni sugli attributi e sulle classi di attributo, vedere attributi.  
+ *attributi* (facoltativo)  
+ Informazioni dichiarative aggiuntive. Per ulteriori informazioni sugli attributi e classi di attributi, vedere attributi.  
   
- *modifiers* \(Facoltativo\)  
- Un modificatore per la funzione, come static.  `virtual` non è consentito poiché i metodi virtuali non possono essere generici.  
+ *modificatori* (facoltativo)  
+ Un modificatore per la funzione, ad esempio statico.  `virtual`non è consentita perché i metodi virtuali non possono essere generici.  
   
- *return\-type*  
- Tipo restituito dal metodo.  Se il tipo restituito è void, nessun valore restituito è obbligatorio.  
+ *tipo restituito*  
+ Tipo restituito dal metodo. Se il tipo restituito è void, nessun valore restituito è obbligatorio.  
   
  *identifier*  
- Il nome della funzione.  
+ Nome della funzione.  
   
- *type\-parameter identifier\(s\)*  
- Elenco delimitato da virgole degli identificatori.  
+ *identificatori di parametro di tipo*  
+ Elenco delimitato da virgole di identificatori.  
   
- *formal\-parameters* \(facoltativo\)  
- Elenco dei parametri  
+ *parametri formali di* (facoltativo)  
+ Elenco di parametri.  
   
- *type\-parameter\-constraints\-clauses*  
- Consente di specificare le restrizioni sui tipi che possono essere utilizzati come argomenti di tipo e assume il formato specificato in [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ *parametro di tipo-clausole di vincoli*  
+ Questo consente di specificare le restrizioni per i tipi che possono essere utilizzati come argomenti di tipo e assume il formato specificato in [vincoli sui parametri di tipo generico (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
- *function\-body*  
+ *corpo della funzione*  
  Il corpo del metodo, che può fare riferimento agli identificatori di parametro di tipo.  
   
- **Osservazioni**  
+ **Note**  
   
- Le funzioni generiche sono funzioni dichiarate con un parametro di tipo generico.  Possono essere metodi in una classe o una struttura o funzioni autonome.  Una singola dichiarazione generica dichiara in modo implicito una famiglia di funzioni che differiscono solo in sostituzione di un tipo effettivo diverso per il parametro di tipo generico.  
+ Funzioni generiche sono le funzioni dichiarate con un parametro di tipo generico. Possono essere metodi nelle funzioni di classe o struct o autonomo. Una singola dichiarazione generica dichiara in modo implicito una famiglia di funzioni che differiscono solo per la sostituzione di un tipo effettivo diverso per il parametro di tipo generico.  
   
- In [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)], i costruttori di classe o di struct non possono essere dichiarati con parametri di tipo generico.  
+ In Visual C++, costruttori di classe o struct non possono essere dichiarati con parametri di tipo generico.  
   
- Una volta chiamato, il parametro di tipo generico è sostituito da un tipo effettivo.  Il tipo effettivo può essere specificato in modo esplicito in parentesi angolari utilizzando una sintassi simile a una chiamata di funzione di modello.  Se viene chiamato senza parametri di tipo, il compilatore tenta di dedurre il tipo effettivo dai parametri forniti nella chiamata di funzione.  Se l'argomento di tipo richiesto non può essere dedotto dai parametri utilizzati, verrà visualizzato un errore.  
+ Quando viene chiamato, il parametro di tipo generico viene sostituito da un tipo effettivo. Il tipo effettivo può essere specificato in modo esplicito in parentesi angolari utilizzando una sintassi simile a una chiamata di funzione di modello. Se chiamata senza parametri di tipo, il compilatore tenterà di dedurre il tipo effettivo dai parametri specificati nella chiamata di funzione. Se l'argomento tipo designato non può essere dedotto dai parametri usati, il compilatore segnalerà un errore.  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- L'esempio di codice seguente mostra una funzione generica.  
+ Esempio di codice riportato di seguito viene illustrato come una funzione generica.  
   
 ```  
 // generics_generic_function_1.cpp  
@@ -133,7 +130,7 @@ int main() {
   
  **Esempio**  
   
- Le funzioni generiche possono essere sottoposte a overload in base alla firma o il grado, il numero di parametri di tipo in una funzione.  Inoltre, le funzioni generiche possono essere sottoposte a overload con le funzioni non generiche con lo stesso nome, purché le funzioni differiscono in alcuni parametri di tipo.  Per esempio le funzioni seguenti possono essere sottoposte ad overload:  
+ Funzioni generiche possono essere sottoposti a overload in base a una firma o grado, il numero di parametri di tipo in una funzione. Funzioni generiche, inoltre, possono risultare sovraccarico con le funzioni non generica con lo stesso nome, purché le funzioni differiscono per alcuni parametri di tipo. Ad esempio, le funzioni seguenti possono essere sottoposti a overload:  
   
 ```  
 // generics_generic_function_2.cpp  
@@ -151,7 +148,7 @@ ref struct MyClass {
   
  **Esempio**  
   
- L'esempio seguente utilizza una funzione generica per cercare il primo elemento di un array.  Dichiara `MyClass`, che eredita dalla classe base `MyBaseClass`.  `MyClass` contiene una funzione generica, `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, nella classe di base.  In **main**, la funzione generica, `MyFunction`, viene chiamata utilizzando argomenti di tipo diversi.  
+ L'esempio seguente usa una funzione generica per individuare il primo elemento in una matrice. Dichiara `MyClass`, che eredita dalla classe di base `MyBaseClass`. `MyClass`contiene una funzione generica, `MyFunction`, che chiama un'altra funzione generica, `MyBaseClassFunction`, all'interno della classe base. In **principale**, la funzione generica, `MyFunction`, viene chiamato utilizzando argomenti di tipo diverso.  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -189,8 +186,11 @@ int main() {
   
  **Output**  
   
-  **La mia funzione ha restituito un int: 2003**  
- **La mia funzione ha restituito una stringa: Ciao funzioni generiche\!**   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+My function returned an int: 2003  
+My function returned a string: Hello generic functions!  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Generics](../windows/generics-cpp-component-extensions.md)

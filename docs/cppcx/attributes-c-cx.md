@@ -1,27 +1,30 @@
 ---
-title: "Attributi (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Attributi (C + + CX) | Documenti Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 4cffb903bcfa22654d4b8ff65609342fab267412
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Attributi (C++/CX)
-Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e ai tipi [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] per specificare determinati comportamenti nella creazione dei metadati. Nel codice [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] sono usati comunemente diversi attributi predefiniti, ad esempio [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx). Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:  
+# <a name="attributes-ccx"></a>Attributi (C++/CX)
+Un attributo è un tipo speciale di classe di riferimento che può essere anteposto tra parentesi quadre ai metodi e tipi di Windows Runtime per specificare determinati comportamenti nella creazione dei metadati. Diversi attributi predefiniti, ad esempio, [Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx), sono comunemente usati in C + + codice CX. Nell'esempio riportato di seguito viene mostrata l'applicazione dell'attributo a una classe:  
   
- [!code-cpp[cx_attributes#01](../snippets/cpp/VS_Snippets_Misc/cx_attributes/cpp/class1.h#01)]  
+ [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]  
   
-## Attributi personalizzati  
- Puoi anche definire attributi personalizzati. Gli attributi personalizzati devono essere conformi alle regole [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]:  
+## <a name="custom-attributes"></a>Attributi personalizzati  
+ Puoi anche definire attributi personalizzati. Attributi personalizzati devono essere conformi a queste regole di Windows Runtime:  
   
 -   Gli attributi personalizzati possono contenere solo campi pubblici.  
   
@@ -29,9 +32,9 @@ Un attributo è un tipo speciale di classe di riferimento che può essere antepo
   
 -   Un campo può essere uno dei seguenti tipi:  
   
-    -   int32 \(int\)  
+    -   int32 (int)  
   
-    -   uint32 \(int non firmato\)  
+    -   uint32 (int non firmato)  
   
     -   bool  
   
@@ -41,13 +44,13 @@ Un attributo è un tipo speciale di classe di riferimento che può essere antepo
   
     -   Platform::Type^  
   
-    -   classe enum pubblica \(include le enumerazioni definite dall'utente\)  
+    -   classe enum pubblica (include le enumerazioni definite dall'utente)  
   
  Nell'esempio riportato di seguito viene mostrato come definire un attributo personalizzato e quindi inizializzarlo quando lo si utilizza.  
   
- [!code-cpp[cx_attributes#02](../snippets/cpp/VS_Snippets_Misc/cx_attributes/cpp/class1.h#02)]  
+ [!code-cpp[cx_attributes#02](../cppcx/codesnippet/CPP/cx_attributes/class1.h#02)]  
   
-## Vedere anche  
- [Sistema di tipi \(C\+\+\/CX\)](../cppcx/type-system-c-cx.md)   
- [Riferimenti al linguaggio Visual C\+\+](../cppcx/visual-c-language-reference-c-cx.md)   
- [Riferimenti a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)
+## <a name="see-also"></a>Vedere anche  
+ [Sistema di tipi (C++/CX)](../cppcx/type-system-c-cx.md)   
+ [Riferimenti al linguaggio di Visual C++](../cppcx/visual-c-language-reference-c-cx.md)   
+ [Riferimento a spazi dei nomi](../cppcx/namespaces-reference-c-cx.md)

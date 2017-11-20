@@ -1,41 +1,39 @@
 ---
-title: "list::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (membro) [STL/CLR]"
+title: 'List:: Empty (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: f45edf8a-927d-41ff-9c09-cb0fba4f08b8
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 388a7ffd665652626dc48d4278a57e38c34e91b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# list::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di verificare se non sono presenti elementi.  
+# <a name="listempty-stlclr"></a>list::empty (STL/CLR)
+Verifica se sono presenti o meno degli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool empty();  
 ```  
   
-## Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  Equivale a [list::size](../dotnet/list-size-stl-clr.md)`() == 0`.  Utilizzarla per verificare se l'elenco è vuoto.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [List:: Size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se l'elenco è vuoto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_empty.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)   
- [list::size](../dotnet/list-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)

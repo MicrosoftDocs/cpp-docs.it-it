@@ -1,53 +1,53 @@
 ---
-title: "OpenMP Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Funzioni OpenMP | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: caa41947f43189f52333106f80cce6f58b921f8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP Functions
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Vengono forniti collegamenti alle funzioni utilizzate in OpenMP API.  
+# <a name="openmp-functions"></a>Funzioni OpenMP
+Vengono forniti collegamenti a funzioni usate nell'API OpenMP.  
   
- L'implementazione di Visual C\+\+ standard di OpenMP sono incluse le seguenti funzioni.  
+ L'implementazione di Visual C++ del OpenMP standard include le funzioni seguenti.  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Uninitializes un blocco.|  
-|[omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes un blocco nidificabile.|  
-|[omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Restituisce un valore che indica se il numero di thread disponibili nell'area parallela successiva può essere regolato dal runtime.|  
-|[omp\_get\_max\_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Restituisce un Integer che sia uguale o maggiore del numero di thread che sono disponibili se un'area parallela senza [num\_threads](../../../parallel/openmp/reference/num-threads.md) è stato definito in tale punto di codice.|  
-|[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Restituisce un valore che indica se il parallelismo annidato è abilitato.|  
-|[omp\_get\_num\_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Restituisce il numero di processori disponibili quando viene chiamata la funzione.|  
-|[omp\_get\_num\_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Restituisce il numero di thread nell'area parallela.|  
-|[omp\_get\_thread\_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Restituisce il numero del thread che esegue all'interno del team di thread.|  
-|[omp\_get\_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Restituisce il numero di secondi tra i cicli macchina del processore.|  
-|[omp\_get\_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Restituisce un valore in secondi del tempo trascorso da un certo punto.|  
-|[omp\_in\_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Restituisce diverso da zero se viene chiamato dall'interno di un'area parallela.|  
-|[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)|inizializza un blocco semplice.|  
-|[omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|inizializza un blocco.|  
-|[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indica che il numero di thread disponibili nell'area parallela successiva può essere regolato dal runtime.|  
-|[omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)|I blocchi pertanto l'esecuzione fino a quando un blocco non è disponibile.|  
-|[omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|I blocchi pertanto l'esecuzione fino a quando un blocco non è disponibile.|  
-|[omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Abilita annidato il parallelismo.|  
-|[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Imposta il numero di thread nelle aree parallele successive, a meno che non venga ignorato da un oggetto [num\_threads](../../../parallel/openmp/reference/num-threads.md) clausola.|  
-|[omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Tentativo di impostare un blocco ma non blocca l'esecuzione del thread.|  
-|[omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Tentativo di impostare un blocco nidificabile ma non blocca l'esecuzione del thread.|  
-|[omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|rilascia un blocco.|  
-|[omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|rilascia un blocco nidificabile.|  
+|[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Annulla l'inizializzazione di un blocco.|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Annulla l'inizializzazione di un blocco annidabile.|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Restituisce un valore che indica se il numero di thread disponibili nell'area parallela successivi possa essere adattato per la fase di esecuzione.|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Restituisce un valore integer che è uguale o maggiore del numero di thread che sarà disponibile se un'area parallela senza [num_threads](../../../parallel/openmp/reference/num-threads.md) sono state definite in tale punto nel codice.|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Restituisce un valore che indica se è abilitato il parallelismo annidato.|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Restituisce il numero di processori che sono disponibili quando viene chiamata la funzione.|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Restituisce il numero di thread in tale area.|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Restituisce il numero di thread del thread in esecuzione nel relativo team di thread.|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Restituisce il numero di secondi tra cicli di processore.|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Restituisce un valore in secondi del tempo che intercorre tra un certo punto.|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Restituisce un diverso da zero se chiamato dall'interno di un'area parallela.|  
+|[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Inizializza un semplice blocco.|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Inizializza un blocco.|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Indica che il numero di thread disponibili nell'area parallela successivi possa essere adattato per la fase di esecuzione.|  
+|[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Blocchi di esecuzione del thread fino a quando non è disponibile un blocco.|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Blocchi di esecuzione del thread fino a quando non è disponibile un blocco.|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Abilita parallelismo annidato.|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Imposta il numero di thread in aree parallele successivi, a meno che non viene sottoposto a override da un [num_threads](../../../parallel/openmp/reference/num-threads.md) clausola.|  
+|[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Tenta di impostare un blocco, ma non blocca l'esecuzione del thread.|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Tenta di impostare un blocco annidabile ma non blocca l'esecuzione del thread.|  
+|[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Rilascia un blocco.|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Rilascia un blocco annidabile.|  
   
-## Vedere anche  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti alla libreria](../../../parallel/openmp/reference/openmp-library-reference.md)
