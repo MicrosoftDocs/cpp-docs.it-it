@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,22 +22,20 @@ apitype: DLLExport
 f1_keywords:
 - ___unguarded_readlc_active_add_func
 - ___setlc_active_func
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ___setlc_active_func
 - ___unguarded_readlc_active_add_func
 ms.assetid: 605ec4e3-81e5-4ece-935a-f434768cc702
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: a1746d597613bf76bdbf8c38ff3487b4d0c18fc2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setlcactivefunc-unguardedreadlcactiveaddfunc"></a>___setlc_active_func, ___unguarded_readlc_active_add_func
 OBSOLETE. CRT esporta queste funzioni interne esclusivamente per mantenere la compatibilità binaria.  

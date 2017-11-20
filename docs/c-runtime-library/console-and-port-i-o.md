@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -20,30 +17,15 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: f252a10b0d340b6fceac2c2372cdf991764c83c4
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="console-and-port-io"></a>I/O console e porta
 Queste routine eseguono la lettura e la scrittura sulla console o sulla porta specificata. Le routine di I/O della console non sono compatibili con le routine di I/O di flusso o le routine I/O di basso livello della libreria. Prima dell'esecuzione dell'I/O non è necessario aprire la console o la porta, pertanto questa categoria non include routine di apertura o chiusura. Nei sistemi operativi Windows l'output di queste funzioni è sempre indirizzato alla console e non può essere reindirizzato.  

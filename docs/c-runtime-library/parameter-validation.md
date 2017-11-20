@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- parameters, validation
+dev_langs: C++
+helpviewer_keywords: parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 749e734bc4657efff3f0dfaeb735a0ea69375d02
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 01d200e716ce4291350584ac7e2f388cca30cedf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="parameter-validation"></a>Convalida dei parametri
 La maggior parte delle funzioni CRT con sicurezza avanzata e molte delle funzioni preesistenti convalidano i propri parametri. La convalida può includere il controllo della presenza di puntatori NULL, la verifica che i numeri interi rientrino in un intervallo valido o il controllo della validità dei valori di enumerazione. Quando viene rilevato un parametro non valido, viene eseguito il gestore di parametri non validi.  

@@ -1,10 +1,8 @@
 ---
 redirect_url: /cpp/ide/ide_and_tools_for_visual_cpp_development
-ms.translationtype: MT
-ms.sourcegitcommit: 567ae1bdb057e8bde3ba6e109857350785682b60
 ms.openlocfilehash: 49e0644e005ad85c912e3c40f2e6fc1c32be249c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-

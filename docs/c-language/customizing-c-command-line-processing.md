@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C
 Se il programma non accetta argomenti della riga di comando, è possibile salvare una piccola quantità di spazio eliminando l'utilizzo della routine di libreria che esegue l'elaborazione della riga di comando. Questa routine viene chiamata **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide), come descritto in [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md). Per eliminarne l'uso, definire una routine che non esegue alcuna operazione nel file che contiene la funzione **main** e denominarla **_setargv** (o **_wsetargv** nell'ambiente a caratteri wide). La chiamata a **_setargv** o a **_wsetargv** viene soddisfatta dalla definizione di **_setargv** o **_wsetargv** creata e la versione di libreria non viene caricata.  

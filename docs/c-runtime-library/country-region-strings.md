@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- country/region strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3c250e47688e5fbcb32779d58dd8fe8973cdc96c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
-ms.contentlocale: it-it
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 Le stringhe di paese e area geografica possono essere combinate con una stringa di lingua per creare una specifica delle impostazioni locali per le funzioni `setlocale`, `_wsetlocale`, `_create_locale`e `_wcreate_locale` . Per un elenco dei nomi di paesi/aree geografiche supportati dalla versione del sistema operativo Windows, vedere [National Language Support (NLS) API Reference](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) (Tabella di riferimento API NLS (National Language Support)). Negli elenchi, la stringa paese/area geografica può essere uno qualsiasi dei valori del paese nella colonna **Locale – Language Country/Region** (Impostazioni locali - Lingua Paese/Area geografica) o una qualsiasi delle abbreviazioni nella colonna **Country or Region name abbreviation** (Abbreviazione nome paese o area geografica). Per informazioni sul supporto di lingue aggiuntive nei sistemi operativi Windows in base alla versione, vedere [Appendix A: Product Behavior](http://msdn.microsoft.com/goglobal/bb896001.aspx) (Appendice A: comportamento del prodotto) in "[MS-LCID]: Windows Language Code Identifier (LCID) Reference" (Informazioni di riferimento sugli identificatori di lingua (LCID) di Windows).  

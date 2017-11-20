@@ -1,10 +1,8 @@
 ---
 redirect_url: /cpp/build/reference/c-cpp-building-reference
-ms.translationtype: MT
-ms.sourcegitcommit: 26e4b29cc488ddc69872a90a00d66575eaacd1dc
 ms.openlocfilehash: f7dad785ce1e8b026a5919cbe0041820eba34d38
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-

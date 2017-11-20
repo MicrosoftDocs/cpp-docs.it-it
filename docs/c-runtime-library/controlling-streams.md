@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Controlling Streams
-dev_langs:
-- C++
+f1_keywords: Controlling Streams
+dev_langs: C++
 helpviewer_keywords:
 - streams, controlling
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="controlling-streams"></a>Controllo dei flussi
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) restituisce l'indirizzo di un oggetto di tipo `FILE`. Si utilizza questo indirizzo come l'argomento `stream` a diverse funzioni di libreria per eseguire varie operazioni in un file aperto. Per un flusso di byte, tutti gli input vengono eseguiti come se ogni carattere fosse letto chiamando [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) e tutti gli output vengono eseguiti come se ogni carattere fosse scritto chiamando [fputc](../c-runtime-library/reference/fputc-fputwc.md). Per un flusso di caratteri wide, tutti gli input vengono eseguiti come se ogni carattere fosse letto chiamando [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) e tutti gli output vengono eseguiti come se ogni carattere fosse scritto chiamando [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

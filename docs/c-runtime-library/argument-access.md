@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.arguments
-dev_langs:
-- C++
+f1_keywords: c.arguments
+dev_langs: C++
 helpviewer_keywords:
 - argument access macros [C++]
 - variable-length argument lists
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: c216c009d84771fdf34426b6121a89eb4b3f73e4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="argument-access"></a>Accesso agli argomenti
 Le macro `va_arg`, `va_end` e `va_start` forniscono accesso agli argomenti della funzione quando il numero di argomenti è variabile. Queste macro sono definite in STDARG.H per la compatibilità ANSI C e in VARARGS.H per la compatibilità con UNIX System V.  

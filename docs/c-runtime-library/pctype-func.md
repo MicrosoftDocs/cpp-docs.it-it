@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __pctype_func
+apiname: __pctype_func
 apilocation:
 - msvcrt.dll
 - msvcr110_clr0400.dll
@@ -19,23 +17,19 @@ apilocation:
 - msvcr100.dll
 - msvcr80.dll
 apitype: DLLExport
-f1_keywords:
-- __pctype_func
-dev_langs:
-- C++
-helpviewer_keywords:
-- __pctype_func
+f1_keywords: __pctype_func
+dev_langs: C++
+helpviewer_keywords: __pctype_func
 ms.assetid: d52b8add-d07d-4516-a22f-e836cde0c57f
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: ae2c5f53c10083deb281a88a5f398712722700b3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pctypefunc"></a>__pctype_func
 Recupera un puntatore a una matrice di informazioni sulla classificazione dei caratteri.  

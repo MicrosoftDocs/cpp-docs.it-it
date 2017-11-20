@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Ansi
-dev_langs:
-- C++
+f1_keywords: Ansi
+dev_langs: C++
 helpviewer_keywords:
 - underscores, leading
 - compatibility [C++], ANSI C
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: bd98d80c2fcbf3c684aa185b783f164d6b14f0a9
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ansi-c-compliance"></a>Conformità ANSI C
 La convenzione di denominazione per tutti gli identificatori specifici Microsoft nel sistema di runtime (ad esempio funzioni, macro, costanti, variabili e definizioni di tipo) è conforme a ANSI. In questa documentazione, qualsiasi funzione di runtime che segue gli standard ANSI/ISO C viene indicata come compatibile con ANSI. Le applicazioni conformi allo standard ANSI devono utilizzare solo queste funzioni compatibili con ANSI.  

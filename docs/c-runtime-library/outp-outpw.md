@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,22 +22,20 @@ apitype: DLLExport
 f1_keywords:
 - outp
 - outpw
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - outpw function
 - outp function
 ms.assetid: ab29dc04-e440-4c3f-83b1-420e65b5df75
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 4185587c69b8002c5e6efa99b4cf4815e6af6a71
-ms.contentlocale: it-it
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: ade863f15603d183fff66bb6f9ee325f3a413a93
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="outp-outpw"></a>outp, outpw
 Queste funzioni POSIX sono deprecate. In alternativa, usare [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) , che è conforme a ISO C++.  

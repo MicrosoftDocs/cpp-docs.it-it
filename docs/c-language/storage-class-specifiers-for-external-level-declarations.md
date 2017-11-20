@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - external definitions
 - linkage [C++], external
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Identificatori di classi di archiviazione per dichiarazioni di livello esterno
 Le variabili esterne sono variabili nell'ambito file. Sono definite all'esterno di qualsiasi funzione e sono potenzialmente disponibili in molte funzioni. Le funzioni possono essere definite solo a livello esterno e, pertanto, non possono essere annidate. Per impostazione predefinita, tutti i riferimenti a variabili esterne e funzioni con lo stesso nome sono riferimenti allo stesso oggetto, ovvero presentano un "collegamento esterno". È possibile usare la parola chiave **static** per eseguire l'override di questa operazione. Per altre informazioni su **static**, vedere le informazioni più avanti in questa sezione.  

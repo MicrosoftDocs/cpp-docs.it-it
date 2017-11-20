@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __setusermatherr
+apiname: __setusermatherr
 apilocation:
 - msvcr80.dll
 - msvcr90.dll
@@ -20,23 +18,19 @@ apilocation:
 - msvcr100.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- __setusermatherr
-dev_langs:
-- C++
-helpviewer_keywords:
-- __setusermatherr
+f1_keywords: __setusermatherr
+dev_langs: C++
+helpviewer_keywords: __setusermatherr
 ms.assetid: f306818d-381a-4d68-8739-71b92bacb5ea
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: fa4f5b7b60bf4ea6fea0d0d63d2ee911101174b5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setusermatherr"></a>__setusermatherr
 Specifica una routine fornita dall'utente per gestire errori matematici, in alternativa alla routine [_matherr](../c-runtime-library/reference/matherr.md).  

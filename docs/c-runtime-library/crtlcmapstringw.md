@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __crtLCMapStringW
+apiname: __crtLCMapStringW
 apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
@@ -19,23 +17,19 @@ apilocation:
 - msvcr110.dll
 - msvcr80.dll
 apitype: DLLExport
-f1_keywords:
-- __crtLCMapStringW
-dev_langs:
-- C++
-helpviewer_keywords:
-- __crtLCMapStringW
+f1_keywords: __crtLCMapStringW
+dev_langs: C++
+helpviewer_keywords: __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Esegue il mapping di una stringa di caratteri a un'altra, eseguendo una trasformazione specificata dipendente dalle impostazioni locali. Questa funzione può essere anche utilizzata per generare una chiave di ordinamento per la stringa di input.  

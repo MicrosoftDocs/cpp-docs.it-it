@@ -4,22 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _errno
-apilocation:
-- msvcrt.dll
+apiname: _errno
+apilocation: msvcrt.dll
 apitype: DLLExport
 f1_keywords:
 - _sys_errlist
 - errno
 - _sys_nerr
 - _doserrno
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - error codes, printing
 - sys_errlist global variable
@@ -30,30 +26,15 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dd49544eb79573216d97f6082eff5afeca12a946
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno, _doserrno, _sys_errlist, and _sys_nerr
 Macro globali che contengono i codici di errore impostati durante l'esecuzione del programma e stringhe equivalenti dei codici di errore per la visualizzazione.  

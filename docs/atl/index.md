@@ -1,10 +1,8 @@
 ---
 redirect_url: /cpp/atl/atl-com-desktop-components
-ms.translationtype: MT
-ms.sourcegitcommit: 26e4b29cc488ddc69872a90a00d66575eaacd1dc
 ms.openlocfilehash: e93d21ed48973d3b3afab49d7c3140a6b1175d1a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-

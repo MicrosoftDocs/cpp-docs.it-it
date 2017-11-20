@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Trasferimento alla piattaforma UWP (Universal Windows Platform) (C++)
 In questo argomento è possibile trovare informazioni su come eseguire il porting di codice C++ esistente alla piattaforma di app Windows 10, la piattaforma UWP (Universal Windows Platform). Il termine *universale* indica che il codice può essere eseguito su uno qualsiasi dei dispositivi su cui è in esecuzione Windows 10, tra cui desktop, tablet e dispositivi futuri che eseguono Windows 10. Si crea un unico progetto e un'unica interfaccia utente basata su XAML che funziona con qualsiasi dispositivo che esegue Windows 10. È possibile usare le funzionalità di layout dinamico in XAML per consentire l'interfaccia utente dell'applicazione di adattarsi alle dimensioni del display diverse.  
@@ -46,7 +28,7 @@ In questo argomento è possibile trovare informazioni su come eseguire il portin
   
 1.  [Porting di un'app di Windows Store 8.1 alla piattaforma UWP](#BK_81StoreApp)  
   
-2.  [Porting di un componente Windows Runtime 8.1 a UWP](#BK_81Component)  
+2.  [Porting di un componente Runtime di Windows 8.1 per il UWP](#BK_81Component)  
   
  Se si ha a disposizione una DLL Win32 per desktop classico e la si vuole chiamare da un'applicazione UWP, è anche possibile eseguire queste operazioni. Usando queste procedure, è possibile creare un livello dell'interfaccia utente UWP per un'applicazione C++ per desktop Windows classico esistente oppure un codice C++ multipiattaforma standard. Vedere [Procedura: usare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).  
   
@@ -94,7 +76,7 @@ In questo argomento è possibile trovare informazioni su come eseguire il portin
   
 11. Esecuzione e il debug dell'app su un emulatore o un dispositivo fisico, per ogni tipo di dispositivo che supporta l'applicazione. Per eseguire un emulatore, è necessario eseguire Visual Studio in un computer fisico, non una macchina virtuale.  
   
-##  <a name="BK_81Component"></a> Porting di un componente Windows Runtime 8.1 a UWP  
+##  <a name="BK_81Component"></a> Porting di un componente Runtime di Windows 8.1 per il UWP  
  Se si dispone di una DLL o di un componente Windows Runtime già compatibile con app di Windows Store 8.1, è possibile usare questa procedura per ottenere il componente o una DLL compatibili con la piattaforma UWP e con Windows 10. La procedura di base consiste nel creare un nuovo progetto e copiarvi il codice.  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Per trasferire un componente Windows 8.1 Runtime nella piattaforma UWP  
@@ -110,7 +92,7 @@ In questo argomento è possibile trovare informazioni su come eseguire il portin
 ## <a name="troubleshooting"></a>Risoluzione dei problemi  
  Possono verificarsi diversi errori durante il processo di porting di codice per la piattaforma Windows universale. Di seguito sono riportati alcuni possibili problemi riscontrati.  
   
- **Problemi di configurazione del progetto**  
+ **Configurazione progetto non valida.**  
   
  È possibile ricevere l'errore:  
   
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>Vedere anche  
  [Guida al porting di Visual C++](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [Sviluppare app per la piattaforma UWP (Universal Windows Platform)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

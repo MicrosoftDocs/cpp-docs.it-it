@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - MBCS
 - SBCS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: ac4c3f7273adf9e373484f24fbb7a56ebea5903a
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Tipi di dati SBCS e MBCS
 Qualsiasi routine della libreria di runtime Microsoft `MBCS` che gestisce un solo carattere multibyte o un byte di un carattere multibyte prevede un argomento `unsigned int` (dove 0x00 <= valore del carattere <= 0xFFFF e 0x00 <= valore del byte <= 0xFF). Una routine `MBCS` che gestisce i byte o i caratteri multibyte in un contesto di stringa prevede una stringa di caratteri multibyte da rappresentare come puntatore `unsigned char`.  

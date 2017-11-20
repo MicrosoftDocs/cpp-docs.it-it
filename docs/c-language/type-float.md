@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - type float
 - exponent length
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="type-float"></a>Tipo float
 I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical and Electronics Engineers). I valori a precisione singola con tipo float hanno 4 byte costituiti da un bit del segno, da un esponente binario a 8 bit excess-127 e da una mantissa a 23 bit. La mantissa rappresenta un numero compreso tra 1,0 e 2,0. Poiché il bit più significativo della mantissa è sempre 1, non viene archiviato nel numero. Questa rappresentazione specifica un intervallo incluso approssimativamente tra 3,4E-38 e 3,4E+38 per il tipo float.  

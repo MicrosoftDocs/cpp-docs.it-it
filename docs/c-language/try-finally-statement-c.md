@@ -4,49 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- try_cpp
-- try
-- finally
-- finally_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- try-catch keyword [C], try-finally keyword [C]
-- __finally keyword [C], try-finally statement syntax
 - try-finally keyword [C]
+- __finally keyword [C], try-finally statement syntax
 - __finally keyword [C]
-- try-catch keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 6176932ab5997cdfa9b7c34e85107ff0ae833039
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: c76062799a0939ad86556c8e6718e94f2a3397e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="try-finally-statement-c"></a>Istruzione try-finally (C)
 **Sezione specifica Microsoft**  

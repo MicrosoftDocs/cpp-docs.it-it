@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - wenviron
 - _wenviron
 - _environ
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - environ function
 - _environ function
@@ -22,30 +20,15 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: a1f9ed6ee3b0ee97dd71358790796de5bc9ca586
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 La variabile `_environ` è un puntatore ad un array di puntatori a stringhe di caratteri multibyte che costituiscono l'ambiente del processo. Questa variabile globale è stata deprecata a favore di versioni funzionali più sicure, [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) e [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), che devono essere usate al posto della variabile globale. `_environ` viene dichiarato in Stdlib.h.  

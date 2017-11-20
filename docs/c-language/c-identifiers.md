@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - identifiers, C
 - naming identifiers
@@ -18,30 +16,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: fca83b12e469401fe18632a1df9f876964b8a493
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: ab60d1275925504a746f8b6d01003129fd688673
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-identifiers"></a>Identificatori C
 Gli "Identificatori" o i "simboli" sono i nomi forniti per variabili, tipi, funzioni ed etichette nel programma. I nomi degli identificatori devono essere diversi in ortografia e maiuscolo/minuscolo da tutte le parole chiave. Non è possibile utilizzare le parole chiave (C o Microsoft) come identificatori; sono riservate per un utilizzo speciale. Un identificatore viene creato specificandolo nella dichiarazione di una variabile, di un tipo o di una funzione. In questo esempio, `result` è un identificatore per una variabile intera e `main` e `printf` sono nomi degli identificatori per le funzioni.  

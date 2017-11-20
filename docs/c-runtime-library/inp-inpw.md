@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,22 +22,20 @@ apitype: DLLExport
 f1_keywords:
 - inpw
 - inp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - inp function
 - inpw function
 ms.assetid: c7e1eeac-77cd-47ff-b843-4095b4c31d3b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 1f0c640b6a17450f43d772de48b544fdf3b290a5
-ms.contentlocale: it-it
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 6973fe6639f5edfa728a862b63fc715c4e9c82fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="inp-inpw"></a>inp, inpw
 Queste funzioni POSIX sono deprecate. In alternativa, usare [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) , che è conforme a ISO C++.  

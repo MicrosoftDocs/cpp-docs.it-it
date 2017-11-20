@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>I/O di flusso
 Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli caratteri a strutture dati di grandi dimensioni. Forniscono anche il buffering, migliorando le prestazioni. Le dimensioni predefinite del buffer del flusso sono 4 KB. Queste routine influiscono solo su buffer creati dalle routine di libreria di runtime e non hanno alcun effetto sui buffer creati dal sistema operativo.  
@@ -52,7 +33,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Eliminare l'indicatore di errore per il flusso|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Chiudere il flusso|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Chiudere tutti i flussi aperti tranne `stdin`, `stdout` e `stderr`|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Chiudere tutti i flussi aperti tranne `stdin`, `stdout`e `stderr`|  
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Associare il flusso a un descrittore di file del file aperto|  
 |[feof](../c-runtime-library/reference/feof.md)|Test per la fine del file sul flusso|  
 |[ferror](../c-runtime-library/reference/ferror.md)|Test per l'errore sul flusso|  
@@ -118,7 +99,7 @@ Queste funzioni elaborano dati di diverse dimensioni e formati, da singoli carat
   
  Qualsiasi file specificatamente aperto con il flag `c` o `n` si comporta in base al flag, indipendentemente dallo stato del flag globale di commit/no-commit.  
   
- Se il programma non chiude in modo esplicito un flusso, il flusso viene automaticamente chiuso quando il programma termina. Tuttavia, è necessario chiudere un flusso al termine di un programma, perché il numero di flussi che possono essere aperti contemporaneamente è limitato. Per informazioni su questo limite, vedere [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md).  
+ Se il programma non chiude in modo esplicito un flusso, il flusso viene automaticamente chiuso quando il programma termina. Tuttavia, è necessario chiudere un flusso al termine di un programma, perché il numero di flussi che possono essere aperti contemporaneamente è limitato. Per informazioni sul questo limite, vedere [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .  
   
  L'input può usare direttamente l'output solo con una chiamata corrispondente a `fflush` o a una funzione di posizionamento di file (`fseek`, `fsetpos`o `rewind`). L'output può seguire l'input senza una corrispondente chiamata a una funzione di posizionamento dei file se l'operazione di input rileva la fine del file.  
   

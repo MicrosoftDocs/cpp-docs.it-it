@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: it-it
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: gestione pacchetti per C++ per Windows 
 vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione di librerie di terze parti in Windows. Se un progetto usa librerie di terze parti, è consigliabile usare vcpkg per installarle. vcpkg supporta sia librerie open source che proprietarie. Tutte le librerie nel catalogo pubblico di vcpkg sono state testate per la compatibilità con Visual Studio 2015 e Visual Studio 2017. A maggio 2017 il catalogo includeva più di 238 librerie e la community di C++ aggiunge continuamente altre librerie.
 
@@ -158,4 +154,3 @@ Il contenuto di un'istanza di vcpkg è:
   **`--triplet <t>`** Specificare la tripletta dell'architettura di destinazione. (impostazione predefinita: `%VCPKG_DEFAULT_TRIPLET%`, vedere anche `vcpkg help triplet`)
 
   **`--vcpkg-root <path>`** Specificare la directory radice di vcpkg (impostazione predefinita: `%VCPKG_ROOT%`)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -17,8 +16,7 @@ apilocation:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 apitype: DLLExport
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file names [C++], searching for
 - _find function
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="filename-search-functions"></a>Funzioni di ricerca dei nomi file
 Queste funzioni eseguono e terminano le ricerche per i nomi di file specificati:  

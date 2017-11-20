@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -24,30 +22,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c2c4e7554b6a11e7396627e085d9645a4161ff15
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="trigraphs"></a>Trigrammi
 Il set di caratteri di origine dei programmi di origine C è contenuto nel set di caratteri ASCII a 7 bit, ma è un superset del set di codice invariante ISO 646-1983. Le sequenze di trigramma consentono la scrittura di programmi C utilizzando solo il set di codice invariante ISO (International Standards Organization). I trigrammi sono sequenze di tre caratteri (introdotti da due punti interrogativi consecutivi) che il compilatore sostituisce con i relativi caratteri di punteggiatura corrispondenti. È possibile utilizzare i trigrammi in file di origine C con un set di caratteri che non contiene rappresentazioni grafiche adeguate per alcuni caratteri di punteggiatura.  

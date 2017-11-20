@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - else
 - if
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C]
 - else clauses
@@ -20,37 +18,22 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 91da64a12f687063e65dd2045709a9b65bb93f0c
-ms.contentlocale: it-it
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 1f7d7e43ab50cc50321aea79aad200231f719c3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-statement-c"></a>Istruzione if (C)
 L'istruzione **if** controlla la creazione condizionale di rami. Il corpo di un'istruzione **if** viene eseguito se il valore dell'espressione è diverso da zero. La sintassi dell'istruzione **if** presenta due formati.  
   
 ## <a name="syntax"></a>Sintassi  
  *selection-statement*:  
- **if (**  *expression*  **)**  *statement*  
+ **if (**  *espressione*  **)**  *istruzione*  
   
  **if (**  *expression*  **)**  *statement*  **else**  *statement*  
   
