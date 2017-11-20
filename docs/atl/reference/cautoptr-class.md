@@ -1,11 +1,10 @@
 ---
-title: Classe su CAutoPtr | Documenti di Microsoft
+title: Classe su CAutoPtr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLBASE/ATL::CAutoPtr::Detach
 - ATLBASE/ATL::CAutoPtr::Free
 - ATLBASE/ATL::CAutoPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 309a3d0ddceab2995c85e156c7db09ddd7edfa86
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 4f3128f3f1c186eb1b667ab8cb456dca0c95aa6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautoptr-class"></a>Classe su CAutoPtr
 Questa classe rappresenta un oggetto del puntatore intelligente.  
@@ -76,7 +58,7 @@ class CAutoPtr
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAutoPtr::Attach](#attach)|Chiamare questo metodo per assumere la proprietà di un puntatore esistente.|  
+|[CAutoPtr::Attach](#attach)|Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.|  
 |[CAutoPtr::Detach](#detach)|Chiamare questo metodo per rilasciare la proprietà di un puntatore.|  
 |[CAutoPtr::Free](#free)|Chiamare questo metodo per eliminare un oggetto a cui fa riferimento un `CAutoPtr`.|  
   
@@ -86,33 +68,33 @@ class CAutoPtr
 |----------|-----------------|  
 |[CAutoPtr::operator T *](#operator_t_star)|L'operatore di cast.|  
 |[CAutoPtr::operator =](#operator_eq)|L'operatore di assegnazione.|  
-|[CAutoPtr::operator->](#operator_ptr)|L'operatore puntatore a membro.|  
+|[CAutoPtr::operator ->](#operator_ptr)|L'operatore puntatore a membro.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CAutoPtr::m_p](#m_p)|La variabile di membro dati puntatore.|  
+|[CAutoPtr::m_p](#m_p)|La variabile membro di dati puntatore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce metodi per la creazione e gestione di un puntatore intelligente, che consentirà di evitare perdite di memoria liberando risorse automaticamente quando diventa esterno all'ambito.  
+ Questa classe fornisce metodi per la creazione e gestione di un puntatore intelligente, che consentirà di evitare perdite di memoria automaticamente liberando risorse quando rientra dall'ambito.  
   
- Inoltre, `CAutoPtr`del costruttore di copia e assegnazione operatore trasferire la proprietà del puntatore, copiando il puntatore di origine al puntatore di destinazione e impostare il puntatore di origine su NULL. Non è pertanto possibile disporre di due `CAutoPtr` oggetti ogni memorizza il puntatore stesso e questo riduce la possibilità di eliminare due volte lo stesso puntatore.  
+ Inoltre, `CAutoPtr`del costruttore di copia e assegnazione operatore trasferire la proprietà dell'indicatore di misura, copia il puntatore di origine per l'indicatore di misura di destinazione e impostare il puntatore di origine su NULL. Non è pertanto possibile disporre di due `CAutoPtr` oggetti ogni memorizzando il puntatore stesso e questo riduce la possibilità di eliminazione due volte lo stesso puntatore.  
   
- `CAutoPtr`semplifica inoltre la creazione di raccolte di puntatori. Anziché derivare una classe di raccolta e si esegue l'override del distruttore, è più semplice creare una raccolta di `CAutoPtr` oggetti. Quando viene eliminata la raccolta, il `CAutoPtr` oggetti verranno escono dall'ambito ed eliminare automaticamente se stessi.  
+ `CAutoPtr`semplifica inoltre la creazione di raccolte di puntatori. Invece di derivazione di una classe di raccolta e si esegue l'override del distruttore, è più semplice creare una raccolta di `CAutoPtr` oggetti. Quando viene eliminata la raccolta, il `CAutoPtr` oggetti verranno escono dall'ambito ed eliminarsi automaticamente.  
   
- [CHeapPtr](../../atl/reference/cheapptr-class.md) e varianti funzionano nello stesso modo come `CAutoPtr`, ad eccezione del fatto che essi allocare e liberare memoria mediante funzioni degli heap diversi anziché C++ **nuova** e **eliminare** operatori. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) è simile a `CAutoPtr`, la sola differenza è che usa **vettoriale new []** e **vettore delete []** per allocare e liberare memoria.  
+ [CHeapPtr](../../atl/reference/cheapptr-class.md) e di lavoro nello stesso modo come varianti `CAutoPtr`, ad eccezione del fatto che essi allocare e liberare memoria tramite le funzioni di heap diversi anziché C++ **nuova** e **eliminare** operatori. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) è simile a `CAutoPtr`, la sola differenza che utilizza **vettore new []** e **vettore delete []** per allocare e liberare memoria.  
   
- Vedere anche [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) quando sono necessari le matrici o elenchi di puntatori intelligenti.  
+ Vedere anche [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) quando sono necessari matrici o elenchi di puntatori intelligenti.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h  
   
 ## <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_Utilities&#74;](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
 ##  <a name="attach"></a>CAutoPtr::Attach  
- Chiamare questo metodo per assumere la proprietà di un puntatore esistente.  
+ Chiamare questo metodo per assumere la proprietà di un indicatore di misura esistente.  
   
 ```
 void Attach(T* p) throw();
@@ -123,9 +105,9 @@ void Attach(T* p) throw();
  Il `CAutoPtr` oggetto assumerà la proprietà del puntatore ' this '.  
   
 ### <a name="remarks"></a>Note  
- Quando un `CAutoPtr` oggetto acquisisce la proprietà di un puntatore, verrà automaticamente eliminato il puntatore e i dati allocati quando esce dall'ambito. Se [CAutoPtr::Detach](#detach) viene chiamato, il programmatore è nuovamente dato responsabilità per liberare le risorse allocato.  
+ Quando un `CAutoPtr` oggetto acquisisce la proprietà di un puntatore, verranno automaticamente eliminati il puntatore e i dati allocati quando esce dall'ambito. Se [CAutoPtr::Detach](#detach) viene chiamato, il programmatore è nuovamente specificato responsabilità per liberare le risorse allocato.  
   
- Nelle build di debug, un errore di asserzione verificherà se il [CAutoPtr::m_p](#m_p) (membro dati) attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
+ Nelle build di debug, un errore di asserzione si verificherà se il [CAutoPtr::m_p](#m_p) (membro dati) attualmente fa riferimento a un valore esistente; ovvero, non è uguale a NULL.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio nel [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -146,13 +128,13 @@ CAutoPtr(CAutoPtr<T>& p) throw();
   
 ### <a name="parameters"></a>Parametri  
  `p`  
- Un puntatore esistente.  
+ Un indicatore di misura esistente.  
   
  `TSrc`  
  Il tipo gestito da un altro `CAutoPtr`, utilizzato per inizializzare l'oggetto corrente.  
   
 ### <a name="remarks"></a>Note  
- Il `CAutoPtr` oggetto può essere creato utilizzando un puntatore esistente, nel qual caso trasferisce la proprietà del puntatore.  
+ Il `CAutoPtr` oggetto può essere creato utilizzando un indicatore di misura esistente, nel qual caso trasferisce la proprietà dell'indicatore di misura.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio nel [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -175,10 +157,10 @@ T* Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una copia del puntatore.  
+ Restituisce una copia dell'indicatore di misura.  
   
 ### <a name="remarks"></a>Note  
- Rilascia la proprietà di un puntatore, imposta il [CAutoPtr::m_p](#m_p) variabile membro dati su NULL e restituisce una copia del puntatore. Dopo la chiamata **scollegamento**, è fino al programmatore di liberare eventuali risorse allocata su cui il `CAutoPtr` potrebbe avere precedentemente utilizzato oggetto reponsibility.  
+ Rilascia la proprietà di un puntatore, imposta il [CAutoPtr::m_p](#m_p) variabile membro dati su NULL e restituisce una copia dell'indicatore di misura. Dopo la chiamata **scollegamento**, è fino al programmatore di liberare le risorse allocata su cui il `CAutoPtr` potrebbe avere precedentemente utilizzato oggetto reponsibility.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio nel [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -194,7 +176,7 @@ void Free() throw();
  L'oggetto a cui punta il `CAutoPtr` viene liberato e [CAutoPtr::m_p](#m_p) variabile membro dati è impostato su NULL.  
   
 ##  <a name="m_p"></a>CAutoPtr::m_p  
- La variabile di membro dati puntatore.  
+ La variabile membro di dati puntatore.  
   
 ```
 T* m_p;
@@ -225,7 +207,7 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
  Restituisce un riferimento a un **su CAutoPtr\< T >**.  
   
 ### <a name="remarks"></a>Note  
- L'operatore di assegnazione consente di scollegare il `CAutoPtr` oggetto da qualsiasi puntatore corrente e associa il nuovo puntatore `p`, al suo posto.  
+ L'operatore di assegnazione scollega il `CAutoPtr` oggetto da qualsiasi puntatore corrente e associa il nuovo puntatore `p`, al suo posto.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio nel [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -238,10 +220,10 @@ T* operator->() const throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di [CAutoPtr::m_p](#m_p) variabile membro dati.  
+ Restituisce il valore della [CAutoPtr::m_p](#m_p) variabile membro dati.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare questo operatore per chiamare un metodo in una classe a cui fa riferimento il `CAutoPtr` oggetto. Nelle build di debug, un errore di asserzione verificherà se il `CAutoPtr` fa riferimento a NULL.  
+ Utilizzare questo operatore per chiamare un metodo in una classe a cui fa riferimento il `CAutoPtr` oggetto. Nelle build di debug, un errore di asserzione si verificherà se il `CAutoPtr` fa riferimento a NULL.  
   
 ### <a name="example"></a>Esempio  
  Vedere l'esempio nel [Cenni preliminari su CAutoPtr](../../atl/reference/cautoptr-class.md).  
@@ -263,4 +245,3 @@ operator T* () const throw();
  [Classe CHeapPtr](../../atl/reference/cheapptr-class.md)   
  [Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

@@ -1,74 +1,73 @@
 ---
-title: "Classe IDBInitializeImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IDBInitializeImpl<T>"
-  - "ATL::IDBInitializeImpl<T>"
-  - "IDBInitializeImpl"
-  - "ATL::IDBInitializeImpl"
-  - "ATL.IDBInitializeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDBInitializeImpl (classe)"
+title: Classe IDBInitializeImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IDBInitializeImpl<T>
+- ATL::IDBInitializeImpl<T>
+- IDBInitializeImpl
+- ATL::IDBInitializeImpl
+- ATL.IDBInitializeImpl
+dev_langs: C++
+helpviewer_keywords: IDBInitializeImpl class
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7a51023f167eee5fbd4082486409f4e11a15547
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IDBInitializeImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un'implementazione per l'interfaccia di [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx).  
+# <a name="idbinitializeimpl-class"></a>Classe IDBInitializeImpl
+Fornisce un'implementazione per il [IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx) interfaccia.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  La classe, derivata da `IDBInitializeImpl`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[IDBInitializeImpl](../../data/oledb/idbinitializeimpl-idbinitializeimpl.md)|Costruttore.|  
   
-### Metodi di interfaccia  
+### <a name="interface-methods"></a>Metodi di interfaccia  
   
 |||  
 |-|-|  
-|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|Avvia il provider.|  
-|[Uninitialize](../../data/oledb/idbinitializeimpl-uninitialize.md)|Interrompe il provider.|  
+|[Inizializzare](../../data/oledb/idbinitializeimpl-initialize.md)|Avvia il provider.|  
+|[Annullare l'inizializzazione](../../data/oledb/idbinitializeimpl-uninitialize.md)|Arresta il provider.|  
   
-### Membri di dati  
+### <a name="data-members"></a>Membri di dati  
   
 |||  
 |-|-|  
-|[m\_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Flag di origine dati.|  
-|[m\_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Un puntatore all'implementazione di informazioni SU le proprietà.|  
+|[m_dwStatus](../../data/oledb/idbinitializeimpl-m-dwstatus.md)|Flag dell'origine dati.|  
+|[m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)|Un puntatore all'implementazione di informazioni di proprietà di database.|  
   
-## Note  
- Un'interfaccia richiesta per gli oggetti origine dati e interfaccia facoltativa in enumeratori.  
+## <a name="remarks"></a>Note  
+ Un'interfaccia obbligatoria in oggetti origine dati e l'interfaccia facoltativa sugli enumeratori.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

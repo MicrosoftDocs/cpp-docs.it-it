@@ -1,79 +1,79 @@
 ---
-title: "/DELAYSIGN (Firma parzialmente un assembly) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/delaysign"
-  - "VC.Project.VCLinkerTool.DelaySign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAYSIGN (opzione del linker)"
-  - "DELAYSIGN (opzione del linker)"
-  - "-DELAYSIGN (opzione del linker)"
+title: -DELAYSIGN (firma parzialmente un Assembly) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /delaysign
+- VC.Project.VCLinkerTool.DelaySign
+dev_langs: C++
+helpviewer_keywords:
+- /DELAYSIGN linker option
+- DELAYSIGN linker option
+- -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6867806907ba16114895381a9795cff0f072b25c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /DELAYSIGN (Firma parzialmente un assembly)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (Firma parzialmente un assembly)
 ```  
 /DELAYSIGN[:NO]  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove  
   
  NO  
- Specifica che l'assembly non deve essere firmato parzialmente.  
+ Specifica che l'assembly non deve essere parzialmente firmato.  
   
-## Note  
- Utilizzare **\/DELAYSIGN** se si desidera unicamente inserire nell'assembly la chiave pubblica.  Il valore predefinito è **\/DELAYSIGN:NO**.  
+## <a name="remarks"></a>Note  
+ Utilizzare **/DELAYSIGN** se si desidera inserire la chiave pubblica nell'assembly. Il valore predefinito è **/delaysign: No**.  
   
- L'opzione **\/DELAYSIGN** ha effetto solo se utilizzata con [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) o [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md).  
+ Il **/DELAYSIGN** opzione ha effetto solo se utilizzata con [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) o [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md).  
   
- Quando si richiede un assembly completamente firmato, il compilatore genera un hash per il file che contiene il manifesto, o metadati dell'assembly, e quindi firma l'hash risultante con la chiave privata.  La firma digitale risultante viene archiviata nel file contenente il manifesto.  Se per un assembly si utilizza una firma posticipata, il linker non elabora e memorizza la firma, ma riserva spazio nel file in modo che la firma possa essere aggiunta successivamente.  
+ Quando si richiede un assembly con firma completa, il compilatore genera un hash per il file contenente il manifesto (i metadati dell'assembly) e firma tale hash con la chiave privata. La firma digitale risultante viene archiviata nel file contenente il manifesto. Quando un assembly è impostata la firma ritardata, il linker non calcola e archiviare la firma, ma riserva spazio nel file in modo che la firma possa essere aggiunta successivamente.  
   
- L'utilizzo di **\/DELAYSIGN**, ad esempio, consente a un dispositivo di test di inserire l'assembly nella cache globale.  Al termine del test, sarà possibile apporre una firma completa all'assembly inserendovi la chiave privata.  
+ Ad esempio, usando **/DELAYSIGN** consente a un tester di inserire l'assembly nella cache globale. Al termine del test, è possibile firmare completamente l'assembly inserendovi la chiave privata nell'assembly.  
   
- Per ulteriori informazioni su come firmare un assembly, vedere [Assembly con nome sicuro \(firma degli assembly\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) e [Ritardo della firma di un assembly](../Topic/Delay%20Signing%20an%20Assembly.md).  
+ Vedere [assembly con nome sicuro (firma degli Assembly) (C + + CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) e [ritardo della firma di un Assembly](/dotnet/framework/app-domains/delay-sign-assembly) per ulteriori informazioni su come firmare un assembly.  
   
- Di seguito sono elencate altre opzioni del linker che hanno effetto sulla generazione dell'assembly.  
+ Altre opzioni dei linker che influiscono sulla generazione di assembly sono:  
   
--   [\/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

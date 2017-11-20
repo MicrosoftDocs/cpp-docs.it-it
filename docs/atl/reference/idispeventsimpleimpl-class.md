@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,41 +18,24 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventSimpleImpl::Invoke
 - ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventSimpleImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 392e8a8d8d38b0eaacce4ab013c46476516f46f7
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: a6500a73151f2d04c6f6ec9185aca385f9c3108a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl (classe)
 Questa classe fornisce le implementazioni del `IDispatch` metodi, senza recupero di informazioni sul tipo da una libreria dei tipi.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -70,7 +52,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  La classe dell'utente, che è derivata da `IDispEventSimpleImpl`.  
   
  `pdiid`  
- Il puntatore per l'IID dell'interfaccia dispatch di eventi implementata da questa classe.  
+ Il puntatore per l'IID dell'interfaccia dispatch evento implementato da questa classe.  
   
 ## <a name="members"></a>Membri  
   
@@ -105,7 +87,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl** fornisce la stessa funzionalità [IDispEventImpl](../../atl/reference/idispeventimpl-class.md), ma non ottiene informazioni sul tipo sull'interfaccia da una libreria dei tipi. Le procedure guidate di generano codice basato solo su `IDispEventImpl`, ma è possibile utilizzare `IDispEventSimpleImpl` aggiungendo il codice manualmente. Utilizzare `IDispEventSimpleImpl` quando si non dispone di una libreria dei tipi che descrive l'interfaccia di evento o si desidera evitare l'overhead associato all'utilizzo della libreria dei tipi.  
   
 > [!NOTE]
-> `IDispEventImpl`e `IDispEventSimpleImpl` fornire la propria implementazione di **IUnknown:: QueryInterface** abilitazione ogni `IDispEventImpl` o `IDispEventSimpleImpl` classe di base per agire come un'identità COM separata consentendo l'accesso diretto ai membri della classe dell'oggetto COM principale.  
+> `IDispEventImpl`e `IDispEventSimpleImpl` fornire la propria implementazione di **IUnknown:: QueryInterface** abilitazione ogni `IDispEventImpl` o `IDispEventSimpleImpl` classe fungere da un'identità COM separata consentendo l'accesso diretto ai membri della classe di base in un oggetto COM principale.  
   
  Implementazione di ATL CE di ActiveX evento sink solo supporta i valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
@@ -206,7 +188,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  Questa implementazione di **IDispatch:: GetTypeInfo** restituisce **E_NOTIMPL**.  
@@ -219,7 +201,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IDispatch:: GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) in Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  Questa implementazione di **IDispatch:: GetTypeInfoCount** restituisce **E_NOTIMPL**.  
@@ -229,7 +211,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in Windows SDK.  
   
 ##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  Questa implementazione di **IDispatch:: Invoke** chiama i gestori eventi elencati nell'evento mappa sink.  
@@ -279,4 +261,3 @@ HRESULT Unadvise(IUnknown* pUnk);
  [IDispEventImpl (classe)](../../atl/reference/idispeventimpl-class.md)   
  [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

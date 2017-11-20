@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,21 +12,18 @@ f1_keywords:
 - ATLCOLL/ATL::CDefaultCompareTraits
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultCompareTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 0a5a9a68bd220112d6e8065e273c47fdb7247096
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdefaultcomparetraits-class"></a>Classe CDefaultCompareTraits
 Questa classe fornisce funzioni di confronto di elemento predefinite.  
@@ -108,4 +104,3 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

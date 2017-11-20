@@ -1,11 +1,10 @@
 ---
-title: Classe CComObjectGlobal | Documenti di Microsoft
+title: Classe CComObjectGlobal | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,38 +15,21 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectGlobal::QueryInterface
 - ATLCOM/ATL::CComObjectGlobal::Release
 - ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectGlobal class
+dev_langs: C++
+helpviewer_keywords: CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 8c371eee9de660a2bb08e67f35a5a6c81d32eee0
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7684f01b9d9fa3a8be434152f190e91d0dccae3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectglobal-class"></a>Classe CComObjectGlobal
-Questa classe gestisce un conteggio dei riferimenti sul modulo contenente il `Base` oggetto.  
+Questa classe gestisce un conteggio dei riferimenti in cui il modulo contenente il `Base` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,7 +40,7 @@ class CComObjectGlobal : public Base
   
 #### <a name="parameters"></a>Parametri  
  `Base`  
- La classe derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da qualsiasi altra interfaccia si desidera supportare nell'oggetto.  
+ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche a causa di una qualsiasi altra interfaccia che si desidera supportare nell'oggetto.  
   
 ## <a name="members"></a>Membri  
   
@@ -81,12 +63,12 @@ class CComObjectGlobal : public Base
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il **HRESULT** restituito durante la costruzione di `CComObjectGlobal` oggetto.|  
+|[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il **HRESULT** restituito durante la costruzione del `CComObjectGlobal` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComObjectGlobal`gestisce un conteggio dei riferimenti sul modulo contenente il `Base` oggetto. `CComObjectGlobal`assicura che l'oggetto non verrà eliminato, purché il modulo non viene rilasciato. L'oggetto verrà rimosso solo quando il conteggio dei riferimenti sul modulo intero pari a&0;.  
+ `CComObjectGlobal`gestisce un conteggio dei riferimenti in cui il modulo contenente il `Base` oggetto. `CComObjectGlobal`assicura che l'oggetto non verrà eliminato, purché il modulo non viene rilasciato. L'oggetto verrà rimosso solo quando l'intero modulo il conteggio dei riferimenti va a zero.  
   
- Ad esempio, utilizzando `CComObjectGlobal`, una class factory può contenere un oggetto globale comune condivise da tutti i relativi client.  
+ Ad esempio, usando `CComObjectGlobal`, una class factory può contenere un oggetto globale comune condiviso da tutti i client.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Base`  
@@ -104,7 +86,7 @@ STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un valore che può essere utile per la diagnostica e test.  
+ Un valore che può essere utile per la diagnostica e di testing.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, `AddRef` chiamate **_Module::Lock**, dove **Module** è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o una classe derivata da esso.  
@@ -117,7 +99,7 @@ CComObjectGlobal(void* = NULL));
 ```  
   
 ### <a name="remarks"></a>Note  
- Se non è stata derivata dalla classe base [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire `FinalConstruct` metodo. Il distruttore chiama `FinalRelease`.  
+ Se non è stata derivata la classe base dalla [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire `FinalConstruct` metodo. Il distruttore chiama `FinalRelease`.  
   
 ##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  Distruttore.  
@@ -130,7 +112,7 @@ CComObjectGlobal();
  Libera tutte le risorse allocate e chiama [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
- Contiene il `HRESULT` dalla chiamata `FinalConstruct` durante la costruzione di `CComObjectGlobal` oggetto.  
+ Contiene il `HRESULT` dalla chiamata `FinalConstruct` durante la costruzione del `CComObjectGlobal` oggetto.  
   
 ```
 HRESULT m_hResFinalConstruct;
@@ -145,7 +127,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
   
 ### <a name="parameters"></a>Parametri  
  `iid`  
- [in] GUID dell'interfaccia richiesta.  
+ [in] Il GUID dell'interfaccia richiesto.  
   
  `ppvObject`  
  [out] Un puntatore al puntatore a interfaccia identificato dal iid, o **NULL** se l'interfaccia non viene trovato.  
@@ -164,7 +146,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Nelle build di debug **versione** restituisce un valore che può essere utile per la diagnostica e test. Nelle build di debug non **versione** restituisce sempre 0.  
+ Nelle build di debug **versione** restituisce un valore che può essere utile per la diagnostica e di testing. Nelle build di debug non **versione** restituisce sempre 0.  
   
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, **versione** chiamate **_Module::Unlock**, dove **Module** è l'istanza globale di [CComModule](../../atl/reference/ccommodule-class.md) o una classe derivata da esso.  
@@ -174,4 +156,3 @@ STDMETHOD_(ULONG, Release)();
  [Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)   
  [CComObject (classe)](../../atl/reference/ccomobject-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

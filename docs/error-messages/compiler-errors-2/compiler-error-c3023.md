@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3023
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3023
+f1_keywords: C3023
+dev_langs: C++
+helpviewer_keywords: C3023
 ms.assetid: 89dcce98-3cd7-4931-a50f-87df1d2ebc9b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: be45b364bbc87b03fd6898b1cdee339a3cf9e8b6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3023"></a>Errore del compilatore C3023
 'value': rilevato token imprevisto nell'argomento della clausola 'clause' OpenMP  

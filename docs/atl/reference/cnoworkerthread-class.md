@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,18 @@ f1_keywords:
 - ATLUTIL/ATL::CNoWorkerThread::Initialize
 - ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CNoWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CNoWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 12cb2f9ab7c69d8c120c1870c5cd97cbc59cf32e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cnoworkerthread-class"></a>Classe CNoWorkerThread
 Utilizzare questa classe come argomento per il `MonitorClass` parametro di modello per le classi di cache se si desidera disabilitare la manutenzione della cache dinamica.  
@@ -171,4 +167,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="remarks"></a>Note  
  L'implementazione fornita da questa classe non esegue alcuna operazione.
-

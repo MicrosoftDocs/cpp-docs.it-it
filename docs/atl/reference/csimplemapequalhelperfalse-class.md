@@ -1,11 +1,10 @@
 ---
-title: Classe CSimpleMapEqualHelperFalse | Documenti di Microsoft
+title: Classe CSimpleMapEqualHelperFalse | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,21 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualKey
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSimpleMapEqualHelperFalse class
+dev_langs: C++
+helpviewer_keywords: CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 68a08ffc0ba126c523a779e3d1a72217dead6235
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 1dda098f54b0589a610e10713cc2f936172e26e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>Classe CSimpleMapEqualHelperFalse
-Questa classe è un supporto per il [CSimpleMap](../../atl/reference/csimplemap-class.md) (classe).  
+Questa classe è un supporto per il [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -63,9 +45,9 @@ class CSimpleMapEqualHelperFalse
 |[CSimpleMapEqualHelperFalse::IsEqualValue](#isequalvalue)|(Statico) Restituisce false.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe di tratti è sostituisca la `CSimpleMap` classe. Fornisce un metodo per il confronto di due elementi contenuti nel `CSimpleMap` oggetto, in particolare due elementi di valore o due elementi principali.  
+ Questa classe di tratti è un supplemento di `CSimpleMap` classe. Fornisce un metodo per il confronto tra due elementi contenuti nella `CSimpleMap` oggetto, in particolare due elementi di valore o due elementi principali.  
   
- Confronto del valore restituirà sempre false e, inoltre, verrà chiamato `ATLASSERT` con un argomento di false se vi è mai fatto riferimento. In situazioni in cui non è definito sufficientemente i test di uguaglianza, questa classe consente a una mappa che contiene coppie chiave/valore per funzionare correttamente per la maggior parte dei metodi ma funziona in modo ben definito per i metodi che dipendono da confronti, ad esempio [CSimpleMap::FindVal](../../atl/reference/csimplemap-class.md#findval).  
+ Confronto del valore restituirà sempre false e inoltre chiamerà `ATLASSERT` con un argomento di false se vi viene mai fatto riferimento. In situazioni in cui non è definito sufficientemente i test di uguaglianza, questa classe consente a una mappa contenente coppie chiave/valore per funzionare correttamente per la maggior parte dei metodi, ma non in modo ben definito per i metodi che dipendono da confronti, ad esempio [CSimpleMap:: FindVal](../../atl/reference/csimplemap-class.md#findval).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpcoll. h  
@@ -101,9 +83,8 @@ static bool IsEqualValue(const TVal&, const TVal&);
  Restituisce false.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo sempre restituisce false e chiamerà `ATLASSERT` con un argomento di false se vi è mai fatto riferimento. Lo scopo di `CSimpleMapEqualHelperFalse::IsEqualValue` consiste nel forzare metodi utilizzano confronti per avere esito negativo in modo ben definito quando il test di uguaglianza non è stato definito in modo adeguato.  
+ Questo metodo sempre restituisce false e chiamerà `ATLASSERT` con un argomento di false se vi viene mai fatto riferimento. Lo scopo di `CSimpleMapEqualHelperFalse::IsEqualValue` consiste nel forzare metodi mediante i confronti esito negativo in modo ben definito quando il test di uguaglianza non è stato definito in modo adeguato.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

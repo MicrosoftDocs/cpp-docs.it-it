@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __restrict_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __restrict keyword [C++]
+f1_keywords: __restrict_cpp
+dev_langs: C++
+helpviewer_keywords: __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 6e854c87355831980f768fd0027f8ac70d9001a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="restrict"></a>__restrict
 Ad esempio il **declspec ( [limitare](../cpp/restrict.md) )** modificatore, la `__restrict` parola chiave indica che un simbolo non è associato un alias nell'ambito corrente. Tra la parola chiave `__restrict` e il modificatore `__declspec ( restrict )` esistono le differenze seguenti:  

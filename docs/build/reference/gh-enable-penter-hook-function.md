@@ -1,44 +1,43 @@
 ---
-title: "/Gh (Attiva funzione hook _penter) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_penter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gh (opzione del compilatore) [C++]"
-  - "_penter (funzione)"
-  - "Gh (opzione del compilatore) [C++]"
-  - "-Gh (opzione del compilatore) [C++]"
+title: -Gh (Attiva funzione Hook penter) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _penter
+dev_langs: C++
+helpviewer_keywords:
+- /Gh compiler option [C++]
+- Gh compiler option [C++]
+- _penter function
+- -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5053bb1e43fb1038c112c8e73cd0d69d0be2f38e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Gh (Attiva funzione hook _penter)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fa sì che venga chiamata la funzione `_penter` all'inizio di ogni metodo o funzione.  
+# <a name="gh-enable-penter-hook-function"></a>/Gh (Attiva funzione hook _penter)
+Provoca una chiamata di `_penter` funzione all'inizio di ogni metodo o funzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Gh  
 ```  
   
-## Note  
- La funzione `_penter` non fa parte di alcuna libreria ed è il programmatore che decide se fornirne una definizione.  
+## <a name="remarks"></a>Note  
+ Il `_penter` funzione non è parte di alcuna libreria ed è responsabilità dell'utente per fornire una definizione per `_penter`.  
   
- Non è necessario fornire un prototipo, a meno che non si intenda chiamare `_penter` esplicitamente.  La funzione deve apparire come se avesse il seguente prototipo e deve inserire il contenuto di tutti i registri in ingresso e visualizzare il contenuto non modificato in uscita:  
+ A meno che non si prevede di chiamare in modo esplicito `_penter`, non è necessario fornire un prototipo. La funzione deve apparire come se avesse il seguente prototipo e deve inserire il contenuto di tutti i registri in ingresso ed estrarre il contenuto non modificato in uscita:  
   
 ```  
 void __declspec(naked) _cdecl _penter( void );  
@@ -46,22 +45,22 @@ void __declspec(naked) _cdecl _penter( void );
   
  Questa dichiarazione non è disponibile per i progetti a 64 bit.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Esempio  
- Quando viene compilato con **\/Gh**, il codice riportato di seguito illustra come `_penter` venga chiamata due volte: una volta quando si entra nella funzione `main` e una volta quando si entra nella funzione `x`.  
+## <a name="example"></a>Esempio  
+ Nell'esempio di codice, quando viene compilato con **/Gh**, viene illustrato come `_penter` viene chiamato due volte; una volta durante l'inserimento della funzione `main` e una volta durante l'inserimento della funzione `x`.  
   
 ```  
 // Gh_compiler_option.cpp  
@@ -100,8 +99,11 @@ extern "C" void __declspec(naked) _cdecl _penter( void ) {
 }  
 ```  
   
-  **In una funzione\!**  
-**In una funzione\!**   
-## Vedere anche  
+```Output  
+In a function!  
+In a function!  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

@@ -1,49 +1,48 @@
 ---
-title: "feclearexcept1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feclearexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feclearexcept"
-  - "fenv/feclearexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzione feclearexcept"
+title: feclearexcept1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feclearexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feclearexcept
+- fenv/feclearexcept
+dev_langs: C++
+helpviewer_keywords: feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ef5576dbe5df784f9e93de6b1d4167d4ee6afa74
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# feclearexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Tenta di cancellare i flag di eccezione a virgola mobile specificati dall'argomento.  
+# <a name="feclearexcept"></a>feclearexcept
+Prova a cancellare i flag di eccezione a virgola mobile specificati dall'argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int feclearexcept(  
@@ -51,35 +50,35 @@ int feclearexcept(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `excepts`  
- I flag di stato di eccezione per cancellare.  
+ Flag di stato delle eccezioni da cancellare.  
   
-## Valore restituito  
- Restituisce zero se `excepts` è zero, oppure se sono state cancellate tutte le eccezioni specificate. In caso contrario, restituisce un valore diverso da zero.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce zero se `excepts` è zero, oppure se sono state cancellate in maniera corretta tutte le eccezioni specificate. In caso contrario, viene restituito un valore diverso da zero.  
   
-## Note  
- Il `feclearexcept` funzione tenta di cancellare mobile punto specificato dal flag di stato di eccezione `excepts`. La funzione supporta queste macro delle eccezioni, definite in fenv. h:  
+## <a name="remarks"></a>Note  
+ La funzione `feclearexcept` prova a cancellare i flag di stato delle eccezioni a virgola mobile specificati da `excepts`. La funzione supporta queste macro di eccezioni, definite in fenv.h:  
   
-|Macro \(eccezione\)|Descrizione|  
-|-------------------------|-----------------|  
-|FE\_DIVBYZERO|Si è verificato un errore singolarità o polo in un'operazione a virgola mobile in precedenza. è stato creato un valore infinito.|  
-|FE\_INEXACT|La funzione è stata forzata per arrotondare il risultato archiviato di un'operazione a virgola mobile in precedenza.|  
-|FE\_INVALID|Si è verificato un errore di dominio in un'operazione a virgola mobile in precedenza.|  
-|FE\_OVERFLOW|Si è verificato un errore di intervallo; un risultato dell'operazione a virgola mobile precedente è troppo grande per essere rappresentato.|  
-|FE\_UNDERFLOW|Un risultato dell'operazione a virgola mobile precedente era troppo piccolo per essere rappresentare con la massima precisione; un valore denormal è stato creato.|  
-|FE\_ALLEXCEPT|L'operatore OR bit per bit di tutte supportate eccezioni a virgola mobile.|  
+|Macro di eccezioni|Descrizione|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|Si è verificato un errore di singolarità o polo in un'operazione precedente a virgola mobile. È stato creato un valore di infinità.|  
+|FE_INEXACT|La funzione è stata forzata ad arrotondare il risultato archiviato di un'operazione precedente a virgola mobile.|  
+|FE_INVALID|Si è verificato un errore di dominio in un'operazione precedente a virgola mobile.|  
+|FE_OVERFLOW|Si è verificato un errore di intervallo. Un risultato dell'operazione precedente a virgola mobile era troppo grande per essere rappresentato.|  
+|FE_UNDERFLOW|Un risultato dell'operazione precedente a virgola mobile era troppo piccolo per essere rappresentato con la massima precisione. È stato creato un valore denormalizzato.|  
+|FE_ALLEXCEPT|OR bit per bit di tutte le eccezioni a virgola mobile supportate.|  
   
- Il `excepts` argomento può essere zero o l'operatore OR bit per bit di uno o più delle macro eccezione supportati. Il risultato di qualsiasi altro valore di argomento non è definito.  
+ L'argomento `excepts` può essere zero oppure OR bit per bit di uno o più macro di eccezioni supportate. Il risultato di qualsiasi altro valore di argomento non è definito.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Funzione|Intestazione C|Intestazione C\+\+|  
-|--------------|--------------------|------------------------|  
-|`feclearexcept`|\<fenv.h\>|\<cfenv\>|  
+|Funzione|Intestazione C|Intestazione C++|  
+|--------------|--------------|------------------|  
+|`feclearexcept`|\<fenv.h>|\<cfenv>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fetestexcept](../../c-runtime-library/reference/fetestexcept1.md)

@@ -1,51 +1,50 @@
 ---
-title: "Procedura: compilare applicazioni isolate per l&#39;utilizzo di componenti COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "applicazioni isolate [C++]"
+title: 'Procedura: compilare applicazioni isolate per l''utilizzo di componenti COM | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: isolated applications [C++]
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 80fe7391f41180cb4e5a6cfed5954a8ba821f44e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: compilare applicazioni isolate per l&#39;utilizzo di componenti COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le applicazioni isolate sono applicazioni che contengono manifesti integrati nel programma.  È possibile creare applicazioni isolate che utilizzino componenti COM.  
+# <a name="how-to-build-isolated-applications-to-consume-com-components"></a>Procedura: compilare applicazioni isolate per l'utilizzo di componenti COM
+Applicazioni isolate sono applicazioni che contengono manifesti incorporati nel programma. È possibile creare applicazioni isolate per l'utilizzo di componenti COM.  
   
-### Per aggiungere riferimenti COM a manifesti di applicazioni isolate  
+### <a name="to-add-com-references-to-manifests-of-isolated-applications"></a>Per aggiungere riferimenti COM a manifesti di applicazioni isolate  
   
-1.  Aprire le pagine delle proprietà del progetto relative all'applicazione isolata.  
+1.  Aprire le pagine delle proprietà di progetto per l'applicazione di tipo isolato.  
   
-2.  Espandere il nodo **Proprietà di configurazione**, quindi il nodo **Strumento Manifesto**.  
+2.  Espandere il **le proprietà di configurazione** nodo, quindi espandere il **strumento manifesto** nodo.  
   
-3.  Selezionare la pagina delle proprietà **COM isolato**, quindi impostare la proprietà **Nome file componente** sul nome del componente COM che deve essere utilizzato dall'applicazione isolata.  
+3.  Selezionare il **COM isolato** pagina delle proprietà e quindi impostare il **nome File componente** proprietà sul nome del componente COM che si desidera utilizzare l'applicazione isolato.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
-### Per compilare manifesti in applicazioni isolate  
+### <a name="to-build-manifests-into-isolated-applications"></a>Per generare i manifesti in applicazioni isolate  
   
-1.  Aprire le pagine delle proprietà del progetto relative all'applicazione isolata.  
+1.  Aprire le pagine delle proprietà di progetto per l'applicazione di tipo isolato.  
   
-2.  Espandere il nodo **Proprietà di configurazione**, quindi il nodo **Strumento Manifesto**.  
+2.  Espandere il **le proprietà di configurazione** nodo, quindi espandere il **strumento manifesto** nodo.  
   
-3.  Selezionare la pagina delle proprietà **Input e output**, quindi impostare la proprietà **Incorpora manifesto** su **Sì**.  
+3.  Selezionare il **di Input e Output** pagina delle proprietà e quindi impostare il **Incorpora manifesto** proprietà è uguale a **Sì**.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
 5.  Compilare la soluzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Applicazioni isolate](http://msdn.microsoft.com/library/aa375190)   
- [Assembly side\-by\-side](_win32_side_by_side_assemblies)
+ [Informazioni sugli assembly Side-by-Side](http://msdn.microsoft.com/library/ff951640)

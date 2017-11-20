@@ -1,39 +1,37 @@
 ---
-title: "DF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DF directive"
+title: DF | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DF
+dev_langs: C++
+helpviewer_keywords: DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8149486e457feaafbf3b8553a560439ed4e6f277
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# DF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-alloca e facoltativamente inizializza 6 byte di archiviazione per ciascuno `initializer`.  `DF` è sinonimo di  [FWORD](../../assembler/masm/fword.md).  
+# <a name="df"></a>DF
+Alloca e, facoltativamente, inizializza 6 byte di spazio di archiviazione per ogni `initializer`. `DF`è un sinonimo di [FWORD](../../assembler/masm/fword.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 [[name]] DF initializer [[, initializer]]...  
 ```  
   
-## Note  
- È inoltre possibile utilizzare come identificatore di tipo ogni volta che un tipo è valido.  
+## <a name="remarks"></a>Note  
+ Può essere utilizzata anche come un identificatore di tipo in qualsiasi punto un tipo è valido.  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

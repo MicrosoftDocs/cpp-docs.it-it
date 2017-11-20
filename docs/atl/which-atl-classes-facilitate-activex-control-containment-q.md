@@ -1,38 +1,38 @@
 ---
-title: "Which ATL Classes Facilitate ActiveX Control Containment? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contenitori dei controlli ActiveX [C++], ATL control hosting"
-  - "hosting controls using ATL"
+title: Quali classi ATL semplificano contenimento dei controlli ActiveX? | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- hosting controls using ATL
+- ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0346f362dac7a184691feac4a8dab25f5709e095
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Which ATL Classes Facilitate ActiveX Control Containment?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il codice del controllo ospitato ATL non richiede di utilizzare alcune classi ATL, è possibile creare una semplice finestra **"AtlAxWin80"** e utilizzare il controllo API di hosting se necessario per ulteriori informazioni, vedere [Qual è il controllo API di Hosting ATL?](../atl/what-is-the-atl-control-hosting-api-q.md)\).  Tuttavia, le classi seguenti restituiscono le funzionalità di contenimento più facili da utilizzare.  
+# <a name="which-atl-classes-facilitate-activex-control-containment"></a>Quali classi ATL semplificano contenimento dei controlli ActiveX?
+Codice di hosting di controlli ATL non richiede l'utilizzo di classi ATL. è possibile creare semplicemente un **"AtlAxWin80"** finestra e utilizzare l'API di hosting di controlli eventualmente (per ulteriori informazioni, vedere **che cos'è l'API di Hosting del controllo ATL**. Tuttavia, le classi seguenti rendono le funzionalità di contenimento più facile da utilizzare.  
   
 |Classe|Descrizione|  
-|------------|-----------------|  
-|[CAxWindow](../atl/reference/caxwindow-class.md)|Esegue il wrapping di una finestra **"AtlAxWin80"**, fornendo i metodi per creare la finestra, creare un controllo e\/o associare un controllo alla finestra e recuperare i puntatori a interfaccia sull'host.|  
-|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Esegue il wrapping di una finestra **"AtlAxWinLic80"**, fornendo i metodi per creare la finestra, creare un controllo e\/o associare un controllo concesso in licenza nella finestra e recuperare i puntatori a interfaccia sull'host.|  
-|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Funge da una classe base per le classi di controlli ActiveX in base a una risorsa finestra di dialogo.  Tali controlli possono contenere altri controlli ActiveX.|  
-|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Funge da una classe base per le classi di finestre di dialogo basate su una risorsa finestra di dialogo.  Tali finestre di dialogo possono contenere i controlli ActiveX.|  
-|[CWindow](../atl/reference/cwindow-class.md)|Fornisce un metodo, [GetDlgControl](../Topic/CWindow::GetDlgControl.md), che restituirà un puntatore a interfaccia su un controllo, presente l'id della finestra host.  Inoltre, i wrapper di API Windows esposti da `CWindow` in genere rendono la gestione della finestra più semplice.|  
+|-----------|-----------------|  
+|[CAxWindow](../atl/reference/caxwindow-class.md)|Esegue il wrapping di un **"AtlAxWin80"** finestra, fornendo i metodi per la creazione della finestra, creazione di un controllo e/o il collegamento di un controllo alla finestra e il recupero di puntatori a interfaccia per l'oggetto host.|  
+|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Esegue il wrapping di un **"Atlaxwin80"** finestra, fornendo i metodi per la creazione della finestra, creazione di un controllo e/o il collegamento di un controllo concesso in licenza alla finestra e il recupero di puntatori a interfaccia per l'oggetto host.|  
+|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Funge da classe base per classi di controlli ActiveX in base a una risorsa finestra di dialogo. Tali controlli possono contenere altri controlli ActiveX.|  
+|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Funge da classe base per classi di finestre di dialogo in base a una risorsa finestra di dialogo. Tali finestre di dialogo possono contenere controlli ActiveX.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Fornisce un metodo, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), verrà restituito un puntatore a interfaccia per un controllo, l'ID della finestra host specificato. Inoltre, i wrapper di API Windows esposti da `CWindow` in genere semplificare la gestione delle finestre.|  
   
-## Vedere anche  
- [Domande frequenti sul contenimento di controlli](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Vedere anche  
+ [Domande frequenti sul contenimento di controllo](../atl/atl-control-containment-faq.md)
+

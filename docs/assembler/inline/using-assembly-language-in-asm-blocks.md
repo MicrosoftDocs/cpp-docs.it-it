@@ -1,33 +1,33 @@
 ---
-title: "Utilizzo di linguaggio assembly in blocchi __asm | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], linguaggio dell'assembly"
-  - "linguaggio dell'assembly [C++]"
-  - "linguaggio dell'assembly [C++], funzionalità"
+title: Utilizzo del linguaggio Assembly in blocchi asm | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembly language [C++], features
+- assembly language [C++]
+- __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: de48f28b1a31ebece26d6b39286fb6edb065db0b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Utilizzo di linguaggio assembly in blocchi __asm
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sezione specifica Microsoft  
- L'assembler inline presenta molti aspetti in comune con gli altri assembler.  Ad esempio, accetta qualsiasi espressione valida in MASM.  In questa sezione viene descritto l'utilizzo delle funzionalità del linguaggio assembly nei blocchi `__asm`.  
+# <a name="using-assembly-language-in-asm-blocks"></a>Utilizzo del linguaggio assembly in blocchi __asm
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ L'assembler inline presenta molti aspetti in comune con gli altri assembler. Ad esempio, accetta qualsiasi espressione valida in MASM. In questa sezione viene descritto l'utilizzo delle funzionalità del linguaggio assembly nei blocchi `__asm`.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
 -   [Set di istruzioni per assembly inline](../../assembler/inline/instruction-set-for-inline-assembly.md)  
   
@@ -39,13 +39,13 @@ caps.handback.revision: 8
   
 -   [Direttive macro di MASM in assembly inline](../../assembler/inline/masm-macro-directives-in-inline-assembly.md)  
   
--   [Riferimenti di segmento in assembly inline](../../assembler/inline/segment-references-in-inline-assembly.md)  
+-   [Riferimenti ai segmenti nell'assembly inline](../../assembler/inline/segment-references-in-inline-assembly.md)  
   
 -   [Dimensioni delle variabili e dei tipi in assembly inline](../../assembler/inline/type-and-variable-sizes-in-inline-assembly.md)  
   
 -   [Commenti in linguaggio assembly](../../assembler/inline/assembly-language-comments.md)  
   
--   [La pseudoistruzione \_emit](../../assembler/inline/emit-pseudoinstruction.md)  
+-   [La pseudoistruzione Emit](../../assembler/inline/emit-pseudoinstruction.md)  
   
 -   [Debug ed elenchi per assembly inline](../../assembler/inline/debugging-and-listings-for-inline-assembly.md)  
   
@@ -53,5 +53,5 @@ caps.handback.revision: 8
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembler inline](../../assembler/inline/inline-assembler.md)

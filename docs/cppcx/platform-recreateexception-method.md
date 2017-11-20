@@ -1,38 +1,39 @@
 ---
-title: "Metodo Platform::ReCreateException | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::ReCreateException"
-dev_langs: 
-  - "C++"
+title: 'Metodo platform:: recreateexception | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Exception
+dev_langs: C++
+helpviewer_keywords: Platform::Exception Class
 ms.assetid: fa73d1ab-86e4-4d26-a7d9-81938c1c7e77
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: e617d85c17db3c1e3cccb64786dfe7bfcfb9b1e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo Platform::ReCreateException
-Questo metodo è solo per uso interno e non è destinata al codice utente. Usa invece il [metodo Exception::CreateException](../cppcx/exception-createexception-method.md).  
-  
-## Sintassi  
-  
-```vb  
-static Exception^ ReCreateException(int hr)  
-```  
-  
-#### Parametri  
-  
-## Valore proprietà\/Valore restituito  
- Restituisce un nuovo oggetto Platform::Exception^, in base all'HRESULT specificato.  
-  
-## Equivalente .NET Framework  
-  
-## Requisiti
+# <a name="platformrecreateexception-method"></a>Metodo Platform::ReCreateException
+Questo metodo è solo per uso interno e non è destinata al codice utente. Usare invece il metodo Exception:: CreateException.
+
+## <a name="syntax"></a>Sintassi
+
+```cpp
+static Exception^ ReCreateException(int hr)
+```
+
+### <a name="parameters"></a>Parametri
+`hr`
+
+### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito
+
+Restituisce un nuovo oggetto Platform::Exception^, in base all'HRESULT specificato.
+

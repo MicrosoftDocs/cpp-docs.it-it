@@ -1,11 +1,10 @@
 ---
-title: Classe CAutoVectorPtrElementTraits | Documenti di Microsoft
+title: Classe CAutoVectorPtrElementTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,21 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 59aaaa19d696099c45d4b25f4c41f1cedf97a255
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptrelementtraits-class"></a>Classe CAutoVectorPtrElementTraits
-Questa classe fornisce metodi e funzioni statiche typedef utili durante la creazione di raccolte di puntatori intelligenti utilizzando nuovo vettore ed eliminare operatori.  
+Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori intelligenti usando il vettore di nuovi operatori e delete.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -68,7 +50,7 @@ class CAutoVectorPtrElementTraits :
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
   
 ## <a name="remarks"></a>Note  
  Questa classe fornisce metodi e funzioni statiche TypeDef per consentire la creazione di oggetti di classe di raccolta che contiene i puntatori intelligenti. A differenza di [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), questa classe utilizza vector nuovi ed eliminare gli operatori.  
@@ -95,7 +77,7 @@ typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.  
+ Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
   
 ```
 typedef T*& OUTARGTYPE;
@@ -105,4 +87,3 @@ typedef T*& OUTARGTYPE;
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

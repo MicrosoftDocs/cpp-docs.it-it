@@ -1,48 +1,47 @@
 ---
-title: "IDBInitializeImpl::Uninitialize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBInitializeImpl.Uninitialize"
-  - "Uninitialize"
-  - "IDBInitializeImpl::Uninitialize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Uninitialize (metodo)"
+title: 'Idbinitializeimpl:: UnInitialize | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBInitializeImpl.Uninitialize
+- Uninitialize
+- IDBInitializeImpl::Uninitialize
+dev_langs: C++
+helpviewer_keywords: Uninitialize method
 ms.assetid: ba37fc74-f84e-40b0-abb6-41bddd505269
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8baebc7f51f005d3884e9cbadee19a894a0705ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# IDBInitializeImpl::Uninitialize
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Inserisce l'oggetto datasource in uno stato non inizializzata liberando risorse interne come il supporto della proprietà.  
+# <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
+Posizioni dei dati di origine oggetto in uno stato non inizializzato da liberare le risorse interne, ad esempio il supporto della proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      STDMETHOD(Uninitialize)(   
-   void    
+      STDMETHOD(Uninitialize)(   
+   void    
 );  
 ```  
   
-## Note  
- Vedere [IDBInitialize::Uninitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx)*in OLE DB Programmer's Reference*.  
+## <a name="remarks"></a>Note  
+ Vedere [IDBInitialize:: UnInitialize](https://msdn.microsoft.com/en-us/library/ms719648.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)   
  [IDBInitializeImpl::Initialize](../../data/oledb/idbinitializeimpl-initialize.md)

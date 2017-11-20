@@ -1,36 +1,35 @@
 ---
-title: "IRowsetInfoImpl::GetSpecification | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetInfoImpl::GetSpecification"
-  - "ATL.IRowsetInfoImpl.GetSpecification"
-  - "IRowsetInfoImpl.GetSpecification"
-  - "GetSpecification"
-  - "ATL::IRowsetInfoImpl::GetSpecification"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetSpecification (metodo)"
+title: 'Irowsetinfoimpl:: Getspecification | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetInfoImpl::GetSpecification
+- ATL.IRowsetInfoImpl.GetSpecification
+- IRowsetInfoImpl.GetSpecification
+- GetSpecification
+- ATL::IRowsetInfoImpl::GetSpecification
+dev_langs: C++
+helpviewer_keywords: GetSpecification method
 ms.assetid: 8e14289d-9cca-4df7-a9e0-f4ef03c61e30
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 012f845cd47bca6008cdc493651cf17bb1745466
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetInfoImpl::GetSpecification
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce un puntatore a un'interfaccia sull'oggetto \(comando o sessione\) che crea questo rowset.  
+# <a name="irowsetinfoimplgetspecification"></a>IRowsetInfoImpl::GetSpecification
+Restituisce un puntatore a interfaccia per l'oggetto (di comando o di sessione) che ha creato questo set di righe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,16 +39,16 @@ Restituisce un puntatore a un'interfaccia sull'oggetto \(comando o sessione\) ch
 );  
 ```  
   
-#### Parametri  
- Vedere [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/en-us/library/ms716746.aspx)*in OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [IRowsetInfo::GetSpecification](https://msdn.microsoft.com/en-us/library/ms716746.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Note  
- Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) per recuperare le proprietà dall'oggetto origine dati.  
+## <a name="remarks"></a>Note  
+ Utilizzare questo metodo con [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) per recuperare le proprietà dell'oggetto di origine dati.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)   
- [IRowsetInfoImpl::GetReferencedRowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)   
+ [Irowsetinfoimpl:: Getreferencedrowset](../../data/oledb/irowsetinfoimpl-getreferencedrowset.md)   
  [IRowsetInfoImpl::GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)

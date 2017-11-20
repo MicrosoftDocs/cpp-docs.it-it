@@ -1,38 +1,35 @@
 ---
-title: ".RADIX | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".RADIX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".RADIX directive"
+title: . RADICE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .RADIX
+dev_langs: C++
+helpviewer_keywords: .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 89359ca5fef89e7790ab96621965e6c105dcfbb9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# .RADIX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Imposta la radice predefinita, compreso tra 2 e 16, al valore di *espressione*.  
+# <a name="radix"></a>.RADIX
+Imposta la radice predefinita, nell'intervallo 2-16, il valore di *espressione*.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 .RADIX expression  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

@@ -1,79 +1,79 @@
 ---
-title: "/PDBSTRIPPED (Rimuove simboli privati) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbstripped"
-  - "VC.Project.VCLinkerTool.StripPrivateSymbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pdb (file), rimozione di simboli privati"
-  - "/PDBSTRIPPED (opzione del linker)"
-  - "PDB (file), rimozione di simboli privati"
-  - "PDBSTRIPPED (opzione del linker)"
-  - "-PDBSTRIPPED (opzione del linker)"
+title: -PDBSTRIPPED (Rimuove simboli privati) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdbstripped
+- VC.Project.VCLinkerTool.StripPrivateSymbols
+dev_langs: C++
+helpviewer_keywords:
+- /PDBSTRIPPED linker option
+- -PDBSTRIPPED linker option
+- .pdb files, stripping private symbols
+- PDB files, stripping private symbols
+- PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73288ef6bf6881d946e4ec4bdd94e9b85cc0e81a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBSTRIPPED (Rimuove simboli privati)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (Rimuove simboli privati)
 ```  
 /PDBSTRIPPED:pdb_file_name  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove:  
   
- *pdb\_file\_name*  
- Nome specificato dall'utente per il database di programma \(PDB\) ridotto creato nel linker.  
+ *pdb_file_name*  
+ Un nome utente specificato per il database rimosso programma (PDB) creato dal linker.  
   
-## Note  
- Con l'opzione \/PDBSTRIPPED viene creato un secondo database di programma \(PDB\) quando si compila l'immagine del programma con una qualsiasi delle opzioni del compilatore o del linker che generano un file PDB \([\/DEBUG](../../build/reference/debug-generate-debug-info.md), [\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), \/Zd o \/Zi\).  Il secondo file PDB omette i simboli che non si desidera fornire ai clienti.  Tale file conterrà solo quanto segue:  
+## <a name="remarks"></a>Note  
+ L'opzione /PDBSTRIPPED crea un secondo file di programma (PDB) di database durante la compilazione dell'immagine del programma con qualsiasi del compilatore o del linker che genera un file PDB ([/debug](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd o /Zi). Il secondo file PDB omette i simboli che non si desidera fornire ai clienti. Conterrà solo il secondo file PDB:  
   
 -   Simboli pubblici  
   
--   L'elenco dei file oggetto e le porzioni del file eseguibile cui contribuiscono  
+-   L'elenco dei file oggetto e le parti del file eseguibile a cui contribuiscono  
   
--   Record di debug FPO \(Frame Pointer Optimization\) utilizzati per scorrere lo stack  
+-   Record di frame puntatore (FPO) di ottimizzazione debug utilizzato per scorrere lo stack  
   
- Il file PDB ridotto non conterrà quanto segue:  
+ Il file PDB ridotto non conterrà:  
   
--   Informazioni sui tipi  
+-   Informazioni sul tipo  
   
--   Informazioni sul numero di riga  
+-   Informazioni sul numeri di riga  
   
--   Simboli CodeView del file per oggetto, quali i simboli per funzioni, variabili locali e dati statici  
+-   Simboli CodeView di file per oggetto, ad esempio quelle per le funzioni, variabili locali e i dati statici  
   
- Il file PDB completo viene generato comunque quando si utilizza \/PDBSTRIPPED.  
+ Il file PDB completo verrà ancora generato quando si utilizza /PDBSTRIPPED.  
   
- Se non si crea alcun file PDB, l'opzione \/PDBSTRIPPED verrà ignorata.  
+ Se non si crea un file PDB, l'opzione /PDBSTRIPPED verrà ignorata.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Debug**.  
+3.  Fare clic su di **Debug** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Rimuovi simboli privati**.  
+4.  Modificare il **Rimuovi simboli privati** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

@@ -1,28 +1,28 @@
 ---
-title: "MxCsr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: MxCsr | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4f3c229d-0862-4733-acc7-9ed7a0b870ce
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6bbd0adbfa7ccc51093ac087d908360b893ea518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# MxCsr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Lo stato del registro include anche MxCsr.  La convenzione di chiamata divide questo registro in una parte volatile e una parte non volatile.  La parte volatile è costituita dai 6 flag di stato \(MXCSR\[0:5\]\) mentre il resto del registro \(MXCSR\[6:15\]\) è considerato non volatile.  
+# <a name="mxcsr"></a>MxCsr
+Lo stato del registro include anche MxCsr. La convenzione di chiamata divide questo registro in una parte volatile e una parte non volatile. La parte volatile è costituita da 6 flag di stato, MXCSR [0:5], mentre il resto del registro, MXCSR [6:15] è considerato non volatile.  
   
- All'inizio dell'esecuzione del programma, la parte non volatile viene impostata sui seguenti valori standard:  
+ La parte non volatile è impostata su valori standard seguenti all'inizio dell'esecuzione del programma:  
   
 ```  
 MXCSR[6]         : Denormals are zeros - 0  
@@ -31,15 +31,15 @@ MXCSR[13:14]   : Rounding  control - 0 (round to nearest)
 MXCSR[15]      : Flush to zero for masked underflow - 0 (off)  
 ```  
   
- Un chiamato che modifica uno qualsiasi dei campi non volatili in MXCSR deve ripristinare i valori originali prima di restituire il controllo al chiamante.  Inoltre, un chiamante che ha modificato uno qualsiasi di questi campi deve ripristinare i relativi valori standard prima di chiamare un chiamato, a meno che quest'ultimo non si aspetti i valori modificati.  
+ Un oggetto chiamato che modifica uno qualsiasi dei campi non volatili in MXCSR necessario ripristinarli prima di restituire al chiamante. Inoltre, un chiamante che ha modificato uno qualsiasi di questi campi è necessario eseguirne il ripristino in base ai valori standard prima di richiamare un oggetto chiamato a meno che per contratto chiamato prevede che i valori modificati.  
   
  Esistono due eccezioni alle regole relative alla non volatilità dei flag di controllo:  
   
--   Quando si utilizzano funzioni definite esplicitamente per modificare i flag MxCsr non volatili.  
+-   Funzioni in cui lo scopo della funzione specificata documentato consiste nella modifica MxCsr non volatili flag.  
   
--   Quando è dimostrato che la violazione di queste regole porta alla creazione di un programma che ha lo stesso comportamento di un programma in cui tali regole non vengono violate, ad esempio tramite un'analisi a livello di intero programma.  
+-   Quando è corretto probabilmente che la violazione di queste regole di un programma che ha lo stesso come un programma in cui queste regole non vengono violate, ad esempio, tramite l'analisi intero programma.  
   
- Non è possibile effettuare alcuna assunzione sullo stato della parte volatile di MXCSR in un limite di funzione, a meno che non siano esplicitamente definite nella documentazione di una funzione.  
+ Non possono fare ipotesi sullo stato di parte volatile di MXCSR attraverso il confine di una funzione, a meno che specificamente descritto nella documentazione relativa a una funzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Convenzione di chiamata](../build/calling-convention.md)

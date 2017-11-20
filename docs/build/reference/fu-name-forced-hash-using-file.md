@@ -1,68 +1,67 @@
 ---
-title: "/FU (Specifica file #using da utilizzare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForcedUsingFiles"
-  - "/FU"
-  - "VC.Project.VCNMakeTool.ForcedUsingAssemblies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FU (opzione del compilatore) [C++]"
-  - "FU (opzione del compilatore) [C++]"
-  - "-FU (opzione del compilatore) [C++]"
+title: '-FU (Name Forced #using File) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForcedUsingFiles
+- /FU
+- VC.Project.VCNMakeTool.ForcedUsingAssemblies
+dev_langs: C++
+helpviewer_keywords:
+- -FU compiler option [C++]
+- FU compiler option [C++]
+- /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ef372eaada4acf8c32bc52ad82dc8c1d9d6d813
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /FU (Specifica file #using da utilizzare)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Un opzione del compilatore che può essere utilizzata come alternativa al passaggio di un nome file a [Direttiva \#using](../../preprocessor/hash-using-directive-cpp.md) nel codice sorgente.  
+# <a name="fu-name-forced-using-file"></a>/FU (Specifica file #using da utilizzare)
+Un'opzione del compilatore che è possibile utilizzare in alternativa al passaggio di un nome di file per [# direttiva using](../../preprocessor/hash-using-directive-cpp.md) nel codice sorgente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /FU file  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `file`  
- Specifica il file dei metadati a cui fare riferimento in questa compilazione.  
+ Specifica il file di metadati per fare riferimento a questa compilazione.  
   
-## Note  
- L'opzione \/FU accetta solo un nome file.  Per specificare più file, utilizzare \/FU con ognuno.  
+## <a name="remarks"></a>Note  
+ L'opzione /FU accetta solo un nome file. Per specificare più file, utilizzare /FU con ciascuno di essi.  
   
- Se si utilizza [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] e si fa riferimento ai metadati per utilizzare la funzionalità [Assembly Friend](../../dotnet/friend-assemblies-cpp.md), non è possibile utilizzare **\/FU**.  È necessario fare riferimento ai metadati nel codice utilizzando `#using`\- insieme con l'attributo `[as friend]`.  Gli assembly friend non sono supportati in [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] \([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]\).  
+ Se si utilizza [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] e fanno riferimento i metadati per utilizzare il [assembly Friend](../../dotnet/friend-assemblies-cpp.md) funzionalità, è possibile utilizzare **/FU**. È necessario fare riferimento ai metadati nel codice utilizzando `#using` insieme all'attributo `[as friend]`. Gli assembly friend non sono supportati in [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
   
- Per informazioni su come creare un assembly o un modulo per Common Language Runtime \(CLR\), vedere [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  Per informazioni su come compilare in [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], vedere [Compilazione di applicazioni e librerie](../Topic/Building%20apps%20and%20libraries%20\(C++-CX\).md).  
+ Per informazioni su come creare un assembly o un modulo per common language runtime (CLR), vedere [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Per informazioni su come compilare in [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], vedere [compilazione di applicazioni e librerie](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **C\/C\+\+**.  
+2.  Selezionare il **C/C++** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+3.  Selezionare il **avanzate** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Imponi \#using**.  
+4.  Modificare il **Imponi #using** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>.  
   
-## Vedere anche  
- [Opzioni del file di output \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [File di output (/ F) opzioni](../../build/reference/output-file-f-options.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

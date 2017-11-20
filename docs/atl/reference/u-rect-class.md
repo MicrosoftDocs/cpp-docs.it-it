@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL::_U_RECT
 - _U_RECT
 - ATL._U_RECT
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: a8c7d4e7b34256d9544cd75dc71dbfb8294db30b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="urect-class"></a>Classe _U_RECT
 Classe di adattatori di questo argomento consente di utilizzare `RECT` puntatori o riferimenti deve essere passato a una funzione che viene implementata in termini di puntatori.  
@@ -87,4 +84,3 @@ _U_RECT (LPRECT lpRect);
   
 ## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
-

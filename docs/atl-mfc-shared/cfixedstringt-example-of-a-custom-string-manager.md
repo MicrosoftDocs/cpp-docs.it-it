@@ -1,68 +1,68 @@
 ---
-title: "CFixedStringT: Example of a Custom String Manager | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFixedStringT class, using a custom string manager"
+title: 'CFixedStringT: Esempio di un gestore di stringa personalizzato | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ceb64bb71ad43dd1a6e6fd45a3a0480d68eb643a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CFixedStringT: Example of a Custom String Manager
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La libreria ATL implementa un esempio di un gestore personalizzato della stringa utilizzata dalla classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), denominato **CFixedStringMgr**.  `CFixedStringT` è derivato da [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una stringa che assegna i dati di tipo carattere come parte dell'oggetto `CFixedStringT` stesso se la stringa è inferiore alla lunghezza specificata dal parametro di modello **t\_nChars**`CFixedStringT`.  Con questo approccio, la stringa non necessita dell'heap affatto, a meno che la lunghezza della stringa si sviluppi oltre la dimensione del buffer fissa.  Poiché `CFixedStringT` non utilizza sempre un heap di allocare i dati in formato stringa, non può utilizzare **CAtlStringMgr** come relativo gestore della stringa.  Utilizza un amministratore alla stringa personalizzata \(**CFixedStringMgr**\), che implementa l'interfaccia [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md).  Questa interfaccia viene discussa in [Implementazione di un gestore personalizzato di stringa \(metodo avanzato\)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Esempio di una gestione stringa personalizzata
+La libreria ATL implementa un esempio di un gestore di stringa personalizzato usato dalla classe [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), denominato **CFixedStringMgr**. `CFixedStringT`derivato da [CStringT](../atl-mfc-shared/reference/cstringt-class.md) e implementa una stringa che alloca i caratteri come parte di `CFixedStringT` oggetto stesso, purché la stringa è minore della lunghezza specificata dal **t_nChars** parametro di modello di `CFixedStringT`. Con questo approccio, la stringa non è necessario l'heap, a meno che la lunghezza della stringa di dimensioni superano le dimensioni del buffer fisso. Poiché `CFixedStringT` non utilizza sempre un heap per allocare i dati delle stringhe, non sarà possibile utilizzare **CAtlStringMgr** come gestore delle stringhe. Viene utilizzato un gestore di stringa personalizzato (**CFixedStringMgr**), che implementa il [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) interfaccia. Questa interfaccia, vedere [implementazione di un gestore di stringa personalizzato (metodo avanzato)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).  
   
  Il costruttore per **CFixedStringMgr** accetta tre parametri:  
   
--   Puntatore di**pData:** Alla struttura fissa `CStringData` da utilizzare.  
+-   **pData:** un puntatore a fissi `CStringData` struttura da utilizzare.  
   
--   **nChars:** il numero massimo di caratteri che la struttura `CStringData` possibile utilizzare.  
+-   **nChars:** il numero massimo di caratteri di `CStringData` struttura può contenere.  
   
--   Puntatore di**pMgr:** All'interfaccia `IAtlStringMgr` "di un amministratore di backup della stringa."  
+-   **pMgr:** un puntatore al `IAtlStringMgr` interfaccia di "gestione di stringhe di backup".  
   
- Il costruttore archivia i valori `pData` e **pMgr** nei rispettivi variabili membro \(`m_pData` e **m\_pMgr**\).  Quindi imposta la lunghezza del buffer su zero, la lunghezza disponibile uguale alla dimensione massima del buffer fissa e il conteggio dei riferimenti – 1.  Il valore di conteggio dei riferimenti indica che il buffer è bloccato e utilizzare questa istanza **CFixedStringMgr** come amministratore della stringa.  
+ Il costruttore archivia i valori di `pData` e **pMgr** nelle rispettive variabili membro (`m_pData` e **m_pMgr**). Viene quindi impostata la lunghezza del buffer da zero, la lunghezza disponibile per la dimensione massima del buffer predefinito e il conteggio dei riferimenti su -1. Il valore del conteggio di riferimento indica che il buffer è bloccato e per l'utilizzo di questa istanza di **CFixedStringMgr** come gestore di stringhe.  
   
- Contrassegnare il buffer come bloccato impedisce ad altre istanze `CStringT` di utilizzare un riferimento condiviso al buffer.  Se ad altre istanze `CStringT` sono consentite per condividere il buffer sarà possibile per il buffer contenuto da `CFixedStringT` vengono eliminati mentre altre stringhe sono ancora utilizzando il buffer.  
+ Contrassegnare il buffer come bloccato impedisce altri `CStringT` le istanze di un riferimento al buffer condiviso. Se altri `CStringT` istanze sono state consentite per condividere il buffer sia possibile per il buffer contenuto `CFixedStringT` da eliminare durante le altre stringhe sono stati ancora utilizzando il buffer.  
   
- **CFixedStringMgr** è un'implementazione completa dell'interfaccia `IAtlStringMgr`.  L'implementazione di ciascun metodo è illustrata separatamente.  
+ **CFixedStringMgr** è un'implementazione completa del `IAtlStringMgr` interfaccia. Viene descritta l'implementazione di ogni metodo.  
   
-## Implementazione di CFixedStringMgr::Allocate  
- L'implementazione **CFixedStringMgr::Allocate** dei controlli in primo luogo viene verificato se la dimensione richiesta della stringa è minore o uguale alla dimensione del buffer fisso \(memorizzato nel membro `m_pData` \).  Se il buffer fissa è elevata, **CFixedStringMgr** blocca il buffer fissa con una lunghezza pari a zero.  Se la lunghezza della stringa non si compila oltre la dimensione del buffer fissa, `CStringT` non dovrà riallocare il buffer.  
+## <a name="implementation-of-cfixedstringmgrallocate"></a>Implementazione di CFixedStringMgr  
+ L'implementazione di **CFixedStringMgr** controlla prima se la dimensione richiesta della stringa è minore o uguale alla dimensione del buffer fisso (archiviati nel `m_pData` membro). Se il buffer fisso è sufficientemente ampio, **CFixedStringMgr** blocca il buffer fissa con lunghezza pari a zero. Fino a quando la lunghezza della stringa dimensioni non eccedere le dimensioni del buffer fisso, `CStringT` non sarà necessario riallocare il buffer.  
   
- Se la dimensione richiesta della stringa è maggiore del buffer fissa **CFixedStringMgr** inoltra la richiesta a di backup ricevute l'amministratore.  L'amministratore di backup della stringa è previsto per allocare il buffer dall'heap.  Tuttavia, prima di restituire questo buffer **CFixedStringMgr** blocca il buffer e sostituisce il puntatore di gestione delle stringhe di buffer con un puntatore all'oggetto **CFixedStringMgr**.  Questo assicura che i tentativi di ridistribuire o liberare il buffer da `CStringT` chiamare in **CFixedStringMgr**.  
+ Se la dimensione richiesta della stringa è maggiore di buffer fisso **CFixedStringMgr** inoltra la richiesta per la gestione di stringhe di backup. Il gestore backup si presume che per il buffer dall'heap. Tuttavia, prima di restituire questo buffer **CFixedStringMgr** blocca il buffer e consente di sostituire con un puntatore a puntatore al gestore del buffer di stringa di **CFixedStringMgr** oggetto. In questo modo si garantisce che tenta di riallocare o liberare il buffer di `CStringT` chiamerà **CFixedStringMgr**.  
   
-## Implementazione di CFixedStringMgr::ReAllocate  
- L'implementazione **CFixedStringMgr::ReAllocate** è molto simile all'implementazione **Allocate**.  
+## <a name="implementation-of-cfixedstringmgrreallocate"></a>Implementazione di CFixedStringMgr:: ReAllocate  
+ L'implementazione di **CFixedStringMgr:: ReAllocate** è molto simile alla relativa implementazione di **allocare**.  
   
- Se il buffer che viene ridistribuito è il buffer fisso e le dimensioni del buffer richieste sono minori del buffer fissa, nessuna allocazione viene eseguita.  Tuttavia, se il buffer che viene ridistribuito non è il buffer fissa, deve essere un buffer allocato con l'amministratore di backup.  In questo caso l'amministratore di backup viene utilizzato per ridistribuire il buffer.  
+ Se il buffer riallocato è il buffer fisso e le dimensioni del buffer richieste sono inferiori a quelle del buffer predefinito, non viene eseguita alcuna allocazione. Tuttavia, se il buffer riallocato non è il buffer fisso, è necessario un buffer allocato con la gestione di backup. In questo caso, il gestore di backup viene utilizzato per riallocare il buffer.  
   
- Se il buffer che viene ridistribuito è il buffer fisso e le nuove dimensioni del buffer sono troppo grandi per l'ingresso nel buffer fissa, **CFixedStringMgr** alloca un nuovo buffer mediante l'amministratore di backup.  Il contenuto del buffer fissa viene copiato nel buffer.  
+ Se il buffer riallocato è il buffer fisso e la nuova dimensione del buffer è troppo grande per adattarsi all'interno del buffer predefinito, **CFixedStringMgr** alloca un nuovo buffer tramite il gestore di backup. Il contenuto del buffer predefinito viene quindi copiato nel nuovo buffer.  
   
-## Implementazione di CFixedStringMgr::Free  
- l'implementazione **CFixedStringMgr::Free** segue lo stesso modello **Allocate** e `ReAllocate`.  Se il buffer che viene liberato è il buffer fisso, il metodo lo imposta su un buffer bloccato di lunghezza zero.  Se il buffer che viene liberato è stato allocato con l'amministratore di backup, **CFixedStringMgr** utilizza l'amministratore di backup per liberarlo.  
+## <a name="implementation-of-cfixedstringmgrfree"></a>Implementazione di CFixedStringMgr  
+ L'implementazione di **CFixedStringMgr** segue lo stesso modello come **allocare** e `ReAllocate`. Se il buffer deallocato è il buffer fisso, il metodo imposta a un buffer bloccato di lunghezza zero. Se il buffer deallocato è stato allocato con il gestore di backup, **CFixedStringMgr** utilizza la gestione di backup per liberarlo.  
   
-## Implementazione di CFixedStringMgr::Clone  
- L'implementazione **CFixedStringMgr::Clone** restituisce sempre un puntatore all'amministratore di backup anziché **CFixedStringMgr** stessa.  Ciò accade perché ogni istanza **CFixedStringMgr** può essere associato solo a una singola istanza `CStringT`.  Tutte le altre istanze `CStringT` che tentano di duplicare l'amministratore deve ottenere l'amministratore di backup.  Questo perché i supporti di gestione del backup condivisi.  
+## <a name="implementation-of-cfixedstringmgrclone"></a>Implementazione di CFixedStringMgr:: Clone  
+ L'implementazione di **CFixedStringMgr:: Clone** restituisce sempre un puntatore per la gestione di backup invece di **CFixedStringMgr** stesso. Ciò accade perché ogni istanza di **CFixedStringMgr** può solo essere associato a una singola istanza di `CStringT`. Eventuali altre istanze `CStringT` tentativo di clonare la gestione deve ottenere il gestore di backup invece. Questo avviene perché la gestione di backup supporta la condivisione.  
   
-## Implementazione di CFixedStringMgr::GetNilString  
- L'implementazione **CFixedStringMgr::GetNilString** restituisce il buffer fissa.  A causa della corrispondenza tra due utenti **CFixedStringMgr** e `CStringT`, una determinata istanza `CStringT` non utilizza sempre un buffer per volta.  Di conseguenza, una stringa di zero e di un buffer di stringa effettiva non sono mai necessari contemporaneamente.  
+## <a name="implementation-of-cfixedstringmgrgetnilstring"></a>Implementazione di CFixedStringMgr:: GetNilString  
+ L'implementazione di **CFixedStringMgr:: GetNilString** restituisce il buffer fisso. A causa della corrispondenza 1: 1 di **CFixedStringMgr** e `CStringT`, un'istanza specifica di `CStringT` non utilizza mai più di un buffer alla volta. Pertanto, una stringa null e un buffer di stringa reale non sono necessari mai nello stesso momento.  
   
- Ogni volta che il buffer fisso non viene utilizzato, **CFixedStringMgr** garantisce che venga inizializzato con un di lunghezza zero.  Ciò consente di utilizzare come stringa di zero.  Come funzionano aggiungendo, il membro `nAllocLength` del buffer fissa è sempre impostato a grandezza naturale del buffer fissa.  Ciò significa che `CStringT` può della stringa senza chiamare [IAtlStringMgr::Reallocate](../Topic/IAtlStringMgr::Reallocate.md), nonché per la stringa di zero.  
+ Ogni volta che il buffer fisso non è in uso, **CFixedStringMgr** assicura che viene inizializzato con una lunghezza pari a zero. In questo modo possono essere utilizzate come stringa nulla. Inoltre, il `nAllocLength` membro del buffer fisso è sempre impostata per la dimensione totale del buffer fisso. Ciò significa che `CStringT` possibile aumentare la stringa senza chiamare [IAtlStringMgr:: ReAllocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate), anche per la stringa null.  
   
-## Requisiti  
- **Header:** cstringt.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** CStringT. h  
   
-## Vedere anche  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione della memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
+

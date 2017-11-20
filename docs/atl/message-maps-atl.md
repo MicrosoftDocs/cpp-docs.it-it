@@ -1,41 +1,42 @@
 ---
-title: "Message Maps (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, gestori messaggi"
-  - "message maps, ATL"
+title: Mappe (ATL) messaggi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- message maps, ATL
+- ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 650dcd31e07ef1995f09b0521991d79726b22774
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Message Maps (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="message-maps-atl"></a>Mappe messaggi (ATL)
+Una mappa messaggi associa una funzione del gestore con un messaggio specifico, un comando o una notifica. Con ATL [macro della mappa dei messaggi](../atl/reference/message-map-macros-atl.md), è possibile specificare una mappa messaggi per una finestra. La routine della finestra in `CWindowImpl`, `CDialogImpl`, e `CContainedWindowT` indirizzare i messaggi di una finestra alla propria mappa messaggi.  
+  
+ Il [funzioni del gestore di messaggi](../atl/message-handler-functions.md) accetta un argomento supplementare di tipo `BOOL&`. Questo argomento indica se un messaggio è stato elaborato e viene impostato su `TRUE` per impostazione predefinita. Una funzione del gestore quindi possibile impostare l'argomento `FALSE` per indicare che non sono stati gestiti un messaggio. In questo caso, ATL continuerà cercare una funzione di gestione della mappa messaggi. Impostando questo argomento `FALSE`, è possibile eseguire alcune operazioni in risposta a un messaggio e quindi consentire l'elaborazione predefinita o un'altra funzione del gestore di terminare la gestione del messaggio.  
+  
+## <a name="chained-message-maps"></a>Mappe messaggi concatenate  
+ ATL consente anche di concatenare le mappe messaggi, che indirizza a una mappa del messaggio definita in un'altra classe di gestione dei messaggi. Ad esempio, è possibile implementare comuni gestione dei messaggi in una classe separata per fornire un comportamento uniforme per tutte le finestre di concatenamento a tale classe. È possibile collegare a una classe base o a un membro di dati della classe.  
+  
+ ATL supporta anche la concatenazione dinamica, che consente la catena di mappa dei messaggi di un altro oggetto in fase di esecuzione. Per implementare la concatenazione dinamica, è necessario derivare la classe da [CDynamicChain](../atl/reference/cdynamicchain-class.md). Dichiarare quindi il [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) macro della mappa del messaggio. `CHAIN_MSG_MAP_DYNAMIC`richiede un numero univoco che identifica l'oggetto e a cui si concatenano la mappa dei messaggi. È necessario definire questo valore univoco tramite una chiamata a `CDynamicChain::SetChainEntry`.  
+  
+ È possibile concatenare qualsiasi classe che dichiara una mappa messaggi, purché la classe deriva dalla [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap`consente a un oggetto per esporre le mappe messaggi ad altri oggetti. Si noti che `CWindowImpl` già deriva da `CMessageMap`.  
+  
+## <a name="alternate-message-maps"></a>Mappe messaggi alternative  
+ Infine, ATL supporta mappe di messaggi alternativo, dichiarate con la [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) (macro). Ogni mappa messaggi alternativo è identificato da un numero univoco, si passa a `ALT_MSG_MAP`. Mapping di messaggi alternativo, è possibile gestire i messaggi di più finestre in una mappa. Si noti che per impostazione predefinita, `CWindowImpl` non usare le mappe messaggi alternativo. Per aggiungere questo supporto, eseguire l'override di `WindowProc` metodo il `CWindowImpl`-classe derivata e chiamata `ProcessWindowMessage` con l'identificatore della mappa messaggi.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Implementazione di una finestra](../atl/implementing-a-window.md)
 
-Una mappa messaggi associa una funzione di gestione con un messaggio specifico, un comando, o una notifica.  Utilizzando [macro della mappa messaggi](../atl/reference/message-map-macros-atl.md)ATL, è possibile specificare una mappa messaggi per una finestra.  Le procedure finestra `CWindowImpl`, in `CDialogImpl`e in `CContainedWindowT` i messaggi di una finestra alla mappa messaggi.  
-  
- [funzioni di gestore messaggi](../atl/message-handler-functions.md) accetta un argomento aggiuntivo di tipo `BOOL&`.  In questo argomento indica se il messaggio è stato elaborato e su `TRUE` per impostazione predefinita.  Una funzione di gestione può quindi impostare l'argomento su `FALSE` per indicare che non è stato gestito un messaggio.  In questo caso, ATL continuerà a trovare una funzione di gestione ulteriormente nella mappa messaggi.  Impostando questo argomento a `FALSE`, è innanzitutto necessario eseguire un'azione in risposta a un messaggio e quindi consentire l'elaborazione predefinita o un'altra funzione di gestione per il completamento di gestire il messaggio.  
-  
-## Mappe messaggi concatenate  
- ALT consente anche alle mappe messaggi a catena, che indirizza la gestione dei messaggi a una mappa messaggi definita in un'altra classe.  Ad esempio, è possibile implementare la gestione dei messaggi comune in una classe separata per fornire il comportamento uniforme per tutte le finestre che concatenate in quella classe.  È possibile concatenare a una classe base o a un membro dati della classe.  
-  
- ATL è inoltre possibile concatenare dinamico, che consente di concatenare alla mappa messaggi di un altro oggetto in fase di esecuzione.  Per distribuire concatenare dinamico, è necessario derivare la classe da [CDynamicChain](../atl/reference/cdynamicchain-class.md).  Quindi dichiarare la macro [CHAIN\_MSG\_MAP\_DYNAMIC](../Topic/CHAIN_MSG_MAP_DYNAMIC.md) nella mappa messaggi.  `CHAIN_MSG_MAP_DYNAMIC` richiede un numero univoco che identifica l'oggetto e la mappa messaggi che si concatenano.  È necessario definire questo valore univoco con una chiamata a `CDynamicChain::SetChainEntry`.  
-  
- È possibile concatenare qualsiasi classe che dichiara una mappa messaggi, se la classe deriva da [CMessageMap](../atl/reference/cmessagemap-class.md).  `CMessageMap` consente a un oggetto di esporre le mappe dei messaggi ad altri oggetti.  Si noti che `CWindowImpl` già deriva da `CMessageMap`.  
-  
-## Alternare le mappe dei messaggi  
- Infine, mappe messaggi alternate il supporto ATL, dichiarate con la macro [ALT\_MSG\_MAP](../Topic/ALT_MSG_MAP.md).  Ciascuna mappa messaggi alternativa è identificata da un numero univoco, che viene passato a `ALT_MSG_MAP`.  Utilizzando le mappe messaggi alternate, è possibile gestire i messaggi di windows in un mapping.  Notare che per impostazione predefinita, `CWindowImpl` non utilizza le mappe messaggi alternate.  Per aggiungere il supporto, eseguire l'override del metodo `WindowProc` nel `CWindowImpl`classe derivata da e chiamare `ProcessWindowMessage` con l'identificatore della mappa messaggi.  
-  
-## Vedere anche  
- [Implementing a Window](../atl/implementing-a-window.md)

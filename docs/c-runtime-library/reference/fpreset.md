@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fpreset
+apiname: _fpreset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e718ae6c92664c3d1966dd5eaade409e104dd63f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fpreset"></a>_fpreset
 Reimposta il pacchetto a virgola mobile.  
@@ -70,7 +52,7 @@ void _fpreset( void );
 ## <a name="remarks"></a>Note  
  La funzione `_fpreset` reinizializza il pacchetto per le operazioni matematiche a virgola mobile. `_fpreset` viene in genere usata con `signal`, `system` o con le funzioni `_exec` o `_spawn`. Se un programma intercetta segnali di errore a virgola mobile (`SIGFPE`) con `signal`, è possibile eseguire in modo sicuro il ripristino dagli errori a virgola mobile richiamando `_fpreset` e usando `longjmp`.  
   
- Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) perché common language runtime supporta solo la precisione a virgola mobile predefinita.  
+ Questa funzione è deprecata durante la compilazione con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) Poiché common language runtime supporta solo la precisione a virgola mobile predefinita.  
   
 ## <a name="requirements"></a>Requisiti  
   

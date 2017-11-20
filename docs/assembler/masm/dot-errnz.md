@@ -1,38 +1,35 @@
 ---
-title: ".ERRNZ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ERRNZ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ERRNZ directive"
+title: . ERRNZ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ERRNZ
+dev_langs: C++
+helpviewer_keywords: .ERRNZ directive
 ms.assetid: 373a9222-140f-4505-8dec-ef370a069ebf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 597cacab3a741af66e0a94477b13fc2803aa1e4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# .ERRNZ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-genera un errore se *espressione* è true \(diverso da zero\).  
+# <a name="errnz"></a>.ERRNZ
+Genera un errore se *espressione* è true (diverso da zero).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 .ERRNZ expression [[, message]]  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

@@ -1,31 +1,29 @@
 ---
-title: "What Is AtlAxWin100? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AtlAxWin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AtlAxWin method"
+title: "Che cos'è AtlAxWin100? | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: AtlAxWin
+dev_langs: C++
+helpviewer_keywords: AtlAxWin method
 ms.assetid: 8efb6e14-df2a-40f1-a129-61b83965b5bd
-caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6cc60bbb4efad8c4e01da124cb066a4d3c151056
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# What Is AtlAxWin100?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`AtlAxWin100` è il nome di una classe finestra che le guide forniscono funzionalità del controllo ospitato ATL.  Quando si crea un'istanza di questa classe, la routine della finestra automaticamente utilizzerà il controllo API di hosting per creare un oggetto host associato alla finestra e per caricarla con il controllo specificato come titolo della finestra.  
+# <a name="what-is-atlaxwin100"></a>Che cos'è AtlAxWin100?
+`AtlAxWin100`è il nome di una classe della finestra che consente di fornire funzionalità di hosting di controlli ATL. Quando si crea un'istanza di questa classe, la procedura di finestra utilizzeranno automaticamente l'API di hosting di controlli per creare un oggetto host associato alla finestra e caricarla con il controllo che si specifica come il titolo della finestra.  
   
-## Vedere anche  
- [Domande frequenti sul contenimento di controlli](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>Vedere anche  
+ [Domande frequenti sul contenimento di controllo](../atl/atl-control-containment-faq.md)
+

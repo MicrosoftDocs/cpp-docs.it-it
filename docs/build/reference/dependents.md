@@ -1,39 +1,38 @@
 ---
-title: "/DEPENDENTS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dependents"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DEPENDENTS (opzione di dumpbin)"
-  - "DEPENDENTS (opzione dumpbin)"
-  - "-DEPENDENTS (opzione dumpbin)"
+title: -DEPENDENTS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dependents
+dev_langs: C++
+helpviewer_keywords:
+- -DEPENDENTS dumpbin option
+- /DEPENDENTS dumpbin option
+- DEPENDENTS dumpbin option
 ms.assetid: 9b31da2a-75ac-4bbf-a3f1-adf8b0ecbbb4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 00e1ad1e4923f3b656dfef05ca9a06243a97be4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /DEPENDENTS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dependents"></a>/DEPENDENTS
 ```  
 /DEPENDENTS  
 ```  
   
-## Note  
- Consente di eseguire il dump dei nomi delle DLL dalle quali vengono importate funzioni per l'immagine,  ma non quello dei nomi delle funzioni importate.  
+## <a name="remarks"></a>Note  
+ I nomi delle DLL da cui l'immagine di importazioni di funzioni di dump. I nomi delle funzioni importate non dump.  
   
- L'unica opzione di DUMPBIN utilizzabile sui file generati con l'opzione del compilatore [\/GL](../../build/reference/gl-whole-program-optimization.md) è [\/HEADERS](../../build/reference/headers.md).  
+ Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

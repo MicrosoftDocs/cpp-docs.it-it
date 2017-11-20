@@ -4,34 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComSafeArrayBound
-- ATLSAFE/ATL::CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
 - ATLSAFE/ATL::GetCount
 - ATLSAFE/ATL::GetLowerBound
 - ATLSAFE/ATL::GetUpperBound
 - ATLSAFE/ATL::SetCount
 - ATLSAFE/ATL::SetLowerBound
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArrayBound class
+dev_langs: C++
+helpviewer_keywords: CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: c52e429804fdc3eb84ca14005bbc65e00603a4c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsafearraybound-class"></a>Classe CComSafeArrayBound
 Questa classe è un wrapper per un [SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d) struttura.  
@@ -178,4 +173,3 @@ LONG SetLowerBound(LONG lLowerBound) throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

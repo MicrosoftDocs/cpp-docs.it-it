@@ -1,64 +1,65 @@
 ---
-title: "Esportazione da una DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "esportazioni di DLL [C++]"
-  - "DLL [C++], esportazione da"
-  - "esportazione di DLL [C++]"
-  - "esportazione di DLL [C++], informazioni sull’esportazione da DLL"
-  - "esportazione di funzioni [C++], DLL (esportazione da)"
-  - "tabella di esportazioni [C++]"
-  - "funzioni [C++], esportazione"
+title: Esportazione da una DLL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting DLLs [C++], about exporting from DLLs
+- exporting functions [C++], DLLs (exporting from)
+- exporting DLLs [C++]
+- DLLs [C++], exporting from
+- DLL exports [C++]
+- functions [C++], exporting
+- exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a591628d74320dee7868b0c689bd4d61bb19073d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Esportazione da una DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il layout di un file dll è simile a quello di un file exe, tranne per il fatto che contiene una tabella di esportazione.  Questa tabella include il nome di ogni funzione che la DLL esporta in altri eseguibili.  Queste funzioni sono i punti di ingresso alla DLL. Solo le funzioni nella tabella di esportazione sono accessibili dagli altri eseguibili.  Qualsiasi altra funzione nella DLL è privata.  La tabella di esportazione di una DLL può essere visualizzata tramite lo strumento [DUMPBIN](../build/reference/dumpbin-reference.md) con l'opzione \/EXPORTS.  
+# <a name="exporting-from-a-dll"></a>Esportazione da una DLL  
   
- È possibile esportare funzioni da una DLL con i due metodi descritti di seguito.  
+Un file DLL ha un layout molto simile a un file .exe, con una differenza importante, ovvero un file DLL contiene una tabella di esportazione. La tabella di esportazione contiene il nome di ogni funzione che la DLL esporta altri eseguibili. Queste funzioni sono i punti di ingresso nella DLL. solo le funzioni nella tabella di esportazione sono accessibili da altri file eseguibili. Qualsiasi altra funzione nella DLL sono privata per la DLL. La tabella di esportazione di una DLL può essere visualizzata utilizzando il [DUMPBIN](../build/reference/dumpbin-reference.md) strumento con l'opzione /EXPORTS.  
   
--   Creare un file di definizione di modulo \(def\) e utilizzarlo quando si compila la DLL.  Utilizzare questo metodo se si intende [esportare le funzioni dalla DLL in base al numero ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
+ È possibile esportare funzioni da una DLL tramite due metodi:  
   
--   Utilizzare la parola chiave **\_\_declspec\(dllexport\)** nella definizione della funzione.  
+-   Creare un file di definizione (con estensione def) del modulo e usare il file con estensione def durante la creazione della DLL. Utilizzare questo approccio se si desidera [esportare funzioni dalla DLL di base al numero ordinale anziché dal nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
   
- Quando si esportano le funzioni con uno di questi metodi, accertarsi di utilizzare la convenzione di chiamata [\_\_stdcall](../cpp/stdcall.md).  
+-   Utilizzare la parola chiave **dllexport** nella definizione della funzione.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+ Durante l'esportazione di funzioni con entrambi i metodi, assicurarsi di utilizzare il [stdcall](../cpp/stdcall.md) convenzione di chiamata.  
   
--   [Esportazione da una DLL utilizzando i file def](../build/exporting-from-a-dll-using-def-files.md)  
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Esportazione da una DLL utilizzando \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Esportazione e importazione utilizzando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Esportazione di funzioni C\+\+ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Esportazione e importazione tramite AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Esportazione di funzioni da una DLL in base al numero ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
+-   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Scelta del metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Funzioni di esportazione da una DLL in base al numero ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
   
--   [Scelta del metodo di collegamento da utilizzare](../build/determining-which-linking-method-to-use.md)  
+-   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Inizializzare una DLL](../build/initializing-a-dll.md)  
+-   [Determinare quale metodo di collegamento](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+-   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
+  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
 -   [Importazione in un'applicazione](../build/importing-into-an-application.md)  
   
@@ -66,5 +67,5 @@ Il layout di un file dll è simile a quello di un file exe, tranne per il fatto 
   
 -   [Importazioni reciproche](../build/mutual-imports.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione ed esportazione](../build/importing-and-exporting.md)

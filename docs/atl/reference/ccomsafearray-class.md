@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,18 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 5bfa67654bf86fdaadc9ef77c0d462b9796140d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsafearray-class"></a>Classe CComSafeArray
 La classe è un wrapper della struttura **SAFEARRAY** .  
@@ -93,9 +74,9 @@ class CComSafeArray
 |[CComSafeArray::Add](#add)|Aggiunge uno o più elementi o una struttura **SAFEARRAY** a `CComSafeArray`.|  
 |[CComSafeArray::Attach](#attach)|Collega una struttura **SAFEARRAY** a un oggetto `CComSafeArray` .|  
 |[CComSafeArray::CopyFrom](#copyfrom)|Copia il contenuto di una struttura **SAFEARRAY** nell'oggetto `CComSafeArray` .|  
-|[CComSafeArray::CopyTo](#copyto)|Crea una copia dell'oggetto `CComSafeArray`.|  
-|[CComSafeArray:: Create](#create)|Crea un oggetto `CComSafeArray`.|  
-|[CComSafeArray:: Destroy](#destroy)|Elimina un oggetto `CComSafeArray`.|  
+|[CComSafeArray::CopyTo](#copyto)|Crea una copia dell'oggetto `CComSafeArray` .|  
+|[CComSafeArray::Create](#create)|Crea un oggetto `CComSafeArray` .|  
+|[CComSafeArray::Destroy](#destroy)|Elimina un oggetto `CComSafeArray` .|  
 |[CComSafeArray::Detach](#detach)|Scollega una struttura **SAFEARRAY** da un oggetto `CComSafeArray` .|  
 |[CComSafeArray::GetAt](#getat)|Recupera un singolo elemento da una matrice unidimensionale.|  
 |[CComSafeArray::GetCount](#getcount)|Restituisce il numero di elementi nella matrice.|  
@@ -126,13 +107,13 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|Questo membro dati contiene l'indirizzo della struttura **SAFEARRAY** .|  
   
 ## <a name="remarks"></a>Note  
- `CComSafeArray`fornisce un wrapper per il [il tipo di dati SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) (classe), rendendo sufficiente per creare e gestire le matrici unidimensionali e multidimensionali di quasi uno qualsiasi dei tipi VARIANT supportati.  
+ `CComSafeArray` fornisce un wrapper per la classe [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) , semplificando la creazione e la gestione di matrici unidimensionali e multidimensionali di quasi ogni tipo supportato da VARIANT.  
   
  `CComSafeArray` semplifica il passaggio delle matrici tra processi e fornisce anche protezione aggiuntiva poiché controlla i valori degli indici della matrice rispetto ai limiti superiore e inferiore.  
   
  Il limite inferiore di una classe `CComSafeArray` può iniziare con qualsiasi valore definito dall'utente; tuttavia, le matrici a cui si accede con C++ usano un limite inferiore pari a 0. Altri linguaggi, quali Visual Basic, possono usare altri valori di delimitazione (ad esempio da -10 a 10).  
   
- Utilizzare [CComSafeArray:: Create](#create) per creare un `CComSafeArray` oggetto, e [CComSafeArray:: Destroy](#destroy) per eliminarlo.  
+ Usare [CComSafeArray::Create](#create) per creare un oggetto `CComSafeArray` e [CComSafeArray::Destroy](#destroy) per eliminarlo.  
   
  Una classe `CComSafeArray` può contenere i subset di tipi di dati VARIANT seguenti:  
   
@@ -158,7 +139,7 @@ class CComSafeArray
  **Intestazione:** atlsafe.h  
   
 ## <a name="example"></a>Esempio  
- [!code-cpp[&#75; NVC_ATL_Utilities](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  Aggiunge uno o più elementi o una struttura **SAFEARRAY** a `CComSafeArray`.  
@@ -246,7 +227,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  Un puntatore a un **SAFEARRAY** struttura. Il costruttore utilizza questo indirizzo per creare una copia della matrice, pertanto la matrice non viene fatto riferimento dopo la costruzione.  
   
 ### <a name="remarks"></a>Note  
- Crea un oggetto `CComSafeArray`.  
+ Crea un oggetto `CComSafeArray` .  
   
 ##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
  Distruttore.  
@@ -276,7 +257,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  Questo metodo copia il contenuto di un **SAFEARRAY** in corrente `CComSafeArray` oggetto. Il contenuto esistente della matrice viene sostituito.  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
- Crea una copia dell'oggetto `CComSafeArray`.  
+ Crea una copia dell'oggetto `CComSafeArray` .  
   
 ```
 HRESULT CopyTo(LPSAFEARRAY* ppArray);
@@ -292,7 +273,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Note  
  Questo metodo copia il contenuto di un `CComSafeArray` dell'oggetto in un **SAFEARRAY** struttura.  
   
-##  <a name="create"></a>CComSafeArray:: Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  Crea un oggetto `CComSafeArray`.  
   
 ```
@@ -319,8 +300,8 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Note  
  Oggetto `CComSafeArray` oggetto può essere creato da un oggetto esistente **SAFEARRAYBOUND** struttura e il numero di dimensioni o specificando il numero di elementi nella matrice e il limite inferiore. Se la matrice è possibile accedere da Visual C++, il limite inferiore deve essere 0. Altri linguaggi potrebbero consentire altri valori per il limite inferiore (ad esempio, Visual Basic supporta matrici con gli elementi con un intervallo, ad esempio da -10 a 10).  
   
-##  <a name="destroy"></a>CComSafeArray:: Destroy  
- Elimina un oggetto `CComSafeArray`.  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
+ Elimina un oggetto `CComSafeArray` .  
   
 ```
 HRESULT Destroy();
@@ -606,8 +587,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  Il `bCopy` flag viene presa in considerazione quando gli elementi di tipo `BSTR` o **VARIANT** vengono aggiunti a una matrice. Il valore predefinito di **TRUE** garantisce che una nuova copia viene reso dei dati quando l'elemento viene aggiunto alla matrice.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di dati SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [CComSafeArray:: Create](#create)   
  [CComSafeArray:: Destroy](#destroy)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

@@ -1,34 +1,33 @@
 ---
-title: "ICommandImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::CreateRowset"
-  - "ICommandImpl.CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRowset (metodo)"
+title: 'ICommandImpl:: CreateRowset | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::CreateRowset
+- ICommandImpl.CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: a0890009-205e-4970-879f-01ed9d6a93f1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 510f222972b8d9306f7b248799679f0dd499288a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamato da [Esegui](../../data/oledb/icommandimpl-execute.md) per creare un singolo rowset.  
+# <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
+Chiamato da [Execute](../../data/oledb/icommandimpl-execute.md) per creare un singolo set di righe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -45,38 +44,38 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `RowsetClass`  
- Un membro della classe modello che rappresenta la classe del rowset dell'utente.  Solitamente generato dalla procedura guidata.  
+ Un membro della classe modello che rappresenta la classe di rowset dell'utente. In genere generato dalla procedura guidata.  
   
  `pUnkOuter`  
- \[in\] puntatore All'interfaccia di controllo di **IUnknown** se il rowset viene creato come parte di un aggregato; in caso contrario, è null.  
+ [in] Un puntatore a interfaccia di controllo **IUnknown** interfaccia se il set di righe viene creato come parte di un'aggregazione; in caso contrario, il valore è null.  
   
  `riid`  
- \[in\] corrisponde a `riid` in `ICommand::Execute`.  
+ [in] Corrisponde a `riid` in `ICommand::Execute`.  
   
  `pParams`  
- \[In\/out\] Corrisponde a `pParams` in `ICommand::Execute`.  
+ [in/out] Corrisponde a `pParams` in `ICommand::Execute`.  
   
  `pcRowsAffected`  
  Corrisponde a `pcRowsAffected` in `ICommand::Execute`.  
   
  `ppRowset`  
- \[In\/out\] Corrisponde a `ppRowset` in `ICommand::Execute`.  
+ [in/out] Corrisponde a `ppRowset` in `ICommand::Execute`.  
   
  `pRowsetObj`  
- \[out\] puntatore A un oggetto rowset.  In genere questo parametro non viene utilizzato, ma può essere utilizzato se è necessario eseguire ulteriori operazioni sul rowset prima di passarli a un oggetto COM.  La durata di `pRowsetObj` è associata da `ppRowset`.  
+ [out] Un puntatore a un oggetto set di righe. Questo parametro non viene in genere usato, ma può essere utilizzato se è necessario eseguire più operazioni nel set di righe prima di passarlo a un oggetto COM. La durata di `pRowsetObj` è associato a `ppRowset`.  
   
-## Valore restituito  
- Un valore standard di `HRESULT`.  Vedere `ICommand::Execute` per un elenco di valori comuni.  
+## <a name="return-value"></a>Valore restituito  
+ Un valore `HRESULT` standard. Vedere `ICommand::Execute` per un elenco di valori tipici.  
   
-## Note  
- Per creare più di un rowset, o fornire i propri condizioni per creare rowset diversi, inserire le chiamate diverse a `CreateRowset` da **Esegui**.  
+## <a name="remarks"></a>Note  
+ Per creare più di un set di righe o per fornire la propria condizioni per la creazione di set di righe diverso, effettuare le diverse chiamate alle `CreateRowset` dall'interno **Execute**.  
   
- Vedere [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx)*in OLE DB Programmer's Reference.*  
+ Vedere [ICommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) nel *di riferimento per programmatori OLE DB.*  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ICommandImpl](../../data/oledb/icommandimpl-class.md)

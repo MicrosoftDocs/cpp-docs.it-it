@@ -1,35 +1,36 @@
 ---
-title: "ATL Connection Point Example | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "punti di connessione [C++], esempi"
-  - "examples [ATL]"
+title: Esempio di punto di connessione ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connection points [C++], examples
+- examples [ATL]
 ms.assetid: a49721b7-f308-43de-8868-f662a94bc81a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 518976381209fe774f32b286e42a9840159a9404
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Connection Point Example
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo esempio viene illustrato un oggetto che supporti [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) come interfaccia di output:  
+# <a name="atl-connection-point-example"></a>Esempio di punto di connessione ATL
+Questo esempio viene illustrato un oggetto che supporta [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) come un'interfaccia in uscita:  
   
- [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/CPP/atl-connection-point-example_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]  
   
- In specificare `IPropertyNotifySink` come interfaccia in uscita, è possibile utilizzare la classe [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) anziché `IConnectionPointImpl`.  Di seguito è riportato un esempio:  
+ Quando si specifica `IPropertyNotifySink` come un'interfaccia in uscita, è possibile utilizzare una classe [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) anziché `IConnectionPointImpl`. Ad esempio:  
   
- [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/CPP/atl-connection-point-example_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Punto di connessione](../atl/atl-connection-points.md)
+

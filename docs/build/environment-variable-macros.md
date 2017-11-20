@@ -1,34 +1,34 @@
 ---
-title: "Macro di variabili di ambiente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variabili di ambiente, macro in NMAKE"
-  - "macro, variabili di ambiente"
-  - "NMAKE (programma), macro di variabili di ambiente"
+title: Macro di variabili di ambiente | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, environment variable macros
+- environment variables, macros in NMAKE
+- macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b64e6c167df00d072b70a2f39e882a84357b4eab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Macro di variabili di ambiente
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-NMAKE eredita le definizioni di macro per le variabili di ambiente esistenti prima dell'avvio della sessione.  Se è stata impostata una variabile nell'ambiente del sistema operativo, questa sarà disponibile come macro NMAKE.  I nomi ereditati vengono convertiti in maiuscole.  L'ereditarietà ha luogo prima della pre\-elaborazione.  Utilizzare l'opzione \/E per fare in modo che le macro ereditate dalle variabili di ambiente eseguano l'override delle macro con lo stesso nome nel makefile.  
+# <a name="environment-variable-macros"></a>Macro di variabili di ambiente
+NMAKE eredita le definizioni di macro di variabili di ambiente esistano prima dell'avvio della sessione. Se nell'ambiente del sistema operativo è stata impostata una variabile, è disponibile come una macro di NMAKE. I nomi ereditati vengono convertiti in caratteri maiuscoli. Prima di pre-elaborazione viene eseguita l'ereditarietà. Utilizzare l'opzione /E per le macro ereditate dalle variabili di ambiente per eseguire l'override delle macro con lo stesso nome nel makefile.  
   
- Le macro di variabili di ambiente possono essere ridefinite nella sessione. In questo modo, verrà modificata la variabile di ambiente corrispondente.  Le variabili di ambiente possono essere modificate anche con il comando SET.  Utilizzando tale comando per modificare una variabile di ambiente in una sessione, non viene tuttavia modificata la macro corrispondente.  
+ Macro di variabili di ambiente possono essere ridefinite nella sessione e si cambia la variabile di ambiente corrispondente. È inoltre possibile modificare le variabili di ambiente con il comando SET. Utilizzando il comando SET per modificare una variabile di ambiente in una sessione non modifica la macro corrispondente, tuttavia.  
   
- Di seguito è riportato un esempio.  
+ Ad esempio:  
   
 ```  
 PATH=$(PATH);\nonesuch  
@@ -37,9 +37,9 @@ all:
     echo %PATH%  
 ```  
   
- In questo esempio la modifica di `PATH` determina anche la modifica della corrispondente variabile di ambiente `PATH` e l'aggiunta di `\nonesuch` al percorso.  
+ In questo esempio, la modifica `PATH` Modifica variabile di ambiente corrispondente `PATH`; aggiunge `\nonesuch` al percorso.  
   
- Se una variabile di ambiente viene definita come stringa mediante una sintassi non corretta in un makefile, non verrà creata alcuna macro né generato alcun messaggio di avviso.  Se il valore di una variabile contiene un simbolo di dollaro \($\), esso viene interpretato come inizio di una chiamata di macro.  L'utilizzo della macro può generare un comportamento imprevisto.  
+ Se una variabile di ambiente viene definita come una stringa che è sintatticamente errata di un makefile, verrà creata alcuna macro e non viene generato alcun messaggio di avviso. Se un valore della variabile contiene un segno di dollaro ($), esso viene interpretato come l'inizio di una chiamata di macro. Utilizzo della macro può causare comportamenti imprevisti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Macro speciali di NMAKE](../build/special-nmake-macros.md)

@@ -1,40 +1,40 @@
 ---
-title: "Recordset: dichiarazione di una classe per una tabella (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recordset ODBC, dichiarazione di classe per tabelle"
-  - "recordset, dichiarazione di classi per tabelle"
+title: 'Recordset: Dichiarazione di una classe per una tabella (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, declaring class for tables
+- recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fe8d93d39d298b65b61218356f70bc65b82810bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset: dichiarazione di una classe per una tabella (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset: dichiarazione di una classe per una tabella (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- La classe di recordset più comune consente di aprire una singola tabella.  Per dichiarare una classe di recordset per una sola tabella, utilizzare il modello [Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) scegliendo il comando **Aggiungi classe** e specificare le colonne desiderate definendo per ciascuna un membro dati di campo del recordset corrispondente.  
+ La classe recordset più comune verrà visualizzata una singola tabella. Per dichiarare una classe per una singola tabella, utilizzare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) da **Aggiungi classe** e scegliere le colonne desiderate specificando un membro dati di campo del recordset corrispondente.  
   
- È inoltre possibile utilizzare i recordset per effettuare le operazioni riportate di seguito.  
+ Altri utilizzi per i recordset includono:  
   
--   Join di due o più tabelle.  
+-   Unione di due o più tabelle.  
   
--   Inclusione dei risultati di una query già definita.  
+-   Contenente i risultati di una query predefinita.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: creazione e chiusura di recordset \(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Recordset: dichiarazione di una classe per una query già definita \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Recordset: esecuzione di un join \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
+ [Recordset: Dichiarazione di una classe per una Query già definita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

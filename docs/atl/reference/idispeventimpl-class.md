@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,24 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: c51a305d1b858aaa31a9bf700e825848ba3eb563
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (classe)
 Questa classe fornisce le implementazioni del `IDispatch` metodi.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -76,7 +58,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  Il puntatore per l'IID dell'interfaccia dispatch evento implementato da questa classe. Questa interfaccia deve essere definita nella libreria dei tipi identificata da `plibid`, `wMajor`, e `wMinor`.  
   
  `plibid`  
- Un puntatore alla libreria dei tipi che definisce l'interfaccia dispatch a cui puntava `pdiid`. Se **/ GUID_NULL**, verrà caricata la libreria dei tipi dall'oggetto di origine eventi.  
+ Un puntatore alla libreria dei tipi che definisce l'interfaccia dispatch a cui puntava `pdiid`. Se **& GUID_NULL**, verrà caricata la libreria dei tipi dall'oggetto di origine eventi.  
   
  `wMajor`  
  Versione principale della libreria dei tipi. Il valore predefinito è 0.  
@@ -106,7 +88,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Individua l'indice di funzione per l'identificatore di distribuzione specificato.|  
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Esegue il mapping di un singolo membro e un insieme facoltativo di nomi di argomento a un set corrispondente di integer DISPID.|  
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Esegue il mapping di un singolo membro e un insieme facoltativo di nomi di argomento a un set corrispondente di tipo integer DISPID.|  
 |[IDispEventImpl::GetTypeInfo](#gettypeinfo)|Recupera le informazioni sul tipo per un oggetto.|  
 |[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|Recupera il numero di interfacce di informazioni sul tipo.|  
 |[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|Recupera il tipo di base di un tipo definito dall'utente.|  
@@ -125,7 +107,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `IDispEventImpl`fornisce la stessa funzionalità [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), ad eccezione di tipo di informazioni sull'interfaccia ottiene da una libreria dei tipi anziché fornito come un puntatore a un [le strutture ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) struttura. Utilizzare `IDispEventSimpleImpl` quando non si dispone di una libreria dei tipi che descrive l'interfaccia eventi o per evitare l'overhead associato all'utilizzo della libreria dei tipi.  
   
 > [!NOTE]
-> `IDispEventImpl`e `IDispEventSimpleImpl` fornire la propria implementazione di **IUnknown:: QueryInterface** abilitazione ogni `IDispEventImpl` e `IDispEventSimpleImpl` classe di base per agire come un'identità COM separata consentendo l'accesso diretto ai membri della classe dell'oggetto COM principale.  
+> `IDispEventImpl`e `IDispEventSimpleImpl` fornire la propria implementazione di **IUnknown:: QueryInterface** abilitazione ogni `IDispEventImpl` e `IDispEventSimpleImpl` classe fungere da un'identità COM separata consentendo l'accesso diretto alla classe di base membri dell'oggetto COM principale.  
   
  Implementazione di ATL CE di ActiveX evento sink solo supporta i valori restituiti di tipo HRESULT o void dai metodi del gestore eventi; qualsiasi altro valore restituito non è supportato e il relativo comportamento sarà indefinito.  
   
@@ -183,7 +165,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Recupera le informazioni sul tipo relative a un oggetto che può quindi essere usato per ottenere informazioni sul tipo relative a un'interfaccia.  
@@ -205,7 +187,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IDispatch:: GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in Windows SDK.  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  Recupera il tipo di base di un tipo definito dall'utente.  

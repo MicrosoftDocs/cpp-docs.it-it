@@ -1,32 +1,32 @@
 ---
-title: "File inline multipli | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inline (file), NMAKE multipli"
-  - "file inline multipli"
-  - "NMAKE (programma), inline (file)"
+title: File Inline multipli | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, multiple NMAKE
+- multiple inline files
+- NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8bdba2afcc7bc17cb0609e95764b06d83d4cc91e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# File inline multipli
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Con un comando è possibile creare più file inline.  
+# <a name="multiple-inline-files"></a>File inline multipli
+Un comando è possibile creare più di un file inline.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,8 +37,8 @@ inlinetext
 <<[KEEP | NOKEEP]  
 ```  
   
-## Note  
- Per ogni file specificare una o più righe di testo inline seguite da una riga di chiusura contenente il delimitatore.  Iniziare il testo del secondo file nella riga successiva alla riga di delimitazione del primo file.  
+## <a name="remarks"></a>Note  
+ Per ogni file, specificare uno o più righe di testo inline seguite da una riga di chiusura contenente il delimitatore. Iniziare il testo del secondo file sulla riga successiva riga di delimitazione per il primo file.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File inline in un makefile](../build/inline-files-in-a-makefile.md)

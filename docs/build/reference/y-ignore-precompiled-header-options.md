@@ -1,60 +1,59 @@
 ---
-title: "/Y- (Ignora le opzioni di intestazioni precompilate) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/y-"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Y- (opzione del compilatore) [C++]"
-  - "-Y- (opzione del compilatore) [C++]"
-  - "Y- (opzione del compilatore) [C++]"
+title: -Y-(ignora le opzioni di intestazione precompilata) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /y-
+dev_langs: C++
+helpviewer_keywords:
+- Y- compiler option [C++]
+- -Y- compiler option [C++]
+- /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 719843e2ea337011757beda5c4504c7e889ed920
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Y- (Ignora le opzioni di intestazioni precompilate)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consente di ignorare tutte le altre opzioni del compilatore `/Y`. Non può essere sottoposta a override.  
+# <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignora le opzioni dell'intestazione precompilata)
+Tutte le altre cause `/Y` compilatore opzioni verrà ignorato (e non è possibile stesso essere sottoposto a override).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Y-  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Per ulteriori informazioni sulle intestazioni precompilate, vedere:  
   
--   [\/Y \(Intestazioni precompilate\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)  
   
--   [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md)  
+-   [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

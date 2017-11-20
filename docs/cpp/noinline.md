@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- noinline_cpp
-dev_langs:
-- C++
+f1_keywords: noinline_cpp
+dev_langs: C++
 helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba1e7f6563b480cadc171bd6cea6e5fb4cb9839
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 6b8548f428509c2af45858e1baf927da54ebe8f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="noinline"></a>noinline
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -49,5 +45,4 @@ class X {
  [declspec](../cpp/declspec.md)   
  [Parole chiave](../cpp/keywords-cpp.md)   
  [inline, __inline, \__forceinline](inline-functions-cpp.md)
-
 

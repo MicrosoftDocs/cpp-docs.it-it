@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- this_cpp
-dev_langs:
-- C++
+f1_keywords: this_cpp
+dev_langs: C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 86ccf50a089b1497bdc166ee9367215dc59b3ca1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="this-pointer"></a>Puntatore this
 Il **questo** puntatore è accessibile solo all'interno di funzioni membro non statico di un **classe**, `struct`, o **unione** tipo. Viene puntato l'oggetto per il quale è chiamata la funzione membro. Funzioni membro statiche non hanno un **questo** puntatore.  
@@ -182,7 +178,7 @@ int main()
   
  Il tipo di **questo** in un membro della funzione è descritto dalla sintassi seguente, dove *cv-qualifier-list* è determinato dal dichiaratore di funzioni membro e può essere **const**o **volatile** (o entrambi), e *-tipo di classe* è il nome della classe:  
   
- *tipo di classe [cv-qualifier-list]* ** \* const questo  **  
+ *tipo di classe [cv-qualifier-list]*  **\* const questo**   
   
  In altre parole, **questo** è sempre un puntatore di tipo const e non può essere riassegnato.  Il **const** o `volatile` qualificatori utilizzati nella dichiarazione di funzione membro vengono applicati all'istanza della classe a cui puntata **questo** nell'ambito di tale funzione.  
   

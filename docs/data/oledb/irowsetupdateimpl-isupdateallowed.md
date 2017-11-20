@@ -1,34 +1,33 @@
 ---
-title: "IRowsetUpdateImpl::IsUpdateAllowed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl::IsUpdateAllowed"
-  - "IRowsetUpdateImpl.IsUpdateAllowed"
-  - "IsUpdateAllowed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsUpdateAllowed (metodo)"
+title: 'IRowsetUpdateImpl:: IsUpdateAllowed | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl::IsUpdateAllowed
+- IRowsetUpdateImpl.IsUpdateAllowed
+- IsUpdateAllowed
+dev_langs: C++
+helpviewer_keywords: IsUpdateAllowed method
 ms.assetid: d6daf3b3-a8e0-4275-a67d-897dea01e297
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: feaa5b397989667da62bbf979603391c08eada2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::IsUpdateAllowed
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eseguire l'override di questo metodo per verificare la presenza di sicurezza, integrità e così via, prima degli aggiornamenti.  
+# <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
+Eseguire l'override di questo metodo per verificare la presenza di sicurezza, l'integrità, e così via prima degli aggiornamenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,21 +38,21 @@ Eseguire l'override di questo metodo per verificare la presenza di sicurezza, in
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *status*  
- \[in\] lo stato delle operazioni in sospeso in righe.  
+ [in] Lo stato di operazioni sulle righe in sospeso.  
   
  *hRowUpdate*  
- \[in\] handle per le righe che desidera aggiornare.  
+ [in] Handle per le righe in cui che l'utente desidera aggiornare.  
   
  *pRowStatus*  
- \[out\] lo stato restituito all'utente.  
+ [out] Lo stato restituito all'utente.  
   
-## Note  
- Se si determina che un aggiornamento è autorizzato, restituisce `S_OK`; in caso contrario restituisce **E\_FAIL**.  Se si consente un aggiornamento, è inoltre necessario impostare **DBROWSTATUS** in [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) a [stato della riga](https://msdn.microsoft.com/en-us/library/ms722752.aspx)appropriato.  
+## <a name="remarks"></a>Note  
+ Se si determina che un aggiornamento sono consentito, restituisce `S_OK`; in caso contrario restituisce **E_FAIL**. Se si consente a un aggiornamento, è inoltre necessario impostare il **DBROWSTATUS** in [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) al relativo [lo stato della riga](https://msdn.microsoft.com/en-us/library/ms722752.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)

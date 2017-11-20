@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wspawnlp
 - wspawnlp
 - _spawnlp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wspawnlp function
 - _spawnlp function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 66172824d106860b6fa4408f85cba4a10bce696e
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d0453ce194e9321393f87ed492b92cf3ae11d4bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 Crea ed esegue un nuovo processo.  
@@ -108,7 +91,7 @@ intptr_t _wspawnlp(
  L'elenco di argomenti supera i 1024 byte.  
   
  `EINVAL`  
-L'argomento `mode` non è valido.  
+ L'argomento `mode` non è valido.  
   
  `ENOENT`  
  Il file o il percorso non è stato trovato.  

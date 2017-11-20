@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -45,33 +43,18 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6353229aecc273daac03635f73761345171bd30e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime, _mkgmtime32, _mkgmtime64
-Converte un'ora UTC rappresentata da un `tm``struct` in un'ora UTC rappresentata da un tipo `time_t`.  
+Converte un'ora UTC rappresentata da un `tm struct` in un'ora UTC rappresentata da un tipo `time_t`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,7 +73,7 @@ __time64_t _mkgmtime64(
   
 #### <a name="parameters"></a>Parametri  
  `timeptr`  
- Puntatore all'ora UTC come `struct``tm` da convertire.  
+ Puntatore all'ora UTC come `struct tm` da convertire.  
   
 ## <a name="return-value"></a>Valore restituito  
  Una quantità di tipo `__time32_t` o `__time64_t` che rappresenta il numero di secondi trascorsi dalla mezzanotte del 1 gennaio 1970 nel formato UTC (Coordinated Universal Time). Se la data è compresa nell'intervallo (vedere la sezione Osservazioni) o l'input non può essere interpretato come un'ora valida, il valore restituito è -1.  

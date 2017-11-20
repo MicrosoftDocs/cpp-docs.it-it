@@ -1,61 +1,60 @@
 ---
-title: "Classe CDBPropIDSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet"
-  - "ATL.CDBPropIDSet"
-  - "ATL::CDBPropIDSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropIDSet (classe)"
+title: Classe CDBPropIDSet | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet
+- ATL.CDBPropIDSet
+- ATL::CDBPropIDSet
+dev_langs: C++
+helpviewer_keywords: CDBPropIDSet class
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 996e1a04e9870a9cd3cf02ca6a8c7c05a1dc3e56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CDBPropIDSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eredita dalla struttura di **DBPROPIDSET** e aggiungere un costruttore che consente di inizializzare i campi delle chiavi nonché il metodo di accesso a [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md).  
+# <a name="cdbpropidset-class"></a>Classe CDBPropIDSet
+Eredita il **DBPROPIDSET** struttura e aggiunge un costruttore che inizializza i campi chiavi, nonché [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accedere al metodo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CDBPropIDSet : public tagDBPROPIDSET  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Aggiunge una proprietà da impostare la proprietà ID.|  
+|[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)|Aggiunge una proprietà per il set di ID di proprietà.|  
 |[CDBPropIDSet](../../data/oledb/cdbpropidset-cdbpropidset.md)|Costruttore.|  
-|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Imposta il GUID del set della proprietà ID.|  
+|[SetGUID](../../data/oledb/cdbpropidset-setguid.md)|Imposta il GUID dell'ID di proprietà.|  
   
-### Operatori  
+### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator \=](../../data/oledb/cdbpropidset-operator-equal.md)|Assegna il contenuto di una proprietà ID impostata su un altro.|  
+|[operator =](../../data/oledb/cdbpropidset-operator-equal.md)|Assegna il contenuto di una proprietà ID è impostato su un'altra.|  
   
-## Note  
- Strutture di **DBPROPIDSET** di utilizzo di consumer OLE DB per passare una matrice di proprietà l'id che il consumer desidera ottenere informazioni della proprietà.  Le proprietà identificate in una singola struttura di [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) appartengono a un set di proprietà.  
+## <a name="remarks"></a>Note  
+ Usare i consumer OLE DB **DBPROPIDSET** strutture per passare una matrice di ID di proprietà per cui il consumer desidera ottenere informazioni sulle proprietà. Le proprietà identificate in un'unica [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) struttura appartengono al set di una proprietà.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

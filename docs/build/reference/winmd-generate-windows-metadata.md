@@ -1,56 +1,54 @@
 ---
-title: "/WINMD (generare metadati di Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateWindowsMetadata"
-dev_langs: 
-  - "C++"
+title: -WINMD (genera i metadati di Windows) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs: C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7e9c8a0c13256f83e4418d754d11fc69b060e034
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /WINMD (generare metadati di Windows)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Abilita la generazione di file di metadati di Windows Runtime \(.winmd\).  
+# <a name="winmd-generate-windows-metadata"></a>/WINMD (generare metadati di Windows)
+Abilita la generazione di file di metadati di Windows Runtime (con estensione winmd).  
   
 ```  
-  
 /WINMD[:{NO|ONLY}]  
 ```  
   
-## Note  
- \/WINMD  
- L'impostazione predefinita per le applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Il linker genera sia il file eseguibile binario che il file di metadati di .winmd.  
+## <a name="remarks"></a>Note  
+ /WINMD  
+ L'impostazione predefinita per le applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Il linker genera sia il file eseguibile binario che il file di metadati con estensione winmd.  
   
- \/WINMD:NO  
- Il linker genera solo il file eseguibile binario, ma non un file .winmd.  
+ /WINMD:NO  
+ Il linker genera solo il file eseguibile binario, ma non un file con estensione winmd.  
   
- \/WINMD:ONLY  
- Il linker genera solo il file .winmd, ma non il file eseguibile binario.  
+ /WINMD:ONLY  
+ Il linker genera solo il file con estensione winmd, ma non un file eseguibile binario.  
   
- Per impostazione predefinita, il nome file di output avrà il form `binaryname`.winmd.  Per specificare un altro nome file, utilizzare l'opzione [\/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md).  
+ Per impostazione predefinita, il nome file di output avrà il formato `binaryname`.winmd. Per specificare un nome file diverso, utilizzare il [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) opzione.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Selezionare il **Linker** cartella.  
   
-3.  Selezionare la pagina delle proprietà **Metadati Windows**.  
+3.  Selezionare il **metadati di Windows** pagina delle proprietà.  
   
-4.  Nell'elenco a discesa di **Genera metadati Windows**, selezionare l'opzione desiderata.  
+4.  Nel **genera metadati Windows** elenco a discesa, selezionare l'opzione desiderata.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

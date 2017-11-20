@@ -1,60 +1,60 @@
 ---
-title: "Transazione (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "database [C++], transazioni"
-  - "ODBC [C++], transazioni"
-  - "ODBC (recordset) [C++], transazioni"
-  - "ODBC (recordset) [C++], aggiornamento"
-  - "recordset [C++], transazioni"
-  - "recordset [C++], aggiornamento"
-  - "transazioni [C++], classi ODBC MFC"
+title: Transazione (ODBC) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets [C++], updating
+- transactions [C++], MFC ODBC classes
+- ODBC [C++], transactions
+- recordsets [C++], updating
+- databases [C++], transactions
+- recordsets [C++], transactions
+- ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38348bb2c1e78111e996cf84ae4bc81aceb96895
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Transazione (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="transaction-odbc"></a>Transazione (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- Una transazione è una soluzione per raggruppare una serie di aggiornamenti relativi a un'[origine dati](../../data/odbc/data-source-odbc.md), in modo che il commit di tutti gli aggiornamenti venga eseguito in un'unica operazione oppure non venga eseguito in caso di rollback della transazione.  Se non si utilizzano le transazioni, il commit delle modifiche apportate all'origine dati viene eseguito automaticamente anziché su richiesta.  
+ Una transazione è un modo per raggruppare una serie di aggiornamenti da un [origine dati](../../data/odbc/data-source-odbc.md) in modo che tutti viene eseguito il commit in una sola volta o non venga eseguito in caso di rollback della transazione. Se non si utilizza una transazione, le modifiche apportate all'origine dati vengono eseguite automaticamente anziché su richiesta.  
   
 > [!NOTE]
->  Non tutti i driver per database ODBC supportano le transazioni.  Chiamare la funzione membro `CanTransact` dell'oggetto [CDatabase](../../mfc/reference/cdatabase-class.md) o [CRecordset](../../mfc/reference/crecordset-class.md) per determinare se il driver utilizzato supporta le transazioni per un determinato database.  Si tenga presente che `CanTransact` non indica se l'origine dati fornisce il supporto completo delle transazioni.  È inoltre necessario chiamare `CDatabase::GetCursorCommitBehavior` e `CDatabase::GetCursorRollbackBehavior` dopo **CommitTrans** e **Rollback** per verificare gli effetti della transazione sull'oggetto `CRecordset` aperto.  
+>  Non tutti i driver di database ODBC supportano le transazioni. Chiamare il `CanTransact` funzione membro del [CDatabase](../../mfc/reference/cdatabase-class.md) o [CRecordset](../../mfc/reference/crecordset-class.md) oggetto per determinare se il driver supporta le transazioni per un determinato database. Si noti che `CanTransact` non indica se l'origine dati fornisce supporto completo delle transazioni. È inoltre necessario chiamare `CDatabase::GetCursorCommitBehavior` e `CDatabase::GetCursorRollbackBehavior` dopo **CommitTrans** e **Rollback** per controllare l'effetto della transazione all'apertura `CRecordset` oggetto.  
   
- Quando si chiama **Update**, le chiamate alle funzioni membro `AddNew` ed **Edit** di un oggetto `CRecordset` agiscono immediatamente sull'origine dati.  Anche le chiamate a **Delete** hanno effetto immediato.  Al contrario, è possibile utilizzare una transazione composta da più chiamate ad `AddNew`, **Edit**, **Update** e **Delete**, che vengono eseguite ma non applicate finché **CommitTrans** non viene chiamata in modo esplicito.  Quando si imposta una transazione, è possibile eseguire una serie di chiamate di questo tipo, senza perdere la possibilità di annullarle.  Se una risorsa fondamentale non è disponibile oppure se altre condizioni impediscono il completamento dell'intera transazione, è possibile eseguire il rollback anziché il commit della transazione.  In questo caso, nessuna delle modifiche riguardanti la transazione viene applicata all'origine dati.  
-  
-> [!NOTE]
->  Attualmente la classe `CRecordset` non supporta gli aggiornamenti dell'origine dati se si è implementato il recupero di massa delle righe,  pertanto non è possibile inviare chiamate ad `AddNew`, **Edit**, **Delete** o **Update**.  Tuttavia, è possibile scrivere funzioni personalizzate per effettuare gli aggiornamenti e quindi chiamare tali funzioni all'interno di una determinata transazione.  Per ulteriori informazioni sul recupero di massa di righe, vedere [Recordset: recupero di massa di record \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ Le chiamate al `AddNew` e **modifica** funzioni membro di un `CRecordset` oggetto influenzano l'origine dati quando si chiama **aggiornamento**. **Eliminare** anche le chiamate hanno effetto immediatamente. Al contrario, è possibile utilizzare una transazione composta da più chiamate a `AddNew`, **modifica**, **aggiornamento**, e **eliminare**, che vengono eseguite, ma non eseguito il commit fino a si chiama **CommitTrans** in modo esplicito. Mediante la definizione di una transazione, è possibile eseguire una serie di tali chiamate mantenendo la possibilità di eseguire il rollback. Se non è disponibile una risorsa critica o un'altra condizione impedisce il completamento dell'intera transazione, è possibile il rollback della transazione anziché il commit. In tal caso, nessuna delle modifiche riguardanti la transazione viene applicata all'origine dati.  
   
 > [!NOTE]
->  Oltre a influire sul recordset, le transazioni hanno effetto sulle istruzioni SQL eseguite direttamente mentre si utilizza l'oggetto ODBC **HDBC** associato all'oggetto `CDatabase` oppure un oggetto **HSTMT** ODBC basato su tale oggetto **HDBC**.  
-  
- Le transazioni sono particolarmente utili quando più record devono essere aggiornati simultaneamente.  In questo caso, è necessario che la transazione non rimanga incompleta, come può accadere se viene generata un'eccezione prima che venga effettuato l'ultimo aggiornamento.  Il raggruppamento di più aggiornamenti in una transazione consente l'annullamento delle modifiche \(rollback\) per riportare i record allo stato precedente alla transazione.  Se ad esempio una banca trasferisce denaro dal conto A al conto B, sia il prelievo da A che il deposito in B dovranno essere completati correttamente, altrimenti l'intera transazione non verrà eseguita.  
-  
- Nelle classi di database è necessario eseguire le transazioni attraverso gli oggetti `CDatabase`.  Un oggetto `CDatabase` rappresenta un collegamento con un'origine dati. Uno o più recordset associati a tale oggetto `CDatabase` operano su tabelle del database attraverso funzioni membro del recordset.  
+>  Attualmente la classe `CRecordset` non supporta gli aggiornamenti dell'origine dati se è stato implementato il recupero di massa di righe. Questo significa che è possibile eseguire chiamate a `AddNew`, **modifica**, **eliminare**, o **aggiornamento**. Tuttavia, è possibile scrivere funzioni personalizzate per eseguire gli aggiornamenti e quindi chiamare tali funzioni all'interno di una determinata transazione. Per ulteriori informazioni sulle righe di massa, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
 > [!NOTE]
->  È supportato un solo livello di transazioni.  Non è possibile annidare le transazioni e una transazione non può comprendere più oggetti di database.  
+>  Oltre a influire sul recordset, le transazioni influiscono sulle istruzioni SQL eseguite direttamente, purché si utilizzi ODBC **HDBC** associato il `CDatabase` oggetto o un database ODBC **HSTMT** in base a che **HDBC**.  
   
- Negli argomenti riportati di seguito vengono fornite ulteriori informazioni sull'esecuzione delle transazioni:  
+ Le transazioni sono particolarmente utili quando si dispone di più record che devono essere aggiornati contemporaneamente. In questo caso, si desidera evitare una transazione completata metà come può accadere se è stata generata un'eccezione prima che venisse effettuato l'ultimo aggiornamento. Raggruppamento di tali aggiornamenti in una transazione consente di ripristinare (ripristino) le modifiche e restituisce i record sullo stato di dati. Ad esempio, se una banca trasferisce denaro dal conto al conto B, sia il prelievo da A che il deposito in B debba essere completati correttamente o l'intera transazione dovrà avere esito negativo.  
   
--   [Transazione: esecuzione di una transazione in un recordset \(ODBC\)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+ Le classi di database, l'esecuzione delle transazioni tramite `CDatabase` oggetti. Oggetto `CDatabase` oggetto rappresenta una connessione a un'origine dati, e uno o più recordset associato `CDatabase` oggetto operano sulle tabelle del database tramite le funzioni membro oggetto recordset.  
   
--   [Transazione: effetti delle transazioni sugli aggiornamenti \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+> [!NOTE]
+>  È supportato un solo livello di transazioni. Non è possibile nidificare le transazioni né una transazione può estendersi a più oggetti di database.  
   
-## Vedere anche  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+ Gli argomenti seguenti forniscono ulteriori informazioni sull'eseguono delle transazioni:  
+  
+-   [Transazione: esecuzione di una transazione in un recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+  
+-   [Transazione: effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

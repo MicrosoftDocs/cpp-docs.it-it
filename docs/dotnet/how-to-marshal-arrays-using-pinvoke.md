@@ -1,42 +1,42 @@
 ---
-title: "Procedura: effettuare il marshalling di matrici utilizzando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshalling dei dati [C++], matrici"
-  - "interoperabilità [C++], matrici"
-  - "marshalling [C++], matrici"
-  - "platform invoke [C++], matrici"
+title: 'Procedura: marshalling di matrici utilizzando PInvoke | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf034bb191174d78ca8a614559e9f1e4976d88bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: effettuare il marshalling di matrici utilizzando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come è possibile chiamare, utilizzando il tipo CLR <xref:System.String>, funzioni native che accettano stringhe di tipo C, sfruttando il supporto per platform invoke di .NET Framework.  Se possibile, si consiglia ai programmatori Visual C\+\+ di utilizzare in alternativa le funzionalità di interoperabilità di C\+\+, poiché P\/Invoke fornisce un supporto limitato per la segnalazione degli errori in fase di compilazione, non è indipendente dai tipi e può risultare difficile da implementare.  Se l'API non gestita viene fornita come DLL e il codice sorgente non è disponibile, P\/Invoke è l'unica opzione. In caso contrario, vedere [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procedura: Effettuare il marshalling di matrici utilizzando PInvoke
+In questo argomento viene illustrato come funzioni native che accettano stringhe di tipo C possono essere chiamate utilizzando il tipo di stringa CLR <xref:System.String> utilizzando il supporto di .NET Framework Platform Invoke. I programmatori di Visual C++ si consiglia invece di utilizzare le funzionalità di interoperabilità C++ (sempre) poiché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione (in caso contrario, vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
   
-## Esempio  
- Le matrici native e gestite vengono disposte in memoria in modo differente. Di conseguenza, il passaggio di tali matrici tra codice gestito e codice non gestito richiede una conversione \(marshalling\).  In questo argomento viene illustrato come è possibile passare una matrice di semplici elementi \(copiabili\) alle funzioni native dal codice gestito.  
+## <a name="example"></a>Esempio  
+ Poiché le matrici native e gestite vengono disposte in modo diverso in memoria, passando correttamente oltre i limiti gestiti/non gestiti non richiede conversione o effettuare il marshalling. In questo argomento viene illustrato come una matrice di elementi semplice (copiabili) può essere passata alle funzioni native da codice gestito.  
   
- Per il marshalling dei dati gestiti\/non gestiti viene in genere utilizzato l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> per creare un punto di ingresso gestito per ciascuna funzione nativa che verrà utilizzata.  Nel caso delle funzioni che accettano matrici come argomenti, è necessario utilizzare anche l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per specificare al compilatore il modo in cui verrà effettuato il marshalling dei dati.  Nell'esempio riportato di seguito viene utilizzata l'enumerazione <xref:System.Runtime.InteropServices.UnmanagedType> per indicare che il marshalling della matrice gestita verrà effettuato come matrice di tipo C.  
+ Come accade per il marshalling dei dati gestiti/non gestiti in generale, il <xref:System.Runtime.InteropServices.DllImportAttribute> attributo viene utilizzato per creare un punto di ingresso gestito per ogni funzione nativa che verrà utilizzato. Nel caso di funzioni che accettano di matrici come argomenti, il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo deve essere usato anche per specificare al compilatore la modalità di marshalling di dati. Nell'esempio seguente, il <xref:System.Runtime.InteropServices.UnmanagedType> enumerazione viene utilizzata per indicare che è verrà effettuato il marshalling della matrice gestita come una matrice di tipo C.  
   
- Il codice riportato di seguito è costituito da un modulo gestito e un modulo non gestito.  Il modulo non gestito è costituito da una DLL che definisce una funzione che accetta una matrice di Integer.  Il secondo modulo è un'applicazione gestita da riga di comando che importa tale funzione, definendola tuttavia rispetto a una matrice gestita, e che utilizza l'attributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> per specificare che la matrice deve essere convertita in una matrice nativa al momento della chiamata.  
+ Il codice seguente è costituito da una funzione non gestita e un modulo gestito. Il modulo non gestito è una DLL che definisce una funzione che accetta una matrice di interi. Il secondo modulo è un'applicazione della riga di comando gestita che importa tale funzione, ma definisce in termini di una matrice gestita e utilizza il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo per specificare che la matrice deve essere convertita in una matrice nativa quando viene chiamato.  
   
- Il modulo gestito è compilato con \/clr, ma funziona anche \/clr:pure.  
+ Il modulo gestito viene compilato con /clr, ma con /clr: pure funziona anche. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +59,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +84,7 @@ int main() {
 }  
 ```  
   
- Nessuna parte della DLL viene esposta al codice gestito utilizzando la normale direttiva \#include.  In realtà, l'accesso alla DLL viene eseguito solo in fase di esecuzione. Di conseguenza, gli eventuali problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
+ Si noti che nessuna parte della DLL viene esposto al codice gestito tramite tradizionale #include (direttiva). In effetti, la DLL viene eseguito in fase di esecuzione solo, problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
   
-## Vedere anche  
- [Utilizzo esplicito di PInvoke in C\+\+ \(attributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

@@ -1,74 +1,74 @@
 ---
-title: "Recordset: recupero di somme e altri risultati aggregati (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recordset ODBC, recupero di valori aggregati SQL"
-  - "recordset, recupero di valori aggregati SQL"
-  - "recupero di valori aggregati SQL da recordset"
-  - "valori aggregati SQL"
-  - "valori aggregati SQL, recupero da recordset"
-  - "progetti SQL Server, recupero di valori aggregati da recordset"
-  - "SQL, recupero di valori aggregati da recordset"
+title: 'Recordset: Recupero di somme e altri risultati aggregati (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SQL, retrieving aggregate values from recordsets
+- recordsets, retrieving SQL aggregate values
+- retrieving SQL aggregate values from recordsets
+- ODBC recordsets, retrieving SQL aggregate values
+- SQL aggregate values
+- SQL Server projects, retrieving aggregate values from recordsets
+- SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f69341095e2bf6ad97e3b9c3fa0535c349c47ca3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Recordset: recupero di somme e altri risultati aggregati (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- In questo argomento viene illustrato il recupero dei risultati aggregati mediante le parole chiave [SQL](../../data/odbc/sql.md) indicate di seguito.  
+ In questo argomento viene illustrato come ottenere i risultati aggregati con i seguenti [SQL](../../data/odbc/sql.md) parole chiave:  
   
--   **SUM** Calcola il totale dei valori all'interno di una colonna con un tipo di dati numerico.  
+-   **SOMMA** calcola il totale dei valori in una colonna con tipo di dati numerico.  
   
--   **MIN** Estrae il valore più piccolo all'interno di una colonna con un tipo di dati numerico.  
+-   **MIN** estrae il valore più piccolo in una colonna con tipo di dati numerico.  
   
--   **MAX** Estrae il valore più grande all'interno di una colonna con un tipo di dati numerico.  
+-   **MAX** estrae il valore più grande in una colonna con tipo di dati numerico.  
   
--   **AVG** Calcola la media di tutti i valori all'interno di una colonna con un tipo di dati numerico.  
+-   **AVG** calcola la media di tutti i valori in una colonna con tipo di dati numerico.  
   
--   **COUNT** Calcola il numero di record all'interno di una colonna con qualsiasi tipo di dati.  
+-   **CONTEGGIO** conta il numero di record in una colonna di qualsiasi tipo di dati.  
   
- Utilizzare queste funzioni SQL per recuperare informazioni statistiche sui record di un'origine dati senza estrarre i record dall'origine dati.  Il recordset creato è composto, in genere, da un singolo record contenente un valore, se tutte le colonne sono aggregazioni. Nel caso in cui si utilizzi una clausola **GROUP BY**, potrebbero essere presenti più record. Questo valore rappresenta il risultato del calcolo o dell'estrazione effettuata dalla funzione SQL.  
+ Utilizzare queste funzioni SQL per ottenere informazioni statistiche sui record di un'origine dati anziché estrarre i record dall'origine dati. Il recordset che viene creato in genere è costituito da un singolo record (se tutte le colonne sono aggregazioni) che contiene un valore. (Potrebbe essere più di un record se è stato usato un **GROUP BY** clausola.) Questo valore è il risultato del calcolo o estrazione eseguita dalla funzione SQL.  
   
 > [!TIP]
->  Se si desidera aggiungere una clausola SQL **GROUP BY** ed eventualmente una clausola **HAVING** all'istruzione SQL, aggiungerla alla fine di **m\_strFilter**.  Di seguito è riportato un esempio.  
+>  Per aggiungere un database SQL **GROUP BY** clausola (ed eventualmente un **HAVING** clausola) all'istruzione SQL, li aggiunge alla fine di **m_strFilter**. Ad esempio:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  
 ```  
   
- Per limitare il numero di record utilizzati per il recupero di risultati aggregati, filtrare e ordinare le colonne.  
+ È possibile limitare il numero di record che consentono di ottenere risultati aggregati, filtrare e ordinare le colonne.  
   
 > [!CAUTION]
->  Alcuni operatori di aggregazione restituiscono un tipo di dati diverso da quello delle colonne su cui si sta eseguendo l'aggregazione.  
+>  Alcuni operatori di aggregazione restituiscono un tipo di dati diversi dalle colonne su cui si sta eseguendo l'aggregazione.  
   
--   **SUM** e **AVG** possono restituire il tipo di dati successivo superiore. Ad esempio, se si esegue una chiamata con `int`, viene restituito un valore **LONG** o **double**.  
+-   **SOMMA** e **AVG** potrebbe restituire il tipo di dati più grande successivo (ad esempio, la chiamata con `int` restituisce **lungo** o **doppie**).  
   
--   **COUNT** in genere restituisce un valore **LONG** indipendentemente dal tipo di colonna di destinazione.  
+-   **CONTEGGIO** restituisce in genere **lungo** indipendentemente dal tipo di colonna di destinazione.  
   
--   **MAX** e **MIN** restituiscono lo stesso tipo di dati delle colonne calcolate.  
+-   **MAX** e **MIN** restituire lo stesso tipo di dati come colonne calcolate.  
   
-     Ad esempio, la procedura guidata **Aggiungi classe** crea `long` `m_lSales` in modo che possa contenere una colonna Sales. Se si desidera includere il risultato aggregato, è tuttavia necessario sostituirlo con il membro dati `double m_dblSumSales`.  Vedere l'esempio che segue.  
+     Ad esempio, il **Aggiungi classe** procedura guidata crea `long` `m_lSales` per contenere una colonna Sales, ma è necessario sostituirlo con un `double m_dblSumSales` membro dati per contenere il risultato aggregato. Vedere l'esempio seguente.  
   
-#### Per recuperare un risultato aggregato per un recordset  
+#### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Per ottenere il risultato di un'aggregazione per un oggetto recordset  
   
-1.  Creare un recordset come descritto in [Aggiunta di un consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) contenente le colonne da cui si desidera ottenere risultati aggregati.  
+1.  Creare un oggetto recordset, come descritto in [aggiunta di un Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) contenente le colonne da cui si desidera ottenere risultati aggregati.  
   
-2.  Modificare la funzione [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) del recordset.  Sostituire la stringa che rappresenta il nome della colonna, ovvero il secondo argomento delle chiamate alle funzioni [RFX](../../data/odbc/record-field-exchange-using-rfx.md), con una stringa che rappresenta la funzione di aggregazione della colonna.  Ad esempio, sostituire:  
+2.  Modificare il [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) funzione per il recordset. Sostituire la stringa che rappresenta il nome di colonna (il secondo argomento del [RFX](../../data/odbc/record-field-exchange-using-rfx.md) chiamate di funzione) con una stringa che rappresenta la funzione di aggregazione nella colonna. Ad esempio, sostituire:  
   
     ```  
     RFX_Long(pFX, "Sales", m_lSales);  
@@ -80,23 +80,23 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)  
     ```  
   
-3.  Apertura del recordset.  Il risultato dell'operazione di aggregazione si troverà in `m_dblSumSales`.  
+3.  Apre il recordset. Il risultato dell'operazione di aggregazione viene lasciato in `m_dblSumSales`.  
   
 > [!NOTE]
->  La procedura guidata assegna i nomi dei membri dati senza i prefissi della notazione ungherese.  La procedura guidata crea ad esempio `m_Sales` per una colonna Sales anziché il nome `m_lSales` utilizzato nel codice sopra riportato.  
+>  La procedura guidata assegna i nomi dei membri di dati senza prefissi ungheresi. Ad esempio, la procedura guidata crea `m_Sales` per una colonna Sales, anziché `m_lSales` nome utilizzato a scopo illustrativo.  
   
- Se si utilizza una classe [CRecordView](../../mfc/reference/crecordview-class.md) per la visualizzazione dei dati, sarà necessario modificare la chiamata alla funzione DDX per visualizzare il valore del nuovo membro dati. In tal caso, modificare  
+ Se si utilizza un [CRecordView](../../mfc/reference/crecordview-class.md) classe per visualizzare i dati, è necessario modificare la chiamata di funzione DDX per visualizzare il nuovo valore del membro dati; in questo caso, può essere modificato da:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);  
 ```  
   
- To:  
+ A:  
   
 ```  
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);  
 ```  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: selezione dei record \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

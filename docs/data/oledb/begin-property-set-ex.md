@@ -1,32 +1,30 @@
 ---
-title: "BEGIN_PROPERTY_SET_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPERTY_SET_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPERTY_SET_EX (macro)"
+title: BEGIN_PROPERTY_SET_EX | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPERTY_SET_EX
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPERTY_SET_EX macro
 ms.assetid: c95e7fab-edce-47b8-b282-200e53a2ea8a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 57e1b6b75404bf2ccef7cff76adc3d23a3609b1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROPERTY_SET_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Contrassegna l'inizio di una proprietà in una mappa degli insiemi di proprietà.  
+# <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
+Mapping dell'insieme di segni di che imposta l'inizio di una proprietà in una proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,21 +33,21 @@ guid
 , flags )  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `guid`  
- \[in\] la proprietà GUID.  
+ [in] La proprietà GUID.  
   
  `flags`  
- \[in\] **UPROPSET\_HIDDEN** per qualsiasi insiemi di proprietà che non si desidera esporre, o **UPROPSET\_PASSTHROUGH** per un provider che espone le proprietà definite l'ambito del provider.  
+ [in] **UPROPSET_HIDDEN** per qualsiasi set di proprietà non si desidera rendere visibili, o **UPROPSET_PASSTHROUGH** per un provider di esporre le proprietà definite all'esterno dell'ambito del provider.  
   
-## Esempio  
- Vedere [BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md).  
+## <a name="example"></a>Esempio  
+ Vedere [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

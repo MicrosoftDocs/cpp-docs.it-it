@@ -1,43 +1,43 @@
 ---
-title: "Automazione in una DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "automazione [C++], DLL"
-  - "DLL [C++], automazione"
+title: Automazione in una DLL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], Automation
+- Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 69b5d723da2ac67de3c381b6a5bc09645c1f4341
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Automazione in una DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando si sceglie l'opzione di automazione nella Creazione guidata DLL MFC, vengono forniti gli elementi indicati di seguito.  
+# <a name="automation-in-a-dll"></a>Automazione in una DLL
+Quando si sceglie l'opzione di automazione nella creazione guidata DLL MFC, la procedura guidata fornisce le seguenti:  
   
--   Un file ODL \(Object Description Language\) iniziale  
+-   Un linguaggio di descrizione dell'oggetto iniziale (. File ODL)  
   
--   Una direttiva include nel file STDAFX.H per Afxole.h  
+-   Una direttiva include nel file di stdafx.  
   
--   Un'implementazione della funzione `DllGetClassObject`, che chiama la funzione **AfxDllGetClassObject**  
+-   Un'implementazione del `DllGetClassObject` funzione che chiama il **AfxDllGetClassObject** (funzione)  
   
--   Un'implementazione della funzione `DllCanUnloadNow`, che chiama la funzione **AfxDllCanUnloadNow**  
+-   Un'implementazione del `DllCanUnloadNow` funzione che chiama il **AfxDllCanUnloadNow** (funzione)  
   
--   Un'implementazione della funzione `DllRegisterServer`, che chiama la funzione [COleObjectFactory::UpdateRegistryAll](../Topic/COleObjectFactory::UpdateRegistryAll.md)  
+-   Un'implementazione del `DllRegisterServer` funzione che chiama il [COleObjectFactory:: UpdateRegistryAll](../mfc/reference/coleobjectfactory-class.md#updateregistryall) (funzione)  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
 -   [Server di automazione](../mfc/automation-servers.md)  
   
-## Vedere anche  
- [DLL in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [DLL in Visual C++](../build/dlls-in-visual-cpp.md)

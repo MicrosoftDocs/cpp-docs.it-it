@@ -1,57 +1,57 @@
 ---
-title: "Snapshot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "libreria di cursori [ODBC], snapshot"
-  - "cursori [ODBC], statiche"
-  - "ODBC (libreria di cursori) [ODBC], snapshot"
-  - "recordset ODBC, snapshot"
-  - "recordset, snapshot"
-  - "snapshot"
-  - "snapshot, supporto in ODBC"
-  - "cursori statici"
+title: Snapshot | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC cursor library [ODBC], snapshots
+- cursors [ODBC], static
+- recordsets, snapshots
+- snapshots, support in ODBC
+- static cursors
+- ODBC recordsets, snapshots
+- cursor library [ODBC], snapshots
+- snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b8671ce1eefd73b2b8af506b621258e81cbed9b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Snapshot
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Uno snapshot è un recordset che riflette una visualizzazione statica dei dati esistente al momento della creazione.  Una volta aperto lo snapshot ed effettuato lo spostamento su tutti i record, l'insieme di record in esso contenuti e i relativi valori non subiscono modifiche fino a quando lo snapshot non viene ricompilato chiamando **Requery**.  
+# <a name="snapshot"></a>Snapshot
+Uno snapshot è un oggetto recordset riflette una visualizzazione statica dei dati in fase di che creazione dello snapshot. Quando si apre lo snapshot e spostare tutti i record, il set di record contiene e i relativi valori non cambiano fino a quando lo snapshot viene rigenerato chiamando **Requery**.  
   
 > [!NOTE]
->  L'argomento è relativo alle classi ODBC MFC.  Se si utilizzano le classi DAO MFC anziché le classi ODBC MFC, per una descrizione dei recordset di tipo snapshot, vedere [CDaoRecordset::Open](../Topic/CDaoRecordset::Open.md).  
+>  Questo argomento si applica alle classi ODBC MFC. Se si usano le classi DAO MFC anziché le classi ODBC MFC, vedere [CDaoRecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open) per una descrizione di recordset di tipo snapshot.  
   
- È possibile creare snapshot aggiornabili o in sola lettura con le classi di database.  A differenza di un dynaset, uno snapshot aggiornabile non riflette le modifiche ai valori di record apportate da altri utenti, ma mostra gli aggiornamenti e le eliminazioni effettuati dal programma.  I record aggiunti a uno snapshot non vengono visualizzati nello snapshot fino a quando non si chiama **Requery**.  
+ È possibile creare snapshot aggiornabili o di sola lettura con le classi di database. A differenza di un dynaset, snapshot aggiornabile non riflette le modifiche ai valori di record apportate da altri utenti, ma tiene conto di aggiornamenti ed eliminazioni effettuate dal programma. I record aggiunti a uno snapshot non vengono visualizzati nello snapshot fino a quando non si chiama **Requery**.  
   
 > [!TIP]
->  Uno snapshot è un cursore statico ODBC.  I cursori statici non recuperano una riga di dati fino a quando non ci si sposta sul record.  Per assicurarsi che tutti i record vengano immediatamente recuperati, è possibile scorrere fino alla fine del recordset, quindi tornare al primo record che si desidera visualizzare.  Si noti tuttavia che lo scorrimento fino alla fine del recordset comporta un aumento di overhead e può provocare un peggioramento delle prestazioni.  
+>  Uno snapshot è un cursore statico ODBC. I cursori statici non recuperano una riga di dati fino a quando non sposta sul record. Per garantire che tutti i record vengano recuperati immediatamente, è possibile scorrere fino alla fine del recordset e quindi scorrere fino al primo record che si desidera visualizzare. Si noti, tuttavia, che lo scorrimento alla fine comporta overhead aggiuntivo e può ridurre le prestazioni.  
   
- Gli snapshot risultano particolarmente utili quando è necessario che i dati rimangano invariati durante l'esecuzione delle operazioni, ad esempio durante la generazione di un report o l'esecuzione di calcoli.  Tuttavia, poiché l'origine dati può divergere notevolmente dallo snapshot, potrebbe essere necessario ricompilarlo regolarmente.  
+ Gli snapshot sono utili quando è necessario dati rimangano invariati durante le operazioni, come quando si genera un report o eseguire calcoli. Anche in questo caso, l'origine dati può far divergere notevolmente dallo snapshot, pertanto è opportuno ricompilarlo nel tempo.  
   
- Il supporto degli snapshot è basato sulla libreria di cursori ODBC, che fornisce a qualsiasi driver di livello 1 i cursori statici e gli aggiornamenti posizionati necessari per garantire l'aggiornabilità.  È necessario che la DLL della libreria di cursori venga caricata in memoria per fornire questo supporto.  Quando si costruisce un oggetto `CDatabase` e si chiama la relativa funzione membro `OpenEx`, è necessario specificare l'opzione **CDatabase::useCursorLib** del parametro `dwOptions`.  Se si chiama la funzione membro **Open**, la libreria di cursori viene caricata per impostazione predefinita.  Se si utilizzano i dynaset anziché gli snapshot, non caricare la libreria di cursori.  
+ Supporto dello snapshot è basato sulla libreria di cursori ODBC, che fornisce i cursori statici e posizionati gli aggiornamenti (necessari per garantire l'aggiornabilità) per i driver di livello 1. La libreria di cursori DLL deve essere caricata in memoria per il supporto. Quando si creano un `CDatabase` oggetto e chiamare il relativo `OpenEx` funzione membro, è necessario specificare il **CDatabase:: useCursorLib** opzione del `dwOptions` parametro. Se si chiama il **aprire** funzione membro, la libreria di cursori viene caricato per impostazione predefinita. Se si usano i dynaset anziché gli snapshot, non si desidera che la libreria di cursori da caricare.  
   
- Gli snapshot sono disponibili solo se la libreria di cursori ODBC viene caricata durante la costruzione dell'oggetto `CDatabase` o se il driver ODBC utilizzato supporta i cursori statici.  
-  
-> [!NOTE]
->  È possibile che gli snapshot \(cursori statici\) per alcuni driver ODBC non siano aggiornabili.  Per informazioni sui tipi di cursori supportati e i tipi di concorrenza da essi supportati, consultare la documentazione del driver in uso.  Per garantire l'utilizzo di snapshot aggiornabili, è necessario caricare la libreria di cursori in memoria durante la creazione di un oggetto `CDatabase`.  Per ulteriori informazioni, vedere [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
+ Gli snapshot sono disponibili solo se la libreria di cursori ODBC è stata caricata quando il `CDatabase` costruzione dell'oggetto o il driver ODBC in uso supporta i cursori statici.  
   
 > [!NOTE]
->  Se si desidera utilizzare sia snapshot che dynaset, è necessario basarli su due oggetti `CDatabase` differenti, ovvero due connessioni differenti.  
+>  Per alcuni driver ODBC, snapshot (cursori statici) potrebbe non essere aggiornabili. Controllare la documentazione del driver per i tipi di cursore supportati e supportano i tipi di concorrenza. Per garantire snapshot aggiornabili, assicurarsi che si tenta di caricare la libreria di cursori in memoria quando si crea un `CDatabase` oggetto. Per ulteriori informazioni, vedere [ODBC: libreria di cursori ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).  
   
- Per ulteriori informazioni sulle proprietà condivise dagli snapshot e da tutti i recordset, vedere [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md).  Per ulteriori informazioni su ODBC e sugli snapshot, inclusa la libreria di cursori ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md).  
+> [!NOTE]
+>  Se si desidera utilizzare sia snapshot che dynaset, devono essere basati su due diversi `CDatabase` oggetti, ovvero due diverse connessioni.  
   
-## Vedere anche  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+ Per ulteriori informazioni sulla condivisione di snapshot di proprietà con tutti i recordset, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Per ulteriori informazioni su ODBC e gli snapshot, inclusa la libreria di cursori ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

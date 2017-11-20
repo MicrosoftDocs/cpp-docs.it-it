@@ -1,30 +1,30 @@
 ---
-title: "Windows::Foundation:Collections (spazio dei nomi) (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Windows::Foundation::Collections"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows::Foundation:Collections (spazio dei nomi) (C++/CX)"
+title: Collections Namespace (C + + CX) | Documenti Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Windows::Foundation::Collections
+dev_langs: C++
+helpviewer_keywords: Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: ed7868a1f9c0f5d163928c85a09577b9d6db2f37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Windows::Foundation:Collections (spazio dei nomi) (C++/CX)
-[!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] integra lo spazio dei nomi Windows::Foundation::Collections con funzioni che semplificano l'uso delle classi di raccolte Vector, VectorView, Map e MapView.  
+# <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation:Collections (spazio dei nomi) (C++/CX)
+C + + CX integra lo spazio dei nomi Collections con funzioni che semplificano l'utilizzo delle classi collection Vector, VectorView, Map e MapView.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,19 +35,17 @@ namespace Windows {
 }  
 ```  
   
-### Funzioni  
+### <a name="functions"></a>Funzioni  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[back\_inserter \(funzione\)](../cppcx/back-inserter-function.md)|Restituisce un iteratore che può essere usato per inserire un valore alla fine di una raccolta.|  
-|[begin \(funzione\)](../cppcx/begin-function.md)|Restituisce un iteratore che punta all'inizio di una raccolta.|  
-|[end \(funzione\)](../cppcx/end-function.md)|Restituisce un iteratore che punta oltre la fine di una raccolta.|  
-|[to\_vector \(funzione\)](../cppcx/to-vector-function.md)|Restituisce una raccolta come std::vector.|  
+|[Funzione back_inserter](../cppcx/back-inserter-function.md)|Restituisce un iteratore che può essere usato per inserire un valore alla fine di una raccolta.|  
+|[Funzione begin](../cppcx/begin-function.md)|Restituisce un iteratore che punta all'inizio di una raccolta.|  
+|[Funzione end](../cppcx/end-function.md)|Restituisce un iteratore che punta oltre la fine di una raccolta.|  
+|[Funzione to_vector](../cppcx/to-vector-function.md)|Restituisce una raccolta come std::vector.|  
   
-## Requisiti  
+### <a name="requirements"></a>Requisiti  
  **Intestazione:** collection.h  
   
  **Spazio dei nomi:** Windows::Foundation::Collections  
   
-## Vedere anche  
- [Spazio dei nomi Windows::Foundation](~/windows/windows-foundation-namespace.md)

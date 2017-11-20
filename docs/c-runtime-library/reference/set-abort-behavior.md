@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_abort_behavior
+apiname: _set_abort_behavior
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _set_abort_behavior
 - set_abort_behavior
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
 ms.assetid: 43918766-e4ba-4b1f-80e8-1a4a910cd452
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: edf31ccddfb9ab2eaa6de226ff4ec7eb09869438
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 Specifica l'azione da eseguire quando un programma viene terminato in modo anomalo.  

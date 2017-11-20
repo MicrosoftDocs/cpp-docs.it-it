@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wspawnl
 - _wspawnl
 - _spawnl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - spawnl function
 - processes, creating
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 91000dba7d7fe1ff505eee30d60bc60936ef4971
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 209e237c9792c41764211fecf1cf0f6b614ad11e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 Crea ed esegue un nuovo processo.  
@@ -109,7 +92,7 @@ intptr_t _wspawnl(
  L'elenco di argomenti supera i 1024 byte.  
   
  `EINVAL`  
-L'argomento `mode` non è valido.  
+ L'argomento `mode` non è valido.  
   
  `ENOENT`  
  Il file o il percorso non è stato trovato.  
@@ -122,7 +105,7 @@ L'argomento `mode` non è valido.
   
  Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Queste funzioni convalidano i relativi parametri. Se `cmdname` sincrono o `arg0` è una stringa vuota o un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL`e restituiscono -1. Nessun nuovo processo viene generato.  
+ Queste funzioni convalidano i relativi parametri. Se `cmdname` o `arg0` è una stringa vuota o un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL`e restituiscono -1. Nessun nuovo processo viene generato.  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni crea ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato.  

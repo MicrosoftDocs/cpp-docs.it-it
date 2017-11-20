@@ -1,33 +1,33 @@
 ---
-title: "Generazione di manifesti dalla riga di comando | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strumento di manifesto (mt.exe)"
-  - "manifesti [C++]"
+title: Generazione di manifesti dalla riga di comando | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Generazione di manifesti dalla riga di comando
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando si compilano applicazioni C\/C\+\+ dalla riga di comando utilizzando nmake o strumenti simili, il manifesto verrà generato dopo che il linker avrà elaborato tutti i file oggetto e avrà compilato il file binario finale.  Il linker raccoglie le informazioni sull'assembly archiviate nei file oggetto e combina tali informazioni in un file manifesto finale.  Per impostazione predefinita il linker genererà un file denominato \<nome\_binario\>.\<estensione\>.manifest per descrivere il file binario finale.  Il linker non incorpora un file manifesto all'interno del file binario e può generare un manifesto esclusivamente come file esterno.  Esistono diverse modalità per incorporare un manifesto all'interno del file binario finale, ad esempio l'utilizzo dello [strumento Manifesto \(mt.exe\)](http://msdn.microsoft.com/library/aa375649) o la compilazione del manifesto in un file di risorse.  È importante ricordare che è necessario seguire regole specifiche quando si incorpora un manifesto all'interno del file binario finale per attivare funzionalità quali collegamento incrementale, firma e Modifica e continuazione.  Queste e altre opzioni vengono illustrate in [Procedura: incorporare un manifesto in un'applicazione C\/C\+\+](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) durante la compilazione sulla riga di comando.  
+# <a name="manifest-generation-at-the-command-line"></a>Generazione di manifesti dalla riga di comando
+Quando si compilano applicazioni C/C++ dalla riga di comando utilizzando nmake o strumenti simili, il manifesto viene generato dopo il linker ha elaborato tutti i file oggetto e la compilazione del file binario finale. Il linker raccoglie informazioni sull'assembly archiviati nei file oggetto e combina queste informazioni in un file manifesto finale. Per impostazione predefinita il linker genererà un file denominato < binary_name >. \<estensione >. manifest per descrivere il file binario finale. Il linker incorpora un file manifesto nel file binario e può solo generare un manifesto come file esterno. Esistono diversi modi per incorporare un manifesto all'interno del file binario finale, ad esempio usando il [strumento manifesto (mt.exe)](http://msdn.microsoft.com/library/aa375649) o la compilazione del manifesto in un file di risorse. È importante tenere presente che debbano di regole specifiche da seguire quando si incorpora un manifesto all'interno del file binario finale per abilitare funzionalità quali il collegamento incrementale, firma, e modifica e continuazione. Queste e altre opzioni sono illustrate [procedura: incorporare un manifesto all'interno di un'applicazione C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) durante la compilazione sulla riga di comando.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Manifesti](http://msdn.microsoft.com/library/aa375365)   
- [\/INCREMENTAL \(collegamento incrementale\)](../build/reference/incremental-link-incrementally.md)   
- [Assembly con nome sicuro \(firma degli assembly\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
- [Modifica e continuazione](../Topic/Edit%20and%20Continue.md)   
- [Informazioni sulla generazione di manifesti per programmi C\/C\+\+](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+ [/INCREMENTAL (collegamento incrementale)](../build/reference/incremental-link-incrementally.md)   
+ [Assembly con nome sicuro (firma degli Assembly) (C + c++ /CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)   
+ [Modifica e continuazione](/visualstudio/debugger/edit-and-continue)   
+ [Informazioni sulla generazione di manifesti per programmi C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

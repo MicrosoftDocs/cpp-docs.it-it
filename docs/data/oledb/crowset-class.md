@@ -1,88 +1,87 @@
 ---
-title: "Classe CRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>"
-  - "CRowset"
-  - "ATL::CRowset"
-  - "ATL::CRowset<TAccessor>"
-  - "ATL.CRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRowset (classe)"
+title: Classe CRowset | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>
+- CRowset
+- ATL::CRowset
+- ATL::CRowset<TAccessor>
+- ATL.CRowset
+dev_langs: C++
+helpviewer_keywords: CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Incapsula un oggetto rowset OLE DB e diverse interfacce correlate e fornisce metodi di modifica dei dati del rowset.  
+# <a name="crowset-class"></a>Classe CRowset
+Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CRowset  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `TAccessor`  
- Una classe di funzione di accesso.  Il valore predefinito è `CAccessorBase`.  
+ Una classe di funzione di accesso. Il valore predefinito è `CAccessorBase`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/crowset-addrefrows.md)|Incrementa il conteggio dei riferimenti associato alla riga corrente.|  
-|[Chiudi](../../data/oledb/crowset-close.md)|Righe delle versioni e l'interfaccia corrente di `IRowset`.|  
-|[Confronto](../../data/oledb/crowset-compare.md)|Confronta due segnalibri utilizzando [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx).|  
-|[CRowset](../../data/oledb/crowset-crowset.md)|Crea un nuovo oggetto di `CRowset` ed eventualmente lo associa a un'interfaccia di **IRowset** fornita come parametro.|  
-|[Delete](../../data/oledb/crowset-delete.md)|Righe di eliminazione dal rowset utilizzando [IRowsetChange:DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx).|  
-|[FindNextRow](../../data/oledb/crowset-findnextrow.md)|Cercare la riga seguente di corrispondenza dopo che il segnalibro specificato.|  
+|[AddRefRows](../../data/oledb/crowset-addrefrows.md)|Incrementa il conteggio dei riferimenti associati con la riga corrente.|  
+|[Chiudi](../../data/oledb/crowset-close.md)|Rilascia le righe e corrente `IRowset` interfaccia.|  
+|[Compare](../../data/oledb/crowset-compare.md)|Confronta due segnalibri utilizzando [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx).|  
+|[CRowset](../../data/oledb/crowset-crowset.md)|Crea un nuovo `CRowset` dell'oggetto e (facoltativamente) lo associa a un **IRowset** interfaccia fornita come parametro.|  
+|[Eliminazione](../../data/oledb/crowset-delete.md)|Elimina le righe dal set di righe utilizzando [IRowsetChange:DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx).|  
+|[FindNextRow](../../data/oledb/crowset-findnextrow.md)|Trova la riga corrispondente successiva dopo il segnalibro specificato.|  
 |[GetApproximatePosition](../../data/oledb/crowset-getapproximateposition.md)|Restituisce la posizione approssimativa di una riga corrispondente a un segnalibro.|  
-|[GetData](../../data/oledb/crowset-getdata.md)|Recupera dati dalla copia della riga del set di righe.|  
+|[GetData](../../data/oledb/crowset-getdata.md)|Recupera dati da una copia del set di righe della riga.|  
 |[GetDataHere](../../data/oledb/crowset-getdatahere.md)|Recupera i dati dal buffer specificato.|  
-|[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|Recupera i dati recuperati da l o trasmessi all'origine dati, trascurante modifiche in sospeso.|  
+|[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|Recupera i dati recuperati da più di recente o trasmesso all'origine dei dati, ignorando le modifiche in sospeso.|  
 |[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|Restituisce lo stato di tutte le righe.|  
-|[Insert](../../data/oledb/crowset-insert.md)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx).|  
+|[Inserimento](../../data/oledb/crowset-insert.md)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx).|  
 |[IsSameRow](../../data/oledb/crowset-issamerow.md)|Confronta la riga specificata con la riga corrente.|  
-|[Membro](../../data/oledb/crowset-movefirst.md)|Riposizionare la posizione di NeXT\- raccolta alla posizione iniziale.|  
-|[MoveLast](../../data/oledb/crowset-movelast.md)|Consente di passare all'ultimo record.|  
-|[MoveNext](../../data/oledb/crowset-movenext.md)|Dati di raccolte sequenziale dalla riga successiva o un numero specificato di posizioni oltre la riga successiva.|  
-|[Membro](../../data/oledb/crowset-moveprev.md)|Consente di passare al record precedente.|  
-|[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)|Recupera la riga contrassegnata da un segnalibro o la riga in un offset specificato dal bookmark.|  
-|[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Le raccolte di righe da una posizione frazionaria del rowset.|  
-|[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Chiama [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) per rilasciare l'handle di riga corrente.|  
-|[SetData](../../data/oledb/crowset-setdata.md)|Imposta i valori dei dati in una o più colonne di una riga mediante [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
-|[Annulla](../../data/oledb/crowset-undo.md)|Annulla tutte le modifiche apportate a una riga dall'ultima raccolta o [Aggiorna](../../data/oledb/crowset-update.md).|  
-|[Aggiorna](../../data/oledb/crowset-update.md)|Trasmette tutte le modifiche in sospeso apportate alla riga corrente dall'ultima raccolta o aggiornamento.|  
-|[UpdateAll](../../data/oledb/crowset-updateall.md)|Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultima raccolta o aggiornamento.|  
+|[Metodo MoveFirst](../../data/oledb/crowset-movefirst.md)|Riposiziona il percorso di recupero successivo per la posizione iniziale.|  
+|[MoveLast](../../data/oledb/crowset-movelast.md)|Passa all'ultimo record.|  
+|[Metodo MoveNext](../../data/oledb/crowset-movenext.md)|Recupera i dati dalla riga successiva sequenza o un numero specificato di posizioni successive alla riga successiva.|  
+|[MovePrev](../../data/oledb/crowset-moveprev.md)|Passa al record precedente.|  
+|[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)|Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato dal segnalibro.|  
+|[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Recupera le righe a partire da una posizione decimale nel set di righe.|  
+|[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Chiamate [IRowset:: ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) per rilasciare l'handle di riga corrente.|  
+|[SetData](../../data/oledb/crowset-setdata.md)|Imposta i valori dei dati in una o più colonne di una riga utilizzando [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
+|[Annulla](../../data/oledb/crowset-undo.md)|Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|  
+|[Aggiornamento](../../data/oledb/crowset-update.md)|Consente di trasmettere le modifiche apportate alla riga corrente dopo l'ultimo recupero o l'aggiornamento in sospeso.|  
+|[UpdateAll](../../data/oledb/crowset-updateall.md)|Consente di trasmettere le modifiche apportate a tutte le righe l'ultima operazione di recupero o l'aggiornamento in sospeso.|  
   
-## Note  
- In OLE DB, un rowset è l'oggetto in cui un programma impostare e recuperare i dati.  
+## <a name="remarks"></a>Note  
+ In OLE DB, un set di righe è l'oggetto tramite il quale un programma imposta e recupera i dati.  
   
- Questa classe non deve essere creata un'istanza ma piuttosto per essere passata come parametro di modello a `CTable` o a `CCommand` \(`CRowset` è l'impostazione predefinita\).  
+ Questa classe non deve essere creata un'istanza, ma piuttosto passato come parametro di modello per `CTable` o `CCommand` (`CRowset` è l'impostazione predefinita).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Esempio di DBViewer](../../top/visual-cpp-samples.md)   
- [Esempio MultiRead](../../top/visual-cpp-samples.md)   
- [Esempio di attributi MultiRead](../../top/visual-cpp-samples.md)   
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Esempio DBViewer](../../visual-cpp-samples.md)   
+ [Esempio multiRead](../../visual-cpp-samples.md)   
+ [Attributi multiRead](../../visual-cpp-samples.md)   
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

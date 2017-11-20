@@ -1,26 +1,26 @@
 ---
-title: "Struttura e definizioni di costanti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Struttura e definizioni di costanti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a93975903451e609676baa6b32641e41221fa005
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Struttura e definizioni di costanti
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per la comunicazione tra la routine di supporto predefinita e le funzioni hook e durante le eccezioni vengono utilizzate diverse strutture.  Di seguito sono illustrati i valori di notifica e di errore, le strutture di informazione e il tipo di puntatore a funzione hook passato agli hook.  
+# <a name="structure-and-constant-definitions"></a>Struttura e definizioni di costanti
+Routine di supporto predefinito utilizza diverse strutture per comunicare con le funzioni hook e durante le eccezioni. Ecco i valori di notifica e di errore, le strutture di informazioni e il tipo di puntatore a funzione hook passati agli hook:  
   
 ```  
 //  
@@ -78,5 +78,5 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Informazioni sulla funzione di supporto](../../build/reference/understanding-the-helper-function.md)

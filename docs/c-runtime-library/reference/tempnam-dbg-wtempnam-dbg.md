@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - tempnam_dbg
 - _tempnam_dbg
 - _wtempnam_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file names [C++], creating temporary
 - tempnam_dbg function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6d1c4013dcfcbc6049957978316398566c60089b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 Versioni delle funzioni [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) che usano la versione di debug di `malloc, _malloc_dbg`.  
@@ -106,7 +89,7 @@ wchar_t *_wtempnam_dbg(
  Ogni funzione restituisce un puntatore al nome generato o `NULL` se si verifica un errore. Può verificarsi un errore se è specificato un nome di directory non valido nella variabile di ambiente TMP e nel parametro `dir`.  
   
 > [!NOTE]
-> Non è necessario chiamare  `free` (o `free_dbg`) per puntatori allocati da `_tempnam_dbg` e `_wtempnam_dbg`.  
+>  Non è necessario chiamare `free` (o `free_dbg`) per puntatori allocati da `_tempnam_dbg` e `_wtempnam_dbg`.  
   
 ## <a name="remarks"></a>Note  
  Il `_tempnam_dbg` e `_wtempnam_dbg` funzioni sono identiche a `_tempnam` e `_wtempnam` ad eccezione del fatto che, quando `_DEBUG` è definito, queste funzioni usano la versione di debug `malloc` e `_malloc_dbg`per allocare memoria se `NULL` viene passato come primo parametro. Per altre informazioni, vedere [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  

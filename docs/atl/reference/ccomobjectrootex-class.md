@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,18 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectrootex-class"></a>Classe CComObjectRootEx
 Questa classe fornisce metodi per la gestione di gestione per gli oggetti aggregate e non aggregati conteggio riferimenti dell'oggetto.  
@@ -111,11 +92,11 @@ class CComObjectRootEx : public CComObjectRootBase
   
  È necessario ereditare una classe che implementa un server COM `CComObjectRootEx` o [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
- Se la definizione di classe specifica di [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) macro ATL crea un'istanza di **CComPolyObject\<CClasse >** quando **IClassFactory::CreateInstance** viene chiamato. Durante la creazione, viene controllato il valore unknown esterno. Se è **NULL**, **IUnknown** è implementata per un oggetto non aggregato. Se non è unknown esterno **NULL**, **IUnknown** è implementata per un oggetto aggregato.  
+ Se la definizione di classe specifica di [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) macro ATL crea un'istanza di **CComPolyObject\<CClasse >** quando **IClassFactory:: CreateInstance** viene chiamato. Durante la creazione, viene controllato il valore unknown esterno. Se è **NULL**, **IUnknown** è implementata per un oggetto non aggregato. Se non è unknown esterno **NULL**, **IUnknown** è implementata per un oggetto aggregato.  
   
  Se la classe non è specificato il `DECLARE_POLY_AGGREGATABLE` macro ATL crea un'istanza di **CAggComObject\<CClasse >** per gli oggetti aggregati o un'istanza di **CComObject\<CClasse >** per gli oggetti non aggregati.  
   
- Il vantaggio dell'utilizzo `CComPolyObject` è che si evita che entrambi `CComAggObject` e `CComObject` nel modulo per gestire i casi aggregati e non aggregati. Un singolo `CComPolyObject` oggetto gestisce entrambi i casi. Pertanto, solo una copia dell'oggetto vtable e una copia delle funzioni presenti in un modulo. Se la vtable è elevata, questo può ridurre notevolmente le dimensioni del modulo. Tuttavia, se la vtable è piccola, utilizzando `CComPolyObject` possono provocare una dimensione di modulo leggermente maggiore perché non è ottimizzato per un oggetto aggregato o aggregato, come `CComAggObject` e `CComObject`.  
+ Il vantaggio dell'utilizzo `CComPolyObject` è che si evita che entrambi `CComAggObject` e `CComObject` nel modulo per gestire i casi aggregati e non aggregati. Un singolo `CComPolyObject` oggetto gestisce entrambi i casi. Pertanto, solo una copia dell'oggetto vtable e una copia delle funzioni presenti in un modulo. Se la vtable è elevata, questo può ridurre notevolmente le dimensioni del modulo. Tuttavia, se la vtable è piccola, utilizzando `CComPolyObject` può comportare una dimensione leggermente maggiore di modulo perché non è ottimizzato per un oggetto aggregato o aggregato, come `CComAggObject` e `CComObject`.  
   
  Se l'oggetto è aggregato, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) viene implementata da `CComAggObject` o `CComPolyObject`. Queste classi delegate `QueryInterface`, `AddRef`, e **versione** le chiamate a `CComObjectRootEx`del `OuterQueryInterface`, `OuterAddRef`, e `OuterRelease` per inoltrare a unknown esterno. In genere, si esegue l'override `CComObjectRootEx::FinalConstruct` nella classe per creare oggetti aggregati ed eseguire l'override `CComObjectRootEx::FinalRelease` per liberare qualsiasi aggregati gli oggetti.  
   
@@ -148,7 +129,7 @@ HRESULT FinalConstruct();
   
 -   Non è possibile restituire un codice di stato da un costruttore, ma è possibile restituire un `HRESULT` per mezzo di `FinalConstruct`del valore restituito. Quando vengono creati gli oggetti della classe utilizzando la factory di classe standard fornita da ATL, questo valore restituito viene propagato al client COM che consente di fornire informazioni dettagliate sull'errore.  
   
--   È possibile chiamare funzioni virtuali tramite il meccanismo di funzione virtuale dal costruttore di una classe. La chiamata a una funzione virtuale dal costruttore di una classe determina una chiamata alla funzione risolta in modo statico come definito in quel punto nella gerarchia di ereditarietà. Chiamate a funzioni virtuali pure producono errori del linker.  
+-   È possibile chiamare funzioni virtuali tramite il meccanismo di funzione virtuale dal costruttore di una classe. La chiamata a una funzione virtuale dal costruttore di una classe determina una chiamata alla funzione risolta staticamente come definito in quel punto nella gerarchia di ereditarietà. Chiamate a funzioni virtuali pure producono errori del linker.  
   
      La classe non è la classe più derivata nella gerarchia di ereditarietà, si basa su una classe derivata, fornita da ATL per fornire alcune delle proprie funzionalità. È probabile che l'inizializzazione, sarà necessario utilizzare le funzionalità fornite da tale classe (Ciò vale anche quando gli oggetti della classe necessaria aggregare gli altri oggetti), ma il costruttore della classe non è in grado di accedere a tali funzionalità. Il codice di costruzione per la classe viene eseguito prima che la classe più derivata è completamente costruita.  
   
@@ -157,7 +138,7 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>Esempio  
  In genere, eseguire l'override di questo metodo nella classe derivata da `CComObjectRootEx` per creare qualsiasi aggregati gli oggetti. Ad esempio:  
   
- [!code-cpp[NVC_ATL_COM &#40;](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  Se la costruzione non riesce, è possibile restituire un errore. È inoltre possibile utilizzare la macro [macro DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) per proteggere l'oggetto esterno vengano eliminati se, durante la creazione, l'oggetto aggregato interno incrementa il conteggio dei riferimenti quindi decrementa il conteggio su 0.  
   
@@ -167,7 +148,7 @@ HRESULT FinalConstruct();
   
 -   Eseguire l'override `FinalConstruct` per creare la funzione di aggregazione.  
   
--   Utilizzare la **IUnknown** puntatore è definito come parametro per il [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) (macro).  
+-   Utilizzare il **IUnknown** puntatore è definito come parametro per il [COM_INTERFACE_ENTRY_AGGREGATE](com-interface-entry-macros.md#com_interface_entry_aggregate) (macro).  
   
 -   Eseguire l'override `FinalRelease` per rilasciare il **IUnknown** puntatore.  
   
@@ -310,10 +291,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Note  
  Il valore di `bStarting` parametro indica se il modulo viene inizializzato o terminata. L'implementazione predefinita di `ObjectMain` non esegue alcuna operazione, ma è possibile eseguire l'override di questa funzione nella classe per inizializzare o pulire le risorse che si desidera allocare per la classe. Si noti che `ObjectMain` viene chiamato prima che tutte le istanze della classe vengono richiesti.  
   
- `ObjectMain`viene chiamato dal punto di ingresso della DLL, pertanto il tipo di operazione che può eseguire la funzione di punto di ingresso è limitato. Per ulteriori informazioni su queste restrizioni, vedere [funzionamento della libreria Run-Time](../../build/run-time-library-behavior.md) e [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain`viene chiamato dal punto di ingresso della DLL, pertanto il tipo di operazione che può eseguire la funzione di punto di ingresso è limitato. Per ulteriori informazioni su queste restrizioni, vedere [DLL e Visual C++ il comportamento della libreria di runtime](../../build/run-time-library-behavior.md) e [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  Incrementa il conteggio dei riferimenti di unknown esterno di un'aggregazione.  
@@ -369,4 +350,3 @@ void Unlock();
  [CComObject (classe)](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject (classe)](../../atl/reference/ccompolyobject-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

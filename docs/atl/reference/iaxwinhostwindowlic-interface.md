@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,21 +12,18 @@ f1_keywords:
 - No header/ATL::IAxWinHostWindowLic
 - No header/ATL::CreateControlLic
 - No header/ATL::CreateControlLicEx
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindowLic interface
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 2e74029025daeb18a3c63459845ef9edf4ca69cb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 6d0e8c0a8ec941c7a7980b81fcd95df08298ea28
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic (interfaccia)
 Questa interfaccia fornisce metodi per la modifica di un controllo concesso in licenza e l'oggetto host.  
@@ -106,7 +102,6 @@ STDMETHOD(CreateControlLicEx)(
   
 ### <a name="example"></a>Esempio  
  Vedere [Hosting ActiveX controlli tramite ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) per un esempio che utilizza `IAxWinHostWindowLic::CreateControlLicEx`.
-
 
 
 

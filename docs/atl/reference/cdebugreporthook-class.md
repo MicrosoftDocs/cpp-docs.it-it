@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,21 +16,18 @@ f1_keywords:
 - ATLUTIL/ATL::CDebugReportHook::SetHook
 - ATLUTIL/ATL::CDebugReportHook::SetPipeName
 - ATLUTIL/ATL::CDebugReportHook::SetTimeout
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDebugReportHook class
+dev_langs: C++
+helpviewer_keywords: CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: b573406f679a685af8c82242a91ac5578cac9dbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 72790fca5fbfb2856d4da780f276b9cfdc53a26a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (classe)
 Utilizzare questa classe per inviare i report di debug a una named pipe.  
@@ -178,4 +174,3 @@ void SetTimeout(DWORD dwTimeout);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../atl/reference/atl-classes.md)
-

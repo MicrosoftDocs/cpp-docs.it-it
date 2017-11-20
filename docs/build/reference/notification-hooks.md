@@ -1,68 +1,67 @@
 ---
-title: "Hook di notifica | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caricamento ritardato di DLL, hook di notifica"
+title: Hook di notifica | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 156dd4cec32318be008d7c007d02f03495eeae23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Hook di notifica
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gli hook di notifica vengono chiamati prima che nella routine di supporto vengano effettuate le seguenti azioni:  
+# <a name="notification-hooks"></a>Hook di notifica
+Hook di notifica vengono chiamati prima nella routine di supporto vengono eseguite le seguenti operazioni:  
   
--   Verifica dell'avvenuto caricamento dell'handle memorizzato per la libreria.  
+-   L'handle memorizzato nella raccolta viene controllato per verificare se è già stato caricato.  
   
--   Chiamata a **LoadLibrary** per tentare di caricare la DLL.  
+-   **LoadLibrary** viene chiamato per tentare di caricare la DLL.  
   
--   Chiamata a **GetProcAddress** per tentare di ottenere l'indirizzo della routine.  
+-   **GetProcAddress** viene chiamato per tentare di ottenere l'indirizzo della routine.  
   
--   Ritorno al thunk di caricamento delle importazioni ritardate.  
+-   Restituisce il thunk di caricamento di importazione di ritardo.  
   
- L'hook di notifica viene attivato:  
+ È abilitato l'hook di notifica:  
   
--   Fornendo una nuova definizione del puntatore **\_\_pfnDliNotifyHook2**, inizializzato per puntare alla funzione dell'utente che riceve le notifiche.  
+-   Fornendo una nuova definizione dell'indicatore di misura **pfnDliNotifyHook2** che viene inizializzato in modo da puntare alla funzione che riceve le notifiche.  
   
-     \- oppure \-  
+     -oppure-  
   
--   Impostando il puntatore **\_\_pfnDliNotifyHook2** sulla funzione hook prima delle chiamate alla DLL sottoposta a caricamento ritardato.  
+-   Impostando il puntatore **pfnDliNotifyHook2** alla funzione hook prima delle chiamate alla DLL che il programma è ritardare il caricamento.  
   
- Se la notifica è **dliStartProcessing**, il valore restituito dalla funzione hook può essere:  
+ Se la notifica è **dliStartProcessing**, la funzione hook può restituire:  
   
  NULL  
- La funzione di supporto predefinita consente di gestire il caricamento della DLL.  Utile da chiamare per ottenere informazioni.  
+ Il supporto predefinito gestisce il caricamento della DLL. Ciò è utile per essere chiamato solo per scopi informativi.  
   
  Puntatore a funzione  
- Ignorare la gestione predefinita del caricamento ritardato  per poter fornire un gestore di caricamento personalizzato.  
+ Ignorare la gestione di caricamento ritardato predefinita. Ciò consente di fornire un gestore di caricamento.  
   
- Se la notifica è **dliNotePreLoadLibrary**, il valore restituito dalla funzione hook può essere:  
+ Se la notifica è **dliNotePreLoadLibrary**, la funzione hook può restituire:  
   
--   0 per ricevere solo notifiche informative.  
+-   0, se desidera semplicemente notifiche informative.  
   
--   L'HMODULE della DLL caricata, se è stata caricata la DLL.  
+-   Il modulo HMODULE della DLL caricata, se è caricato la DLL.  
   
- Se la notifica è **dliNotePreGetProcAddress**, il valore restituito dalla funzione hook può essere:  
+ Se la notifica è **dliNotePreGetProcAddress**, la funzione hook può restituire:  
   
--   0 per ricevere solo notifiche informative.  
+-   0, se desidera semplicemente notifiche informative.  
   
--   L'indirizzo della funzione importata, se ottenuto dalla funzione hook.  
+-   Indirizzo della funzione importata, se la funzione hook Ottiene l'indirizzo di se stesso.  
   
- Se la notifica è **dliNoteEndProcessing**, il valore restituito della funzione hook verrà ignorato.  
+ Se la notifica è **dliNoteEndProcessing**, valore restituito della funzione hook viene ignorato.  
   
- Se questo puntatore è inizializzato \(diverso da zero\), il supporto del caricamento ritardato consentirà di richiamare la funzione in corrispondenza di determinati punti di notifica durante l'esecuzione.  La definizione del puntatore a funzione è la seguente:  
+ Se l'indicatore di misura viene inizializzato (diverso da zero), il caricamento ritardato richiamerà la funzione in alcune fasi di notifica durante l'esecuzione. Puntatore a funzione presenta la seguente definizione:  
   
 ```  
 // The "notify hook" gets called for every call to the  
@@ -84,7 +83,7 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- Le notifiche, con il relativo valore, vengono passate alla funzione hook in una struttura **DelayLoadInfo**.  I dati sono identici a quelli utilizzati dalla routine di supporto del caricamento ritardato.  Il valore di notifica sarà uno dei valori definiti in [Struttura e definizioni di costanti](../../build/reference/structure-and-constant-definitions.md).  
+ Le notifiche di passare un **DelayLoadInfo** struttura alla funzione hook insieme al valore di notifica. Questi dati sono identici a quella usata dalla routine di supporto di caricamento ritardato. Il valore di notifica sarà uno dei valori definiti nel [struttura e definizioni di costanti](../../build/reference/structure-and-constant-definitions.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Gestione e notifica degli errori](../../build/reference/error-handling-and-notification.md)

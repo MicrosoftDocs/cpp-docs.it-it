@@ -1,65 +1,65 @@
 ---
-title: "/hotpatch (Crea immagine con funzionalit&#224; di patch a caldo) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hot patch"
-  - "-hotpatch (opzione del compilatore) [C++]"
-  - "/hotpatch (opzione del compilatore) [C++]"
-  - "hotpatch"
+title: -hotpatch (Crea immagine hot patch) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fb5eaebb9ee8de01a9b2418333e2959cd5b4a21f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /hotpatch (Crea immagine con funzionalit&#224; di patch a caldo)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crea immagine con funzionalità di patch a caldo)
 Prepara un'immagine per l'applicazione di una patch a caldo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /hotpatch  
 ```  
   
-## Note  
- Quando in una compilazione viene utilizzato **\/hotpatch**, il compilatore garantisce che la prima istruzione di ciascuna funzione sia almeno a due byte, ovvero la dimensione richiesta per l'applicazione di una patch a caldo.  
+## <a name="remarks"></a>Note  
+ Quando **/hotpatch** viene utilizzato in una compilazione, il compilatore garantisce che la prima istruzione di ciascuna funzione sia almeno a due byte, che è necessario per l'applicazione di patch a caldo.  
   
- Per completare le operazioni preliminari per applicare una patch a caldo ad un immagine, dopo avere utilizzato **\/hotpatch** per compilare, è necessario utilizzare [\/FUNCTIONPADMIN \(Crea immagine con funzionalità di patch a caldo\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) per il collegamento.  Quando un'immagine viene compilata e collegata utilizzando una singola chiamata di cl.exe, **\/hotpatch** implica **\/functionpadmin**.  
+ Per completare la preparazione di una patch a caldo un'immagine, dopo aver utilizzato **/hotpatch** per compilare, è necessario utilizzare [/FUNCTIONPADMIN (Crea immagine di patch a caldo)](../../build/reference/functionpadmin-create-hotpatchable-image.md) da collegare. Quando si compila e si collega un'immagine utilizzando una singola chiamata di cl.exe, **/hotpatch** implica **/functionpadmin**.  
   
- Poiché le istruzioni sono sempre di due byte o più grandi sull'architettura ARM e poiché la compilazione x64 viene sempre considerata come se **\/hotpatch** fosse stata specificata, non è necessario specificare **\/hotpatch** durante la compilazione di queste destinazioni; tuttavia, è comunque necessario eseguire il collegamento utilizzando **\/functionpadmin** per creare un'immagine su cui è applicabile una patch a caldo.  L'opzione del compilatore **\/hotpatch** ha effetto solo sulla compilazione x86.  
+ Poiché le istruzioni sono sempre due byte o più grandi nell'architettura ARM e poiché compilazione x64 viene sempre considerata come se **/hotpatch** è stato specificato, non è necessario specificare **/hotpatch** quando la compilazione di queste destinazioni; Tuttavia, è necessario comunque il collegamento utilizzando **/functionpadmin** per creare un'immagine. Il **/hotpatch** la compilazione del compilatore opzione solo interessa x86.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **C\/C\+\+**.  
+2.  Selezionare il **C/C++** cartella.  
   
-3.  Selezionare la pagina delle proprietà **Riga di comando**.  
+3.  Selezionare il **riga di comando** pagina delle proprietà.  
   
-4.  Aggiungere l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Aggiungere l'opzione del compilatore di **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Istruzioni utili  
- Per ulteriori informazioni sulla gestione degli aggiornamenti, vedere "Security Guidance for Update Management" all'indirizzo [http:\/\/www.microsoft.com\/technet\/security\/guidance\/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
+## <a name="guidance"></a>Materiale sussidiario  
+ Per ulteriori informazioni sulla gestione degli aggiornamenti, vedere "Linee guida per aggiornare gestione della sicurezza" all'indirizzo [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

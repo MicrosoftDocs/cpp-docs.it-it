@@ -1,40 +1,39 @@
 ---
-title: "Gestione e notifica degli errori | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione errori, e notifica"
+title: Gestione degli errori e notifica | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b7666325caafdbdf2a56eeb1c02c183d0ead54e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Gestione e notifica degli errori
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per ulteriori informazioni sulla gestione e la notifica degli errori, vedere [Informazioni sulla funzione di supporto](http://msdn.microsoft.com/it-it/6279c12c-d908-4967-b0b3-cabfc3e91d3d).  
+# <a name="error-handling-and-notification"></a>Gestione e notifica degli errori
+Per ulteriori informazioni sulla gestione degli errori e la notifica, vedere [informazioni sulla funzione di supporto](understanding-the-helper-function.md).  
   
- Per ulteriori informazioni sulle funzioni hook, vedere [Struttura e definizioni di costanti](../../build/reference/structure-and-constant-definitions.md).  
+ Per ulteriori informazioni sulle funzioni hook, vedere [struttura e definizioni di costanti](../../build/reference/structure-and-constant-definitions.md).  
   
- È necessario che in tutti i programmi in cui vengono utilizzate le DLL a caricamento ritardato, la gestione degli errori venga eseguita in maniera affidabile dal momento che gli errori che si verificano durante l'esecuzione del programma genereranno eccezioni non gestite.  La gestione degli errori comprende due fasi:  
+ Se il programma utilizza una DLL a caricamento ritardato, deve gestire gli errori in modo affidabile poiché gli errori che si verificano durante l'esecuzione del programma verranno comportare eccezioni non gestite. Gestione degli errori è costituita da due parti:  
   
- Recupero mediante un hook.  
- Se il codice deve essere ripristinato o deve fornire una libreria e\/o una routine alternativa in caso di errore, è possibile fornire un hook alla funzione di supporto in modo da rendere disponibile la libreria e\/o la routine necessaria oppure correggere la situazione.  La routine di hook deve restituire un valore appropriato per consentire il proseguimento dell'esecuzione \(HINSTANCE o FARPROC\) oppure 0, per indicare la necessità di generare un'eccezione.  Essa può anche generare una propria eccezione oppure **longjmp** all'esterno dell'hook.  Sono disponibili hook di notifica e hook di errore.  
+ Ripristino tramite un hook.  
+ Se il codice deve recuperare o fornire un libreria alternativa e/o una routine in caso di errore, è possibile specificare una funzione hook per la funzione di supporto che può fornire o correggere l'errore. La routine di hook deve restituire un valore appropriato, in modo che l'elaborazione può continuare (HINSTANCE o FARPROC) oppure 0 per indicare che deve essere generata un'eccezione. Può anche generare la propria eccezione o **longjmp** fuori l'hook. Sono disponibili hook di notifica e hook di errore.  
   
  Creazione di report mediante un'eccezione.  
- Se per gestire l'errore è sufficiente interrompere la routine, non sono necessari hook, purché sia possibile gestire l'eccezione con il codice utente.  
+ Se è sufficiente per gestire l'errore deve interrompere la procedura, non hook è necessaria, purché il codice utente può gestire l'eccezione.  
   
- Nei seguenti argomenti vengono esaminate la gestione e la notifica degli errori:  
+ Gli argomenti seguenti descrivono la notifica e la gestione degli errori:  
   
 -   [Hook di notifica](../../build/reference/notification-hooks.md)  
   
@@ -42,5 +41,5 @@ Per ulteriori informazioni sulla gestione e la notifica degli errori, vedere [In
   
 -   [Eccezioni](../../build/reference/exceptions-c-cpp.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto per le DLL a caricamento ritardato nel linker](../../build/reference/linker-support-for-delay-loaded-dlls.md)

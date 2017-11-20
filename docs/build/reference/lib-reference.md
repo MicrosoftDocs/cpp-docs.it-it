@@ -1,41 +1,40 @@
 ---
-title: "Riferimenti a LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gestione librerie a 32 bit"
-  - "LIB [C++]"
-  - "Gestione librerie"
-  - "librerie statiche"
-  - "librerie statiche, impostazione delle opzioni IDE"
+title: Riferimenti a LIB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- static libraries
+- static libraries, setting IDE options
+- Library Manager
+- LIB [C++]
+- 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4593e3fb5cdd511bde8beb262c8a3cb9fd247fd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Riferimenti a LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Library Manager \(LIB.EXE\) consente di creare e gestire una libreria di file oggetto COFF \(Formato file oggetto comune, Common Object File Format\),  nonché creare file di esportazione e librerie di importazione per fare riferimento alle definizioni esportate.  
+# <a name="lib-reference"></a>Riferimenti a LIB
+Gestione librerie Microsoft (LIB.exe) Crea e gestisce una raccolta di file oggetto comune oggetto formato COFF (File). LIB consente anche di creare file di esportazione e librerie di importazione per le definizioni di riferimento esportato.  
   
 > [!NOTE]
->  Questo strumento può essere avviato solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)],  Non è possibile avviarlo dal prompt dei comandi di sistema o da Esplora file.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
--   [Cenni preliminari su LIB](../../build/reference/overview-of-lib.md)  
+-   [Panoramica di LIB](../../build/reference/overview-of-lib.md)  
   
--   [Procedura: impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
+-   [Procedura: Impostare le opzioni di LIB.EXE nell'ambiente di sviluppo di Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)  
   
 -   [Esecuzione di LIB](../../build/reference/running-lib.md)  
   
@@ -43,7 +42,7 @@ Microsoft Library Manager \(LIB.EXE\) consente di creare e gestire una libreria 
   
 -   [Estrazione di membri dalle librerie](../../build/reference/extracting-a-library-member.md)  
   
--   [Utilizzo di librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md)  
+-   [Uso di librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
-## Vedere anche  
- [Strumenti per la compilazione in C\/C\+\+](../../build/reference/c-cpp-build-tools.md)
+## <a name="see-also"></a>Vedere anche  
+ [Strumenti per la compilazione in C/C++](../../build/reference/c-cpp-build-tools.md)

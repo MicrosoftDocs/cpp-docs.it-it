@@ -1,132 +1,130 @@
 ---
-title: "Cenni preliminari su LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LIB [C++], modalità"
+title: Cenni preliminari su LIB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e6ea2a91e50bab33ab46f96d63cdc0c1c1023c6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Cenni preliminari su LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mediante LIB è possibile creare librerie standard, librerie di importazione e file di esportazione utilizzabili con [LINK](../../build/reference/linker-options.md) quando si compila un programma.  LIB viene eseguito da un prompt dei comandi.  
+# <a name="overview-of-lib"></a>Cenni preliminari su LIB
+LIB creare librerie standard e librerie di importazione è possibile utilizzare con file di esportazione [collegamento](../../build/reference/linker-options.md) quando si compila un programma. LIB viene eseguito da un prompt dei comandi.  
   
- È possibile utilizzare LIB nelle seguenti modalità:  
+ È possibile utilizzare LIB nelle modalità seguenti:  
   
--   [Compilazione o modifica di una libreria COFF](../../build/reference/managing-a-library.md)  
+-   [La creazione o modifica di una libreria COFF](../../build/reference/managing-a-library.md)  
   
 -   [Estrazione di un oggetto membro in un file](../../build/reference/extracting-a-library-member.md)  
   
 -   [Creazione di un file di esportazione e di una libreria di importazione](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
- Queste modalità si escludono reciprocamente e pertanto è possibile utilizzare LIB secondo un'unica modalità alla volta.  
+ Queste modalità si escludono a vicenda; è possibile utilizzare LIB nella sola modalità alla volta.  
   
-## Opzioni LIB  
- Di seguito sono elencate le opzioni di lib.exe, con un collegamento a ulteriori informazioni.  
+## <a name="lib-options"></a>Opzioni di LIB  
+ Nella tabella seguente sono elencate le opzioni di lib.exe, con un collegamento a ulteriori informazioni.  
   
- **\/DEF**  
- Consente di creare un file di esportazione e una libreria di importazione.  
+ **/DEF**  
+ Creare una libreria di importazione e un file di esportazione.  
   
- Per ulteriori informazioni, vedere [Compilazione di una libreria di importazione e di un file di esportazione](../../build/reference/building-an-import-library-and-export-file.md).  
+ Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/ERRORREPORT**  
- Consente di inviare a Microsoft informazioni relative agli errori interni con lib.exe.  
+ **/ERRORREPORT**  
+ Invia a Microsoft informazioni sugli errori interni con lib.exe.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **\/EXPORT**  
- Consente di esportare una fuzione dal programma.  
+ **/ ESPORTAZIONE**  
+ Esporta una funzione dal programma.  
   
- Per ulteriori informazioni, vedere [Compilazione di una libreria di importazione e di un file di esportazione](../../build/reference/building-an-import-library-and-export-file.md).  
+ Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/EXTRACT**  
- Consente di creare un file oggetto \(obj\) che contiene una copia di un membro di una libreria esistente.  
+ **/ ESTRAZIONE**  
+ Creare un file oggetto (obj) che contiene una copia di un membro di una raccolta esistente.  
   
- Per ulteriori informazioni, vedere [Estrazione di membri dalle librerie](../../build/reference/extracting-a-library-member.md).  
+ Per ulteriori informazioni vedere [l'estrazione di un membro di una libreria](../../build/reference/extracting-a-library-member.md).  
   
- **\/INCLUDE**  
- Consente di aggiungere un simbolo alla tabella dei simboli.  
+ **/INCLUDE**  
+ Aggiunge un simbolo per la tabella dei simboli.  
   
- Per ulteriori informazioni, vedere [Compilazione di una libreria di importazione e di un file di esportazione](../../build/reference/building-an-import-library-and-export-file.md).  
+ Per ulteriori informazioni vedere [la creazione di un File di esportazione e la libreria di importazione](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/LIBPATH**  
- Consente di eseguire l'override del percorso delle librerie specificato nelle variabili di ambiente.  
+ **/LIBPATH**  
+ Esegue l'override del percorso delle librerie dell'ambiente.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/LIST**  
+ **/ ELENCO**  
  Visualizza le informazioni sulla libreria di output nell'output standard.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/LTCG**  
- Determina la compilazione della libreria mediante la generazione di codice in fase di collegamento.  
+ **OPZIONE /LTCG**  
+ Fa sì che la libreria da compilare mediante la generazione di codice in fase di collegamento.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **\/MACHINE**  
- Consente di specificare la piattaforma di destinazione per il programma.  
+ **/ MACCHINA**  
+ Specifica la piattaforma di destinazione per il programma.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **\/NAME**  
- Quando si compila una libreria di importazione, è necessario specificare il nome della DLL per la quale compilare la libreria di importazione.  
+ **/ NOME**  
+ Quando si compila una libreria di importazione, specifica il nome della DLL per la quale compilare la libreria di importazione.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/NODEFAULTLIB**  
- Consente la rimozione di una o più librerie predefinite dall'elenco delle librerie in cui si effettuano le ricerche per la risoluzione dei riferimenti esterni.  
+ **/NODEFAULTLIB**  
+ Rimuove uno o più librerie predefinite dall'elenco delle librerie che la ricerca durante la risoluzione di riferimenti esterni.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/NOLOGO**  
- Consente di evitare la visualizzazione del messaggio contenente le informazioni sul copyright e il numero di versione di LIB, nonché impedire che vengano visualizzati i file di comando.  
+ **/NOLOGO**  
+ Evita la visualizzazione del LIB copyright messaggio e la versione numero e impedisce la visualizzazione dei file di comando.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **\/OUT**  
- Consente di eseguire l'override del nome predefinito per i file di output.  
+ **/OUT**  
+ Sostituisce il file di output predefinito.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/REMOVE**  
- Consente di omettere un oggetto dalla libreria di output.  
+ **INSTALLAZIONE**  
+ Omette l'oggetto dalla libreria di output.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/SUBSYSTEM**  
- Consente di comunicare al sistema operativo le modalità di esecuzione di un programma creato mediante collegamento alla libreria di output.  
+ **/ SOTTOSISTEMA**  
+ Indica al sistema operativo come eseguire un programma creato mediante il collegamento alla libreria di output.  
   
- Per ulteriori informazioni, vedere [Gestione di una libreria](../../build/reference/managing-a-library.md).  
+ Per ulteriori informazioni vedere [gestione di una libreria](../../build/reference/managing-a-library.md).  
   
- **\/VERBOSE**  
- Visualizza informazioni dettagliate sullo stato di avanzamento della sessione, inclusi i nomi dei file obj aggiunti.  
+ **/VERBOSE**  
+ Visualizza i dettagli sullo stato di avanzamento della sessione, inclusi i nomi dei file con estensione obj da aggiungere.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
- **\/WX**  
+ **/WX**  
  Considera gli avvisi come errori.  
   
- Per ulteriori informazioni, vedere [Esecuzione di LIB](../../build/reference/running-lib.md).  
+ Per ulteriori informazioni vedere [esecuzione di LIB](../../build/reference/running-lib.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimenti a LIB](../../build/reference/lib-reference.md)   
- [File di input LIB](../../build/reference/lib-input-files.md)   
- [File di output di LIB](../../build/reference/lib-output-files.md)   
- [Altri output di LIB](../../build/reference/other-lib-output.md)   
+ [File di Input LIB](../../build/reference/lib-input-files.md)   
+ [File di Output LIB](../../build/reference/lib-output-files.md)   
+ [Altri Output di LIB](../../build/reference/other-lib-output.md)   
  [Struttura di una libreria](../../build/reference/structure-of-a-library.md)

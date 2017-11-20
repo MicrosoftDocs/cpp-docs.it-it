@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -41,8 +40,7 @@ f1_keywords:
 - _variant_t::operatorfloat
 - _variant_t.operatorIDispatch
 - _variant_t.operatorshort
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extractors, _variant_t class
 - operator CY
@@ -57,16 +55,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 9ec02d82529a6772e079305c34c5f43ee163a2f7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4db692b4847bf6a8aa7fb1ffca3f4a2d96de833c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="variantt-extractors"></a>Estrattori _variant_t
 **Sezione specifica Microsoft**  
@@ -126,4 +123,3 @@ operator unsigned __int64() const;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe _variant_t](../cpp/variant-t-class.md)
-

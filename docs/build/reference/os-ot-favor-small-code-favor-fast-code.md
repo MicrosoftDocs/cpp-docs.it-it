@@ -1,65 +1,65 @@
 ---
-title: "/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocit&#224; codice) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed"
-  - "/os"
-  - "VC.Project.VCCLCompilerTool.FavorSizeOrSpeed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Os (opzione del compilatore) [C++]"
-  - "/Ot (opzione del compilatore) [C++]"
-  - "velocità codice"
-  - "Ottimizza per velocità codice (opzione del compilatore) [C++]"
-  - "Ottimizza per dimensione codice (opzione del compilatore) [C++]"
-  - "Os (opzione del compilatore) [C++]"
-  - "-Os (opzione del compilatore) [C++]"
-  - "Ot (opzione del compilatore) [C++]"
-  - "-Ot (opzione del compilatore) [C++]"
-  - "ottimizzazione del codice macchina"
+title: "-Os -/Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
+- /os
+- VC.Project.VCCLCompilerTool.FavorSizeOrSpeed
+dev_langs: C++
+helpviewer_keywords:
+- favor fast code compiler option [C++]
+- /Os compiler option [C++]
+- Ot compiler option [C++]
+- /Ot compiler option [C++]
+- small machine code
+- -Ot compiler option [C++]
+- fast code
+- favor small code compiler option [C++]
+- Os compiler option [C++]
+- -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5663f71ff6e8654312e3d8c8f76d8acfd9988e3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocit&#224; codice)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Riduce o ingrandisce le dimensioni dei file exe e delle DLL.  
+# <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Ottimizza per dimensione codice, Ottimizza per velocità codice)
+Riduce a icona o ingrandita le dimensioni del file exe e DLL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Os  
 /Ot  
 ```  
   
-## Note  
- **\/Os** \(Ottimizza per dimensione codice\) riduce le dimensioni dei file exe e delle DLL indicando al compilatore di ottimizzare per dimensione anziché per velocità.  Il compilatore può ridurre molti costrutti C e C\+\+ a sequenze funzionalmente simili di codice macchina.  Talvolta queste differenze offrono dei compromessi tra dimensione e velocità.  Le opzioni **\/Os** e **\/Ot** consentono di specificare una preferenza:  
+## <a name="remarks"></a>Note  
+ **/OS** (Ottimizza codice) riduce le dimensioni dei file exe e DLL indicando al compilatore di privilegiare la velocità di dimensione. Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi queste differenze rappresentano un compromesso tra la dimensione e velocità. Il **/Os** e **/Ot** opzioni consentono di specificare una preferenza per uno di essi:  
   
- **\/Ot** \(Ottimizza per velocità codice\) aumenta la velocità dei file exe e delle DLL indicando al compilatore di ottimizzare per velocità anziché per dimensione. Questa è l'impostazione predefinita. Il compilatore può ridurre molti costrutti C e C\+\+ a sequenze funzionalmente simili di codice macchina.  In alcuni casi queste differenze rappresentano un compromesso tra la dimensione e la velocità.  L'opzione \/Ot è implicita nell'opzione Ottimizza velocità \([\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)\).  L'opzione **\/O2** riunisce varie opzioni che consentono di generare codice a velocità elevata.  
+ **/Ot** (Ottimizza per velocità codice) ottimizza la velocità di exe e DLL indicando al compilatore di privilegiare la velocità rispetto alla dimensione. (Questo è il valore predefinito). Il compilatore può ridurre molti costrutti C e C++ per le sequenze simili a livello funzionale del codice macchina. In alcuni casi, queste differenze rappresentano un compromesso tra la dimensione e velocità. L'opzione /Ot implicito Ottimizza velocità ([/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md)) opzione. Il **/O2** opzione combina diverse opzioni per produrre codice molto veloce.  
   
- Se si utilizza **\/Os** o **\/Ot**, per ottimizzare il codice è necessario specificare anche [\/Og](../../build/reference/og-global-optimizations.md).  
-  
-> [!NOTE]
->  Le informazioni raccolte dall'esecuzione dei test di profilatura eseguiranno l'override delle ottimizzazioni altrimenti attive se si specifica **\/Ob**, **\/Os** o **\/Ot**.  Per ulteriori informazioni, vedere [Ottimizzazioni guidate da profilo \(PGO\)](../../build/reference/profile-guided-optimizations.md).  
-  
- **Sezione specifico x86**  
-  
- Nell'esempio riportato di seguito viene illustrata la differenza tra le opzioni Ottimizza per dimensione codice \(**\/Os**\) e Ottimizza per velocità codice \(**\/Ot**\):  
+ Se si utilizza **/Os** o **/Ot**, è necessario specificare anche [/Og](../../build/reference/og-global-optimizations.md) per ottimizzare il codice.  
   
 > [!NOTE]
->  Nell'esempio riportato di seguito viene descritto il comportamento previsto quando si utilizza **\/Os** o **\/Ot**.  A seconda della versione di rilascio, tuttavia, il comportamento del compilatore può offrire ottimizzazioni diverse per il codice riportato di seguito.  
+>  Le informazioni raccolte durante le esecuzioni dei test di profilatura sostituiranno le ottimizzazioni che verrebbero altrimenti applicate se si specifica **/Ob**, **/Os**, o **/Ot**. Per ulteriori informazioni, [ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).  
+  
+ **x86 specifico**  
+  
+ Esempio di codice seguente viene illustrata la differenza tra l'Ottimizza per dimensione codice (**/Os**) opzioni e Ottimizza per velocità codice (**/Ot**) opzione:  
+  
+> [!NOTE]
+>  Di seguito viene descritto il comportamento previsto quando si utilizza **/Os** o **/Ot**. Tuttavia, il comportamento del compilatore può comportare da versioni diverse ottimizzazioni per il codice riportato di seguito.  
   
 ```  
 /* differ.c  
@@ -73,14 +73,14 @@ int differ(int x)
 }  
 ```  
   
- Come illustrato nel frammento di codice macchina riportato sotto, quando DIFFER.c viene ottimizzato per la dimensione \(**\/Os**\), il compilatore implementa l'espressione di moltiplicazione nell'istruzione return in modo esplicito per produrre una sequenza di codice breve, ma lenta:  
+ Come illustrato nel frammento di codice macchina riportato di seguito, quando DIFFER per dimensioni (**/Os**), il compilatore implementa il moltiplicare l'espressione nell'istruzione return in modo esplicito come un per produrre una sequenza di codice breve ma più lenta:  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
 imul   eax, 71                  ; 00000047H  
 ```  
   
- Viceversa, quando DIFFER.c viene ottimizzato per la velocità \(**\/Ot**\), il compilatore implementa l'espressione di moltiplicazione nell'istruzione return come una serie di istruzioni shift e `LEA` per generare una sequenza di codice più lunga, ma veloce:  
+ In alternativa, quando DIFFER per la velocità di (**/Ot**), il compilatore implementa l'espressione nell'istruzione return come una serie di MAIUSC multiply e `LEA` istruzioni per produrre una sequenza, ma più veloce del codice:  
   
 ```  
 mov    eax, DWORD PTR _x$[ebp]  
@@ -90,23 +90,23 @@ lea    eax, DWORD PTR [eax+eax*8]
 sub    eax, ecx  
 ```  
   
- **END x86 Specific**  
+ **FINE x86 specifico**  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Ottimizzazione**.  
+3.  Fare clic su di **ottimizzazione** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Ottimizza per dimensione o velocità**.  
+4.  Modificare il **Ottimizza per dimensione o velocità** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.FavorSizeOrSpeed%2A>.  
   
-## Vedere anche  
- [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

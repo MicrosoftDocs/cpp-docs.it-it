@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-visual-c"></a>Ambito (Visual C++)
 I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area viene denominata "l'ambito" del nome. L'ambito determina la "durata" di un nome che non indica un oggetto con estensione statica. L'ambito determina inoltre la visibilità di un nome quando vengono chiamati i costruttori e i distruttori di classe e quando vengono inizializzate le variabili locali per l'ambito. (Per ulteriori informazioni, vedere [costruttori](../cpp/constructors-cpp.md) e [distruttori](../cpp/destructors-cpp.md).) Esistono cinque tipi di ambito:  
@@ -49,7 +46,7 @@ I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area
   
      In C++, l'ambito file è anche noto come ambito dello spazio dei nomi.  
   
--   **Ambito di classe** nomi dei membri della classe hanno ambito di classe. Funzioni membro della classe è accessibile solo tramite gli operatori di selezione dei membri (**.** o ** -> **) o gli operatori puntatore a membro (**.\* ** o ** -> \* **) su un oggetto o un puntatore a un oggetto di tale classe; i dati membro di classe non statica viene considerati locali per l'oggetto di tale classe. Si consideri la seguente dichiarazione di classe:  
+-   **Ambito di classe** nomi dei membri della classe hanno ambito di classe. Funzioni membro della classe è accessibile solo tramite gli operatori di selezione dei membri (**.** o  **->** ) o gli operatori puntatore a membro (**.\***  o  **-> \*** ) su un oggetto o un puntatore a un oggetto di tale classe; i dati membro di classe non statica viene considerati locali per l'oggetto di tale classe. Si consideri la seguente dichiarazione di classe:  
   
     ```  
     class Point  

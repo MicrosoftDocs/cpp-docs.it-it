@@ -1,59 +1,60 @@
 ---
-title: "Strings (ATL/MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, string handling class"
-  - "char pointers"
-  - "const char pointers"
-  - "copying string objects"
-  - "C-style strings"
-  - "language portability [C++]"
-  - "literal strings [C++], class CString"
-  - "literal strings [C++], class CStringT"
-  - "MBCS [C++], CString support"
-  - "MFC [C++], string handling class"
-  - "portabilità [C++], Unicode and ANSI string objects"
-  - "reference counting [C++]"
-  - "stringhe [C++]"
-  - "stringhe [C++], class CString"
-  - "stringhe [C++], class CStringT"
-  - "stringhe [C++], in ATL"
-  - "stringhe [C++], in MFC"
-  - "stringhe [C++], string operations"
+title: Stringhe (MFC ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- const char pointers
+- strings [C++], in ATL
+- MFC [C++], string handling class
+- MBCS [C++], CString support
+- strings [C++], class CStringT
+- char pointers
+- reference counting [C++]
+- strings [C++], string operations
+- portability [C++], Unicode and ANSI string objects
+- literal strings [C++], class CString
+- copying string objects
+- ATL, string handling class
+- strings [C++], in MFC
+- strings [C++]
+- C-style strings
+- language portability [C++]
+- strings [C++], class CString
+- literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d2b48b1454c988819953c03d6de449d8290c12d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Strings (ATL/MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quasi tutte le operazioni di programmi con i dati in formato stringa.  In Visual C\+\+ sono disponibili diversi modi per gestire i dati in formato stringa.  
+# <a name="strings-atlmfc"></a>Stringhe (ATL/MFC)
+Quasi tutti i programmi di lavoro con dati di tipo stringa. Visual C++ fornisce diversi modi per gestire i dati della stringa.  
   
-## In questa sezione  
- [Using CStringT](../atl-mfc-shared/using-cstringt.md)  
- Descrive programmare utilizzando la classe modello CStringT.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Uso di CStringT](../atl-mfc-shared/using-cstringt.md)  
+ Descrive la programmazione mediante la classe modello CStringT.  
   
- [Using CString](../atl-mfc-shared/using-cstring.md)  
- Descrive programmazione mediante CString, l'implementazione predefinita di CStringT.  
+ [Uso di CString](../atl-mfc-shared/using-cstring.md)  
+ Viene illustrato come programmare utilizzando CString, l'implementazione predefinita di CStringT.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Cenni preliminari su CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
- Vengono fornite informazioni di riferimento sulla classe condivisa `CStringT`.  
+ Fornisce informazioni di riferimento condiviso `CStringT` classe.  
   
- [concetti di MFC](../mfc/mfc-concepts.md)  
- Fornisce ad argomenti su concetti e attività relativi a programmare utilizzando la libreria MFC.  
+ [Concetti relativi a MFC](../mfc/mfc-concepts.md)  
+ Fornisce argomenti concettuali e basato su attività che consentono di programmare tramite la libreria MFC.  
   
-## Vedere anche  
- [ATL\/MFC Shared Classes](../atl-mfc-shared/atl-mfc-shared-classes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classi condivise ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)
+

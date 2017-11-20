@@ -1,33 +1,30 @@
 ---
-title: "@F | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@F"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@F symbol"
+title: '@F| Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@F'
+dev_langs: C++
+helpviewer_keywords: '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e8eb13eeafdbe30e1dd14944562ed191c479e839
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# @F
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La posizione del codice @@: etichetta.  
+# <a name="f"></a>@F
+La posizione del successivo [@ @:](../../assembler/masm/at-at.md) etichetta.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,5 +32,5 @@ La posizione del codice @@: etichetta.
   
 ```  
   
-## Vedere anche  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

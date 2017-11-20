@@ -1,32 +1,32 @@
 ---
-title: "Importazione tramite i file DEF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def (file) [C++], importazione"
-  - "file def [C++], importazione"
-  - "attributo dllimport [C++], DEF (file)"
-  - "DLL [C++], DEF (file)"
-  - "importazione di DLL [C++], DEF (file)"
+title: L'importazione tramite i file DEF | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- importing DLLs [C++], DEF files
+- def files [C++], importing with
+- .def files [C++], importing with
+- dllimport attribute [C++], DEF files
+- DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 81148525b70f3c5ff351feb9561699f3b9b5e932
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Importazione tramite i file DEF
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se si decide di utilizzare **\_\_declspec\(dllimport\)** con un file def, occorre modificare quest'ultimo in modo da utilizzare DATA anziché CONSTANT allo scopo di ridurre la probabilità che si verifichi un problema a causa del codice errato:  
+# <a name="importing-using-def-files"></a>Importazione tramite i file DEF
+Se si sceglie di utilizzare **declspec** insieme a un file con estensione def, è necessario modificare il file. def per utilizzare i dati al posto di costante per ridurre la probabilità che la generazione di codice non corretto causa un problema:  
   
 ```  
 // project.def  
@@ -35,30 +35,30 @@ EXPORTS
    ulDataInDll   DATA  
 ```  
   
- Nella tabella riportata di seguito sono illustrati i motivi di questa scelta:  
+ Nella tabella seguente viene illustrato il motivo.  
   
-|Parola chiave|Genera nella libreria di importazione|Esporta|  
-|-------------------|-------------------------------------------|-------------|  
-|`CONSTANT`|`_imp_ulDataInDll_ulDataInDll`|`_ulDataInDll`|  
+|Parola chiave|Genera nella libreria di importazione|Esportazioni|  
+|-------------|---------------------------------|-------------|  
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|  
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|  
   
- L'utilizzo di **\_\_declspec\(dllimport\)** e di CONSTANT consente di elencare sia la versione `imp` che il nome non decorato nella libreria di importazione della DLL \(lib\) creata per consentire il collegamento esplicito.  Se si utilizza **\_\_declspec\(dllimport\)** e DATA viene elencata solo la versione `imp` del nome.  
+ Utilizzando **declspec** e costante vengono elencate entrambe le `imp` versione e il nome non decorato in lib DLL importazione della libreria creata per consentire il collegamento esplicito. Utilizzando **declspec** e gli elenchi di dati solo la `imp` versione del nome.  
   
- Se si utilizza CONSTANT, è possibile utilizzare uno dei seguenti costrutti di codice per accedere a `ulDataInDll`:  
+ Se si utilizza una costante, è possibile utilizzare uno dei seguenti costrutti di codice per accedere a `ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/  
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- \- oppure \-  
+ -oppure-  
   
 ```  
 ULONG *ulDataInDll;      /*prototype*/  
 if (*ulDataInDll == 0L)  /*sample code fragment*/  
 ```  
   
- Se tuttavia si utilizza DATA nel file def, soltanto il codice compilato con la seguente definizione può accedere alla variabile `ulDataInDll`:  
+ Tuttavia, se si utilizzano i dati nel file def, solo il codice compilato con la seguente definizione può accedere alla variabile `ulDataInDll`:  
   
 ```  
 __declspec(dllimport) ULONG ulDataInDll;  
@@ -66,9 +66,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- L'uso di CONSTANT è più rischioso perché, se non si utilizza il livello aggiuntivo di riferimento indiretto, è possibile che si acceda al puntatore alla variabile nella tabella di indirizzi di importazione e non alla variabile vera e propria.  Questo tipo di problema può manifestarsi spesso come violazione di accesso poiché la tabella IAT è attualmente impostata in sola lettura dal compilatore e dal linker.  
+ Utilizzo di costante è più rischioso perché se si dimentica di utilizzare un livello supplementare di riferimento indiretto, si potrebbe accedere puntatore della tabella di indirizzi di importazione alla variabile, ovvero non la variabile. Questo tipo di problema può manifestarsi spesso come una violazione di accesso perché la tabella di indirizzi di importazione è attualmente impostata in sola lettura dal compilatore e del linker.  
   
- Per segnalare questa situazione, il linker corrente di Visual C\+\+ invia un messaggio di avviso se individua CONSTANT nel file def.  L'unico motivo valido per utilizzare CONSTANT è dato dall'impossibilità di ricompilare un file oggetto in cui il file di intestazione non elenca **\_\_declspec\(dllimport\)** nel prototipo.  
+ Il linker corrente di Visual C++ genera un avviso se rileva una costante in un file def per tenere conto per questo caso. L'unico motivo valido per utilizzare CONSTANT è se non è possibile ricompilare un file oggetto in cui il file di intestazione non elenca **declspec** nel prototipo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione in un'applicazione](../build/importing-into-an-application.md)

@@ -1,74 +1,74 @@
 ---
-title: "/STUB (nome file stub MS-DOS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/stub"
-  - "VC.Project.VCLinkerTool.DosStub"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/STUB (opzione del linker)"
-  - "Nome file stub MS-DOS (opzione del linker)"
-  - "STUB (opzione del linker)"
-  - "-STUB (opzione del linker)"
-  - "Win32 [C++], collegamento di programmi stub MS-DOS"
-  - "API Windows [C++], collegamento di programmi stub MS-DOS"
+title: -STUB (nome File Stub MS-DOS) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /stub
+- VC.Project.VCLinkerTool.DosStub
+dev_langs: C++
+helpviewer_keywords:
+- Win32 [C++], attaching MS-DOS stub program
+- STUB linker option
+- MS-DOS stub file name linker option
+- /STUB linker option
+- Windows API [C++], attaching MS-DOS stub program
+- -STUB linker option
 ms.assetid: 65221ffe-4f9a-4a14-ac69-3cfb79b40b5f
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 75d5d3d1eb362c893f3594e5d770111ddded01b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /STUB (nome file stub MS-DOS)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome file stub MS-DOS)
 ```  
 /STUB:filename  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove:  
   
  *filename*  
- Applicazione MS\-DOS.  
+ Un'applicazione MS-DOS.  
   
-## Note  
- L'opzione \/STUB connette un programma stub MS\-DOS ad un programma Win32.  
+## <a name="remarks"></a>Note  
+ L'opzione /STUB connette un programma stub MS-DOS a un programma Win32.  
   
- Il programma stub viene richiamato se il file viene eseguito in MS\-DOS.  In genere viene visualizzato un messaggio appropriato. Tuttavia qualsiasi applicazione MS\-DOS può essere un programma stub.  
+ Se il file viene eseguito in MS-DOS, viene richiamato un programma stub. In genere viene visualizzato un messaggio appropriato. Tuttavia, qualsiasi applicazione MS-DOS può essere un programma stub.  
   
- Specificare un *filename* per il programma stub dopo i due punti \(:\) alla riga di comando.  Nel linker viene verificato il *filename* e viene visualizzato un messaggio di errore se il file non è un eseguibile.  È necessario che il programma sia un file exe. I file COM non sono validi come programmi stub.  
+ Specificare un *filename* per il programma stub dopo i due punti (:) nella riga di comando. I controlli del linker *filename* e viene visualizzato un messaggio di errore se il file non è un file eseguibile. Il programma deve essere un file .exe. un file. com non è valido per un programma stub.  
   
- Se questa opzione non viene utilizzata, verrà associato automaticamente un programma stub predefinito nel quale verrà generato il seguente messaggio:  
+ Se si omette questa opzione, il linker collega un programma stub predefinito che rilascia il messaggio seguente:  
   
 ```  
 This program cannot be run in MS-DOS mode.  
 ```  
   
- Quando si compila un driver di periferica virtuale, *filename* consente all'utente di specificare un nome file contenente una struttura IMAGE\_DOS\_HEADER \(definita in WINNT.H\) da utilizzare nel VXD, in sostituzione dell'intestazione predefinita.  
+ Quando si compila un driver di dispositivo virtuale, *filename* consente all'utente di specificare un nome di file che contiene una struttura IMAGE_DOS_HEADER (definita in WINNT. H) da utilizzare in VXD, anziché l'intestazione predefinita.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

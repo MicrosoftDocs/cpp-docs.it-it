@@ -33,36 +33,21 @@ f1_keywords:
 - math/fmax
 - math/fmaxf
 - math/fmaxl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fmax function
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 2c8520367d07f0c42f9245421040cbc665771722
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: bb74fdfdcc12dce4777a51465164a3fbc6622f41
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 Determina il valore più grande tra due valori numerici specificati.  

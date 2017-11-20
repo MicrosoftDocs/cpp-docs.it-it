@@ -1,50 +1,51 @@
 ---
-title: "Specifica di un modello di threading per un progetto (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_APARTMENT_THREADED (macro)"
-  - "_ATL_FREE_THREADED (macro)"
-  - "_ATL_SINGLE_THREADED (macro)"
-  - "ATL, multithreading"
-  - "threading [ATL], modelli"
+title: Specifica il modello di Threading per un progetto (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- _ATL_FREE_THREADED macro
+- _ATL_APARTMENT_THREADED macro
+- ATL, multithreading
+- threading [ATL], models
+- _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 78d126564a736eafed2b51c0216b458844d4567a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Specifica di un modello di threading per un progetto (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="specifying-the-threading-model-for-a-project-atl"></a>Specifica di un modello di threading per un progetto (ATL)
 Le macro seguenti sono disponibili per specificare il modello di threading di un progetto ATL:  
   
 |Macro|Linee guida per l'utilizzo|  
-|-----------|--------------------------------|  
-|\_ATL\_SINGLE\_THREADED|Definire se tutti gli oggetti utilizzano il singolo modello di threading.|  
-|\_ATL\_APARTMENT\_THREADED|Definire se uno o più degli oggetti utilizzano il threading apartment.|  
-|\_ATL\_FREE\_THREADED|Definire se uno o più degli oggetti utilizzano il threading free o neutro.  Il codice esistente può contenere riferimenti a macro [\_ATL\_MULTI\_THREADED](../Topic/_ATL_MULTI_THREADED.md)equivalente.|  
+|-----------|--------------------------|  
+|ATL_SINGLE_THREADED|Specificare se tutti gli oggetti utilizzano il modello di threading singolo.|  
+|ATL_APARTMENT_THREADED|Definire se uno o più degli oggetti usano il threading apartment.|  
+|ATL_FREE_THREADED|Definire se uno o più degli oggetti di utilizzo di threading free o neutral. Il codice esistente può contenere riferimenti alla macro equivalente [ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded).|  
   
- Se non si definisce una di queste macro per il progetto, il \_ATL\_FREE\_THREADED avrà effetto.  
+ Se non si definisce uno qualsiasi di queste macro per il progetto, ATL_FREE_THREADED sarà più attivo.  
   
- Le macro influiscono sulle prestazioni di runtime come segue:  
+ Le macro delle prestazioni in fase di esecuzione come indicato di seguito:  
   
--   Specificare la macro che corrispondono agli oggetti nel progetto può migliorare le prestazioni in fase di esecuzione.  
+-   Specifica la macro che corrisponde agli oggetti nel progetto, è possibile migliorare le prestazioni in fase di esecuzione.  
   
--   Specificare un livello superiore della macro, ad esempio se si specifica il \_ATL\_APARTMENT\_THREADED quando tutti gli oggetti vengono singola thread multipli, leggermente degraderà le prestazioni in fase di esecuzione.  
+-   Specifica un livello superiore di una macro, ad esempio, se si specifica ATL_APARTMENT_THREADED quando tutti gli oggetti sono a thread singolo, leggermente influirà negativamente sulle prestazioni di runtime.  
   
--   Specificare un livello più basso di una macro, ad esempio, se si specifica il \_ATL\_SINGLE\_THREADED quando uno o più degli oggetti utilizzano il o il threading Free threading apartment, può provocare arresti l'applicazione negativo in fase di esecuzione.  
+-   Specifica un livello inferiore di una macro, ad esempio, se si specifica ATL_SINGLE_THREADED quando uno o più degli oggetti di usare il threading apartment o free, può causare l'errore in fase di esecuzione dell'applicazione.  
   
- Vedere [Opzioni, guidata semplice ATL](../atl/reference/options-atl-simple-object-wizard.md) per una descrizione dei modelli di threading disponibili per un oggetto ATL.  
+ Vedere [opzioni, creazione guidata oggetto semplice ATL](../atl/reference/options-atl-simple-object-wizard.md) per una descrizione del threading modelli disponibili per un oggetto ATL.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

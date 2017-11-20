@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,20 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (classe)
 Questa classe fornisce metodi per la creazione di una finestra di dialogo modale o non modale.  
@@ -110,7 +93,7 @@ template <class T,
 > [!NOTE]
 >  La classe deve definire un **IDD** membro che specifica l'ID di risorsa modello di finestra di dialogo. Ad esempio, la creazione guidata progetto ATL aggiunge automaticamente la riga seguente alla classe:  
   
- [!code-cpp[# NVC_ATL_Windowing 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  dove `MyDlg` è il **nome breve** immessa nella finestra della procedura guidata **nomi** pagina.  
   
@@ -119,7 +102,7 @@ template <class T,
 |Creazione di controlli|[Esercitazione ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Utilizzando le finestre di dialogo ATL|[Classi di finestra ATL](../../atl/atl-window-classes.md)|  
 |Creazione guidata progetto ATL|[Creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Finestre di dialogo|[Finestre di dialogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e gli argomenti successivi il[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Finestre di dialogo|[Finestre di dialogo](http://msdn.microsoft.com/library/windows/desktop/ms632588) e argomenti successivi in Windows SDK|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
@@ -142,7 +125,7 @@ HWND Create(
  `hWndParent`  
  [in] Handle di finestra proprietaria.  
   
- **RECT /**`rect`  
+ **RECT &**`rect`  
  [in] Oggetto [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura specifica dimensioni e la posizione della finestra di dialogo.  
   
  `dwInitParam`  
@@ -152,7 +135,7 @@ HWND Create(
  Handle di finestra di dialogo appena creato.  
   
 ### <a name="remarks"></a>Note  
- Questa finestra di dialogo verrà automaticamente allegata al `CDialogImpl` oggetto. Per creare una finestra di dialogo modale, chiamare [DoModal](#domodal). Sostituzioni secondo viene utilizzata solo con [CComControl](../../atl/reference/ccomcontrol-class.md).  
+ Questa finestra di dialogo verrà automaticamente allegata al `CDialogImpl` oggetto. Per creare una finestra di dialogo modale, chiamare [DoModal](#domodal). Il secondo override precedente viene utilizzato solo con [CComControl](../../atl/reference/ccomcontrol-class.md).  
   
 ##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
  Elimina definitivamente una finestra di dialogo non modale.  
@@ -216,7 +199,7 @@ INT_PTR DoModal(
   
 ### <a name="parameters"></a>Parametri  
  `hWndParent`  
- [in] Handle di finestra proprietaria. Il valore predefinito è il valore restituito del [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
+ [in] Handle di finestra proprietaria. Il valore predefinito è il valore restituito di [GetActiveWindow](http://msdn.microsoft.com/library/windows/desktop/ms646292) funzione Win32.  
   
  `dwInitParam`  
  [in] Specifica il valore da passare alla finestra di dialogo di **lParam** parametro del **WM_INITDIALOG** messaggio.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,18 @@ f1_keywords:
 - ATLCORE/ATL::CComFakeCriticalSection::Lock
 - ATLCORE/ATL::CComFakeCriticalSection::Term
 - ATLCORE/ATL::CComFakeCriticalSection::Unlock
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComFakeCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: b0619dc44c630ea272531fdf6ef5f5da3a487d65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomfakecriticalsection-class"></a>Classe CComFakeCriticalSection
 Questa classe fornisce gli stessi metodi di [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ma non fornisce una sezione critica.  
@@ -101,4 +97,3 @@ HRESULT Unlock() throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

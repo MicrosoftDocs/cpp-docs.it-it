@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_error class [C++], member functions
+dev_langs: C++
+helpviewer_keywords: _com_error class [C++], member functions
 ms.assetid: 39a73cdb-c12c-4d3b-a314-e3f6580f4d2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c25764ee1be43b433b3c2e5ba51f895e9efdf0b6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 50d96e589157a6395b8915a5ec5d05f35fbc3ab4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comerror-member-functions"></a>Funzioni membro _com_error
 Per informazioni di **com_error** funzioni membro, vedere [classe com_error](../cpp/com-error-class.md).  

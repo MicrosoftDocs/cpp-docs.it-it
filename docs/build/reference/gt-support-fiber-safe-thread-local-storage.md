@@ -1,62 +1,62 @@
 ---
-title: "/GT (Supporta archiviazione locale di thread indipendente da fiber) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations"
-  - "/gt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GT (opzione del compilatore) [C++]"
-  - "archiviazione locale di thread statica indipendente da fiber (opzione del compilatore) [C++]"
-  - "GT (opzione del compilatore) [C++]"
-  - "-GT (opzione del compilatore) [C++]"
-  - "archiviazione locale di thread statica e indipendenza da fiber"
-  - "archiviazione locale di thread"
+title: -GT (archiviazione locale di Thread di supporto indipendente da Fiber) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations
+- /gt
+dev_langs: C++
+helpviewer_keywords:
+- /GT compiler option [C++]
+- GT compiler option [C++]
+- thread-local storage
+- static thread-local storage and fiber safety
+- -GT compiler option [C++]
+- fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5912f241716bbaf9aba989dabbeb25d38ab465c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /GT (Supporta archiviazione locale di thread indipendente da fiber)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'indipendenza da fiber per i dati assegnati utilizzando l'archiviazione locale di thread statica, ovvero i dati allocati con `__declspec(thread)`.  
+# <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Supporta archiviazione locale di thread indipendente da fiber)
+Supporta l'indipendenza da fiber per i dati allocati mediante l'archiviazione locale di thread statici, vale a dire i dati allocati con `__declspec(thread)`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /GT  
 ```  
   
-## Note  
- Ai dati dichiarati con `__declspec(thread)` viene fatto riferimento tramite una matrice TLS \(Thread\-Local Storage\).  La matrice TLS è una matrice di indirizzi che il sistema gestisce per ciascun thread.  Ogni indirizzo in questa matrice fornisce la posizione dei dati di archiviazione thread\-local.  
+## <a name="remarks"></a>Note  
+ Dati dichiarato con `__declspec(thread)` viene fatto riferimento tramite un array di archiviazione locale di thread (TLS). La matrice TLS è una matrice di indirizzi che il sistema mantiene per ogni thread. Ogni indirizzo in questa matrice fornisce la posizione dei dati di archiviazione locale di thread.  
   
- Un fiber è un oggetto leggero composto da uno stack e da un contesto di registro e può essere pianificato su vari thread.  Può inoltre essere eseguito su qualsiasi thread.  Poiché un fiber può essere scambiato e riavviato in un secondo momento su un thread diverso, l'indirizzo della matrice TLS non deve essere inserito nella cache o ottimizzato come sottoespressione comune in una chiamata di funzione. Per informazioni dettagliate al riguardo, vedere l'opzione [\/Og \(Ottimizzazioni globali\)](../../build/reference/og-global-optimizations.md).  **\/GT** impedisce questo tipo di ottimizzazioni.  
+ Un fiber è un oggetto semplice che include uno stack e un contesto di registro e possa essere pianificato nei diversi thread. Un fiber è possibile eseguire in qualsiasi thread. Poiché un fiber può essere scambiato e riavviato in un secondo momento su un thread diverso, l'indirizzo della matrice TLS non deve essere memorizzato nella cache o ottimizzato come sottoespressione comune in una chiamata di funzione (vedere il [/Og (ottimizzazioni globali)](../../build/reference/og-global-optimizations.md) opzione Dettagli). **/GT** impedisce che tali ottimizzazioni.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Ottimizzazione**.  
+3.  Fare clic su di **ottimizzazione** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Attiva ottimizzazioni fiber**.  
+4.  Modificare il **abilita ottimizzazioni fiber** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFiberSafeOptimizations%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

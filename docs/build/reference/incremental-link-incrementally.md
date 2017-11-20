@@ -1,97 +1,97 @@
 ---
-title: "/INCREMENTAL (collegamento incrementale) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/incremental"
-  - "VC.Project.VCLinkerTool.LinkIncremental"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INCREMENTAL (opzione del linker)"
-  - "INCREMENTAL (opzione del linker)"
-  - "-INCREMENTAL (opzione del linker)"
-  - "collegamento incrementale"
-  - "Collega in modo incrementale (opzione)"
-  - "LINK (strumento) [C++], opzioni per il collegamento completo"
+title: -INCREMENTALE (collegamento incrementale) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /incremental
+- VC.Project.VCLinkerTool.LinkIncremental
+dev_langs: C++
+helpviewer_keywords:
+- /INCREMENTAL linker option
+- -INCREMENTAL linker option
+- INCREMENTAL linker option
+- link incrementally option
+- LINK tool [C++], options for full linking
+- incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8866988a800a4d6c2a942af1a613c1d6906abc78
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /INCREMENTAL (collegamento incrementale)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="incremental-link-incrementally"></a>/INCREMENTAL (collegamento incrementale)
 ```  
 /INCREMENTAL[:NO]  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Controlla il modo in cui il linker gestisce il collegamento incrementale.  
   
- Per impostazione predefinita il linker viene eseguito in modalità incrementale.  Per eseguire l'override di un collegamento incrementale predefinito, specificare \/INCREMENTAL:NO.  
+ Per impostazione predefinita il linker viene eseguito in modalità incrementale. Per eseguire l'override di un collegamento incrementale predefinito, specificare /INCREMENTAL:NO.  
   
- Un programma collegato in modo incrementale è funzionalmente equivalente a un programma che non lo è.  Dal momento che sono preparati per collegamenti incrementali successivi, i file eseguibili \(exe\) e le librerie a collegamento dinamico \(DLL\) collegati in modo incrementale presentano le seguenti caratteristiche:  
+ Un programma collegato in modo incrementale è funzionalmente equivalente a un programma collegato in modo non incrementale. Tuttavia, poiché è stato preparato per collegamenti incrementali successivi, una libreria statica dall'eseguibile in modo incrementale collegata o file di libreria a collegamento dinamico:  
   
--   Sono di dimensioni maggiori rispetto ai programmi collegati in modo non incrementale a causa della spaziatura interna del codice e dei dati. \(La spaziatura interna consente al linker di aumentare le dimensioni delle funzioni e dei dati senza ricreare il file exe\).  
+-   È maggiore di un programma collegato in modo non incrementale a causa di spaziatura interna del codice e dati. Spaziatura interna consente al linker di aumentare le dimensioni di funzioni e dati senza ricreare il file.  
   
 -   È possibile che contengano thunk dei salti per gestire la rilocazione di funzioni in nuovi indirizzi.  
   
     > [!NOTE]
-    >  Per assicurarsi che la build di rilascio finale non contenga spaziatura interna o thunk, collegare il programma in modo non incrementale.  
+    >  Per garantire che la build di rilascio finale non contenga spaziatura interna o thunk, collegare il programma in modo non incrementale.  
   
- Per eseguire un collegamento incrementale indipendentemente dall'impostazione predefinita, specificare \/INCREMENTAL.  Quando questa opzione è selezionata, tramite il linker viene generato un avviso qualora il collegamento incrementale non possa essere eseguito, quindi il programma viene collegato in modo non incrementale.  Alcune opzioni e situazioni determinano l'override di \/INCREMENTAL.  
+ Per eseguire un collegamento incrementale indipendentemente dall'impostazione predefinita, specificare /INCREMENTAL. Quando questa opzione è selezionata, il linker genera un avviso se è possibile collegare in modo incrementale e quindi il programma viene collegato in modo non incrementale. Alcune opzioni e situazioni determinano l'override di /INCREMENTAL.  
   
- È possibile collegare in modo incrementale la maggior parte dei programmi.  Alcune modifiche sono tuttavia eccessive e alcune opzioni sono incompatibili con il collegamento incrementale.  LINK esegue un collegamento completo se viene specificata una delle opzioni seguenti:  
+ È possibile collegare in modo incrementale la maggior parte dei programmi. Alcune modifiche sono tuttavia eccessive e alcune opzioni sono incompatibili con il collegamento incrementale. LINK esegue un collegamento completo se viene specificata una delle opzioni seguenti:  
   
--   Collegamento incrementale non selezionato \(\/INCREMENTAL:NO\)  
+-   Collegamento incrementale non selezionato (/INCREMENTAL:NO)  
   
--   \/OPT:REF selezionato  
+-   /OPT:REF selezionato  
   
--   \/OPT:ICF selezionato  
+-   /OPT:ICF selezionato  
   
--   \/OPT:LBR selezionato  
+-   /OPT:LBR selezionato  
   
--   \/ORDER selezionato  
+-   /ORDER selezionato  
   
- \/INCREMENTAL è implicito quando si specifica [\/DEBUG](../../build/reference/debug-generate-debug-info.md).  
+ /INCREMENTAL è implicito quando [/debug](../../build/reference/debug-generate-debug-info.md) specificato.  
   
  LINK esegue un collegamento completo qualora si verifichi una delle situazioni seguenti:  
   
--   Il file di stato incrementale con estensione ilk è mancante. \(LINK crea un nuovo file ilk in preparazione del collegamento incrementale successivo\).  
+-   Il file di stato incrementale con estensione ilk è mancante. (LINK crea un nuovo file ilk in preparazione del collegamento incrementale successivo).  
   
--   Non si dispone dell'autorizzazione di scrittura per il file ilk. \(LINK ignora il file ilk ed esegue i collegamenti in modo non incrementale\).  
+-   Non si dispone dell'autorizzazione di scrittura per il file ilk. (LINK ignora il file ilk collegamenti in modo non incrementale.)  
   
 -   Il file di output exe o dll è mancante.  
   
 -   Il timestamp del file ilk, exe o dll è cambiato.  
   
--   Un'opzione LINK è cambiata.  In caso di modifica nelle build, la maggior parte delle opzioni LINK causa un collegamento completo.  
+-   Un'opzione LINK è cambiata. In caso di modifica nelle build, la maggior parte delle opzioni LINK causa un collegamento completo.  
   
--   Un file oggetto \(OBJ\) viene aggiunto o omesso.  
+-   Un file oggetto (OBJ) viene aggiunto o omesso.  
   
-### Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Selezionare il **Linker** cartella.  
   
-3.  Selezionare la pagina delle proprietà **Generale**.  
+3.  Selezionare la pagina delle proprietà **Generale** .  
   
-4.  Modificare la proprietà **Abilita collegamento incrementale**.  
+4.  Modificare il **Attiva collegamento incrementale** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkIncremental%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

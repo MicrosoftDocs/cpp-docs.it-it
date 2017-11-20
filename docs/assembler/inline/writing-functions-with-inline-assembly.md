@@ -1,32 +1,32 @@
 ---
-title: "Scrittura di funzioni con assembly inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], funzioni"
-  - "assembler [C++], scrittura di funzioni"
-  - "funzioni [C++], assembly inline"
-  - "assembly inline [C++], scrittura di funzioni"
+title: Scrittura di funzioni con Assembly Inline | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], inline assembly
+- inline assembly [C++], writing functions
+- assembler [C++], writing functions
+- __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Scrittura di funzioni con assembly inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Specifici di Microsoft  
- Se si scrive una funzione con il codice assembly inline, è facile passare argomenti alla funzione e restituire un valore da esso.  Negli esempi seguenti confrontare una funzione per un assembler separati vengono innanzitutto scritti e riscritti per l'assembler inline.  La funzione, denominata  `power2`, riceve due parametri, moltiplicando il primo parametro per 2 elevato alla potenza del secondo parametro.  Scritto per un assembler separato, la funzione potrebbe essere simile al seguente:  
+# <a name="writing-functions-with-inline-assembly"></a>Scrittura di funzioni con assembly inline
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Se si scrive una funzione con il codice assembly inline, è facile passare argomenti alla funzione e riceverne un valore. Negli esempi seguenti viene confrontata una funzione dapprima scritta per un assembler separato e successivamente riscritta dell'assembler inline. La funzione, denominata `power2`, riceve due parametri, moltiplicando il primo parametro per 2 alla potenza del secondo parametro. Scritta per un assembler separato, la funzione potrebbe essere simile alla seguente:  
   
 ```  
 ; POWER.ASM  
@@ -50,10 +50,10 @@ _TEXT   ENDS
         END  
 ```  
   
- Dal momento che è stato scritto per un assembler separato, la funzione richiede i passaggi di file e assembly e collegamento di origine distinti.  Gli argomenti della funzione C e C\+\+ in genere sono passati sullo stack, quindi questa versione della  `power2`funzione accede ai relativi argomenti in base alle relative posizioni sullo stack.  \(Si noti che il  **modello** direttiva, disponibile in MASM e alcuni altri assemblatori, consente inoltre di accedere a stack argomenti e variabili di stack locale dal nome.\)  
+ Poiché è scritta per un assembler separato, la funzione richiede un file di origine separato e passaggi di collegamento e di assembly. Gli argomenti della funzione C e C++ vengono in genere passati nello stack, pertanto l'accesso di questa versione della funzione `power2` ai relativi argomenti avviene mediante le relative posizioni nello stack. (Si noti che il **modello** direttiva, disponibile in MASM e in altri assembler, consente inoltre di accedere ad argomenti dello stack e variabili dello stack locali in base al nome.)  
   
-## Esempio  
- Scrive questo programma il  `power2`funzione con il codice assembly inline:  
+## <a name="example"></a>Esempio  
+ In questo programma la funzione `power2` viene scritta con il codice assembly inline:  
   
 ```  
 // Power2_inline_asm.c  
@@ -81,11 +81,11 @@ int power2( int num, int power )
 }  
 ```  
   
- La versione in linea del  `power2`funzione fa riferimento ai relativi argomenti per nome e viene visualizzato nello stesso file di origine del resto del programma.  Questa versione richiede anche meno istruzioni in linguaggio assembly.  
+ La versione inline della funzione `power2` fa riferimento ai relativi argomenti in base al nome e viene visualizzata nello stesso file di origine del resto del programma. Inoltre, in questa versione sono richieste meno istruzioni di assembly.  
   
- Poiché la versione in linea di  `power2`non esegue una C  `return`\(istruzione\), provoca un innocuo messaggio di avviso se esegue la compilazione a livello di avviso 2 o superiore.  La funzione restituisce un valore, ma il compilatore non è in grado di riconoscere che in assenza di un  `return`istruzione.  È possibile utilizzare  [avviso \#pragma](../../preprocessor/warning.md) per disattivare la generazione di questo avviso.  
+ Poiché la versione inline di `power2` non esegue un'istruzione `return` del linguaggio C, genera un avviso informativo se si compila con avviso di livello 2 o successivo. La funzione non restituisce un valore, ma il compilatore non è in grado di segnalare tale situazione in assenza di un'istruzione `return`. È possibile utilizzare [#pragma avviso](../../preprocessor/warning.md) per disabilitare la generazione dell'avviso.  
   
- **FINE specifico di Microsoft**  
+ **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Utilizzo di C o C\+\+ in blocchi \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso di C o C++ in blocchi __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

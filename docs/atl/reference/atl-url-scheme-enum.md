@@ -1,48 +1,28 @@
 ---
-title: Enumerazione ATL_URL_SCHEME | Documenti di Microsoft
+title: Enumerazione ATL_URL_SCHEME | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- ATL_URL_SCHEME
+dev_langs: C++
+helpviewer_keywords: ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-caps.latest.revision: 7.2
+caps.latest.revision: "7.2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 608508b60192ccfdaf4cb0ea09d5274e07de9f0c
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: cca9eaf9da116c241b4e137e8ca204b1a90b4595
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-
-
 # <a name="atlurlscheme"></a>ATL_URL_SCHEME  
 
-I membri di questa enumerazione forniscono costanti per gli schemi comprensibile [CUrl](curl-class.md).  
+I membri di questa enumerazione forniscono costanti per gli schemi riconosciuti dal [CUrl](curl-class.md).  
   
 ## <a name="syntax"></a>Sintassi  
   

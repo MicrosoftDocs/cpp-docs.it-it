@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,21 @@ f1_keywords:
 - ATLBASE/ATL::CComSingleThreadModel::ThreadModelNoCS
 - ATLBASE/ATL::CComSingleThreadModel::Decrement
 - ATLBASE/ATL::CComSingleThreadModel::Increment
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - single-threaded applications
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 65af9492f3721fd642def72a3049552cdff75ce6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e7fe0d3ea0b8fc5b42546f12c17d890250752260
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Classe CComSingleThreadModel
 Questa classe fornisce metodi per l'incremento e decremento del valore di una variabile.  
@@ -173,4 +170,3 @@ typedef CComSingleThreadModel ThreadModelNoCS;
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

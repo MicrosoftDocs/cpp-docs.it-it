@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapwalk
+apiname: _heapwalk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 936ca2f3f4e4f2fb57dd730f5a58927d08d6207f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: caed5b5fec9ff7854905542c093a0d265dee4db5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="heapwalk"></a>_heapwalk
 Attraversa l'heap e restituisce informazioni relative alla voce successiva.  
@@ -86,7 +68,7 @@ int _heapwalk(
  L'heap è danneggiato o è stato travato un nodo non valido.  
   
  `_HEAPBADPTR`  
-Il campo  `_pentry` della struttura `_HEAPINFO` non contiene un puntatore valido nell'heap oppure `entryinfo` è un puntatore Null.  
+ Il campo `_pentry` della struttura `_HEAPINFO` non contiene un puntatore valido nell'heap oppure `entryinfo` è un puntatore Null.  
   
  `_HEAPEND`  
  Fine dell'heap raggiunta correttamente.  

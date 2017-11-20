@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - tanf
 - tanhf
 - tanhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tanl function
 - tanhl function
@@ -53,31 +51,15 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f52084801f695fe6c435e9c46520a6b2b3c9e754
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c0f094272514966655e8ecfe45a3f35e179db333
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan, tanf, tanl, tanh, tanhf, tanhl
 Calcola la tangente (`tan`, `tanf` o `tanl`) oppure la tangente iperbolica (`tanh`, `tanhf` o `tanhl`).  
@@ -122,7 +104,7 @@ long double tanhl(
  Angolo in radianti.  
   
 ## <a name="return-value"></a>Valore restituito  
- Le funzioni `tan` restituiscono la tangente di `x`. If `x` is greater than or equal to 263, or less than or equal to -263, a loss of significance in the result occurs.  
+ Le funzioni `tan` restituiscono la tangente di `x`. Se `x` è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.  
   
  Le funzioni `tanh` restituiscono la tangente iperbolica di `x`. Non vi è restituzione di errori.  
   

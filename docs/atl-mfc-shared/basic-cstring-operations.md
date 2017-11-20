@@ -1,111 +1,111 @@
 ---
-title: "Basic CString Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caratteri, accessing in CStrings"
-  - "CString objects"
-  - "CString objects, operazioni di base"
-  - "literal strings, CString operations"
-  - "stringhe (confronto), CString operations"
-  - "stringhe letterali, CString operations"
+title: Le operazioni di base con CString | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, basic operations
+- string literals, CString operations
+- literal strings, CString operations
+- CString objects
+- string comparison, CString operations
+- characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 566f2d29da9ff8422b8a29178f63a553bfe33668
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Basic CString Operations
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento vengono descritte le seguenti operazioni di base [CString](../atl-mfc-shared/reference/cstringt-class.md) :  
+# <a name="basic-cstring-operations"></a>Operazioni di base con CString
+Questo argomento viene illustrato nell'esempio seguente basic [CString](../atl-mfc-shared/reference/cstringt-class.md) operazioni:  
   
--   [Creando CString oggetti da stringhe standard di valore letterale c](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
+- [Creazione di oggetti CString da stringhe letterali C standard](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
   
--   [Accedere ai singoli caratteri in un CString](#_core_accessing_individual_characters_in_a_cstring)  
+- [L'accesso ai singoli caratteri di CString](#_core_accessing_individual_characters_in_a_cstring)  
   
--   [Concatenare due oggetti di CString](#_core_concatenating_two_cstring_objects)  
+- [Concatenazione di due oggetti CString](#_core_concatenating_two_cstring_objects)  
   
--   [Confrontare gli oggetti di CString](#_core_comparing_cstring_objects)  
+- [Confronto di oggetti CString](#_core_comparing_cstring_objects)  
   
--   [Per convertire oggetti di CString](#_core_converting_cstring_objects)  
+- [La conversione di oggetti CString](#_core_converting_cstring_objects)  
   
- `Class CString` è basato sul modello [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)della classe.  `CString` è `typedef``CStringT`.  Più preciso, `CString` è `typedef`*di una specializzazione esplicita*`CStringT`, una tecnica comune utilizzare il modello di classe per definire la classe.  Le classi analogamente definite vengono `CStringA` e `CStringW`.  Per ulteriori informazioni sulla specializzazione esplicita, vedere [Creazione di istanze di modelli di classe](../Topic/Class%20Template%20Instantiation.md).  
+ `Class CString`è basato sul modello di classe [classe CStringT](../atl-mfc-shared/reference/cstringt-class.md). `CString`è un `typedef` di `CStringT`. Più precisamente, `CString` è un `typedef` di un *specializzazione esplicita* di `CStringT`, ovvero un modo comune per utilizzare un modello di classe per definire una classe. Sono classi definite in modo analogo `CStringA` e `CStringW`.  
   
- `CString`, `CStringA`e `CStringW` sono definiti in atlstr.h.  `CStringT` è definito in cstringt.h.  
+ `CString`, `CStringA`, e `CStringW` sono definiti in atlstr.h. `CStringT`è definito in CStringT. h.  
   
- `CString`, `CStringA`e `CStringW` ognuno ottiene un set di metodi degli operatori e definito da `CStringT` da utilizzare con i dati in formato stringa che supportano.  Alcuni duplicati di metodi, e, supera in alcuni casi i servizi della stringa delle librerie di runtime del linguaggio C.  
+ `CString`, `CStringA`, e `CStringW` ogni ottenere un set dei metodi e operatori definiti da `CStringT` per l'utilizzo con i dati di stringa supportate. Alcuni metodi duplicati e, in alcuni casi, superano i servizi di stringa delle librerie di runtime C.  
   
- Nota: `CString` è una classe nativa.  Per una classe string che serve nel progetto gestito \+\+\/CLI c, utilizzare `System.String`.  
+ Nota: `CString` è una classe nativa. Per una classe di stringa che viene usata in C + + CLI gestiti progetto, utilizzare `System.String`.  
   
-##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Creare gli oggetti di CString da stringhe standard di valore letterale c  
- È possibile assegnare stringhe letterali di tipo C a `CString` come è possibile assegnare un oggetto `CString` a un altro.  
+##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a>Creazione di oggetti CString da stringhe letterali C Standard  
+ È possibile assegnare stringhe letterali di tipo C per una `CString` esattamente come è possibile assegnare uno `CString` oggetto a un altro.  
   
--   Assegnare il valore della stringa letterale c a un oggetto `CString`.  
+-   Assegnare il valore di una stringa letterale C a una `CString` oggetto.  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#183](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#183](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_1.cpp)]  
   
--   Assegnare il valore di un `CString` a un altro oggetto `CString`.  
+-   Assegnare il valore di uno `CString` a un altro `CString` oggetto.  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#184](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#184](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_2.cpp)]  
   
-     Il contenuto di un oggetto `CString` viene copiato quando un oggetto `CString` viene assegnato a un altro.  Di conseguenza, le due stringhe non condividono un riferimento ai caratteri che costituiscono la stringa.  Per ulteriori informazioni su come utilizzare gli oggetti `CString` come valori, vedere [CString Semantics](../atl-mfc-shared/cstring-semantics.md).  
+     Il contenuto di un `CString` oggetto vengono copiati quando uno `CString` oggetto viene assegnato a un altro. Pertanto, le due stringhe non condividono un riferimento per i caratteri effettivi che costituiscono la stringa. Per ulteriori informazioni su come usare `CString` degli oggetti come valori, vedere [semantica di CString](../atl-mfc-shared/cstring-semantics.md).  
   
     > [!NOTE]
-    >  Per scrivere l'applicazione in modo da consentirne la compilazione per Unicode o ANSI, stringhe letterali di codice utilizzando la macro di \_T.  Per ulteriori informazioni, vedere [Supporto per set di caratteri Unicode e multibyte \(MBCS\)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
+    >  Scrivere l'applicazione in modo che possa essere compilato per Unicode o ANSI, le stringhe letterali utilizzando la macro t. Per ulteriori informazioni, vedere [supporto Unicode e impostare caratteri Multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> Accedere ai singoli caratteri in un CString  
- È possibile accedere ai singoli caratteri in un oggetto `CString` utilizzando i metodi `SetAt` e `GetAt`.  È inoltre possibile utilizzare l'elemento della matrice, o pedice, l'operatore \( \[ \] \) anziché `GetAt` per ottenere i singoli caratteri.  \(Si ricorda accedere agli elementi della matrice tramite l'indice, come nelle stringhe di tipo C standard.\) i valori di indice per i caratteri `CString` sono in base zero.  
+##  <a name="_core_accessing_individual_characters_in_a_cstring"></a>L'accesso ai singoli caratteri di CString  
+ È possibile accedere a singoli caratteri di un `CString` oggetto utilizzando il `GetAt` e `SetAt` metodi. È inoltre possibile utilizzare l'elemento o all'indice, operatore di matrice ([]) invece di `GetAt` per ottenere i singoli caratteri. (Assomiglia all'accesso agli elementi di matrice in base all'indice, come le stringhe di tipo C standard.) I valori per `CString` caratteri sono a base zero.  
   
-##  <a name="_core_concatenating_two_cstring_objects"></a> Concatenare due oggetti di CString  
- Per concatenare due oggetti `CString`, utilizzare gli operatori di concatenazione \(\+ o \+\=\), come segue.  
+##  <a name="_core_concatenating_two_cstring_objects"></a>Concatenazione di due oggetti CString  
+ Per concatenare due `CString` oggetti, utilizzare gli operatori di concatenazione (+ + o), come indicato di seguito.  
   
- [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_3.cpp)]  
   
- Almeno un argomento agli operatori di concatenazione \(\+ o \+\=\) deve essere un oggetto `CString`, tuttavia è possibile utilizzare una stringa di caratteri costante, ad esempio `"big"`\) o `char`, ad esempio "x "\) per l'altro argomento.  
+ Almeno un argomento per gli operatori di concatenazione (+ + = o) deve essere un `CString` oggetto, ma è possibile usare una stringa di caratteri costante (ad esempio, `"big"`) o un `char` (ad esempio, ' x') per l'altro argomento.  
   
-##  <a name="_core_comparing_cstring_objects"></a> Confrontare gli oggetti di CString  
- Il metodo `Compare` e l'operatore di \=\= per `CString` sono equivalenti.  `Compare`, `operator==`e `CompareNoCase` sono MBCS e Unicode sviluppatori; `CompareNoCase` è anche senza distinzione tra maiuscole e minuscole.  Il metodo `Collate``CString` è riservato impostazioni locali e spesso è più lento `Compare`.  Utilizzare `Collate` solo in cui è necessario attenerti alle regole di ordinamento specificate dalle impostazioni locali correnti.  
+##  <a name="_core_comparing_cstring_objects"></a>Confronto di oggetti CString  
+ Il `Compare` (metodo) e l'operatore per `CString` sono equivalenti. `Compare`, `operator==`, e `CompareNoCase` compatibili MBCS e Unicode; `CompareNoCase` è anche tra maiuscole e minuscole. Il `Collate` metodo `CString` viene applicata la distinzione delle impostazioni locali e spesso è più lento `Compare`. Utilizzare `Collate` solo in cui è necessario rispettare l'ordinamento delle regole come specificato dalle impostazioni locali correnti.  
   
- Nella tabella seguente sono illustrate le funzioni di confronto disponibili [CString](../atl-mfc-shared/reference/cstringt-class.md) e le funzioni dell'equivalente Unicode\/MBCS\-portable nella libreria di runtime del linguaggio C.  
+ Nella seguente tabella sono disponibili [CString](../atl-mfc-shared/reference/cstringt-class.md) le funzioni di confronto e delle funzioni di formato portabile Unicode/MBCS equivalenti nella libreria di runtime C.  
   
-|Funzione di CString|Funzione MBCS|Funzione Unicode|  
-|-------------------------|-------------------|----------------------|  
+|Funzione di CString|Funzione MBCS|Unicode (funzione)|  
+|----------------------|-------------------|----------------------|  
 |`Compare`|`_mbscmp`|`wcscmp`|  
 |`CompareNoCase`|`_mbsicmp`|`_wcsicmp`|  
 |`Collate`|`_mbscoll`|`wcscoll`|  
   
- Il modello di classe `CStringT` definisce gli operatori relazionali \(\<, \<\=, \>\=, \>, \=\= e\! \=\), disponibili per l'utilizzo `CString`.  È possibile confrontare due `CStrings` utilizzando questi operatori, come illustrato nell'esempio seguente.  
+ Il `CStringT` modello di classe definisce gli operatori relazionali (<, \<=, > =, >, = = e! =), che sono disponibili per l'utilizzo da `CString`. È possibile confrontare due `CStrings` tramite questi operatori, come illustrato nell'esempio seguente.  
   
- [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_4.cpp)]  
   
-##  <a name="_core_converting_cstring_objects"></a> Per convertire oggetti di CString  
- Per informazioni sulla conversione degli oggetti di CString ad altri tipi di stringa, vedere [Procedura: convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md).  
+##  <a name="_core_converting_cstring_objects"></a>La conversione di oggetti CString  
+ Per informazioni sulla conversione di oggetti CString in altri tipi di stringa, vedere [procedura: convertire tra diversi tipi stringa](../text/how-to-convert-between-various-string-types.md).  
   
-## Utilizzando CString con wcout  
- Per utilizzare un CString con `wcout` è necessario eseguire esplicitamente il cast dell'oggetto a `const wchar_t*` come illustrato nel seguente esempio:  
-  
-```  
-CString cs("meow");  
-  wcout << (const wchar_t*) cs << endl;  
+## <a name="using-cstring-with-wcout"></a>Uso di CString con wcout  
+ Per utilizzare un oggetto CString con `wcout` deve esplicitamente il cast dell'oggetto un `const wchar_t*` come illustrato nell'esempio seguente:  
   
 ```  
+CString cs("meow");
+
+    wcout <<(const wchar_t*) cs <<endl;  
+ 
+```  
   
- Senza il cast, `cs` viene considerato `void*` e `wcout` stampa l'indirizzo dell'oggetto.  Questo comportamento è causato dalle interazioni immediatamente evidenti tra la deduzione di argomento di modello e la risoluzione dell'overload che rappresentano direttamente corretti e allo standard C\+\+.  
+ Se il cast, `cs` viene considerato come un `void*` e `wcout` stampa l'indirizzo dell'oggetto. Questo comportamento è causato dalle interazioni meno evidenti tra argomento deduzione e overload risoluzione per il modello che si trovano nel loro corretto e conforme allo standard C++.  
   
-## Vedere anche  
- [Stringhe](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)   
- [Creazione di istanze di modelli di classe](../Topic/Class%20Template%20Instantiation.md)   
- [Specializzazione esplicita di modelli di classe](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)   
- [Specializzazione parziale di modelli di classe](../cpp/template-specialization-cpp.md)   
- [Procedura: convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)
+## <a name="see-also"></a>Vedere anche  
+ [Stringhe (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
+ [Specializzazione di modello](../cpp/template-specialization-cpp.md)   
+ [Procedura: Convertire vari tipi di stringhe](../text/how-to-convert-between-various-string-types.md)
+

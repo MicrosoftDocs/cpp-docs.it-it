@@ -1,56 +1,56 @@
 ---
-title: "Importazione ed esportazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) (parola chiave) [C++]"
-  - "DLL [C++], esportazione da"
-  - "DLL [C++], importazione"
-  - "esportazione di DLL [C++]"
-  - "importazione di DLL [C++]"
+title: Importazione ed esportazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], importing
+- exporting DLLs [C++]
+- importing DLLs [C++]
+- DLLs [C++], exporting from
+- __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b22332e9d8e31b631cf4e93f8ee6860498d64144
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Importazione ed esportazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile importare simboli pubblici in un'applicazione o esportare funzioni da una DLL mediante i due metodi elencati di seguito.  
+# <a name="importing-and-exporting"></a>Importazione ed esportazione
+È possibile importare simboli pubblici in un'applicazione o esportare funzioni da una DLL tramite due metodi:  
   
--   Utilizzare un file di definizione di modulo \(def\) quando si compila la DLL.  
+-   Usare un file di definizione (con estensione def) modulo durante la compilazione della DLL  
   
--   Utilizzare le parole chiave **\_\_declspec\(dllimport\)** o **\_\_declspec\(dllexport\)** in una definizione di funzione nell'applicazione principale.  
+-   Utilizzare le parole chiave **declspec** o **dllexport** in una definizione di funzione nell'applicazione principale.  
   
-## Utilizzo di un file def  
- Un file di definizione di modulo \(def\) è un file di testo contenente una o più istruzioni di modulo che descrivono alcuni attributi di una DLL.  Se non si utilizzano le parole chiave **\_\_declspec\(dllimport\)** o **\_\_declspec\(dllexport\)** per esportare le funzioni di una DLL, è necessario utilizzare un file def.  
+## <a name="using-a-def-file"></a>Utilizzo di un file. def  
+ Un file di definizione moduli (def) è un file di testo che contiene uno o più istruzioni di modulo che descrivono i vari attributi di una DLL. Se non si utilizza **declspec** o **dllexport** per esportare le funzioni della DLL, è necessario un file def.  
   
- È possibile utilizzare i file def per l'[importazione in un'applicazione](../build/importing-using-def-files.md) o l'[esportazione da una DLL](../build/exporting-from-a-dll-using-def-files.md).  
+ È possibile utilizzare file def per [importazione in un'applicazione](../build/importing-using-def-files.md) o [esportazione da una DLL](../build/exporting-from-a-dll-using-def-files.md).  
   
-## Utilizzo di \_\_declspec  
- Visual C\+\+ utilizza **\_\_declspec\(dllimport\)** e **\_\_declspec\(dllexport\)** per sostituire la parola chiave **\_\_export** utilizzata in precedenza nelle versioni a 16 bit di Visual C\+\+.  
+## <a name="using-declspec"></a>Utilizzo di declspec  
+ Visual C++ utilizza **declspec** e **dllexport** per sostituire il **Export** parola chiave utilizzata in precedenza in versioni di Visual C++ a 16 bit.  
   
- L'utilizzo di **\_\_declspec\(dllimport\)** non è richiesto per la compilazione corretta del codice, ma consente al compilatore di generare codice più efficiente.  Il compilatore, infatti, può determinare se una funzione è presente o meno in una DLL e può quindi produrre un codice che evita un livello di riferimento indiretto normalmente presente in una chiamata di funzione che attraversa un limite di DLL.  È tuttavia necessario utilizzare **\_\_declspec\(dllimport\)** per importare le variabili utilizzate in una DLL.  
+ Non è necessario utilizzare **declspec** per il codice venga compilato correttamente, ma in questo modo consente al compilatore di generare codice più efficiente. Il compilatore è in grado di generare codice più efficiente poiché può determinare se esiste una funzione in una DLL o non, che consente il compilatore genera codice che ignora un livello di riferimento indiretto che normalmente sarebbe presente in una chiamata di funzione che attraversa i limiti di una DLL. Tuttavia, è necessario utilizzare **declspec** per importare le variabili utilizzate in una DLL.  
   
- Con la sezione EXPORTS del file def appropriato, la parola chiave **\_\_declspec\(dllexport\)** non è necessaria.  **\_\_declspec\(dllexport\)** è stata aggiunta per semplificare l'esportazione delle funzioni da un file exe o dll senza l'utilizzo di un file def.  
+ Con la sezione EXPORTS file def appropriato, **dllexport** non è obbligatorio. **dllexport** è stata aggiunta per fornire un modo semplice per l'esportazione di funzioni da un file .exe o DLL senza utilizzare un file def.  
   
- Il formato eseguibile portabile Win32 consente di ridurre al minimo il numero di pagine da modificare per correggere i problemi di importazione.  A questo scopo, tutti gli indirizzi di importazione di un qualsiasi programma vengono inseriti in un'unica posizione, denominata tabella di indirizzi di importazione.  Il caricatore può pertanto modificare solo una o due pagine quando accede a queste importazioni.  
+ Il formato del file eseguibile portabile Win32 è progettato per ridurre al minimo il numero di pagine che devono essere modificate per risolvere le importazioni. A tale scopo, inserisce tutti gli indirizzi di importazione per qualsiasi programma in un'unica posizione denominata tabella di indirizzi di importazione. Il caricatore può modificare solo una o due pagine quando si accede a tali importazioni.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
 -   [Importazione in un'applicazione](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Esportare da una DLL](../build/exporting-from-a-dll.md)  
+-   [Esportazione da una DLL](../build/exporting-from-a-dll.md)  
   
-## Vedere anche  
- [DLL in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [DLL in Visual C++](../build/dlls-in-visual-cpp.md)

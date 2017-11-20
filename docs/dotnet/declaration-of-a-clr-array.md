@@ -1,58 +1,57 @@
 ---
-title: "Dichiarazione di una matrice CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array (parola chiave) [C++]"
+title: Dichiarazione di una matrice CLR | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a00464ce6d8ffe93ffed63818dd52b913f7224ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Dichiarazione di una matrice CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintassi per la dichiarazione, la creazione di un'istanza e l'inizializzazione di una matrice gestita è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="declaration-of-a-clr-array"></a>Dichiarazione di una matrice CLR
+La sintassi di dichiarazione, creazione di un'istanza e l'inizializzazione di una matrice gestita ha modificato dalle estensioni gestite per C++ in Visual C++.  
   
- Nelle estensioni gestite la dichiarazione di un oggetto matrice CLR rappresenta un'estensione della dichiarazione di matrice standard, in cui una parola chiave `__gc` viene inserita tra il nome dell'oggetto matrice e la relativa dimensione, eventualmente con virgole, come illustrato negli esempi riportati di seguito:  
+ La dichiarazione di un oggetto matrice CLR nelle estensioni gestite rappresenta un'estensione della dichiarazione di matrice standard in cui un `__gc` (parola chiave) è stato inserito tra il nome dell'oggetto matrice e la relativa dimensione eventualmente con virgole, come la seguente coppia di esempi:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);  
 void PrintValues( int myArr __gc[,,]);  
 ```  
   
- Ciò è stato semplificato nella nuova sintassi, in cui viene utilizzata una dichiarazione simile a un modello affine alla dichiarazione di `vector` di STL.  Il primo parametro indica il tipo di elemento.  Il secondo parametro specifica la dimensione della matrice. Poiché il valore predefinito è 1, è necessario un secondo argomento solo in caso di più dimensioni.  L'oggetto matrice costituisce un handle di rilevamento e deve pertanto essere dotato di accento circonflesso.  Se anche il tipo di elemento è un tipo di riferimento, anch'esso deve essere dotato di accento circonflesso.  Se espresso nella nuova sintassi, l'esempio precedente risulta come segue:  
+ Ciò è stato semplificato nella nuova sintassi, in cui viene utilizzata una dichiarazione di modello simile a libreria Standard C++ `vector` dichiarazione. Il primo parametro indica il tipo di elemento. Il secondo parametro specifica la dimensione di matrice (valore predefinito di 1, in modo che solo più dimensioni richiedono un secondo argomento). L'oggetto matrice è un handle di rilevamento e pertanto deve essere assegnato un hat. Se il tipo di elemento è anche un tipo riferimento, è inoltre necessario un hat. L'esempio precedente, quando vengono espressi nella nuova sintassi, ad esempio, simile al seguente:  
   
 ```  
 void PrintValues( array<Object^>^ myArr );  
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
- Poiché un tipo di riferimento è un handle di rilevamento anziché un oggetto, è possibile specificare una matrice CLR come il tipo restituito di una funzione \(ciò non è possibile per la matrice nativa\). Nelle estensioni gestite, la sintassi da utilizzare a tale scopo è poco intuitiva.  Di seguito è riportato un esempio.  
+ Poiché un tipo di riferimento è un handle di rilevamento, anziché un oggetto, è possibile specificare una matrice CLR come tipo restituito di una funzione. (Al contrario, non è possibile specificare la matrice nativa come tipo restituito di una funzione.) La sintassi per eseguire questa operazione nelle estensioni gestite è poco intuitiva. Ad esempio:  
   
 ```  
 Int32 f() [];  
 int GetArray() __gc[];  
 ```  
   
- In [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] la dichiarazione è molto più semplice.  Di seguito è riportato un esempio:  
+ In Visual C++, la dichiarazione è molto più semplice. Di seguito è riportato un esempio:  
   
 ```  
 array<Int32>^ f();  
 array<int>^ GetArray();  
 ```  
   
- L'inizializzazione rapida di una matrice gestita locale è supportata in entrambe le versioni del linguaggio.  Di seguito è riportato un esempio.  
+ L'inizializzazione a sintassi abbreviata di una matrice gestita locale è supportato in entrambe le versioni della lingua. Ad esempio:  
   
 ```  
 int GetArray() __gc[] {  
@@ -64,7 +63,7 @@ int GetArray() __gc[] {
 }  
 ```  
   
- La semplificazione risulta notevole nella nuova sintassi, in cui il boxing è implicito e l'operatore `__box` è stato pertanto eliminato. Per informazioni, vedere [Tipi di valore e relativi comportamenti \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md).  
+ la semplificazione nella nuova sintassi (si noti che poiché la conversione boxing è implicito nella nuova sintassi, il `__box` operatore è stato eliminato, vedere [tipi di valore e relativi comportamenti (C + + CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md) per una discussione):  
   
 ```  
 array<int>^ GetArray() {  
@@ -74,21 +73,21 @@ array<int>^ GetArray() {
 }  
 ```  
   
- Poiché una matrice è un tipo di riferimento CLR, la dichiarazione di ciascun oggetto matrice è un handle di rilevamento  ed è pertanto necessario allocare gli oggetti matrice nell'heap CLR. Nella notazione abbreviata, l'allocazione per l'heap gestito risulta nascosta. Di seguito viene riportata la forma esplicita dell'inizializzazione di un oggetto matrice nelle estensioni gestite:  
+ Poiché una matrice è un tipo di riferimento CLR, la dichiarazione di ogni oggetto di matrice è un handle di rilevamento. Di conseguenza, gli oggetti array devono essere allocati nell'heap di Common Language Runtime. (La notazione a sintassi abbreviata nasconde l'allocazione di heap gestito). Di seguito è riportato il formato esplicito dell'inizializzazione di un oggetto matrice nelle estensioni gestite:  
   
 ```  
 Object* myArray[] = new Object*[2];  
 String* myMat[,] = new String*[4,4];  
 ```  
   
- Nella nuova sintassi l'espressione `new` viene sostituita con `gcnew`.  Le grandezze delle dimensioni vengono passate come parametri all'espressione `gcnew`, come segue:  
+ Nella nuova sintassi di `new` espressione viene sostituita con `gcnew`. Le dimensioni di dimensione vengono passate come parametri per il `gcnew` espressione, come indicato di seguito:  
   
 ```  
 array<Object^>^ myArray = gcnew array<Object^>(2);  
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- Nella nuova sintassi, l'espressione `gcnew` può essere seguita da un elenco di inizializzazione esplicita. Ciò non è supportato nelle estensioni gestite.  Di seguito è riportato un esempio.  
+ Nella nuova sintassi, è possibile seguire un elenco di inizializzazione esplicita la `gcnew` espressione; ciò non è supportato nelle estensioni gestite. Ad esempio:  
   
 ```  
 // explicit initialization list following gcnew   
@@ -97,6 +96,6 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## Vedere anche  
- [Tipi gestiti \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi gestiti (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
+ [Array](../windows/arrays-cpp-component-extensions.md)

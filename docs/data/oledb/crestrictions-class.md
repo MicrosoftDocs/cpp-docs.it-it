@@ -1,34 +1,33 @@
 ---
-title: "Classe CRestrictions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRestrictions"
-  - "CRestrictions"
-  - "ATL.CRestrictions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRestrictions (classe)"
+title: Classe CRestrictions | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRestrictions
+- CRestrictions
+- ATL.CRestrictions
+dev_langs: C++
+helpviewer_keywords: CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 88ba3c853bbd12c1512dbb8c70c0941718b1396f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CRestrictions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Una classe generica che consente di specificare le restrizioni per i rowset dello schema.  
+# <a name="crestrictions-class"></a>Classe CRestrictions
+Una classe generica che consente di specificare le restrizioni per i set di righe dello schema.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <   
@@ -42,27 +41,27 @@ class CRestrictions : public CSchemaRowset <
 >  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Classe utilizzata per la funzione di accesso.  
+ La classe utilizzata per la funzione di accesso.  
   
  `nRestrictions`  
- Numero di colonne delle restrizioni per il rowset dello schema.  
+ Il numero di colonne di restrizione per il set di righe dello schema.  
   
  `pguid`  
  Puntatore al GUID per lo schema.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[Aprire](../../data/oledb/crestrictions-open.md)|Restituisce un set di risultati in base alle restrizioni fornite dall'utente.|  
+|[Apri](../../data/oledb/crestrictions-open.md)|Restituisce un set in base alle restrizioni fornito dall'utente di risultati.|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

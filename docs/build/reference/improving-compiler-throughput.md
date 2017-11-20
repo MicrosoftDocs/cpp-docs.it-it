@@ -1,35 +1,35 @@
 ---
-title: "Incremento dell&#39;efficienza delle operazioni del compilatore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore cl.exe, prestazioni"
-  - "compilatore cl.exe, velocità effettiva"
-  - "prestazioni, compilatore"
-  - "velocità effettiva, compilatore C++"
+title: "Miglioramento della velocità effettiva del compilatore | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- throughput, C++ compiler
+- cl.exe compiler, performance
+- performance, compiler
+- cl.exe compiler, throughput
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4a0ff39c5565f12b4c4c1d5ae4a5850398be2b22
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Incremento dell&#39;efficienza delle operazioni del compilatore
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per compilare un progetto più rapidamente, utilizzare file di intestazione precompilati,  soprattutto se si fa uso di file di intestazione ATL, MFC o di [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+# <a name="improving-compiler-throughput"></a>Incremento dell'efficienza delle operazioni del compilatore
+Utilizzare i file di intestazione precompilata per velocizzare la compilazione del progetto. Questo è importante se si utilizza ATL, MFC o i file di intestazione di Windows SDK.  
   
- Vedere [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [\/Yu](../../build/reference/yu-use-precompiled-header-file.md).  
+ Vedere [/Yc](../../build/reference/yc-create-precompiled-header-file.md) e [/Yu](../../build/reference/yu-use-precompiled-header-file.md).  
   
- Per ulteriori informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
+ Per altre informazioni sulle intestazioni precompilate, vedere [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

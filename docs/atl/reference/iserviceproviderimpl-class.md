@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
 - ATLCOM/ATL::IServiceProviderImpl
 - ATLCOM/ATL::IServiceProviderImpl::QueryService
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 39dbab33f631ab9e0dc2b605169e92b6d12d78a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: ac66d9158466037751566a2fb6de458001503ab0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iserviceproviderimpl-class"></a>Classe IServiceProviderImpl
 Questa classe fornisce un'implementazione predefinita del `IServiceProvider` interfaccia.  
@@ -116,4 +113,3 @@ STDMETHOD(QueryService)(
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

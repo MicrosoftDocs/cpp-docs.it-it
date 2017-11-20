@@ -1,35 +1,34 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock (costruttore)"
+title: lock::lock | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0bc0c0e61b4500bae9589cbf6b536f1a23ae45c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruisce un oggetto di `lock`, facoltativamente di attesa per acquisire per sempre il blocco, per una quantità di tempo specificato, o per nothing.  
+# <a name="locklock"></a>lock::lock
+Costruisce un `lock` oggetto, facoltativamente in attesa di acquisire il blocco continuo, per un determinato periodo di tempo o affatto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class T> lock(  
@@ -49,27 +48,27 @@ template<class T> lock(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_object`  
  Oggetto da bloccare.  
   
  `_timeout`  
- Valore di timeout in millisecondi o come <xref:System.TimeSpan>.  
+ Valore di timeout in millisecondi o come un <xref:System.TimeSpan>.  
   
-## Eccezioni  
- Genera <xref:System.ApplicationException> se questo stato del blocco non si verifica prima del timeout.  
+## <a name="exceptions"></a>Eccezioni  
+ Genera <xref:System.ApplicationException> se l'acquisizione del blocco non viene eseguito prima del timeout.  
   
-## Note  
- I primi tre tipo di costruttore tenta di acquisire un blocco `_object` nel periodo di timeout specificato \(o di <xref:System.Threading.Timeout.Infinite> se non è stato specificato\).  
+## <a name="remarks"></a>Note  
+ I primi tre form del costruttore tentano di acquisire un blocco su `_object` entro il periodo di timeout specificato (o <xref:System.Threading.Timeout.Infinite> se non è specificato).  
   
- Il quarto tipo di costruttore non acquisisce un blocco su `_object`.  `lock_later` è un membro di [Enumerazione lock\_when](../dotnet/lock-when-enum.md).  Utilizzare [lock::acquire](../dotnet/lock-acquire.md) o [lock::try\_acquire](../dotnet/lock-try-acquire.md) per acquisire il blocco in questo caso.  
+ Il quarto form del costruttore non di acquisire un blocco su `_object`. `lock_later`è un membro del [enumerazione lock_when](../dotnet/lock-when-enum.md). Utilizzare [lock::acquire](../dotnet/lock-acquire.md) o [lock::try_acquire](../dotnet/lock-try-acquire.md) di acquisire il blocco in questo caso.  
   
- Il blocco automaticamente verrà eliminato quando il distruttore viene chiamato.  
+ Il blocco verrà rilasciato automaticamente quando viene chiamato il distruttore.  
   
- Il parametro `_object` non può essere <xref:System.Threading.ReaderWriterLock>.  In questo caso, un errore del compilatore verrà.  
+ Il parametro `_object` non può essere <xref:System.Threading.ReaderWriterLock>.  Questo caso, si verificherà un errore del compilatore.  
   
-## Esempio  
- In questo esempio viene utilizzata una sola istanza di una classe in più thread.  La classe utilizza un blocco stesso per garantire che accede ai dati interni siano utilizzate per ogni thread.  Il thread principale dell'applicazione viene utilizzato un blocco sulla stessa istanza della classe per controllare periodicamente per verificare se i thread di lavoro sono ancora presenti e attende per uscire da finché tutti i thread di lavoro non ha completato le attività.  
+## <a name="example"></a>Esempio  
+ Questo esempio Usa una singola istanza di una classe su più thread.  Per verificare che gli accessi ai dati interni siano coerenti per ogni thread, la classe Usa un blocco su se stesso.  Il thread principale dell'applicazione utilizza un blocco sulla stessa istanza della classe per controllare periodicamente per vedere se un thread di lavoro continuano a esistere e attese per uscire dall'installazione fino a quando tutti i thread di lavoro completamento delle attività.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +142,27 @@ int main() {
 }  
 ```  
   
-  **In thread 3, contatore \= 0**  
-**In thread 3, contatore \= 10**  
-**In thread 5, contatore \= 0**  
-**In thread 5, contatore \= 10**  
-**In thread 7, contatore \= 0**  
-**In thread 7, contatore \= 10**  
-**In thread 4, contatore \= 0**  
-**In thread 4, contatore \= 10**  
-**In thread 6, contatore \= 0**  
-**In thread 6, contatore \= 10**  
-**Tutti i thread completati.**   
-## Requisiti  
- msclr \<\\ lock.h di**File di intestazione** \>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\lock.h >  
   
-## Vedere anche  
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
  [Membri lock](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
+ [blocco:: ~ blocco](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

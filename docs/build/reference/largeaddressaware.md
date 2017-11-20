@@ -1,37 +1,36 @@
 ---
-title: "/LARGEADDRESSAWARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/largeaddressaware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LARGEADDRESSAWARE (opzione editbin)"
-  - "LARGEADDRESSAWARE (opzione editbin)"
-  - "-LARGEADDRESSAWARE (opzione editbin)"
+title: -LARGEADDRESSAWARE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /largeaddressaware
+dev_langs: C++
+helpviewer_keywords:
+- -LARGEADDRESSAWARE editbin option
+- /LARGEADDRESSAWARE editbin option
+- LARGEADDRESSAWARE editbin option
 ms.assetid: 5db58df3-4457-4808-adf7-2bee6ea97486
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e632c4f9dec5e3d7569f10bced2a837657f275df
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /LARGEADDRESSAWARE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="largeaddressaware"></a>/LARGEADDRESSAWARE
 ```  
 /LARGEADDRESSAWARE  
 ```  
   
-## Note  
- Questa opzione consente di modificare l'immagine per indicare che l'applicazione è in grado di gestire indirizzi di dimensioni superiori a 2 gigabyte.  
+## <a name="remarks"></a>Note  
+ Questa opzione Modifica l'immagine per indicare che l'applicazione può gestire indirizzi superiori a 2 gigabyte.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)

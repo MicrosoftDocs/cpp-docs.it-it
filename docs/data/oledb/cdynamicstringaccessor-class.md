@@ -1,32 +1,30 @@
 ---
-title: "Classe CDynamicStringAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessor (classe)"
+title: Classe CDynamicStringAccessor | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cbd9526904eca0a4b0cc59c1aac22970b83d3090
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe CDynamicStringAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consente di accedere ad un'origine dati quando non si conosce lo schema del database \(la struttura sottostante del database\).  
+# <a name="cdynamicstringaccessor-class"></a>Classe CDynamicStringAccessor
+Consente di accedere a un'origine dati quando non si conosce lo schema del database (la struttura sottostante del database).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,36 +32,36 @@ Consente di accedere ad un'origine dati quando non si conosce lo schema del data
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|Recupera i dati specificati di colonna come stringa.|  
 |[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|Imposta i dati specificati di colonna come stringa.|  
   
-## Note  
- Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati nel formato nativo indicato dal provider, `CDynamicStringAccessor` richiede al provider di recuperare tutti i dati dall'archivio dati in formato stringa.  Questa soluzione è particolarmente utile per eseguire semplici attività che non richiedono calcoli di valori nell'archivio dati, quali la visualizzazione o la stampa del contenuto dell'archivio dati.  
+## <a name="remarks"></a>Note  
+ Mentre [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) richiede i dati in formato nativo indicato dal provider, `CDynamicStringAccessor` richiede che il provider di recuperare tutti i dati dall'archivio dati come dati di tipo stringa. Ciò è particolarmente utile per eseguire semplici operazioni che non richiedono il calcolo di valori nell'archivio dati, ad esempio visualizzare o stampare il contenuto dell'archivio dati.  
   
- Il tipo nativo di dati della colonna nell'archivio dati non è importante; finché il provider può supportare la conversione di dati, fornirà i dati in formato stringa.  Se il provider non supporta la conversione dal tipo di dati nativo a una stringa \(non è comune\), la chiamata di richiesta restituirà il valore di successo **DB\_S\_ERRORSOCCURED**, e lo stato per la colonna corrispondente indicherà un problema di conversione con **DBSTATUS\_E\_CANTCONVERTVALUE**.  
+ Il tipo nativo di dati della colonna nell'archivio dati non è importante; se il provider supporta la conversione di dati, potrà fornire i dati in formato stringa. Se il provider non supporta la conversione dal tipo di dati nativo a una stringa (che non è comune), la chiamata di richiesta restituirà il valore di esito positivo **DB_S_ERRORSOCCURED**, e lo stato per la colonna corrispondente verrà indicare un problema di conversione **DBSTATUS_E_CANTCONVERTVALUE**.  
   
- Utilizzare i metodi di `CDynamicStringAccessor` per ottenere le informazioni di colonna.  Tali informazioni di colonna vengono utilizzate per la creazione dinamica di una funzione di accesso in fase di esecuzione.  
+ Utilizzare `CDynamicStringAccessor` metodi per ottenere informazioni di colonna. Utilizzare queste informazioni di colonna per creare una funzione di accesso in modo dinamico in fase di esecuzione.  
   
- Le informazioni di colonna sono memorizzate in un buffer che viene creato e gestito da questa classe.  Per ottenere i dati dal buffer, utilizzare [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), o per memorizzare dati nel buffer, utilizzare [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
+ Le informazioni di colonna vengono archiviate in un buffer creato e gestito da questa classe. Ottenere dati dal buffer tramite [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), o se archiviarlo per il buffer utilizzando [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).  
   
- Per informazioni ed esempi di utilizzo delle classi delle funzioni di accesso dinamiche, vedere [Utilizzo delle funzioni di accesso dinamiche](../../data/oledb/using-dynamic-accessors.md).  
+ Per informazioni ed esempi di utilizzo delle classi di funzioni di accesso dinamiche, vedere [utilizzando funzioni di accesso dinamiche](../../data/oledb/using-dynamic-accessors.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione**: atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CAccessor](../../data/oledb/caccessor-class.md)   
- [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Riferimenti per i modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor (classe)](../../data/oledb/caccessor-class.md)   
+ [CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [Classe CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)   
  [Classe CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)   
  [Classe CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)

@@ -1,46 +1,46 @@
 ---
-title: "/Zc:strictStrings (Disabilitare la conversione del tipo di valore letterale stringa) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:strictStrings"
-  - "strictStrings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc (opzioni del compilatore) (C++)"
-  - "/Zc:strictStrings"
-  - "strictStrings"
-  - "Zc (opzioni del compilatore) (C++)"
-  - "-Zc (opzioni del compilatore) (C++)"
+title: '-Zc: strictStrings (disabilitare la conversione del tipo di valore letterale stringa) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /Zc:strictStrings
+- strictStrings
+dev_langs: C++
+helpviewer_keywords:
+- /Zc:strictStrings
+- -Zc compiler options (C++)
+- strictStrings
+- /Zc compiler options (C++)
+- Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 09ba2ca14a935c9d412fece89099f508dbd32ae3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Zc:strictStrings (Disabilitare la conversione del tipo di valore letterale stringa)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (Disabilitare la conversione del tipo di valore letterale stringa)
 Quando specificato, il compilatore richiede la stretta conformità con la qualificazione `const` per i puntatori inizializzati mediante valori letterali di stringa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Zc:strictStrings[-]  
 ```  
   
-## Note  
- Se si specifica **\/Zc:strictStrings**, il compilatore impone le qualificazioni standard C\+\+ `const` per i valori letterali di stringa, come tipo "matrice di `const` `char`" o "matrice di `const` `wchar_t`", in base alla dichiarazione.  I valori letterali di stringa non sono modificabili e un tentativo di modificare il contenuto di uno di questi valori provoca un errore di violazione di accesso in fase di esecuzione.  È necessario dichiarare un puntatore di stringa come `const` per inizializzarlo mediante un valore letterale di stringa o usare un oggetto `const_cast` per inizializzare un puntatore non `const`.  Per impostazione predefinita o se è specificato **\/Zc:strictStrings\-**, il compilatore non impone le qualificazioni standard C\+\+ `const` per i puntatori di stringa inizializzati mediante valori letterali di stringa.  
+## <a name="remarks"></a>Note  
+ Se **/Zc: strictstrings** è specificato, il compilatore impone C++ standard `const` qualifiche per i valori letterali stringa, come tipo ' matrice di `const char`' o ' matrice `const wchar_t`', in base alla dichiarazione. I valori letterali di stringa non sono modificabili e un tentativo di modificare il contenuto di uno di questi valori provoca un errore di violazione di accesso in fase di esecuzione. È necessario dichiarare un puntatore di stringa come `const` per inizializzarlo mediante un valore letterale di stringa o usare un oggetto `const_cast` per inizializzare un puntatore non `const`. Per impostazione predefinita, oppure se **/Zc:strictStrings-** è specificato, il compilatore non impone C++ standard `const` qualifiche per i puntatori di stringa inizializzati mediante valori letterali stringa.  
   
- Usare l'opzione **\/Zc:strictStrings** per evitare la compilazione di codice errato.  Questo esempio mostra in che modo un semplice errore di dichiarazione provoca un arresto anomalo in fase di esecuzione:  
+ Utilizzare il **/Zc: strictstrings** opzione per impedire la compilazione del codice non corretto. Questo esempio mostra in che modo un semplice errore di dichiarazione provoca un arresto anomalo in fase di esecuzione:  
   
 ```cpp  
 // strictStrings_off.cpp  
@@ -51,7 +51,7 @@ int main() {
 }  
 ```  
   
- Quando l'opzione **\/Zc:strictStrings** è abilitata, lo stesso codice segnala un errore nella dichiarazione di `str`.  
+ Quando **/Zc: strictstrings** è abilitato, lo stesso codice segnala un errore nella dichiarazione di `str`.  
   
 ```cpp  
 // strictStrings_on.cpp  
@@ -63,22 +63,22 @@ int main() {
 }  
 ```  
   
- Se si usa `auto` per dichiarare un puntatore di stringa, il compilatore crea automaticamente la dichiarazione del tipo di puntatore `const` corretta.  Il tentativo di modificare il contenuto di un puntatore `const` viene segnalato dal compilatore come errore.  
+ Se si usa `auto` per dichiarare un puntatore di stringa, il compilatore crea automaticamente la dichiarazione del tipo di puntatore `const` corretta. Il tentativo di modificare il contenuto di un puntatore `const` viene segnalato dal compilatore come errore.  
   
 > [!NOTE]
->  La Libreria C\+\+ standard in [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] non supporta l'opzione del compilatore **\/Zc:strictStrings** nelle build di debug.  Se l'output di compilazione contiene svariati errori [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md), la causa può essere questa.  
+>  La libreria Standard C++ in [!INCLUDE[cpp_dev12_long](../../build/reference/includes/cpp_dev12_long_md.md)] non supporta il **/Zc: strictstrings** si basa l'opzione del compilatore in modalità debug. Se viene visualizzato più [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) errori nella compilazione di output, questa potrebbe essere la causa.  
   
- Per altre informazioni sui problemi di conformità in Visual C\+\+, vedere [Comportamento non standard](../../cpp/nonstandard-behavior.md).  
+ Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Utilizzo di proprietà di progetto](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **C\/C\+\+**.  
+2.  Selezionare il **C/C++** cartella.  
   
-3.  Selezionare la pagina delle proprietà **Riga di comando**.  
+3.  Selezionare il **riga di comando** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Opzioni aggiuntive** in modo da includere `/Zc:strictStrings`, quindi fare clic su **OK**.  
+4.  Modificare il **opzioni aggiuntive** proprietà da includere `/Zc:strictStrings` e quindi scegliere **OK**.  
   
-## Vedere anche  
- [\/Zc \(Conformità\)](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>Vedere anche  
+ [/Zc (conformità)](../../build/reference/zc-conformance.md)

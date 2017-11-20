@@ -1,34 +1,33 @@
 ---
-title: "/Yl (Inserisce il riferimento PCH per la libreria di debug) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/yi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Yl (opzione del compilatore) [C++]"
-  - "Yl (opzione del compilatore) [C++]"
-  - "-Yl (opzione del compilatore) [C++]"
+title: -Yl (inserisce il riferimento PCH per la libreria di Debug) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /yi
+dev_langs: C++
+helpviewer_keywords:
+- -Yl compiler option [C++]
+- Yl compiler option [C++]
+- /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 271681849d78eb8a6a4032bcbafbcc81b96c9f9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /Yl (Inserisce il riferimento PCH per la libreria di debug)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Viene utilizzato se si crea una libreria di debug che utilizza intestazioni precompilate e la compilazione non riesce.  
+# <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Inserisce il riferimento PCH per la libreria di debug)
+Utilizzato se la creazione di una libreria di debug che utilizza le intestazioni precompilate e la compilazione non riesce.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Ylsymbol  
@@ -38,42 +37,42 @@ Viene utilizzato se si crea una libreria di debug che utilizza intestazioni prec
 /Yl-  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `symbol`  
  Un simbolo arbitrario da archiviare nel modulo di oggetto.  
   
  \-  
- Un segno meno \(\-\) che esplicitamente disattiva l'opzione del compilatore **\/Yl**.  
+ Un segno meno (-) che disabilita in modo esplicito il **/Yl** l'opzione del compilatore.  
   
-## Note  
- Per impostazione predefinita, il compilatore utilizza l'opzione **\/Yl** \(senza specificare *symbol*\).  L'opzione **\/Yl** consente al debugger di ottenere informazioni complete sui tipi.  **\/Yl\-** disabilita il comportamento predefinito.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, il compilatore utilizza il **/Yl** opzione (senza specificare un *simbolo*). Il **/Yl** opzione consente al debugger di ottenere informazioni complete sui tipi. **/Yl-** disabilita il comportamento predefinito.  
   
- Quando si compila un modulo con **\/Yc** e **\/Yl**`symbol`, viene creato un simbolo simile a \_\_@@\_PchSym\_@00@...@`symbol`, dove i puntini di sospensione \(...\) rappresentano una stringa di caratteri generata dal linker e lo archivia nel modulo di oggetto.  Qualsiasi file di origine compilato con questa intestazione precompilata fa riferimento al simbolo specificato, che fa in modo che il linker includa il modulo di oggetto e le relative informazioni di debug dalla libreria.  
+ Quando si esegue la compilazione di un modulo con **/Yc** e **/Yl**`symbol`, il compilatore crea un simbolo simile a _ @@_PchSym\_@00@... @`symbol`, dove i puntini di sospensione (...) rappresenta una stringa di caratteri generate dal linker e lo archivia nel modulo di oggetto. Qualsiasi file di origine che si compila con questa intestazione precompilata fa riferimento al simbolo specificato, che indica al linker di includere il modulo di oggetto e le relative informazioni di debug della libreria.  
   
- Se si utilizza questa opzione, è possibile che venga generato l'errore LNK1211.  Quando si specificano le opzioni [\/Yc \(Crea il file di intestazione precompilato\)](../../build/reference/yc-create-precompiled-header-file.md) e [\/Z7, \/Zi, \/ZI \(Formato informazioni di debug\)](../../build/reference/z7-zi-zi-debug-information-format.md), viene creato un file di intestazione precompilato contenente informazioni di debug.  Potrebbe verificarsi un errore quando si archivia l'intestazione precompilata in una libreria, si utilizza la libreria per compilare un modulo di oggetto e il codice sorgente non fa riferimento ad alcuna delle funzioni definite dal file di intestazione precompilato.  
+ Con questa opzione, è possibile generare LNK1211. Quando si specifica il [/Yc (Crea precompilata File di intestazione)](../../build/reference/yc-create-precompiled-header-file.md) e [/Z7, /Zi, /ZI (formato informazioni di Debug)](../../build/reference/z7-zi-zi-debug-information-format.md) opzioni, il compilatore crea un file di intestazione precompilata che contiene le informazioni di debug. Quando si archiviano le intestazioni precompilate in una raccolta, utilizza la libreria da compilare un modulo di oggetto e il codice sorgente non fa riferimento a una delle funzioni definite nel file di intestazione precompilata, può verificarsi un errore.  
   
- Per risolvere il problema, specificare **\/Yl**`symbol`, dove `symbol` è il nome di un simbolo arbitrario nella libreria quando si crea un file di intestazione precompilato che non contiene alcuna definizione di funzione.  Questa opzione indica al compilatore di archiviare le informazioni di debug nel file di intestazione precompilato.  
+ Per risolvere il problema, specificare **/Yl**`symbol`, dove `symbol` è il nome di un simbolo arbitrario nella libreria, quando si crea un file di intestazione precompilata non contiene alcuna definizione di funzione. Questa opzione indica al compilatore di archiviare le informazioni di debug nel file di intestazione precompilata.  
   
  Per ulteriori informazioni sulle intestazioni precompilate, vedere:  
   
--   [\/Y \(Intestazioni precompilate\)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (intestazioni precompilate)](../../build/reference/y-precompiled-headers.md)  
   
--   [Creazione di file di intestazione precompilati](../../build/reference/creating-precompiled-header-files.md)  
+-   [Creazione di file di intestazione precompilata](../../build/reference/creating-precompiled-header-files.md)  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

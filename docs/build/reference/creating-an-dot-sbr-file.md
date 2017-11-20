@@ -1,42 +1,41 @@
 ---
-title: "Creazione di un file SBR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".sbr (file)"
-  - "BSCMAKE, file di input"
-  - "simboli locali nelle informazioni di visualizzazione"
-  - "SBR (file)"
-  - "file browser di origine"
-  - "simboli"
+title: Creazione di un. File SBR | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SBR files
+- BSCMAKE, input files
+- .sbr files
+- source browser files
+- local symbols in browse information
+- symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fb3638f70d19d88228b8ff65eb78c479868f1b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Creazione di un file SBR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE utilizza come input i file sbr.  Con il compilatore viene creato un file sbr per ciascun file oggetto \(obj\) che viene compilato.  Durante la compilazione o l'aggiornamento del file di informazioni di visualizzazione, tutti i file sbr del progetto devono essere disponibili sul disco.  
+# <a name="creating-an-sbr-file"></a>Creazione di un file SBR
+I file di input per BSCMAKE sono file SBR. Il compilatore crea un file sbr per ogni file oggetto (obj), che la compilazione. Quando si compila o aggiornamento del file di informazioni di visualizzazione, tutti i file sbr per il progetto devono essere disponibili su disco.  
   
- Per creare un file sbr con tutte le informazioni possibili, specificare [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
+ Per creare un file sbr con tutte le informazioni possibili, specificare [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md).  
   
- Per creare un file sbr che non contenga simboli locali, specificare [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md).  Se i file sbr contengono simboli locali, è comunque possibile ometterli dal file bsc utilizzando l'opzione [\/El](../../build/reference/bscmake-options.md)`.` di BSCMAKE.  
+ Per creare un file sbr che non contiene simboli locali, specificare [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md). Se i file SBR contengono simboli locali, è comunque possibile ometterli dal file BSC usando BSCMAKE [/El (opzione)](../../build/reference/bscmake-options.md)`.`  
   
- Per creare un file sbr non è necessario eseguire una compilazione completa.  Specificando, ad esempio, l'opzione \/Zs viene eseguito un controllo della sintassi dal compilatore e generato un file sbr se si specifica l'opzione \/FR o \/Fr.  
+ È possibile creare un file sbr senza eseguire una compilazione completa. Ad esempio, è possibile specificare l'opzione /Zs al compilatore di eseguire un controllo della sintassi e ancora generare un file SBR se si specifica /FR o /Fr.  
   
- Il processo di compilazione può essere più efficiente se in prima istanza i file sbr vengono compressi per eliminare tutte le definizioni senza riferimenti.  I file sbr vengono automaticamente compressi dal compilatore.  
+ Il processo di compilazione può essere più efficiente se i file SBR prima vengono compressi per rimuovere le definizioni senza riferimenti. Il compilatore comprime automaticamente i file SBR.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Compilazione di un file BSC](../../build/reference/building-a-dot-bsc-file.md)

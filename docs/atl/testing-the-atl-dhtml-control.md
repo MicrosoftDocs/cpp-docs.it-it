@@ -1,49 +1,50 @@
 ---
-title: "Testing the ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls"
-  - "DHTML controls, test"
-  - "HTML (controlli), test"
-  - "testing controls"
+title: Test del controllo DHTML ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, testing
+- testing controls
+- DHTML controls
+- DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 12eab78bdf2f0499740ecc53dbb6cf7053948679
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Testing the ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una volta creato il progetto, è possibile compilare e testare il controllo di esempio.  Prima di eseguire queste operazioni, Visualizzazione classi e Esplora soluzioni di utilizzo per esaminare il progetto.  Gli elementi del progetto vengono descritti più dettagliatamente in [Identificazione degli elementi del progetto di controllo DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
+# <a name="testing-the-atl-dhtml-control"></a>Test del controllo DHTML ATL
+Dopo aver creato il progetto, è possibile compilare e testare il controllo di esempio. Prima di procedere, è possibile utilizzare Esplora soluzioni e visualizzazione classi per esaminare il progetto. Gli elementi del progetto sono descritti più dettagliatamente in [identificazione degli elementi del progetto controllo DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
   
-#### Per compilare e testare il controllo ATL DHTML  
+#### <a name="to-build-and-test-the-atl-dhtml-control"></a>Per compilare e testare il controllo DHTML ATL  
   
-1.  Compilare il progetto.  Scegliere **Compila soluzione** dal menu **Compila**.  
+1.  Compilare il progetto. Dal **compilare** menu, fare clic su **Compila soluzione**.  
   
-2.  Quando la compilazione viene completata, aprire Test Container.  Vedere [Proprietà ed eventi di test con Test Container](../mfc/testing-properties-and-events-with-test-container.md) per informazioni su come accedere a Test Container.  
+2.  Al termine della compilazione, aprire Test Container. Vedere [test di proprietà ed eventi con Test Container](../mfc/testing-properties-and-events-with-test-container.md) per informazioni su come accedere Test Container.  
   
-3.  In Test Container, scegliere dal menu **Modifica**, fare clic **Inserisci nuovo controllo**.  
+3.  Nel contenitore di Test, dal **modifica** menu, fare clic su **Inserisci nuovo controllo**.  
   
-4.  Nella finestra di dialogo **Inserisci controllo**, selezionare il controllo dalla casella di riepilogo.  È importante ricordare, il nome si basa sul nome breve indicata nella creazione guidata controllo ATL.  Scegliere **OK**.  
+4.  Nel **Inserisci controllo** finestra di dialogo, selezionare il controllo dalla casella di riepilogo. Tenere presente che il nome è basato sul nome breve è indicato nella creazione guidata controllo ATL. Fare clic su **OK**.  
   
-5.  Esaminare il controllo.  Si noti che dispone di una barra di scorrimento.  Utilizzare il controllo di comando per ridimensionare il controllo per attivare la barra di scorrimento.  
+5.  Esaminare il controllo. Si noterà che dispone di una barra di scorrimento. Utilizzare gli handle del controllo per ridimensionare il controllo per attivare la barra di scorrimento.  
   
-6.  Testare i pulsanti del controllo.  Le modifiche di colore di sfondo nel colore indicato dal pulsante.  
+6.  Testare i pulsanti del controllo. Il colore di sfondo modifica il colore indicato dal pulsante.  
   
-7.  Test Container da.  
+7.  Chiudere Test Container.  
   
- Dopo, provare [modificare il controllo DHTML](../atl/modifying-the-atl-dhtml-control.md).  
+ Successivamente, provare a [la modifica del controllo DHTML](../atl/modifying-the-atl-dhtml-control.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto per controlli DHTML](../atl/atl-support-for-dhtml-controls.md)
+

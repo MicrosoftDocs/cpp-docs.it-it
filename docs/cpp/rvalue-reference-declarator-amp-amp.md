@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
-helpviewer_keywords:
-- '&& rvalue reference declarator'
+f1_keywords: '&&'
+dev_langs: C++
+helpviewer_keywords: '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f34c20b380fe1bef5e57de37b4e239e8ba4eadf9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8d0595078c9515c5c705a1cbfb1ed6b5e55db788
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Dichiaratore di riferimento rvalue:&amp;&amp;
 Contiene un riferimento a un'espressione rvalue.  
@@ -419,4 +414,3 @@ print_type_and_value<string&>(string& t)
  [Elementi Lvalue e Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [Costruttori di spostamento e operatori di assegnazione di spostamento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
  [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)   
-

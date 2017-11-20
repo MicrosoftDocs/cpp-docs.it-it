@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- typename_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- typename template specifier
+f1_keywords: typename_cpp
+dev_langs: C++
+helpviewer_keywords: typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b2f10c9815a78655857893becbfb9119e70dd378
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="typename"></a>typename
 Nelle definizioni di modello fornisce un suggerimento al compilatore che un identificatore sconosciuto è un tipo. Nell'elenco di parametri di modello, viene utilizzato per specificare un parametro di tipo.  

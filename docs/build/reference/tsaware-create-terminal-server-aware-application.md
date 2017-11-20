@@ -1,69 +1,69 @@
 ---
-title: "/TSAWARE (Crea un&#39;applicazione con supporto Terminal Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-  - "VC.Project.VCLinkerTool.TerminalServerAware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TSAWARE (opzione del linker)"
-  - "Terminal Server"
-  - "Terminal Server, applicazioni con supporto Terminal Server"
-  - "TSAWARE (opzione del linker)"
-  - "-TSAWARE (opzione del linker)"
+title: -TSAWARE (Crea applicazione compatibile con il Server Terminal) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tsaware
+- VC.Project.VCLinkerTool.TerminalServerAware
+dev_langs: C++
+helpviewer_keywords:
+- Terminal Server
+- /TSAWARE linker option
+- Terminal Server, Terminal Server-aware applications
+- -TSAWARE linker option
+- TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: da606dfd1dd486b952d2181d196d5668a6198d69
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /TSAWARE (Crea un&#39;applicazione con supporto Terminal Server)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crea un'applicazione con supporto Terminal Server)
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Note  
- L'opzione \/TSAWARE imposta un flag nel campo DllCharacteristics di IMAGE\_OPTIONAL\_HEADER nell'intestazione facoltativa dell'immagine del programma.  Quando questo flag è impostato, Terminal Server non effettuerà determinate modifiche all'applicazione.  
+## <a name="remarks"></a>Note  
+ L'opzione /TSAWARE imposta un flag nel campo DllCharacteristics di IMAGE_OPTIONAL_HEADER nell'intestazione facoltativa dell'immagine del programma. Quando questo flag viene impostato, Terminal Server non apporta determinate modifiche all'applicazione.  
   
- Le applicazioni che non dispongono del supporto Terminal Server sono in genere applicazioni legacy. A tali applicazioni Terminal Server apporta alcune modifiche che ne garantiscono il corretto funzionamento in ambienti multiutente.  Viene ad esempio creata una cartella Windows virtuale, in modo che ogni utente disponga di una cartella Windows anziché della directory Windows di sistema.  In tal modo gli utenti avranno la possibilità di accedere ai rispettivi file INI.  Nel caso di un'applicazione legacy vengono inoltre apportate alcune modifiche al Registro di sistema,  le quali hanno l'effetto di rallentare il caricamento dell'applicazione legacy su Terminal Server.  
+ Quando un'applicazione non è compatibile con Terminal Server (anche noto come un'applicazione legacy), Terminal Server apporta alcune modifiche all'applicazione legacy per consentire il funzionamento corretto in un ambiente multiutente. Ad esempio, Terminal Server creerà una cartella virtuale di Windows, in modo che ogni utente disponga di una cartella di Windows anziché la directory del sistema Windows. Ciò consente agli utenti di accedere ai propri file INI. Inoltre, il Server Terminal apportate alcune modifiche al Registro di sistema per un'applicazione legacy. Queste modifiche rallentano il caricamento dell'applicazione legacy in Terminal Server.  
   
- Se un'applicazione dispone del supporto Terminal Server, è importante che in essa, durante l'installazione, non vengano né utilizzati i file INI né scritto nel Registro di sistema **HKEY\_CURRENT\_USER**.  
+ Se un'applicazione è supporto Terminal Server, è necessario affidarsi file INI né scrivere il **HKEY_CURRENT_USER** Registro di sistema durante l'installazione.  
   
- Se si utilizza \/TSAWARE e nell'applicazione vengono ancora utilizzati file INI, tali file verranno condivisi da tutti gli utenti del sistema.  Se questa situazione è accettabile, sarà comunque possibile collegare l'applicazione a \/TSAWARE. In caso contrario sarà necessario utilizzare \/TSAWARE:NO.  
+ Se si utilizza /TSAWARE e l'applicazione utilizza ancora file INI, i file verranno condivisi da tutti gli utenti del sistema. Se è accettabile, sarà comunque possibile collegare l'applicazione con /TSAWARE; in caso contrario, è necessario utilizzare /TSAWARE: No.  
   
- L'opzione \/TSAWARE viene attivata per impostazione predefinita per Windows 2000 e versioni successive, per applicazioni Windows e console.  Per informazioni, vedere [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [\/VERSION](../../build/reference/version-version-information.md).  
+ L'opzione /TSAWARE è abilitata per impostazione predefinita per Windows 2000 e versioni successive, per Windows e applicazioni console. Vedere [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) e [/VERSION](../../build/reference/version-version-information.md) per informazioni.  
   
- \/TSAWARE non è valida per driver, VxD o DLL.  
+ /TSAWARE non è valida per i driver, vxd o DLL.  
   
- Se un'applicazione è stata collegata a \/TSAWARE, DUMPBIN [\/HEADERS](../../build/reference/headers.md) visualizzerà informazioni relative a tale operazione.  
+ Se un'applicazione è stata collegata a /TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) visualizzerà informazioni su tale operazione.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Sistema**.  
+3.  Fare clic su di **sistema** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Terminal Server**.  
+4.  Modificare il **Terminal Server** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)   
- [Storing User\-Specific Information](http://msdn.microsoft.com/library/aa383452)   
- [Legacy Applications in a Terminal Services Environment](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+ [L'archiviazione delle informazioni specifiche dell'utente](http://msdn.microsoft.com/library/aa383452)   
+ [Applicazioni legacy in un ambiente di servizi Terminal](https://msdn.microsoft.com/en-us/library/aa382957.aspx)

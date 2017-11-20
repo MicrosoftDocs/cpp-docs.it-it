@@ -1,35 +1,34 @@
 ---
-title: "CTable::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CTable.Open"
-  - "ATL::CTable::Open"
-  - "CTable::Open"
-  - "CTable.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (metodo)"
+title: 'CTable:: Open | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 5d006d95-74d7-4e2b-b243-a33bc53b5455
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b9edfb63c29298eb2805372cbb1303144a084f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CTable::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aprire la tabella.  
+# <a name="ctableopen"></a>CTable::Open
+Apre la tabella.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -53,33 +52,33 @@ HRESULT Open(
 ) throw ( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `session`  
- \[in\] la sessione per il quale la tabella è aperta.  
+ [in] La sessione per cui la tabella è aperta.  
   
  *wszTableName*  
- \[in\] nome della tabella da aprire, passato come stringhe Unicode.  
+ [in] Il nome della tabella da aprire, passato come stringa Unicode.  
   
  *szTableName*  
- \[in\] nome della tabella da aprire, passato come stringa ANSI.  
+ [in] Il nome della tabella da aprire, passato come una stringa ANSI.  
   
- *dbid*  
- \[in\] **DBID** della tabella da aprire.  
+ *DBID*  
+ [in] Il **DBID** della tabella da aprire.  
   
  *pPropSet*  
- \[in\] puntatore A una matrice di strutture che contengono [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) proprietà e valori da impostare.  Vedere [Insiemi di proprietà e gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx)*in OLE DB Programmer's Reference* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  Il valore predefinito NULL non specifica proprietà.  
+ [in] Un puntatore a una matrice di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture contenenti le proprietà e valori da impostare. Vedere [set di proprietà e i gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx) nel *di riferimento per programmatori OLE DB* in Windows SDK. Il valore predefinito null non specifica alcuna proprietà.  
   
  `ulPropSets`  
- \[in\] numero di strutture di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) passate nell'argomento *di pPropSet*.  
+ [in] Il numero di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture passato il *pPropSet* argomento.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Per ulteriori informazioni, vedere [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)*in OLE DB Programmer's Reference*.  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere [IOpenRowset:: OPENROWSET](https://msdn.microsoft.com/en-us/library/ms716724.aspx) nel *riferimento per programmatori OLE DB*.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CTable](../../data/oledb/ctable-class.md)

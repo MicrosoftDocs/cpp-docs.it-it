@@ -1,73 +1,68 @@
 ---
-title: "File lib come input del linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AdditionalDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lib (file)"
-  - "COFF (file), librerie di importazione"
-  - "librerie predefinite [C++]"
-  - "librerie predefinite [C++], output del linker"
-  - "impostazioni predefinite [C++], librerie"
-  - "librerie di importazione, file del linker"
-  - "librerie [C++], file LIB come input del linker"
-  - "collegamento [C++], OMF (librerie)"
-  - "OMF (librerie)"
+title: . LIB file come Input del Linker | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.AdditionalDependencies
+dev_langs: C++
+helpviewer_keywords:
+- OMF libraries
+- linking [C++], OMF libraries
+- import libraries, linker files
+- libraries [C++], .lib files as linker input
+- COFF files, import libraries
+- default libraries [C++], linker output
+- default libraries [C++]
+- defaults [C++], libraries
+- .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ad61a8fa3672dd6f243c611e8ad363769dc5fa05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# File lib come input del linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In LINK vengono accettate librerie standard COFF e librerie di importazione COFF; entrambe presentano in genere l'estensione lib.  Le librerie standard contengono oggetti e vengono create nello strumento LIB.  Le librerie di importazione contengono informazioni sulle esportazioni in altri programmi e vengono create in LINK durante la compilazione di un programma contenente esportazioni o nello strumento LIB.  Per informazioni sull'utilizzo di LIB per la creazione di librerie standard o di importazione, vedere [Riferimenti a LIB](../../build/reference/lib-reference.md).  Per informazioni dettagliate sull'utilizzo di LINK per la creazione di una libreria di importazione, vedere l'opzione [\/DLL](../../build/reference/dll-build-a-dll.md).  
+# <a name="lib-files-as-linker-input"></a>File lib come input del linker
+COLLEGAMENTO accetta librerie standard COFF e COFF librerie di importazione, che in genere dispongono di estensione. lib. Le librerie standard contengono gli oggetti e vengono create nello strumento LIB. Librerie di importazione contengono informazioni sull'esportazione in altri programmi e vengono create dal collegamento durante la compilazione di un programma che contiene esportazioni o dallo strumento LIB. Per informazioni sull'utilizzo di LIB per creare standard o librerie di importazione, vedere [riferimenti a LIB](../../build/reference/lib-reference.md). Per informazioni dettagliate sull'uso di collegamento per creare una libreria di importazione, vedere il [/DLL](../../build/reference/dll-build-a-dll.md) opzione.  
   
- Una libreria viene specificata per LINK come argomento di tipo nome file o come libreria predefinita.  I riferimenti esterni vengono risolti effettuando la ricerca dapprima nelle librerie specificate alla riga di comando, quindi nelle librerie predefinite specificate con l'opzione [\/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md), infine nelle librerie predefinite specificate nei file obj.  Se con il nome della libreria viene specificato un percorso, la ricerca della libreria verrà effettuata nella directory indicata.  Se invece non viene specificato alcun percorso, la ricerca verrà effettuata dapprima nella directory da cui viene eseguito LINK, quindi in tutte le directory specificate nella variabile di ambiente LIB.  
+Una libreria di collegamento è specificata come un argomento del nome file o una raccolta predefinita. COLLEGAMENTO di risoluzione dei riferimenti esterni eseguendo una ricerca prima nelle librerie specificate nella riga di comando, quindi nelle librerie predefinite specificate con il [/DEFAULTLIB](../../build/reference/defaultlib-specify-default-library.md) opzione, quindi in librerie predefinite specificate nei file obj. Se viene specificato un percorso con il nome della libreria, collegamento Cerca la libreria in tale directory. Se viene specificato alcun percorso, collegamento ricerca primo nella directory in esecuzione dal collegamento e quindi in tutte le directory specificate nella variabile di ambiente LIB.  
   
-### Per aggiungere file lib come input del linker nell'ambiente di sviluppo  
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>Per aggiungere file LIB come input del linker nell'ambiente di sviluppo  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Scegliere il **Input** pagina delle proprietà di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Input**.  
+3.  Modificare il **dipendenze aggiuntive** proprietà per aggiungere i file con estensione LIB.  
   
-4.  Modificare la proprietà **Dipendenze aggiuntive**.  
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>A livello di codice aggiungere il file con estensione LIB come input del linker  
   
-### Per aggiungere file lib come input del linker a livello di codice  
+-   Vedere [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx).  
   
--   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalDependencies%2A>.  
+## <a name="example"></a>Esempio  
+L'esempio seguente viene illustrato come creare e usare un file con estensione LIB. Innanzitutto, creare un file con estensione LIB:  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come compilare e utilizzare un file lib:  
-  
-```  
+```cpp  
 // lib_link_input_1.cpp  
-// compile with: /LD  
+// compile by using: cl /LD lib_link_input_1.cpp  
 __declspec(dllexport) int Test() {  
    return 213;  
 }  
 ```  
   
-## Esempio  
- Quindi:  
+E quindi, compilare l'esempio utilizzando il file con estensione LIB che appena creato:  
   
-```  
+```cpp  
 // lib_link_input_2.cpp  
-// compile with: /EHsc lib_link_input_1.lib  
+// compile by using: cl /EHsc lib_link_input_1.lib lib_link_input_2.cpp   
 __declspec(dllimport) int Test();  
 #include <iostream>  
 int main() {  
@@ -75,7 +70,10 @@ int main() {
 }  
 ```  
   
-  **213**   
-## Vedere anche  
- [File di input LINK](../../build/reference/link-input-files.md)   
+```Output  
+213  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [File di Input LINK](../../build/reference/link-input-files.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

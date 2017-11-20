@@ -1,30 +1,30 @@
 ---
-title: "Platform::Runtime::InteropServices (spazio dei nomi) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Runtime::InteropServices"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Runtime::InteropServices (spazio dei nomi)"
+title: Namespace platform::Runtime::InteropServices | Documenti Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Runtime::InteropServices
+dev_langs: C++
+helpviewer_keywords: Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: a26cc24c409d02ff15a436dc5870d18677a152c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Runtime::InteropServices (spazio dei nomi)
+# <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices (spazio dei nomi)
 Questo spazio dei nomi è solo per uso interno e non deve essere utilizzato per lo sviluppo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
   
@@ -33,11 +33,11 @@ namespace Platform {
 }}  
 ```  
   
-## Membri  
+### <a name="members"></a>Membri  
  Sebbene questo spazio dei nomi sia solo per uso interno, tramite i browser è possibile visualizzarne i seguenti membri.  
   
 |Nome|Nota|  
-|----------|----------|  
+|----------|------------|  
 |ComInterfaceType|enumerazione|  
 |InterfaceTypeAttribute||  
 |LayoutKind|enumerazione|  
@@ -45,13 +45,13 @@ namespace Platform {
 |StructLayoutAttribute||  
 |UnmanagedType|enumerazione|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Platform`  
   
-## Requisiti  
+### <a name="requirements"></a>Requisiti  
  **Metadati:** platform.winmd  
   
  **Spazio dei nomi:** Platform::InteropServices  
   
-## Vedere anche  
- [\(NOTINBUILD\) Spazio dei nomi Platform](http://msdn.microsoft.com/it-it/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>Vedere anche  
+ [Piattaforma Namespace](platform-namespace-c-cx.md)

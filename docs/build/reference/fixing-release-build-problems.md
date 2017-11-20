@@ -1,44 +1,44 @@
 ---
-title: "Correzione dei problemi della build di rilascio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilazioni di debug, sovrascrittura di memoria"
-  - "memoria, sovrascrittura"
-  - "build di rilascio, risoluzione dei problemi"
-  - "risoluzione dei problemi di build di rilascio"
-  - "risoluzione dei problemi in Visual C++, build di rilascio"
+title: Correzione versione compilare problemi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- release builds, troubleshooting
+- debug builds, memory overwrites
+- memory, overwrites
+- troubleshooting Visual C++, release builds
+- troubleshooting release builds
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d9ea76487ffe5d622cc754072f999da8a9c5a156
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Correzione dei problemi della build di rilascio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se il codice genera errori di compilazione dopo il passaggio dalla build di debug alla build di rilascio, è consigliabile effettuare alcuni controlli.  
+# <a name="fixing-release-build-problems"></a>Correzione dei problemi della build di rilascio
+Se il codice genera errori di compilazione dopo il passaggio dalla compilazione di debug per una build di rilascio, esistono alcune aree che è necessario controllare.  
   
- È possibile che con una build ottimizzata \(di rilascio\) vengano visualizzati avvisi del compilatore che non venivano invece generati con la build di debug.  
+ È possibile ricevere gli avvisi del compilatore durante una compilazione di rilascio ottimizzata non visualizzati durante una build di debug.  
   
--   [Analisi delle istruzioni ASSERT](../../build/reference/using-verify-instead-of-assert.md)  
+-   [Esaminare le istruzioni ASSERT](../../build/reference/using-verify-instead-of-assert.md)  
   
--   [Utilizzo della build di debug per il controllo della sovrascrittura di memoria](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
+-   [Utilizzare la Build di Debug per un controllo della sovrascrittura di memoria](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
   
--   [Attivazione della generazione di informazioni di debug per la build di rilascio](../../build/reference/how-to-debug-a-release-build.md)  
+-   [Attivare la generazione delle informazioni di Debug per le Build di rilascio](../../build/reference/how-to-debug-a-release-build.md)  
   
--   [Controllo delle sovrascritture di memoria](../../build/reference/checking-for-memory-overwrites.md)  
+-   [Controllo della sovrascrittura di memoria](../../build/reference/checking-for-memory-overwrites.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Build di rilascio](../../build/reference/release-builds.md)   
- [Problemi comuni durante la creazione di una build di rilascio](../../build/reference/common-problems-when-creating-a-release-build.md)   
+ [Problemi comuni durante la creazione di una Build di rilascio](../../build/reference/common-problems-when-creating-a-release-build.md)   
  [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

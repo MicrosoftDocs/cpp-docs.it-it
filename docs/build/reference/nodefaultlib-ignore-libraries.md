@@ -1,73 +1,73 @@
 ---
-title: "/NODEFAULTLIB (Ignora librerie) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NODEFAULTLIB (opzione del linker)"
-  - "librerie predefinite, rimozione"
-  - "Ignora librerie (opzione del linker)"
-  - "librerie, ignorare"
-  - "NODEFAULTLIB (opzione del linker)"
-  - "-NODEFAULTLIB (opzione del linker)"
+title: -/NODEFAULTLIB (Ignora librerie) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
+- VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
+- /nodefaultlib
+dev_langs: C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1172bc3dbed6353e31e34a0f406d2ea688ce78c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /NODEFAULTLIB (Ignora librerie)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Ignora librerie)
 ```  
 /NODEFAULTLIB[:library]   
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  dove:  
   
- *library*  
- Libreria che si desidera venga ignorata quando vengono risolti i riferimenti esterni.  
+ *libreria*  
+ Una libreria che si desidera al linker di ignorare durante la risoluzione di riferimenti esterni.  
   
-## Note  
- L'opzione \/NODEFAULTLIB indica al linker di rimuovere una o più librerie predefinite dall'elenco di librerie in cui viene effettuata la ricerca durante la risoluzione di riferimenti esterni.  
+## <a name="remarks"></a>Note  
+ L'opzione /NODEFAULTLIB indica al linker di rimuovere uno o più librerie predefinite dall'elenco delle librerie che la ricerca durante la risoluzione di riferimenti esterni.  
   
- Per creare un file obj che non contiene riferimenti alle librerie predefinite, utilizzare [\/Zl \(Omette il nome della libreria predefinita\)](../../build/reference/zl-omit-default-library-name.md).  
+ Per creare un file obj che non contiene riferimenti alle librerie predefinite, utilizzare [/Zl (omette nome di libreria predefinito)](../../build/reference/zl-omit-default-library-name.md).  
   
- Per impostazione predefinita, con \/NODEFAULTLIB vengono rimosse tutte le librerie predefinite dall'elenco delle librerie in cui effettuare le ricerche per la risoluzione dei riferimenti esterni.  Il parametro *library* facoltativo consente di rimuovere una o più librerie specificate dall'elenco di librerie in cui effettuare le ricerche per la risoluzione dei riferimenti esterni.  Specificare un'opzione \/NODEFAULTLIB per ogni libreria che si desidera escludere.  
+ Per impostazione predefinita, /NODEFAULTLIB rimuove tutte le librerie predefinite dall'elenco delle librerie che la ricerca durante la risoluzione di riferimenti esterni. Facoltativo *libreria* parametro consente di rimuovere una o più librerie specificate dall'elenco delle librerie la ricerca durante la risoluzione di riferimenti esterni. Specificare un'opzione /NODEFAULTLIB per ogni libreria che si desidera escludere.  
   
- I riferimenti a definizioni esterne vengono risolti effettuando la ricerca dapprima nelle librerie specificate esplicitamente, quindi nelle librerie predefinite specificate con l'opzione \/DEFAULTLIB, infine nelle librerie predefinite specificate nei file obj.  
+ Il linker risolve i riferimenti a definizioni esterne eseguendo una ricerca prima nelle librerie che si specifica esplicitamente, quindi nelle librerie predefinite specificate con l'opzione /DEFAULTLIB e quindi nelle librerie predefinite specificate nei file obj.  
   
- Con \/NODEFAULTLIB:*library* viene eseguito l'override di [\/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*library* quando lo stesso nome *library* viene specificato in entrambe.  
+ /NODEFAULTLIB:*libreria* esegue l'override [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*libreria* quando lo stesso *libreria* nome è specificato in entrambe.  
   
- Se si utilizza \/NODEFAULTLIB, ad esempio, per compilare il programma senza la libreria di runtime C, potrebbe essere necessario utilizzare anche [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) per specificare il punto di ingresso \(funzione\) nel programma.  Per ulteriori informazioni, vedere [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).  
+ Se si utilizza /NODEFAULTLIB, ad esempio, per compilare il programma senza la libreria di runtime C, è possibile utilizzare anche [/ENTRY](../../build/reference/entry-entry-point-symbol.md) per specificare il punto di ingresso (funzione) nel programma. Per altre informazioni, vedere [Funzionalità libreria CRT](../../c-runtime-library/crt-library-features.md).  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Input**.  
+3.  Fare clic su di **Input**pagina delle proprietà.  
   
-4.  Selezionare la proprietà **Ignora tutte le librerie predefinite** o specificare un elenco di librerie da ignorare nella proprietà **Ignora libreria specifica**.  Nella pagina delle proprietà **Riga di comando** verrà visualizzato l'effetto delle modifiche apportate a queste proprietà.  
+4.  Selezionare il **Ignora tutte le librerie predefinite** proprietà o specificare un elenco delle librerie di cui si desidera ignorare nel **Ignora libreria specifica** proprietà. Il **riga di comando** pagina delle proprietà verrà visualizzato l'effetto delle modifiche apportate a queste proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

@@ -1,66 +1,65 @@
 ---
-title: "/V (Numero versione) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/v"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/V (opzione del compilatore) [C++]"
-  - "incorporamento di stringhe di versione"
-  - "V (opzione del compilatore) [C++]"
-  - "-V (opzione del compilatore) [C++]"
-  - "numeri di versione, specifica per OBJ"
+title: -V (numero versione) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /v
+dev_langs: C++
+helpviewer_keywords:
+- embedding version strings
+- /V compiler option [C++]
+- version numbers, specifying for .obj
+- V compiler option [C++]
+- -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8d206db7699b955d1440da53731d4c8574fdf81c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /V (Numero versione)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Incorpora una stringa di testonel file obj.  Deprecata.  
+# <a name="v-version-number"></a>/V (Numero versione)
+Deprecato. Incorpora una stringa di testo nel file obj.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Vstring  
 ```  
   
-## Argomenti  
+## <a name="arguments"></a>Argomenti  
  `string`  
- Una stringa che specifica il numero di versione o le informazioni sul copyright da incorporare in un file obj.  
+ Stringa che specifica il numero di versione o informazioni sul copyright per essere incorporati in un file con estensione obj.  
   
-## Note  
- La stringapuò apporre al file obj un'etichetta con un numero di versione o informazioni sul copyright.  Ogni spazio o carattere di tabulazione deve essere racchiuso tra doppie virgolette \("\), se fa parte della stringa.  Una barra \(\\\) deve precedere le doppie virgolette \("\), se fa parte della stringa.  Uno spazio tra **\/V** e `string` è facoltativo.  
+## <a name="remarks"></a>Note  
+ L'etichetta stringcan un file con estensione obj con un numero di versione o un avviso di copyright. I caratteri spazio o tabulazione devono essere racchiusi tra virgolette doppie (") se fanno parte della stringa. Una barra rovesciata (\\) devono precedere tutte le virgolette se fanno parte della stringa. Uno spazio tra **/V** e `string` è facoltativo.  
   
- Per inserire il nome e il numero di versione del compilatore nel file obj, è inoltre possibile utilizzare [comment](../../preprocessor/comment-c-cpp.md) con l'argomento del tipo di commento del compilatore.  
+ È inoltre possibile utilizzare [comment (C/C++)](../../preprocessor/comment-c-cpp.md) con l'argomento di tipo di commento del compilatore per inserire il nome e numero di versione del compilatore nel file con estensione obj.  
   
- **\/V** è deprecata; **\/V** veniva utilizzata principalmente per il supporto della compilazione di driver di dispositivi virtuali \(VxDs\), funzione non più supportata dal set di strumenti di [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)].  Per ulteriori informazioni, vedere [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/it-it/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+ Il **/V** opzione è deprecata a partire da Visual Studio 2005. **/V** veniva principalmente utilizzato per supportare la creazione di driver di dispositivo virtuali (VxDs) e funzione non è più supportata dagli strumenti di Visual C++. Per un elenco di opzioni del compilatore obsolete, vedere **deprecate o rimosse le opzioni del compilatore** in [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

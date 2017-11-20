@@ -1,60 +1,59 @@
 ---
-title: "Classe IGetDataSourceImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IGetDataSourceImpl"
-  - "ATL.IGetDataSourceImpl<T>"
-  - "ATL.IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IGetDataSourceImpl (classe)"
+title: Classe IGetDataSourceImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IGetDataSourceImpl
+- ATL.IGetDataSourceImpl<T>
+- ATL.IGetDataSourceImpl
+- ATL::IGetDataSourceImpl
+- ATL::IGetDataSourceImpl<T>
+dev_langs: C++
+helpviewer_keywords: IGetDataSourceImpl class
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8af6a2a782bb72a7b306bfdfeda9ebf3a1800a93
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe IGetDataSourceImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un'implementazione dell'oggetto di [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx).  
+# <a name="igetdatasourceimpl-class"></a>Classe IGetDataSourceImpl
+Fornisce un'implementazione del [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx) oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  La classe, derivata da `IGetDataSourceImpl`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi di interfaccia  
+### <a name="interface-methods"></a>Metodi di interfaccia  
   
 |||  
 |-|-|  
 |[GetDataSource](../../data/oledb/igetdatasourceimpl-getdatasource.md)|Restituisce un puntatore a interfaccia sull'oggetto origine dati che ha creato la sessione.|  
   
-## Note  
- Si tratta di un'interfaccia richiesta la sessione per ottenere un puntatore a un'interfaccia all'oggetto origine dati.  
+## <a name="remarks"></a>Note  
+ Si tratta di un'interfaccia obbligatoria nella sessione per ottenere un puntatore a interfaccia per l'oggetto origine dati.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

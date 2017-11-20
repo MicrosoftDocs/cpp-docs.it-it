@@ -1,32 +1,30 @@
 ---
-title: "REPEAT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "REPEAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "REPEAT directive"
+title: RIPETERE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: REPEAT
+dev_langs: C++
+helpviewer_keywords: REPEAT directive
 ms.assetid: 26a72d91-d6b0-4d32-b5ba-4f5074e7973b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ee0ec93989116501c820d7251fa95566a0715fc5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# REPEAT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-contrassegna un blocco che deve essere ripetuto *espressione* volte.  Equivale a [REPT](../../assembler/masm/rept.md).  
+# <a name="repeat"></a>REPEAT
+Contrassegna un blocco che deve essere ripetuta *espressione* volte. Uguale a [REPT](../../assembler/masm/rept.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,5 +33,5 @@ statements
 ENDM  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)
