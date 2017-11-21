@@ -1,32 +1,31 @@
 ---
-title: "Procedura: enumerare i file di una directory (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "directory [C++], elenco di file"
-  - "file [C++], elenco di file"
+title: 'Procedura: enumerare i file in una Directory (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], listing files
+- directories [C++], listing files
 ms.assetid: ebfc2666-229f-4b94-a9a1-e8f1b5d946d6
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 365f54435c92ff464a0906cd719bd33ce28d61b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: enumerare i file di una directory (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come recuperare l'elenco dei file archiviati in una directory.  Inoltre, vengono enumerate le sottodirectory.  Nell'esempio vengono utilizzati i metodi <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> e <xref:System.IO.Directory.GetDirectories%2A> per visualizzare il contenuto della directory C:\\Windows.  
+# <a name="how-to-enumerate-files-in-a-directory-ccli"></a>Procedura: enumerare i file di una directory (C++/CLI)
+Esempio di codice riportato di seguito viene illustrato come recuperare un elenco dei file in una directory. Inoltre, vengono enumerate le sottodirectory. Nell'esempio di codice viene illustrato come utilizzare il <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> e <xref:System.IO.Directory.GetDirectories%2A> metodi per visualizzare il contenuto della directory c:\Windows..  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // enum_files.cpp  
@@ -51,6 +50,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [I\/O di file e di flussi](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
