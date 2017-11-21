@@ -1,36 +1,34 @@
 ---
-title: "ptr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.operator="
-  - "msclr.com.ptr.operator="
-  - "msclr::com::ptr::operator="
-  - "ptr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: PTR::operator = | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.operator=
+- msclr.com.ptr.operator=
+- msclr::com::ptr::operator=
+- ptr::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89d26c7011c31e5f4aad66589192ac38e2244e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Associa un oggetto COM a `com::ptr`.  
+# <a name="ptroperator"></a>ptr::operator=
+Associa un oggetto COM per un `com::ptr`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 ptr<_interface_type> % operator=(  
@@ -38,23 +36,23 @@ ptr<_interface_type> % operator=(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `_right`  
- Il puntatore all'interfaccia COM da associare.  
+ Puntatore a interfaccia COM da collegare.  
   
-## Valore restituito  
- Un riferimento di rilevamento in `com::ptr`.  
+## <a name="return-value"></a>Valore restituito  
+ Un riferimento di rilevamento nel `com::ptr`.  
   
-## Eccezioni  
- Se `com::ptr` già possiede un riferimento a un oggetto COM, `operator=` genera <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>Eccezioni  
+ Se il `com::ptr` possiede già un riferimento a un oggetto COM, `operator=` genera <xref:System.InvalidOperationException>.  
   
-## Note  
- Assegnazione di un oggetto COM a `com::ptr` fa riferimento all'oggetto COM ma non rilascia il riferimento del chiamante.  
+## <a name="remarks"></a>Note  
+ L'assegnazione di un oggetto COM per un `com::ptr` fa riferimento all'oggetto COM ma non comporta il rilascio di riferimento del chiamante.  
   
- Questo operatore ha lo stesso effetto di `Attach`.  
+ Questo operatore ha lo stesso effetto `Attach`.  
   
-## Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto di `IXMLDOMDocument` il membro privato.  Le prime `Release` chiamate di funzione membro di `ReplaceDocument` su qualsiasi oggetto precedentemente di proprietà e quindi utilizza `operator=` per associare un oggetto del nuovo documento.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Il `ReplaceDocument` chiamate prima di funzione membro `Release` su qualsiasi proprietà in precedenza oggetto e quindi utilizza `operator=` per collegare un nuovo oggetto documento.  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,13 +126,13 @@ int main() {
 }  
 ```  
   
-## Requisiti  
- **Header file**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\com\ptr.h >  
   
- msclr::com di**Spazio dei nomi**  
+ **Namespace** msclr:: com  
   
-## Vedere anche  
- [Membri ptr](../dotnet/ptr-members.md)   
- [ptr::Attach](../dotnet/ptr-attach.md)   
- [ptr::Detach](../dotnet/ptr-detach.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Membri PTR](../dotnet/ptr-members.md)   
+ [PTR::Attach](../dotnet/ptr-attach.md)   
+ [PTR::Detach](../dotnet/ptr-detach.md)   
  [ptr::Release](../dotnet/ptr-release.md)

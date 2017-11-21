@@ -1,36 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4547 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4547"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4547"
+title: Compilatore avviso (livello 1) C4547 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4547
+dev_langs: C++
+helpviewer_keywords: C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f61c4075e8c41970cb72ca317373d7aeb4bddb02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4547
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operatore': l'operatore prima della virgola non ha effetto. Previsto operatore con effetto collaterale  
+# <a name="compiler-warning-level-1-c4547"></a>Avviso del compilatore (livello 1) C4547
+'operator': operatore prima della virgola non ha effetto. Previsto operatore con effetto collaterale  
   
- È stata rilevata un'espressione delimitata da virgole in formato non corretto.  
+ Il compilatore ha rilevato un'espressione di valori delimitati da virgole con formato non valido.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
- Il seguente codice di esempio genera l'errore C4547:  
+ L'esempio seguente genera l'errore C4547:  
   
 ```  
 // C4547.cpp  

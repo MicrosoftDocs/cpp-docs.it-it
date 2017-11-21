@@ -1,11 +1,10 @@
 ---
-title: Classe CNonStatelessWorker | Documenti di Microsoft
+title: Classe CNonStatelessWorker | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - ATLUTIL/ATL::CNonStatelessWorker::Execute
 - ATLUTIL/ATL::CNonStatelessWorker::Initialize
 - ATLUTIL/ATL::CNonStatelessWorker::Terminate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CNonStatelessWorker class
+dev_langs: C++
+helpviewer_keywords: CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 804b87bf752aac5cecf64cb61b4d53d6269963f2
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 08b440a60b23182c3efff1c0236773ad2b98bf97
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
-Riceve richieste da un pool di thread e li passa un oggetto di lavoro che viene creato e distrutto in ogni richiesta.  
+Riceve richieste da un pool di thread e li passa un oggetto di lavoro che viene creato ed eliminato in ogni richiesta.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -60,7 +42,7 @@ class CNonStatelessWorker
   
 #### <a name="parameters"></a>Parametri  
  *Lavoro*  
- Una classe di thread di lavoro conforme al [archetipo lavoro](../../atl/reference/worker-archetype.md) adatto per la gestione delle richieste in coda in [CThreadPool](../../atl/reference/cthreadpool-class.md).  
+ Una classe di thread di lavoro conforme al [sistema per lavoro](../../atl/reference/worker-archetype.md) adatto per la gestione delle richieste in coda in [CThreadPool](../../atl/reference/cthreadpool-class.md).  
   
 ## <a name="members"></a>Membri  
   
@@ -79,9 +61,9 @@ class CNonStatelessWorker
 |[CNonStatelessWorker::Terminate](#terminate)|Implementazione di [WorkerArchetype::Terminate](worker-archetype.md#terminate).|  
   
 ## <a name="remarks"></a>Note  
- Questa classe è un thread di lavoro semplice per l'utilizzo con [CThreadPool](../../atl/reference/cthreadpool-class.md). Questa classe non fornisce tutte le funzionalità della propria gestione delle richieste. Al contrario, viene creata un'istanza di un'istanza di *lavoro* per ogni richiesta e delega l'implementazione dei metodi a tale istanza.  
+ Questa classe è un thread di lavoro semplice per l'utilizzo con [CThreadPool](../../atl/reference/cthreadpool-class.md). Questa classe non fornisce tutte le funzionalità della propria gestione delle richieste. Al contrario, viene creata un'istanza di un'istanza di *lavoro* per ogni richiesta e delegati di implementazione dei metodi a tale istanza.  
   
- Il vantaggio di questa classe è che fornisce un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool`verrà creato un singolo lavoro per la durata del thread, pertanto se la classe di lavoro contiene stato, che dovrà contenere più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del processo di lavoro e lo stato contiene è limitato a una singola richiesta.  
+ Il vantaggio di questa classe è che fornisce un modo pratico per modificare il modello di stato per le classi di thread di lavoro esistenti. `CThreadPool`verrà creato un singolo lavoro per la durata del thread, pertanto se la classe di lavoro contiene stato, che esso può contenere più richieste. Eseguendo semplicemente il wrapping di tale classe nel `CNonStatelessWorker` modello prima di utilizzarlo con `CThreadPool`, la durata del thread di lavoro e lo stato, contiene è limitato a una singola richiesta.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlutil. h  
@@ -98,7 +80,7 @@ void Execute(
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo metodo crea un'istanza del *lavoro* classe in stack di chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
+ Questo metodo crea un'istanza di *lavoro* classe stack e chiamate [inizializzare](worker-archetype.md#initialize) su tale oggetto. Se l'inizializzazione ha esito positivo, questo metodo chiama anche [Execute](worker-archetype.md#execute) e [Terminate](worker-archetype.md#terminate) sullo stesso oggetto.  
 
   
 ##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
@@ -136,6 +118,5 @@ void Terminate(void* /* pvParam */) throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [CThreadPool (classe)](../../atl/reference/cthreadpool-class.md)   
- [Archetipo di lavoro](../../atl/reference/worker-archetype.md)   
+ [Sistema di rilevazione di lavoro](../../atl/reference/worker-archetype.md)   
  [Classi](../../atl/reference/atl-classes.md)
-

@@ -1,34 +1,34 @@
 ---
-title: "ATL Copy Policy Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_Copy class"
-  - "_CopyInterface class"
-  - "classi [C++], copy policy"
-  - "copy policy classes [C++]"
-  - "dati [C++], ATL"
+title: Classi di criteri di copia ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], ATL
+- classes [C++], copy policy
+- copy policy classes [C++]
+- _Copy class
+- _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 667a6c35d979b0fb1da3675efd03e2840285b845
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# ATL Copy Policy Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le classi criteri di copia sono [classi di utilità](../atl/utility-classes.md) utilizzato per inizializzare, copia ed eliminazione dei dati.  Le classi criteri di copia consentono di definire la semantica di copia per qualsiasi tipo di dati e definire le conversioni tra tipi di dati diversi.  
+# <a name="atl-copy-policy-classes"></a>Classi di criteri di copia ATL
+Classi di criteri di copia sono [classi di utilità](../atl/utility-classes.md) utilizzato per inizializzare, copiare ed eliminare dati. Classi di criteri di copia consentono di definire semantica di copia per qualsiasi tipo di dati e per definire le conversioni tra tipi di dati diversi.  
   
- ATL utilizza le classi criteri di copia nelle implementazioni dei seguenti modelli:  
+ Usa classi copia ATL criteri nelle implementazioni dei modelli seguenti:  
   
 -   [CComEnumImpl](../atl/reference/ccomenumimpl-class.md)  
   
@@ -36,10 +36,10 @@ Le classi criteri di copia sono [classi di utilità](../atl/utility-classes.md) 
   
 -   [ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)  
   
- Incapsulamento delle informazioni necessarie per copiare o convertire i dati in una classe criteri di copia che può essere passata come argomento di modello, gli sviluppatori ATL forniti all'estremità riutilizzo delle classi.  Ad esempio, se è necessario implementare una raccolta utilizzando qualsiasi tipo di dati arbitrario, è sufficiente fornire ai criteri di copia appropriati; è necessario non alterare mai il codice per implementare la raccolta.  
+ Quanto incapsula le informazioni necessarie per copiare o convertire i dati in una classe di criteri di copia che può essere passato come argomento di modello, gli sviluppatori di ATL sono forniti i riusabilità estremi di queste classi. Ad esempio, se è necessario implementare una raccolta di qualsiasi tipo di dati arbitrari, è necessario fornire è i criteri di copia appropriata. non hai mai tocco il codice che implementa la raccolta.  
   
-## Definizione  
- Per definizione, la classe che fornisce le seguenti funzioni statiche è una classe di criteri di copia:  
+## <a name="definition"></a>Definizione  
+ Per definizione, una classe che fornisce le seguenti funzioni statiche è una classe di criteri di copia:  
   
  `static void init(` `DestinationType` `* p);`  
   
@@ -47,41 +47,42 @@ Le classi criteri di copia sono [classi di utilità](../atl/utility-classes.md) 
   
  `static void destroy(` `DestinationType` `* p);`  
   
- È possibile sostituire i tipi `DestinationType` e *SourceType* con tipi di dati arbitrari per ogni criteri di copia.  
+ È possibile sostituire i tipi di `DestinationType` e *SourceType* con tipi di dati arbitrari per tutti i criteri di copia.  
   
 > [!NOTE]
->  Sebbene sia possibile definire classi criteri di copia per qualsiasi tipo di dati arbitrari, l'utilizzo delle classi nel codice ATL deve limitare i tipi che hanno significato.  Ad esempio quando si utilizza la classe criteri di copia con le implementazioni della raccolta o enumeratore ATL, `DestinationType` deve essere un tipo che può essere utilizzato come parametro in un metodo di un'interfaccia COM.  
+>  Sebbene sia possibile definire classi di criteri di copia per i tipi di dati arbitrari, uso delle classi nel codice ATL consigliabile limitare i tipi appropriati. Ad esempio, quando tramite un criterio di copia di classe con l'insieme ATL o implementazioni di enumeratore `DestinationType` deve essere un tipo che può essere utilizzato come parametro in un metodo di interfaccia COM.  
   
- Utilizzare **init** per inizializzare i dati, **copy** per copiare i dati e **destroy** per liberare i dati.  Il significato esatto di inizializzazione, copiare e la distruzione del dominio della classe criteri di copia e variano a seconda dei tipi di dati utilizzati.  
+ Utilizzare **init** per inizializzare i dati, **copia** per copiare i dati, e **destroy** per liberare i dati. Il significato esatto di inizializzazione, la copia e la distruzione sono il dominio della classe di criteri di copia e varia a seconda dei tipi di dati coinvolti.  
   
- Esistono due requisiti sull'utilizzo e sull'implementazione di una classe di criteri di copia:  
+ Esistono due requisiti per l'uso e l'implementazione di una classe di criteri di copia:  
   
--   Il primo parametro a **copy** deve ricevere solo un puntatore ai dati precedentemente inizializzato utilizzando **init**.  
+-   Il primo parametro **copia** deve ricevere solo un puntatore ai dati che sono inizializzati in precedenza utilizzando **init**.  
   
--   **destroy** deve ricevere solo mai un puntatore ai dati precedentemente inizializzato utilizzando **init** o copiato tramite **copy**.  
+-   **Eliminare definitivamente** deve ricevere solo un puntatore ai dati che sono inizializzati in precedenza utilizzando **init** o copiati tramite **copia**.  
   
-## Implementazioni standard  
- ATL fornisce due classi criteri di copia sotto forma di classi modello **\_CopyInterface** e **\_Copy** :  
+## <a name="standard-implementations"></a>Implementazioni standard  
+ ATL fornisce due classi di criteri di copia nel formato di **Copy** e **CopyInterface** classi modello:  
   
--   La classe **\_Copy** consente di copiare solo omogenea \(non conversione tra tipi di dati\) poiché offre un solo parametro di modello per specificare sia `DestinationType` che *SourceType*.  L'implementazione generica di questo modello non contiene inizializzazione o codice di distruzione e utilizza `memcpy` per copiare i dati.  ATL fornisce inoltre le specializzazioni **\_Copy** per **VARIANT**, `LPOLESTR`, **CONNECTDATA** e **OLEVERB**.  
+-   Il **Copy** classe consente solo la copia omogenea (non la conversione tra tipi di dati) in quanto offre solo un parametro singolo modello per specificare entrambi `DestinationType` e *SourceType*. L'implementazione generica di questo modello non contiene alcun codice di inizializzazione o la distruzione e Usa `memcpy` per copiare i dati. ATL fornisce anche le specializzazioni di **Copy** per **VARIANT**, `LPOLESTR`, **OLEVERB**, e **CONNECTDATA** tipi di dati.  
   
--   La classe **\_CopyInterface** fornisce un'implementazione per i puntatori a interfaccia di copia che seguono le regole COM standard.  Nuovamente questa classe consente solo la copia omogenea, pertanto utilizza una semplice assegnazione e una chiamata a `AddRef` per eseguire la copia.  
+-   Il **CopyInterface** classe fornisce un'implementazione per la copia di puntatori a interfaccia regole COM standard. Ancora una volta questa classe consente solo la copia omogenea e pertanto Usa assegnazione semplice e una chiamata a `AddRef` per eseguire la copia.  
   
-## Implementazioni personalizzate  
- In genere, è necessario definire classi criteri di copia per copiare eterogenea ovvero conversione tra tipi di dati\).  Per alcuni esempi di classi criteri di copia personalizzate, l'aspetto dei file VCUE\_Copy.h e VCUE\_CopyString.h nell'esempio [ATLCollections](../top/visual-cpp-samples.md).  Questi file sono contenute due classi criteri di copia del modello, `GenericCopy` e `MapCopy`, nonché una serie di specializzazioni `GenericCopy` per i tipi di dati diversi.  
+## <a name="custom-implementations"></a>Implementazioni personalizzate  
+ In genere, è necessario definire le classi di criteri di copia per la copia eterogenea (conversione tra tipi di dati). Per alcuni esempi di classi di criteri di copia personalizzata, esaminare i file VCUE_Copy. h e VCUE_CopyString. h nel [ATLCollections](../visual-cpp-samples.md) esempio. Questi file contengono le classi dei criteri di copia, due modello `GenericCopy` e `MapCopy`, oltre a una serie di specializzazioni di `GenericCopy` per diversi tipi di dati.  
   
-### GenericCopy  
- `GenericCopy` consente di specificare *il SourceType* e `DestinationType` come argomenti.  Di seguito viene riportata la forma più generale della classe `GenericCopy` in VCUE\_Copy.h:  
+### <a name="genericcopy"></a>GenericCopy  
+ `GenericCopy`Consente di specificare il *SourceType* e `DestinationType` come argomenti di modello. Ecco la forma più generale del `GenericCopy` classe da VCUE_Copy:  
   
- [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/CPP/atl-copy-policy-classes_1.h)]  
+ [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
- VCUE\_Copy.h contiene anche le specializzazioni di questa classe: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`.  VCUE\_CopyString.h contiene le specializzazioni per la copia da **std::string**oggetti: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`e `GenericCopy<BSTR, std::string>`.  È possibile migliorare `GenericCopy` fornendo ulteriori specializzazioni personalizzati.  
+ VCUE_Copy contiene anche le seguenti specializzazioni di questa classe: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`. VCUE_CopyString. h contiene specializzazioni per la copia da **std:: String**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, e `GenericCopy<BSTR, std::string>`. È possibile migliorare `GenericCopy` fornendo ulteriori specializzazioni personalizzate.  
   
-### MapCopy  
- `MapCopy` presuppone che i dati che vengono copiati siano archiviati in un mapping stile STL, che consentono di specificare il tipo di mapping in cui vengono archiviati i dati e il tipo di destinazione.  L'implementazione della classe utilizza solo i typedef forniti dalla classe *di MapType* per determinare il tipo di dati di origine e chiamare la classe appropriata `GenericCopy`.  Nessuna di specializzazione di questa classe è necessario.  
+### <a name="mapcopy"></a>MapCopy  
+ `MapCopy`si presuppone che i dati da copiare sono archiviati in una mappa di tipo libreria Standard C++, pertanto consente di specificare il tipo di mappa in cui sono archiviati i dati e il tipo di destinazione. L'implementazione della classe vengono utilizzati solo i typedef forniti dal *MapType (TipoMappa)* classe per determinare il tipo di dati di origine e di chiamare appropriata `GenericCopy` classe. Non sono necessari specializzazioni di questa classe.  
   
- [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/CPP/atl-copy-policy-classes_2.h)]  
+ [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   
-## Vedere anche  
- [Implementing an STL\-Based Collection](../atl/implementing-an-stl-based-collection.md)   
- [Esempio ATLCollections](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>Vedere anche  
+ [Implementazione di una raccolta basata sulla libreria Standard C++](../atl/implementing-an-stl-based-collection.md)   
+ [Nell'esempio ATLCollections](../visual-cpp-samples.md)
+

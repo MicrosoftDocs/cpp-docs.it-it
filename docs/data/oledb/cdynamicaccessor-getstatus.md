@@ -1,41 +1,40 @@
 ---
-title: "CDynamicAccessor::GetStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::GetStatus"
-  - "CDynamicAccessor.GetStatus"
-  - "ATL.CDynamicAccessor.GetStatus"
-  - "CDynamicAccessor::GetStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetStatus (metodo)"
+title: 'CDynamicAccessor:: GetStatus | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::GetStatus
+- CDynamicAccessor.GetStatus
+- ATL.CDynamicAccessor.GetStatus
+- CDynamicAccessor::GetStatus
+dev_langs: C++
+helpviewer_keywords: GetStatus method
 ms.assetid: 8f1aba69-5c2c-4ca7-ad84-7b4b27995eb8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fd1c55e78cdc4a0ec8bd5c24c7010ec133b043bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetstatus"></a>CDynamicAccessor::GetStatus
 Recupera lo stato della colonna specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      bool GetStatus(   
-   DBORDINAL nColumn,   
-   DBSTATUS* pStatus    
+      bool GetStatus(   
+   DBORDINAL nColumn,   
+   DBSTATUS* pStatus    
 ) const throw( );  
 bool GetStatus(  
    const CHAR* pColumnName,  
@@ -47,22 +46,22 @@ bool GetStatus(
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nColumn`  
- \[in\] numero di colonne.  I numeri di colonne iniziano con 1.  Un valore 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore 0 si intende la colonna del segnalibro, se presente.  
   
  `pColumnName`  
- \[in\] puntatore A una stringa di caratteri che contiene il nome della colonna.  
+ [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.  
   
  `pStatus`  
- \[out\] puntatore Alla variabile contenente lo stato della colonna.  Vedere [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni.  
+ [out] Puntatore a una variabile che contiene lo stato della colonna. Vedere [DBSTATUS](https://msdn.microsoft.com/en-us/library/ms722617.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni.  
   
-## Valore restituito  
- Restituisce **true** se la colonna specificata viene trovata.  In caso contrario, la funzione restituisce **false**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce **true** se la colonna specificata viene trovata. In caso contrario, questa funzione restituisce **false**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)

@@ -1,54 +1,55 @@
 ---
-title: "Raccolte ed enumeratori ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "raccolta (interfacce)"
-  - "raccolte, classi ATL"
-  - "enumeratore (interfacce)"
-  - "enumeratori, classi ATL"
+title: Insiemi ed enumeratori ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collections, ATL classes
+- enumerators, ATL classes
+- collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Raccolte ed enumeratori ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`collection` è un oggetto COM che fornisce un'interfaccia che consente l'accesso a un gruppo di elementi dati \(dati non elaborati o altri oggetti.  Un'interfaccia che segue gli standard per consentire l'accesso a un gruppo di oggetti è nota come *interfaccia della raccolta*.  
+# <a name="atl-collections-and-enumerators"></a>Raccolte ed enumeratori ATL
+Oggetto `collection` è un oggetto COM che fornisce un'interfaccia che consente l'accesso a un gruppo di elementi di dati (dati non elaborati o altri oggetti). Un'interfaccia che segue gli standard per fornire l'accesso a un gruppo di oggetti è noto come un *interfaccia di raccolta*.  
   
- Come minimo, le interfacce di raccolta devono fornire una proprietà **Conteggio** che restituisce il numero di elementi della raccolta, una proprietà **Elemento** che restituisce un elemento dalla raccolta basata su un indice e una proprietà `_NewEnum` che restituisce un enumeratore per la raccolta.  Facoltativamente, interfacce di raccolta possono fornire **Aggiungi** e i metodi **Rimuovi** per consentire agli elementi da inserire in o eliminare dalla raccolta e un metodo **Cancella** per rimuovere tutti gli elementi.  
+ Come minimo, è necessario fornire le interfacce di raccolta una **conteggio** proprietà che restituisce il numero di elementi nella raccolta, un **elemento** proprietà che restituisce un elemento dalla raccolta in base a un indice e un `_NewEnum` proprietà che restituisce un enumeratore per la raccolta. Facoltativamente, è possono fornire le interfacce di raccolta **Aggiungi** e **rimuovere** metodi che consentono di essere inserito o eliminato dalla raccolta di elementi e un **deselezionare** rimuovere (metodo) tutti gli elementi.  
   
- `enumerator` è un oggetto COM che fornisce un'interfaccia per la ripetizione degli elementi in una raccolta.  Le interfacce di enumeratori forniscono l'accesso seriale agli elementi di una raccolta tramite quattro metodi richiesti: `Next`, **Skip**, **Reimposta**e `Clone`.  
+ Un `enumerator` è un oggetto COM che fornisce un'interfaccia per scorrere gli elementi in una raccolta. Enumeratore (interfacce) forniscono l'accesso seriale agli elementi di una raccolta tramite i quattro metodi richiesti: `Next`, **Skip**, **reimpostare**, e `Clone`.  
   
- Per ulteriori informazioni sulle interfacce dell'enumeratore lettura dell'interfaccia archetipo \(ma completamente immaginaria\) di.  
+ Sono disponibili ulteriori informazioni sulle interfacce di enumeratore leggendo sull'archetipo (ma completamente immaginaria) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfaccia.  
   
-## Argomenti della sezione  
- [Classi della libreria e dell'enumeratore ATL](../atl/atl-collection-and-enumerator-classes.md)  
- Vengono descritte brevemente e vengono forniti collegamenti alle classi ATL che quale è per distribuire le raccolte e gli enumeratori.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Classi di raccolta e di enumeratori ATL](../atl/atl-collection-and-enumerator-classes.md)  
+ Descrive brevemente e fornisce collegamenti alle classi ATL che consentono di implementano raccolte ed enumeratori.  
   
- [Principi di progettazione per le interfacce dell'enumeratore e della raccolta](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
- Vengono illustrati i principi di progettazione diverse di ogni tipo di interfaccia.  
+ [Principi di progettazione per le interfacce di raccolte ed enumeratori](../atl/design-principles-for-collection-and-enumerator-interfaces.md)  
+ Vengono illustrati i principi di progettazione protetti da ogni tipo di interfaccia.  
   
- [Implementare una raccolta Basata STL](../atl/implementing-an-stl-based-collection.md)  
- Un esempio completo che viene illustrata l'implementazione di una raccolta basata \(STL\) della libreria di modelli standard.  
+ [Implementazione di una raccolta basata su libreria standard C++](../atl/implementing-an-stl-based-collection.md)  
+ Un esempio esteso che illustra l'implementazione di una raccolta basata sulla libreria Standard C++.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali sulla programmazione mediante Active Template Library.  
+ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
   
- [Esempio ATLCollections](../top/visual-cpp-samples.md)  
- Un esempio in cui viene illustrato l'utilizzo `ICollectionOnSTLImpl` e `CComEnumOnSTL`e l'implementazione di classi criteri di copia personalizzate.  
+ [Nell'esempio ATLCollections](../visual-cpp-samples.md)  
+ Un esempio che illustra l'uso di `ICollectionOnSTLImpl` e `CComEnumOnSTL`e l'implementazione di classi di criteri di copia personalizzata.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

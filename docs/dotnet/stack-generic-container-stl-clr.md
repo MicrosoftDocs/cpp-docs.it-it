@@ -1,42 +1,40 @@
 ---
-title: "stack::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membro) [STL/CLR]"
+title: stack::generic_container (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 00f106c4-2a02-41cd-80de-f413c9355c74
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc3150b71f9b20cfe38d8d950c4daacb3327a3fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# stack::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo della generica interfaccia per l'adattatore del contenitore.  
+# <a name="stackgenericcontainer-stlclr"></a>stack::generic_container (STL/CLR)
+Il tipo dell'interfaccia generica per l'adapter di contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::IStack<Value>  
     generic_container;  
 ```  
   
-## Note  
- Il tipo descrive la generica interfaccia per questa classe di adattatori di contenitori del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive l'interfaccia generica per questa classe di adattatori di contenitore di modello.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_stack_generic_container.cpp   
@@ -78,16 +76,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c d**  
- **a b c d e**   
-## Requisiti  
- **Intestazione:** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/stack >  
   
-## Vedere anche  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
  <xref:Microsoft.VisualC.StlClr.IStack%602>   
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::generic\_value](../dotnet/stack-generic-value-stl-clr.md)
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)

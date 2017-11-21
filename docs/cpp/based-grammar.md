@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- based addressing
+dev_langs: C++
+helpviewer_keywords: based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 427906751c57b8b5f0c46479e8481394fa20f56c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: abcaa55bb0453b894f4023a68743f570bc6c3c52
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="based-grammar"></a>Grammatica __based
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
@@ -32,7 +28,7 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="grammar"></a>Grammatica  
  *modificatore di intervallo in base*:  
- **based (***base espressione***)    **  
+ **based (***base espressione***)**   
   
  *espressione di base*:  
  *based-variablebased-abstract-declaratorsegment-namesegment-cast*  

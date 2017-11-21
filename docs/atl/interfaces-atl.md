@@ -1,37 +1,38 @@
 ---
-title: "Interfaces (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM (interfacce)"
-  - "interfacce, COM"
+title: Interfacce (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces
+- interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un'interfaccia è il modo in cui un oggetto espone la funzionalità di tutto il mondo esterno.  In COM, un'interfaccia è una tabella dei puntatori \(come C\+\+ vtable\) alle funzioni implementate dall'oggetto.  La tabella rappresenta l'interfaccia e funzioni a cui punta sono metodi dell'interfaccia.  Un oggetto può esporre il numero di interfacce e scegliere.  
+# <a name="interfaces-atl"></a>Interfacce (ATL)
+Un'interfaccia è il modo in cui un oggetto espone le proprie funzionalità al mondo esterno. In COM, un'interfaccia è una tabella di puntatori (ad esempio, un oggetto vtable C++) alle funzioni implementate dall'oggetto. La tabella rappresenta l'interfaccia e le funzioni a cui fa riferimento sono i metodi di tale interfaccia. Un oggetto può esporre il numero di interfacce che sceglie.  
   
- Ogni interfaccia è basata sull'interfaccia COM sottostante, [IUnknown](../atl/iunknown.md).  I metodi **IUnknown** possibile navigare alle altre interfacce esposte dall'oggetto.  
+ Ogni interfaccia si basa sull'interfaccia COM fondamentale, [IUnknown](../atl/iunknown.md). I metodi di **IUnknown** consentire la navigazione con altre interfacce esposte dall'oggetto.  
   
- Inoltre, ogni interfaccia è assegnato un ID univoco dell'interfaccia \(IID\).  Questa univocità semplifica supportare il controllo delle versioni di interfaccia.  Una nuova versione di un'interfaccia è semplicemente una nuova interfaccia, con un nuovo IID.  
+ Inoltre, ogni interfaccia viene assegnato un'univoca ID interfaccia (IID). Questa univocità semplifica supportare il controllo delle versioni di interfaccia. Una nuova versione di un'interfaccia è semplicemente una nuova interfaccia, con un nuovo IID.  
   
 > [!NOTE]
->  Gli IID per le interfacce COM e OLE standard sono predefiniti.  
+>  IID per le interfacce COM e OLE standard sono predefiniti.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Introduzione a COM](../atl/introduction-to-com.md)   
- [COM Objects and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [Le interfacce e oggetti COM](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+

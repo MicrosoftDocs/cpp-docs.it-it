@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits::Hash
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultHashTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 383cdc49f9ac78447186a677bc712287b71b3994
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdefaulthashtraits-class"></a>Classe CDefaultHashTraits
 Questa classe fornisce una funzione statica per il calcolo dei valori hash.  
@@ -77,4 +73,3 @@ static ULONG Hash(const T& element) throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

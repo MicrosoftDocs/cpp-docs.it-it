@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3394
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3394
+f1_keywords: C3394
+dev_langs: C++
+helpviewer_keywords: C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 69a4f9ebd8df95a5a65191b19d4d130eb6ede196
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3394"></a>Errore del compilatore C3394
 errore di sintassi nella clausola constraint: trovato 'identifier', previsto un tipo  

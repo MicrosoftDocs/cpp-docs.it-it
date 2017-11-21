@@ -1,56 +1,43 @@
 ---
-title: Macro di classe finestra | Documenti di Microsoft
+title: Macro di classe di finestra | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlwin/ATL::DECLARE_WND_CLASS
+- atlwin/ATL::DECLARE_WND_SUPERCLASS
+- atlwin/ATL::DECLARE_WND_CLASS_EX
+dev_langs: C++
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
-ms.openlocfilehash: f32926b6efd4ffb9c0541c0574a479c13dac01df
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e952c19d5cb52be1f2d2ab727049e92cf3625f5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="window-class-macros"></a>Macro di classe di finestra
-Queste macro definiscono utilità classe della finestra.  
+Queste macro definiscono le utilità di classe di finestra.  
   
 |||  
 |-|-|  
 |[DECLARE_WND_CLASS](#declare_wnd_class)|Consente di specificare il nome di una nuova classe di finestra.| 
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(2017 di visual Studio) Consente di specificare il nome di una nuova classe di finestra e la classe contenitore cui routine utilizzerà la nuova classe.| 
-|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Consente di specificare il nome di una classe finestra esistente in cui verrà impostata una nuova classe della finestra.|  
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(2017 di visual Studio) Consente di specificare il nome di una nuova classe della finestra e la classe che utilizzerà la nuova classe il cui routine della finestra.| 
+|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Consente di specificare il nome di una classe finestra esistente su cui basare una nuova classe della finestra.|  
 |[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Consente di specificare i parametri di una classe.|  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlwin. h  
    
 ##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
- Consente di specificare il nome di una nuova classe di finestra. Inserire la macro nella classe di controllo del controllo ActiveX ATL.  
+ Consente di specificare il nome di una nuova classe di finestra. Inserire la macro nella classe del controllo del controllo ActiveX di ATL.  
   
 ```
 DECLARE_WND_CLASS( WndClassName )
@@ -61,11 +48,11 @@ DECLARE_WND_CLASS( WndClassName )
  [in] Il nome della nuova classe di finestra. Se **NULL**, ATL verrà generato un nome di classe di finestra.  
   
 ### <a name="remarks"></a>Note  
- Se si utilizza l'opzione /permissive-compiler, quindi DECLARE_WND_CLASS causerà un errore del compilatore. Utilizzare invece DECLARE_WND_CLASS2.
+ Se si utilizza l'opzione /permissive-compiler, quindi DECLARE_WND_CLASS genererà un errore del compilatore. In alternativa, usare DECLARE_WND_CLASS2.
  
- DECLARE_WND_CLASS consente di specificare il nome di una nuova classe di finestra le cui informazioni verranno gestite da [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS`definisce la nuova classe di finestra implementando la seguente funzione statica:  
+ DECLARE_WND_CLASS consente di specificare il nome di una nuova classe di finestra le cui informazioni vengono gestite da [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS`definisce la nuova classe di finestra implementando la seguente funzione statica:  
   
- [!code-cpp[127 NVC_ATL_Windowing](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   
  `DECLARE_WND_CLASS`Specifica gli stili seguenti per la nuova finestra:  
   
@@ -75,9 +62,9 @@ DECLARE_WND_CLASS( WndClassName )
   
 -   CS_DBLCLKS  
   
- `DECLARE_WND_CLASS`Specifica inoltre il colore di sfondo della finestra predefinita. Utilizzare il [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) (macro) per fornire gli stili e il colore di sfondo.  
+ `DECLARE_WND_CLASS`specifica anche il colore di sfondo della finestra predefinita. Utilizzare il [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) (macro) per fornire gli stili e il colore di sfondo.  
   
- [CWindowImpl](cwindowimpl-class.md) utilizza il `DECLARE_WND_CLASS` macro per creare una finestra in base a una nuova classe della finestra. Per ignorare questo comportamento, utilizzare il [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) (macro), o fornire la propria implementazione di [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) (funzione).  
+ [CWindowImpl](cwindowimpl-class.md) utilizza il `DECLARE_WND_CLASS` (macro) per creare una finestra in base a una nuova classe della finestra. Per eseguire l'override di questo comportamento, utilizzare il [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) (macro), o fornire la propria implementazione del [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) (funzione).  
 
   
  Per ulteriori informazioni sull'utilizzo delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).  
@@ -94,14 +81,14 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
  [in] Il nome della nuova classe di finestra. Se **NULL**, ATL verrà generato un nome di classe di finestra. 
 
  `EnclosingClass`  
- [in] Il nome della classe della finestra che include la nuova classe della finestra. Non può essere **NULL**.  
+ [in] Il nome della classe della finestra che include la nuova classe di finestra. Non può essere **NULL**.  
   
 ### <a name="remarks"></a>Note 
-Se si utilizza il /permissive-option, DECLARE_WND_CLASS causerà un errore di compilazione perché contiene un nome dipendente. DECLARE_WND_CLASS2 richiede un nome in modo esplicito la classe che questa macro viene utilizzata e non viene generato l'errore sotto il /permissive-flag.
+Se si utilizza il /permissive-option, DECLARE_WND_CLASS genererà un errore di compilazione perché contiene un nome di dipendente. DECLARE_WND_CLASS2 è necessario assegnare un nome in modo esplicito la classe che questa macro viene usata e non viene generato l'errore sotto il /permissive-flag.
 Questa macro è identica a [DECLARE_WND_CLASS](#declare_wnd_class).
    
 ##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
- Consente di specificare i parametri di una classe. Inserire la macro nella classe di controllo del controllo ActiveX ATL.  
+ Consente di specificare i parametri di una classe. Inserire la macro nella classe del controllo del controllo ActiveX di ATL.  
   
 ```
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
@@ -109,19 +96,19 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
   
 ### <a name="parameters"></a>Parametri  
  `WndClassName`  
- [in] Il nome della finestra di classe superclasse che verranno `OrigWndClassName`. Se **NULL**, ATL verrà generato un nome di classe di finestra.  
+ [in] Il nome della finestra di classe che superclasse verrà `OrigWndClassName`. Se **NULL**, ATL verrà generato un nome di classe di finestra.  
   
  `OrigWndClassName`  
  [in] Il nome di una classe finestra esistente.  
   
 ### <a name="remarks"></a>Note  
- Questa macro consente di specificare il nome di una classe finestra che verrà superclasse una classe finestra esistente. [CWndClassInfo](cwndclassinfo-class.md) gestisce le informazioni della superclasse.  
+ Questa macro consente di specificare il nome di una classe della finestra che verrà superclasse una classe finestra esistente. [CWndClassInfo](cwndclassinfo-class.md) gestisce le informazioni della superclasse.  
   
  `DECLARE_WND_SUPERCLASS`implementa la funzione statica seguente:  
   
- [!code-cpp[127 NVC_ATL_Windowing](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   
- Per impostazione predefinita, [CWindowImpl](cwindowimpl-class.md) utilizza il [DECLARE_WND_CLASS](#declare_wnd_class) macro per creare una finestra in base a una nuova classe della finestra. Specificando il `DECLARE_WND_SUPERCLASS` macro in un `CWindowImpl`-classe derivata la classe finestra si baserà su una classe esistente, ma utilizzerà routine della finestra. Questa tecnica è denominata creazione di superclassi.  
+ Per impostazione predefinita, [CWindowImpl](cwindowimpl-class.md) utilizza il [DECLARE_WND_CLASS](#declare_wnd_class) macro per creare una finestra in base a una nuova classe della finestra. Specificando il `DECLARE_WND_SUPERCLASS` macro in un `CWindowImpl`-classe derivata della classe di finestra si baserà su una classe esistente ma utilizzerà routine della finestra. Questa tecnica è denominata creazione di superclassi.  
   
  Oltre a utilizzare il `DECLARE_WND_CLASS` e `DECLARE_WND_SUPERCLASS` macro, è possibile eseguire l'override di [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) funzione con la propria implementazione.  
 
@@ -129,7 +116,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
  Per ulteriori informazioni sull'utilizzo delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).  
   
 ##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
- Consente di specificare il nome di una classe finestra esistente in cui verrà impostata una nuova classe della finestra. Inserire la macro nella classe di controllo del controllo ActiveX ATL.  
+ Consente di specificare il nome di una classe finestra esistente su cui basare una nuova classe della finestra. Inserire la macro nella classe del controllo del controllo ActiveX di ATL.  
   
 ```
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
@@ -146,15 +133,14 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
  [in] Il colore di sfondo della finestra.  
   
 ### <a name="remarks"></a>Note  
- Questa macro consente di specificare i parametri della classe di una nuova classe di finestra, le cui informazioni verranno gestite da [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS_EX`definisce la nuova classe di finestra implementando la seguente funzione statica:  
+ Questa macro consente di specificare i parametri di classe di una nuova classe di finestra, le cui informazioni vengono gestite da [CWndClassInfo](cwndclassinfo-class.md). `DECLARE_WND_CLASS_EX`definisce la nuova classe di finestra implementando la seguente funzione statica:  
   
- [!code-cpp[127 NVC_ATL_Windowing](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]  
   
  Se si desidera utilizzare un colore di sfondo e gli stili predefiniti, utilizzare il [DECLARE_WND_CLASS](#declare_wnd_class) (macro). Per ulteriori informazioni sull'utilizzo delle finestre in ATL, vedere l'articolo [classi di finestra ATL](../../atl/atl-window-classes.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Macro](atl-macros.md)
-
 
 
 

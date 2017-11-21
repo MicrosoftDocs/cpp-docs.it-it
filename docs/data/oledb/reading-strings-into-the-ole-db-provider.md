@@ -1,37 +1,36 @@
 ---
-title: "Lettura di stringhe in un provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, lettura di stringhe in"
+title: Lettura di stringhe nel Provider OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c4c88f29cd0ad7989c079a17f66f1f48e4874a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Lettura di stringhe in un provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La funzione `RMyProviderRowset::Execute` apre un file e legge stringhe.  Il consumer passa il nome file al provider chiamando [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx).  Il provider riceve il nome file e lo archivia nella variabile membro `m_szCommandText`.  `Execute` legge il nome file da `m_szCommandText`.  Se il nome file non è valido o se il file non è disponibile, `Execute` restituirà un errore.  In caso contrario, aprirà il file e chiamerà `fgets` per recuperare le stringhe.  Per ciascun insieme di stringhe letto, `Execute` creerà un'istanza del record utente \(`CAgentMan`\) e la inserirà in una matrice.  
+# <a name="reading-strings-into-the-ole-db-provider"></a>Lettura di stringhe in un provider OLE DB
+Il `RMyProviderRowset::Execute` funzione apre un file e legge le stringhe. Il consumer passa il nome del file al provider chiamando [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx). Il provider riceve il nome del file e archiviarlo nella variabile membro `m_szCommandText`. `Execute`legge il nome di file da `m_szCommandText`. Se il nome del file non è valido o non è disponibile, il file `Execute` restituisce un errore. In caso contrario, viene aperto il file e le chiamate `fgets` per recuperare le stringhe. Per ogni insieme di stringhe di letture, `Execute` crea un'istanza del record utente (`CAgentMan`) e lo inserisce in una matrice.  
   
- Se il file non può essere aperto, `Execute` dovrà restituire **DB\_E\_NOTABLE**.  Se viene restituito **E\_FAIL**, il provider non potrà essere utilizzato con molti consumer e non supererà i [test di conformità](../../data/oledb/testing-your-provider.md) OLE DB.  
+ Se il file non può essere aperto, `Execute` deve restituire **DB_E_NOTABLE**. Se restituisce **E_FAIL** invece il provider non funzionerà con molti consumer e non passerà OLE DB [dei test di conformità](../../data/oledb/testing-your-provider.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Nel seguente esempio è riportata la funzione `Execute` modificata:  
+### <a name="description"></a>Descrizione  
+ La versione modificata `Execute` funzione è simile al seguente:  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 /////////////////////////////////////////////////////////////////////////  
@@ -105,5 +104,5 @@ public:
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)

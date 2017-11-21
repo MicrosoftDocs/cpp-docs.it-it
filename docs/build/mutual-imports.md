@@ -1,64 +1,64 @@
 ---
-title: "Importazioni reciproche | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AFXEXT (simbolo del preprocessore)"
-  - "AFX_DATA"
-  - "AFX_EXT_CLASS (macro)"
-  - "importazioni circolari"
-  - "DLL [C++], importazione"
-  - "file eseguibili [C++], importazione"
-  - "esportazione di DLL [C++], importazioni reciproche"
-  - "DLL di estensione [C++], importazioni reciproche"
-  - "importazione di DLL [C++], importazioni reciproche"
-  - "importazioni DLL reciproche [C++]"
-  - "importazione reciproca di file eseguibili [C++]"
+title: Importazioni reciproche | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- mutual DLL imports [C++]
+- AFX_DATA
+- importing DLLs [C++], mutual imports
+- mutually importing executable files [C++]
+- AFX_EXT_CLASS macro
+- circular imports
+- _AFXEXT preprocessor symbol
+- DLLs [C++], importing
+- executable files [C++], importing
+- extension DLLs [C++], mutual imports
+- exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Importazioni reciproche
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'esportazione o l'importazione in un altro file eseguibile presenta alcune complicazioni quando le importazioni sono reciproche, ovvero circolari.  Un esempio è dato da due DLL che importano simboli l'una dall'altra, analogamente alle funzioni ricorsive reciproche.  
+# <a name="mutual-imports"></a>Importazioni reciproche
+Esportazione o importazione in un altro file eseguibile presenta complicazioni quando le importazioni sono reciproca (o circolare). Ad esempio, due DLL importare simboli tra loro, simili alle funzioni ricorsive.  
   
- Il problema dei file eseguibili a importazione reciproca, di solito DLL, è dato dal fatto che non è possibile compilare un file senza compilare prima l'altro.  Ciascun processo di compilazione richiede, come input, una libreria di importazione prodotta dall'altro processo di compilazione.  
+ Il problema di importazione reciproca di file eseguibili (in genere DLL) è che non è possibile compilare senza compilare prima l'altro. Ogni processo di compilazione richiede, come input, una libreria di importazione prodotta dal processo di compilazione.  
   
- La soluzione consiste nell'impiego dell'utilità LIB con l'opzione \/DEF, che produce una libreria di importazione senza compilare l'eseguibile.  Questa utilità consente di compilare tutte le librerie di importazione necessarie, indipendentemente dal numero di DLL coinvolte o dal grado di complessità delle dipendenze.  
+ La soluzione consiste nell'utilizzare l'utilità LIB con l'opzione /DEF, che genera una libreria di importazione senza compilare il file eseguibile. Utilizzo di questa utilità, è possibile compilare tutte le librerie di importazione è necessario, indipendentemente dal numero di DLL coinvolti o grado di complessità delle dipendenze.  
   
- La soluzione generale per gestire le importazioni reciproche è descritta di seguito.  
+ È la soluzione generale per la gestione delle importazioni reciproche:  
   
-1.  Prendere ciascuna DLL a turno. L'ordine non è importante, anche se alcune soluzioni sono ottimali. Se tutte le librerie di importazione necessarie sono attualmente disponibili, eseguire LINK per compilare il file eseguibile \(DLL\).  Viene creata una libreria di importazione.  In caso contrario, eseguire LIB per creare una libreria di importazione.  
+1.  Eseguire ogni DLL a sua volta. (Qualsiasi ordine è possibile, anche se alcuni ordini sono più adatti). Se tutte le librerie di importazione necessarie sono disponibili correnti, eseguire LINK per creare il file eseguibile (DLL). Questa operazione genera una libreria di importazione. In caso contrario, eseguire LIB per produrre una libreria di importazione.  
   
-     L'esecuzione di LIB con l'opzione \/DEF produce un file aggiuntivo con estensione exp,  che deve essere utilizzato successivamente per compilare l'eseguibile.  
+     Esecuzione di LIB con l'opzione /DEF produce un file aggiuntivo con un. Estensione EXP. Il file con estensione File EXP deve essere utilizzato in seguito per compilare il file eseguibile.  
   
-2.  Dopo avere utilizzato LINK o LIB per compilare tutte le librerie di importazione, tornare indietro ed eseguire LINK per compilare i file eseguibili che non sono stati compilati nel passaggio precedente.  Tenere presente che il file exp corrispondente deve essere specificato sulla riga LINK.  
+2.  Dopo aver utilizzato LINK o LIB per compilare tutte le librerie di importazione, tornare indietro ed eseguire LINK per generare i file eseguibili che non sono stati compilati nel passaggio precedente. Si noti che è necessario specificare il file EXP corrispondente nella riga di collegamento.  
   
-     Se è stata eseguita l'utilità LIB per creare una libreria di importazione per DLL1, dovrebbe essere stato prodotto anche il file DLL1.exp.  È necessario utilizzare DLL1.exp come input per LINK al momento della compilazione di DLL1.dll.  
+     Se è stata eseguita l'utilità LIB in precedenza per creare una libreria di importazione per DLL1, avrebbe prodotto anche il file DLL1. È necessario utilizzare DLL1 come input di collegamento durante la compilazione di DLL1.  
   
- Nell'esempio riportato di seguito viene illustrata una soluzione per due DLL di importazione reciproche, DLL1 e DLL2.  Il passaggio 1 prevede l'esecuzione di LIB, con l'opzione \/DEF impostata, su DLL1.  Questo passaggio produce la libreria di importazione DLL1.lib e il file DLL1.exp.  Nel passaggio 2 la libreria di importazione viene utilizzata per compilare DLL2, che produce a sua volta una libreria di importazione per i simboli di DLL2.  Il passaggio 3 compila DLL1, utilizzando come input DLL1.exp e DLL2.lib.  Tenere presente che non è necessario un file exp per DLL2, poiché non è stata utilizzata l'utilità LIB per compilare la libreria di importazione di DLL2.  
+ Nella figura seguente viene illustrata una soluzione per due DLL importazione reciproca, DLL1 e DLL2. Passaggio 1 consiste nell'esecuzione di LIB, con il set di opzione /DEF, su DLL1. Passaggio 1 produce DLL1 DLL1.lib e una libreria di importazione. Nel passaggio 2, la libreria di importazione viene utilizzata per compilare DLL2, che a sua volta genera una libreria di importazione per simboli di DLL2. Passaggio 3 genera DLL1, utilizzando DLL1 e DLL2 come input. Tenere presente che non è necessario un file EXP per DLL2, poiché LIB non è stato utilizzato per compilare la libreria di importazione DLL2.  
   
- ![Uso di importazioni reciproche per collegare due DLL](../build/media/vc37yj1.png "vc37YJ1")  
+ ![Uso di importazioni reciproche per collegare due DLL](../build/media/vc37yj1.gif "vc37YJ1")  
 Collegamento di due DLL con importazioni reciproche  
   
-## Limitazioni di \_AFXEXT  
- È possibile utilizzare il simbolo del preprocessore `_AFXEXT` per le DLL di estensione purché non siano presenti più livelli di DLL di estensione.  Se si hanno DLL di estensione che chiamano o derivano da classi nelle relative DLL di estensione, derivando quindi dalle classi MFC, è necessario utilizzare il proprio simbolo del preprocessore per evitare ambiguità.  
+## <a name="limitations-of-afxext"></a>Limitazioni di AFXEXT  
+ È possibile utilizzare il `_AFXEXT` simbolo del preprocessore per le DLL, purché non si dispone più livelli di estensione MFC DLL di estensione MFC. Se si dispone di estensione MFC DLL che chiamano o derivano dalle classi nel propria MFC DLL di estensione, quindi dalla quale derivare le classi MFC, è necessario utilizzare il proprio simbolo del preprocessore per evitare ambiguità.  
   
- Il problema è dato dal fatto che in Win32 è necessario dichiarare i dati in modo esplicito come **\_\_declspec\(dllexport\)** se devono essere esportati da una DLL e come **\_\_declspec\(dllimport\)** se devono essere importati da una DLL.  Quando si definisce `_AFXEXT`, le intestazioni MFC assicurano la corretta definizione di **AFX\_EXT\_CLASS**.  
+ Il problema è che in Win32, è necessario dichiarare in modo esplicito i dati come **dllexport** se è possibile esportare da una DLL, e **declspec** se deve essere importato da una DLL. Quando si definisce `_AFXEXT`, le intestazioni MFC assicurarsi che **AFX_EXT_CLASS** sia definito correttamente.  
   
- Quando sono presenti più livelli, un simbolo come **AFX\_EXT\_CLASS** non è sufficiente, poiché una DLL di estensione potrebbe esportare nuove classi o importare altre classi da un'altra DLL di estensione.  Per risolvere il problema, è possibile utilizzare uno speciale simbolo del preprocessore per indicare se si sta compilando la DLL o utilizzando la DLL.  Ad esempio, si immaginino due estensioni DLL: A.dll e B.dll.  Esportano entrambe alcune classi in A.h e B.h, rispettivamente.  B.dll utilizza le classi di A.dll.  I file di intestazione potrebbero essere analoghi al seguente:  
+ Quando si dispone più livelli, un simbolo, ad esempio **AFX_EXT_CLASS** non è sufficiente, perché una DLL di estensione MFC potrebbe essere esportare nuove classi, nonché importare altre classi da un'altra DLL di estensione MFC. Per risolvere questo problema, utilizzare un simbolo del preprocessore speciale che indica che si compila la DLL o utilizzando la DLL. Si supponga, ad esempio, due DLL di estensione MFC, dll e DLL. Ognuno di essi Esporta alcune classi nella h e h, rispettivamente. B. dll utilizza le classi di DLL. I file di intestazione avrà un aspetto simile al seguente:  
   
 ```  
 /* A.H */  
@@ -83,14 +83,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- A.dll viene compilata con `/D A_IMPL` e B.dll viene compilata con `/D B_IMPL`.  Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato, mentre `CExampleA` viene importato durante la compilazione di B.dll.  `CExampleA` viene esportato durante la compilazione di A.dll e importato quando viene utilizzato da B.dll \(o da un altro client\).  
+ DLL viene compilata con `/D A_IMPL` e DLL viene compilata con `/D B_IMPL`. Utilizzando simboli distinti per ogni DLL, `CExampleB` viene esportato e `CExampleA` viene importato quando si compila una DLL. `CExampleA`viene esportato quando si compila una DLL e importato quando viene utilizzato dalla DLL (o un altro client).  
   
- Questo tipo di disposizione su più livelli non può essere realizzato quando si utilizzano i simboli del preprocessore incorporati **AFX\_EXT\_CLASS** e `_AFXEXT`.  La tecnica sopra descritta risolve il problema in modo non dissimile dal meccanismo utilizzato da MFC nella compilazione delle proprie DLL di estensione per la tecnologia Active, i database e la rete.  
+ Questo tipo di disposizione non può essere eseguito quando si utilizza l'elemento predefinito **AFX_EXT_CLASS** e `_AFXEXT` simboli del preprocessore. La tecnica sopra descritta risolve questo problema in modo diversamente da quanto accade non che viene utilizzato il meccanismo di MFC quando si compila la tecnologia Active, Database e DLL di estensione MFC di rete.  
   
-## Esportazione di porzioni di classi  
- Quando si esportano porzioni di classi, occorre accertarsi che gli elementi di dati necessari creati dalle macro MFC vengano esportati correttamente.  A tal fine, è possibile ridefinire `AFX_DATA` in base alla macro della classe specifica.  Eseguire questa operazione ogni volta che non si esporta l'intera classe.  
+## <a name="not-exporting-the-entire-class"></a>Non esportare l'intera classe  
+ Quando non si sta esportando un'intera classe, è necessario assicurarsi che gli elementi dati necessari creati dalle macro MFC vengano esportati correttamente. Questa operazione può essere eseguita mediante la ridefinizione `AFX_DATA` alla macro della classe specifico. Questa operazione deve essere eseguita ogni volta che si sta esportando non l'intera classe.  
   
- Di seguito è riportato un esempio.  
+ Ad esempio:  
   
 ```  
 /* A.H */  
@@ -114,25 +114,25 @@ class CExampleA : public CObject
 #define AFX_DATA  
 ```  
   
-### Scegliere l'argomento con cui si desidera procedere  
+### <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Esportare da una DLL](../build/exporting-from-a-dll.md)  
+-   [Esportazione da una DLL](../build/exporting-from-a-dll.md)  
   
--   [Esportazione da una DLL tramite i file def](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Esportazione da una DLL tramite. DEF (file)](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Esportazione da una DLL utilizzando \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Esportazione e importazione utilizzando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Esportazione e importazione tramite AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Esportazione di funzioni C\+\+ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Scelta del metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-### Scegliere l'argomento su cui visualizzare maggiori informazioni  
+### <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
--   [Utilità LIB e opzione \/DEF](../build/reference/lib-reference.md)  
+-   [L'utilità LIB e l'opzione /DEF](../build/reference/lib-reference.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Importazione ed esportazione](../build/importing-and-exporting.md)

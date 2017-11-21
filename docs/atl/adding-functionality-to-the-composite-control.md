@@ -1,43 +1,44 @@
 ---
-title: "Adding Functionality to the Composite Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX (controlli) [C++], eventi"
-  - "controlli composti, gestione eventi"
-  - "event handlers [C++], controlli ActiveX"
+title: "Aggiunta di funzionalità per il controllo composito | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- event handlers [C++], ActiveX controls
+- composite controls, handling events
+- ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7282ba7eb80fd30175751bb5234818a5e3cf1431
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Adding Functionality to the Composite Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una volta aggiunto tutti i controlli necessari nel controllo composito, il passaggio successivo consiste nell'aggiungere nuove funzionalità.  Questa nuova funzionalità generalmente rientra in due categorie:  
+# <a name="adding-functionality-to-the-composite-control"></a>Aggiunta di funzionalità per il controllo composito
+Dopo aver inserito eventuali controlli nel controllo composito, il passaggio successivo prevede l'aggiunta di nuove funzionalità. Questa nuova funzionalità in genere può essere suddiviso in due categorie:  
   
--   Interfacce aggiuntive di supporto e personalizzare il comportamento del controllo composito con funzionalità aggiuntive e specifiche.  
+-   Supporto di interfacce aggiuntive e personalizzazione del comportamento del controllo composito con ulteriori funzionalità specifiche.  
   
--   Gestione di eventi dal controllo ActiveX contenuto \(o dai controlli.  
+-   Gestione di eventi da contenuti o del controllo ActiveX (controlli).  
   
- Per l'ambito e l'ambito di questo articolo, il resto di questa sezione vengono illustrate unicamente su gestione di eventi da controlli ActiveX.  
+ Per lo scopo e ambito di questo articolo, il resto di questa sezione è incentrata unicamente sulla gestione degli eventi dei controlli ActiveX.  
   
 > [!NOTE]
->  Se è necessario gestire i messaggi da controlli Windows, vedere [Implementazione di una finestra](../atl/implementing-a-window.md) per ulteriori informazioni sulla gestione dei messaggi in ATL.  
+>  Se è necessario gestire i messaggi dai controlli di Windows, vedere [implementazione di una finestra](../atl/implementing-a-window.md) per ulteriori informazioni sulla gestione dei messaggi in ATL.  
   
- Dopo l'inserimento di controlli ActiveX nella finestra di dialogo, fare clic con il pulsante destro del mouse sul controllo e scegliere **Aggiungere il gestore eventi**.  Selezionare l'evento che si desidera gestire e fare clic **Add and Edit**.  Il codice del gestore eventi viene aggiunto al file con estensione h del controllo.  
+ Dopo aver inserito un controllo ActiveX nella risorsa della finestra di dialogo, il pulsante destro del controllo e fare clic su **Aggiungi gestore**. Selezionare l'evento che si desidera gestire e fare clic su **aggiungere e modificare**. Il codice del gestore eventi verrà aggiunto al file con estensione h del controllo.  
   
- I punti di connessione per i controlli ActiveX il controllo composito automaticamente connessi e disconnessi tramite le chiamate a [CComCompositeControl::AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md).  
+ Punti di connessione per i controlli ActiveX del controllo composito vengono automaticamente connessi e disconnesso tramite chiamate a [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali sul controllo composito](../atl/atl-composite-control-fundamentals.md)
+

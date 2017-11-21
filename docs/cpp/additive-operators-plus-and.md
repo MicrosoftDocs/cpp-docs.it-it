@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
 - '-'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], addition
 - subtraction operator [C++], additive operators
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a1017985934cbe871617b76f3e5959121b810602
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 02909b9b42ca781f7a178aa4b9dc7440bd89f2a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -120,10 +117,9 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
  Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard STDDEF.H).  
   
- Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento di matrice th, in cui * n * è l'elemento a cui fa riferimento il puntatore originale e *si* è il valore integrale del secondo operando.  
+ Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento di matrice th, in cui  *n*  è l'elemento a cui fa riferimento il puntatore originale e *si* è il valore integrale del secondo operando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni con operatori binari](../cpp/expressions-with-binary-operators.md)   
  [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Operatori di addizione C](../c-language/c-additive-operators.md)
-

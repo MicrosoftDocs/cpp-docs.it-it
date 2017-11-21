@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - ftime64
 - ftime
 - ftime32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ftime64 function
 - _ftime64 function
@@ -44,31 +42,15 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ed69cd73a42889e56dc258ce66e56db3210dfc95
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 75aadec105b126da7d8821196aacbeef8334bf9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime, _ftime32, _ftime64
 Ottiene l'ora corrente. Sono disponibili versioni più sicure di queste funzioni. Vedere [_ftime_s, _ftime32_s, _ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md).  

@@ -1,41 +1,39 @@
 ---
-title: "deque::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin (membro) [STL/CLR]"
+title: 'deque:: Begin (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: e99d20d2-bb33-415f-9bd6-fe331d8c2ba2
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4943971a82d1a87515a6e2ebc96963adeb49c6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# deque::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce l'inizio della sequenza controllata.  
+# <a name="dequebegin-stlclr"></a>deque::begin (STL/CLR)
+Indica l'inizio della sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator begin();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore di accesso casuale che definisce il primo elemento della sequenza selezionata, ovvero poco oltre la fine di una sequenza vuota.  Viene utilizzato per ottenere un iteratore che definisce l'inizio `current` della sequenza controllata, ma il cui stato può modificarsi se la lunghezza della sequenza controllata cambia.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore ad accesso casuale che definisce il primo elemento della sequenza controllata o appena oltre la fine di una sequenza vuota. È utilizzato per ottenere un iteratore che definisce il `current` inizio della sequenza controllata, ma il cui stato è possibile modificare se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_deque_begin.cpp   
@@ -70,17 +68,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a.**  
-**\*\+\+begin\(\) \= b**  
- **c x\-y**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::end](../dotnet/deque-end-stl-clr.md)   
- [deque::front](../dotnet/deque-front-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: end (STL/CLR)](../dotnet/deque-end-stl-clr.md)   
+ [deque:: front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

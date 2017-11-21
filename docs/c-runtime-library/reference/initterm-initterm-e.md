@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,24 +28,22 @@ f1_keywords:
 - initterm
 - _initterm
 - initterm_e
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - initterm function
 - initterm_e function
 - _initterm function
 - _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 377f8e19268a643b0237da66ba14a82fc7b6685b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 Metodi interni che procedono a una tabella di puntatori funzione e li inizializzano.  

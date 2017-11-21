@@ -1,45 +1,43 @@
 ---
-title: "auto_handle::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::operator->"
-  - "auto_handle.operator->"
-  - "auto_handle::operator->"
-  - "msclr.auto_handle.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator->"
+title: auto_handle::operator -&gt; | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::operator->
+- auto_handle.operator->
+- auto_handle::operator->
+- msclr.auto_handle.operator->
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator->
 ms.assetid: c8c7a771-ea15-41fa-981a-065b8d1162b4
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 06b663caf838c9ee828012fd70f568b5bf456586
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'operatore di accesso ai membri.  
+# <a name="autohandleoperator-gt"></a>auto_handle::operator-&gt;
+L'operatore di accesso di membro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _element_type ^ operator->();  
 ```  
   
-## Valore restituito  
- Oggetto di cui è stato eseguito il wrapping da `auto_handle`.  
+## <a name="return-value"></a>Valore restituito  
+ L'oggetto che è stato eseguito il wrapping `auto_handle`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_handle_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Fare attenzione innanzitutto A\!**  
-**AM\>\_i \= 5**   
-## Requisiti  
- msclr \<\\ auto\_handle.h di**File di intestazione** \>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_handle.h >  
   
-## Vedere anche  
- [Membri auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::get](../dotnet/auto-handle-get.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::get](../dotnet/auto-handle-get.md)

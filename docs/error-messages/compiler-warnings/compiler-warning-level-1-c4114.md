@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4114"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4114"
+title: Compilatore (livello 1) Avviso C4114 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4114
+dev_langs: C++
+helpviewer_keywords: C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 44f58eeda59295b77a663f033695d00c0d36a1ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4114
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4114"></a>Compilatore (livello 1) Avviso C4114
 stesso qualificatore di tipo utilizzato più di una volta  
   
- In una dichiarazione o definizione di tipo viene utilizzato più volte un qualificatore di tipo \(**const**, `volatile`, **signed** o `unsigned`\).  Questa situazione determina la generazione di un avviso con le estensioni Microsoft \(\/Ze\) e di un errore in compatibilità ANSI \(\/Za\).  
+ Una definizione o una dichiarazione di tipo viene utilizzato un qualificatore di tipo (**const**, `volatile`, **firmato**, o `unsigned`) più volte. In questo modo un avviso con le estensioni Microsoft (/Ze) e un errore in compatibilità ANSI (/Za).  
   
- Il seguente codice di esempio genera l'errore C4114:  
+ L'esempio seguente genera l'errore C4114:  
   
 ```  
 // C4114.cpp  
@@ -36,7 +34,7 @@ stesso qualificatore di tipo utilizzato più di una volta
 volatile volatile int i;   // C4114  
 ```  
   
- Il seguente codice di esempio genera l'errore C4114:  
+ L'esempio seguente genera l'errore C4114:  
   
 ```  
 // C4114_b.cpp  

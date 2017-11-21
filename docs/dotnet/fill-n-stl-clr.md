@@ -1,45 +1,43 @@
 ---
-title: "fill_n (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::fill_n"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fill_n (funzione)"
+title: fill_n (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::fill_n
+dev_langs: C++
+helpviewer_keywords: fill_n function
 ms.assetid: bb9f2f71-ba1d-44ec-8b47-6ece149dd6b8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47499b458fc343848cc5aa6d91a8630f63d2d4e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# fill_n (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Assegna un nuovo valore a un numero specificato di elementi in un intervallo a partire da un determinato elemento.  
+# <a name="filln-stlclr"></a>fill_n (STL/CLR)
+Assegna un nuovo valore a un numero specificato di elementi di un intervallo che inizia con un determinato elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _OutIt, class _Diff, class _Ty> inline  
     void fill_n(_OutIt _First, _Diff _Count, const _Ty% _Val);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `fill_n`STL.  Per ulteriori informazioni, vedere [fill\_n](../Topic/fill_n.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `fill_n`. Per ulteriori informazioni, vedere [fill_n](../standard-library/algorithm-functions.md#fill_n).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

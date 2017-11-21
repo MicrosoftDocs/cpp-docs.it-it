@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,33 +61,17 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: it-it
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>Errore del compilatores C2300 Through C2399
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -109,9 +92,9 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2306 errore del compilatore|'*file*' non contiene le informazioni di debug più recenti per questo modulo|  
 |[Errore del compilatore C2307](compiler-error-c2307.md)|pragma *direttiva* devono essere spostate all'esterno della funzione se è abilitata per la compilazione incrementale|  
 |[Errore del compilatore C2308](compiler-error-c2308.md)|concatenazione di stringhe non corrispondenti|  
-|[Errore del compilatore C2309](compiler-error-c2309.md)|prevista una dichiarazione di eccezione tra parentesi per il gestore catch|  
+|[Errore del compilatore C2309](compiler-error-c2309.md)|gestore catch è prevista una dichiarazione di eccezione tra parentesi|  
 |[Errore del compilatore C2310](compiler-error-c2310.md)|i gestori catch devono specificare un tipo|  
-|[Errore del compilatore C2311](compiler-error-c2311.md)|'*tipo*': individuato da '...' nella riga *numero*|  
+|[Errore del compilatore C2311](compiler-error-c2311.md)|'*tipo*': individuato da '...' alla riga *numero*|  
 |[Errore del compilatore C2312](compiler-error-c2312.md)|'*type1*': individuato da '*type2*' nella riga *numero*|  
 |[Errore del compilatore C2313](compiler-error-c2313.md)|'*type1*': individuato dal riferimento ('*type2*') nella riga *numero*|  
 |C2314 errore del compilatore|parola chiave '*keyword1*' è obsoleto: utilizzare '*keyword2*' invece|  
@@ -130,7 +113,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2327](compiler-error-c2327.md)|'*identificatore*': non è un nome di tipo, statica o enumeratore|  
 |C2328 errore del compilatore|'*parola chiave*': parola chiave non è ancora supportata.|  
 |C2329 errore del compilatore|'*identificatore*': ptr64 non disponibile per puntatori a funzioni|  
-|C2330 errore del compilatore|'implementation_key( )' è valido solo in un'area delimitata da #pragma start_map_region/stop_map_region|  
+|C2330 errore del compilatore|'implementation_key ()' è valido solo in un'area delimitata da #pragma start_map_region/stop_map_region|  
 |C2331 errore del compilatore|l'accesso a '*identificatore*'ora definito come'*accessibility1*', in precedenza è stato definito come'*accessibility2*'|  
 |[Errore del compilatore C2332](compiler-error-c2332.md)|'*typedef*': nome tag mancante|  
 |[Errore del compilatore C2333](compiler-error-c2333.md)|'*funzione*': errore nella dichiarazione di funzione; corpo di funzione verrà ignorato.|  
@@ -142,7 +125,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2339 errore del compilatore|'*identificatore*': tipo non valido nell'IDL incorporato.|  
 |C2340 errore del compilatore|'*identificatore*': 'static' può essere utilizzato solo all'interno di una definizione di classe|  
 |[Errore del compilatore C2341](compiler-error-c2341.md)|'*sezione*': segmento deve essere definito utilizzando #pragma data_seg, code_seg o sezione precedente da utilizzare|  
-|C2342 errore del compilatore|errore di sintassi: conflitto tra qualificatori di tipo|  
+|C2342 errore del compilatore|Errore di sintassi: conflitto tra qualificatori di tipo|  
 |C2343 errore del compilatore|'*sezione*': conflitto tra gli attributi di sezione|  
 |[Errore del compilatore C2344](compiler-error-c2344.md)|align (*numero*): l'allineamento deve essere una potenza di due|  
 |[Errore del compilatore C2345](compiler-error-c2345.md)|align (*numero*): il valore di allineamento non valido|  
@@ -151,12 +134,12 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2348](compiler-error-c2348.md)|'*tipo*': non è una funzione di aggregazione di tipo C, Impossibile esportarlo nell'IDL incorporato.|  
 |[Errore del compilatore C2349](compiler-error-c2349.md)|'*funzione*' non possono essere compilate come gestito: '*spiegazione*'; utilizzare #pragma non gestita|  
 |[Errore del compilatore C2350](compiler-error-c2350.md)|'*identificatore*' non è un membro statico|  
-|[Errore del compilatore C2351](compiler-error-c2351.md)|sintassi C++ obsoleta per l'inizializzazione di un costruttore|  
+|[Errore del compilatore C2351](compiler-error-c2351.md)|sintassi di inizializzazione costruttore C++ obsoleta|  
 |[Errore del compilatore C2352](compiler-error-c2352.md)|'*identificatore*': chiamata non valida di funzione membro non statica|  
-|[Errore del compilatore C2353](compiler-error-c2353.md)|specifica di eccezione non consentita|  
+|[Errore del compilatore C2353](compiler-error-c2353.md)|Specifica di eccezione non è consentita.|  
 |Errore del compilatore C2354|Obsoleta.|  
 |[Errore del compilatore C2355](compiler-error-c2355.md)|'this': riferimento possibile solo all'interno di funzioni membro non statiche o inizializzatori di membri dati non statici|  
-|[Errore del compilatore C2356](compiler-error-c2356.md)|il segmento di inizializzazione non deve cambiare durante l'unità di conversione|  
+|[Errore del compilatore C2356](compiler-error-c2356.md)|il segmento di inizializzazione non deve essere modificato durante l'unità di conversione|  
 |[Errore del compilatore C2357](compiler-error-c2357.md)|'*identificatore*': deve essere una funzione di tipo '*tipo*'|  
 |C2358 errore del compilatore|'*identificatore*': non è possibile definire una proprietà statica di fuori di una definizione di classe|  
 |C2359 errore del compilatore|Obsoleta.|  
@@ -192,7 +175,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2389](compiler-error-c2389.md)|'*operatore*': operando 'nullptr' non valido|  
 |[Errore del compilatore C2390](compiler-error-c2390.md)|'*identificatore*': classe di archiviazione errata*identificatore*'|  
 |[Errore del compilatore C2391](compiler-error-c2391.md)|'*identificatore*': 'friend' non può essere utilizzato durante la definizione di tipo|  
-|[Errore del compilatore C2392](compiler-error-c2392.md)|'*membro1*': restituiti di covariante tipi non supportati nei tipi gestiti o WinRT, altrimenti '*member2*' verrebbe eseguito l'override|  
+|[Errore del compilatore C2392](compiler-error-c2392.md)|'*member1*': restituiti di covariante tipi non supportati nei tipi gestiti o WinRT, altrimenti '*member2*' verrebbe eseguito l'override|  
 |[Errore del compilatore C2393](compiler-error-c2393.md)|'*simbolo*': Impossibile allocare il simbolo per dominio di applicazione nel segmento '*segmento*'|  
 |[Errore del compilatore C2394](compiler-error-c2394.md)|'*tipo*:: operatore *operatore*': operatore CLR o WinRT non valido. Almeno un parametro deve essere dei seguenti tipi di: ' t ^', ' t ^ %', ' t ^ &', dove T = '*tipo*'|  
 |[Errore del compilatore C2395](compiler-error-c2395.md)|'*tipo*:: operatore *operatore*': operatore CLR o WinRT non valido. Almeno un parametro deve essere dei seguenti tipi: ' T' ', ' T' %', ' T' &', ' T' ^', ' t ^ %', ' t ^ &', dove T = '*tipo*'|  
@@ -200,4 +183,3 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2397](compiler-error-c2397.md)|conversione da '*type1*'a'*type2*' richiede una conversione di narrowing|  
 |C2398 errore del compilatore|Elemento '*numero*': conversione da '*type1*'a'*type2*' richiede una conversione di narrowing|  
 |C2399 errore del compilatore|Obsoleta.|  
-

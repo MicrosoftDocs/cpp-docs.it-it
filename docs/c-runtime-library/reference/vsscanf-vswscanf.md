@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,36 +26,20 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 06c26fdeb5d63a446600bc288f99ca9cc903d002
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 95446e1442f1df98dff5e1819e97c49c75209fda
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf, vswscanf
 Legge i dati formattati da una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [vsscanf_s, vswscanf_s](../../c-runtime-library/reference/vsscanf-s-vswscanf-s.md).  

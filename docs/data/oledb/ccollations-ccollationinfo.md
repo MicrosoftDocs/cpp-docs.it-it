@@ -1,80 +1,80 @@
 ---
-title: "CCollations, CCollationInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLLATION_CATALOG"
-  - "m_szCatalog"
-  - "CCollationInfo"
-  - "CCollations"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "m_szCharSetName"
-  - "m_szSchema"
-  - "CHARACTER_SET_CATALOG"
-  - "m_szCharSetSchema"
-  - "m_szCharSetCatalog"
-  - "m_szPadAttribute"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "m_szName"
-  - "COLLATIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCollationInfo (classe di parametri)"
-  - "CCollations (classe typedef)"
-  - "CHARACTER_SET_CATALOG"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "COLLATION_CATALOG"
-  - "COLLATION_NAME"
-  - "COLLATION_SCHEMA"
-  - "COLLATIONS (recordset)"
-  - "m_szCatalog"
-  - "m_szCharSetCatalog"
-  - "m_szCharSetName"
-  - "m_szCharSetSchema"
-  - "m_szName"
-  - "m_szPadAttribute"
-  - "m_szSchema"
+title: CCollations, CCollationInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COLLATION_CATALOG
+- m_szCatalog
+- CCollationInfo
+- CCollations
+- CHARACTER_SET_NAME
+- CHARACTER_SET_SCHEMA
+- m_szCharSetName
+- m_szSchema
+- CHARACTER_SET_CATALOG
+- m_szCharSetSchema
+- m_szCharSetCatalog
+- m_szPadAttribute
+- COLLATION_NAME
+- COLLATION_SCHEMA
+- m_szName
+- COLLATIONS
+dev_langs: C++
+helpviewer_keywords:
+- m_szSchema
+- COLLATION_SCHEMA
+- m_szCharSetCatalog
+- m_szCatalog
+- COLLATIONS recordset
+- COLLATION_CATALOG
+- CCollationInfo parameter class
+- m_szName
+- COLLATION_NAME
+- m_szPadAttribute
+- CHARACTER_SET_NAME
+- m_szCharSetName
+- CHARACTER_SET_SCHEMA
+- CHARACTER_SET_CATALOG
+- m_szCharSetSchema
+- CCollations typedef class
 ms.assetid: d8b43c4d-9dd5-4043-b4c8-38c03bfa0c72
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99bf8120d048298ca570ea4b318c7ae9c04da811
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CCollations, CCollationInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CCollations** typedef per implementare la propria classe di parametri **CCollationInfo**.  
+# <a name="ccollations-ccollationinfo"></a>CCollations, CCollationInfo
+Chiamare la classe typedef **CCollations** per implementare la relativa classe di parametro **CCollationInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica le regole di confronto del carattere, definite nel catalogo, accessibili a un utente specifico.  
+ Questa classe identifica i confronti tra caratteri, definiti nel catalogo, che sono accessibili a un determinato utente.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di REGOLE UN CONFRONTO](https://msdn.microsoft.com/en-us/library/ms715783.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe di regole di confronto](https://msdn.microsoft.com/en-us/library/ms715783.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szCatalog|COLLATION\_CATALOG|  
-|m\_szSchema|COLLATION\_SCHEMA|  
-|m\_szName|COLLATION\_NAME|  
-|m\_szCharSetCatalog|CHARACTER\_SET\_CATALOG|  
-|m\_szCharSetSchema|CHARACTER\_SET\_SCHEMA|  
-|m\_szCharSetName|CHARACTER\_SET\_NAME|  
-|m\_szPadAttribute|PAD\_ATTRIBUTE|  
+|------------------|--------------------|  
+|m_szCatalog|COLLATION_CATALOG|  
+|m_szSchema|COLLATION_SCHEMA|  
+|m_szName|COLLATION_NAME|  
+|m_szCharSetCatalog|CHARACTER_SET_CATALOG|  
+|m_szCharSetSchema|CHARACTER_SET_SCHEMA|  
+|m_szCharSetName|CHARACTER_SET_NAME|  
+|m_szPadAttribute|PAD_ATTRIBUTE|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

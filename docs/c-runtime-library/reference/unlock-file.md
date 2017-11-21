@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _unlock_file
+apiname: _unlock_file
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - _unlock_file
 - unlock_file
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], unlocking
 - unlock_file function
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bc676e9912264009e0af263ec88fb142fbb4d1fe
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: 246fd73cdc3b380dae7ea9a6a3d02fcd9290ba1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unlockfile"></a>_unlock_file
 Sblocca un file, consentendo ad altri processi di accedere al file.  

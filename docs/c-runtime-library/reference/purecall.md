@@ -1,62 +1,61 @@
 ---
-title: "_purecall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_purecall"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntoskrnl.exe"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "purecall"
-  - "_purecall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_purecall (funzione)"
-  - "purecall (funzione)"
+title: _purecall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _purecall
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntoskrnl.exe
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- purecall
+- _purecall
+dev_langs: C++
+helpviewer_keywords:
+- _purecall function
+- purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c475c66c92dec7990aa8056a1791c8eeb87d6afa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _purecall
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il gestore errori chiamata di funzione virtuale pura predefinito. Il compilatore genera codice per chiamare questa funzione quando viene chiamata una funzione membro virtuale pura.  
+# <a name="purecall"></a>_purecall
+Gestore degli errori predefinito per le chiamate a funzioni virtuali pure. Il compilatore genera codice per chiamare questa funzione quando viene chiamata una funzione membro virtuale pura.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 extern "C" int __cdecl _purecall();  
 ```  
   
-## Note  
- Il `_purecall` funzione è un dettaglio di implementazione specifici di Microsoft del compilatore Microsoft Visual C\+\+. Questa funzione non deve essere chiamato direttamente dal codice e non dispone di alcuna dichiarazione intestazione pubblica. È documentato qui perché si tratta di un'esportazione pubblica della libreria di Runtime C.  
+## <a name="remarks"></a>Note  
+ La funzione `_purecall` è un dettaglio di implementazione specifico di Microsoft del compilatore Microsoft Visual C++. Questa funzione non è progettata per essere chiamata direttamente dal codice e non ha una dichiarazione di intestazione pubblica. È qui documentata perché si tratta di un'esportazione pubblica della libreria di runtime C.  
   
- Una chiamata a una funzione virtuale pura è un errore perché non è implementata. Il compilatore genera codice per richiamare il `_purecall` funzione del gestore errori quando viene chiamata una funzione virtuale pura. Per impostazione predefinita, `_purecall` Termina il programma. Prima della chiusura, il `_purecall` funzione richiama un `_purecall_handler` funzione se ne è stato impostato per il processo. È possibile installare il proprio funzione del gestore errori per le chiamate di funzione virtuale pura, a rilevarli per il debug o la creazione di report. Per utilizzare il proprio gestore degli errori, creare una funzione che ha il `_purecall_handler` firma, quindi utilizzare [set\_purecall\_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) per renderlo il gestore corrente.  
+ Una chiamata a una funzione virtuale pura è un errore perché non ha un'implementazione. Il compilatore genera codice per richiamare la funzione del gestore degli errori `_purecall` quando viene chiamata una funzione virtuale pura. Per impostazione predefinita, `_purecall` termina il programma. Prima di terminare il programma, la funzione `_purecall` richiama una funzione `_purecall_handler` se ne è stata impostata una per il processo. È possibile installare una funzione del gestore errori personalizzata per le chiamate di funzioni virtuali pure, in modo da intercettarle per il debug o la creazione di report. Per usare un gestore errori personalizzato, creare una funzione con la firma `_purecall_handler` e quindi usare [_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) per impostarla come gestore corrente.  
   
-## Requisiti  
- Il `_purecall` funzione dispone di una dichiarazione di intestazione. Il `_purecall_handler` typedef è definito in \< STDLIB. h \>.  
+## <a name="requirements"></a>Requisiti  
+ La funzione `_purecall` non ha una dichiarazione di intestazione. Il typedef `_purecall_handler` è definito in \<stdlib.h>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [\_get\_purecall\_handler, set\_purecall\_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)
+ [_get_purecall_handler, _set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)

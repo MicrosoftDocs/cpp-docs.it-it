@@ -1,35 +1,36 @@
 ---
-title: "Design Principles for Collection and Enumerator Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection interfaces"
-  - "enumerator interfaces"
+title: Progettazione di raccolta e le interfacce di enumeratore (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 40aa94226b93a42b14dfd23a64e12fff00e22729
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Design Principles for Collection and Enumerator Interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esistono principi di progettazione diverse di ogni tipo di interfaccia:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Principi di progettazione per la raccolta ed enumeratore (interfacce)
+Esistono diversi principi di progettazione protetti da ogni tipo di interfaccia:  
   
--   Un'interfaccia di libreria fornisce *l'accesso casuale* *a un singolo* elemento nella raccolta utilizzando il metodo **Elemento**, che consente ai client individuare il numero di elementi presenti nella raccolta tramite la proprietà **Conteggio** e spesso che consente ai client di aggiungere e rimuovere elementi.  
+-   Fornisce un'interfaccia di raccolta *casuale* l'accesso a un *singolo* elemento nella raccolta tramite il **elemento** (metodo), consente ai client individua il numero di elementi presenti nella raccolta tramite il **conteggio** proprietà, e spesso consente ai client di aggiungere e rimuovere elementi.  
   
--   Un'interfaccia dell'enumeratore fornisce l'accesso seriale a *più* elementi in una raccolta, non consente al client individuare il numero di elementi presenti nella raccolta \(enumeratore finché non termina di restituire elementi\) e non fornisce alcuna modalità di aggiunta o rimozione di elementi.  
+-   Fornisce un'interfaccia di enumeratore *seriale* l'accesso a *più* gli elementi in una raccolta, quindi non consente al client di individuare il numero di elementi presenti nella raccolta (fino a quando l'enumeratore interrompe la restituzione gli elementi), e non fornisce alcun modo di aggiunta o rimozione di elementi.  
   
- Ogni tipo di interfaccia ha un ruolo diverso nel fornire accesso agli elementi in una raccolta.  
+ Ogni tipo di interfaccia svolge un ruolo diverso nel fornire l'accesso agli elementi in una raccolta.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Raccolte ed enumeratori](../atl/atl-collections-and-enumerators.md)
+

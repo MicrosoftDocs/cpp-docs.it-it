@@ -1,41 +1,39 @@
 ---
-title: "deque::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size (membro) [STL/CLR]"
+title: 'deque:: Size (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 81db82c1-7fe7-4eb4-8785-6d36197e4681
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92726a2dc3795aa79a1739126b049bf807bbb6d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# deque::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequesize-stlclr"></a>deque::size (STL/CLR)
 Conta il numero di elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_type size();  
 ```  
   
-## Note  
- La funzione membro restituisce la lunghezza della sequenza selezionata.  Utilizzarla per determinare attualmente il numero di elementi della sequenza selezionata.  Se si è preoccupiate su viene se la sequenza ha dimensione diversa da zero, vedere [deque::empty](../dotnet/deque-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce la lunghezza della sequenza controllata. Utilizzarla per determinare il numero di elementi attualmente presenti nella sequenza controllata. Se invece è rilevante se la sequenza è diverso da zero dimensioni, vedere [deque:: Empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)`()`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_deque_size.cpp   
@@ -68,15 +66,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 che iniziano con 3**  
-**size\(\) \= 0 dopo aver cancellato**  
-**size\(\) \= 2 dopo l'aggiunta di 2**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::empty](../dotnet/deque-empty-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)

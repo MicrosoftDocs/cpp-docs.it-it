@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macro di debug e la segnalazione errori
 Queste macro forniscono utili funzionalità di debug e traccia.  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  La differenza tra **ATLENSURE** e `ATLASSERT` che **ATLENSURE** genera un'eccezione in versione compila anche come le compilazioni di Debug.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[&#108; NVC_ATL_Utilities](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
@@ -156,7 +145,7 @@ ATLTRACENOTIMPL(funcname);
  Nelle build di rilascio, restituisce semplicemente **E_NOTIMPL**.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[127 NVC_ATL_Utilities](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atltrace.h 
@@ -254,15 +243,15 @@ ATLTRACE2(
   
  Per dichiarare una categoria di traccia personalizzato, dichiarare un'istanza globale del `CTraceCategory` classe come indicato di seguito:  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  Il nome della categoria, `MY_CATEGORY` in questo esempio, è il nome specificato per il `category` parametro. Il primo parametro è il nome della categoria che verrà visualizzata nello strumento di traccia ATL/MFC. Il secondo parametro è il livello di traccia predefinito. Questo parametro è facoltativo e il livello di traccia predefinito è 0.  
   
  Per utilizzare una categoria definita dall'utente:  
   
- [!code-cpp[&#110; NVC_ATL_Utilities](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
- Per specificare che si desidera filtrare i messaggi di traccia, inserire le definizioni per queste macro in stdafx. h prima il `#include <atlbase.h>` istruzione.  
+ Per specificare che si desidera filtrare i messaggi di traccia, inserire le definizioni per queste macro in stdafx. h prima di `#include <atlbase.h>` istruzione.  
   
  In alternativa, è possibile impostare il filtro nelle direttive del preprocessore nel **pagine delle proprietà** la finestra di dialogo. Fare clic su di **preprocessore** scheda e quindi inserire globale nel **definizioni preprocessore** casella di modifica.  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE** e `ATLTRACE2` hanno lo stesso comportamento **ATLTRACE** è inclusa per compatibilità con le versioni precedenti.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Macro](../../atl/reference/atl-macros.md)   
  [Funzioni globali di debug e segnalazione errori](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

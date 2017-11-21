@@ -1,47 +1,48 @@
 ---
-title: "Multiple Dual Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM_INTERFACE_ENTRY_IID macro"
-  - "COM_INTERFACE_ENTRY2 macro"
-  - "interfacce duali, exposing multiple"
-  - "IDispatchImpl (classe), multiple dual interfaces"
-  - "multiple dual interfaces"
-  - "multiple dual interfaces, exposing with ATL"
+title: "Interfacce duali più | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multiple dual interfaces
+- COM_INTERFACE_ENTRY2 macro
+- dual interfaces, exposing multiple
+- multiple dual interfaces, exposing with ATL
+- IDispatchImpl class, multiple dual interfaces
+- COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 426109958cf9b34829c23ac0bfd59743f1681e72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Multiple Dual Interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="multiple-dual-interfaces"></a>Più interfacce duali
+È possibile combinare i vantaggi di un'interfaccia duale (ovvero, la flessibilità di vtable e l'associazione tardiva, rendendo in tal modo la classe disponibile per i linguaggi di scripting, nonché di C++) con le tecniche di ereditarietà multipla.  
+  
+ Sebbene sia possibile esporre più interfacce duali in un singolo oggetto COM, non è consigliabile. Se sono presenti più interfacce duali, deve essere presente solo un `IDispatch` interfaccia esposta. Le tecniche disponibili per garantire che questo è il caso comportano, ad esempio perdita di funzione o di maggiore complessità del codice. Lo sviluppatore considerando questo approccio debba valutare con attenzione i vantaggi e svantaggi.  
+  
+## <a name="exposing-a-single-idispatch-interface"></a>Esposizione di una singola interfaccia IDispatch  
+ È possibile esporre più interfacce duali in un singolo oggetto mediante la derivazione da due o più specializzazioni di `IDispatchImpl`. Tuttavia, se si consentono ai client di eseguire una query per il `IDispatch` interfaccia, sarà necessario utilizzare il [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) macro (o [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) per specificare la classe base da utilizzare per il implementazione di `IDispatch`.  
+  
+ [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
+  
+ Poiché un solo `IDispatch` viene esposta l'interfaccia, i client che possono accedere solo gli oggetti tramite il `IDispatch` interfaccia non sarà in grado di accedere ai metodi o proprietà in qualsiasi altra interfaccia.  
+  
+## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>La combinazione di più interfacce duali in una singola implementazione di IDispatch  
+ ATL non fornisce alcun supporto per la combinazione di più interfacce duali in una singola implementazione di `IDispatch`. Tuttavia, esistono diversi approcci noti per combinare manualmente le interfacce, ad esempio la creazione di una classe basata su modelli che contiene un'unione di tutte le rispettive `IDispatch` interfacce, creando un nuovo oggetto per eseguire il `QueryInterface` funzione o tramite un implementazione basata su typeinfo di oggetti nidificati per creare il `IDispatch` interfaccia.  
+  
+ Questi approcci presentano problemi potenziali conflitti di spazio dei nomi, nonché la complessità del codice e la gestibilità. Non è consigliabile creare più interfacce duali.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Interfacce duali e ATL](../atl/dual-interfaces-and-atl.md)
 
-È possibile combinare i vantaggi di un'interfaccia duale \(ovvero la flessibilità di vtable che l'associazione tardiva, pertanto rendendo disponibili la classe dei linguaggi di script e C\+\+ con le tecniche di ereditarietà multipla.  
-  
- Sebbene sia possibile esporre le interfacce duali più su un singolo oggetto COM, non è consigliabile.  Se sono presenti più interfacce duali, deve esistere solo un'interfaccia `IDispatch` esposta.  Le tecniche disponibili assicurarsi che questo caso trasportano le pene come perdita di funzione o di aumenta la complessità di codice.  Lo sviluppatore che considera questo approccio deve valutare attentamente i vantaggi e gli svantaggi.  
-  
-## Esporre una singola interfaccia IDispatch  
- È possibile esporre le interfacce duali più su un singolo oggetto derivazione da due o più specializzazioni `IDispatchImpl`.  Tuttavia, se si consente ai client alla query per l'interfaccia `IDispatch`, è necessario utilizzare la macro [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md) \(o [COM\_INTERFACE\_ENTRY\_IID](../Topic/COM_INTERFACE_ENTRY_IID.md)\) per specificare che una classe base da utilizzare per l'implementazione `IDispatch`.  
-  
- [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/CPP/multiple-dual-interfaces_1.h)]  
-  
- Poiché solo un'interfaccia `IDispatch` viene esposta, i client che possono accedere solo gli oggetti tramite l'interfaccia `IDispatch` non saranno in grado di accedere ai metodi o le proprietà in qualsiasi altra interfaccia.  
-  
-## Combinando le interfacce duali multiple in un'unica implementazione IDispatch  
- ATL non fornisce alcun supporto per combinare le interfacce duali multiple in un'unica implementazione `IDispatch`.  Tuttavia, esistono numerosi approcci noti manualmente a combinare le interfacce, come creare una classe basata su modelli che contiene un'unione delle interfacce distinte `IDispatch`, creando un nuovo oggetto per eseguire la funzione `QueryInterface`, o tramite a un'implementazione basata typeinfo degli oggetti annidati per creare l'interfaccia `IDispatch`.  
-  
- Questi approcci hanno problemi con i conflitti potenziali dello spazio dei nomi nonché della complessità e la manutenibilità.  Non è consigliabile creare le interfacce duali più.  
-  
-## Vedere anche  
- [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)

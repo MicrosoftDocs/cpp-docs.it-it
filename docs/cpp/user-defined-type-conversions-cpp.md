@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- explicit_cpp
-dev_langs:
-- C++
+f1_keywords: explicit_cpp
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -31,16 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 778c5a659755b5c79f79e9b846441c3e0665995e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
 Oggetto *conversione* produce un nuovo valore di un tipo da un valore di un tipo diverso. *Conversioni standard* sono incorporate nel linguaggio C++ e supporto relativi tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire conversioni a, da oppure tra tipi definiti dall'utente.  
@@ -234,4 +230,3 @@ void display_balance(const Money balance)
   
  Qui la funzione di conversione `operator double` è stata resa esplicita ed è stato introdotto un cast esplicito sul tipo `double` nella funzione `display_balance` per eseguire la conversione. Se il cast fosse stato omesso, il compilatore non avrebbe potuto individuare un operatore di inserimento del flusso `<<` adeguato per il tipo `Money` e si sarebbe verificato un errore.  
   
-

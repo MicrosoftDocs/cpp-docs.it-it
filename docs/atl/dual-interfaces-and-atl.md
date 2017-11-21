@@ -1,47 +1,48 @@
 ---
-title: "Dual Interfaces and ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, interfacce duali"
-  - "COM, e ATL"
-  - "interfacce duali, about dual interfaces"
+title: Interfacce duali e ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, dual interfaces
+- dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Dual Interfaces and ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le interfacce duali consentono i metodi di accesso come metodi di interfaccia dispatch o come metodi riferimento.  In questa sezione vengono illustrate alcune delle funzionalità delle interfacce duali da una prospettiva ATL.  
+# <a name="dual-interfaces-and-atl"></a>Interfacce duali e ATL
+Un'interfaccia duale consente ai metodi a cui accedere come metodi di interfaccia dispatch o vtable. In questa sezione vengono illustrate alcune delle funzionalità di interfacce duali dal punto di vista ATL.  
   
-## Argomenti della sezione  
- [implementare un'interfaccia duale](../atl/implementing-a-dual-interface.md)  
- Vengono illustrate le classi e procedure guidate nell'implementare un'interfaccia duale.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Implementazione di un'interfaccia duale](../atl/implementing-a-dual-interface.md)  
+ Illustra le classi e le procedure guidate coinvolte nell'implementazione di un'interfaccia duale.  
   
- [interfacce duali più](../atl/multiple-dual-interfaces.md)  
- Viene illustrato come esporre le interfacce duali più su un singolo oggetto.  
+ [Interfacce duali multiple](../atl/multiple-dual-interfaces.md)  
+ Viene illustrato come esporre più interfacce duali in un singolo oggetto.  
   
- [L'attributo non estensibile](../atl/nonextensible-attribute.md)  
- Viene illustrato quando utilizzare l'attributo **nonextensible** nella definizione di interfaccia.  
+ [Il nonextensible (attributo)](../atl/nonextensible-attribute.md)  
+ Viene illustrato quando utilizzare il **nonextensible** attributo nella definizione di interfaccia.  
   
- [Interfacce duali ed eventi](../atl/dual-interfaces-and-events.md)  
- Vengono illustrati i motivi di progettazione per non visualizzare un'interfaccia eventi un'interfaccia duale.  
+ [Interfacce duali e eventi](../atl/dual-interfaces-and-events.md)  
+ Vengono illustrati motivi legati alla progettazione per non apportare a un evento di interfaccia duale.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali sulla programmazione mediante Active Template Library.  
+ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

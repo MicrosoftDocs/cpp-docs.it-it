@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- Exit
-dev_langs:
-- C++
-helpviewer_keywords:
-- exit function
+f1_keywords: Exit
+dev_langs: C++
+helpviewer_keywords: exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 240636bf7b6f10421c5d4ebd202a5fb3473a819d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e4a1ee1a533309dfedce139efc7c6db1f41653a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exit-function"></a>Funzione exit
 Il **uscire** funzione, dichiarata in un file di inclusione standard STDLIB. H, termina un programma C++.  

@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t.operator=
 - _com_ptr_t::operator=
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operator = [C++], pointers
 - = operator [C++], with specific Visual C++ objects
 - operator= [C++], pointers
 ms.assetid: 46849455-371c-4d0f-bae4-c1f737d2ca4a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ae4480db5f0f8bd72dcedec3ea9a82b5e00b4abd
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b510c47fabe46c90dffa9c44c4ecfb981a7e5c2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comptrtoperator-"></a>_com_ptr_t::operator =
 **Sezione specifica Microsoft**  

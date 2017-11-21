@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::_ATL_BASE_MODULE70
 - ATL._ATL_BASE_MODULE70
 - _ATL_BASE_MODULE70
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atlbasemodule70-structure"></a>Struttura _ATL_BASE_MODULE70
 Usato da qualsiasi progetto che utilizza ATL.  
@@ -80,7 +77,6 @@ struct _ATL_BASE_MODULE70 {
   
 ## <a name="see-also"></a>Vedere anche  
  [Strutture](../../atl/reference/atl-structures.md)
-
 
 
 

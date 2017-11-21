@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,21 +30,18 @@ f1_keywords:
 - ATLCOLL/ATL::CRBTree::RemoveAll
 - ATLCOLL/ATL::CRBTree::RemoveAt
 - ATLCOLL/ATL::CRBTree::SetValueAt
-dev_langs:
-- C++
-helpviewer_keywords:
-- CRBTree class
+dev_langs: C++
+helpviewer_keywords: CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: f9014233631eda9d1f3576382e71e377a3f7fcfd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 078224c555f2f1955083b51954d56b3e9cac8fd1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crbtree-class"></a>Classe CRBTree
 Questa classe fornisce metodi per la creazione e utilizzo di una struttura ad albero rosso a nero.  
@@ -441,4 +437,3 @@ typedef VTraits::OUTARGTYPE VOUTARGTYPE;
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

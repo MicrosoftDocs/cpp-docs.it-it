@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __cdecl_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __cdecl keyword [C++]
+f1_keywords: __cdecl_cpp
+dev_langs: C++
+helpviewer_keywords: __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5216462ad00d332aec2d00eba78f5d84cdfd7c82
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: f11414914bb1682c0bd5e05d80ab2ebbbe3ae72a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Sezione specifica Microsoft**  
@@ -41,7 +36,7 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  Per informazioni correlate, vedere [nomi decorati](../build/reference/decorated-names.md).  
   
- Posizionare il modificatore `__cdecl` prima del nome di una variabile o di una funzione. Poiché la denominazione e convenzioni di chiamata di C è l'impostazione predefinita, l'unica volta è necessario utilizzare `__cdecl` nel codice x86 è quando è stata specificata la **/Gv** (vectorcall), **/Gz** (stdcall) o ** /GR** l'opzione del compilatore (fastcall). Il [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) opzione del compilatore impone il `__cdecl` convenzione di chiamata.  
+ Posizionare il modificatore `__cdecl` prima del nome di una variabile o di una funzione. Poiché la denominazione e convenzioni di chiamata di C è l'impostazione predefinita, l'unica volta è necessario utilizzare `__cdecl` nel codice x86 è quando è stata specificata la **/Gv** (vectorcall), **/Gz** (stdcall) o  **/GR** l'opzione del compilatore (fastcall). Il [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md) opzione del compilatore impone il `__cdecl` convenzione di chiamata.  
   
  Nei processori ARM e x64 `__cdecl` è accettato, ma in genere viene ignorato dal compilatore. Per convenzione su ARM e x64, gli argomenti vengono passati nei registri quando possibile e gli argomenti successivi vengono passati nello stack. In x64 il codice, utilizzare `__cdecl` per eseguire l'override di **/Gv** opzione del compilatore e utilizzare la convenzione di chiamata predefinita di x64.  
   

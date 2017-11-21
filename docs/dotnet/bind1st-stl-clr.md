@@ -1,32 +1,30 @@
 ---
-title: "bind1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind1st (funzione) [STL/CLR]"
+title: bind1st (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind1st
+dev_langs: C++
+helpviewer_keywords: bind1st function [STL/CLR]
 ms.assetid: 03a04cef-60fb-4667-b22a-22a387adb028
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 732238e3c0754731dcf7caf10ad1d6a140490cd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# bind1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera un `binder1st` per un argomento e un functor.  
+# <a name="bind1st-stlclr"></a>bind1st (STL/CLR)
+Genera un `binder1st` per un argomento e il funtore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Fun,  
@@ -35,24 +33,24 @@ template<typename Fun,
         Arg left);  
 ```  
   
-## Parametri di template  
+## <a name="template-parameters"></a>Parametri di template  
  Arg  
- Tipo dell'argomento.  
+ Il tipo di argomento.  
   
  Fun  
- Il tipo del functor.  
+ Tipo del funtore.  
   
-## Parametri di funzione  
- functor  
- Il functor su cui eseguire il wrapping.  
+## <a name="function-parameters"></a>Parametri di funzione  
+ funtore  
+ Il funtore per eseguire il wrapping.  
   
  left  
- Il primo argomento su cui eseguire il wrapping.  
+ Il primo argomento per eseguire il wrapping.  
   
-## Note  
- La funzione di modello restituisce [binder1st](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`.  Utilizzarla come metodo conveniente per eseguire il wrapping di un functor a due argomenti e il suo primo argomento in un functor a un solo argomento che la chiama con un secondo argomento.  
+## <a name="remarks"></a>Note  
+ La funzione modello restituisce [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)`<Fun>(functor, left)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di due argomenti e il relativo primo argomento in una funzione di un argomento che viene chiamato con un secondo argomento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_bind1st.cpp   
@@ -95,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Requisiti  
- **Intestazione:** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [binder1st](../dotnet/binder1st-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)

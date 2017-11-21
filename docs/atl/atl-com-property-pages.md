@@ -1,53 +1,54 @@
 ---
-title: "Pagine delle propriet&#224; COM ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL COM (oggetti)"
-  - "pagine delle proprietà (ATL)"
-  - "oggetti COM, ATL"
-  - "pagine delle proprietà (COM)"
-  - "proprietà (pagine), ATL"
-  - "proprietà (pagine), COM"
+title: "Pagine delle proprietà COM ATL | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- property pages, COM
+- ATL COM objects
+- COM property pages
+- property pages, ATL
+- COM objects, ATL
+- ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Pagine delle propriet&#224; COM ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le pagine delle proprietà COM fornisce un'interfaccia utente per impostare le proprietà \(o chiamare metodi\) di uno o più oggetti COM.  Le pagine delle proprietà vengono utilizzati ampiamente da controlli ActiveX per fornire interfacce utente avanzate che consentono le proprietà del controllo da impostare in fase di progettazione.  
+# <a name="atl-com-property-pages"></a>Pagine delle proprietà COM ATL
+Pagine delle proprietà COM forniscono un'interfaccia utente per l'impostazione delle proprietà (o chiamare i metodi) di uno o più oggetti COM. Pagine delle proprietà sono ampiamente utilizzati per i controlli ActiveX per fornire le interfacce utente avanzate che consentono di impostare in fase di progettazione le proprietà del controllo.  
   
- Le pagine delle proprietà sono oggetti COM che implementano l'interfaccia [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) o [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246).  Queste interfacce forniscono metodi che consentono la pagina da associare a `site` \(un oggetto COM che rappresenta il contenitore della pagina\) e una serie *oggetti* \(COM di cui metodi verranno chiamati in risposta alle modifiche apportate dall'utente della pagina delle proprietà.  Il contenitore della pagina delle proprietà è responsabile dei metodi dell'interfaccia della pagina delle proprietà nella pagina per visualizzare o nascondere la relativa interfaccia utente e per applicare le modifiche apportate dall'utente agli oggetti sottostanti.  
+ Pagine delle proprietà sono oggetti COM che implementano il [interfaccia IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) o [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) interfaccia. Queste interfacce forniscono metodi che consentono la pagina può essere associato un `site` (un oggetto COM che rappresenta il contenitore della pagina) e un numero di *oggetti* (COM gli oggetti i cui metodi vengono chiamati in risposta alle modifiche apportate dall'utente della pagina delle proprietà). Il contenitore della pagina proprietà è responsabile della chiamata di metodi sull'interfaccia pagina proprietà per indicare la pagina quando per mostrare o nascondere la relativa interfaccia utente e quando applicare le modifiche apportate dall'utente per gli oggetti sottostanti.  
   
- Ogni pagina delle proprietà può essere compilata completamente indipendentemente dagli oggetti di cui è possibile impostare le proprietà.  Qualsiasi di una pagina delle proprietà richiedono è di comprendere una particolare interfaccia \(o set di interfacce\) e di fornire un'interfaccia utente per chiamare metodi dell'interfaccia.  
+ Ogni pagina delle proprietà può essere compilato completamente in modo indipendente dagli oggetti la cui proprietà possono essere impostate. Una pagina delle proprietà, non è necessario che per comprendere una particolare interfaccia (o set di interfacce) e per fornire un'interfaccia utente per la chiamata di metodi su tale interfaccia.  
   
- Per ulteriori informazioni, vedere [Finestre e le pagine delle proprietà](http://msdn.microsoft.com/library/windows/desktop/ms686577) in [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Per ulteriori informazioni, vedere [finestre delle proprietà e pagine delle proprietà](http://msdn.microsoft.com/library/windows/desktop/ms686577) nel [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
   
-## Argomenti della sezione  
- [Specificare le pagine delle proprietà](../atl/specifying-property-pages.md)  
- Elenca le operazioni necessarie per specificare le pagine delle proprietà per il controllo e viene illustrata una classe di esempio.  
+## <a name="in-this-section"></a>Contenuto della sezione  
+ [Specifica delle pagine delle proprietà](../atl/specifying-property-pages.md)  
+ Elenca i passaggi per la specifica delle pagine delle proprietà per il controllo e viene illustrato un esempio di classe.  
   
- [Implementare le pagine delle proprietà](../atl/implementing-property-pages.md)  
- Elenca i passaggi per implementare le pagine delle proprietà, compresi i metodi per eseguire l'override di.  Vengono fornite con un esempio completo basato sul programma di esempio ATLPages.  
+ [Implementazione delle pagine delle proprietà](../atl/implementing-property-pages.md)  
+ Elenca i passaggi per l'implementazione delle pagine delle proprietà, inclusi i metodi per eseguire l'override. Viene illustrato un esempio completo basato sul programma di esempio ATLPages.  
   
-## Sezioni correlate  
- [Esempio ATLPages](../top/visual-cpp-samples.md)  
- La separazione di esempio peresempio ATLPages, che implementa una pagina delle proprietà mediante `IPropertyPageImpl`.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Esempio ATLPages](../visual-cpp-samples.md)  
+ La classe astratta di esempio per l'esempio ATLPages, che implementa una pagina delle proprietà utilizzando `IPropertyPageImpl`.  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali sulla programmazione mediante Active Template Library.  
+ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)
+

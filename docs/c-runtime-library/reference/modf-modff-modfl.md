@@ -1,57 +1,57 @@
 ---
-title: "modf, modff, modfl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "modff"
-  - "modf"
-  - "modfl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "modff"
-  - "_modfl"
-  - "modf"
-  - "modfl"
-  - "math/modf"
-  - "math/modff"
-  - "math/modfl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modf (funzione)"
-  - "modff (funzione)"
-  - "funzione modfl"
+title: modf, modff, modfl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- modff
+- modf
+- modfl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- modff
+- _modfl
+- modf
+- modfl
+- math/modf
+- math/modff
+- math/modfl
+dev_langs: C++
+helpviewer_keywords:
+- modf function
+- modff function
+- modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# modf, modff, modfl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Divide un valore a virgola mobile in frazionari e parti intere.  
+# <a name="modf-modff-modfl"></a>modf, modff, modfl
+Divide un valore a virgola mobile in parte frazionaria e parte intera.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double modf(  
@@ -76,35 +76,35 @@ long double modfl(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *x*  
  Valore a virgola mobile.  
   
  `intptr`  
- Puntatore alla parte intera stored.  
+ Puntatore alla parte intera archiviata.  
   
-## Valore restituito  
- Questa funzione restituisce la parte decimale con segno del *x*. Non vi è restituzione di errori.  
+## <a name="return-value"></a>Valore restituito  
+ Questa funzione restituisce la parte frazionaria con segno di *x*. Non vi è restituzione di errori.  
   
-## Note  
- Il `modf` funzioni suddividere il valore a virgola mobile `x` in frazionari e parti di integer, ognuno dei quali ha lo stesso segno `x`. La parte decimale con segno del `x` viene restituito. La parte intera viene archiviata come un valore a virgola mobile `intptr.`  
+## <a name="remarks"></a>Note  
+ La funzione `modf` suddivide il valore a virgola mobile `x` nelle parti frazionaria e intera, ognuna delle quali ha lo stesso segno di `x`. Viene restituita la parte frazionaria con segno di `x`. La parte intera viene archiviata come valore a virgola mobile in `intptr.`  
   
- `modf` è un'implementazione che utilizza Streaming SIMD Extensions 2 \(SSE2\). Vedere [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md) per informazioni e le restrizioni sull'utilizzo dell'implementazione SSE2.  
+ `modf` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.  
   
- C\+\+ consente l'overload, pertanto è possibile chiamare gli overload di `modf` che accettano e restituiscono `float` o `long double` parametri. In un programma C, `modf` sempre accetta due valori double e restituisce un valore double.  
+ C++ consente l'overload, quindi è possibile chiamare overload di `modf` che accettino e restituiscano i parametri `float` e `long double`. In un programma C `modf` accetta sempre due valori double e restituisce un valore double.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`modf`, `modff`, `modfl`|C: \< Math. h \><br /><br /> C\+\+:, \< cmath \> o \< Math. h \>|  
+|-------------|---------------------|  
+|`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++:, \<cmath> o \<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Librerie  
+## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_modf.c  
@@ -124,13 +124,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 For -14.876543, the fraction is -0.876543 and the integer is -14  
 ```  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

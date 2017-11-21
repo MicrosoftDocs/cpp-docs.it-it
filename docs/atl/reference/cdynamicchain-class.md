@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,21 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e66984fc7a7be45ea80dc894fcf0d11cc8febd45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdynamicchain-class"></a>Classe CDynamicChain
 Questa classe fornisce metodi che supportano la concatenazione dinamica delle mappe messaggi.  
@@ -89,11 +72,11 @@ class CDynamicChain
   
  Si supponga, ad esempio, che la classe viene definita come segue:  
   
- [!code-cpp[&#88; NVC_ATL_Windowing](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
  Il client chiama quindi `CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing #89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
  dove `chainedObj` è l'oggetto concatenata e un'istanza di una classe derivata da `CMessageMap`. A questo punto, se `myCtl` riceve un messaggio che non è gestito da `OnPaint` o `OnSetFocus`, la procedura di finestra indirizza il messaggio `chainedObj`della mappa messaggi predefinita.  
   
@@ -120,7 +103,7 @@ BOOL CallChain(
  [in] L'identificatore univoco associato all'oggetto concatenata e propria mappa messaggi.  
   
  `hWnd`  
- [in] Handle di finestra di ricezione del messaggio.  
+ [in] L'handle della finestra che riceve il messaggio.  
   
  `uMsg`  
  [in] Il messaggio inviato alla finestra.  
@@ -202,4 +185,3 @@ BOOL SetChainEntry(
 ## <a name="see-also"></a>Vedere anche  
  [Classe di CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

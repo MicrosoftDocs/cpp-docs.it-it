@@ -1,45 +1,43 @@
 ---
-title: "map::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound (membro) [STL/CLR]"
+title: 'Map:: upper_bound (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: d772b4a8-d0dc-439a-8b5b-3c91836d9256
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc82213acbc0fa2e6871b9a08119b37186652628
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fine preleva di temporizzazione che corrisponde a una chiave specificata.  
+# <a name="mapupperbound-stlclr"></a>map::upper_bound (STL/CLR)
+Trova fine dell'intervallo che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro determinato l'ultimo elemento `X` sequenza selezionata con ordine equivalente a `key`.  Se tale elemento non esiste, o se `X` è l'ultimo elemento della sequenza selezionata, restituisce [map::end](../dotnet/map-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`.  Utilizzarla per individuare attualmente la fine di una sequenza di elementi della sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro determina l'ultimo elemento `X` nella sequenza controllata che ha un ordinamento equivalente a `key`. Se tale elemento non esiste o se `X` è l'ultimo elemento nella sequenza controllata, restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; in caso contrario restituisce un iteratore che definisce il primo elemento oltre `X`. Utilizzarla per individuare la fine di una sequenza di elementi attualmente nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*upper\_bound \(L'a\) \= \[b 2\]**  
-**\*upper\_bound \(L'b\) \= \[c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::equal\_range](../dotnet/map-equal-range-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: Count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [Map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
+ [Map:: Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)

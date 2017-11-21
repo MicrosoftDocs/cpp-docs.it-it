@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - property pages, adding
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 72a8644d81857b722fd50a7e852d215bb25a2fb2
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: a7c1d7ae11873c2bc47f1bb4a7a2439768e8347b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-an-atl-property-page"></a>Aggiunta di una pagina delle proprietà ATL
 Per aggiungere una pagina delle proprietà Active Template Library (ATL) al progetto, è necessario avere questo sia stato creato come un'applicazione ATL o di un'applicazione MFC con supporto ATL. È possibile utilizzare il [Creazione guidata progetto ATL](../../atl/reference/atl-project-wizard.md) per creare un'applicazione ATL o [aggiungere un oggetto ATL all'applicazione MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) per implementare il supporto ATL per un'applicazione MFC.  
   
- Se si aggiunge una pagina delle proprietà per un controllo, il controllo deve supportare il [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interfaccia. Per impostazione predefinita, questa interfaccia è nell'elenco di derivazione del controllo quando viene chiamato è [crea un controllo ATL](../../atl/reference/adding-an-atl-control.md) utilizzando il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).  
+ Se si aggiunge una pagina delle proprietà per un controllo, il controllo deve supportare il [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) interfaccia. Per impostazione predefinita, questa interfaccia è nell'elenco di derivazione del controllo classe quando si [crea un controllo ATL](../../atl/reference/adding-an-atl-control.md) utilizzando il [Creazione guidata controllo ATL](../../atl/reference/atl-control-wizard.md).  
   
 > [!NOTE]
 >  Se la classe di controllo non dispone di [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) nel proprio elenco di derivazione, è necessario aggiungerla manualmente.  
@@ -62,5 +45,4 @@ Per aggiungere una pagina delle proprietà Active Template Library (ATL) al prog
  [Pagine delle proprietà](../../atl/atl-com-property-pages.md)   
  [Nozioni di base di oggetti COM ATL](../../atl/fundamentals-of-atl-com-objects.md)   
  [Esempio: implementazione di una pagina delle proprietà](../../atl/example-implementing-a-property-page.md)
-
 

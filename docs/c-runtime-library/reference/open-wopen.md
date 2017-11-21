@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 82b12ebfbff06c19a863bec7d8be2e6677c0148e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.openlocfilehash: b2362db1db1686bcf87cb171b3f29da48226d54b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="open-wopen"></a>_open, _wopen
 Apre un file. Queste funzioni sono deprecate perché sono disponibili versioni più sicure. Vedere [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -100,7 +83,7 @@ int _wopen(
  Si è tentato di aprire un file di sola lettura per la scrittura, la modalità di condivisione del file non consente le operazioni specificate o il percorso specificato è una directory.  
   
  `EEXIST`  
-Sono stati specificati i flag  `_O_CREAT` e `_O_EXCL`, ma `filename` esiste già.  
+ Sono stati specificati i flag `_O_CREAT` e `_O_EXCL`, ma `filename` esiste già.  
   
  `EINVAL`  
  L'argomento `oflag` o `pmode` non è valido.  

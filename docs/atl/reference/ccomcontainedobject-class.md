@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,21 @@ f1_keywords:
 - ATLCOM/ATL::CComContainedObject::GetControllingUnknown
 - ATLCOM/ATL::CComContainedObject::QueryInterface
 - ATLCOM/ATL::CComContainedObject::Release
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 8fed68d788403a0c2a822d7e47f50b08d409bbf2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcontainedobject-class"></a>Classe CComContainedObject
 Questa classe implementa [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) mediante la delega per l'oggetto proprietario **IUnknown**.  
@@ -161,4 +158,3 @@ STDMETHOD_(ULONG, Release)();
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

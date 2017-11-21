@@ -1,45 +1,43 @@
 ---
-title: "map::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find (membro) [STL/CLR]"
+title: 'Map:: Find (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 779dcbee-d584-4fbd-b788-481e094ece9d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 805ddfc8e2e8194df38703011a90c62d96475ddd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Viene trovato un elemento che corrisponde alla chiave specificata.  
+# <a name="mapfind-stlclr"></a>map::find (STL/CLR)
+Trova un elemento che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- Se almeno un elemento nella sequenza selezionata ordine è equivalente a `key`, la funzione membro restituirà un iteratore che definisce uno degli elementi; in caso contrario restituisce [map::end](../dotnet/map-end-stl-clr.md)`()`.  Utilizzarla per posizionare attualmente un elemento nella sequenza controllata che corrisponde a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ Se almeno un elemento nella sequenza controllata ha un ordinamento equivalente con `key`, la funzione membro restituisce un iteratore che definisce uno di questi elementi; in caso contrario restituisce [Map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`. Utilizzarla per individuare un elemento attualmente nella sequenza controllata che corrisponde a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_find.cpp   
@@ -73,20 +71,23 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**individuare A \= False**  
-**trova b \= \[b 2\]**  
-**individuare C \= False**   
-## Descrizione  
- Si noti che `find` non garantisce quale diversi l'elemento cerca.  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+## <a name="description"></a>Descrizione  
+ Si noti che `find` non garantisce che l'elemento più rileva.  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::equal\_range](../dotnet/map-equal-range-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)   
- [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
+ [Map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)   
+ [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)

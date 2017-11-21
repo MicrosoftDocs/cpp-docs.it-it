@@ -1,41 +1,39 @@
 ---
-title: "vector::capacity (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::capacity"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "capacity (membro) [STL/CLR]"
+title: 'Vector:: Capacity (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::capacity
+dev_langs: C++
+helpviewer_keywords: capacity member [STL/CLR]
 ms.assetid: f82d8da9-8b4d-4288-8d18-8e9ca5911d87
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 97693360d03f0c861f1c2f1b956fcbd136d7c6f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::capacity (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce la dimensione dello spazio di memorizzazione allocato per il contenitore.  
+# <a name="vectorcapacity-stlclr"></a>vector::capacity (STL/CLR)
+Indica le dimensioni di archiviazione allocato per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 size_type capacity();  
 ```  
   
-## Note  
- La funzione membro restituisce un'archiviazione attualmente allocata per utilizzare la sequenza selezionata, un valore almeno avere le [vector::size](../dotnet/vector-size-stl-clr.md)`()`.  Utilizzarla per determinare quanto il contenitore può crearsi prima che questo ridistribuire lo spazio per la sequenza selezionata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce la memoria attualmente allocata per contenere la sequenza controllata, un valore almeno pari [Vector:: Size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`. Utilizzarla per determinare la quantità il contenitore può raggiungere prima è necessario riassegnare l'archiviazione per la sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_capacity.cpp   
@@ -66,17 +64,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**capacity\(\) \= 4, OK \= True**  
-**capacity\(\) \= 9, OK \= True**   
-## Descrizione  
- Si noti che le capacità effettiva possono differire dai valori riportati di seguito, a condizione che la relazione nell'esempio di `ok` true.  
+```Output  
+ a b c  
+capacity() = 4, ok = True  
+capacity() = 9, ok = True  
+```  
   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+## <a name="description"></a>Descrizione  
+ Si noti che la capacità effettiva differiscano dai valori riportati di seguito, durata per tutti `ok` test report true.  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::reserve](../dotnet/vector-reserve-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)

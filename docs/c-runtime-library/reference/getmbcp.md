@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _getmbcp
+apiname: _getmbcp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _getmbcp
 - getmbcp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code pages, determining current
 - _getmbcp function
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4bc1000e9443d60e966ef6a929ed134acd44f1b7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getmbcp"></a>_getmbcp
 Recupera la tabella codici corrente.  

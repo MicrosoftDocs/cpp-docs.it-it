@@ -1,41 +1,39 @@
 ---
-title: "map::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type (membro) [STL/CLR]"
+title: 'Map:: mapped_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: 818ee40d-8355-446e-a7b2-eb5bf8cc689d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac5a39ed59b224304b0c8f2095a032bf39daef48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un valore mappato associato a ogni chiave.  
+# <a name="mapmappedtype-stlclr"></a>map::mapped_type (STL/CLR)
+Tipo di un valore mappato associato a ogni chiave.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Mapped mapped_type;  
 ```  
   
-## Note  
- Il tipo è sinonimo del parametro di template `Mapped`.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo del parametro di modello `Mapped`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_mapped_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **1 2 3**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+1 2 3  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_compare](../dotnet/map-key-compare-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

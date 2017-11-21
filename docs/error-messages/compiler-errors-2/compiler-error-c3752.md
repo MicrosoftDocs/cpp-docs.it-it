@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3752
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3752
+f1_keywords: C3752
+dev_langs: C++
+helpviewer_keywords: C3752
 ms.assetid: 1ac81d85-0f5a-4f39-95b6-42fd43cb18d5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 555c268a12cc37cbcbe00a7fc9ee4a166be2ea14
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3752"></a>Errore del compilatore C3752
 'classe attributo': non è possibile classificare l'attributo. 'keyword' non deve essere utilizzato in questo contesto  

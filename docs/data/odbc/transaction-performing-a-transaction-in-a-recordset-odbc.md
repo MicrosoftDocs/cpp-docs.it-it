@@ -1,41 +1,40 @@
 ---
-title: "Transazione: esecuzione di una transazione in un recordset (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transazioni, aggiornamento di recordset"
+title: 'Transazione: Esecuzione di una transazione in un Recordset (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1451775374b94bbefb6396e7afeda2396df84ba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Transazione: esecuzione di una transazione in un recordset (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrata l'esecuzione di una transazione in un recordset.  
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transazione: esecuzione di una transazione in un recordset (ODBC)
+In questo argomento viene illustrato come eseguire una transazione in un recordset.  
   
 > [!NOTE]
->  È supportato un solo livello di transazioni, che non possono essere annidate.  
+>  È supportato un solo livello di transazioni; è possibile nidificare le transazioni.  
   
-#### Per eseguire una transazione in un recordset  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Per eseguire una transazione in un recordset  
   
-1.  Chiamare la funzione membro **BeginTrans** dell'oggetto `CDatabase`.  
+1.  Chiamare il `CDatabase` dell'oggetto **BeginTrans** funzione membro.  
   
-2.  Se non è stato implementato il recupero di massa di righe, chiamare le funzioni membro **AddNew\/Update**, **Edit\/Update** e **Delete** di uno o più oggetti recordset dello stesso database per il numero di volte desiderato.  Per ulteriori informazioni, vedere [Recordset: aggiunta, aggiornamento ed eliminazione di record \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  Se è stato implementato il recupero di massa di righe, è necessario creare le funzioni richieste per aggiornare l'origine dati.  
+2.  Se non è stato implementato il recupero di massa di righe, chiamare il **AddNew/Update**, **Modifica/Aggiorna**, e **eliminare** funzioni membro di uno o più oggetti recordset dello stesso database il numero di volte in base alle esigenze. Per ulteriori informazioni, vedere [Recordset: aggiunta, aggiornamento e l'eliminazione di record (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Se è stato implementato il recupero di massa di righe, è necessario scrivere funzioni personalizzate per aggiornare l'origine dati.  
   
-3.  Chiamare infine la funzione membro **CommitTrans** dell'oggetto `CDatabase`.  Se in uno degli aggiornamenti si verifica un errore o si decide di annullare le modifiche, chiamare la relativa funzione membro **Rollback**.  
+3.  Infine, chiamare il `CDatabase` dell'oggetto **CommitTrans** funzione membro. Se si verifica un errore in uno degli aggiornamenti o si decide di annullare le modifiche, chiamare il relativo **Rollback** funzione membro.  
   
- Nel seguente esempio vengono utilizzati due recordset per eliminare l'iscrizione di uno studente dal database di registrazione di una scuola, rimuovendo i dati dello studente da tutti i corsi ai quali è iscritto.  Le chiamate a **Delete** devono essere eseguite correttamente in entrambi i recordset, pertanto è necessario utilizzare una transazione.  Nell'esempio si presuppone l'esistenza di `m_dbStudentReg`, una variabile membro di tipo `CDatabase` già collegata all'origine dati e delle classi recordset `CEnrollmentSet` e `CStudentSet`.  La variabile `strStudentID` contiene un valore specificato dall'utente.  
+ Nell'esempio seguente usa due set di record per eliminare la registrazione di uno studente da un database di registrazione dell'istituto di istruzione, la rimozione dello studente da tutte le classi in cui viene registrato lo studente. Poiché il **eliminare** chiamate in entrambi i recordset devono avere esito positivo, è necessaria una transazione. Nell'esempio si presuppone l'esistenza di `m_dbStudentReg`, una variabile membro di tipo `CDatabase` già connesso all'origine dati e le classi di recordset `CEnrollmentSet` e `CStudentSet`. Il `strStudentID` variabile contiene un valore specificato dall'utente.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -88,10 +87,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  Se si chiama nuovamente **BeginTrans** senza chiamare **CommitTrans** o **Rollback**, si verificherà un errore.  
+>  La chiamata **BeginTrans** nuovamente senza chiamare **CommitTrans** o **Rollback** è un errore.  
   
-## Vedere anche  
- [Transazione \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Transazione: effetti delle transazioni sugli aggiornamenti \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>Vedere anche  
+ [Transazione (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Transazione: Effetti delle transazioni sugli aggiornamenti (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase (classe)](../../mfc/reference/cdatabase-class.md)   
+ [Classe CRecordset](../../mfc/reference/crecordset-class.md)

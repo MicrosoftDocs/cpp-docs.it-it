@@ -1,130 +1,131 @@
 ---
-title: "Classi di raccolta ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi di raccolte"
-  - "classi di raccolte, informazioni"
-  - "classi di raccolte, scelta"
-  - "ConstructElements (funzione)"
-  - "CTraits (classi)"
-  - "DestructElements (funzione)"
-  - "SerializeElements (funzione)"
-  - "traits (classi)"
+title: Classi Collection ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DestructElements function
+- collection classes, choosing
+- ConstructElements function
+- SerializeElements function
+- traits classes
+- collection classes, about collection classes
+- CTraits classes
+- collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classi di raccolta ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL fornisce molte classi per archiviare e accedere ai dati.  La classe si decide di utilizzare dipende da numerosi fattori, tra cui:  
+# <a name="atl-collection-classes"></a>Classi Collection ATL
+ATL fornisce molte classi per l'archiviazione e l'accesso ai dati. La classe a cui si decide di utilizzare dipende da diversi fattori, tra cui:  
   
--   La quantità di dati da memorizzare  
+-   La quantità di dati da archiviare  
   
--   Efficienza rispetto alle prestazioni quando si accede ai dati  
+-   Efficienza e prestazioni nell'accesso ai dati  
   
--   La possibilità di accedere ai dati dall'indice o dalla chiave  
+-   La possibilità di accedere ai dati in base all'indice o chiave  
   
--   Come i dati vengono ordinati  
+-   Ordinamento dei dati  
   
--   Le preferenze personali  
+-   Preferenze personali  
   
-## Le classi di raccolte  
- ATL fornisce le classi di matrice per gestire un numero limitato di oggetti.  Tuttavia, queste classi sono limitate e progettate per l'utilizzo internamente da ATL.  Si consiglia di utilizzare nei programmi.  
+## <a name="small-collection-classes"></a>Classi Collection di piccole dimensioni  
+ ATL fornisce le seguenti classi di matrice per la gestione di un numero limitato di oggetti. Tuttavia, queste classi sono limitate e progettato per essere utilizzato internamente da ATL. È consigliabile non utilizzarle nei programmi.  
   
-|Classe|Tipo di archiviazione dei dati|  
-|------------|------------------------------------|  
-|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementa una classe di matrice per gestire un numero limitato di oggetti.|  
-|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementa una classe di mapping per gestire un numero limitato di oggetti.|  
+|Classe|Tipo di archiviazione di dati|  
+|-----------|--------------------------|  
+|[CSimpleArray](../atl/reference/csimplearray-class.md)|Implementa una classe di matrice per la gestione di un numero limitato di oggetti.|  
+|[CSimpleMap](../atl/reference/csimplemap-class.md)|Implementa una classe di mapping per la gestione di un numero limitato di oggetti.|  
   
-## Classi di raccolte di utilizzo generale  
- Le classi di seguire implementano le matrici, elenchi e i mapping e vengono fornite come classi di raccolte di utilizzo generale:  
+## <a name="general-purpose-collection-classes"></a>Classi di raccolte generiche  
+ Le classi seguenti implementano matrici, elenchi e mappe e vengono fornite come classi di raccolta generici:  
   
-|Classe|Tipo di archiviazione dei dati|  
-|------------|------------------------------------|  
+|Classe|Tipo di archiviazione di dati|  
+|-----------|--------------------------|  
 |[CAtlArray](../atl/reference/catlarray-class.md)|Implementa una matrice.|  
 |[CAtlList](../atl/reference/catllist-class.md)|Implementa un elenco.|  
-|[CAtlMap](../atl/reference/catlmap-class.md)|Implementa una struttura di mapping, con cui i dati possono farvi riferimento da una chiave o un valore.|  
-|[CRBMap](../atl/reference/crbmap-class.md)|Implementa una struttura di mapping tramite l'algoritmo Rosso\- Nero.|  
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementa una struttura multimapping Rosso\-Nera.|  
+|[CAtlMap](../atl/reference/catlmap-class.md)|Implementa una struttura di mapping, in base al quale possono essere fa riferimento a dati chiave o un valore.|  
+|[CRBMap](../atl/reference/crbmap-class.md)|Implementa una struttura di mapping utilizzando l'algoritmo rosso a nero.|  
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Implementa una struttura di mapping multipla basata su rosso a nero.|  
   
- Queste classi bloccheranno molti errori di programmazione se utilizzate nelle build di debug, ma a scopo delle prestazioni, questi controlli non vengono eseguiti nelle build per la vendita.  
+ Queste classi intercetterà molti errori di programmazione utilizzato nelle build di debug, ma ai fini del, prestazioni, questi controlli non verranno eseguiti nella build in versione finale.  
   
-## Classi di raccolte specializzate  
- Le classi di raccolte specializzate vengono fornite per gestire i puntatori alla memoria e i puntatori a interfaccia:  
+## <a name="specialized-collection-classes"></a>Classi di raccolte specializzate  
+ Altre classi collection sono inoltre disponibili per la gestione di puntatori alla memoria e i puntatori di interfaccia:  
   
 |Classe|Scopo|  
-|------------|-----------|  
-|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Fornisce metodi utili quando creano una matrice di puntatori intelligenti.|  
-|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Fornisce metodi utili quando creano un elenco con puntatori intelligenti.|  
-|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Archivia i puntatori `IUnknown` ed è progettato per essere utilizzato come parametro alla classe modello [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).|  
-|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Fornisce metodi utili quando creano un elenco con puntatori heap.|  
-|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Fornisce metodi utili quando creano una matrice di puntatori all'interfaccia COM.|  
-|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Fornisce metodi utili quando creano un elenco tramite puntatori all'interfaccia COM.|  
+|-----------|-------------|  
+|[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Fornisce metodi utili quando si crea una matrice di puntatori intelligenti.|  
+|[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Fornisce metodi utili durante la costruzione di un elenco di puntatori intelligenti.|  
+|[CComUnkArray](../atl/reference/ccomunkarray-class.md)|Archivi `IUnknown` puntatori ed è progettato per essere utilizzato come parametro per il [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) classe modello.|  
+|[CHeapPtrList](../atl/reference/cheapptrlist-class.md)|Fornisce metodi utili durante la costruzione di un elenco dei puntatori di heap.|  
+|[CInterfaceArray](../atl/reference/cinterfacearray-class.md)|Fornisce metodi utili quando si crea una matrice di puntatori a interfaccia COM.|  
+|[CInterfaceList](../atl/reference/cinterfacelist-class.md)|Fornisce metodi utili durante la costruzione di un elenco di puntatori a interfaccia COM.|  
   
-## Scegliere una classe di raccolte  
- Ognuna delle classi di raccolte disponibili sono disponibili le caratteristiche di prestazione diversi, come illustrato nella tabella riportata di seguito.  
+## <a name="choosing-a-collection-class"></a>Scelta di una classe di raccolta  
+ Ognuna delle classi di raccolta disponibili offre caratteristiche di prestazioni diverse, come illustrato nella tabella seguente.  
   
--   Le colonne 2 e 3 descrivono le caratteristiche dell'ordine e l'accesso a ogni classe.  Nella tabella, il termine "ordinato" significa che l'ordine in cui gli elementi vengono inseriti ed eliminate determinare il relativo ordine nella raccolta; non significa che gli elementi vengono ordinati i relativi contenuti.  Il termine "indicizzato" significa che gli elementi della raccolta possono essere recuperati da un intero, come gli elementi in una matrice tipica.  
+-   Le colonne 2 e 3 descrivono ogni classe di ordinamento e accedere alle caratteristiche. Nella tabella il termine "ordine" significa che l'ordine di inserimento ed eliminazione degli elementi determina il relativo ordine nella raccolta. Non significa che gli elementi sono ordinati in base al rispettivo contenuto. Il termine "indicizzazione" significa che è possibile recuperare gli elementi nella raccolta da un indice Integer, analogamente agli elementi in una matrice standard.  
   
--   Le colonne 4 e 5 descrivono le prestazioni di ciascuna classe.  Nelle applicazioni che richiedono molti inserimenti nella raccolta, la velocità di inserimento può essere particolarmente importante, per altre applicazioni, la velocità di ricerca può essere più importante.  
+-   Le colonne 4 e 5 descrivono le prestazioni di ciascuna classe. In applicazioni che richiedono molte operazioni di inserimento nella raccolta, la velocità di inserimento potrebbe essere particolarmente importante. In altre applicazioni potrebbe essere più importante la velocità di ricerca.  
   
 -   La colonna 6 indica se ogni forma consente elementi duplicati.  
   
--   Le prestazioni di un'operazione specifica la classe di raccolte sono espresse in termini di relazione tra il tempo necessario per completare l'esecuzione e il numero di elementi della raccolta.  Un'operazione che richiede una quantità di tempo che aumenta linearmente quando il numero di aumenta di elementi viene descritto come O \(n\) algoritmo.  Al contrario, un'operazione che richiede un punto che aumenta sempre meno quando il numero di aumenta di elementi viene descritto come O \(algoritmo di log n\).  Pertanto, in termini di prestazioni, O \(algoritmi del log n\) supera la O \(n\) algoritmi sempre maggiore del numero di elementi.  
+-   Le prestazioni di un'operazione di classe di raccolta specificato sono espressi in termini la relazione tra il tempo necessario per completare l'operazione e il numero di elementi nella raccolta. Un'operazione che richiede una quantità di tempo che aumenta in modo lineare del numero di elementi viene descritto come un algoritmo o (n). Al contrario, un'operazione che richiede un periodo di tempo che aumenta meno il numero di elementi viene descritto come un algoritmo O (log n). Pertanto, in termini di prestazioni, gli algoritmi O (log n) che agli algoritmi più come il numero di elementi.  
   
-### Funzionalità di libreria di forme  
+### <a name="collection-shape-features"></a>Funzionalità delle forme di raccolta  
   
-|Forma|Ordinato?|Indicizzato?|Inserire<br /><br /> element|Cercare<br /><br /> elemento specificato|Duplicato<br /><br /> elementi?|  
-|-----------|---------------|------------------|--------------------------|--------------------------------------|-----------------------------|  
-|Elenco|Sì|No|Veloce \(tempo costante\)|Lenta o \(n\)|Sì|  
-|Matrice|Sì|Da int \(tempo costante\)|Rallenti la O \(n\) tranne se inserimento alla fine, nel qual caso il tempo costante|Lenta o \(n\)|Sì|  
-|Mappa|No|La chiave \(tempo costante\)|Veloce \(tempo costante\)|Veloce \(tempo costante\)|Nessun \(tasti\) sì \(valori\)|  
-|Mapping Rosso\-Nero|Sì \(la chiave\)|La chiave O \(log n\)|O veloce \(log n\)|O veloce \(log n\)|No|  
-|Multimap Rosso\-Nero|Sì \(la chiave\)|La chiave O \(log n\) \(più valori per chiave\)|O veloce \(log n\)|O veloce \(log n\)|Sì \(più valori per chiave\)|  
+|Forma|Ordered|Indicizzazione|Inserire un<br /><br /> elemento|Ricerca<br /><br /> elemento specificato|Duplica<br /><br /> elementi|  
+|-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
+|Elenco|Sì|No|Fast (tempo costante)|Rallentamento o (n)|Sì|  
+|Matrice|Sì|Da int (tempo costante)|Rallentamento o (n), ad eccezione dell'inserimento alla fine, in cui il tempo costante di case|Rallentamento o (n)|Sì|  
+|Mappa|No|Chiave (tempo costante)|Fast (tempo costante)|Fast (tempo costante)|No (chiavi) Sì (valori)|  
+|Mappa rosso a nero|Sì (per chiave)|Chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|  
+|Multimap rosso a nero|Sì (per chiave)|Chiave O(log n) (più valori per ogni chiave)|Veloce O (log n)|Veloce O (log n)|Sì (più valori per ogni chiave)|  
   
-## Utilizzo di oggetti di CTraits  
- Mentre le classi di raccolte ATL possono essere utilizzate per archiviare una vasta gamma di tipi di dati definiti dall'utente, può essere utile poter eseguire l'override delle funzioni principali come confrontare.  Questo risultato si ottiene utilizzando le classi di CTraits.  
+## <a name="using-ctraits-objects"></a>Utilizzo di oggetti CTraits  
+ Le classi collection ATL possono essere utilizzati per archiviare una vasta gamma di tipi di dati definito dall'utente, può essere utile essere in grado di eseguire l'override di funzioni importanti, ad esempio i confronti. A questo scopo utilizzare le classi CTraits.  
   
- Le classi di CTraits sono simili a, ma più flessibili di, le funzioni di supporto di classi collection MFC; vedere [Supporti delle classi di raccolte](../mfc/reference/collection-class-helpers.md) per ulteriori informazioni.  
+ CTraits (classi) sono simili, ma più flessibile, le funzioni di supporto MFC insieme classe; vedere [classi Collection](../mfc/reference/collection-class-helpers.md) per ulteriori informazioni.  
   
- Nel creare la classe di raccolte, è possibile specificare una classe di CTraits.  Questa classe contiene codice che esegue le operazioni come confrontare una volta chiamato con gli altri metodi che costituiscono la classe di raccolte.  Ad esempio, se l'oggetto elenco contiene le proprie strutture definite dall'utente, è possibile ridefinire il test di uguaglianza per confrontare solo le variabili membro sicuri.  In questo modo, il metodo di ricerca dell'oggetto elenco verrà eseguito in modo molto utile.  
+ Quando si crea la classe di raccolta, è possibile specificare una classe CTraits. Questa classe conterrà il codice che eseguirà le operazioni, ad esempio i confronti quando viene chiamato da altri metodi che costituiscono la classe di raccolta. Ad esempio, se l'oggetto elenco contiene strutture personalizzate definite dall'utente, si potrebbe desidera ridefinire il test di uguaglianza per confrontare solo determinate variabili membro. In questo modo, il metodo di ricerca dell'oggetto elenco funzionerà in modo più efficiente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
- [!code-cpp[NVC_ATL_Utilities#112](../atl/codesnippet/CPP/atl-collection-classes_1.cpp)]  
+### <a name="code"></a>Codice  
+ [!code-cpp[NVC_ATL_Utilities#112](../atl/codesnippet/cpp/atl-collection-classes_1.cpp)]  
   
-## Commenti  
- Per un elenco delle classi di CTraits, vedere [classi di raccolte](../atl/collection-classes.md).  
+## <a name="comments"></a>Commenti  
+ Per un elenco delle classi CTraits, vedere [classi Collection](../atl/collection-classes.md).  
   
- Nel diagramma seguente viene illustrata la gerarchia di classi per le classi di CTraits.  
+ Il diagramma seguente mostra la gerarchia di classi per le classi CTraits.  
   
- ![Gerarchia dei tratti per le classi di raccolte](../atl/media/vctraitscollectionclasseshierarchy.png "vcTraitsCollectionClassesHierarchy")  
+ ![Gerarchia dei tratti per le classi collection](../atl/media/vctraitscollectionclasseshierarchy.gif "vctraitscollectionclasseshierarchy")  
   
-## Esempi di classi collection  
- I seguenti esempi vengono illustrate le classi di raccolte:  
+## <a name="collection-classes-samples"></a>Esempi di classi Collection  
+ Negli esempi seguenti illustrano le classi di raccolta:  
   
--   [Esempio MMXSwarm](../top/visual-cpp-samples.md)  
+-   [Esempio MMXSwarm](../visual-cpp-samples.md)  
   
--   [Esempio di DynamicConsumer](../top/visual-cpp-samples.md)  
+-   [Esempio DynamicConsumer](../visual-cpp-samples.md)  
   
--   [L'esempio UpdatePV](../top/visual-cpp-samples.md)  
+-   [Esempio UpdatePV](../visual-cpp-samples.md)  
   
--   [Esempio di marquee](../top/visual-cpp-samples.md)  
+-   [Esempio di testo scorrevole](../visual-cpp-samples.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../atl/active-template-library-atl-concepts.md)   
- [Classi di raccolte](../atl/collection-classes.md)
+ [Classi di raccolta](../atl/collection-classes.md)
+

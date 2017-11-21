@@ -1,41 +1,39 @@
 ---
-title: "queue::container_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container_type (membro) [STL/CLR]"
+title: 'Queue:: container_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: 118168f9-e5ed-47e2-a4f5-26b0b56e41e1
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b29c55cd182538b9d44706086b8ffbd09777bf4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# queue::container_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuecontainertype-stlclr"></a>queue::container_type (STL/CLR)
 Tipo del contenitore sottostante.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## Note  
- Il tipo è un sinonimo per il parametro di modello `Container`.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo del parametro di modello `Container`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_queue_container_type.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/queue\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::get\_container](../dotnet/queue-get-container-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [coda (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::get_container (STL/CLR)](../dotnet/queue-get-container-stl-clr.md)

@@ -1,42 +1,42 @@
 ---
-title: "Semantica dei tipi di valore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__pin (parola chiave)"
-  - "ereditarietà, tipi di valori"
-  - "interior_ptr (parola chiave) [C++]"
-  - "pin_ptr (parola chiave) [C++]"
-  - "puntatori di blocco"
-  - "funzioni virtual, tipi di valori"
+title: La semantica dei tipi di valore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interior_ptr keyword [C++]
+- virtual functions, value types
+- inheritance, value types
+- pinning pointers
+- pin_ptr keyword [C++]
+- __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d04f84fa98c61161bc7f03eb5b38004e6d6659cb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Semantica dei tipi di valore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La semantica dei tipi di valore è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="value-type-semantics"></a>Semantica dei tipi di valore
+La semantica dei tipi di valore è cambiate rispetto alle estensioni gestite per C++ a Visual C++.  
   
- Di seguito è riportato il tipo di valore canonico semplice utilizzato nella specifica delle estensioni gestite per C\+\+:  
+ Di seguito è il tipo di valore canonico semplice utilizzato nelle estensioni gestite per specifiche di C++:  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
 ```  
   
- Nelle estensioni gestite è possibile individuare quattro varianti sintattiche di un tipo di valore \(dove i form 2 e 3 sono semanticamente equivalenti\):  
+ Nelle estensioni gestite, è possibile avere quattro varianti sintattiche di un tipo di valore (in form 2 e 3 sono semanticamente equivalenti):  
   
 ```  
 V v = { 0 };       // Form (1)  
@@ -45,54 +45,54 @@ V __gc *pvgc = 0;  // Form (3)
 __box V* pvbx = 0; // Form (4) must be local   
 ```  
   
-## Chiamata dei metodi virtuali ereditati  
- `Form (1)` rappresenta l'oggetto valore canonico e viene, in genere, riconosciuto senza problemi, tranne quando si tenta di richiamare un metodo virtuale ereditato, ad esempio `ToString()`.  Di seguito è riportato un esempio.  
+## <a name="invoking-inherited-virtual-methods"></a>Richiamo di metodi virtuali ereditati  
+ `Form (1)`è l'oggetto valore canonico e si è ragionevolmente compresi appieno, tranne quando si tenta di richiamare un metodo virtuale ereditato, ad esempio `ToString()`. Ad esempio:  
   
 ```  
 v.ToString(); // error!  
 ```  
   
- Per richiamare questo metodo, che non è sottoposto a override in `V`, è necessario che il compilatore abbia accesso alla corrispondente tabella virtuale della classe base.  Poiché i tipi di valore sono archivi di stato interno senza il corrispondente puntatore alla relativa tabella virtuale \(vptr\), è necessario che `v` sia sottoposto a boxing.  La progettazione del linguaggio delle estensioni gestite non supporta il boxing implicito, che deve invece essere specificato esplicitamente dal programmatore, come in  
+ Per richiamare questo metodo, perché non è sottoposto a override `V`, il compilatore deve avere accesso alla tabella virtuale associata della classe di base. Poiché i tipi di valore sono in stato archiviazione senza il puntatore associato alla relativa tabella virtuale (vptr), è necessario che `v` essere boxed. Nella struttura del linguaggio estensioni gestite non è supportata la conversione boxing implicita ma devono essere specificati esplicitamente dal programmatore, come in  
   
 ```  
 __box( v )->ToString(); // Managed Extensions: note the arrow  
 ```  
   
- La motivazione primaria alla base di questa progettazione è didattica: il meccanismo sottostante deve essere visibile al programmatore in modo che questo possa comprendere il "costo" derivante dalla mancata specifica di un'istanza nell'ambito del tipo di valore.  Se `V` contenesse un'istanza di `ToString`, il boxing non sarebbe necessario.  
+ Il principale obiettivo di questa struttura è formativo: il meccanismo sottostante deve essere visibile al programmatore in modo che questo possa comprendere il costo non fornisce un'istanza all'interno del tipo di valore. Sono stati `V` per contenere un'istanza di `ToString`, non è necessario la conversione boxing.  
   
- La complessità lessicale connessa al boxing esplicito dell'oggetto, ma non il costo sottostante del boxing stesso, viene eliminata nella nuova sintassi:  
+ La complessità lessicale di conversione boxing in modo esplicito l'oggetto, ma non il costo sottostante del boxing stesso, verrà rimosse nella nuova sintassi:  
   
 ```  
 v.ToString(); // new syntax  
 ```  
   
- con il rischio di trarre in inganno lo sviluppatore di classi in relazione al costo della mancata specifica di un'istanza esplicita del metodo `ToString` in `V`.  Il boxing implicito viene preferito perché sebbene generalmente esista un unico sviluppatore di classi, esiste tuttavia un numero illimitato di utenti, nessuno dei quali ha la possibilità di modificare `V` per eliminare il boxing esplicito potenzialmente oneroso.  
+ ma a discapito probabilmente fuorviante per quanto riguarda il costo della mancata specifica di un'istanza esplicita della progettazione classi di `ToString` metodo all'interno di `V`. Boxing implicito il motivo è che mentre è in genere solo una progettazione di classi, esistono un numero illimitato di utenti, nessuno dei quali ha la possibilità di modificare `V` per eliminare il boxing esplicito potenzialmente oneroso.  
   
- I criteri in base a cui stabilire se specificare, o meno, un'istanza di override di `ToString` nell'ambito di una classe di valori dovrebbero essere la frequenza e la posizione dei relativi utilizzi.  Se la frequenza di chiamata è minima, la definizione di tale istanza non risulta particolarmente vantaggiosa.  Analogamente, se la chiamata viene eseguita nelle aree meno efficienti dell'applicazione, l'aggiunta dell'istanza non migliorerebbe in modo apprezzabile le prestazioni generali dell'applicazione.  In alternativa, è possibile utilizzare un handle di rilevamento relativo al valore boxed. Le chiamate eseguite attraverso tale handle non richiederebbero l'esecuzione del boxing.  
+ I criteri determinare se visualizzare o meno fornire un'istanza di override `ToString` all'interno di un valore di classe deve essere la frequenza e la posizione dei relativi utilizzi. Se viene chiamato molto raramente, è ovviamente particolarmente vantaggioso nella relativa definizione. Analogamente, se viene chiamato in aree non ad alte prestazioni dell'applicazione, aggiunta non migliorerebbe aggiungerà per le prestazioni generali dell'applicazione. In alternativa, è possibile utilizzare un handle di rilevamento per il valore boxed, e chiamate tramite tale handle non richiedono la conversione boxing.  
   
-## Rimozione del costruttore predefinito delle classi di valori  
- Un'ulteriore differenza in termini di tipi di valore tra le estensioni gestite e la nuova sintassi consiste nell'eliminazione del supporto di un costruttore predefinito.  Questo è dovuto al fatto che, durante l'esecuzione, si verificano situazioni in cui CLR può creare un'istanza del tipo di valore senza richiamare il costruttore predefinito associato.  In altre parole, nell'ambito delle estensioni gestite il tentativo di supportare un costruttore predefinito all'interno di un tipo di valore non può garantire risultati effettivi.  A causa di tale assenza di garanzie, è stato considerato più opportuno eliminare il supporto piuttosto che mantenerlo in condizioni non deterministiche di applicazione.  
+## <a name="there-is-no-longer-a-value-class-default-constructor"></a>Non è più un costruttore predefinito della classe di valore  
+ Un'altra differenza con un tipo di valore tra le estensioni gestite e la nuova sintassi è la rimozione del supporto per un costruttore predefinito. Infatti, esistono casi durante l'esecuzione in cui CLR può creare un'istanza del tipo di valore senza richiamare il costruttore predefinito associato. Vale a dire, il tentativo di estensioni gestite per supportare un costruttore predefinito all'interno di un tipo di valore potrebbe non essere garantito. Dato che assenza di garanzia, è stato ritenuto opportuno eliminare il supporto anziché essere non deterministico nell'applicazione.  
   
- Gli effetti reali di questa decisione sono meno negativi di quanto potesse sembrare inizialmente.  Questo perché ogni oggetto di un tipo di valore viene automaticamente impostato su zero \(ovvero, ogni tipo viene inizializzato sul relativo valore predefinito\).  Di conseguenza, i membri di un'istanza locale non risultano mai indefiniti.  In tal senso, la perdita della capacità di definire un costruttore predefinito semplice non equivale affatto a una perdita. L'esecuzione in CLR risulta infatti più efficiente.  
+ Non si tratta come non valida come potrebbe sembrare inizialmente. Infatti, ogni oggetto di un tipo di valore viene automaticamente impostato su zero (ovvero, ogni tipo viene inizializzato sul valore predefinito). Di conseguenza, i membri di un'istanza locale non sono mai non definiti. In questo senso, la perdita della capacità di definire un costruttore predefinito semplice è realmente una perdita affatto - e in realtà è più efficiente se eseguite da CLR.  
   
- Il problema si pone quando un utente delle estensioni gestite definisce un costruttore predefinito complesso,  poiché questo non dispone di un mapping alla nuova sintassi.  Il codice all'interno del costruttore deve essere migrato in un metodo di inizializzazione denominato che deve quindi essere richiamato esplicitamente dall'utente.  
+ Il problema è quando un utente delle estensioni gestite definisce un costruttore predefinito non semplice. Questo è disponibile alcun mapping per la nuova sintassi. Il codice all'interno del costruttore sarà necessario eseguire la migrazione in un metodo di inizializzazione denominato che dovrebbe quindi essere richiamata in modo esplicito dall'utente.  
   
- La dichiarazione di un oggetto tipo di valore all'interno della nuova sintassi rimane per il resto invariata.  Il lato negativo risiede nel fatto che i tipi di valore non offrono risultati soddisfacenti nel wrapping dei tipi nativi per i motivi seguenti:  
+ In caso contrario, la dichiarazione di un oggetto di tipo di valore all'interno della nuova sintassi è invariata. Il lato negativo è che i tipi di valore non sono soddisfacenti per il ritorno a capo dei tipi nativi per i motivi seguenti:  
   
--   Nell'ambito di un tipo di valore non è previsto il supporto per un distruttore.  Di conseguenza, non è possibile automatizzare un insieme di azioni generate dalla conclusione del ciclo di vita di un oggetto.  
+-   Non è previsto alcun supporto per un distruttore all'interno di un tipo di valore. Non vi è alcun modo per automatizzare un set di azioni attivate entro la fine della durata di un oggetto.  
   
--   Una classe nativa può essere contenuta solo in un tipo gestito come puntatore, che viene quindi allocato nell'heap nativo.  
+-   Una classe nativa può essere contenuta solo all'interno di un tipo gestito come un puntatore che viene quindi allocato nell'heap nativo.  
   
- Il risultato che si desidera ottenere è il wrapping di una piccola classe nativa in un tipo di valore anziché in un tipo di riferimento, in modo da evitare di duplicare l'allocazione per l'heap: l'heap nativo per il tipo nativo e l'heap CLR per il wrapper gestito.  Il wrapping di una classe nativa in un tipo di valore consente di evitare l'heap gestito, ma non permette di automatizzare la richiesta della memoria dell'heap nativo.  I tipi di riferimento rappresentano l'unico tipo gestito utilizzabile per il wrapping delle classi native complesse.  
+ Si desidera eseguire il wrapping di una classe nativa in un tipo di valore anziché un tipo di riferimento per evitare un'allocazione di heap doppie: nell'heap nativo per il tipo nativo e l'heap di Common Language Runtime per il wrapper gestito. Il wrapping di una classe nativa all'interno di un tipo di valore consente di evitare l'heap gestito, ma non consente di automatizzare il recupero della memoria heap nativo. Tipi di riferimento sono l'unico tipo gestito all'interno del quale eseguire il wrapping delle classi native non semplice.  
   
-## Puntatori interni  
- `Form (2)` e `Form (3)` possono fare riferimento a quasi tutti gli oggetti, sia gestiti che nativi.  Ad esempio, nelle estensioni gestite è consentito quanto segue:  
+## <a name="interior-pointers"></a>Puntatori interni  
+ `Form (2)`e `Form (3)` possono fare riferimento a quasi tutti gli oggetti (ovvero, qualsiasi elemento gestito o nativo). In tal caso, ad esempio, tutte le seguenti opzioni sono consentite nelle estensioni gestite:  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
   
-V v = { 0 };  // Form (1)  
+V v = { 0 };  // Form (1)  
 V *pv = 0;  // Form (2)  
 V __gc *pvgc = 0;  // Form (3)  
 __box V* pvbx = 0;  // Form (4)  
@@ -107,11 +107,11 @@ pv = &r->vr;        // an interior pointer to value type within a
                     //    reference type on the managed heap  
 ```  
   
- Di conseguenza, `V*` può fare riferimento a una posizione in un blocco locale \(e quindi può essere sospeso\), in ambito globale, nell'heap nativo \(ad esempio se l'oggetto a cui si riferisce è già stato eliminato\), nell'heap CLR \(dove viene rilevata la necessità di spostamento durante un processo Garbage Collection\) e all'interno di un oggetto di riferimento nell'heap CLR \(anche il puntatore interno viene rilevato in modo trasparente\).  
+ In tal caso, un `V*` possono indirizzare una posizione all'interno di un blocco locale (e pertanto può essere inesatto), in ambito globale, all'interno di nativo dell'heap (ad esempio, se l'oggetto che indirizza è già stato eliminato), all'interno dell'heap di Common Language Runtime (e pertanto verrà registrata in caso rilocazione durante l'operazione di garbage collection) e all'interno di un oggetto di riferimento nell'heap di Common Language Runtime (un puntatore interno, questo metodo viene chiamato, viene anche in modo trasparente registrato).  
   
- Nelle estensioni gestite non è possibile separare gli aspetti nativi di un `V*`, che viene infatti gestito globalmente e questo implica la possibilità che faccia riferimento a un oggetto o a un sotto\-oggetto nell'heap gestito.  
+ Nelle estensioni gestite, non è possibile separare gli aspetti nativi di un `V*`; vale a dire, viene trattata in relativi inclusi, che gestisce la possibilità di esso che punta a un oggetto o un oggetto secondario nell'heap gestito.  
   
- Nella nuova sintassi i puntatori dei tipi di valore sono di due tipi: `V*`, limitato alle posizioni dell'heap non CLR, e il puntatore interno `interior_ptr<V>`, che consente, ma non richiede, un riferimento nell'heap gestito.  
+ Nella nuova sintassi, un puntatore al tipo di valore è inserito in due tipi: `V*`, limitato alle posizioni dell'heap non CLR e il puntatore interno `interior_ptr<V>`, che consente, ma non richiede un indirizzo nell'heap gestito.  
   
 ```  
 // may not address within managed heap   
@@ -121,13 +121,13 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)` e `Form (3)` delle estensioni gestite sono mappati a `interior_ptr<V>`.  Il parametro `Form (4)` è un handle di rilevamento.  riferito all'intero oggetto sottoposto a boxing all'interno dell'heap gestito.  Nella nuova sintassi questo viene convertito in un `V^`,  
+ `Form (2)`e `Form (3)` delle estensioni gestite eseguire il mapping in `interior_ptr<V>`. `Form (4)`è un handle di rilevamento. Indirizza l'intero oggetto sottoposto a boxing all'interno dell'heap gestito. Viene convertito nella nuova sintassi in un `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    
 ```  
   
- Tutte le seguenti dichiarazioni presenti nelle estensioni gestite sono associate a puntatori interni nella nuova sintassi \(si tratta di tipi di valore nello spazio dei nomi `System`\).  
+ Le dichiarazioni seguenti nelle estensioni gestite tutte associate a puntatori interni nella nuova sintassi. (Si tratta di tipi di valore all'interno di `System` dello spazio dei nomi.)  
   
 ```  
 Int32 *pi;   // => interior_ptr<Int32> pi;  
@@ -135,19 +135,19 @@ Boolean *pb; // => interior_ptr<Boolean> pb;
 E *pe;       // => interior_ptr<E> pe; // Enumeration  
 ```  
   
- I tipi incorporati non sono considerati tipi gestiti, sebbene possano essere utilizzati come alias per i tipi nello spazio dei nomi `System`.  Di conseguenza, i seguenti mapping tra le estensioni gestite e la nuova sintassi sono validi:  
+ I tipi incorporati non sono considerati tipi gestiti, sebbene possano essere utilizzati come alias per i tipi all'interno di `System` dello spazio dei nomi. In questo modo, i seguenti mapping tra le estensioni gestite e la nuova sintassi:  
   
 ```  
 int * pi;     // => int* pi;  
 int __gc * pi2; // => interior_ptr<int> pi2;  
 ```  
   
- Quando si converte un `V*` nel programma esistente, la strategia più conservativa consiste nell'eseguirne sempre la trasformazione in un `interior_ptr<V>`.  Questa è la tecnica applicata nelle estensioni gestite.  Nella nuova sintassi il programmatore può limitare un tipo di valore a indirizzi di heap non gestiti, specificando `V*` anziché un puntatore interno.  Se durante la conversione del programma risulta possibile eseguire una chiusura transitiva di tutti gli utilizzi del programma stesso ed essere certi che l'heap gestito non contenga alcun indirizzo assegnato, è consigliabile lasciare `V*` inalterato.  
+ Quando si converte un `V*` nel programma esistente, la strategia più conservativa consiste nell'eseguirne sempre la trasformazione in un `interior_ptr<V>`. Questa è la tecnica applicata nelle estensioni gestite. Nella nuova sintassi, il programmatore ha la possibilità di limitare un tipo di valore a indirizzi di heap non gestito specificando `V*` anziché un puntatore interno. Se, durante la conversione del programma, è possibile eseguire una chiusura transitiva di tutti gli utilizzi e assicurarsi che nessun indirizzo assegnato sia all'interno dell'heap gestito, è consigliabile lasciare come `V*` funziona correttamente.  
   
-## Puntatori di blocco  
- Il processo Garbage Collector può talvolta spostare gli oggetti inclusi nell'heap CLR in altre posizioni all'interno dell'heap. Questo si verifica, generalmente, durante una fase di compressione.  Questo movimento non rappresenta un problema per quanto riguarda handle di rilevamento, riferimenti di rilevamento e puntatori interni che aggiornano tali entità in modo trasparente.  Può tuttavia presentare difficoltà se l'utente ha passato l'indirizzo di un oggetto dell'heap CLR all'esterno dell'ambiente di runtime.  In questo caso, è probabile che il movimento volatile dell'oggetto provochi un errore di runtime.  Per evitare che gli oggetti di questo tipo vengano spostati, è necessario bloccarli localmente nella posizione in cui si trovano per l'intera durata dell'utilizzo esterno.  
+## <a name="pinning-pointers"></a>Puntatori di blocco  
+ Il garbage collector può talvolta spostare gli oggetti che risiedono nell'heap CLR in diverse posizioni all'interno dell'heap, in genere durante la fase di compattazione. Questo movimento non è un problema di rilevamento handle, riferimenti di rilevamento e puntatori interni che aggiornano queste entità in modo trasparente. Questo spostamento è un problema, tuttavia, se l'utente ha passato l'indirizzo di un oggetto nell'heap CLR all'esterno dell'ambiente di runtime. In questo caso, lo spostamento dell'oggetto volatile è potrebbe provocare un errore di runtime. Per evitare che gli oggetti come questi vengano spostati, è necessario aggiungere in locale nel percorso per l'estensione per il loro utilizzo di fuori.  
   
- Per dichiarare un *puntatore di blocco* nelle estensioni gestite, è sufficiente qualificare una dichiarazione di puntatore utilizzando la parola chiave `__pin`.  Di seguito è riportato un esempio leggermente modificato rispetto alla specifica delle estensioni gestite:  
+ Nelle estensioni gestite, una *puntatore di blocco* è dichiarato specificando una dichiarazione di puntatore con il `__pin` (parola chiave). Di seguito è riportato un esempio leggermente modificato dalla specifica delle estensioni gestite:  
   
 ```  
 __gc struct H { int j; };  
@@ -157,11 +157,11 @@ int main()
    H * h = new H;  
    int __pin * k = & h -> j;  
   
-   // …  
+   // ...  
 };  
 ```  
   
- Nella nuova progettazione del linguaggio un puntatore di blocco viene dichiarato con una sintassi analoga a quella di un puntatore interno.  
+ Nella nuova progettazione lingua, un puntatore di blocco è dichiarato con una sintassi analoga a quella di un puntatore interno.  
   
 ```  
 ref struct H  
@@ -175,15 +175,15 @@ int main()
    H^ h = gcnew H;  
    pin_ptr<int> k = &h->j;  
   
-   // …  
+   // ...  
 }  
 ```  
   
- Nella nuova sintassi un puntatore di blocco rappresenta un caso speciale di puntatore interno.  I vincoli originali relativi al puntatore di blocco rimangono inalterati.  Il puntatore di blocco non può ad esempio essere utilizzato come parametro o tipo restituito di un metodo, ma può solo essere dichiarato in un oggetto locale.  La nuova sintassi prevede, tuttavia, diversi vincoli aggiuntivi.  
+ Un puntatore di blocco nella nuova sintassi è un caso speciale di un puntatore interno. I vincoli in un puntatore di blocco originali rimangono. Ad esempio non può essere utilizzato come parametro o tipo restituito di un metodo. può essere dichiarata solo in un oggetto locale. Un numero di vincoli aggiuntivi, tuttavia, è state aggiunte nella nuova sintassi.  
   
- Il valore predefinito di un puntatore di blocco è `nullptr` e non `0`.  Non è possibile inizializzare un `pin_ptr<>` o assegnare a esso il valore `0`.  Tutte le assegnazioni di `0` nel codice esistente devono essere modificate in `nullptr`.  
+ Il valore predefinito di un puntatore di blocco è `nullptr`, non `0`. Oggetto `pin_ptr<>` non può essere inizializzata o assegnato `0`. Tutte le assegnazioni di `0` nel codice esistente dovrà essere modificato per `nullptr`.  
   
- A un puntatore di blocco nelle estensioni gestite è consentito di fare riferimento a un intero oggetto, come illustrato nell'esempio seguente tratto dalla specifica delle estensioni gestite:  
+ È stato consentito un puntatore di blocco nelle estensioni gestite per risolvere un intero oggetto, come nell'esempio seguente, tratto dalla specifica delle estensioni gestite:  
   
 ```  
 __gc class G {  
@@ -197,7 +197,7 @@ void f( G * g ) {
 };  
 ```  
   
- Nella nuova sintassi, il blocco dell'intero oggetto restituito dall'espressione `new` non è supportato.  Risulta invece necessario bloccare l'indirizzo del membro interno.  Di seguito è riportato un esempio:  
+ Nella nuova sintassi, il blocco dell'intero oggetto restituito dal `new` espressione non è supportata. Piuttosto, l'indirizzo del membro interno deve essere bloccata. Di seguito è riportato un esempio:  
   
 ```  
 ref class G {  
@@ -214,8 +214,8 @@ void f( G^ g ) {
 }  
 ```  
   
-## Vedere anche  
- [Tipi di valore e relativi comportamenti \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)   
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di valore e i relativi comportamenti (C + c++ /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [interior_ptr (C + c++ /CLI)](../windows/interior-ptr-cpp-cli.md)   
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

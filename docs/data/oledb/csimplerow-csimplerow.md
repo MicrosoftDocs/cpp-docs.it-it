@@ -1,36 +1,35 @@
 ---
-title: "CSimpleRow::CSimpleRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSimpleRow"
-  - "ATL::CSimpleRow::CSimpleRow"
-  - "CSimpleRow.CSimpleRow"
-  - "ATL.CSimpleRow.CSimpleRow"
-  - "CSimpleRow::CSimpleRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSimpleRow (classe), costruttore"
+title: 'Csimplerow:: Csimplerow | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSimpleRow
+- ATL::CSimpleRow::CSimpleRow
+- CSimpleRow.CSimpleRow
+- ATL.CSimpleRow.CSimpleRow
+- CSimpleRow::CSimpleRow
+dev_langs: C++
+helpviewer_keywords: CSimpleRow class, constructor
 ms.assetid: 3968a36c-b8bb-48df-bd06-3956e64b0842
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0cd8371f1a44cb26812f6bc03e2394095447cc8b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CSimpleRow::CSimpleRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="csimplerowcsimplerow"></a>CSimpleRow::CSimpleRow
 Costruttore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,15 +38,15 @@ Costruttore.
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `iRowsetCur`  
- \[in\] Indice del rowset corrente.  
+ [in] Indice al set di righe corrente.  
   
-## Note  
- Imposta [m\_iRowset](../../data/oledb/csimplerow-m-irowset.md) a `iRowsetCur`.  
+## <a name="remarks"></a>Note  
+ Set [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) a `iRowsetCur`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CSimpleRow](../../data/oledb/csimplerow-class.md)

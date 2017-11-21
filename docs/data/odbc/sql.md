@@ -1,94 +1,94 @@
 ---
-title: "SQL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi di database [C++], SQL (istruzioni)"
-  - "ODBC [C++], implementazione SQL"
-  - "SQL [C++]"
-  - "SQL [C++], ODBC"
+title: SQL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- database classes [C++], SQL statements
+- SQL [C++]
+- SQL [C++], ODBC
+- ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# SQL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-SQL \(SQL\) è un modo per comunicare con un database relazionale e consente di definire, l'esecuzione di query, modificare e controllare i dati.  Mediante la sintassi SQL è possibile creare un'istruzione che estrae i record in base a criteri specificati.  
+# <a name="sql"></a>SQL
+SQL (Structured Query Language) è un modo per comunicare con un database relazionale che consente di definire, query, modificare e controllare i dati. Utilizzando la sintassi SQL, è possibile costruire un'istruzione che estrae i record in base ai criteri specificati.  
   
 > [!NOTE]
->  Queste informazioni si riferiscono alle classi ODBC MFC.  Se si utilizzano le classi DAO di MFC, confrontare la sintassi SQL del modulo di gestione di database Microsoft Jet e quella ANSI consultando la Guida di DAO.  
+>  Queste informazioni si applicano alle classi ODBC MFC. Se si lavora con le classi DAO MFC, vedere il confronto di Database di gestione Microsoft Jet ANSI SQL e la Guida di DAO.  
   
- Le istruzioni SQL iniziano con una parola chiave rappresentata da un verbo, ad esempio **CREATE** o **SELECT**.  SQL è un linguaggio estremamente potente, in quanto una singola istruzione può interessare un'intera tabella.  
+ Istruzioni SQL iniziano con un verbo di parola chiave, ad esempio **crea** o **selezionare**. SQL è un linguaggio molto potente. una singola istruzione può influire su un'intera tabella.  
   
- Esistono molte versioni di SQL, ciascuna sviluppata tenendo conto di uno specifico DBMS.  Le classi di database MFC riconoscono un insieme di istruzioni corrispondente alla bozza di specifica SQL X\/Open e CAE \(Common Applications Environment\) di SQL Access Group \(1991\).  Per informazioni sulla sintassi di queste istruzioni, vedere l'appendice C in *ODBC SDK* *Programmer's Reference* nel CD di MSDN Library.  
+ Esistono molte versioni di SQL, ciascuna sviluppata con un determinato DBMS presente. Le classi di database MFC riconoscono un set di istruzioni SQL che corrisponde alla X / Open e bozza di specifica SQL SQL accesso gruppo comuni applicazioni ambiente CAE () (1991). Per informazioni sulla sintassi di queste istruzioni, vedere l'appendice C nel *ODBC SDK* *di riferimento per programmatori* sul CD di MSDN Library.  
   
- In questo argomento vengono fornite informazioni su:  
+ Questo argomento viene illustrato:  
   
--   [Open Database Connectivity \(ODBC\)](#_core_open_database_connectivity_.28.odbc.29).  
+-   [La relazione tra ODBC e SQL](#_core_open_database_connectivity_.28.odbc.29).  
   
--   [Classi di database](#_core_the_database_classes).  
+-   [Parole chiave SQL più comuni utilizzate dalle classi di database](#_core_the_database_classes).  
   
--   [Utilizzo delle istruzioni SQL nelle classi di database](#_core_how_the_database_classes_use_sql).  
+-   [Come le classi di database utilizzano SQL](#_core_how_the_database_classes_use_sql).  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> Open Database Connectivity \(ODBC\)  
- Le classi di database vengono implementate mediante ODBC, che utilizza il linguaggio SQL in un'interfaccia a livello di chiamata anziché incorporare i comandi SQL nel codice.  ODBC utilizza SQL per comunicare con un'[origine dati](../../data/odbc/data-source-odbc.md) tramite i driver ODBC.  Questi driver interpretano e traducono, se necessario, le istruzioni SQL, in modo che sia possibile utilizzarle con uno specifico formato di database, quale Microsoft Access.  Per ulteriori informazioni sull'utilizzo di SQL in ODBC, vedere [ODBC](../../data/odbc/odbc-basics.md) e ODBC SDK *Programmer's Reference* nel CD di MSDN Library.  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>Open Database Connectivity (ODBC)  
+ Le classi di database vengono implementate con ODBC, che utilizza SQL in un'interfaccia a livello di chiamata anziché incorporare i comandi SQL nel codice. Utilizzo di ODBC SQL per comunicare con un [origine dati](../../data/odbc/data-source-odbc.md) tramite driver ODBC. Questi driver interpretano l'istruzione SQL e viene convertito, se necessario, per l'utilizzo con un formato di database specifico, ad esempio Microsoft Access. Per ulteriori informazioni sull'utilizzo di ODBC in SQL, vedere [ODBC](../../data/odbc/odbc-basics.md) e il SDK di ODBC *di riferimento per programmatori* sul CD di MSDN Library.  
   
-##  <a name="_core_the_database_classes"></a> Classi di database  
- Le classi di database consentono di modificare e aggiornare i dati in un'[origine dati](../../data/odbc/data-source-odbc.md) esistente.  La [Creazione guidata applicazioni MFC](../../mfc/reference/database-support-mfc-application-wizard.md), la [Creazione guidata consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md), a cui è possibile accedere tramite il comando **Aggiungi classe**, e le classi di database creano automaticamente la maggior parte delle istruzioni SQL.  
+##  <a name="_core_the_database_classes"></a>Classi di database  
+ Le classi di database sono progettate per consentire di modificare e aggiornare i dati in un oggetto esistente [origine dati](../../data/odbc/data-source-odbc.md). Il [Creazione guidata applicazione MFC](../../mfc/reference/database-support-mfc-application-wizard.md), [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (tramite **Aggiungi classe**), e le classi di database costruire la maggior parte delle istruzioni SQL per l'utente.  
   
- Le classi di database utilizzano una parte del linguaggio SQL conosciuta come DML \(Data Manipulation Language\).  Questi comandi consentono di utilizzare tutta o una parte dell'origine dati, aggiungere nuovi record, modificare ed eliminare record esistenti.  Nella tabella riportata di seguito sono elencate le parole chiave SQL più comuni e il relativo utilizzo nelle classi di database.  
+ Le classi di database utilizzano una parte di SQL, noto come Data Manipulation Language (DML). Questi comandi consentono di utilizzare tutta o parte dell'origine dati, aggiungere nuovi record, record di modifica ed eliminare record. Nella tabella seguente sono elencate le parole chiave SQL più comuni e le modalità con le classi di database utilizzano.  
   
-### Alcune parole chiave SQL comuni  
+### <a name="some-common-sql-keywords"></a>Alcune parole chiave SQL comuni  
   
-|Parola chiave SQL|Utilizzo nelle classi di database e nelle procedure guidate|  
-|-----------------------|-----------------------------------------------------------------|  
-|**SELECT**|Per identificare le tabelle e le colonne dell'origine dati da utilizzare.|  
-|**WHERE**|Per applicare un filtro che limiti la selezione.|  
-|**ORDER BY**|Per applicare un criterio di ordinamento al recordset.|  
-|**INS**|Per aggiungere nuovi record a un recordset.|  
-|**DELETE**|Per eliminare record da un recordset.|  
-|**UPDATE**|Per modificare i campi di un record.|  
+|La parola chiave SQL|Utilizzano le procedure guidate e le classi di database|  
+|-----------------|---------------------------------------------|  
+|**SELEZIONARE**|Per identificare quali tabelle e colonne nell'origine dati devono essere utilizzati.|  
+|**DOVE**|Per applicare un filtro che consente di limitare la selezione.|  
+|**ORDER BY**|Per applicare un ordinamento per il recordset.|  
+|**INSERIMENTO**|Per aggiungere nuovi record di un recordset.|  
+|**ELIMINARE**|Per eliminare i record da un oggetto recordset.|  
+|**AGGIORNAMENTO**|Per modificare i campi di un record.|  
   
- Le classi di database riconoscono inoltre le istruzioni ODBC **CALL**, che è possibile utilizzare per chiamare una query già definita \(o stored procedure\) in alcune origini dati.  Il driver del database ODBC interpreta queste istruzioni e sostituisce il comando appropriato per ciascun DBMS.  
+ Inoltre, le classi di database riconoscono ODBC **CHIAMARE** istruzioni, è possibile utilizzare per chiamare una query già definita (o una stored procedure) su alcune origini dati. Il driver di database ODBC interpreta queste istruzioni e sostituisce il comando appropriato per ogni sistema DBMS.  
   
 > [!NOTE]
->  Non tutti i DBMS supportano le istruzioni **CALL**.  
+>  Non tutti i DBMS supportano **CHIAMARE** istruzioni.  
   
- Se le classi non sono in grado di riconoscere un'istruzione fornita dall'utente in `CRecordset::Open`, tale istruzione verrà interpretata come il nome di una tabella.  
+ Se le classi sia in grado di riconoscere un'istruzione fornita dall'utente in `CRecordset::Open`, viene interpretato come un nome di tabella.  
   
- Per una spiegazione sulla creazione delle istruzioni SQL nel framework, vedere [Recordset: selezione dei record \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: personalizzazione dell'istruzione SQL del recordset \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md).  
+ Per una spiegazione del modo il framework crea istruzioni SQL, vedere [Recordset: selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) e [SQL: del Recordset SQL istruzione (ODBC personalizzazione)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).  
   
- I database SQL utilizzano tipi di dati simili a quelli utilizzati in C e C\+\+.  Per una descrizione di tali somiglianze, vedere [SQL: tipi di dati SQL e C\+\+ \(ODBC\)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
+ Database SQL utilizzano tipi di dati simili a quelle utilizzate in C e C++. Per una discussione su queste analogie, vedere [SQL: tipi di dati C++ (ODBC) e SQL](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
   
- È possibile ottenere ulteriori informazioni sulle istruzioni SQL, compreso un elenco delle istruzioni SQL supportate, i tipi di dati, la sintassi di base SQL e un elenco delle pubblicazioni consigliate su SQL in *ODBC SDK* *Programmer's Reference* nel CD di MSDN Library.  
+ È possibile trovare altre informazioni su SQL, incluso un elenco di istruzioni SQL supportate, i tipi di dati, la sintassi di base SQL e un elenco delle pubblicazioni consigliate su SQL, il *ODBC SDK* *di riferimento per programmatori*  sul CD di MSDN Library.  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a> Utilizzo delle istruzioni SQL nelle classi di database  
- I recordset derivati dalle classi di database comunicano con un'origine dati mediante ODBC, che, a sua volta, recupera i record dall'origine dati inviando istruzioni SQL.  In questo argomento viene illustrata la relazione tra le classi di database e SQL.  
+##  <a name="_core_how_the_database_classes_use_sql"></a>Utilizzano di SQL le classi di Database  
+ I recordset derivati dalle classi di database utilizzano ODBC per comunicare con un'origine dati ODBC recupera i record dall'origine dati mediante l'invio di istruzioni SQL. Questo argomento illustra la relazione tra le classi di database e SQL.  
   
- Un recordset crea un'istruzione SQL compilando gli elementi di un'istruzione SQL in una `CString`.  La stringa viene creata come un'istruzione **SELECT** che restituisce un insieme di record.  
+ Un recordset crea un'istruzione SQL compilando le parti di un'istruzione SQL in un `CString`. La stringa viene creata come un **selezionare** istruzione che restituisce un set di record.  
   
- Quando il recordset chiama ODBC per inviare un'istruzione SQL all'origine dati, Gestione driver ODBC passa l'istruzione al driver ODBC che la invia al DBMS sottostante.  Il DBMS restituisce come risultato un insieme di record e il driver ODBC restituisce i record all'applicazione.  Le classi di database consentono al programma di accedere al gruppo di risultati in una classe C\+\+ indipendente dai tipi derivata da `CRecordset`.  
+ Quando il recordset chiama ODBC per inviare un'istruzione SQL per l'origine dati, gestione Driver ODBC passa l'istruzione per il driver ODBC e il driver invia al sistema DBMS sottostante. Il sistema DBMS restituisce un set di risultati di record e il driver ODBC restituisce i record per l'applicazione. Le classi di database consentono l'accesso al programma il set di risultati in una classe C++ indipendente dai tipi derivati da `CRecordset`.  
   
- Negli argomenti riportati di seguito vengono fornite ulteriori informazioni sulla modalità di utilizzo delle istruzioni SQL nelle classi di database.  
+ Gli argomenti seguenti forniscono ulteriori informazioni sulla modalità di utilizzo di classi di database SQL:  
   
--   [SQL: personalizzazione dell'istruzione SQL del recordset \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [SQL: Personalizzazione di istruzione SQL del Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
--   [SQL: tipi di dati SQL e C\+\+ \(ODBC\)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
+-   [SQL: tipi di dati SQL e C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)  
   
--   [SQL: esecuzione di chiamate SQL dirette \(ODBC\)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
+-   [SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
   
-## Vedere anche  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

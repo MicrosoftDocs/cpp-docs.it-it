@@ -1,42 +1,40 @@
 ---
-title: "hash_multimap::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_compare (membro) [STL/CLR]"
+title: 'hash_multimap:: key_compare (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: 011f5bc3-0e40-48fe-9d6f-f6960210a27a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3fb355bce946b1892e14b5de2ba09d8e980c71ff
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il delegato di ordinamento per due chiavi.  
+# <a name="hashmultimapkeycompare-stlclr"></a>hash_multimap::key_compare (STL/CLR)
+Delegato per due chiavi di ordinamento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## Note  
- Il tipo è un sinonimo del delegato che determina l'ordinamento degli argomenti chiave.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo per il delegato che determina l'ordine dei relativi argomenti di chiave.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_key_compare.cpp   
@@ -72,19 +70,23 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= True**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## Requisiti  
- **Intestazione:** \<cliext\/hash\_map\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **Spazio dei nomi:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_comp](../dotnet/hash-multimap-key-comp-stl-clr.md)   
- [hash\_multimap::key\_type](../dotnet/hash-multimap-key-type-stl-clr.md)   
- [hash\_multimap::value\_compare](../dotnet/hash-multimap-value-compare-stl-clr.md)
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_comp (STL/CLR)](../dotnet/hash-multimap-key-comp-stl-clr.md)   
+ [hash_multimap:: KEY_TYPE (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)   
+ [hash_multimap::value_compare (STL/CLR)](../dotnet/hash-multimap-value-compare-stl-clr.md)

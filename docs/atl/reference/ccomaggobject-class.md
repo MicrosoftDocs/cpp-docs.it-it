@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLCOM/ATL::CComAggObject::QueryInterface
 - ATLCOM/ATL::CComAggObject::Release
 - ATLCOM/ATL::CComAggObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2f580a33b5b92f44e40a3da2e1f7111cbb8ede88
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 0af699e61f487ba8af836a4f544ed4c338d70b4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 Questa classe implementa il [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) interfaccia per un oggetto aggregato. Per definizione, un oggetto aggregato è contenuto all'interno di un oggetto esterno. Il `CComAggObject` è simile alla classe il [CComObject classe](../../atl/reference/ccomobject-class.md), ad eccezione del fatto che espone un'interfaccia che è direttamente accessibile ai client esterni.  
@@ -80,7 +63,7 @@ class CComAggObject : public IUnknown,
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|Incrementa il conteggio dei riferimenti per l'oggetto aggregato.|  
-|[CComAggObject::CreateInstance](#createinstance)|Questa funzione statica consente di creare un nuovo **CComAggObject** `contained` **>** oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComAggObject::CreateInstance](#createinstance)|Questa funzione statica consente di creare un nuovo **CComAggObject <** `contained`  **>**  oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|Esegue l'inizializzazione finale di `m_contained`.|  
 |[CComAggObject::FinalRelease](#finalrelease)|Esegue la distruzione finale di `m_contained`.|  
 |[CComAggObject::QueryInterface](#queryinterface)|Recupera un puntatore all'interfaccia richiesta.|  
@@ -146,7 +129,7 @@ CComAggObject(void* pv);
  Libera tutte le risorse allocate, chiamate [FinalRelease](#finalrelease), e decrementa il modulo conteggio dei blocchi.  
   
 ##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- Questa funzione statica consente di creare un nuovo **CComAggObject** `contained` **>** oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Questa funzione statica consente di creare un nuovo **CComAggObject <** `contained`  **>**  oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -156,7 +139,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametri  
  `pp`  
- [out] Un puntatore a un **CComAggObject\<***contenuti* **>** puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
+ [out] Un puntatore a un **CComAggObject\<***contenuti*  **>**  puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
@@ -239,4 +222,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

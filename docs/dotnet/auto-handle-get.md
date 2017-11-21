@@ -1,44 +1,43 @@
 ---
-title: "auto_handle::get | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::get"
-  - "msclr::auto_handle::get"
-  - "auto_handle.get"
-  - "msclr.auto_handle.get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::get"
+title: auto_handle::Get | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::get
+- msclr::auto_handle::get
+- auto_handle.get
+- msclr.auto_handle.get
+dev_langs: C++
+helpviewer_keywords: auto_handle::get
 ms.assetid: 8c75727b-8f21-44b3-be3e-7eb8858da4f7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b8442ec99e19099e5f77ec6f9010e0f8fc235f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleget"></a>auto_handle::get
 Ottiene l'oggetto contenuto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 _element_type ^ get();  
 ```  
   
-## Valore restituito  
- L'oggetto contenuto.  
+## <a name="return-value"></a>Valore restituito  
+ Oggetto contenuto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_handle_get.cpp  
@@ -78,15 +77,18 @@ int main() {
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Fare attenzione innanzitutto A\!**  
-**Fare attenzione innanzitutto A\!**  
-**Fare attenzione innanzitutto A\!**  
-**in ClassA destructor:first**   
-## Requisiti  
- msclr \<\\ auto\_handle.h di**File di intestazione** \>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+Hello from first A!  
+Hello from first A!  
+in ClassA destructor:first  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_handle.h >  
   
-## Vedere anche  
- [Membri auto\_handle](../dotnet/auto-handle-members.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_handle](../dotnet/auto-handle-members.md)

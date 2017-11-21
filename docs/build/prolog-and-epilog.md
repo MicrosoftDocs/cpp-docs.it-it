@@ -1,32 +1,32 @@
 ---
-title: "Prologo ed epilogo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Prologo ed epilogo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Prologo ed epilogo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per ciascuna funzione che alloca spazio dello stack, chiama altre funzioni, salva il contenuto dei registri non volatili o utilizza la gestione delle eccezioni deve essere definito un prologo, i cui indirizzi limite sono descritti nei dati di rimozione associati alla voce corrispondente nella tabella delle funzioni \(vedere [Gestione delle eccezioni \(x64\)](../build/exception-handling-x64.md)\).  Il prologo salva i registri di argomento nei relativi indirizzi iniziali, se necessario, inserisce i registri non volatili nello stack, alloca la parte fissa dello stack per le variabili locali e temporanee ed eventualmente definisce un puntatore ai frame.  I dati di rimozione associati devono descrivere l'azione del prologo nonché fornire le informazioni necessarie per annullare gli effetti del codice di prologo.  
+# <a name="prolog-and-epilog"></a>Prologo ed epilogo
+Ogni funzione alloca spazio dello stack, chiama altre funzioni, consente di salvare i registri non volatili o utilizza la gestione delle eccezioni deve essere un prologo, i cui indirizzi limite sono descritti nei dati di rimozione associati alla voce di tabella rispettiva funzione (vedere [Eccezioni (x64)](../build/exception-handling-x64.md)). Il prologo Salva argomento registri nei relativi indirizzi iniziali se necessario, inserisce i registri non volatili nello stack, alloca la parte fissa dello stack per le variabili locali e i temporanei e facoltativamente stabilisce un puntatore ai frame. I dati di rimozione deve descrivere l'azione del prologo e deve fornire le informazioni necessarie per annullare gli effetti del codice di prologo.  
   
- Se la dimensione dell'allocazione fissa dello stack è maggiore di una pagina, ossia è maggiore di 4096 byte, è possibile che l'allocazione dello stack si estenda su più pagine di memoria virtuale. Di conseguenza, prima di eseguire effettivamente l'allocazione, è necessario effettuare un controllo.  A questo scopo, è disponibile una routine speciale che può essere chiamata dal prologo e che non distrugge gli eventuali registri di argomento.  
+ Se l'allocazione fissa nello stack è più di una pagina (ovvero, maggiore di 4096 byte), è possibile che l'allocazione dello stack potrebbe estendersi su più pagine di memoria virtuale e, pertanto, è necessario controllare l'allocazione prima è effettivamente allocata. A questo scopo, viene fornita una speciale routine che viene chiamata dal prologo e che non elimina i registri di argomento.  
   
- Il metodo consigliato per il salvataggio dei registri non volatili consiste nello spostamento di tali registri nello stack prima dell'esecuzione dell'allocazione fissa dello stack.  Se quest'ultima è stata eseguita prima del salvataggio dei registri non volatili, è molto probabile che sia necessario uno spostamento a 32 bit per indirizzare l'area dei registri salvati. Le operazioni di inserimento dei registri sono simili a quelle di spostamento e devono mantenere tale velocità anche nell'immediato futuro, nonostante la dipendenza implicita tra i vari inserimenti.  Il salvataggio dei registri non volatili può essere effettuato in qualsiasi ordine.  Tuttavia, la prima operazione da eseguire nel prologo su un registro non volatile deve essere il salvataggio del registro.  
+ Il metodo preferito per il salvataggio dei registri non volatili consiste nello spostare li nello stack prima dell'allocazione fissa dello stack. Se l'allocazione fissa dello stack sono stata eseguita prima di registri non volatili salvati, probabilmente sarà necessario all'indirizzo uno spostamento a 32 bit salvati registrare area (quest'ultima, push di registri sono veloci come si sposta e deve rimanere ad in futuro malgrado la dipendenza implicita tra push). I registri non volatili possono essere salvati in qualsiasi ordine. Tuttavia, il primo utilizzo di un registro non volatile nel prologo deve essere salvarlo.  
   
- Di seguito è riportato il codice di un tipico prologo:  
+ Il codice di un tipico prologo potrebbe essere:  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -38,9 +38,9 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- In questo prologo viene memorizzato il contenuto del registro di argomento RCX nella relativa posizione iniziale, vengono salvati i registri non volatili R13\-R15, viene allocata la parte fissa dello stack frame e viene definito un puntatore ai frame che punti a 128 byte nell'area di allocazione fissa.  L'utilizzo di un offset consente di indirizzare una parte maggiore dell'area di allocazione fissa, con offset di 1 byte.  
+ In questo prologo archivia il Registro di argomento RCX nella relativa posizione iniziale, non volatile Salva registra R13 R15 alloca la parte fissa dello stack frame e stabilisce un puntatore ai frame che punti a 128 byte nell'area di allocazione fissa. Utilizzo di un offset consente più dell'area di allocazione fissa essere risolti con offset di 1 byte.  
   
- Se la dimensione dell'allocazione fissa è maggiore o uguale a una pagina di memoria, prima di modificare RSP sarà necessario chiamare una funzione di supporto.  Quest'ultima, \_\_chkstk, ha il compito di sondare l'intervallo dello stack da allocare e assicura che lo stack venga esteso correttamente.  In questo caso, il precedente esempio di prologo diventerebbe:  
+ Se la dimensione di allocazione fissa è maggiore o uguale a una pagina di memoria, una funzione di supporto deve essere chiamata prima di modificare RSP. Questo chkstk, ha il è responsabile per l'individuazione tramite probe l'intervallo dello stack da allocare, per assicurarsi che lo stack viene esteso in modo corretto. In tal caso, il precedente esempio di prologo invece sarebbe:  
   
 ```  
 mov       [RSP + 8], RCX  
@@ -54,13 +54,13 @@ lea      R13, 128[RSP]
 ...  
 ```  
   
- La funzione di supporto \_\_chkstk non modificherà gli eventuali registri diversi da R10, R11 e i codici di condizione.  In particolare, restituirà RAX invariato e lascerà intatti tutti i registri non volatili e i registri di argomento.  
+ Il supporto di chkstk non modificherà qualsiasi registri diversi da R10, R11 e i codici di condizione. In particolare, verrà restituito RAX invariato e lasciare tutti i registri non volatili e registri di passaggio di argomenti senza modificati.  
   
- Deve essere presente un codice di epilogo in corrispondenza di ciascuna uscita a una funzione.  In genere viene definito un unico codice di prologo, mentre possono essere presenti più codici di epilogo.  Il codice di epilogo taglia lo stack in corrispondenza della relativa dimensione di allocazione fissa, se necessario, dealloca l'allocazione fissa dello stack, ripristina i registri non volatili estraendo i rispettivi valori salvati dallo stack e quindi restituisce il controllo.  
+ Codice di epilogo è presente in ogni uscita per una funzione. Mentre è in genere solo un prologo, possono essere presenti più codici di epilogo. Codice di epilogo taglia lo stack per le dimensioni di allocazione fissa (se necessario), ne esegue l'allocazione fissa dello stack, consente di ripristinare registri non volatili visualizzando i valori salvati dallo stack e restituisce.  
   
- Affinché il codice di rimozione possa eseguire correttamente la rimozione attraverso eccezioni e interrupt, è necessario che il codice di epilogo rispetti un set di regole ben definito.  Questo consente di ridurre la quantità di dati di rimozione richiesti, poiché non sono necessari dati aggiuntivi per descrivere ciascun epilogo.  Al contrario, il codice di rimozione può determinare che un epilogo è in fase di esecuzione analizzando un flusso di codice per identificare un epilogo.  
+ Il codice di epilogo deve seguire una serie di regole per il codice di rimozione precise per eseguire correttamente la rimozione tramite le eccezioni e gli interrupt. Questo riduce la quantità di dati richiesti, di rimozione perché non di dati aggiuntivi necessari per descrivere ogni epilogo. Al contrario, il codice di rimozione è possibile determinare che un epilogo è in esecuzione per l'analisi in avanti di un flusso di codice per identificare un epilogo.  
   
- Se nella funzione non viene utilizzato alcun puntatore ai frame, l'epilogo deve prima deallocare la parte fissa dello stack, quindi recuperare i registri non volatili e infine restituire il controllo alla funzione chiamante.  Di seguito è riportato un esempio:  
+ Se non viene utilizzato alcun puntatore ai frame in funzione, quindi l'epilogo deve prima di deallocare la parte fissa dello stack di registri non volatili e il controllo viene restituito alla funzione chiamante. Di seguito è riportato un esempio:  
   
 ```  
 add      RSP, fixed-allocation-size  
@@ -70,7 +70,7 @@ pop      R15
 ret  
 ```  
   
- Se nella funzione viene utilizzato un puntatore ai frame, lo stack deve essere tagliato in corrispondenza della relativa allocazione fissa prima dell'esecuzione dell'epilogo.  Questa operazione non è inclusa tecnicamente nell'epilogo.  Ad esempio, è possibile utilizzare il seguente epilogo per annullare gli effetti del precedente codice di prologo:  
+ Se un puntatore ai frame viene utilizzato nella funzione, lo stack deve essere tagliato nell'allocazione fissa prima dell'esecuzione dell'epilogo. Si tratta tecnicamente non fa parte dell'epilogo. Ad esempio, l'epilogo seguente potrebbe essere utilizzato per annullare il prologo utilizzato in precedenza:  
   
 ```  
 lea      RSP, -128[R13]  
@@ -82,21 +82,21 @@ pop      R15
 ret  
 ```  
   
- In pratica, quando si utilizza un puntatore ai frame, non esiste alcun motivo per modificare RSP in due passaggi. Di conseguenza, è possibile utilizzare in alternativa il seguente epilogo:  
+ In pratica, quando viene utilizzato un puntatore ai frame, non vi è alcun motivo per cui modificare RSP in due passaggi, in modo che verrà utilizzato invece il seguente epilogo:  
   
 ```  
-lea      RSP, fixed-allocation-size – 128[R13]  
+lea      RSP, fixed-allocation-size - 128[R13]  
 pop      R13  
 pop      R14  
 pop      R15  
 ret  
 ```  
   
- Un codice di epilogo deve  essere costituito necessariamente da un'istruzione `add RSP,constant` o `lea RSP,constant[FPReg]`, seguita da una serie di zero o più estrazioni di registro a 8 byte e da un'istruzione ret o jmp.  Nell'epilogo è consentito soltanto un sottoinsieme di istruzioni jmp,  ovvero quelle appartenenti alla classe di jmp con riferimenti di memoria ModRM in cui il valore del campo mod di ModRM è 00.  Non è possibile utilizzare nell'epilogo istruzioni jmp in cui il valore del campo mod di ModRM è 01 o 10.  Per ulteriori informazioni sui riferimenti ModRM consentiti, vedere la tabella A\-15 nel Volume 3 "General Purpose and System Instructions" di AMD x86\-64 Architecture Programmer’s Manual.  Non può essere presente alcun altro codice.  In particolare, non è possibile specificare alcuna operazione all'interno di un epilogo, compreso il caricamento di un valore restituito.  
+ Questi sono i formati validi solo per un epilogo. Essere costituito un `add RSP,constant` o `lea RSP,constant[FPReg]`, seguito da una serie di zero o più estrazioni di registro a 8 byte e una restituzione o un jmp. (Solo un subset di istruzioni jmp sono consentiti nell'epilogo. Si tratta esclusivamente di classe di jmp con riferimenti a memoria ModRM in campo mod ModRM valore 00. Non è consentito l'uso di jmp nell'epilogo con il valore di campo mod ModRM 01 o 10. Tabella vedere A-15 AMD x86-64 Architecture Programmer manuale Volume 3: utilizzo generale e istruzioni di sistema, per ulteriori informazioni sui riferimenti ModRM consentiti.). Nessun altro codice può essere visualizzati. In particolare, non può essere pianificato all'interno di un epilogo, compreso il caricamento di un valore restituito.  
   
- Tenere presente che, quando non si utilizza un puntatore ai frame, l'epilogo deve utilizzare l'istruzione `add RSP,constant` per deallocare la parte fissa dello stack.  Non è possibile utilizzare l'istruzione `lea RSP,constant[RSP]`.  Questa restrizione è stata imposta per limitare il numero dei modelli che devono essere riconosciuti dal codice di rimozione durante la ricerca degli epiloghi.  
+ Si noti che, quando non viene utilizzato un puntatore ai frame, l'epilogo deve utilizzare `add RSP,constant` per deallocare la parte fissa dello stack. Non è possibile utilizzare `lea RSP,constant[RSP]` invece. Questa restrizione non esiste, pertanto il codice di rimozione ha meno di modelli per riconoscere quando si cerca di epiloghi.  
   
- Il rispetto di queste regole consente al codice di rimozione di determinare che un epilogo è attualmente in esecuzione e di simulare l'esecuzione del resto dell'epilogo in modo da ricreare il contesto della funzione chiamante.  
+ Seguendo queste regole consente il codice di rimozione per determinare che un epilogo è attualmente in esecuzione e per simulare l'esecuzione del resto dell'epilogo in modo da ricreare il contesto della funzione chiamante.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Convenzioni del software x64](../build/x64-software-conventions.md)

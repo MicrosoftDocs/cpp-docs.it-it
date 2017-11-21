@@ -1,35 +1,34 @@
 ---
-title: "Problemi di versione per tipi di valore annidati in tipi nativi (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nogc (dichiarazioni di tipi)"
-  - "__value (parola chiave), problemi nell'annidamento"
+title: Problemi di versione per tipi di valore annidati in tipi nativi (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Problemi di versione per tipi di valore annidati in tipi nativi (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si consideri un componente assembly firmato con nome sicuro che viene utilizzato per compilare un assembly client.  Tale componente contiene un tipo di valore che viene utilizzato nel client come tipo per un membro di una classe, una matrice o un'unione nativa.  Se in una versione successiva del componente viene modificato il layout o la dimensione del tipo di valore, sarà necessario ricompilare il client.  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemi di versione per tipi di valore annidati in tipi nativi (C++/CLI)
+Si consideri un componente di assembly firmato (nome sicuro) utilizzato per compilare un assembly client. Il componente contiene un tipo di valore utilizzato nel client come il tipo per un membro di un'unione nativa, una classe o una matrice. Se una versione futura del componente viene modificato il layout del tipo di valore o la dimensione, è necessario ricompilare il client.  
   
- Creare un file di chiave con [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) \(`sn -k mykey.snk`\).  
+ Creare un file di chiave con [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato il componente.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente è il componente.  
   
 ```  
 // nested_value_types.cpp  
@@ -46,8 +45,8 @@ public value struct S {
 };  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato il client:  
+## <a name="example"></a>Esempio  
+ In questo esempio è il client:  
   
 ```  
 // nested_value_types_2.cpp  
@@ -72,7 +71,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 S.i = 5  
@@ -81,8 +80,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### Commenti  
- Se tuttavia si aggiunge un altro membro a `struct S` in nested\_value\_types.cpp, ad esempio `double d;`, e si ricompila il componente senza ricompilare il client, verrà generata un'eccezione non gestita di tipo <xref:System.IO.FileLoadException?displayProperty=fullName>.  
+### <a name="comments"></a>Commenti  
+ Tuttavia, se si aggiunge un altro membro `struct S` in nested_value_types, (ad esempio, `double d;`) e ricompilare il componente senza ricompilare il client, il risultato è un'eccezione non gestita (di tipo <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
-## Vedere anche  
- [Tipi gestiti](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi gestiti (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

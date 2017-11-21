@@ -1,52 +1,52 @@
 ---
-title: "Properties and Property Pages Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.properties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proprietà [ATL]"
-  - "proprietà [ATL], classi"
-  - "proprietà (pagine), classi"
+title: "Pagine e proprietà delle classi (ATL) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.properties
+dev_langs: C++
+helpviewer_keywords:
+- property pages, classes
+- properties [ATL], classes
+- properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e8885876d36dcc81169be990c7001aa3052253e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Properties and Property Pages Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le seguenti proprietà e pagine delle proprietà di supporto delle classi:  
+# <a name="properties-and-property-pages-classes"></a>Le proprietà e le classi di pagine delle proprietà
+Le classi seguenti supportano le proprietà e pagine delle proprietà:  
   
--   [CComDispatchDriver](../Topic/CComDispatchDriver.md) recupera o imposta le proprietà di un oggetto tramite un puntatore `IDispatch`.  
+-   [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) Recupera o imposta le proprietà di un oggetto tramite un `IDispatch` puntatore.  
   
 -   [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) implementa le proprietà predefinite supportate da ATL.  
   
--   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) accede alle informazioni nelle pagine delle proprietà di un oggetto.  
+-   [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md) accede alle informazioni nelle pagine delle proprietà dell'oggetto.  
   
--   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) archivia le proprietà di un oggetto in un contenitore di proprietà fornito.  
+-   [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) archivia le proprietà di un oggetto in un contenitore di proprietà specificato dal client.  
   
--   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gestisce una pagina delle proprietà particolare all'interno di una finestra delle proprietà.  
+-   [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) gestisce una determinata pagina delle proprietà all'interno di una finestra delle proprietà.  
   
--   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) simile a `IPropertyPageImpl`, ma consente inoltre a un client selezionare una proprietà specifica in una pagina delle proprietà.  
+-   [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) simile a `IPropertyPageImpl`, ma consente anche di un client selezionare una proprietà specifica in una pagina delle proprietà.  
   
--   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) ottiene i CLSID per le pagine delle proprietà supportata da un oggetto.  
+-   [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) Ottiene il CLSID per le pagine delle proprietà supportate da un oggetto.  
   
-## Articoli correlati  
- [L'esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
+## <a name="related-articles"></a>Articoli correlati  
+ [Esercitazione ATL](../atl/active-template-library-atl-tutorial.md)  
   
  [Pagine delle proprietà COM ATL](../atl/atl-com-property-pages.md)  
   
-## Vedere anche  
- [Class Overview](../atl/atl-class-overview.md)   
- [Property Map Macros](../atl/reference/property-map-macros.md)
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sulla classe](../atl/atl-class-overview.md)   
+ [Macro della mappa proprietà](../atl/reference/property-map-macros.md)
+

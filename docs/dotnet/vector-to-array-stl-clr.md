@@ -1,41 +1,39 @@
 ---
-title: "vector::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membro) [STL/CLR]"
+title: Vector::to_array (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 00e1f1c6-6ef5-4238-b95a-411059e0b69b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47904e1845d4f2d9abb8e289bfe5337bd25892aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la sequenza controllata in un nuovo array.  
+# <a name="vectortoarray-stlclr"></a>vector::to_array (STL/CLR)
+La sequenza controllata viene copiata in una nuova matrice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Note  
- La funzione membro restituisce un array contenente la sequenza controllata.  Utilizzarla per ottenere una copia della sequenza controllata in forma di array.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/vector\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 2) C4094 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4094"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4094"
+title: Compilatore (livello 2) Avviso C4094 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4094
+dev_langs: C++
+helpviewer_keywords: C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 01b52b13876e30528632dec13dbaee60acf886fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 2) C4094
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'token' senza tag non dichiara alcun simbolo  
+# <a name="compiler-warning-level-2-c4094"></a>Compilatore (livello 2) Avviso C4094
+tag 'token' non dichiara alcun simbolo  
   
- Il compilatore ha rilevato una dichiarazione vuota con una struttura, un'unione o una classe senza tag.  La dichiarazione viene ignorata.  
+ Il compilatore ha rilevato una dichiarazione vuota con un tag di struttura, unione o classe. La dichiarazione viene ignorata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // C4094.cpp  
@@ -42,4 +40,4 @@ int main()
 }  
 ```  
   
- Questa condizione genera un errore in compatibilità ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).
+ Questa condizione genera un errore in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

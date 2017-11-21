@@ -1,41 +1,39 @@
 ---
-title: "deque::push_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::push_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_front (membro) [STL/CLR]"
+title: 'deque:: push_front (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::push_front
+dev_langs: C++
+helpviewer_keywords: push_front member [STL/CLR]
 ms.assetid: a452c94e-abad-4e28-af41-c73ec805ec6f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 110c1eb538c08b8bba891433e639a0f6559a6d1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# deque::push_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Aggiunge un nuovo primo elemento.  
+# <a name="dequepushfront-stlclr"></a>deque::push_front (STL/CLR)
+Aggiunge un nuovo elemento di primo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void push_front(value_type val);  
 ```  
   
-## Note  
- La funzione membro inserire un elemento con valore `val` all'inizio della sequenza selezionata.  Utilizzarla per anteporre un altro elemento a deque.  
+## <a name="remarks"></a>Note  
+ La funzione membro inserisce un elemento con valore `val` all'inizio della sequenza controllata. Utilizzarla per anteporre un altro elemento di deque.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_deque_push_front.cpp   
@@ -58,14 +56,17 @@ int main()
   
 ```  
   
-  **c a b**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+c b a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)

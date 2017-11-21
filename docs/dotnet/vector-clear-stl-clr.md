@@ -1,41 +1,39 @@
 ---
-title: "vector::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear (membro) [STL/CLR]"
+title: 'Vector:: Clear (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 4ed20ec8-3089-4c36-b68f-1b51c639041f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b03883d25aed8528d972cbc3569c67c56b83df2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# vector::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorclear-stlclr"></a>vector::clear (STL/CLR)
 Rimuove tutti gli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void clear();  
 ```  
   
-## Note  
- La funzione membro effettivamente chiama [vector::erase](../dotnet/vector-erase-stl-clr.md)`(` [vector::begin](../dotnet/vector-begin-stl-clr.md)`(),` [vector::end](../dotnet/vector-end-stl-clr.md)`())`.  Utilizzarla per assicurarsi che la sequenza selezionata è vuota.  
+## <a name="remarks"></a>Note  
+ La funzione membro chiama in modo efficace [Vector:: Erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md) `(` [Vector:: Begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md) `(),` [Vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `())`. Utilizzarla per garantire che la sequenza controllata vuota.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_clear.cpp   
@@ -72,15 +70,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::erase](../dotnet/vector-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)

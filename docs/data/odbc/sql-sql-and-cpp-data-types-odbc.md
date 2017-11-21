@@ -1,69 +1,68 @@
 ---
-title: "SQL: tipi di dati SQL e C++ (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di dati [C++], SQL e C++"
-  - "SQL [C++], e tipi di dati C++"
-  - "tipi di dati SQL [C++]"
+title: 'SQL: Tipi di dati C++ (ODBC) e SQL | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data types [C++], SQL vs. C++
+- SQL data types [C++]
+- SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 76a4f2bb14b7878c8843dc89bece4fdd5b2e3c02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# SQL: tipi di dati SQL e C++ (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipi di dati SQL e C++ (ODBC)
 > [!NOTE]
->  Queste informazioni si riferiscono alle classi ODBC MFC.  Se si utilizzano le classi DAO di MFC, vedere l'argomento relativo al confronto tra la sintassi SQL del modulo di gestione di database Microsoft Jet e quella ANSI nella Guida di DAO.  
+>  Queste informazioni si applicano alle classi ODBC MFC. Se si lavora con le classi DAO MFC, vedere l'argomento "Confronto del Database del motore SQL e ANSI SQL di Microsoft Jet" nella Guida di DAO.  
   
- Nella tabella riportata di seguito i tipi di dati SQL ANSI sono associati ai tipi di dati C\+\+.  Questa tabella integra le informazioni sul linguaggio C fornite nell'appendice D in *ODBC SDK* *Programmer's Reference* nel CD di MSDN Library.  Le procedure guidate gestiscono automaticamente l'associazione per la maggior parte dei tipi di dati.  Per la scrittura manuale del codice per il trasferimento di campi, è possibile utilizzare le informazioni di mapping anziché una procedura guidata.  
+ Nella tabella seguente viene eseguito il mapping tipi di dati ANSI SQL per tipi di dati C++. Ciò aumenta le informazioni sul linguaggio C fornite nell'appendice D il *ODBC SDK* *di riferimento per programmatori* sul CD di MSDN Library. Le procedure guidate di gestiscono la maggior parte dei mapping dei tipi di dati per l'utente. Se non si utilizza una procedura guidata, è possibile utilizzare le informazioni di mapping che consentiranno di scrivere manualmente il codice di exchange di campo.  
   
-### Tipi di dati SQL ANSI e corrispondenti tipi di dati C\+\+  
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Tipi di dati SQL ANSI mappati ai tipi di dati C++  
   
-|Tipo di dati SQL ANSI|Tipo di dati C\+\+|  
-|---------------------------|------------------------|  
+|Tipo di dati SQL ANSI|Tipo di dati C++|  
+|------------------------|---------------------|  
 |**CHAR**|`CString`|  
 |**DECIMAL**|`CString` 1|  
 |**SMALLINT**|`int`|  
 |`REAL`|**float**|  
-|**INTEGER**|**long**|  
+|**VALORE INTEGER**|**long**|  
 |**FLOAT**|**double**|  
 |**DOUBLE**|**double**|  
-|**NUMERIC**|`CString` 1|  
+|**NUMERICO**|`CString` 1|  
 |**VARCHAR**|`CString`|  
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
 |**BIT**|**BOOL**|  
 |**TINYINT**|**BYTE**|  
 |**BIGINT**|`CString` 1|  
-|**BINARY**|`CByteArray`|  
+|**BINARIO**|`CByteArray`|  
 |**VARBINARY**|`CByteArray`|  
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|  
 |**DATE**|`CTime`, `CString`|  
-|**TIME**|**CTime, CString**|  
+|**ORA**|**CTime, CString**|  
 |**TIMESTAMP**|**CTime, CString**|  
   
- 1.  I tipi di dati ANSI **DECIMAL** e **NUMERIC** vengono associati a `CString`, in quanto **SQL\_C\_CHAR** è il tipo di trasferimento ODBC predefinito.  
+ 1. ANSI **decimale** e **numerico** eseguire il mapping a `CString` perché **SQL_C_CHAR** è il tipo di trasferimento ODBC predefinito.  
   
- 2.  Per impostazione predefinita, i dati di tipo carattere composti da più di 255 caratteri, quando associati a `CString`, vengono troncati.  È possibile estendere la lunghezza del troncamento impostando in modo esplicito l'argomento `nMaxLength` di `RFX_Text`.  
+ 2. Per impostazione predefinita quando viene eseguito il mapping a dati carattere oltre 255 caratteri vengono troncati `CString`. È possibile estendere la lunghezza del troncamento impostando in modo esplicito il `nMaxLength` argomento di `RFX_Text`.  
   
- 3.  Per impostazione predefinita, i dati binari composti da più di 255 caratteri, quando associati a `CByteArray`, vengono troncati.  È possibile estendere la lunghezza del troncamento impostando in modo esplicito l'argomento `nMaxLength` di `RFX_Binary`.  
+ 3. Dati binari oltre 255 caratteri vengono troncati per impostazione predefinita quando il mapping a `CByteArray`. È possibile estendere la lunghezza del troncamento impostando in modo esplicito il `nMaxLength` argomento di `RFX_Binary`.  
   
- Se non si utilizza la libreria di cursori ODBC e si tenta di aggiornare due o più campi long di lunghezza variabile mediante il driver ODBC di Microsoft SQL Server e le classi di database ODBC MFC, è possibile che si verifichino problemi.  I tipi di dati ODBC, ovvero **SQL\_LONGVARCHAR** e **SQL\_LONGVARBINARY**, vengono associati ai tipi text e image di SQL Server.  Se si aggiornano due o più campi long di lunghezza variabile nella stessa chiamata a `CRecordset::Update`, verrà generata un'eccezione `CDBException`.  Si consiglia pertanto di non aggiornare più colonne long contemporaneamente mediante `CRecordset::Update`.  È possibile eseguire questa operazione con l'API ODBC **SQLPutData**.  È inoltre possibile utilizzare la libreria di cursori ODBC. Si consiglia tuttavia di non adottare questo metodo per i driver che supportano i cursori e non richiedono la libreria di cursori, come il driver per SQL Server.  
+ Se non si utilizza la libreria di cursori ODBC, si potrebbe verificarsi un problema durante il tentativo di aggiornare due o più campi long a lunghezza variabile con il driver ODBC di Microsoft SQL Server e le classi di database ODBC MFC. I tipi di ODBC, **SQL_LONGVARCHAR** e **SQL_LONGVARBINARY**, eseguire il mapping di testo e immagine di tipi di SQL Server. Oggetto `CDBException` viene generata se si aggiornano due o più campi di long a lunghezza variabile nella stessa chiamata a `CRecordset::Update`. Pertanto, non verranno più colonne long contemporaneamente con `CRecordset::Update`. È possibile aggiornare più colonne long contemporaneamente con l'API ODBC **SQLPutData**. È inoltre possibile utilizzare la libreria di cursori ODBC, ma questa operazione è sconsigliata per driver, come il driver SQL Server, che supportano i cursori e non richiedono la libreria di cursori.  
   
- Se si utilizza la libreria di cursori ODBC con le classi di database ODBC MFC e il driver ODBC per Microsoft SQL Server, è possibile che venga generata un'istruzione **ASSERT** con un'eccezione `CDBException`, nel caso in cui venga eseguita una chiamata a `CRecordset::Update` dopo una chiamata a `CRecordset::Requery`.  Si consiglia di chiamare invece `CRecordset::Close` e `CRecordset::Open` anziché `CRecordset::Requery`.  Un'altra soluzione consiste nel non utilizzare la libreria di cursori ODBC, in quanto i driver SQL Server e ODBC per SQL Server forniscono il supporto incorporato per i cursori e quindi la libreria di cursori ODBC non è necessaria.  
+ Se si utilizza la libreria di cursori ODBC con le classi di database ODBC MFC e il driver ODBC di Microsoft SQL Server, un **ASSERT** potrebbero verificarsi insieme a un `CDBException` se una chiamata a `CRecordset::Update` segue una chiamata a `CRecordset::Requery`. Chiamare invece `CRecordset::Close` e `CRecordset::Open` anziché `CRecordset::Requery`. Un'altra soluzione consiste nel non utilizzare la libreria di cursori ODBC, in quanto SQL Server e il driver ODBC di SQL Server forniscono il supporto nativo per i cursori in modo nativo e non è necessaria la libreria di cursori ODBC.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [SQL](../../data/odbc/sql.md)   
- [SQL: esecuzione di chiamate SQL dirette \(ODBC\)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+ [SQL: esecuzione di chiamate SQL dirette (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

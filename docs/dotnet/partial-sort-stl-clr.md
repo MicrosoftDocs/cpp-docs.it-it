@@ -1,32 +1,30 @@
 ---
-title: "partial_sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::partial_sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "partial_sort (funzione) [STL/CLR]"
+title: partial_sort (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::partial_sort
+dev_langs: C++
+helpviewer_keywords: partial_sort function [STL/CLR]
 ms.assetid: 5a73b275-aef0-4bda-8ae3-7c1196fe49c4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80de2072e6fdc7975d924c1a9c96b5033dfa978c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# partial_sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dispone di un numero specificato di elementi più piccoli in un intervallo in un ordine nondescending o come un criterio di ordinamento specificato da un predicato binario.  
+# <a name="partialsort-stlclr"></a>partial_sort (STL/CLR)
+Dispone un numero specificato di elementi più piccoli di un intervallo in un ordine non decrescente o secondo un criterio di ordinamento specificato da un predicato binario.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +34,13 @@ template<class _RanIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `partial_sort`STL.  Per ulteriori informazioni, vedere [partial\_sort](../Topic/partial_sort.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `partial_sort`. Per ulteriori informazioni, vedere [partial_sort](../standard-library/algorithm-functions.md#partial_sort).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

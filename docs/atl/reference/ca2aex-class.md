@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2AEX::CA2AEX
 - ATLCONV/ATL::CA2AEX::m_psz
 - ATLCONV/ATL::CA2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2AEX class
+dev_langs: C++
+helpviewer_keywords: CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 979e06cbb4386f61f6490342f16d48739be55e95
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2aex-class"></a>Classe CA2AEX
 Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX` e `CT2AEX`e typedef **CA2A**.  

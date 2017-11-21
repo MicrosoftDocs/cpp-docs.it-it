@@ -1,68 +1,68 @@
 ---
-title: "_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vscprintf"
-  - "_vscprintf_l"
-  - "_vscwprintf_l"
-  - "_vscwprintf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vscprintf_l"
-  - "vscwpeintf"
-  - "_vscwprintf"
-  - "_vsctprintf"
-  - "_vscprintf"
-  - "vscwprintf_l"
-  - "vscprintf"
-  - "_vscwprintf_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vscprintf (funzione)"
-  - "_vscprintf_l (funzione)"
-  - "_vsctprintf (funzione)"
-  - "_vsctprintf_l (funzione)"
-  - "_vscwprintf (funzione)"
-  - "_vscwprintf_l (funzione)"
-  - "testo formattato [C++]"
-  - "vscprintf (funzione)"
-  - "vscprintf_l (funzione)"
-  - "vsctprintf (funzione)"
-  - "vsctprintf_l (funzione)"
-  - "vscwprintf (funzione)"
-  - "vscwprintf_l (funzione)"
+title: _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vscprintf
+- _vscprintf_l
+- _vscwprintf_l
+- _vscwprintf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vscprintf_l
+- vscwpeintf
+- _vscwprintf
+- _vsctprintf
+- _vscprintf
+- vscwprintf_l
+- vscprintf
+- _vscwprintf_l
+dev_langs: C++
+helpviewer_keywords:
+- vsctprintf function
+- _vscprintf_l function
+- _vsctprintf_l function
+- _vsctprintf function
+- _vscwprintf_l function
+- vscwprintf_l function
+- _vscprintf function
+- _vscwprintf function
+- vscwprintf function
+- vsctprintf_l function
+- formatted text [C++]
+- vscprintf function
+- vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce il numero di caratteri nella stringa formattata utilizzando un puntatore ad una lista di argomenti.  
+# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
+Restituisce il numero di caratteri nella stringa formattata usando un puntatore a un elenco di argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _vscprintf(  
@@ -85,54 +85,54 @@ int _vscwprintf_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `format`  
- Stringa di formato e di controllo.  
+ Stringa di controllo del formato.  
   
  `argptr`  
- Puntatore all'elenco di argomenti.  
+ Puntatore a un elenco di argomenti.  
   
  `locale`  
- Le impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
- Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valore restituito  
- `_vscprintf` restituisce il numero di caratteri che dovrebbero essere generati se la stringa puntata dalla lista di argomenti fosse stampata o inviata ad un file o buffer utilizzando i codici di formattazione specifici.  Il valore restituito non include il carattere di terminazione null.  `_vscwprintf` esegue la stessa funzione per i caratteri di tipo "wide".  
+## <a name="return-value"></a>Valore restituito  
+ `_vscprintf` restituisce il numero di caratteri che verrebbero generati se la stringa a cui punta l'elenco di argomenti venisse stampata o inviata a un file o un buffer tramite i codici di formattazione specificati. Il valore restituito non include il carattere Null di terminazione. `_vscwprintf` esegue la stessa funzione per i caratteri wide.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione che utilizzano il parametro delle impostazioni locali passato in ingresso invece di utilizzare quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
- Se `format` è un puntatore a null, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione restituisce \-1 e imposta `errno` a `EINVAL`.  
+ Se `format` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e imposteranno `errno` su `EINVAL`.  
   
-## Note  
- Ogni `argument` \(se presente\) viene convertito in base alla tipo di formato specificato in `format`.  Il formato è costituito da caratteri normali e ha lo stesso form e la stessa funzione dell'argomento `format` per la funzione [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="remarks"></a>Note  
+ Ogni `argument` (se presente) viene convertito in base alla specifica di formato corrispondente in `format`. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento `format` per [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
 > [!IMPORTANT]
->  Assicurarsi che se `format` è una stringa definita dall'utente, sia del tipo con terminazione null e con il corretto numero e tipo di parametri.  Per ulteriori informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Se `format` è una stringa definita dall'utente, assicurarsi che abbia terminazione Null e il numero e il tipo corretti di parametri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### Mapping di routine a Testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine TCHAR.H|\_UNICODE & \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine TCHAR.H|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vsctprintf`|`_vscprintf`|`_vscprintf`|`_vscwprintf`|  
 |`_vsctprintf_l`|`_vscprintf_l`|`_vscprintf_l`|`_vscwprintf_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_vscprintf`, `_vscprintf_l`|\<stdio.h\>|  
-|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h\> o \<wchar.h\>|  
+|-------------|---------------------|  
+|`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
+|`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> o \<wchar.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Vedere l'esempio per [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  
   
-## Vedere anche  
- [I\/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [fprintf, \_fprintf\_l, fwprintf, \_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf, \_printf\_l, wprintf, \_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf, \_scanf\_l, wscanf, \_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+## <a name="see-also"></a>Vedere anche  
+ [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
+ [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [Funzioni vprintf](../../c-runtime-library/vprintf-functions.md)

@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - OLE DB, adding ATL OLE DB provider to projects
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Aggiunta di un Provider OLE DB ATL
 Utilizzare questa procedura guidata per aggiungere un provider OLE DB ATL a un progetto. Un provider OLE DB ATL è costituito da un'origine dati, sessione, comandi e le classi di set di righe. Il progetto deve essere stato creato come un'applicazione COM ATL.  
@@ -43,5 +40,4 @@ Utilizzare questa procedura guidata per aggiungere un provider OLE DB ATL a un p
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiunta di funzionalità con creazioni guidate codice](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

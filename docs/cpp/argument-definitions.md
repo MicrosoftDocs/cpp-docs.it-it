@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4bb50f4471aed2af6de0ae20e2e3c85ab0cb5d9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="argument-definitions"></a>Definizioni di argomenti
 Gli argomenti nel prototipo  
@@ -43,7 +40,7 @@ argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar
  Un intero contenente il numero di argomenti che seguono in `argv`. Il parametro `argc` è sempre maggiore di o uguale a 1.  
   
  `argv`  
- Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv` **[0]** è il comando con cui viene richiamato il programma, `argv` **[1]** è il primo argomento della riga di comando e così via, fino a `argv` ** [**`argc`**]**, che è sempre **NULL**. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'elaborazione della riga di comando di eliminazione.  
+ Una matrice di stringhe con terminazione null che rappresentano gli argomenti della riga di comando immessi dall'utente del programma. Per convenzione, `argv` **[0]** è il comando con cui viene richiamato il programma, `argv` **[1]** è il primo argomento della riga di comando e così via, fino a `argv`  **[**`argc`**]**, che è sempre **NULL**. Vedere [personalizzazione dell'elaborazione della riga di comando](../cpp/customizing-cpp-command-line-processing.md) per informazioni sull'elaborazione della riga di comando di eliminazione.  
   
  Il primo argomento della riga di comando è sempre `argv` **[1]** e l'ultimo è `argv` **[** `argc` - 1**]**.  
   

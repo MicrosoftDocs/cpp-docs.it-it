@@ -4,32 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ConvertBSTRToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- ConvertBSTRToString function
+f1_keywords: ConvertBSTRToString
+dev_langs: C++
+helpviewer_keywords: ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c559509083d21ff8b742ef80a55ac161bbca2f53
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: db0a8cafbc48e4153092475026fad245d94f8e00
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 **Sezione specifica Microsoft**  
   
- Converte un `BSTR` valore un **char \* **.  
+ Converte un `BSTR` valore un **char \*** .  
   
 ## <a name="syntax"></a>Sintassi  
   

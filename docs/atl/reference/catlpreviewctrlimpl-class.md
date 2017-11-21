@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,21 +23,18 @@ f1_keywords:
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlPreviewCtrlImpl class
+dev_langs: C++
+helpviewer_keywords: CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 281bc00e46cf28f7cc7d5f1e072fd41ad4cce61a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1802e1bd3a42767cbc5fa0705f9ccdfd3afa2589
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Classe CAtlPreviewCtrlImpl
 Questa classe è un'implementazione di ATL di una finestra che viene inserita in una finestra host fornita dalla Shell per l'anteprima avanzata.  
@@ -301,4 +297,3 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
   
 ## <a name="see-also"></a>Vedere anche  
  [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wgetcwd_dbg
 - getcwd_dbg
 - wgetcwd_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wgetcwd_dbg function
 - working directory
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - _wgetcwd_dbg function
 - directories [C++], current working
 ms.assetid: 8d5d151f-d844-4aa6-a28c-1c11a22dc00d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9814916e32878a1e1a11f534fce64aeaf2f6a57e
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 286404a87680f50be5311250643925488eff88e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg, _wgetcwd_dbg
 Versioni di debug delle funzioni [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md) (disponibili solo durante il debug).  
@@ -126,7 +109,7 @@ wchar_t *_wgetcwd_dbg(
 |`_getcwd_dbg`|\<crtdbg.h>|  
 |`_wgetcwd_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_getcwd, _wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

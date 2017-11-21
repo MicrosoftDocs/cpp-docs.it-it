@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CW2WEX::CW2WEX
 - ATLCONV/ATL::CW2WEX::m_psz
 - ATLCONV/ATL::CW2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2WEX class
+dev_langs: C++
+helpviewer_keywords: CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 61dbd4e59671ef2a17ba53eff4e864c43f3575b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cw2wex-class"></a>Classe CW2WEX
 Questa classe viene utilizzata per le macro di conversione di stringhe `CW2TEX` e `CT2WEX`e typedef `CW2W`.  
@@ -169,4 +151,3 @@ operator LPWSTR() const throw();
  [Classe CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

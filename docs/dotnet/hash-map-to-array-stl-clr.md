@@ -1,41 +1,39 @@
 ---
-title: "hash_map::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membro) [STL/CLR]"
+title: hash_map::to_array (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 26d7620f-893b-47f2-99e3-f0b6af3aedc9
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53be0d34d58c6cf294f77293498e330f167bd836
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la sequenza controllata in un nuovo array.  
+# <a name="hashmaptoarray-stlclr"></a>hash_map::to_array (STL/CLR)
+La sequenza controllata viene copiata in una nuova matrice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## Note  
- La funzione membro restituisce un array contenente la sequenza controllata.  Utilizzarla per ottenere una copia della sequenza controllata in forma di array.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## Requisiti  
- **Intestazione:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)

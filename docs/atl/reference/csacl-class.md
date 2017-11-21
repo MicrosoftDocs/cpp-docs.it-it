@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 72949601269dea510ba7b9078b022a28905349c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csacl-class"></a>Classe CSacl
 Questa classe è un wrapper per una struttura SACL (elenco di controllo di accesso di sistema).  
@@ -89,7 +71,7 @@ class CSacl : public CAcl
   
  Utilizzare i metodi di classe forniti per aggiungere, rimuovere, creare ed eliminare le voci ACE dal **SACL** oggetto. Vedere anche [AtlGetSacl](security-global-functions.md#atlgetsacl) e [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) in Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -229,4 +211,3 @@ void RemoveAllAces() throw();
  [Voci ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)
-

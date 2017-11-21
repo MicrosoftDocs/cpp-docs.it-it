@@ -1,31 +1,31 @@
 ---
-title: "Procedura: convertire System::String in stringhe standard | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "libreria C++ standard, conversione di System::String in stringhe standard"
-  - "conversione di stringhe, System::String"
+title: 'Procedura: convertire System:: String in stringhe Standard | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting System::String to standard string
+- string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e550c41c28f0d2bac4386d4a4a1c012785fc1526
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: convertire System::String in stringhe standard
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile convertire un oggetto <xref:System.String> in `std::string` o `std::wstring`, senza utilizzare `PtrToStringChars` in Vcclr.h.  
+# <a name="how-to-convert-systemstring-to-standard-string"></a>Procedura: convertire System::String in stringhe standard
+È possibile convertire un <xref:System.String> a `std::string` o `std::wstring`, senza utilizzare `PtrToStringChars` in Vcclr.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // convert_system_string.cpp  
@@ -71,5 +71,5 @@ abcd
 efgh  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

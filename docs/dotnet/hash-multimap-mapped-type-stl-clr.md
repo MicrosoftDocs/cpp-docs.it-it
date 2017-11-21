@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type (membro) [STL/CLR]"
+title: 'hash_multimap:: mapped_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: b97db6a7-9d4e-42f0-a725-ac309f5374bf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 414f2b96e983577c0539eb8c876b787bd5bffab3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un valore mappato associato a ogni chiave.  
+# <a name="hashmultimapmappedtype-stlclr"></a>hash_multimap::mapped_type (STL/CLR)
+Tipo di un valore mappato associato a ogni chiave.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Mapped mapped_type;  
 ```  
   
-## Note  
- Il tipo è sinonimo del parametro di template `Mapped`.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo del parametro di modello `Mapped`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_mapped_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **1 2 3**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+1 2 3  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_compare](../dotnet/hash-multimap-key-compare-stl-clr.md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: key_compare (STL/CLR)](../dotnet/hash-multimap-key-compare-stl-clr.md)   
+ [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

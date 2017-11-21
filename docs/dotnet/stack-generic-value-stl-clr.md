@@ -1,41 +1,39 @@
 ---
-title: "stack::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value (membro) [STL/CLR]"
+title: stack::generic_value (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: f918f5e6-5cb6-480e-8548-13e15026ffde
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9ccf9e391baea7d74a25318d6ca5ea8313c3cb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# stack::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di elemento per l'utilizzo con l'interfaccia generica del contenitore.  
+# <a name="stackgenericvalue-stlclr"></a>stack::generic_value (STL/CLR)
+Il tipo di elemento per l'utilizzo con l'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Note  
- Il tipo viene descritto un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato da utilizzare con l'interfaccia generica per questa classe di contenitori del modello. \(`GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.\)  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un oggetto di tipo `GValue` che descrive il valore dell'elemento archiviato per l'utilizzo con l'interfaccia generica per questa classe di contenitori di modelli. (`GValue` è `value_type` o `value_type^` se `value_type` è un tipo di riferimento.)  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_stack_generic_value.cpp   
@@ -74,15 +72,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **c a b**   
-## Requisiti  
- **Intestazione:**\<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+c b a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/stack >  
   
-## Vedere anche  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::value\_type](../dotnet/stack-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)

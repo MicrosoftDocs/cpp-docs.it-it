@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error::WCode
-dev_langs:
-- C++
-helpviewer_keywords:
-- WCode method [C++]
+f1_keywords: _com_error::WCode
+dev_langs: C++
+helpviewer_keywords: WCode method [C++]
 ms.assetid: f3b21852-f8ea-4e43-bff1-11c2d35454c4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 15c0d860a5faffc160def725630fbbb1d84d8ed8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 3c26d02b6c010d17978dd517576cd74d5dd8adef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comerrorwcode"></a>_com_error::WCode
 **Sezione specifica Microsoft**  

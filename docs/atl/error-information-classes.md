@@ -1,34 +1,34 @@
 ---
-title: "Error Information Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.errors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione errori, classi"
-  - "gestione errori, error information classes"
-  - "error information, classi"
+title: Classe informazioni di errore (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.errors
+dev_langs: C++
+helpviewer_keywords:
+- error handling, error information classes
+- error handling, classes
+- error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 71e8112adf7164dcfdf0baffb6b0531b1ee84e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Error Information Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="error-information-classes"></a>Classi di informazioni di errore
+La classe seguente indica la modalità di gestione di informazioni sull'errore:  
+  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta la [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) interfaccia. **IErrorInfo** consente di essere propagati al client le informazioni di errore.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Cenni preliminari sulla classe](../atl/atl-class-overview.md)
 
-La classe seguente indica quali informazioni vengono gestite:  
-  
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) determina se l'oggetto supporta l'interfaccia [IErrorInfo](http://msdn.microsoft.com/it-it/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  Consente**IErrorInfo** informazioni da propagare nuovamente al client.  
-  
-## Vedere anche  
- [Class Overview](../atl/atl-class-overview.md)

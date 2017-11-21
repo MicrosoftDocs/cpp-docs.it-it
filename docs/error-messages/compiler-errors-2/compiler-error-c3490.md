@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3490
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3490
+f1_keywords: C3490
+dev_langs: C++
+helpviewer_keywords: C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3490"></a>Errore del compilatore C3490
 impossibile modificare 'var' perché l'accesso viene effettuato tramite un oggetto const  

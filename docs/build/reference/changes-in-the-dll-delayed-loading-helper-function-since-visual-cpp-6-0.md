@@ -1,64 +1,63 @@
 ---
-title: "Funzione di supporto del caricamento ritardato delle DLL: modifiche introdotte rispetto a Visual C++ 6.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delayLoadHelper2 (funzione)"
-  - "caricamento ritardato di DLL, novità"
-  - "funzioni di supporto, novità"
-  - "PFromRva (metodo)"
+title: 'Funzione di supporto rispetto a Visual C++ 6.0 del caricamento ritardato delle DLL: modifiche introdotte | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- delayed loading of DLLs, what's changed
+- PFromRva method
+- __delayLoadHelper2 function
+- helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fb16beb6f2ddb07f57fe9f35c67552348cac56cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Funzione di supporto del caricamento ritardato delle DLL: modifiche introdotte rispetto a Visual C++ 6.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se sul computer sono presenti più versioni di Visual C\+\+ oppure è stata definita una funzione di supporto personalizzata, le modifiche apportate alla funzione di supporto del caricamento ritardato delle DLL possono generare diversi effetti.  Di seguito è riportato un esempio.  
+# <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Funzione di supporto del caricamento ritardato delle DLL: modifiche introdotte rispetto a Visual C++ 6.0
+Se si dispone di più versioni di Visual C++ nel computer in uso o se è definita una funzione di supporto, può dipendere dalle modifiche apportate alla DLL caricamento ritardato funzione di supporto. Ad esempio:  
   
--   **\_\_delayLoadHelper** diventa **\_\_delayLoadHelper2**  
+-   **delayLoadHelper** è ora **delayLoadHelper2**  
   
--   **\_\_pfnDliNotifyHook** diventa **\_\_pfnDliNotifyHook2**  
+-   **pfnDliNotifyHook diventa** è ora **pfnDliNotifyHook2**  
   
--   **\_\_pfnDliFailureHook** diventa **\_\_pfnDliFailureHook2**  
+-   **pfnDliFailureHook** è ora **pfnDliFailureHook2**  
   
--   **\_\_FUnloadDelayLoadedDLL** diventa **\_\_FUnloadDelayLoadedDLL2**  
+-   **FUnloadDelayLoadedDLL** è ora **FUnloadDelayLoadedDLL2**  
   
 > [!NOTE]
->  Se si utilizza la funzione di supporto predefinita, questi cambiamenti non avranno effetto.  La modalità di richiamo del linker non viene modificata.  
+>  Se si utilizza la funzione di supporto predefinito, queste modifiche non avranno effetto. Non sono presenti modifiche relative alla modalità di richiamo del linker.  
   
-## Più versioni di C\+\+  
- Se sul computer sono disponibili più versioni di Visual C\+\+, assicurarsi che il linker corrisponda a delayimp.lib.  Se non c'è corrispondenza, verrà visualizzato un errore del linker che segnalerà `___delayLoadHelper2@8` o `___delayLoadHelper@8` come simbolo esterno non risolto.  Il primo errore indica la presenza di un nuovo linker con una versione di delayimp.lib obsoleta, mentre il secondo indica la presenza di un linker precedente con una nuova versione di delayimp.lib.  
+## <a name="multiple-versions-of-visual-c"></a>Più versioni di Visual C++  
+ Se si dispone di più versioni di Visual C++ nel computer, assicurarsi che il linker corrisponda delayimp. Se è presente una mancata corrispondenza, si otterrà un errore del linker uno `___delayLoadHelper2@8` o `___delayLoadHelper@8` come simbolo esterno non risolto. Il primo implica un linker nuovo con un vecchio delayimp e quest'ultimo implica un linker precedente con un nuovo delayimp.  
   
- In caso di errore di linker non risolto, eseguire [dumpbin \/linkermember](../../build/reference/linkermember.md):1 sulla delayimp.lib che si ritiene debba contenere la funzione di supporto per individuare la funzione di supporto definita.  La funzione di supporto può essere definita anche in un file oggetto. Eseguire [dumpbin \/symbols](../../build/reference/symbols.md) e cercare `delayLoadHelper(2)`.  
+ Se si verifica un errore del linker non risolto, eseguire [dumpbin /linkermember](../../build/reference/linkermember.md): 1 sulla delayimp. lib che si prevede di includere la funzione di supporto per individuare la funzione di supporto è definita. La funzione di supporto può anche essere definita in un file oggetto. eseguire [dumpbin /symbols](../../build/reference/symbols.md) e cercare `delayLoadHelper(2)`.  
   
- Se si dispone del linker di Visual C\+\+ 6.0, procedere nel modo seguente:  
+ Se si conosce il linker Visual C++ 6.0, si dispone quindi:  
   
--   Eseguire dumpbin sul file LIB oppure OBJ del supporto per il caricamento ritardato per determinare se definisce **\_\_delayLoadHelper2**.  In caso contrario, il collegamento avrà esito negativo.  
+-   Eseguire dumpbin sul file lib o obj dell'helper a caricamento ritardato per determinare se definisce **delayLoadHelper2**. In caso contrario, il collegamento avrà esito negativo.  
   
--   Definire **\_\_delayLoadHelper** nel file LIB oppure OBJ del supporto per il caricamento ritardato.  
+-   Definire **delayLoadHelper** il ritardo di caricare file lib o obj del supporto.  
   
-## Funzione di supporto definita dall'utente  
- Se è stata definita una funzione di supporto personalizzata e si utilizza la versione corrente di Visual C\+\+, procedere nel modo seguente:  
+## <a name="user-defined-helper-function"></a>Funzione di supporto definito dall'utente  
+ Se si utilizza la versione corrente di Visual C++ definita funzione di supporto, eseguire le operazioni seguenti:  
   
--   Rinominare la funzione di supporto come **\_\_delayLoadHelper2**.  
+-   Rinominare la funzione di supporto per **delayLoadHelper2**.  
   
--   Poiché i puntatori nel descrittore del ritardo \(ImgDelayDescr in delayimp.h\) sono stati modificati da indirizzi assoluti \(VA\) a indirizzi relativi \(RVA\) per garantirne il funzionamento corretto sia in programmi a 32 bit che in programmi a 64 bit, è necessario convertirli nuovamente in puntatori.  È stata introdotta una nuova funzione: PFromRva, in delayhlp.cpp.  Tale funzione può essere utilizzata in tutti i campi del descrittore per convertirli nuovamente in puntatori a 32 o 64 bit.  La funzione di supporto del caricamento ritardato predefinita continua a rappresentare un valido modello da utilizzare come esempio.  
+-   Poiché i puntatori nel descrittore di ritardo (ImgDelayDescr in Delayimp. h) sono stati modificati da indirizzi assoluti (va) per gli indirizzi relativi (RVA) a funzionare come previsto in entrambi i programmi a 32 e a 64 bit, è necessario convertire nuovamente i puntatori. È stata introdotta una nuova funzione: PFromRva, trovato in cpp. È possibile utilizzare questa funzione in ognuno dei campi nel descrittore di convertirle puntatori a 32 o 64 bit. La funzione di supporto carico ritardo predefinito continua a essere un buon modello da utilizzare come un esempio.  
   
-## Caricamento di tutte le importazioni per una DLL a caricamento ritardato  
- Il linker consente di caricare tutte le importazioni da una DLL specificata come DLL a caricamento ritardato.  Per ulteriori informazioni, vedere [Caricamento di tutte le importazioni per una DLL a caricamento ritardato](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md).  
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Caricare tutte le importazioni per una DLL a caricamento ritardato  
+ Il linker è possibile caricare tutte le importazioni da una DLL a caricamento ritardato specificato. Vedere [durante il caricamento di tutte le importazioni per una DLL a caricamento ritardato](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) per ulteriori informazioni.  
   
-## Vedere anche  
- [Understanding the Helper Function](http://msdn.microsoft.com/it-it/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sulla funzione di supporto](understanding-the-helper-function.md)

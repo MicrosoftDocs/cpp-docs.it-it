@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _scalb
+apiname: _scalb
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - scalb
 - _scalb
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exponential calculations
 - _scalb function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8a8f70dd525a798bd2492270ef95e5e75c5aa36b
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: fda23a5c3addaf0dc05882593d592300c4a06bef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scalb"></a>_scalb
 Eleva l'argomento alla potenza di 2.  
@@ -91,7 +73,7 @@ double _scalb(
 |-------------|---------------------|  
 |`_scalb`|\<float.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   

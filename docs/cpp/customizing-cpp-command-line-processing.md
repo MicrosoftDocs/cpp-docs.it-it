@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _setenvp
 - _setargv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - command line [C++], processing
 - command-line processing
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _setenvp function
 ms.assetid: aae01cbb-892b-48b8-8e1f-34f22421f263
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 977ab6f5a7a8dbddf045e83a14127ac979a114a9
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9a804d38fa14fd77a68c53504814503042c2234a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>Personalizzazione dell'elaborazione dalla riga di comando C++
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

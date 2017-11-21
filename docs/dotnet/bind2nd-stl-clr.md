@@ -1,32 +1,30 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind2nd (funzione) [STL/CLR]"
+title: bind2nd (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 484430c181e13508daa4936f29d078829ddda083
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera `binder2nd` per un argomento e un functor.  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+Genera un `binder2nd` per un argomento e il funtore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Fun,  
@@ -35,24 +33,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Parametri di template  
- Argomento  
- Tipo dell'argomento.  
+## <a name="template-parameters"></a>Parametri di template  
+ Arg  
+ Il tipo di argomento.  
   
  Fun  
- Il tipo di functor.  
+ Tipo del funtore.  
   
-## Parametri di funzione  
- functor  
- Il functor cui eseguire il wrapping.  
+## <a name="function-parameters"></a>Parametri di funzione  
+ funtore  
+ Il funtore per eseguire il wrapping.  
   
  right  
  Il secondo argomento per eseguire il wrapping.  
   
-## Note  
- La funzione di modello restituisce [binder2nd](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`.  Utilizzarla come comodo mezzo per eseguire il wrapping di un functor a due argomenti e il secondo argomento in un functor di un solo argomento che viene chiamato con un primo argomento.  
+## <a name="remarks"></a>Note  
+ La funzione modello restituisce [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Utilizzato come un modo pratico per eseguire il wrapping di una funzione di due argomenti e il secondo argomento in una funzione di un argomento che viene chiamato con un primo argomento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -95,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Requisiti  
- **Intestazione:**\<cliext\/functional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [binder2nd](../dotnet/binder2nd-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)
