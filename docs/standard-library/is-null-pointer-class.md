@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_null_pointer
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_null_pointer
+f1_keywords: type_traits/std::is_null_pointer
+dev_langs: C++
+helpviewer_keywords: is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 5a1a4827fa2f321625d3b1001accd493742fca61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8e4267dfd9cc612d1564a178e5d540e07cfa30d0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnullpointer-class"></a>Classe is_null_pointer
 Verifica se il tipo è std::nullptr_t.  
@@ -51,7 +47,6 @@ struct is_null_pointer;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

@@ -1,46 +1,44 @@
 ---
-title: "omp_get_wtime | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_wtime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_wtime OpenMP function"
+title: omp_get_wtime | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_wtime
+dev_langs: C++
+helpviewer_keywords: omp_get_wtime OpenMP function
 ms.assetid: c8dee105-ec1b-42e5-a6e3-edeedcf9854c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b071564cc6c5059d8978d45f80ce3e008622ec2f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# omp_get_wtime
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce un valore in secondi del tempo trascorso da un certo punto.  
+# <a name="ompgetwtime"></a>omp_get_wtime
+Restituisce un valore in secondi del tempo che intercorre tra un certo punto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 double omp_get_wtime( );  
 ```  
   
-## Valore restituito  
- Restituisce un valore in secondi del tempo trascorso da un certo punto arbitrario, ma coerente.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce che un valore in secondi del tempo trascorso dal punto di alcune arbitrario, ma coerente.  
   
-## Note  
- Tale punto rimanga coerente durante l'esecuzione del programma, consentendo i confronti successivi.  
+## <a name="remarks"></a>Note  
+ Tale punto rimane coerenza durante l'esecuzione del programma, rendendo possibile confronti successivi.  
   
- Per ulteriori informazioni, vedere [3.3.1 omp\_get\_wtime Function](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).  
+ Per ulteriori informazioni, vedere [3.3.1 funzione omp_get_wtime](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_get_wtime.cpp  
@@ -63,10 +61,13 @@ int main() {
 }  
 ```  
   
-  **avviare \= 594255,3671159324**  
-**estremità \= 594256,3664474116**  
-**confronto \= 0,9993314791936427**  
-**wtick \= 2.793651148400146e\-007**  
-**1\/wtick \= 3579545**   
-## Vedere anche  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+start = 594255.3671159324  
+end = 594256.3664474116  
+diff = 0.9993314791936427  
+wtick = 2.793651148400146e-007  
+1/wtick = 3579545  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

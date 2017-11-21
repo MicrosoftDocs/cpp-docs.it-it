@@ -1,32 +1,30 @@
 ---
-title: "make_pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_pair (funzione) [STL/CLR]"
+title: make_pair (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_pair
+dev_langs: C++
+helpviewer_keywords: make_pair function [STL/CLR]
 ms.assetid: 74733f2c-97b0-4d69-b431-5ab8f0de9e3e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8fba63cb9e10fcdccba8ed5c6a8a405184a4bca5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# make_pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fare `pair` da una coppia di valori.  
+# <a name="makepair-stlclr"></a>make_pair (STL/CLR)
+Rendere un `pair` da una coppia di valori.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Value1,  
@@ -34,25 +32,25 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
-#### Parametri  
- Value1  
- Il tipo del valore prima eseguito il wrapping.  
+#### <a name="parameters"></a>Parametri  
+ `Value1`  
+ Il tipo del primo valore sottoposto a wrapping.  
   
- Value2  
- Il tipo del secondo valore trasformato.  
+ `Value2`  
+ Il tipo del secondo valore sottoposto a wrapping.  
   
- innanzitutto  
- Primo valore di cui eseguire il wrapping.  
+ `first`  
+ Primo valore per eseguire il wrapping.  
   
- in secondo luogo  
- Secondo valore di cui eseguire il wrapping.  
+ `second`  
+ Secondo valore da cui eseguire il wrapping.  
   
-## Note  
- La funzione di modello restituisce `pair<``Value1``,` `Value2``>(``first``,` `second``)`.  Utilizzarla per costruire un oggetto di `pair``<``Value1``,` `Value2``>` da una coppia di valori.  
+## <a name="remarks"></a>Note  
+ La funzione modello restituisce `pair<Value1, Value2>(first, second)`. Utilizzato per costruire un `pair<Value1, Value2>` oggetto da una coppia di valori.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cliext_make_pair.cpp   
 // compile with: /clr   
 #include <cliext/utility>   
@@ -69,12 +67,15 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[y, 4\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/utility\>  
+```Output  
+[x, 3]  
+[y, 4]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/utilità >  
   
-## Vedere anche  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

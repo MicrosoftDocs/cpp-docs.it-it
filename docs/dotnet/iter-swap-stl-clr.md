@@ -1,45 +1,43 @@
 ---
-title: "iter_swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::iter_swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iter_swap (funzione) [STL/CLR]"
+title: iter_swap (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::iter_swap
+dev_langs: C++
+helpviewer_keywords: iter_swap function [STL/CLR]
 ms.assetid: 9809c9f5-2ca6-4e9e-97c1-d7973d3134f8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28e73cfea302ed6204922bc16eccd6c9cfc5a4c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# iter_swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Metadati e due valori sono segnalati da una coppia degli iteratori specificati.  
+# <a name="iterswap-stlclr"></a>iter_swap (STL/CLR)
+Scambia due valori a cui viene fatto riferimento da una coppia di iteratori specificati.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
     void iter_swap(_FwdIt1 _Left, _FwdIt2 _Right);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `iter_swap`STL.  Per ulteriori informazioni, vedere [iter\_swap](../Topic/iter_swap.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `iter_swap`. Per ulteriori informazioni, vedere [iter_swap](../standard-library/algorithm-functions.md#iter_swap).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

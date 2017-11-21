@@ -1,50 +1,49 @@
 ---
-title: "/ALLOWISOLATION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ALLOWISOLATION"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALLOWISOLATION (opzione editbin)"
-  - "ALLOWISOLATION (opzione editbin)"
-  - "-ALLOWISOLATION (opzione editbin)"
+title: -ALLOWISOLATION | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /ALLOWISOLATION
+dev_langs: C++
+helpviewer_keywords:
+- -ALLOWISOLATION editbin option
+- /ALLOWISOLATION editbin option
+- ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bb0a3973b140e452d3cb1198c5a98ca2caf61a1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# /ALLOWISOLATION
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="allowisolation"></a>/ALLOWISOLATION
 Specifica il comportamento per la ricerca del manifesto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 /ALLOWISOLATION[:NO]  
 ```  
   
-## Note  
- **\/ALLOWISOLATION** fa eseguire al sistema operativo ricerche e caricamenti del manifesto.  
+## <a name="remarks"></a>Note  
+ **/ALLOWISOLATION** fa sì che il sistema operativo al manifesto ricerche e caricamenti.  
   
- Il valore predefinito è **\/ALLOWISOLATION**.  
+ **/ALLOWISOLATION** è l'impostazione predefinita.  
   
- **\/ALLOWISOLATION:NO** indica che gli eseguibili vengono caricati come se non esistesse alcun manifesto e fa sì che [Riferimenti a EDITBIN](../../build/reference/editbin-reference.md) imposti il bit nel `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` nel campo `DllCharacteristics` dell'intestazione facoltativa.  
+ **/ALLOWISOLATION:No** indica che i file eseguibili vengono caricati come se non vi fosse alcun manifesto e cause [riferimenti a EDITBIN](../../build/reference/editbin-reference.md) per impostare il `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` bit dell'intestazione facoltativa `DllCharacteristics` campo.  
   
- Se per un eseguibile è disabilitato l'isolamento, il caricatore di Windows non tenterà di individuare un manifest di applicazione per i processi creati più di recente.  Il nuovo processo non dispone di un contesto di attivazione predefinito, anche se esiste un manifesto nell'eseguibile stesso o se è presente un manifesto con il nome *nome\-eseguibile*.exe.manifest.  
+ Se per un eseguibile è disabilitato l'isolamento, il caricatore di Windows non tenterà di individuare un manifest di applicazione per i processi creati più di recente. Il nuovo processo non dispone di un contesto di attivazione predefinito, anche se è presente un manifesto nell'eseguibile stesso o se non esiste un manifesto con il nome *nome eseguibile*. manifest.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)   
- [\/ALLOWISOLATION \(Ricerca di manifesti\)](../../build/reference/allowisolation-manifest-lookup.md)   
+ [/ALLOWISOLATION (ricerca di manifesti)](../../build/reference/allowisolation-manifest-lookup.md)   
  [Riferimento a file manifesto](http://msdn.microsoft.com/library/aa375632.aspx)

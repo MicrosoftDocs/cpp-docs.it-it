@@ -1,34 +1,31 @@
 ---
-title: "Operatore ComPtrRef::operator== | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator=="
-dev_langs: 
-  - "C++"
+title: 'Operatore comptrref:: Operator = = | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator==
+dev_langs: C++
 ms.assetid: 95fcf781-b473-4317-88cd-e938778d3c3e
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc55ab734229cc256f47185349ce79049d05723b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore ComPtrRef::operator==
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="comptrrefoperator-operator"></a>Operatore ComPtrRef::operator==
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-  
 bool operator==(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +52,28 @@ bool operator==(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `a`  
- Riferimento a un oggetto ComPtrRef.  
+ Un riferimento a un oggetto ComPtrRef.  
   
  `b`  
- Un riferimento ad un altro oggetto ComPtrRef, o ad un puntatore di tipo anonimo \(`void*`\).  
+ Un riferimento a un altro oggetto ComPtrRef o un puntatore a un tipo anonimo (`void*`).  
   
-## Valore restituito  
- Il primo operatore diventa `true` se l'oggetto `a` è uguale a `b`; in caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce l'operatore prima `true` se oggetto `a` è uguale all'oggetto `b`; in caso contrario, `false`.  
   
- Il secondo e il terzo operatore restituiscono `true` se l'oggetto `a` è uguale a `nullptr`; in caso contrario, `false`.  
+ Il secondo e terzo operatore yield `true` se oggetto `a` è uguale a `nullptr`; in caso contrario, `false`.  
   
- I il quarto e quinti operatore restituiscono `true` se l'oggetto `a` è uguale a `b`; in caso contrario, `false`.  
+ Gli operatori quarto e quinto yield `true` se oggetto `a` è uguale all'oggetto `b`; in caso contrario, `false`.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Indica se due oggetti ComPtrRef sono uguali.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Namespace Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
  [Classe ComPtrRef](../windows/comptrref-class.md)

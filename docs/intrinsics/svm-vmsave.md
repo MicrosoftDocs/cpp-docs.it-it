@@ -1,35 +1,34 @@
 ---
-title: "__svm_vmsave | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_vmsave"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMSAVE (istruzione)"
-  - "__svm_vmsave (funzione intrinseca)"
+title: __svm_vmsave | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_vmsave
+dev_langs: C++
+helpviewer_keywords:
+- VMSAVE instruction
+- __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 49f0f2bc2446c45c394daa9a4ec1e8c0a6278c83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_vmsave
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="svmvmsave"></a>__svm_vmsave
+**Sezione specifica Microsoft**  
   
- Archivia un sottoinsieme dello stato di processore nel blocco di controllo specificato della macchina \(VMCB\) virtuale.  
+ Archivia un subset di stato del processore in blocco di controllo della macchina virtuale specificata (VMCB).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __svm_vmsave(  
@@ -37,26 +36,26 @@ void __svm_vmsave(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|\[in\] `VmcbPhysicalAddress`|L'indirizzo fisico di VMCB.|  
+|[in] `VmcbPhysicalAddress`|L'indirizzo fisico del VMCB.|  
   
-## Note  
- La funzione di `__svm_vmsave` equivale all'istruzione macchina di `VMSAVE` .  Questa funzione supporta l'interazione di monitoraggio della macchina virtuale dell'host con un sistema operativo guest e le relative applicazioni.  Per ulteriori informazioni, ricerca del documento, “il volume manuale 2 del programmatore di architettura dei sistemi AMD64: Programmazione di sistema,„ documento numero 24593, revisione 3,11 o successiva, [AMD Corporation](http://go.microsoft.com/fwlink/?LinkId=23746) al sito.  
+## <a name="remarks"></a>Note  
+ Il `__svm_vmsave` è equivalente alla funzione di `VMSAVE` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nel [Corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) sito.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__svm_vmsave`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_vmrun](../intrinsics/svm-vmrun.md)   
- [\_\_svm\_vmload](../intrinsics/svm-vmload.md)
+ [__svm_vmrun](../intrinsics/svm-vmrun.md)   
+ [__svm_vmload](../intrinsics/svm-vmload.md)

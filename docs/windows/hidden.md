@@ -1,32 +1,30 @@
 ---
-title: "hidden | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.hidden"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hidden attribute"
+title: nascosto | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.hidden
+dev_langs: C++
+helpviewer_keywords: hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a33faa8f0b21e26842f6ad6fc98c16228f8335ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hidden
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica che l'elemento esiste ma non deve essere visualizzata in un browser orientati a tramite.  
+# <a name="hidden"></a>hidden
+Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzatore per utente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,28 +32,27 @@ Indica che l'elemento esiste ma non deve essere visualizzata in un browser orien
   
 ```  
   
-## Note  
- **nascosto** L'attributo di C\+\+ ha la stessa funzionalità di  [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **nascosto** attributo C++ ha la stessa funzionalità come il [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [associabile](../windows/bindable.md) per un esempio di utilizzo  **nascosto**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio di come utilizzare **nascosto**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`,  **classe**,  `struct`, metodo, proprietà|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|**coclasse** \(se applicato a  **classe** o  `struct`\)|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|`interface`, **classe**, `struct`, metodo, proprietà|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
+|**Attributi non validi**|Nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi di metodo](../windows/method-attributes.md)   

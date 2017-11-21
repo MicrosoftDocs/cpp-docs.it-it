@@ -1,51 +1,50 @@
 ---
-title: "Spazio dei nomi Windows::Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/ABI::Windows::Foundation"
-  - "client/Windows::Foundation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Foundation (spazio dei nomi)"
+title: Spazio Namespace | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- client/ABI::Windows::Foundation
+- client/Windows::Foundation
+dev_langs: C++
+helpviewer_keywords: Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a3c2c1dd444959bd8139ce20b96c8190f6fe6d9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Spazio dei nomi Windows::Foundation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Abilita la funzionalità fondamentale [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], come oggetto e creazione della factory.  
+# <a name="windowsfoundation-namespace"></a>Spazio dei nomi Windows::Foundation
+Abilita la funzionalità di Windows Runtime fondamentali, ad esempio la creazione di oggetti e la factory.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 namespace Windows::Foundation;  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Funzioni  
+### <a name="functions"></a>Funzioni  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Funzione ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera un'istanza di tipo specifico definito in un ID della classe.|  
+|[Funzione ActivateInstance](../windows/activateinstance-function.md)|Registra e recupera un'istanza di un tipo specificato definito in un ID di classe specificata.|  
 |[Funzione GetActivationFactory](../windows/getactivationfactory-function.md)|Recupera una factory di attivazione per il tipo specificato dal parametro di modello.|  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Spazio nome:** Windows  
+ **Namespace:** Windows  
   
-## Vedere anche  
- [Windows Namespace](http://msdn.microsoft.com/it-it/45b08650-69cd-4f7f-a959-b7361476865c)
+## <a name="see-also"></a>Vedere anche  
+ [Namespace di Windows](http://msdn.microsoft.com/en-us/45b08650-69cd-4f7f-a959-b7361476865c)

@@ -1,55 +1,54 @@
 ---
-title: "_ReadBarrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReadBarrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ReadBarrier (intrinseco)"
+title: _ReadBarrier | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReadBarrier
+dev_langs: C++
+helpviewer_keywords: _ReadBarrier intrinsic
 ms.assetid: f9e54a92-61bc-4f55-8195-b8932065a796
-caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 654d68ddf16dd0e162e0e50bbfb85f15fe9b5a86
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _ReadBarrier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readbarrier"></a>_ReadBarrier  
+  
 **Sezione specifica Microsoft**  
   
  Limita le ottimizzazioni del compilatore che possono riordinare le operazioni di accesso alla memoria nel punto della chiamata.  
   
 > [!CAUTION]
->  Le funzioni intrinseche del compilatore `_ReadBarrier`, `_WriteBarrier` e `_ReadWriteBarrier` e la macro `MemoryBarrier` sono deprecate e non vanno usate.  Per la comunicazione tra thread, usare meccanismi come [atomic\_thread\_fence](../Topic/atomic_thread_fence%20Function.md) e [std::atomic\<T\>](../standard-library/atomic.md), definiti nella [Libreria standard C\+\+](../standard-library/cpp-standard-library-reference.md).  Per l'accesso hardware, usare l'opzione del compilatore [\/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) con la parola chiave [volatile](../cpp/volatile-cpp.md).  
+>  Le funzioni intrinseche del compilatore `_ReadBarrier`, `_WriteBarrier` e `_ReadWriteBarrier` e la macro `MemoryBarrier` sono deprecate e non vanno usate. Per la comunicazione tra thread, utilizzare meccanismi come [atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence) e [std:: Atomic\<T >](../standard-library/atomic.md) che sono definiti nel [della libreria Standard C++](../standard-library/cpp-standard-library-reference.md). Per accedere a hardware, utilizzare il [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) con l'opzione del compilatore di [volatile](../cpp/volatile-cpp.md) (parola chiave).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void _ReadBarrier(void);  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`_ReadBarrier`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
+## <a name="remarks"></a>Note  
  La funzione intrinseca `_ReadBarrier` limita le ottimizzazioni del compilatore che possono rimuovere o riordinare le operazioni di accesso alla memoria nel punto della chiamata.  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

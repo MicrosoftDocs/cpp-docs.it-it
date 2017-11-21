@@ -1,36 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4566 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4566"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4566"
+title: Compilatore avviso (livello 1) C4566 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4566
+dev_langs: C++
+helpviewer_keywords: C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7d2755a8e4220f45ef243153b0d0da7b95ec15b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4566
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-un carattere rappresentato dal nome di caratteri universali 'char' non può essere rappresentato nella tabella codici corrente \(tabella\)  
+# <a name="compiler-warning-level-1-c4566"></a>Avviso del compilatore (livello 1) C4566
+carattere rappresentato dal nome di caratteri universali 'char' non può essere rappresentato nella tabella codici corrente (pagina)  
   
- Non è possibile rappresentare tutti i caratteri Unicode nella tabella codici ANSI corrente.  
+ Non tutti i caratteri Unicode possono essere rappresentato nella tabella codici ANSI corrente.  
   
- Le stringhe di caratteri stretti \(a singolo byte\) vengono convertite in caratteri a più byte, mentre le stringhe di caratteri estesi \(a doppio byte\) non vengono convertite.  
+ Stringhe a caratteri Narrow (caratteri di un byte) vengono convertite in caratteri multibyte, mentre non sono stringhe wide (caratteri a due byte).  
   
- Il seguente codice di esempio genera l'errore C4566:  
+ L'esempio seguente genera l'errore C4566:  
   
 ```  
 // C4566.cpp  

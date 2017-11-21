@@ -1,32 +1,30 @@
 ---
-title: "Metodo CriticalSection::TryLock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryLock (metodo)"
+title: 'Metodo criticalsection:: TryLock | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::TryLock
+dev_langs: C++
+helpviewer_keywords: TryLock method
 ms.assetid: 504bb87c-2cd0-4f54-b458-b3efb9789053
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 225131a48e6ba5079ef2008b11ac6b22197f71d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo CriticalSection::TryLock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Tenta di entrare in una sezione critica senza bloccarsi.  Se la chiamata ha esito positivo, il thread chiamante assume la proprietà della sezione critica.  
+# <a name="criticalsectiontrylock-method"></a>Metodo CriticalSection::TryLock
+Tenta di immettere una sezione critica senza bloccare. Se la chiamata ha esito positivo, il thread chiamante acquisisce la proprietà della sezione critica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 SyncLock TryLock();  
@@ -36,20 +34,20 @@ static SyncLock TryLock(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `cs`  
- Un oggetto sezione critica definito dall'utente.  
+ Un oggetto specificato dall'utente sezione critica.  
   
-## Valore restituito  
- Un valore diverso da zero se la sezione critica viene immessa correttamente o il thread corrente già proprietario della sezione critica.  Zero se un altro thread è già proprietario della sezione critica.  
+## <a name="return-value"></a>Valore restituito  
+ Un valore diverso da zero se la sezione critica è stato immesso correttamente o il thread corrente è già proprietario della sezione critica. Zero in caso di un altro thread già proprietario della sezione critica.  
   
-## Note  
- La prima funzione **TryLock** influisce sull'oggetto sezione critica corrente.  La seconda funzione **TryLock** influisce su una sezione critica definita dall'utente.  
+## <a name="remarks"></a>Note  
+ Il primo **TryLock** funzione influisce l'oggetto corrente di sezione critica. Il secondo **TryLock** function viene applicata a una sezione critica specificato dall'utente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CriticalSection](../windows/criticalsection-class.md)

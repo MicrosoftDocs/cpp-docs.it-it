@@ -1,32 +1,30 @@
 ---
-title: "Costruttore WeakRef::WeakRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakRef, costruttore"
+title: 'Costruttore weakref:: Weakref | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::WeakRef
+dev_langs: C++
+helpviewer_keywords: WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a4b9c6648937813a02ca842407dbb07577f289f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Costruttore WeakRef::WeakRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakrefweakref-constructor"></a>Costruttore WeakRef::WeakRef
 Inizializza una nuova istanza della classe WeakRef.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WeakRef();  
@@ -51,17 +49,17 @@ WeakRef(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ptr`  
- Un puntatore, un riferimento, o un riferimento\-rvalue a un oggetto esistente che inizializza l'oggetto corrente di WeakRef.  
+ Un puntatore, un riferimento o un riferimento rvalue a un oggetto esistente che inizializza l'oggetto WeakRef corrente.  
   
-## Osservazioni  
- Il primo costruttore inizializza un oggetto vuoto di WeakRef.  Il secondo costruttore inizializza un oggetto di WeakRef da un puntatore a un'interfaccia di IWeakReference.  Il terzo costruttore inizializza un oggetto di WeakRef da un riferimento a un oggetto di ComPtr\< IWeakReference\>.  I il quarto e quinto costruttore inizializza un oggetto di WeakRef da un altro oggetto di WeakRef.  
+## <a name="remarks"></a>Note  
+ Il primo costruttore inizializza un oggetto WeakRef vuoto. Il secondo costruttore inizializza un oggetto WeakRef da un puntatore all'interfaccia IWeakReference. Il terzo costruttore inizializza un oggetto WeakRef da un riferimento a un ComPtr\< IWeakReference > oggetto. Il quarto e quinto costruttore inizializza un oggetto WeakRef da un altro oggetto WeakRef.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe WeakRef](../windows/weakref-class.md)

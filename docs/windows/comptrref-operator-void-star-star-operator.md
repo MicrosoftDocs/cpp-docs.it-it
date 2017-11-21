@@ -1,46 +1,43 @@
 ---
-title: "Operatore ComPtrRef::operator void** | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator void**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator void** (operatore)"
+title: 'Operatore comptrref:: void * * (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator void**
+dev_langs: C++
+helpviewer_keywords: operator void** operator
 ms.assetid: f020045c-9de4-4392-8783-73f0fc0761c6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f961328444d49bb282b87b4d4670aeab7fe7997
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore ComPtrRef::operator void**
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="comptrrefoperator-void-operator"></a>Operatore ComPtrRef::operator void**
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 operator void**() const;  
 ```  
   
-## Note  
- Elimina l'oggetto corrente di ComPtrRef, esegue il cast del puntatore all'interfaccia che è stata rappresentata dall'oggetto di ComPtrRef come puntatore a puntatore a `void`quindi restituisce il puntatore di cast.  
+## <a name="remarks"></a>Note  
+ Elimina l'oggetto ComPtrRef corrente, esegue il cast di puntatore a interfaccia che è stato rappresentato dall'oggetto ComPtrRef come un puntatore a puntatore-a `void`e quindi restituisce il puntatore di cast.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Comptrref (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

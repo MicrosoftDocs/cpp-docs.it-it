@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2247
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2247
+f1_keywords: C2247
+dev_langs: C++
+helpviewer_keywords: C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 64eafb23ca83cb61ac9b45cf9c84ba69365f8198
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2247"></a>Errore del compilatore C2247
 'identifier' non è accessibile perché 'class' Usa 'identificatore' per ereditare da 'class'  

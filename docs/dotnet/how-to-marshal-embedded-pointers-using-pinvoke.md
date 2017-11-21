@@ -1,41 +1,41 @@
 ---
-title: "Procedura: effettuare il marshalling di puntatori incorporati utilizzando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshalling dei dati [C++], puntatori incorporati"
-  - "puntatori incorporati [C++]"
-  - "interoperabilità [C++], puntatori incorporati"
-  - "marshalling [C++], puntatori incorporati"
-  - "platform invoke [C++], puntatori incorporati"
+title: 'Procedura: effettuare il marshalling di puntatori incorporati utilizzando PInvoke | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: effettuare il marshalling di puntatori incorporati utilizzando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le funzioni implementate nelle DLL non gestite possono essere chiamate utilizzando la funzionalità P\/Invoke.  Se il codice sorgente della DLL non è disponibile, P\/Invoke è l'unica opzione per l'interoperabilità.  Tuttavia, a differenza di altri linguaggi .NET, in Visual C\+\+ viene fornita un'alternativa a P\/Invoke.  Per ulteriori informazioni, vedere [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori incorporati utilizzando PInvoke
+Funzioni che vengono implementate nella DLL non gestite possono essere chiamate da codice gestito tramite la funzionalità Platform Invoke (P/Invoke). Se il codice sorgente per la DLL non è disponibile, P/Invoke è l'unica opzione per l'interoperabilità. Tuttavia, a differenza di altri linguaggi .NET, Visual C++ fornisce un'alternativa a P/Invoke. Per ulteriori informazioni, vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) e [procedura: effettuare il marshalling incorporate puntatori Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
-## Esempio  
- Il passaggio delle strutture al codice nativo richiede la creazione di una struttura gestita che sia equivalente in termini di layout dei dati alla struttura nativa.  Tuttavia, le strutture che contengono puntatori richiedono una gestione speciale.  Per ciascun puntatore incorporato nella struttura nativa, la versione gestita della struttura deve contenere un'istanza del tipo <xref:System.IntPtr>.  Inoltre, la memoria per queste istanze deve essere esplicitamente allocata, inizializzata e rilasciata utilizzando i metodi <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> e <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>.  
+## <a name="example"></a>Esempio  
+ Il passaggio di strutture al codice nativo, è necessario che venga creata una struttura gestita equivalente in termini di layout dei dati per la struttura nativa. Tuttavia, le strutture che contengono puntatori richiedono una gestione speciale. Per ciascun puntatore incorporato nella struttura nativa, la versione gestita della struttura deve contenere un'istanza di <xref:System.IntPtr> tipo. Inoltre, della memoria per queste istanze devono essere allocate in modo esplicito, inizializzato e liberata usando il <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, e <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> metodi.  
   
- Il codice riportato di seguito è costituito da un modulo gestito e un modulo non gestito.  Il modulo non gestito è una DLL in cui sono definite una funzione che accetta una struttura denominata ListString contenente un puntatore, nonché una funzione denominata TakesListStruct.  Il modulo gestito è un'applicazione della riga di comando che importa la funzione TakesListStruct e definisce una struttura denominata MListStruct, equivalente alla funzione ListStruct nativa con l'unica differenza che double\* è rappresentato con un'istanza di <xref:System.IntPtr>.  Prima di chiamare TakesListStruct, la funzione main alloca e inizializza la memoria a cui fa riferimento questo campo.  
+ Il codice seguente è costituito da una funzione non gestita e un modulo gestito. Il modulo non gestito è una DLL che definisce una funzione che accetta una struttura denominata ListString contenente un puntatore e una funzione denominata TakesListStruct. Il modulo gestito è un'applicazione della riga di comando che importa la funzione TakesListStruct e definisce una struttura denominata MListStruct equivale alla funzione ListStruct nativa ad eccezione del fatto che il valore double * è rappresentato con un <xref:System.IntPtr> istanza. Prima di chiamare TakesListStruct, la funzione main alloca e inizializza la memoria che fa riferimento a questo campo.  
   
- Il modulo gestito è compilato con \/clr, ma funziona anche \/clr:pure.  
+ Il modulo gestito viene compilato con /clr, ma con /clr: pure funziona anche. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -65,7 +65,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -107,7 +107,7 @@ int main() {
 }  
 ```  
   
- Nessuna parte della DLL viene esposta al codice gestito utilizzando la normale direttiva \#include.  In realtà, l'accesso alla DLL viene eseguito solo in fase di esecuzione. Di conseguenza, gli eventuali problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
+ Si noti che nessuna parte della DLL viene esposto al codice gestito utilizzando la normale #include (direttiva). In effetti, la DLL di accesso viene eseguita in fase di esecuzione, problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
   
-## Vedere anche  
- [Utilizzo esplicito di PInvoke in C\+\+ \(attributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

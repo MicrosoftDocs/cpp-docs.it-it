@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -48,32 +47,17 @@ helpviewer_keywords:
 - C2889
 - C2895
 - C2899
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1f7f5329c9723b1c0fe44020807251fff04a4349
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 9c825bba825db2bba28e29c0cf38bb845492509c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Del compilatore C2800 errori a C2899
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -97,25 +81,25 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2809](compiler-error-c2809.md)|' operatore *operatore*' non ha parametri formali|  
 |[Errore del compilatore C2810](compiler-error-c2810.md)|'*interfaccia*': un'interfaccia può ereditare solo da un'altra interfaccia|  
 |[Errore del compilatore C2811](compiler-error-c2811.md)|'*type1*': non può ereditare da '*type2*', una classe di riferimento può ereditare solo da una classe di riferimento o una classe di interfaccia|  
-|[Errore del compilatore C2812](compiler-error-c2812.md)|#importazione non è supportata con /clr: pure e /CLR: safe|  
-|[Errore del compilatore C2813](compiler-error-c2813.md)|#importazione non è supportata con /MP|  
+|[Errore del compilatore C2812](compiler-error-c2812.md)|#import non è supportato con /clr: pure e /CLR: safe|  
+|[Errore del compilatore C2813](compiler-error-c2813.md)|#import non supportato con /MP|  
 |[Errore del compilatore C2814](compiler-error-c2814.md)|'*membro*': un tipo nativo non può essere annidato all'interno di un tipo gestito o WinRT '*classe*'|  
 |[Errore del compilatore C2815](compiler-error-c2815.md)|'operator delete': il primo parametro formale deve essere ' void *', ma '*tipo *' è stata utilizzata|  
 |C2816 errore del compilatore|Obsoleta.|  
-|[Errore del compilatore C2817](compiler-error-c2817.md)|il tipo restituito per 'operator delete' deve essere 'void'|  
+|[Errore del compilatore C2817](compiler-error-c2817.md)|tipo restituito per 'operator delete' deve essere 'void'|  
 |[Errore del compilatore C2818](compiler-error-c2818.md)|applicazione di 'operator ->' di overload è ricorsiva tramite il tipo '*classe*'|  
 |[Errore del compilatore C2819](compiler-error-c2819.md)|tipo '*classe*' non ha un membro di overload 'operator ' ->|  
 |C2820 errore del compilatore|Obsoleta.|  
 |[Errore del compilatore C2821](compiler-error-c2821.md)|il primo parametro formale di 'operator new' deve essere 'size_t'|  
-|C2822 errore del compilatore|rimozione locale non supportata su questa piattaforma|  
+|C2822 errore del compilatore|rimozione locale non è supportata in questa piattaforma|  
 |[Errore del compilatore C2823](compiler-error-c2823.md)|non è valido un modello o generico (typedef)|  
-|[Errore del compilatore C2824](compiler-error-c2824.md)|il tipo restituito per 'operator new' deve essere 'void*'|  
+|[Errore del compilatore C2824](compiler-error-c2824.md)|il tipo restituito per 'operator new' deve essere ' void *'|  
 |[Errore del compilatore C2825](compiler-error-c2825.md)|'*identificatore*': deve essere una classe o spazio dei nomi quando seguito da ':: '|  
 |Errore del compilatore C2826|Obsoleta.|  
 |[Errore del compilatore C2827](compiler-error-c2827.md)|' operatore *operatore*' non può essere sottoposto a override a livello globale con forma unaria|  
 |[Errore del compilatore C2828](compiler-error-c2828.md)|' operatore *operatore*' non può essere sottoposto a override a livello globale con forma binaria|  
 |[Errore del compilatore C2829](compiler-error-c2829.md)|' operatore *operatore*' non può avere un elenco di parametri variabile|  
-|[Errore del compilatore C2830](compiler-error-c2830.md)|solo i parametri di posizione di 'operator new' possono avere valori predefiniti|  
+|[Errore del compilatore C2830](compiler-error-c2830.md)|solo i parametri di posizione per 'operator new' possono avere valori predefiniti|  
 |[Errore del compilatore C2831](compiler-error-c2831.md)|' operatore *operatore*' non può avere parametri predefiniti|  
 |C2832 errore del compilatore|'*identificatore*': un tipo di riferimento non può essere inizializzato dal valore|  
 |[Errore del compilatore C2833](compiler-error-c2833.md)|' operatore *token*' non è un tipo o un operatore riconosciuto|  
@@ -126,7 +110,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2838](compiler-error-c2838.md)|'*identificatore*': il nome completo non valido nella dichiarazione di membro|  
 |[Errore del compilatore C2839](compiler-error-c2839.md)|tipo restituito non valido '*tipo*' di overload 'operator ->'|  
 |Errore del compilatore C2840|argomento di istruzione non costante|  
-|C2841 errore del compilatore|argomento di registro non costante|  
+|C2841 errore del compilatore|registrare l'argomento non costante|  
 |[Errore del compilatore C2842](compiler-error-c2842.md)|'*classe*': un tipo gestito o WinRT non può definire il proprio 'operator new' o 'operator delete'|  
 |[Errore del compilatore C2843](compiler-error-c2843.md)|'*membro*': Impossibile accettare l'indirizzo di un membro dati non statico o il metodo di un tipo gestito o WinRT|  
 |[Errore del compilatore C2844](compiler-error-c2844.md)|'*identificatore*': non può essere un membro di interfaccia '*interfaccia*'|  
@@ -139,13 +123,13 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |C2851 errore del compilatore|'*enum*': un'enumerazione WinRT pubblica può utilizzare solo 'int' o 'unsigned int' come tipo di base|  
 |C2852 errore del compilatore|'*identificatore*': solo i membri di dati possono essere inizializzati all'interno di una classe|  
 |C2853 errore del compilatore|'*identificatore*': un membro dati non statici non può avere un tipo che contiene 'auto'|  
-|[Errore del compilatore C2854](compiler-error-c2854.md)|errore di sintassi in #pragma hdrstop|  
+|[Errore del compilatore C2854](compiler-error-c2854.md)|Errore di sintassi in #pragma hdrstop|  
 |[Errore del compilatore C2855](compiler-error-c2855.md)|opzione della riga di comando '*opzione*' non è coerente con l'intestazione precompilata|  
 |[Errore del compilatore C2856](compiler-error-c2856.md)|#pragma hdrstop non può trovarsi all'interno di un blocco #if|  
 |[Errore del compilatore C2857](compiler-error-c2857.md)|' #include ' specificata con il /Yc istruzione*filename* opzione della riga di comando non è stato trovato nel file di origine|  
 |[Errore del compilatore C2858](compiler-error-c2858.md)|opzione della riga di comando ' /Yc (/Fd*filename*)' non è coerente con l'intestazione precompilata, utilizzato ' /Fd*filename*'|  
 |[Errore del compilatore C2859](compiler-error-c2859.md)|*nome del file* non è il *filetype* file utilizzato quando è stata creata questa intestazione precompilata, ricreare l'intestazione precompilata.|  
-|[Errore del compilatore C2860](compiler-error-c2860.md)|'void' non può essere utilizzato come tipo di un argomento, fatta eccezione per '(void)'|  
+|[Errore del compilatore C2860](compiler-error-c2860.md)|'void' non può essere un tipo di argomento, ad eccezione di '(void)'|  
 |[Errore del compilatore C2861](compiler-error-c2861.md)|'*dichiarazione*': non è possibile definire una funzione membro di interfaccia|  
 |[Errore del compilatore C2862](compiler-error-c2862.md)|'*interfaccia*': un'interfaccia può avere solo membri pubblici|  
 |[Errore del compilatore C2863](compiler-error-c2863.md)|'*interfaccia*': un'interfaccia non può avere elementi Friend|  
@@ -165,24 +149,23 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2877](compiler-error-c2877.md)|'*membro*'non è accessibile da '*classe*'|  
 |[Errore del compilatore C2878](compiler-error-c2878.md)|'*identificatore*': un spazio dei nomi o classe con questo nome non esiste|  
 |[Errore del compilatore C2879](compiler-error-c2879.md)|'*identificatore*': solo uno spazio dei nomi può essere assegnato un nome alternativo per una definizione di alias dello spazio dei nomi|  
-|C2880 errore del compilatore|__swi o __hvc richiede una costante valida come primo argomento (numero SWI)|  
+|C2880 errore del compilatore|SWI o HVC richiede una costante valida come primo argomento (numero SWI)|  
 |[Errore del compilatore C2881](compiler-error-c2881.md)|'*identificatore*': è già utilizzato come alias per '*classe*'|  
 |[Errore del compilatore C2882](compiler-error-c2882.md)|'*identificatore*': utilizzo non valido dell'identificatore dello spazio dei nomi nell'espressione|  
 |[Errore del compilatore C2883](compiler-error-c2883.md)|'*funzione*': dichiarazione di funzione è in conflitto con '*identificatore*' introdotto dalla dichiarazione using|  
 |[Errore del compilatore C2884](compiler-error-c2884.md)|'*identificatore*': introdotto dalla dichiarazione using in conflitto con la funzione locale '*funzione*'|  
 |[Errore del compilatore C2885](compiler-error-c2885.md)|'*classe*::*identificatore*': dichiarazione using non valida nell'ambito di classe non|  
 |[Errore del compilatore C2886](compiler-error-c2886.md)|'*classe*::*identificatore*': simbolo non può essere utilizzato in una dichiarazione using di membri|  
-|C2887 errore del compilatore|__swi o __hvc non può avere più di cinque argomenti (numero SWI, r0 - r3)|  
+|C2887 errore del compilatore|SWI o HVC non può avere più di cinque argomenti (numero SWI, r0 - r3)|  
 |[Errore del compilatore C2888](compiler-error-c2888.md)|'*identificatore*': simbolo non può essere definito nello spazio dei nomi '*dello spazio dei nomi*'|  
 |C2889 errore del compilatore|'*classe*': un tipo di classe gestita o WinRT non può essere una classe base virtuale|  
 |[Errore del compilatore C2890](compiler-error-c2890.md)|'*classe*': una classe di riferimento può avere solo una classe di base non di interfaccia|  
 |[Errore del compilatore C2891](compiler-error-c2891.md)|'*parametro*': Impossibile accettare l'indirizzo di un parametro di modello|  
-|[Errore del compilatore C2892](compiler-error-c2892.md)|la classe locale non deve avere modelli di membro|  
+|[Errore del compilatore C2892](compiler-error-c2892.md)|classe locale non deve avere modelli di membro|  
 |[Errore del compilatore C2893](compiler-error-c2893.md)|Impossibile specializzare il modello di funzione '*modello*'|  
-|[Errore del compilatore C2894](compiler-error-c2894.md)|impossibile dichiarare i modelli in modo che abbiano il collegamento 'C'|  
+|[Errore del compilatore C2894](compiler-error-c2894.md)|modelli non possono essere dichiarati con collegamento 'c'|  
 |C2895 errore del compilatore|'*dichiarazione*': Impossibile creare in modo esplicito un'istanza di un modello di funzione che è stato dichiarato con dllimport|  
 |[Errore del compilatore C2896](compiler-error-c2896.md)|'*function1*': non è possibile utilizzare una funzione modello o generico '*function2*' come argomento di funzione|  
 |[Errore del compilatore C2897](compiler-error-c2897.md)|un distruttore/finalizzatore non può essere un modello di funzione|  
 |[Errore del compilatore C2898](compiler-error-c2898.md)|'*dichiarazione*': i modelli di funzione membro non possono essere virtuali|  
 |Errore del compilatore C2899|Obsoleta.|  
-

@@ -1,35 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4441 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4441"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4441"
+title: Compilatore avviso (livello 1) C4441 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4441
+dev_langs: C++
+helpviewer_keywords: C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fc83284e7de2c381413dd48f60a82dd68942568f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4441
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-convenzione di chiamata di 'cc1' ignorata; utilizzata 'cc2'  
+# <a name="compiler-warning-level-1-c4441"></a>Avviso del compilatore (livello 1) C4441
+convenzione di chiamata di 'cc1' ignorata; utilizzata invece 'cc2'  
   
- Le funzioni membro nei tipi gestiti definiti dall'utente e nei generics di funzioni globali devono utilizzare la convenzione di chiamata [\_\_clrcall](../../cpp/clrcall.md).  Il compilatore ha utilizzato `__clrcall`.  
+ Le funzioni membro in tipi gestiti definiti dall'utente e generics di funzioni globali devono utilizzare il [clrcall](../../cpp/clrcall.md) convenzione di chiamata.  Il compilatore utilizzato `__clrcall`.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4441:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4441.  
   
 ```  
 // C4441.cpp  

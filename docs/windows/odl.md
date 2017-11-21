@@ -1,32 +1,30 @@
 ---
-title: "odl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.odl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "odl attribute"
+title: ODL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.odl
+dev_langs: C++
+helpviewer_keywords: odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 179d645bde978a9eafb21961d1400aa7282f558e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# odl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-identifica un'interfaccia come interfaccia \(ODL\) di ODL.  il compilatore MIDL non richiede **odl** attributo; viene riconosciuto solo per la compatibilità con i file più recenti di .odl.  
+# <a name="odl"></a>odl
+Identifica un'interfaccia come interfaccia oggetto descrizione Language ODL (). Il compilatore MIDL non richiede il **odl** attributo; solo per compatibilità con versioni precedenti. ODL venga riconosciuto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,10 +32,10 @@ identifica un'interfaccia come interfaccia \(ODL\) di ODL.  il compilatore MIDL 
   
 ```  
   
-## Note  
- **odl** L'attributo di C\+\+ ha la stessa funzionalità di  [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **odl** attributo C++ ha la stessa funzionalità come il [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) attributo MIDL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_odl.cpp  
@@ -59,20 +57,19 @@ public:
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   

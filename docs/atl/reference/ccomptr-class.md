@@ -1,49 +1,31 @@
 ---
-title: Classe CComPtr | Documenti di Microsoft
+title: Classe CComPtr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
 - ATLBASE/ATL::CComPtr::CComPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtr class
+dev_langs: C++
+helpviewer_keywords: CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ae7bb5e85f23492bdbef4af86d9f68fa83c991e2
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0fada073fd438bb2b3605c972f6598f2955b5f68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomptr-class"></a>Classe CComPtr
-Una classe di puntatore intelligente per la gestione dei puntatori a interfaccia COM.  
+Una classe del puntatore intelligente per la gestione dei puntatori a interfaccia COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,18 +50,18 @@ class CComPtr
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|Assegna un puntatore al puntatore di membro.|  
+|[CComPtr::operator =](#operator_eq)|Assegna un puntatore al puntatore a membro.|  
   
 ## <a name="remarks"></a>Note  
- ATL utilizza `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) per gestire i puntatori a interfaccia COM. Derivano entrambi da [CComPtrBase](../../atl/reference/ccomptrbase-class.md), ed entrambi eseguire il conteggio dei riferimenti automatico.  
+ Utilizza ATL `CComPtr` e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) per gestire i puntatori a interfaccia COM. Entrambe sono derivate da [CComPtrBase](../../atl/reference/ccomptrbase-class.md), ed entrambi eseguire il conteggio dei riferimenti automatico.  
   
- Il **CComPtr** e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classi consentono di eliminare le perdite di memoria eseguendo il conteggio dei riferimenti automatico.  Le funzioni seguenti entrambi eseguono le stesse operazioni logiche; Tuttavia, si noti come la seconda versione potrebbe essere meno soggetto a errori tramite il **CComPtr** classe:  
+ Il **CComPtr** e [CComQIPtr](../../atl/reference/ccomqiptr-class.md) classi possono contribuire a evitare perdite di memoria eseguendo il conteggio dei riferimenti automatico.  Le funzioni seguenti entrambi eseguono le stesse operazioni logiche; Si noti, tuttavia, come la seconda versione potrebbe essere meno soggetto a errori tramite il **CComPtr** classe:  
   
- [!code-cpp[NVC_ATL_Utilities&#130;](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
- [!code-cpp[&#131; NVC_ATL_Utilities](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
- Nelle build di Debug collegamento atlsd per l'analisi codice.  
+ Nelle build di Debug, collegare atlsd.lib per l'analisi codice.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -117,10 +99,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Restituisce un puntatore a aggiornato `CComPtr` oggetto  
   
 ### <a name="remarks"></a>Note  
- Questa operazione AddRefs il nuovo oggetto e rilascia l'oggetto esistente, se esiste.  
+ Questa operazione AddRefs il nuovo oggetto e le versioni l'oggetto esistente, se presente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

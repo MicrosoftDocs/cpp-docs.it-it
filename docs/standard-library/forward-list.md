@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <forward_list>
-dev_langs:
-- C++
-helpviewer_keywords:
-- <forward_list>
+f1_keywords: <forward_list>
+dev_langs: C++
+helpviewer_keywords: <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: c7995991477ac2b83c0435db59f923e1406e92ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 991be1f0426cbdab94e5587a599632311a4c42c7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 Definisce la classe modello contenitore forward_list e diversi modelli di supporto.  
@@ -60,7 +55,6 @@ Definisce la classe modello contenitore forward_list e diversi modelli di suppor
   
 ## <a name="see-also"></a>Vedere anche  
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
-
 
 
 

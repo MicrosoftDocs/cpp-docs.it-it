@@ -1,39 +1,37 @@
 ---
-title: "Errore degli strumenti del linker LNK1237 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1237"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1237"
+title: Strumenti del linker LNK1237 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1237
+dev_langs: C++
+helpviewer_keywords: LNK1237
 ms.assetid: 8722ffa8-096a-4bb0-85f9-f3aa0e10872a
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43ab77f153b6e53709422a1826a6beee25d65b2a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore degli strumenti del linker LNK1237
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-durante la generazione del codice, il compilatore ha introdotto un riferimento al simbolo 'simbolo' definito nel modulo 'modulo' compilato con \/GL  
+# <a name="linker-tools-error-lnk1237"></a>Errore degli strumenti del linker LNK1237
+durante la generazione di codice, il compilatore ha introdotto un riferimento al simbolo 'simbolo' definito nel modulo 'modulo' compilato con /GL  
   
- Durante la generazione del codice, il compilatore non deve introdurre simboli che verranno successivamente risolti in definizioni compilate con l'opzione **\/GL**.  Il parametro `symbol` è un simbolo che è stato introdotto e successivamente risolto in una definizione compilata con l'opzione **\/GL**.  
+ Durante la generazione di codice, il compilatore consiglia di non introdurre simboli che vengono risolte in un secondo momento per le definizioni di compilazione **/GL**. `symbol`è un simbolo che è stato introdotto e successivamente risolto a una definizione di compilazione con **/GL**.  
   
- Per ulteriori informazioni, vedere [\/GL \(Ottimizzazione intero programma\)](../../build/reference/gl-whole-program-optimization.md).  
+ Per altre informazioni, vedere [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md).  
   
- Per correggere l'errore LNK1237, non compilare il simbolo con **\/GL** oppure utilizzare [\/INCLUDE \(Forza riferimenti al simbolo\)](../../build/reference/include-force-symbol-references.md) per forzare un riferimento al simbolo.  
+ Per correggere l'errore LNK1237, non compilare il simbolo con **/GL** o utilizzare [/INCLUDE (forza riferimenti al simbolo)](../../build/reference/include-force-symbol-references.md) per forzare un riferimento al simbolo.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore LNK1237.  Per correggere questo errore, non inizializzare la matrice in LNK1237\_a.cpp e aggiungere **\/include:\_\_chkstk** al comando del collegamento.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore LNK1237. Per correggere l'errore, inizializzare la matrice in LNK1237_a. cpp e aggiungere **/include: chkstk** al comando del collegamento.  
   
 ```  
 // LNK1237_a.cpp  

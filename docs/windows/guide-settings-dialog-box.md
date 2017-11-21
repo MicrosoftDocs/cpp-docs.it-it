@@ -1,66 +1,67 @@
 ---
-title: "Finestra di dialogo Impostazioni guide | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLU (Dialog Unit - unità delle finestre di dialogo)"
-  - "Editor di finestre, blocco sulle guide"
-  - "spaziatura di griglia"
-  - "guide, impostazioni"
-  - "unità delle finestre di dialogo (DLU - Dialog Unit)"
-  - "griglia di layout nell'editor finestre"
-  - "blocca sulle guide (editor finestre)"
-  - "controlli [C++], blocco su guide/griglia"
-  - "Impostazioni guide (finestra di dialogo dell'editor finestre)"
+title: Guida alla finestra di dialogo Impostazioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DLUs (dialog units)
+- Dialog editor, snap to guides
+- grid spacing
+- guides, settings
+- dialog units (DLUs)
+- layout grid in Dialog Editor
+- snap to guides (Dialog editor)
+- controls [C++], snap to guides/grid
+- Guide Settings dialog box (Dialog editor)
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3389a92be2dcb1a183cfbc297e45fb8360a9288d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Finestra di dialogo Impostazioni guide
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Guide layout  
- Consente di visualizzare le impostazioni delle guide di layout.  
+# <a name="guide-settings-dialog-box"></a>Finestra di dialogo Impostazioni guide
+## <a name="layout-guides"></a>Guide  
+ Consente di visualizzare le impostazioni per le guide di layout.  
   
- **Nessuno**  
+ **None**  
   
- Consente di nascondere gli strumenti di layout.  
+ Nasconde gli strumenti di layout.  
   
  **Righelli e guide**  
   
- Se attivata, questa opzione consente di aggiungere i righelli agli strumenti di layout. È possibile inserire le guide nei righelli.  Le guide predefinite sono i margini, che è possibile spostare mediante trascinamento.  Per inserire una guida, fare clic sui righelli.  I controlli vengono "bloccati" sulle guide quando vengono spostati sopra o in prossimità di queste ultime.  I controlli vengono inoltre spostati con la guida a cui sono associati.  Se un controllo è associato a una guida su ciascun lato e una delle guide viene spostata, il controllo viene ridimensionato.  
+ Quando abilitata, aggiunge i righelli per strumenti di layout. le guide possono trovarsi i righelli. Le guide predefinite sono i margini, che possono essere spostati mediante il trascinamento. Fare clic sui righelli per inserire una Guida. "Snap" guide quando i controlli vengono spostati sopra o accanto ai controlli. Controlli vengono spostati anche con una guida sono associati a esso. Quando un controllo è associato a una Guida su ogni lato, e una Guida viene spostata, il controllo viene ridimensionato.  
   
- **Grid**  
+ **Griglia**  
   
- Consente di creare una griglia di layout.  I nuovi controlli vengono automaticamente allineati alla griglia.  
+ Crea una griglia di layout. Nuovi controlli verranno automaticamente allineamento alla griglia.  
   
-## Spaziatura griglia  
- Consente di visualizzare le impostazioni relative alla spaziatura della griglia, espresse in unità della finestra di dialogo \(DLU, Dialog Unit\).  
+## <a name="grid-spacing"></a>Spaziatura griglia  
+ Visualizza le impostazioni per la spaziatura della griglia in unità della finestra di dialogo (DLU-Dialog Unit).  
   
  **Larghezza: DLU**  
   
- Consente di impostare la larghezza della griglia di layout in DLU.  Una DLU orizzontale corrisponde alla larghezza media del carattere nella finestra di dialogo divisa per quattro.  
+ Imposta la larghezza della griglia di layout in DLU. Una DLU orizzontale corrisponde alla larghezza media del tipo di carattere casella finestra divisa per quattro.  
   
  **Altezza: DLU**  
   
- Consente di impostare l'altezza della griglia di layout in DLU.  Una DLU verticale corrisponde all'altezza media del carattere nella finestra di dialogo divisa per otto.  
+ Imposta l'altezza della griglia di layout in DLU. Una DLU verticale corrisponde all'altezza media del carattere nella finestra di dialogo diviso per 8.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Modifying the Layout Grid](../mfc/modifying-the-layout-grid.md)   
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica della griglia di Layout](../windows/modifying-the-layout-grid.md)   
+ [Stati dell'editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)
+

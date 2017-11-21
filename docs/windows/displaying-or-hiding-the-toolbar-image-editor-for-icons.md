@@ -1,45 +1,46 @@
 ---
-title: "Displaying or Hiding the Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], toolbar"
-  - "toolbars [C++], showing"
-  - "toolbars [C++], hiding"
+title: Visualizzare o nascondere la barra degli strumenti (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 78755b526ba5073224c2c9942526b1e8d09e4860
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Displaying or Hiding the Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Poiché numerosi strumenti di disegno sono accessibili dalla [tastiera](../mfc/accelerator-keys-image-editor-for-icons.md), può talvolta rivelarsi utile nascondere la barra degli strumenti dell'Editor di immagini.  
+# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Attivazione o disattivazione della barra degli strumenti (Editor di immagini per le icone)
+Poiché molti degli strumenti di disegno sono disponibili le [tastiera](../windows/accelerator-keys-image-editor-for-icons.md), è talvolta utile nascondere la barra degli strumenti dell'Editor di immagini.  
   
-### Per attivare o disattivare la visualizzazione della barra degli strumenti dell'editor di immagini  
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Per visualizzare o nascondere la barra degli strumenti dell'Editor di immagini  
   
-1.  Scegliere **Barre degli strumenti** dal menu **Visualizza**, quindi **Editor immagini**.  
+1.  Nel **vista** dal menu **barre degli strumenti** scegliere **Editor di immagini**.  
   
     > [!NOTE]
-    >  Gli elementi di questa barra degli strumenti risulteranno non disponibili quando un file di immagine di un progetto o di una soluzione corrente non viene aperto nell'Editor di immagini.  Per informazioni su come aggiungere file di immagine ai progetti, vedere [Creating an Icon or Other Image](../mfc/creating-an-icon-or-other-image-image-editor-for-icons.md).  
+    >  Gli elementi da questa barra degli strumenti risulteranno non disponibili quando un file di immagine dal progetto corrente o di soluzione non è aperta nell'Editor di immagini. Vedere [la creazione di un'icona o altre immagini](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), per informazioni sull'aggiunta di file di immagine ai progetti.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Finestra Colori](../windows/colors-window-image-editor-for-icons.md)   
- [Toolbar](../mfc/toolbar-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Finestra colori](../windows/colors-window-image-editor-for-icons.md)   
+ [Barra degli strumenti](../windows/toolbar-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+

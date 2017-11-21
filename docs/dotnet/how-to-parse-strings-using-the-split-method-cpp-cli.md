@@ -1,35 +1,34 @@
 ---
-title: "Procedura: analizzare stringhe tramite il metodo Split (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "esempi [C++], stringhe"
-  - "analisi di stringhe [C++]"
-  - "espressioni regolari [C++], analisi di stringhe"
-  - "Split (metodo), analisi di stringhe"
-  - "stringhe [C++], analisi"
+title: 'Procedura: analizzare stringhe tramite il metodo Split (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- Split method, parsing strings
+- strings [C++], parsing
 ms.assetid: d52d2539-5ebb-4716-86b3-07314dd7e4bd
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be3443995966c5ce7b9c2fe4a156c8d6c79069d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: analizzare stringhe tramite il metodo Split (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come utilizzare il metodo <xref:System.String.Split%2A?displayProperty=fullName> per estrarre ciascuna parola da una stringa.  Viene costruita una stringa contenente più tipi di descrittori di parole e quindi analizzata chiamando <xref:System.String.Split%2A> con un elenco di descrittori.  Infine, ciascuna parola nella frase viene visualizzata separatamente.  
+# <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Procedura: analizzare stringhe tramite il metodo Split (C++/CLI)
+Esempio di codice seguente viene illustrato l'utilizzo di <xref:System.String.Split%2A?displayProperty=fullName> metodo per estrarre le parole da una stringa. Stringa che contiene più tipi di descrittori di parole viene costruita e quindi analizzata chiamando <xref:System.String.Split%2A> con un elenco di descrittori. Quindi, ogni parola della frase viene visualizzato separatamente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // regex_split.cpp  
@@ -54,6 +53,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

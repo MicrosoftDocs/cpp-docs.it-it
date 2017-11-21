@@ -1,32 +1,30 @@
 ---
-title: "Metodo Implements::FillArrayWithIid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid (metodo)"
+title: 'Metodo Implements:: fillarraywithiid | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: b2e62e3f-0ab9-4c70-aad7-856268544f44
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a53a7eb9a05e1f4583c49b42fa10efdf1ee815ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo Implements::FillArrayWithIid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inserisce l'ID di interfaccia specificata dallo zeresimo parametro di modello corrente nell'array di elementi specificato.  
+# <a name="implementsfillarraywithiid-method"></a>Metodo Implements::FillArrayWithIid
+Inserisce l'ID di interfaccia specificato dal parametro di modello zero corrente nell'elemento di matrice specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -35,20 +33,20 @@ __forceinline static void FillArrayWithIid(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `index`  
- Un indice a base zero che indica un elemento dell'array iniziale per questa operazione.  Quando questa operazione viene completata, `index` viene incrementato di 1.  
+ Indice in base zero che indica l'elemento di matrice iniziale per questa operazione. Al termine dell'operazione, `index` viene incrementato di 1.  
   
  `iids`  
- Array di tipo IID .  
+ Matrice di tipo IID.  
   
-## Note  
- Funzione di supporto interna.  
+## <a name="remarks"></a>Note  
+ Funzione di supporto interno.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
- [Implementa la struttura](../windows/implements-structure.md)
+## <a name="see-also"></a>Vedere anche  
+ [Struttura Implements](../windows/implements-structure.md)

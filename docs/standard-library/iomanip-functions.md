@@ -19,7 +19,7 @@ f1_keywords:
 - iomanip/std::setprecision
 - iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::get_money [C++]
@@ -33,12 +33,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 8ea88bd5f1400eab0fe3cdbf09321e152412e1e1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 ||||  
@@ -618,5 +617,4 @@ l5 = 65536
   
 ## <a name="see-also"></a>Vedere anche  
  [\<iomanip>](../standard-library/iomanip.md)
-
 

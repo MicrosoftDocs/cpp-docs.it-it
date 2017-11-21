@@ -1,96 +1,102 @@
 ---
-title: "Procedura dettagliata: Adattamento del codice esistente per l&#39;uso di attivit&#224; leggere | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utilizzo di attività leggere [Runtime di concorrenza]"
-  - "attività leggere, uso [Runtime di concorrenza]"
+title: "Procedura dettagliata: Adattamento del codice esistente per l'uso di attività leggere | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- using lightweight tasks [Concurrency Runtime]
+- lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e5be679f1c36d2a0a615f54de099b0d834d15c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura dettagliata: Adattamento del codice esistente per l&#39;uso di attivit&#224; leggere
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Procedura dettagliata: Adattamento del codice esistente per l'uso di attività leggere
+In questo argomento viene illustrato come adattare il codice esistente che usa l'API di Windows per creare ed eseguire un thread per l'utilizzo di un'attività leggera.  
+  
+ Oggetto *attività leggera* è un'attività pianificata direttamente da un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [Concurrency:: ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) oggetto. Le attività leggere sono utili quando si adatta il codice esistente per usare la funzionalità di pianificazione del runtime di concorrenza.  
+  
+## <a name="prerequisites"></a>Prerequisiti  
+ Prima di iniziare questa procedura dettagliata, leggere l'argomento [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+  
+## <a name="example"></a>Esempio  
+  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene illustrato l'utilizzo tipico dell'API di Windows per creare ed eseguire un thread. Questo esempio viene utilizzato il [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) funzione da chiamare il `MyThreadFunction` in un thread separato.  
+  
+### <a name="code"></a>Codice  
+ [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
+  
+### <a name="comments"></a>Commenti  
+ Questo esempio produce il seguente output:  
+  
+```Output  
+Parameters = 50, 100  
+```  
+  
+ La procedura seguente viene illustrato come adattare l'esempio di codice per utilizzare il Runtime di concorrenza per eseguire la stessa attività.  
+  
+### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>Per adattare l'esempio per l'utilizzo di un'attività leggera  
+  
+1.  Aggiungere un `#include` direttiva concrt. h il file di intestazione.  
+  
+ [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
+  
+2.  Aggiungere un `using` direttiva per il `concurrency` dello spazio dei nomi.  
+  
+ [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
+  
+3.  Modificare la dichiarazione di `MyThreadFunction` per utilizzare il `__cdecl` la convenzione di chiamata e restituire `void`.  
+  
+ [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
+  
+4.  Modificare il `MyData` struttura per includere un [Concurrency:: event](../../parallel/concrt/reference/event-class.md) oggetto che segnala all'applicazione principale il completamento di attività.  
+  
+ [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
+  
+5.  Sostituire la chiamata a `CreateThread` con una chiamata al [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask) metodo.  
 
-In questo argomento viene illustrato come adattare il codice esistente che utilizza l'API Windows per creare ed eseguire un thread per utilizzare un'attività leggera.  
   
- Per *attività leggera* si intende un'attività che si pianifica direttamente da un oggetto [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) o [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md).  Le attività leggere sono utili quando si adatta il codice esistente per utilizzare la funzionalità di pianificazione del runtime di concorrenza.  
+ [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
   
-## Prerequisiti  
- Prima di iniziare questa procedura dettagliata, leggere l'argomento [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
-  
-## Esempio  
-  
-### Descrizione  
- Nell'esempio seguente viene illustrato l'utilizzo tipico dell'API Windows per creare ed eseguire un thread.  In questo esempio viene utilizzata la funzione [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) per chiamare `MyThreadFunction` su un thread separato.  
-  
-### Codice  
- [!code-cpp[concrt-windows-threads#1](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_1.cpp)]  
-  
-### Commenti  
- Questo esempio produce l'output che segue.  
-  
-  **Parameters \= 50, 100** Nei passaggi seguenti viene illustrato come adattare l'esempio di codice per l'utilizzo del runtime di concorrenza per eseguire la stessa attività.  
-  
-### Per adattare l'esempio per l'utilizzo di un'attività leggera  
-  
-1.  Aggiungere una direttiva `#include` per file di intestazione concrt.h.  
-  
-     [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]  
-  
-2.  Aggiungere una direttiva `using` per lo spazio dei nomi `concurrency`.  
-  
-     [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]  
-  
-3.  Modificare la dichiarazione di `MyThreadFunction` in modo da utilizzare la convenzione di chiamata `__cdecl` e restituire `void`.  
-  
-     [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]  
-  
-4.  Modificare la struttura `MyData` in modo da includere un oggetto [concurrency::event](../../parallel/concrt/reference/event-class.md) che segnali all'applicazione principale il completamento dell'attività.  
-  
-     [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]  
-  
-5.  Sostituire la chiamata a `CreateThread` con una chiamata al metodo [concurrency::CurrentScheduler::ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md).  
-  
-     [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]  
-  
-6.  Sostituire la chiamata a `WaitForSingleObject` con una chiamata al metodo [concurrency::event::wait](../Topic/event::wait%20Method.md) per attendere il completamento dell'attività.  
-  
-     [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
+
+6.  Sostituire la chiamata a `WaitForSingleObject` con una chiamata al [concurrency::event::wait](reference/event-class.md#wait) metodo per attendere il completamento dell'attività.  
+
+ [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]  
   
 7.  Rimuovere la chiamata a `CloseHandle`.  
   
-8.  Modificare la firma della definizione di `MyThreadFunction` in modo da corrispondere al passaggio 3.  
+8.  Modificare la firma della definizione di `MyThreadFunction` per corrispondere al passaggio 3.  
   
-     [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
+ [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]  
   
-9. Al termina della funzione `MyThreadFunction`, chiamare il metodo [concurrency::event::set](../Topic/event::set%20Method.md) per segnalare all'applicazione principale il completamento dell'attività.  
+9. Alla fine del `MyThreadFunction` funzione, chiamare il [concurrency::event::set](reference/event-class.md#set) metodo per segnalare all'applicazione principale il completamento di attività.  
   
-     [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
+ [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]  
   
-10. Rimuovere l'istruzione `return` da `MyThreadFunction`.  
+10. Rimuovere il `return` from dell'istruzione `MyThreadFunction`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Nell'esempio completato seguente viene illustrato il codice che utilizza un'attività leggera per chiamare la funzione `MyThreadFunction`.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene completato viene illustrato il codice che usa un'attività leggera per chiamare il `MyThreadFunction` (funzione).  
   
-### Codice  
- [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/CPP/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  
+### <a name="code"></a>Codice  
+ [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]  
   
-### Commenti  
+### <a name="comments"></a>Commenti  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Classe Scheduler](../../parallel/concrt/reference/scheduler-class.md)

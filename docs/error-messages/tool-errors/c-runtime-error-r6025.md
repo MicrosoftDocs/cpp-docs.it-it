@@ -1,35 +1,42 @@
 ---
-title: "R6025 errore di Runtime C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6025"
+title: R6025 errore di Runtime C | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6025
+dev_langs: C++
+helpviewer_keywords: R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 06fd7aa6458a3c7e89d80146ec20a0e3f7587b4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore R6025 del linguaggio C in fase di esecuzione 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamata di funzione virtuale pure.  
+# <a name="c-runtime-error-r6025"></a>R6025 errore di Runtime C
+chiamata di funzione virtuale pura  
   
- Non è stata creata alcuna istanza di oggetti per gestire la chiamata di funzione virtuale pure.  
+> [!NOTE]
+>  Se questo messaggio di errore si verifica durante l'esecuzione di un'applicazione, l'app è stato arrestato perché si è verificato un problema interno. La causa più comune di questo errore è un bug nell'applicazione o un'installazione danneggiata.  
+>   
+>  Per risolvere questo errore, è possibile provare questi passaggi:  
+>   
+>  -   Utilizzare il **App e funzionalità** o **programmi e funzionalità** nella pagina di **Pannello di controllo** per ripristinare o reinstallare il programma.  
+> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.  
+> -   Cerca una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.  
   
- Se viene visualizzato questo errore in un'applicazione, contattare l'assistenza tecnica per l'applicazione.  
+ **Informazioni per i programmatori**  
   
- L'errore è provocato da una chiamata a una funzione virtuale in una classe base astratta mediante un puntatore che è stato creato da un cast al tipo della classe derivata, ma è in realtà un puntatore alla classe base.  Ciò può verificarsi in occasione di un cast da un **void\*** a un puntatore a una classe quando il **void\*** è stato creato durante la costruzione della classe base.  
+ Nessun oggetto è stata creata un'istanza per gestire la chiamata di funzione virtuale pura.  
   
- Per ulteriori informazioni, vedere il sito Web [Supporto Microsoft](http://go.microsoft.com/fwlink/?LinkId=75220).
+ Questo errore è causato dalla chiamata di funzione virtuale in una classe base astratta tramite un puntatore che viene creato da un cast nel tipo della classe derivata, ma è un puntatore alla classe di base. Questa situazione può verificarsi quando si esegue il cast da un **void\***  a un puntatore a una classe quando il **void\***  è stato creato durante la costruzione della classe di base.  
+  
+ Per ulteriori informazioni, vedere il [supporto tecnico Microsoft](http://go.microsoft.com/fwlink/?LinkId=75220) sito Web.

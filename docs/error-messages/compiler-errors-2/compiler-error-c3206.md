@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3206
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3206
+f1_keywords: C3206
+dev_langs: C++
+helpviewer_keywords: C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 4faf775e3a3a179e49f013b21a948c49a4f89f74
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-error-c3206"></a>Errore del compilatore C3206
 'function': argomento di tipo non valido per 'param', elenco di argomenti di tipo mancante per il tipo di classe 'typename'  
@@ -96,11 +91,8 @@ int main() {
 }  
 ```  
   
- Questo errore può anche essere generato come risultato delle operazioni di conformità del compilatore eseguite per Visual C++ .NET 2003, in cui i modelli di classe non sono consentiti come argomento di tipo modello.  
-  
- Un modello di classe non è consentito come argomento di tipo modello. era consentito in Visual C++ .NET 2003 ma non è valido in C++.  
-  
- L'esempio riportato di seguito viene compilato in Visual C++ .NET 2002 ma non funziona in Visual C++ .NET 2003:  
+ 
+ Un modello di classe non è consentito come argomento di tipo modello. L'esempio seguente genera C3206:  
   
 ```  
 // C3206e.cpp  
@@ -134,7 +126,7 @@ int main() {
 }  
 ```  
   
- Se è necessario un parametro di modello template, la risoluzione dell'errore valida nelle versioni Visual C++ .NET 2003 e Visual C++ .NET 2002 richiede di includere la funzione in una classe modello che accetti un parametro modello template:  
+ Se è necessario un parametro di modello template, è necessario includere la funzione in una classe modello che accetta un parametro di modello template:  
   
 ```  
 // C3206g.cpp  

@@ -1,35 +1,34 @@
 ---
-title: "CCommand::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CCommand.Open"
-  - "ATL::CCommand::Open"
-  - "CCommand.Open"
-  - "CCommand::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (metodo)"
+title: 'CCommand:: | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CCommand.Open
+- ATL::CCommand::Open
+- CCommand.Open
+- CCommand::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13945181ac92ec35e0b252f31382202414333bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ccommandopen"></a>CCommand::Open
 Esegue ed eventualmente associa il comando.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -68,56 +67,56 @@ HRESULT Open(
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `session`  
- \[in\] la sessione in cui eseguire il comando.  
+ [in] La sessione in cui eseguire il comando.  
   
  `wszCommand`  
- \[in\] il comando da eseguire, passato come stringhe Unicode.  Può essere **NULL** quando si utilizza `CAccessor`in questo caso, il comando verrà recuperato dal valore passato alla macro di [DEFINE\_COMMAND](../../data/oledb/define-command.md).  Vedere [ICommand::Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx)*in OLE DB Programmer's Reference* per i dettagli.  
+ [in] Il comando da eseguire, passato come stringa Unicode. Può essere **NULL** quando si utilizza `CAccessor`, nel qual caso il comando verrà recuperato dal valore passato per il [DEFINE_COMMAND](../../data/oledb/define-command.md) (macro). Vedere [ICommand:: Execute](https://msdn.microsoft.com/en-us/library/ms718095.aspx) nel *riferimento per programmatori OLE DB* per informazioni dettagliate.  
   
  `szCommand`  
- \[in\] stesso di `wszCommand` ma di questo parametro accetta una stringa di comando ANSI.  Il quarto form di questo metodo accetta un valore null.  Vedere più avanti "commenti" in questo argomento per i dettagli.  
+ [in] Uguale a `wszCommand` ad eccezione del fatto che questo parametro accetta una stringa di comando ANSI. Il quarto form di questo metodo può accettare un valore NULL. Vedere "la sezione Osservazioni" più avanti in questo argomento per informazioni dettagliate.  
   
  *pPropSet*  
- \[in\] puntatore A una matrice di strutture che contengono [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) proprietà e valori da impostare.  Vedere [Insiemi di proprietà e gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx)*in OLE DB Programmer's Reference* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Un puntatore a una matrice di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture contenenti le proprietà e valori da impostare. Vedere [set di proprietà e i gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx) nel *di riferimento per programmatori OLE DB* in Windows SDK.  
   
  `pRowsAffected`  
- \[in\/out\] un puntatore alla memoria in cui il numero di righe interessate da un comando viene restituito.  Se *\*pRowsAffected* è **NULL**, nessun numero di righe viene restituito.  In caso contrario, set di **Apri** \*`pRowsAffected` a seconda delle condizioni seguenti:  
+ [in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando. Se  *\*pRowsAffected* è **NULL**, non viene restituito alcun conteggio delle righe. In caso contrario, **aprire** imposta *`pRowsAffected` in base alle condizioni seguenti:  
   
-|Se il parametro|Then|  
-|---------------------|----------|  
-|L'elemento di **cParamSets** di `pParams` è maggiore di 1|\*`pRowsAffected` rappresenta il numero complessivo di righe interessate da qualsiasi set di parametri specificati nell'esecuzione.|  
-|Il numero di righe interessate non è disponibile|\*`pRowsAffected` viene impostato a 1.|  
-|Il comando non aggiorna, non elimina, oppure non vengono inserite righe|\*`pRowsAffected` è definito.|  
+|Se|Then|  
+|--------|----------|  
+|Il **cParamSets** elemento `pParams` è maggiore di 1|*`pRowsAffected`rappresenta il numero totale di righe interessate da tutti i set di parametri specificati nell'esecuzione.|  
+|Il numero di righe interessate non è disponibile|*`pRowsAffected`è impostato su -1.|  
+|Il comando non viene aggiornata, eliminare o inserire righe|*`pRowsAffected`non è definito.|  
   
  `guidCommand`  
- \[in\] A GUID che specifica la sintassi e le regole generali per il provider utilizzare durante l'analisi del testo del comando.  Vedere [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) e [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx)*in OLE DB Programmer's Reference* per i dettagli.  
+ [in] GUID che specifica la sintassi e regole generali per il provider da utilizzare durante l'analisi del testo del comando. Vedere [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) e [ICommandText:: SetCommandText](https://msdn.microsoft.com/en-us/library/ms709757.aspx) nel *riferimento per programmatori OLE DB* per informazioni dettagliate.  
   
  `bBind`  
- \[in\] specifica se associare il comando automaticamente dopo l'esecuzione.  L'impostazione predefinita è **true**, che causa il comando essere associato automaticamente.  L'impostazione `bBind` a **false** impedisce l'associazione automatica di comando per associare a esso le manualmente. \(L'associazione manuale è di particolare interesse per gli utenti di OLAP.\)  
+ [in] Specifica se associare automaticamente il comando dopo l'esecuzione. Il valore predefinito è **true**, che fa sì che il comando da associare automaticamente. Impostazione `bBind` a **false** impedisce l'associazione automatica del comando in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).  
   
  `ulPropSets`  
- \[in\] numero di strutture di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) passate nell'argomento *di pPropSet*.  
+ [in] Il numero di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture passato il *pPropSet* argomento.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- I primi tre forme di **Apri** accettano una sessione, creare un comando ed eseguire il comando, l'associazione a seconda delle esigenze tutti i parametri.  
+## <a name="remarks"></a>Note  
+ Le prime tre forme di **aprire** richiedere una sessione, creare un comando ed eseguire il comando, i parametri di associazione in base alle esigenze.  
   
- Il primo form di **Apri** accetta una stringa di comando Unicode e non ha un valore predefinito.  
+ La prima forma del **aprire** accetta una stringa di comando di Unicode e nessun valore predefinito.  
   
- La seconda forma di **Apri** non accetta una stringa di comando ANSI e valore predefinito \(forniti per compatibilità con le versioni precedenti di applicazioni esistenti ANSI\).  
+ La seconda forma di **aprire** accetta una stringa di comando ANSI e nessun valore predefinito (disponibile per la compatibilità con le applicazioni esistenti ANSI).  
   
- Il terzo form di **Apri** consente alla stringa di comando sia NULL, a causa di tipo `int` con un valore predefinito NULL.  Viene fornito per chiamare `Open(session, NULL);` o `Open(session);` perché il valore è di tipo `int`.  Questa versione richiede e asserisce che il parametro di `int` NULL.  
+ La terza tipologia di **aprire** consente la stringa di comando deve essere NULL, a causa di tipo `int` con un valore predefinito null. Viene fornito per la chiamata `Open(session, NULL);` o `Open(session);` perché NULL è di tipo `int`. Questa versione è necessario e dichiara che il `int` parametro essere NULL.  
   
- Utilizzare il quarto form di **Apri** quando è già stato creato un comando e si desidera eseguire solo [Preparare](../../data/oledb/ccommand-prepare.md) e più esecuzioni.  
+ Utilizzare la forma del quarto **aprire** quando è già stato creato un comando e si desidera eseguire una singola [Prepare](../../data/oledb/ccommand-prepare.md) e più esecuzioni.  
   
 > [!NOTE]
->  **Apri** chiama **Esegui**, che a sua volta chiama `GetNextResult`.  
+>  **Aprire** chiamate **Execute**, che a sua volta chiama `GetNextResult`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CCommand](../../data/oledb/ccommand-class.md)

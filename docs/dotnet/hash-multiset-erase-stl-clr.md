@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase (membro) [STL/CLR]"
+title: 'hash_multiset:: Erase (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: bddd329d-aece-4b93-8355-005351c3aa45
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cf8ec1956abbdb9efa7ca05ecf39264003c8c5f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rimuove gli elementi alle posizioni specificate.  
+# <a name="hashmultiseterase-stlclr"></a>hash_multiset::erase (STL/CLR)
+Rimuove gli elementi in corrispondenza delle posizioni specificate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +32,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### Parametri  
- innanzitutto  
- Avvio dell'intervallo da cancellare.  
+#### <a name="parameters"></a>Parametri  
+ primo  
+ Inizio dell'intervallo da cancellare.  
   
- chiave  
+ key  
  Valore della chiave da cancellare.  
   
  last  
- Fine di intervallo da cancellare.  
+ Fine dell'intervallo da cancellare.  
   
- where  
+ dove  
  Elemento da cancellare.  
   
-## Note  
- La prima funzione membro rimuovi elemento della sequenza selezionata indicata da `where` e restituisce un iteratore che definisce il primo elemento che rimane oltre l'elemento rimosso, o [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()` se tale elemento non esiste.  Utilizzarla per rimuovere un singolo elemento.  
+## <a name="remarks"></a>Note  
+ La prima funzione membro rimuove l'elemento della sequenza controllata a cui puntata `where`e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso, o [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()` se tale elemento non esiste. Utilizzarlo per rimuovere un singolo elemento.  
   
- La seconda funzione membro rimuove gli elementi della sequenza selezionata nell'intervallo `[``first``,` `last``)` e restituisce un iteratore che definisce il primo elemento che rimane oltre tutti gli elementi eliminati, o `end()` se tale elemento non esiste.  Utilizzarla per rimuovere elementi zero o più adiacenti.  
+ La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`) e restituisce un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o `end()` se tale elemento non è presente... Utilizzarlo per rimuovere zero o più elementi adiacenti.  
   
- La terza funzione membro elimina qualsiasi elemento della sequenza selezionata della chiave è equivalente a ordine `key` e restituisce un conteggio del numero di elementi rimosso.  Utilizzarla per eliminare e contare tutti gli elementi che soddisfano una chiave specificata.  
+ La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a `key`e restituisce un conteggio del numero di elementi rimossi. Utilizzarla per rimuovere e il conteggio di tutti gli elementi che corrispondono a una chiave specificata.  
   
- Ogni cancellatura dell'elemento richiede tempo proporzionale al logaritmo del numero di elementi della sequenza selezionata.  
+ La cancellazione di ogni elemento richiede tempo proporzionale al logaritmo del numero di elementi nella sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multiset_erase.cpp   
@@ -97,16 +95,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b e c d**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::clear](../dotnet/hash-multiset-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)

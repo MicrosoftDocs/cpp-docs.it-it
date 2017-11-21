@@ -1,32 +1,30 @@
 ---
-title: "rdx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.rdx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdx attribute"
+title: RDX | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.rdx
+dev_langs: C++
+helpviewer_keywords: rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3384547f1c7648504137004ce90d0c0f41cda77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# rdx
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Crea una chiave del Registro di sistema o modificare una chiave del Registro di sistema esistente.  
+# <a name="rdx"></a>rdx
+Crea una chiave del Registro di sistema o modifica una chiave del Registro di sistema esistente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,36 +35,36 @@ Crea una chiave del Registro di sistema o modificare una chiave del Registro di 
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `key`  
  Il nome della chiave da creare o aprire.  
   
- `valuename`\(facoltativo\)  
- specifica il campo di valore da impostare.  Se un campo di valore con questo nome non esiste nella chiave, viene aggiunto.  
+ `valuename`(facoltativo)  
+ Specifica il campo del valore da impostare. Se un campo del valore con questo nome esiste già nella chiave, viene aggiunto.  
   
  *regtype*  
- Il tipo della chiave del Registro di sistema che è stata aggiunta.  Può essere: **testo**,  **DWORD**,  **binario**, o  `CString`.  
+ Il tipo di chiave del Registro di sistema da aggiungere. Può essere uno dei seguenti: **testo**, **dword**, **binario**, o `CString`.  
   
-## Note  
- **rdx** L'attributo di C\+\+ crea o modifica una chiave del Registro di sistema esistente per un componente COM.  L'attributo consente di aggiungere una macro di BEGIN\_RDX\_MAP oggetto che implementa il membro di destinazione.  `RegistryDataExchange`, una funzione inserita come conseguenza di una macro di BEGIN\_RDX\_MAP, può essere utilizzata per trasferire i dati tra il Registro di sistema e i membri dati  
+## <a name="remarks"></a>Note  
+ Il **rdx** attributo C++ crea o modifica una chiave del Registro di sistema esistente per un componente COM. L'attributo aggiunge una macro BEGIN_RDX_MAP all'oggetto che implementa il membro di destinazione. `RegistryDataExchange`, una funzione inserita come risultato la macro BEGIN_RDX_MAP, può essere utilizzata per trasferire dati tra il Registro di sistema e i membri dati  
   
- Questo attributo può essere utilizzato con [coclasse](../windows/coclass.md),  [progid](../windows/progid.md), o  [vi\_progid](../windows/vi-progid.md) attributi o altri attributi che implica uno di questi.  
+ Questo attributo può essere utilizzato in combinazione con il [coclasse](../windows/coclass.md), [progid](../windows/progid.md), o [vi_progid](../windows/vi-progid.md) attributi o gli altri attributi, che implica uno di questi.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|**classe** o  `struct` membro|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|**classe** o `struct` membro|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Esempio  
- Il codice seguente aggiunge una chiave del Registro di sistema chiamata MyValue al sistema che descrive il componente COM di CMyClass.  
+## <a name="example"></a>Esempio  
+ Il codice seguente aggiunge una chiave del Registro di sistema denominata MyValue per il sistema che descrive il componente COM CMyClass.  
   
 ```  
 // cpp_attr_ref_rdx.cpp  
@@ -87,7 +85,6 @@ public:
 };  
 ```  
   
-## Vedere anche  
- [COM Attributes](../windows/com-attributes.md)   
- [registration\_script](../windows/registration-script.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi COM](../windows/com-attributes.md)   
+ [registration_script](../windows/registration-script.md)   

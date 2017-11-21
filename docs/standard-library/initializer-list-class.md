@@ -4,42 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
 - initializer_list/std::initializer_list::end
 - initializer_list/std::initializer_list::size
+dev_langs: C++
 ms.assetid: 1f2c0ff4-5636-4f79-b008-e75426e3d2ab
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 542a13de6e8b97f736ea2cfcdf8956c2f261c1e4
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::initializer_list::initializer_list
+- std::initializer_list::begin
+- std::initializer_list::end
+- std::initializer_list::size
+ms.openlocfilehash: 271ba1705dd48e11f1613e778b2d3bd41df7bba6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initializerlist-class"></a>Classe initializer_list
 Fornisce l'accesso a una matrice di elementi in cui ogni membro è del tipo specificato.  
@@ -214,5 +202,4 @@ constexpr size_t size() const noexcept;
   
 ## <a name="see-also"></a>Vedere anche  
  [<forward_list>](../standard-library/forward-list.md)
-
 

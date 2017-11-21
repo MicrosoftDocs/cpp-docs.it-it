@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -58,19 +57,17 @@ helpviewer_keywords:
 - C2591
 - C2595
 - C2596
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e66a789de4a1b5cfd64ff73f6dbecd4e85bfdffd
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>C2500 errori del compilatore a C2599
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -90,7 +87,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2505](compiler-error-C2505.md)|'*simbolo*': ' declspec (*identificatore*)' può essere applicato solo a dichiarazioni o definizioni di oggetti globali o membri dati statici|  
 |[Errore del compilatore C2506](compiler-error-C2506.md)|'*membro*': ' declspec (*identificatore*)' non è possibile applicare a questo simbolo|  
 |[Errore del compilatore C2507](compiler-error-C2507.md)|'*identificatore*': troppi modificatori virtual nella classe di base|  
-|C2508 errore del compilatore|'*identificatore*': '\_\_declspec (*identificatore1*)' non può essere combinato con '\_\_declspec (*identificatore2*)'|  
+|C2508 errore del compilatore|'*identificatore*': ' declspec (*identificatore1*)' non può essere combinato con ' declspec (*identificatore2*)'|  
 |[Errore del compilatore C2509](compiler-error-C2509.md)|'*identificatore*': funzione membro non dichiarata '*classe*'|  
 |[Errore del compilatore C2510](compiler-error-C2510.md)|'*identificatore*': a sinistra di ':: ' deve essere una classe/struttura/unione|  
 |[Errore del compilatore C2511](compiler-error-C2511.md)|'*identificatore*': membro funzione overload non trovata in '*classe*'|  

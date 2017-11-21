@@ -1,59 +1,59 @@
 ---
-title: "Intrinseci del compilatore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore cl.exe, intrinseci"
-  - "compilatore cl.exe, prestazioni"
-  - "intrinseci di compilatore"
-  - "intrinseci, compilatore"
+title: Intrinseci del compilatore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- intrinsics, compiler
+- compiler intrinsics
+- cl.exe compiler, performance
+- cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 53d6986d569bbf928282dce9e9e1cba0601bc4ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Intrinseci del compilatore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La maggior parte delle funzioni sono contenute nelle librerie, ma alcune sono incorporate \(ovvero intrinseche\) al compilatore.  Queste sono denominate funzioni intrinseche o intrinseci.  
+# <a name="compiler-intrinsics"></a>Intrinseci del compilatore
+La maggior parte delle funzioni sono contenute nelle librerie, ma alcune sono incorporate (ovvero intrinseche) al compilatore. Queste sono denominate funzioni intrinseche o intrinseci.  
   
-## Note  
- Se una funzione è intrinseca, il codice per la funzione viene in genere inserito inline, evitando, in questo modo, il sovraccarico di una chiamata di funzione e consentendo la creazione di istruzioni del computer estremamente efficaci per tale funzione.  Un intrinseco è spesso più veloce dell'assembly inline equivalente, in quanto l'utilità di ottimizzazione dispone di una conoscenza incorporata del comportamento di molti intrinseci, pertanto possono essere disponibili ottimizzazioni altrimenti non disponibili quando si usa l'assembly inline.  Inoltre, l'utilità di ottimizzazione può espandere la funzione intrinseca in modo diverso, allineare i buffer in modo differente o apportare altre modifiche a seconda del contesto e degli argomenti della chiamata.  
+## <a name="remarks"></a>Note  
+ Se una funzione è intrinseca, il codice per la funzione viene in genere inserito inline, evitando, in questo modo, il sovraccarico di una chiamata di funzione e consentendo la creazione di istruzioni del computer estremamente efficaci per tale funzione. Un intrinseco è spesso più veloce dell'assembly inline equivalente, in quanto l'utilità di ottimizzazione dispone di una conoscenza incorporata del comportamento di molti intrinseci, pertanto possono essere disponibili ottimizzazioni altrimenti non disponibili quando si usa l'assembly inline. Inoltre, l'utilità di ottimizzazione può espandere la funzione intrinseca in modo diverso, allineare i buffer in modo differente o apportare altre modifiche a seconda del contesto e degli argomenti della chiamata.  
   
- L'uso degli intrinseci influisce sulla portabilità del codice, poiché gli intrinseci disponibili in Visual C\+\+ potrebbero non essere disponibili se il codice viene compilato con altri compilatori e alcuni intrinseci che potrebbero essere disponibili per alcune architetture di destinazione non lo sono per tutte le architetture.  Tuttavia, gli intrinseci sono in genere più portabili degli assembly inline.  Gli intrinseci sono richiesti nelle architetture a 64 bit quando l'assembly inline non è supportato.  
+ L'uso degli intrinseci influisce sulla portabilità del codice, poiché gli intrinseci disponibili in Visual C++ potrebbero non essere disponibili se il codice viene compilato con altri compilatori e alcuni intrinseci che potrebbero essere disponibili per alcune architetture di destinazione non lo sono per tutte le architetture. Tuttavia, gli intrinseci sono in genere più portabili degli assembly inline. Gli intrinseci sono richiesti nelle architetture a 64 bit quando l'assembly inline non è supportato.  
   
  Alcune funzioni intrinseche, ad esempio `__assume` e `__ReadWriteBarrier`, forniscono informazioni al compilatore che influiscono sul comportamento dell'utilità di ottimizzazione.  
   
- Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione.  È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche.  Il primo modo consiste nell'uso di `#pragma intrinsic(``intrinsic-function-name-list``)`.  Il pragma può essere usato per specificare uno o più intrinseci separati da virgole.  Il secondo modo consiste nell'usare l'opzione del compilatore [\/Oi \(Genera funzioni intrinseche\)](../build/reference/oi-generate-intrinsic-functions.md), che rende disponibili tutte le funzioni intrinseche su una piattaforma specifica.  In **\/Oi**, usare `#pragma function(``intrinsic-function-name-list``)` per imporre una chiamata di funzione anziché una funzione intrinseca.  Se la documentazione per un intrinseco specifico indica che la routine è disponibile solo come un intrinseco, allora l'implementazione intrinseca viene usata indipendentemente dalla specifica di **\/Oi** o `#pragma intrinsic` .  In ogni caso, **\/Oi** o `#pragma intrinsic` consente, ma senza imposizione, all'utilità di ottimizzazione di usare la funzione intrinseca.  L'utilità di ottimizzazione potrà ancora chiamare la funzione.  
+ Alcune funzioni intrinseche sono disponibili solo come intrinseci e alcune sono disponibili nelle implementazioni sia di intrinseci che di funzione. È possibile indicare al compilatore di usare l'implementazione di intrinseci in due modi, a seconda che si voglia abilitare solo funzioni specifiche o abilitare tutte le funzioni intrinseche. Il primo modo consiste nell'utilizzare `#pragma intrinsic(` *elenco di nomi funzione intrinseca*`)`. Il pragma può essere usato per specificare uno o più intrinseci separati da virgole. Il secondo consiste nell'utilizzare il [/Oi (genera funzioni intrinseche)](../build/reference/oi-generate-intrinsic-functions.md) opzione del compilatore, che rende disponibili tutte le funzioni intrinseche su una determinata piattaforma. In **/Oi**, utilizzare `#pragma function(` *elenco di nomi funzione intrinseca* `)` per imporre una chiamata di funzione anziché una funzione intrinseca. Se la documentazione relativa a un intrinseco specifico indica che la routine è disponibile solo come funzione intrinseca, allora l'implementazione intrinseca viene usata indipendentemente dal fatto che **/Oi** o `#pragma intrinsic` specificato. In tutti i casi, **/Oi** o `#pragma intrinsic` consente, ma non impone, query optimizer di utilizzare la funzione intrinseca. L'utilità di ottimizzazione potrà ancora chiamare la funzione.  
   
- Alcune funzioni di libreria standard C\/C\+\+ sono disponibili nelle implementazioni intrinseche in alcune architetture.  Quando si chiama una funzione CRT, viene impiegata l'implementazione intrinseca se nella riga di comando è stata specificata l'opzione **\/Oi**.  
+ Alcune funzioni di libreria standard C/C++ sono disponibili nelle implementazioni intrinseche in alcune architetture. Quando si chiama una funzione CRT, viene utilizzata l'implementazione intrinseca se **/Oi** viene specificato nella riga di comando.  
   
- È disponibile un file di intestazione \<intrin.h\>, che dichiara i prototipi di funzioni intrinseche.  Nei file di intestazione \<immintrin.h\> e \<ammintrin.h\> sono disponibili funzioni intrinseche specifiche del produttore.  Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.  
+ Un file di intestazione, \<intrin. h >, è disponibile che dichiara i prototipi di funzioni intrinseche. Sono disponibili in funzioni intrinseche specifiche del produttore di \<immintrin > e \<ammintrin > file di intestazione. Inoltre, alcune intestazioni di Windows dichiarano funzioni che eseguono il mapping su un intrinseco del compilatore.  
   
- Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architetture.  Per altre informazioni sull'uso degli intrinseci su un particolare processore di destinazione, fare riferimento alla documentazione di riferimento del produttore.  
+ Le sezioni seguenti elencano tutti gli intrinseci disponibili in varie architetture. Per altre informazioni sull'uso degli intrinseci su un particolare processore di destinazione, fare riferimento alla documentazione di riferimento del produttore.  
   
--   [Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)  
+-   [Intrinseci ARM](../intrinsics/arm-intrinsics.md)  
   
 -   [Elenco intrinseci x86](../intrinsics/x86-intrinsics-list.md)  
   
--   [Elenco oggetti intrinseci x64 \(amd64\)](../intrinsics/x64-amd64-intrinsics-list.md)  
+-   [Elenco intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)  
   
--   [Funzioni intrinseche disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)  
+-   [Intrinseci disponibili in tutte le architetture](../intrinsics/intrinsics-available-on-all-architectures.md)  
   
--   [Elenco alfabetico di funzioni intrinseche](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
+-   [Elenco alfabetico delle funzioni intrinseche](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
   
-## Vedere anche  
- [ARM Assembler Reference](../assembler/arm/arm-assembler-reference.md)   
- [Microsoft Macro Assembler Reference](../assembler/masm/microsoft-macro-assembler-reference.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
- [Riferimenti alla libreria di runtime C](../c-runtime-library/c-run-time-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento all'Assembler ARM](../assembler/arm/arm-assembler-reference.md)   
+ [Riferimento a Microsoft Macro Assembler](../assembler/masm/microsoft-macro-assembler-reference.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)   
+ [Riferimenti della libreria di runtime di C](../c-runtime-library/c-run-time-library-reference.md)

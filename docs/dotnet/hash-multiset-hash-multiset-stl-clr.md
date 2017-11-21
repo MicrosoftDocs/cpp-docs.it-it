@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::hash_multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::hash_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multiset (membro) [STL/CLR]"
+title: 'hash_multiset:: hash_multiset (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::hash_multiset
+dev_langs: C++
+helpviewer_keywords: hash_multiset member [STL/CLR]
 ms.assetid: 1b224c60-b714-4ed5-9234-79b61b92a953
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6345e94ff115d14ae7e94d0243682ed8b27b28b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::hash_multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisethashmultiset-stlclr"></a>hash_multiset::hash_multiset (STL/CLR)
 Costruisce un oggetto contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 hash_multiset();  
@@ -49,106 +47,92 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Parametri  
- first  
+#### <a name="parameters"></a>Parametri  
+ primo  
  Inizio dell'intervallo da inserire.  
   
  hashfn  
- Funzione hash per eseguire il mapping delle chiavi in bucket.  
+ Funzione per le chiavi di mapping a bucket di hash.  
   
  last  
  Fine dell'intervallo da inserire.  
   
  pred  
- Predicato di ordinamento per la sequenza controllata.  
+ Ordinamento di predicato per la sequenza controllata.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
-## Note  
- Costruttore:  
+## <a name="remarks"></a>Note  
+ Il costruttore:  
   
  `hash_multiset();`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `key_compare()` di ordine e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato di ordinamento e la funzione hash predefiniti.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato dell'ordinamento predefinito `key_compare()`e con la funzione hash predefinita. È utilizzata per specificare una sequenza controllata iniziale vuota, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
- Costruttore:  
+ Il costruttore:  
   
  `explicit hash_multiset(key_compare^ pred);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `pred` di ordinamento e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato di ordinamento specificato e la funzione hash predefinita.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`e con la funzione hash predefinita. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento specificato e la funzione hash predefinita.  
   
- Costruttore:  
+ Il costruttore:  
   
  `hash_multiset(key_compare^ pred, hasher^ hashfn);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `pred` di ordinamento e con la funzione hash `hashfn`.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato di ordinamento e la funzione hash specificati.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`e con la funzione hash `hashfn`. È utilizzata per specificare una sequenza controllata iniziale vuota, con la funzione di predicato e hash ordinamento specificata.  
   
- Costruttore:  
+ Il costruttore:  
   
  `hash_multiset(hash_multiset<Key>% right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``.`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``.`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`, con il predicato di ordinamento e con la funzione hash predefiniti.  Utilizzare nello specifico una sequenza controllata iniziale che è una copia di una sequenza controllata da un oggetto hash\_multiset `right`, con il predicato di ordinamento e con la funzione hash predefiniti.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto hash_multiset `right`, con il predicato di ordinamento predefinito e una funzione hash.  
   
- Costruttore:  
+ Il costruttore:  
   
  `hash_multiset(hash_multiset<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``->`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``->`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`, con il predicato di ordinamento e con la funzione hash predefiniti.  Utilizzare nello specifica una sequenza controllata iniziale che è una copia di una sequenza controllata da un oggetto hash\_multiset `right`, con il predicato di ordinamento e con la funzione hash predefiniti.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto hash_multiset `right`, con il predicato di ordinamento predefinito e una funzione hash.  
   
- Costruttore:  
+ Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last);`  
   
- `hash_multiset(InIter first, InIter last);`  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato di ordinamento e con la funzione hash predefiniti.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash predefiniti.  
+ Il costruttore:  
   
- Costruttore:  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato e la funzione hash predefinita.  
   
- `hash_multiset(InIter first, InIter last,`  
+ Il costruttore:  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato di ordinamento `pred` e con la funzione hash predefinita.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza, con il predicato di ordinamento specificato e la funzione hash predefinita.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`e con la funzione hash `hashfn`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con la funzione di predicato e hash ordinamento specificata.  
   
- Costruttore:  
-  
- `template<typename InIter>`  
-  
- `hash_multiset(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato di ordinamento `pred` e con la funzione hash `hashfn`.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza, con il predicato di ordinamento e la funzione hash specificati.  
-  
- Costruttore:  
+ Il costruttore:  
   
  `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato di ordinamento predefinito e con la funzione hash predefinita.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento e la funzione hash predefiniti.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
- Costruttore:  
+ Il costruttore:  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con la funzione di hash di predicato e predefinito ordinamento specificato.  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato di ordinamento `pred`, e con la funzione hash predefinita.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato e la funzione hash predefinita.  
+ Il costruttore:  
   
- Costruttore:  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`e con la funzione hash `hashfn`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con la funzione di predicato e hash ordinamento specificato.  
   
- `key_compare^ pred, hasher^ hashfn);`  
+## <a name="example"></a>Esempio  
   
- inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato di ordinamento `pred`, e con la funzione hash `hashfn`.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento e la funzione hash specificati.  
-  
-## Esempio  
-  
-```  
+```cpp  
 // cliext_hash_multiset_construct.cpp   
 // compile with: /clr   
 #include <cliext/hash_set>   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
   
- **Spazio dei nomi:** cliext  
+ a b c  
+ a b c  
+ c b a  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)   
- [hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)   
+ [hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)

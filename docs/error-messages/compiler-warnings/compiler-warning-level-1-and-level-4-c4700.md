@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4700
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4700
+f1_keywords: C4700
+dev_langs: C++
+helpviewer_keywords: C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: f41e519a9dbcff3cc5ad4b718003e5964bfc3e85
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>Avviso del compilatore (livelli 1 e 4) C4700
 variabile locale non inizializzata 'nome' utilizzato  

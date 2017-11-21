@@ -1,55 +1,55 @@
 ---
-title: "_AddressOfReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_AddressOfReturnAddress_cpp"
-  - "_AddressOfReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AddressOfReturnAddress (funzione intrinseca)"
-  - "AddressOfReturnAddress (funzione intrinseca)"
+title: AddressOfReturnAddress | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _AddressOfReturnAddress_cpp
+- _AddressOfReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _AddressOfReturnAddress intrinsic
+- AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0808f1053475b1f4919ada60615f91dc8cc0cba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _AddressOfReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+**Sezione specifica Microsoft**  
   
- Fornisce l'indirizzo della posizione di memoria contenente l'indirizzo di ritorno di una funzione corrente.  Questo indirizzo non può essere utilizzato per accedere ad altri percorsi di memoria, ad esempio gli argomenti della funzione.  
+ Fornisce l'indirizzo della posizione di memoria che contiene l'indirizzo restituito della funzione corrente. Questo indirizzo non può essere usato per accedere ad altri percorsi di memoria (ad esempio, gli argomenti della funzione).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void * _AddressOfReturnAddress();  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Quando `_AddressOfReturnAddress` viene utilizzato in un programma compilato con [\/clr](../build/reference/clr-common-language-runtime-compilation.md), la funzione che contiene la chiamata di `_AddressOfReturnAddress` compilata come funzione nativa.  Quando una funzione compilata come chiamate gestite nella funzione che contiene `_AddressOfReturnAddress`, `_AddressOfReturnAddress` potrebbe non avere come previsto.  
+## <a name="remarks"></a>Note  
+ Quando `_AddressOfReturnAddress` viene utilizzato in un programma compilato con [/clr](../build/reference/clr-common-language-runtime-compilation.md), la funzione contenente il `_AddressOfReturnAddress` chiamata viene compilata come una funzione nativa. Quando una funzione compilata come gestito chiama la funzione contenente `_AddressOfReturnAddress`, `_AddressOfReturnAddress` potrebbe non funzionare come previsto.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // compiler_intrinsics_AddressOfReturnAddress.cpp  
@@ -75,9 +75,14 @@ int main() {
 }  
 ```  
   
-  **0012FF78 00401058 00401058**   
-## Microsoft FINALE specifico  
+```Output  
+0012FF78  
+00401058  
+00401058  
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

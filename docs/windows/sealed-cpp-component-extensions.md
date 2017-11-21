@@ -1,77 +1,74 @@
 ---
-title: "sealed  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sealed_cpp"
-  - "sealed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sealed keyword [C++]"
+title: sealed (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sealed_cpp
+- sealed
+dev_langs: C++
+helpviewer_keywords: sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 531088a36fb5e71517d1e1abd6fde8ffb2b18fe9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# sealed  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sealed--c-component-extensions"></a>sealed (Estensioni del componente C++)
 `sealed` è una parola chiave sensibile al contesto per le classi di riferimento che indica che un membro virtuale non può essere sottoposto a override o che un tipo non può essere usato come tipo di base.  
   
 > [!NOTE]
->  Il linguaggio standard ISO C\+\+11 contiene la parola chiave [final](../cpp/final-specifier.md), supportata in Visual Studio.  È possibile usare `final` sulle classi standard e `sealed` sulle classi di riferimento.  
+>  ISO C++ 11 Standard lingua ha il [finale](../cpp/final-specifier.md) (parola chiave), che è supportato in Visual Studio. È possibile usare `final` sulle classi standard e `sealed` sulle classi di riferimento.  
   
-## Tutti i runtime  
- **Sintassi**  
+## <a name="all-runtimes"></a>Tutti i runtime  
+  
+## <a name="syntax"></a>Sintassi
   
 ```  
-  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
-  
 ```  
   
- **Parametri**  
+### <a name="parameters"></a>Parametri  
   
  *identifier*  
  Nome della funzione o della classe.  
   
- *return\-type*  
+ *tipo restituito*  
  Tipo restituito da una funzione.  
   
- **Note**  
+## <a name="remarks"></a>Note  
   
- Nel primo esempio di sintassi, la classe è sealed.  Nel secondo esempio una funzione virtuale è sealed.  
+ Nel primo esempio di sintassi, la classe è sealed. Nel secondo esempio una funzione virtuale è sealed.  
   
- La parola chiave `sealed` è valida per le piattaforme native e anche per [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e Common Language Runtime \(CLR\).  Per altre informazioni, vedere [Identificatori di override e compilazioni native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Il `sealed` parola chiave è valida per le piattaforme native e anche per Windows Runtime e common language runtime (CLR). Per ulteriori informazioni, vedere [gli identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- È possibile rilevare in fase di compilazione se un tipo è sealed usando il tratto di tipo `__is_sealed (``type``)`.  Per altre informazioni, vedere la pagina relativa al [Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ È possibile rilevare in fase di compilazione se un tipo è sealed usando il `__is_sealed(type)` tratto di tipo. Per ulteriori informazioni, vedere [supporto del compilatore per tratti di tipo](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- `sealed` è una parola chiave sensibile al contesto.  Per altre informazioni, vedere [Parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `sealed` è una parola chiave sensibile al contesto.  Per ulteriori informazioni, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Vedere [Classi e struct di riferimento](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
+## <a name="windows-runtime"></a>Windows Runtime  
+ Vedere [le classi e struct](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx).  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## Common Language Runtime  
+## <a name="common-language-runtime"></a>Common Language Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Common Language Runtime.  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  L'esempio di codice seguente illustra l'effetto di `sealed` su un membro virtuale.  
   
 ```cpp  
@@ -117,11 +114,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+X::f override of I1::f  
+X::f override of I1::g  
+Y::f override of I1::f  
+```  
   
-  **X::f override of I1::f**  
- **X::f override of I1::g**  
- **Y::f override of I1::f** L'esempio di codice successivo mostra come contrassegnare una classe come sealed.  
+ L'esempio di codice successivo mostra come contrassegnare una classe come sealed.  
   
 ```cpp  
 // sealed_keyword_2.cpp  
@@ -141,5 +140,5 @@ public:
 };  
 ```  
   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

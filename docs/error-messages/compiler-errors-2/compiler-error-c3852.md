@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3852
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3852
+f1_keywords: C3852
+dev_langs: C++
+helpviewer_keywords: C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 1aef83942bb84908cd032ae9f23a7492e299e7e5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3852"></a>Errore del compilatore C3852
 'member' con tipo 'type': Impossibile inizializzare il membro con l'inizializzazione aggregata  

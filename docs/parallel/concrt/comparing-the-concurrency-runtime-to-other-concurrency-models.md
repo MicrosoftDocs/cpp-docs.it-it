@@ -1,34 +1,33 @@
 ---
-title: "Confronto tra runtime di concorrenza e altri modelli di concorrenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Runtime di concorrenza, confronto con altri modelli"
+title: Confronto tra Runtime di concorrenza e altri modelli di concorrenza | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a20df7ed057c11f8d8879e1373cc7466982d871b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Confronto tra runtime di concorrenza e altri modelli di concorrenza
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Confronto tra runtime di concorrenza e altri modelli di concorrenza
 Questo documento descrive le differenze tra le funzionalità e i modelli di programmazione del runtime di concorrenza e quelli di altre tecnologie. È importante poter confrontare i vantaggi del runtime di concorrenza con quelli di altri modelli di programmazione per poter scegliere la tecnologia che meglio soddisfa i requisiti delle applicazioni in uso.  
   
  Se si sta usando un altro modello di programmazione, ad esempio il pool di thread di Windows oppure OpenMP, in alcuni casi può essere più opportuno eseguire la migrazione al runtime di concorrenza. L'argomento [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) , ad esempio, descrive i casi in cui può essere appropriato eseguire la migrazione da OpenMP al runtime di concorrenza. Se, tuttavia, si ritiene che le prestazioni dell'applicazione e il supporto di debug corrente siano soddisfacenti, la migrazione non è necessaria.  
   
  È possibile usare le funzionalità e i vantaggi di produttività del runtime di concorrenza come complemento dell'applicazione esistente basata su un altro modello di concorrenza. Il runtime di concorrenza non può garantire il bilanciamento del carico quando più utilità di pianificazione delle attività competono per le stesse risorse di elaborazione. Nei casi in cui i carichi di lavoro non si sovrappongono, tuttavia, questo effetto è minimo.  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> Sezioni  
+##  <a name="top"></a> Sezioni  
   
 -   [Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa](#models)  
   
@@ -36,7 +35,7 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
   
 -   [Confronto tra il runtime di concorrenza e OpenMP](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa  
+##  <a name="models"></a> Confronto tra la pianificazione di tipo preemptive e la pianificazione cooperativa  
  I modelli di pianificazione di tipo preemptive e cooperativa rappresentano due modalità comuni che consentono a più attività di condividere risorse di elaborazione come, ad esempio, processori o thread di hardware.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>Pianificazione di tipo preemptive e cooperativa  
@@ -55,7 +54,7 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> Confronto tra il runtime di concorrenza e l'API Windows  
+##  <a name="winapi"></a> Confronto tra il runtime di concorrenza e l'API Windows  
  L'API (Application Programming Interface) di Microsoft Windows, definita in genere API Windows, e precedentemente nota come Win32, offre un modello di programmazione che consente la concorrenza nelle applicazioni. Il runtime di concorrenza si basa sull'API Windows per offrire modelli di programmazione aggiuntivi che non sono resi disponibili dal sistema operativo sottostante.  
   
  Il runtime di concorrenza si basa sul modello di thread dell'API Windows per eseguire attività in parallelo. Usa inoltre la gestione della memoria e i meccanismi di archiviazione locale dei thread dell'API Windows. In Windows 7 e Windows Server 2008 R2, usa il supporto dell'API Windows per i computer e i thread pianificabili dall'utente con oltre 64 thread di hardware. Il runtime di concorrenza estende il modello dell'API Windows offrendo un'utilità di pianificazione cooperativa e un algoritmo di acquisizione del lavoro per ottimizzare l'uso delle risorse di elaborazione e consentendo più istanze simultanee dell'utilità di pianificazione.  
@@ -81,8 +80,8 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> Confronto tra il runtime di concorrenza e OpenMP  
- Il runtime di concorrenza consente diversi modelli di programmazione. Questi modelli possono sovrapporsi ai modelli di altre librerie o integrarsi con essi. Questa sezione confronta il runtime di concorrenza e [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add).  
+##  <a name="openmp"></a> Confronto tra il runtime di concorrenza e OpenMP  
+ Il runtime di concorrenza consente diversi modelli di programmazione. Questi modelli possono sovrapporsi ai modelli di altre librerie o integrarsi con essi. Questa sezione confronta il runtime di concorrenza e [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp).  
   
  Il modello di programmazione OpenMP è definito da uno standard aperto e include associazioni ben definite ai linguaggi di programmazione Fortran e C/C++. Le versioni 2.0 e 2.5 di OpenMP sono particolarmente adatte per gli algoritmi paralleli che sono iterativi, ovvero eseguono l'iterazione parallela su una matrice di dati. OpenMP è molto efficiente quando il grado di parallelismo è predeterminato e corrisponde alle risorse disponibili nel sistema. Il modello OpenMP rappresenta un sistema valido soprattutto per il calcolo ad alte prestazioni, che prevede la distribuzione di problemi di calcolo molto estesi tra le risorse di elaborazione di un unico computer. In questo scenario, l'ambiente dell'hardware è noto e lo sviluppatore potrà accedere in modo esclusivo alle risorse di elaborazione quando viene eseguito l'algoritmo.  
   
@@ -99,4 +98,4 @@ Questo documento descrive le differenze tra le funzionalità e i modelli di prog
  [Panoramica](../../parallel/concrt/asynchronous-message-blocks.md)   
  [PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

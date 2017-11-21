@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- container classes
+dev_langs: C++
+helpviewer_keywords: container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 2d8485f7fa62f2aaf3d3e6be920620aaf14fd7ca
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 97f8d1a0e6e84fe7ce509d7654e7f0d72eae3e36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sample-container-members"></a>Membri contenitore di esempio
 > [!NOTE]
@@ -72,4 +54,3 @@ ms.lasthandoff: 02/24/2017
 |[rend](../standard-library/container-class-rend.md)|La funzione membro restituisce un iteratore inverso che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota), designando la fine della sequenza inversa.|  
 |[size](../standard-library/container-class-size.md)|Restituisce la lunghezza della sequenza controllata, in un tempo costante indipendentemente dalla lunghezza della sequenza controllata.|  
 |[swap](../standard-library/container-class-swap.md)
-

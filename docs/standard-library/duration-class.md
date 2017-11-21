@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,33 +14,18 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f3376d8c03608fde5a2a614bf0a3058fd8692800
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], duration
+ms.openlocfilehash: 70dc3b3b21961946a73f73e44ae3bed7c283bd4c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="duration-class"></a>Classe duration
 Descrive un tipo che contiene un *intervallo di tempo*, ovvero un tempo trascorso tra due punti temporali.  
@@ -312,4 +296,3 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
  [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
  [\<chrono>](../standard-library/chrono.md)   
  [Struttura duration_values](../standard-library/duration-values-structure.md)
-

@@ -1,50 +1,49 @@
 ---
-title: "Procedura: estendere la libreria del marshalling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "libreria del marshalling, estensione"
+title: 'Procedura: estendere la libreria del marshalling | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3133a8329dac0e20eeb5c3b3c8141e15a65aefe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: estendere la libreria del marshalling
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come estendere la libreria del marshalling per fornire più conversioni tra tipi di dati.  Gli utenti possono estendere la libreria del marshalling per qualsiasi conversione di dati attualmente non supportata dalla libreria.  
+# <a name="how-to-extend-the-marshaling-library"></a>Procedura: Estendere la libreria del marshalling
+In questo argomento viene illustrato come estendere la libreria del marshalling per fornire più conversioni tra tipi di dati. Gli utenti possono estendere la libreria del marshalling per le conversioni di dati non sono attualmente supportati dalla libreria.  
   
- L'estensione della libreria del marshalling può essere eseguita in due modi: con o senza una [Classe marshal\_context](../dotnet/marshal-context-class.md).  Rivedere l'argomento [Panoramica del marshaling in C\+\+](../dotnet/overview-of-marshaling-in-cpp.md) per determinare se una nuova conversione richiede un contesto.  
+ È possibile estendere la libreria del marshalling in due modi: con o senza un [classe marshal_context](../dotnet/marshal-context-class.md). Esaminare il [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md) argomento per determinare se una nuova conversione richiede un contesto.  
   
- In entrambi casi, innanzitutto viene creato un file per le nuove conversioni di marshalling .  Questa operazione preserva l'integrità dei file della libreria del marshalling standard.  Se si desidera trasferire un progetto in un altro computer o a un altro programmatore, è necessario copiare il nuovo file di marshalling con il resto del progetto.  In questo modo, il destinatario riceverà sicuramente le nuove conversioni e non dovrà modificare i file di libreria.  
+ In entrambi i casi, è innanzitutto necessario creare un file per le conversioni di marshalling nuovo. A tale scopo, per mantenere l'integrità dei file della libreria di marshalling standard. Se si desidera eseguire il porting di un progetto a un altro computer o a un altro programmatore, è necessario copiare il nuovo file di marshalling con il resto del progetto. In questo modo, l'utente che riceve il progetto verrà garantito per le nuove conversioni e non sarà necessario modificare i file di libreria.  
   
-### Per estendere la libreria del marshalling con una conversione che non richiede un contesto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>Per estendere la libreria del marshalling con una conversione che non richiede un contesto  
   
-1.  Creare un file per archiviare le nuove funzioni di marshalling, ad esempio MyMarshal.h.  
+1.  Creare un file per archiviare le nuove funzioni di marshalling, ad esempio, MyMarshal.  
   
-2.  Includere uno o più dei file della libreria del marshalling:  
+2.  Includere uno o più dei file della libreria di marshalling:  
   
-    -   marshal.h per i tipi di base.  
+    -   Marshal. h per tipi di base.  
   
-    -   marshal\_windows.h per i tipi di dati Windows.  
+    -   marshal_windows. h per i tipi di dati di windows.  
   
-    -   marshal\_cppstd.h per i tipi di dati STL.  
+    -   marshal_cppstd. h per i tipi di dati della libreria Standard C++.  
   
-    -   marshal\_atl.h per i tipi di dati ATL.  
+    -   marshal_atl. h per i tipi di dati ATL.  
   
-3.  Utilizzare il codice alla fine di queste operazioni per scrivere la funzione di conversione.  In questo codice, TO è il tipo in cui convertire, FROM è il tipo da cui far partire la conversione e `from` è il parametro da convertire.  
+3.  Utilizzare il codice alla fine di questi passaggi per scrivere la funzione di conversione. In questo codice, è il tipo da convertire, FROM è il tipo da convertire da e `from` è il parametro da convertire.  
   
-4.  Sostituire il commento sulla logica di conversione con il codice per convertire il parametro `from` in un oggetto di tipo TO e restituire l'oggetto convertito.  
+4.  Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un oggetto dello per tipo e restituisce l'oggetto convertito.  
   
 ```  
 namespace msclr {  
@@ -57,29 +56,29 @@ namespace msclr {
 }  
 ```  
   
-### Per estendere la libreria del marshalling con una conversione che richiede un contesto  
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>Per estendere la libreria del marshalling con una conversione che richiede un contesto  
   
-1.  Creare un file per archiviare le nuove funzioni di marshalling, ad esempio MyMarshal.h  
+1.  Creare un file per archiviare le nuove funzioni di marshalling, ad esempio, MyMarshal  
   
-2.  Includere uno o più dei file della libreria del marshalling:  
+2.  Includere uno o più dei file della libreria di marshalling:  
   
-    -   marshal.h per i tipi di base.  
+    -   Marshal. h per tipi di base.  
   
-    -   marshal\_windows.h per i tipi di dati Windows.  
+    -   marshal_windows. h per i tipi di dati di windows.  
   
-    -   marshal\_cppstd.h per i tipi di dati STL.  
+    -   marshal_cppstd. h per i tipi di dati della libreria Standard C++.  
   
-    -   marshal\_atl.h per i tipi di dati ATL.  
+    -   marshal_atl. h per i tipi di dati ATL.  
   
-3.  Utilizzare il codice alla fine di queste operazioni per scrivere la funzione di conversione.  In questo codice, TO è il tipo in cui convertire, FROM è il tipo da cui far partire la conversione, `toObject` è un puntatore in cui archiviare il risultato e `fromObject` è il parametro da convertire.  
+3.  Utilizzare il codice alla fine di questi passaggi per scrivere la funzione di conversione. In questo codice, è il tipo da convertire, FROM è il tipo da convertire da `toObject` è un puntatore in cui archiviare il risultato, e `fromObject` è il parametro da convertire.  
   
-4.  Sostituire il commento sull'inizializzazione con codice per inizializzare il parametro `toPtr` sul valore vuoto appropriato.  Se ad esempio si tratta di un puntatore, impostarlo su `NULL`.  
+4.  Sostituire il commento sull'inizializzazione con codice per inizializzare il `toPtr` al valore vuoto appropriato. Ad esempio, se è un puntatore, impostarlo su `NULL`.  
   
-5.  Sostituire il commento sulla logica di conversione con il codice per convertire il parametro di `from` in un oggetto del tipo di *TO*.  L'oggetto convertito verrà archiviato in `toPtr`.  
+5.  Sostituire il commento sulla logica di conversione con il codice per convertire il `from` parametro in un oggetto di *a* tipo. L'oggetto convertito verrà archiviato `toPtr`.  
   
-6.  Sostituire il commento sull'impostazione di `toObject` con il codice per impostare `toObject` sull'oggetto convertito.  
+6.  Sostituire il commento sull'impostazione `toObject` con il codice per impostare `toObject` sull'oggetto convertito.  
   
-7.  Sostituire il commento sulla pulizia delle risorse native contenenti codice per liberare eventuale memoria allocata da `toPtr`.  Se `toPtr` ha allocato memoria mediante `new`, utilizzare `delete` per liberare memoria.  
+7.  Sostituire il commento sulla pulizia delle risorse native contenenti codice per liberare memoria allocata da `toPtr`. Se `toPtr` memoria allocata tramite `new`, utilizzare `delete` per liberare la memoria.  
   
 ```  
 namespace msclr {  
@@ -110,8 +109,8 @@ namespace msclr {
 }   
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito la libreria del marshalling viene estesa con una conversione che non richiede un contesto.  In questo esempio, il codice converte le informazioni sul personale da un tipo di dati nativo a un tipo di dati gestito.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente estende la libreria del marshalling con una conversione che non richiedono un contesto. In questo esempio, il codice converte le informazioni sui dipendenti da un tipo di dati nativo a un tipo di dati gestiti.  
   
 ```  
 // MyMarshalNoContext.cpp  
@@ -163,13 +162,16 @@ int main() {
 }  
 ```  
   
- Nell'esempio precedente, la funzione `marshal_as` restituisce un handle ai dati convertiti.  L'obiettivo è di impedire la creazione di una copia aggiuntiva dei dati.  La restituzione diretta della variabile comporterebbe un costo associato superfluo in termini di prestazioni.  
+ Nell'esempio precedente, il `marshal_as` funzione restituisce un handle per i dati convertiti. Questa operazione è stata eseguita per impedire la creazione di una copia aggiuntiva dei dati. Restituisce la variabile direttamente sarebbe hanno un costo di ridurre inutilmente le prestazioni associato.  
   
-  **Nome gestito: Jeff Smith**  
-**Indirizzo gestito: 123 Main Street**  
-**Codice postale gestito: 98111**   
-## Esempio  
- Nell'esempio riportato di seguito, il codice converte le informazioni sul personale da un tipo di dati gestito a un tipo di dati nativo.  Questa conversione richiede un contesto di marshalling.  
+```Output  
+Managed name: Jeff Smith  
+Managed address: 123 Main Street  
+Managed zip code: 98111  
+```  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente converte le informazioni sui dipendenti da un tipo di dati gestiti in un tipo di dati nativi. Questa conversione richiede un contesto di marshalling.  
   
 ```  
 // MyMarshalContext.cpp  
@@ -263,8 +265,11 @@ int main() {
 }  
 ```  
   
-  **Nome nativo: Jeff Smith**  
-**Indirizzo nativo: 123 Main Street**  
-**Codice postale nativo: 98111**   
-## Vedere anche  
- [Panoramica del marshaling in C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)
+```Output  
+Native name: Jeff Smith  
+Native address: 123 Main Street  
+Native zip code: 98111  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)

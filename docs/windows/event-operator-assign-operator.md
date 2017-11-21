@@ -1,33 +1,30 @@
 ---
-title: "Operatore Event::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Event::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= (operatore)"
+title: 'Event:: operator = (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Event::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: d8fe9820-8856-4899-9553-56226bdc4945
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b6001462a5618251acc838d1d8fad3bd93968c81
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore Event::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Assegna un Event specifico all'istanza Eventd corrente.  
+# <a name="eventoperator-operator"></a>Operatore Event::operator=
+Assegna il riferimento Event specifico all'istanza Event corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW Event& operator=(  
@@ -35,17 +32,17 @@ WRL_NOTHROW Event& operator=(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `h`  
- Un riferimento rvalue\- a un'istanza di evento.  
+ Un riferimento rvalue a un'istanza dell'evento.  
   
-## Valore restituito  
- Un puntatore a un'istanza di eventi corrente.  
+## <a name="return-value"></a>Valore restituito  
+ Un puntatore all'istanza Event corrente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
- [Classe di eventi \(Libreria modelli C\+\+ per Windows Runtime\)](../windows/event-class-windows-runtime-cpp-template-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Classe di eventi (Libreria modelli C++ per Windows Runtime)](../windows/event-class-windows-runtime-cpp-template-library.md)

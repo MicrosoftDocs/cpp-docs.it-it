@@ -1,47 +1,45 @@
 ---
-title: "Operatore HString::Operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator="
-dev_langs: 
-  - "C++"
+title: 'Hstring:: operator = (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator=
+dev_langs: C++
 ms.assetid: 8e68c1ff-bc57-4526-810e-af3c284b4e30
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec8e77d1074b3dbd10d68f205af656d7f33aa334
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Operatore HString::Operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sposta il valore di un altro oggetto di HString all'oggetto corrente di HString.  
+# <a name="hstringoperator-operator"></a>Operatore HString::Operator=
+Sposta il valore di un altro oggetto HString all'oggetto HString corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HString& operator=(HString&& other) throw()  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `other`  
- Un oggetto esistente di HString.  
+ Oggetto HString esistente.  
   
-## Note  
- Il valore dell'oggetto esistente `other` viene copiato all'oggetto corrente di HString, quindi l'oggetto `other` viene eliminato.  
+## <a name="remarks"></a>Note  
+ Il valore dell'oggetto esistente `other` oggetto viene copiato l'oggetto HString corrente, quindi il `other` oggetto viene eliminato definitivamente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HString](../windows/hstring-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "db_accessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_accessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_accessor attribute"
+title: db_accessor | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_accessor
+dev_langs: C++
+helpviewer_keywords: db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d5293712990685ff63bcafa8e5c9d5a0e8592a25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# db_accessor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-gruppi **db\_column** attributi che partecipano a l  `IAccessor`associazione basata.  
+# <a name="dbaccessor"></a>db_accessor
+Gruppi **db_column** gli attributi che fanno parte di `IAccessor`-associazione di base.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,24 +34,24 @@ gruppi **db\_column** attributi che partecipano a l  `IAccessor`associazione bas
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *num*  
- Specifica il numero della funzione di accesso \(un intero in base zero\).  È necessario specificare i numeri della funzione di accesso in ordine crescente, utilizzando Integer o dei valori definiti.  
+ Specifica il numero delle funzioni di accesso (un indice intero in base zero). È necessario specificare numeri di funzione di accesso in ordine crescente d'ordine, usando interi o valori definiti.  
   
- *autoidentificatori*  
- Valore booleano che specifica se la funzione di accesso viene recuperata automaticamente \(**TRUE**\) o non recuperato \(**FALSE**\).  
+ *auto*  
+ Un valore booleano che specifica se la funzione di accesso viene recuperato automaticamente (**TRUE**) o non recuperati (**FALSE**).  
   
-## Note  
- **db\_accessor** definisce la funzione di accesso sottostante OLE DB per le successive  **db\_column** e  **db\_param** attributi all'interno della stessa classe o della funzione.  **db\_accessor** è utile a livello di membro e viene utilizzato per raggruppare  **db\_column** attributi che partecipano a OLE DB  `IAccessor`associazione basata.  Viene utilizzato insieme a uno **db\_table** o  **db\_command** attributi.  Chiamare questo attributo è simile alla chiamata [BEGIN\_ACCESSOR](../data/oledb/begin-accessor.md) e  [END\_ACCESSOR](../data/oledb/end-accessor.md) macro.  
+## <a name="remarks"></a>Note  
+ **db_accessor** definisce la funzione di accesso OLE DB sottostanti per le successive **db_column** e **db_param** attributi all'interno della stessa classe o funzione. **db_accessor** è utilizzabile a livello di membro e viene utilizzata al gruppo **db_column** gli attributi che fanno parte di OLE DB `IAccessor`-associazione di base. Viene utilizzato in combinazione con il **db_table** o **db_command** attributi. La chiamata di questo attributo è simile alla chiamata di [BEGIN_ACCESSOR](../data/oledb/begin-accessor.md) e [END_ACCESSOR](../data/oledb/end-accessor.md) macro.  
   
- **db\_accessor** genera un rowset e associa ai mapping corrispondenti della funzione di accesso.  Se non si chiama **db\_accessor**, la funzione di accesso 0 verrà automaticamente generata e tutte le associazioni delle colonne verrà eseguito il mapping a questo blocco della funzione di accesso.  
+ **db_accessor** genera un set di righe e li associa ai mapping di funzione di accesso corrispondente. Se non si chiama **db_accessor**, funzione di accesso 0 verrà automaticamente generato e tutte le associazioni di colonna verranno mappate a questo blocco di funzione di accesso.  
   
- **db\_accessor** raggruppa le associazioni delle colonne del database in uno o più funzioni di accesso.  Per una discussione degli scenari in cui è necessario utilizzare le funzioni di accesso, vedere [Utilizzo di più funzioni di accesso per un rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md).  Vedere anche “supporto di record utente per più funzioni di accesso„ in [Record utente](../data/oledb/user-records.md).  
+ **db_accessor** gruppi di associazioni di colonna all'interno di uno o più funzioni di accesso del database. Per una descrizione degli scenari in cui è necessario utilizzare più funzioni di accesso, vedere [utilizzo di più funzioni di accesso per un Rowset](../data/oledb/using-multiple-accessors-on-a-rowset.md). Vedere anche "Utente Record supporto per più funzioni di accesso" in [record utente](../data/oledb/user-records.md).  
   
- Quando il provider di tipo consumer di attributo applicato questo attributo a una classe, il compilatore la classe a \_*TheClassName*funzione di accesso, dove *TheClassName* è il nome assegnato alla classe e il compilatore inoltre creata una classe denominata *TheClassName,* quale deriva da \_*TheClassName*funzione di accesso.  In Visualizzazione classi, verranno visualizzate entrambe le classi.  
+ Quando il provider di attributi del consumer si applica questo attributo a una classe, il compilatore Rinomina la classe per \_ *NomeClasse*funzione di accesso, in cui *NomeClasse* è il nome assegnato il classe e il compilatore creerà inoltre una classe denominata *NomeClasse*, che deriva da \_ *NomeClasse*della funzione di accesso.  In Visualizzazione classi verranno visualizzate entrambe le classi.  
   
-## Esempio  
- Nell'esempio seguente viene utilizzato **db\_accessor** per raggruppare le colonne della tabella Orders del database Northwind in due funzioni di accesso.  La funzione di accesso 0 è una funzione di accesso automatico e la funzione di accesso 1 non è.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa **db_accessor** per raggruppare le colonne nella tabella Orders del database Northwind in due funzioni di accesso. Funzione di accesso 0 è automatica, e non 1 della funzione di accesso.  
   
 ```  
 // cpp_attr_ref_db_accessor.cpp  
@@ -75,19 +73,18 @@ public:
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|blocchi di attributi|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Blocchi di attributi|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi del consumer OLE DB](../windows/ole-db-consumer-attributes.md)   

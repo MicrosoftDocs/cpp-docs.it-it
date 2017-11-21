@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>Operatori &lt;valarray&gt;
 ||||  
@@ -232,7 +259,7 @@ operator&(
  Un oggetto valarray i cui elementi sono la combinazione di elemento dell'operazione AND bit per bit di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
- È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, **longdouble**, `void``bool` o per altri tipi di dati più complessi.  
+ È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, **longdouble**, `void`, `bool` o per altri tipi di dati più complessi.  
   
  L'operatore **AND** bit per bit supporta la stessa tabella di verità dell'operatore **AND** logico, ma si applica al tipo di dati a livello dei singoli bit. L'operatore [operator&&](../standard-library/valarray-operators.md#amp) si applica a livello di elemento, conteggiando tutti i valori diversi da zero come true e il risultato è un oggetto valarray di valori booleani. L'operatore **ANDoperator&** bit per bit invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
@@ -1331,7 +1358,7 @@ operator^(
  Un oggetto valarray i cui elementi sono la combinazione di elemento di bit per bit **XOR** operazione di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
- È possibile usare un'operazione bit per bit solo per modificare i bit in tipi di dati `char` e `int` e varianti e non per tipi di dati **float**, **double**, `long double`, `void``bool` o per altri tipi di dati più complessi.  
+ Un'operazione con OR utilizzabile solo per modificare i bit di `char` e `int` varianti e tipi di dati e non in **float**, **doppie**, `long double`, `void`, `bool` o altri, tipi di dati più complessi.  
   
  L'operatore `OR` esclusivo (**XOR**) bit per bit supporta la semantica seguente: dati i bit *b*1 e *b*2, *b*1 **XOR** *b*2 è **true** se uno dei bit è true; **false** se entrambi i bit sono false o se entrambi i bit sono true.  
   
@@ -1509,7 +1536,7 @@ operator||(
  Un oggetto valarray i cui elementi sono di tipo `bool` e sono la combinazione di elemento dell'operazione di OR logico di `left` e `right`.  
   
 ### <a name="remarks"></a>Note  
- L'operatore `OR``operator||` logico si applica a livello di elemento, conteggiando tutti i valori diversi da zero come **true** e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
+ L'operatore logico `OR` `operator||` si applica a livello di elemento, il conteggio di tutti i valori diversi da zero come **true**, e il risultato è un oggetto valarray di valori booleani. La versione bit per bit dell'operatore `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or) invece può determinare un oggetto valarray di valori diversi da 0 o 1, a seconda del risultato dell'operazione bit per bit.  
   
 ### <a name="example"></a>Esempio  
   
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>Vedere anche  
  [\<valarray>](../standard-library/valarray.md)
-
 

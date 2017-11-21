@@ -1,80 +1,80 @@
 ---
-title: "__incgsbyte, __incgsword, __incgsdword, __incgsqword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incgsdword"
-  - "__incgsqword_cpp"
-  - "__incgsword_cpp"
-  - "__incgsword"
-  - "__incgsbyte"
-  - "__incgsbyte_cpp"
-  - "__incgsqword"
-  - "__incgsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incgsbyte (funzione intrinseca)"
-  - "__incgsword (funzione intrinseca)"
-  - "__incgsqword (funzione intrinseca)"
-  - "__incgsdword (funzione intrinseca)"
+title: __incgsbyte, __incgsword, __incgsdword, __incgsqword | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incgsdword
+- __incgsqword_cpp
+- __incgsword_cpp
+- __incgsword
+- __incgsbyte
+- __incgsbyte_cpp
+- __incgsqword
+- __incgsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incgsbyte intrinsic
+- __incgsword intrinsic
+- __incgsqword intrinsic
+- __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 042858ea1568705050c5e10399a24f7bc24edd8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __incgsbyte, __incgsword, __incgsdword, __incgsqword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
+**Sezione specifica Microsoft**  
   
- Aggiungerne uno al valore in una posizione di memoria specificata da un offset relativo all'inizio del segmento di `GS` .  
+ Aggiungere 1 al valore in una posizione di memoria specificata da un offset relativo all'inizio del `GS` segmento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __incgsbyte(   
-   unsigned long Offset   
+void __incgsbyte(   
+   unsigned long Offset   
 );  
-void __incgsword(   
-   unsigned long Offset   
+void __incgsword(   
+   unsigned long Offset   
 );  
-void __incgsdword(   
+void __incgsdword(   
    unsigned long Offset  
 );  
-void __incgsqword(   
-   unsigned long Offset   
+void __incgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Parametri  
- \[in\] `Offset`  
- L'offset dall'inizio di `GS`.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Offset`  
+ L'offset dall'inizio del `GS`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__incgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__incgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
-## Note  
- Queste intrinseci sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_\_addgsbyte, \_\_addgsword, \_\_addgsdword, \_\_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
- [\_\_readgsbyte, \_\_readgsdword, \_\_readgsqword, \_\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+## <a name="see-also"></a>Vedere anche  
+ [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)   
+ [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

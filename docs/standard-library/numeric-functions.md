@@ -13,7 +13,7 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 9b1c992930fb6b35498f04357e783d01db3a229c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltnumericgt-functions"></a>Funzioni &lt;numeric&gt;
 ||||  
@@ -583,5 +582,4 @@ int main( )
   
 ## <a name="see-also"></a>Vedere anche  
  [\<numeric>](../standard-library/numeric.md)
-
 

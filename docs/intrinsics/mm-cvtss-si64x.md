@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si (funzione intrinseca)"
-  - "_mm_cvtss_si64x (funzione intrinseca)"
+title: _mm_cvtss_si64x | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 19d39aa8219321e372a2cd8b669c83b606646122
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Sezione specifica Microsoft**  
   
- Genera la versione estesa di [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] di numeri a virgola mobile scalare di una singola precisione dell'istruzione integer a 64 bit \(`cvtss2si`\).  
+ Genera il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] versione estesa di convertire scalare singola precisione numero a virgola mobile a Integer a 64 bit (`cvtss2si`) (istruzione).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Parametri  
- \[in\] `value`  
- Una struttura di `__m128` che contiene i valori a virgola mobile.  
+#### <a name="parameters"></a>Parametri  
+ [in] `value`  
+ Un `__m128` struttura che contiene i valori a virgola mobile.  
   
-## Valore restituito  
- Un Integer a 64 bit, il risultato della conversione del primo valore a virgola mobile a un Integer.  
+## <a name="return-value"></a>Valore restituito  
+ Intero a 64 bit, il risultato della conversione del primo valore a virgola mobile a un numero intero.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il primo elemento del valore della struttura viene convertito in un Integer e viene restituito.  I bit di arrotondamento del controllo in MXCSR vengono utilizzati per determinare il comportamento di arrotondamento.  La modalità di arrotondamento predefinita è in tondo il più vicino, mediante arrotondamento al numero pari se la parte decimale è 0,5.  Poiché la struttura di `__m128` rappresenta un log XMM, questa funzione intrinseca accetta un valore dal registro XMM e lo scrive nella memoria di sistema.  
+## <a name="remarks"></a>Note  
+ Il primo elemento del valore di struttura viene convertito in un numero intero e restituito. I bit del controllo arrotondamento in MXCSR vengono utilizzati per determinare la modalità di arrotondamento. La modalità predefinita è arrotondamento al più vicino, arrotondamento al numero pari, se la parte decimale è 0,5. Poiché il `__m128` struttura rappresenta un registro XMM, questa funzione intrinseca accetta un valore dal registro XMM e lo scrive in memoria di sistema.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## Microsoft FINALE specifico  
+```Output  
+101  
+```  
   
-## Vedere anche  
- [\_\_m128d](../cpp/m128d.md)   
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
+ [__m128d](../cpp/m128d.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

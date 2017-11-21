@@ -1,62 +1,60 @@
 ---
-title: "OMP_NUM_THREADS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_NUM_THREADS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_NUM_THREADS OpenMP environment variable"
+title: OMP_NUM_THREADS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_NUM_THREADS
+dev_langs: C++
+helpviewer_keywords: OMP_NUM_THREADS OpenMP environment variable
 ms.assetid: 4b558124-1387-4c30-a6a5-ff5345a9ced6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2139ecfc719bd6e5836a67d9387b3ff2f4289bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# OMP_NUM_THREADS
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Imposta il numero massimo di thread nell'area parallela, a meno che non venga ignorato da [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o  [num\_threads](../../../parallel/openmp/reference/num-threads.md).  
+# <a name="ompnumthreads"></a>OMP_NUM_THREADS
+Imposta il numero massimo di thread in tale area, a meno che non viene sottoposto a override da [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) o [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 set OMP_NUM_THREADS[=num]  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
  `num`  
- Il numero massimo di thread desiderato nell'area parallela, fino a 64 nell'implementazione di Visual C\+\+.  
+ Il numero massimo di thread desiderato nell'area parallela, fino a 64 nell'implementazione di Visual C++.  
   
-## Note  
- **OMP\_NUM\_THREADS** la variabile di ambiente può essere sottoposta a override da  [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funzione o da  [num\_threads](../../../parallel/openmp/reference/num-threads.md).  
+## <a name="remarks"></a>Note  
+ Il **OMP_NUM_THREADS** variabile di ambiente può essere sostituita dal [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) funzione o da [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- il valore predefinito di `num` in Visual C\+\+ l'implementazione standard OpenMP rappresenta il numero di processori virtuali, incluse le CPU hyperthreading.  
+ Il valore predefinito di `num` in Visual C++ implementazione dello standard OpenMP è il numero di processori virtuali, tra cui CPU hyperthreading.  
   
- Per ulteriori informazioni, vedere [4.2 OMP\_NUM\_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
+ Per ulteriori informazioni, vedere [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
-## Esempio  
- Il comando seguente imposta **OMP\_NUM\_THREADS** variabile di ambiente su 16:  
+## <a name="example"></a>Esempio  
+ Il comando seguente imposta il **OMP_NUM_THREADS** variabile di ambiente a 16:  
   
 ```  
 set OMP_NUM_THREADS=16  
 ```  
   
- Il comando seguente per visualizzare l'impostazione corrente di **OMP\_NUM\_THREADS** variabile di ambiente:  
+ Il comando seguente consente di visualizzare l'impostazione corrente del **OMP_NUM_THREADS** variabile di ambiente:  
   
 ```  
 set OMP_NUM_THREADS  
 ```  
   
-## Vedere anche  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>Vedere anche  
+ [Variabili di ambiente](../../../parallel/openmp/reference/openmp-environment-variables.md)

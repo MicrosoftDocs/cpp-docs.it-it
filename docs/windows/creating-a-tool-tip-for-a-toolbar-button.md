@@ -1,60 +1,61 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tool tips [C++], adding to toolbar buttons"
-  - "\n in tool tip"
-  - "toolbar buttons [C++], tool tips"
-  - "buttons [C++], tool tips"
-  - "Toolbar editor, creating tool tips"
+title: Creazione di una descrizione comando per un pulsante della barra degli strumenti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tool tips [C++], adding to toolbar buttons
+- "\nin tool tip"
+- toolbar buttons [C++], tool tips
+- buttons [C++], tool tips
+- Toolbar editor, creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9399341f19a614783c0f8f873051ed048d89b35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Tool Tip for a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per creare una descrizione comandi  
+# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Creazione di una descrizione comandi per un pulsante della barra degli strumenti
+### <a name="to-create-a-tool-tip"></a>Per creare una descrizione comando  
   
 1.  Selezionare il pulsante della barra degli strumenti.  
   
-2.  Nel campo della proprietà **Prompt** della [finestra Proprietà](../Topic/Properties%20Window.md) aggiungere una descrizione del pulsante per la barra di stato. Dopo il messaggio, aggiungere \\n e il nome della descrizione comandi.  
+2.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window)nella **prompt dei comandi** campo di proprietà, aggiungere una descrizione del pulsante per la barra di stato; dopo il messaggio, aggiungere \n e il nome della descrizione comandi.  
   
- Un esempio comune di descrizione comandi è il pulsante Stampa di WordPad.  
+ Un esempio comune di descrizione comandi è il pulsante di stampa in WordPad:  
   
- 1.  Aprire WordPad.  
+ 1. Aprire WordPad.  
   
- 2.  Passare con il puntatore del mouse sul pulsante **Stampa** della barra degli strumenti.  
+ 2. Posizionare il puntatore del mouse sul **stampa** pulsante della barra degli strumenti.  
   
- 3.  Sotto il puntatore del mouse verrà visualizzata la parola "Stampa".  
+ 3. Si noti che la parola "Stampa" ora è mobile sotto il puntatore del mouse.  
   
- 4.  Nella barra di stato, nella parte inferiore della finestra di WordPad, verrà visualizzato il testo "Stampa il documento attivo".  
+ 4. Nella barra di stato (nella parte inferiore della finestra di WordPad) - ora visualizzato il testo "Stampa il documento attivo".  
   
- La parola "Stampa" del passaggio 3 è il "nome della descrizione comandi", mentre il messaggio "Stampa il documento attivo" del passaggio 4 è la "descrizione del pulsante per la barra di stato".  
+ Stampa nel passaggio 3 è il "nome della descrizione comandi" e il messaggio "stampa il documento attivo' dal passaggio 4 è"descrizione del pulsante per la barra di stato".  
   
- Per ottenere questo risultato utilizzando l'editor **barra degli strumenti**, impostare la proprietà **Prompt** su **Stampa il documento attivo\\nStampa**.  
+ Se si desidera che questo effetto utilizzando la **barra degli strumenti** editor, impostare il **Prompt** proprietà **stampa il documento attivo\nStampa**.  
   
 > [!NOTE]
->  È possibile modificare il testo del messaggio mediante la [Finestra proprietà](../Topic/Properties%20Window.md).  
+>  È possibile modificare il testo del messaggio utilizzando il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  MFC o ATL  
   
-## Vedere anche  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Creazione, spostamento e modifica i pulsanti della barra degli strumenti](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Editor barra degli strumenti](../windows/toolbar-editor.md)
+

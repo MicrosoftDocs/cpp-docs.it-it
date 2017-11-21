@@ -1,43 +1,42 @@
 ---
-title: "How to: Improve Performance with Generics (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "performance, C++"
-  - "Visual C++, performance"
-  - "Visual C++, generics"
-  - "generics [C++], performance"
+title: 'Procedura: migliorare le prestazioni con i Generics (Visual C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- performance, C++
+- Visual C++, performance
+- Visual C++, generics
+- generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 943639ed97798369bd4efa24561fd5b174f81579
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Improve Performance with Generics (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo.  Il tipo effettivo del parametro di tipo viene rimandato fino alla chiamata dal codice client.  Per ulteriori informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).  
+# <a name="how-to-improve-performance-with-generics-visual-c"></a>Procedura: migliorare le prestazioni con i generics (Visual C++)
+Con i generics, è possibile creare codice riutilizzabile basato su un parametro di tipo. Il tipo effettivo del parametro di tipo viene rinviato fino alla chiamata da parte del codice client. Per ulteriori informazioni sui generics, vedere [Generics](../windows/generics-cpp-component-extensions.md).  
   
- Questo articolo discuterà come i generics consentono di aumentare le prestazioni di un'applicazione che utilizza le raccolte.  
+ In questo articolo viene illustrato il modo in cui i generics consentono di aumentare le prestazioni di un'applicazione in cui sono utilizzate le raccolte.  
   
-## Esempio  
- Il Framework .NET viene fornito di molte classi di raccolta nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>.  La maggior parte di queste raccolte funzionano su oggetti di tipo <xref:System.Object?displayProperty=fullName>.  Questo consente alle raccolte di memorizzare un qualsiasi tipo, poiché tutti i tipi disponibili nel Framework .NET, anche tipi di valore, derivano da <xref:System.Object?displayProperty=fullName>.  Tuttavia, esistono due svantaggi a questo approccio.  
+## <a name="example"></a>Esempio  
+ .NET Framework viene fornito con molte classi di raccolta nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>. La maggior parte di queste raccolte funziona con oggetti di tipo <xref:System.Object?displayProperty=fullName>. In questo modo, nelle raccolte può essere archiviato qualsiasi tipo, poiché tutti i tipi disponibili in .NET Framework, anche quelli di valore, derivano da <xref:System.Object?displayProperty=fullName>. Tuttavia, questo approccio presenta due svantaggi.  
   
- Innanzitutto, se la raccolta sta memorizzando tipi valore come gli integer, il valore deve essere boxed prima di aggiungerlo alla raccolta ed unboxed quando il valore viene recuperato dalla raccolta.  Queste sono operazioni onerose.  
+ Innanzitutto, se tramite la raccolta vengono archiviati tipi di valore come interi, il valore deve essere sottoposto a boxing prima di essere aggiunto alla raccolta e alla conversione unboxing quando il valore viene recuperato dalla raccolta. Si tratta di operazioni complesse.  
   
- In secondo luogo, non è possibile determinare quali tipi possono essere aggiunti ad una raccolta.  È consentito aggiungere un integer e una stringa alla stessa raccolta, anche se probabilmente questo non era previsto.  Pertanto, affinché il codice sia indipendente dai tipi, è necessario controllare che il tipo recuperato dalla raccolta sia effettivamente quello previsto.  
+ In secondo luogo, non è possibile determinare quali tipi possono essere aggiunti a una raccolta. È consentito aggiungere un intero e una stringa alla stessa raccolta, anche se probabilmente non si tratta dell'operazione prevista. Pertanto, affinché il codice sia indipendente dai tipi, è necessario controllare che il tipo recuperato dalla raccolta sia effettivamente quello previsto.  
   
- L'esempio di codice seguente mostra i due svantaggi principali delle raccolte .NET Framework prima dei generics.  
+ Nell'esempio di codice seguente vengono mostrati i due svantaggi principali delle raccolte di .NET Framework prima dei generics.  
   
 ```  
 // perf_pre_generics.cpp  
@@ -81,12 +80,15 @@ int main()
 }  
 ```  
   
-  **Estratta una stringa: Sette**  
-**Estratto un int: 7**   
-## Esempio  
- Il nuovo spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName> contiene molte delle stesse raccolte trovate nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>, ma sono state modificate per accettare parametri di tipo generico.  Questo elimina i due svantaggi delle raccolte non generiche: il boxing e l'unboxing dei tipi di valore e l'impossibilità di specificare i tipi da archiviare nelle raccolte.  Le operazioni sulle due raccolte sono identiche; differiscono solo in come vengono istanziate.  
+```Output  
+Popped a String: Seven  
+Popped an int: 7  
+```  
   
- Confrontare l'esempio riportato in precedenza con questo esempio che utilizza una raccolta generica <xref:System.Collections.Generic.Stack%601>.  Su raccolte di grandi dimensioni che vengono utilizzate spesso, le prestazioni di questo esempio sono molto migliori rispetto all'esempio precedente.  
+## <a name="example"></a>Esempio  
+ Nel nuovo spazio dei nomi <xref:System.Collections.Generic?displayProperty=fullName> sono contenute molte delle stesse raccolte disponibili nello spazio dei nomi <xref:System.Collections?displayProperty=fullName>, ma sono state modificate per accettare i parametri di tipo generico. In questo modo vengono eliminati i due svantaggi delle raccolte non generiche: il boxing e l'unboxing dei tipi di valore e l'impossibilità di specificare i tipi da archiviare nelle raccolte. Le operazioni nelle due raccolte sono identiche; l'unica differenza è la modalità di creazione di istanze.  
+  
+ Confrontare l'esempio riportato in precedenza con questo esempio in cui viene utilizzata una raccolta <xref:System.Collections.Generic.Stack%601> generica. In caso di raccolte di grandi dimensioni a cui l'accesso viene eseguito spesso, le prestazioni di questo esempio sono decisamente migliori rispetto all'esempio precedente.  
   
 ```  
 // perf_post_generics.cpp  
@@ -124,6 +126,9 @@ int main()
 }  
 ```  
   
-  **14**   
-## Vedere anche  
+```Output  
+14  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Generics](../windows/generics-cpp-component-extensions.md)

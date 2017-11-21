@@ -1,45 +1,45 @@
 ---
-title: "Funzioni di gestione della memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni di gestione della memoria [Runtime di concorrenza]"
+title: Funzioni di gestione della memoria | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c090041969bae959ecb386486032f3f848a1440b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Funzioni di gestione della memoria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo documento vengono descritte le funzioni di gestione della memoria offerte dal runtime di concorrenza che consentono di allocare e liberare memoria in modo simultaneo.  
+# <a name="memory-management-functions"></a>Funzioni di gestione della memoria
+Questo documento descrive le funzioni di gestione della memoria che fornisce il Runtime di concorrenza che consentono di allocare e liberare memoria in modo simultaneo.  
   
 > [!TIP]
->  Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita, pertanto non è necessario crearne una nell'applicazione.  Poiché l'utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con la [PPL \(Parallel Patterns Library\)](../../parallel/concrt/parallel-patterns-library-ppl.md) o la [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se non si ha familiarità con il runtime di concorrenza.  
+>  Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita, pertanto non è necessario crearne una nell'applicazione. Poiché l'utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se si è familiarità con il Runtime di concorrenza.  
   
- Il runtime di concorrenza fornisce due funzioni di gestione della memoria ottimizzate per allocare e liberare blocchi di memoria in modo simultaneo.  La funzione [concurrency::Alloc](../Topic/Alloc%20Function.md) alloca un blocco di memoria utilizzando le dimensioni specificate.  La funzione [concurrency::Free](../Topic/Free%20Function.md) libera la memoria allocata da `Alloc`.  
-  
-> [!NOTE]
->  Le funzioni `Alloc` e `Free` sono dipendenti tra loro.  Utilizzare la funzione `Free` solo per rilasciare la memoria allocata tramite la funzione `Alloc`.  Inoltre, quando si utilizza la funzione `Alloc` per allocare memoria, utilizzare solo la funzione `Free` per rilasciare tale memoria.  
-  
- Utilizzare le funzioni `Alloc` e `Free` quando si alloca e libera un set prestabilito di dimensioni di allocazione da attività o thread diversi.  Il runtime di concorrenza memorizza nella cache la memoria allocata dall'heap del runtime C.  Il runtime di concorrenza mantiene una cache di memoria separata per ogni thread in esecuzione; pertanto, il runtime gestisce la memoria senza l'utilizzo di blocchi o barriere di memoria.  Un'applicazione beneficia maggiormente dei vantaggi offerti dalle funzioni `Alloc` e `Free` quando l'accesso alla cache di memoria è più frequente.  Ad esempio, un thread che chiama frequentemente `Alloc` e `Free` trae più vantaggi rispetto a un thread che chiama principalmente `Alloc` o `Free`.  
+ Il Runtime di concorrenza fornisce due funzioni di gestione della memoria che sono ottimizzate per allocare e liberare i blocchi di memoria in modo simultaneo. Il [Concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc) funzione alloca un blocco di memoria utilizzando la dimensione specificata. Il [Concurrency:: Free](reference/concurrency-namespace-functions.md#free) funzione libera la memoria allocata da `Alloc`.  
   
 > [!NOTE]
->  Quando si utilizzano queste funzioni di gestione della memoria e l'applicazione utilizza una grande quantità di memoria, è possibile che nell'applicazione si verifichi una condizione di memoria insufficiente prima del previsto.  Poiché i blocchi di memoria memorizzati nella cache da un thread non sono disponibili per un altro thread, se un thread include una grande quantità di memoria, tale memoria non sarà disponibile.  
+>  Il `Alloc` e `Free` funzioni si basano su loro. Utilizzare il `Free` funzione solo per rilasciare la memoria allocata tramite il `Alloc` (funzione). Inoltre, quando si utilizza il `Alloc` funzione per allocare memoria, utilizzare solo il `Free` funzione per rilasciare tale memoria.  
   
-## Esempio  
- Per un esempio in cui vengono utilizzate le funzioni `Alloc` e `Free` per migliorare le prestazioni di memoria, vedere [Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
+ Utilizzare il `Alloc` e `Free` funzioni quando si alloca e libera un set fisso di dimensioni di allocazione da attività o thread diversi. Il Runtime di concorrenza memorizza nella cache di memoria allocata dall'heap di Runtime C. Il Runtime di concorrenza mantiene una cache di memoria separata per ogni thread in esecuzione. Pertanto, il runtime gestisce la memoria senza l'utilizzo di blocchi o barriere di memoria. Vantaggi di un'applicazione più il `Alloc` e `Free` funzioni quando la cache della memoria si accede più frequentemente. Ad esempio, un thread che chiama frequentemente `Alloc` e `Free` vantaggi più di un thread che chiama principalmente `Alloc` o `Free`.  
   
-## Vedere anche  
+> [!NOTE]
+>  Quando si utilizzano queste funzioni di gestione della memoria e l'applicazione utilizza molti memoria, l'applicazione è possono immettere una condizione di memoria insufficiente prima di quanto previsto. Poiché i blocchi di memoria che vengono memorizzati nella cache da un thread non sono disponibili altri thread, se un thread contiene grandi quantità di memoria, che la memoria non è disponibile.  
+  
+## <a name="example"></a>Esempio  
+ Per un esempio che utilizza il `Alloc` e `Free` funzioni per migliorare le prestazioni di memoria, vedere [procedura: utilizzare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).  
+  
+## <a name="see-also"></a>Vedere anche  
  [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Procedura: Usare Alloc e Free per migliorare le prestazioni di memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
+

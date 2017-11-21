@@ -1,78 +1,76 @@
 ---
-title: "Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.appsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Creazione guidata nuovo progetto da file di codice esistenti, impostazioni progetto"
+title: Specificare le impostazioni di progetto, creare un nuovo progetto da Creazione guidata file di codice esistenti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.appsettings
+dev_langs: C++
+helpviewer_keywords: Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac4e4a0e9454567be98e4534614c725df70368ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare questa pagina della Creazione guidata nuovo progetto da file di codice esistenti per specificare:  
+# <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>Specifica le impostazioni del progetto, Creazione guidata nuovo progetto da file di codice esistenti
+Utilizzare questa pagina della procedura guidata Crea nuovo progetto da file di codice esistenti per specificare:  
   
--   L'ambiente di compilazione del nuovo progetto  
+-   L'ambiente di compilazione per il nuovo progetto  
   
--   Le impostazioni di compilazione per un tipo specifico di progetto da generare  
+-   Le impostazioni per un tipo specifico di nuovo progetto per generare di compilazione  
   
-## Elenco attività  
- [Procedura: creare un progetto C\+\+ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>Elenco attività  
+ [Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## Elenco UIElement  
- **Utilizza Visual Studio**  
- Specifica di utilizzare gli strumenti di compilazione inclusi in Visual Studio per la compilazione del nuovo progetto.  Tale opzione è selezionata come impostazione predefinita.  
+## <a name="uielement-list"></a>Elenco UIElement  
+ **Utilizzare Visual Studio**  
+ Specifica di utilizzare gli strumenti di compilazione che vengono inclusi in Visual Studio per compilare il nuovo progetto. Questa opzione è selezionata per impostazione predefinita.  
   
  **Tipo di progetto**  
- Specifica il tipo di progetto che verrà creato dalla procedura guidata.  
+ Specifica il tipo di progetto che verrà generato.  
   
  **Progetto di applicazione Windows**  
- Indica che la procedura guidatà creerà un progetto per un'applicazione Windows eseguibile.  L'opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
+ Indica che la procedura guidata genererà un progetto per un'applicazione eseguibile di Windows. Questa opzione è disponibile il **tipo di progetto** casella di riepilogo a discesa.  
   
  **Progetto di applicazione console**  
- Indica che la procedura guidatà creerà un progetto per un'applicazione console.  L'opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
+ Indica che la procedura guidata genererà un progetto per un'applicazione console. Questa opzione è disponibile il **tipo di progetto** casella di riepilogo a discesa.  
   
- **Progetto libreria di collegamento dinamico \(DLL\)**  
- Indica che la procedura guidatà creerà un progetto per un'applicazione di libreria a collegamento dinamico.  L'opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
+ **Progetto libreria di collegamento dinamico (DLL)**  
+ Indica che la procedura guidata genererà un progetto per un'applicazione di libreria di collegamento dinamico. Questa opzione è disponibile il **tipo di progetto** casella di riepilogo a discesa.  
   
- **Progetto di libreria statica \(LIB\)**  
- Indica che la procedura guidatà creerà un progetto per un'applicazione di libreria statica.  L'opzione è disponibile nella casella di riepilogo a discesa **Tipo progetto**.  
+ **Progetto di libreria statica (LIB)**  
+ Indica che la procedura guidata genererà un progetto per un'applicazione libreria statica. Questa opzione è disponibile il **tipo di progetto** casella di riepilogo a discesa.  
   
- **Aggiungi supporto per ATL**  
+ **Aggiungere il supporto per ATL**  
  Aggiunge il supporto ATL al nuovo progetto.  
   
- **Aggiungi supporto per MFC**  
- Aggiunge il supporto MFC al nuovo progetto.  
+ **Aggiungere il supporto per MFC**  
+ Aggiunge il supporto MFC per il nuovo progetto.  
   
- **Aggiungi supporto per Common Language Runtime**  
- Aggiunge il supporto di programmazione CLR al nuovo progetto.  
+ **Aggiungere il supporto per Common Language Runtime**  
+ Aggiunge supporto per il nuovo progetto per la programmazione CLR.  
   
  **Common Language Runtime**  
- Specifica che il nuovo progetto sarà conforme alle funzionalità CLR.  
+ Specifica il nuovo progetto per garantire la conformità con le funzionalità di Common Language Runtime.  
   
- **Common Language Runtime \(vecchia sintassi\)**  
- Specifica che il nuovo progetto sarà conforme alle estensioni gestite per la sintassi di C\+\+, ovvero la sintassi di programmazione CLR precedente a Visual C\+\+ 2005.  
+ **Common Language Runtime (sintassi precedente)**  
+ Specifica il nuovo progetto per garantire la conformità con le estensioni gestite per la sintassi di C++, ovvero la sintassi di programmazione CLR prima di Visual C++ 2005.  
   
- **Utilizza sistema di compilazione esterno**  
- Specifica di utilizzare gli strumenti di compilazione non inclusi in Visual Studio per la compilazione del nuovo progetto.  Una volta indicata l'opzione, è possibile specificare le righe di comando per la compilazione nelle pagine **Specifica le impostazioni di configurazione per il debug** e **Specifica le impostazioni di configurazione per il rilascio**.  
+ **Utilizzare il sistema di compilazione esterno**  
+ Specifica di utilizzare gli strumenti di compilazione non inclusi in Visual Studio per creare il nuovo progetto. Quando questa opzione è selezionata, è possibile specificare le righe di comando di compilazione sul **specificare le impostazioni di configurazione di Debug** e **specifica le impostazioni di configurazione di rilascio** pagine.  
   
 > [!NOTE]
->  Quando è selezionata l'opzione **Utilizza sistema di compilazione esterno**, l'ambiente di sviluppo integrato \(IDE\) non compila il nuovo progetto. Di conseguenza, le opzioni \/D, \/I, \/FI, \/AI e \/FU non sono richieste per la compilazione.  Tuttavia, tali opzioni devono essere impostate correttamente perché IntelliSense funzioni in modo adeguato.  
+>  Quando il **utilizza sistema di compilazione esterno** opzione è selezionata, l'IDE non compilare il nuovo progetto, pertanto la /D, I, /FI, /AI o /FU opzioni non sono necessarie per la compilazione. Tuttavia, queste opzioni devono essere impostate correttamente per IntelliSense funzionare correttamente.  
   
-## Vedere anche  
- [Specifica le impostazioni di configurazione per il debug, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-debug-configuration-settings.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Specificare le impostazioni di configurazione di Debug, creare un nuovo progetto da Creazione guidata file di codice esistenti](../ide/specify-debug-configuration-settings.md)   
  [Specifica le impostazioni di configurazione per il rilascio, Creazione guidata nuovo progetto da file di codice esistenti](../ide/specify-release-configuration.md)

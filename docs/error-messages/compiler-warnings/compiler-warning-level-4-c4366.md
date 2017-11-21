@@ -1,39 +1,37 @@
 ---
-title: "Avviso del compilatore (livello 4) C4366 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4366"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4366"
+title: Compilatore avviso (livello 4) C4366 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4366
+dev_langs: C++
+helpviewer_keywords: C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d610bfcf2e432870fc081298d3dfc3a60c73bd4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 4) C4366
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il risultato dell'operatore 'operatore' unario potrebbe essere non allineato  
+# <a name="compiler-warning-level-4-c4366"></a>Avviso del compilatore (livello 4) C4366
+Il risultato dell'operatore 'operator' unario potrebbe essere non allineato  
   
- Se un membro della struttura non è stato ancora allineato a causa della compressione, il compilatore genererà un avviso quando l'indirizzo del membro viene assegnato a un puntatore allineato.  Per impostazione predefinita, tutti i puntatori sono allineati.  
+ Se un membro di struttura può mai essere allineato a causa di compressione, il compilatore genererà un avviso quando che l'indirizzo del membro viene assegnato a un puntatore allineato. Per impostazione predefinita, tutti i puntatori sono allineati.  
   
- Per non visualizzare l'avviso, modificare l'allineamento della struttura o dichiarare il puntatore con la parola chiave [\_\_unaligned](../../cpp/unaligned.md).  
+ Per risolvere C4366, modificare l'allineamento della struttura o dichiarare il puntatore del mouse con il [unaligned](../../cpp/unaligned.md) (parola chiave).  
   
- Per ulteriori informazioni, vedere \_\_unaligned e [pack](../../preprocessor/pack.md).  
+ Per ulteriori informazioni, vedere unaligned e [pack](../../preprocessor/pack.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4366:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4366.  
   
 ```  
 // C4366.cpp  

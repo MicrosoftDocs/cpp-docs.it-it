@@ -1,34 +1,32 @@
 ---
-title: "Errore degli strumenti del linker LNK2011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2011"
+title: Strumenti del linker LNK2011 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2011
+dev_langs: C++
+helpviewer_keywords: LNK2011
 ms.assetid: 04991ef5-49d5-46c7-8eee-a9d1d3fc541e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a660356f719003a06c17d1fddba948e9d903e00a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore degli strumenti del linker LNK2011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-oggetto precompilato non collegato; l'immagine potrebbe non essere eseguita  
+# <a name="linker-tools-error-lnk2011"></a>Errore degli strumenti del linker LNK2011
+oggetto precompilato non collegato. immagine non può essere eseguita  
   
- Se si utilizzano intestazioni precompilate, LINK richiede che tutti i file oggetto creati con le intestazioni precompilate siano collegati.  Se si dispone di un file di origine utilizzato per generare un'intestazione precompilata da utilizzare con altri file di origine, è necessario includere il file oggetto creato insieme all'intestazione precompilata.  
+ Se si usano intestazioni precompilate, LINK richiede che tutti i file oggetto creati con le intestazioni precompilate siano collegati. Se si dispone di un file di origine che consente di generare un'intestazione precompilata da utilizzare con altri file di origine, è ora necessario includere il file oggetto creato con l'intestazione precompilata.  
   
- Ad esempio, se si compila un file denominato STUB.cpp per creare un'intestazione precompilata da utilizzare con altri file di origine, è necessario collegare STUB.obj per evitare questo errore.  Nelle seguenti righe di comandi, la prima riga è utilizzata per creare un'intestazione precompilata, COMMON.pch, utilizzata con PROG1.cpp e PROG2.cpp nella seconda e nella terza riga.  Il file STUB.cpp contiene solo righe `#include`, uguali a quelle dei file PROG1.cpp e PROG2.cpp, e viene utilizzato esclusivamente per generare le intestazioni precompilate.  Nell'ultima riga è necessario collegare STUB.obj per evitare l'errore LNK2011.  
+ Ad esempio, se si compila un file denominato stub. cpp per creare un'intestazione precompilata da utilizzare con altri file di origine, è necessario collegare stub o si verificherà questo errore. Nelle seguenti righe di comando, riga uno viene utilizzato per creare un'intestazione precompilata, COMMON.pch, che viene utilizzato con PROG1. cpp e PROG2. cpp nelle righe di due e tre. Il file stub. cpp contiene solo `#include` righe (lo stesso `#include` righe PROG1. cpp e PROG2. cpp) e viene utilizzato solo per generare le intestazioni precompilate. Nell'ultima riga, stub deve essere collegato in per evitare l'errore LNK2011.  
   
 ```  
 cl /c /Yccommon.h stub.cpp  

@@ -1,48 +1,47 @@
 ---
-title: "Riga di comando di BSCMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSCMAKE, riga di comando"
+title: Riga di comando BSCMAKE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 278518ae37a4e76ea4fe0252e3341e54daebe599
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Riga di comando di BSCMAKE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per eseguire BSCMAKE, utilizzare la seguente sintassi della riga di comando:  
+# <a name="bscmake-command-line"></a>Riga di comando di BSCMAKE
+Per eseguire BSCMAKE, utilizzare la sintassi della riga di comando seguente:  
   
 ```  
 BSCMAKE [options] sbrfiles  
 ```  
   
- Le opzioni possono essere visualizzate solo nel campo `options` della riga di comando.  
+ Le opzioni possono apparire solo nel `options` campo nella riga di comando.  
   
- Nel campo *sbrfiles* è possibile specificare uno o più file sbr creati mediante un compilatore o un assembler.  Separare i nomi dei vari file sbr mediante spazi o tabulazioni.  Specificare le estensioni, in quanto non vi è estensione predefinita.  È possibile specificare un percorso con il nome del file e utilizzare i caratteri jolly del sistema operativo \(\* e ?\).  
+ Il *sbrfiles è possibile* campo specifica uno o più file SBR creati da un compilatore o l'assembler. Separare i nomi dei file sbr con spazi o tabulazioni. È necessario specificare l'estensione. non vi è alcun valore predefinito. È possibile specificare un percorso con il nome del file e, è possibile utilizzare caratteri jolly del sistema operativo (* e?).  
   
- In una compilazione incrementale è possibile specificare file sbr nuovi, non inclusi nella compilazione originale.  Se si desidera che tutti i contributi rimangano nel file di informazioni di visualizzazione, specificare tutti i file sbr utilizzati in origine per la creazione del file bsc, compresi i file troncati.  Se uno dei file sbr viene omesso, i relativi contributi al file di informazioni di visualizzazione vengono rimossi.  
+ Durante una compilazione incrementale, è possibile specificare i nuovi file sbr che non sono parte della compilazione originale. Se si desidera tutti i contributi deve rimanere nel file di informazioni di visualizzazione, è necessario specificare tutti i file SBR (compresi i file troncati) che sono stati originariamente utilizzati per creare il file BSC. Se si omette un file sbr, viene rimosso il contributo del file per il file di informazioni.  
   
- Per una compilazione completa non devono essere specificati file sbr troncati.  La compilazione completa richiede i contributi di tutti i file sbr specificati.  Prima di eseguire una compilazione completa è necessario ricompilare il progetto e creare un nuovo file sbr per ogni file vuoto.  
+ Non specificare un file SBR troncati per una compilazione completa. Una compilazione completa richiede i contributi di tutti i file SBR specificato. Prima di eseguire una compilazione completa, ricompilare il progetto e creare un nuovo file sbr per ogni file vuoto.  
   
- Il seguente comando esegue BSCMAKE per compilare un file chiamato MAIN.bsc da tre file sbr:  
+ Il comando seguente esegue BSCMAKE per compilare un file chiamato Main. BSC da tre file SBR:  
   
 ```  
 BSCMAKE main.sbr file1.sbr file2.sbr  
 ```  
   
- Per informazioni correlate, vedere [File di comando di BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) e [Opzioni di BSCMAKE](../../build/reference/bscmake-options.md).  
+ Per informazioni correlate, vedere [File di comando di BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) e [opzioni BSCMAKE](../../build/reference/bscmake-options.md).  
   
-## Vedere anche  
- [Riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)

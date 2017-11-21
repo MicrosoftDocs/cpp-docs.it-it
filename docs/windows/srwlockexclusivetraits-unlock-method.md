@@ -1,32 +1,30 @@
 ---
-title: "Metodo SRWLockExclusiveTraits::Unlock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock (metodo)"
+title: 'Metodo srwlockexclusivetraits:: Unlock | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 7fd6b0fb-8b88-4a43-aa74-0d7fe47a0da6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ac40ea65dad74d42a3ee729bfb1cd1711879a06
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo SRWLockExclusiveTraits::Unlock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rilascia il controllo esclusivo dell'oggetto SRWlock specificato.  
+# <a name="srwlockexclusivetraitsunlock-method"></a>Metodo SRWLockExclusiveTraits::Unlock
+Restituisce il controllo esclusivo dell'oggetto SRWLock specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 inline static void Unlock(  
@@ -34,14 +32,14 @@ inline static void Unlock(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `srwlock`  
- Handle ad un oggetto SRWLock.  
+ Handle a un oggetto SRWLock.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura SRWLockExclusiveTraits](../windows/srwlockexclusivetraits-structure.md)

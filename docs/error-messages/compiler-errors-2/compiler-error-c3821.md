@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3821
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3821
+f1_keywords: C3821
+dev_langs: C++
+helpviewer_keywords: C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3821"></a>Errore del compilatore C3821
 'function': funzione o un tipo gestito non può essere utilizzato in una funzione non gestita  
@@ -66,4 +61,3 @@ int main() {
    }  
 } // C3821  
 ```  
-

@@ -1,11 +1,10 @@
 ---
-title: Classe uint_2 | Documenti di Microsoft
+title: Classe uint_2 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,34 +33,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: fdb24ae59933cc926064a6a5a9335e8734079995
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uint2-class"></a>Classe uint_2
 Rappresenta un vettore short di due interi senza segno.  
@@ -84,7 +66,7 @@ class uint_2;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore uint_2](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore uint_2](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -109,15 +91,15 @@ class uint_2;
 |----------|-----------------|  
 |uint_2::operator:||  
 |% uint_2::operator =||  
-|uint_2::operator / =||  
+|uint_2::operator & =||  
 |uint_2::operator * =||  
 |uint_2::operator / =||  
 |uint_2::operator ^ =||  
-|uint_2::operator | =||  
+|uint_2::operator &#124; =||  
 |uint_2::operator ~||  
 |uint_2::operator + +||  
 |+ = uint_2::operator||  
-|uint_2::operator\<=||  
+|uint_2::operator <\<=||  
 |uint_2::operator =||  
 |uint_2::operator =||  
 |uint_2::operator >> =||  
@@ -151,7 +133,7 @@ class uint_2;
   
 ##  <a name="ctor"></a>uint_2 
 
- Predefinito costruttore inizializza tutti gli elementi con 0.  
+ Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 uint_2() restrict(amp,
@@ -210,7 +192,7 @@ explicit inline uint_2(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ##  <a name="uint_2__size"></a>dimensioni 
 
@@ -220,4 +202,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,18 @@ f1_keywords:
 - ATLCOM/ATL::ICollectionOnSTLImpl::getcount
 - ATLCOM/ATL::ICollectionOnSTLImpl::get_Item
 - ATLCOM/ATL::ICollectionOnSTLImpl::m_coll
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICollectionOnSTLImpl class
+dev_langs: C++
+helpviewer_keywords: ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: f55e1a4aa01f239721ad3a87f68be7c6d55b233f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: b1c2debc93f6503bf7928ed789345a50c281804d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl (classe)
 Questa classe fornisce i metodi utilizzati da una classe di raccolta.  
@@ -159,4 +155,3 @@ M_coll CollType;
 ## See Also  
  [ATLCollections Sample](../../visual-cpp-samples.md)   
  [Class Overview](../../atl/atl-class-overview.md)
-

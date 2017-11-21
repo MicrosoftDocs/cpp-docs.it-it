@@ -1,58 +1,59 @@
 ---
-title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], flipping and rotating images"
-  - "images [C++], flipping"
-  - "images [C++], rotating"
+title: Capovolgimento di un'immagine (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e8f31e29d955d54231b25d09f79ecfcf73595a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Flipping an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un'immagine può essere capovolta o ruotata allo scopo di:  
+# <a name="flipping-an-image-image-editor-for-icons"></a>Capovolgimento di un'immagine (Editor di immagini per le icone)
+È possibile capovolge o Ruota un'immagine:  
   
 -   Creare un'immagine speculare dell'originale.  
   
--   Capovolgere verticalmente l'immagine.  
+-   Capovolgere l'immagine.  
   
--   Ruotare l'immagine verso destra di 90 gradi alla volta.  
+-   Ruotare di 90 gradi l'immagine a destra alla volta.  
   
-### Per capovolgere l'immagine orizzontalmente \(immagine speculare\)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>Capovolgere orizzontalmente l'immagine (immagine speculare)  
   
-1.  Scegliere **Capovolgi orizzontalmente** dal menu **Immagine**.  
+1.  Dal **immagine** menu, scegliere **Capovolgi orizzontalmente**.  
   
-### Per capovolgere l'immagine verticalmente  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>Capovolgere verticalmente l'immagine (capovolgere)  
   
-1.  Scegliere **Capovolgi verticalmente** dal menu **Immagine**.  
+1.  Dal **immagine** menu, scegliere **Capovolgi verticalmente**.  
   
-### Per ruotare l'immagine di 90 gradi  
+### <a name="to-rotate-the-image-90-degrees"></a>Per ruotare di 90 gradi l'immagine  
   
-1.  Scegliere **Ruota di 90 gradi** dal menu **Immagine**.  
+1.  Dal **immagine** menu, scegliere **ruotare di 90 gradi**.  
   
     > [!NOTE]
-    >  Per accedere a questi comandi è anche possibile utilizzare i [tasti di scelta rapida](../mfc/accelerator-keys-image-editor-for-icons.md) corrispondenti oppure il menu di scelta rapida visualizzabile facendo clic con il pulsante destro del mouse all'esterno dell'immagine nell'Editor di immagini.  
+    >  È inoltre possibile utilizzare il [tasti di scelta rapida (collegamento)](../windows/accelerator-keys-image-editor-for-icons.md) per tali comandi o accedere ai comandi dal menu di scelta rapida (fare clic all'esterno dell'immagine nell'editor di immagini).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+

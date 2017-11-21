@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,23 +13,21 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CReversalTransition::CReversalTransition
 - AFXANIMATIONCONTROLLER/CReversalTransition::Create
 - AFXANIMATIONCONTROLLER/CReversalTransition::m_duration
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CReversalTransition [MFC], CReversalTransition
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 30d616bb63953e302973d3b6cbb254869c5f2491
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d48ae1a8f8fdcaa0d7836104f2a42da23019bb81
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="creversaltransition-class"></a>Classe CReversalTransition
 Incapsula una transizione di inversione.  
@@ -110,4 +107,3 @@ UI_ANIMATION_SECONDS m_duration;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

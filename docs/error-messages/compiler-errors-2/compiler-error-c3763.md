@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3763
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3763
+f1_keywords: C3763
+dev_langs: C++
+helpviewer_keywords: C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3763"></a>Errore del compilatore C3763
 'type': 'retval' e 'out' possono apparire solo in un tipo di puntatore a dati  

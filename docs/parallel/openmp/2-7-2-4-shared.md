@@ -1,29 +1,28 @@
 ---
-title: "2.7.2.4 shared | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.4 condiviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c9c5d653-58fc-4620-ab0a-443ac4f8ba2e
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 974f534003455ccd750ddc1b7c1f3c28b220f1b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.4 shared
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Questa clausola condivisione delle variabili visualizzate in *variabile\-elenco* tra tutti i thread del team.  Tutti i thread all'interno di un team l'accesso alla stessa area di memoria per **condiviso** variabili.  
+# <a name="2724-shared"></a>2.7.2.4 shared
+Questa clausola condivide le variabili incluse nella *elenco variabili* tra tutti i thread in un team. La stessa area di archiviazione per accedano a tutti i thread all'interno di un team **condivisa** variabili.  
   
- La sintassi di **condiviso** la clausola è la seguente:  
+ La sintassi del **condivisa** clausola è il seguente:  
   
 ```  
 shared(variable-list)  

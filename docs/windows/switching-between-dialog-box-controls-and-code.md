@@ -1,59 +1,60 @@
 ---
-title: "Switching Between Dialog Box Controls and Code | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "events [C++], viewing for controls"
-  - "Windows messages [C++], controls"
-  - "messages [C++], viewing for dialog boxes"
-  - "Dialog editor, accessing code"
-  - "code [C++], switching from Dialog Editor"
-  - "controls [C++], jumping to code"
-  - "Dialog editor, switching between controls and code"
+title: Passaggio tra controlli finestra di dialogo e codice | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- events [C++], viewing for controls
+- Windows messages [C++], controls
+- messages [C++], viewing for dialog boxes
+- Dialog editor, accessing code
+- code [C++], switching from Dialog Editor
+- controls [C++], jumping to code
+- Dialog editor, switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 831b8ca3eddec1bfd13d166d98454206bfac1bfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Switching Between Dialog Box Controls and Code
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nelle applicazioni MFC è possibile passare al codice del gestore corrispondente o creare rapidamente funzioni del gestore dello stub facendo doppio clic sui controlli di una finestra di dialogo.  
+# <a name="switching-between-dialog-box-controls-and-code"></a>Passaggio dai controlli della finestra di dialogo al codice e viceversa
+In applicazioni MFC, è possibile fare doppio clic in controlli finestra di dialogo per passare al codice del gestore o per creare rapidamente stub di funzioni del gestore.  
   
- Dopo avere selezionato un controllo, scegliere il pulsante **Eventi di controllo** o il pulsante **Messaggi** nella [finestra Proprietà](../Topic/Properties%20Window.md) per visualizzare un elenco completo degli eventi e dei messaggi di Windows disponibili per l'elemento selezionato.  Selezionare una voce dall'elenco per creare o modificare le funzioni del gestore.  
+ Un controllo è selezionata, fare clic sul **eventi di controllo** pulsante o **messaggi** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window) per visualizzare un elenco completo dei messaggi di Windows e gli eventi è disponibile per l'elemento selezionato. Scegliere dall'elenco per creare o modificare le funzioni del gestore.  
   
-### Per passare dall'editor finestre al codice  
+### <a name="to-jump-to-code-from-the-dialog-editor"></a>Per passare al codice dall'editor finestre  
   
-1.  Fare doppio clic su un controllo all'interno della finestra di dialogo per passare alla dichiarazione relativa alla funzione di gestione dei messaggi implementata più recentemente.  Per le classi di finestre di dialogo basate su ATL si passa sempre alla definizione del costruttore.  
+1.  Fare doppio clic su un controllo nella finestra di dialogo a cui passare la dichiarazione per la funzione di gestione dei messaggi implementato più di recente. (Per le classi di finestra di dialogo basati su ATL, è sempre passare alla definizione del costruttore.)  
   
-### Per visualizzare gli eventi relativi a un controllo  
+### <a name="to-view-events-for-a-control"></a>Per visualizzare gli eventi per un controllo  
   
-1.  Dopo avere selezionato un controllo, scegliere il pulsante **Eventi di controllo** nella [finestra Proprietà](../Topic/Properties%20Window.md).  
+1.  Un controllo è selezionata, fare clic su di **eventi di controllo** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
     > [!NOTE]
-    >  Se si sceglie il pulsante **Eventi di controllo** mentre la *finestra di dialogo* ha lo stato attivo, verrà esposto un elenco di tutti i controlli della finestra di dialogo che sarà possibile espandere in modo da modificare gli eventi relativi ai singoli controlli.  
+    >  Fare clic su di **eventi di controllo** pulsante quando il *la finestra di dialogo* ha espone lo stato attivo per un elenco di tutti i controlli nella finestra di dialogo, che è possibile espandere in modo da modificare gli eventi relativi ai singoli controlli.  
   
-     Quando un singolo controllo ha lo stato attivo nella finestra di dialogo, è possibile fare clic con il pulsante destro del mouse sul controllo e scegliere **Aggiungi gestore eventi** dal menu di scelta rapida.  In questo modo è possibile specificare la classe a cui viene aggiunto il gestore.  Per ulteriori informazioni, vedere [Aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).  
+     Quando un singolo controllo ha lo stato attivo nella finestra di dialogo, è possibile pulsante destro del mouse e selezionare **Aggiungi gestore** dal menu di scelta rapida. Ciò consente di specificare la classe a cui viene aggiunto il gestore. Per ulteriori informazioni, vedere [aggiungendo un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).  
   
-### Per visualizzare i messaggi relativi a una finestra di dialogo  
+### <a name="to-view-messages-for-a-dialog-box"></a>Per visualizzare i messaggi per una finestra di dialogo  
   
-1.  Dopo avere selezionato una finestra di dialogo, scegliere il pulsante **Messaggi** nella [finestra Proprietà](../Topic/Properties%20Window.md).  
+1.  Con la finestra di dialogo selezionata, fare clic su di **messaggi** pulsante il [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Editor finestre](../windows/dialog-editor.md)
+

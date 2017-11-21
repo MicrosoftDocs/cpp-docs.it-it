@@ -1,32 +1,30 @@
 ---
-title: "SafeGreaterThanEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeGreaterThanEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeGreaterThanEquals (funzione)"
+title: SafeGreaterThanEquals | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeGreaterThanEquals
+dev_langs: C++
+helpviewer_keywords: SafeGreaterThanEquals function
 ms.assetid: 43312fa9-d925-4f9f-a352-a190c02b3005
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 16a13e49cb33698810c536839eb434109557466e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# SafeGreaterThanEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 Confronta due numeri.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <typename T, typename U>  
@@ -36,35 +34,35 @@ inline bool SafeGreaterThanEquals (
 ) throw ();  
 ```  
   
-#### Parametri  
- \[in\] `t`  
- Primo numero da confrontare.  L'espressione deve essere di tipo T.  
+#### <a name="parameters"></a>Parametri  
+ [in] `t`  
+ Il primo numero da confrontare. Deve essere di tipo T.  
   
- \[in\] `u`  
- Secondo numero da confrontare.  L'espressione deve essere di tipo U.  
+ [in] `u`  
+ Il secondo numero da confrontare. Deve essere di tipo U.  
   
-## Valore restituito  
- `true` se `t` è maggiore o uguale a `u`; in caso contrario `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se `t` è maggiore o uguale a `u`; in caso contrario `false`.  
   
-## Note  
- `SafeGreaterThanEquals` migliora l'operatore di confronto standard poiché consente di confrontare due tipi diversi di numeri.  
+## <a name="remarks"></a>Note  
+ `SafeGreaterThanEquals`migliora l'operatore di confronto standard in quanto consente di confrontare due tipi diversi di numeri.  
   
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per una singola operazione di confronto senza creare un'istanza di [Classe SafeInt](../windows/safeint-class.md).  
+ Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione di confronto singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Questo metodo deve essere utilizzato solo quando una singola un'operazione matematica deve essere protetta.  Se sono presenti più operazioni, è necessario utilizzare la classe di `SafeInt` anziché chiamare le singole funzioni autonome.  
+>  Questo metodo deve essere utilizzato solo quando è necessario proteggere una singola operazione matematica. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
   
- Per ulteriori informazioni sui tipi T e U del modello, vedere [Funzioni SafeInt](../windows/safeint-functions.md).  
+ Per ulteriori informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
   
-## Requisiti  
- **Intestazione:** safeint.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** SafeInt. h  
   
- **Spazio dei nomi:** Microsoft::Utilities  
+ **Namespace:** Microsoft:: Utilities  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni SafeInt](../windows/safeint-functions.md)   
  [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)   
+ [SafeInt (classe)](../windows/safeint-class.md)   
  [SafeGreaterThan](../windows/safegreaterthan.md)   
  [SafeLessThanEquals](../windows/safelessthanequals.md)   
  [SafeLessThan](../windows/safelessthan.md)

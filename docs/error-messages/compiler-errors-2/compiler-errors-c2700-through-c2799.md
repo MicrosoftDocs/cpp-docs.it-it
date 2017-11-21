@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -46,32 +45,17 @@ helpviewer_keywords:
 - C2789
 - C2796
 - C2799
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 02bfc54853aea219b4ff0a08231e73fb53550a37
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: d8246cec8db138b053f3c239448043147131166c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>C2700 errori del compilatore C2799
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -85,19 +69,19 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |-----------|-------------|  
 |[Errore del compilatore C2700](compiler-error-c2700.md)|'*tipo*': non può essere generata (per altre informazioni, utilizzare /W4)|  
 |[Errore del compilatore C2701](compiler-error-c2701.md)|'*funzione*': una funzione modello o generico non può essere un elemento friend di una classe locale|  
-|[Errore del compilatore C2702](compiler-error-c2702.md)| __except non può apparire in un blocco di terminazione|  
-|[Errore del compilatore C2703](compiler-error-c2703.md)|istruzione __leave non valida|  
+|[Errore del compilatore C2702](compiler-error-c2702.md)| except non può trovarsi in un blocco di terminazione|  
+|[Errore del compilatore C2703](compiler-error-c2703.md)|istruzione leave non valido|  
 |[Errore del compilatore C2704](compiler-error-c2704.md)|'*funzione*': va_start intrinseco ammesso solo in varargs|  
 |[Errore del compilatore C2705](compiler-error-c2705.md)|'*etichetta*': salto non valido in '*exception_block*' ambito|  
-|[Errore del compilatore C2706](compiler-error-c2706.md)|__except non valido senza __try corrispondente. '}' mancante nel blocco __try?|  
+|[Errore del compilatore C2706](compiler-error-c2706.md)|except non valido senza try corrispondente (mancante '}' nel blocco try?)|  
 |[Errore del compilatore C2707](compiler-error-c2707.md)|'*identificatore*': un contesto non valido per una funzione intrinseca|  
 |[Errore del compilatore C2708](compiler-error-c2708.md)|'*identificatore*': lunghezza in byte effettivi dei parametri è diverso dal precedente chiamata o di riferimento|  
 |[Errore del compilatore C2709](compiler-error-c2709.md)|'*identificatore*': lunghezza in byte dei parametri formali differente da una dichiarazione precedente|  
 |[Errore del compilatore C2710](compiler-error-c2710.md)|'*identificatore*': ' declspec (*modificatore*)' può essere applicato solo a una funzione che restituisce un puntatore|  
 |[Errore del compilatore C2711](compiler-error-c2711.md)|'*funzione*': questa funzione non può essere compilate come gestite, gestita tramite #pragma|  
-|[Errore del compilatore C2712](compiler-error-c2712.md)|Impossibile utilizzare __try in funzioni che richiedono la rimozione di oggetti|  
-|[Errore del compilatore C2713](compiler-error-c2713.md)|In ciascuna funzione è permessa una sola forma di gestione delle eccezioni|  
-|[Errore del compilatore C2714](compiler-error-c2714.md)|alignof(void) non è consentito|  
+|[Errore del compilatore C2712](compiler-error-c2712.md)|Impossibile utilizzare try in funzioni che richiedono la rimozione di oggetti|  
+|[Errore del compilatore C2713](compiler-error-c2713.md)|ciascuna funzione è permessa solo una forma di gestione delle eccezioni|  
+|[Errore del compilatore C2714](compiler-error-c2714.md)|non è consentito alignof(void)|  
 |[Errore del compilatore C2715](compiler-error-c2715.md)|'*tipo*': Impossibile generare o intercettare questo tipo|  
 |Errore del compilatore C2716|Obsoleta.|  
 |Errore del compilatore C2717|Obsoleta.|  
@@ -124,7 +108,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2738](compiler-error-c2738.md)|' operatore *tipo*': è ambiguo o non è un membro di '*classe*'|  
 |[Errore del compilatore C2739](compiler-error-c2739.md)|'*numero*': le dimensioni di matrice gestita o WinRT esplicite devono essere comprese tra 1 e 32|  
 |C2740 errore del compilatore|valore dell'operando '*numero*'non compreso nell'intervallo'*lower_bound* - *upper_bound*'|  
-|C2741 errore del compilatore|dimensione frame eccessiva|  
+|C2741 errore del compilatore|Dimensione frame eccessiva|  
 |C2742 errore del compilatore|Obsoleta.|  
 |[Errore del compilatore C2743](compiler-error-c2743.md)|'*tipo*': Impossibile intercettare un tipo nativo con distruttore clrcall o costruttore di copia|  
 |C2744 errore del compilatore|'*operatore*' non è un operatore CLR o WinRT valido|  
@@ -154,14 +138,14 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2768](compiler-error-c2768.md)|'*funzione*': utilizzo non valido di argomenti di modello espliciti|  
 |C2769 errore del compilatore|è Impossibile inizializzare la parentesi graffa di una matrice gestita o WinRT in un elenco di inizializzatori di basi/membri|  
 |[Errore del compilatore C2770](compiler-error-c2770.md)|argomenti di modello o generico esplicita non valido per '*modello*'|  
-|[Errore del compilatore C2771](compiler-error-c2771.md)|#importazione consentite solo globale o l'ambito dello spazio dei nomi|  
+|[Errore del compilatore C2771](compiler-error-c2771.md)|#import consentito solo nell'ambito globale o dello spazio dei nomi|  
 |C2772 errore del compilatore|Obsoleta.|  
-|[Errore del compilatore C2773](compiler-error-c2773.md)|#importare e #using disponibili solo nel compilatore C++|  
+|[Errore del compilatore C2773](compiler-error-c2773.md)|#import e #using disponibili solo nel compilatore C++|  
 |[Errore del compilatore C2774](compiler-error-c2774.md)|'*identificatore*': nessun metodo 'put' è associato a questa proprietà|  
 |[Errore del compilatore C2775](compiler-error-c2775.md)|'*identificatore*': nessun metodo 'get' è associato a questa proprietà|  
 |[Errore del compilatore C2776](compiler-error-c2776.md)|per ciascuna proprietà è possibile specificare un solo metodo 'get'|  
 |[Errore del compilatore C2777](compiler-error-c2777.md)|per ciascuna proprietà è possibile specificare un solo metodo 'put'|  
-|[Errore del compilatore C2778](compiler-error-c2778.md)|formato GUID non corretto in __declspec(uuid())|  
+|[Errore del compilatore C2778](compiler-error-c2778.md)|GUID di formato non corretto in __declspec(uuid())|  
 |[Errore del compilatore C2779](compiler-error-c2779.md)|'*dichiarazione*': i metodi di proprietà possono essere solo associati ai membri dati non statici|  
 |[Errore del compilatore C2780](compiler-error-c2780.md)|'*dichiarazione*': prevista *numero* argomenti - *numero* fornito|  
 |[Errore del compilatore C2781](compiler-error-c2781.md)|'*dichiarazione*': prevista almeno *numero* argomento - *numero* fornito|  
@@ -173,14 +157,13 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2787](compiler-error-c2787.md)|'*identificatore*': nessun GUID è stato associato a questo oggetto|  
 |[Errore del compilatore C2788](compiler-error-c2788.md)|'*identificatore*': più di un GUID associato all'oggetto|  
 |C2789 errore del compilatore|'*identificatore*': deve essere inizializzato un oggetto di tipo qualificato da const|  
-|[Errore del compilatore C2790](compiler-error-c2790.md)|'super': questa parola chiave può essere utilizzata solo nel corpo di una funzione membro di una classe|  
+|[Errore del compilatore C2790](compiler-error-c2790.md)|'super': questa parola chiave può essere utilizzata solo all'interno del corpo della funzione membro di classe|  
 |[Errore del compilatore C2791](compiler-error-c2791.md)|utilizzo non valido di 'super': '*classe*' non ha classi di base|  
-|[Errore del compilatore C2792](compiler-error-c2792.md)|'super': questa parola chiave deve essere seguita da '::'|  
+|[Errore del compilatore C2792](compiler-error-c2792.md)|'super': questa parola chiave deve essere seguita da ':: '|  
 |[Errore del compilatore C2793](compiler-error-c2793.md)|'*token*': token imprevisto dopo ':: ', identificatore o la parola chiave 'operator' previsto|  
 |[Errore del compilatore C2794](compiler-error-c2794.md)|'*identificatore*': non è un membro di una classe base diretta o indiretta di '*classe*'|  
 |[Errore del compilatore C2795](compiler-error-c2795.md)|' super::*identificatore*' non è una funzione membro|  
-|C2796 errore del compilatore|'ref new' può essere utilizzato solo per creare un'istanza di tipo WinRT|  
+|C2796 errore del compilatore|'ref new' può essere utilizzato solo per creare un'istanza di un tipo WinRT|  
 |[Errore del compilatore C2797](compiler-error-c2797.md)|(Obsoleto) '*identificatore*': l'inizializzazione elenco all'interno di elenco di inizializzatori di membro o l'inizializzatore di membro dati non statici non implementato|  
 |[Errore del compilatore C2798](compiler-error-c2798.md)|' super::*identificatore*' è ambiguo|  
 |C2799 errore del compilatore|'*identificatore*': deve essere inizializzato un oggetto di tipo qualificato da const senza un costruttore predefinito fornito dall'utente|  
-

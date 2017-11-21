@@ -1,57 +1,55 @@
 ---
-title: "private (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "private"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "private OpenMP clause"
+title: private (/openmp) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: private
+dev_langs: C++
+helpviewer_keywords: private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21193361d10acdbf506e0b9f8e09ba5d7da598d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# private (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Specifica che ogni thread deve disporre di una propria istanza di una variabile.  
+# <a name="private-openmp"></a>private (OpenMP)
+Specifica che ogni thread deve avere la propria istanza di una variabile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 private(var)  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
  `var`  
- La variabile per disporre istanze in ogni thread.  
+ La variabile disporre istanze in ogni thread.  
   
-## Note  
+## <a name="remarks"></a>Note  
  **privato** si applica alle direttive seguenti:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [Nelle sezioni](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- Per ulteriori informazioni, vedere [2.7.2.1 private](../../../parallel/openmp/2-7-2-1-private.md).  
+ Per ulteriori informazioni, vedere [2.7.2.1 privata](../../../parallel/openmp/2-7-2-1-private.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // openmp_private.c  
@@ -157,55 +155,77 @@ int main() {
 }  
 ```  
   
-  **Si tratta delle variabili prima della voce nell'area parallela.  nThreadPrivate \= 4**  
- **nPrivate \= 4**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 4**  
- **\= 4 nShared**  
-**Queste sono le variabili alla voce del ciclo 1 del thread 0.  nThreadPrivate \= 4**  
- **nPrivate \= 1310720**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 1245104**  
- **\= 3 nShared**  
-**Queste sono le variabili alla voce del ciclo 1 del thread 1.  nThreadPrivate \= 4**  
- **nPrivate \= 4488**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 19748**  
- **\= 0 nShared**  
-**Queste sono le variabili alla voce del ciclo 1 del thread 2.  nThreadPrivate \= 4**  
- **nPrivate \= \-132514848**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= \-513199792**  
- **\= 4 nShared**  
-**Queste sono le variabili alla voce del ciclo 1 del thread 3.  nThreadPrivate \= 4**  
- **nPrivate \= 1206**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 1204**  
- **\= 2 nShared**  
-**Queste sono le variabili alla voce del ciclo 2 del thread 0.  nThreadPrivate \= 0**  
- **nPrivate \= 0**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 0**  
- **\= 0 nShared**  
-**Queste sono le variabili alla voce del ciclo 2 del thread 1.  nThreadPrivate \= 1**  
- **nPrivate \= 1**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 1**  
- **\= 1 nShared**  
-**Queste sono le variabili alla voce del ciclo 2 del thread 2.  nThreadPrivate \= 2**  
- **nPrivate \= 2**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 2**  
- **\= 2 nShared**  
-**Queste sono le variabili alla voce del ciclo 2 del thread 3.  nThreadPrivate \= 3**  
- **nPrivate \= 3**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 3**  
- **\= 3 nShared**  
-**Si tratta delle variabili dopo l'uscita dall'area parallela.  nThreadPrivate \= 0 \(l'ultimo valore nel thread master\)**  
- **nPrivate \= 4 \(valore prima di immettere area parallela\)**  
- **nFirstPrivate \= 4 \(valore prima di immettere area parallela\)**  
- **nLastPrivate \= 3 \(valore dall'ultima iterazione del ciclo\)**  
- **\= 1 nShared \(il valore assegnato, dal thread in ritardo, 1\)**    
-## Vedere anche  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+These are the variables before entry into the parallel region.  
+nThreadPrivate = 4  
+      nPrivate = 4  
+ nFirstPrivate = 4  
+  nLastPrivate = 4  
+       nShared = 4  
+  
+These are the variables at entry of loop 1 of thread 0.  
+nThreadPrivate = 4  
+      nPrivate = 1310720  
+ nFirstPrivate = 4  
+  nLastPrivate = 1245104  
+       nShared = 3  
+  
+These are the variables at entry of loop 1 of thread 1.  
+nThreadPrivate = 4  
+      nPrivate = 4488  
+ nFirstPrivate = 4  
+  nLastPrivate = 19748  
+       nShared = 0  
+  
+These are the variables at entry of loop 1 of thread 2.  
+nThreadPrivate = 4  
+      nPrivate = -132514848  
+ nFirstPrivate = 4  
+  nLastPrivate = -513199792  
+       nShared = 4  
+  
+These are the variables at entry of loop 1 of thread 3.  
+nThreadPrivate = 4  
+      nPrivate = 1206  
+ nFirstPrivate = 4  
+  nLastPrivate = 1204  
+       nShared = 2  
+  
+These are the variables at entry of loop 2 of thread 0.  
+nThreadPrivate = 0  
+      nPrivate = 0  
+ nFirstPrivate = 3  
+  nLastPrivate = 0  
+       nShared = 0  
+  
+These are the variables at entry of loop 2 of thread 1.  
+nThreadPrivate = 1  
+      nPrivate = 1  
+ nFirstPrivate = 3  
+  nLastPrivate = 1  
+       nShared = 1  
+  
+These are the variables at entry of loop 2 of thread 2.  
+nThreadPrivate = 2  
+      nPrivate = 2  
+ nFirstPrivate = 3  
+  nLastPrivate = 2  
+       nShared = 2  
+  
+These are the variables at entry of loop 2 of thread 3.  
+nThreadPrivate = 3  
+      nPrivate = 3  
+ nFirstPrivate = 3  
+  nLastPrivate = 3  
+       nShared = 3  
+  
+These are the variables after exit from the parallel region.  
+nThreadPrivate = 0 (The last value in the master thread)  
+      nPrivate = 4 (The value prior to entering parallel region)  
+ nFirstPrivate = 4 (The value prior to entering parallel region)  
+  nLastPrivate = 3 (The value from the last iteration of the loop)  
+       nShared = 1 (The value assigned, from the delayed thread, 1)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Clausole](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,30 +1,29 @@
 ---
-title: "Metodo HString::Set | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::Set"
-dev_langs: 
-  - "C++"
+title: 'Metodo hstring:: set | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::Set
+dev_langs: C++
 ms.assetid: c9b3d613-95c4-48b0-999d-f5baf0804faf
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc761ea9d79fbca358b8aab68944560c58a170ed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HString::Set
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Imposta il valore dell'oggetto corrente di HString alla stringa di caratteri estesi o al parametro specifica di HString.  
+# <a name="hstringset-method"></a>Metodo HString::Set
+Imposta il valore dell'oggetto HString corrente per la stringa specificata di caratteri "wide" o il parametro HString.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,20 +38,20 @@ HRESULT Set(
            ) throw();  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
- Una stringa di caratteri estesi.  
+ Una stringa di caratteri wide.  
   
  `len`  
- La lunghezza massima del parametro `str` assegnato all'oggetto corrente di HString.  
+ La lunghezza massima del `str` parametro assegnato all'oggetto HString corrente.  
   
  `hstr`  
- Un oggetto esistente di HString.  
+ Oggetto HString esistente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HString](../windows/hstring-class.md)

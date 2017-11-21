@@ -1,32 +1,30 @@
 ---
-title: "Struttura VerifyInheritanceHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VerifyInheritanceHelper (struttura)"
+title: VerifyInheritanceHelper (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+dev_langs: C++
+helpviewer_keywords: VerifyInheritanceHelper structure
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 926ed226b67ae510647d2523e4992f6ee3c79a5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Struttura VerifyInheritanceHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (struttura)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -40,31 +38,31 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I`  
- Un tipo.  
+ Tipo.  
   
  `Base`  
  Un altro tipo.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Verifica se un'interfaccia è derivata da un'altra interfaccia.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Verifica le due interfacce specificate dai parametri del modello corrente e determina se un'interfaccia è derivata dall'altra.|  
+|[Metodo VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Verifica le due interfacce specificate dai parametri di modello corrente e determina se un'interfaccia è derivata da altra.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `VerifyInheritanceHelper`  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

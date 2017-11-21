@@ -4,48 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- integral_constant
 - type_traits/std::integral_constant
 - XTR1COMMON/std::integral_constant
-- bool_constant
 - type_traits/std::bool_constant
 - XTR1COMMON/std::bool_constant
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- integral_constant class
-- integral_constant
-- bool_constant
+- std::integral_constant [C++]
+- std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: b64b3ef25622a61fd10bca9d49d527ff232d5c1b
-ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: d519e7310237a00e1423f70adea5fa0590ec5350
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
 Crea una costante integrale da un tipo e da un valore.  
@@ -110,5 +90,4 @@ integral_constant<bool, false> == false
  [<type_traits>](../standard-library/type-traits.md)   
  [false_type](../standard-library/type-traits-typedefs.md#false_type)   
  [true_type](../standard-library/type-traits-typedefs.md#true_type)
-
 

@@ -1,42 +1,41 @@
 ---
-title: "Errore dell‘analizzatore di espressioni CXX0017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0017"
-  - "CXX0017"
+title: Errore dell'analizzatore di espressioni CXX0017 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0017
+dev_langs: C++
+helpviewer_keywords:
+- CAN0017
+- CXX0017
 ms.assetid: af74db02-a64d-49ca-8363-3e044a107580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b1e7901f46aacbcac73a7d2b6a3e5f033d1526c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore dell‘analizzatore di espressioni CXX0017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il simbolo non è stato individuato.  
+# <a name="expression-evaluator-error-cxx0017"></a>Errore dell‘analizzatore di espressioni CXX0017
+simbolo non trovato  
   
  Un simbolo specificato in un'espressione non è stato trovato.  
   
- L'errore potrebbe essere determinato da un'incongruenza di maiuscole\/minuscole nel nome del simbolo.  Poiché nei linguaggi C e C\+\+ è prevista la distinzione tra maiuscole e minuscole, un nome di simbolo deve essere specificato con la stessa distinzione tra maiuscole e minuscole con cui è definito nell'origine.  
+ Una delle possibili cause di questo errore è una mancata corrispondenza tra il nome del simbolo case. Poiché C e C++ sono linguaggi tra maiuscole e minuscole, un nome di simbolo deve essere specificato esattamente del caso in cui è definito nell'origine.  
   
- L'errore può verificarsi quando si tenta di eseguire un cast di tipo su una variabile per controllarla durante il debug.  Nella dichiarazione `typedef` è specificato un nuovo nome per un tipo, ma non viene definito un nuovo tipo.  Il cast di tipo tentato durante il debug richiede il nome di un tipo già definito.  
+ Questo errore può verificarsi durante il tentativo di una variabile il cast di tipo per controllare la variabile durante il debug. Il `typedef` dichiara un nuovo nome per un tipo, ma viene definito un nuovo tipo. Il cast di tipo tentato durante il debug richiede il nome di un tipo definito.  
   
  Questo errore è identico all'errore CAN0017.  
   
-### Per correggere valutando le seguenti possibili soluzioni  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Per correggere il problema, provare le seguenti soluzioni possibili  
   
-1.  Verificare che il simbolo sia stato già dichiarato nel punto del programma in cui viene utilizzato.  
+1.  Verificare che il simbolo è già stato dichiarato nel punto del programma in cui è in uso.  
   
-2.  Per impostare variabili nel debugger, utilizzare un nome effettivo di tipo anziché un nome definito con `typedef`.
+2.  Per eseguire il cast delle variabili nel debugger, utilizzare un nome di tipo effettivo anziché `typedef`-nome definito.

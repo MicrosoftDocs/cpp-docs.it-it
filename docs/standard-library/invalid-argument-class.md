@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::invalid_argument
-- invalid_argument
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_argument class
+f1_keywords: stdexcept/std::invalid_argument
+dev_langs: C++
+helpviewer_keywords: invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3cb196cc07756d9af9193c9c04a56a67f627530a
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 03dfdda0c3304364381fca2c53eb373ab3a86286
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="invalidargument-class"></a>Classe invalid_argument
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un argomento non valido.  
@@ -95,5 +75,4 @@ Type class std::invalid_argument
 ## <a name="see-also"></a>Vedere anche  
  [logic_error Class](../standard-library/logic-error-class.md)  (Classe logic_error)  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 

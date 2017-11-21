@@ -1,40 +1,39 @@
 ---
-title: "for each, in | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::foreach"
-  - "for"
-  - "each"
-  - "in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for each (parola chiave) [C++]"
+title: per ognuno, in | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::foreach
+- for
+- each
+- in
+dev_langs: C++
+helpviewer_keywords: for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# for each, in
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Scorre una matrice o una raccolta.  Questa parola chiave non standard è disponibile sia nei progetti C\+\+\/CLI sia nei progetti C\+\+ nativi.  Il suo utilizzo non è tuttavia consigliato.  In alternativa, considerare l'utilizzo di un'[Istruzione for basata su intervallo \(C\+\+\)](../cpp/range-based-for-statement-cpp.md) standard.  
+# <a name="for-each-in"></a>for each, in
+Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. È consigliabile utilizzare uno standard [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md) invece.  
   
-## Tutti i runtime  
+## <a name="all-runtimes"></a>Tutti i runtime  
  **Sintassi**  
   
 ```  
   
-        for each (type identifier in expression) {  
+      for each (typeidentifierinexpression) {  
    statements  
 }  
   
@@ -46,38 +45,38 @@ Scorre una matrice o una raccolta.  Questa parola chiave non standard è disponi
  Tipo di `identifier`.  
   
  `identifier`  
- Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.  
+ Variabile di iterazione che rappresenta l'elemento della raccolta.  Quando `identifier` è un [operatore di riferimento di rilevamento](../windows/tracking-reference-operator-cpp-component-extensions.md), è possibile modificare l'elemento.  
   
  `expression`  
- Raccolta o espressione di matrice.  L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.  
+ Raccolta o espressione di matrice. L'elemento della raccolta deve poter essere convertito dal compilatore nel tipo `identifier`.  
   
  `statements`  
  Una o più istruzioni da eseguire.  
   
- **Osservazioni**  
+ **Note**  
   
- L'istruzione `for each` viene utilizzata per scorrere una raccolta.  È possibile modificare gli elementi di una raccolta, ma non è possibile aggiungere o eliminare elementi.  
+ L'istruzione `for each` viene utilizzata per scorrere una raccolta. È possibile modificare gli elementi di una raccolta, ma non è possibile aggiungere o eliminare elementi.  
   
- Vengono eseguite *statements* per ogni elemento della matrice o della raccolta.  Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.  
+ Il *istruzioni* vengono eseguiti per ogni elemento nella matrice o raccolta. Dopo che l'iterazione è stata completata per tutti gli elementi della raccolta, il controllo viene trasferito all'istruzione che segue il blocco `for each`.  
   
- `for each` e `in` sono [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `for each`e `in` sono [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
  Per ulteriori informazioni:  
   
--   [Scorrimento di una raccolta STL con for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
+-   [Scorrere la raccolta di librerie standard C++ tramite for each](../dotnet/iterating-over-stl-collection-by-using-for-each.md)  
   
--   [Procedura: scorrere le matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
+-   [Procedura: Scorrere le matrici con for each](../dotnet/how-to-iterate-over-arrays-with-for-each.md)  
   
--   [Procedura: scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
+-   [Procedura: Scorrere una raccolta generica con for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
   
--   [Procedura: scorrere una raccolta definita dall'utente con for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
+-   [Procedura: Scorrere una raccolta definita dall'utente con for each](../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows Runtime  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-### Esempio  
+### <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare `for each` per scorrere una stringa.  
   
 ```  
@@ -108,22 +107,26 @@ int main() {
   
  **Output**  
   
-  **abcd**  
- **Test**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Osservazioni**  
+```Output  
+abcd  
   
- La sintassi CLR è uguale alla sintassi di **tutti i runtime**, ad eccezione di quanto segue.  
+Testing  
+```  
   
- *expression*  
- Raccolta o espressione di matrice gestita.  L'elemento della raccolta deve poter essere convertito dal compilatore da <xref:System.Object> al tipo *identifier*.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Note**  
   
- *expression* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601> o un tipo che definisce un metodo `GetEnumerator` che a sua volta restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in `IEnumerator`.  
+ La sintassi CLR è lo stesso come il **tutti i runtime** sintassi, tranne che come indicato di seguito.  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+ *espressione*  
+ Raccolta o espressione di matrice gestita. L'elemento della raccolta deve essere in modo che il compilatore può convertire da <xref:System.Object> per il *identificatore* tipo.  
   
-### Esempio  
+ *espressione* restituisce un tipo che implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo che definisce un `GetEnumerator` metodo che restituisce un tipo che implementa <xref:System.Collections.IEnumerator> o dichiara tutti i metodi definiti in `IEnumerator`.  
+  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
+  
+### <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare `for each` per scorrere una stringa.  
   
 ```  
@@ -153,7 +156,11 @@ int main() {
   
  **Output**  
   
-  **abcd**  
- **Test**    
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+abcd  
+  
+Testing   
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

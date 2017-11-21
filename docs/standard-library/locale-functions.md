@@ -23,7 +23,7 @@ f1_keywords:
 - locale/std::toupper
 - locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
-caps.latest.revision: 15
+caps.latest.revision: "15"
 manager: ghogen
 helpviewer_keywords:
 - std::has_facet [C++]
@@ -41,12 +41,11 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 28274279da6422edf7e92e4aca9a6425cd21a9e8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltlocalegt-functions"></a>Funzioni &lt;locale&gt;
 ||||  
@@ -920,5 +919,4 @@ The character '!' in locale loc2 is not alphabetic.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<locale>](../standard-library/locale.md)
-
 

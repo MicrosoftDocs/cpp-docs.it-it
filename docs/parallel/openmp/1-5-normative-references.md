@@ -1,30 +1,29 @@
 ---
-title: "1.5 Normative References | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 1.5 riferimenti alle normative | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d95e51f9-94da-4150-8e28-85d8fe24bd5f
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4bfae4f7e4baa85cbbe14d89598669d6a7cf26f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 1.5 Normative References
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
--   9899:1999 ISO\/IEC, *Information Technology \- linguaggi di programmazione \- C\#*.  Tale specifica di OpenMP API si riferisce al 9899:1999 ISO\/IEC come C99.  
+# <a name="15-normative-references"></a>1.5 Riferimenti alle normative
+-   ISO/IEC 9899: 1999 a, *informazioni tecnologia - linguaggi di programmazione - C*. Questa API OpenMP fa riferimento la specifica ISO/IEC 9899: 1999 come C99.  
   
--   9899:1990 ISO\/IEC, *Information Technology \- linguaggi di programmazione \- C\#*.  Tale specifica di OpenMP API si riferisce al 9899:1990 ISO\/IEC come C90.  
+-   ISO/IEC 9899: 1990 a, *informazioni tecnologia - linguaggi di programmazione - C*. Questa specifica OpenMP API fa riferimento a 9899: 1990 ISO/IEC come C90.  
   
--   14882:1998 ISO\/IEC, *Information Technology \- linguaggio di programmazione C\+\+*.  Tale specifica di OpenMP API si riferisce al 14882:1998 ISO\/IEC come C\+\+.  
+-   ISO/IEC 14882:1998, *informazioni tecnologia - linguaggi di programmazione - C++*. Questa API OpenMP fa riferimento la specifica ISO/IEC 14882:1998 come C++.  
   
- Laddove questa specifica di OpenMP API si riferisce a C\#, il riferimento viene eseguito nel linguaggio di base supportato dall'implementazione.
+ In questa specifica OpenMP API fa riferimento a C, viene fatto riferimento per la lingua supportata dall'implementazione di base.

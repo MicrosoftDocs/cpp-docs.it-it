@@ -1,32 +1,30 @@
 ---
-title: "Metodo WeakRef::As | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::As"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "As (metodo)"
+title: 'Metodo weakref:: As | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::As
+dev_langs: C++
+helpviewer_keywords: As method
 ms.assetid: 7173da62-b3fe-44d6-aea4-1aa97e69b221
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5160cb93d6660eaf990856a58d5b9379e911125e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo WeakRef::As
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakrefas-method"></a>Metodo WeakRef::As
 Imposta il parametro del puntatore ComPtr specificato per rappresentare l'interfaccia specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -45,32 +43,32 @@ HRESULT As(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `U`  
  ID di interfaccia.  
   
  `ptr`  
  Al termine dell'operazione, un oggetto che rappresenta il parametro `U`.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
   
--   S\_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione. `ptr` è impostato su `nullptr`.  
+-   S_OK se l'operazione riesce; in caso contrario, HRESULT che indica il motivo dell'errore dell'operazione. `ptr` è impostato su `nullptr`.  
   
--   S\_OK se l'operazione riesce, ma l'oggetto WeakRef corrente è già stato rilasciato. Il parametro `ptr` viene impostato su `nullptr`.  
+-   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente è già stato rilasciato. Il parametro `ptr` viene impostato su `nullptr`.  
   
--   S\_OK se l'operazione riesce, ma l'oggetto WeakRef corrente non è derivato dal parametro `U`. Il parametro `ptr` viene impostato su `nullptr`.  
+-   S_OK se l'operazione riesce, ma l'oggetto WeakRef corrente non è derivato dal parametro `U`. Il parametro `ptr` viene impostato su `nullptr`.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Se il parametro `U` è IWeakReference o non è derivato da IInspectable, viene generato un errore.  
   
- Il primo modello è il form da usare nel codice. Il secondo modello è una specializzazione helper interna che supporta le funzionalità del linguaggio C\+\+, ad esempio la parola chiave di deduzione del tipo [auto](../cpp/auto-cpp.md).  
+ Il primo modello è il form da usare nel codice. Il secondo modello è una specializzazione helper interna che supporta le funzionalità del linguaggio C++, ad esempio la parola chiave di deduzione del tipo [auto](../cpp/auto-cpp.md) .  
   
- A partire da Windows 10 SDK, questo metodo non imposta l'istanza di WeakRef su `nullptr` se non è stato ottenuto il riferimento debole. Si consiglia, quindi, di non usare un codice per il controllo degli errori che verifica WeakRef per `nullptr`. Controllare invece il valore HRESULT restituito per determinare se il metodo è riuscito o controllare `ptr` per `nullptr`.  
+ A partire da Windows 10 SDK, questo metodo non imposta l'istanza di WeakRef su `nullptr` se non è stato ottenuto il riferimento debole. Si consiglia, quindi, di non usare un codice per il controllo degli errori che verifica WeakRef per `nullptr`. Controllare invece `ptr` per `nullptr`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** client.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe WeakRef](../windows/weakref-class.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::pointer_to_binary
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::pointer_to_binary
+dev_langs: C++
 helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 70c9d0a54976e8aa69175a730b1fcc747065d849
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a3facc8db34f6d54e5e9267160081cb1b40e754c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointertobinaryfunction-class"></a>Classe pointer_to_binary_function
 Converte un puntatore a funzione binaria in una funzione binaria adattabile.  
@@ -70,7 +66,6 @@ public:
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

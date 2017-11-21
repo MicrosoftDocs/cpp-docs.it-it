@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-- random/std::bernoulli_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -33,16 +30,15 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: cd4d0e5e5fb88eae5ca0247f1672e816dc35c601
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e66f7d0cc0385fea47a9d023f9cb67170de48cb4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 Genera una distribuzione Bernoulli.  
@@ -210,6 +206,5 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 
 

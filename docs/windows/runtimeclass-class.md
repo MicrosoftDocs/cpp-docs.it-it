@@ -1,34 +1,32 @@
 ---
-title: "Classe RuntimeClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClass (classe)"
+title: Classe RuntimeClass | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass
+dev_langs: C++
+helpviewer_keywords: RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e757712b360ff3ed4de12d8236c75a691a1f0c7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe RuntimeClass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta una classe istanziata che eredita il numero specificato di interfacce e fornisce il [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] specificato, COM classico e il supporto di riferimento ridotto.  
+# <a name="runtimeclass-class"></a>Classe RuntimeClass
+Rappresenta una classe istanziata che eredita il numero specificato di interfacce e fornisce il Windows Runtime specificato, COM classico e il supporto dei riferimenti deboli.  
   
- In genere si derivano i tipi di WRL da `RuntimeClass` poiché questa classe implementa `AddRef`, `Release` e `QueryInterface`, e consente di gestire il conteggio dei riferimenti complessivi del modulo.  
+ È in genere derivare tipi WRL da `RuntimeClass` poiché questa classe implementa `AddRef`, `Release`, e `QueryInterface`, e consente di gestire il conteggio dei riferimenti generale del modulo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -60,50 +58,50 @@ template <
 class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT, RuntimeClassFlags<classFlags> >;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I0`  
- L'interfaccia con ID numero zero \(Obbligatorio\)  
+ ID dell'interfaccia di zero. (Obbligatorio).  
   
  `I1`  
- Il primo ID di interfaccia. \(Facoltativo\)  
+ Il primo ID di interfaccia. (facoltativo)  
   
  `I2`  
- Il secondo ID di interfaccia \(Facoltativo\)  
+ Il secondo ID di interfaccia. (facoltativo)  
   
  `I3`  
- Il terzo ID di interfaccia \(Facoltativo\)  
+ Il terzo ID di interfaccia. (facoltativo)  
   
  `I4`  
- Il quarto ID di interfaccia \(Facoltativo\)  
+ Il quarto ID di interfaccia. (facoltativo)  
   
  `I5`  
- Il quinto ID di interfaccia \(Facoltativo\)  
+ Il quinto ID di interfaccia. (facoltativo)  
   
  `I6`  
- Il sesto ID di interfaccia \(Facoltativo\)  
+ Il sesto ID di interfaccia. (facoltativo)  
   
  `I7`  
- Il settimo ID di interfaccia \(Facoltativo\)  
+ Il settimo ID di interfaccia. (facoltativo)  
   
  `I8`  
- L'ottavo ID di interfaccia \(Facoltativo\)  
+ ID dell'interfaccia ottavo. (facoltativo)  
   
  `I9`  
- Il nono ID di interfaccia \(Facoltativo\)  
+ Il nono ID di interfaccia. (facoltativo)  
   
  `classFlags`  
- Una combinazione di uno o più valori di enumerazione [RuntimeClassType](../windows/runtimeclasstype-enumeration.md).  
+ Una combinazione di uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valori di enumerazione.  Il `__WRL_CONFIGURATION_LEGACY__` macro può essere definita per modificare il valore predefinito di classFlags per tutte le classi di runtime nel progetto. Se definito, le istanze di RuntimeClass sono predefinito dy non agile. Se non è definito, le istanze di RuntimeClass sono agile per impostazione predefinita. Per evitare ambiguità, specificare sempre il RuntimeClassType::FtmBase o RuntimeClassType::InhibitFtmBase.
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Inizializza l'istanza corrente della classe di RuntimeClass.|  
-|[Distruttore RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinizializza l'istanza corrente della classe di RuntimeClass.|  
+|[Costruttore RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Inizializza l'istanza corrente della classe RuntimeClass.|  
+|[Distruttore RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Deinizializza l'istanza corrente della classe RuntimeClass.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
@@ -124,10 +122,10 @@ class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7
   
  `RuntimeClass`  
   
-## Requisiti  
- **Intestazione:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

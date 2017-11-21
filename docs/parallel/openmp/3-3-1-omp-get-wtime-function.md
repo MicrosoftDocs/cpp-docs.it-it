@@ -1,34 +1,33 @@
 ---
-title: "3.3.1 omp_get_wtime Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.3.1 funzione omp_get_wtime | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 90188bd2-c53e-4398-8946-d3ecc92fa0f6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c5f48f2cbc5cb77d20884632881b779986dac6d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 3.3.1 omp_get_wtime Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_wtime` la funzione restituisce un valore in virgola mobile a precisione doppia uguale al tempo di clock trascorso della parete in secondi poiché alcune “di calcolare in passato„.  Effettivo “tempo in passato„ è arbitrario, ma è garantito non cambiare durante l'esecuzione del programma applicativo.  Il formato è il seguente:  
+# <a name="331-ompgetwtime-function"></a>3.3.1 Funzione omp_get_wtime
+Il `omp_get_wtime` funzione restituisce un valore a virgola mobile e precisione doppia corrisponde al tempo trascorso in secondi, dal "tempo nel passato".  Il "tempo effettivo in precedenza" è arbitrario, ma è sicuramente non per modificare durante l'esecuzione dell'applicazione. Il formato è il seguente:  
   
 ```  
 #include <omp.h>  
 double omp_get_wtime(void);  
 ```  
   
- È prevista dalla funzione viene utilizzata per misurare il tempo trascorso come illustrato nell'esempio seguente:  
+ Si prevede verrà utilizzata per misurare i tempi trascorsi come illustrato nell'esempio seguente la funzione:  
   
 ```  
 double start;  
@@ -39,4 +38,4 @@ end = omp_get_wtime();
 printf_s("Work took %f sec. time.\n", end-start);  
 ```  
   
- I tempi restituiti sono “volte per thread„ da quale è indicato che non sono necessarie rendere globalmente coerenti tra tutti i thread che partecipano a un'applicazione.
+ Gli orari restituiti sono "tempi di singoli thread" da cui si intende che non è necessario essere a livello globale coerente in tutti i thread che fanno parte di un'applicazione.

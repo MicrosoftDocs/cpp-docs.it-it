@@ -1,32 +1,31 @@
 ---
-title: "Errore dell‘analizzatore di espressioni CXX0006 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0006"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0006"
-  - "CXX0006"
+title: Errore dell'analizzatore di espressioni CXX0006 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0006
+dev_langs: C++
+helpviewer_keywords:
+- CAN0006
+- CXX0006
 ms.assetid: 34a8e21c-5443-4817-aad9-bb3143cfcaa6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 59f16927d722f81b87e99dc3796ec6b649576159
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore dell‘analizzatore di espressioni CXX0006
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-parentesi sinistra mancante  
+# <a name="expression-evaluator-error-cxx0006"></a>Errore dell‘analizzatore di espressioni CXX0006
+parentesi mancanti  
   
- Nell'espressione sono state trovate parentesi non corrette.  Digitare nuovamente l'espressione con l'esatta corrispondenza di parentesi di apertura e di chiusura.  
+ Parentesi non corrispondenti sono stati trovati nell'espressione. Digitare di nuovo l'espressione con parentesi bilanciate.  
   
  Questo errore è identico all'errore CAN0006.

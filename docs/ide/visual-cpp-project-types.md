@@ -1,98 +1,107 @@
 ---
-title: "Tipi di progetto Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "programmi [C++], progetti"
-  - "modelli di progetto [Visual Studio], C++"
-  - "commenti TODO [C++]"
-  - "progetti [C++], tipi"
-  - "modelli [C++], progetti"
-  - "applicazioni [C++], progetti"
-  - "progetti Visual C++, tipi"
+title: Tipi di progetto Visual C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 10/30/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- programs [C++], projects
+- project templates [Visual Studio], C++
+- TODO comments [C++]
+- projects [C++], types
+- templates [C++], projects
+- applications [C++], projects
+- Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 625489b69b3831d78bbe9bc80d92838e1e79b0c8
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 11/11/2017
 ---
-# Tipi di progetto Visual C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="visual-c-project-types"></a>Tipi di progetto Visual C++
 
-È possibile usare un modello di progetto per creare la struttura di base dei programmi, i menu, le barre degli strumenti, le icone, i riferimenti e le istruzioni `#include` appropriati per il tipo di progetto da creare. Visual Studio include diversi tipi di modelli di progetto di Visual C\+\+ e fornisce le procedure guidate per molti di essi in modo da poter personalizzare i progetti durante la creazione. Subito dopo aver creato un progetto, è possibile compilarlo ed eseguire l'applicazione. È consigliabile compilare l'applicazione gradualmente man mano che la si sviluppa.  
-  
- Non è necessario usare un modello per creare un progetto, ma in molti casi risulta più efficiente perché è più semplice modificare la struttura e i file di progetto anziché crearli da zero.  
+È possibile usare un modello di progetto per creare la struttura di base dei programmi, i menu, le barre degli strumenti, le icone, i riferimenti e le istruzioni `#include` appropriati per il tipo di progetto da creare. Visual Studio include diversi tipi di modelli di progetto di Visual C++ e fornisce le procedure guidate per molti di essi in modo da poter personalizzare i progetti durante la creazione. Immediatamente dopo aver creato un progetto, è possibile compilare ed eseguire l'applicazione; è consigliabile compilare in modo intermittente quando si sviluppa l'applicazione.
+
+Non è necessario usare un modello per creare un progetto, ma in molti casi risulta più efficiente perché è più semplice modificare la struttura e i file di progetto anziché crearli da zero.  
   
 > [!NOTE]
->  È possibile creare un progetto in linguaggio C usando i modelli di progetto C\+\+. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto \(non per la soluzione\) espandere **Proprietà di configurazione**, **C\/C\+\+** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C \(\/TC\)**.  
-  
-## Modelli di progetto  
- In Visual Studio sono disponibili i seguenti modelli di progetto di Visual C\+\+.  
-  
-### Applicazioni Windows Store  
-  
-||  
-|-|  
-|[Modelli di progetto C\#, VB e C\+\+ per le app dello Store](http://go.microsoft.com/fwlink/p/?LinkID=262279)|  
-  
-### ATL  
-  
-|Modello di progetto|Come creare un progetto|  
-|-------------------------|-----------------------------|  
-|Progetto ATL|[Creazione di un progetto ATL](../atl/reference/creating-an-atl-project.md)|  
-  
-### CLR  
-  
-|Modello di progetto|  
-|-------------------------|  
-|[\(NOTINBUILD\)Modello di libreria di classi \(C\+\+\)](http://msdn.microsoft.com/it-it/0d779bfa-5c5a-4b10-a9d5-a6791764a78f)|  
-|[Procedura: Creare applicazioni console CLR](../dotnet/how-to-create-clr-console-applications-cpp-cli.md)|  
-|[NOTINBUILD Modello di progetto vuoto CLR \(C\+\+\)](http://msdn.microsoft.com/it-it/f57c5572-5581-440f-b684-eec646764f08)|  
-  
-### Generale  
-  
-|Modello di progetto|Come creare un progetto|  
-|-------------------------|-----------------------------|  
-|Progetto vuoto|[Creazione di soluzioni e progetti](../Topic/Creating%20Solutions%20and%20Projects.md)|  
-|Creazione guidata personalizzata|[Creazione di una procedura guidata personalizzata](../ide/creating-a-custom-wizard.md)|  
-|Progetto Makefile|[Creazione di un progetto makefile](../ide/creating-a-makefile-project.md)|  
-  
-### MFC  
-  
-|Modello di progetto|Come creare un progetto|  
-|-------------------------|-----------------------------|  
-|Controllo ActiveX MFC|[Creazione di un controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|  
-|Applicazione MFC|[Creazione di un'applicazione MFC](../mfc/reference/creating-an-mfc-application.md)|  
-|DLL MFC|[Creazione di un progetto DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md)|  
-  
-### Test  
-  
-|Modello di progetto|Come creare un progetto|  
-|-------------------------|-----------------------------|  
-|Progetto di test gestito|[Creare un progetto di unit test](../Topic/Create%20a%20unit%20test%20project.md)|  
-|Progetto di unit test nativo|[Unit test di codice nativo con Esplora test](http://msdn.microsoft.com/it-it/8a09d6d8-3613-49d8-9ffe-11375ac4736c)|  
-  
-### Win32  
-  
-|Modello di progetto|Come creare un progetto|  
-|-------------------------|-----------------------------|  
-|Progetto console Win32|[Creazione di un'applicazione console](../windows/creating-a-console-application.md)|  
-|Progetto Win32|[Procedura: Creare un'applicazione desktop di Windows](../Topic/How%20to:%20Create%20a%20Windows%20Desktop%20Application.md)|  
-  
-## Commenti TODO  
- Molti dei file generati da un modello di progetto contengono commenti TODO per consentire di trovare il punto in cui fornire il proprio codice sorgente. Per altre informazioni su come aggiungere codice, vedere [Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md) e [Working with Resource Files](../mfc/working-with-resource-files.md).  
-  
-## Vedere anche  
- [Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Creare applicazioni con i progetti](http://msdn.microsoft.com/it-it/3339fa90-bac2-4b95-8361-662a2e0e7dfe)   
- [Progetti CLR](../ide/files-created-for-clr-projects.md)
+> È possibile creare un progetto in linguaggio C usando i modelli di progetto C++. Nel progetto generato trovare i file con estensione cpp e modificarla con c. Quindi, nella pagina **Proprietà progetto** per il progetto (non per la soluzione) espandere **Proprietà di configurazione**, **C/C++** e selezionare **Avanzate**. Impostare l'opzione **Compila come** su **Compila come codice C (/TC)**.
+
+## <a name="project-templates"></a>Modelli di progetto
+
+I modelli di progetto inclusi in Visual Studio dipendono dalla versione del prodotto e i carichi di lavoro che è stato installato. Se è stato installato lo sviluppo Desktop con carico di lavoro di C++, Visual Studio non dispone di questi modelli di progetto Visual C++.
+
+### <a name="windows-desktop"></a>Desktop di Windows
+
+|Modello di progetto|Descrizione|  
+|----------------------|-----------------------------| 
+|[Applicazione Console di Windows](../windows/creating-a-console-application.md)|Progetto per la creazione di un'applicazione console di Windows.|
+|[Applicazione Desktop di Windows](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Progetto per la creazione di un'applicazione desktop (Win32).|
+|[Libreria a collegamento dinamico](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|Progetto per la creazione di una libreria di collegamento dinamico (DLL).|
+|[Libreria statica](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|Progetto per la creazione di una libreria statica (LIB).|
+|Procedura guidata Desktop di Windows|Una procedura guidata per la creazione di librerie e applicazioni desktop di Windows con opzioni aggiuntive.|
+
+### <a name="general"></a>Generale
+
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
+|Progetto vuoto|Progetto vuoto per la creazione di un'applicazione, una libreria o una DLL. È necessario aggiungere qualsiasi codice o le risorse necessarie.|
+|[Progetto makefile](../ide/creating-a-makefile-project.md)|Sistema di compilazione progetto per l'utilizzo esterno.|
+|Elementi progetto condiviso|Un progetto utilizzato per la condivisione di file tra più progetti.|
+
+### <a name="atl"></a>ATL
+
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
+|[Progetto ATL](../atl/reference/creating-an-atl-project.md)|Un progetto che utilizza Active Template Library.|
+
+### <a name="test"></a>Test
+
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
+|[Progetto Unit Test nativo](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Un progetto contenente unit test del C++ nativo.|
+
+### <a name="mfc"></a>MFC
+
+Se si aggiunge che il MFC e ATL supporto componente per l'installazione di Visual Studio, questi modelli di progetto vengono aggiunti a Visual Studio.
+
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
+|[Applicazione MFC](../mfc/reference/creating-an-mfc-application.md)|Progetto per la creazione di un'applicazione che utilizza la libreria di classe MFC (Microsoft Foundation).|
+|[Controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)|Progetto per la creazione di un controllo ActiveX che utilizza la libreria MFC.|
+|[DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md)|Progetto per la creazione di una libreria di collegamento dinamico che utilizza la libreria MFC.|
+
+### <a name="windows-universal-apps"></a>App universali di Windows
+
+Se si aggiunge il componente di strumenti della piattaforma universale di Windows C++ per l'installazione di Visual Studio, questi modelli di progetto vengono aggiunti a Visual Studio.
+
+Per una panoramica di App universali di Windows in C++, vedere [app di Windows universale (C++)](../windows/universal-windows-apps-cpp.md).
+
+|Modello di progetto|Descrizione|
+|----------------------|-----------------------------|
+|Applicazione vuota|Progetto per un'app di piattaforma UWP (Universal Windows) a pagina singola che non dispone di controlli predefiniti o layout.|
+|App DirectX 11|Progetto per un'app Universal Windows Platform che usa DirectX 11.|
+|App DirectX 12|Progetto per un'app Universal Windows Platform che usa DirectX 12.|
+|App DirectX 11 e XAML|Progetto per un'app Universal Windows Platform che usa DirectX 11 e XAML.|
+|Applicazione Unit Test|Progetto per creare un'applicazione unit test per le app Universal Windows Platform (UWP).|
+|DLL|Progetto per una libreria di collegamento dinamico (DLL) nativa utilizzabile da un componente di runtime o app Universal Windows Platform.|
+|Libreria statica|Progetto per una libreria statica nativa (LIB) che può essere utilizzato da un componente di runtime o app Universal Windows Platform.|
+|Componente Windows Runtime|Progetto per un componente Windows Runtime che può essere utilizzato da un'app UWP, indipendentemente dal linguaggio di programmazione in cui scrivere l'app.|
+|Progetto di creazione del pacchetto di applicazione Windows|Un progetto che crea un pacchetto UWP che consente a un'applicazione desktop essere caricato lato o distribuite tramite Microsoft Store.|
+
+## <a name="todo-comments"></a>Commenti TODO
+
+Molti dei file generati da un modello di progetto contengono commenti TODO per consentire di trovare il punto in cui fornire il proprio codice sorgente. Per ulteriori informazioni sull'aggiunta di codice, vedere [aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md) e [lavorare con file di risorse](../windows/working-with-resource-files.md).
+
+## <a name="see-also"></a>Vedere anche
+
+[Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   

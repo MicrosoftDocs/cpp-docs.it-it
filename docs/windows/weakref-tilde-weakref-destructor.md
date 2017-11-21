@@ -1,42 +1,39 @@
 ---
-title: "Distruttore WeakRef::~WeakRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::~WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~WeakRef, distruttore"
+title: 'WeakRef:: ~ WeakRef distruttore | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::~WeakRef
+dev_langs: C++
+helpviewer_keywords: ~WeakRef, destructor
 ms.assetid: 6062a4c0-3750-4488-b3da-6e43b2b1204c
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e8f2e468603e46f88d15bd380b6d0ae35ef7eb53
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Distruttore WeakRef::~WeakRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Annulla l'inizializzazione dell'istanza corrente della classe RuntimeClass.  
+# <a name="weakrefweakref-destructor"></a>Distruttore WeakRef::~WeakRef
+Annulla l'inizializzazione dell'istanza corrente della classe WeakRef.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 ~WeakRef();  
 ```  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe WeakRef](../windows/weakref-class.md)

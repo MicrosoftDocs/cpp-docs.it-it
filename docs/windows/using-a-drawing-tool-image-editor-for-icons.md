@@ -1,79 +1,79 @@
 ---
-title: "Using a Drawing Tool (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], selecting drawing tools"
-  - "Image editor [C++], toolbar"
-  - "drawing tools"
+title: Utilizzando uno strumento di disegno (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.drawing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], selecting drawing tools
+- Image editor [C++], toolbar
+- drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcbc089783e86be9c9fcb49fb3c4f0b10c29064f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Using a Drawing Tool (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gli strumenti di disegno a mano libera e gli strumenti di cancellazione dell'editor di immagini presentano lo stesso funzionamento, ovvero si seleziona lo strumento e se necessario si effettua la [selezione dei colori di primo piano e di sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e delle opzioni relative alle dimensioni e alla forma.  Si sposta quindi il puntatore del mouse sull'immagine e si fa clic o si trascina il puntatore per eseguire le operazioni di disegno o di cancellazione desiderate.  
+# <a name="using-a-drawing-tool-image-editor-for-icons"></a>Utilizzo di uno strumento di disegno (Editor di immagini per le icone)
+L'editor di immagini a mano disegno e gli strumenti nello stesso modo di cancellazione del: si seleziona lo strumento e, se necessario, [selezione dei colori di primo piano e sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) e le opzioni di dimensioni e la forma. Quindi spostare il puntatore dell'immagine e fare clic su o trascinare il mouse per disegnare e cancellare.  
   
- Quando si seleziona lo strumento **Gomma**, **Pennello** o **Aerografo**, nel selettore di opzioni vengono visualizzate le opzioni disponibili per tale strumento.  
+ Quando si seleziona il **gomma** strumento **pennello** strumento, o **aerografo** strumento selettore di opzioni consente di visualizzare le opzioni per tale strumento.  
   
 > [!TIP]
->  Anziché utilizzare lo strumento **Gomma**, è possibile disegnare nel colore di sfondo utilizzando uno degli strumenti di disegno.  
+>  Anziché utilizzare il **gomma** strumento, può risultare più pratico disegnare il colore di sfondo con uno degli strumenti di disegno.  
   
- È possibile selezionare gli strumenti di disegno dalla barra degli strumenti dell'**Editor immagini** oppure dal menu **Immagine**.  
+ È possibile selezionare gli strumenti di disegno dal **Editor di immagini** barra degli strumenti o **immagine** menu.  
   
-### Per selezionare e utilizzare uno strumento di disegno dalla barra degli strumenti dell'editor di immagini  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Per selezionare e utilizzare uno strumento di disegno nella barra degli strumenti dell'Editor di immagini  
   
-1.  Fare clic su un pulsante sulla barra degli strumenti dell'**Editor immagini**.  
+1.  Fare clic su un pulsante nel **Editor di immagini** barra degli strumenti.  
   
-    -   Facendo clic con il pulsante sinistro del mouse e tenendo premuto tale pulsante, lo strumento **Gomma** consente di disegnare sopra l'immagine utilizzando il colore di sfondo corrente.  
+    -   Il **gomma** strumento disegni posizionato sull'immagine con il colore di sfondo corrente quando si preme il pulsante sinistro del mouse.  
   
-    -   Lo strumento **Matita** consente di disegnare a mano libera con uno spessore costante di un pixel.  
+    -   Il **matita** strumento Disegna a mano libera uno spessore costante di un pixel.  
   
-    -   La **dimensione e la forma dello strumento Pennello sono determinate dal selettore di opzioni**.  
+    -   Il **selettore di opzioni determina lo strumento di pennello forma e dimensioni**.  
   
-    -   Lo strumento **Aerografo** distribuisce in modo casuale pixel di colore intorno al centro del pennello.  
+    -   Il **aerografo** strumento distribuisce in modo casuale pixel di colore attorno al centro del pennello.  
   
         > [!TIP]
-        >  Quando si passa il cursore sui pulsanti della [barra degli strumenti dell'editor di immagini](../mfc/toolbar-image-editor-for-icons.md), vengono visualizzate le relative descrizioni comandi.  che consentono di identificare facilmente i vari pulsanti descritti in questo argomento.  
+        >  Descrizioni comandi vengono visualizzati quando si posiziona il cursore sui pulsanti sul [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md). Questi suggerimenti per identificare i pulsanti specifici indicati di seguito.  
   
-2.  Se necessario, selezionare i colori e un pennello.  
+2.  Se necessario, selezionare i colori e un pennello:  
   
-    -   Nella [tavolozza Colori](../windows/colors-window-image-editor-for-icons.md) fare clic con il pulsante sinistro del mouse per selezionare un colore di primo piano oppure fare clic con il pulsante destro per selezionare un colore di sfondo.  
+    -   Nel [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md), scegliere il pulsante sinistro del mouse per selezionare un colore di primo piano o il pulsante destro del mouse per selezionare un colore di sfondo.  
   
-    -   Nel [selettore di opzioni](../mfc/toolbar-image-editor-for-icons.md) fare clic sulla forma che rappresenta il pennello che si desidera utilizzare.  
+    -   Nel [selettore di opzioni](../windows/toolbar-image-editor-for-icons.md), fare clic su una forma che rappresenta il pennello che si desidera utilizzare.  
   
-3.  Posizionare il puntatore del mouse nel punto dell'immagine in cui si desidera iniziare a disegnare.  Il puntatore assume una forma diversa a seconda dello strumento selezionato.  
+3.  Selezionare il luogo in cui si desidera iniziare a disegnare immagine o un disegno. Il puntatore assume la forma in base allo strumento selezionato.  
   
-4.  Fare clic con il pulsante sinistro del mouse per utilizzare il colore di primo piano oppure fare clic con il pulsante destro per utilizzare il colore di sfondo, quindi tenere premuto tale pulsante mentre si esegue l'operazione di disegno.  
+4.  Premere il pulsante sinistro del mouse (per il colore di primo piano) o il pulsante destro del mouse (per il colore di sfondo) e tenerlo premuto mentre si disegno.  
   
-### Per selezionare e utilizzare uno strumento di disegno dal menu Immagine  
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>Per selezionare e utilizzare uno strumento di disegno dal menu immagine  
   
-1.  Scegliere l'opzione **Strumenti** dal menu **Immagine**.  
+1.  Fare clic su di **immagine** menu e selezionare il **strumenti** comando.  
   
-2.  Scegliere lo strumento che si desidera utilizzare dal sottomenu.  
+2.  Nel sottomenu, scegliere lo strumento che si desidera utilizzare.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [Image Editor for Icons](../windows/image-editor-for-icons.md)  (Editor di immagini per icone)  
+ [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)
+

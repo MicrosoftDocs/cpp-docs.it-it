@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3771
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3771
+f1_keywords: C3771
+dev_langs: C++
+helpviewer_keywords: C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: dc3e9639fa83524e797c22edd771c847046f0e3c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3771"></a>Errore del compilatore C3771
 "identifier": impossibile trovare la dichiarazione Friend nell'ambito dello spazio dei nomi più vicino  

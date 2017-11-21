@@ -1,79 +1,82 @@
 ---
-title: "Procedura: Usare i contenitori paralleli per aumentare l&#39;efficienza | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "miglioramento dell'efficienza con contenitori paralleli [Runtime di concorrenza]"
-  - "concurrent_queue (classe), esempios"
-  - "concurrent_vector (classe), esempios"
+title: 'Procedura: usare i contenitori paralleli per aumentare l''efficienza | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- increasing efficiency with parallel containers [Concurrency Runtime]
+- concurrent_queue class, examples
+- concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6fd904db5d01bf1464da522d7209f8d15502556
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: Usare i contenitori paralleli per aumentare l&#39;efficienza
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come utilizzare i contenitori paralleli per archiviare e accedere ai dati in parallelo in modo efficiente.  
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Procedura: Usare i contenitori paralleli per aumentare l'efficienza
+In questo argomento viene illustrato come utilizzare i contenitori paralleli per archiviare in modo efficiente e accedere ai dati in parallelo.  
   
- Nel codice di esempio viene calcolato il set di numeri primi e di Carmichael in parallelo.  Per ogni numero di Carmichael vengono quindi calcolati i fattori primi di tale numero.  
+ Nell'esempio di codice calcola il set di numeri primi e Carmichael in parallelo. Quindi, per ogni numero Carmichael, il codice calcola i fattori principali di tale numero.  
   
-## Esempio  
- Nell'esempio seguente viene illustrata la funzione `is_prime` che determina se il valore di input è un numero primo e la funzione `is_carmichael` che determina se il valore di input è un numero di Carmichael.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente il `is_prime` funzione, che determina se un valore di input è un numero primo, e `is_carmichael` funzione, che determina se il valore di input è un numero di Carmichael.  
   
- [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]  
   
-## Esempio  
- Nell'esempio seguente vengono utilizzate le funzioni `is_prime` e `is_carmichael` per calcolare i set di numeri primi e di Carmichael.  Nell'esempio vengono utilizzati gli algoritmi [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) e [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) per calcolare ogni set in parallelo.  Per ulteriori informazioni sugli algoritmi paralleli, vedere [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
+## <a name="example"></a>Esempio  
+ L'esempio seguente usa il `is_prime` e `is_carmichael` funzioni per calcolare i set di numeri primi e i numeri di Carmichael. Nell'esempio viene utilizzato il [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) e [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmi per calcolare ogni set in parallelo. Per ulteriori informazioni sugli algoritmi paralleli, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
   
- In questo esempio viene utilizzato un oggetto [concurrency::concurrent\_queue](../../parallel/concrt/reference/concurrent-queue-class.md) per contenere il set di numeri di Carmichael poiché tale oggetto verrà utilizzato come coda di lavoro.  Viene utilizzato un oggetto [concurrency::concurrent\_vector](../../parallel/concrt/reference/concurrent-vector-class.md) per contenere il set di numeri primi poiché sarà necessario scorrere questo set per trovare i fattori primi.  
+ Questo esempio viene utilizzato un [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) oggetto per contenere il set di Carmichael numeri perché tale oggetto verrà utilizzato come una coda di lavoro. Usa un [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) oggetto per contenere il set di numeri primi, poiché sarà necessario scorrere questa impostazione per individuare i fattori primi.  
   
- [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]  
   
-## Esempio  
- Nell'esempio seguente viene illustrata la funzione `prime_factors_of` che utilizza la divisione semplice \(trial division\) per trovare tutti i fattori primi del valore specificato.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente il `prime_factors_of` (funzione), che utilizza la divisione di valutazione per trovare tutti i fattori primi del valore specificato.  
   
- Questa funzione utilizza l'algoritmo [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) per scorrere la raccolta di numeri primi.  L'oggetto `concurrent_vector` consente al ciclo parallelo di aggiungere contemporaneamente i fattori primi al risultato.  
+ Questa funzione utilizza il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo per scorrere la raccolta di numeri primi. Il `concurrent_vector` consente di aggiungere contemporaneamente i fattori primi al risultato del ciclo parallelo.  
   
- [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]  
   
-## Esempio  
- In questo esempio viene elaborato ogni elemento nella coda dei numeri di Carmichael chiamando la funzione `prime_factors_of` per calcolarne i relativi fattori primi.  Viene utilizzato un gruppo di attività per eseguire questo lavoro in parallelo.  Per ulteriori informazioni sui gruppi di attività, vedere [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+## <a name="example"></a>Esempio  
+ Questo esempio viene elaborato ogni elemento nella coda di numeri di Carmichael chiamando il `prime_factors_of` funzione per calcolare i fattori relativi primi. Usa un gruppo di attività per eseguire questa operazione in parallelo. Per ulteriori informazioni sui gruppi di attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- In questo esempio vengono stampati i fattori primi per ogni numero di Carmichael se tale numero dispone di più di quattro fattori primi.  
+ In questo esempio consente di visualizzare i fattori principali per ogni numero Carmichael se tale numero dispone di più di quattro fattori primi.  
   
- [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]  
   
-## Esempio  
- Nel codice seguente viene illustrato l'esempio completo che utilizza i contenitori paralleli per calcolare i fattori primi dei numeri di Carmichael.  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato un esempio completo che usa i contenitori paralleli per calcolare i fattori primi dei numeri di Carmichael.  
   
- [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]  
+ [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]  
   
- Questo esempio produce l'output seguente:  
+ Questo esempio produce il seguente output di esempio.  
   
-  **Prime factors of 9890881 are: 7 11 13 41 241.**  
-**Prime factors of 825265 are: 5 7 17 19 73.**  
-**Prime factors of 1050985 are: 5 13 19 23 37.**   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio o incollarlo in un file denominato `carmichael-primes.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+```Output  
+Prime factors of 9890881 are: 7 11 13 41 241.  
+Prime factors of 825265 are: 5 7 17 19 73.  
+Prime factors of 1050985 are: 5 13 19 23 37.  
+```  
   
- **cl.exe \/EHsc carmichael\-primes.cpp**  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `carmichael-primes.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
-## Vedere anche  
+ **CL.exe /EHsc carmichael-primes. cpp**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)   
  [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [Classe concurrent\_vector](../../parallel/concrt/reference/concurrent-vector-class.md)   
- [Classe concurrent\_queue](../../parallel/concrt/reference/concurrent-queue-class.md)   
- [Funzione parallel\_invoke](../Topic/parallel_invoke%20Function.md)   
- [Funzione parallel\_for](../Topic/parallel_for%20Function.md)   
- [Classe task\_group](../Topic/task_group%20Class.md)
+ [Classe concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)   
+ [Classe concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)   
+ [Funzione parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)   
+ [Funzione parallel_for](reference/concurrency-namespace-functions.md#parallel_for)   
+ [Classe task_group](reference/task-group-class.md)

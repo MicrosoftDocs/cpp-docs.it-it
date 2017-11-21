@@ -1,32 +1,30 @@
 ---
-title: "pointer_default | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pointer_default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_default attribute"
+title: pointer_default | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pointer_default
+dev_langs: C++
+helpviewer_keywords: pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e7eed7dbb4fbd7648e02857897dc4f0c541af7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# pointer_default
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica l'attributo predefinito del puntatore per tutti i puntatori, ad eccezione dei puntatori di livello superiore che vengono visualizzati gli elenchi di parametri.  
+# <a name="pointerdefault"></a>pointer_default
+Specifica l'attributo di puntatore predefinito per tutti i puntatori, ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,30 +33,29 @@ Specifica l'attributo predefinito del puntatore per tutti i puntatori, ad eccezi
 ) ]  
 ```  
   
-#### Parametri  
- *corrispondente*  
- un valore che descrive il tipo di puntatore: **stampante**,  `ref`, o  **univoco**.  
+#### <a name="parameters"></a>Parametri  
+ *value*  
+ Un valore che descrive il tipo di puntatore: **ptr**, `ref`, o **univoco**.  
   
-## Note  
- **pointer\_default** L'attributo di C\+\+ ha la stessa funzionalità di  [pointer\_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **pointer_default** attributo C++ ha la stessa funzionalità come il [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [valore predefinito](../windows/defaultvalue.md) per un esempio di utilizzo  **pointer\_default**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [defaultvalue](../windows/defaultvalue.md) per un esempio dell'uso di **pointer_default**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   

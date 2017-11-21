@@ -1,67 +1,66 @@
 ---
-title: "__outbytestring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outbytestring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep outsb (istruzione)"
-  - "__outbytestring (funzione intrinseca)"
-  - "outsb (istruzione)"
+title: __outbytestring | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outbytestring
+dev_langs: C++
+helpviewer_keywords:
+- rep outsb instruction
+- __outbytestring intrinsic
+- outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43ee5deb1dc6584352d4aaff882ad8fb91702d04
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __outbytestring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="outbytestring"></a>__outbytestring
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione di `rep outsb` , che invia il primo byte di `Count` dei dati operazioni da `Buffer` alla porta specificata da `Port`.  
+ Genera il `rep outsb` (istruzione), che invia il primo `Count` byte di dati a cui puntava `Buffer` alla porta specificata da `Port`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __outbytestring(   
-   unsigned short Port,   
-   unsigned char* Buffer,   
-   unsigned long Count   
+void __outbytestring(   
+   unsigned short Port,   
+   unsigned char* Buffer,   
+   unsigned long Count   
 );  
 ```  
   
-#### Parametri  
- \[in\] `Port`  
- La porta per inviare i dati a.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Port`  
+ La porta per inviare i dati.  
   
- \[in\] `Buffer`  
- i dati da spedire la porta specificata.  
+ [in] `Buffer`  
+ I dati da inviare alla porta specificata.  
   
- \[in\] `Count`  
- Il numero di byte dei dati da inviare.  
+ [in] `Count`  
+ Il numero di byte di dati da inviare.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

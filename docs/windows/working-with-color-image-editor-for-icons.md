@@ -1,53 +1,52 @@
 ---
-title: "Working with Color (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.color"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], background colors"
-  - "Image editor [C++], Colors Palette"
-  - "colors [C++], image"
-  - "Colors Palette, Image editor"
-  - "palettes, Image editor colors"
-  - "foreground colors, Image editor"
-  - "colors [C++]"
+title: Utilizzo dei colori (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.color
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], background colors
+- Image editor [C++], Colors Palette
+- colors [C++], image
+- Colors Palette, Image editor
+- palettes, Image editor colors
+- foreground colors, Image editor
+- colors [C++]
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6afda534f55d3247f2df11c1a48d0157af245cf2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Working with Color (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'editor di immagini offre una serie di funzionalità specificamente progettate per la gestione e la personalizzazione dei colori.  È infatti possibile impostare un colore di primo piano o di sfondo, riempire aree delimitate con dei colori o selezionare un colore da un'immagine per utilizzarlo come colore di primo piano o di sfondo corrente.  Si possono creare immagini utilizzando gli strumenti della [barra degli strumenti dell'editor di immagini](../mfc/toolbar-image-editor-for-icons.md) e la tavolozza di colori della [finestra Colori](../windows/colors-window-image-editor-for-icons.md).  
+# <a name="working-with-color-image-editor-for-icons"></a>Utilizzo del colori (Editor di immagini per le icone)
+L'editor di immagini contiene molte funzionalità che, in particolare, gestire e personalizzare i colori. È possibile impostare un colore di primo piano o in background, Riempi aree delimitate o selezionare un colore in un'immagine da utilizzare come colore di primo piano o di sfondo corrente. È possibile utilizzare strumenti nel [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md) con la tavolozza di colori di [finestra colori](../windows/colors-window-image-editor-for-icons.md) per creare immagini.  
   
- Tutti i colori per le immagini monocromatiche e a 16 colori sono riportati nella tavolozza Colori della finestra Colori.  Oltre ai 16 colori standard, è possibile creare colori personalizzati.  La modifica di uno dei colori della tavolozza determina l'immediata modifica del colore corrispondente nell'immagine.  
+ Nella tavolozza di colori della finestra colori, vengono visualizzati tutti i colori per monocromatico e immagini a 16 colori. Oltre a 16 colori standard, è possibile creare colori personalizzati. Uno dei colori nella tavolozza verrà immediatamente la modifica il colore corrispondente nell'immagine.  
   
- Quando si utilizzano immagini cursore e icona a 256 colori, viene utilizzata la proprietà Colors riportata nella [finestra Proprietà](../Topic/Properties%20Window.md).  Per ulteriori informazioni, vedere [Creazione di un cursore o di un'icona a 256 colori](../mfc/creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
+ Quando le immagini lavoro con un'icona a 256 colori e il cursore, la proprietà di colori nel [finestra proprietà](/visualstudio/ide/reference/properties-window) viene utilizzato. Per ulteriori informazioni, vedere [la creazione di un cursore o un'icona a 256 colori](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md).  
   
 > [!NOTE]
->  Utilizzando l'editor di immagini, è possibile visualizzare, ma non modificare, immagini a 32 bit.  
+>  Utilizzando l'Editor immagini, è possibile visualizzare, ma non modificare, immagini a 32 bit.  
   
- È anche possibile creare immagini a 16,8 milioni di colori.  I campioni dei 16,8 milioni di colori, tuttavia, non vengono visualizzati nella tavolozza completa della finestra Colori, ma solo nell'area dell'indicatore del colore di primo piano o di sfondo.  I 16,8 milioni di colori vengono creati mediante la [finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md).  Per ulteriori informazioni, vedere [Personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+ Inoltre è possibile creare immagini a colori a true. Tuttavia, campioni di colore true non vengono visualizzati nella tavolozza completa nella finestra colori. vengono visualizzati solo nell'area indicatore di colore di primo piano o in background. Colori true vengono creati mediante il [la finestra di dialogo Regola colori](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Per ulteriori informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- È possibile salvare le tavolozze di colori personalizzate su disco in modo da poterle ricaricare quando necessario.  L'ultima tavolozza di colori utilizzata viene salvata nel Registro di sistema e caricata automaticamente al successivo avvio di Visual Studio.  
+ È possibile salvare le tavolozze di colori personalizzati sul disco e ricaricarli in base alle esigenze. La tavolozza dei colori utilizzati di recente viene salvato nel Registro di sistema e caricato automaticamente al successivo che avvio di Visual Studio.  
   
--   [Selezione dei colori di primo piano e di sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)  
+-   [Selezione dei colori di sfondo e in primo piano](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)  
   
--   [Riempimento di un'area delimitata di un'immagine con un colore](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
+-   [Un'Area delimitata di un'immagine con un colore di riempimento](../windows/filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons.md)  
   
--   [Selezione di un colore dell'immagine da utilizzare altrove](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
+-   [Selezione di un colore di un'immagine da utilizzare altrove](../windows/picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons.md)  
   
 -   [Selezione di uno sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)  
   
@@ -55,15 +54,15 @@ L'editor di immagini offre una serie di funzionalità specificamente progettate 
   
 -   [Personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md)  
   
--   [Salvataggio e caricamento di tavolozze di colori diverse](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)  
+-   [Salvataggio e caricamento di tavolozze dei colori diverse](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)  
   
--   [Finestra Colori](../windows/colors-window-image-editor-for-icons.md)  
+-   [Finestra colori](../windows/colors-window-image-editor-for-icons.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Risorse](_win32_Resources)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+

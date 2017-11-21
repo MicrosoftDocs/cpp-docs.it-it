@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::less_equal
-- less_equal
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::less_equal
+dev_langs: C++
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 58e188cc830140ace78777a03959a7f4e170f328
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b568198401ceb36a0b094609e3e2e4c118b3821f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lessequal-struct"></a>Struct less_equal
 Predicato binario che esegue l'operazione di minore o uguale a (`operator<=`) sui relativi argomenti.  
@@ -75,7 +56,7 @@ struct less_equal<void>
  Operando destro dell'operazione di minore o uguale a. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Risultato di `Left``<=``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, che è del tipo restituito da `operator<=`.  
+ Risultato di `Left <= Right`. Il modello specializzato esegue un inoltro perfetto del risultato, che è del tipo restituito da `operator<=`.  
   
 ## <a name="remarks"></a>Note  
  Il predicato binario `less_equal`< `Type`> fornisce un rigido ordinamento debole di un set di valori di elemento di tipo `Type` in classi di equivalenza esclusivamente se il tipo soddisfa i requisiti matematici standard per questo tipo di ordinamento. Le specializzazioni per qualsiasi tipo di puntatore producono un ordinamento totale degli elementi, in quanto tutti gli elementi di valori distinti vengono ordinati l'uno rispetto all'altro.  
@@ -148,7 +129,6 @@ Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -1,32 +1,31 @@
 ---
-title: "Procedura: definire e installare un gestore eccezioni globale | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestori, globali"
+title: 'Procedura: definire e installare un gestore eccezioni globale | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 970ecd355b42c83102c034c4639f152b1971dae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: definire e installare un gestore eccezioni globale
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice seguente viene illustrato come le eccezioni non gestite possono essere acquisite.  Il modulo di esempio contiene un pulsante che, una volta raggiunto, esegue un riferimento null, causando di un'eccezione.  Questa funzionalità rappresenta un errore tipico di codice.  L'eccezione risultante viene rilevata dall'applicazione un gestore eccezioni installato dalla funzione main.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedura: definire e installare un gestore eccezioni globale
+L'esempio di codice seguente viene illustrato come non gestite le eccezioni possono essere acquisite. Il modulo di esempio contiene un pulsante che, quando premuti, esegue un riferimento null, generare un'eccezione generata. Questa funzionalità rappresenta un errore di codice tipico. L'eccezione risulta viene intercettata dal gestore di eccezioni di livello di applicazione installato per la funzione principale.  
   
- Questa operazione viene eseguita associando un delegato all'evento di <xref:System.Windows.Forms.Application.ThreadException>.  In questo caso, le eccezioni successive vengono quindi inviate al metodo di `App::OnUnhandled`.  
+ Questa operazione viene eseguita associando un delegato per il <xref:System.Windows.Forms.Application.ThreadException> evento. In questo caso, le eccezioni successivi vengono quindi inviate al `App::OnUnhandled` metodo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +79,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)

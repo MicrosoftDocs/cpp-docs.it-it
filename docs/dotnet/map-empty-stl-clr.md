@@ -1,41 +1,39 @@
 ---
-title: "map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (membro) [STL/CLR]"
+title: 'Map:: Empty (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: ce41d37a-2896-48df-87ea-d3f3b3e5ab45
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5838e1daba1cbc6181d7fba4fc6df117850c9552
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di verificare se non sono presenti elementi.  
+# <a name="mapempty-stlclr"></a>map::empty (STL/CLR)
+Verifica se sono presenti o meno degli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool empty();  
 ```  
   
-## Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  Equivale a [map::size](../dotnet/map-size-stl-clr.md)`() == 0`.  È possibile utilizzarlo per verificare se la mappa è vuota.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [Map:: Size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se la mappa è vuota.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::size](../dotnet/map-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)

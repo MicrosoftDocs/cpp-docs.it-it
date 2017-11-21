@@ -1,44 +1,44 @@
 ---
-title: "Boxing implicito di tipi di valore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__box (parola chiave)"
-  - "boxing"
-  - "boxing, __box (parola chiave)"
-  - "boxing, Visual C++"
-  - "tipi di valori, boxed"
+title: La conversione Boxing implicita dei tipi di valore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- boxing, Visual C++
+- __box keyword
+- boxing
+- boxing, __box keyword
+- value types, boxed
 ms.assetid: 9597c92f-a3fe-44af-ad80-f9d656847a35
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f489c686a182840e142264476c3906d0cbfe97b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Boxing implicito di tipi di valore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La conversione boxing dei tipi di valore è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="implicit-boxing-of-value-types"></a>Boxing implicito di tipi di valore
+La conversione boxing dei tipi di valore è cambiato da estensioni gestite per C++ a Visual C++.  
   
- Nella progettazione del linguaggio è stato adottato un approccio teorico anziché pratico basato sull'utilizzo della funzionalità e questa scelta si è rivelata errata.  Per analogia, Stroustrup decise che nella progettazione originale del linguaggio con ereditarietà multipla un sotto\-oggetto di classe base virtuale non potesse essere inizializzato all'interno di un costruttore di classe derivata. Il linguaggio richiedeva quindi che qualsiasi classe utilizzata come classe base virtuale definisse un costruttore predefinito,  che sarebbe stato richiamato da tutte le successive derivazioni virtuali.  
+ Nella progettazione del linguaggio è teorico anziché esperienza pratica con la funzionalità e, in pratica, è verificato un errore. Come un'analogia, originale progettazione del linguaggio più ereditarietà Stroustrup deciso che non è possibile inizializzare un oggetto secondario di classe base virtuale all'interno di un costruttore di classe derivata e, di conseguenza il linguaggio necessario che qualsiasi classe che funge da base virtuale classe deve definire un costruttore predefinito. È il costruttore predefinito che sarebbe stato richiamato da qualsiasi derivazione virtuale successive.  
   
- Il problema posto da una gerarchia di classi base virtuali è che la responsabilità dell'inizializzazione del sotto\-oggetto virtuale condiviso si sposta con ognuna delle derivazioni successive.  Se, ad esempio, si definisce una classe base la cui inizializzazione richiede l'allocazione di un buffer, le dimensioni di tale buffer definite dall'utente devono essere passate al costruttore come argomento.  Se si specificano quindi due derivazioni virtuali successive, chiamate `inputb` e `outputb`, ognuna di esse indica un valore particolare per il costruttore della classe base.  Se ora si deriva una classe `in_out` sia da `inputb` che da `outputb`, non sarà possibile eseguire una valutazione precisa di nessuno di questi valori del sotto\-oggetto condiviso di classe base virtuale.  
+ Il problema di una gerarchia di classe base virtuale è che la responsabilità dell'inizializzazione dell'oggetto secondario virtuale condivisa viene aggiornata di conseguenza ogni derivazione successive. Ad esempio, se definisce una classe base per cui inizializzazione richiede l'allocazione di un buffer, le dimensioni specificate dall'utente di buffer può essere passata come argomento al costruttore. Se si specificano quindi due derivazioni virtuali successive, chiamare `inputb` e `outputb`, ciascuna fornisce un valore particolare per il costruttore della classe base. A questo punto, quando si deriva un `in_out` classe sia da `inputb` e `outputb`, nessuno di questi valori per l'oggetto secondario condiviso di classe base virtuale sarà possibile precisa da valutare.  
   
- Di conseguenza, nella progettazione del linguaggio originale Stroustrup ha disattivato l'inizializzazione esplicita di una classe base virtuale all'interno dell'elenco di inizializzazione dei membri relativo al costruttore della classe derivata.  Questo ha teoricamente risolto il problema, ma l'impossibilità di controllare l'inizializzazione della classe base virtuale si è dimostrata una soluzione impraticabile.  Keith Gorlen del National Institute of Health, che ha implementato una versione freeware della libreria della raccolta SmallTalk chiamata nihcl, è stato determinante nel convincere Stroustrup che era ormai necessario creare una progettazione del linguaggio più flessibile.  
+ Pertanto, nella finestra di progettazione del linguaggio originale Stroustrup ha disattivato l'inizializzazione esplicita di una classe base virtuale all'interno dell'elenco di inizializzazione del membro del costruttore della classe derivata. Anche se è stato risolto il problema, in pratica l'impossibilità di indirizzare l'inizializzazione della classe base virtuale dimostrato impraticabile. Keith Gorlen del National Institute of Health, che ha implementato una versione gratuita di libreria della raccolta SmallTalk chiamata nihcl, è stato in convincere Stroustrup che aveva ideare una progettazione di linguaggio più flessibile.  
   
- Uno dei principi della progettazione gerarchica orientata agli oggetti sostiene che una classe derivata deve riferirsi solo a se stessa con l'implementazione non privata delle relative classi base.  Per garantire il supporto di una progettazione di inizializzazione più flessibile per l'ereditarietà virtuale, Stroustrup doveva violare tale principio.  La classe derivata di livello più basso in una gerarchia si assume la responsabilità dell'inizializzazione di tutti i sotto\-oggetti virtuali, indipendentemente dal punto della gerarchia in cui questa viene eseguita.  Ad esempio, `inputb` e `outputb` sono entrambi responsabili di inizializzare in modo esplicito la relativa classe base virtuale.  Se `in_out` deriva sia da `inputb` che da `outputb`, `in_out` diventa responsabile di inizializzare la classe base virtuale precedentemente rimossa, l'inizializzazione viene resa esplicita in `inputb` e `outputb` viene eliminato.  
+ Un principio di progettazione gerarchica orientata agli oggetti contiene che una classe derivata deve riferirsi a se stessa solo con l'implementazione non privati delle relative classi base. Per supportare una progettazione di inizializzazione più flessibile per l'ereditarietà virtuale, Stroustrup doveva violare questo principio. La classe più derivata in una gerarchia assume la responsabilità per l'inizializzazione di tutti i sotto-oggetto virtuale indipendentemente dal livello di profondità nella gerarchia di cui si verifica. Ad esempio, `inputb` e `outputb` sono entrambi responsabili di inizializzare in modo esplicito la relativa classe base virtuale. Quando `in_out` deriva da entrambi `inputb` e `outputb`, `in_out` diventa responsabile per l'inizializzazione di una volta rimosso classe base virtuale e l'inizializzazione resa esplicita in `inputb` e `outputb` è eliminato.  
   
- Questo garantisce la flessibilità richiesta dagli sviluppatori di linguaggio, ma rende più complessa la semantica.  Per eliminare tale complessità, è sufficiente limitare una classe base virtuale in modo che risulti senza stato e consentirle di specificare un'interfaccia.  Questo linguaggio di progettazione è consigliabile in C\+\+,  mentre assume il ruolo di criteri con il tipo interfaccia nella programmazione CLR.  
+ Questo offre la flessibilità necessaria per gli sviluppatori di lingua, ma anche una più complessa la semantica. Per eliminare tale complicazione viene escluso se si limita a una classe base virtuale senza stato e consente semplicemente di specificare un'interfaccia. Questo costituisce un idioma progettazione consigliato in C++. All'interno di programmazione CLR, viene generato per i criteri con il tipo di interfaccia.  
   
- Di seguito è riportato un esempio di codice semplice in cui il boxing esplicito non è necessario:  
+ Ecco un esempio di codice semplice - e in questo caso, non è necessario il boxing esplicito:  
   
 ```  
 // Managed Extensions for C++ requires explicit __box operation  
@@ -52,7 +52,7 @@ Console::WriteLine( "{0}\t{1}\t{2}", __box(0),
    __box(my1DIntArray->GetUpperBound(0)) );  
 ```  
   
- Come si può notare, vengono eseguite numerose operazioni di boxing.  In [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], la conversione boxing del tipo di valore è implicita:  
+ Come si può notare, è molto di boxing. Tipo di valore in Visual C++, la conversione boxing è implicito:  
   
 ```  
 // new syntax makes boxing implicit  
@@ -64,6 +64,6 @@ Console::WriteLine( "{0}\t{1}\t{2}", 0,
    my1DIntArray->GetUpperBound( 0 ) );  
 ```  
   
-## Vedere anche  
- [Tipi di valore e relativi comportamenti \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Boxing](../windows/boxing-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di valore e i relativi comportamenti (C + c++ /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [Conversione boxing](../windows/boxing-cpp-component-extensions.md)

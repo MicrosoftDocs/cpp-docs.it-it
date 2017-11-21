@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3915
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3915
+f1_keywords: C3915
+dev_langs: C++
+helpviewer_keywords: C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3915"></a>Errore del compilatore C3915
 'type' non dispone di alcuna proprietà indicizzata predefinita (indicizzatore di classe)  

@@ -1,30 +1,28 @@
 ---
-title: "Classe SyncLockWithStatusT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockWithStatusT (classe)"
+title: SyncLockWithStatusT (classe) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT
+dev_langs: C++
+helpviewer_keywords: SyncLockWithStatusT class
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d1d2cd87c7a77501981904686f0bea0b3c7444e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe SyncLockWithStatusT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.  
+# <a name="synclockwithstatust-class"></a>Classe SyncLockWithStatusT
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,12 +35,12 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 #### <a name="parameters"></a>Parametri  
  `SyncTraits`  
- Un tipo che può richiedere esclusivo o proprietà di una risorsa condivisa.  
+ Un tipo che può accettare esclusivo o proprietà di una risorsa condivisa.  
   
 ## <a name="remarks"></a>Note  
  Rappresenta un tipo che può richiedere esclusivo o proprietà di una risorsa condivisa.  
   
- La classe SyncLockWithStatusT viene utilizzata per implementare il [Mutex](../windows/mutex-class1.md) e [semaforo](../windows/semaphore-class.md) classi.  
+ SyncLockWithStatusT (classe) viene utilizzata per implementare il [Mutex](../windows/mutex-class1.md) e [semaforo](../windows/semaphore-class.md) classi.  
   
 ## <a name="members"></a>Membri  
   
@@ -50,20 +48,20 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore synclockwithstatust:: Synclockwithstatust](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza della classe SyncLockWithStatusT.|  
+|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza della classe SyncLockWithStatusT.|  
   
 ### <a name="protected-constructors"></a>Costruttori protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore synclockwithstatust:: Synclockwithstatust](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza della classe SyncLockWithStatusT.|  
+|[Costruttore SyncLockWithStatusT::SyncLockWithStatusT](../windows/synclockwithstatust-synclockwithstatust-constructor.md)|Inizializza una nuova istanza della classe SyncLockWithStatusT.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo synclockwithstatust:: GetStatus](../windows/synclockwithstatust-getstatus-method.md)|Recupera lo stato di attesa dell'oggetto SyncLockWithStatusT corrente.|  
-|[Metodo synclockwithstatust:: IsLocked](../windows/synclockwithstatust-islocked-method.md)|Indica se l'oggetto corrente SyncLockWithStatusT proprietaria di una risorsa. Ciò significa che è l'oggetto SyncLockWithStatusT *bloccato*.|  
+|[Metodo SyncLockWithStatusT::GetStatus](../windows/synclockwithstatust-getstatus-method.md)|Recupera lo stato di attesa dell'oggetto SyncLockWithStatusT corrente.|  
+|[Metodo SyncLockWithStatusT::IsLocked](../windows/synclockwithstatust-islocked-method.md)|Indica se l'oggetto SyncLockWithStatusT corrente appartiene a una risorsa. l'oggetto SyncLockWithStatusT è *bloccato*.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
@@ -79,7 +77,7 @@ class SyncLockWithStatusT : public SyncLockT<SyncTraits>;
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers::Details  
+ **Namespace:** Microsoft::WRL::Wrappers::Details  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

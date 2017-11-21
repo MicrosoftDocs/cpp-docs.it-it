@@ -1,51 +1,52 @@
 ---
-title: "Editing Properties for an ActiveX Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], editing properties"
-  - "ActiveX controls [C++], properties"
+title: "Modifica delle proprietà di un controllo ActiveX | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], editing properties
+- ActiveX controls [C++], properties
 ms.assetid: e5880c62-36c7-4701-bc99-97a82974c22a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b5c7635a3d6d9253a0e8dce52f78158f7681b7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Editing Properties for an ActiveX Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I controlli ActiveX offerti da fornitori indipendenti possono disporre di caratteristiche e proprietà specifiche.  Le proprietà dei controlli ActiveX vengono visualizzate nella finestra Proprietà.  Tutte le pagine delle proprietà create dai writer del controllo ActiveX vengono inoltre visualizzate nella finestra di dialogo delle pagine delle proprietà. Per visualizzare la pagina delle proprietà di uno specifico controllo ActiveX, scegliere il pulsante Pagina delle proprietà nella [finestra Proprietà](../Topic/Properties%20Window.md).  
+# <a name="editing-properties-for-an-activex-control"></a>Modifica delle proprietà di un controllo ActiveX
+Controlli ActiveX forniti da fornitori indipendenti possono sono dotati di proprietà e le caratteristiche. Nella finestra proprietà vengono visualizzate le proprietà di controlli ActiveX. Inoltre, in cui vengono visualizzate pagine delle proprietà create dai writer del controllo ActiveX nel **pagine delle proprietà** la finestra di dialogo (per visualizzare la pagina delle proprietà di un controllo ActiveX specifico, fare clic sul pulsante pagina delle proprietà di [Finestra proprietà](/visualstudio/ide/reference/properties-window)).  
   
- Per un controllo ActiveX vengono visualizzate diverse schede nella pagina delle proprietà a seconda delle finestre delle proprietà che fanno parte del controllo ActiveX.  
+ Varie schede vengono visualizzate nella pagina delle proprietà per un controllo ActiveX, a seconda delle finestre delle proprietà che fanno parte del controllo ActiveX.  
   
 > [!NOTE]
->  È possibile applicare la procedura riportata di seguito all'utilizzo della pagina delle proprietà per la modifica dei controlli ActiveX.  È anche possibile cercare e modificare le proprietà ActiveX nella nuova finestra Proprietà.  
+>  La procedura seguente si applica a utilizzando la pagina delle proprietà per modificare i controlli ActiveX. Inoltre, è possibile esplorare e modificare le proprietà ActiveX nella nuova finestra delle proprietà.  
   
-### Per modificare le proprietà di un controllo ActiveX  
+### <a name="to-edit-properties-for-an-activex-control"></a>Per modificare le proprietà per un controllo ActiveX  
   
-1.  Selezionare il controllo **ActiveX**.  
+1.  Selezionare il **ActiveX** controllo.  
   
-2.  Scegliere **Pagina delle proprietà** dal menu **Visualizza** e visualizzare le proprietà.  
+2.  Nel **vista** menu, fare clic su **pagina delle proprietà** e visualizzare le proprietà.  
   
 3.  Apportare le modifiche necessarie nella pagina delle proprietà.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [Viewing and Adding ActiveX Controls to a Dialog Box](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Visualizzazione e aggiunta di controlli ActiveX a una finestra di dialogo](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
+

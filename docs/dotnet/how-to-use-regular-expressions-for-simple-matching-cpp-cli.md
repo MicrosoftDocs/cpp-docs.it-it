@@ -1,35 +1,34 @@
 ---
-title: "Procedura: utilizzare espressioni regolari per la corrispondenza semplice (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsMatch (metodo)"
-  - "espressioni regolari [C++], corrispondenza semplice"
-  - "ricerca, corrispondenze esatte di sottostringhe"
-  - "stringhe [C++], corrispondenza esatta di sottostringhe"
-  - "sottostringhe, corrispondenze semplici"
+title: 'Procedura: utilizzare espressioni regolari per la corrispondenza semplice (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- substrings, simple matches
+- searching, exact substring matches
+- strings [C++], exact substring matching
+- regular expressions [C++], simple matching
+- IsMatch method
 ms.assetid: 4661f6f3-0f6d-48f2-abe4-cb4770bf9bd5
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c0765dde0ee0e910fe9bc865f68e0d4edeeb67e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: utilizzare espressioni regolari per la corrispondenza semplice (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito vengono utilizzate le espressioni regolari per cercare le corrispondenze di sottostringa esatte.  La ricerca viene eseguita dal metodo statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A>, che accetta come input due stringhe.  La prima corrisponde alla stringa da cercare e la seconda indica il criterio di ricerca da utilizzare.  
+# <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>Procedura: utilizzare espressioni regolari per la corrispondenza semplice (C++/CLI)
+Esempio di codice seguente utilizza espressioni regolari per cercare le corrispondenze esatte di sottostringhe. La ricerca viene eseguita da statico <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> metodo che accetta come input due stringhe. Il primo è la stringa da cercare e il secondo è il motivo per cui eseguire la ricerca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // regex_simple.cpp  
@@ -63,6 +62,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

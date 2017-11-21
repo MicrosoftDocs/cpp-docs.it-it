@@ -6,21 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- istream/std::operator&gt;&gt;
-dev_langs:
-- C++
+f1_keywords: istream/std::operator&gt;&gt;
+dev_langs: C++
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 30cb2b182d8047eb1b2a5eaa384b01c719799043
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltistreamgt-operators"></a>Operatori &lt;istream&gt;
  
@@ -177,5 +174,4 @@ int main( )
   
 ## <a name="see-also"></a>Vedere anche  
  [\<istream>](../standard-library/istream.md)
-
 

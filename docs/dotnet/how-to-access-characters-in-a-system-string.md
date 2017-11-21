@@ -1,37 +1,37 @@
 ---
-title: "Procedura: accedere ai caratteri in System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caratteri [C++], accesso in System::String"
-  - "esempi [C++], stringhe"
-  - "stringhe [C++], accesso ai caratteri"
+title: 'Procedura: accedere ai caratteri in un System:: String | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2cc927d2e06def1eba726f3123e9968003e62d1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Procedura: accedere ai caratteri in System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile accedere ai caratteri di un oggetto <xref:System.String> per migliorare le prestazioni delle chiamate a funzioni non gestite che accettano stringhe `wchar_t*`.  Questo metodo genera un puntatore interno al primo carattere dell'oggetto <xref:System.String>,  che può essere modificato direttamente oppure bloccato e passato a una funzione che si aspetta una normale stringa `wchar_t`.  
+# <a name="how-to-access-characters-in-a-systemstring"></a>Procedura: accedere ai caratteri in System::String
+È possibile accedere ai caratteri di un <xref:System.String> oggetto per chiamate ad alte prestazioni a non gestito, le funzioni che accettano `wchar_t*` stringhe. Il metodo restituisce un puntatore interno al primo carattere del <xref:System.String> oggetto. L'indicatore di misura possono essere manipolati direttamente o bloccato e passato a una funzione che prevede un normale `wchar_t` stringa.  
   
-## Esempio  
- `PtrToStringChars` restituisce un oggetto <xref:System.Char>, ossia un puntatore interno \(detto anche `byref`\),  ed è quindi soggetto alla Garbage Collection.  Si consiglia di non bloccare questo puntatore, a meno che non si desideri passarlo a una funzione nativa.  
+## <a name="example"></a>Esempio  
+ `PtrToStringChars`Restituisce un <xref:System.Char>, ovvero un puntatore interno (noto anche come un `byref`). Di conseguenza, è sottoposte a garbage collection. Non è necessario bloccare l'indicatore di misura a meno che non si intende passare a una funzione nativa.  
   
- Si consideri il codice riportato di seguito.  Il blocco non è necessario perché `ppchar` è un puntatore interno e, se il Garbage Collector sposta la stringa indicata da tale puntatore, verrà aggiornato anche `ppchar`.  Senza un [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md), il codice funzionerà correttamente e non si verificherà il possibile calo di prestazioni causato dal blocco.  
+ Si consideri il codice seguente.  Il blocco non è necessario perché `ppchar` è un puntatore interno e se il garbage collector Sposta la stringa punta a, verrà aggiornato anche `ppchar`. Senza un [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md), il codice verrà eseguito correttamente e che non have il potenziale calo di prestazioni causato dal blocco.  
   
- Se si passa `ppchar`  a una funzione nativa, questo oggetto deve essere un puntatore di blocco. Il Garbage Collector, infatti, non sarà in grado di aggiornare gli eventuali puntatori sullo stack frame non gestito.  
+ Se si passa `ppchar` a una funzione nativa, quindi deve essere un puntatore di blocco; il garbage collector non sarà in grado di aggiornare tutti i puntatori al frame dello stack non gestito.  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,9 +49,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## Esempio  
- In questo esempio viene illustrato quando il blocco è necessario.  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>Esempio  
+ Questo esempio viene illustrato il blocco in cui è necessario.  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -74,9 +77,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## Esempio  
- Un puntatore interno dispone di tutte le proprietà di un puntatore C\+\+ nativo.  Ad esempio, è possibile utilizzarlo per accedere a una struttura di dati collegata ed eseguire inserimenti ed eliminazioni utilizzando un unico puntatore:  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>Esempio  
+ Un puntatore interno dispone di tutte le proprietà del puntatore C++ nativo. Ad esempio, è possibile utilizzare per scorrere una struttura di dati collegati ed eseguire inserimenti ed eliminazioni utilizzando solo un puntatore:  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +104,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3491
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3491
+f1_keywords: C3491
+dev_langs: C++
+helpviewer_keywords: C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 58458a1ab0b67eb4fa6d38d0be2fb38f6d7496eb
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3491"></a>Errore del compilatore C3491
 'var': impossibile modificare un'acquisizione per valore in un'espressione lambda non modificabile  

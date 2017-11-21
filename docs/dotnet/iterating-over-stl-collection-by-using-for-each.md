@@ -1,38 +1,37 @@
 ---
-title: "Scorrimento di una raccolta STL con for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "raccolte DTL, scorrimento"
+title: L'iterazione sulla raccolta di libreria Standard C++ con for each | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f18b4bfdcb1c525e6e05b133e853d09b2dbd0a56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Scorrimento di una raccolta STL con for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La parola chiave di `for each` può essere utilizzata per scorrere una raccolta di libreria C\+\+ standard \(STL\).  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>L'iterazione sulla raccolta di libreria Standard C++ con for each
+Il `for each` (parola chiave) utilizzabile per scorrere una raccolta della libreria Standard C++.  
   
-## Tutte le piattaforme  
- **Osservazioni**  
+## <a name="all-platforms"></a>Tutte le piattaforme  
+ **Note**  
   
- Una raccolta STL è anche nota come *contenitore*.  Per ulteriori informazioni, vedere [Contenitori STL](../standard-library/stl-containers.md).  
+ Una raccolta della libreria Standard C++ è anche noto come un *contenitore*. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio di codice riportato `for each` per scorrere [\< map \>](../standard-library/map.md).  
+ Nell'esempio di codice viene illustrato come utilizzare `for each` per scorrere un [ \<mappa >](../standard-library/map.md).  
   
 ```  
 // for_each_stl.cpp  
@@ -74,9 +73,13 @@ int main() {
   
  **Output**  
   
-  **Mesi con 30 giorni \= 4** **Esempio**  
+```Output  
+Months with 30 days = 4  
+```  
   
- Nell'esempio di codice seguente viene utilizzato un riferimento const \(`const&`\) per una variabile di iterazione con i contenitori STL.  È possibile utilizzare un riferimento \(`&`\) come variabile di iterazione in una raccolta di tipo che può essere dichiarato come *T*`&`.  
+ **Esempio**  
+  
+ L'esempio di codice seguente viene utilizzato un riferimento const (`const&`) per una variabile di iterazione con i contenitori della libreria Standard C++. È possibile utilizzare un riferimento (`&`) come una variabile di iterazione in una raccolta di un tipo che può essere dichiarato come un *T*`&`.  
   
 ```  
 // for_each_stl_2.cpp  
@@ -102,23 +105,26 @@ int main() {
   
  **Output**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Osservazioni**  
+```Output  
+retval: 60  
+```  
+  
+## <a name="windows-runtime"></a>Windows Runtime  
+ **Note**  
   
  Non esistono commenti specifici della piattaforma su questa funzionalità.  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Osservazioni**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Note**  
   
  Non esistono commenti specifici della piattaforma su questa funzionalità.  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-## Vedere anche  
- [for each, in](../dotnet/for-each-in.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [per ognuno, in](../dotnet/for-each-in.md)   
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

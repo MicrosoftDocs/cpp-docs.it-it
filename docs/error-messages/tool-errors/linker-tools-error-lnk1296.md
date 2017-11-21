@@ -1,31 +1,29 @@
 ---
-title: "Errore degli strumenti del linker LNK1296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1296"
+title: Strumenti del linker LNK1296 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1296
+dev_langs: C++
+helpviewer_keywords: LNK1296
 ms.assetid: f94a3d18-5411-456b-966f-89810fdcfe60
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2ea42c612b3482efbe4a36eb56e54a52441cef39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore degli strumenti del linker LNK1296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Impossibile caricare nomefile  
+# <a name="linker-tools-error-lnk1296"></a>Errore degli strumenti del linker LNK1296
+Impossibile caricare il nome di file  
   
  La DLL specificata non è disponibile.  
   
- I percorsi possibili per la DLL sono la directory corrente, la directory di sistema, la directory di Windows e le directory specificate nella variabile di ambiente PATH.
+ I percorsi possibili per la DLL sono la directory corrente, la directory di sistema, la directory di Windows e nelle directory specificate nella variabile di ambiente PATH.

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::exponential_distribution::param_type::lambda
 - random/std::exponential_distribution::param_type::operator==
 - random/std::exponential_distribution::param_type::operator!=
-- random/std::exponential_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::exponential_distribution [C++]
 - std::exponential_distribution [C++], reset
@@ -33,16 +30,15 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 940d4c2604f65166faa95ca06ef3cc9b81a47b3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2e41b80ba64a40b2faece0c4ac873e124b00719d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 Genera una distribuzione esponenziale.  
@@ -231,5 +227,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
 [\<random>](../standard-library/random.md)
-
 

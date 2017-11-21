@@ -1,28 +1,27 @@
 ---
-title: "Memorizzazione di stringhe in un provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "record utente, modifica"
+title: L'archiviazione delle stringhe nel Provider OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Memorizzazione di stringhe in un provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Tramite la Creazione guidata provider OLE DB ATL viene creato in MyProviderRS.h un record utente predefinito denominato `CWindowsFile`.  Per gestire le due stringhe è necessario modificare `CWindowsFile` oppure aggiungere un record utente personalizzato, come illustrato nel codice riportato di seguito.  
+# <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
+In MyProviderRS. H, la creazione guidata Provider OLE DB ATL crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` o aggiungere un record utente personalizzato, come illustrato nel codice seguente:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +48,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- I membri dati `szCommand` and `szText` rappresentano le due stringhe, mentre `szCommand2` e `szText2` forniscono le ulteriori colonne, se necessarie.  Il membro dati `dwBookmark` non è necessario per questo provider semplice in sola lettura, ma verrà utilizzato in seguito per aggiungere un'interfaccia `IRowsetLocate`. Per ulteriori informazioni, vedere [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  L'operatore `==` confronta le istanze. L'implementazione di questo operatore è facoltativa.  
+ I membri dati `szCommand` e `szText` rappresentano le due stringhe, con `szCommand2` e `szText2` forniscono le ulteriori colonne, se necessario. Il membro dati `dwBookmark` non è necessaria per questo provider semplice in sola lettura, ma viene utilizzato in un secondo momento per aggiungere un `IRowsetLocate` interfaccia, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md). Il `==` operatore confronta le istanze (implementazione di questo operatore è facoltativo).  
   
- Al termine di questa operazione, sarà possibile compilare ed eseguire il provider.  Per eseguire il test del provider, è necessario un consumer con funzionalità corrispondenti.  Per informazioni su come creare un consumer di test, vedere [Implementazione di un consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  Eseguire il consumer di test con il provider.  Verificare che il consumer di test recuperi le stringhe corrette dal provider quando si fa clic sul pulsante **Run** nella finestra di dialogo **Test Consumer**.  
+ Al termine, il provider deve essere possibile compilare ed eseguire. Per testare il provider, è necessario un consumer con funzionalità di corrispondenza. [Implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md) viene illustrato come creare un consumer di test. Eseguire il consumer di test con il provider. Verificare che il consumer di test consente di recuperare le stringhe corrette dal provider quando si fa clic il **eseguire** pulsante il **Test Consumer** la finestra di dialogo.  
   
- Dopo aver verificato il corretto funzionamento del provider, sarà possibile migliorarne le funzionalità implementando ulteriori interfacce.  Un esempio di questa operazione è illustrato in [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+ Quando si è verificato il corretto funzionamento del provider, è consigliabile migliorare le funzionalità implementando le interfacce aggiuntive. Viene illustrato un esempio [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione di un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md)

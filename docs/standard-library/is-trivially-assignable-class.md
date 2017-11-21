@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivially_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_assignable
+f1_keywords: type_traits/std::is_trivially_assignable
+dev_langs: C++
+helpviewer_keywords: is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 4d40adc84ae8e2a9bb8f53e78d3a90dda99fd7e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d37d4c827a082f7db179d4fb7014cba371103e71
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="istriviallyassignable-class"></a>Classe is_trivially_assignable
 Verifica se un valore di tipo `From` può essere facilmente assegnato al tipo `To`.  
@@ -54,7 +50,6 @@ struct is_trivially_assignable;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

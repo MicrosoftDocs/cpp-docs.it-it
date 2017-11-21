@@ -1,39 +1,39 @@
 ---
-title: "Consumer e provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB (consumer)"
-  - "OLE DB (consumer), architettura di dati OLE DB"
-  - "provider OLE DB"
-  - "provider OLE DB, architettura di dati OLE DB"
-  - "OLE DB, modello dati"
+title: I consumer OLE DB e provider | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, OLE DB data architecture
+- OLE DB providers
+- OLE DB consumers, OLE DB data architecture
+- OLE DB consumers
+- OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd09e1566a6f53244d420387870a03b0b34f8fb6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Consumer e provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'architettura OLE utilizza il modello basato su consumer e provider.  I consumer richiedono i dati.  I provider rispondono alle richieste restituendo i dati in formato tabulare e inviandoli ai consumer.  Tutte le chiamate che possono essere effettuate da un consumer devono essere implementate nel provider.  
+# <a name="ole-db-consumers-and-providers"></a>Consumer e provider OLE DB
+L'architettura OLE DB utilizza il modello di consumer e provider. Un consumer effettua le richieste di dati. Un provider risponde alle richieste seguenti, inserire i dati in un formato tabulare e restituirlo al consumer. Qualsiasi chiamata che rendono il consumer deve essere implementata nel provider.  
   
- In termini tecnici, un consumer è qualsiasi sistema o codice di applicazione \(non necessariamente un componente OLE DB\) che accede ai dati tramite interfacce OLE DB.  Le interfacce vengono implementate in un provider.  Pertanto, per provider si intende qualsiasi componente software che implementa interfacce OLE DB per incorporare l'accesso ai dati ed esporre tali dati ad altri oggetti, ovvero i consumer.  
+ Tecnicamente, un consumer è qualsiasi applicazione o del sistema codice (non necessariamente un componente di OLE DB) che accede ai dati tramite interfacce OLE DB. Le interfacce vengono implementate in un provider. Di conseguenza, un provider è un componente software che implementa le interfacce OLE DB per incapsulare l'accesso ai dati e come esporlo ad altri oggetti (vale a dire privati).  
   
- In termini di ruoli un consumer richiama i metodi su interfacce OLE DB, mentre un provider OLE DB implementa le interfacce OLE DB necessarie.  
+ In termini di ruoli, un consumer chiama i metodi su interfacce OLE DB. un provider OLE DB implementa le interfacce OLE DB necessarie.  
   
- In OLE DB non vengono utilizzati i termini client e server, in quanto questi ruoli non sono sempre validi, in particolare in situazioni a più livelli.  Un consumer può essere un componente su un livello che viene utilizzato da un altro componente, pertanto la definizione di componente client sarebbe inesatta.  Inoltre, i provider funzionano in alcuni casi più come driver di database che come server.  
+ OLE DB consente di evitare condizioni client e server perché questi ruoli non sempre superflua, in particolare in una situazione a più livelli. Poiché un consumer può essere un componente in un livello che viene utilizzato da un altro componente, per chiamare un client componente potrebbe essere poco chiare. Inoltre, un provider talvolta funge da più driver di database rispetto a un server.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Programmazione con OLE DB](../../data/oledb/ole-db-programming.md)   
- [Cenni preliminari sulla programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)
+ [Panoramica della programmazione con OLE DB](../../data/oledb/ole-db-programming-overview.md)

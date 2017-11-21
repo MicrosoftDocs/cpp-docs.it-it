@@ -1,46 +1,28 @@
 ---
-title: Classe CComAutoCriticalSection | Documenti di Microsoft
+title: Classe CComAutoCriticalSection | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComAutoCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9f58a4cfd02af09a05b625a7e02b574b672adade
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 39bae0c1a5f78b852a92d10c4bb06fcb96f0e51d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomautocriticalsection-class"></a>Classe CComAutoCriticalSection
 `CComAutoCriticalSection`fornisce metodi per ottenere e rilasciare la proprietà di un oggetto sezione critica.  
@@ -66,7 +48,7 @@ class CComAutoCriticalSection : public CComCriticalSection
  In genere, si utilizza `CComAutoCriticalSection` tramite il `typedef` nome [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Questo nome fa riferimento a `CComAutoCriticalSection` quando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) è in uso.  
 
   
- Il `Init` e `Term` metodi da [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) non sono disponibili quando si utilizza questa classe.  
+ Il `Init` e `Term` metodi [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) non sono disponibili quando si utilizza questa classe.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
@@ -74,7 +56,7 @@ class CComAutoCriticalSection : public CComCriticalSection
  `CComAutoCriticalSection`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** atlcore. h  
+ **Intestazione:** atlcore  
   
 ##  <a name="ccomautocriticalsection"></a>CComAutoCriticalSection::CComAutoCriticalSection  
  Costruttore.  
@@ -94,10 +76,9 @@ CComAutoCriticalSection();
 ```  
   
 ### <a name="remarks"></a>Note  
- Le chiamate di distruttore [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), che rilascia tutte le risorse di sistema utilizzate dall'oggetto sezione critica.  
+ Il distruttore chiama [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), che rilascia tutte le risorse di sistema utilizzate dall'oggetto sezione critica.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Classe CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
-

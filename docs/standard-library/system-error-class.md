@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- system_error/std::system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error class
+f1_keywords: system_error/std::system_error
+dev_langs: C++
+helpviewer_keywords: system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 975fcf228191695e419df2b04bd5578e15924f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 053dc577c884be5ef0878d0caf82107ecaf21239
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="systemerror-class"></a>Classe system_error
 Rappresenta la classe di base per tutte le eccezioni generate per segnalare un errore di sistema di basso livello.  
@@ -65,5 +60,4 @@ const error_code& code() const throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [<system_error>](../standard-library/system-error.md)
-
 

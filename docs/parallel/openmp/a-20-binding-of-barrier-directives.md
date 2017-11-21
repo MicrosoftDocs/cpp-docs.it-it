@@ -1,29 +1,28 @@
 ---
-title: "A.20   Binding of barrier Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Associazione A.20 delle direttive barriera | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fdcc26-6873-429b-998e-de451401483b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d88c431753d918c05866324dd6436a091d6057a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# A.20   Binding of barrier Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La richiesta direttiva di regole di associazione per un oggetto **barriera** direttiva da associare a un tipo più vicina  `parallel` direttiva.  Per ulteriori informazioni sull'associazione direttiva, vedere [parte 2,8](../../parallel/openmp/2-8-directive-binding.md) nella pagina 32.  
+# <a name="a20---binding-of-barrier-directives"></a>A.20   Associazione di direttive barrier
+L'associazione di direttive regole di chiamata per un **barriera** direttiva da associare di inclusione più vicina `parallel` direttiva. Per ulteriori informazioni sull'associazione di direttive, vedere [sezione 2.8](../../parallel/openmp/2-8-directive-binding.md) nella pagina 32.  
   
- Nell'esempio seguente, la chiamata da principale in sub2 è conforme perché **barriera** \(in sub3\) associa all'area parallela in sub2.  la chiamata da principale in sub1 è conforme perché **barriera** associazioni all'area parallela nella subroutine sub2.  la chiamata da principale in sub3 è conforme perché **barriera** non è associato ad alcuna area parallela e viene ignorato.  Si noti inoltre che **barriera** sincronizza unicamente il team di thread nell'area parallela di inclusione e di non tutti i thread creati in sub1.  
+ Nell'esempio seguente, la chiamata da *principale* a *sub2* è conforme in quanto il **barriera** (in *sub3*) associa all'area parallela in *sub2*. La chiamata da *principale* a *sub1* è conforme in quanto il **barriera** associa all'area parallela nella subroutine *sub2*.  La chiamata da *principale* a *sub3* è conforme in quanto il **barriera** non viene associato a un'area parallela e viene ignorato. Si noti inoltre che il **barriera** Sincronizza solo al team di thread in tale area che lo contiene e non tutti i thread creati in *sub1*.  
   
 ```  
 int main()  

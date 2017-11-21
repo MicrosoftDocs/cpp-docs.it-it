@@ -1,34 +1,32 @@
 ---
-title: "Avviso del compilatore (livello 1) C4621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4621"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4621"
+title: Compilatore avviso (livello 1) C4621 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4621
+dev_langs: C++
+helpviewer_keywords: C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4a9252e615ad0fe1ede02e374294e03db38eca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4621
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-nessuna forma suffissa trovata di 'operator \-\-' per il tipo 'tipo' Verrà utilizzata la forma prefissa  
+# <a name="compiler-warning-level-1-c4621"></a>Avviso del compilatore (livello 1) C4621
+Nessuna forma suffissa di 'operator': trovata per il tipo 'type', utilizzata la forma prefissa  
   
- Non è stato definito alcun operatore di decremento suffisso per il tipo specificato.  Viene utilizzato l'operatore prefisso di overload.  
+ Si è verificato alcun operatore di decremento suffisso definito per il tipo specificato. Il compilatore ha usato l'operatore prefisso di overload.  
   
- Per evitare la visualizzazione dell'avviso, definire un operatore `--` suffisso.  Creare una versione a due argomenti dell'operatore `--` come illustrato di seguito:  
+ Questo avviso può essere evitato definendo un suffisso `--` operatore. Creare una versione a due argomenti di `--` operatore come illustrato di seguito:  
   
 ```  
 // C4621.cpp  

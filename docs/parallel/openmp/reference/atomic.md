@@ -1,48 +1,46 @@
 ---
-title: "atomic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "atomic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atomic OpenMP directive"
+title: Atomic | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: atomic
+dev_langs: C++
+helpviewer_keywords: atomic OpenMP directive
 ms.assetid: 275e0338-cf2f-4525-97b5-696250000df7
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 92804b2bdcc243bde6e536004cda73d7f5087b1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# atomic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Specifica che una posizione di memoria che verrà aggiornata in modalità atomica.  
+# <a name="atomic"></a>atomico
+Specifica che una posizione di memoria che verrà aggiornata in modo atomico.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma omp atomic  
    expression  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `expression`  
- L'istruzione che contiene il lvalue la cui posizione di memoria che si desidera proteggere da più scrittura.  Per ulteriori informazioni sui form dell'espressione valida, vedere la specifica di OpenMP.  
+ L'istruzione contenente lvalue la cui posizione di memoria a cui si desidera proteggere più scritture. Per ulteriori informazioni sui moduli di espressione validi, vedere la specifica OpenMP.  
   
-## Note  
- `atomic` la direttiva non supporta clausole di OpenMP.  
+## <a name="remarks"></a>Note  
+ Il `atomic` direttiva non supporta clausole OpenMP.  
   
- Per ulteriori informazioni, vedere [2.6.4 atomic Construct](../../../parallel/openmp/2-6-4-atomic-construct.md).  
+ Per ulteriori informazioni, vedere [atomica 2.6.4 costrutto](../../../parallel/openmp/2-6-4-atomic-construct.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_atomic.cpp  
@@ -63,6 +61,9 @@ int main() {
 }  
 ```  
   
-  **Numero di thread: 10**   
-## Vedere anche  
+```Output  
+Number of threads: 10  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

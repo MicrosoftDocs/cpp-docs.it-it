@@ -1,41 +1,39 @@
 ---
-title: "deque::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membro) [STL/CLR]"
+title: deque::to_array (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: ecd34f30-2ad8-47b5-8c5e-2466df46fe6d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 106b28547d018dbdd5eb6fdd46d4f862cb9b77ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# deque::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la sequenza selezionata una nuova matrice.  
+# <a name="dequetoarray-stlclr"></a>deque::to_array (STL/CLR)
+La sequenza controllata viene copiata in una nuova matrice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Note  
- La funzione membro restituisce una matrice contenente la sequenza selezionata.  Utilizzarla per ottenere una copia della sequenza selezionata in forma di matrice.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_deque_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)

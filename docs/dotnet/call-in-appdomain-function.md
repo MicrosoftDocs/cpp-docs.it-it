@@ -1,32 +1,30 @@
 ---
-title: "Funzione call_in_appdomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "call_in_appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_in_appdomain (funzione)"
+title: Funzione call_in_appdomain | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: call_in_appdomain
+dev_langs: C++
+helpviewer_keywords: call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 648dda2bf13e6e1193ffbd90613253c6d763a89d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Funzione call_in_appdomain
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Esegue una funzione in un dominio applicazione specificato.  
+# <a name="callinappdomain-function"></a>Funzione call_in_appdomain
+Esegue una funzione in un dominio di applicazione specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <typename ArgType1, ...typename ArgTypeN>  
@@ -47,26 +45,26 @@ RetType call_in_appdomain(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `appdomainId`  
- Appdomain in cui chiamare la funzione.  
+ Dominio dell'applicazione in cui chiamare la funzione.  
   
  `voidFunc`  
- Puntatore a una funzione di `void` che accetta parametri di N \(0 \<\= N \<\= 15\).  
+ Puntatore a un `void` funzione che accetta parametri N (0 < = N < = 15).  
   
  `nonvoidFunc`  
- Puntatore a una funzione non di`void` che accetta parametri di N \(0 \<\= N \<\= 15\).  
+ Puntatore a non -`void` funzione che accetta parametri N (0 < = N < = 15).  
   
  `arg1...argN`  
- Zero a 15 parametri da passare a `voidFunc` o a `nonvoidFunc` nell'altro dominio applicazione.  
+ Zero per 15 parametri da passare al `voidFunc` o `nonvoidFunc` in altro dominio applicazione.  
   
-## Valore restituito  
- Il risultato dell'esecuzione `voidFunc` o di `nonvoidFunc` nel dominio applicazione specificato.  
+## <a name="return-value"></a>Valore restituito  
+ Il risultato dell'esecuzione `voidFunc` o `nonvoidFunc` nel dominio dell'applicazione specificato.  
   
-## Note  
- Gli argomenti della funzione passata a `call_in_appdomain` non devono essere tipi CLR.  
+## <a name="remarks"></a>Note  
+ Gli argomenti della funzione passato a `call_in_appdomain` non devono essere tipi CLR.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_call_in_appdomain.cpp  
@@ -112,7 +110,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 default appdomain: msl_call_in_appdomain.exe  
@@ -121,7 +119,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## Requisiti  
- **File intestazione**\<msclr\\appdomain.h\>  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\appdomain.h >  
   
- msclr di**Spazio dei nomi**
+ **Namespace** msclr

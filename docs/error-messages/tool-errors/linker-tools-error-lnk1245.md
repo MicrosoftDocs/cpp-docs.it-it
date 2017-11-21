@@ -1,35 +1,33 @@
 ---
-title: "Errore degli strumenti del linker LNK1245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1245"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1245"
+title: Strumenti del linker LNK1245 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1245
+dev_langs: C++
+helpviewer_keywords: LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e937962fc71b0767dce94614f0505c2d30e915bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore degli strumenti del linker LNK1245
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-è stato specificato il sottosistema non valido 'sottosistema'; il valore di \/SUBSYSTEM deve essere WINDOWS, WINDOWSCE o CONSOLE  
+# <a name="linker-tools-error-lnk1245"></a>Errore degli strumenti del linker LNK1245
+sottosistema non valido 'sottosistema' specificato. /SUBSYSTEM deve essere WINDOWS, WINDOWSCE o CONSOLE  
   
- L'oggetto è stato compilato con [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) e si è verificata una delle seguenti situazioni:  
+ [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) utilizzato per compilare l'oggetto e una delle seguenti condizioni è true:  
   
--   È stato definito un punto di ingresso personalizzato \([\/ENTRY](../../build/reference/entry-entry-point-symbol.md)\) da cui il linker non è in grado di dedurre un sottosistema.  
+-   È stato definito un punto di ingresso personalizzato ([/ENTRY](../../build/reference/entry-entry-point-symbol.md)), in modo che il linker non è stato possibile dedurre un sottosistema.  
   
--   Il valore passato all'opzione del linker [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) non è valido per gli oggetti \/clr.  
+-   È stato passato un valore di [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) che non è valido per gli oggetti /CLR. l'opzione del linker.  
   
- In entrambi i casi, è possibile correggere l'errore specificando un valore valido nell'opzione del linker \/SUBSYSTEM.
+ Per entrambi i casi, la risoluzione consiste nello specificare un valore valido per l'opzione del linker /SUBSYSTEM.

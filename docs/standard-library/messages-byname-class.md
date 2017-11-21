@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmes/std::messages_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- messages_byname class
+f1_keywords: xlocmes/std::messages_byname
+dev_langs: C++
+helpviewer_keywords: messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e958328b2f434132ae1e9a2012983b10f04bc1f9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a94395023ff39e787f2fdc23dfe3fe4ccb57ff4c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="messagesbyname-class"></a>Classe messages_byname
 Questa classe modello derivata descrive un oggetto che può essere usato come facet dei messaggi delle impostazioni locali specificate, consentendo il recupero dei messaggi localizzati.  
@@ -66,7 +61,6 @@ protected:
   
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 
 
 

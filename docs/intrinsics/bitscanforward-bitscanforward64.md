@@ -1,67 +1,74 @@
 ---
-title: "_BitScanForward, _BitScanForward64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_BitScanForward"
-  - "_BitScanForward_cpp"
-  - "_BitScanForward64_cpp"
-  - "_BitScanForward64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_BitScanForward intrinsic"
-  - "BitScanForward intrinsic"
-  - "bsf instruction"
+title: _BitScanForward, _BitScanForward64 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _BitScanForward
+- _BitScanForward_cpp
+- _BitScanForward64_cpp
+- _BitScanForward64
+dev_langs: C++
+helpviewer_keywords:
+- _BitScanForward intrinsic
+- bsf instruction
+- BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 94fe30e65cc501e16fe31bd04b5cb786a323ccdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# _BitScanForward, _BitScanForward64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Sezione specifica Microsoft**  
   
- Cercare un bit impostato \(1\) nei dati di maschera dal bit meno significativo \(LSB\) al bit più significativo \(MSB\).  
+ Cercare un bit impostato (1) nei dati di maschera dal bit meno significativo (LSB) al bit più significativo (MSB).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned char _BitScanForward(    unsigned long * Index,    unsigned long Mask ); unsigned char _BitScanForward64(    unsigned long * Index,    unsigned __int64 Mask );  
+unsigned char _BitScanForward(  
+   unsigned long * Index,  
+   unsigned long Mask  
+);  
+unsigned char _BitScanForward64(  
+   unsigned long * Index,  
+   unsigned __int64 Mask  
+);  
 ```  
   
-#### Parametri  
- \[out\] `Index`  
- Caricato con la posizione di bit del primo bit impostato \(1\) trovato.  
+#### <a name="parameters"></a>Parametri  
+ [out] `Index`  
+ Caricato con la posizione di bit del primo bit impostato (1) trovato.  
   
- \[in\] `Mask`  
+ [in] `Mask`  
  Il valore a 32 bit o a 64 bit da cercare.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  0 se la maschera è zero; diverso da zero in caso contrario.  
   
-## Note  
- Se viene trovato un bit impostato, viene restituita la posizione di bit del primo bit impostato trovato nel primo parametro.  Se non viene trovato alcun bit impostato, viene restituito 0; in caso contrario, viene restituito 1.  
+## <a name="remarks"></a>Note  
+ Se viene trovato un bit impostato, viene restituita la posizione di bit del primo bit impostato trovato nel primo parametro. Se non viene trovato alcun bit impostato, viene restituito 0; in caso contrario, viene restituito 1.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // BitScanForward.cpp  
@@ -92,20 +99,20 @@ int main()
 }  
 ```  
   
-## Input  
+## <a name="input"></a>Input  
   
 ```  
 12  
 ```  
   
-## Esempio di output  
+## <a name="sample-output"></a>Esempio di output  
   
 ```  
 Enter a positive integer as the mask:   
 Mask: 12 Index: 2  
 ```  
   
-### Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

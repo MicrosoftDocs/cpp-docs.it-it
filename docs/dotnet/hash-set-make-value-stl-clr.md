@@ -1,45 +1,43 @@
 ---
-title: "hash_set::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value (membro) [STL/CLR]"
+title: hash_set::make_value (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 19819fee-d3a0-428d-92db-cba7235d37d4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a34387a274cc1d804c74dcb086f667791f5e16f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetmakevalue-stlclr"></a>hash_set::make_value (STL/CLR)
 Costruisce un oggetto valore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 static value_type make_value(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
- Valore chiave da utilizzare.  
+#### <a name="parameters"></a>Parametri  
+ key  
+ Valore della chiave da utilizzare.  
   
-## Note  
- La funzione membro restituisce un oggetto `value_type` la cui chiave è `key`.  Utilizzarla per comporre un oggetto appropriato da utilizzare con diverse altre funzioni membro.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un `value_type` oggetto la cui chiave è `key`. Utilizzarla per creare un oggetto può essere utilizzato con diverse altre funzioni membro.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_set_make_value.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: KEY_TYPE (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

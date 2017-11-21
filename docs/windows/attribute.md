@@ -1,35 +1,34 @@
 ---
-title: "attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.attribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__typeof keyword"
-  - "custom attributes, creating"
-  - "attribute attribute"
-  - "attributes [C++], custom"
+title: attributo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.attribute
+dev_langs: C++
+helpviewer_keywords:
+- __typeof keyword
+- custom attributes, creating
+- attribute attribute
+- attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d5233e5b3f2a27fc821c786d99cb3d996e5c039
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# attribute
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="attribute"></a>Attributo
 Consente di creare un attributo personalizzato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,34 +39,34 @@ Consente di creare un attributo personalizzato.
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *AllowOn*  
- Specifica gli elementi del linguaggio in cui è possibile applicare l'attributo personalizzato.  l'impostazione predefinita è **System:: AttributeTargets:: tutti** \(vedere  [System:: AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)\).  
+ Specifica gli elementi del linguaggio a cui può essere applicato l'attributo personalizzato. Valore predefinito è **System::AttributeTargets::All** (vedere [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
   
  `AllowMultiple`  
- Specifica se è possibile applicare l'attributo personalizzato ripetutamente a un costrutto.  l'impostazione predefinita è **FALSE**.  
+ Specifica se l'attributo personalizzato può essere applicata ripetutamente per un costrutto. Valore predefinito è **FALSE**.  
   
  `Inherited`  
- Indica se l'attributo deve essere ereditato da sottoclassi.  Il compilatore non fornisce supporto speciale a questa funzionalità, è il processo di utenti di attributo \(reflection, ad esempio\) rispettano queste informazioni.  se `Inherited` viene  **TRUE**, l'attributo viene ereditato.  se `AllowMultiple` viene  **TRUE**, l'attributo è accumulerà sul membro derivato; se  `AllowMultiple` viene  **FALSE**, l'attributo verrà ignorato \(o sostituire\) nell'erediterietà.  se `Inherited` viene  **FALSE**, l'attributo non verrà ereditato.  l'impostazione predefinita è **TRUE**.  
+ Indica se l'attributo deve essere ereditate dalle sottoclassi. Il compilatore fornisce un supporto speciale per questa funzionalità. è il processo i consumer di attributo (ad esempio Reflection) in modo da rispettare queste informazioni. Se `Inherited` è **TRUE**, l'attributo viene ereditato. Se `AllowMultiple` è **TRUE**, l'attributo si accumulerà nel membro derivato; se `AllowMultiple` è **FALSE**, l'attributo eseguirà l'override (o sostituire) nell'ereditarietà. Se `Inherited` è **FALSE**, l'attributo non viene ereditato. Valore predefinito è **TRUE**.  
   
-## Note  
+## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  `attribute` l'attributo è ora deprecata.  Utilizzare l'attributo System.Attribute di Common Language Runtime a direttamente per creare i attirbutes definiti dall'utente.  Per ulteriori informazioni, vedere [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  Il `attribute` attributo è obsoleta.  Utilizzare common language runtime attributo System. Attribute direttamente per creare attirbutes definito dall'utente.  Per ulteriori informazioni, vedere [attributi definiti dall'utente](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Definire una classe [attributo personalizzato](../windows/custom-attributes-cpp.md) inserendo  `attribute` attributo a una definizione della struttura o della classe gestita.  Il nome della classe è l'attributo personalizzato.  Di seguito è riportato un esempio:  
+ Definire un [attributo personalizzato](../windows/custom-attributes-cpp.md) inserendo il `attribute` attributo in una definizione di classe o struct gestita. Il nome della classe è l'attributo personalizzato. Ad esempio:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- definisce un attributo denominato MyAttr applicabile ai parametri di funzione.  La classe deve essere pubblica se l'attributo verrà mantenuto in altri assembly.  
+ definisce un attributo denominato MyAttr che possono essere applicati ai parametri di funzione. La classe deve essere pubblica se l'attributo dovrà essere utilizzato in altri assembly.  
   
 > [!NOTE]
->  Per impedire conflitti dello spazio dei nomi, tutti i nomi di attributo in modo implicito terminano con “attribute„; in questo esempio, il nome dell'attributo e la classe è effettivamente MyAttrAttribute, ma MyAttr e MyAttrAttribute possono essere utilizzati indifferentemente.  
+>  Per evitare conflitti di spazio dei nomi, tutti i nomi di attributo in modo implicito terminano con "Attribute"; In questo esempio, il nome dell'attributo e la classe è effettivamente MyAttrAttribute, ma MyAttr e MyAttrAttribute possono essere utilizzate indifferentemente.  
   
- I costruttori pubblici della classe definisce i parametri senza nome dell'attributo.  I costruttori di overload consentono più modalità di specificare l'attributo, pertanto un attributo personalizzato definito il modo seguente:  
+ Costruttori pubblici della classe definiscono parametri senza nome dell'attributo. I costruttori di overload consentono più modi di specificare l'attributo, in modo da un attributo personalizzato che viene definito nel modo seguente:  
   
 ```  
 // cpp_attr_ref_attribute.cpp  
@@ -87,7 +86,7 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- I membri dati pubblici e le proprietà della classe sono i parametri denominati facoltativi dell'attributo:  
+ Membri dati pubblici della classe e le proprietà sono i parametri dell'attributo facoltativo denominato:  
   
 ```  
 // cpp_attr_ref_attribute_2.cpp  
@@ -111,11 +110,11 @@ public:
 ref class ClassC {};  
 ```  
   
- Per un elenco di tipi di parametro possibili dell'attributo, vedere [attributi personalizzati](../windows/custom-attributes-cpp.md).  
+ Per un elenco dei tipi di parametro possibili dell'attributo, vedere [attributi personalizzati](../windows/custom-attributes-cpp.md).  
   
- vedere [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md) per una descrizione delle destinazioni dell'attributo.  
+ Vedere [attributi definiti dall'utente](../windows/user-defined-attributes-cpp-component-extensions.md) per una discussione sulle destinazioni degli attributi.  
   
- `attribute` l'attributo presenta  `AllowMultiple` parametro che specifica se l'attributo personalizzato è di utilizzo singolo o multiuse \(possibile visualizzata più volte alla stessa entità\).  
+ Il `attribute` presenta un `AllowMultiple` parametro che specifica se l'attributo personalizzato è monouso o multiuso (può essere visualizzato più volte sulla stessa entità).  
   
 ```  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,7 +129,7 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Le classi di attributi personalizzati che derivano direttamente o indirettamente da <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, che rappresenta l'id delle definizioni di attributo in rapido e semplice di metadati.  `attribute` l'attributo implica l'ereditarietà da system:: L'attributo, pertanto la derivazione esplicita non è necessario:  
+ Classi di attributi personalizzati derivano direttamente o indirettamente da <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, rendendo identificazione delle definizioni degli attributi nei metadati facili e veloci. Il `attribute` attributo implica l'ereditarietà da System:: Attribute, in modo esplicita derivazione non è necessaria:  
   
 ```  
 [ attribute(Class) ]  
@@ -144,22 +143,22 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` è un alias per  <xref:System.AttributeUsageAttribute?displayProperty=fullName> \(non AttributeAttribute; ciò è un'eccezione all'attributo che indica la regola\).  
+ `attribute`è un alias per <xref:System.AttributeUsageAttribute?displayProperty=fullName> (non attributoAttribute; si tratta di un'eccezione alla regola di denominazione di attributo).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|`ref` **classe**,  **struttura di riferimento**|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|`ref`**classe**, **uno struct di riferimento**|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuna|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_attribute_4.cpp  
@@ -174,8 +173,8 @@ ref struct ABC {
 ref class MyClass {};  
 ```  
   
-## Esempio  
- `Inherited` l'argomento predefinito specifica se un attributo personalizzato applicato a una classe base indicherà sulla reflection di una classe derivata.  
+## <a name="example"></a>Esempio  
+ Il `Inherited` argomento denominato specifica se un attributo personalizzato applicato in una classe di base verrà visualizzati sulla reflection di una classe derivata.  
   
 ```  
 // cpp_attr_ref_attribute_5.cpp  
@@ -211,7 +210,10 @@ int main() {
 }  
 ```  
   
-  **2**   
-## Vedere anche  
- [Attributes Alphabetical Reference](../windows/attributes-alphabetical-reference.md)   
- [Custom Attributes](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento alfabetico agli attributi](../windows/attributes-alphabetical-reference.md)   
+ [Attributi personalizzati](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

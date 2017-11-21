@@ -1,37 +1,38 @@
 ---
-title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, size"
-  - "dialog boxes, positioning"
+title: Specifica la posizione e le dimensioni di una finestra di dialogo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, size
+- dialog boxes, positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0dcd2acc4067e62d5cc44ca4e180f591e9fe63b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Specifying the Location and Size of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La posizione e la dimensione di una finestra di dialogo e dei controlli in essa contenuti vengono misurate in unità della finestra di dialogo.  I valori relativi ai singoli controlli e alla finestra di dialogo vengono visualizzati nella parte inferiore destra della barra di stato di Visual Studio quando i controlli vengono selezionati.  
+# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Impostazione della posizione e della dimensione di una finestra di dialogo
+La posizione e dimensioni di una finestra di dialogo, nonché la posizione e dimensioni dei controlli in esso contenuti, vengono misurati in unità di finestra di dialogo. I valori per i singoli controlli e la finestra di dialogo vengono visualizzati nella parte inferiore destra della barra quando si seleziona lo stato di Visual Studio.  
   
- Nella [finestra Proprietà](../Topic/Properties%20Window.md) è possibile impostare tre proprietà per specificare la posizione in cui verrà visualizzata sullo schermo una finestra di dialogo.  La proprietà Center è booleana. Se il valore viene impostato su True, la finestra di dialogo verrà sempre visualizzata al centro dello schermo.  Se viene impostato su False, è possibile definire esplicitamente la posizione in cui la finestra di dialogo verrà visualizzata sullo schermo impostando le proprietà X e Y.  Le proprietà relative alla posizione sono valori di offset dall'angolo superiore sinistro dell'area di visualizzazione, definito come {X\=0, Y\=0}.  La posizione è inoltre basata sulla proprietà **Absolute Align**. Se il valore è True, le coordinate sono relative allo schermo. Se il valore è False, le coordinate sono relative alla finestra proprietaria della finestra di dialogo.  
+ Esistono tre proprietà che è possibile impostare nel [finestra proprietà](/visualstudio/ide/reference/properties-window) per specificare in una finestra di dialogo verrà visualizzata sullo schermo. La proprietà Center è un valore booleano. Se si imposta il valore su True, la finestra di dialogo verrà sempre visualizzato al centro dello schermo. Se è impostato su False, è quindi possibile impostare le proprietà Posx e Posy definire in modo esplicito in cui verrà visualizzata la finestra di dialogo visualizzate sullo schermo. Le proprietà posizione sono valori di offset dall'angolo superiore sinistro dell'area di visualizzazione, è definito come {X = 0, Y = 0}. La posizione si basa inoltre sul **Absolute Align** proprietà: se True, le coordinate sono rispetto allo schermo; se False, le coordinate sono relativi alla finestra del proprietario della finestra di dialogo.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

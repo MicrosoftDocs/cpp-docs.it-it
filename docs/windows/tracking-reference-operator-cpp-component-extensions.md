@@ -1,50 +1,48 @@
 ---
-title: "Tracking Reference Operator (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tracking references"
-  - "% tracking reference [C++]"
+title: Rilevamento di operatore di riferimento (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: '%'
+dev_langs: C++
+helpviewer_keywords:
+- tracking references
+- '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-caps.latest.revision: 31
-caps.handback.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "31"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 733c99dc4895907ba943f32dc7048ce6cfc01528
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Tracking Reference Operator (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il *riferimento di traccia* \(`%`\) si comporta come un riferimento ordinario C\+\+ \(`&`\), ma quando un oggetto viene assegnato a un riferimento di traccia, il conteggio dei riferimenti dell'oggetto viene incrementato.  
+# <a name="tracking-reference-operator-c-component-extensions"></a>Operatore di riferimento di rilevamento (Estensioni del componente C++)
+Oggetto *riferimento di rilevamento* (`%`) si comporta come un riferimento ordinario C++ (`&`) ad eccezione del fatto che quando un oggetto viene assegnato a un riferimento di rilevamento, conteggio dei riferimenti dell'oggetto viene incrementato.  
   
-## Tutte le piattaforme  
+## <a name="all-platforms"></a>Tutte le piattaforme  
  Un riferimento di traccia presenta le caratteristiche descritte di seguito.  
   
 -   L'assegnazione di un oggetto a un riferimento di traccia causa l'incremento del conteggio dei riferimenti dell'oggetto.  
   
--   Un riferimento nativo \(&\) è il risultato quando si dereferenzia un \*.  Un riferimento di traccia \(%\) è il risultato quando si dereferenzia un ^.  Se si dispone di un % per un oggetto, l'oggetto rimane attivo in memoria.  
+-   Un riferimento nativo (&) è il risultato quando si dereferenzia un *. Un riferimento di traccia (%) è il risultato quando si dereferenzia un ^. Se si dispone di un % per un oggetto, l'oggetto rimane attivo in memoria.  
   
--   L'operatore punto \(`.`\) di accesso ai membri viene utilizzato per accedere a un membro dell'oggetto.  
+-   L'operatore punto (`.`) di accesso ai membri viene utilizzato per accedere a un membro dell'oggetto.  
   
--   I riferimenti di traccia sono validi per gli handle e i tipi di valore \(ad esempio `String^`\).  
+-   I riferimenti di traccia sono validi per gli handle e i tipi di valore (ad esempio `String^`).  
   
--   Un riferimento di traccia non può essere assegnato a un valore null o `nullptr`.  Può essere riassegnato a un altro oggetto valido quando necessario.  
+-   Un riferimento di traccia non può essere assegnato a un valore null o `nullptr`. Può essere riassegnato a un altro oggetto valido quando necessario.  
   
 -   Un riferimento di traccia non può essere utilizzato come operatore unario di acquisizione indirizzo.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Un riferimento di traccia si comporta come un riferimento standard C\+\+, eccetto che % è un riferimento con conteggio dei riferimenti.  Il frammento di codice riportato di seguito illustra come eseguire la conversione tra i tipi % e ^:  
+## <a name="windows-runtime"></a>Windows Runtime  
+ Un riferimento di traccia si comporta come un riferimento standard C++, eccetto che % è un riferimento con conteggio dei riferimenti. Il frammento di codice riportato di seguito illustra come eseguire la conversione tra i tipi % e ^:  
   
 ```  
 Foo^ spFoo = ref new Foo();  
@@ -69,32 +67,25 @@ ref class Foo sealed {};
     {  
         if (f != nullptr) { UseFooHelper(*f); }  
     }  
-  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- In C\+\+\/CLI è possibile usare un riferimento di traccia a un handle quando si esegue l'associazione a un oggetto di un tipo CLR nell'heap sottoposto a Garbage Collection.  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ In C++/CLI è possibile usare un riferimento di traccia a un handle quando si esegue l'associazione a un oggetto di un tipo CLR nell'heap sottoposto a Garbage Collection.  
   
  In CLR, il valore di una variabile di riferimento di traccia viene aggiornato automaticamente ogni volta che il Garbage Collector sposta l'oggetto a cui si fa riferimento.  
   
- Un riferimento di traccia può essere dichiarato solo sullo stack  e non può essere membro di una classe.  
+ Un riferimento di traccia può essere dichiarato solo sullo stack e non può essere membro di una classe.  
   
- Non è possibile avere un riferimento C\+\+ nativo a un oggetto nell'heap sottoposto a Garbage Collection.  
+ Non è possibile avere un riferimento C++ nativo a un oggetto nell'heap sottoposto a Garbage Collection.  
   
- Per ulteriori informazioni sui riferimenti di traccia in C\+\+\/CLI, vedere:  
+ Per ulteriori informazioni sui riferimenti di traccia in C++/CLI, vedere:  
   
--   [Procedura: utilizzare riferimenti di rilevamento in C\+\+\/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)  
+-   [Procedura: Usare riferimenti di rilevamento in C++/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
   
--   [Procedura: utilizzare riferimenti di rilevamento e tipi di valori](../misc/how-to-use-tracking-references-and-value-types.md)  
-  
--   [Procedura: utilizzare riferimenti di rilevamento e puntatori interni](../misc/how-to-use-tracking-references-and-interior-pointers.md)  
-  
--   [Procedura: Scrivere funzioni di modello che accettano parametri nativi, di valore o per riferimento](../misc/how-to-write-template-functions-that-take-native-value-or-reference-parameters.md)  
-  
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nel seguente esempio per C\+\+\/CLI viene illustrato come usare un riferimento di traccia con tipi gestiti e nativi.  
+ Nel seguente esempio per C++/CLI viene illustrato come usare un riferimento di traccia con tipi gestiti e nativi.  
   
 ```  
 // tracking_reference_1.cpp  
@@ -135,7 +126,7 @@ int main() {
   
  **Esempio**  
   
- Nel seguente esempio per C\+\+\/CLI viene illustrato come associare un riferimento di traccia a una matrice.  
+ Nel seguente esempio per C++/CLI viene illustrato come associare un riferimento di traccia a una matrice.  
   
 ```  
 // tracking_reference_2.cpp  
@@ -154,5 +145,7 @@ int main() {
   
  **Output**  
   
-  **21**  
- **222**
+```Output  
+21  
+222  
+```

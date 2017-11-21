@@ -1,32 +1,30 @@
 ---
-title: "hash_multimap::hash_multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multimap (membro) [STL/CLR]"
+title: 'hash_multimap:: hash_multimap (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_multimap
+dev_langs: C++
+helpviewer_keywords: hash_multimap member [STL/CLR]
 ms.assetid: a1d576a7-5dc7-4ad9-abef-ee7a13caaec3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d09f0fd54625d5f6df87305771991c65340309f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimaphashmultimap-stlclr"></a>hash_multimap::hash_multimap (STL/CLR)
 Costruisce un oggetto contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 hash_multimap();  
@@ -49,104 +47,90 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### Parametri  
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+#### <a name="parameters"></a>Parametri  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  hashfn  
- Funzione hash per eseguire il mapping delle chiavi in bucket.  
+ Funzione per le chiavi di mapping a bucket di hash.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  pred  
- Predicato utilizzato per ordinare la sequenza selezionata.  
+ Ordinamento di predicato per la sequenza controllata.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `hash_multimap();`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `key_compare()`di ordine e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato la funzione hash predefiniti dell'ordine.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato dell'ordinamento predefinito `key_compare()`e con la funzione hash predefinita. È utilizzata per specificare una sequenza controllata iniziale vuota, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato `pred`di ordine e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato specificato di ordinamento e la funzione hash predefinita.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`e con la funzione hash predefinita. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento specificato e la funzione hash predefinita.  
   
  Il costruttore:  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato `pred`di ordine e con la funzione hash `hashfn`.  Utilizzarla per specificare una sequenza iniziale controllata vuota, con il predicato la funzione hash dell'ordine specificato.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`e con la funzione hash `hashfn`. È utilizzata per specificare una sequenza controllata iniziale vuota, con la funzione di predicato e hash ordinamento specificata.  
   
  Il costruttore:  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``.`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``.`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`di hash\_multimap, con il predicato la funzione hash predefiniti dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto hash_multimap `right`, con il predicato di ordinamento predefinito e una funzione hash.  
   
  Il costruttore:  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``->`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``->`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine e con la funzione hash predefinita.  Utilizzarla per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`di hash\_multimap, con il predicato la funzione hash predefiniti dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto hash_multimap `right`, con il predicato di ordinamento predefinito e una funzione hash.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- `hash_multimap(InIter first, InIter last);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato predefinito dell'ordine e con la funzione hash predefinita.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato la funzione hash predefiniti dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato `pred`di ordine e con la funzione hash predefinita.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato specificato di ordinamento e la funzione hash predefinita.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato e la funzione hash predefinita.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato `pred`di ordine e con la funzione hash `hashfn`.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato la funzione hash dell'ordine specificato.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`e con la funzione hash `hashfn`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con la funzione di predicato e hash ordinamento specificata.  
   
  Il costruttore:  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato predefinito dell'ordine e con la funzione hash predefinita.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato la funzione hash predefiniti dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il funzione di predicato e hash dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
-  
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato `pred`di ordine e con la funzione hash predefinita.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento e la funzione hash specificati di impostazione predefinita.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`e con la funzione hash predefinita. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con la funzione di hash di predicato e predefinito ordinamento specificato.  
   
  Il costruttore:  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `key_compare^ pred, hasher^ hashfn);`  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`e con la funzione hash `hashfn`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con la funzione di predicato e hash ordinamento specificato.  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato `pred`di ordine e con la funzione hash `hashfn`.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato la funzione hash dell'ordine specificato.  
-  
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multimap_construct.cpp   
@@ -258,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 0**  
- **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **un \[1\] \[b \[2\]c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
   
- **Spazio dei nomi:** cliext  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
   
-## Vedere anche  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::generic\_container](../dotnet/hash-multimap-generic-container-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::generic_container (STL/CLR)](../dotnet/hash-multimap-generic-container-stl-clr.md)   
+ [hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

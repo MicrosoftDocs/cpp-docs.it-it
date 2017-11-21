@@ -1,27 +1,26 @@
 ---
-title: "3.3.2 omp_get_wtick Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.3.2 funzione omp_get_wtick | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1ad08500-bcb0-40d9-a81f-f131819006c9
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc7a67eebfe4cef5f9e5b3806dcd77cb77c32637
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# 3.3.2 omp_get_wtick Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_wtick` la funzione restituisce un valore in virgola mobile a precisione doppia uguale al numero di secondi tra i cicli macchina successivi.  Il formato è il seguente:  
+# <a name="332-ompgetwtick-function"></a>3.3.2 Funzione omp_get_wtick
+Il `omp_get_wtick` funzione restituisce un valore a virgola mobile e precisione doppia uguale al numero di secondi tra cicli successivi. Il formato è il seguente:  
   
 ```  
 #include <omp.h>  

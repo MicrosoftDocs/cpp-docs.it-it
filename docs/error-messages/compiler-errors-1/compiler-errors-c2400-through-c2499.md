@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -34,19 +33,17 @@ helpviewer_keywords:
 - C2478
 - C2481
 - C2497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6586dfb0e0c3d63d87d6790f0cbe1bb8a832133e
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>Del compilatore C2400 errori a C2499
 Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.  
@@ -148,7 +145,7 @@ Gli articoli in questa parte della documentazione contengono informazioni su una
 |[Errore del compilatore C2491](compiler-error-c2491.md)|'*identificatore*': definizione di dllimport *funzione* non consentito|  
 |[Errore del compilatore C2492](compiler-error-c2492.md)|'*variabile*': i dati con durata di archiviazione di thread non possono avere un'interfaccia dll|  
 |[Errore del compilatore C2493](compiler-error-c2493.md)|forma non valida di based|  
-|[Errore del compilatore C2494](compiler-error-c2494.md)|'*(parola chiave)*' non può essere chiamato dall'interno di un'espressione di filtro o \_ \_blocco finally/finally|  
+|[Errore del compilatore C2494](compiler-error-c2494.md)|'*parola chiave*' non può essere chiamato dall'interno di un'espressione di filtro o &#95; &#95; blocco finally/finally|  
 |[Errore del compilatore C2495](compiler-error-c2495.md)|'*identificatore*': '__declspec(noexcept)' può essere applicato solo a definizioni o dichiarazioni di funzione|  
 |[Errore del compilatore C2496](compiler-error-c2496.md)|'*identificatore*': 'selectany' può essere applicato solo agli elementi di dati con collegamento esterno|  
 |C2497 errore del compilatore|'*identificatore*': 'implementation_key' può essere applicato solo alle dichiarazioni di funzione|  

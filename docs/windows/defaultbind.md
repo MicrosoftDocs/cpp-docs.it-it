@@ -1,32 +1,30 @@
 ---
-title: "defaultbind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultbind attribute"
+title: defaultbind | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultbind
+dev_langs: C++
+helpviewer_keywords: defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b9e737b633d77fd658f794ba5927fc65ef1dc9a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# defaultbind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica la singola proprietà, associabile che rappresenta il metodo migliore per l'oggetto.  
+# <a name="defaultbind"></a>defaultbind
+Indica la singola proprietà associabile che meglio rappresenta l'oggetto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,30 +32,29 @@ Indica la singola proprietà, associabile che rappresenta il metodo migliore per
   
 ```  
   
-## Note  
- **defaultbind** L'attributo di C\+\+ ha la stessa funzionalità di  [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **defaultbind** attributo C++ ha la stessa funzionalità come il [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [associabile](../windows/bindable.md) per un esempio di utilizzo  **defaultbind**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio di come utilizzare **defaultbind**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|Nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
+ [Attributi del membro dati](../windows/data-member-attributes.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

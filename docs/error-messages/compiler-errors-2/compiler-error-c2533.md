@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2533
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2533
+f1_keywords: C2533
+dev_langs: C++
+helpviewer_keywords: C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: c21849c7318ac4f169bf7104a478fa57ba7dd040
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2533"></a>Errore del compilatore C2533
 'identifier': i costruttori non possono avere un tipo restituito  

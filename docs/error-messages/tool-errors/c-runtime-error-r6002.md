@@ -1,41 +1,46 @@
 ---
-title: "Errore di Runtime di C da R6002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RUNTIME DA R6002"
+title: Errore di Runtime di C da R6002 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6002
+dev_langs: C++
+helpviewer_keywords: R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b8bd95ed0b088fcfed61b7c0ff1db6343c69500
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore R6002 del linguaggio C in fase di esecuzione 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Supporto per le operazioni in virgola mobile non caricato.  
+# <a name="c-runtime-error-r6002"></a>Errore di Runtime di C da R6002
+supporto a virgola mobile non caricato.  
   
- La necessaria libreria in virgola mobile non è stata collegata.  
+ La libreria a virgola mobile necessaria non è stata collegata.  
   
-### Possibili cause  
+> [!NOTE]
+>  Se questo messaggio di errore si verifica durante l'esecuzione di un'applicazione, l'app è stato arrestato perché si è verificato un problema interno. Possibili cause di questo errore, ma spesso è dovuto a un difetto del codice dell'app o dal tentativo di eseguire un'app che non è stata creata per il processore del computer specifico.  
+>   
+>  Per risolvere questo errore, è possibile provare questi passaggi:  
+>   
+>  -   Utilizzare il **App e funzionalità** o **programmi e funzionalità** nella pagina di **Pannello di controllo** per ripristinare o reinstallare il programma.  
+> -   Controllare **Windows Update** nel **Pannello di controllo** per gli aggiornamenti software.  
+> -   Cerca una versione aggiornata dell'app. Se il problema persiste, contattare il fornitore dell'app.  
   
-1.  Il programma è stato compilato o collegato con un'opzione che richiede un coprocessore, quale l'opzione \/FPi87, ma è stato eseguito in un computer in cui non è installato un coprocessore.  
+ **Informazioni per i programmatori**  
   
-2.  Una stringa di formato per una funzione `printf_s` o `scanf_s` contiene una specifica di formato a virgola mobile mentre il programma non contiene alcun valore o variabile a virgola mobile.  
+ Questo errore può verificarsi nell'app quando la libreria a virgola mobile non è stata collegata. Verificare la presenza di una di queste cause:  
   
-3.  Il compilatore riduce le dimensioni di un programma caricando il supporto per le operazioni in virgola mobile solo quando è necessario.  Il compilatore non è in grado di rilevare specifiche di formato a virgola mobile nelle stringhe di formato e, pertanto, non carica le necessarie routine a virgola mobile.  
+-   Una stringa di formato per un `printf_s` o `scanf_s` funzione contiene una specifica di formato a virgola mobile e il programma non contiene alcun valore a virgola mobile o variabile. Per risolvere questo problema, utilizzare un argomento a virgola mobile in modo che corrisponda alla specifica di formato a virgola mobile oppure eseguire un'assegnazione a virgola mobile altrove nel programma. In questo modo il supporto a virgola mobile da caricare.  
   
-4.  Utilizzare un argomento a virgola mobile che corrisponda alla specifica di formato a virgola mobile o eseguire un'assegnazione di virgola mobile in un punto qualsiasi del programma.  In questo modo il supporto per le operazioni in virgola mobile verrà caricato.  
+-   Il compilatore riduce le dimensioni di un programma caricando solo quando è necessario il supporto a virgola mobile. Il compilatore non può rilevare operazioni a virgola mobile o specifiche di formato a virgola mobile in stringhe di formato, non è possibile caricare le routine a virgola mobile necessarie. Per risolvere questo problema, utilizzare una specifica di formato a virgola mobile e fornire un argomento a virgola mobile oppure eseguire un'assegnazione a virgola mobile altrove nel programma. In questo modo il supporto a virgola mobile da caricare.  
   
-5.  In un programma con linguaggio misto, una libreria di C è stata specificata prima di una libreria FORTRAN quando il programma è stato collegato.  Eseguire nuovamente il collegamento e specificare la libreria di C per ultima.
+-   In un programma con linguaggio misto, una libreria di C è stata specificata prima di una libreria FORTRAN quando il programma è stato collegato. Ricollega e specificare la libreria C ultima.

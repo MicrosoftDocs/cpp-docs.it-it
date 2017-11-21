@@ -1,33 +1,33 @@
 ---
-title: "How to: Pin Pointers and Arrays | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, pinning"
-  - "arrays [C++], pinning"
+title: 'Procedura: bloccare puntatori e matrici | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02c0f42042f5cdda0898e7d2c74754e68fb67113
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Pin Pointers and Arrays
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bloccare un sotto\-oggetto definito in un oggetto gestito ha l'effetto di bloccare l'intero oggetto.  Ad esempio, se un qualsiasi elemento di un array è bloccato, allora l'intero array è bloccato.  Non esistono estensioni del linguaggio per dichiarare un array bloccato.  Per bloccare un array, dichiarare un puntatore di blocco al suo tipo di elemento e bloccare uno dei suoi elementi.  
+# <a name="how-to-pin-pointers-and-arrays"></a>Procedura: bloccare puntatori e matrici
+Il blocco di un oggetto secondario definito in un oggetto gestito comporta il blocco di tutto l'oggetto.  Ad esempio, se un qualsiasi elemento di una matrice è bloccato, sarà bloccata tutta la matrice. Non esistono estensioni del linguaggio per dichiarare una matrice bloccata. Per bloccare una matrice, dichiarare un puntatore di blocco al relativo tipo di elemento e bloccarne uno degli elementi.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +49,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 ++  
 ```  
   
-## Vedere anche  
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

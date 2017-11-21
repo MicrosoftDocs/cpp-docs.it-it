@@ -1,54 +1,55 @@
 ---
-title: "Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Carattere strumento testo (finestra di dialogo)"
-  - "tipi di carattere, modifica in un'immagine"
-  - "testo, in immagini"
+title: La finestra di dialogo Carattere strumento testo (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Text Tool Font dialog box
+- fonts, changing on an image
+- text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f14e398943d71cab4e520b373834b7373146f221
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di specificare le impostazioni relative ai tipi di carattere quando si usa la [finestra di dialogo Strumento testo](../mfc/text-tool-dialog-box-image-editor-for-icons.md) dell'[Editor](../mfc/image-editor-for-icons.md) di immagini.  
+# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
+Specifica le impostazioni del carattere quando si utilizza il [finestra di dialogo strumento testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).  
   
- Utilizzare questa finestra di dialogo per eseguire le operazioni descritte di seguito.  
+ Utilizzare questa finestra di dialogo per:  
   
--   [Modifica del carattere del testo in un'immagine](../mfc/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Modifica del carattere del testo in un'immagine](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Per visualizzare la finestra di dialogo, selezionare il pulsante **Carattere** nella finestra di dialogo Strumento testo.  
+ Per accedere a questa finestra di dialogo, scegliere il **carattere** pulsante nella finestra di dialogo strumento testo.  
   
  **Tipo di carattere**  
- Vengono elencati i tipi di carattere disponibili.  
+ Elenca i tipi di carattere disponibili.  
   
- **Stile**  
- Vengono elencati gli stili disponibili per il tipo di carattere specificato.  
+ **Stile del carattere**  
+ Elenca gli stili disponibili per il tipo di carattere specificato.  
   
  **Dimensione**  
- Vengono elencate le dimensioni in punti disponibili per il tipo di carattere specificato.  
+ Elenca le dimensioni disponibili per il tipo di carattere specificato.  
   
  **Esempio**  
- Viene riportato un esempio dell'aspetto del testo in base alle impostazioni specificate per il tipo di carattere.  
+ Viene illustrato un esempio di come verrà visualizzato il testo con le impostazioni del carattere specificata.  
   
  **Script**  
- Vengono elencati gli alfabeti disponibili per il tipo di carattere specificato.  Quando si seleziona un diverso alfabeto, il set di caratteri corrispondente diventa disponibile per la creazione di documenti multilingue.  
+ Elenca gli script di linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona un lingua diversa di script, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti in più lingue.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Nessuno  
   
-## Vedere anche  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

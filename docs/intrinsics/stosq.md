@@ -1,69 +1,68 @@
 ---
-title: "__stosq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosq (istruzione)"
-  - "stosq (istruzione)"
-  - "__stosq (funzione intrinseca)"
+title: __stosq | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosq
+dev_langs: C++
+helpviewer_keywords:
+- rep stosq instruction
+- stosq instruction
+- __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6195632e6f0c395b225325ec7546a254b90cbf3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __stosq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="stosq"></a>__stosq
+**Sezione specifica Microsoft**  
   
- Genera un'istruzione della stringa dell'archivio \(`rep stosq`\).  
+ Genera un'istruzione di archivio stringa (`rep stosq`).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
+void __stosb(   
+   unsigned __int64* Dest,   
+   unsigned __int64 Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parametri  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parametri  
+ [out] `Dest`  
  La destinazione dell'operazione.  
   
- \[in\] `Data`  
- Dati da memorizzare.  
+ [in] `Data`  
+ I dati da archiviare.  
   
- \[in\] `Count`  
- La lunghezza del blocco di quadwords da scrivere.  
+ [in] `Count`  
+ La lunghezza del blocco di parole quadruple da scrivere.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il risultato è che il quadword `Data` viene scritto in un blocco di quadwords di `Count` nella stringa di `Dest` .  
+## <a name="remarks"></a>Note  
+ Il risultato è che la parola quadrupla `Data` viene scritto in un blocco di `Count` parole quadruple nel `Dest` stringa.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // stosq.c  
@@ -83,13 +82,13 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-### Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

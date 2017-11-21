@@ -1,50 +1,49 @@
 ---
-title: "Tipi gestiti (C++/CL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi __gc"
-  - "tipi [C++], CLR"
+title: Tipi (C++ CL) gestiti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __gc types
+- types [C++], CLR
 ms.assetid: 1ddd114e-be02-4de7-a4dd-a2d72ad8ff81
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 058c2c2c2c8c54a0c4c7d290326c4af453c73d05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Tipi gestiti (C++/CL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintassi per la dichiarazione di tipi gestiti e per la creazione e l'utilizzo di oggetti di questi tipi è stata modificata in modo significativo in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+,  allo scopo di promuovere l'integrazione nel sistema di tipi ISO\-C\+\+.  Queste modifiche sono illustrate in dettaglio nelle sottosezioni riportate di seguito.  
+# <a name="managed-types-ccl"></a>Tipi gestiti (C++/CL)
+La sintassi per la dichiarazione di tipi gestiti e per la creazione e utilizzo di oggetti di questi tipi è stato notevolmente modificata dalle estensioni gestite per C++ a Visual C++. Questa operazione è stata eseguita per promuovere l'integrazione nel sistema di tipi standard ISO C++. Queste modifiche sono illustrate in dettaglio nelle sezioni seguenti.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  [Dichiarazione di un tipo classe gestito](../dotnet/declaration-of-a-managed-class-type.md)  
- Illustra come dichiarare un tipo `class`, `struct` o `interface` gestito.  
+ Viene illustrato come dichiarare un oggetto gestito `class`, `struct`, o `interface`.  
   
  [Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md)  
- Illustra come dichiarare un oggetto di tipo classe di riferimento utilizzando un handle di rilevamento.  
+ Viene illustrato come dichiarare un oggetto di tipo classe di riferimento utilizzando un handle di rilevamento.  
   
  [Dichiarazione di una matrice CLR](../dotnet/declaration-of-a-clr-array.md)  
- Descrive come dichiarare e inizializzare una matrice.  
+ Viene illustrato come dichiarare e inizializzare una matrice.  
   
  [Modifiche nell'ordine di inizializzazione del costruttore](../dotnet/changes-in-constructor-initialization-order.md)  
- Illustra modifiche fondamentali nell'ordine di inizializzazione del costruttore della classe.  
+ Vengono illustrate le modifiche delle chiavi in ordine di inizializzazione di costruttore di classe.  
   
  [Modifiche nella semantica del distruttore](../dotnet/changes-in-destructor-semantics.md)  
- Illustra la finalizzazione non deterministica, il confronto tra `Finalize` e `Dispose`, le ramificazioni per gli oggetti di riferimento e l'utilizzo esplicito di `Finalize`.  
+ Illustra la finalizzazione deterministica, `Finalize` e `Dispose`, conseguenze per gli oggetti di riferimento e l'utilizzo esplicito di `Finalize`.  
   
- **Nota:** la descrizione dei delegati è rinviata a [Delegati ed eventi](../dotnet/delegates-and-events.md) allo scopo di presentarli con i membri di evento in una classe, che costituiscono l'argomento generale di [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
+ **Nota:** la discussione di delegati viene posticipata fino alla [delegati ed eventi](../dotnet/delegates-and-events.md) per presentare i membri dell'evento all'interno di una classe, l'argomento generale di [dichiarazioni di membro all'interno di una classe o interfaccia (C + C++ /CLI) ](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
   
-## Vedere anche  
- [Nozioni di base della migrazione in C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [C + + CLI nozioni di base della migrazione](../dotnet/cpp-cli-migration-primer.md)   
+ [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [Array](../windows/arrays-cpp-component-extensions.md)

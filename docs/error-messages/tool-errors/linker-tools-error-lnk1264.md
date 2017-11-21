@@ -1,31 +1,29 @@
 ---
-title: "Errore degli strumenti del linker LNK1264 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1264"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1264"
+title: Strumenti del linker LNK1264 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1264
+dev_langs: C++
+helpviewer_keywords: LNK1264
 ms.assetid: 23b1aad7-d382-42c1-bae8-db68575c57a8
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d58bad22604509546e7f1645b56594653d33b070
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Errore degli strumenti del linker LNK1264
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-opzione \/LTCG:PGINSTRUMENT specificata ma non è richiesta la generazione di codice; strumentazione non riuscita  
+# <a name="linker-tools-error-lnk1264"></a>Errore degli strumenti del linker LNK1264
+/LTCG: PGINSTRUMENT specificato ma non richiesta; la generazione di codice strumentazione non riuscita  
   
- È stata specificata l'opzione **\/LTCG:PGINSTRUMENT**, ma non è stato trovato alcun file obj compilato con [\/GL](../../build/reference/gl-whole-program-optimization.md).  Non è possibile eseguire la strumentazione e il collegamento non viene eseguito correttamente.  Nella riga di comando deve essere presente almeno un file obj compilato con **\/GL** per consentire la strumentazione.  
+ **/LTCG: PGINSTRUMENT** è stato specificato ma non sono stati trovati file. obj che sono stati compilati con [/GL](../../build/reference/gl-whole-program-optimization.md). Strumentazione non è possibile eseguire sul posto e il collegamento non è riuscita. Deve esistere almeno un file con estensione obj nella riga di comando che viene compilato con **/GL** in modo che la strumentazione.  
   
- L'ottimizzazione PGO è disponibile solo per i compilatori a 64 bit.
+ Ottimizzazione PGO (PGO) è disponibile solo per i compilatori a 64 bit.

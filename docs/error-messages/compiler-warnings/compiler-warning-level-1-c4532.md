@@ -1,32 +1,30 @@
 ---
-title: "Avviso del compilatore (livello 1) C4532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4532"
+title: Compilatore avviso (livello 1) C4532 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4532
+dev_langs: C++
+helpviewer_keywords: C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5cec2f70dfa6781c237cc1c08079904c7b48e171
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Avviso del compilatore (livello 1) C4532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'continuazione': il salto dal blocco \_\_finally genera un comportamento indefinito durante la gestione della terminazione  
+# <a name="compiler-warning-level-1-c4532"></a>Avviso del compilatore (livello 1) C4532
+'continue': salto dal blocco finally/finally un comportamento indefinito durante la gestione della terminazione  
   
- È stata rilevata una delle seguenti parole chiave:  
+ Il compilatore ha rilevato una delle parole chiave seguenti:  
   
 -   [continue](../../cpp/continue-statement-cpp.md)  
   
@@ -34,13 +32,13 @@ caps.handback.revision: 9
   
 -   [goto](../../cpp/goto-statement-cpp.md)  
   
- che provoca l'uscita da un blocco [\_\_finally](../../cpp/try-finally-statement.md) o [finally](../../dotnet/finally.md) durante una terminazione anomala.  
+ provoca l'uscita da un [finally](../../cpp/try-finally-statement.md) o [infine](../../dotnet/finally.md) blocco terminazione anomala.  
   
- Se viene generata un'eccezione e, mentre lo stack viene svuotato durante l'esecuzione dei gestori di terminazione \(blocchi `__finally` o finally\), viene eseguita l'uscita da un blocco `__finally` prima che il blocco `__finally` termini, il comportamento sarà indefinito.  È possibile che il controllo non torni al codice di svuotamento e che, pertanto, l'eccezione non venga gestita correttamente.  
+ Se si verifica un'eccezione, mentre lo stack viene rimossa durante l'esecuzione dei gestori di terminazione (il `__finally` o blocchi), e il codice passa da un `__finally` bloccare prima il `__finally` termina in blocco, il comportamento è indefinito. Controllo non può restituire per il codice di rimozione, in modo l'eccezione potrebbe non essere gestita correttamente.  
   
- Se è necessario uscire da un blocco **\_\_finally** , verificare prima la presenza di terminazioni anomale.  
+ Se è necessario uscire da un **finally** blocco, verificare prima della terminazione anomala.  
   
- Nell'esempio seguente viene generato l'avviso C4532. Per evitare la visualizzazione degli avvisi, è sufficiente impostare le istruzioni di spostamento come commento.  
+ L'esempio seguente genera l'avviso C4532. è sufficiente impostare come commento le istruzioni di spostamento per risolvere gli avvisi.  
   
 ```  
 // C4532.cpp  

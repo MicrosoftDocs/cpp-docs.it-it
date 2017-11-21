@@ -1,32 +1,30 @@
 ---
-title: "Classe SyncLockT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockT (classe)"
+title: SyncLockT (classe) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockT
+dev_langs: C++
+helpviewer_keywords: SyncLockT class
 ms.assetid: a967f6f7-3555-43d1-b210-2bb65d63d15e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70e50f4ab18cdfddc3330e5c23e5808040c354bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Classe SyncLockT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="synclockt-class"></a>SyncLockT (classe)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -35,51 +33,51 @@ template <
 class SyncLockT;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `SyncTraits`  
- Il tipo che può utilizzare la proprietà di una risorsa.  
+ Tipo che può diventare proprietari di una risorsa.  
   
-## Note  
- Rappresenta un tipo che può accettare solo proprietà in esclusiva o condivise di una risorsa.  
+## <a name="remarks"></a>Note  
+ Rappresenta un tipo che può richiedere esclusivo o proprietà di una risorsa condivisa.  
   
- La classe di SyncLockT viene utilizzata, ad esempio, per facilitare l'implementazione della classe [SRWLock](../windows/srwlock-class.md).  
+ SyncLockT (classe) viene utilizzata, ad esempio, per facilitare l'implementazione di [SRWLock](../windows/srwlock-class.md) classe.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza della classe SyncLockT.|  
-|[Distruttore SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|De\-inizializza un'istanza della classe SyncLockT.|  
-  
-### Costruttori protetti  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza della classe SyncLockT.|  
+|[Distruttore SyncLockT::~SyncLockT](../windows/synclockt-tilde-synclockt-destructor.md)|Deinizializza un'istanza della classe SyncLockT.|  
   
-### Metodi pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se l'oggetto SynckLockT corrente possiede una risorsa; ovvero, l'oggetto SyncLockT è *locked*.|  
-|[Metodo SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Lascia il controllo delle risorse utilizzatate dall'oggetto corrente di SyncLockT, se disponibile.|  
-  
-### Membri di dati protetti  
+### <a name="protected-constructors"></a>Costruttori protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati SyncLockT::sync\_](../windows/synclockt-sync-data-member.md)|Contiene la risorsa sottostante rappresentata dalla classe di SyncLockT.|  
+|[Costruttore SyncLockT::SyncLockT](../windows/synclockt-synclockt-constructor.md)|Inizializza una nuova istanza della classe SyncLockT.|  
   
-## Gerarchia di ereditarietà  
+### <a name="public-methods"></a>Metodi pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Metodo SyncLockT::IsLocked](../windows/synclockt-islocked-method.md)|Indica se l'oggetto SyncLockT corrente appartiene a una risorsa. l'oggetto SyncLockT è *bloccato*.|  
+|[Metodo SyncLockT::Unlock](../windows/synclockt-unlock-method.md)|Restituisce il controllo della risorsa contenuta nell'oggetto SyncLockT corrente, se presente.|  
+  
+### <a name="protected-data-members"></a>Membri dati protetti  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Membro dati SyncLockT::sync_](../windows/synclockt-sync-data-member.md)|Contiene la risorsa sottostante rappresentata dalla classe SyncLockT.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SyncLockT`  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers::Details  
   
-## Vedere anche  
- [Spazio dei nomi Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Namespace Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)   
  [Classe SRWLock](../windows/srwlock-class.md)

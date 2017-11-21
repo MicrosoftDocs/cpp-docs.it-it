@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY (macro)"
+title: PROVIDER_COLUMN_ENTRY | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY macro
 ms.assetid: 7921cfc1-aa9c-493e-8fc4-9d4294cafe72
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e8a97beb60dcc08fb442322191d8a515bdbdbc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta una determinata colonna supportati dal provider.  
+# <a name="providercolumnentry"></a>PROVIDER_COLUMN_ENTRY
+Rappresenta una colonna specifica è supportata dal provider.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,21 +33,21 @@ name
 , ordinal, member )  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *name*  
- \[in\] nome della colonna.  
+ [in] Il nome della colonna.  
   
  `ordinal`  
- \[in\] numero di colonne.  A meno che la colonna sia una colonna bookmark, il numero di colonne non deve essere 0.  
+ [in] Numero di colonna. A meno che la colonna è una colonna del segnalibro, il numero di colonna non deve essere 0.  
   
  `member`  
- \[in\] la variabile membro in `dataClass` che corrisponde alla colonna.  
+ [in] La variabile membro in `dataClass` corrispondente alla colonna.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -1,39 +1,38 @@
 ---
-title: "Variable Argument Lists (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variable argument lists"
-  - "parameter arrays"
+title: Elenchi di argomenti variabili (...) (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af3742ae4c8f22dd2b5cef8189d02e8f19f7c9fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Variable Argument Lists (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo esempio viene illustrato come utilizzare la sintassi `...` in Visual C\+\+ per implementare funzioni con un numero variabile di argomenti.  
+# <a name="variable-argument-lists--ccli"></a>Elenchi di argomenti variabili (...) (C++/CLI)
+In questo esempio viene illustrato come utilizzare il `...` sintassi in Visual C++ per implementare le funzioni che hanno un numero variabile di argomenti.  
   
 > [!NOTE]
->  Questo argomento riguarda C\+\+\/CLI.  Per informazioni sull'utilizzo di `...` in C\+\+ Standard ISO, vedere [Ellissi e modelli variadic](../cpp/ellipses-and-variadic-templates.md) e [Puntini di sospensione e argomenti predefiniti](../misc/ellipses-and-default-arguments.md).  
+>  Questo argomento si riferisce al C + + CLI. Per informazioni sull'utilizzo di `...` in C++ Standard ISO, vedere [ellissi e modelli Variadic](../cpp/ellipses-and-variadic-templates.md) e puntini di sospensione e argomenti predefiniti in [espressioni in forma suffissa](../cpp/postfix-expressions.md).  
   
- Il parametro che utilizza `...` deve essere l'ultimo parametro presente nell'elenco di parametri.  
+ Il parametro che utilizza `...` deve essere l'ultimo parametro nell'elenco di parametri.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +53,14 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 3  
 ```  
   
-## Esempio di codice  
- Nell'esempio seguente viene illustrato come chiamare da C\# una funzione di Visual C\+\+ che accetta un numero di argomenti variabile.  
+## <a name="code-example"></a>Esempio di codice  
+ Nell'esempio seguente viene illustrato come chiamare da c#, una funzione di Visual C++ che accetta un numero variabile di argomenti.  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +73,9 @@ public:
 };  
 ```  
   
- La funzione `f` può essere chiamata da C\# o Visual Basic, ad esempio, come se fosse una funzione che può accettare un numero variabile di argomenti.  
+ La funzione `f` può essere chiamato da c# o Visual Basic, ad esempio, come se fosse una funzione che può accettare un numero variabile di argomenti.  
   
- In C\#, un argomento passato a un parametro `ParamArray` può essere chiamato da un numero variabile di argomenti.  L'esempio di codice riportato di seguito è in C\#.  
+ In c#, un argomento passato a un `ParamArray` parametro può essere chiamato da un numero variabile di argomenti. Esempio di codice seguente è in c#.  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +92,7 @@ public class X {
 }  
 ```  
   
- Una chiamata a `f` in Visual C\+\+ può passare una matrice inizializzata o una matrice di lunghezza variabile.  
+ Una chiamata a `f` in Visual C++ è possibile passare una matrice inizializzata o una matrice a lunghezza variabile.  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +110,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Array](../windows/arrays-cpp-component-extensions.md)

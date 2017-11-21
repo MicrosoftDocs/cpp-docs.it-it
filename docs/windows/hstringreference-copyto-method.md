@@ -1,28 +1,28 @@
 ---
-title: "Metodo HStringReference::CopyTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Metodo hstringreference:: CopyTo | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 179d9b14-1ced-4b16-b297-19ca1e92a462
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f93dd138490834451a665761f4c575a751bfe7ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Metodo HStringReference::CopyTo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia l'oggetto corrente di HStringReference a un oggetto di HSTRING.  
+# <a name="hstringreferencecopyto-method"></a>Metodo HStringReference::CopyTo
+Copie di HStringReference corrente dell'oggetto a un oggetto HSTRING.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -31,17 +31,17 @@ HRESULT CopyTo(
    ) const throw();  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `str`  
- Il HSTRING che riceve la copia.  
+ HSTRING che riceve la copia.  
   
-## Note  
- Questo metodo [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) chiama la funzione.  
+## <a name="remarks"></a>Note  
+ Questo metodo chiama il [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) (funzione).  
   
-## Requisiti  
- **Intestazione:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HStringReference](../windows/hstringreference-class.md)

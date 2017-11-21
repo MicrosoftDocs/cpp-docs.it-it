@@ -1,58 +1,56 @@
 ---
-title: "__writedr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__writedr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__writedr (funzione intrinseca)"
+title: __writedr | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __writedr
+dev_langs: C++
+helpviewer_keywords: __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e5a87f7339481378c3a7fb6af7201dd13a3ede59
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# __writedr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Scrive il valore specificato nel log specificato di debug.  
+# <a name="writedr"></a>__writedr
+Scrive il valore specificato per il Registro di debug specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __writedr(unsigned DebugRegister, unsigned DebugValue);  
 void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);  
 ```  
   
-#### Parametri  
- \[in\] `DebugRegister`  
- Un numero da 0 a 7 che identifica il log di debug.  
+#### <a name="parameters"></a>Parametri  
+ [in] `DebugRegister`  
+ Registrare un numero compreso tra 0 e 7 che identifica il debug.  
   
- \[in\]`DebugValue`  
- Un valore da scrivere nel log di debug.  
+ [in] `DebugValue`  
+ Registrare un valore da scrivere per il debug.  
   
-## Note  
- Queste intrinseci sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__writedr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_readdr](../intrinsics/readdr.md)
+ [__readdr](../intrinsics/readdr.md)

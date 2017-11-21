@@ -1,189 +1,202 @@
 ---
-title: "Gestione delle eccezioni nel runtime di concorrenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attività leggere, gestione delle eccezioni [Runtime di concorrenza]"
-  - "gestione delle eccezioni [Runtime di concorrenza]"
-  - "gruppi di attività strutturate, gestione delle eccezioni [Runtime di concorrenza]"
-  - "agenti, gestione delle eccezioni [Runtime di concorrenza]"
-  - "gruppi di attività, gestione delle eccezioni [Runtime di concorrenza]"
+title: Gestione delle eccezioni nel Runtime di concorrenza | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- lightweight tasks, exception handling [Concurrency Runtime]
+- exception handling [Concurrency Runtime]
+- structured task groups, exception handling [Concurrency Runtime]
+- agents, exception handling [Concurrency Runtime]
+- task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 29
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 26
+caps.latest.revision: "29"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a2820daea9508145a200fc5dfd82098ac2572b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Gestione delle eccezioni nel runtime di concorrenza
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="exception-handling-in-the-concurrency-runtime"></a>Gestione delle eccezioni nel runtime di concorrenza
+Il Runtime di concorrenza Usa per comunicare molti tipi di errori di gestione delle eccezioni di C++. Utilizzo non valido di runtime, errori di runtime, ad esempio un errore per acquisire una risorsa e gli errori che si verificano tali errori includono le funzioni di lavoro che permette alle attività e gruppi di attività. Quando un'attività o un gruppo di attività genera un'eccezione, il runtime gestisce l'eccezione e ne esegue il marshalling per il contesto in attesa per l'attività o un gruppo di attività. Per i componenti, ad esempio le attività e gli agenti, il runtime gestisce le eccezioni per l'utente. In questi casi, è necessario implementare un meccanismo di gestione delle eccezioni. In questo argomento viene descritto come il runtime gestisce le eccezioni generate dall'attività, gruppi di attività, dalle attività leggere e dagli agenti asincroni e come rispondere alle eccezioni nelle applicazioni.  
+  
+## <a name="key-points"></a>Punti chiave  
+  
+-   Quando un'attività o un gruppo di attività genera un'eccezione, il runtime gestisce l'eccezione e ne esegue il marshalling per il contesto in attesa per l'attività o un gruppo di attività.  
+  
+-   Quando possibile, racchiudere ogni chiamata a [concurrency::task::get](reference/task-class.md#get) e [concurrency::task::wait](reference/task-class.md#wait) con un `try` / `catch` blocco per gestire gli errori che è possibile ripristinare Da. Il runtime termina l'applicazione se un'attività genera un'eccezione e non viene rilevata dall'attività, una delle relative continuazioni o dell'applicazione principale.  
+  
+-   Viene eseguito sempre una continuazione basata su attività; non è importante se l'attività precedente è stata completata, ha generato un'eccezione o è stata annullata. Una continuazione basata su valore non viene eseguito se l'attività precedente genera un'eccezione o Annulla.  
+  
+-   Poiché le continuazioni basate su attività vengono sempre eseguiti, considerare la possibilità di aggiungere una continuazione basata su attività alla fine della catena di continuazione. Ciò consente di garantire che il codice rileva tutte le eccezioni.  
+  
+-   Il runtime genera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) quando si chiama [concurrency::task::get](reference/task-class.md#get) e tale attività viene annullata.  
 
-Il runtime di concorrenza utilizza la gestione delle eccezioni C\+\+ per comunicare molti tipi di errori.  Questi errori includono l'utilizzo non valido del runtime, errori di runtime come l'acquisizione non riuscita di una risorsa ed errori che si verificano nelle funzioni lavoro fornite alle attività e ai gruppi di attività.  Quando un'attività o un gruppo di attività genera un'eccezione, il runtime gestisce l'eccezione e ne esegue il marshalling nel contesto che attende il completamento dell'attività o del gruppo di attività.  Il runtime non gestisce le eccezioni per i componenti come le attività leggere e gli agenti.  In questi casi, è necessario implementare un meccanismo di gestione delle eccezioni personalizzato.  In questo argomento viene descritto come il runtime gestisce le eccezioni generate dalle attività, dai gruppi di attività, dalle attività leggere e dagli agenti asincroni e come rispondere alle eccezioni nelle applicazioni.  
   
-## Punti chiave  
+-   Il runtime gestisce le eccezioni per le attività e gli agenti.  
   
--   Quando un'attività o un gruppo di attività genera un'eccezione, il runtime gestisce l'eccezione e ne esegue il marshalling nel contesto che attende il completamento dell'attività o del gruppo di attività.  
+##  <a name="top"></a>In questo documento  
   
--   Quando possibile, racchiudere ogni chiamata a [concurrency::task::get](../Topic/task::get%20Method.md) e a [concurrency::task::wait](../Topic/task::wait%20Method.md) con un blocco `try`\/`catch` per gestire gli errori che si possono recuperare.  L'applicazione verrà terminata dal runtime se un'attività genera un'eccezione e tale eccezione non viene intercettata dall'attività, da una delle sue continuazioni o dall'applicazione principale.  
+- [Attività e continuazioni](#tasks)  
   
--   Una continuazione basata su attività viene sempre eseguita; non è importante se l'attività precedente è stata completata correttamente, ha generato un'eccezione oppure è stata annullata.  Una continuazione basata su valori non viene eseguita se l'attività precedente ha generato un'eccezione o se è stata cancellata.  
+- [Gruppi di attività e algoritmi paralleli](#task_groups)  
   
--   Poiché le continuazioni basate su attività vengono sempre eseguite, è necessario considerare l'aggiunta di una continuazione basata su attività alla fine della catena di continuazione.  Questa operazione può permettere al codice di rilevare tutte le eccezioni.  
+- [Eccezioni generate dal Runtime](#runtime)  
   
--   Il runtime genera [concurrency::task\_canceled](../../parallel/concrt/reference/task-canceled-class.md) quando si chiama [concurrency::task::get](../Topic/task::get%20Method.md) e l'attività viene annullata.  
+- [Più eccezioni](#multiple)  
   
--   Il runtime non gestisce le eccezioni per le attività leggere e gli agenti.  
+- [Annullamento](#cancellation)  
   
-##  <a name="top"></a> In questo documento  
+- [Attività leggere](#lwts)  
   
--   [Attività e continuazioni](#tasks)  
+- [Agenti asincroni](#agents)  
   
--   [Gruppi di attività e algoritmi paralleli](#task_groups)  
+##  <a name="tasks"></a>Attività e continuazioni  
+ In questa sezione viene descritto come il runtime gestisce le eccezioni generate da [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) oggetti e delle relative continuazioni. Per ulteriori informazioni sul modello di attività e continuazione, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
--   [Eccezioni generate dal runtime](#runtime)  
+ Quando si genera un'eccezione nel corpo di una funzione lavoro passata a un `task` dell'oggetto, il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama [concurrency::task::get](reference/task-class.md#get) o [concurrency:: Task:: Wait](reference/task-class.md#wait). Il documento [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) descrive basato su attività e continuazioni basate su valore, ma al riepilogo, una continuazione basata su valore accetta un parametro di tipo `T` e una continuazione basata su attività accetta un parametro di tipo `task<T>`. Se un'attività che genera un'eccezione ha uno o più continuazioni basate su valori, tali continuazioni non pianificati per l'esecuzione. Il seguente esempio illustra questo comportamento.  
+
   
--   [Più eccezioni](#multiple)  
+ [!code-cpp[concrt-eh-task#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_1.cpp)]  
   
--   [Annullamento](#cancellation)  
+ Una continuazione basata su attività consente di gestire qualsiasi eccezione generata dall'attività precedente. Viene eseguito sempre una continuazione basata su attività; non è importante se l'attività è stata completata, ha generato un'eccezione o è stata annullata. Quando un'attività genera un'eccezione, relative continuazioni basate su attività vengono pianificate per l'esecuzione. Nell'esempio seguente mostra un'attività che genera sempre un'eccezione. L'attività ha due continuazioni; uno è basato su un valore e l'altro è basato su attività. L'eccezione basato su attività viene sempre eseguito e pertanto può intercettare l'eccezione generata dall'attività precedente. Quando l'esempio in attesa di entrambe le continuazioni al completamento, l'eccezione viene generata di nuovo perché viene sempre generata quando l'eccezione di attività `task::get` o `task::wait` viene chiamato.  
   
--   [Attività leggere](#lwts)  
+ [!code-cpp[concrt-eh-continuations#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_2.cpp)]  
   
--   [Agenti asincroni](#agents)  
+ È consigliabile utilizzare le continuazioni basate su attività per intercettare le eccezioni che si sono in grado di gestire. Poiché le continuazioni basate su attività vengono sempre eseguiti, considerare la possibilità di aggiungere una continuazione basata su attività alla fine della catena di continuazione. Ciò consente di garantire che il codice rileva tutte le eccezioni. Nell'esempio seguente viene illustrata una catena di continuazione basato su un valore di base. Genera la terza attività nella catena, e pertanto non vengono eseguite le continuazioni basate su valori che lo seguono. Tuttavia, la continuazione finale è basato su attività e pertanto viene sempre eseguito. La continuazione finale gestisce l'eccezione generata dall'attività di terzi.  
   
-##  <a name="tasks"></a> Attività e continuazioni  
- In questa sezione viene descritto come il runtime gestisce le eccezioni generate dagli oggetti [concurrency::task](../../parallel/concrt/reference/task-class-concurrency-runtime.md) e dalle loro continuazioni.  Per ulteriori informazioni sull'attività e sul modello di continuazione, vedere [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ È consigliabile intercettare le eccezioni più specifiche che è possibile. Se non si dispone di eccezioni specifiche catch, è possibile omettere la continuazione basata su attività finale. Qualsiasi eccezione rimane non gestita e può terminare l'applicazione.  
   
- Quando si genera un'eccezione nel corpo di una funzione lavoro passata ad un oggetto `task`, il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama [concurrency::task::get](../Topic/task::get%20Method.md) o [concurrency::task::wait](../Topic/task::wait%20Method.md).  Il documento [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) descrive le continuazioni basate su attività e quelle basate su valori, ma per riepilogare, una continuazione basata su valori accetta un parametro di tipo `T` mentre una continuazione basata su attività accetta un parametro di tipo `task<T>`.  Se un'attività che genera un'eccezione ha una o più continuazioni basate su valori, tali continuazioni non verranno pianificate per l'esecuzione.  Questo comportamento è illustrato nell'esempio seguente:  
-  
- [!code-cpp[concrt-eh-task#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_1.cpp)]  
-  
- Una continuazione basata su attività consente di gestire qualsiasi eccezione generata dall'attività precedente.  Una continuazione basata su attività viene sempre eseguita; non è importante se l'attività è stata completata correttamente, ha generato un'eccezione oppure è stata annullata.  Quando un'attività genera un'eccezione, le sue continuazioni basate su attività verranno pianificate per l'esecuzione.  Nell'esempio seguente viene mostrata un'attività che genera sempre un'eccezione.  L'attività presenta due continuazioni; una è basata su valori mentre l'altra è basata su attività.  La continuazione basata su attività viene sempre eseguita e quindi può rilevare l'eccezione generata dall'attività precedente.  Quando nell'esempio si rimane in attesa della terminazione di entrambe le continuazioni, l'eccezione viene generata di nuovo poiché l'eccezione dell'attività viene sempre generata quando `task::get` o `task::wait` vengono chiamati.  
-  
- [!code-cpp[concrt-eh-continuations#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_2.cpp)]  
-  
- È consigliabile utilizzare le continuazioni basate su attività per rilevare le eccezioni gestibili.  Poiché le continuazioni basate su attività vengono sempre eseguite, è necessario considerare l'aggiunta di una continuazione basata su attività alla fine della catena di continuazione.  Questa operazione può permettere al codice di rilevare tutte le eccezioni.  Nell'esempio seguente viene illustrata una catena di continuazioni basate su valori.  La terza attività nella catena genera un'eccezione, pertanto tutte le continuazioni basate su valori che seguono non verranno eseguite.  Tuttavia, la continuazione finale è basata su attività e pertanto verrà sempre eseguita.  La continuazione finale gestisce l'eccezione generata dalla terza attività.  
-  
- È consigliabile intercettare le eccezioni nel modo più specifico possibile.  È possibile omettere la continuazione finale basata su attività se non si hanno eccezioni specifiche da rilevare.  Qualsiasi eccezione rimarrà non gestita e potrà terminare l'applicazione.  
-  
- [!code-cpp[concrt-eh-task-chain#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_3.cpp)]  
+ [!code-cpp[concrt-eh-task-chain#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_3.cpp)]  
   
 > [!TIP]
->  È possibile utilizzare il metodo [concurrency::task\_completion\_event::set\_exception](../../parallel/concrt/reference/task-completion-event-class.md) per associare un'eccezione ad un evento di completamento delle attività.  Il documento [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) descrive la classe [concurrency::task\_completion\_event](../../parallel/concrt/reference/task-completion-event-class.md) più dettagliatamente.  
+>  È possibile utilizzare il [concurrency::task_completion_event::set_exception](../../parallel/concrt/reference/task-completion-event-class.md) metodo per associare un'eccezione a un evento di completamento attività. Il documento [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md) descrive il [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) classe in modo più dettagliato.  
   
- [concurrency::task\_canceled](../../parallel/concrt/reference/task-canceled-class.md) è un tipo di eccezione runtime importante correlato a `task`.  Il runtime genera `task_canceled` quando si chiama `task::get` e l'attività viene annullata. \(Viceversa, `task::wait` restituisce [task\_status::canceled](../Topic/task_group_status%20Enumeration.md) e non genera eccezioni.\) È possibile intercettare e gestire questa eccezione con una continuazione basata su attività o quando si chiama `task::get`.  Per ulteriori informazioni sull'annullamento delle attività, vedere [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
-  
-> [!CAUTION]
->  Non generare mai `task_canceled` dal codice.  Si chiami invece [concurrency::cancel\_current\_task](../Topic/cancel_current_task%20Function.md).  
-  
- L'applicazione verrà terminata dal runtime se un'attività genera un'eccezione e tale eccezione non viene intercettata dall'attività, da una delle sue continuazioni o dall'applicazione principale.  Se l'applicazione si arresta in modo anomalo, è possibile configurare Visual Studio per interrompere l'esecuzione quando vengono generate eccezioni C\+\+.  Dopo aver diagnosticato la posizione dell'eccezione non gestita, utilizzare una continuazione basata su attività per la sua gestione.  
-  
- La sezione [Eccezioni generate dal runtime](#runtime) in questo documento descrive in dettaglio come gestire le eccezioni del runtime.  
-  
- \[[Top](#top)\]  
-  
-##  <a name="task_groups"></a> Gruppi di attività e algoritmi paralleli  
- In questa sezione viene descritto come il runtime gestisce le eccezioni generate dai gruppi di attività.  Questa sezione si applica anche agli algoritmi paralleli come [concurrency::parallel\_for](../Topic/parallel_for%20Function.md), poiché tali algoritmi sono basati sui gruppi di attività.  
+
+ [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) è un tipo di eccezione di runtime importanti che si riferisce a `task`. Il runtime genera `task_canceled` quando si chiama `task::get` e tale attività viene annullata. (Al contrario, `task::wait` restituisce [task_status:: Canceled](reference/concurrency-namespace-enums.md#task_group_status) e non genera eccezioni.) È possibile rilevare e gestire questa eccezione da una continuazione basata su attività o quando si chiama `task::get`. Per ulteriori informazioni sull'annullamento di attività, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).  
+
   
 > [!CAUTION]
->  Assicurarsi di comprendere gli effetti che le eccezioni hanno sulle attività dipendenti.  Per le procedure consigliate su come utilizzare la gestione delle eccezioni con le attività o con gli algoritmi paralleli, vedere la sezione [Come l'annullamento e la gestione delle eccezioni influiscono sull'eliminazione degli oggetti](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) nelle procedure consigliate dell'argomento PPL \(Parallel Patterns Library\).  
+>  Non generare mai `task_canceled` dal codice. Chiamare [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) invece.  
   
- Per ulteriori informazioni sui gruppi di attività, vedere [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  Per ulteriori informazioni sugli algoritmi paralleli, vedere [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
+ Il runtime termina l'applicazione se un'attività genera un'eccezione e non viene rilevata dall'attività, una delle relative continuazioni o dell'applicazione principale. Se l'applicazione si blocca, è possibile configurare Visual Studio per interrompere l'esecuzione quando vengono generate eccezioni di C++. Dopo avere diagnosticato il percorso dell'eccezione non gestita, è possibile utilizzare una continuazione basata su attività per gestirla.  
   
- Quando si genera un'eccezione nel corpo di una funzione lavoro passata a un oggetto [concurrency::task\_group](../Topic/task_group%20Class.md) o [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md), il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama [concurrency::task\_group::wait](../Topic/task_group::wait%20Method.md), [concurrency::structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md), [concurrency::task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md) o [concurrency::structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md).  Il runtime arresta inoltre tutte le attività attive presenti nel gruppo di attività, comprese quelle presenti nei gruppi di attività figlio, ed elimina le attività che non sono ancora state avviate.  
+ La sezione [le eccezioni generate dal Runtime](#runtime) in questo documento viene descritto come gestire le eccezioni di runtime in modo più dettagliato.  
   
- Nell'esempio seguente viene illustrata la struttura di base di una funzione lavoro che genera un'eccezione.  Nell'esempio viene utilizzato un oggetto `task_group` per visualizzare i valori di due oggetti `point` in parallelo.  La funzione lavoro `print_point` visualizza i valori di un oggetto `point` nella console.  La funzione lavoro genera un'eccezione se il valore di input è `NULL`.  Il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama `task_group::wait`.  
+ [[Torna all'inizio](#top)]  
   
- [!code-cpp[concrt-eh-task-group#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_4.cpp)]  
+##  <a name="task_groups"></a>Gruppi di attività e algoritmi paralleli  
+
+ In questa sezione viene descritto come il runtime gestisce le eccezioni generate dai gruppi di attività. In questa sezione si applica anche per gli algoritmi paralleli, ad esempio [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for), poiché questi algoritmi si basano sui gruppi di attività.  
   
- Questo esempio produce l'output che segue.  
+> [!CAUTION]
+>  Assicurarsi di comprendere gli effetti sulle attività dipendenti eccezioni. Per le procedure consigliate sull'utilizzo delle eccezioni con le attività o gli algoritmi paralleli, vedere il [comprendere come eccezione eccezioni influiscono sull'oggetto eliminazione e annullamento](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) sezione nelle procedure consigliate in parallelo Argomento di libreria di modelli.  
   
-  **X \= 15, Y \= 30**  
-**Caught exception: point is NULL.** Per un esempio completo in cui viene utilizzata la gestione delle eccezioni in un gruppo di attività, vedere [Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
+ Per ulteriori informazioni sui gruppi di attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Per ulteriori informazioni sugli algoritmi paralleli, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  
+
+ Quando si genera un'eccezione nel corpo di una funzione lavoro passata a un [Concurrency:: task_group](reference/task-group-class.md) o [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) dell'oggetto, il runtime archivia l'eccezione e ne esegue il marshalling il contesto che chiama [Concurrency](reference/task-group-class.md#wait), [Concurrency](reference/structured-task-group-class.md#wait), [run_and_wait](reference/task-group-class.md#run_and_wait), o [concurrency::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait). Inoltre, il runtime arresta tutte le attività attive che sono nel gruppo di attività (compresi quelli in gruppi di attività figlio) ed Elimina tutte le attività che non sono ancora avviate.  
+
   
- \[[Top](#top)\]  
+ Nell'esempio seguente viene illustrata la struttura di base di una funzione lavoro che genera un'eccezione. Nell'esempio viene utilizzato un `task_group` oggetto per visualizzare i valori di due `point` oggetti in parallelo. Il `print_point` funzione lavoro stampati i valori di un `point` oggetto nella console. La funzione lavoro genera un'eccezione se il valore di input è `NULL`. Il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama `task_group::wait`.  
   
-##  <a name="runtime"></a> Eccezioni generate dal runtime  
- Un'eccezione può verificarsi a causa di una chiamata al runtime.  La maggior parte dei tipi di eccezione, esclusi [concurrency::task\_canceled](../../parallel/concrt/reference/task-canceled-class.md) e [concurrency::operation\_timed\_out](../../parallel/concrt/reference/operation-timed-out-class.md), indicano un errore di programmazione.  Questi errori sono in genere irreversibili e pertanto non devono essere rilevati o gestiti dal codice dell'applicazione.  È consigliabile rilevare o gestire gli errori irreversibili nel codice dell'applicazione solo quando è necessario diagnosticare gli errori di programmazione.  Tuttavia, tramite la comprensione dei tipi di eccezione definiti dal runtime è possibile diagnosticare gli errori di programmazione.  
+ [!code-cpp[concrt-eh-task-group#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_4.cpp)]  
   
- Il meccanismo di gestione delle eccezioni è lo stesso sia per le eccezioni generate dal runtime che per le eccezioni generate dalle funzioni lavoro.  La funzione [concurrency::receive](../Topic/receive%20Function.md), ad esempio, genera `operation_timed_out` quando non viene ricevuto un messaggio nel periodo di tempo specificato.  Se `receive` genera un'eccezione in una funzione lavoro passata a un gruppo di attività, il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait` o `structured_task_group::run_and_wait`.  
+ Questo esempio produce il seguente output:  
   
- Nell'esempio seguente viene utilizzato l'algoritmo [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) per eseguire due attività in parallelo.  La prima attività attende cinque secondi, quindi invia un messaggio a un buffer dei messaggi.  La seconda attività utilizza la funzione `receive` per attendere tre secondi per la ricezione di un messaggio dallo stesso buffer dei messaggi.  Se il messaggio non viene ricevuto nel periodo di tempo indicato, la funzione `receive` genera `operation_timed_out`.  
+```Output  
+X = 15, Y = 30Caught exception: point is NULL.  
+```  
   
- [!code-cpp[concrt-eh-time-out#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_5.cpp)]  
+ Per un esempio completo che usa un gruppo di attività di gestione delle eccezioni, vedere [procedura: utilizzare eccezioni per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
- Questo esempio produce l'output che segue.  
+ [[Torna all'inizio](#top)]  
   
-  **Timeout dell'operazione.** Per evitare l'interruzione anomala dell'applicazione, verificare che il codice gestisca le eccezioni quando viene effettuata una chiamata nel runtime.  Le eccezioni devono inoltre essere gestite quando si effettua una chiamata nel codice esterno che utilizza il runtime di concorrenza, ad esempio, una libreria di terze parti.  
+##  <a name="runtime"></a>Eccezioni generate dal Runtime  
+ Un'eccezione può essere causato da una chiamata al runtime. La maggior parte dei tipi di eccezione, ad eccezione di [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) e [concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indicare un errore di programmazione. Questi errori sono in genere irreversibili e pertanto dovrebbero non essere rilevati o gestiti dal codice dell'applicazione. È consigliabile intercettare solo o gestire gli errori irreversibili nel codice dell'applicazione quando è necessario diagnosticare gli errori di programmazione. Tuttavia, informazioni sui tipi di eccezione definiti dal runtime consente di diagnosticare gli errori di programmazione.  
   
- \[[Top](#top)\]  
+ Il meccanismo di gestione delle eccezioni è uguale per le eccezioni generate dal runtime come le eccezioni generate dalle funzioni di lavoro. Ad esempio, il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione genera un'eccezione `operation_timed_out` quando non riceve un messaggio nel periodo di tempo specificato. Se `receive` genera un'eccezione in una funzione lavoro che si passa a un gruppo di attività, il runtime archivia l'eccezione e ne esegue il marshalling nel contesto che chiama `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait`, o `structured_task_group::run_and_wait`.  
   
-##  <a name="multiple"></a> Più eccezioni  
- Se un'attività o un algoritmo parallelo riceve più eccezioni, il runtime esegue il marshalling solo di una delle eccezioni nel contesto di chiamata.  Il runtime non garantisce di quale eccezione viene eseguito il marshalling.  
+ L'esempio seguente usa il [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo per eseguire due attività in parallelo. La prima attività attende cinque secondi e quindi invia un messaggio a un buffer dei messaggi. La seconda attività utilizza il `receive` funzione in attesa di tre secondi per ricevere un messaggio dal buffer del messaggio stesso. Il `receive` funzione genera un'eccezione `operation_timed_out` se non riceve il messaggio nel periodo di tempo.  
   
- Nell'esempio seguente viene utilizzato l'algoritmo `parallel_for` per visualizzare i numeri nella console.  Se il valore di input è inferiore a un valore minimo o superiore a un valore massimo, viene generata un'eccezione.  In questo esempio, più funzioni lavoro possono generare un'eccezione.  
+ [!code-cpp[concrt-eh-time-out#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_5.cpp)]  
   
- [!code-cpp[concrt-eh-multiple#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_6.cpp)]  
+ Questo esempio produce il seguente output:  
   
- Questo esempio produce l'output seguente:  
+```Output  
+The operation timed out.  
+```  
   
-  **8**  
-**2**  
-**9**  
-**3**  
-**10**  
-**4**  
-**5**  
-**6**  
-**7**  
-**Caught exception: \-5: the value is less than the minimum.** \[[Top](#top)\]  
+ Per impedire un arresto anomalo dell'applicazione, assicurarsi che il codice gestisce le eccezioni quando viene chiamato in fase di esecuzione. Consente di gestire anche le eccezioni quando viene chiamato nel codice esterno che utilizza il Runtime di concorrenza, ad esempio, una libreria di terze parti.  
   
-##  <a name="cancellation"></a> Annullamento  
- Non tutte le eccezioni indicano un errore.  Un algoritmo di ricerca potrebbe, ad esempio, utilizzare la gestione delle eccezioni per arrestare l'attività associata quando viene trovato il risultato.  Per ulteriori informazioni su come utilizzare i meccanismi di annullamento nel codice, vedere [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
+ [[Torna all'inizio](#top)]  
   
- \[[Top](#top)\]  
+##  <a name="multiple"></a>Più eccezioni  
+ Se un'attività o un algoritmo parallelo riceve più eccezioni, il runtime effettua il marshalling solo una delle eccezioni nel contesto di chiamata. Il runtime non garantisce l'eccezione che effettua il marshalling.  
   
-##  <a name="lwts"></a> Attività leggere  
- Un'attività leggera è un'attività che si pianifica direttamente da un oggetto [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md).  Le attività leggere implicano meno sovraccarico delle attività ordinarie.  Tuttavia, il runtime non rileva le eccezioni generate dalle attività leggere.  L'eccezione viene invece rilevata dal gestore delle eccezioni non gestite che per impostazione predefinita termina il processo.  Pertanto, utilizzare un meccanismo di gestione degli errori appropriato nell'applicazione.  Per ulteriori informazioni sulle attività leggere, vedere [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
+ L'esempio seguente usa il `parallel_for` algoritmo per stampare i numeri nella console. Genera un'eccezione se il valore di input è minore di un valore minimo o maggiore di un valore massimo. In questo esempio, più le funzioni di lavoro può generare un'eccezione.  
   
- \[[Top](#top)\]  
+ [!code-cpp[concrt-eh-multiple#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_6.cpp)]  
   
-##  <a name="agents"></a> Agenti asincroni  
- Analogamente alle attività leggere, il runtime non gestisce le eccezioni generate dagli agenti asincroni.  
+ Di seguito Mostra output di esempio per questo esempio.  
   
- Nell'esempio seguente viene illustrato un modo per gestire le eccezioni in una classe che deriva da [concurrency::agent](../../parallel/concrt/reference/agent-class.md).  Nell'esempio viene definita la classe `points_agent`.  Il metodo `points_agent::run` legge gli oggetti `point` dal buffer dei messaggi e li visualizza nella console.  Il metodo `run` genera un'eccezione se viene ricevuto un puntatore `NULL`.  
+```Output  
+8293104567Caught exception: -5: the value is less than the minimum.  
+```  
   
- Il metodo `run` racchiude tutto il lavoro in un blocco `try`\-`catch`.  Il blocco `catch` archivia l'eccezione in un buffer dei messaggi.  L'applicazione controlla se l'agente ha rilevato un errore leggendo da questo buffer dopo il completamento dell'agente.  
+ [[Torna all'inizio](#top)]  
   
- [!code-cpp[concrt-eh-agents#1](../../parallel/concrt/codesnippet/CPP/exception-handling-in-the-concurrency-runtime_7.cpp)]  
+##  <a name="cancellation"></a>Annullamento  
+ Non tutte le eccezioni indicano un errore. Ad esempio, un algoritmo di ricerca potrebbe utilizzare la gestione delle eccezioni per interrompere l'attività associata quando viene trovato il risultato. Per ulteriori informazioni su come usare i meccanismi di annullamento nel codice, vedere [annullamento nella libreria PPL](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
- Questo esempio produce l'output che segue.  
+ [[Torna all'inizio](#top)]  
   
-  **X: 10 Y: 20**  
-**X: 20 Y: 30**  
-**error occurred in agent: point must not be NULL**  
-**the status of the agent is: done** Poiché il blocco `try`\-`catch` è esterno al ciclo `while`, l'agente termina l'elaborazione quando viene rilevato il primo errore.  Se il blocco `try`\-`catch` fosse interno al ciclo `while`, l'agente continuerebbe dopo un errore.  
+##  <a name="lwts"></a>Attività leggere  
+ Un'attività leggera è un'attività pianificata direttamente da un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) oggetto. Attività leggere implicano meno sovraccarico le normali attività. Tuttavia, il runtime non intercetta le eccezioni generate dalle attività leggere. Al contrario, l'eccezione viene intercettata dal gestore di eccezioni non gestite, che, per impostazione predefinita, termina il processo. Pertanto, è possibile utilizzare un meccanismo di gestione degli errori appropriato nell'applicazione. Per ulteriori informazioni sulle attività leggere, vedere [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
- In questo esempio le eccezioni vengono archiviate in un buffer dei messaggi in modo tale che un altro componente possa monitorare l'agente per verificare la presenza di errori durante l'esecuzione.  In questo esempio viene utilizzato un oggetto [concurrency::single\_assignment](../../parallel/concrt/reference/single-assignment-class.md) per archiviare l'errore.  Nel caso in cui un agente gestisca più eccezioni, la classe `single_assignment` archivia solo il primo messaggio passato.  Per archiviare solo l'ultima eccezione, utilizzare la classe [concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md).  Per archiviare tutte le eccezioni, utilizzare la classe [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md).  Per ulteriori informazioni su questi blocchi dei messaggi, vedere [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md).  
+ [[Torna all'inizio](#top)]  
   
- Per ulteriori informazioni sugli agenti asincroni, vedere [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md).  
+##  <a name="agents"></a>Agenti asincroni  
+ Analogamente alle attività leggere, il runtime gestisce le eccezioni generate dagli agenti asincroni.  
   
- \[[Top](#top)\]  
+ Nell'esempio seguente viene illustrato un modo per gestire le eccezioni in una classe che deriva da [Concurrency:: Agent](../../parallel/concrt/reference/agent-class.md). Questo esempio viene definito il `points_agent` classe. Il `points_agent::run` metodo legge `point` per gli oggetti dal buffer dei messaggi e li visualizza nella console. Il `run` metodo genera un'eccezione se viene ricevuto un `NULL` puntatore.  
+  
+ Il `run` metodo racchiude tutto il lavoro in un `try` - `catch` blocco. Il `catch` blocco archivia l'eccezione in un buffer dei messaggi. L'applicazione verifica se l'agente ha rilevato un errore mediante la lettura da questo buffer, dopo il completamento dell'agente.  
+  
+ [!code-cpp[concrt-eh-agents#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_7.cpp)]  
+  
+ Questo esempio produce il seguente output:  
+  
+```Output  
+X: 10 Y: 20  
+X: 20 Y: 30  
+error occurred in agent: point must not be NULL  
+the status of the agent is: done  
+```  
+  
+ Poiché il `try` - `catch` all'esterno di un blocco di `while` ciclo, l'agente termina l'elaborazione quando viene rilevato il primo errore. Se il `try` - `catch` era incluso in un blocco di `while` ciclo, l'agente continuerà dopo un errore.  
+  
+ In questo esempio le eccezioni vengono archiviate in un buffer dei messaggi in modo che un altro componente è possibile monitorare l'agente per gli errori durante l'esecuzione. Questo esempio viene utilizzato un [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) oggetto usato per archiviare l'errore. Nel caso in cui un agente gestisca più eccezioni, la `single_assignment` classe archivia solo il primo messaggio viene passato a esso. Per archiviare solo l'ultima eccezione, utilizzare il [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) classe. Per archiviare tutte le eccezioni, utilizzare il [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) classe. Per ulteriori informazioni su questi blocchi dei messaggi, vedere [blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md).  
+  
+ Per ulteriori informazioni sugli agenti asincroni, vedere [agenti asincroni](../../parallel/concrt/asynchronous-agents.md).  
+  
+ [[Torna all'inizio](#top)]  
   
 ##  <a name="summary"></a> Riepilogo  
- \[[Top](#top)\]  
+ [[Torna all'inizio](#top)]  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Runtime di concorrenza](../../parallel/concrt/concurrency-runtime.md)   
  [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)   
- [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md)   
+ [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)   
  [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)
+

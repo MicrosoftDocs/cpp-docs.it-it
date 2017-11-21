@@ -1,42 +1,39 @@
 ---
-title: "Distruttore CriticalSection::~CriticalSection | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~CriticalSection, distruttore"
+title: 'CriticalSection:: ~ CriticalSection distruttore | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::~CriticalSection
+dev_langs: C++
+helpviewer_keywords: ~CriticalSection, destructor
 ms.assetid: 46fcd52f-d384-4635-b427-d0bee2304e2d
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b46723dc34955816b9683722c0c977f3068b320e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# Distruttore CriticalSection::~CriticalSection
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-De\-inizializza ed elimina l'oggetto CriticalSection corrente.  
+# <a name="criticalsectioncriticalsection-destructor"></a>Distruttore CriticalSection::~CriticalSection
+Deinizializza ed elimina l'oggetto CriticalSection corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW ~CriticalSection();  
 ```  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CriticalSection](../windows/criticalsection-class.md)

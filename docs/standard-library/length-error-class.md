@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::length_error
-- length_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- length_error class
+f1_keywords: stdexcept/std::length_error
+dev_langs: C++
+helpviewer_keywords: length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8720ad32638442d134f3b3d4c3e638ca048f719e
-ms.contentlocale: it-it
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: ee49a5af42dd3ccb34e9465cb46809cc6bb80f09
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lengtherror-class"></a>Classe length_error
 La classe funge da classe di base per tutte le eccezioni generate per segnalare un tentativo di generare un oggetto troppo lungo da specificare.  
@@ -109,5 +89,4 @@ Type class std::length_error
 ## <a name="see-also"></a>Vedere anche  
  [logic_error Class](../standard-library/logic-error-class.md)  (Classe logic_error)  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 
