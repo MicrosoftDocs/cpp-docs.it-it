@@ -1,64 +1,64 @@
 ---
-title: "pgosweep | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pgosweep (programma)"
-  - "ottimizzazioni PGO, pgosweep"
+title: pgosweep | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- pgosweep program
+- profile-guided optimizations, pgosweep
 ms.assetid: f39dd3b7-1cd9-4c3b-8e8b-fb794744b757
-caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c703bc68a36dd21c837e62738d9d2c2631502a0d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
-# pgosweep
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzato nell'ottimizzazione PGO \(Profile\-Guided Optimization\) per scrivere tutti i dati del profilo da un programma in esecuzione nel file PGC.  
+# <a name="pgosweep"></a>pgosweep
+Utilizzato nell'ottimizzazione PGO per scrivere il file pgc tutti i dati di profilo da un programma in esecuzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 pgosweep [options] image pgcfile  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `options`  
- Parametro opzionale che può essere lasciato vuoto.  I valori validi per `options` sono i seguenti:  
+ Parametro facoltativo che può essere vuoto. I valori validi per `options` sono i seguenti:  
   
--   **\/?** o **\/help,** consentono di visualizzare il messaggio della guida.  
+-   **/?** o **/help,** viene visualizzato il messaggio della Guida.  
   
--   **\/noreset,** consente di mantenere il conteggio nelle strutture dei dati di runtime.  
+-   **che,** mantiene il conteggio nelle strutture di dati di runtime.  
   
  `image`  
- Percorso completo di un file EXE o DLL creato utilizzando l'opzione del compilatore \/LTCG:PGINSTRUMENT.  
+ Il percorso completo di un file .exe o DLL che è stato creato utilizzando il /LTCG: PGINSTRUMENT opzione del compilatore.  
   
  `pgcfile`  
- File PGC in cui il comando scrive i conteggi dei dati.  
+ Il file. pgc presenti in questo comando scriverà i dati di conteggi.  
   
-## Note  
- Questo comando funziona sui programmi compilati con l'opzione del compilatore \/LTCG:PGINSTRUMENT.  Interrompe un programma in esecuzione e scrive i dati del profilo in un nuovo file PGC.  Per impostazione predefinita, il comando reimposta i conteggi dopo ogni operazione di scrittura.  Se si specifica l'opzione **\/noreset**, il comando registrerà i valori senza però reimpostarli nel programma in esecuzione.  Se i dati del profilo vengono recuperati successivamente, questa opzione produrrà dati duplicati.  
+## <a name="remarks"></a>Note  
+ Questo comando funziona sui programmi che sono stati compilati con l'opzione del compilatore /LTCG: PGINSTRUMENT. Interrompe un programma in esecuzione e scrive i dati di profilo in un nuovo file pgc. Per impostazione predefinita, il comando Reimposta i conteggi dopo ogni operazione di scrittura. Se si specifica il **/noreset** opzione, il comando verrà registrare i valori, ma non reimpostarli nel programma in esecuzione. Se si recuperano i dati di profilo in un secondo momento, questa opzione consentirà dati duplicati.  
   
- `pgosweep` può anche essere utilizzato solo per recuperare le informazioni sul profilo per il runtime dell'applicazione.  È possibile, ad esempio, eseguire `pgosweep` subito dopo l'avvio dell'applicazione e ignorare il file.  In questo modo si eliminerebbero i dati del profilo associati ai costi di avviamento.  Sarà quindi possibile eseguire `pgosweep` prima di terminare l'applicazione.  I dati raccolti conterranno ora solo le informazioni sul profilo dal runtime.  
+ Un utilizzo alternativo per `pgosweep` consiste nel recuperare le informazioni solo per il runtime dell'applicazione. Ad esempio, è possibile eseguire `pgosweep` subito dopo l'avvio dell'applicazione e ignorare il file. Verranno rimossi i dati di profilo associati costi di avvio. Quindi, è possibile eseguire `pgosweep` prima di terminare l'applicazione. I dati raccolti sono state raccolte informazioni di profilo solo dal runtime.  
   
- Quando si assegna un nome a un file .pgc \(`pgcfile`\), è possibile utilizzare il formato standard, ovvero *appname\!n*.pgc.  Mediante questo formato, i dati verranno trovati durante l'utilizzo dell'opzione \/LTCG:PGO.  Se non si utilizza il formato standard, è necessario ricorrere a [pgomgr](../../build/reference/pgomgr.md) per unire i file PGC.  
+ Quando si assegna un nome in un file pgc (`pgcfile`) è possibile utilizzare il formato standard, ovvero *appname! n*. pgc. Se si utilizza questo formato, il compilatore troverà questi dati in fase di /LTCG: PGO. Se non si utilizza il formato standard, è necessario utilizzare [pgomgr](../../build/reference/pgomgr.md) per unire i file pgc.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 pgosweep myapp.exe myapp!1.pgc  
 ```  
   
- In questo esempio `pgosweep` scrive le informazioni sul profilo corrente per myapp.exe in myapp\! 1.pgc.  
+ In questo esempio, `pgosweep` scrive le informazioni sul profilo corrente per myapp.exe myapp!1.pgc.  
   
-## Vedere anche  
- [Strumenti per l'ottimizzazione PGO \(Profile Guided Optimization, Ottimizzazione guidata da profilo\)](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+## <a name="see-also"></a>Vedere anche  
+ [Strumenti per l'ottimizzazione manuale PGO](../../build/reference/tools-for-manual-profile-guided-optimization.md)
