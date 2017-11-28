@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,37 +15,19 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 apitype: DLLExport
-f1_keywords:
-- scanf
-dev_langs:
-- C++
-helpviewer_keywords:
-- scanf function, width specification
+f1_keywords: scanf
+dev_langs: C++
+helpviewer_keywords: scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 922405b111404e5a11052fd1aba8d2729e254714
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 Le informazioni si applicano all’interpretazione di stringhe di formato nella famiglia di funzioni `scanf`, incluse le versioni protette, quali `scanf_s`. Queste funzioni presumono normalmente che il flusso di input sia suddiviso in una sequenza di token. I token sono separati da spazi vuoti (spazi, tabulazioni o caratteri di nuova riga) o nel caso dei tipi numerici, dalla fine naturale di un tipo di dati numerici secondo quanto indicato dal primo carattere che non può essere convertito in testo numerico. Tuttavia, è possibile utilizzare la specifica della larghezza per fare in modo di interrompere l'analisi dell'input prima della fine naturale di un token.  
