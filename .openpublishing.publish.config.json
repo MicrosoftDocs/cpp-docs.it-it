@@ -1,11 +1,30 @@
 {
   "build_entry_point": "docs",
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
+  "continue_with_document_error": true,
+  "branch_target_mapping": {
+    "live": [
+      "Publish",
+      "Pdf"
+    ],
+    "master": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "Targets": {
+    "Pdf": {
+      "template_folder": "_themes.pdf"
+    }
+  },
   "docsets_to_publish": [
     {
       "docset_name": "vcppdocs",
       "build_source_folder": "docs",
       "build_output_subfolder": "vcppdocs",
       "locale": "it-it",
+      "version": 0,
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
@@ -15,21 +34,11 @@
       "template_folder": "_themes"
     }
   ],
-  "notification_subscribers": [
-    "CnE_Content_Brno@moravia.com",
-    "CnE_UE_Bugfixing_ENG@moravia.com"
-  ],
- "branches_to_filter": [
-			    "master",
-			    "live"
-  ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/cpp-docs.it-it",
-  "git_repository_branch_open_to_public_contributors": "live",
-  "continue_with_document_error": true,
+  "notification_subscribers": [],
+  "branches_to_filter": ["live"],
   "skip_source_output_uploading": false,
-	"contribution_branch_mappings": {
-      "live-sxs": "live"
-  },
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/cpp-docs.it-it",
+  "git_repository_branch_open_to_public_contributors": "live",
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
@@ -38,17 +47,30 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
+    },
+    {
       "path_to_root": "_repo.en-us",
-      "url": "https://github.com/MicrosoftDocs/cpp-docs-pr",
+      "url": "https://github.com/dotnet/docs",
       "branch": "live",
       "branch_mapping": {
-        "live": "live",
-        "master": "master"
+        "master": "master",
+        "live": "live"
       }
-    }
+    },
+    {
+      "path_to_root": "dotnet-xref",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+      "branch": "live",
+      "branch_mapping": {
+        "master": "master",
+        "live": "live",
+        "live-sxs" : "live"
+      }
+}
   ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false
+  "need_generate_pdf_url_template": true,
+  "enable_incremental_build": true
 }
