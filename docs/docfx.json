@@ -9,30 +9,7 @@
         "exclude": [
           "**/obj/**",
           "vcppdocs/**",
-          "**/includes/**",
-        "cppcx/**",
-	"assembler/**",
-	"atl/**",
-	"atl/reference/**",
-	"atl-mfc-shared/**",
-	"build/**",
-	"cloud/**",
-	"cpp/**",
-	"c-runtime-library/reference/**",
-	"data/**",
-	"dotnet/**",
-	"error-messages/**",
-	"ide/**",
-	"intrinsics/**",
-	"mfc/**",
-	"misc/**",
-	"parallel/**",
-	"preprocessor/**",
-	"security/**",
-	"text/**",
-	"top/**",
-	"standard-library/**",
-	"windows/**"
+          "**/includes/**"
         ]
       }
     ],
@@ -56,20 +33,28 @@
             "breadcrumb_path": "~/_breadcrumb/toc.yml",
             "ROBOTS": "INDEX,FOLLOW",
             "author": "",
-            "ms.author": "",
+            "bilingual_type": "hover over",
+           "ms.author": "",
             "manager": "ghogen",
             "ms.date": "11/16/2016",
             "ms.topic": "article",
             "audience": "developer",
             "ms.reviewer": "",
-            "ms.prod": "visual-studio-dev15",
-            "ms.technology": "devlang-cpp",
+            "ms.prod": "visual-cpp-dev15",
             "ms.tgt_pltfrm": "",
-            "scopedSearch": ["C++"]
+            "searchScope": ["C++"]
     },
     "fileMetadata": {},
     "template": [],
-    "xref": ["msdn.4.5.2.zip", "namespaces.4.5.2.zip", "vs.110.zip", "vs.140.zip", "office15.zip"],
+    "xref": [
+      "dotnet-xref/_zip/dotnet.zip",
+      "dotnet-xref/_zip/vs.110.zip",
+      "dotnet-xref/_zip/vs.140.zip",
+      "dotnet-xref/_zip/office15.zip",
+      "dotnet-xref/_zip/missingapi.yml",
+      "dotnet-xref/_zip/msdnsmallset.yml",
+      "dotnet-xref/_zip/roslyn.yml"
+    ],
     "dest": "vcppdocs"
   }
 }
