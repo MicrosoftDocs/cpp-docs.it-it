@@ -1,1 +1,1 @@
-Windows Presentation Foundation \(WPF\)
+Windows Presentation Foundation (WPF)
