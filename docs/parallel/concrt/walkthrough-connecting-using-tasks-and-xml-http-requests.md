@@ -1,124 +1,127 @@
 ---
-title: "Procedura dettagliata: Connessione tramite attivit&#224; e richieste HTTP XML | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "connessione a servizi Web, app di Windows Store [C++]"
-  - "IXMLHTTPRequest2 e attività, esempio"
-  - "IXHR2 e attività, esempio"
+title: "Procedura dettagliata: Connessione tramite attività e richieste HTTP XML | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connecting to web services, Windows Store apps [C++]
+- IXMLHTTPRequest2 and tasks, example
+- IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5fef2e682f8e2036eb2919c20879c60e879ec845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura dettagliata: Connessione tramite attivit&#224; e richieste HTTP XML
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Questo esempio illustra come utilizzare le interfacce [IXMLHTTPRequest2](http://msdn.microsoft.com/it-it/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/it-it/aa4b3f4c-6e28-458b-be25-6cce8865fc71) insieme alle attività per inviare richieste, HTTP GET e POST ad un servizio web, in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  Combinando `IXMLHTTPRequest2` insieme alle attività, è possibile scrivere codice che compone altre attività.  Ad esempio, è possibile utilizzare l'attività di download come parte di una catena di attività.  L'attività di download può anche rispondere quando il lavoro viene annullato.  
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Procedura dettagliata: Connessione tramite attività e richieste HTTP XML
+In questo esempio viene illustrato come utilizzare il [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app. Combinando `IXMLHTTPRequest2` insieme alle attività, è possibile scrivere codice che si integra con altre attività. Ad esempio, è possibile utilizzare l'attività di download come parte di una catena di attività. L'attività di download è anche possibile rispondere all'annullamento di lavoro.  
   
 > [!TIP]
->  È inoltre possibile utilizzare l'SDK C\+\+ REST per eseguire richieste HTTP da un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] utilizzando l'applicazione C\+\+ o da un'applicazione C\+\+ desktop.  Per ulteriori informazioni, vedi [C\+\+ REST SDK \(nome in codice "Casablanca"\)](../../top/cpp-rest-sdk-codename-casablanca.md).  
+>  È inoltre possibile utilizzare l'SDK REST C++ per eseguire richieste HTTP da un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] utilizzando l'applicazione C++ o da un'applicazione C++ desktop. Per altre informazioni, vedere [C++ REST SDK (nome in codice "Casablanca")](https://github.com/Microsoft/cpprestsdk).  
   
- Per ulteriori informazioni sulle attività, vedere [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  Per ulteriori informazioni su come utilizzare le attività in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], vedere [Asynchronous programming in C\+\+](http://msdn.microsoft.com/it-it/512700b7-7863-44cc-93a2-366938052f31) e [Creazione di operazioni asincrone in C\+\+ per le applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+ Per ulteriori informazioni sulle attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Per ulteriori informazioni su come usare le attività in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app, vedere [programmazione asincrona in C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) e [la creazione di operazioni asincrone in C++ per applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
- Questo primo documento mostra come creare `HttpRequest` e le relative classi di supporto.  Viene quindi illustrato come utilizzare questa classe in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] che utilizza C\+\+ e XAML.  
+ Questo documento viene innanzitutto illustrato come creare `HttpRequest` e le relative classi di supporto. Viene quindi illustrato come utilizzare questa classe da un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app che usa C++ e XAML.  
   
- Per un esempio più completo, che utilizza la classe `HttpReader` specificata in questo documento, vedere [Sviluppo dell'utilità di ottimizzazione dei viaggi di Bing Mappe, un'applicazione Windows Store in JavaScript e C\+\+](../Topic/Developing%20Bing%20Maps%20Trip%20Optimizer,%20a%20Windows%20Store%20app%20in%20JavaScript%20and%20C++.md).  Per un altro esempio che usa `IXMLHTTPRequest2` ma non usa attività, vedere [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/it-it/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
+ Per un esempio più completo che usa il `HttpReader` classe descritta nel presente documento, vedere [lo sviluppo di Bing Maps ottimizzazione dei viaggi, un'applicazione Windows Store in JavaScript e C++](http://msdn.microsoft.com/library/974cf025-de1a-4299-b7dd-c6c7bf0e5d30). Per un altro esempio che usa `IXMLHTTPRequest2` ma non utilizza attività, vedere [avvio rapido: connessione mediante richieste HTTP XML (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35).  
   
 > [!TIP]
->  `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` sono interfacce che si consiglia di utilizzare in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  È inoltre possibile adattare questo esempio per utilizzarlo in un'applicazione desktop.  
+>  `IXMLHTTPRequest2`e `IXMLHTTPRequest2Callback` sono le interfacce che è consigliabile per l'utilizzo in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app. È anche possibile adattare questo esempio per l'utilizzo in un'applicazione desktop.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
   
-## Definizione delle classi HttpRequest, HttpRequestBuffersCallback e HttpRequestStringCallback  
- Quando si utilizza l'interfaccia `IXMLHTTPRequest2` per creare richieste Web tramite HTTP, si implementa l'interfaccia `IXMLHTTPRequest2Callback` per ricevere la risposta del server e rispondere agli eventi.  In questo esempio viene definita la classe `HttpRequest` per creare richieste Web e le classi `HttpRequestStringCallback`, `HttpRequestBuffersCallback` per elaborare le risposte.  Le classi di `HttpRequestStringCallback` e `HttpRequestBuffersCallback` supportano la classe `HttpRequest`; si utilizza solo la classe `HttpRequest` dal codice dell'applicazione.  
+## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Definizione delle classi HttpRequest, HttpRequestBuffersCallback e HttpRequestStringCallback  
+ Quando si utilizza il `IXMLHTTPRequest2` l'interfaccia per creare richieste web tramite HTTP, si implementa il `IXMLHTTPRequest2Callback` interfaccia per ricevere la risposta del server e rispondere agli altri eventi. Questo esempio viene definito il `HttpRequest` classe per creare richieste web e `HttpRequestBuffersCallback` e `HttpRequestStringCallback` alle classi di elaborazione delle risposte. Il `HttpRequestBuffersCallback` e `HttpRequestStringCallback` classi supportano il `HttpRequest` classe, ma funzionano solo con la `HttpRequest` classe dal codice dell'applicazione.  
   
- I metodi `GetAsync`, `PostAsync`, della classe `HttpRequest` consentono di avviare rispettivamente le operazioni HTTP GET e POST.  Questi metodi utilizzano la classe `HttpRequestStringCallback` per leggere la risposta del server come una stringa.  I metodi `ReadAsync` e `SendAsync` consentono di trasmettere contenuti di grande dimensioni in blocchi.  Ognuno di questi metodi restituisce [concurrency::task](../../parallel/concrt/reference/task-class-concurrency-runtime.md) per rappresentare l'operazione.  I metodi `task<std::wstring>` e `PostAsync` producono il valore `GetAsync`, dove il frammento `wstring` rappresenta la risposta del server.  I metodi `ReadAsync` e `SendAsync` producono valori `task<void>` ; queste attività vengono completate quando le operazioni d'invio e di lettura sono completate.  
+ Il `GetAsync`, `PostAsync` metodi di `HttpRequest` classe consentono di avviare le operazioni di HTTP GET e POST, rispettivamente. Utilizzano questi metodi di `HttpRequestStringCallback` per leggere la risposta del server sotto forma di stringa. Il `SendAsync` e `ReadAsync` metodi consentono di trasmettere contenuti di grandi dimensioni in blocchi. Questi metodi restituiscono [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) che rappresenta l'operazione. Il `GetAsync` e `PostAsync` producano `task<std::wstring>` valore, in cui il `wstring` parte rappresenta la risposta del server. Il `SendAsync` e `ReadAsync` producano `task<void>` valori; queste attività completo quando completare le operazioni di lettura e di trasmissione.  
   
- Poiché le interfacce `IXMLHTTPRequest2` agiscono in maniera asincrona, questo esempio usa [concurrency::task\_completion\_event](../../parallel/concrt/reference/task-completion-event-class.md) per creare attività che può completarsi successivamente al completamento dell'oggetto di callback, oppure quando l'operazione di download viene annullata.  La classe `HttpRequest` crea una continuazione correlata ad una attività, da questa attività, per impostare il risultato finale.  La classe `HttpRequest` utilizza la continuazione di un'attività correlata, per garantire l'attività di continuazione anche se l'attività precedente produce un errore o viene annullata.  Per ulteriori informazioni sulla continuazione di attività correlate, vedere [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Poiché il `IXMLHTTPRequest2` interfacce agiscono in modo asincrono, in questo esempio viene utilizzato [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md) per creare un'attività che completa l'oggetto callback al termine o Annulla l'operazione di download. La `HttpRequest` classe crea una continuazione basata su attività da questa attività per impostare il risultato finale. La `HttpRequest` classe utilizza una continuazione basata su attività per verificare che l'attività di continuazione viene eseguita anche se l'attività precedente genera un errore o viene annullata. Per ulteriori informazioni sulle continuazioni basate su attività, vedere [parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
   
- Per supportare l'annullamento, `HttpRequest`, `HttpRequestBuffersCallback` e le classi di `HttpRequestStringCallback` utilizzano i token di annullamento.  Le classi `HttpRequestStringCallback` e `HttpRequestBuffersCallback` utilizzano il metodo di [concurrency::cancellation\_token::register\_callback](../Topic/cancellation_token::register_callback%20Method.md) per consentire all'attività di completare l'evento per rispondere all'annullamento.  Questo callback di annullamento interrompe il download.  Per ulteriori informazioni sull'annullamento, vedere [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
+ Per supportare l'annullamento, la `HttpRequest`, `HttpRequestBuffersCallback`, e `HttpRequestStringCallback` classi utilizzano i token di annullamento. Il `HttpRequestBuffersCallback` e `HttpRequestStringCallback` classi Usa la [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) metodo per abilitare l'evento di completamento di attività rispondere all'annullamento. Questo callback annullamento interrompe il download. Per ulteriori informazioni sull'annullamento, vedi [annullamento](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).  
   
-#### Per definire la classe HttpRequest  
+#### <a name="to-define-the-httprequest-class"></a>Per definire la classe HttpRequest  
   
-1.  Utilizzare il modello di Visual C\+\+ **Applicazione vuota \(XAML\)**, per creare un progetto di un'applicazione XAML vuota.  In questo esempio nomina il progetto `UsingIXMLHTTPRequest2`.  
+1.  Usare Visual C++ **App vuota (XAML)** modello per creare un progetto di app XAML vuoto. Questo esempio assegna al progetto il nome `UsingIXMLHTTPRequest2`.  
   
-2.  Aggiungere al progetto un file di intestazione denominato HttpRequest.h e un file di origine denominato HttpRequest.cpp.  
+2.  Aggiungere al progetto un file di intestazione denominata HttpRequest.h e un file di origine denominato HttpRequest.cpp.  
   
-3.  In pch.h, aggiungere questo codice :  
+3.  In PCH. h, aggiungere questo codice:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#1](concrt-using-IXMLHTTPRequest2#1)]  
+     [!code-cpp[concrt-using-ixhr2#1](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_1.h)]  
   
-4.  In HttpRequest.h, aggiungere il codice seguente:  
+4.  In HttpRequest.h, aggiungere questo codice:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#2](concrt-using-IXMLHTTPRequest2#2)]  
+     [!code-cpp[concrt-using-ixhr2#2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_2.h)]  
   
-5.  In HttpRequest.h, aggiungere questo codice:  
+5.  In HttpRequest.cpp, aggiungere questo codice:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#3](concrt-using-IXMLHTTPRequest2#3)]  
+     [!code-cpp[concrt-using-ixhr2#3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_3.cpp)]  
   
-## Utilizzo della classe HttpRequest in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]  
- In questa sezione viene illustrato come utilizzare la classe `HttpRequest` in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  L'applicazione fornisce una casella di input che definisce una risorsa con un URL, un pulsante che esegue le operazioni di GET e POST e un pulsante per annullare l'operazione in corso.  
+## <a name="using-the-httprequest-class-in-a-includewin8appnamelongbuildincludeswin8appnamelongmdmd-app"></a>Utilizzo della classe HttpRequest in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]  
+ In questa sezione viene illustrato come utilizzare il `HttpRequest` classe un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app. L'applicazione fornisce una casella di input che definisce una risorsa URL, e i comandi che eseguono operazioni GET e POST e un pulsante di comando che consente di annullare l'operazione corrente.  
   
-#### Per utilizzare la classe HttpRequest  
+#### <a name="to-use-the-httprequest-class"></a>Per utilizzare la classe HttpRequest  
   
-1.  Nel file MainPage.xaml, definire l'elemento [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) come segue.  
+1.  In MainPage. XAML, definire il [StackPanel](http://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.stackpanel.aspx) elemento come indicato di seguito.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A1](concrt-using-IXMLHTTPRequest2#A1)]  
+     [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]  
   
-2.  In MainPage.xaml.h, aggiungere questa direttiva `#include` :  
+2.  In MainPage, aggiungere questo `#include` direttiva:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A2](concrt-using-IXMLHTTPRequest2#A2)]  
+     [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]  
   
-3.  In MainPage.xaml.h, aggiungere queste variabili membro `private` alla classe `MainPage` :  
+3.  In MainPage, aggiungere questi `private` variabili membro per la `MainPage` classe:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A3](concrt-using-IXMLHTTPRequest2#A3)]  
+     [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]  
   
-4.  In MainPage.xaml.h, dichiarare il metodo `ProcessHttpRequest`, `private` :  
+4.  In MainPage, dichiarare il `private` metodo `ProcessHttpRequest`:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A4](concrt-using-IXMLHTTPRequest2#A4)]  
+     [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]  
   
-5.  In MainPage.xaml.cpp, aggiungere le istruzioni `using` :  
+5.  In MainPage.xaml.cpp, aggiungere questi `using` istruzioni:  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A5](concrt-using-IXMLHTTPRequest2#A5)]  
+     [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]  
   
-6.  In MainPage.xaml.cpp, implementare `GetButton_Click`, `PostButton_Click`e i metodi `CancelButton_Click` della classe `MainPage` .  
+6.  In MainPage.xaml.cpp, implementare il `GetButton_Click`, `PostButton_Click`, e `CancelButton_Click` metodi di `MainPage` classe.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A6](concrt-using-IXMLHTTPRequest2#A6)]  
+     [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]  
   
     > [!TIP]
-    >  Se l'applicazione non richiede il supporto per l'annullamento, passare [concurrency::cancellation\_token::none](../Topic/cancellation_token::none%20Method.md) ai metodi `HttpRequest::PostAsync` e `HttpRequest::GetAsync`.  
+
+
+    >  Se l'app non richiedono il supporto per l'annullamento, passare [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) per il `HttpRequest::GetAsync` e `HttpRequest::PostAsync` metodi.  
+
+
   
-7.  In MainPage.xaml.cpp, implementare il metodo `MainPage::ProcessHttpRequest`.  
+7.  In MainPage.xaml.cpp, implementare il `MainPage::ProcessHttpRequest` metodo.  
   
-     [!CODE [concrt-using-IXMLHTTPRequest2#A7](concrt-using-IXMLHTTPRequest2#A7)]  
+     [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]  
   
 8.  Nelle proprietà del progetto, in **Linker**, **Input**, specificare `shcore.lib` e `msxml6.lib`.  
   
- Ecco l'applicazione in esecuzione:  
+ Di seguito è riportato l'app in esecuzione:  
   
- ![App di Windows Store in esecuzione](../../parallel/concrt/media/concrt_usingixhr2.png "ConcRT\_UsingIXHR2")  
+ ![App di Windows Store in esecuzione](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")  
   
-## Passaggi successivi  
+## <a name="next-steps"></a>Passaggi successivi  
  [Procedure dettagliate del runtime di concorrenza](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Parallelismo delle attività](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
- [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md)   
- [Asynchronous programming in C\+\+](http://msdn.microsoft.com/it-it/512700b7-7863-44cc-93a2-366938052f31)   
- [Creazione di operazioni asincrone in C\+\+ per le applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
- [Quickstart: Connecting using XML HTTP Request \(IXMLHTTPRequest2\)](http://msdn.microsoft.com/it-it/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
- [Classe task \(runtime di concorrenza\)](../../parallel/concrt/reference/task-class-concurrency-runtime.md)   
- [Classe task\_completion\_event](../../parallel/concrt/reference/task-completion-event-class.md)   
- [IXMLHTTPRequest2](http://msdn.microsoft.com/it-it/bbc11c4a-aecf-4d6d-8275-3e852e309908)   
- [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/it-it/aa4b3f4c-6e28-458b-be25-6cce8865fc71)
+ [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)   
+ [Programmazione asincrona in C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)   
+ [Creazione di operazioni asincrone in C++ per applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)   
+ [Guida introduttiva: Connessione mediante richieste HTTP XML (IXMLHTTPRequest2)](http://msdn.microsoft.com/en-us/cc7aed53-b2c5-4d83-b85d-cff2f5ba7b35)   
+ [Classe Task (Runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)   
+ [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_COLUMN_MAP (macro)"
+title: BEGIN_COLUMN_MAP | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_COLUMN_MAP macro
 ms.assetid: d6ffe633-e0da-4e33-8faa-f7f259d05420
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9edcaa47bccf0665ddeabf4e65e16ab1642de885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="begincolumnmap"></a>BEGIN_COLUMN_MAP
 Segna l'inizio di una voce della mappa delle colonne.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,27 +37,27 @@ x
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *x*  
- \[in\] Il nome della classe di record utente derivata da `CAccessor`.  
+ [in] Il nome della classe di record utente derivata da `CAccessor`.  
   
-## Note  
- Questa macro viene usata nel caso di un'unica funzione di accesso su un set di righe. Se ci sono più funzioni di accesso su un set di righe, usare [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md).  
+## <a name="remarks"></a>Note  
+ Questa macro viene usata nel caso di un'unica funzione di accesso su un set di righe. Se ci sono più funzioni di accesso su un set di righe, usare [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).  
   
- La macro `BEGIN_COLUMN_MAP` è completata con la macro `END_COLUMN_MAP`. Questa macro viene usata quando è richiesta una sola funzione di accesso nel record utente.  
+ La macro `BEGIN_COLUMN_MAP` è completata con la macro `END_COLUMN_MAP` . Questa macro viene usata quando è richiesta una sola funzione di accesso nel record utente.  
   
  Le colonne corrispondono ai campi nel set di righe che si desidera associare.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Ecco un esempio di mappa delle colonne e dei parametri:  
   
- [!CODE [NVC_OLEDB_Consumer#16](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#16)]  
+ <!--[!CODE [NVC_OLEDB_Consumer#16](../codesnippet/vs_snippets_cpp/nvc_oledb_consumer#16)]  -->
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)

@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_ACCESSOR_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_ACCESSOR_MAP (macro)"
+title: BEGIN_ACCESSOR_MAP | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_ACCESSOR_MAP macro
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ff08fd95e9e84d47562a5fafb8bf7be04e41ed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_ACCESSOR_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="beginaccessormap"></a>BEGIN_ACCESSOR_MAP
 Contrassegna l'inizio delle voci della mappa delle funzioni di accesso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,26 +39,69 @@ num
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *x*  
- \[in\] Nome della classe di record utente.  
+ [in] Nome della classe di record utente.  
   
  *num*  
- \[in\] Il numero delle funzioni di accesso in questa mappa.  
+ [in] Il numero delle funzioni di accesso in questa mappa.  
   
-## Note  
- In caso di più funzioni di accesso su un gruppo di righe, è necessario specificare `BEGIN_ACCESSOR_MAP` all'inizio e usare la macro `BEGIN_ACCESSOR` per ogni singola funzione di accesso. La macro `BEGIN_ACCESSOR` è completata con la macro `END_ACCESSOR`. La mappa delle funzioni di accesso è completata con la macro `END_ACCESSOR_MAP`.  
+## <a name="remarks"></a>Note  
+ In caso di più funzioni di accesso su un gruppo di righe, è necessario specificare `BEGIN_ACCESSOR_MAP` all'inizio e usare la macro `BEGIN_ACCESSOR` per ogni singola funzione di accesso. La macro `BEGIN_ACCESSOR` è completata con la macro `END_ACCESSOR` . La mappa delle funzioni di accesso è completata con la macro `END_ACCESSOR_MAP` .  
   
- In presenza di una sola funzione di accesso nel record utente, usare la macro [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md).  
+ In presenza di una sola funzione di accesso nel record utente, usare la macro [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).  
   
-## Esempio  
- [!CODE [NVC_OLEDB_Consumer#15](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#15)]  
+## <a name="example"></a>Esempio  
+
+ ```cpp  
+class CArtistsAccessor
+{
+public:
+// Data Elements
+   TCHAR m_szFirstName[21];
+   TCHAR m_szLastName[31];
+   short m_nAge;
+
+// Output binding map
+BEGIN_ACCESSOR_MAP(CArtistsAccessor, 2)
+   BEGIN_ACCESSOR(0, true)
+      COLUMN_ENTRY(1, m_szFirstName)
+      COLUMN_ENTRY(2, m_szLastName)
+   END_ACCESSOR()
+   BEGIN_ACCESSOR(1, false) // Not an auto accessor
+      COLUMN_ENTRY(3, m_nAge)
+   END_ACCESSOR()
+END_ACCESSOR_MAP()
+
+   HRESULT OpenDataSource()
+   {
+      CDataSource _db;
+      _db.Open();
+      return m_session.Open(_db);
+   }
+
+   void CloseDataSource()
+   {
+      m_session.Close();
+   }
+
+   CSession m_session;
+
+   DEFINE_COMMAND_EX(CArtistsAccessor, L" \
+   SELECT \
+      FirstName, \
+      LastName, \
+      Age \
+      FROM Artists")
+};
+ ```
+
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)
