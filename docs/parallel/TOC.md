@@ -21,4 +21,4 @@
 ### [Multithreading: uso delle classi di sincronizzazione](multithreading-how-to-use-the-synchronization-classes.md)
 ### [Multithreading: terminazione dei thread](multithreading-terminating-threads.md)
 ### [Multithreading: suggerimenti sulla programmazione](multithreading-programming-tips.md)
-## [Multithreading and Locales](multithreading-and-locales.md) (Multithreading e impostazioni locali)
+## [Multithreading e impostazioni locali](multithreading-and-locales.md)
