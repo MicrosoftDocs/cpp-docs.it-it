@@ -1,69 +1,77 @@
 ---
-title: "Procedura: Implementare vari modelli producer-consumer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli producer-consumer, implementazione [Runtime di concorrenza]"
-  - "implementazione di modelli producer-consumer [Runtime di concorrenza]"
+title: 'Procedura: implementare vari modelli Producer-Consumer | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- producer-consumer patterns, implementing [Concurrency Runtime]
+- implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0efafe17cd524c241e709d3c3c59233a130cdf95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: Implementare vari modelli producer-consumer
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene descritto come implementare il modello producer\-consumer nell'applicazione.  In questo modello il *producer* invia i messaggi a un blocco dei messaggi e il *consumer* legge i messaggi da tale blocco.  
+# <a name="how-to-implement-various-producer-consumer-patterns"></a>Procedura: Implementare vari modelli producer-consumer
+In questo argomento viene descritto come implementare il modello producer-consumer nell'applicazione. In questo modello, il *producer* invia messaggi a un blocco di messaggi e il *consumer* legge i messaggi dal blocco.  
   
- Nell'argomento vengono illustrati due scenari.  Nel primo scenario il consumer deve ricevere ogni messaggio inviato dal producer.  Nel secondo scenario il consumer esegue periodicamente il polling dei dati e pertanto non deve ricevere ogni messaggio.  
+ L'argomento vengono illustrati due scenari. Nel primo scenario, il consumer deve ricevere ogni messaggio inviato dal produttore. Nel secondo scenario, il consumer esegue periodicamente il polling per i dati e pertanto non deve ricevere ogni messaggio.  
   
- In entrambi gli esempi di questo argomento vengono utilizzati gli agenti, i blocchi dei messaggi e le funzioni di passaggio dei messaggi per trasmettere i messaggi dal producer al consumer.  L'agente del producer utilizza la funzione [concurrency::send](../Topic/send%20Function.md) per scrivere i messaggi in un oggetto [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md).  L'agente del consumer utilizza la funzione [concurrency::receive](../Topic/receive%20Function.md) per leggere i messaggi da un oggetto [concurrency::ISource](../../parallel/concrt/reference/isource-class.md).  Entrambi gli agenti contengono un valore sentinel per coordinare la fine dell'elaborazione.  
+ Entrambi gli esempi in questo argomento usano gli agenti, blocchi dei messaggi e funzioni di passaggio dei messaggi per trasmettere i messaggi dal producer al consumer. L'agente di produttori utilizza il [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) funzione per scrivere messaggi in un [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) oggetto. L'agente utente utilizza il [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) funzione per leggere i messaggi da un [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) oggetto. Entrambi gli agenti contengono un valore di sentinel per coordinare la fine dell'elaborazione.  
   
- Per ulteriori informazioni sugli agenti asincroni, vedere [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md).  Per ulteriori informazioni sui blocchi dei messaggi e sulle funzioni di passaggio dei messaggi, vedere [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md) e [Funzioni di passaggio dei messaggi](../../parallel/concrt/message-passing-functions.md).  
+ Per ulteriori informazioni sugli agenti asincroni, vedere [agenti asincroni](../../parallel/concrt/asynchronous-agents.md). Per ulteriori informazioni sui blocchi dei messaggi e funzioni di passaggio dei messaggi, vedere [blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md) e [Message (funzioni) passando](../../parallel/concrt/message-passing-functions.md).  
   
-## Esempio  
- In questo esempio l'agente del producer invia una serie di numeri all'agente del consumer.  Il consumer riceve ognuno di questi numeri e ne calcola la media.  L'applicazione scrive la media nella console.  
+## <a name="example"></a>Esempio  
+ In questo esempio, l'agente di producer invia una serie di numeri all'agente del consumer. Il consumer riceve ognuno di questi numeri e ne calcola la Media. L'applicazione scrive la media nella console.  
   
- In questo esempio viene utilizzato un oggetto [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) per consentire al producer di accodare i messaggi.  La classe `unbounded_buffer` implementa `ITarget` e `ISource` in modo tale che il producer e il consumer possano inviare e ricevere i messaggi da un buffer condiviso.  Le funzioni `send` e `receive` coordinano l'attività di propagazione dei dati dal producer al consumer.  
+ Questo esempio viene utilizzato un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) oggetto per consentire il producer di messaggi in coda. Il `unbounded_buffer` implementa `ITarget` e `ISource` in modo che il produttore e il consumer può inviare e ricevere messaggi da e verso un buffer condiviso. Il `send` e `receive` funzioni coordinano le attività di propagazione dei dati dal producer al consumer.  
   
- [!code-cpp[concrt-producer-consumer-average#1](../../parallel/concrt/codesnippet/CPP/how-to-implement-various-producer-consumer-patterns_1.cpp)]  
+ [!code-cpp[concrt-producer-consumer-average#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_1.cpp)]  
   
- Questo esempio produce l'output che segue.  
+ Questo esempio produce il seguente output:  
   
-  **The average is 50.**   
-## Esempio  
- In questo esempio l'agente del producer invia una serie di quotazioni di Bora all'agente del consumer.  L'agente del consumer legge periodicamente la quotazione corrente e la visualizza sulla console.  
+```Output  
+The average is 50.  
+```  
   
- Questo esempio è simile al precedente, ad eccezione del fatto che viene utilizzato l'oggetto [concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) per consentire al producer di condividere un messaggio con il consumer.  Come nell'esempio precedente, la classe `overwrite_buffer` implementa `ITarget` e `ISource` in modo tale che il producer e il consumer possano agire su un buffer dei messaggi condiviso.  
+## <a name="example"></a>Esempio  
+ In questo esempio, l'agente di producer invia una serie di quotazioni all'agente del consumer. L'agente consumer periodicamente legge l'offerta corrente e stampato nella console.  
   
- [!code-cpp[concrt-producer-consumer-quotes#1](../../parallel/concrt/codesnippet/CPP/how-to-implement-various-producer-consumer-patterns_2.cpp)]  
+ In questo esempio è simile al precedente, ad eccezione del fatto che usa un [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) oggetto per consentire il producer di condividere un messaggio al consumer. Come nell'esempio precedente, `overwrite_buffer` implementa `ITarget` e `ISource` in modo che il produttore e il consumer può agire su un buffer di messaggi condiviso.  
   
- Questo esempio produce l'output seguente:  
+ [!code-cpp[concrt-producer-consumer-quotes#1](../../parallel/concrt/codesnippet/cpp/how-to-implement-various-producer-consumer-patterns_2.cpp)]  
   
-  **Current quote is 24.44.**  
-**Current quote is 24.44.**  
-**Current quote is 24.65.**  
-**Current quote is 24.99.**  
-**Current quote is 23.76.**  
-**Current quote is 22.30.**  
-**Current quote is 25.89.** Diversamente da un oggetto `unbounded_buffer`, la funzione `receive` non rimuove il messaggio dall'oggetto `overwrite_buffer`.  Se il consumer legge più volte dal buffer dei messaggi prima che il producer sovrascriva il messaggio, il destinatario otterrà ogni volta lo stesso messaggio.  
+ Questo esempio produce il seguente output di esempio.  
   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio o incollarlo in un file denominato `producer-consumer.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+```Output  
+Current quote is 24.44.  
+Current quote is 24.44.  
+Current quote is 24.65.  
+Current quote is 24.99.  
+Current quote is 23.76.  
+Current quote is 22.30.  
+Current quote is 25.89.  
+```  
   
- **cl.exe \/EHsc producer\-consumer.cpp**  
+ A differenza di con un `unbounded_buffer` oggetto, il `receive` funzione rimuove il messaggio dal `overwrite_buffer` oggetto. Se il consumer legge dal buffer dei messaggi di più di una volta prima che il producer sovrascrive il messaggio, il ricevitore ottiene lo stesso messaggio ogni volta.  
   
-## Vedere anche  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `producer-consumer.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+  
+ **CL.exe /EHsc producer-consumer. cpp**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)   
  [Agenti asincroni](../../parallel/concrt/asynchronous-agents.md)   
  [Blocchi dei messaggi asincroni](../../parallel/concrt/asynchronous-message-blocks.md)   

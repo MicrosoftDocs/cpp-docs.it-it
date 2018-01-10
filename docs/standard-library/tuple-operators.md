@@ -13,17 +13,15 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-operators"></a>Operatori &lt;tuple&gt;
 ||||  
@@ -405,5 +403,4 @@ false
   
 ## <a name="see-also"></a>Vedere anche  
  [\<tuple>](../standard-library/tuple.md)
-
 

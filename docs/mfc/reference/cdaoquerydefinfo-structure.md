@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64c8fe002c5b24e67d53b781a68411cffdd79928
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoquerydefinfo-structure"></a>Struttura CDaoQueryDefInfo
 Il `CDaoQueryDefInfo` struttura contiene informazioni su un oggetto querydef definito per l'accesso oggetti DAO (data).  
@@ -48,7 +49,7 @@ struct CDaoQueryDefInfo
  Identifica in modo univoco l'oggetto querydef. Per ulteriori informazioni, vedere l'argomento "Proprietà di nome" nella Guida di DAO. Chiamare [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) per recuperare direttamente questa proprietà.  
   
  `m_nType`  
- Un valore che indica il tipo di un oggetto querydef operativo. Il valore può essere uno dei valori seguenti:  
+ Un valore che indica il tipo di un oggetto querydef operativo. Il valore può essere uno dei seguenti:  
   
 - **dbQSelect** selezionare, la query Seleziona record.  
   

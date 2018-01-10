@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: utilizzo di socket con archivi
 Questo articolo viene descritto il [modello di programmazione di CSocket](#_core_the_csocket_programming_model). Classe [CSocket](../mfc/reference/csocket-class.md) fornisce il supporto di socket a un livello superiore di astrazione rispetto a classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket`utilizza una versione del protocollo di serializzazione MFC per passare i dati in e da un oggetto socket tramite MFC [CArchive](../mfc/reference/carchive-class.md) oggetto. `CSocket` fornisce il blocco (durante la gestione di elaborazione in background dei messaggi di Windows) e consente di accedere a `CArchive`, che gestisce molti aspetti della comunicazione che altrimenti occorrerebbe creare di persona utilizzando l'API non elaborata o la classe `CAsyncSocket`.  
@@ -54,7 +55,7 @@ Questo articolo viene descritto il [modello di programmazione di CSocket](#_core
   
 3.  Se il socket è un client, chiamare [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect) per connettere l'oggetto socket a un socket server.  
   
-     -oppure-  
+     oppure  
   
      Se il socket è un server, chiamare [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen) iniziare l'attesa di tentativi di connessione da un client. Dopo aver ricevuto una richiesta di connessione, accettare chiamando [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
@@ -73,7 +74,7 @@ Questo articolo viene descritto il [modello di programmazione di CSocket](#_core
   
      Dopo avere accettato la connessione e l'installazione dell'archivio, è possibile eseguire attività come la convalida delle password.  
   
-7.  Eliminare in modo permanente l'archivio, il file di socket e gli oggetti socket.  
+7.  Eliminare definitivamente l'archivio, il file di socket e gli oggetti socket.  
   
     > [!NOTE]
     >  La classe `CArchive` fornisce la funzione membro `IsBufferEmpty` in modo specifico per l'utilizzo con la classe `CSocket`. Se il buffer contiene più messaggi di dati, ad esempio, è necessario eseguire un ciclo per leggerli tutti e liberare il buffer. In caso contrario, la successiva notifica di ricezione di dati potrebbe essere ritardata a tempo indeterminato. Utilizzare `IsBufferEmpty` per garantire il recupero di tutti i dati.  

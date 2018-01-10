@@ -1,1 +1,1 @@
-Estensioni componenti Visual C\+\+
+Estensioni componenti Visual C++

@@ -1,32 +1,33 @@
 ---
-title: "Classe ClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ClassFactory (classe)"
+title: Classe ClassFactory | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory
+dev_langs: C++
+helpviewer_keywords: ClassFactory class
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c37c016809d31fcb072f23768e9f54313331016
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe ClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Implementa la funzionalità di base di un'interfaccia IClassFactory.  
+# <a name="classfactory-class"></a>ClassFactory (classe)
+Implementa la funzionalità di base dell'interfaccia IClassFactory.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -44,41 +45,41 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I0`  
- L'interfaccia con indice zero.  
+ L'interfaccia di zero.  
   
  `I1`  
- La prima interfaccia ID.  
+ La prima interfaccia.  
   
  `I2`  
- La seconda interfaccia ID.  
+ La seconda interfaccia.  
   
-## Osservazioni  
- Utilizzare `ClassFactory` per fornire un'implementazione definita dall'utente factory.  
+## <a name="remarks"></a>Note  
+ Utilizzare `ClassFactory` per fornire un'implementazione della factory definita dall'utente.  
   
- Il modello di programmazione viene illustrato come utilizzare la struttura [Implementa](../windows/implements-structure.md) per specificare più di tre interfacce su una class factory.  
+ Il modello di programmazione seguente viene illustrato come utilizzare il [implementa](../windows/implements-structure.md) struttura per specificare più di tre interfacce in una class factory.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Incrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.|  
-|[Metodo ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Incrementa o diminuisce il numero di oggetti sottostanti rilevati dall'oggetto corrente di ClassFactory.|  
-|[Metodo ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera un puntatore a interfaccia specificata dal parametro.|  
+|[Metodo ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Incrementa o decrementa il numero di base di oggetti che vengono rilevate dall'oggetto ClassFactory corrente.|  
+|[Metodo ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Recupera un puntatore a interfaccia specificato dal parametro.|  
 |[Metodo ClassFactory::Release](../windows/classfactory-release-method.md)|Decrementa il conteggio dei riferimenti per l'oggetto ClassFactory corrente.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
@@ -99,11 +100,11 @@ class ClassFactory : public Details::RuntimeClass<
   
  `ClassFactory`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Namespace Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
  [Enumerazione RuntimeClassType](../windows/runtimeclasstype-enumeration.md)

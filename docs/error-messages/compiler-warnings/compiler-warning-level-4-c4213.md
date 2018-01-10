@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 4) C4213 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4213"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4213"
+title: Compilatore avviso (livello 4) C4213 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4213
+dev_langs: C++
+helpviewer_keywords: C4213
 ms.assetid: 59fc3f61-ebd2-499e-99d7-f57bec11eda1
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: abe563bd91736c9dfb6c0efc6507763b03a329cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4213
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-utilizzata estensione non standard: cast su l\-value  
+# <a name="compiler-warning-level-4-c4213"></a>Avviso del compilatore (livello 4) C4213
+utilizzata estensione non standard: cast su l-value  
   
- Con le estensioni Microsoft predefinite \(\/Ze\), è possibile utilizzare i cast sul lato sinistro di un'istruzione di assegnazione.  
+ Con le estensioni Microsoft predefinite (/Ze), è possibile utilizzare cast sul lato sinistro di un'istruzione di assegnazione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // C4213.c  
@@ -46,4 +45,4 @@ int main()
 }  
 ```  
   
- Tali cast non sono validi in compatibilità ANSI \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).
+ Tali cast non sono validi in compatibilità ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

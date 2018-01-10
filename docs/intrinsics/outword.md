@@ -1,62 +1,62 @@
 ---
-title: "__outword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__outword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__outword (funzione intrinseca)"
-  - "out (istruzione)"
+title: __outword | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __outword
+dev_langs: C++
+helpviewer_keywords:
+- __outword intrinsic
+- out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eced2be2f5ccc29be5f9ac936dfeae9f4cdb03a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __outword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="outword"></a>__outword
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione di `out` , che invia la parola `Data` alla porta di I\/O specificate da `Port`.  
+ Genera il `out` (istruzione), che invia la parola `Data` attraverso la porta dei / o specificata da `Port`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __outword(   
-   unsigned short Port,   
-   unsigned short Data   
+void __outword(   
+   unsigned short Port,   
+   unsigned short Data   
 );  
 ```  
   
-#### Parametri  
- \[in\] `Port`  
- La porta per inviare i dati a.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Port`  
+ La porta per inviare i dati.  
   
- \[in\] `Data`  
- i dati da inviare.  
+ [in] `Data`  
+ I dati da inviare.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__outword`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,26 +1,29 @@
 ---
-title: "Spazio dei nomi Microsoft::WRL::Details | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: Namespace Microsoft::WRL::Details | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Spazio dei nomi Microsoft::WRL::Details
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzato direttamente dal codice.  
+# <a name="microsoftwrldetails-namespace"></a>Spazio dei nomi Microsoft::WRL::Details
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,62 +37,62 @@ namespace Microsoft::WRL::Details;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[ComPtrRef (classe)](../windows/comptrref-class.md)|Rappresenta un riferimento a un oggetto di tipo ComPtr \< T>.|  
-|[ComPtrRefBase (classe)](../windows/comptrrefbase-class.md)|Rappresenta la classe base per il [ComPtrRef](../windows/comptrref-class.md) (classe).|  
-|[Dontusenewusemake (classe)](../windows/dontusenewusemake-class.md)|Impedisce l'utilizzo di operatore `new` in `RuntimeClass`. Di conseguenza, è necessario utilizzare il [funzione](../windows/make-function.md) invece.|  
-|[EventTargetArray (classe)](../windows/eventtargetarray-class.md)|Rappresenta una matrice dei gestori di eventi.|  
-|[MakeAllocator (classe)](../windows/makeallocator-class.md)|Alloca memoria per una classe attivabile, con o senza il supporto di riferimento debole.|  
-|[ModuleBase (classe)](../windows/modulebase-class.md)|Rappresenta la classe di base di [modulo](../windows/module-class.md) classi.|  
-|[Classe RemoveIUnknown](../windows/removeiunknown-class.md)|Crea un tipo che corrisponde a un `IUnknown`-tipo di base, ma è non virtuale `QueryInterface`, `AddRef`, e `Release` metodi.|  
-|[Classe WeakReference](../windows/weakreference-class1.md)|Rappresenta un *riferimento debole* che può essere utilizzato con il Runtime di Windows o COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.|  
+|[Classe ComPtrRef](../windows/comptrref-class.md)|Rappresenta un riferimento a un oggetto di tipo ComPtr\<T >.|  
+|[Classe ComPtrRefBase](../windows/comptrrefbase-class.md)|Rappresenta la classe base per il [ComPtrRef](../windows/comptrref-class.md) classe.|  
+|[Classe DontUseNewUseMake](../windows/dontusenewusemake-class.md)|Impedisce l'utilizzo di operatore `new` in `RuntimeClass`. Di conseguenza, è necessario utilizzare il [funzione](../windows/make-function.md) invece.|  
+|[Classe EventTargetArray](../windows/eventtargetarray-class.md)|Rappresenta una matrice di gestori eventi.|  
+|[Classe MakeAllocator](../windows/makeallocator-class.md)|Alloca memoria per una classe attivabile, con o senza il supporto di riferimento debole.|  
+|[Classe ModuleBase](../windows/modulebase-class.md)|Rappresenta la classe di base di [modulo](../windows/module-class.md) classi.|  
+|[Classe RemoveIUnknown](../windows/removeiunknown-class.md)|Crea un tipo che è equivalente a un `IUnknown`-tipo di base, ma ha non virtuale `QueryInterface`, `AddRef`, e `Release` metodi.|  
+|[WeakReference (classe)](../windows/weakreference-class1.md)|Rappresenta un *riferimento debole* che può essere utilizzato con Windows Runtime o COM classico. Un riferimento debole rappresenta un oggetto che può o non può essere accessibile.|  
   
 ### <a name="structures"></a>Strutture  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[ArgTraits (struttura)](../windows/argtraits-structure.md)|Dichiara un delegato specificato interfaccia e una funzione membro anonimo che include un numero specificato di parametri.|  
-|[ArgTraitsHelper (struttura)](../windows/argtraitshelper-structure.md)|Consente di definire le caratteristiche comuni di argomenti del delegato.|  
-|[BoolStruct (struttura)](../windows/boolstruct-structure.md)|Definisce se un ComPtr gestisce la durata dell'oggetto di un'interfaccia. Viene utilizzato internamente da BoolStruct di [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatore.|  
-|[CreatorMap (struttura)](../windows/creatormap-structure.md)|Contiene informazioni su come inizializzare, registrare e annullare la registrazione di oggetti.|  
-|[DerefHelper (struttura)](../windows/derefhelper-structure.md)|Rappresenta un puntatore dereferenziato il `T*` parametro di modello.|  
-|[EnableIf (struttura)](../windows/enableif-structure.md)|Definisce un membro dati del tipo specificato dal secondo parametro di modello se il primo parametro di modello restituisce `true`.|  
-|[FactoryCache (struttura)](../windows/factorycache-structure.md)|Contiene il percorso di una class factory e un valore che identifica un registrati [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] o oggetto di classe COM.|  
-|[ImplementsBase (struttura)](../windows/implementsbase-structure.md)|Utilizzato per convalidare i tipi di parametro di modello [implementa la struttura](../windows/implements-structure.md).|  
-|[ImplementsHelper (struttura)](../windows/implementshelper-structure.md)|Consente di implementare il [implementa](../windows/implements-structure.md) struttura.|  
-|[InterfaceList (struttura)](../windows/interfacelist-structure.md)|Utilizzato per creare un elenco ricorsivo di interfacce.|  
-|[InterfaceListHelper (struttura)](../windows/interfacelisthelper-structure.md)|Compila un `InterfaceList` tipo applicando gli argomenti di parametro di modello specificato in modo ricorsivo.|  
-|[InterfaceTraits (struttura)](../windows/interfacetraits-structure.md)|Caratteristiche comuni implementa un'interfaccia.|  
-|[InvokeHelper (struttura)](../windows/invokehelper-structure.md)|Fornisce un'implementazione del metodo Invoke () in base al numero specificato e il tipo di argomenti.|  
-|[IsBaseOfStrict (struttura)](../windows/isbaseofstrict-structure.md)|Verifica se un tipo è la base di un altro tipo.|  
-|[IsSame (struttura)](../windows/issame-structure.md)|Consente di verificare se un oggetto di tipo è identico a un altro tipo specificato.|  
-|[Struttura nil](../windows/nil-structure.md)|Utilizzato per indicare un parametro di modello facoltativo non specificato.|  
-|[RemoveReference (struttura)](../windows/removereference-structure.md)|Rimuove il tratto di riferimento o un riferimento rvalue del parametro di modello di classe specificata.|  
-|[Struttura RuntimeClassBase](../windows/runtimeclassbase-structure.md)|Consente di rilevare `RuntimeClass` nel [rendere](../windows/make-function.md) (funzione).|  
+|[Struttura ArgTraits](../windows/argtraits-structure.md)|Dichiara un delegato specificato interfaccia e una funzione membro anonima che ha un numero di parametri specificato.|  
+|[Struttura ArgTraitsHelper](../windows/argtraitshelper-structure.md)|Consente di definiscono le caratteristiche comuni di argomenti del delegato.|  
+|[Struttura BoolStruct](../windows/boolstruct-structure.md)|Definisce se un ComPtr gestisce la durata dell'oggetto di un'interfaccia. BoolStruct viene utilizzato internamente dal [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) operatore.|  
+|[Struttura CreatorMap](../windows/creatormap-structure.md)|Contiene informazioni su come inizializzare, registrare e annullare la registrazione di oggetti.|  
+|[Struttura DerefHelper](../windows/derefhelper-structure.md)|Rappresenta un puntatore dereferenziato al `T*` parametro di modello.|  
+|[Struttura EnableIf](../windows/enableif-structure.md)|Definisce un membro dati di tipo specificato dal secondo parametro di modello se il primo parametro di modello restituisce `true`.|  
+|[Struttura FactoryCache](../windows/factorycache-structure.md)|Contiene il percorso di una class factory e un valore che identifica un oggetto di classe di Windows Runtime o COM registrato.|  
+|[Struttura ImplementsBase](../windows/implementsbase-structure.md)|Utilizzato per convalidare i tipi di parametro di modello [implementa la struttura](../windows/implements-structure.md).|  
+|[Struttura ImplementsHelper](../windows/implementshelper-structure.md)|Consente di implementare il [implementa](../windows/implements-structure.md) struttura.|  
+|[Struttura InterfaceList](../windows/interfacelist-structure.md)|Consente di creare un elenco ricorsivo di interfacce.|  
+|[Struttura InterfaceListHelper](../windows/interfacelisthelper-structure.md)|Compila un `InterfaceList` tipo applicando gli argomenti di parametro di modello specificato in modo ricorsivo.|  
+|[Struttura InterfaceTraits](../windows/interfacetraits-structure.md)|Caratteristiche comuni di implementa di un'interfaccia.|  
+|[Struttura InvokeHelper](../windows/invokehelper-structure.md)|Fornisce un'implementazione del metodo Invoke () in base al numero specificato e il tipo di argomenti.|  
+|[Struttura IsBaseOfStrict](../windows/isbaseofstrict-structure.md)|Verifica se un tipo è la base di un altro tipo.|  
+|[Struttura IsSame](../windows/issame-structure.md)|Consente di verificare se un tipo specificato è uguale a un altro tipo specificato.|  
+|[Struttura Nil](../windows/nil-structure.md)|Utilizzato per indicare un parametro di modello non specificato, che è facoltativo.|  
+|[Struttura RemoveReference](../windows/removereference-structure.md)|Rimuove il tratto di tipo riferimento o di riferimento rvalue del parametro di modello di classe specificata.|  
+|[Struttura RuntimeClassBase](../windows/runtimeclassbase-structure.md)|Utilizzato per rilevare `RuntimeClass` nel [rendere](../windows/make-function.md) (funzione).|  
 |[Struttura RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)|Fornisce metodi helper per `QueryInterface` operazioni e ottenere gli ID di interfaccia.|  
-|[VerifyInheritanceHelper (struttura)](../windows/verifyinheritancehelper-structure.md)|Verifica se un'interfaccia è derivata da un'altra interfaccia.|  
-|[VerifyInterfaceHelper (struttura)](../windows/verifyinterfacehelper-structure.md)|Verifica che l'interfaccia specificata dal parametro di modello soddisfa requisiti specifici.|  
+|[Struttura VerifyInheritanceHelper](../windows/verifyinheritancehelper-structure.md)|Verifica se un'interfaccia è derivata da un'altra interfaccia.|  
+|[Struttura VerifyInterfaceHelper](../windows/verifyinterfacehelper-structure.md)|Verifica che l'interfaccia specificata dal parametro di modello soddisfi determinati requisiti.|  
   
 ### <a name="enumerations"></a>Enumerazioni  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[AsyncStatusInternal (enumerazione)](../windows/asyncstatusinternal-enumeration.md)|Specifica un mapping tra enumerazioni interne per lo stato delle operazioni asincrone e **Windows::Foundation::AsyncStatus** enumerazione.|  
+|[Enumerazione AsyncStatusInternal](../windows/asyncstatusinternal-enumeration.md)|Specifica un mapping tra enumerazioni interne per lo stato di operazioni asincrone e **Windows::Foundation::AsyncStatus** enumerazione.|  
   
 ### <a name="functions"></a>Funzioni  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[ActivationFactoryCallback (funzione)](../windows/activationfactorycallback-function.md)|Ottiene la factory di attivazione per l'ID di attivazione specificato.|  
-|[Move (funzione)](../windows/move-function.md)|Sposta l'argomento specificato da una posizione a altra.|  
-|[RaiseException (funzione)](../windows/raiseexception-function.md)|Genera un'eccezione nel thread chiamante.|  
-|[Funzione swap (libreria modelli C++ di Windows Runtime)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Scambia i valori dei due argomenti specificati.|  
-|[TerminateMap (funzione)](../windows/terminatemap-function.md)|Arresta la class factory del modulo specificato.|  
+|[Funzione ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Ottiene la factory di attivazione per l'ID di attivazione specificato.|  
+|[Funzione Move](../windows/move-function.md)|Sposta l'argomento specificato da una posizione a altra.|  
+|[Funzione RaiseException](../windows/raiseexception-function.md)|Genera un'eccezione nel thread chiamante.|  
+|[Funzione swap (Libreria modelli C++ per Windows Runtime)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Scambia i valori dei due argomenti specificati.|  
+|[Funzione TerminateMap](../windows/terminatemap-function.md)|Arresta la class factory del modulo specificato.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** async.h, client.h, corewrappers. h, Event. h, ftm.h, implements.h, internal.h, module.h  
+ **Intestazione:** Async, client. h, corewrappers. h, Event. h, ftm.h, h, FTM, module.h  
   
- **Spazio dei nomi:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
 ## <a name="see-also"></a>Vedere anche  
- [Spazio dei nomi Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
- [Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+ [Namespace Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
+ [Spazio dei nomi Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

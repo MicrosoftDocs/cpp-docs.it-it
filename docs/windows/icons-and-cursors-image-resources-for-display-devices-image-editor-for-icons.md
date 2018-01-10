@@ -1,49 +1,51 @@
 ---
-title: "Icons and Cursors: Image Resources for Display Devices (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursors [C++], creating"
-  - "image resources, display devices"
-  - "icons [C++], creating"
-  - "cursors [C++], types"
-  - "icons [C++]"
-  - "Image editor [C++], icons and cursors"
-  - "cursors [C++]"
-  - "display devices, creating icons for"
-  - "cursors [C++], hot spots"
-  - "icons [C++], types"
+title: 'Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini per le icone) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- cursors [C++], creating
+- image resources, display devices
+- icons [C++], creating
+- cursors [C++], types
+- icons [C++]
+- Image editor [C++], icons and cursors
+- cursors [C++]
+- display devices, creating icons for
+- cursors [C++], hot spots
+- icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Icons and Cursors: Image Resources for Display Devices (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>Icone e cursori: risorse immagine per i dispositivi di visualizzazione (Editor di immagini per le icone)
 Icone e cursori sono risorse grafiche che possono contenere più immagini di diverse dimensioni e le combinazioni di colori per diversi tipi di dispositivi di visualizzazione. Inoltre, un cursore ha un'"area sensibile", ovvero il punto che Windows usa per rilevare la posizione. Come per le bitmap e le altre immagini, anche le icone e i cursori vengono creati e modificati usando l'editor di immagini.  
   
- Quando si crea una nuova icona o cursore, l'editor di immagini crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata \(trasparente\). Se l'immagine è un cursore, l'area sensibile inizialmente corrisponde all'angolo superiore sinistro \(coordinate 0,0\).  
+ Quando si crea una nuova icona o cursore, l'editor di immagini crea innanzitutto un'immagine di un tipo standard. L'immagine viene inizialmente riempita con il colore della schermata (trasparente). Se l'immagine è un cursore, l'area sensibile inizialmente corrisponde all'angolo superiore sinistro (coordinate 0,0).  
   
- Per impostazione predefinita, l'editor di immagini supporta la creazione di immagini aggiuntive per i dispositivi illustrati nella tabella seguente. È possibile creare immagini per altri dispositivi specificando i parametri di larghezza, altezza e numero di colori nella [finestra di dialogo dell'immagine personalizzata](../mfc/custom-image-dialog-box-image-editor-for-icons.md).  
+ Per impostazione predefinita, l'editor di immagini supporta la creazione di immagini aggiuntive per i dispositivi illustrati nella tabella seguente. È possibile creare immagini per altri dispositivi specificando i parametri di larghezza, altezza e numero di colori nella [finestra di dialogo dell'immagine personalizzata](custom-image-dialog-box-image-editor-for-icons.md).  
   
 > [!NOTE]
 >  Utilizzando l'Editor immagini, è possibile visualizzare, ma non modificare, immagini a 32 bit.  
   
-|Colore|Larghezza \(pixel\)|Altezza \(pixel\)|  
-|------------|-------------------------|-----------------------|  
+|Colore|Larghezza (pixel)|Altezza (pixel)|  
+|-----------|----------------------|-----------------------|  
 |Monocromatico|16|16|  
 |Monocromatico|32|32|  
 |Monocromatico|48|48|  
@@ -60,26 +62,27 @@ Icone e cursori sono risorse grafiche che possono contenere più immagini di div
 |256|64|64|  
 |256|96|96|  
   
--   [Creazione di una nuova immagine per dispositivo \(icona o cursore\)](../mfc/creating-a-device-image-image-editor-for-icons.md)  
+-   [Creazione di una nuova immagine per dispositivo (icona o cursore)](../windows/creating-a-device-image-image-editor-for-icons.md)  
   
--   [Aggiunta di un'immagine per un diverso dispositivo di visualizzazione](../mfc/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
+-   [Aggiunta di un'immagine per un diverso dispositivo di visualizzazione](../windows/adding-an-image-for-a-different-display-device-image-editor-for-icons.md)  
   
--   [Copia di un'immagine per dispositivo](../mfc/copying-a-device-image-image-editor-for-icons.md)  
+-   [Copia di un'immagine per dispositivo](../windows/copying-a-device-image-image-editor-for-icons.md)  
   
--   [Eliminazione di un'immagine per dispositivo](../mfc/deleting-a-device-image-image-editor-for-icons.md)  
+-   [Eliminazione di un'immagine per dispositivo](../windows/deleting-a-device-image-image-editor-for-icons.md)  
   
--   [Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../mfc/creating-transparent-or-inverse-regions-in-device-images.md)  
+-   [Creazione di aree trasparenti o di inversione nelle immagini per i dispositivi](../windows/creating-transparent-or-inverse-regions-in-device-images.md)  
   
--   [Creazione di un cursore o di un'icona a 256 colori](../mfc/creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
+-   [Creazione di un cursore o di un'icona a 256 colori](creating-a-256-color-icon-or-cursor-image-editor-for-icons.md)  
   
--   [Impostazione dell'area sensibile di un cursore](../mfc/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
+-   [Impostazione dell'area sensibile di un cursore](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisiti  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
-## Vedere anche  
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Image Editor for Icons](../windows/image-editor-for-icons.md)  (Editor di immagini per icone)  
  [Icone](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [Cursori](http://msdn.microsoft.com/library/windows/desktop/ms646970)
+

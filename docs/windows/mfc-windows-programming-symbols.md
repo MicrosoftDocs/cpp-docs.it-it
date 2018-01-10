@@ -1,72 +1,75 @@
 ---
-title: "MFC Windows Programming Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC symbols"
-  - "symbols, MFC"
-  - "Windows programming MFC symbols [C++]"
+title: Simboli MFC per la programmazione Windows | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC symbols
+- symbols, MFC
+- Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# MFC Windows Programming Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anche questi simboli sono parte dei file di supporto di MFC, ma supportano funzioni e operazioni standard delle applicazioni Windows.  Questi simboli vengono principalmente utilizzati con i menu.  Quando si lavora sui menu nell'editor di menu, questi simboli vengono visualizzati nella finestra Proprietà in associazione con i comandi di menu comuni.  Se ad esempio l'applicazione dispone di un menu File con un comando Esci, tale comando verrà associato al simbolo ID\_APP\_EXIT nella [finestra Proprietà](../Topic/Properties%20Window.md).  
+# <a name="mfc-windows-programming-symbols"></a>Simboli per la programmazione Windows di MFC
+Questi simboli fanno parte di file di supporto di MFC, ma supportano funzioni di applicazione Windows standard e le azioni. Questi simboli vengono utilizzati principalmente con i menu. Quando si lavora con i menu nell'Editor di Menu, questi simboli vengono visualizzati nella finestra delle proprietà associate ai comuni comandi di menu. Ad esempio, se l'applicazione dispone di un menu File con un comando Exit, il comando verrà associato il simbolo ID_APP_EXIT nel [finestra proprietà](/visualstudio/ide/reference/properties-window).  
   
 ||||  
 |-|-|-|  
-|ID\_APP\_ABOUT|ID\_APP\_EXIT|ID\_APPLY\_NOW|  
-|ID\_CONTEXT\_HELP|ID\_DEFAULT\_HELP|ID\_EDIT\_CLEAR|  
-|ID\_EDIT\_CLEAR\_ALL|ID\_EDIT\_COPY|ID\_EDIT\_CUT|  
-|ID\_EDIT\_FIND|ID\_EDIT\_PASTE|ID\_EDIT\_PASTE\_LINK|  
-|ID\_EDIT\_PASTE\_SPECIAL|ID\_EDIT\_REDO|ID\_EDIT\_REPEAT|  
-|ID\_EDIT\_REPLACE|ID\_EDIT\_SELECT\_ALL|ID\_EDIT\_UNDO|  
-|ID\_FILE\_CLOSE|ID\_FILE\_MRU\_FILE1|ID\_FILE\_MRU\_FILE10|  
-|ID\_FILE\_MRU\_FILE11|ID\_FILE\_MRU\_FILE12|ID\_FILE\_MRU\_FILE13|  
-|ID\_FILE\_MRU\_FILE14|ID\_FILE\_MRU\_FILE15|ID\_FILE\_MRU\_FILE16|  
-|ID\_FILE\_MRU\_FILE2|ID\_FILE\_MRU\_FILE3|ID\_FILE\_MRU\_FILE4|  
-|ID\_FILE\_MRU\_FILE5|ID\_FILE\_MRU\_FILE6|ID\_FILE\_MRU\_FILE7|  
-|ID\_FILE\_MRU\_FILE8|ID\_FILE\_MRU\_FILE9|ID\_FILE\_MRU\_FIRST|  
-|ID\_FILE\_MRU\_LAST|ID\_FILE\_NEW|ID\_FILE\_NEW\_FRAME|  
-|ID\_FILE\_OPEN|ID\_FILE\_PAGE\_SETUP|ID\_FILE\_PRINT|  
-|ID\_FILE\_PRINT\_DIRECT|ID\_FILE\_PRINT\_PREVIEW|ID\_FILE\_PRINT\_SETUP|  
-|ID\_FILE\_SAVE|ID\_FILE\_SAVE\_AS|ID\_FILE\_SAVE\_COPY\_AS|  
-|ID\_FILE\_SEND\_MAIL|ID\_FILE\_UPDATE|ID\_FORMAT\_FONT|  
-|ID\_HELP|ID\_HELP\_FINDER|ID\_HELP\_INDEX|  
-|ID\_HELP\+USING|ID\_INDICATOR\_CAPS|ID\_INDICATOR\_EXT|  
-|ID\_INDICATOR\_KANA|ID\_INDICATOR\_NUM|ID\_INDICATOR\_OVR|  
-|ID\_INDICATOR\_REC|ID\_INDICATOR\_SCRL|ID\_NEXT\_PANE|  
-|ID\_OLE\_EDIT\_CHANGE\_ICON|ID\_OLE\_EDIT\_CONVERT|ID\_OLE\_EDIT\_LINKS|  
-|ID\_OLE\_EDIT\_PROPERTIES|ID\_OLE\_INSERT\_NEW|ID\_OLE\_VERB\_FIRST|  
-|ID\_PREV\_PANE|ID\_REC\_FIRST|ID\_RECORD\_LAST|  
-|ID\_RECORD\_NEXT|ID\_RECORD\_PREV|ID\_SEPARATOR|  
-|ID\_VIEW\_AUTOARRANGE|ID\_VIEW\_BYNAME|ID\_VIEW\_DETAILS|  
-|ID\_VIEW\_LARGEICON|ID\_VIEW\_LINEUP|ID\_VIEW\_LIST|  
-|ID\_VIEW\_REBAR|ID\_VIEW\_SMALLICON|ID\_VIEW\_STATUS\_BAR|  
-|ID\_VIEW\_TOOLBAR|ID\_WINDOW\_ARRANGE|ID\_WINDOW\_CASCADE|  
-|ID\_WINDOW\_NEW|ID\_WINDOW\_SPLIT|ID\_WINDOW\_TILE\_HORIZ|  
-|ID\_WINDOW\_TILE\_VERT|ID\_WIZBACK|ID\_WIZFINISH|  
-|ID\_WIZNEXT|IDABORT|IDC\_STATIC|  
-|IDCANCEL|IDD\_ABOUTBOX|IDIGNORE|  
-|IDNO|IDOK|IDP\_OLE\_INIT\_FAILED|  
+|ID_APP_ABOUT|ID_APP_EXIT|ID_APPLY_NOW|  
+|ID_CONTEXT_HELP|ID_DEFAULT_HELP|ID_EDIT_CLEAR|  
+|ID_EDIT_CLEAR_ALL|ID_EDIT_COPY|ID_EDIT_CUT|  
+|ID_EDIT_FIND|ID_EDIT_PASTE|ID_EDIT_PASTE_LINK|  
+|ID_EDIT_PASTE_SPECIAL|ID_EDIT_REDO|ID_EDIT_REPEAT|  
+|ID_EDIT_REPLACE|ID_EDIT_SELECT_ALL|ID_EDIT_UNDO|  
+|ID_FILE_CLOSE|ID_FILE_MRU_FILE1|ID_FILE_MRU_FILE10|  
+|ID_FILE_MRU_FILE11|ID_FILE_MRU_FILE12|ID_FILE_MRU_FILE13|  
+|ID_FILE_MRU_FILE14|ID_FILE_MRU_FILE15|ID_FILE_MRU_FILE16|  
+|ID_FILE_MRU_FILE2|ID_FILE_MRU_FILE3|ID_FILE_MRU_FILE4|  
+|ID_FILE_MRU_FILE5|ID_FILE_MRU_FILE6|ID_FILE_MRU_FILE7|  
+|ID_FILE_MRU_FILE8|ID_FILE_MRU_FILE9|ID_FILE_MRU_FIRST|  
+|ID_FILE_MRU_LAST|ID_FILE_NEW|ID_FILE_NEW_FRAME|  
+|ID_FILE_OPEN|ID_FILE_PAGE_SETUP|ID_FILE_PRINT|  
+|ID_FILE_PRINT_DIRECT|ID_FILE_PRINT_PREVIEW|ID_FILE_PRINT_SETUP|  
+|ID_FILE_SAVE|ID_FILE_SAVE_AS|ID_FILE_SAVE_COPY_AS|  
+|ID_FILE_SEND_MAIL|ID_FILE_UPDATE|ID_FORMAT_FONT|  
+|ID_HELP|ID_HELP_FINDER|ID_HELP_INDEX|  
+|ID_HELP + UTILIZZANDO|ID_INDICATOR_CAPS|ID_INDICATOR_EXT|  
+|ID_INDICATOR_KANA|ID_INDICATOR_NUM|ID_INDICATOR_OVR|  
+|ID_INDICATOR_REC|ID_INDICATOR_SCRL|ID_NEXT_PANE|  
+|ID_OLE_EDIT_CHANGE_ICON|ID_OLE_EDIT_CONVERT|ID_OLE_EDIT_LINKS|  
+|ID_OLE_EDIT_PROPERTIES|ID_OLE_INSERT_NEW|ID_OLE_VERB_FIRST|  
+|ID_PREV_PANE|ID_REC_FIRST|ID_RECORD_LAST|  
+|ID_RECORD_NEXT|ID_RECORD_PREV|ID_SEPARATOR|  
+|ID_VIEW_AUTOARRANGE|ID_VIEW_BYNAME|ID_VIEW_DETAILS|  
+|ID_VIEW_LARGEICON|ID_VIEW_LINEUP|ID_VIEW_LIST|  
+|ID_VIEW_REBAR|ID_VIEW_SMALLICON|ID_VIEW_STATUS_BAR|  
+|ID_VIEW_TOOLBAR|ID_WINDOW_ARRANGE|ID_WINDOW_CASCADE|  
+|ID_WINDOW_NEW|ID_WINDOW_SPLIT|ID_WINDOW_TILE_HORIZ|  
+|ID_WINDOW_TILE_VERT|ID_WIZBACK|ID_WIZFINISH|  
+|ID_WIZNEXT|IDABORT|IDC_STATIC|  
+|IDCANCEL|IDD_ABOUTBOX|IDIGNORE|  
+|IDNO|IDOK|IDP_OLE_INIT_FAILED|  
 |IDRETRY|IDYES||  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  MFC  
   
-## Vedere anche  
- [MFC Predefined Symbols](../windows/mfc-predefined-symbols.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>Vedere anche  
+ [Simboli predefiniti di MFC](../windows/mfc-predefined-symbols.md)   
+ [Simboli: identificatori di risorsa](../windows/symbols-resource-identifiers.md)

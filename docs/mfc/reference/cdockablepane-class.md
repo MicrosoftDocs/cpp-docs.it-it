@@ -143,11 +143,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3072e4504fc70e75888607d4f263b39532f69b51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb32fc827c576830def3901389d400450b79f5ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Implementa un riquadro che può essere ancorato in un sito di ancoraggio o incluso in un riquadro a schede.  
@@ -222,7 +223,7 @@ class CDockablePane : public CPane
 |[CDockablePane::ReplacePane](#replacepane)|Sostituisce il riquadro con un riquadro specificato.|  
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|Il framework chiama questo metodo come un riquadro viene deserializzato per ripristinare il divisore di riquadro predefinito.|  
 |`CDockablePane::SaveState`|Utilizzata internamente.|  
-|`CDockablePane::Serialize`|Serializza il riquadro. Esegue l'override di `CBasePane::Serialize`.|  
+|`CDockablePane::Serialize`|Serializza il riquadro. Esegue l'override`CBasePane::Serialize`.|  
 |[CDockablePane::SetAutoHideMode](#setautohidemode)|Attiva o disattiva il riquadro ancorato tra visibile e la modalità Nascondi automaticamente.|  
 |[CDockablePane::SetAutoHideParents](#setautohideparents)|Imposta il pulsante Nascondi automaticamente e la barra degli strumenti Nascondi automaticamente per il riquadro.|  
 |`CDockablePane::SetDefaultPaneDivider`|Utilizzata internamente.|  
@@ -248,7 +249,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>Membri di dati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Specifica se l'animazione Nascondi del riquadro ancorato è disabilitato.|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Determina il comportamento del riquadro quando il riquadro è in modalità Nascondi automaticamente.|  

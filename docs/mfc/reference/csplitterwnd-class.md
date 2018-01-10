@@ -83,11 +83,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d3ba13476ca5595e821ce8a233dae8520f190be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 706425dd8d729937d310da9cc2f09eac8ec1ad57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (classe)
 Fornisce la funzionalità di una finestra con separatore, ovvero una finestra che contiene più riquadri.  

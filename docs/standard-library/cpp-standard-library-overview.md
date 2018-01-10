@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3faa0bab0d49eb45ea340528ffc859bc53764d67
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>Panoramica sulla libreria standard C++
 Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, `<hash_map>` e `<hash_set>`, che non sono necessarie per lo Standard C++. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).  
@@ -78,13 +62,12 @@ Tutte le entità di libreria di C++ sono dichiarate o definite in una o più int
   
 -   [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Sicurezza dei thread nella libreria standard C++)  
   
--   [stdext Namespace](../standard-library/stdext-namespace.md) (Spazio dei nomi stdext)  
+-   [Spazio dei nomi stdext](../standard-library/stdext-namespace.md)  
   
--   [Regular Expressions (C++)](../standard-library/regular-expressions-cpp.md) (Espressioni regolari (C++))  
+-   [Espressioni regolari (C++)](../standard-library/regular-expressions-cpp.md)  
   
  Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità libreria CRT).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -1,44 +1,47 @@
 ---
-title: "App di Windows universale (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: App di Windows universale (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# App di Windows universale (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="universal-windows-apps-c"></a>App di Windows universale (C++)
+App universali di Windows Platform (UWP) contengono un set di principi di progettazione che mettono l'accento interfacce utente semplici incentrate sul contenuto che si adatta automaticamente per diverse dimensioni dello schermo in dispositivi diversi. L'interfaccia utente viene creata con il markup XAML, mentre il code-behind in codice C++ nativo. È anche possibile creare componenti (DLL) che possono essere usati da app UWP scritte in altri linguaggi. La superficie dell'API per App UWP è Windows Runtime, ovvero una ben fornita libreria che offre un'ampia gamma di servizi del sistema operativo.  
 
-Le app della piattaforma UWP \(Universal Windows Platform\) contengono un set di principi di progettazione che mettono l'accento su interfacce utente semplici incentrate sul contenuto e in grado di adattarsi automaticamente alle diverse dimensioni dello schermo di dispositivi di vario tipo. L'interfaccia utente viene creata con il markup XAML, mentre il code\-behind in codice C\+\+ nativo. È anche possibile creare componenti \(DLL\) che possono essere usati da app UWP scritte in altri linguaggi. La superficie dell'API per le app UWP è [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], una ben fornita libreria che offre un'ampia gamma di servizi del sistema operativo.  
+> [!TIP]  
+> Per Windows 10, è possibile utilizzare il convertitore di App Desktop per creare un pacchetto di applicazione desktop esistente per la distribuzione tramite Windows Store. Per altre informazioni, vedere i post relativi all'[uso del runtime di Visual C++ nel progetto Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) e al [trasferimento dell'app desktop sulla piattaforma UWP con Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
   
-> [!NOTE]
->  Buona parte della documentazione per lo sviluppo di app UWP in C\+\+ è disponibile nel sito Web [Windows Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=255563). Alcuni dei collegamenti in questo articolo rimandano a tale sito Web.  
   
-## App UWP che usano C\+\+\/CX  
+## <a name="uwp-apps-that-use-ccx"></a>App UWP che usano C++/CX  
   
 |||  
 |-|-|  
-|[Documentazione di riferimento del linguaggio Visual C\+\+ \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=255561)|Descrive il set di estensioni che semplificano l'utilizzo in C\+\+ delle API di [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] e abilitano la gestione degli errori basata sulle eccezioni.|  
-|[Compilazione di applicazioni e librerie \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=264858)|Descrive come creare DLL e librerie statiche a cui è possibile accedere da un componente o un'app C\+\+\/CX.|  
-|[Esercitazione: Creare la prima app di Windows Store con C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255556)|Procedura dettagliata che presenta i concetti di base dello sviluppo di app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] in C\+\+. Argomento non ancora aggiornato per lo sviluppo UWP in Windows 10.|  
-|[Guida di orientamento per applicazioni Windows Store in C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255553)|Fornisce collegamenti ad articoli relativi allo sviluppo di giochi e app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] in C\+\+.|  
-|[Creazione di componenti Windows Runtime in C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255559)|Descrive come creare DLL che possono essere usate da altri componenti e app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].|  
-|[Sviluppo di giochi](http://go.microsoft.com/fwlink/p/?LinkId=255554)|Descrive come usare DirectX e C\+\+ per creare giochi.|  
+|[Documentazione di riferimento del linguaggio Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|Descrive il set di estensioni che semplificano l'utilizzo di C++ di Windows Runtime APIs e abilitare la gestione degli errori che si basa sulle eccezioni.|  
+|[Compilazione di applicazioni e librerie (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Descrive come creare DLL e librerie statiche a cui è possibile accedere da un componente o un'app C++/CX.|  
+|[Esercitazione: Creare la prima app di Windows Store con C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Procedura dettagliata che introduce i concetti di base dello sviluppo di app UWP in C++. Argomento non ancora aggiornato per lo sviluppo UWP in Windows 10.|  
+|[Creazione di componenti Windows Runtime in C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Viene descritto come creare DLL a cui è possono utilizzare altri componenti e App Universal Windows Platform.|  
+|[Sviluppo di giochi](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Descrive come usare DirectX e C++ per creare giochi.|  
   
-## Applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] che usano [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\)  
- [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] fornisce le interfacce COM di basso livello tramite cui il codice C\+\+ ISO può accedere a [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] in un ambiente privo di eccezioni. Nella maggior parte dei casi si consiglia di usare C\+\+\/CX invece di [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] per lo sviluppo di applicazioni [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. Per informazioni su [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)], vedere [Libreria di modelli di Windows Runtime C\+\+ \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md).  
+## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>App di piattaforma Windows universale che utilizzano la libreria di modelli C++ di Windows Runtime (WRL) 
+ La libreria di modelli di Windows Runtime C++ fornisce le interfacce COM di basso livello mediante il quale codice C++ ISO può accedere al Runtime di Windows in un ambiente privo di eccezioni. Nella maggior parte dei casi, è consigliabile utilizzare C + + CX anziché il modello libreria di Windows Runtime C++ per lo sviluppo di app Universal Windows Platform. Per informazioni sulla libreria di modelli di Windows Runtime C++, vedere [libreria di modelli C++ (WRL) di Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
-## Vedere anche  
- [Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)
+## <a name="see-also"></a>Vedere anche  
+ [Visual C++](../visual-cpp-in-visual-studio.md)
+

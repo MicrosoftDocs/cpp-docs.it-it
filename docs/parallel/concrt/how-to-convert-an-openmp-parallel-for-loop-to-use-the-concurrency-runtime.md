@@ -1,59 +1,67 @@
 ---
-title: "Procedura: Convertire un ciclo OpenMP parallel for per l&#39;utilizzo del runtime di concorrenza | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conversione da OpenMP al runtime di concorrenza, cicli for paralleli"
-  - "conversione da OpenMP al runtime di concorrenza, cicli paralleli"
-  - "cicli for paralleli, conversione da OpenMP al runtime di concorrenza"
-  - "cicli paralleli, conversione da OpenMP al runtime di concorrenza"
+title: 'Procedura: convertire un ciclo OpenMP parallel for per l''utilizzo del Runtime di concorrenza | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- converting from OpenMP to the Concurrency Runtime, parallel for loops
+- converting from OpenMP to the Concurrency Runtime, parallel loops
+- parallel for loops, converting from OpenMP to the Concurrency Runtime
+- parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a27e07884b4ada54f694136ea2fbca474c9d214d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: Convertire un ciclo OpenMP parallel for per l&#39;utilizzo del runtime di concorrenza
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Procedura: Convertire un ciclo OpenMP parallel for per l'utilizzo del runtime di concorrenza
 
-In questo esempio viene illustrato come convertire un ciclo di base che utilizza le direttive [parallel](../../parallel/openmp/reference/parallel.md) e [for](../../parallel/openmp/reference/for-openmp.md) di OpenMP per utilizzare l'algoritmo [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) del runtime di concorrenza.  
+In questo esempio viene illustrato come convertire un ciclo di base che utilizza il OpenMP [parallela](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) e [per](../../parallel/openmp/reference/for-openmp.md) direttive da utilizzare il Runtime di concorrenza [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.  
   
-## Esempio  
- In questo esempio vengono utilizzati sia OpenMP che il runtime di concorrenza per calcolare il conteggio dei numeri primi in una matrice di valori casuali.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene utilizzato sia OpenMP che il Runtime di concorrenza per calcolare il conteggio dei numeri primi in una matrice di valori casuali.  
   
- [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/CPP/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
+ [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
   
- Questo esempio produce l'output che segue.  
+ Questo esempio produce il seguente output:  
   
-  **Using OpenMP...**  
-**found 107254 prime numbers.**  
-**Using the Concurrency Runtime...**  
-**found 107254 prime numbers.** L'algoritmo `parallel_for` e OpenMP 3.0 consentono che il tipo di indice sia un tipo integrale con segno oppure un tipo integrale senza segno.  L'algoritmo `parallel_for` assicura inoltre che l'intervallo specificato non superi un tipo con segno.  Nelle versioni 2.0 e 2.5 di OpenMP sono consentiti solo tipi di indice integrali con segno.  OpenMP inoltre non convalida l'intervallo dell'indice.  
+```Output  
+Using OpenMP...  
+found 107254 prime numbers.  
+Using the Concurrency Runtime...  
+found 107254 prime numbers.  
+```  
   
- Nella versione di questo esempio in cui si utilizza il runtime di concorrenza si utilizza anche l'oggetto [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) in luogo della direttiva [atomic](../../parallel/openmp/reference/atomic.md) per incrementare il valore del contatore senza richiedere la sincronizzazione.  
+ Il `parallel_for` algoritmo e OpenMP 3.0 consentire per il tipo di indice deve essere un tipo integrale signed o un tipo integrale senza segno. Il `parallel_for` algoritmo assicura anche che l'intervallo specificato non causa un overflow a un tipo con segno. Versioni OpenMP 2.0 e 2.5 supporta solo i tipi di indice integrali con segno. OpenMP non convalida l'intervallo di indici.  
   
- Per ulteriori informazioni su `parallel_for` e altri algoritmi paralleli, vedere [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md).  Per ulteriori informazioni sulla classe `combinable`, vedere [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).  
+ La versione di questo esempio che usa il Runtime di concorrenza Usa anche un [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) oggetto al posto del [atomica](../../parallel/openmp/reference/atomic.md) direttiva per incrementare il valore del contatore senza sincronizzazione.  
   
-## Esempio  
- In questo esempio viene modificato l'esempio precedente in modo che si possa agire su un oggetto [std::array](../../standard-library/array-class-stl.md) anziché su una matrice nativa.  Poiché nelle versioni 2.0 e 2.5 di OpenMP sono consentiti solo tipi di indice integrali con segno in un costrutto `parallel` `for`, non è possibile utilizzare gli iteratori per accedere agli elementi di un contenitore STL \(Standard Template Library\) in parallelo.  Nella libreria PPL \(Parallel Patterns Library\) è disponibile l'algoritmo [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md), che esegue attività, in parallelo, su un contenitore iterativo come quelli forniti dal contenitore STL.  Utilizza la stessa logica di partizionamento utilizzata dall'algoritmo `parallel_for`.  L'algoritmo `parallel_for_each` è simile all'algoritmo [std::for\_each](../Topic/for_each.md) STL, con l'unica differenza che l'algoritmo `parallel_for_each` esegue le attività simultaneamente.  
+ Per ulteriori informazioni su `parallel_for` e altri algoritmi paralleli, vedere [gli algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md). Per ulteriori informazioni sul `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).  
   
- [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/CPP/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]  
+## <a name="example"></a>Esempio  
+
+ In questo esempio viene modificato l'esempio precedente per agire su un [std:: Array](../../standard-library/array-class-stl.md) oggetto anziché una matrice nativa. Perché le versioni di OpenMP 2.0 e 2.5 consentono per firmati solo in tipi integrali indice un `parallel_for` costrutto, è possibile utilizzare gli iteratori per accedere agli elementi di un contenitore della libreria Standard C++ in parallelo. Parallel Patterns Library (PPL) fornisce il [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo, che esegue attività in parallelo, in un contenitore iterativo, ad esempio quelli forniti dalla libreria Standard C++. Usa la stessa logica di partizionamento che il `parallel_for` viene utilizzato l'algoritmo. Il `parallel_for_each` libreria C++ Standard è simile all'algoritmo [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo, con la differenza che il `parallel_for_each` algoritmo esegue le attività contemporaneamente.  
   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `concrt-omp-count-primes.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+ [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]  
   
- **cl.exe \/EHsc \/openmp concrt\-omp\-count\-primes.cpp**  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `concrt-omp-count-primes.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
-## Vedere anche  
- [Migrazione da OpenMP al runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
+ **CL.exe /EHsc /openmp concrt-omp-count-primes. cpp**  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Migrazione da OpenMP al Runtime di concorrenza](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)   
  [Contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md)
+

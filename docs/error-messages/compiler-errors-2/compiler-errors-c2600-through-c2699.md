@@ -1,6 +1,6 @@
 ---
 title: Compilatore errori C2600 a C2699 | Documenti Microsoft
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -58,22 +58,22 @@ ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 70ea205ef770fe98cb94cbfc4107fdb4af6560b5
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 7b67597e6b841546b624d235ab017f138b969135
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>Errori del compilatore da C2600 a C2699
 
-Gli articoli in questa parte della documentazione contengono informazioni su una sottosezione degli errori del compilatore di Visual C++. È possibile accedere alle informazioni qui o nella finestra **Output** in Visual Studio è possibile selezionare un numero di errore e quindi scegliere il tasto F1.
+Gli articoli in questa sezione della documentazione illustrano un subset dei messaggi di errore generati dal compilatore.
 
-> [!NOTE]
-> Non tutti [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] errore è documentato in MSDN. In molti casi, il messaggio di diagnostica fornisce tutte le informazioni che sono disponibile. Se si ritiene che un messaggio di errore richieda una spiegazione aggiuntiva, è possibile informarne Microsoft. È possibile utilizzare la forma di commenti e suggerimenti in questa pagina o passare alla barra dei menu in Visual Studio e scegliere **Guida**, **segnalare un Bug**, o è possibile inviare un report di suggerimenti o bug in [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-È possibile trovare assistenza per errori e avvisi nei forum pubblici MSDN. Il [del linguaggio Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) forum è a domande e discussioni sul [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] sintassi del linguaggio e compilatore. Il [generali di Visual C++](http://go.microsoft.com/fwlink/?LinkId=158194) forum è per domande su [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] che non sono trattati in altri forum. È inoltre possibile trovare informazioni su errori e avvisi in [Overflow dello Stack](http://stackoverflow.com/).
+## <a name="error-messages"></a>Messaggi di errore
 
-|Errore|Messaggio|
+|Error|Messaggio|
 |-----------|-------------|
 |[Errore del compilatore C2600](compiler-error-c2600.md)|'*funzione*': Impossibile definire una funzione membro speciale generata dal compilatore (deve essere dichiarata nella classe prima)|
 |[Errore del compilatore C2601](compiler-error-c2601.md)|'*funzione*': non sono valide le definizioni di funzione locale|

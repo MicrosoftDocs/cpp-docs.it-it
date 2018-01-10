@@ -1,36 +1,37 @@
 ---
-title: "Macro variadic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macro variadic [C++]"
-  - "__VA_ARGS__ (identificatore macro variadic)"
+title: Macro Variadic | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- variadic macros [C++]
+- __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Macro variadic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le macro variadiche sono delle macro tipo funzioni che contengono un numero variabile di argomenti.  
+# <a name="variadic-macros"></a>Macro variadic
+Le macro variadic sono macro di tipo funzione che contengono un numero variabile di argomenti.  
   
-## Note  
- Per usare le macro variadiche, le ellissi devo essere specificate come argomento formale finale nella definizione della macro, e l'identificatore `__VA_ARGS__` può essere usato nella definizione per inserire degli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti che combaciano con le ellissi, incluse le virgole tra di loro.  
+## <a name="remarks"></a>Note  
+ Per utilizzare le macro variadic, i puntini di sospensione può essere specificata come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` può essere utilizzato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__`viene sostituito da tutti gli argomenti corrispondenti sui puntini di sospensione, incluse le virgole tra di essi.  
   
- Lo standard C specifica che almeno un argomento deve essere passato all'ellisse, per garantire che la macro non risolva un espressione con un virgola finale.  L'implementazione Visual C\+\+ tronca una virgola finale se nessun argomento è stato passato all'ellisse.  
+ Lo standard C specifica che almeno un argomento deve essere passato ai puntini di sospensione per garantire che la macro non risolva un'espressione con una virgola finale.  L'implementazione Visual C++ tronca una virgola finale se ai puntini di sospensione non è stato passato alcun argomento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```cpp  
 // variadic_macros.cpp  
@@ -59,7 +60,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 here are some varargs1(1)  
@@ -67,8 +68,7 @@ here are some varargs2(4)
 here are some varargs3(5)  
 hello, world  
 error  
-  
 ```  
   
-## Vedere anche  
- [Macro](../preprocessor/macros-c-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro (C/C++)](../preprocessor/macros-c-cpp.md)

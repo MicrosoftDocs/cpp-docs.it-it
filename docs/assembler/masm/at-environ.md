@@ -1,38 +1,36 @@
 ---
-title: "@Environ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@Environ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@Environ symbol"
+title: '@Environ| Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@Environ'
+dev_langs: C++
+helpviewer_keywords: '@Environ symbol'
 ms.assetid: 4b0b7e93-9ebe-413b-8196-1a504eb6d1d0
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 309d9b93dc7b8840ff9a6f20e81fa04ee860f788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# @Environ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Valore della variabile di ambiente *envvar* \(macro funzione.  
+# <a name="environ"></a>@Environ
+Valore della variabile di ambiente *envvar* (function (macro)).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 @Environ( envvar )  
 ```  
   
-## Vedere anche  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

@@ -1,41 +1,42 @@
 ---
-title: "String  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string support with /clr"
-  - "/clr compiler option [C++], string support"
+title: Stringa (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- string support with /clr
+- /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# String  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il compilatore di Visual C\+\+ supporta *stringhe*, che sono oggetti che rappresentano il testo come una sequenza di caratteri.  Visual C\+\+ supporta le variabili di tipo stringa, il cui valore è implicito, e valori letterali, il cui valore è una stringa tra virgolette esplicita.  
+# <a name="string--c-component-extensions"></a>Stringa (Estensioni del componente C++)
+Il compilatore di Visual C++ supporta *stringhe*, che sono oggetti che rappresentano il testo come una sequenza di caratteri. Visual C++ supporta le variabili di stringa, il cui valore è implicita, e i valori letterali il cui valore è una stringa tra virgolette esplicita.  
   
-## Tutti i runtime  
- Il Windows Runtime ed il Common Language Runtime rappresentano le stringhe come oggetti in cui la memoria allocata viene gestita automaticamente.  Ovvero, non viene richiesto in modo esplicito di rimuovere la memoria per una stringa quando la variabile di tipo stringa esce dall'area di validità o l'applicazione termina.  Per indicare che la durata di un oggetto di tipo stringa deve essere gestita automaticamente, dichiarare il tipo stringa con il modificatore [handle per l'oggetto \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Tutti i runtime  
+ Il Windows Runtime e common language runtime rappresentano le stringhe come oggetti la cui memoria viene gestita automaticamente. Ovvero, non è necessario eliminare in modo esplicito la memoria per una stringa quando l'esce variabile stringa dall'ambito o l'applicazione termina. Per indicare che deve essere gestita automaticamente la durata di un oggetto stringa, dichiarare il tipo di stringa con il [handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) modificatore.  
   
-## Windows Runtime  
- L'architettura di Windows Runtime richiede Visual C\+\+ per implementare il tipo di dati `String` nello spazio dei nomi `Platform`.  Per comodità, Visual C\+\+ fornisce anche il tipo di dati `string`, un sinonimo di `Platform::String`, nello spazio dei nomi `default`.  
+## <a name="windows-runtime"></a>Windows Runtime  
+ L'architettura di Windows Runtime richiede che Visual C++ implementare il `String` tipo di dati di `Platform` dello spazio dei nomi. Per comodità, Visual C++ fornisce anche il `string` del tipo di dati, che è un sinonimo per `Platform::String`nel `default` dello spazio dei nomi.  
   
-### Sintassi  
+### <a name="syntax"></a>Sintassi  
   
 ```cpp  
-  
 // compile with /ZW  
 using namespace Platform;  
 using namespace default;  
@@ -45,45 +46,43 @@ using namespace default;
   
 ```  
   
-### Note  
- Per ulteriori informazioni ed esempi riguardanti le stringhe, vedere [Platform::String, std::wstring, and Literals \(Platform\)](http://msdn.microsoft.com/it-it/ec92fbc6-edf3-4137-a85e-8e29bdb857a8).  
+### <a name="remarks"></a>Note  
+ Per ulteriori informazioni ed esempi sulle stringhe, vedere [platform:: String, std:: wstring e valori letterali (piattaforma)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## Common Language Runtime  
- In questo argomento viene illustrato come il compilatore di Visual C\+\+ elabora i valori letterali stringa quando viene eseguito utilizzando l'opzione del compilatore **\/clr**.  Per utilizzare **\/clr**, è necessario utilizzare anche il Common Language Runtime \(CLR\), la sintassi C\+\+\/CLI e gli oggetti gestiti.  Per ulteriori informazioni su **\/clr**, vedere [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Questo argomento viene illustrato come il compilatore Visual C++ elabora i valori letterali stringa quando viene eseguito utilizzando il **/clr** l'opzione del compilatore. Per utilizzare **/clr**, è necessario utilizzare anche common language runtime (CLR), C + + sintassi CLI e gli oggetti gestiti. Per ulteriori informazioni su **/clr**, vedere [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- Durante la compilazione con **\/clr**, il compilatore convertirà i valori letterali stringa in una stringa di tipo <xref:System.String>.  Per preservare la compatibilità con il codice esistente, sono presenti due eccezioni:  
+ Durante la compilazione con **/clr**, il compilatore converte i valori letterali stringa in stringhe di tipo <xref:System.String>. Per mantenere la compatibilità con il codice esistente vi sono due eccezioni a questa:  
   
--   Gestione delle eccezioni.  Quando un valore letterale stringa viene generato, il compilatore lo rileverà come un valore letterale stringa.  
+-   Gestione delle eccezioni. Quando viene generata un valore letterale stringa, il compilatore rileva, come valore letterale stringa.  
   
--   Deduzione del modello.  Quando un valore letterale stringa viene passato come un argomento di modello, il compilatore non lo convertirà in <xref:System.String>.  Nota, i valori letterali stringa passati come un argomento generico saranno promossi a <xref:System.String>.  
+-   Deduzione del modello. Quando un valore letterale stringa viene passata come argomento di modello, il compilatore non converte in un <xref:System.String>. Si noti che i valori letterali stringa passati come argomento generico verranno promossa alla <xref:System.String>.  
   
- Il compilatore dispone anche di un supporto incorporato per tre operatori, in cui è possibile eseguire l'override per personalizzarne il comportamento:  
+ Il compilatore ha anche il supporto incorporato per tre operatori, che è possibile eseguire l'override per personalizzare il comportamento:  
   
--   System::String ^ operator \+\( System::String, System::String\);  
+-   System:: String ^ (operatore) + (System:: String, System:: String);  
   
--   System::String ^ operator \+\( System::Object, System::String\);  
+-   System:: String ^ (operatore) + (System:: Object, System:: String);  
   
--   System::String ^ operator \+\( System::String, System::Object\);  
+-   System:: String ^ (operatore) + (System:: String, System:: Object);  
   
- Una volta passato un oggetto <xref:System.String>, il compilatore lo inscatolerà, se necessario, quindi concatena l'oggetto \(con ToString\) con la stringa.  
-  
- Durante la compilazione con **\/clr:oldSyntax**, i valori letterali stringa non saranno convertiti in <xref:System.String>.  
+ Quando viene passato un <xref:System.String>, il compilatore verrà casella, se necessario e quindi concatenati l'oggetto (con ToString) con la stringa.  
   
 > [!NOTE]
->  L'accento circonflesso \("^"\) indica che la variabile dichiarata è un handle per un oggetto C\+\+\/CLI gestito.  
+>  Il punto di inserimento ("^") indica che la variabile dichiarata è un handle di C + + CLI dell'oggetto gestito.  
   
- Per ulteriori informazioni, vedere [Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md).  
+ Per ulteriori informazioni vedere [stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md).  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio di codice seguente viene illustrata la concatenazione ed il confronto di stringhe.  
+ Esempio di codice seguente viene illustrato il concatenamento e il confronto di stringhe.  
   
 ```cpp  
 // string_operators.cpp  
@@ -142,22 +141,39 @@ int main() {
   
  **Output**  
   
-  **abcdef**  
- **abcghi**  
- **ghiabc**  
- **c**  
- **abcdefghi**  
- **abczzz**  
- **abc1**  
- **abc97**  
- **abc3.1**  
- **abcdef**  
- **a and b are equal**  
- **a and b are not equal**  
- **abc**  
- **n is empty** **Esempio**  
+```Output  
+abcdef  
   
- Nell'esempio seguente viene mostrato che è possibile eseguire l'overload degli operatori forniti dal compilatore e che il compilatore cercherà un overload della funzione basata sul tipo <xref:System.String>.  
+abcghi  
+  
+ghiabc  
+  
+c  
+  
+abcdefghi  
+  
+abczzz  
+  
+abc1  
+  
+abc97  
+  
+abc3.1  
+  
+abcdef  
+  
+a and b are equal  
+  
+a and b are not equal  
+  
+abc  
+  
+n is empty  
+```  
+  
+ **Esempio**  
+  
+ L'esempio seguente viene illustrato che è possibile eseguire l'overload di operatori fornito dal compilatore e che il compilatore individuerà un overload della funzione in base il <xref:System.String> tipo.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -205,13 +221,21 @@ int main() {
   
  **Output**  
   
-  **overloaded \+\(String ^ a, String ^ b\)**   
- **overloaded \+\(String ^ a, Object ^ b\)**   
- **overloaded \+\(Object ^ a, String ^ b\)**   
- **String ^ a**  
- **const char \* a** **Esempio**  
+```Output  
+overloaded +(String ^ a, String ^ b)   
   
- Nell'esempio seguente viene mostrato che il compilatore fa distinzione tra stringhe native e le stringhe <xref:System.String>.  
+overloaded +(String ^ a, Object ^ b)   
+  
+overloaded +(Object ^ a, String ^ b)   
+  
+String ^ a  
+  
+const char * a  
+```  
+  
+ **Esempio**  
+  
+ L'esempio seguente viene illustrato che il compilatore distingue tra stringhe native e <xref:System.String> stringhe.  
   
 ```cpp  
 // string_operators_3.cpp  
@@ -252,11 +276,17 @@ int main() {
   
  **Output**  
   
-  **char\***  
- **String^ str**  
- **System.SByte\***  
- **System.String**   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+char *  
+  
+String^ str  
+  
+System.SByte*  
+  
+System.String  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme Runtime](../windows/component-extensions-for-runtime-platforms.md)   
  [Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md)   
- [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/CLR (compilazione common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

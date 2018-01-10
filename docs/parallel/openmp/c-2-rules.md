@@ -1,29 +1,29 @@
 ---
-title: "C.2 Regole | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: C. 2 regole | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# C.2 Regole
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La notazione è descritto nella sezione 6.1 dello standard C. In questa appendice grammatica sono illustrate le estensioni per la grammatica del linguaggio di base per le direttive OpenMP C e C++.  
+# <a name="c2-rules"></a>C.2 Regole
+La notazione è descritta nella sezione 6.1 dello standard C. Questa appendice grammatica sono illustrate le estensioni per la grammatica del linguaggio di base per le direttive OpenMP C e C++.  
   
- **/\* in C++ (ISO/IEC 14882:1998) \*/**  
+ **/\*in C++ (ISO/IEC 14882:1998)\*/**  
   
  *istruzione-seq*:  
   
@@ -31,27 +31,27 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *direttiva OpenMP*  
   
- *istruzione istruzione seq*  
+ *istruzione seq-istruzione*  
   
  *istruzione-seq (direttiva openmp-)*  
   
- **/\* in C90 (ISO/IEC 9899: 1990) \*/**  
+ **/\*in C90 (ISO/IEC 9899: 1990)\*/**  
   
- *elenco di istruzioni*:  
+ *statement-list*:  
   
  *istruzione*  
   
  *direttiva OpenMP*  
   
- *istruzione di elenco di istruzioni*  
+ *statement-list statement*  
   
- *elenco di istruzioni (direttiva openmp-)*  
+ *elenco di istruzioni direttiva openmp*  
   
- **/\* in C99 (ISO/IEC 9899:1999) \*/**  
+ **/\*in C99 (ISO/IEC 9899: 1999)\*/**  
   
  *elemento di blocco*:  
   
- *dichiarazione*  
+ *declaration*  
   
  *istruzione*  
   
@@ -59,7 +59,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *istruzione*:  
   
- **/\* istruzioni standard \*/**  
+ **/\*istruzioni standard\*/**  
   
  *costrutto di OpenMP*  
   
@@ -67,15 +67,15 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *costrutto parallelo*  
   
- *Per creare*  
+ *per costrutto*  
   
  *costrutto di sezioni*  
   
- *costrutto Single*  
+ *singolo costrutto*  
   
- *parallelo per costrutto*  
+ *parallelo-per-costrutto*  
   
- *costrutto di sezioni parallele*  
+ *costrutto di sezioni parallelo*  
   
  *master-construc*  
   
@@ -87,7 +87,7 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *direttiva OpenMP*:  
   
- *Barrier (direttiva)*  
+ *barriera-direttiva*  
   
  *direttiva Flush*  
   
@@ -95,29 +95,29 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *istruzione*  
   
- *costrutto parallelo*:  
+ *parallelo costrutto*:  
   
- *direttiva parallelo strutturato-blocco*  
+ *parallelo direttiva blocco strutturato*  
   
- *direttiva parallelo*:  
+ *parallelo direttiva*:  
   
- **# pragma omp parallel**  *parallelo clausola*optseq *nuova riga*  
+ **# pragma omp parallel***parallelo clausola*optseq *nuova riga*   
   
- *clausola parallelo*:  
+ *parallelo-clausola*:  
   
  *univoco parallelo-clausola*  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- *clausola univoco parallelo*:  
+ *univoco parallelo-clausola*:  
   
  **Se (** *espressione* **)**  
   
  **num_threads (** *espressione* **)**  
   
- *Per creare*:  
+ *per costrutto*:  
   
- *istruzione di iterazione per direttiva*  
+ *istruzione di iterazione per la direttiva*  
   
  *per la direttiva*:  
   
@@ -127,23 +127,23 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *univoco per la clausola*  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- **NOWAIT**  
+ **nowait**  
   
  *univoco per la clausola*:  
   
  **ordinati**  
   
- **pianificazione (** *tipo di pianificazione* **)**  
+ **pianificazione (** *-tipo di pianificazione* **)**  
   
- **pianificazione (** *tipo di pianificazione* **,** *espressione* **)**  
+ **pianificazione (** *-tipo di pianificazione* **,** *espressione* **)**  
   
  *tipo di pianificazione*:  
   
- **statico**  
+ **static**  
   
- **dinamica**  
+ **dynamic**  
   
  **PGO**  
   
@@ -151,17 +151,17 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *Nelle sezioni costrutto*:  
   
- *sezione ambito Sections (direttiva)*  
+ *sezione ambito sezioni-direttiva*  
   
- *Sections (direttiva)*:  
+ *direttiva Sections*:  
   
  **Nelle sezioni di # pragma omp** *sezioni clausola*optseq *nuova riga*  
   
- *clausola sezioni*:  
+ *Nelle sezioni clausola*:  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- **NOWAIT**  
+ **nowait**  
   
  *sezione ambito*:  
   
@@ -169,17 +169,17 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *sezione sequenza*:  
   
- *sezione direttiva*opt *blocco strutturato*  
+ *direttiva di sezione*opt *blocco strutturato*  
   
- *sezione direttiva sezione sequenza strutturato-blocco*  
+ *direttiva di sezione sezione sequenza strutturato-blocco*  
   
- *sezione direttiva*:  
+ *direttiva di sezione*:  
   
  **# pragma omp section** *nuova riga*  
   
  *singolo costrutto*:  
   
- *direttiva singolo blocco strutturato*  
+ *singola direttiva blocco strutturato*  
   
  *singola direttiva*:  
   
@@ -187,17 +187,17 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *singola clausola*:  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- **NOWAIT**  
+ **nowait**  
   
- *parallelo per costrutto*:  
+ *parallelo-per-costrutto*:  
   
- *istruzione di iterazione parallelo per direttiva*  
+ *istruzione di iterazione per parallelo-direttiva*  
   
- *parallelo per direttiva*:  
+ *parallelo-per-directive*:  
   
- **# pragma omp parallel per** *parallelo per clausola*optseq *nuova riga*  
+ **# pragma omp parallel per** *parallelo clausola for*optseq *nuova riga*  
   
  *clausola for parallelo*:  
   
@@ -205,27 +205,27 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *univoco per la clausola*  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- *costrutto di sezioni parallele*:  
+ *costrutto di sezioni parallelo*:  
   
  *sezione ambito parallelo-sezioni-direttiva*  
   
  *parallelo-sezioni-directive*:  
   
- **sezioni parallele # pragma omp** *parallelo-sezioni-clausola*optseq *nuova riga*  
+ **Nelle sezioni di # pragma omp parallel** *parallelo-sezioni-clausola*optseq *nuova riga*  
   
- *clausola di sezioni parallele*:  
+ *parallelo-sezioni-clausola*:  
   
  *univoco parallelo-clausola*  
   
- *dati-clausola*  
+ *clausola di dati*  
   
- *costrutto master*:  
+ *master-costrutto*:  
   
- *struttura blocchi master (direttiva)*  
+ *direttiva master blocco strutturato*  
   
- *master (direttiva)*:  
+ *direttiva master*:  
   
  **master di # pragma omp** *nuova riga*  
   
@@ -237,11 +237,11 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  **# pragma omp critico** *area frase*opt *nuova riga*  
   
- *area frase*:  
+ *area-frase*:  
   
  *(identificatore)*  
   
- *direttiva barriera*:  
+ *barriera direttiva*:  
   
  **barriera di # pragma omp** *nuova riga*  
   
@@ -249,21 +249,21 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *istruzione di espressione Atomic (direttiva)*  
   
- *direttiva atomic*:  
+ *direttiva atomica*:  
   
  **# pragma omp atomic** *nuova riga*  
   
- *direttiva Flush*:  
+ *scaricamento direttiva*:  
   
  **# pragma omp scaricamento** *scaricamento var*opt *nuova riga*  
   
  *scaricamento var*:  
   
- *(elenco variabili)*  
+ *(elenco di variabili)*  
   
  *costrutto ordinato*:  
   
- *direttiva ordinati strutturato-blocco*  
+ *direttiva ordinati blocco strutturato*  
   
  *direttiva ordinati*:  
   
@@ -271,50 +271,50 @@ La notazione è descritto nella sezione 6.1 dello standard C. In questa appendic
   
  *dichiarazione*:  
   
- **/\* dichiarazioni standard \*/**  
+ **/\*dichiarazioni standard\*/**  
   
- *threadprivate (direttiva)*  
+ *direttiva threadprivate*  
   
  *direttiva threadprivate*:  
   
- **# pragma omp threadprivate (** *elenco variabili*  **)** *nuova riga*  
+ **# pragma omp threadprivate (** *elenco variabili***)** *nuova riga*   
   
  *clausola data*:  
   
  **private (** *elenco variabili* **)**  
   
- **copyprivate (**  *elenco variabili*  **)**  
+ **copyprivate (***elenco variabili***)**   
   
- **firstprivate (**  *elenco variabili*  **)**  
+ **firstprivate (***elenco variabili***)**   
   
- **lastprivate (** *elenco variabili*  **)**  
+ **lastprivate (** *elenco variabili***)**   
   
  **condiviso (** *elenco variabili* **)**  
   
- **valore predefinito (condiviso)**  
+ **predefinito (condiviso)**  
   
- **impostazione predefinita (nessuno)**  
+ **predefinito (nessuno)**  
   
- **riduzione (**  *operatore di riduzione*  **:**  *elenco variabili*  **)**  
+ **riduzione (***operatore di riduzione***:***elenco variabili***)**   
   
- **copyin (**  *elenco variabili*  **)**  
+ **copyin (***elenco variabili***)**   
   
  *operatore di riduzione*:  
   
- *Uno dei*: **+ \* -& ^ & #124; & & & #124; & #124;**  
+ *Uno dei*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
   
- **/\* in C \*/**  
+ **/\*in C\*/**  
   
  *elenco di variabili*:  
   
- *Identificatore*  
+ *identifier*  
   
  *elenco di variabili* **,** *identificatore*  
   
- **/\* in C++ \*/**  
+ **/\*in C++\*/**  
   
  *elenco di variabili*:  
   
- *ID espressione*  
+ *ID-expression*  
   
  *elenco di variabili* **,** *id espressione*

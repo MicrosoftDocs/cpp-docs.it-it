@@ -1,32 +1,33 @@
 ---
-title: "async_uuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.async_uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "async_uuid attribute"
+title: async_uuid | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.async_uuid
+dev_langs: C++
+helpviewer_keywords: async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9c3d9fc9afb7a6f65be8ace5fec085db9bd92191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# async_uuid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica il UUID che indica al compilatore MIDL per definire sia le versioni sincrone che asincrone di un'interfaccia COM.  
+# <a name="asyncuuid"></a>async_uuid
+Specifica l'UUID che indica al compilatore MIDL per definire versioni sincrone e asincrone di un'interfaccia COM.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,14 +36,14 @@ Specifica il UUID che indica al compilatore MIDL per definire sia le versioni si
 )]  
 ```  
   
-#### Parametri  
- *uuid*  
- Un UUID che identifica la versione dell'interfaccia.  
+#### <a name="parameters"></a>Parametri  
+ *UUID*  
+ UUID che identifica la versione dell'interfaccia.  
   
-## Note  
- **async\_uuid** L'attributo di C\+\+ ha la stessa funzionalità di  [async\_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **async_uuid** attributo C++ ha la stessa funzionalità come il [async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) attributo MIDL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_async_uuid.cpp  
@@ -56,20 +57,19 @@ __interface ICustom {
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**doppio**,  **interfaccia dispatch**|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**doppia**, **interfaccia dispatch**|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   

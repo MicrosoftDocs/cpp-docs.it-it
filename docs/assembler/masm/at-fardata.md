@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec027d351fa7a8edbf81b40ec77f4ac4f6c22a7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb1a2e1af557969d546cea76c5ceeb55f40f35fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fardata"></a>@fardata
 Il nome del segmento definito per il [. FARDATA](../../assembler/masm/dot-fardata.md) (direttiva) (macro di testo).  

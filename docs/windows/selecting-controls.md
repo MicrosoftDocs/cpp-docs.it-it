@@ -1,47 +1,51 @@
 ---
-title: "Selecting Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, selecting controls"
-  - "dominant controls"
-  - "dialog box controls, selecting in editor"
-  - "controls [C++], selecting"
-  - "size, controls"
-  - "controls [C++], dominant"
+title: Selezione di controlli | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, selecting controls
+- dominant controls
+- dialog box controls, selecting in editor
+- controls [C++], selecting
+- size, controls
+- controls [C++], dominant
 ms.assetid: 27f05450-4550-4229-9f4c-2c9e06365596
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8bf795bacf40a90aaeec451315e4d0e75f7f71aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Selecting Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Selezionare i controlli per ridimensionarli, allinearli, spostarli, copiarli o eliminarli, quindi eseguire l'operazione desiderata.  Nella maggior parte dei casi, per utilizzare gli strumenti di ridimensionamento e allineamento della [barra degli strumenti dell'editor finestre](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) è necessario selezionare più di un controllo.  
+# <a name="selecting-controls"></a>Selezione di controlli
+Selezionare i controlli per dimensioni, allineare, spostare, copiare, o eliminarli e quindi eseguire l'operazione desiderata. Nella maggior parte dei casi, è necessario selezionare più di un controllo per utilizzare gli strumenti di ridimensionamento e l'allineamento del [barra degli strumenti finestra di dialogo Editor](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
- Quando un controllo è selezionato, il bordo intorno al controllo è ombreggiato e nel bordo di selezione vengono visualizzati quadratini di ridimensionamento pieni \(attivi\) o vuoti \(non attivi\).  Quando si selezionano più controlli, i quadratini di ridimensionamento del controllo dominante sono pieni, mentre quelli degli altri controlli selezionati sono vuoti.  
+ Quando un controllo è selezionato, ha un bordo ombreggiato pieni (attivi) o vuoto (inattivo) "quadratini di ridimensionamento," quadratini che vengono visualizzati sul bordo di selezione. Quando si selezionano più controlli, il controllo dominante dispone di quadratini di ridimensionamento a tinta unita; tutti gli altri controlli selezionati sono quadratini vuoti.  
   
- Quando si ridimensionano o si allineano più controlli, l'editor finestre utilizza il "controllo dominante" per determinare come ridimensionare o allineare gli altri controlli.  Per impostazione predefinita, il controllo dominante è il primo controllo selezionato.  
+ Quando si ridimensionano o allineare più controlli, l'editor finestre viene utilizzato il "controllo dominante" per determinare come gli altri controlli vengono ridimensionati o allineati. Per impostazione predefinita, il controllo dominante è il primo controllo selezionato.  
   
--   [Selezione di più controlli](../mfc/selecting-multiple-controls.md)  
+-   [Selezione di più controlli](../windows/selecting-multiple-controls.md)  
   
--   [Impostazione del controllo dominante](../mfc/specifying-the-dominant-control.md)  
+-   [Impostazione del controllo dominante](../windows/specifying-the-dominant-control.md)  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

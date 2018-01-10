@@ -1,33 +1,33 @@
 ---
-title: "strict_gs_check | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "strict_gs_check"
-  - "strict_gs_check_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strict_gs_check (pragma)"
+title: strict_gs_check | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strict_gs_check
+- strict_gs_check_CPP
+dev_langs: C++
+helpviewer_keywords: strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c355bd385a997e8ff3fd9ec323d50bb33b9c6fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# strict_gs_check
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="strictgscheck"></a>strict_gs_check
 Questo pragma fornisce controllo di sicurezza avanzato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma strict_gs_check([push,] on )   
@@ -35,17 +35,17 @@ Questo pragma fornisce controllo di sicurezza avanzato.
 #pragma strict_gs_check(pop)  
 ```  
   
-## Note  
- Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack.  Per impostazione predefinita, l'opzione del compilatore \/GS \(controllo di sicurezza buffer\) non inserisce un cookie per tutte le funzioni.  Per ulteriori informazioni, vedere [\/GS \(Controllo sicurezza buffer\)](../build/reference/gs-buffer-security-check.md).  
+## <a name="remarks"></a>Note  
+ Indica al compilatore di inserire un cookie casuale nello stack di funzione per il rilevamento di alcune categorie di sovraccarico del buffer basato su stack. Per impostazione predefinita, l'opzione del compilatore /GS (controllo di sicurezza buffer) non inserisce un cookie per tutte le funzioni. Per altre informazioni, vedere [/GS (Controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md).  
   
- È necessario compilare con \/GS \(controllo di sicurezza buffer\) per abilitare lo strict\_gs\_check.  
+ È necessario compilare con /GS (controllo di sicurezza buffer) per abilitare lo strict_gs_check.  
   
- Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi.  Questo pragma è particolarmente aggressivo e si applica alle funzioni che potrebbero non necessitare di questa difesa, ma è ottimizzato per ridurre l'effetto sulle prestazioni dell'applicazione risultante.  
+ Utilizzare questo pragma in moduli di codice esposti a dati potenzialmente dannosi. Questo pragma è particolarmente aggressivo e si applica alle funzioni che potrebbero non necessitare di questa difesa, ma è ottimizzato per ridurre l'effetto sulle prestazioni dell'applicazione risultante.  
   
- Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro.  Ovvero assicurarsi che il codice non abbia sovraccarichi del buffer. Lo strict\_gs\_check potrebbe proteggere l'applicazione dai sovraccarichi del buffer che rimangono nel codice.  
+ Anche se si utilizza questo pragma, si deve cercare di scrivere un codice sicuro. Vale a dire, assicurarsi che il codice non ha sovraccarichi del buffer. strict_gs_check potrebbe impedire l'applicazione sovraccarichi del buffer che rimangono nel codice.  
   
-## Esempio  
- Nel codice seguente si verifica un sovraccarico del buffer quando copiamo una matrice in una matrice locale.  Quando si compila questo codice con \/GS, non viene inserito nessun cookie nello stack, poiché il tipo di dati di una matrice è un puntatore.  L'aggiunta del pragma strict\_gs\_check impone un cookie dello stack nello stack di funzione.  
+## <a name="example"></a>Esempio  
+ Nel codice seguente si verifica un sovraccarico del buffer quando copiamo una matrice in una matrice locale. Quando si compila questo codice con /GS, non viene inserito nessun cookie nello stack, poiché il tipo di dati di una matrice è un puntatore. L'aggiunta del pragma strict_gs_check impone un cookie dello stack nello stack di funzione.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -73,6 +73,6 @@ void ** ReverseArray(void **pData,
   
 ```  
   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [\/GS \(Controllo sicurezza buffer\)](../build/reference/gs-buffer-security-check.md)
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [/GS (controllo sicurezza buffer)](../build/reference/gs-buffer-security-check.md)

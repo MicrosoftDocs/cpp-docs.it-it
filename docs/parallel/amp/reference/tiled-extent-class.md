@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,33 +18,18 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e295b56290435a1d87ac2f0dbc0951850600534d
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Oggetto `tiled_extent` oggetto è un `extent` oggetto di uno a tre dimensioni che suddivide l'area di extent in una, due o riquadri tridimensionale.  
@@ -95,7 +79,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[get_tile_extent](#get_tile_extent)|Restituisce un `extent` oggetto che acquisisce i valori del `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.|  
+|[get_tile_extent](#get_tile_extent)|Restituisce un `extent` acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.|  
 |[riempimento](#pad)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati backup in divisibile per le dimensioni del riquadro.|  
 |[troncare](#truncate)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso in divisibile per le dimensioni del riquadro.|  
   
@@ -108,7 +92,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[tile_dim0 (costante)](#tile_dim0)|Archivia la lunghezza della dimensione più significativa.|  
 |[tile_dim1 (costante)](#tile_dim1)|Archivia la lunghezza della dimensione avanti-a-la maggior parte significativa.|  
@@ -166,7 +150,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` oggetto che acquisisce le dimensioni di questo `tiled_extent` istanza.  
   
 
-## <a name="pad"></a>  pad   
+## <a name="pad"></a> riempimento   
 Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati backup in divisibile per le dimensioni del riquadro.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -243,4 +227,3 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

@@ -1,46 +1,46 @@
 ---
-title: "Operatore ComPtrRef::operator T* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator T*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator T* (operatore)"
+title: 'Operatore comptrref:: T * (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator T*
+dev_langs: C++
+helpviewer_keywords: operator T* operator
 ms.assetid: b4f83370-0ebc-4d56-87c6-1a8ea2d0079b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cbc7650c28ac46d6a58bced636a0aad8ae308187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore ComPtrRef::operator T*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="comptrrefoperator-t-operator"></a>Operatore ComPtrRef::operator T*
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 operator T*();  
 ```  
   
-## Note  
- Restituisce il valore del membro dati [ptr\_](../windows/comptrrefbase-ptr-data-member.md) dell'oggetto corrente di ComPtrRef.  
+## <a name="remarks"></a>Note  
+ Restituisce il valore della [PTR _](../windows/comptrrefbase-ptr-data-member.md) membro dati dell'oggetto ComPtrRef corrente.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe ComPtrRef](../windows/comptrref-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Comptrref (classe)](../windows/comptrref-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

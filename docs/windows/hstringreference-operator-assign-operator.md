@@ -1,47 +1,48 @@
 ---
-title: "Operatore HStringReference::Operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator="
-dev_langs: 
-  - "C++"
+title: 'Hstringreference:: operator = (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
+dev_langs: C++
 ms.assetid: ea100ed3-e566-4c9e-b6a8-f296088dea9c
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 097e89ab4ae2d3b6ddaacb2fa52b811c1577ef72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore HStringReference::Operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Sposta il valore di un altro oggetto di HStringReference all'oggetto corrente di HStringReference.  
+# <a name="hstringreferenceoperator-operator"></a>Operatore HStringReference::Operator=
+Sposta il valore di un altro oggetto HStringReference all'oggetto HStringReference corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 HStringReference& operator=(HStringReference&& other) throw()  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `other`  
- Un oggetto esistente di HStringReference.  
+ Oggetto HStringReference esistente.  
   
-## Note  
- Il valore dell'oggetto esistente `other` viene copiato all'oggetto corrente di HStringReference, quindi l'oggetto `other` viene eliminato.  
+## <a name="remarks"></a>Note  
+ Il valore dell'oggetto esistente `other` oggetto viene copiato l'oggetto HStringReference corrente, quindi il `other` oggetto viene eliminato definitivamente.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HStringReference](../windows/hstringreference-class.md)

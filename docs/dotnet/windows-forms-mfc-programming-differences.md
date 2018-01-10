@@ -16,11 +16,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42406e1736068ccd83ed957cacdc07a5129204a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 696e7684eb91abbf41e3f7a2e1df20b6fa7e5c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Differenze tra la programmazione con Windows Form e quella con MFC
 Negli argomenti di [utilizzando un controllo utente Windows Form in MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md) viene descritto il supporto MFC per Windows Form. Se non si ha familiarità con .NET Framework o MFC di programmazione, in questo argomento vengono fornite informazioni sulle differenze tra i due oggetti di programmazione.  
@@ -51,7 +54,7 @@ Negli argomenti di [utilizzando un controllo utente Windows Form in MFC](../dotn
   
      MFC conserva gli stati modificati per il documento. Pertanto, quando si chiude l'applicazione, chiuderla l'ultima visualizzazione che contiene l'applicazione o si esce da Windows, MFC viene richiesto di salvare il documento. Windows Form dispone di un supporto equivalente.  
   
--   Comandi  
+-   Comandi:  
   
      MFC è presente il concetto di comandi. La barra dei menu della barra degli strumenti e menu di scelta rapida può richiamare tutti lo stesso comando, ad esempio Taglia e copia. In Windows Form, i comandi sono strettamente associati eventi da un determinato elemento dell'interfaccia utente (ad esempio una voce di menu); Pertanto, è necessario associare tutti gli eventi di comando in modo esplicito. È anche possibile gestire più eventi con un singolo gestore in Windows Form. Per ulteriori informazioni, vedere [connessione di più eventi a un singolo gestore eventi in Windows Form](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms).  
   

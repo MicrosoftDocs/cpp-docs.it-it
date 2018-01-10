@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3265
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3265
+f1_keywords: C3265
+dev_langs: C++
+helpviewer_keywords: C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 39a80944a7ebb73a1339e140bf68c91fe17c0951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 1b136e2f64296d2ca39fb0778898afcd2c0caaba
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3265"></a>Errore del compilatore C3265
 non è possibile dichiarare un 'costrutto gestito' in un costrutto non gestito' non gestito'  
@@ -50,4 +46,3 @@ class B
    // gcroot<A^> a;  
 };  
 ```  
-

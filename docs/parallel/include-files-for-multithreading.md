@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcc8282680588585335eaa2c876128d2c2cf23a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f71b52bca5f636d80f2d55cc5e9ffc3e217d90a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-files-for-multithreading"></a>File di inclusione per il multithreading
 File di inclusione standard dichiarare le funzioni di libreria run-time C implementato nelle librerie. Se si utilizza il [ottimizzazione completa](../build/reference/ox-full-optimization.md) (/ Ox) o [fastcall convenzione di chiamata](../build/reference/gd-gr-gv-gz-calling-convention.md) (/ Gr) opzione, il compilatore presuppone che tutte le funzioni devono essere chiamate utilizzando la convenzione di chiamata sui registri. Le funzioni della libreria run-time sono state compilate utilizzando la convenzione di chiamata C, e le dichiarazioni nei file di inclusione standard indicano al compilatore di generare i riferimenti esterni corretti a tali funzioni.  

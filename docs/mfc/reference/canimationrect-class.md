@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 44727722c843e91d6ee924c2cffa6c4c465becad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationrect-class"></a>Classe CAnimationRect
 Implementa la funzionalità di un rettangolo i cui lati possono essere animati.  
@@ -106,7 +107,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|La variabile di animazione incapsulata che rappresenta inferiore associato del rettangolo di animazione.|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|La variabile di animazione incapsulata che rappresenta a sinistra il limite del rettangolo di animazione.|  

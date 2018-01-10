@@ -1,76 +1,79 @@
 ---
-title: "How to: Copy Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resvw.resource.copying"
-  - "vs.resvw.resource.copying"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], moving between files"
-  - "resources [Visual Studio], copying"
-  - "resource files, copying or moving resources between"
-  - "resource files, tiling"
-  - ".rc files, copying resources between"
-  - "rc files, copying resources between"
+title: 'Procedura: copiare risorse | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resvw.resource.copying
+- vs.resvw.resource.copying
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], moving between files
+- resources [Visual Studio], copying
+- resource files, copying or moving resources between
+- resource files, tiling
+- .rc files, copying resources between
+- rc files, copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4ac30e57c0c833f5d26cf9aa8a9ed4ba43946bb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Copy Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile copiare risorse da un file in un altro senza apportarvi modifiche oppure [modificare la lingua o la condizione di una risorsa durante la copia](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
+# <a name="how-to-copy-resources"></a>Procedura: copiare risorse
+È possibile copiare risorse da un file a un altro senza alcuna modifica oppure è possibile [modificare la lingua o una condizione di una risorsa durante la copia](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
   
- È possibile copiare facilmente le risorse da un file eseguibile o di risorse esistente nel file di risorse corrente.  Per eseguire questa operazione, vengono aperti contemporaneamente entrambi i file contenenti le risorse e gli elementi vengono trascinati da un file all'altro oppure copiati e incollati tra i due file.  Questo metodo viene utilizzato per i file di risorse \(RC\) e di modello di risorsa \(RCT\), nonché per i file eseguibili \(EXE\).  
+ È possibile copiare facilmente le risorse da una risorsa esistente o un file eseguibile per il file di risorse corrente. A questo scopo aprire entrambi i file che contiene risorse nello stesso momento e trascinare elementi da un file oppure copiare e incollare tra i due file. Questo metodo funziona per i file di script (RC) delle risorse e file di risorse modello (con estensione rct), nonché i file eseguibili (.exe).  
   
 > [!NOTE]
->  Visual C\+\+ include file di risorse di esempio che è possibile utilizzare nelle applicazioni.  Per ulteriori informazioni, vedere [CLIPART: risorse comuni](http://msdn.microsoft.com/it-it/9bac2891-b6b3-49ec-a287-cec850c707e0).  
+>  Visual C++ include file di risorse di esempio che è possibile utilizzare nella propria applicazione. Per ulteriori informazioni, vedere [CLIPART: risorse comuni](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0).  
   
- È possibile utilizzare il metodo di trascinamento tra file RC aperti [all'esterno del progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+ È possibile utilizzare il metodo di trascinamento e rilascio tra file RC sono aperti [all'esterno del progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-### Per copiare risorse da un file a un altro mediante trascinamento  
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>Copiare le risorse tra i file utilizzando il metodo di trascinamento e rilascio  
   
-1.  Aprire entrambi i file di risorse in modo autonomo. Per ulteriori informazioni, vedere [Visualizzazione di risorse in un file RC all'esterno di un progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  Aprire ad esempio Origine1.rc e Origine2.rc.  
+1.  Aprire entrambi i file (per ulteriori informazioni, vedere [visualizzazione di risorse in un File all'esterno di un progetto rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Ad esempio, aprire Origine1.rc e Origine2.rc.  
   
-2.  Nel primo file RC fare clic sulla risorsa che si desidera copiare.  Ad esempio, in Origine1.rc fare clic su IDD\_DIALOG1.  
+2.  Nel primo file RC, fare clic sulla risorsa che si desidera copiare. Ad esempio, in Origine1. rc, fare clic su IDD_DIALOG1.  
   
-3.  Tenendo premuto CTRL, trascinare la risorsa nel secondo file RC.  Trascinare ad esempio IDD\_DIALOG1 da Origine1.rc a Origine2.rc.  
-  
-    > [!NOTE]
-    >  Se si trascina una risorsa senza tenere premuto CTRL, la risorsa viene spostata, anziché copiata.  
-  
-### Per copiare risorse mediante un'operazione di copia e incolla  
-  
-1.  Aprire entrambi i file di risorse in modo autonomo. Per ulteriori informazioni, vedere [Visualizzazione di risorse in un file RC all'esterno di un progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  Aprire ad esempio Origine1.rc e Origine2.rc.  
-  
-2.  Nel file di origine da cui si desidera copiare una risorsa, ad esempio Origine1.rc, fare clic con il pulsante destro del mouse sulla risorsa e scegliere **Copia** dal menu di scelta rapida.  
-  
-3.  Fare clic con il pulsante destro del mouse sul file di risorse in cui si desidera incollare la risorsa, ad esempio Origine2.rc.  Scegliere **Incolla** dal menu di scelta rapida.  
+3.  Tenere premuto il tasto CTRL e trascinare la risorsa per il secondo file RC. Ad esempio, trascinare IDD_DIALOG1 da Origine1 Origine2.  
   
     > [!NOTE]
-    >  Non è possibile eseguire operazioni di trascinamento, di copia, taglia o incolla da file di risorse inclusi nel progetto \(Visualizzazione risorse\) a file RC autonomi \(aperti in finestre di documento\).  Queste operazioni potevano invece essere eseguite nelle precedenti versioni del prodotto.  
+    >  Trascina una risorsa senza tenere premuto il tasto CTRL Sposta la risorsa, anziché copiata.  
+  
+### <a name="to-copy-resources-using-copy-and-paste"></a>Per copiare le risorse tramite copia e Incolla  
+  
+1.  Aprire entrambi i file (per ulteriori informazioni, vedere [visualizzazione di risorse in un File all'esterno di un progetto rc](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Ad esempio Origine1. rc e Origine2. rc.  
+  
+2.  Nel file di origine da cui si desidera copiare una risorsa (ad esempio Origine1. rc), fare doppio clic su una risorsa e scegliere **copia** dal menu di scelta rapida.  
+  
+3.  Fare clic sul file di risorse in cui si desidera incollare la risorsa (ad esempio Origine2). Scegliere **Incolla** dal menu di scelta rapida.  
   
     > [!NOTE]
-    >  Per evitare conflitti con valori o nomi di simbolo contenuti nel file esistente, Visual C\+\+ può modificare il valore del simbolo della risorsa trasferita o il nome e il valore del simbolo quando lo si copia nel nuovo file.  
+    >  È non è possibile trascinare e rilasciare, copiare, tagliare o tra i file di risorse nel progetto (visualizzazione di risorse) e i file RC autonomo (quelli aperti in finestre di documento). È possibile farlo nelle versioni precedenti del prodotto.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+    > [!NOTE]
+    >  Per evitare conflitti con i valori nel file esistente o i nomi dei simboli, Visual C++ può modificare il valore di simbolo della risorsa trasferita o il nome e valore quando si copia il nuovo file.  
+  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [How to: Open a Resource Script File Outside of a Project \(Standalone\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: aprire un File di Script di risorsa all'esterno di un progetto (autonomo)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [File di risorse](../windows/resource-files-visual-studio.md)   
+ [Editor di risorse](../windows/resource-editors.md)

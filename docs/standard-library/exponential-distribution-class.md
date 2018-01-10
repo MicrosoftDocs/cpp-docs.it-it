@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 940d4c2604f65166faa95ca06ef3cc9b81a47b3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exponentialdistribution-class"></a>Classe exponential_distribution
 Genera una distribuzione esponenziale.  
@@ -94,7 +95,7 @@ La funzione membro proprietà `param()` imposta o restituisce il pacchetto di pa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla distribuzione esponenziale, vedere l'articolo di Wolfram MathWorld [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098) (Distribuzione esponenziale).  
+Per informazioni dettagliate sulla distribuzione esponenziale, vedere l'articolo di Wolfram MathWorld [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098) (Distribuzione esponenziale).  
   
 ## <a name="example"></a>Esempio  
   

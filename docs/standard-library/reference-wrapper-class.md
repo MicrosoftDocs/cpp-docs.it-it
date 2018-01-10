@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b9460c2d08c7f5527af733c412fc22dda5944cb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87608912712f201d4731deac53d7a59fdddf41d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencewrapper-class"></a>Classe reference_wrapper
 Esegue il wrapping di un riferimento  
@@ -73,7 +74,7 @@ Le funzioni helper [std::ref](functional-functions.md#ref) e [std::cref](functio
 |-|-|  
 |[reference_wrapper](#reference_wrapper)|Costruisce un oggetto `reference_wrapper`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

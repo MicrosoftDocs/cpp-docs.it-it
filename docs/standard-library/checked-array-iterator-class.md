@@ -24,11 +24,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb39271a7df2471c1373e6b272bbf262f34375ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 La classe `checked_array_iterator` consente di trasformare una matrice o un puntatore in un iteratore verificato. Usare questa classe come wrapper (con la funzione [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)) per i puntatori o le matrici non elaborati in modo da fornire un controllo e gestire gli avvisi relativi ai puntatori non verificati anziché disattivarli globalmente. Se necessario, è possibile usare la versione non verificata della classe [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).  
@@ -151,7 +152,7 @@ int main()
 |-|-|  
 |[checked_array_iterator](#checked_array_iterator)|Costruisce un `checked_array_iterator` predefinito o un `checked_array_iterator` da un iteratore sottostante.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

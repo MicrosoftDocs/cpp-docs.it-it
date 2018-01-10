@@ -1,5 +1,5 @@
 ---
-title: 'Funzioni dello spazio dei nomi Concurrency:: precise_math | Documenti di Microsoft'
+title: 'Funzioni dello spazio dei nomi Concurrency:: precise_math | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -94,18 +94,18 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 727bbabf3c3b016e7c2666e3f77cf15b7e36d2a8
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: precise_math
 ||||  
@@ -202,7 +202,7 @@ inline double acosh(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore inversa del coseno iperbolico dell'argomento  
+ Restituisce il valore del coseno iperbolico inverso dell'argomento  
   
 ##  <a name="acoshf"></a>acoshf  
  Calcola il coseno iperbolico inverso dell'argomento  
@@ -216,7 +216,7 @@ inline float acoshf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore inversa del coseno iperbolico dell'argomento  
+ Restituisce il valore del coseno iperbolico inverso dell'argomento  
   
 ##  <a name="asin"></a>  asin  
  Calcola l'arcoseno dell'argomento  
@@ -264,7 +264,7 @@ inline double asinh(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno iperbolico inverso dell'argomento  
+ Restituisce il valore seno iperbolico inverso dell'argomento  
   
 ##  <a name="asinhf"></a>asinhf  
  Calcola il seno iperbolico inverso dell'argomento  
@@ -278,7 +278,7 @@ inline float asinhf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno iperbolico inverso dell'argomento  
+ Restituisce il valore seno iperbolico inverso dell'argomento  
   
 ##  <a name="atan"></a>  atan  
  Calcola l'arcotangente dell'argomento  
@@ -319,7 +319,7 @@ inline double atan2(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di y/x arcotangente  
+ Restituisce il valore dell'arcotangente di y/x  
   
 ##  <a name="atan2f"></a>atan2f  
  Calcola l'arcotangente di y/x  
@@ -338,7 +338,7 @@ inline float atan2f(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di y/x arcotangente  
+ Restituisce il valore dell'arcotangente di y/x  
   
 ##  <a name="atanf"></a>atanf  
  Calcola l'arcotangente dell'argomento  
@@ -369,7 +369,7 @@ inline double atanh(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore tangente iperbolico inverso dell'argomento  
+ Restituisce il valore di controllo di tangente iperbolico inverso dell'argomento  
   
 ##  <a name="atanhf"></a>atanhf  
  Calcola la tangente iperbolica inversa dell'argomento  
@@ -383,7 +383,7 @@ inline float atanhf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore tangente iperbolico inverso dell'argomento  
+ Restituisce il valore di controllo di tangente iperbolico inverso dell'argomento  
   
 ##  <a name="cbrt"></a>cbrt  
  Calcola la radice cubica reale dell'argomento  
@@ -522,7 +522,7 @@ inline float cosf(float _X) restrict(amp);
  Restituisce il valore di coseno dell'argomento  
   
 ##  <a name="cosh"></a>  cosh  
- Calcola il valore del coseno iperbolico dell'argomento  
+ Calcola il coseno iperbolico di valore dell'argomento  
   
 ```  
 inline float cosh(float _X) restrict(amp);
@@ -539,7 +539,7 @@ inline double cosh(double _X) restrict(amp);
  Restituisce il valore del coseno iperbolico dell'argomento  
   
 ##  <a name="coshf"></a>coshf  
- Calcola il valore del coseno iperbolico dell'argomento  
+ Calcola il coseno iperbolico di valore dell'argomento  
   
 ```  
 inline float coshf(float _X) restrict(amp);
@@ -553,7 +553,7 @@ inline float coshf(float _X) restrict(amp);
  Restituisce il valore del coseno iperbolico dell'argomento  
   
 ##  <a name="cospi"></a>cospi  
- Calcola il valore di pi greco coseno * x  
+ Calcola il coseno di valore di pi greco * x  
   
 ```  
 inline float cospi(float _X) restrict(amp);
@@ -567,10 +567,10 @@ inline double cospi(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di pi greco coseno * x  
+ Restituisce il coseno di valore di pi greco * x  
   
 ##  <a name="cospif"></a>cospif  
- Calcola il valore di pi greco coseno * x  
+ Calcola il coseno di valore di pi greco * x  
   
 ```  
 inline float cospif(float _X) restrict(amp);
@@ -581,9 +581,9 @@ inline float cospif(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di pi greco coseno * x  
+ Restituisce il coseno di valore di pi greco * x  
   
-##  <a name="erf"></a>FUNZ.  
+##  <a name="erf"></a>Erf  
  Calcola la funzione di errore di x  
   
 ```  
@@ -708,7 +708,7 @@ inline float erfinvf(float _X) restrict(amp);
  Restituisce la funzione inversa di errore di x  
   
 ##  <a name="exp10"></a>exp10  
- Calcola la base&10; esponenziale dell'argomento  
+ Viene calcolato in base 10 esponenziale dell'argomento  
   
 ```  
 inline float exp10(float _X) restrict(amp);
@@ -722,10 +722,10 @@ inline double exp10(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la base&10; esponenziale dell'argomento  
+ Restituisce la base 10 esponenziale dell'argomento  
   
 ##  <a name="exp10f"></a>exp10f  
- Calcola la base&10; esponenziale dell'argomento  
+ Viene calcolato in base 10 esponenziale dell'argomento  
   
 ```  
 inline float exp10f(float _X) restrict(amp);
@@ -736,7 +736,7 @@ inline float exp10f(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la base&10; esponenziale dell'argomento  
+ Restituisce la base 10 esponenziale dell'argomento  
   
 ##  <a name="expm1"></a>expm1  
  Calcola l'esponenziale in base e dell'argomento, meno 1  
@@ -750,7 +750,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `exponent`  
- Il termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` è la base del logaritmo naturale.  
+ Il termine esponenziale  *n*  dell'espressione matematica `e` <sup> n </sup>, dove `e` è la base del logaritmo naturale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento, meno 1  
@@ -764,7 +764,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `exponent`  
- Il termine esponenziale *n* dell'espressione matematica `e` <sup>n</sup>, dove `e` è la base del logaritmo naturale.  
+ Il termine esponenziale  *n*  dell'espressione matematica `e` <sup> n </sup>, dove `e` è la base del logaritmo naturale.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento, meno 1  
@@ -801,7 +801,7 @@ inline float expf(float _X) restrict(amp);
  Restituisce l'esponenziale in base e dell'argomento  
   
 ##  <a name="exp2"></a>EXP2  
- Calcola l'esponenziale dell'argomento base-2  
+ Calcola l'esponenziale dell'argomento di base-2  
   
 ```  
 inline float exp2(float _X) restrict(amp);
@@ -815,10 +815,10 @@ inline double exp2(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'esponenziale dell'argomento base-2  
+ Restituisce la base 2 esponenziale dell'argomento  
   
 ##  <a name="exp2f"></a>exp2f  
- Calcola l'esponenziale dell'argomento base-2  
+ Calcola l'esponenziale dell'argomento di base-2  
   
 ```  
 inline float exp2f(float _X) restrict(amp);
@@ -829,7 +829,7 @@ inline float exp2f(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'esponenziale dell'argomento base-2  
+ Restituisce la base 2 esponenziale dell'argomento  
   
 ##  <a name="fabs"></a>fabs  
  Restituisce il valore assoluto dell'argomento  
@@ -863,7 +863,7 @@ inline float fabsf(float _X) restrict(amp);
  Restituisce il valore assoluto dell'argomento  
 
 ## <a name="fdim"></a>fdim  
-Calcola la differenza tra gli argomenti positiva.
+Calcola la differenza tra gli argomenti positivo.
 ```  
 inline float fdim(
    float _X,
@@ -879,10 +879,10 @@ inline double fdim(
 
 
 ### <a name="return-value"></a>Valore restituito
-La differenza tra x e y se x è maggiore di y; in caso contrario, +&0;.
+La differenza tra x e y se x è maggiore di y; in caso contrario, + 0.
  
 ## <a name="fdimf"></a>fdimf  
-Calcola la differenza tra gli argomenti positiva.
+Calcola la differenza tra gli argomenti positivo.
 ```
 inline float fdimf(
    float _X,
@@ -893,7 +893,7 @@ inline float fdimf(
 `_X`Valore a virgola mobile `_Y` valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
-La differenza tra x e y se x è maggiore di y; in caso contrario, +&0;. 
+La differenza tra x e y se x è maggiore di y; in caso contrario, + 0. 
   
 ##  <a name="floor"></a>floor  
  Calcola la base dell'argomento  
@@ -927,7 +927,7 @@ inline float floorf(float _X) restrict(amp);
  Restituisce la base dell'argomento  
 
 ## <a name="a-namefma-fma"></a><a name="fma">FMA  
-Calcola il prodotto del primo e secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
+Calcola il prodotto del primo e il secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
 ```
 inline float fma(
    float _X,
@@ -950,7 +950,7 @@ inline double fma(
 Il risultato dell'espressione ( x * y) + _Z. Il calcolo dell'intero viene eseguito come una singola operazione. vale a dire le sottoespressioni vengono calcolate a precisione infinita, e solo il risultato finale viene arrotondato. 
 
 ## <a name="fmaf"></a>fmaf  
-Calcola il prodotto del primo e secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
+Calcola il prodotto del primo e il secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
 ```
 inline float fmaf(
    float _X,
@@ -967,7 +967,7 @@ inline float fmaf(
 Il risultato dell'espressione ( x * y) + _Z. Il calcolo dell'intero viene eseguito come una singola operazione. vale a dire le sottoespressioni vengono calcolate a precisione infinita, e solo il risultato finale viene arrotondato.
   
 ##  <a name="fmax"></a>Fmax  
- Determinare il valore numerico massimo degli argomenti  
+ Determinare il valore numerico massimo di argomenti  
   
 ```  
 inline float fmax(
@@ -988,10 +988,10 @@ inline double fmax(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico massimo degli argomenti  
+ Restituisce il valore numerico massimo di argomenti  
   
 ##  <a name="fmaxf"></a>fmaxf  
- Determinare il valore numerico massimo degli argomenti  
+ Determinare il valore numerico massimo di argomenti  
   
 ```  
 inline float fmaxf(
@@ -1007,10 +1007,10 @@ inline float fmaxf(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico massimo degli argomenti  
+ Restituisce il valore numerico massimo di argomenti  
   
 ##  <a name="fmin"></a>Fmin  
- Determinare il valore numerico minimo degli argomenti  
+ Determinare il valore numerico minimo di argomenti  
   
 ```  
 inline float fmin(
@@ -1031,10 +1031,10 @@ inline double fmin(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico minimo degli argomenti  
+ Restituisce il valore numerico minimo di argomenti  
   
 ##  <a name="fminf"></a>fminf  
- Determinare il valore numerico minimo degli argomenti  
+ Determinare il valore numerico minimo di argomenti  
   
 ```  
 inline float fminf(
@@ -1050,9 +1050,9 @@ inline float fminf(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituire il valore numerico minimo degli argomenti  
+ Restituisce il valore numerico minimo di argomenti  
   
-##  <a name="fmod"></a>Funzione fmod (C++ AMP)  
+##  <a name="fmod"></a>fmod (funzione) (C++ AMP)  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato.  
   
 ```  
@@ -1074,7 +1074,7 @@ inline double fmod(
  Il secondo argomento a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il resto del `_X` diviso per `_Y`; ovvero, il valore di `_X`  -  `_Y` *n*, dove *n* è un numero intero in modo che la grandezza del `_X`  -  `_Y` *n* è inferiore la grandezza del `_Y`.  
+ Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
   
 ##  <a name="fmodf"></a>fmodf  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato.  
@@ -1093,10 +1093,10 @@ inline float fmodf(
  Il secondo argomento a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
- Il resto del `_X` diviso per `_Y`; ovvero, il valore di `_X`  -  `_Y` *n*, dove *n* è un numero intero in modo che la grandezza del `_X`  -  `_Y` *n* è inferiore la grandezza del `_Y`.  
+ Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
   
 ##  <a name="fpclassify"></a>fpclassify  
- Classifica il valore dell'argomento come un valore NaN, infinito, normale subnormal, zero  
+ Classifica il valore dell'argomento come un valore NaN, infinito, normale, subnormal zero  
   
 ```  
 inline int fpclassify(float _X) restrict(amp);
@@ -1110,10 +1110,10 @@ inline int fpclassify(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della macro classificazione numerica appropriato per il valore dell'argomento.  
+ Restituisce il valore della macro numero classificazione appropriato per il valore dell'argomento.  
   
 ##  <a name="frexp"></a>frexp  
- Ottiene la mantissa ed esponente di x  
+ Ottiene la mantissa e l'esponente di x  
   
 ```  
 inline float frexp(
@@ -1131,13 +1131,13 @@ inline double frexp(
  Valore a virgola mobile  
   
  `_Exp`  
- Restituisce l'esponente dell'intero di x nel valore a virgola mobile  
+ Restituisce l'esponente intero di x nel valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il x mantissa  
   
 ##  <a name="frexpf"></a>frexpf  
- Ottiene la mantissa ed esponente di x  
+ Ottiene la mantissa e l'esponente di x  
   
 ```  
 inline float frexpf(
@@ -1150,7 +1150,7 @@ inline float frexpf(
  Valore a virgola mobile  
   
  `_Exp`  
- Restituisce l'esponente dell'intero di x nel valore a virgola mobile  
+ Restituisce l'esponente intero di x nel valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il x mantissa  
@@ -1278,10 +1278,10 @@ inline int isnan(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un valore diverso da zero se e solo se l'argomento è un valore NaN  
+ Restituisce un valore diverso da zero se e solo se l'argomento ha un valore NaN  
   
 ##  <a name="isnormal"></a>isnormal  
- Determina se l'argomento è una normale  
+ Determina se l'argomento è un normale  
   
 ```  
 inline int isnormal(float _X) restrict(amp);
@@ -1298,7 +1298,7 @@ inline int isnormal(double _X) restrict(amp);
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore normale  
   
 ##  <a name="ldexp"></a>ldexp  
- Calcola un numero reale compreso tra il mantissa specificata e l'esponente.  
+ Calcola un numero reale compreso tra la mantissa specificata e un esponente.  
   
 ```  
 inline float ldexp(
@@ -1322,7 +1322,7 @@ inline double ldexp(
  Restituisce x * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>ldexpf  
- Calcola un numero reale compreso tra il mantissa specificata e l'esponente.  
+ Calcola un numero reale compreso tra la mantissa specificata e un esponente.  
   
 ```  
 inline float ldexpf(
@@ -1401,7 +1401,7 @@ inline double log(double _X) restrict(amp);
  Restituisce il logaritmo di base e dell'argomento  
   
 ##  <a name="log10"></a>  log10  
- Calcola il logaritmo in base&10; dell'argomento  
+ Calcola il logaritmo in base 10 dell'argomento  
   
 ```  
 inline float log10(float _X) restrict(amp);
@@ -1415,10 +1415,10 @@ inline double log10(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il logaritmo in base&10; dell'argomento  
+ Restituisce il logaritmo in base 10 dell'argomento  
   
 ##  <a name="log10f"></a>log10f  
- Calcola il logaritmo in base&10; dell'argomento  
+ Calcola il logaritmo in base 10 dell'argomento  
   
 ```  
 inline float log10f(float _X) restrict(amp);
@@ -1429,7 +1429,7 @@ inline float log10f(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il logaritmo in base&10; dell'argomento  
+ Restituisce il logaritmo in base 10 dell'argomento  
   
 ##  <a name="log1p"></a>log1p  
  Calcola il logaritmo di base e di 1 e l'argomento  
@@ -1463,7 +1463,7 @@ inline float log1pf(float _X) restrict(amp);
  Restituisce il logaritmo di base e di 1 e l'argomento  
   
 ##  <a name="log2"></a>LOG2  
- Calcola il logaritmo in base&2; dell'argomento  
+ Calcola il logaritmo in base 2 dell'argomento  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -1477,10 +1477,10 @@ inline double log2(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il logaritmo in base&10; dell'argomento  
+ Restituisce il logaritmo in base 10 dell'argomento  
   
 ##  <a name="log2f"></a>log2f  
- Calcola il logaritmo in base&2; dell'argomento  
+ Calcola il logaritmo in base 2 dell'argomento  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -1491,10 +1491,10 @@ inline float log2f(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il logaritmo in base&10; dell'argomento  
+ Restituisce il logaritmo in base 10 dell'argomento  
   
 ##  <a name="logb"></a>logb  
- Estrae l'esponente di x, come un valore signed integer nel formato a virgola mobile  
+ Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile  
   
 ```  
 inline float logb(float _X) restrict(amp);
@@ -1508,10 +1508,10 @@ inline double logb(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'esponente firmato del x  
+ Restituisce l'esponente di x con segno  
   
 ##  <a name="logbf"></a>logbf  
- Estrae l'esponente di x, come un valore signed integer nel formato a virgola mobile  
+ Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile  
   
 ```  
 inline float logbf(float _X) restrict(amp);
@@ -1522,7 +1522,7 @@ inline float logbf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'esponente firmato del x  
+ Restituisce l'esponente di x con segno  
   
 ##  <a name="logf"></a>logf  
  Calcola il logaritmo di base e dell'argomento  
@@ -1539,7 +1539,7 @@ inline float logf(float _X) restrict(amp);
  Restituisce il logaritmo di base e dell'argomento  
   
 ##  <a name="modf"></a>modf  
- Divide l'argomento specificato in frazionari e parti intere.  
+ Divide le parti intere e l'argomento specificato in frazionari.  
   
 ```  
 inline float modf(
@@ -1556,14 +1556,14 @@ inline double modf(
  `_X`  
  Valore a virgola mobile  
   
- `_Iptr`(il parametro)  
+ `_Iptr`(parametro) out  
  La parte intera di `_X`, come un valore a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
  La parte decimale con segno del `_X`.  
   
 ##  <a name="modff"></a>modff  
- Divide l'argomento specificato in frazionari e parti intere.  
+ Divide le parti intere e l'argomento specificato in frazionari.  
   
 ```  
 inline float modff(
@@ -1582,7 +1582,7 @@ inline float modff(
  Restituisce la parte decimale con segno del `_X`.  
   
 ##  <a name="nan"></a>NaN  
- Restituisce un valore NaN non interattivo  
+ Restituisce un NaN non interattivo  
   
 ```  
 inline double nan(int _X) restrict(amp);
@@ -1590,13 +1590,13 @@ inline double nan(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una costante NaN, se disponibile, con il contenuto indicato in x  
+ Restituisce un NaN non interattivo, se disponibile, con il contenuto indicato in x  
   
 ##  <a name="nanf"></a>nanf  
- Restituisce un valore NaN non interattivo  
+ Restituisce un NaN non interattivo  
   
 ```  
 inline float nanf(int _X) restrict(amp);
@@ -1604,13 +1604,13 @@ inline float nanf(int _X) restrict(amp);
   
 ### <a name="parameters"></a>Parametri  
  `_X`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una costante NaN, se disponibile, con il contenuto indicato in x  
+ Restituisce un NaN non interattivo, se disponibile, con il contenuto indicato in x  
   
 ##  <a name="nearbyint"></a>nearbyint  
- Consente di arrotondare l'argomento su un valore integer nel formato a virgola mobile, utilizzando la direzione di arrotondamento corrente.  
+ Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.  
   
 ```  
 inline float nearbyint(float _X) restrict(amp);
@@ -1627,7 +1627,7 @@ inline double nearbyint(double _X) restrict(amp);
  Restituisce il valore intero arrotondato.  
   
 ##  <a name="nearbyintf"></a>nearbyintf  
- Consente di arrotondare l'argomento su un valore integer nel formato a virgola mobile, utilizzando la direzione di arrotondamento corrente.  
+ Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.  
   
 ```  
 inline float nearbyintf(float _X) restrict(amp);
@@ -1641,7 +1641,7 @@ inline float nearbyintf(float _X) restrict(amp);
  Restituisce il valore intero arrotondato.  
   
 ##  <a name="nextafter"></a>nextafter  
- Determinare il successivo valore, rappresentabile nel tipo della funzione, dopo x nella direzione di y  
+ Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y  
   
 ```  
 inline float nextafter(
@@ -1662,10 +1662,10 @@ inline double nextafter(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il successivo valore rappresentabile, il tipo della funzione, dopo x nella direzione di y  
+ Restituisce il successivo valore rappresentabile nel tipo della funzione, dopo x nella direzione di y  
   
 ##  <a name="nextafterf"></a>nextafterf  
- Determinare il successivo valore, rappresentabile nel tipo della funzione, dopo x nella direzione di y  
+ Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y  
   
 ```  
 inline float nextafterf(
@@ -1681,7 +1681,7 @@ inline float nextafterf(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il successivo valore rappresentabile, il tipo della funzione, dopo x nella direzione di y  
+ Restituisce il successivo valore rappresentabile nel tipo della funzione, dopo x nella direzione di y  
   
 ##  <a name="phi"></a>Phi  
  Restituisce la funzione distribuzione cumulativa dell'argomento  
@@ -1861,7 +1861,7 @@ inline float remainderf(
  Restituisce y REM x  
   
 ##  <a name="remquo"></a>remquo  
- Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Inoltre calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
+ Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Anche calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
   
 ```  
 inline float remquo(
@@ -1883,14 +1883,14 @@ inline double remquo(
  `_Y`  
  Il secondo argomento a virgola mobile.  
   
- `_Quo`(il parametro)  
- L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei componenti frazionari di `_X` diviso i bit frazionari di `_Y`.  
+ `_Quo`(parametro) out  
+ L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei bit frazionario di `_X` diviso per i bit di frazionari `_Y`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto di `_X` diviso `_Y`.  
   
 ##  <a name="remquof"></a>remquof  
- Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Inoltre calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
+ Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Anche calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
   
 ```  
 inline float remquof(
@@ -1906,8 +1906,8 @@ inline float remquof(
  `_Y`  
  Il secondo argomento a virgola mobile.  
   
- `_Quo`(il parametro)  
- L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei componenti frazionari di `_X` diviso i bit frazionari di `_Y`.  
+ `_Quo`(parametro) out  
+ L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei bit frazionario di `_X` diviso per i bit di frazionari `_Y`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto di `_X` diviso `_Y`.  
@@ -1975,7 +1975,7 @@ inline float rsqrtf(float _X) restrict(amp);
  Restituisce il reciproco della radice quadrata dell'argomento  
   
 ##  <a name="scalb"></a>scalb  
- Moltiplica x da FLT_RADIX a y l'alimentazione  
+ Moltiplica x da FLT_RADIX per la power y  
   
 ```  
 inline float scalb(
@@ -1999,7 +1999,7 @@ inline double scalb(
  Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbf"></a>scalbf  
- Moltiplica x da FLT_RADIX a y l'alimentazione  
+ Moltiplica x da FLT_RADIX per la power y  
   
 ```  
 inline float scalbf(
@@ -2018,7 +2018,7 @@ inline float scalbf(
  Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbn"></a>scalbn  
- Moltiplica x da FLT_RADIX a y l'alimentazione  
+ Moltiplica x da FLT_RADIX per la power y  
   
 ```  
 inline float scalbn(
@@ -2036,13 +2036,13 @@ inline double scalbn(
  Valore a virgola mobile  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x * (FLT_RADIX ^ y)  
   
 ##  <a name="scalbnf"></a>scalbnf  
- Moltiplica x da FLT_RADIX a y l'alimentazione  
+ Moltiplica x da FLT_RADIX per la power y  
   
 ```  
 inline float scalbnf(
@@ -2055,7 +2055,7 @@ inline float scalbnf(
  Valore a virgola mobile  
   
  `_Y`  
- Valore intero  
+ Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x * (FLT_RADIX ^ y)  
@@ -2092,7 +2092,7 @@ inline int signbitf(float _X) restrict(amp);
  Restituisce un valore diverso da zero se e solo se il segno di x è negativo  
   
 ##  <a name="sin"></a>  sin  
- Calcola il valore del seno dell'argomento  
+ Calcola il valore seno dell'argomento  
   
 ```  
 inline float sin(float _X) restrict(amp);
@@ -2106,10 +2106,10 @@ inline double sin(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno dell'argomento  
+ Restituisce il valore seno dell'argomento  
   
 ##  <a name="sinf"></a>sinf  
- Calcola il valore del seno dell'argomento  
+ Calcola il valore seno dell'argomento  
   
 ```  
 inline float sinf(float _X) restrict(amp);
@@ -2120,10 +2120,10 @@ inline float sinf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno dell'argomento  
+ Restituisce il valore seno dell'argomento  
   
 ##  <a name="sincos"></a>sincos  
- Calcola un valore seno e il coseno di x  
+ Calcola un valore seno e coseno di x  
   
 ```  
 inline void sincos(
@@ -2143,13 +2143,13 @@ inline void sincos(
  Valore a virgola mobile  
   
  `_S`  
- Restituisce il valore del seno di x  
+ Restituisce il valore seno di x  
   
  `_C`  
- Restituisce il valore di x coseno  
+ Restituisce il coseno di valore di x  
   
 ##  <a name="sincosf"></a>sincosf  
- Calcola un valore seno e il coseno di x  
+ Calcola un valore seno e coseno di x  
   
 ```  
 inline void sincosf(
@@ -2163,13 +2163,13 @@ inline void sincosf(
  Valore a virgola mobile  
   
  `_S`  
- Restituisce il valore del seno di x  
+ Restituisce il valore seno di x  
   
  `_C`  
- Restituisce il valore di x coseno  
+ Restituisce il coseno di valore di x  
   
 ##  <a name="sinh"></a>  sinh  
- Calcola il valore del seno iperbolico dell'argomento  
+ Calcola il valore seno iperbolico dell'argomento  
   
 ```  
 inline float sinh(float _X) restrict(amp);
@@ -2183,10 +2183,10 @@ inline double sinh(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno iperbolico dell'argomento  
+ Restituisce il valore seno iperbolico dell'argomento  
   
 ##  <a name="sinhf"></a>sinhf  
- Calcola il valore del seno iperbolico dell'argomento  
+ Calcola il valore seno iperbolico dell'argomento  
   
 ```  
 inline float sinhf(float _X) restrict(amp);
@@ -2197,10 +2197,10 @@ inline float sinhf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno iperbolico dell'argomento  
+ Restituisce il valore seno iperbolico dell'argomento  
   
 ##  <a name="sinpi"></a>sinpi  
- Calcola il valore del seno di pi greco * x  
+ Calcola il valore seno di pi greco * x  
   
 ```  
 inline float sinpi(float _X) restrict(amp);
@@ -2214,10 +2214,10 @@ inline double sinpi(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno di pi greco * x  
+ Restituisce il valore seno di pi greco * x  
   
 ##  <a name="sinpif"></a>sinpif  
- Calcola il valore del seno di pi greco * x  
+ Calcola il valore seno di pi greco * x  
   
 ```  
 inline float sinpif(float _X) restrict(amp);
@@ -2228,10 +2228,10 @@ inline float sinpif(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore del seno di pi greco * x  
+ Restituisce il valore seno di pi greco * x  
   
 ##  <a name="sqrt"></a>  sqrt  
- Calcola la radice di squre dell'argomento  
+ Calcola la radice squre dell'argomento  
   
 ```  
 inline float sqrt(float _X) restrict(amp);
@@ -2245,10 +2245,10 @@ inline double sqrt(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la radice di squre dell'argomento  
+ Restituisce la radice squre dell'argomento  
   
 ##  <a name="sqrtf"></a>sqrtf  
- Calcola la radice di squre dell'argomento  
+ Calcola la radice squre dell'argomento  
   
 ```  
 inline float sqrtf(float _X) restrict(amp);
@@ -2259,10 +2259,10 @@ inline float sqrtf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la radice di squre dell'argomento  
+ Restituisce la radice squre dell'argomento  
   
 ##  <a name="tan"></a>  tan  
- Calcola il valore dell'argomento tangente  
+ Calcola il valore di controllo di tangente dell'argomento  
   
 ```  
 inline float tan(float _X) restrict(amp);
@@ -2276,10 +2276,10 @@ inline double tan(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore dell'argomento tangente  
+ Restituisce il valore di controllo di tangente dell'argomento  
   
 ##  <a name="tanf"></a>tanf  
- Calcola il valore dell'argomento tangente  
+ Calcola il valore di controllo di tangente dell'argomento  
   
 ```  
 inline float tanf(float _X) restrict(amp);
@@ -2290,10 +2290,10 @@ inline float tanf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore dell'argomento tangente  
+ Restituisce il valore di controllo di tangente dell'argomento  
   
 ##  <a name="tanh"></a>  tanh  
- Calcola il valore della tangente iperbolico dell'argomento  
+ Calcola il valore di controllo di tangente iperbolico dell'argomento  
   
 ```  
 inline float tanh(float _X) restrict(amp);
@@ -2307,10 +2307,10 @@ inline double tanh(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della tangente iperbolico dell'argomento  
+ Restituisce il valore di controllo di tangente iperbolico dell'argomento  
   
 ##  <a name="tanhf"></a>tanhf  
- Calcola il valore della tangente iperbolico dell'argomento  
+ Calcola il valore di controllo di tangente iperbolico dell'argomento  
   
 ```  
 inline float tanhf(float _X) restrict(amp);
@@ -2321,10 +2321,10 @@ inline float tanhf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore della tangente iperbolico dell'argomento  
+ Restituisce il valore di controllo di tangente iperbolico dell'argomento  
   
 ##  <a name="tanpi"></a>tanpi  
- Calcola il valore di pi greco tangente * x  
+ Calcola il valore di controllo di tangente di pi greco * x  
   
 ```  
 inline float tanpi(float _X) restrict(amp);
@@ -2338,10 +2338,10 @@ inline double tanpi(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di pi greco tangente * x  
+ Restituisce il valore di controllo di tangente di pi greco * x  
   
 ##  <a name="tanpif"></a>tanpif  
- Calcola il valore di pi greco tangente * x  
+ Calcola il valore di controllo di tangente di pi greco * x  
   
 ```  
 inline float tanpif(float _X) restrict(amp);
@@ -2352,7 +2352,7 @@ inline float tanpif(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il valore di pi greco tangente * x  
+ Restituisce il valore di controllo di tangente di pi greco * x  
   
 ##  <a name="tgamma"></a>tgamma  
  Calcola la funzione gamma di x  
@@ -2386,7 +2386,7 @@ inline float tgammaf(float _X) restrict(amp);
  Restituisce il risultato della funzione gamma di x  
   
 ##  <a name="trunc"></a>trunc  
- Tronca l'argomento per il componente numero intero  
+ Tronca l'argomento per il componente integer  
   
 ```  
 inline float trunc(float _X) restrict(amp);
@@ -2400,10 +2400,10 @@ inline double trunc(double _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il componente numero intero dell'argomento  
+ Restituisce il componente integer dell'argomento  
   
 ##  <a name="truncf"></a>truncf  
- Tronca l'argomento per il componente numero intero  
+ Tronca l'argomento per il componente integer  
   
 ```  
 inline float truncf(float _X) restrict(amp);
@@ -2414,8 +2414,7 @@ inline float truncf(float _X) restrict(amp);
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce il componente numero intero dell'argomento  
+ Restituisce il componente integer dell'argomento  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::precise_math](concurrency-precise-math-namespace.md)
-

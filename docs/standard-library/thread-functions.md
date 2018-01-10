@@ -13,7 +13,7 @@ f1_keywords:
 - thread/std::swap
 - thread/std::yield
 ms.assetid: bb1aa1ef-fe3f-4e2c-8b6e-e22dbf2f5a19
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::get_id [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: dd073f48eb926e8fec0017f63ab77a91eb65acff
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 ||||  
@@ -103,5 +102,4 @@ inline void yield() noexcept;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<thread>](../standard-library/thread.md)
-
 

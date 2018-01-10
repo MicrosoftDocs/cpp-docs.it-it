@@ -1,47 +1,46 @@
 ---
-title: "Avviso del compilatore (livello 2) C4146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4146"
+title: Compilatore (livello 2) avviso C4146 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4146
+dev_langs: C++
+helpviewer_keywords: C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d7a9a67beb4dc122c25318c1796e22a4c35dbe38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 2) C4146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-operatore "meno" unario utilizzato con tipo unsigned. Il risultato resta unsigned  
+# <a name="compiler-warning-level-2-c4146"></a>Compilatore (livello 2) avviso C4146
+operatore meno unario applicato al tipo unsigned, risultato resta unsigned  
   
- I tipi unsigned possono contenere solo valori non negativi. In genere, quindi, non ha senso applicare l'operatore meno unario \(negazione\) a un tipo unsigned.  Sia l'operando che il risultato sono non negativi.  
+ Tipi unsigned possono contenere valori solo un valore non negativo, in modo unario (negazione) è in genere inutile quando applicato a un tipo senza segno. L'operando sia il risultato non siano negativi.  
   
- In pratica, questa situazione si verifica quando il programmatore cerca di esprimere il valore intero minimo, ossia \-2147483648.  Questo valore non può essere scritto come \-2147483648, poiché l'espressione viene elaborata in due fasi:  
+ In pratica, ciò si verifica quando il programmatore sta tentando di esprimere il valore integer minimo, ossia -2147483648. Questo valore non può essere scritto come -2147483648 perché l'espressione viene elaborata in due fasi:  
   
-1.  Viene valutato il numero 2147483648.  Poiché tale numero è maggiore del valore integer massimo di 2147483647, il tipo di 2147483648 non è [int](../../c-language/integer-types.md), ma `unsigned int`.  
+1.  Il numero 2147483648 viene valutato. Poiché è maggiore del valore integer massimo di 2147483647, non è il tipo di 2147483648 [int](../../c-language/integer-types.md), ma `unsigned int`.  
   
-2.  L'operatore meno unario viene applicato al valore, con un risultato unsigned corrispondente a 2147483648.  
+2.  Operatore meno unario viene applicato al valore, con un risultato unsigned corrispondente a 2147483648.  
   
- Il tipo unsigned del risultato può causare un comportamento imprevisto.  Se si utilizza il risultato in un confronto, è possibile che venga utilizzato un confronto unsigned, ad esempio quando l'altro operando è un `int`.  È chiaro quindi il motivo per cui il programma di esempio riportato di seguito stampa una sola riga.  
+ Il tipo senza segno del risultato può causare comportamenti imprevisti. Se viene utilizzato il risultato in un confronto, potrebbe essere utilizzato un confronto senza segno, ad esempio, quando l'altro operando è un `int`. Questo spiega perché il programma di esempio seguente stampa una sola riga.  
   
- La seconda riga prevista, `1 is greater than the most negative int`, non viene stampata perché `((unsigned int)1) > 2147483648`  è false.  
+ La seconda riga prevista `1 is greater than the most negative int`, non viene stampata perché `((unsigned int)1) > 2147483648` è false.  
   
- Per evitare la visualizzazione dell'avviso C4146, utilizzare INT\_MIN da limits.h, il cui tipo è **signed int**.  
+ È possibile evitare C4146, utilizzare INT_MIN da Limits. h, il cui tipo è **tipo signed int**.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C4146:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4146:  
   
 ```  
 // C4146.cpp  

@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91ba5c74ebda12df4bc912ac8bd760263364345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fd81a8548dbb746da4afa5b89bc49ee801cbaeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wizards-and-the-resource-editors"></a>Procedure guidate ed editor risorse
 Visual C++ include diverse procedure guidate per l'utilizzo nella programmazione MFC, insieme a molti editor di risorse integrata. Per la programmazione, i controlli ActiveX di [Creazione guidata controllo ActiveX](../mfc/reference/mfc-activex-control-wizard.md) svolge una funzione simile a quella della creazione guidata applicazione MFC. Sebbene sia possibile scrivere applicazioni MFC senza la maggior parte di questi strumenti, gli strumenti notevolmente semplificano e velocizzare il lavoro.  

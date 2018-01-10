@@ -32,11 +32,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01dc273b4c878db4ba48ce38bf69919eb2bfae3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Direttive #if, #elif, #else e #endif (C/C++)
 La direttiva `#if`, con le direttive `#elif`, `#else` e `#endif`, controlla la compilazione di parti di un file di origine. Se l'espressione scritta (dopo `#if`) presenta un valore diverso da zero, il gruppo di righe immediatamente successivo alla direttiva `#if` viene mantenuto nell'unità di conversione.  

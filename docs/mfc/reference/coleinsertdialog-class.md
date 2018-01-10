@@ -35,11 +35,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c7f1592a5357e6f928c8f23a4abbd5e26ec7032
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4638471ed199d08bb21bcf16465fe933af3a584c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleinsertdialog-class"></a>Classe classe COleInsertDialog
 Utilizzata per la finestra di dialogo di inserimento oggetto OLE.  

@@ -1,32 +1,33 @@
 ---
-title: "nonextensible | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.nonextensible"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nonextensible attribute"
+title: nonextensible | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.nonextensible
+dev_langs: C++
+helpviewer_keywords: nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31aa2bf8572a1a0e8ed785d55bb6960cfe6cf75e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# nonextensible
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-specifica che `IDispatch` l'implementazione include solo le proprietà e i metodi elencati nella descrizione dell'interfaccia e non può essere estesa con i membri aggiuntivi in fase di esecuzione.  
+# <a name="nonextensible"></a>nonextensible
+Specifica che il `IDispatch` implementazione include solo le proprietà e metodi elencati nella descrizione dell'interfaccia e non possono essere esteso con altri membri in fase di esecuzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,13 +35,13 @@ specifica che `IDispatch` l'implementazione include solo le proprietà e i metod
   
 ```  
   
-## Note  
- **non estensibile** L'attributo di C\+\+ ha la stessa funzionalità di  [non estensibile](http://msdn.microsoft.com/library/windows/desktop/aa367120) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **nonextensible** attributo C++ ha la stessa funzionalità come il [nonextensible](http://msdn.microsoft.com/library/windows/desktop/aa367120) attributo MIDL.  
   
- utilizzo di **non estensibile** è necessario inoltre  [oleautomation](../windows/oleautomation.md) attributo.  
+ Utilizzo di **nonextensible** richiede anche il [oleautomation](../windows/oleautomation.md) attributo.  
   
-## Esempio  
- Il codice seguente viene illustrato un utilizzo di **non estensibile** attributo:  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato uno degli utilizzi di **nonextensible** attributo:  
   
 ```  
 // cpp_attr_ref_nonextensible.cpp  
@@ -57,20 +58,19 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|**doppio** e  **oleautomation**, o  **interfaccia dispatch**|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|**doppia** e **oleautomation**, o **interfaccia dispatch**|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   

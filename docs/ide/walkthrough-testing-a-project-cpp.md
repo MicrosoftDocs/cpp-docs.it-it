@@ -1,73 +1,73 @@
 ---
-title: "Procedura dettagliata: verifica di un progetto (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "test di progetti [C++]"
-  - "progetti [C++], test"
-  - "test di progetti"
+title: 'Procedura dettagliata: Verifica di un progetto (C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- project testing [C++]
+- testing projects
+- projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura dettagliata: verifica di un progetto (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'esecuzione di un programma in modalità di debug consente di utilizzare punti di interruzione per sospenderlo allo scopo di esaminare lo stato di variabili e oggetti.  
+# <a name="walkthrough-testing-a-project-c"></a>Procedura dettagliata: verifica di un progetto (C++)
+Quando si esegue un programma in modalità di Debug, è possibile utilizzare i punti di interruzione per sospendere il programma per esaminare lo stato di variabili e oggetti.  
   
- In questa procedura dettagliata si osserverà il valore di una variabile durante l'esecuzione del programma e si capirà perché il valore non è quello previsto.  
+ In questa procedura dettagliata, controllare il valore di una variabile mentre viene eseguito il programma e dedurre perché il valore non è quello previsto.  
   
-## Prerequisiti  
+## <a name="prerequisites"></a>Prerequisiti  
   
--   In questa procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C\+\+.  
+-   In questa procedura dettagliata si presuppone la conoscenza delle nozioni di base del linguaggio C++.  
   
--   Si presuppone inoltre che l'utente abbia completato le procedure dettagliate correlate precedenti elencate in [Utilizzo dell'ambiente di sviluppo di Visual Studio per lo sviluppo di applicazioni desktop C\+\+](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
+-   Inoltre, presuppone di aver completato la precedenza di procedure dettagliate correlate elencati in [tramite l'IDE di Visual Studio per lo sviluppo Desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-### Per eseguire un programma in modalità di debug  
+### <a name="to-run-a-program-in-debug-mode"></a>Per eseguire un programma in modalità di Debug  
   
 1.  Aprire TestGames.cpp per la modifica.  
   
-2.  Selezionare questa riga di codice:  
+2.  Selezionare la riga di codice:  
   
      `Cardgame.solitaire(1);`  
   
-3.  Per impostare un punto di interruzione sulla riga scegliere **Debug**, **Imposta\/Rimuovi punto di interruzione** oppure premere il tasto F9.  Un cerchio rosso viene visualizzato a sinistra della riga a indicare che è stato impostato un punto di interruzione.  Per rimuovere un punto di interruzione, è possibile scegliere nuovamente il comando di menu o il tasto F9.  
+3.  Per impostare un punto di interruzione riga, nella barra dei menu, scegliere **Debug**, **Attiva/Disattiva punto di interruzione**, o premere F9. Verrà visualizzato un cerchio rosso a sinistra della riga. indica che è impostato un punto di interruzione. Per rimuovere un punto di interruzione, è possibile scegliere nuovamente il comando di menu o il tasto F9.  
   
-     Se si utilizza un mouse, è inoltre possibile impostare o rimuovere un punto di interruzione facendo clic sul margine sinistro.  
+     Se si usa un mouse, è possibile impostare o rimuovere un punto di interruzione facendo clic sul margine sinistro.  
   
-4.  Sulla barra dei menu scegliere **Debug**, **Avvia debug** oppure premere il tasto F5.  
+4.  Nella barra dei menu, scegliere **Debug**, **Avvia debug**, o premere il tasto F5.  
   
-     Quando viene raggiunta la riga con il punto di interruzione impostato, l'esecuzione verrà arrestata temporaneamente \(perché il programma si trova in modalità di interruzione\).  Una freccia gialla a sinistra di una riga di codice indica la riga successiva che verrà eseguita.  
+     Quando il programma raggiunge la riga con il punto di interruzione, esecuzione viene arrestata temporaneamente perché il programma è in modalità di interruzione. Una freccia gialla a sinistra di una riga di codice indica che è la riga successiva da eseguire.  
   
-5.  Per esaminare il valore della variabile `Cardgame::totalParticipants`, spostare il puntatore su `Cardgame` e quindi spostarlo sul controllo di espansione a sinistra della finestra descrizione comandi.  Vengono visualizzati il nome della variabile `totalParticipants` e il relativo valore di 12.  
+5.  Per esaminare il valore della `Cardgame::totalParticipants` variabile, spostare il puntatore su `Cardgame` e quindi spostarlo sopra il controllo di espansione a sinistra della finestra della descrizione comandi. Il nome della variabile `totalParticipants` e vengono visualizzati il relativo valore pari a 12.  
   
-     Aprire il menu di scelta rapida della variabile `Cardgame::totalParticipants` e quindi scegliere **Aggiungi espressione di controllo** per visualizzare la variabile nella finestra **Espressioni di controllo 1**.  È anche possibile selezionare una variabile e trascinarla nella finestra **Espressione di controllo 1**.  
+     Aprire il menu di scelta rapida per il `Cardgame::totalParticipants` variabile e quindi scegliere **Aggiungi espressione di controllo** per visualizzare il **controllo1** finestra. È anche possibile selezionare una variabile e trascinarlo in modo che il **controllo1** finestra.  
   
-6.  Per passare alla riga di codice successiva, sulla barra dei menu scegliere **Debug**, **Esegui istruzione\/routine** oppure premere il tasto F10.  
+6.  Per passare alla riga successiva del codice, nella barra dei menu, scegliere **Debug**, **Esegui istruzione/routine**, oppure premere F10.  
   
-     Il valore di `Cardgame::totalParticipants` nella finestra **Espressione di controllo 1** viene ora visualizzato come 13.  
+     Il valore di `Cardgame::totalParticipants` nel **controllo1** finestra verrà visualizzata come 13.  
   
-7.  Aprire il menu di scelta rapida per l'istruzione `return 0;`, quindi scegliere **Esegui fino al cursore**.  La freccia gialla a sinistra del codice è rivolta verso l'istruzione successiva da eseguire.  
+7.  Aprire il menu di scelta rapida per il `return 0;` istruzione e quindi scegliere **Esegui fino al cursore**. La freccia gialla a sinistra dei punti di codice per l'istruzione successiva da eseguire.  
   
-8.  Il numero di `Cardgame::totalParticipants` dovrebbe diminuire al termine di Cardgame.  A questo punto, `Cardgame::totalParticipants` dovrebbe corrispondere a 0 perché tutte le istanze dei puntatori Cardgame sono state eliminate, ma la finestra **Espressione di controllo 1** indica che `Cardgame::totalparticipants` è uguale a 18.  Ciò indica l'esistenza di un bug nel codice, che è possibile rilevare e correggere completando la procedura dettagliata che segue, [Procedura dettagliata: debug di un progetto \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md).  
+8.  Il `Cardgame::totalParticipants` numero dovrebbe ridursi quando un costruttore Cardgame. A questo punto, `Cardgame::totalParticipants` deve essere uguale a 0 perché tutte le istanze di Cardgame sono state eliminate, ma la **controllo1** finestra indica che `Cardgame::totalparticipants` è uguale a 18. Questo errore indica che un bug nel codice, che è possibile rilevare e correggere completando la procedura successiva, [procedura dettagliata: debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md).  
   
-9. Per arrestare il programma, sulla barra dei menu, scegliere **Debug**, **Arresta debug** o scegliere la combinazione di tasti MAIUSC\+F5.  
+9. Per arrestare il programma, nella barra dei menu, scegliere **Debug**, **Termina debug**, oppure scegliere la combinazione di tasti MAIUSC + F5.  
   
-## Passaggi successivi  
- **Precedente:** [Procedura dettagliata: Compilazione di un progetto \(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Successivo:** [Procedura dettagliata: debug di un progetto \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+## <a name="next-steps"></a>Passaggi successivi  
+ **Precedente:** [procedura dettagliata: compilazione di un progetto (C++)](../ide/walkthrough-building-a-project-cpp.md) &#124; **Avanti:**[procedura dettagliata: debug di un progetto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## Vedere anche  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/it-it/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/it-it/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   
+ [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)
