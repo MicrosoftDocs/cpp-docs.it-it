@@ -1,34 +1,34 @@
 ---
-title: "GetProcAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetProcAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], GetProcAddress"
-  - "GetProcAddress (metodo)"
-  - "esportazioni ordinali [C++]"
+title: GetProcAddress | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: GetProcAddress
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], GetProcAddress
+- ordinal exports [C++]
+- GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# GetProcAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I processi che si collegano a una DLL in modo esplicito chiamano [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL.  Per chiamare la funzione della DLL si utilizza il puntatore alla funzione restituito.  **GetProcAddress** accetta come parametri l'handle del modulo DLL \(restituito da **LoadLibrary**, `AfxLoadLibrary` o **GetModuleHandle**\) e il nome della funzione da chiamare o l'ordinale di esportazione della funzione.  
+# <a name="getprocaddress"></a>GetProcAddress
+I processi in modo esplicito il collegamento a una chiamata DLL [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) per ottenere l'indirizzo di una funzione esportata nella DLL. Utilizzare il puntatore a funzione restituito per chiamare la funzione DLL. **GetProcAddress** accetta come parametri l'handle del modulo DLL (restituito da **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) e il nome della funzione è desidera chiamata o l'esportazione della funzione ordinale.  
   
- Poiché si chiama la funzione DLL tramite un puntatore e non viene effettuato alcun controllo dei tipi in fase di compilazione, accertarsi che i parametri per la funzione siano corretti affinché non vengano oltrepassati i limiti della memoria assegnata allo stack e non venga provocata una violazione di accesso.  Per garantire il supporto indipendente dai tipi, osservare i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori a funzione.  Di seguito è riportato un esempio.  
+ Poiché si sta chiamando la funzione DLL tramite un puntatore e non esiste alcun controllo dei tipi in fase di compilazione, assicurarsi che i parametri della funzione siano corretti, in modo che non si oltrepassare la memoria allocata nello stack e provocare una violazione di accesso. Un modo per garantire l'indipendenza dai tipi è per osservare i prototipi delle funzioni esportate e creare oggetti typedef corrispondenti per i puntatori di funzione. Ad esempio:  
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  
@@ -58,23 +58,23 @@ if (hDLL != NULL)
 }  
 ```  
   
- Il modo in cui si specifica la funzione desiderata quando si chiama **GetProcAddress** dipende da come è stata compilata la DLL.  
+ Come si specifica la funzione desiderata quando si chiama **GetProcAddress** dipende dal modo in cui è stata creata la DLL.  
   
- È possibile ottenere l'ordinale di esportazione solo se la DLL alla quale ci si collega è stata compilata con un file di definizione di modulo \(def\) e se gli ordinali sono elencati con le funzioni nella sezione **EXPORTS** del file def della DLL.  La chiamata a **GetProcAddress** con un ordinale di esportazione è leggermente più veloce rispetto all'uso del nome della funzione se la DLL ha molte funzioni esportate, poiché gli ordinali di esportazione funzionano come indici nella tabella di esportazione della DLL.  Con un ordinale di esportazione, **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato con i nomi delle funzioni nella tabella di esportazione della DLL.  Si consiglia tuttavia di chiamare **GetProcAddress** con un ordinale di esportazione solo se si è in grado di controllare l'assegnazione degli ordinali alle funzioni esportate nel file def.  
+ È possibile ottenere l'ordinale di esportazione solo se la DLL si effettua il collegamento viene compilata con un file di definizione (con estensione def) del modulo e se gli ordinali sono elencati con le funzioni di **esportazioni** sezione del file def della DLL. La chiamata **GetProcAddress** un'esportazione ordinale, anziché il nome della funzione, è leggermente più veloce se la DLL ha molte funzioni esportate, poiché gli ordinali di esportazione funzionano come indici nella DLL esporta una tabella. Con un numero ordinale di esportazione, **GetProcAddress** può individuare la funzione direttamente anziché confrontare il nome specificato per i nomi delle funzioni nella tabella di esportazione della DLL. Tuttavia, è necessario chiamare **GetProcAddress** con un numero ordinale di esportazione solo se è possibile controllare l'assegnazione degli ordinali alle funzioni esportate nel file def.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Collegamento implicito](../build/linking-implicitly.md)  
+-   [Come collegare in modo implicito a una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Scelta del metodo di collegamento da utilizzare](../build/determining-which-linking-method-to-use.md)  
+-   [Determinare quale metodo di collegamento](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
 -   [LoadLibrary e AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
--   [\<caps:sentence id\="tgt17" sentenceid\="8c920606bb67e2587dd3c3e5cf977593" class\="tgtSentence"\>FreeLibrary\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
+-   [FreeLibrary](http://msdn.microsoft.com/library/windows/desktop/ms683152)  
   
 -   [Esportazione da una DLL tramite i file DEF](../build/exporting-from-a-dll-using-def-files.md)  
   
-## Vedere anche  
- [DLL in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [DLL in Visual C++](../build/dlls-in-visual-cpp.md)

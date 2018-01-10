@@ -1,49 +1,72 @@
 ---
-title: "Interfaccia Platform::IBoxArray | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IBoxArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::IBoxArray"
+title: 'Interfaccia platform:: iboxarray | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Namespace not found::Platform
+- VCCORLIB/Namespace not found::Platform::Value
+dev_langs: C++
+helpviewer_keywords: Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 421f8517b8a96c40bb44dd959eba90b1bf903113
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Interfaccia Platform::IBoxArray
-`IBoxArray` è il wrapper per le matrici di tipi di valore passati tramite l'interfaccia ABI \(Application Binary Interface\) o archiviati in raccolte di elementi `Platform::Object^` come quelli nei controlli XAML.  
+# <a name="platformiboxarray-interface"></a>Interfaccia Platform::IBoxArray
+`IBoxArray` è il wrapper per le matrici di tipi di valore passati tramite l'interfaccia ABI (Application Binary Interface) o archiviati in raccolte di elementi `Platform::Object^` come quelli nei controlli XAML.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 template <typename T>  
 interface class IBoxArray  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  Tipo di valore boxed in ogni elemento della matrice.  
   
-## Note  
- `IBoxArray` è il nome di [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) per `Windows::Foundation::IReferenceArray`.  
+### <a name="remarks"></a>Note  
+ `IBoxArray`è C + + nome CX per `Windows::Foundation::IReferenceArray`.  
   
-## Membri  
- L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType`.`IBoxArray` dispone anche di questi membri:  
+### <a name="members"></a>Membri  
+ L'interfaccia `IBoxArray` eredita dall'interfaccia `IValueType` . `IBoxArray` dispone anche di questi membri:  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|Valore|Restituisce la matrice di tipo unboxed archiviata in precedenza in questa istanza di `IBoxArray`.|  
+|[Valore](#value)|Restituisce la matrice di tipo unboxed archiviata in precedenza in questa istanza di `IBoxArray` .|  
+
+## <a name="value"></a>Proprietà iboxarray:: value
+Restituisce il valore memorizzato in origine in questo oggetto.  
   
-## Vedere anche  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+property T Value {T get();}  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `T`  
+ Tipo del valore boxed.  
+  
+### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
+ Restituisce il valore memorizzato in origine in questo oggetto.  
+  
+### <a name="remarks"></a>Note  
+ Per un esempio, vedere [Boxing](../cppcx/boxing-c-cx.md).  
+  
+  
+## <a name="see-also"></a>Vedere anche  
  [Array e WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

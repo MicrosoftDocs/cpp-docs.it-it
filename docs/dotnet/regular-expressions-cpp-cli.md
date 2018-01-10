@@ -17,18 +17,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a398d9df981a1ae9fc7cbc6bf73b233f0596fd2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: deac3645e9b53745ccf8e3b68ed47d4c0de86430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-ccli"></a>Espressioni regolari (C++/CLI)
 Illustra diverse operazioni di stringa usando le classi di espressioni regolari in .NET Framework.  
   
  Gli argomenti seguenti illustrano l'utilizzo di .NET Framework <xref:System.Text.RegularExpressions> dello spazio dei nomi (e in un caso di <xref:System.String.Split%2A?displayProperty=fullName> (metodo)) per cercare, analizzare e modificare le stringhe.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [Procedura: Analizzare le stringhe con le espressioni regolari (C++/CLI)](../dotnet/how-to-parse-strings-using-regular-expressions-cpp-cli.md)  
   

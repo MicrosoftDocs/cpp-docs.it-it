@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLBASE/ATL::CAtlComModule::RegisterTypeLib
 - ATLBASE/ATL::CAtlComModule::UnregisterServer
 - ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlComModule class
+dev_langs: C++
+helpviewer_keywords: CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlcommodule-class"></a>Classe CAtlComModule
 Questa classe implementa un modulo di server COM.  
@@ -142,7 +125,7 @@ HRESULT RegisterTypeLib();
  Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Aggiunge informazioni su una libreria dei tipi nel Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.  
+ Aggiunge informazioni su una libreria dei tipi nel Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare la libreria di tipo deve essere utilizzata.  
   
 ##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  Chiamare questo metodo per annullare la registrazione di ogni oggetto nella mappa oggetto.  
@@ -179,7 +162,7 @@ HRESULT UnRegisterTypeLib();
  Stringa nel formato "\\\N", dove N è l'indice integer della risorsa della libreria dei tipi.  
   
 ### <a name="remarks"></a>Note  
- Rimuove una libreria dei tipi di informazioni dal Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare quale libreria dei tipi deve essere utilizzata.  
+ Rimuove una libreria dei tipi di informazioni dal Registro di sistema. Se l'istanza del modulo contiene più librerie dei tipi, utilizzare la prima versione di questo metodo per specificare la libreria di tipo deve essere utilizzata.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
@@ -187,4 +170,3 @@ HRESULT UnRegisterTypeLib();
 ## <a name="see-also"></a>Vedere anche  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

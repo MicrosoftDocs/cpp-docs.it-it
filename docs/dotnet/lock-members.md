@@ -13,16 +13,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a87aed5e73f4b7d649f46ffae992884611a31b13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c5f811cf875f8f846a6092f9974b8a451cd16c39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lock-members"></a>Membri lock
 I membri del [classe lock](../dotnet/lock-class.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [lock::lock](../dotnet/lock-lock.md)  
   
  [lock::~lock](../dotnet/lock-tilde-lock.md)  

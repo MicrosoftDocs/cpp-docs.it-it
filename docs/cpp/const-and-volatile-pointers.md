@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bebd757f304de2377ab2337e5b41a577a2b492b6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="const-and-volatile-pointers"></a>Puntatori const e volatile
 Il [const](../cpp/const-cpp.md) e [volatile](../cpp/volatile-cpp.md) parole chiave modificare la modalità in cui vengono trattati i puntatori. Il **const** (parola chiave) specifica che il puntatore non può essere modificato dopo l'inizializzazione, il puntatore è protetto da modifiche successive.  
@@ -99,7 +97,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  L'istruzione precedente viene dichiarata una funzione, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), in cui due dei tre argomenti sono di tipo puntatore a `char`. Poiché gli argomenti vengono passati per riferimento e non per valore, la funzione potrebbe modificare sia `strDestination` e `strSource` se `strSource` non è stato dichiarato come **const**. La dichiarazione di `strSource` come **const** garantisce al chiamante che `strSource` non può essere modificato dalla funzione chiamata.  
   
 > [!NOTE]
->  Poiché non esiste una conversione standard da *typename* ** \* ** a **const** *typename* ** \* **, è possibile passare un argomento di tipo **char \* ** a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Tuttavia, il contrario non è true. non esiste alcuna conversione implicita per rimuovere il **const** attributo da un oggetto o puntatore.  
+>  Poiché non esiste una conversione standard da *typename*  **\***  a **const** *typename*  **\*** , è possibile passare un argomento di tipo **char \***  a [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Tuttavia, il contrario non è true. non esiste alcuna conversione implicita per rimuovere il **const** attributo da un oggetto o puntatore.  
   
  Oggetto **const** puntatore di un tipo specificato può essere assegnato a un puntatore dello stesso tipo. Tuttavia, un puntatore che non è **const** non può essere assegnato a un **const** puntatore. Nel codice seguente vengono mostrate le assegnazioni corrette e quelle non corrette:  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: afec3ea0d88ff7ede9c498a270e2806a4ceb79e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2219ac079fecdb0f21215814885ee831d24f8f6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-storage-classes"></a>Classi di archiviazione C
 La "classe di archiviazione" della variabile determina se l'elemento dispone di una durata "globale" o "locale". C chiama queste due durate "statica" e "automatica". Un elemento con una durata globale esiste già e mantiene lo stesso valore nel corso dell'esecuzione del programma. Tutte le funzioni hanno durate globali.  

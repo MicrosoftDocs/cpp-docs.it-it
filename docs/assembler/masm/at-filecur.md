@@ -1,33 +1,31 @@
 ---
-title: "@FileCur | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@FileCur"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@FileCur symbol"
+title: '@FileCur| Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@FileCur'
+dev_langs: C++
+helpviewer_keywords: '@FileCur symbol'
 ms.assetid: f00f36df-ff6a-4dc7-9800-dc23a300f1d4
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 164fab1207b0812e9545e04d3402986a888b6581
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# @FileCur
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Il nome del file corrente \(macro di testo\).  
+# <a name="filecur"></a>@FileCur
+Il nome del file corrente (macro di testo).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,5 +33,5 @@ Il nome del file corrente \(macro di testo\).
   
 ```  
   
-## Vedere anche  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 91f0ffd5b02f9e8bc34604683c6274ec0f2c28b3
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctime-wasctime"></a>asctime, _wasctime
 Convertire una struttura temporale `tm` in una stringa di caratteri. Sono disponibili versioni più sicure di queste funzioni. Vedere [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md).  
@@ -121,7 +105,7 @@ wchar_t *_wasctime(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`asctime`|\<time.h>|  
-|`_wasctime`|\<time.h> o \<wchar.h>|  
+|`_wasctime`|\<time.h> or \<wchar.h>|  
   
 ## <a name="example"></a>Esempio  
  Questo programma inserisce l'ora di sistema in `aclock` long integer, la traduce nella struttura `newtime` e quindi la converte in stringa per l'output usando la funzione `asctime`.  
@@ -155,7 +139,7 @@ Current date and time: Sun Feb 03 11:38:58 2002
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
  [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   

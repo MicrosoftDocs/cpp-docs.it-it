@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d87ba7e23ccc50cb6debbdb91912f1ae3e90ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 Crea un nome di file univoco. Queste sono versioni di [_mktemp, _wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -88,7 +89,7 @@ errno_t _wmktemp_s(
 |----------------|-------------------|----------------------|-------------------------------|  
 |`NULL`|qualsiasi|`EINVAL`|`NULL`|  
 |Formato non corretto (vedere la sezione `Remarks` per il formato corretto)|qualsiasi|`EINVAL`|stringa vuota|  
-|any|<= numero di X|`EINVAL`|stringa vuota|  
+|qualsiasi|<= numero di X|`EINVAL`|stringa vuota|  
   
  Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e le funzioni restituiscono `EINVAL`.  
   
@@ -129,7 +130,7 @@ fna12345
   
  `_mktemp_s` consente di creare al massimo 26 nomi di file univoci per qualsiasi combinazione specificata di valori di base e modello. Pertanto, FNZ12345 è l'ultimo nome di file univoco che `_mktemp_s` può creare per i valori `base` e `template` usati in questo esempio.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -138,7 +139,7 @@ fna12345
 |`_mktemp_s`|\<io.h>|  
 |`_wmktemp_s`|\<io.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

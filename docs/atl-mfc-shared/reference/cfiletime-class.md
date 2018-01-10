@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23727110219af5ff7a38036b4607e9636d5c9c3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d48e899bb058ed27559a4ef699a3a53267064f98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiletime-class"></a>Classe CFileTime
 Questa classe fornisce metodi per la gestione dei valori di data e ora associati a un file.  
@@ -82,7 +83,7 @@ class CFileTime :  public FILETIME
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CFileTime::Day](#day)|Un membro dati statici archiviare il numero di intervalli da 100 nanosecondi che costituiscono un giorno.|  
 |[CFileTime::Hour](#hour)|Un membro dati statici archiviare il numero di intervalli da 100 nanosecondi che costituiscono un'ora.|  

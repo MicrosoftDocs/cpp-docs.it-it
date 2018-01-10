@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 277eb151fabc62a5d6cd44ba34bac7c230cec39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setframe"></a>.SETFRAME
 Riempimenti nel frame registrare campo e l'offset nel registro specificato utilizzando le informazioni di rimozione (`reg`) e di offset (`offset`). L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera inoltre un `UWOP_SET_FPREG` di ingresso del codice di rimozione per registra l'oggetto specificato utilizzando l'offset corrente di prologo.  

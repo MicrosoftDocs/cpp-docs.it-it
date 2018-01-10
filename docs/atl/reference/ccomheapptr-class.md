@@ -1,49 +1,32 @@
 ---
-title: Classe template CComHeapPtr | Documenti di Microsoft
+title: Classe template CComHeapPtr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr::CComHeapPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComHeapPtr class
+dev_langs: C++
+helpviewer_keywords: CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 0e5196a98b8fd76b2e7e791fd2cd9549099a1cc9
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8619c050ecc356e1445991b625da00c04f462848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheapptr-class"></a>Classe template CComHeapPtr
-Una classe di puntatore intelligente per la gestione dei puntatori di heap.  
+Una classe del puntatore intelligente per la gestione dei puntatori di heap.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,4 +80,3 @@ explicit CComHeapPtr(T* pData) throw();
  [Classe CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)   
  [Classe CComAllocator](../../atl/reference/ccomallocator-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

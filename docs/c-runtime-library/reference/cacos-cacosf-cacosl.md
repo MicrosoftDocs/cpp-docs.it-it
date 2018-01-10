@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 77abc89674ed4211dfe63c7ddf852ca890989142
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de09d89b81b536bd26c0e62d8ab294df3de6c67c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 Recupera l'arcocoseno del numero complesso con tagli branch all'esterno dell'intervallo [-1, + 1] lungo l'asse reale.  
@@ -77,7 +78,7 @@ _Lcomplex cacosl(
  Numero complesso che rappresenta un angolo, espresso in radianti.  
   
 ## <a name="return-value"></a>Valore restituito  
- L'arcocoseno di `z`, espresso in radianti. Il risultato è non vincolato lungo l'asse immaginario e nell'intervallo [0, π] lungo l'asse reale. Si verificherà un errore di dominio se `z` è esterno all'intervallo [-1, +1].  
+ L'arcocoseno di `z`, espresso in radianti. Il risultato è unbounded lungo l'asse immaginaria e nel nell'intervallo [0, π] lungo l'asse reale. Si verificherà un errore di dominio se `z` è esterno all'intervallo [-1, +1].  
   
 ## <a name="remarks"></a>Note  
  Dato che C++ consente l'overload, è possibile chiamare degli overload di `cacos` che accettino e restituiscano valori `_Fcomplex` e `_Lcomplex`. In un programma C `cacos` accetta e restituisce sempre un valore `_Dcomplex` .  
@@ -91,7 +92,7 @@ _Lcomplex cacosl(
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32d9d7aeed4cdefcd11411b8324490553200da6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4afc833717c05cd6470339a943c02132fa8a459f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="terminating-newline-characters"></a>Termine caratteri di nuova riga
 **ANSI 4.9.2** Se è necessario che l'ultima riga di un flusso di testo termini con un carattere di nuova riga  

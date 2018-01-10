@@ -1,30 +1,31 @@
 ---
-title: "Riutilizzo di file inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inline (file), riutilizzo NMAKE"
-  - "NMAKE (programma), inline (file)"
-  - "revisione di file inline"
+title: Riutilizzo di file Inline | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, reusing NMAKE
+- revising inline files
+- NMAKE program, inline files
 ms.assetid: d42dbffb-2cef-4ccb-9a1f-20b8ef81481c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f839babe036aff81174b954e1aef7abce8923386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Riutilizzo di file inline
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per riutilizzare un file inline, specificare \<\<*nomefile* nella posizione in cui il file è definito e utilizzato per la prima volta, quindi riutilizzare *nomefile* senza \<\< successivamente nello stesso comando o in un comando diverso.  Il comando che consente di creare il file inline deve essere eseguito prima di tutti i comandi che lo utilizzano.  
+# <a name="reusing-inline-files"></a>Riutilizzo di file inline
+Per riutilizzare un file inline, specificare <<*filename* in cui il file è definito e utilizzato prima, quindi riutilizzare *filename* senza << successive nello stesso o in un altro comando. È necessario eseguire il comando per creare il file inline prima tutti i comandi che usano il file.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [File inline in un makefile](../build/inline-files-in-a-makefile.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno
 Un Integer senza segno viene convertito in un Integer senza segno o con segno più breve troncando i bit più significativi oppure in un Integer senza segno o con segno più lungo mediante estensione con zeri (vedere la tabella [Conversioni da tipi integrali senza segno](#_clang_table_4..3)).  
@@ -46,7 +47,7 @@ printf_s( "%hd\n", j );   // Prints -3
   
 ### <a name="conversions-from-unsigned-integral-types"></a>Conversioni dai tipi integrali senza segno  
   
-|Da|Per|Metodo|  
+|Da|A|Metodo|  
 |----------|--------|------------|  
 |`unsigned char`|`char`|Viene mantenuto lo schema di bit; il bit più significativo diventa il bit di segno|  
 |`unsigned char`|**short**|Estensione zero|  

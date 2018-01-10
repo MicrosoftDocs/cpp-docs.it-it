@@ -1,47 +1,50 @@
 ---
-title: "Creazione di un provider OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli del provider OLE DB, creazione di provider"
-  - "provider OLE DB, creazione"
+title: Creazione di un Provider OLE DB | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 97d5edb8e65729f8bee68043b316fa74f78fb0da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creazione di un provider OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per creare un provider OLE DB si consiglia di generare un progetto COM ATL e un provider utilizzando le procedure guidate, quindi modificare i file mediante i modelli OLE DB.  Durante la personalizzazione del provider è possibile impostare come commento le proprietà non desiderate e aggiungere interfacce facoltative.  
+# <a name="creating-an-ole-db-provider"></a>Creazione di un provider OLE DB
+Il metodo consigliato per creare un provider OLE DB consiste nell'utilizzare le procedure guidate per creare un progetto ATL COM e un provider e quindi modificare i file utilizzando i modelli OLE DB. Come la personalizzazione del provider, è possibile impostare come commento indesiderata proprietà e aggiungere interfacce facoltative.  
   
- Le operazioni da eseguire sono elencate di seguito.  
+ I passaggi di base sono descritti di seguito:  
   
-1.  Utilizzare la Creazione guidata progetto ATL per generare i file base del progetto e la Creazione guidata provider OLE DB ATL per generare il provider, selezionando **Provider OLE DB ATL** dalla cartella Visual C\+\+ in **Aggiungi classe**.  
+1.  Utilizzare la creazione guidata progetto ATL per creare i file di progetto di base e la creazione guidata Provider OLE DB ATL per creare il provider (selezionare **Provider OLE DB ATL** dalla cartella di Visual C++ in **Aggiungi classe**).  
   
-2.  Modificare il codice nel metodo `Execute` in CMyProviderRS.h.  Per un esempio, vedere [Lettura di stringhe in un provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
+2.  Modificare il codice di `Execute` metodo in CMyProviderRS. Per un esempio, vedere [lettura di stringhe in un Provider OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).  
   
-3.  Modificare le mappe delle proprietà in MyProviderDS.h, MyProviderSess.h e MyProviderRS.h.  La procedura guidata crea mappe delle proprietà contenenti tutte le proprietà che possono essere implementate da un provider.  Scorrere il contenuto delle mappe delle proprietà e rimuovere o impostare come commento le proprietà che non si desidera supportare.  
+3.  Modificare il mapping di proprietà in MyProviderDS. H, MyProviderSess. H e MyProviderRS. H. La procedura guidata crea i mapping di proprietà che contengono tutte le proprietà che è possibile implementare un provider. Eseguire il mapping di proprietà e rimuovere o impostare come commento le proprietà che non è necessario che il provider di supporto.  
   
-4.  Aggiornare PROVIDER\_COLUMN\_MAP disponibile in MyProviderRS.h.  Per un esempio, vedere [Memorizzazione di stringhe in un provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
+4.  Aggiornare PROVIDER_COLUMN_MAP, che possono trovarsi in MyProviderRS. H. Per un esempio, vedere [l'archiviazione di stringhe In un Provider OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md).  
   
-5.  Per eseguire il test del provider, cercare il provider in un'enumerazione di provider.  Per esempi di codice di test utilizzabile per cercare un provider in un'enumerazione, vedere [CATDB](http://msdn.microsoft.com/it-it/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBVIEWER](http://msdn.microsoft.com/it-it/07620f99-c347-4d09-9ebc-2459e8049832) oppure l'esempio contenuto in [Implementazione di un consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
+5.  Quando si è pronti per testare il provider, è possibile eseguirne il test quando si tenta di trovare il provider in un'enumerazione di provider. Per esempi di codice di test che consente di trovare un provider in un'enumerazione, vedere il [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) e [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) oppure l'esempio in [implementazione di un Consumer semplice](../../data/oledb/implementing-a-simple-consumer.md).  
   
-6.  Se lo si desidera, aggiungere eventuali interfacce supplementari.  Per un esempio vedere [Miglioramento di un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
+6.  Aggiungere eventuali interfacce aggiuntive desiderate. Per un esempio, vedere [miglioramento di un Provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md).  
   
     > [!NOTE]
-    >  Per impostazione predefinita, nelle procedure guidate viene generato codice conforme con il livello 0 di OLE DB.  Per assicurare che l'applicazione rimanga conforme con il livello 0, non rimuovere dal codice alcuna interfaccia generata nelle procedure guidate.  
+    >  Per impostazione predefinita, le procedure guidate di generano codice 0 conforme al livello OLE DB. Per garantire che l'applicazione rimanga livello 0 conforme, non rimuovere una delle interfacce generate dalla procedura guidata dal codice.  
   
-## Vedere anche  
- [CATDB](http://msdn.microsoft.com/it-it/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/it-it/07620f99-c347-4d09-9ebc-2459e8049832)
+## <a name="see-also"></a>Vedere anche  
+ [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)

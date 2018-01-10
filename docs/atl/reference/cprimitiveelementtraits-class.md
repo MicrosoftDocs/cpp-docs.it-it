@@ -1,11 +1,10 @@
 ---
-title: Classe CPrimitiveElementTraits | Documenti di Microsoft
+title: Classe CPrimitiveElementTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,22 @@ f1_keywords:
 - ATLCOLL/ATL::CPrimitiveElementTraits
 - ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
 - ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPrimitiveElementTraits class
+dev_langs: C++
+helpviewer_keywords: CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 55255342f39ff80f5deb5378353529ef4d6934bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
-Questa classe fornisce metodi predefiniti e comporre funzioni per una classe di raccolte di tipi di dati primitivi.  
+Questa classe fornisce metodi predefiniti e comporre funzioni che per una classe di raccolte di tipi di dati primitivi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,7 +38,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
   
 #### <a name="parameters"></a>Parametri  
  `T`  
- Il tipo di dati da archiviare nell'oggetto classe di insiemi.  
+ Il tipo di dati da archiviare nell'oggetto raccolta di classe.  
   
 ## <a name="members"></a>Membri  
   
@@ -64,10 +47,10 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce funzioni statiche predefiniti e metodi per lo spostamento, copia, il confronto e hashing gli elementi di tipo di dati primitivi archiviati in un oggetto classe di raccolta.  
+ Questa classe fornisce metodi per lo spostamento, la copia, il confronto e gli elementi di tipo di dati primitivi archiviati in un oggetto di classe di raccolta di hash e funzioni statiche predefinito.  
   
  Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -93,7 +76,7 @@ typedef T INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.  
+ Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -102,4 +85,3 @@ typedef T& OUTARGTYPE;
 ## <a name="see-also"></a>Vedere anche  
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

@@ -1,43 +1,46 @@
 ---
-title: "Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "scorrimento di record [C++]"
-  - "visualizzazioni di record [C++], scorrimento"
-  - "scorrimento di record"
+title: Gestori di comandi per lo scorrimento (accesso ai dati MFC) dei Record | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- record views [C++], scrolling
+- record scrolling [C++]
+- scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d3164cfd8a7d78191f2076637b51d96bb45f2293
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le classi [CRecordView](../mfc/reference/crecordview-class.md) e [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) garantiscono una gestione dei comandi predefinita per i seguenti comandi standard:  
+# <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestione dei comandi per lo scorrimento dei record (accesso ai dati MFC)
+Il [CRecordView](../mfc/reference/crecordview-class.md) classe fornisce il comando predefinito per i seguenti comandi standard:  
   
--   **ID\_RECORD\_MOVE\_FIRST**  
+-   **ID_RECORD_MOVE_FIRST**  
   
--   **ID\_RECORD\_MOVE\_LAST**  
+-   **ID_RECORD_MOVE_LAST**  
   
--   **ID\_RECORD\_MOVE\_NEXT**  
+-   **ID_RECORD_MOVE_NEXT**  
   
--   **ID\_RECORD\_MOVE\_PREV**  
+-   **ID_RECORD_MOVE_PREV**  
   
- La funzione membro `OnMove` delle classi `CRecordView` e `CDaoRecordView` garantisce una gestione dei comandi predefinita per tutti e quattro i comandi che consentono lo spostamento da un record all'altro.  Quando vengono eseguiti tali comandi, RFX \(o DFX\) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record.  Per informazioni su RFX, vedere [Trasferimento di campi di record \(RFX\)](../data/odbc/record-field-exchange-rfx.md).  
+ Il `OnMove` funzione membro fornisce predefinito gestione dei comandi per tutti i quattro comandi che consentono lo spostamento da un record a altro. Quando vengono eseguiti tali comandi, RFX (o DFX) carica il nuovo record nei campi del recordset e DDX sposta i valori nei controlli del form del record. Per informazioni su RFX, vedere [trasferimento di campi di Record (RFX)](../data/odbc/record-field-exchange-rfx.md).  
   
 > [!NOTE]
 >  Usare sempre questi ID di comando standard per qualsiasi oggetto di interfaccia utente associato ai comandi standard di navigazione tra i record.  
   
-## Vedere anche  
- [Supporto della navigazione in una visualizzazione di record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+## <a name="see-also"></a>Vedere anche  
+ [Supporto della navigazione in una visualizzazione di Record](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

@@ -1,47 +1,46 @@
 ---
-title: "wctype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wctype (funzione)"
-  - "caratteri wide"
+title: wctype | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords: wctype
+dev_langs: C++
+helpviewer_keywords:
+- wctype function
+- wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6dec5a3fd89703b3e27f9acf8c9edf976fdd18f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# wctype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determina una regola di classificazione per i codici di caratteri estesi.  
+# <a name="wctype"></a>wctype
+Determina una regola di classificazione per i codici di caratteri wide.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 wctype_t wctype(  
@@ -49,18 +48,18 @@ wctype_t wctype(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `property`  
- Proprietà stringa.  
+ Stringa di proprietà.  
   
-## Valore restituito  
- Se la categoria `LC_CTYPE` delle impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla stringa `property`della proprietà, la funzione ritorna zero.  In caso contrario, restituisce un valore diverso da zero appropriato da utilizzare come secondo argomento a una chiamata successiva a [towctrans](../../c-runtime-library/reference/towctrans.md).  
+## <a name="return-value"></a>Valore restituito  
+ Se la categoria `LC_CTYPE` delle impostazioni locali correnti non definisce una regola di classificazione il cui nome corrisponde alla stringa di proprietà `property`, la funzione restituisce zero. In caso contrario, restituisce un valore diverso da zero adatto per l'uso come secondo argomento per una chiamata successiva a [towctrans](../../c-runtime-library/reference/towctrans.md).  
   
-## Note  
- La funzione determina una regola di classificazione per i codici di caratteri estesi.  Le coppie seguenti di chiamate hanno lo stesso comportamento in tutte le impostazioni locali \(ma l'implementazione può definire regole aggiuntive di classificazione anche nelle impostazioni locali "C"\):  
+## <a name="remarks"></a>Note  
+ La funzione determina una regola di classificazione per i codici di caratteri wide. Le seguenti coppie di chiamate hanno lo stesso comportamento in tutte le impostazioni locali, ma un'implementazione può definire ulteriori regole di classificazione anche nelle impostazioni locali "C":  
   
 |Funzione|Uguale a|  
-|--------------|--------------|  
+|--------------|-------------|  
 |`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
 |`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
 |`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
@@ -73,14 +72,14 @@ wctype_t wctype(
 |`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
 |`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`wctype`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`wctype`|\<wctype.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [setlocale, \_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+## <a name="see-also"></a>Vedere anche  
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

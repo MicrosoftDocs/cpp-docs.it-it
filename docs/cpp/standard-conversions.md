@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 954ba431378317a3f9079677f49223a336af5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per ulteriori informazioni sui tipi, tipi standard e tipi derivati, vedere [tipi](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -206,13 +207,13 @@ Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi 
 |----------------------|----------------|-------------------------------------------|  
 |Funzione esterna (non a livello dell'ambito della classe)|Private|No|  
 ||Protetta|No|  
-||Public|Sì|  
-|Funzione del membro B (nell'ambito B)|Private|Sì|  
-||Protetta|Sì|  
-||Public|Sì|  
+||Public|Yes|  
+|Funzione del membro B (nell'ambito B)|Private|Yes|  
+||Protetta|Yes|  
+||Public|Yes|  
 |Funzione del membro C (nell'ambito C)|Private|No|  
-||Protetta|Sì|  
-||Public|Sì|  
+||Protetta|Yes|  
+||Public|Yes|  
   
  Il secondo caso in cui un puntatore a una classe può essere convertito in un puntatore a una classe base è quando si usa una conversione di tipo esplicita. (Vedere [espressioni con conversioni di tipi esplicite](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae) per ulteriori informazioni sulle conversioni di tipo esplicito.)  
   

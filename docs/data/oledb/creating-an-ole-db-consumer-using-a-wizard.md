@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52b1780d9553de049ee02d13ea8f8fbe9535fe8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e6b8a3b0c41c3a387779254d6605b6599bf7f1f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>Creazione di un consumer OLE DB mediante procedura guidata
 Questa procedura viene illustrato come è possibile utilizzare la creazione guidata progetto ATL e la creazione guidata Consumer OLE DB ATL per generare un consumer di modelli OLE DB e quindi modificare il codice dell'applicazione console per recuperare e visualizzare i dati da una tabella di database principale.  

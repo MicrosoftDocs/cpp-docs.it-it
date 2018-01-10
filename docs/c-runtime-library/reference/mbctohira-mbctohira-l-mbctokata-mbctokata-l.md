@@ -49,11 +49,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a398e2d0b55a8c3292a77ba957982fa5a5e21f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fd3af95988ffeac5801e2d64f81c0947f26c3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 Esegue la conversione tra caratteri hiragana e katakana.  
@@ -98,7 +99,7 @@ unsigned int _mbctokata_l(
 |`_mbctohira,_mbctohira_l`|Da katakana multibyte a hiragana multibyte.|  
 |`_mbctokata,_mbctokata_l`|Da hiragana multibyte a katakana multibyte.|  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione di quelle che non hanno il suffisso `_l` che usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali, mentre quelle che hanno il suffisso `_l` usano il parametro delle impostazioni locali che viene passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione di quelle che non hanno il suffisso `_l` che usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali, mentre quelle che hanno il suffisso `_l` usano il parametro delle impostazioni locali che viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Nelle versioni precedenti, `_mbctohira` è stato denominato `jtohira` e `_mbctokata` è stato denominato `jtokata`. Per il nuovo codice, usare i nuovi nomi.  
   
@@ -114,7 +115,7 @@ unsigned int _mbctokata_l(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
  [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
  [_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)   
  [_mbctombb, _mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)

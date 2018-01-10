@@ -40,11 +40,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88da6a8a34670da588c0fef25b3060c79b3145f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Crea un thread.  
@@ -104,7 +105,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
   
  Se `startaddress` è NULL, viene richiamato il gestore di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono -1.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  Per altre informazioni su `uintptr_t`, vedere [Tipi standard](../../c-runtime-library/standard-types.md).  
   
@@ -132,7 +133,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 > [!NOTE]
 >  Per un file eseguibile collegato a Libcmt.lib, non chiamare l'API Win32 `ExitThread` in modo da non impedire al sistema di runtime di recuperare le risorse allocate. `_endthread` e `_endthreadex` recuperano le risorse del thread allocate, quindi chiamano `ExitThread`.  
   
- Il sistema operativo gestisce l'allocazione dello stack quando si chiama `_beginthread` o `_beginthreadex` . Non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, l'argomento `stack_size` può essere 0, nel qual caso il sistema operativo usa lo stesso valore dello stack specificato per il thread principale.  
+ Il sistema operativo gestisce l'allocazione dello stack quando si chiama `_beginthread` o `_beginthreadex`. Non è necessario passare l'indirizzo dello stack di thread a una di queste funzioni. Inoltre, l'argomento `stack_size` può essere 0, nel qual caso il sistema operativo usa lo stesso valore dello stack specificato per il thread principale.  
   
  `arglist` è un parametro da passare al thread appena creato. In genere è l'indirizzo di un elemento di dati, quale una stringa di caratteri. `arglist` può essere NULL se non è necessario, ma a `_beginthread` e `_beginthreadex` deve essere assegnato un valore da passare al nuovo thread. Tutti i thread vengono terminati se un thread qualsiasi chiama `abort`, `exit`, `_exit`o `ExitProcess`.  
   
@@ -323,7 +324,7 @@ Counter should be 1000000; it is-> 1000000
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   

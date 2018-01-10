@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -40,36 +38,22 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9fdaa428d5772c0622ca4c2f08c64fb376173240
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Confronta i primi `n` byte di due stringhe di caratteri multibyte.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -113,7 +97,7 @@ int _mbsnbcmp_l(
   
  `_mbsnbcmp` è simile a `_mbsncmp`, ad eccezione del fatto che `_mbsncmp` confronta le stringhe per caratteri anziché per byte.  
   
- Il valore di output viene influenzato dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali, che specifica i byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La funzione `_mbsnbcmp` usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. La funzione `_mbsnbcmp_l` è identica ad eccezione del fatto che usa il parametro `locale`. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Il valore di output viene influenzato dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali, che specifica i byte iniziali e finali dei caratteri multibyte. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La funzione `_mbsnbcmp` usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. La funzione `_mbsnbcmp_l` è identica ad eccezione del fatto che usa il parametro `locale`. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `string1` o `string2` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno `_NLSCMPERROR` e `errno` viene impostato su `EINVAL`.  
   

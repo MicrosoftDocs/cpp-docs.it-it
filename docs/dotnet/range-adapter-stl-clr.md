@@ -1,32 +1,33 @@
 ---
-title: "range_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::range_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range_adapter (classe) [STL/CLR]"
+title: range_adapter (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::range_adapter
+dev_langs: C++
+helpviewer_keywords: range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# range_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una classe modello che esegue il wrapping di una coppia degli iteratori utilizzati per implementare varie la libreria di classi base \(BCL\) collega.  Utilizzare il range\_adapter per modificare un intervallo di STL\/CLR come se fosse una raccolta di BCL.  
+# <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
+Classe modello che esegue il wrapping di una coppia di iteratori che consentono di implementare più interfacce di libreria di classi Base (BCL). Utilizzare il range_adapter per modificare un intervallo STL/CLR come se fosse un insieme di BCL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Iter>  
@@ -39,37 +40,37 @@ template<typename Iter>
     { ..... };  
 ```  
   
-#### Parametri  
- ITER  
- Il tipo associato con gli iteratori di cui è stato eseguito il wrapping.  
+#### <a name="parameters"></a>Parametri  
+ iter  
+ Il tipo associato gli iteratori sottoposta a wrapping.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
 |Funzione membro|Descrizione|  
 |---------------------|-----------------|  
-|[range\_adapter::range\_adapter](../dotnet/range-adapter-range-adapter-stl-clr.md)|Costruisce un oggetto dell'adattatore.|  
+|[range_adapter::range_adapter (STL/CLR)](../dotnet/range-adapter-range-adapter-stl-clr.md)|Costruisce un oggetto adattatore.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|[range\_adapter::operator\=](../dotnet/range-adapter-operator-assign-stl-clr.md)|Sostituisce la coppia archiviata di iteratore.|  
+|--------------|-----------------|  
+|[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Sostituisce la coppia iteratore archiviato.|  
   
-## Interfacce  
+## <a name="interfaces"></a>Interfacce  
   
 |Interfaccia|Descrizione|  
-|-----------------|-----------------|  
-|<xref:System.Collections.IEnumerable>|Scorrere gli elementi della raccolta.|  
+|---------------|-----------------|  
+|<xref:System.Collections.IEnumerable>|Scorre gli elementi nella raccolta.|  
 |<xref:System.Collections.ICollection>|Gestisce un gruppo di elementi.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Scorrere gli elementi tipizzati nella raccolta.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Elementi tipizzati nella raccolta vengono scorsi...|  
 |<xref:System.Collections.Generic.ICollection%601>|Gestisce un gruppo di elementi tipizzati.|  
   
-## Note  
- Il range\_adapter archivia una coppia degli iteratori, che a sua volta delimitano una sequenza di elementi.  L'oggetto implementa le interfacce di BCL che consentono di scorrere gli elementi, in ordine.  Utilizzare questa classe modello per modificare gli intervalli di STL\/CLR analogo a quello dei contenitori di BCL.  
+## <a name="remarks"></a>Note  
+ Il range_adapter archivia una coppia di iteratori, che a sua volta delimitare una sequenza di elementi. L'oggetto implementa quattro interfacce di libreria di classi base che consentono di scorrere gli elementi, in ordine. Utilizzare questa classe di modello per modificare gli intervalli STL/CLR come contenitori BCL.  
   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [make\_collection](../dotnet/make-collection-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

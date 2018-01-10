@@ -1,36 +1,38 @@
 ---
-title: "Classe CBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CBookmark"
-  - "ATL::CBookmark<nSize>"
-  - "CBookmark"
-  - "ATL.CBookmark<nSize>"
-  - "ATL::CBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBookmark (classe)"
+title: Classe CBookmark | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CBookmark
+- ATL::CBookmark<nSize>
+- CBookmark
+- ATL.CBookmark<nSize>
+- ATL::CBookmark
+dev_langs: C++
+helpviewer_keywords: CBookmark class
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dba5f98912fc69bac5554a4c6231f77e17e99d98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilizza un valore bookmark nel buffer.  
+# <a name="cbookmark-class"></a>Classe CBookmark
+Contiene il valore di un segnalibro nel buffer.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template < DBLENGTH nSize = 0 >  
@@ -39,33 +41,33 @@ template < >
 class CBookmark< 0 > : public CBookmarkBase  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nSize`  
- La dimensione del buffer bookmark in byte.  Quando `nSize` è zero, il buffer del segnalibro verrà creato dinamicamente in fase di esecuzione.  
+ Le dimensioni del buffer del segnalibro, in byte. Quando `nSize` è zero, verrà creato in modo dinamico il buffer di segnalibro in fase di esecuzione.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
 |[CBookmark](../../data/oledb/cbookmark-class.md)|Il costruttore|  
-|[GetBuffer](../../data/oledb/cbookmark-getbuffer.md)|Recupera il puntatore nel buffer.|  
+|[GetBuffer](../../data/oledb/cbookmark-getbuffer.md)|Recupera il puntatore al buffer.|  
 |[GetSize](../../data/oledb/cbookmark-getsize.md)|Recupera la dimensione del buffer in byte.|  
-|[SetBookmark](../../data/oledb/cbookmark-setbookmark.md)|Impostare il valore del segnalibro.|  
+|[SetBookmark](../../data/oledb/cbookmark-setbookmark.md)|Imposta il valore del segnalibro.|  
   
-### Operatori  
+### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator \=](../../data/oledb/cbookmark-operator-equal.md)|Assegna una classe di `CBookmark` a un altro.|  
+|[operator =](../../data/oledb/cbookmark-operator-equal.md)|Assegna un `CBookmark` classe a un'altra.|  
   
-## Note  
- **CBookmark\<0\>** è una specializzazione di template di `CBookmark`; il suo buffer viene creato dinamicamente in fase di esecuzione.  
+## <a name="remarks"></a>Note  
+ **CBookmark\<0 >** è una specializzazione di modello di `CBookmark`; il buffer viene creato dinamicamente in fase di esecuzione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

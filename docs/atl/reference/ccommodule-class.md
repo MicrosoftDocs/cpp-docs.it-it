@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,21 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>CComModule (classi)
 In ATL 7.0, `CComModule` è deprecato: vedere [classi di modulo ATL](../../atl/atl-module-classes.md) per altri dettagli.  
@@ -363,10 +347,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Parametri  
  `dwClsContext`  
- [in] Specifica il contesto in cui viene eseguita l'oggetto della classe. I valori possibili sono **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, o **CLSCTX_LOCAL_SERVER**. Per una descrizione di questi valori, vedere [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Specifica il contesto in cui viene eseguita l'oggetto della classe. I valori possibili sono **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, o **CLSCTX_LOCAL_SERVER**. Per una descrizione di questi valori, vedere [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) in Windows SDK.  
   
  `dwFlags`  
- [in] Determina i tipi di connessione per l'oggetto della classe. I valori possibili sono **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, o **REGCLS_MULTI_SEPARATE**. Per una descrizione di questi valori, vedere [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Determina i tipi di connessione per l'oggetto della classe. I valori possibili sono **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, o **REGCLS_MULTI_SEPARATE**. Per una descrizione di questi valori, vedere [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) in Windows SDK.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore HRESULT standard.  
@@ -592,7 +576,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
  Specificando il [macro DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) o [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) (macro), `UpdateRegistryFromResourceD` verrà richiamato automaticamente quando viene elaborata la mappa oggetto.  
   
 > [!NOTE]
->  Per sostituire i valori di sostituzione in fase di esecuzione, non si specifica il `DECLARE_REGISTRY_RESOURCE` o `DECLARE_REGISTRY_RESOURCEID` (macro). In alternativa, creare una matrice di **_ATL_REGMAP_ENTRIES** strutture, in cui ogni voce contiene un segnaposto variabile abbinato a un valore per sostituire il segnaposto in fase di esecuzione. Chiamare quindi `UpdateRegistryFromResourceD`, passando la matrice la `pMapEntries` parametro. Aggiunge tutti i valori di sostituzione il **_ATL_REGMAP_ENTRIES** strutture alla mappa di sostituzione del Registrar.  
+>  Per sostituire i valori di sostituzione in fase di esecuzione, non si specifica il `DECLARE_REGISTRY_RESOURCE` o `DECLARE_REGISTRY_RESOURCEID` (macro). In alternativa, creare una matrice di **_ATL_REGMAP_ENTRIES** strutture, in cui ogni voce contiene un segnaposto variabile abbinato a un valore per sostituire il segnaposto in fase di esecuzione. Chiamare quindi `UpdateRegistryFromResourceD`, passando la matrice la `pMapEntries` parametro. Aggiunge tutti i valori di sostituzione di **_ATL_REGMAP_ENTRIES** strutture alla mappa di sostituzione del Registrar.  
   
 > [!NOTE]
 >  Per collegare in modo statico al componente del Registro di sistema ATL (Registrar), vedere [UpdateRegistryFromResourceS](#updateregistryfromresources).  
@@ -636,10 +620,9 @@ virtual HRESULT UpdateRegistryFromResourceS(
  `UpdateRegistryFromResourceS`verrà richiamato automaticamente quando viene elaborata la mappa di oggetto, purché si aggiungono `#define _ATL_STATIC_REGISTRY` per il file stdafx. h.  
   
 > [!NOTE]
->  Per sostituire i valori di sostituzione in fase di esecuzione, non si specifica il [macro DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) o [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) (macro). In alternativa, creare una matrice di **_ATL_REGMAP_ENTRIES** strutture, in cui ogni voce contiene un segnaposto variabile abbinato a un valore per sostituire il segnaposto in fase di esecuzione. Chiamare quindi `UpdateRegistryFromResourceS`, passando la matrice la `pMapEntries` parametro. Aggiunge tutti i valori di sostituzione il **_ATL_REGMAP_ENTRIES** strutture alla mappa di sostituzione del Registrar.  
+>  Per sostituire i valori di sostituzione in fase di esecuzione, non si specifica il [macro DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) o [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) (macro). In alternativa, creare una matrice di **_ATL_REGMAP_ENTRIES** strutture, in cui ogni voce contiene un segnaposto variabile abbinato a un valore per sostituire il segnaposto in fase di esecuzione. Chiamare quindi `UpdateRegistryFromResourceS`, passando la matrice la `pMapEntries` parametro. Aggiunge tutti i valori di sostituzione di **_ATL_REGMAP_ENTRIES** strutture alla mappa di sostituzione del Registrar.  
   
  Per ulteriori informazioni sui parametri sostituibili e script, vedere l'articolo [il componente di registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

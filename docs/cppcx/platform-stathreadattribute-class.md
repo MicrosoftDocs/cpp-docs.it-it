@@ -1,59 +1,124 @@
 ---
-title: "Platform::STAThreadAttribute (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::STAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::STAThreadAttribute (classe)"
+title: 'Classe platform:: STAThreadAttribute | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COLLECTION/Platform::Platform
+- COLLECTION/Platform::Platform::STAThreadAttribute constructor 1
+- COLLECTION/Platform::Platform::STAThreadAttribute::Equals
+- COLLECTION/Platform::Platform::STAThreadAttribute::GetHashCode
+- COLLECTION/Platform::Platform::STAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1c2b8c38d672b6bd3ecd0fcafb54a9b6e723202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::STAThreadAttribute (classe)
-Indica che il modello di threading per un'applicazione è di tipo apartment a thread singolo \(STA, Single\-Threaded Apartment\).  
+# <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (classe)
+Indica che il modello di threading per un'applicazione è di tipo apartment a thread singolo (STA, Single-Threaded Apartment).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 public ref class STAThreadAttribute sealed : Attribute  
 ```  
   
-## Membri  
+### <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[STAThreadAttribute \(costruttore\)](../cppcx/stathreadattribute-constructor-1.md)|Inizializza una nuova istanza della classe.|  
-  
-### Metodi pubblici  
- L'attributo STAThreadAttribute eredita da [Classe Platform::Object](../cppcx/platform-object-class.md). STAThreadAttribute esegue anche l'overload o contiene i membri seguenti:  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[STAThreadAttribute::Equals](../cppcx/stathreadattribute-equals.md)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|  
-|[STAThreadAttribute::GetHashCode](../cppcx/stathreadattribute-gethashcode.md)|Restituisce il codice hash per l'istanza.|  
-|[STAThreadAttribute::ToString](../cppcx/stathreadattribute-tostring.md)|Restituisce una stringa che rappresenta l'oggetto corrente.|  
+|[Costruttore 1 STAThreadAttribute](#ctor)|Inizializza una nuova istanza della classe.|  
   
-## Gerarchia di ereditarietà  
+### <a name="public-methods"></a>Metodi pubblici  
+ L'attributo STAThreadAttribute eredita da [classe platform:: Object](../cppcx/platform-object-class.md). STAThreadAttribute esegue anche l'overload o contiene i membri seguenti:  
+  
+|nome|Descrizione|  
+|----------|-----------------|  
+|[STAThreadAttribute::Equals](#equals)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|  
+|[STAThreadAttribute::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|  
+|[STAThreadAttribute::ToString](#tostring)|Restituisce una stringa che rappresenta l'oggetto corrente.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Platform`  
   
-## Requisiti  
+### <a name="requirements"></a>Requisiti  
  **Intestazione:** collection.h  
   
  **Spazio dei nomi:** Platform  
+
+
+
+## <a name="ctor"></a> STAThreadAttribute constructor
+Inizializza una nuova istanza della classe STAThreadAttribute.  
   
-## Vedere anche  
- [\(NOTINBUILD\) Spazio dei nomi Platform](http://msdn.microsoft.com/it-it/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:STAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>STAThreadAttribute::Equals
+Determina se l'oggetto specificato è uguale all'oggetto corrente.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ obj  
+ Oggetto da confrontare.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `true` se gli oggetti sono uguali. In caso contrario, `false`.  
+  
+
+
+## <a name="gethashcode"></a>STAThreadAttribute::GetHashCode
+Restituisce il codice hash per l'istanza.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Codice hash per l'istanza.  
+  
+
+
+## <a name="tostring"></a>STAThreadAttribute::ToString
+Restituisce una stringa che rappresenta l'oggetto corrente.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Stringa che rappresenta l'oggetto corrente.  
+  
+
+  
+## <a name="see-also"></a>Vedere anche  
+ [Piattaforma Namespace](platform-namespace-c-cx.md)

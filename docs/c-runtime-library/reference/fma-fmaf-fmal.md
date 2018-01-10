@@ -33,37 +33,22 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 59238cf511be936b0d882c2f00320ee7422904e0
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Moltiplica due valori, aggiunge un terzo valore e quindi arrotonda il risultato, senza perdita di precisione grazie all'arrotondamento intermedio.  
@@ -118,16 +103,16 @@ long double fmal(
   
  In caso contrario, può restituire uno dei valori seguenti:  
   
-|Problema|Valore restituito|  
+|Problema|INVIO|  
 |-----------|------------|  
 |`x` = INFINITY, `y` = 0 o<br /><br /> `x` = 0, `y` = INFINITY|NaN|  
-|`x` o `y` = ± INFINITY esatto, `z` = INFINITY con il segno opposto|NaN|  
+|`x`o `y` = ± esatta infinito, `z` = infinito con segno opposto|NaN|  
 |`x` o `y` = NaN|NaN|  
 |not (`x` = 0, `y`= indefinito) e `z` = NaN<br /><br /> not (`x`=indefinito, `y`=0) e `z` = NaN|NaN|  
 |Errore di intervallo di overflow|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|  
 |Errore di intervallo di underflow|valore corretto dopo l'arrotondamento.|  
   
- Gli errori vengono segnalati come specificato in [matherr](../../c-runtime-library/reference/matherr.md).  
+ Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Note  
  Poiché C++ consente l'overload, è possibile chiamare overload di `fma` che accettano e restituiscono **float** e **long double** tipi. In un programma C, `fma` accetta e restituisce sempre un **double**.  
@@ -140,9 +125,9 @@ long double fmal(
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [remainder, remainderf, remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)   
  [remquo, remquof, remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

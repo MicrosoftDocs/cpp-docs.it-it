@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  Specificare i file eseguibili del programma e DLL nel *file* argomento nella riga di comando EDITBIN nell'ordine in cui vengono baserà. È possibile specificare facoltativamente uno o più *modificatori*, ciascuno separato da una virgola (**,**):  
   
-|Modificatore|Azione|  
+|Modificatore|Operazione|  
 |--------------|------------|  
 |BASE**=***indirizzo*|Fornisce un indirizzo iniziale per la riassegnazione di indirizzi di base per i file. Specificare *indirizzo* in notazione decimale o in linguaggio C. Se non si specifica BASE, il valore predefinito l'indirizzo di base iniziale è 0x400000. Specificare se verso il basso viene utilizzato, BASE, e *indirizzo* imposta la fine dell'intervallo di indirizzi di base.|  
 |BASEFILE|Crea un file denominato COFFBASE. TXT, che è un file di testo nel formato previsto dal collegamento/opzione di BASE.|  

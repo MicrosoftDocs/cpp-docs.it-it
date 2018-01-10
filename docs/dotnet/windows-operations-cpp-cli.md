@@ -18,18 +18,21 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d185112e6c3506ab48566d2b94256fda132f13f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1fb24f111fc3ad10b788deec286a0052ce822970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-operations-ccli"></a>Operazioni Windows (C++/CLI)
 Vengono illustrate alcune attività specifiche di Windows utilizzando il [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
  Gli argomenti seguenti illustrano varie operazioni di Windows con il [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] utilizzando Visual C++.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Determinare se l'operazione di arresto è stata avviata (C++/CLI)](../dotnet/how-to-determine-if-shutdown-has-started-cpp-cli.md)  
   
  [Procedura: Determinare lo stato interattivo con l'utente (C++/CLI)](../dotnet/how-to-determine-the-user-interactive-state-cpp-cli.md)  

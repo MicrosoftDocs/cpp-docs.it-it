@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b1c9965b221002a38428d3d813f4568e937cf52d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-run-time-library-reference"></a>Riferimenti alla libreria di runtime C
 La libreria di runtime Microsoft fornisce le routine per la programmazione per il sistema operativo Microsoft Windows. Queste routine consentono di automatizzare molte attività di programmazione comuni non fornite dai linguaggi C e C++.  
   
  I programmi di esempio sono inclusi nei singoli argomenti di riferimento per la maggior parte delle routine nella libreria.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Librerie di runtime C](../c-runtime-library/crt-library-features.md)  
  Vengono descritti i file LIB che includono le librerie di runtime C.  
   
@@ -42,7 +43,7 @@ La libreria di runtime Microsoft fornisce le routine per la programmazione per i
  [Costanti globali](../c-runtime-library/global-constants.md)  
  Vengono forniti collegamenti alle costanti globali definite dalla libreria di runtime.  
   
- [Alphabetical Function Reference](../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)  
+ [Riferimento alfabetico alle funzioni](../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
  Fornisce un punto di ingresso del sommario in un elenco alfabetico di tutte le funzioni della libreria di runtime C.  
   
  [Mapping di testo generico](../c-runtime-library/generic-text-mappings.md)  

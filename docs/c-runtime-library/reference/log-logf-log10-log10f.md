@@ -45,11 +45,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8146d4ebe041fa3419aff3614edcd8fe9fa8b8d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d60347bc47c05a19cb1487e7a6738d328c78f846
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log-logf-log10-log10f"></a>log, logf, log10, log10f
 Calcola logaritmi.  
@@ -95,7 +96,7 @@ float log10f (
 |-----------|-------------------|-----------------------|  
 |± QNAN,IND|none|_DOMAIN|  
 |± 0|ZERODIVIDE|_SING|  
-|x < 0|INVALID|_DOMAIN|  
+|x < 0|NON VALIDO|_DOMAIN|  
   
  **log** e `log10` hanno un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.  
   
@@ -108,7 +109,7 @@ float log10f (
 |-------------|---------------------|  
 |**log**, `logf`, `log10`, `log10f`|\<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

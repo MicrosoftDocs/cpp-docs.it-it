@@ -1,32 +1,31 @@
 ---
-title: "PROC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROC directive"
+title: PROC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROC
+dev_langs: C++
+helpviewer_keywords: PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b8b5259e3a7e42e7eb08cb4832496a6f3c35c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# PROC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I contrassegni iniziano e terminano di un blocco di routine chiamato *etichetta*.  Le istruzioni nel blocco possono essere chiamati da **CALL** istruzione o  [RICHIAMO](../../assembler/masm/invoke.md) direttiva.  
+# <a name="proc"></a>PROC
+Contrassegna l'inizio e fine di un blocco di routine chiamato *etichetta*. Le istruzioni nel blocco possono essere chiamate con il **CHIAMARE** istruzione o [INVOKE](../../assembler/masm/invoke.md) direttiva.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,14 +36,14 @@ statements
 label ENDP  
 ```  
   
-## Note  
- \[FRAME \[:*ehandler\-indirizzo*\]\] è valido solo con ml64.exe e provoca MASM a generare una voce della tabella di funzioni di pdata e rimuovere le informazioni in .xdata per la gestione delle eccezioni strutturata di una funzione rimuovere il comportamento.  
+## <a name="remarks"></a>Note  
+ [FRAME [:*il parametro ehandler indirizzo*]] è valido solo con ml64.exe e MASM generare una voce della tabella (funzione) in. pdata e xdata informazioni di rimozione per strutturata di una funzione determina il comportamento di rimozione di gestione delle eccezioni.  
   
- quando **FRAME** l'attributo viene utilizzato, deve essere seguito da  [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva.  
+ Quando il **FRAME** viene utilizzato l'attributo, deve essere seguita da un [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva.  
   
- vedere [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md) per ulteriori informazioni sull'utilizzo ml64.exe.  
+ Vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) per ulteriori informazioni sull'utilizzo ml64.exe.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -66,7 +65,7 @@ _text ENDS
 END  
 ```  
   
- Il codice precedente verrà generata la seguente tabella di funzioni e rimuove le informazioni:  
+ Il codice sopra riportato verrà emit nella tabella seguente di funzione e rimozione di informazioni:  
   
 ```  
 FileHeader->Machine 34404  
@@ -89,5 +88,5 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

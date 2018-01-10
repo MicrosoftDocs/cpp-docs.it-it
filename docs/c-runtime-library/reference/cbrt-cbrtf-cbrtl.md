@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 578ff897f980a31efead2777835aa3461438d524
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd91b5ac59917e7f77cfb38faea96b03068b3e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 Calcola la radice cubica.  
@@ -76,7 +77,7 @@ long double cbrtl(
   
 |Input|Eccezione SEH|Eccezione `_matherr`|  
 |-----------|-------------------|--------------------------|  
-|± ∞, QNAN, IND|none|nessuno|  
+|± ∞, QNAN, IND|none|none|  
   
 ## <a name="remarks"></a>Note  
  Poiché C++ consente l'overload, è possibile chiamare overload di `cbrt` che accettino tipi `float` e `long double`. In un programma C, `cbrt` accetta e restituisce sempre `double`.  

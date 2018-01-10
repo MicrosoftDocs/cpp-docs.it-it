@@ -1,40 +1,41 @@
 ---
-title: "Percorsi di ricerca nelle regole | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regole di inferenza in NMAKE"
-  - "regole, inferenza"
-  - "percorsi di ricerca nelle regole di inferenza di NMAKE"
+title: Percorsi di ricerca nelle regole | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d62ab17831afec4cc1f8e424766925529dd8e1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Percorsi di ricerca nelle regole
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>Percorsi di ricerca nelle regole
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## Osservazioni  
- Una regola di inferenza viene applicata a una dipendenza solo se i percorsi specificati nella dipendenza corrispondono esattamente ai percorsi della regola di inferenza.  La directory del dipendente deve essere specificata in *frompath* e quella della destinazione in *topath*. Non è consentito l'uso di spazi.  Specificare un solo percorso per ciascuna estensione.  La presenza di un percorso per un'estensione richiede un percorso per l'altra.  Per specificare la directory corrente, utilizzare un punto \(.\) o parentesi graffe vuote \({ }\).  Le macro possono rappresentare *frompath* e *topath* e vengono richiamate durante la pre\-elaborazione.  
+## <a name="remarks"></a>Note  
+ Una regola di inferenza si applica a una dipendenza solo se i percorsi specificati nella dipendenza esattamente corrispondono i percorsi di regole di inferenza. Specificare la directory del dipendente in *frompath* e della destinazione in *topath*; non sono consentiti spazi. Specificare solo un percorso per ciascuna estensione. Un percorso per un'estensione richiede un percorso in altro. Per specificare la directory corrente, utilizzare un punto (.) o parentesi graffe vuote ({}). Le macro possono rappresentare *frompath* e *topath*; richiamati durante la pre-elaborazione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -65,5 +66,5 @@ caps.handback.revision: 7
         $(CC) $(CFLAGS) $<  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Definizione di una regola](../build/defining-a-rule.md)

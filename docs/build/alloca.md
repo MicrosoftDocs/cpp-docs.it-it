@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a2bca8290e080c06e6cf6ec81a82a1ab9a7cb2d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de55a211e1ac9fb87e8dee251c4667a82ab47ea8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alloca"></a>alloca
 [alloca](../c-runtime-library/reference/alloca.md) deve essere 16 byte allineati e inoltre richiesto di utilizzare un puntatore ai frame.  

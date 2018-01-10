@@ -1,49 +1,50 @@
 ---
-title: "/Zp (Allineamento membri struct) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zp"
-  - "VC.Project.VCCLCompilerTool.StructMemberAlignment"
-  - "VC.Project.VCCLWCECompilerTool.StructMemberAlignment"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zp (opzione del compilatore) [C++]"
-  - "Allineamento membri struct (opzione del compilatore)"
-  - "Zp (opzione del compilatore)"
-  - "-Zp (opzione del compilatore) [C++]"
+title: -Zp (Allineamento membri Struct) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zp
+- VC.Project.VCCLCompilerTool.StructMemberAlignment
+- VC.Project.VCCLWCECompilerTool.StructMemberAlignment
+dev_langs: C++
+helpviewer_keywords:
+- Struct Member Alignment compiler option
+- Zp compiler option
+- /Zp compiler option [C++]
+- -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d387e0ab020e96afb3e2975b5c8686b668cbc10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /Zp (Allineamento membri struct)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Controlla la modalità di compressione dei membri di una struttura all'interno della memoria e specifica la stessa compressione per tutte le strutture presenti in un modulo.  
+# <a name="zp-struct-member-alignment"></a>/Zp (Allineamento membri struct)
+Controlla la modalità con cui i membri di una struttura vengono compressi in memoria e specifica la stessa compressione per tutte le strutture in un modulo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Zp[1|2|4|8|16]  
 ```  
   
-## Note  
- Quando si specifica questa opzione, tutti i membri di struttura successivi al primo vengono archiviati sulla dimensione più piccola del tipo di membro, quale essa sia, oppure nei limiti `n`\-byte, dove `n` è 1, 2, 4, 8 o 16.  
+## <a name="remarks"></a>Note  
+ Quando si specifica questa opzione, ogni membro di struttura dopo il primo viene archiviato sulla dimensione del tipo di membro o `n`-limiti di byte (in cui `n` è 1, 2, 4, 8 o 16), qualunque sia il minore.  
   
- Nella tabella riportata di seguito viene fornita una descrizione dei valori disponibili.  
+ I valori disponibili sono illustrati nella tabella seguente.  
   
  1  
- Comprime le strutture nei limiti di 1 byte.  Uguale a **\/Zp**.  
+ Comprime le strutture nei limiti di 1 byte. Uguale a **/Zp**.  
   
  2  
  Comprime le strutture nei limiti di 2 byte.  
@@ -52,37 +53,37 @@ Controlla la modalità di compressione dei membri di una struttura all'interno d
  Comprime le strutture nei limiti di 4 byte.  
   
  8  
- Comprime le strutture nei limiti di 8 byte \(impostazione predefinita\).  
+ Comprime le strutture nei limiti di 8 byte (impostazione predefinita).  
   
  16  
  Comprime le strutture nei limiti di 16 byte.  
   
- Questa opzione non deve essere utilizzata se non in presenza di requisiti di allineamento specifici.  
+ Utilizzare questa opzione non a meno che non si dispone di requisiti di allineamento specifici.  
   
- Per controllare la compressione della struttura, è inoltre possibile utilizzare [pack](../../preprocessor/pack.md).  Per ulteriori informazioni sull'allineamento, vedere:  
+ È inoltre possibile utilizzare [pack](../../preprocessor/pack.md) alla compressione di struttura di controllo. Per ulteriori informazioni sull'allineamento, vedere:  
   
 -   [align](../../cpp/align-cpp.md)  
   
--   [Operatore \_\_alignof](../../cpp/alignof-operator.md)  
+-   [Operatore __alignof](../../cpp/alignof-operator.md)  
   
--   [\_\_unaligned](../../cpp/unaligned.md)  
+-   [__unaligned](../../cpp/unaligned.md)  
   
--   [Esempi di allineamento di strutture](../../build/examples-of-structure-alignment.md) \(specifico per piattaforme x64\)  
+-   [Esempi di allineamento della struttura](../../build/examples-of-structure-alignment.md) (specifico per x64)  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Generazione codice**.  
+3.  Fare clic su di **la generazione di codice** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Allineamento membri struttura**.  
+4.  Modificare il **Allineamento membri Struct** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

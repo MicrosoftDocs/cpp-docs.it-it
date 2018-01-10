@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1879def3a66765c48d9f86e4b7f0c56785a0cf91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql"></a>SQL
 SQL (Structured Query Language) è un modo per comunicare con un database relazionale che consente di definire, query, modificare e controllare i dati. Utilizzando la sintassi SQL, è possibile costruire un'istruzione che estrae i record in base ai criteri specificati.  
@@ -54,8 +57,8 @@ SQL (Structured Query Language) è un modo per comunicare con un database relazi
   
 |La parola chiave SQL|Utilizzano le procedure guidate e le classi di database|  
 |-----------------|---------------------------------------------|  
-|**SELEZIONARE**|Per identificare quali tabelle e colonne nell'origine dati devono essere utilizzati.|  
-|**DOVE**|Per applicare un filtro che consente di limitare la selezione.|  
+|**SELECT**|Per identificare quali tabelle e colonne nell'origine dati devono essere utilizzati.|  
+|**WHERE**|Per applicare un filtro che consente di limitare la selezione.|  
 |**ORDER BY**|Per applicare un ordinamento per il recordset.|  
 |**INSERIMENTO**|Per aggiungere nuovi record di un recordset.|  
 |**ELIMINARE**|Per eliminare i record da un oggetto recordset.|  

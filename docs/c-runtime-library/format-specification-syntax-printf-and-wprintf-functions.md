@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -126,7 +127,7 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 
 ### <a name="flag-characters"></a>Caratteri flag
 
-|Flag|Significato|Default|
+|Flag|Significato|Impostazione predefinita|
 |----------|-------------|-------------|
 |**-**|Allinea a sinistra il risultato entro la larghezza del campo specificata.|Allinea a destra.|
 |**+**|Usa un segno (+ o -) come prefisso del valore di output se si tratta di un tipo con segno.|Il segno viene visualizzato solo per i valori con segno negativo (-).|
@@ -168,7 +169,7 @@ Il carattere *tipo* determina l'interpretazione di *precisione* o la precisione 
 
 ### <a name="how-precision-values-affect-type"></a>Effetti del tipo sui valori di precisione
 
-|Tipo|Significato|Default|
+|Tipo|Significato|Impostazione predefinita|
 |----------|-------------|-------------|
 |**a**, **A**|La precisione indica il numero di cifre dopo il punto.|La precisione predefinita è 13. Se la precisione è 0 non viene stampato alcun separatore decimale, a meno che non venga usato il flag **#**.|
 |**c**, **C**|La precisione non ha alcun effetto.|Viene stampato il carattere.|

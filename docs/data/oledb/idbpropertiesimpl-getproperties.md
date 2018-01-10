@@ -1,64 +1,66 @@
 ---
-title: "IDBPropertiesImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl::GetProperties"
-  - "IDBPropertiesImpl.GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties (metodo)"
+title: 'Idbpropertiesimpl:: GetProperties | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl::GetProperties
+- IDBPropertiesImpl.GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: ab24aebd-366d-49a1-b49b-bb46c6d90f05
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ac54b08dba170dd33d2e5e19cae50715aeab4fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# IDBPropertiesImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce i valori delle proprietà in gruppi di proprietà di origine dati, di informazioni di un'origine dati e di inizializzazione attualmente sono impostati sull'oggetto origine dati o sui valori delle proprietà nel gruppo di proprietà di inizializzazione attualmente sono impostate sull'enumeratore.  
+# <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
+Restituisce i valori delle proprietà nei gruppi di proprietà di origine dati, informazioni sull'origine dati e l'inizializzazione che sono attualmente impostati nell'oggetto origine dati o i valori delle proprietà nel gruppo di proprietà di inizializzazione che vengono impostati il enumeratore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      STDMETHOD(GetProperties)(   
-   ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcProperties,   
-   DBPROPSET ** prgProperties    
+      STDMETHOD(GetProperties)(   
+   ULONG cPropertySets,   
+   const DBPROPIDSET rgPropertySets[],   
+   ULONG * pcProperties,   
+   DBPROPSET ** prgProperties    
 );  
 ```  
   
-#### Parametri  
- Vedere [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx)*in OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [IDBProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms714344.aspx) nel *di riferimento per programmatori OLE DB*.  
   
- Alcuni parametri corrispondono ai parametri *di OLE DB Programmer's Reference* dei nomi diversi, descritti in **IDBProperties::GetProperties**:  
+ Alcuni parametri corrispondono ai *riferimento per programmatori OLE DB* parametri dei nomi diversi, che sono descritte nel **IDBProperties::GetProperties**:  
   
-|Parametri di modelli OLE DB|Parametri di*OLE DB Programmer's Reference*|  
-|---------------------------------|-------------------------------------------------|  
+|Parametri di modelli OLE DB|*Riferimento per programmatori OLE DB* parametri|  
+|--------------------------------|------------------------------------------------|  
 |`cPropertySets`|`cPropertyIDSets`|  
 |`rgPropertySets`|`rgPropertyIDSets`|  
 |*pcProperties*|*pcPropertySets*|  
 |*prgProperties*|*prgPropertySets*|  
   
-## Note  
- Se il provider viene inizializzato, questo metodo restituisce i valori delle proprietà in **DBPROPSET\_DATASOURCE**, **DBPROPSET\_DATASOURCEINFO**, gruppi di proprietà di **DBPROPSET\_DBINIT** attualmente sono impostati sull'oggetto origine dati.  Se il provider non inizializzata, restituisce le proprietà del gruppo di **DBPROPSET\_DBINIT** solo.  
+## <a name="remarks"></a>Note  
+ Se il provider viene inizializzato, questo metodo restituisce i valori delle proprietà nel **DBPROPSET_DATASOURCE**, **DBPROPSET_DATASOURCEINFO**, **DBPROPSET_DBINIT** gruppi di proprietà che sono attualmente impostati nell'oggetto origine dati. Se non è possibile inizializzare il provider, restituisce **DBPROPSET_DBINIT** solo proprietà del gruppo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
+ [Idbpropertiesimpl:: GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

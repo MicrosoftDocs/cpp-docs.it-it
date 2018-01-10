@@ -1,60 +1,61 @@
 ---
-title: "/GA (Ottimizza per applicazione Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication"
-  - "/ga"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GA (opzione del compilatore) [C++]"
-  - "GA (opzione del compilatore) [C++]"
-  - "-GA (opzione del compilatore) [C++]"
-  - "ottimizzazione per Windows (opzioni del compilatore)"
+title: -GA (Ottimizza per applicazione Windows) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication
+- /ga
+dev_langs: C++
+helpviewer_keywords:
+- /GA compiler option [C++]
+- GA compiler option [C++]
+- -GA compiler option [C++]
+- Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 611704120ec99280e0701e06e0e4bd45c95330d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /GA (Ottimizza per applicazione Windows)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'utilizzo di \/GA produce un codice più efficiente per un file exe per l'accesso alle variabili TLS \(thread\-local storage\).  
+# <a name="ga-optimize-for-windows-application"></a>/GA (Ottimizza per applicazione Windows)
+Restituisce un codice più efficiente per un file .exe per l'accesso alle variabili di archiviazione locale di thread (TLS).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /GA  
 ```  
   
-## Note  
- **\/GA** rende più rapido l'accesso ai dati dichiarati con [\_\_declspec\(thread\)](../../cpp/declspec.md) in un programma basato su Windows.  Quando questa opzione è impostata, si presuppone che la macro [\_\_tls\_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) sia 0.  
+## <a name="remarks"></a>Note  
+ **/GA** velocizza l'accesso ai dati dichiarato con [declspec](../../cpp/declspec.md) in un programma basato su Windows. Quando questa opzione è impostata, il [tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) macro è considerato uguale a 0.  
   
- L'utilizzo di **\/GA** per una DLL può causare generazione di codice errata.  
+ Utilizzando **/GA** per una DLL può causare la generazione di codice non valido.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

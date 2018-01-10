@@ -1,69 +1,70 @@
 ---
-title: "Parole riservate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "CONFORMING"
-  - "DISCARDABLE"
-  - "Description"
-  - "base"
-  - "APPLOADER"
-  - "Data"
-  - "DYNAMIC"
-  - "DEV386"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def (file) [C++], parole riservate"
-  - "file def [C++], parole riservate"
-  - "linker [C++], parole riservate"
-  - "parole riservate [C++]"
+title: Parole riservate | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- CONFORMING
+- DISCARDABLE
+- Description
+- base
+- APPLOADER
+- Data
+- DYNAMIC
+- DEV386
+dev_langs: C++
+helpviewer_keywords:
+- .def files [C++], reserved words
+- def files [C++], reserved words
+- linker [C++], reserved words
+- reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 35f9a3e907b72b4b8cf8e673e771832ba3fc0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Parole riservate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le parole che seguono sono riservate dal linker ed  Questi nomi possono essere utilizzati come argomenti nelle [istruzioni di definizione moduli](../../build/reference/module-definition-dot-def-files.md) solo se il nome è racchiuso tra virgolette doppie \(""\).  
+# <a name="reserved-words"></a>Parole riservate
+Le parole seguenti sono riservate dal linker. Questi nomi possono essere utilizzati come argomenti nelle [istruzioni di definizione moduli](../../build/reference/module-definition-dot-def-files.md) solo se il nome è racchiuso tra virgolette doppie ("").  
   
 ||||  
 |-|-|-|  
-|**APPLOADER**1|**INITINSTANCE**2|**PRELOAD**|  
-|**BASE**|**IOPL**|**PRIVATE**|  
-|**CODE**|**LIBRARY**1|**PROTMODE**2|  
-|**CONFORMING**|**LOADONCALL**1|**PURE**1|  
-|**DATA**|**LONGNAMES**2|**READONLY**|  
-|**DESCRIPTION**|`MOVABLE`1|**READWRITE**|  
+|**APPLOADER**1|**INITINSTANCE**2|**PRECARICAMENTO**|  
+|**BASE**|**IOPL**|**PRIVATO**|  
+|**CODICE**|**LIBRERIA**1|**PROTMODE**2|  
+|**CONFORME**|**LOADONCALL**1|**PURE**1|  
+|**DATI**|**LONGNAMES**2|**SOLA LETTURA**|  
+|**DESCRIZIONE**|**MOBILE**1|**LETTURA/SCRITTURA**|  
 |**DEV386**|**MOVEABLE**1|**REALMODE**1|  
-|**DISCARDABLE**|**MULTIPLE**|**RESIDENT**|  
-|**DYNAMIC**|**NAME**|**RESIDENTNAME**1|  
-|**EXECUTE\-ONLY**|**NEWFILES**2|**SECTIONS**|  
-|**EXECUTEONLY**|`NODATA`1|**SEGMENTS**|  
-|**EXECUTEREAD**|**NOIOPL**1|**SHARED**|  
-|**EXETYPE**|**NONAME**|**SINGLE**|  
-|**EXPORTS**|**NONCONFORMING**1|**STACKSIZE**|  
-|**FIXED**1|**NONDISCARDABLE**|**STUB**|  
-|**FUNCTIONS**2|**NONE**|**VERSION**|  
-|**HEAPSIZE**|**NONSHARED**|**WINDOWAPI**|  
-|**IMPORTS**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**IMPURE**1|**OBJECTS**|**WINDOWS**|  
-|**INCLUDE**2|**OLD**1||  
+|**SCARICABILE**|**PIÙ**|**RESIDENTE**|  
+|**DINAMICA**|**NOME**|**RESIDENTNAME**1|  
+|**SOLA ESECUZIONE**|**NEWFILES**2|**NELLE SEZIONI**|  
+|**EXECUTEONLY**|**NODATA**1|**SEGMENTI**|  
+|**ESECUZIONESCRITTURA**|**NOIOPL**1|**CONDIVISO**|  
+|**EXETYPE**|**NONAME**|**SINGOLO**|  
+|**EXPORTS**|**NON CONFORME**1|**STACKSIZE**|  
+|**PREDEFINITO**1|**NONDISCARDABLE**|**STUB**|  
+|**FUNZIONI**2|**NESSUNO**|**VERSIONE**|  
+|**HEAPSIZE**|**NON CONDIVISI**|**WINDOWAPI**|  
+|**IMPORTAZIONI**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
+|**PURE**1|**OGGETTI**|**WINDOWS**|  
+|**INCLUDERE**2|**VECCHIO**1||  
   
- 1 Il linker genera un avviso \("ignorato"\) quando rileva questo termine.  La parola è tuttavia ancora riservata.  
+ 1. il linker genera un avviso ("ignorato") quando rileva il termine. Tuttavia, la parola è ancora riservata.  
   
- 2 Il linker ignora questa parola, ma non genera alcun avviso.  
+ 2. il linker ignora questa parola ma viene generato alcun avviso.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

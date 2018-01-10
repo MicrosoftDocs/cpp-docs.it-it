@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92992278f0f5395c843ef6623a02e6294786ea24
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstring"></a>Uso di CString
 Gli argomenti di questa sezione descrivono come programmare con `CString`. Per la documentazione di riferimento sul `CString` classe, vedere la documentazione relativa a [CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
@@ -51,7 +52,7 @@ int main() {
 }  
 ```  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Operazioni di base con CString](../atl-mfc-shared/basic-cstring-operations.md)  
  Descrive le operazioni di base di `CString`, inclusa la creazione di oggetti da stringhe letterali C, l'accesso ai caratteri in un oggetto `CString`, la concatenazione di due oggetti e il confronto di oggetti `CString`.  
   
@@ -76,7 +77,7 @@ int main() {
  [Supporto per set di caratteri Unicode e multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
  Descrive il supporto di Unicode e MBCS in MFC.  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
  Fornisce informazioni di riferimento sulla classe `CStringT`.  
   

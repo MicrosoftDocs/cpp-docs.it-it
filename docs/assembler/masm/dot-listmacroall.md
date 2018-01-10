@@ -1,33 +1,31 @@
 ---
-title: ".LISTMACROALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACROALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACROALL directive"
+title: . LISTMACROALL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACROALL
+dev_langs: C++
+helpviewer_keywords: .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ffa8812c31f2ce7c3e365e84112772be4ef44150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# .LISTMACROALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listmacroall"></a>.LISTMACROALL
 Avvia l'elenco di tutte le istruzioni nelle macro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,8 +33,8 @@ Avvia l'elenco di tutte le istruzioni nelle macro.
   
 ```  
   
-## Note  
- Equivale a [.LALL](../../assembler/masm/dot-lall.md).  
+## <a name="remarks"></a>Note  
+ Uguale a [. LALL](../../assembler/masm/dot-lall.md).  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

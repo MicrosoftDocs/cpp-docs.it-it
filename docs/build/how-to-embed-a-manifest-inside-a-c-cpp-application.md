@@ -1,57 +1,57 @@
 ---
-title: "Procedura: incorporare un manifesto in un&#39;applicazione C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "incorporamento di manifesti"
-  - "makefile, aggiornamento per incorporamento del manifesto"
-  - "manifesti [C++]"
+title: 'Procedura: incorporare un manifesto all''interno di un''applicazione C/C++ | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: incorporare un manifesto in un&#39;applicazione C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È opportuno che il manifesto di un'applicazione \(o libreria\) C\/C\+\+ sia incorporato all'interno del binario finale poiché in questo modo è possibile garantire un comportamento corretto in fase di esecuzione nella maggior parte degli scenari.  Per impostazione predefinita, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tenta di incorporare il manifesto al momento della compilazione di un progetto dai file di origine. Per ulteriori informazioni, vedere [Generazione di manifesti in Visual Studio](../build/manifest-generation-in-visual-studio.md).  Tuttavia, se un'applicazione viene compilata tramite nmake, è necessario apportare alcune modifiche al makefile esistente.  In questa sezione viene illustrato come modificare makefile esistenti per incorporare automaticamente il manifesto all'interno del file binario finale.  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedura: incorporare un manifesto in un'applicazione C/C++
+È consigliabile che un'applicazione C/C++ (o libreria) il manifesto sia incorporato all'interno del file binario finale perché in questo modo il comportamento di runtime corretto nella maggior parte degli scenari. Per impostazione predefinita, [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] tenta di incorporare il manifesto quando compila un progetto da file di origine; vedere [generazione in Visual Studio](../build/manifest-generation-in-visual-studio.md) per ulteriori informazioni. Tuttavia se un'applicazione compilata con nmake, sono necessarie alcune modifiche al makefile esistente. In questa sezione viene illustrato come modificare makefile esistenti per incorporare automaticamente il manifesto nel file binario finale.  
   
-## Due approcci  
- Ci sono due modi per incorporare il manifesto all'interno di un'applicazione o una libreria.  
+## <a name="two-approaches"></a>Due approcci  
+ Esistono due modi per incorporare il manifesto all'interno di un'applicazione o di una libreria.  
   
--   Se non si sta eseguendo una compilazione incrementale, è possibile incorporare direttamente il manifesto utilizzando una riga di comando simile alla seguente come operazione di post\-compilazione:  
+-   Se non si sta eseguendo una compilazione incrementale è possibile incorporare direttamente il manifesto tramite la riga di comando simile al seguente come passaggio post-compilazione:  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **MT.exe-manifesto MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
-     o  
+     oppure  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **MT.exe-manifesto MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     \(1 per un EXE, 2 per una DLL.\)  
+     (1 per un file EXE, 2 per una DLL).  
   
--   Se si sta eseguendo una compilazione incrementale, la modifica diretta della risorsa come illustrato in questo caso disabiliterà la compilazione incrementale e causerà una ricompilazione completa. Sarà quindi necessario adottare un approccio diverso:  
+-   Se si sta eseguendo una compilazione incrementale, direttamente, come illustrato di seguito, la modifica della risorsa verrà disattivata la compilazione incrementale e causerà una ricompilazione completa. pertanto è necessario adottare un approccio diverso:  
   
-    -   Collegare il binario per generare il file MyApp.exe.manifest.  
+    -   Collegare il file binario per generare il file MyApp.exe.manifest.  
   
     -   Convertire il manifesto in un file di risorse.  
   
-    -   Eseguire di nuovo il collegamento \(in modo incrementale\) per incorporare la risorsa del manifesto nel binario.  
+    -   Collegare nuovamente (incrementale) per incorporare la risorsa del manifesto nel file binario.  
   
- Negli esempi seguenti viene illustrato come modificare makefile per incorporare entrambe le tecniche.  
+ Nell'esempio seguente viene illustrato come modificare makefile per incorporare entrambe le tecniche.  
   
-## Makefile \(prima\)  
- Considerare lo script nmake per MyApp.exe, una semplice applicazione compilata da un file:  
+## <a name="makefiles-before"></a>Makefile (prima)  
+ Si consideri lo script nmake per MyApp.exe, una semplice applicazione generata da un file:  
   
 ```  
 # build MyApp.exe  
@@ -71,9 +71,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Se questo script è eseguito immutato con Visual C\+\+, MyApp.exe viene creato correttamente.  Crea anche il file manifesto esterno MyApp.exe.manifest, utilizzato dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.  
+ Se questo script viene eseguito immutato con Visual C++, crea correttamente MyApp.exe. Crea anche il file manifesto esterno MyApp.exe.manifest, per l'uso dal sistema operativo per caricare gli assembly dipendenti in fase di esecuzione.  
   
- Lo script nmake per MyLibrary.dll è molto simile:  
+ Lo script nmake per MyLibrary. dll è molto simile:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,8 +96,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## Makefile \(dopo\)  
- Per eseguire la compilazione con manifesti incorporati è necessario apportare quattro piccole modifiche a ognuno dei makefile originali.  Per il makefile MyApp.exe:  
+## <a name="makefiles-after"></a>Makefile (dopo)  
+ Per la compilazione con manifesti che è necessario apportare quattro modifiche di piccola per i makefile originali incorporati. Per il file di progetto MyApp.exe:  
   
 ```  
 # build MyApp.exe  
@@ -127,7 +127,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Per il makefile MyLibrary.dll:  
+ Per i makefile MyLibrary. dll:  
   
 ```  
 # build MyLibrary.dll  
@@ -160,9 +160,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Il lavoro effettivo viene eseguito dai due file inclusi nei makefile, ovvero makefile.inc e makefile.targ.inc.  
+ I makefile includono ora due file di cui eseguire il lavoro effettivo, effettivo e makefile.targ.inc.  
   
- Creare makefile.inc e copiarvi quanto segue:  
+ Creare effettivo e copiarvi il seguente:  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -233,7 +233,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Creare ora makefile.targ.inc e copiarvi quanto segue:  
+ A questo punto creare makefile.targ.inc e copiarvi il seguente:  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -260,5 +260,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## Vedere anche  
- [Informazioni sulla generazione di manifesti per programmi C\/C\+\+](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sulla generazione di manifesti per programmi C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

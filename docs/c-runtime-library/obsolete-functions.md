@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a8811703234f2c4e23dab6ad2b99b1aae316c04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obsolete-functions"></a>Funzioni obsolete
 Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si consiglia di sostituire queste funzioni con le versioni aggiornate. Altre funzioni obsolete sono state rimosse da CRT. Questo argomento elenca le funzioni deprecate come obsolete e le funzioni rimosse in specifiche versioni di Visual Studio.  
@@ -67,14 +68,14 @@ Alcune funzioni di libreria sono obsolete e hanno equivalenti più recenti. Si c
 |-----------------------|-----------------|  
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|  
 |[gets, _getws](../c-runtime-library/gets-getws.md)|[gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|  
-|[_get_output_format](../c-runtime-library/get-output-format.md)|Nessuno|  
-|[_heapadd](../c-runtime-library/heapadd.md)|Nessuno|  
-|[_heapset](../c-runtime-library/heapset.md)|Nessuno|  
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Nessuno|  
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Nessuno|  
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Nessuno|  
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Nessuno|  
-|[_set_output_format](../c-runtime-library/set-output-format.md)|Nessuno|  
+|[_get_output_format](../c-runtime-library/get-output-format.md)|nessuno|  
+|[_heapadd](../c-runtime-library/heapadd.md)|nessuno|  
+|[_heapset](../c-runtime-library/heapset.md)|nessuno|  
+|[inp, inpw](../c-runtime-library/inp-inpw.md)|nessuno|  
+|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|nessuno|  
+|[outp, outpw](../c-runtime-library/outp-outpw.md)|nessuno|  
+|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|nessuno|  
+|[_set_output_format](../c-runtime-library/set-output-format.md)|nessuno|  
   
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Funzione rimossa da CRT nelle versioni precedenti di Visual Studio  
  [_lock](../c-runtime-library/lock.md)  

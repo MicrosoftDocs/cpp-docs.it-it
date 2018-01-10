@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fa1a1b914d7d9725e8f2d9858f0481bb7aa24a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be87c0bad9ab250593847cc24d16158030040054
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Può contenere più di un controllo in una singola finestra?
 Non è possibile ospitare più di un controllo in una singola finestra host ATL. Ogni finestra host è progettato per contenere solo un controllo alla volta (in questo modo un semplice meccanismo per la gestione di messaggi a livello di controllo e di reflection le proprietà di ambiente). Tuttavia, se è necessario all'utente di visualizzare più controlli in una singola finestra, è sufficiente per creare più host di windows come elementi figlio di tale finestra.  

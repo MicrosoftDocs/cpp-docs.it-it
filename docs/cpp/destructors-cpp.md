@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>Distruttori (C++)
 Un distruttore è una funzione membro che viene richiamata automaticamente quando l'oggetto esce dall'ambito o viene eliminato in modo esplicito da una chiamata a `delete`. Un distruttore è lo stesso nome di classe, preceduto da una tilde (`~`). Ad esempio, il distruttore per la classe `String` viene dichiarato con `~String()`. Se non si definisce un distruttore, il compilatore fornirà un valore predefinito. Per molte classi di ciò è sufficiente. È necessario definire un distruttore personalizzato quando la classe archivia l'handle di risorse di sistema che devono essere rilasciate o puntatori che possiedono la memoria facciano riferimento.
@@ -74,7 +72,7 @@ int main() {
   
  Nell'esempio precedente, il distruttore `String::~String` usa l'operatore `delete` per liberare lo spazio allocato in modo dinamico per l'archiviazione di testo.  
   
-## <a name="delcaring-destructors"></a>Dichiarazione di distruttori  
+## <a name="declaring-destructors"></a>Dichiarazione di distruttori  
  I distruttori sono funzioni con lo stesso nome della classe ma preceduti da un carattere tilde (`~`).  
   
  Diverse regole controllano la dichiarazione di distruttori. I distruttori:  
@@ -232,4 +230,3 @@ ps->~String();     // Virtual call
 ```  
   
  La notazione per le chiamate esplicite ai distruttori, illustrata nel passaggio precedente, può essere usata indipendentemente dal fatto che il tipo definisca un distruttore. Ciò consente di effettuare tali chiamate esplicite senza sapere se per tale tipo venga definito un distruttore. Una chiamata esplicita a un distruttore in cui non viene definito alcun distruttore non produce alcun effetto.  
-

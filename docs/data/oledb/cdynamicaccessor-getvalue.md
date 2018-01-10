@@ -1,44 +1,46 @@
 ---
-title: "CDynamicAccessor::GetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetValue"
-  - "CDynamicAccessor::GetValue<ctype>"
-  - "ATL.CDynamicAccessor.GetValue<ctype>"
-  - "CDynamicAccessor.GetValue"
-  - "CDynamicAccessor::GetValue"
-  - "ATL.CDynamicAccessor.GetValue"
-  - "ATL::CDynamicAccessor::GetValue"
-  - "ATL::CDynamicAccessor::GetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetValue (metodo)"
+title: 'CDynamicAccessor:: GetValue | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetValue
+- CDynamicAccessor::GetValue<ctype>
+- ATL.CDynamicAccessor.GetValue<ctype>
+- CDynamicAccessor.GetValue
+- CDynamicAccessor::GetValue
+- ATL.CDynamicAccessor.GetValue
+- ATL::CDynamicAccessor::GetValue
+- ATL::CDynamicAccessor::GetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: GetValue method
 ms.assetid: 553f44af-68bc-4cb6-8774-e0940003fa90
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1599cd82347c4074863f2b649a2c67df894893e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetvalue"></a>CDynamicAccessor::GetValue
 Recupera i dati per una colonna specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      void* GetValue(   
-   DBORDINAL nColumn    
+      void* GetValue(   
+   DBORDINAL nColumn    
 ) const throw( );  
 void* GetValue(  
    const CHAR* pColumnName   
@@ -63,31 +65,31 @@ bool GetValue(
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ctype`  
- \[in\] parametro basato su modelli A che gestisce qualsiasi tipo di dati a meno che la stringa digitare \(**CARATTERE A DESTRA ESTESO**, **WCHAR\***\), che richiedono una gestione speciale.  `GetValue` utilizza il tipo di dati appropriato in base a cui specificate qui.  
+ [in] Un parametro basato su modelli che gestisce qualsiasi tipo di dati ad eccezione dei tipi di stringa (**CHAR\***, **WCHAR\***), che richiedono una gestione speciale. `GetValue`Usa il tipo di dati appropriato in base a quanto specificato qui.  
   
  `nColumn`  
- \[in\] numero di colonne.  I numeri di colonne iniziano con 1.  Un valore 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore 0 si intende la colonna del segnalibro, se presente.  
   
  `pColumnName`  
- \[in\] nome della colonna.  
+ [in] Il nome della colonna.  
   
  `pData`  
- \[out\] puntatore al contenuto della colonna specificata.  
+ [out] Puntatore al contenuto della colonna specificata.  
   
-## Valore restituito  
- Se si desidera passare i dati in formato stringa, utilizzare le versioni nontemplated di `GetValue`.  Le versioni nontemplated di questo metodo restituisce **void\***, che indica la parte del buffer contenente i dati specificati della colonna.  Restituisce **NULL** se non viene trovata.  
+## <a name="return-value"></a>Valore restituito  
+ Se si desidera passare dati stringa, utilizzare le versioni non basata su modelli di `GetValue`. Le versioni non basata su modelli di questo metodo restituiscono **void\***, che punta alla parte del buffer che contiene i dati della colonna specificata. Restituisce **NULL** se la colonna non viene trovata.  
   
- Per tutti gli altri tipi di dati, è più semplice utilizzare le versioni basate su modelli di `GetValue`.  Le versioni basate su modelli restituiscono **true** su positivo o **false** in caso di errore.  
+ Per tutti gli altri tipi di dati, è più semplice utilizzare le versioni basate su modelli di `GetValue`. Versioni basate su modelli restituiscono **true** in caso di esito positivo o **false** in caso di errore.  
   
-## Note  
- Utilizzare le versioni nontemplated per restituire le colonne contenenti stringhe e le versioni basate su modelli per colonne che contengono altri tipi di dati.  
+## <a name="remarks"></a>Note  
+ Utilizzare le versioni non basata su modelli per restituire le colonne che contengono le stringhe e le versioni basate su modelli per le colonne che contengono altri tipi di dati.  
   
- In modalità di debug, si otterrà un'asserzione se la dimensione di `pData` è diverso dalla dimensione della colonna per cui punta.  
+ In modalità debug, si otterrà un'asserzione se le dimensioni di `pData` non è uguale alla dimensione della colonna a cui fa riferimento.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

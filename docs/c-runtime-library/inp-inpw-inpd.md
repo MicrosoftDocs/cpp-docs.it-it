@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 983efc1f3341ca334415e8cdd37f96f12fbb3e11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inp-inpw-inpd"></a>_inp, _inpw, _inpd
 Restituisce, da una porta, un byte (`_inp`), una parola (`_inpw`) o una parola doppia (`_inpd`).  
@@ -76,7 +77,7 @@ unsigned long _inpd(
 ## <a name="return-value"></a>Valore restituito  
  Le funzioni restituiscono il byte, la parola o la parola doppia letti da `port`. Non vi è restituzione di errori.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  Le funzioni `_inp`, `_inpw`e `_inpd` leggono un byte, una parola e una doppia parola, rispettivamente, dalla porta di input specificata. Il valore di input può essere qualsiasi Unsigned Short Integer nell'intervallo compreso tra 0 e 65.535.  
   
  Dal momento che queste funzioni leggono direttamente da una porta di I/O, potrebbero non essere usate nel codice utente in Windows NT, Windows 2000, Windows XP e Windows Server 2003.  
@@ -89,7 +90,7 @@ unsigned long _inpd(
 |`_inpw`|\<conio.h>|  
 |`_inpd`|\<conio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../c-runtime-library/crt-library-features.md).  

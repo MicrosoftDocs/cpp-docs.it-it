@@ -1,11 +1,10 @@
 ---
-title: Classe IAtlStringMgr | Documenti di Microsoft
+title: Classe IAtlStringMgr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,37 +15,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::Free
 - ATLSIMPSTR/ATL::GetNilString
 - ATLSIMPSTR/ATL::Reallocate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, IAtlStringMgr
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4ff4aa01a6d30f377560962f98a5892bdcc37837
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 85b99b0b1f35ecbc35b4096ac8c2260d0a55680d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 Questa classe rappresenta l'interfaccia per un `CStringT` di gestione della memoria.  
@@ -64,15 +48,15 @@ __interface IAtlStringMgr
 |||  
 |-|-|  
 |[Allocare](#allocate)|Chiamare questo metodo per allocare una nuova struttura di dati stringa.|  
-|[Clone](#clone)|Chiamare questo metodo per restituire un puntatore a un nuovo responsabile per l'utilizzo con un'altra istanza di stringa `CSimpleStringT`.|  
-|[Gratuito](#free)|Chiamare questo metodo per liberare una struttura di dati stringa.|  
-|[GetNilString](#getnilstring)|Restituisce un puntatore per il `CStringData` oggetto utilizzata dagli oggetti di una stringa vuota.|  
+|[Clone](#clone)|Chiamare questo metodo per restituire un puntatore a un nuovo responsabile di stringa per l'utilizzo con un'altra istanza di `CSimpleStringT`.|  
+|[Disponibile](#free)|Chiamare questo metodo per liberare una struttura di dati stringa.|  
+|[GetNilString](#getnilstring)|Restituisce un puntatore al `CStringData` oggetto utilizzata dagli oggetti di una stringa vuota.|  
 |[Riallocare](#reallocate)|Chiamare questo metodo per riallocare una struttura di dati stringa.|  
   
 ## <a name="remarks"></a>Note  
- Questa interfaccia gestisce la memoria utilizzata dalle classi di stringa indipendente da MFC; ad esempio [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), e [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).  
+ Questa interfaccia gestisce la memoria utilizzata dalle classi; stringa indipendente da MFC ad esempio [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md), [CStringT](../../atl-mfc-shared/reference/cstringt-class.md), e [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md).  
   
- È inoltre possibile utilizzare questa classe per implementare un gestore di memoria personalizzato per la classe di stringa personalizzata. Per ulteriori informazioni, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
+ È inoltre possibile utilizzare questa classe per implementare un gestore di memoria personalizzato per la classe di stringa personalizzato. Per ulteriori informazioni, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlsimpstr.h  
@@ -86,16 +70,16 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
   
 ### <a name="parameters"></a>Parametri  
  `nAllocLength`  
- Il numero di caratteri del nuovo blocco di memoria.  
+ Il numero di caratteri nel nuovo blocco di memoria.  
   
  `nCharSize`  
- Dimensione (in byte) del tipo di carattere utilizzato dal gestore di stringa.  
+ Le dimensioni (in byte) del tipo di carattere utilizzato dal gestore di stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore all'inizio del blocco di memoria appena allocata.  
   
 > [!NOTE]
->  Generando un'eccezione, non segnalare un'allocazione non riuscita. Al contrario, un'allocazione non riuscita deve essere segnalata restituendo **NULL**.  
+>  Impossibile segnalare un'allocazione non riuscita generando un'eccezione. Al contrario, un'allocazione non riuscita deve essere segnalata restituendo **NULL**.  
   
 ### <a name="remarks"></a>Note  
  Chiamare [IAtlStringMgr::Free](#free) o [IAtlStringMgr:: ReAllocate](#reallocate) per liberare la memoria allocata da questo metodo.  
@@ -104,19 +88,19 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 >  Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ##  <a name="clone"></a>IAtlStringMgr::Clone  
- Restituisce un puntatore a un nuovo responsabile per l'utilizzo con un'altra istanza di stringa `CSimpleStringT`.  
+ Restituisce un puntatore a un nuovo responsabile di stringa per l'utilizzo con un'altra istanza di `CSimpleStringT`.  
   
 ```
 IAtlStringMgr* Clone() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce una copia di `IAtlStringMgr` oggetto.  
+ Restituisce una copia del `IAtlStringMgr` oggetto.  
   
 ### <a name="remarks"></a>Note  
  In genere chiamato dal framework quando un gestore di stringhe è necessaria per una nuova stringa. Nella maggior parte dei casi, il **questo** puntatore viene restituito.  
   
- Tuttavia, se il gestore della memoria non supporta utilizzata da più istanze di `CSimpleStringT`, deve essere restituito un puntatore a un gestore di stringhe condivisibile.  
+ Tuttavia, se il gestore della memoria non supporta utilizzato da più istanze di `CSimpleStringT`, deve essere restituito un puntatore a un gestore di stringhe condivisibile.  
   
 > [!NOTE]
 >  Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
@@ -133,7 +117,7 @@ void Free(CStringData* pData) throw();
  Puntatore al blocco di memoria da liberare.  
   
 ### <a name="remarks"></a>Note  
- Consente di liberare il blocco di memoria specificata precedentemente allocato dal [alloca](#allocate) o [riallocare](../../atl/reference/iatlmemmgr-class.md#reallocate).  
+ Consente di liberare il blocco di memoria specificato precedentemente allocato dal [allocare](#allocate) o [riallocare](../../atl/reference/iatlmemmgr-class.md#reallocate).  
   
 > [!NOTE]
 >  Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
@@ -146,13 +130,13 @@ CStringData* GetNilString() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Un puntatore per il `CStringData` oggetto utilizzato per rappresentare una stringa vuota.  
+ Un puntatore al `CStringData` oggetto utilizzato per rappresentare una stringa vuota.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questa funzione per restituire la rappresentazione di stringa vuota.  
   
 > [!NOTE]
->  Quando si implementa un gestore di stringhe personalizzate, questa funzione non deve mai avere esito negativo. È possibile garantire tale requisito consiste nell'incorporare un'istanza di **CNilStringData** nella classe di gestione di stringa e restituiscono un puntatore a quell'istanza.  
+>  Quando si implementa un gestore di stringa personalizzato, questa funzione non deve mai avere esito negativo. È possibile garantire tale requisito consiste nell'incorporare un'istanza di **CNilStringData** nella classe di gestione di stringa e restituiscono un puntatore a quell'istanza.  
   
 > [!NOTE]
 >  Per esempi di utilizzo, vedere [gestione della memoria e CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
@@ -169,19 +153,19 @@ CStringData* Reallocate(
   
 ### <a name="parameters"></a>Parametri  
  `pData`  
- Puntatore alla memoria precedentemente allocata dal gestore di memoria.  
+ Puntatore alla memoria precedentemente allocata da questo gestore di memoria.  
   
  `nAllocLength`  
- Il numero di caratteri del nuovo blocco di memoria.  
+ Il numero di caratteri nel nuovo blocco di memoria.  
   
  `nCharSize`  
- Dimensione (in byte) del tipo di carattere utilizzato dal gestore di stringa.  
+ Le dimensioni (in byte) del tipo di carattere utilizzato dal gestore di stringa.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore all'inizio del blocco di memoria allocata.  
   
 ### <a name="remarks"></a>Note  
- Chiamare questa funzione per ridimensionare il blocco di memoria esistente specificato da `pData`.  
+ Chiamare questa funzione per ridimensionare il blocco di memoria esistente specificato dal `pData`.  
   
  Chiamare [IAtlStringMgr::Free](#free) per liberare la memoria allocata da questo metodo.  
   
@@ -191,6 +175,5 @@ CStringData* Reallocate(
 ## <a name="see-also"></a>Vedere anche  
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

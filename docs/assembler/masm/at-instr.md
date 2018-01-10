@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05a2ffa5f886318524267aeb348557a413960f7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea488841290ff1e5eaa7279e209dff2928b82c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="instr"></a>@InStr
 Funzione di macro che trova la prima occorrenza di *string2* in *string1*, a partire da *posizione* all'interno di *string1*. Se *posizione* non è visualizzato, ricerca inizia all'inizio della *string1*. Restituisce un intero posizione oppure 0 se *string2* non viene trovato.  

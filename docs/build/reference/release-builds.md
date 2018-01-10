@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6ba275b3a287130df111ba89ec2f4dd91170d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="release-builds"></a>Build di rilascio
 Una build di rilascio Usa le ottimizzazioni. Quando si usa le ottimizzazioni per creare una build di rilascio, il compilatore non genererà le informazioni sui simboli di debug. Chiama l'assenza di informazioni di debug sui simboli, nonché il fatto che il codice non viene generato per traccia e ASSERT, significa che le dimensioni del file eseguibile viene ridotto e pertanto è più veloce.  

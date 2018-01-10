@@ -1,35 +1,35 @@
 ---
-title: "Data e ora: supporto SYSTEMTIME | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "SYSTEMTIME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ora di sistema"
-  - "Struttura FILETIME, con la classe CTime"
-  - "formattazione dell'ora [C++]"
-  - "SYSTEMTIME (struttura)"
-  - "date di MFC [C++]"
-  - "ora, formattazione [C++]"
+title: 'Data e ora: supporto SYSTEMTIME | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: SYSTEMTIME
+dev_langs: C++
+helpviewer_keywords:
+- system time
+- FILETIME structure, with CTime class
+- time [C++], formatting
+- SYSTEMTIME structure
+- dates [C++], MFC
+- formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 405c245cdab6426330915c945cd77f8336e68c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Data e ora: supporto SYSTEMTIME
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costruttori che accettano l'ora di sistema e dei file da Win32. Se si usano gli oggetti `CTime` per tali scopi, è necessario modificarne di conseguenza l'inizializzazione, come descritto in questo articolo.  
+# <a name="date-and-time-systemtime-support"></a>Data e ora: supporto SYSTEMTIME
+Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costruttori che accettano i tempi di sistema e file da Win32. Se si usano gli oggetti `CTime` per tali scopi, è necessario modificarne di conseguenza l'inizializzazione, come descritto in questo articolo.  
   
  Per informazioni sulla struttura SYSTEMTIME, vedere [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Per informazioni sulla struttura FILETIME, vedere [FILETIME](../mfc/reference/filetime-structure.md).  
   
@@ -45,15 +45,15 @@ Il [CTime](../atl-mfc-shared/reference/ctime-class.md) classe dispone di costrut
   
  Se il codice contiene un oggetto `CTime` inizializzato con l'ora di sistema, è consigliabile usare il costruttore `SYSTEMTIME` in Win32.  
   
- Non è probabile che si utilizzerà `CTime` `FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) Recupera il timestamp del file tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura.  
+ Non è probabile che si utilizzerà `CTime` `FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, [CFile:: GetStatus](../mfc/reference/cfile-class.md#getstatus) recupera il timestamp del file per l'utente tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Generale programmazione Data e ora in MFC](../atl-mfc-shared/date-and-time.md)  
+-   [Programmazione di tempo in MFC e data generale](../atl-mfc-shared/date-and-time.md)  
   
--   [Supporto di automazione della programmazione Data e ora](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Supporto di automazione della programmazione di ora e data](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Classi di uso generale per la programmazione di data e ora](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Classi di uso generale per la programmazione di ora e data](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Data e ora](../atl-mfc-shared/date-and-time.md)

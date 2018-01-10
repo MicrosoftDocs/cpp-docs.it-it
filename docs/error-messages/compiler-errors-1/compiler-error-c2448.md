@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2448
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2448
+f1_keywords: C2448
+dev_langs: C++
+helpviewer_keywords: C2448
 ms.assetid: e255df3c-f861-4b4d-a193-8768cef061a5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cf628cb40be9c6f5dadf978983f86122a72f847f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f289baff628ad2139940f023de36b7f936775b61
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2448"></a>Errore del compilatore C2448
 'identifier': inizializzatore di tipo funzione sembra essere una definizione di funzione  

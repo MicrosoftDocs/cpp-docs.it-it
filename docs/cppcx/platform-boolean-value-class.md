@@ -1,46 +1,47 @@
 ---
-title: "Classe di valori Platform::Boolean | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Boolean"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Struct Platform::Boolean"
+title: 'Classe di valori platform:: Boolean | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Boolean
+dev_langs: C++
+helpviewer_keywords: Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f25b52001908cf41e1aa564ca86a30da0688003a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe di valori Platform::Boolean
+# <a name="platformboolean-value-class"></a>Classe di valori Platform::Boolean
 Rappresenta un valore booleano. Equivalente a `bool`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 public value struct Boolean  
 ```  
   
-## Membri  
- Boolean include i metodi Equals\(\), GetHashCode\(\) e ToString\(\) derivati dalla [Classe Platform::Object](../cppcx/platform-object-class.md) e il metodo GetTypeCode\(\) derivato dalla [Platform::Type \(classe\)](../cppcx/platform-type-class.md).  
+### <a name="members"></a>Membri  
+ Boolean include i metodi Equals(), GetHashCode() e ToString() derivati dalla [Platform::Object Class](../cppcx/platform-object-class.md)e il metodo GetTypeCode() derivato dalla [Platform::Type Class](../cppcx/platform-type-class.md).  
   
-## Requisiti  
- **Client minimo supportato:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisiti  
+ **Client minimo supportato:** Windows 8  
   
- **Server minimo supportato:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Server minimo supportato:** Windows Server 2012  
   
  **Spazio dei nomi:** Platform  
   
  **Metadati:** platform.winmd  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

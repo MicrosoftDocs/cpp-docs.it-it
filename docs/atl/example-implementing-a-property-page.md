@@ -1,170 +1,172 @@
 ---
-title: "Example: Implementing a Property Page | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proprietà (pagine), implementazione"
+title: "Implementazione di una pagina delle proprietà (ATL) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Example: Implementing a Property Page
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo esempio viene illustrato come compilare una pagina delle proprietà visualizzate \(consente di modificare\) le proprietà dell'interfaccia [Classi documento](../mfc/document-classes.md).  Questa interfaccia è esposta da documenti in [Esempi del modello a oggetti dell'ambiente comune](../Topic/Common%20Environment%20Object%20Model%20Examples.md) di Visual Studio \(sebbene la pagina delle proprietà che non si creerà preoccupi da cui gli oggetti modifica e che supportano l'interfaccia corretta\).  
+# <a name="example-implementing-a-property-page"></a>Esempio: Implementazione di una pagina delle proprietà
+Questo esempio viene illustrato come compilare una pagina delle proprietà che consente di visualizzare le proprietà di (e consente di modificare) le [classi documento](../mfc/document-classes.md) interfaccia.  
   
- l'esempio è basato su [Esempio ATLPages](../top/visual-cpp-samples.md).  
+ L'esempio è basato sul [esempio ATLPages](../visual-cpp-samples.md).  
   
- Per completare questo esempio, sarà:  
+ Per completare questo esempio, si apprenderà come:  
   
--   [Aggiungere la classe della pagina delle proprietà ATL](#vcconusing_the_atl_object_wizard) utilizzando la finestra di dialogo della classe aggiunta e della pagina delle proprietà ATL.  
+- [Aggiungere la classe di pagina delle proprietà ATL](#vcconusing_the_atl_object_wizard) utilizzando la finestra di dialogo Aggiungi classe e guidata pagina delle proprietà ATL.  
   
--   [Modificare la finestra di dialogo](#vcconediting_the_dialog_resource) aggiungendo nuovi controlli per le proprietà interessanti dell'interfaccia **Documento**.  
+- [Modificare la risorsa finestra di dialogo](#vcconediting_the_dialog_resource) aggiungendo nuovi controlli per le proprietà dell'interessanti il **documento** interfaccia.  
   
--   [Aggiungere gestori di messaggi](#vcconadding_message_handlers) al sito della pagina delle proprietà presenti le modifiche apportate dall'utente.  
+- [Aggiungere gestori di messaggi](#vcconadding_message_handlers) per mantenere il sito della pagina proprietà informato delle modifiche apportate dall'utente.  
   
--   Aggiungere alcune istruzioni `#import` e un typedef nella sezione [Governo di cane](#vcconhousekeeping).  
+-   Aggiungere alcuni `#import` istruzioni e un typedef nel [Housekeeping](#vcconhousekeeping) sezione.  
   
--   [Eseguire l'override di IPropertyPageImpl::SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) per convalidare gli oggetti passati alla pagina delle proprietà.  
+- [Eseguire l'override: SetObjects](#vcconoverriding_ipropertypageimpl_setobjects) per convalidare gli oggetti passati alla pagina delle proprietà.  
   
--   [override IPropertyPageImpl::Activate](#vcconoverriding_ipropertypageimpl_activate) per inizializzare l'interfaccia della pagina delle proprietà.  
+- [Eseguire l'override di IPropertyPageImpl](#vcconoverriding_ipropertypageimpl_activate) per inizializzare l'interfaccia della pagina delle proprietà.  
   
--   [override IPropertyPageImpl::Apply](#vcconoverride_ipropertypageimpl_apply) per aggiornare l'oggetto con gli ultimi valori della proprietà.  
+- [Eseguire l'override di IPropertyPageImpl](#vcconoverride_ipropertypageimpl_apply) per aggiornare l'oggetto con i valori di proprietà più recenti.  
   
--   [Visualizzare la pagina delle proprietà](#vccontesting_the_property_page) creando un oggetto di supporto semplice.  
+- [Visualizzare la pagina delle proprietà](#vccontesting_the_property_page) creando un semplice oggetto di supporto.  
   
--   [Creare una macro](#vcconcreating_a_macro) che collauderà la pagina delle proprietà.  
+- [Creare una macro](#vcconcreating_a_macro) che testerà la pagina delle proprietà.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a> Aggiunta della classe della pagina delle proprietà ATL  
- Innanzitutto, creare un nuovo progetto ATL per un server di DLL denominato `ATLPages7`.  Ora [Procedura guidata della pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) utilizzare per generare una pagina delle proprietà.  Assegnare alla pagina delle proprietà **nome breveDocProperties** quindi l'opzione nella pagina **Strings** agli elementi proprietà\-pagina\- specifici definiti come illustrato nella tabella riportata di seguito.  
+##  <a name="vcconusing_the_atl_object_wizard"></a>Aggiunta di una classe di pagina delle proprietà ATL  
+ Innanzitutto, creare un nuovo progetto ATL per un server DLL denominato `ATLPages7`. A questo punto utilizzare il [guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) per generare una pagina delle proprietà. Assegnare la pagina delle proprietà un **nome breve** di **DocProperties** quindi passare il **stringhe** pagina per impostare gli elementi di proprietà pagina specifici, come illustrato nella tabella seguente.  
   
 |Elemento|Valore|  
-|--------------|------------|  
+|----------|-----------|  
 |Titolo|TextDocument|  
-|Stringa del documento|Proprietà di VCUE TextDocument|  
-|File|*\<blank\>*|  
+|Stringa doc|Proprietà di TextDocument VCUE|  
+|HelpFile|*\<vuota >*|  
   
- I valori impostate in questa pagina della procedura guidata verrà restituito al contenitore della pagina delle proprietà quando chiama **IPropertyPage::GetPageInfo**.  Ciò che si verifica dopo le stringhe che dipende dal contenitore, ma in genere verranno utilizzati per identificare la pagina all'utente.  Il titolo in genere visualizzato in una scheda sulla pagina e la stringa di documenti possono essere visualizzati in una barra di stato o in una descrizione comando \(sebbene la finestra delle proprietà standard non utilizzare questa stringa alcuno\).  
-  
-> [!NOTE]
->  Le stringhe impostato qui è archiviato come risorsa di tipo stringa nel progetto tramite la procedura guidata.  È possibile modificare queste stringhe utilizzando l'editor di risorse se è necessario modificare queste informazioni dopo il codice della pagina è stato generato.  
-  
- Scegliere **OK** per la procedura guidata deve generare la pagina delle proprietà.  
-  
-##  <a name="vcconediting_the_dialog_resource"></a> Modificare la risorsa finestra di dialogo  
- Ora che la pagina delle proprietà è stata generata un'eccezione, è necessario aggiungere alcuni controlli alla risorsa finestra di dialogo che rappresenta la pagina.  Aggiungere una casella di modifica, un controllo di testo statico e una casella di controllo e impostare i relativi ID come illustrato di seguito:  
-  
- ![Modifica di una risorsa della finestra di dialogo](../atl/media/ppgresourcelabeled.png "PPGResourceLabeled")  
-  
- Questi controlli saranno utilizzati per visualizzare il nome file del documento e il relativo stato in sola lettura.  
+ I valori impostati in questa pagina della procedura guidata verranno restituiti per il contenitore della pagina proprietà quando viene chiamata **IPropertyPage:: GetPageInfo**. Cosa accade per le stringhe dopo che dipende dal contenitore, ma in genere verrà utilizzati per identificare la pagina all'utente. Il titolo verrà visualizzato in genere in una scheda sopra la pagina e la stringa Doc potrebbe essere visualizzata in una barra di stato o una descrizione comando (anche se la finestra delle proprietà standard non utilizza questa stringa affatto).  
   
 > [!NOTE]
->  La finestra di dialogo non include un frame o i pulsanti di comando, né ha l'aspetto a schede che previsto.  Queste funzionalità fornite da un frame di pagina delle proprietà come quello creato chiamando [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
+>  Le stringhe impostate in questa sezione vengono archiviate come risorse nel progetto di tipo stringa dalla procedura guidata. È possibile modificare facilmente queste stringhe si utilizza l'editor di risorse, se è necessario modificare queste informazioni dopo il codice per la pagina è stato generato.  
   
-##  <a name="vcconadding_message_handlers"></a> Gestori di messaggi di aggiunta  
- Con i controlli sul posto, è possibile aggiungere gestori di messaggi per aggiornare lo stato modificato della pagina quando il valore di uno delle modifiche dei comandi:  
+ Fare clic su **OK** la procedura guidata per generare la pagina delle proprietà.  
   
- [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/CPP/example-implementing-a-property-page_1.h)]  
+##  <a name="vcconediting_the_dialog_resource"></a>La modifica della risorsa finestra di dialogo  
+ Ora che è stata generata la pagina delle proprietà, è necessario aggiungere alcuni controlli alla risorsa finestra di dialogo che rappresentano la pagina. Aggiungere una casella di modifica, un controllo di testo statico e una casella di controllo e impostare i relativi ID, come illustrato di seguito:  
   
- Questo codice risposta alle modifiche apportate al controllo di modifica o la casella di controllo chiamando [IPropertyPageImpl::SetDirty](../Topic/IPropertyPageImpl::SetDirty.md), che informa il sito della pagina che la pagina è stata modificata.  In genere il sito della pagina risponda abilitazione o disabilitazione di un pulsante **Apply** sul frame di pagina delle proprietà.  
+ ![La modifica di una risorsa finestra di dialogo](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
   
-> [!NOTE]
->  Nelle rispettive pagine delle proprietà, potrebbe essere necessario tenere traccia con precisione che le proprietà sono state alterate dall'utente in modo da evitare possibile aggiornare le proprietà che non sono state modificate.  Implementazione di questo esempio di codice tenendo traccia dei valori di proprietà originali e confrontandoli con i valori correnti dell'interfaccia utente al momento di applicare le modifiche.  
-  
-##  <a name="vcconhousekeeping"></a> Governo di cane  
- Aggiungere una coppia di istruzioni `#import` a DocProperties.h in modo che il compilatore sia sull'interfaccia **Documento** :  
-  
- [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/CPP/example-implementing-a-property-page_2.h)]  
-  
- Sarà inoltre necessario fare riferimento alla classe base `IPropertyPageImpl` ; aggiungere `typedef` seguente alla classe **CDocProperties** :  
-  
- [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/CPP/example-implementing-a-property-page_3.h)]  
-  
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> Eseguire l'override di IPropertyPageImpl::SetObjects  
- Il primo metodo `IPropertyPageImpl` che è necessario eseguire l'override è [SetObjects](../Topic/IPropertyPageImpl::SetObjects.md).  Di seguito verrà aggiunto il codice per verificare che un solo oggetto venga passato e supporta l'interfaccia **Documento** che si prevede:  
-  
- [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/CPP/example-implementing-a-property-page_4.h)]  
+ Questi controlli verranno utilizzati per visualizzare il nome del file del documento e il relativo stato di sola lettura.  
   
 > [!NOTE]
->  È opportuno supportare un solo oggetto per questa pagina poiché si consentirà all'utente di impostare il nome file dell'oggetto da un solo file esista in una posizione.  
+>  La risorsa finestra di dialogo non include i pulsanti di comando o frame, né ha l'aspetto a schede che è possibile che sia previsto. Queste funzionalità sono fornite da un frame della pagina di proprietà, ad esempio quello creato chiamando [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437).  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> Eseguire l'override di IPropertyPageImpl::Activate  
- È necessario inizializzare la pagina delle proprietà con i valori della proprietà dell'oggetto sottostante durante la prima pagina della creazione.  
+##  <a name="vcconadding_message_handlers"></a>Aggiunta di gestori messaggi  
+ Con i controlli sul posto, è possibile aggiungere i gestori di messaggi per aggiornare lo stato della pagina dirty quando cambia il valore di uno dei controlli:  
   
- In questo caso è necessario aggiungere i membri seguenti alla classe poiché si utilizzerà inoltre i valori di proprietà iniziali per il confronto quando gli utenti della pagina applicate le modifiche:  
+ [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/CPP/example-implementing-a-property-page_5.h)]  
-  
- L'implementazione della classe base del metodo [Attiva](../Topic/IPropertyPageImpl::Activate.md) è necessario creare la finestra di dialogo e i comandi, pertanto è possibile eseguire l'override di questo metodo e aggiungere la propria inizializzazione dopo avere definito la classe base:  
-  
- [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/CPP/example-implementing-a-property-page_6.h)]  
-  
- Questo codice utilizza i metodi COM l'interfaccia **Documento** per ottenere le proprietà desiderate.  Quindi utilizza i wrapper di API Win32 forniti da [CDialogImpl](../atl/reference/cdialogimpl-class.md) e le relative classi base per visualizzare i valori della proprietà all'utente.  
-  
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a> Eseguire l'override di IPropertyPageImpl::Apply  
- Quando gli utenti desiderano applicare le modifiche a oggetti, il sito della pagina delle proprietà chiamerà il metodo [Applicare](../Topic/IPropertyPageImpl::Apply.md).  Questo è il posto per eseguire l'operazione inversa del codice in **Attiva** — mentre **Attiva** richiesto valori dall'oggetto e li ha spinti i controlli nella pagina delle proprietà, **Apply** accetta valori dai controlli nella pagina delle proprietà e li inserisce nell'oggetto.  
-  
- [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/CPP/example-implementing-a-property-page_7.h)]  
+ Questo codice di risposta alle modifiche apportate al controllo di modifica o casella di controllo chiamando [IPropertyPageImpl:: SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty), che informa il sito della pagina che la pagina è stata modificata. In genere il sito della pagina risponderà abilitando o disabilitando un **applica** pulsante frame della pagina delle proprietà.  
   
 > [!NOTE]
->  Il controllo su [m\_bDirty](../Topic/IPropertyPageImpl::m_bDirty.md) all'inizio di questa implementazione è un controllo iniziale per evitare che gli aggiornamenti non necessari gli oggetti **Apply** se viene chiamato più volte.  Sono inoltre disponibili controlli su ognuno dei valori della proprietà da assicurarsi che solo le modifiche possono generare una chiamata al metodo a **Documento**.  
+>  Nelle pagine delle proprietà, potrebbe essere necessario tenere traccia delle esattamente quali proprietà sono state modificate in modo che è possibile evitare l'aggiornamento delle proprietà che non sono state modificate dall'utente. In questo esempio implementa il codice per tenere traccia dei valori originali delle proprietà e confrontarli con i valori correnti dall'interfaccia utente quando è necessario applicare le modifiche.  
+  
+##  <a name="vcconhousekeeping"></a>Attività di manutenzione  
+ A questo punto aggiungere un paio di `#import` istruzioni DocProperties.h in modo che il compilatore viene a conoscenza di **documento** interfaccia:  
+  
+ [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
+  
+ È necessario anche fare riferimento al `IPropertyPageImpl` classe di base; aggiungere i seguenti `typedef` per il **CDocProperties** classe:  
+  
+ [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
+  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>Si esegue l'override: SetObjects  
+ Il primo `IPropertyPageImpl` metodo che è necessario eseguire l'override è [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects). Di seguito verrà aggiunto il codice per verificare che solo un singolo oggetto è stato passato e che supporti il **documento** interfaccia che si aspetta:  
+  
+ [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
   
 > [!NOTE]
->  Espone **FullName** di**Documento** come proprietà di sola lettura.  Per aggiornare il nome file del documento in base alle modifiche apportate alla pagina delle proprietà, è necessario utilizzare il metodo **Salva** per salvare il file con un nome diverso.  Pertanto, il codice in una pagina delle proprietà non deve limitarsi a ottenere o a impostare proprietà.  
+>  È opportuno supporta solo un singolo oggetto per questa pagina in quanto si consentirà all'utente di impostare il nome del file dell'oggetto, può esistere solo un file in una qualsiasi posizione.  
   
-##  <a name="vccontesting_the_property_page"></a> Visualizzare la pagina delle proprietà  
- Per visualizzare questa pagina, è necessario creare un oggetto di supporto semplice.  L'oggetto supporto fornito un metodo che semplifica **OleCreatePropertyFrame** API per la visualizzazione di una singola pagina collegata a un singolo oggetto.  Questo supporto è progettato per consentirne l'utilizzo da Visual Basic.  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>Si esegue l'override di IPropertyPageImpl  
+ Il passaggio successivo è per inizializzare la pagina delle proprietà con i valori di proprietà dell'oggetto sottostante quando si crea la pagina.  
   
- Utilizzare [Aggiungere la finestra di dialogo della classe](../ide/add-class-dialog-box.md) e [Procedura guidata semplice ATL](../atl/reference/atl-simple-object-wizard.md) per generare una nuova classe e utilizzare `Helper` come nome breve.  Una volta creato, aggiungere un metodo come illustrato nella tabella riportata di seguito.  
+ In questo caso occorre aggiungere i membri seguenti alla classe, poiché si utilizzeranno inoltre i valori iniziali delle proprietà per il confronto quando gli utenti della pagina di applicare le modifiche:  
+  
+ [!code-cpp[NVC_ATL_Windowing#77](../atl/codesnippet/cpp/example-implementing-a-property-page_5.h)]  
+  
+ L'implementazione della classe base di [attiva](../atl/reference/ipropertypageimpl-class.md#activate) metodo è responsabile della creazione nella finestra di dialogo e i relativi controlli, è possibile eseguire l'override di questo metodo, aggiungere la propria inizializzazione dopo la chiamata della classe base:  
+  
+ [!code-cpp[NVC_ATL_Windowing#78](../atl/codesnippet/cpp/example-implementing-a-property-page_6.h)]  
+  
+ Questo codice Usa i metodi COM del **documento** interfaccia per ottenere le proprietà che si sono interessati. Viene quindi utilizzato il wrapper dell'API Win32 forniti da [CDialogImpl](../atl/reference/cdialogimpl-class.md) e le relative classi base per visualizzare i valori delle proprietà per l'utente.  
+  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a>Si esegue l'override di IPropertyPageImpl  
+ Quando gli utenti desiderano applicare le modifiche apportate agli oggetti, il sito della pagina proprietà chiamerà il [applica](../atl/reference/ipropertypageimpl-class.md#apply) metodo. Questo è il luogo per eseguire l'inverso del codice in **attiva** , mentre **attiva** accetta valori dall'oggetto e li inserita nella pagina delle proprietà, i controlli **applica** accetta i valori dai controlli nella pagina delle proprietà e li inserisce nell'oggetto.  
+  
+ [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
+  
+> [!NOTE]
+>  La verifica [m_bDirty](../atl/reference/ipropertypageimpl-class.md#m_bdirty) all'inizio di questa implementazione è un controllo iniziale per evitare gli aggiornamenti non necessari degli oggetti se **applica** viene chiamato più volte. Esistono anche controlli in base a ognuno dei valori di proprietà per garantire che solo le modifiche apportate in una chiamata al metodo di **documento**.  
+  
+> [!NOTE]
+> **Documento** espone **FullName** come una proprietà di sola lettura. Per aggiornare il nome del file del documento in base alle modifiche apportate alla pagina delle proprietà, è necessario utilizzare il **salvare** per salvare il file con un nome diverso. Di conseguenza, il codice in una pagina delle proprietà non deve limitarsi al recupero o impostazione delle proprietà.  
+  
+##  <a name="vccontesting_the_property_page"></a>Visualizzare la pagina delle proprietà  
+ Per visualizzare questa pagina, è necessario creare un semplice oggetto di supporto. L'oggetto helper fornirà un metodo che semplifica la **OleCreatePropertyFrame** API per la visualizzazione di una singola pagina connessa a un singolo oggetto. Questo supporto sarà progettato in modo che può essere utilizzato da Visual Basic.  
+  
+ Utilizzare il [la finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md) e [guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md) per generare una nuova classe e usare `Helper` come il nome breve. Una volta creata, aggiungere un metodo come illustrato nella tabella seguente.  
   
 |Elemento|Valore|  
-|--------------|------------|  
+|----------|-----------|  
 |Nome metodo|`ShowPage`|  
 |Parametri|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|  
   
- Il parametro `bstrCaption` è la didascalia da visualizzare come titolo della finestra di dialogo.  Il parametro `bstrID` è una stringa che rappresenta un CLSID o un ProgID della pagina delle proprietà da visualizzare.  Il parametro `pUnk` sarà il puntatore `IUnknown` dell'oggetto le cui proprietà saranno configurate dalla pagina delle proprietà.  
+ Il `bstrCaption` parametro è la didascalia da visualizzare come titolo della finestra di dialogo. Il `bstrID` parametro è una stringa che rappresenta un CLSID o ProgID della pagina delle proprietà da visualizzare. Il `pUnk` parametro sarà il `IUnknown` puntatore dell'oggetto le cui proprietà verranno configurate dalla pagina delle proprietà.  
   
  Implementare il metodo come illustrato di seguito:  
   
- [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/CPP/example-implementing-a-property-page_8.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a> Creare una macro  
- Dopo aver compilato il progetto, è possibile testare la pagina delle proprietà e l'oggetto helper utilizzando una macro semplice che è possibile creare e l'ambiente di sviluppo di Visual Studio.  Questa macro viene creato un oggetto di supporto, quindi chiama il metodo **ShowPage** utilizzando il ProgID della pagina delle proprietà **DocProperties** e del puntatore **IUnknown** del documento attivo attualmente \- l'editor di Visual Studio.  Il codice necessario per questa macro viene indicato di seguito:  
+##  <a name="vcconcreating_a_macro"></a>Creazione di una Macro  
+ Dopo aver creato il progetto, è possibile testare la pagina delle proprietà e l'oggetto helper mediante una semplice macro che è possibile creare ed eseguire nell'ambiente di sviluppo di Visual Studio. Questa macro verrà creato un file di supporto dell'oggetto, quindi chiamare il relativo **ShowPage** utilizzando il ProgID del metodo il **DocProperties** pagina delle proprietà e il **IUnknown** indicatore di misura del documento attualmente attivo nell'editor di Visual Studio. Il codice che necessario per questa macro è illustrato di seguito:  
   
 ```  
 Imports EnvDTE  
 Imports System.Diagnostics  
-  
+ 
 Public Module AtlPages  
-  
+ 
     Public Sub Test()  
-        Dim Helper  
-        Helper = CreateObject("ATLPages7.Helper.1")  
-  
-        On Error Resume Next  
-        Helper.ShowPage( _  
-            ActiveDocument.Name, _  
-            "ATLPages7Lib.DocumentProperties.1", _  
-            DTE.ActiveDocument _  
-            )  
+    Dim Helper  
+    Helper = CreateObject("ATLPages7.Helper.1")  
+ 
+    On Error Resume Next  
+    Helper.ShowPage(_ 
+    ActiveDocument.Name,
+    _ 
+ "ATLPages7Lib.DocumentProperties.1",
+    _ 
+    DTE.ActiveDocument _)  
     End Sub  
-  
+ 
 End Module  
 ```  
   
- Quando si esegue questa macro, la pagina delle proprietà verrà visualizzato correntemente il nome file e lo stato di sola lettura al documento di testo attivo.  Lo stato di sola lettura del documento riflette solo la possibilità di scrivere nel documento nell'ambiente di sviluppo, non influisce sull'attributo di sola lettura del file su disco.  
+ Quando si esegue questa macro, verrà visualizzata la pagina delle proprietà che mostra il nome file e lo stato di sola lettura del documento attualmente attivo. Lo stato di sola lettura del documento riflette solo la possibilità di scrivere il documento nell'ambiente di sviluppo. non influisce l'attributo di sola lettura del file su disco.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Pagine delle proprietà](../atl/atl-com-property-pages.md)   
- [Esempio ATLPages](../top/visual-cpp-samples.md)
+ [Esempio ATLPages](../visual-cpp-samples.md)
+

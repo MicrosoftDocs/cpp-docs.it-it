@@ -1,40 +1,41 @@
 ---
-title: "Definizione di blocchi __asm come macro C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], as (macro C)"
-  - "macro, __asm (blocchi)"
-  - "Visual C, macro"
+title: Definizione dei blocchi ASM come macro C | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, __asm blocks
+- Visual C, macros
+- __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af95f7b2c74d797203a0e6b3ddd6a92ddcb51e5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Definizione di blocchi __asm come macro C
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="defining-asm-blocks-as-c-macros"></a>Definizione dei blocchi __asm come macro C
+**Sezione specifica Microsoft**  
   
- C macro offrono un modo pratico per inserire il codice assembly nel codice sorgente, ma richiedono particolare attenzione perché una macro si espande in una riga logica.  Per creare le macro senza problemi, seguire queste regole:  
+ Le macro del linguaggio C offrono un modo pratico per inserire il codice assembly nel codice sorgente, tuttavia richiedono una gestione aggiuntiva in quanto una macro si espande in una singola riga logica. Per creare macro senza problemi, attenersi alle seguenti regole:  
   
--   Racchiudere il  `__asm`blocco nel graffe.  
+-   Racchiudere il blocco `__asm` tra parentesi graffe.  
   
--   Inserire il  `__asm`parola chiave prima di ogni istruzione assembly.  
+-   Inserire la parola chiave `__asm` davanti a ogni istruzione assembly.  
   
--   Utilizzare i commenti C obsoleto \(  `/* comment */`\) anziché commenti stile assembly \(   `; comment`\) o commenti a riga singola C \(   `// comment`\).  
+-   Utilizzare i commenti di tipo obsoleto C ( `/* comment */`) invece di commenti stile assembly ( `; comment`) o commenti a riga singola di C ( `// comment`).  
   
- Per illustrare, l'esempio seguente definisce una semplice macro:  
+ Nell'esempio seguente viene definita una macro semplice:  
   
 ```  
 #define PORTIO __asm      \  
@@ -46,23 +47,23 @@ caps.handback.revision: 7
 }  
 ```  
   
- A prima vista, gli ultimi tre  `__asm`parole chiave sembrano superflui.  Tuttavia, esse sono necessarie perché la macro si espande in un'unica riga:  
+ A prima vista, le ultime tre parole chiave `__asm` sembrano superflue. Tuttavia, sono necessarie, perché la macro si espande in una singola riga:  
   
 ```  
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
 ```  
   
- Il terzo e quarto  `__asm`parole chiave sono necessarie come separatori di istruzione.  I separatori di istruzione riconosciuti in  `__asm`i blocchi sono il carattere di nuova riga e  `__asm`parola chiave.  Poiché un blocco definito come una macro è una riga logica, è necessario separare ciascuna istruzione con  `__asm`.  
+ La terza e la quarta parola chiave `__asm` sono necessarie come separatori di istruzione. Gli unici separatori di istruzione riconosciuti nei blocchi `__asm` sono il carattere di nuova riga e la parola chiave `__asm`. Poiché un blocco definito come macro è una riga logica, è necessario separare ogni istruzione con `__asm`.  
   
- Anche le parentesi graffe sono essenziali.  Se vengono omessi, il compilatore può essere confusa da C o C\+\+ istruzioni sulla stessa riga a destra della chiamata di macro.  Senza parentesi graffa di chiusura, il compilatore non è in grado di riconoscere quale codice assembly si interrompe e si vede C o C\+\+ istruzioni la  `__asm`blocco di istruzioni in linguaggio assembly.  
+ Anche le parentesi graffe sono indispensabili. Se vengono omesse, il compilatore può essere confuso dalle istruzioni C o C++ che si trovano nella stessa riga a destra della chiamata di macro. Senza la parentesi graffa di chiusura, il compilatore non è in grado di riconoscere il punto in cui il codice assembly viene interrotto né di considerare le istruzioni C o C++ presenti dopo il blocco `__asm` come istruzioni assembly.  
   
- Commenti stile assembly che iniziano con un punto e virgola \(**;**\) proseguono fino alla fine della riga.  Ciò può causare problemi nelle macro perché il compilatore ignora tutto dopo il commento, fino alla fine della riga logica.  Lo stesso vale per commenti a riga singola C o C\+\+ \(  `// comment`\).  Per evitare errori, utilizzare i commenti C obsoleto \(  `/* comment */`\) in  `__asm`blocchi definiti come macro.  
+ Commenti stile assembly che iniziano con un punto e virgola (**;**) continuano alla fine della riga. Questo causa problemi nelle macro perché il compilatore ignora tutti gli elementi dopo il commento, fino alla fine della riga logica. Lo stesso vale per i commenti a riga singola C o C++ (`// comment`). Per evitare errori, utilizzare commenti C obsoleti ( `/* comment */`) nei blocchi `__asm` definiti come macro.  
   
- Un  `__asm`blocco scritto come una macro C può accettare argomenti.  A differenza di una normale macro C, tuttavia, un  `__asm`macro non può restituire un valore.  Tale macro può essere utilizzata nelle espressioni di C o C\+\+.  
+ Un blocco `__asm` scritto come una macro C può accettare argomenti. Tuttavia, a differenza di una macro di C normale, una macro `__asm` non può restituire un valore. Pertanto non è possibile utilizzare tali macro nelle espressioni C o C++.  
   
- Prestare attenzione a non richiamare le macro di questo tipo indiscriminato.  Ad esempio, richiamare una macro di linguaggio assembly in una funzione dichiarata con la  `__fastcall`convenzione può causare risultati imprevisti.  \(Vedere  [utilizzo e conservazione dei registri in Assembly Inline](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).\)  
+ Prestare attenzione a non richiamare le macro di questo tipo senza alcun criterio. Ad esempio, richiamare una macro in linguaggio assembly in una funzione dichiarata con la convenzione `__fastcall` può causare risultati imprevisti. (Vedere [utilizzo e mantenimento dei registri nell'Assembly Inline](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md).)  
   
- **FINE specifico di Microsoft**  
+ **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembler inline](../../assembler/inline/inline-assembler.md)

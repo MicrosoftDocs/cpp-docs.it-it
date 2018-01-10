@@ -1,71 +1,72 @@
 ---
-title: "_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbicoll_l"
-  - "_mbsnbcoll_l"
-  - "_mbsnbcoll"
-  - "_mbsnbicoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbsnbicoll"
-  - "mbsnbcoll"
-  - "mbsnbicoll_l"
-  - "_mbsnbcoll"
-  - "_mbsnbicoll"
-  - "_ftcsnicoll"
-  - "_ftcsncoll"
-  - "mbsnbcoll_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcoll (funzione)"
-  - "_mbsnbcoll_l (funzione)"
-  - "_mbsnbicoll (funzione)"
-  - "_mbsnbicoll_l (funzione)"
-  - "_tcsncoll (funzione)"
-  - "_tcsnicoll (funzione)"
-  - "mbsnbcoll (funzione)"
-  - "mbsnbcoll_l (funzione)"
-  - "mbsnbicoll (funzione)"
-  - "mbsnbicoll_l (funzione)"
-  - "tcsncoll (funzione)"
-  - "tcsnicoll (funzione)"
+title: _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbicoll_l
+- _mbsnbcoll_l
+- _mbsnbcoll
+- _mbsnbicoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbsnbicoll
+- mbsnbcoll
+- mbsnbicoll_l
+- _mbsnbcoll
+- _mbsnbicoll
+- _ftcsnicoll
+- _ftcsncoll
+- mbsnbcoll_l
+dev_langs: C++
+helpviewer_keywords:
+- _mbsnbcoll_l function
+- mbsnbcoll_l function
+- _mbsnbcoll function
+- _tcsnicoll function
+- mbsnbcoll function
+- mbsnbicoll_l function
+- mbsnbicoll function
+- _tcsncoll function
+- _mbsnbicoll function
+- _mbsnbicoll_l function
+- tcsncoll function
+- tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0ab65644f4a7bcb93ceb2156a5354a81358e47c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# _mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Confronta `n` byte di due stringhe di caratteri multibyte utilizzando le informazioni della tabella codici multibyte.  
+# <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
+Confronta `n` byte di due stringhe di caratteri multibyte usando le informazioni della tabella codici multibyte.  
   
 > [!IMPORTANT]
->  Questa API non può essere utilizzata nelle applicazioni che vengono eseguite in Windows Runtime.  Per ulteriori informazioni, vedere [Funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _mbsnbcoll(  
@@ -92,7 +93,7 @@ int _mbsnbicoll_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `string1, string2`  
  Stringhe da confrontare.  
   
@@ -100,53 +101,53 @@ int _mbsnbicoll_l(
  Numero di byte da confrontare.  
   
  `locale`  
- Impostazioni locali da utilizzare.  
+ Impostazioni locali da usare.  
   
-## Valore restituito  
- Il valore restituito indica la relazione fra le sottostringhe `string1` e `string2`.  
+## <a name="return-value"></a>Valore restituito  
+ Il valore restituito indica la relazione delle sottostringhe di `string1` e `string2`.  
   
 |Valore restituito|Descrizione|  
-|-----------------------|-----------------|  
-|\< 0|Sottostringa `string1` minore della sottostringa `string2`.|  
-|0|Sottostringa `string1` identica alla sottostringa `string2`.|  
-|\> 0|Sottostringa `string1` superiore alla sottostringa `string2`.|  
+|------------------|-----------------|  
+|< 0|La sottostringa di `string1` è minore della sottostringa di `string2`.|  
+|0|La sottostringa di `string1` è identica alla sottostringa di `string2`.|  
+|> 0|La sottostringa di `string1` è maggiore della sottostringa di `string2`.|  
   
- Se `string1` o `string2` è `NULL` o `count` è maggiore di `INT_MAX`, iene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`.  Per utilizzare `_NLSCMPERROR`, includere String.h o Mbstring.h.  
+ Se `string1` o `string2` è `NULL` oppure `count` è maggiore di `INT_MAX`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`. Per usare `_NLSCMPERROR`, includere String.h o Mbstring.h.  
   
-## Note  
- Ciascuna di queste funzione raccoglie, al massimo, il primo byte `count` in `string1` e `string2` e restituisce un valore che indica la relazione tra le sottostringhe `string1` e `string2`.  Se il byte finale della sottostringa di `string1` o `string2` è un byte di apertura, non viene incluso nel confronto; queste funzioni vengono confrontano solamente i caratteri completi delle sottostringhe.  `_mbsnbicoll` è una versione senza distinzione tra maiuscole e minuscole di `_mbsnbcoll`.  Come `_mbsnbcmp` e `_mbsnbicmp`, `_mbsnbcoll` e `_mbsnbicoll` confrontano le due stringhe di caratteri multibyte secondo l'ordine lessicografico specificato dalla [tabella codici](../../c-runtime-library/code-pages.md) multibyte attualmente in uso.  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni collaziona, al massimo, i primi `count` byte in `string1` e `string2`, quindi restituisce un valore che indica la relazione tra le sottostringhe risultanti di `string1` e `string2`. Se il byte finale nella sottostringa di `string1` o `string2` è un byte di apertura, non viene incluso nel confronto. Queste funzioni confrontano solo i caratteri completati nelle sottostringhe. `_mbsnbicoll` è una versione di `_mbsnbcoll` che non fa distinzione tra maiuscole e minuscole. Come `_mbsnbcmp` e `_mbsnbicmp`, `_mbsnbcoll` e `_mbsnbicoll` collazionano le due stringhe di caratteri multibyte in base all'ordine lessicografico specificato dalla [tabella codici](../../c-runtime-library/code-pages.md) multibyte in uso.  
   
- Per alcune tabelle codici e per il set di caratteri corrispondenti, l'ordine di caratteri nel set di caratteri potrebbe differire dall'ordine dei caratteri lessicografici.  Nelle impostazioni locali "C", questo non avviene: l'ordine dei caratteri nel set di caratteri ASCII è identico all'ordine lessicografico dei caratteri.  Tuttavia, in alcune tabelle codici Europee, ad esempio, il carattere "a" \(valore 0x61\) precede il carattere "ä" \(valore 0xE4\) nel set di caratteri, ma il carattere "ä" precede il carattere lessicografico "a".  Per eseguire un confronto lessicografico delle stringhe di byte in tale istanza, utilizzare `_mbsnbcoll` anziché `_mbsnbcmp`; per controllare solamente l'uguaglianza della stringa, utilizzare `_mbsnbcmp`.  
+ Per alcune tabelle codici e i set di caratteri corrispondenti, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ciò non è vero nelle impostazioni locali "C". L'ordine dei caratteri nel set di caratteri ASCII è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in alcune pagine di un'altra tabella, ad esempio, il carattere 'a' (valore 0x61) precede il carattere 'ä' (valore 0xE4) nel tipo di carattere impostato, ma il carattere 'ä' precede il carattere 'a' livello lessicografico. Per eseguire un confronto lessicografico delle stringhe in base ai byte in questo caso, usare `_mbsnbcoll` anziché `_mbsnbcmp`. Per controllare solo l'uguaglianza delle stringhe, usare `_mbsnbcmp`.  
   
- Poiché le funzioni `coll` raccolgono le stringhe lessicografiche per il confronto, mentre le funzioni `cmp` verificano semplicemente l'uguaglianza della stringa, le funzioni `coll` sono più lente delle versioni corrispondenti `cmp`.  Pertanto, le funzioni `coll` devono essere utilizzate solamente quando esiste una differenza tra l'ordine del set di caratteri e l'ordine dei caratteri lessicografici nella tabella codici corrente e questa differenza è particolarmente interessante per il confronto di stringhe.  
+ Dato che le funzioni `coll` collazionano le stringhe a livello lessicografico per il confronto, mentre le funzioni `cmp` testano semplicemente le stringhe per verificarne l'uguaglianza, le funzioni `coll` sono molto più lente delle versioni `cmp` corrispondenti. È quindi consigliabile usare le funzioni `coll` solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto.  
   
- Il valore di output è interessato dall'impostazione dell'impostazione di categoria `LC_CTYPE` delle impostazioni locali; vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) per ulteriori informazioni.  Le versioni di queste funzioni senza il suffisso `_l` utilizzano le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali; le versioni con il suffisso `_l` sono identiche, ad eccezione del fatto che utilizzano il parametro delle impostazioni locali che viene passato.  Per ulteriori informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
-### Mapping di routine su testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
-|`_tcsncoll`|[\_strncoll](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|`_mbsnbcoll`|[\_wcsncoll](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|  
-|`_tcsncoll_l`|[\_strncoll, \_wcsncoll, \_mbsncoll, \_strncoll\_l, \_wcsncoll\_l, \_mbsncoll\_l](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|`_mbsnbcoll_l`|[\_wcsncoll\_l](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|  
-|`_tcsnicoll`|[\_strnicoll](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|`_mbsnbicoll`|[\_wcsnicoll](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|  
-|`_tcsnicoll_l`|[\_strnicoll\_l](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|`_mbsnbicoll_l`|[\_wcsnicoll\_l](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_tcsncoll`|[_strncoll](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|`_mbsnbcoll`|[_wcsncoll](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|  
+|`_tcsncoll_l`|[_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|`_mbsnbcoll_l`|[_wcsncoll_l](../../c-runtime-library/reference/strncoll-wcsncoll-mbsncoll-strncoll-l-wcsncoll-l-mbsncoll-l.md)|  
+|`_tcsnicoll`|[_strnicoll](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|`_mbsnbicoll`|[_wcsnicoll](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|  
+|`_tcsnicoll_l`|[_strnicoll_l](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|`_mbsnbicoll_l`|[_wcsnicoll_l](../../c-runtime-library/reference/strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_mbsnbcoll`|\<mbstring.h\>|  
-|`_mbsnbcoll_l`|\<mbstring.h\>|  
-|`_mbsnbicoll`|\<mbstring.h\>|  
-|`_mbsnbicoll_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcoll`|\<mbstring.h>|  
+|`_mbsnbcoll_l`|\<mbstring.h>|  
+|`_mbsnbicoll`|\<mbstring.h>|  
+|`_mbsnbicoll_l`|\<mbstring.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcat, \_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [\_mbsnbcmp, \_mbsnbcmp\_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [\_mbsnbicmp, \_mbsnbicmp\_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
+ [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
+ [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
- [strncmp, wcsncmp, \_mbsncmp, \_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp, \_wcsnicmp, \_mbsnicmp, \_strnicmp\_l, \_wcsnicmp\_l, \_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)
+ [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Conversioni dai tipi a virgola mobile
 Quando un valore **float** viene convertito in **double** o `long double` o un valore **double** viene convertito in `long double` non si verifica alcun cambiamento del valore. Se possibile i valori **double** convertiti in valori **float** vengono rappresentati esattamente. Se il valore non può essere rappresentato esattamente, la precisione non è mantenuta. Se il risultato non è incluso nell'intervallo, il comportamento non è definito. Per l'intervallo dei tipi a virgola mobile vedere [Limiti sulle costanti a virgola mobile](../c-language/limits-on-floating-point-constants.md).  
@@ -37,7 +38,7 @@ Quando un valore **float** viene convertito in **double** o `long double` o un v
   
 ### <a name="conversions-from-floating-point-types"></a>Conversioni dai tipi a virgola mobile  
   
-|Da|Per|Metodo|  
+|Da|A|Metodo|  
 |----------|--------|------------|  
 |**float**|`char`|Convertire a **long**; convertire **long** a `char`|  
 |**float**|**short**|Convertire a **long**; convertire **long** a **short**|  

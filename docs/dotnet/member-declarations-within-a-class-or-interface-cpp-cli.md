@@ -1,60 +1,62 @@
 ---
-title: "Dichiarazioni di membri in una classe o interfaccia (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "membri di classi, sintassi di dichiarazione"
-  - "membri, sintassi di dichiarazione"
+title: Dichiarazioni di membro all'interno di una classe o interfaccia (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- members, declaration syntax
+- class members, declaration syntax
 ms.assetid: 95d312a4-198b-46f0-b8f5-15253807c55e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Dichiarazioni di membri in una classe o interfaccia (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] la dichiarazione di proprietà e operatori è stata ampiamente riprogettata, in modo da nascondere i dettagli di implementazione sottostanti, che nella progettazione con le estensioni gestite di C\+\+ risultavano esposti.  Sono state apportate modifiche anche alle dichiarazioni di eventi.  
+# <a name="member-declarations-within-a-class-or-interface-ccli"></a>Dichiarazioni di membri in una classe o interfaccia (C++/CLI)
+La dichiarazione di proprietà e operatori è stata ampiamente rielaborata dalle estensioni gestite per C++ a Visual C++, nascondere i dettagli di implementazione sottostante che sono stati esposti nella progettazione delle estensioni gestite. Le dichiarazioni di eventi sono state modificate anche.  
   
- Nell'ambito delle modifiche non supportate nelle estensioni gestite, i costruttori statici possono ora essere definiti non inline \(nelle estensioni gestite era infatti necessario definirli inline\) ed è stata introdotta la nozione di costruttore delegante.  
+ Sotto la categoria di modifiche che hanno nessun supporto delle estensioni gestite, i costruttori statici possono ora essere definito out-of-line (che sono stati deve essere definito inline nelle estensioni gestite) e la nozione di un costruttore delegante è stata introdotta.  
   
-## Argomenti della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Dichiarazione di proprietà](../dotnet/property-declaration.md)  
- Illustra le modifiche relative alle dichiarazioni di proprietà.  
+ Illustra le modifiche alle dichiarazioni di proprietà.  
   
  [Dichiarazione degli indici di proprietà](../dotnet/property-index-declaration.md)  
- Illustra le modifiche relative alle dichiarazioni di proprietà indicizzate.  
+ Illustra le modifiche alle dichiarazioni di proprietà indicizzate.  
   
  [Delegati ed eventi](../dotnet/delegates-and-events.md)  
- Illustra le modifiche relative alla sintassi per la dichiarazione di delegati ed eventi.  
+ Illustra le modifiche alla sintassi per la dichiarazione di delegati ed eventi.  
   
- [Utilizzo di una funzione virtuale sealed](../dotnet/sealing-a-virtual-function.md)  
- Illustra le modifiche relative alla sintassi per impostare una funzione come sealed.  
+ [Uso di una funzione virtuale sealed](../dotnet/sealing-a-virtual-function.md)  
+ Illustra le modifiche alla sintassi per l'utilizzo di una funzione sealed.  
   
  [Operatori di overload](../dotnet/overloaded-operators.md)  
  Illustra le modifiche relative all'overload degli operatori.  
   
  [Modifiche agli operatori di conversione](../dotnet/changes-to-conversion-operators.md)  
- Illustra le modifiche relative agli operatori di conversione.  
+ Illustra le modifiche agli operatori di conversione.  
   
  [Override esplicito di un membro di interfaccia](../dotnet/explicit-override-of-an-interface-member.md)  
- Illustra le modifiche relative al metodo che consente di eseguire in modo esplicito l'override di un membro di interfaccia.  
+ Illustra le modifiche al metodo per l'override in modo esplicito un membro di interfaccia.  
   
  [Funzioni virtuali private](../dotnet/private-virtual-functions.md)  
- Illustra le modifiche relative alla modalità di gestione delle funzioni virtuali private nelle classi derivate.  
+ Illustra le modifiche in modalità di gestione delle funzioni virtuali private nelle classi derivate.  
   
  [L'attributo di collegamento dei membri integrali di Static Const non è più Literal](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
- Illustra le modifiche relative alla modalità di collegamento dei membri integrali di `static const` e alla modalità di dichiarazione esplicita di una costante tramite la nuova parola chiave `literal`.  
+ Vengono illustrate le modifiche in modo `static const` collegamento dei membri integrali e su come dichiarare in modo esplicito una costante usando il nuovo `literal` (parola chiave).  
   
-## Vedere anche  
- [Nozioni di base della migrazione in C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)
+## <a name="see-also"></a>Vedere anche  
+ [Nozioni di base della migrazione in C++/CLI](../dotnet/cpp-cli-migration-primer.md)

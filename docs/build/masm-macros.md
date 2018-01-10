@@ -1,44 +1,45 @@
 ---
-title: "Macro MASM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Macro MASM | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21410432-72fc-4795-bc93-e78123f9f14f
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Macro MASM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per semplificare l'utilizzo delle [Pseudo operazioni in modalità raw](../build/raw-pseudo-operations.md), è disponibile un set di macro, definite in ksamd64.inc, che possono essere utilizzate per creare tipici prologhi ed epiloghi delle routine.  
+# <a name="masm-macros"></a>Macro MASM
+Per semplificare l'utilizzo del [Raw Pseudo operazioni](../build/raw-pseudo-operations.md), esistono una serie di macro, definite in ksamd64.inc, che può essere utilizzato per creare procedure tipiche prologhi ed epiloghi.  
   
-## Note  
+## <a name="remarks"></a>Note  
   
 |Macro|Descrizione|  
 |-----------|-----------------|  
-|alloc\_stack\(n\)|Alloca uno stack frame di n byte \(mediante un'istruzione sub rsp, n\), quindi genera le informazioni di rimozione appropriate \(.allocstack n\).|  
-|save\_reg reg, loc|Salva il registro non volatile reg nello stack in corrispondenza dell'offset RSP loc, quindi genera le informazioni di rimozione appropriate  \(.savereg reg, loc\).|  
-|push\_reg reg|Inserisce il registro non volatile reg nello stack, quindi genera le informazioni di rimozione appropriate  \(.pushreg reg\).|  
-|rex\_push\_reg reg|Salvare un registro non volatile nello stack utilizzando un incremento di 2 byte e genera invece opportuno rimuovere le informazioni nel registro di .pushreg\) che questo deve essere utilizzato se la push è la prima istruzione nella funzione assicurarsi che la funzione è calda \- patchable.|  
-|save\_xmm128 reg, loc|Salva il registro XMM non volatile reg nello stack in corrispondenza dell'offset RSP loc, quindi genera le informazioni di rimozione appropriate \(.savexmm128 reg, loc\).|  
-|set\_frame reg, offset|Imposta il frame register reg in modo che corrisponda a RSP \+ offset \(mediante un'istruzione mov o lea\), quindi genera le informazioni di rimozione appropriate \(.set\_frame reg, offset\).|  
-|push\_eflags|Inserisce il contenuto del registro EFLAGS \(mediante un'istruzione pushfq\), quindi genera le informazioni di rimozione appropriate \(.alloc\_stack 8\).|  
+|alloc_stack(n)|Alloca uno stack frame di n byte (tramite sub rsp, n), quindi genera informazioni. allocstack (n) di rimozione appropriato|  
+|save_reg reg, loc|Salva un registro non volatile reg nello stack in corrispondenza dell'offset RSP loc, quindi genera informazioni di rimozione appropriato. (.savereg reg, loc)|  
+|reg push_reg|Inserisce un registro non volatile reg nello stack, quindi genera informazioni di rimozione appropriato. . pushreg (reg)|  
+|reg rex_push_reg|Salvare un registro non volatile nello stack utilizzando un push di 2 byte e trasmette informazioni (pushreg reg) deve essere utilizzato se la prima istruzione nella funzione per verificare che la funzione sia inserimento il push di rimozione appropriato.|  
+|save_xmm128 reg, loc|Salva registro XMM non volatile reg nello stack in corrispondenza dell'offset RSP loc, quindi genera informazioni (savexmm128 reg, loc) di rimozione appropriato|  
+|set_frame reg, offset|Imposta il frame register reg per essere RSP + offset (mediante un'istruzione mov o lea), quindi genera informazioni (set_frame reg, offset) di rimozione appropriato|  
+|push_eflags|Inserisce il contenuto con un'istruzione pushfq e trasmette le rimozione appropriate informazioni (alloc_stack 8)|  
   
- Di seguito è riportato un esempio di prologo di funzione, in cui è illustrato l'utilizzo corretto delle macro:  
+ Di seguito è riportato un prologo di funzione di esempio con l'utilizzo corretto delle macro:  
   
 ```  
 SkFrame struct   
-Fill    dq ?; fill to 8 mod 16   
+Fill    dq ?; fill to 8 mod 16   
 SavedRdi dq ?; saved register RDI   
 SavedRsi dq ?; saved register RSI   
 SkFrame ends  
@@ -67,5 +68,5 @@ ret
 sample2 ENDP  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Helper di rimozione per MASM](../build/unwind-helpers-for-masm.md)

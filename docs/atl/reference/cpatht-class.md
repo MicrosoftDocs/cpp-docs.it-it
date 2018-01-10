@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,19 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 781f2f6a3fba0e7ca4698809f196e623cfbb6bb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 Questa classe rappresenta un percorso.  
@@ -108,7 +91,7 @@ class CPathT
 |----------|-----------------|  
 |[CPathT::PCXSTR](#pcxstr)|Un tipo stringa costante.|  
 |[CPathT::PXSTR](#pxstr)|Un tipo stringa.|  
-|[CPathT::XCHAR](#xchar)|Tipo di carattere.|  
+|[CPathT::XCHAR](#xchar)|Tipo carattere.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
@@ -162,9 +145,9 @@ class CPathT
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[StringType const CPathT::operator /](#operator_const_stringtype_amp)|Questo operatore consente all'oggetto di essere considerato come una stringa.|  
+|[StringType const CPathT::operator &](#operator_const_stringtype_amp)|Questo operatore consente all'oggetto di essere considerato come una stringa.|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Questo operatore consente all'oggetto di essere considerato come una stringa.|  
-|[CPathT::operator StringType /](#operator_stringtype)|Questo operatore consente all'oggetto di essere considerato come una stringa.|  
+|[CPathT::operator StringType &](#operator_stringtype)|Questo operatore consente all'oggetto di essere considerato come una stringa.|  
 |[+ = CPathT::operator](#operator_add_eq)|Questo operatore aggiunge una stringa per il percorso.|  
   
 ### <a name="public-data-members"></a>Membri dati pubblici  
@@ -791,7 +774,7 @@ void UnquoteSpaces();
  Per ulteriori informazioni, vedere [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
 ##  <a name="xchar"></a>CPathT::XCHAR  
- Tipo di carattere.  
+ Tipo carattere.  
   
 ```
 typedef StringType::XCHAR XCHAR;

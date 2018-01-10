@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 078352ab0b9d9e33a24c04a5e933fe9db68d8473
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9705e6a6940411b1758410882363f2f85dd145f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>Strutture, enumerazioni e campi di bit
 -   [Accesso non corretto a un'unione](../c-language/improper-access-to-a-union.md)  

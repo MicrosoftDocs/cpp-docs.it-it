@@ -1,55 +1,59 @@
 ---
-title: "ODBC: chiamata diretta delle funzioni dell&#39;API ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API [C++], chiamata"
-  - "funzioni catalogo (ODBC)"
-  - "funzioni catalogo (ODBC), chiamata"
-  - "chiamate dirette ad API ODBC"
-  - "ODBC [C++], funzioni API"
-  - "ODBC [C++], funzioni catalogo"
-  - "funzioni API ODBC [C++]"
-  - "funzioni API ODBC [C++], chiamata"
-  - "classi ODBC [C++], e ODBC API"
+title: 'ODBC: Chiamata di API ODBC direttamente le funzioni | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC API functions [C++], calling
+- ODBC [C++], catalog functions
+- ODBC API functions [C++]
+- APIs [C++], calling
+- ODBC classes [C++], vs. ODBC API
+- direct ODBC API calls
+- catalog functions (ODBC)
+- catalog functions (ODBC), calling
+- ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ODBC: chiamata diretta delle funzioni dell&#39;API ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le classi di database forniscono alle [origini dati](../../data/odbc/data-source-odbc.md) un'interfaccia più semplice di quella fornita da ODBC.  Di conseguenza, le classi non includono tutte le API ODBC.  Per le funzionalità non supportate dalle classi, è necessario chiamare direttamente le funzioni dell'API ODBC.  È necessario, ad esempio, chiamare direttamente le funzioni del catalogo ODBC, tra cui **::SQLColumns**, **::SQLProcedures** e **::SQLTables**.  
+# <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: chiamata diretta delle funzioni dell'API ODBC
+Le classi di database forniscono un'interfaccia più semplice per un [origine dati](../../data/odbc/data-source-odbc.md) rispetto a ODBC. Di conseguenza, le classi non includono tutte le API ODBC. Per tutte le funzionalità non è compresa la capacità delle classi, è necessario chiamare direttamente le funzioni API ODBC. Ad esempio, è necessario chiamare le funzioni di catalogo ODBC (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**e altri) direttamente.  
   
 > [!NOTE]
->  È possibile accedere alle origini dati ODBC tramite le classi ODBC MFC, come descritto nel presente argomento, oppure tramite le classi DAO \(Data Access Object\) MFC.  
+>  Origini dati ODBC sono accessibili tramite le classi ODBC MFC, come descritto in questo argomento, oppure tramite le classi MFC oggetto DAO (Data Access).  
   
- Per chiamare direttamente una funzione API ODBC, è necessario effettuare le stesse operazioni che si eseguirebbero per le chiamate senza il framework.  Le operazioni sono le seguenti:  
+ Per chiamare una funzione API ODBC direttamente, è necessario eseguire gli stessi passaggi da eseguire se si sono effettuando chiamate senza il framework. Essi sono passaggi:  
   
--   Allocare la memoria per archiviare tutti i risultati restituiti dalla chiamata.  
+-   Allocare spazio di archiviazione per i risultati che della chiamata.  
   
--   Passare un handle ODBC **HDBC** o **HSTMT**, in base alla firma della funzione in base al parametro.  Utilizzare la macro [AFXGetHENV](../Topic/AfxGetHENV.md) per recuperare l'handle ODBC.  
+-   Passare a un database ODBC **HDBC** o **HSTMT** gestire, a seconda della firma di parametro della funzione. Utilizzare il [AFXGetHENV](../../mfc/reference/database-macros-and-globals.md#afxgethenv) (macro) per recuperare l'handle ODBC.  
   
-     Poiché le variabili membro **CDatabase::m\_hdbc** e **CRecordset::m\_hstmt** sono disponibili, non è necessario allocarle e inizializzarle manualmente.  
+     Variabili membro **CDatabase:: M_hdbc** e **CRecordset:: M_hstmt** sono disponibili in modo che non è necessaria allocare e inizializzare manualmente.  
   
--   È probabilmente necessario chiamare funzioni ODBC aggiuntive prima o dopo la chiamata principale.  
+-   Ad esempio chiamare funzioni ODBC aggiuntive prima o dopo la chiamata principale.  
   
--   Al termine, deallocare la memoria per l'archiviazione.  
+-   Al termine, deallocare spazio di archiviazione.  
   
- Per ulteriori informazioni su queste operazioni, vedere l'SDK [Open Database Connectivity \(ODBC\)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) nella documentazione di MSDN.  
+ Per ulteriori informazioni su questi passaggi, vedere il [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK nella documentazione di MSDN.  
   
- È necessario inoltre effettuare ulteriori operazioni per verificare i valori restituiti dalla funzione, assicurarsi che il programma creato non sia in attesa del completamento di una chiamata asincrona e così via.  È possibile semplificare queste ultime operazioni utilizzando le macro `AFX_SQL_ASYNC` e `AFX_SQL_SYNC`.  Per ulteriori informazioni, vedere [Macro e funzioni globali](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md) in *Riferimenti alla libreria MFC*.  
+ Oltre a questi passaggi, è necessario eseguire passaggi aggiuntivi per controllare i valori restituiti dalla funzione, assicurarsi che il programma non è in attesa di una chiamata asincrona alla fine e così via. È possibile semplificare queste ultime operazioni utilizzando il `AFX_SQL_ASYNC` e `AFX_SQL_SYNC` macro. Per ulteriori informazioni, vedere [macro e funzioni globali](../../mfc/reference/mfc-macros-and-globals.md) nel *riferimenti alla libreria MFC*.  
+
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su ODBC](../../data/odbc/odbc-basics.md)

@@ -1,34 +1,33 @@
 ---
-title: "Informazioni sulla generazione di manifesti per programmi C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manifesti [C++]"
+title: Informazioni sulla generazione di manifesti per programmi C/C++ | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-caps.latest.revision: 12
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 848b4b449fa2c9c8930a616b70a5b61cb28d8fbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Informazioni sulla generazione di manifesti per programmi C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un [manifesto](http://msdn.microsoft.com/library/aa375365) è un documento XML che può essere un file XML esterno oppure una risorsa incorporata in un'applicazione o in un assembly.  Il manifesto di un'[applicazione isolata](http://msdn.microsoft.com/library/aa375190) viene utilizzato per gestire i nomi e le versioni di assembly side\-by\-side condivisi a cui l'applicazione deve essere associata in fase di esecuzione.  Nel manifesto di un [assembly side\-by\-side](_win32_side_by_side_assemblies) ne vengono specificate le dipendenze da nomi, versioni, risorse e altri assembly.  
+# <a name="understanding-manifest-generation-for-cc-programs"></a>Informazioni sulla generazione di manifesti per programmi C/C++
+Oggetto [manifesto](http://msdn.microsoft.com/library/aa375365) è un documento XML che può essere un file XML esterno o una risorsa incorporato all'interno di un'applicazione o un assembly. Il manifesto di un [applicazione isolata](http://msdn.microsoft.com/library/aa375190) viene utilizzato per gestire i nomi e le versioni di assembly side-by-side condivisi a cui l'applicazione deve essere associato in fase di esecuzione. Il manifesto di un assembly side-by-side specifica le dipendenze dei nomi, versioni, risorse e gli altri assembly.  
   
- Sono disponibili due modi per creare un manifesto per un'applicazione isolata o per un assembly side\-by\-side.  Innanzitutto, l'autore dell'assembly può creare manualmente un file manifesto seguendo le regole e i requisiti di denominazione.  In alternativa, se un programma dipende esclusivamente da assembly [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] quali CRT, MFC, ATL o altri, il manifesto potrà essere generato automaticamente dal linker.  
+ Esistono due modi per creare un manifesto per un'applicazione isolata o un assembly side-by-side. In primo luogo, l'autore dell'assembly è possibile creare manualmente un file manifesto seguendo le regole e requisiti di denominazione. In alternativa, se un programma dipende esclusivamente da assembly di Visual C++, ad esempio CRT, MFC, ATL o altri utenti, il manifesto può essere generato automaticamente dal linker.  
   
- Le intestazioni delle librerie [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] contengono informazioni sull'assembly. Quando le librerie vengono incluse nel codice dell'applicazione, tali informazioni sull'assembly vengono utilizzate dal linker per formare un manifesto per il file binario finale.  Il linker non incorpora il file manifesto all'interno del file binario e può generare il manifesto esclusivamente come file esterno.  Un manifesto come file esterno potrebbe non funzionare in tutti gli scenari.  Ad esempio, è consigliabile che gli assembly privati dispongano di manifesti incorporati.  Nelle build da riga di comando, ad esempio quelle che utilizzano nmake per compilare il codice, un manifesto può essere incorporato mediante lo strumento Manifesto. Per ulteriori informazioni, vedere [Generazione di manifesti dalla riga di comando](../build/manifest-generation-at-the-command-line.md).  Quando si esegue la compilazione in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], un manifesto può essere incorporato impostando una proprietà per lo strumento Manifesto nella finestra di dialogo **Proprietà progetti**; vedere [Generazione di manifesti in Visual Studio](../build/manifest-generation-in-visual-studio.md).  
+ Le intestazioni delle librerie di Visual C++ contengono informazioni sull'assembly e quando le librerie sono inclusi nel codice dell'applicazione, queste informazioni sull'assembly viene utilizzate dal linker per creare un manifesto per il file binario finale. Il linker incorpora il file manifesto nel file binario e può generare solo il manifesto come file esterno. Con un manifesto come file esterno potrebbe non funzionare per tutti gli scenari. Ad esempio, è consigliabile che gli assembly privati dispongano di manifesti incorporati. Nelle compilazioni della riga di comando, ad esempio quelli che utilizzano nmake per compilare il codice, è possibile incorporare un manifesto utilizzando lo strumento manifesto. Per ulteriori informazioni vedere [generazione manifesto nella riga di comando](../build/manifest-generation-at-the-command-line.md). Durante la compilazione in [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)], impostando una proprietà per lo strumento manifesto in è possibile incorporare un manifesto di **le proprietà del progetto** finestra di dialogo, vedere [generazione in Visual Studio](../build/manifest-generation-in-visual-studio.md).  
   
-## Vedere anche  
- [Concetti di applicazioni isolate e assembly side\-by\-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [Compilazione di applicazioni isolate C\/C\+\+ e di assembly side\-by\-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concetti di applicazioni isolate e assembly Side-by-side](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
+ [Compilazione di applicazioni isolate C/C++ e di assembly side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

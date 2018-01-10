@@ -1,11 +1,10 @@
 ---
-title: Classe CComGITPtr | Documenti di Microsoft
+title: Classe CComGITPtr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,38 +17,22 @@ f1_keywords:
 - ATLBASE/ATL::CComGITPtr::GetCookie
 - ATLBASE/ATL::CComGITPtr::Revoke
 - ATLBASE/ATL::CComGITPtr::m_dwCookie
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComGITPtr class
+dev_langs: C++
+helpviewer_keywords: CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9fe9d9f6d03a6d72c1ce3332419c738570a53803
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>Classe CComGITPtr
-Questa classe fornisce metodi per la gestione con i puntatori a interfaccia e la tabella di interfaccia globale (GIT).  
+Questa classe fornisce metodi per la gestione di puntatori a interfaccia e la tabella di interfaccia globale (GIT).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +43,7 @@ class CComGITPtr
   
 #### <a name="parameters"></a>Parametri  
  `T`  
- Il tipo del puntatore a interfaccia a essere archiviati nella tabella GIT.  
+ Il tipo del puntatore a interfaccia da archiviare in GIT.  
   
 ## <a name="members"></a>Membri  
   
@@ -75,11 +58,11 @@ class CComGITPtr
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComGITPtr::Attach](#attach)|Chiamare questo metodo per registrare il puntatore di interfaccia nella tabella di interfaccia globale (GIT).|  
-|[CComGITPtr::CopyTo](#copyto)|Chiamare questo metodo per copiare il puntatore passato l'interfaccia della tabella di interfaccia globale (GIT).|  
+|[CComGITPtr::Attach](#attach)|Chiamare questo metodo per registrare il puntatore di interfaccia in una tabella di interfaccia globale (GIT).|  
+|[CComGITPtr::CopyTo](#copyto)|Chiamare questo metodo per copiare il puntatore passato l'interfaccia tra la tabella di interfaccia globale (GIT).|  
 |[CComGITPtr::Detach](#detach)|Chiamare questo metodo per l'interfaccia da dissociare il `CComGITPtr` oggetto.|  
 |[CComGITPtr::GetCookie](#getcookie)|Chiamare questo metodo per restituire il cookie dal `CComGITPtr` oggetto.|  
-|[CComGITPtr::Revoke](#revoke)|Chiamare questo metodo per rimuovere l'interfaccia della tabella di interfaccia globale (GIT).|  
+|[CComGITPtr::Revoke](#revoke)|Chiamare questo metodo per rimuovere l'interfaccia dalla tabella di interfaccia globale (GIT).|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -95,7 +78,7 @@ class CComGITPtr
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Il cookie.|  
   
 ## <a name="remarks"></a>Note  
- Gli oggetti che il gestore di marshalling a thread libero di aggregazione ed è necessario utilizzare puntatori a interfaccia ottenuti da altri oggetti è necessario eseguire passaggi aggiuntivi per garantire che le interfacce vengono sottoposti a marshalling in modo corretto. In genere questo implica l'archiviazione dei puntatori a interfaccia nella tabella GIT e ottenere il puntatore dalla tabella GIT ogni volta che viene utilizzato. La classe `CComGITPtr` viene fornito per consentire l'utilizzo di puntatori a interfaccia archiviati nella tabella GIT.  
+ Gli oggetti che il gestore di marshalling a thread libero di aggregazione e l'esigenza di utilizzare puntatori a interfacce ottenuti da altri oggetti è necessario eseguire passaggi aggiuntivi per assicurarsi che le interfacce in modo corretto vengono effettuato il marshalling. In genere questo implica l'archiviazione dei puntatori a interfaccia in GIT e ottenere il puntatore da GIT ogni volta che viene utilizzato. La classe `CComGITPtr` viene fornita per consentire l'utilizzo di puntatori a interfaccia archiviati nella tabella GIT.  
   
 > [!NOTE]
 >  La funzione di tabella di interfaccia globale è disponibile solo in Windows 95 con DCOM versione 1.1 e versioni successive, Windows 98, Windows NT 4.0 con Service Pack 3 e versioni successive e Windows 2000.  
@@ -104,7 +87,7 @@ class CComGITPtr
  **Intestazione:** atlbase. h  
   
 ##  <a name="attach"></a>CComGITPtr::Attach  
- Chiamare questo metodo per registrare il puntatore di interfaccia nella tabella di interfaccia globale (GIT).  
+ Chiamare questo metodo per registrare il puntatore di interfaccia in una tabella di interfaccia globale (GIT).  
   
 ```
 HRESULT Attach(T* p) throw();
@@ -120,10 +103,10 @@ HRESULT Attach(DWORD dwCookie) throw();
  Il cookie utilizzato per identificare il puntatore di interfaccia.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Nelle build di debug, si verificherà un errore di asserzione se il sistema GIT non è valido o se il cookie è uguale a NULL.  
+ Nelle build di debug, si verificherà un errore di asserzione se GIT non è valido o se il cookie è uguale a NULL.  
   
 ##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  Costruttore.  
@@ -138,7 +121,7 @@ CComGITPtr(CComGITPtr&& rv);
   
 ### <a name="parameters"></a>Parametri  
  [in] `p`  
- Puntatore a interfaccia a essere archiviati nella tabella di interfaccia globale (GIT).  
+ Un puntatore a interfaccia da archiviare nella tabella di interfaccia globale (GIT).  
   
  [in] `git`  
  Un riferimento a un oggetto esistente `CComGITPtr` oggetto.  
@@ -147,12 +130,12 @@ CComGITPtr(CComGITPtr&& rv);
  Un cookie utilizzato per identificare il puntatore di interfaccia.  
   
  [in] `rv`  
- L'origine `CComGITPtr` per spostare i dati dall'oggetto.  
+ L'origine `CComGITPtr` oggetto dati da spostare.  
   
 ### <a name="remarks"></a>Note  
  Crea un nuovo `CComGITPtr` dell'oggetto, utilizzando facoltativamente un oggetto esistente `CComGITPtr` oggetto.  
   
- Utilizzando il costruttore `rv` è un costruttore di spostamento. I dati vengono spostati dall'origine, `rv`e quindi `rv` è deselezionata.  
+ L'utilizzo del costruttore `rv` è un costruttore di spostamento. I dati vengono spostati dall'origine, `rv`e quindi `rv` è deselezionata.  
   
 ##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
  Distruttore.  
@@ -165,7 +148,7 @@ CComGITPtr(CComGITPtr&& rv);
  Rimuove l'interfaccia dalla tabella di interfaccia globale (GIT), utilizzando [CComGITPtr::Revoke](#revoke).  
   
 ##  <a name="copyto"></a>CComGITPtr::CopyTo  
- Chiamare questo metodo per copiare il puntatore passato l'interfaccia della tabella di interfaccia globale (GIT).  
+ Chiamare questo metodo per copiare il puntatore passato l'interfaccia tra la tabella di interfaccia globale (GIT).  
   
 ```
 HRESULT CopyTo(T** pp) const throw();
@@ -173,13 +156,13 @@ HRESULT CopyTo(T** pp) const throw();
   
 ### <a name="parameters"></a>Parametri  
  `pp`  
- Il puntatore che deve ricevere l'interfaccia.  
+ Il puntatore che riceverà l'interfaccia.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- L'interfaccia di GIT viene copiato il puntatore passato. Il puntatore deve essere liberato dal chiamante quando non è più necessaria.  
+ L'interfaccia da GIT viene copiato il puntatore passato. Il puntatore deve essere rilasciato dal chiamante quando non è più necessario.  
   
 ##  <a name="detach"></a>CComGITPtr::Detach  
  Chiamare questo metodo per l'interfaccia da dissociare il `CComGITPtr` oggetto.  
@@ -192,7 +175,7 @@ DWORD Detach() throw();
  Restituisce il cookie dal `CComGITPtr` oggetto.  
   
 ### <a name="remarks"></a>Note  
- Spetta al chiamante di rimuovere l'interfaccia da GIT, utilizzando [CComGITPtr::Revoke](#revoke).  
+ Spetta al chiamante di rimuovere tutte le interfacce da GIT, utilizzando [CComGITPtr::Revoke](#revoke).  
   
 ##  <a name="getcookie"></a>CComGITPtr::GetCookie  
  Chiamare questo metodo per restituire il cookie dal `CComGITPtr` oggetto.  
@@ -238,10 +221,10 @@ CComGITPtr& operator= (CComGITPtr&& rv);
  Un cookie utilizzato per identificare il puntatore di interfaccia.  
   
  [in] `rv`  
- Il `CComGITPtr` spostare dati da.  
+ Il `CComGITPtr` per spostare i dati da.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce la classe aggiornata `CComGITPtr` oggetto.  
+ Restituisce l'aggiornamento `CComGITPtr` oggetto.  
   
 ### <a name="remarks"></a>Note  
  Assegna un nuovo valore per un `CComGITPtr` oggetto, da un oggetto esistente o da un riferimento a una tabella di interfaccia globale.  
@@ -264,14 +247,13 @@ HRESULT Revoke() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Rimuove l'interfaccia di GIT.  
+ Rimuove l'interfaccia da GIT.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestore del marshalling con modello di threading Free](../../atl/atl-and-the-free-threaded-marshaler.md)   
  [Accesso alle interfacce tra apartment](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
  [Quando utilizzare la tabella di interfaccia globale](http://msdn.microsoft.com/library/windows/desktop/ms693729)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

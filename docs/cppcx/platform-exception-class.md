@@ -1,69 +1,155 @@
 ---
-title: "Platform::Exception (classe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Exception"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Exception (classe)"
+title: 'Classe platform:: Exception | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::Exception::Exception
+- VCCORLIB/Platform::Exception::CreateException
+- VCCORLIB/Platform::Exception::HResult
+- VCCORLIB/Platform::Exception::Message
+dev_langs: C++
+helpviewer_keywords: Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Exception (classe)
+# <a name="platformexception-class"></a>Platform::Exception (classe)
 Rappresenta gli errori che si verificano durante l'esecuzione dell'applicazione. Le classi di eccezione personalizzate non possono essere derivate da `Platform::Exception`. Se devi utilizzare un'eccezione personalizzata, puoi utilizzare `Platform::COMException` e specificare un valore HRESULT specifico dell'applicazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 public ref class Exception : Object,    IException,    IPrintable,    IEquatable  
 ```  
   
-## Membri  
- La classe `Exception` eredita dalla classe `Object` e dalle interfacce `IException`, `IPrintable` e `IEquatable`.  
+### <a name="members"></a>Membri  
+ La classe `Exception` eredita dalla classe `Object` e dalle interfacce `IException`, `IPrintable`e `IEquatable` .  
   
  La classe `Exception` dispone dei seguenti generi di membri.  
   
-### Costruttori  
+### <a name="constructors"></a>Costruttori  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|[Exception::Exception \(costruttore\)](../cppcx/exception-exception-constructor.md)|Inizializza una nuova istanza della classe `Exception`.|  
+|[Exception:: Exception](#ctor)|Inizializza una nuova istanza della classe `Exception`.|  
   
-### Metodi  
- La classe `Exception` eredita i metodi `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()` e `ToString()` da [Classe Platform::Object](../cppcx/platform-object-class.md). La classe `Exception` include anche il metodo seguente.  
+### <a name="methods"></a>Metodi  
+ La classe `Exception` eredita i metodi `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`e `ToString()` da [Platform::Object Class](../cppcx/platform-object-class.md). La classe `Exception` include anche il metodo seguente.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|[Exception::CreateException \(metodo\)](../cppcx/exception-createexception-method.md)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
+|[Exception:: CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
   
-### Proprietà  
+### <a name="properties"></a>Proprietà  
  La classe Exception presenta inoltre le proprietà seguenti.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|[Exception::HResult \(proprietà\)](../cppcx/exception-hresult-property.md)|Valore HRESULT corrispondente all'eccezione.|  
-|[Exception::Message \(proprietà\)](../cppcx/exception-message-property.md)|Messaggio in cui viene descritta l'eccezione. Questo valore è di sola lettura e non può essere modificato una volta costruito `Exception`.|  
+|[Exception](#hresult)|Valore HRESULT corrispondente all'eccezione.|  
+|[Exception](#message)|Messaggio in cui viene descritta l'eccezione. Questo valore è di sola lettura e non può essere modificato una volta costruito `Exception` .|  
   
-## Requisiti  
- **Client minimo supportato:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Requisiti  
+ **Client minimo supportato:** Windows 8  
   
- **Server minimo supportato:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Server minimo supportato:** Windows Server 2012  
   
  **Spazio dei nomi:** Platform  
   
  **Metadati:** platform.winmd  
+
+## <a name="createexception"></a>Exception:: CreateException (metodo)
+Crea Platform::Exception^ da un valore HRESULT specificato.  
   
-## Vedere anche  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+Exception^ CreateException(int32 hr)  
+Exception^ CreateException(int32 hr, Platform::String^ message)  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ hr  
+ Valore HRESULT che in genere si ottiene da una chiamata a un metodo COM. Se il valore è 0, che è uguale a S_OK, questo metodo genera [platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) quanto i metodi COM con esito positivo non devono generare eccezioni.  
+  
+ messaggio  
+ Stringa che descrive l'errore.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Eccezione che rappresenta il valore HRESULT dell'errore.  
+  
+### <a name="remarks"></a>Note  
+ Utilizza questo metodo per creare un'eccezione da un valore HRESULT restituito, ad esempio, da una chiamata a un metodo di un'interfaccia COM. Puoi utilizzare l'overload che accetta un parametro String^ per fornire un messaggio personalizzato.  
+  
+ È consigliabile utilizzare CreateException per creare un'eccezione fortemente tipizzata, anziché creare un [platform:: COMException](../cppcx/platform-comexception-class.md) che contiene solo il valore HRESULT.  
+  
+
+
+## <a name="ctor"></a>Costruttore Exception:: Exception
+Inizializza una nuova istanza della classe Exception.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+  
+Exception(int32 hresult)  
+Exception(int32 hresult, ::Platform::String^ message)  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `hresult`  
+ Errore HRESULT rappresentato dall'eccezione.  
+  
+ `message`  
+ Messaggio specifico dell'utente, ad esempio del testo prescrittivo, associato all'eccezione. In genere dovresti preferire il secondo overload per fornire un messaggio descrittivo che sia il più possibile specifico su come e perché si è verificato l'errore.  
+  
+
+
+## <a name="hresult"></a>Proprietà Exception
+Valore HRESULT corrispondente all'eccezione.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:property int HResult {    int get();}  
+```  
+  
+## <a name="property-value"></a>Valore proprietà  
+ Valore HRESULT.  
+  
+### <a name="remarks"></a>Note  
+ La maggior parte delle eccezioni inizia come errori COM, che vengono restituiti come valori HRESULT. C++/CX converte questi valori in oggetti Platform::Exception^ e la proprietà archivia il valore del codice di errore originale.  
+  
+
+
+## <a name="message"></a>Proprietà Exception
+Messaggio in cui viene descritto l'errore.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+public:property String^ Message;  
+```  
+  
+## <a name="property-value"></a>Valore proprietà  
+ Nelle eccezioni originate da Windows Runtime, si tratta di una descrizione dell'errore fornita dal sistema.  
+  
+### <a name="remarks"></a>Note  
+ In Windows 8, questa proprietà è di sola lettura perché le eccezioni in tale versione di Windows Runtime vengono trasportate tramite ABI solo come HRESULT. In Windows 8.1 e versioni successive le informazioni sull'eccezione più dettagliate viene trasportate tramite ABI ed puoi fornire un messaggio personalizzato a cui altri componenti possono accedere a livello di codice. Per ulteriori informazioni, vedere [eccezioni (C + + CX)](../cppcx/exceptions-c-cx.md).  
+  
+
+  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

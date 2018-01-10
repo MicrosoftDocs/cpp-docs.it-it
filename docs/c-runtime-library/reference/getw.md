@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _getw
+apiname: _getw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _getw
-dev_langs:
-- C++
+f1_keywords: _getw
+dev_langs: C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0a6b39cc8780af58f0ea5c4023cac7339473bae4
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8850bd13d8aa1ed0412ae93843784cb560be4a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getw"></a>_getw
 Ottiene un Integer da un flusso.  
@@ -73,7 +55,7 @@ int _getw(
  Puntatore alla struttura `FILE`.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_getw` restituisce l'Integer letto. Un valore restituito di `EOF` indica un errore o la fine del file. Tuttavia, poiché il valore `EOF` è un Integer legittimo, utilizzare `feof` o `ferror` per verificare una condizione di fine del file o di errore. Se `stream` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `EOF`.  
+ `_getw` restituisce l'Integer letto. Un valore restituito di `EOF` indica un errore o la fine del file. Tuttavia, poiché il valore `EOF` è un Integer legittimo, utilizzare `feof` o `ferror` per verificare una condizione di fine del file o di errore. Se `stream` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `EOF`.  
   
 ## <a name="remarks"></a>Note  
  La funzione `_getw` legge il seguente valore binario di tipo `int` dal file associato a `stream` e incrementa il puntatore del file associato (se presente) per puntare al seguente carattere non letto. `_getw` non utilizza alcun allineamento speciale degli elementi nel flusso. I problemi con la portabilità possono verificarsi con `_getw` perché la dimensione del tipo `int` e l'ordine dei byte all'interno del tipo `int` differiscono fra i sistemi.  
@@ -84,7 +66,7 @@ int _getw(
 |-------------|---------------------|  
 |`_getw`|\<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

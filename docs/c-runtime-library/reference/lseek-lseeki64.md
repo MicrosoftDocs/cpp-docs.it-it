@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af250c88b7c5443529cf4aa9524f3d2e78413e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 Sposta un puntatore di file nella posizione specificata.  
@@ -101,7 +102,7 @@ __int64 _lseeki64(
 |`_lseek`|\<io.h>|  
 |`_lseeki64`|\<io.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
@@ -177,6 +178,6 @@ Position for end of file seek = 57
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [I/O di basso livello](../../c-runtime-library/low-level-i-o.md)   
+ [Low-Level I/O](../../c-runtime-library/low-level-i-o.md)  (I/O di basso livello)  
  [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_tell, _telli64](../../c-runtime-library/reference/tell-telli64.md)

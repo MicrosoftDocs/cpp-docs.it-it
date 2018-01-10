@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Informazioni sulla sintassi BNF (Form) Backus Nauer
 Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento utilizzando la sintassi BNF, che usa la notazione illustrata nella tabella seguente.  
@@ -36,7 +37,7 @@ Gli script utilizzati da ATL (Registrar) sono descritte in questo argomento util
   
  Come indicato nella tabella precedente, script di registrazione utilizzare valori letterali stringa. Questi valori sono il testo effettivo che deve essere presente nello script. Nella tabella seguente vengono descritte le stringhe letterali utilizzate in uno script di ATL (Registrar).  
   
-|Valore letterale stringa|Azione|  
+|Valore letterale stringa|Operazione|  
 |--------------------|------------|  
 |**ForceRemove**|Rimuove completamente la successiva chiave (se presente) e quindi ricreata.|  
 |**NoRemove**|Non rimuove il tasto successivo durante l'annullamento della registrazione.|  

@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
@@ -57,7 +60,7 @@ class CRowset
 |[GetDataHere](../../data/oledb/crowset-getdatahere.md)|Recupera i dati dal buffer specificato.|  
 |[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|Recupera i dati recuperati da più di recente o trasmesso all'origine dei dati, ignorando le modifiche in sospeso.|  
 |[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|Restituisce lo stato di tutte le righe.|  
-|[Inserimento](../../data/oledb/crowset-insert.md)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx).|  
+|[Inserisci](../../data/oledb/crowset-insert.md)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx).|  
 |[IsSameRow](../../data/oledb/crowset-issamerow.md)|Confronta la riga specificata con la riga corrente.|  
 |[Metodo MoveFirst](../../data/oledb/crowset-movefirst.md)|Riposiziona il percorso di recupero successivo per la posizione iniziale.|  
 |[MoveLast](../../data/oledb/crowset-movelast.md)|Passa all'ultimo record.|  

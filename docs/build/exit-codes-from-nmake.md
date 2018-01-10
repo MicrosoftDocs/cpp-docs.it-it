@@ -1,40 +1,41 @@
 ---
-title: "Codici di uscita di NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "codici di uscita"
-  - "NMAKE (programma), codici di uscita"
+title: Codici di uscita di NMAKE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, exit codes
+- exit codes
 ms.assetid: 75f6913c-1da5-4572-a2d3-8a4e058bed15
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13cbe4806d8b3960cbf80df41c7cce6e7657ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Codici di uscita di NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Di seguito sono riportati i codici di uscita restituiti da NMAKE:  
+# <a name="exit-codes-from-nmake"></a>Codici di uscita di NMAKE
+NMAKE restituisce i seguenti codici di uscita:  
   
 |Codice|Significato|  
-|------------|-----------------|  
-|0|Nessun errore \(eventualmente un avviso\)|  
-|1|Compilazione non completa \(emesso solo se è stata specificata l'opzione \/K\)|  
-|2|Errore di programma, probabilmente dovuto a una delle cause seguenti:|  
-||-   Errore di sintassi nel makefile|  
-||-   Codice di errore o di uscita di un comando|  
-||-   Interruzione da parte dell'utente|  
-|4|Errore di sistema, memoria insufficiente|  
-|255|Destinazione non aggiornata \(emesso solo se è stata specificata l'opzione \/Q\)|  
+|----------|-------------|  
+|0|Nessun errore (probabilmente un avviso)|  
+|1|Generazione incompleto (emesso solo quando viene usato /K)|  
+|2|Errore del programma, probabilmente a causa di uno dei seguenti:|  
+||-Errore di sintassi di makefile|  
+||-Un codice di errore o di uscita da un comando|  
+||-Un'interruzione dell'utente|  
+|4|Errore di sistema: memoria insufficiente|  
+|255|Destinazione non è aggiornata (emesso solo quando viene usato /Q)|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esecuzione di NMAKE](../build/running-nmake.md)

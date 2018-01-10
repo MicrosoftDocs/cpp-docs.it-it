@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3100
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3100
+f1_keywords: C3100
+dev_langs: C++
+helpviewer_keywords: C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe266ac02839553c1f38ce13976f0e2f5548622e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 666bd441fa45b56f9dc572b01f9428ee48b8d1bf
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3100"></a>Errore del compilatore C3100
 'target': qualificatore di attributo sconosciuto  

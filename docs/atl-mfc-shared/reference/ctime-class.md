@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -28,36 +27,21 @@ f1_keywords:
 - ATLTIME/ATL::CTime::GetTime
 - ATLTIME/ATL::CTime::GetYear
 - ATLTIME/ATL::CTime::Serialize64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 22e488a1c5760c342ce79c42cd8a48c911715b23
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 82f3d4bf1d0c705d7712adb092a5f6d965099a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-class"></a>Classe CTime
 Rappresenta una data e l'ora assoluta.  
@@ -104,14 +88,14 @@ class CTime
 |[operatore + -](#operator_add_-)|Questi operatori di addizione e sottrazione `CTimeSpan` e `CTime` oggetti.|  
 |[+ = (operatore)-=](#operator_add_eq_-_eq)|Questi operatori di addizione e sottrazione un `CTimeSpan` oggetto da e verso questo `CTime` oggetto.|  
 |[operator =](#operator_eq)|L'operatore di assegnazione.|  
-|[operatore = =,< ,="">](#ctime_comparison_operators)|Operatori di confronto.|  
+|[operatore = =, < e così via.](#ctime_comparison_operators)|Operatori di confronto.|  
   
 ## <a name="remarks"></a>Note  
  `CTime`non dispone di una classe di base.  
   
- `CTime`i valori sono basati in ora UTC (coordinated universal time), che equivale a Coordinated Universal time (Greenwich Mean Time, GMT). Vedere [gestione del tempo](../../c-runtime-library/time-management.md) per informazioni sul modo in cui viene determinato il fuso orario.  
+ `CTime`i valori sono basati in ora UTC (coordinated universal time), che equivale a Coordinated Universal time (Greenwich Mean Time, GMT). Vedere [gestione del tempo](../../c-runtime-library/time-management.md) per informazioni sulla determinazione il fuso orario.  
   
- Quando si crea un `CTime` dell'oggetto, impostare il `nDST` parametro su 0 per indicare che ora solare è in effetti, o a un valore maggiore di 0 per indicare che l'ora legale è attivo o a un valore minore di zero per il calcolo di codice di libreria run-time C se ora solare o l'ora legale è attiva. `tm_isdst` è un campo obbligatorio. Se non è impostata, il relativo valore non è definito e il valore restituito da [mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) è imprevedibile. Se `timeptr` punta a una struttura tm restituita da una precedente chiamata a [asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), o [localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), `tm_isdst` campo contiene il valore corretto.  
+ Quando si crea un `CTime` dell'oggetto, impostare il `nDST` parametro su 0 per indicare che è attiva l'ora solare o a un valore maggiore di 0 per indicare che l'ora legale è attivo o a un valore minore di zero per i comput codice di libreria di runtime C e che ora solare o l'ora legale è attiva. `tm_isdst` è un campo obbligatorio. Se non è impostata, il relativo valore non è definito e il valore restituito da [mktime](../../c-runtime-library/reference/mktime-mktime32-mktime64.md) è imprevedibile. Se `timeptr` punta a una struttura tm restituita da una precedente chiamata a [asctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md), [gmtime_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md), o [localtime_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md), `tm_isdst` campo contiene il valore corretto.  
   
  Una classe complementare, [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md), rappresenta un intervallo di tempo.  
   
@@ -148,7 +132,7 @@ bool operator>=(CTime time) const throw();
  Questi operatori confrontano due volte assoluti e restituiscono **true** se la condizione è true; in caso contrario **false**.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
 ##  <a name="ctime"></a>Costruttori CTime::  
  Crea un nuovo `CTime` oggetto inizializzato con il tempo specificato.  
@@ -170,8 +154,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
  `time`  
  Oggetto **__time64_t** valore di ora, ovvero il numero di secondi dopo il 1 gennaio 1970 ora UTC. Si noti che questo verrà adeguato al fuso orario locale. Ad esempio, se si trovano in New York e crea un `CTime` oggetto passando un parametro pari a 0, [CTime::GetMonth](#getmonth) restituirà 12.  
-  
- Nelle versioni di Visual C++ 6.0 e versioni precedenti, `time` è un valore di `time_t`. Visual C++ .NET e versioni successive converte un `time_t` parametro **__time64_t**.  
+
   
  `nYear`, `nMonth`, `nDay`, `nHour`, `nMin`, `nSec`  
  Indica i valori di data e ora da copiare nel nuovo `CTime` oggetto.  
@@ -200,13 +183,13 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>Note  
  Ogni costruttore è descritta di seguito:  
   
-- **CTime();** Costruisce l'oggetto non inizializzato `CTime` oggetto. Questo costruttore consente di definire `CTime` matrici dell'oggetto. È necessario inizializzare tali matrici con tempi validi prima di utilizzare.  
+- **CTime();**  Costruisce l'oggetto non inizializzato `CTime` oggetto. Questo costruttore consente di definire `CTime` matrici dell'oggetto. È necessario inizializzare tali matrici con tempi validi prima di utilizzare.  
   
-- **CTime (const CTime /);** Costruisce una `CTime` oggetto da un altro `CTime` valore.  
+- **CTime (CTime const &);**  Costruisce una `CTime` oggetto da un altro `CTime` valore.  
   
-- **CTime (__time64_t);** Costruisce una `CTime` dell'oggetto da un **__time64_t** tipo. Questo costruttore prevede un'ora UTC e converte il risultato di un'ora locale prima di archiviare il risultato.  
+- **CTime (__time64_t);**  Costruisce una `CTime` dell'oggetto da un **__time64_t** tipo. Questo costruttore prevede un'ora UTC e converte il risultato di un'ora locale prima di archiviare il risultato.  
   
-- **CTime (int, int,...);** Costruisce una `CTime` oggetto dai componenti di ora locale in cui ogni componente vincolato a intervalli seguenti:  
+- **CTime (int, int,...);**  Costruisce una `CTime` oggetto dai componenti di ora locale in cui ogni componente vincolato a intervalli seguenti:  
   
     |Componente|Intervallo|  
     |---------------|-----------|  
@@ -219,19 +202,19 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      Questo costruttore effettua la conversione appropriata in formato UTC. La versione di Debug della libreria di classi Microsoft Foundation asserzioni se uno o più dei componenti di ora sono non compreso nell'intervallo. È necessario convalidare gli argomenti prima di chiamare. Questo costruttore è prevista un'ora locale.  
   
-- **CTime (WORD, parola);** Costruisce una `CTime` oggetto dai valori di data e ora MS-DOS specificati. Questo costruttore è prevista un'ora locale.  
+- **CTime (WORD, parola);**  Costruisce una `CTime` oggetto dai valori di data e ora MS-DOS specificati. Questo costruttore è prevista un'ora locale.  
   
-- **CTime (const SYSTEMTIME /);** Costruisce una `CTime` dell'oggetto da un `SYSTEMTIME` struttura. Questo costruttore è prevista un'ora locale.  
+- **CTime (SYSTEMTIME const &);**  Costruisce una `CTime` dell'oggetto da un `SYSTEMTIME` struttura. Questo costruttore è prevista un'ora locale.  
   
-- **CTime (const FILETIME /);** Costruisce una `CTime` dell'oggetto da un `FILETIME` struttura. Non è probabile che si utilizzerà `CTime FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, `CFile::GetStatus` recupera il timestamp di file per l'utente tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura. Questo costruttore utilizza un tempo basato su UTC e converte automaticamente il valore in ora locale prima di archiviare il risultato.  
+- **CTime (const FILETIME &);**  Costruisce una `CTime` dell'oggetto da un `FILETIME` struttura. Non è probabile che si utilizzerà `CTime FILETIME` direttamente l'inizializzazione. Se si utilizza un `CFile` oggetto per modificare un file, `CFile::GetStatus` recupera il timestamp di file per l'utente tramite un `CTime` oggetto inizializzato con un `FILETIME` struttura. Questo costruttore utilizza un tempo basato su UTC e converte automaticamente il valore di ora locale prima di archiviare il risultato.  
   
     > [!NOTE]
     >  Il costruttore usando **DBTIMESTAMP** parametro è disponibile solo quando viene incluso OleDb.  
   
- Per ulteriori informazioni, vedere il [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) strutturare nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Vedere anche il [MS-DOS data e ora](http://msdn.microsoft.com/library/windows/desktop/ms724503) voce il [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+ Per ulteriori informazioni, vedere il [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) e [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) struttura in Windows SDK. Vedere anche il [MS-DOS data e ora](http://msdn.microsoft.com/library/windows/desktop/ms724503) voce in Windows SDK.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#148](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
 ##  <a name="format"></a>CTime::Format  
  Chiamare questa funzione membro per creare una rappresentazione del valore data e ora formattata.  
@@ -257,7 +240,7 @@ CString Format(UINT nFormatID) const;
  Questo metodo genera un'eccezione se il valore di data e ora da formattare non è compresa tra la mezzanotte dell'1 gennaio 1970 31 dicembre 3000 ora UTC (Universal Coordinated Time).  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#149](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
 ##  <a name="formatgmt"></a>CTime::FormatGmt  
  Genera una stringa formattata che corrisponde a questo `CTime` oggetto.  
@@ -303,7 +286,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
  Archivia il tempo risultante nella struttura `dbts` a cui viene fatto riferimento. Il **DBTIMESTAMP** struttura dati inizializzata da questa funzione avrà il **frazione** membro impostato su zero.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#150](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
 ##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
  Chiamare questa funzione membro per convertire le informazioni sull'ora archiviati nel `CTime` oggetto a una compatibile con Win32 [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) struttura.  
@@ -323,7 +306,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
  `GetAsSystemTime`Archivia il tempo risultante in di riferimento *timeDest* struttura. Il `SYSTEMTIME` struttura dati inizializzata da questa funzione avrà il **wMilliseconds** membro impostato su zero.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
 ##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
  Restituisce un `CTime` oggetto che rappresenta l'ora corrente.  
@@ -336,7 +319,7 @@ static CTime WINAPI GetCurrentTime() throw();
  Restituisce la data corrente del sistema e l'ora in Coordinated Universal Time (UTC).  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#152](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
 ##  <a name="getday"></a>CTime::GetDay  
  Restituisce il giorno rappresentato dal `CTime` oggetto.  
@@ -352,7 +335,7 @@ int GetDay() const throw();
  Questa funzione chiama `GetLocalTm`, che utilizza un buffer interno, allocato in modo statico. I dati di questo buffer viene sovrascritto a causa di chiamate ad altri `CTime` funzioni membro.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#153](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
 ##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
  Restituisce il giorno della settimana rappresentato dal `CTime` oggetto.  
@@ -368,7 +351,7 @@ int GetDayOfWeek() const throw();
  Questa funzione chiama `GetLocalTm`, che utilizza un oggetto interno statico buffer allocato. I dati di questo buffer viene sovrascritto a causa di chiamate ad altri `CTime` funzioni membro.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[&#154; NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#154](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
 ##  <a name="getgmttm"></a>CTime::GetGmtTm  
  Ottiene un **struct tm** che contiene una scomposizione di contenuti in questo momento `CTime` oggetto.  
@@ -390,7 +373,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
  Il parametro `ptm` non può essere `NULL`. Se si desidera ripristinare il comportamento precedente, in cui `ptm` potrebbe essere `NULL` per indicare che è necessario utilizzare un buffer interno, allocato in modo statico, quindi rimuovere la definizione di `_SECURE_ATL`.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[&#155; NVC_ATLMFC_Utilities](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#155](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
 ##  <a name="gethour"></a>CTime::GetHour  
  Restituisce l'ora rappresentata dal `CTime` oggetto.  
@@ -406,10 +389,10 @@ int GetHour() const throw();
  Questa funzione chiama `GetLocalTm`, che utilizza un oggetto interno statico buffer allocato. I dati di questo buffer viene sovrascritto a causa di chiamate ad altri `CTime` funzioni membro.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#156](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
 ##  <a name="getlocaltm"></a>CTime::GetLocalTm  
- Ottiene un **struct tm** che contiene una scomposizione di contenuti in questo momento `CTime` oggetto.  
+ Ottiene un **struct tm** contenente una scomposizione di contenuti in questo momento `CTime` oggetto.  
   
 ```  
 struct tm* GetLocalTm(struct tm* ptm) const; 
@@ -428,7 +411,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
  Il parametro `ptm` non può essere `NULL`. Se si desidera ripristinare il comportamento precedente, in cui `ptm` potrebbe essere `NULL` per indicare che è necessario utilizzare un buffer interno, allocato in modo statico, quindi rimuovere la definizione di `_SECURE_ATL`.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#157](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
 ##  <a name="getminute"></a>CTime::GetMinute  
  Restituisce i minuti rappresentato dal `CTime` oggetto.  
@@ -489,7 +472,7 @@ __time64_t GetTime() const throw();
  **GetTime** restituirà il numero di secondi tra l'oggetto corrente `CTime` oggetto e il 1 ° gennaio 1970.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#158](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
 ##  <a name="getyear"></a>CTime::GetYear  
  Restituisce l'anno rappresentata la `CTime` oggetto.  
@@ -547,7 +530,7 @@ CTimeSpan operator-(CTime time) const throw();
  `CTime`gli oggetti rappresentano ora assoluta, `CTimeSpan` gli oggetti rappresentano tempo relativo. Consentono i primi due operatori di addizione e sottrazione `CTimeSpan` oggetti da e verso `CTime` oggetti. Il terzo operatore consente di sottrarre uno `CTime` oggetto da un altro per produrre un `CTimeSpan` oggetto.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#159](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
 ##  <a name="operator_add_eq_-_eq"></a>+ = CTime::operator-=  
  Questi operatori di addizione e sottrazione un `CTimeSpan` oggetto da e verso questo `CTime` oggetto.  
@@ -568,7 +551,7 @@ CTime& operator-=(CTimeSpan span) throw();
  Questi operatori consentono di aggiungere e sottrarre un `CTimeSpan` oggetto da e verso questo `CTime` oggetto.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATLMFC_Utilities #160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#160](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
 ##  <a name="serialize64"></a>CTime::Serialize64  
   
@@ -598,6 +581,5 @@ CArchive& Serialize64(CArchive& ar);
  [Classe CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)   
  [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
  [Classi condivise ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

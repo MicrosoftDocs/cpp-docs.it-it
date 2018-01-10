@@ -30,11 +30,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4c5a5a76a56567e0c0dd41a70b569327eda1cd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0a2810a8d6602efb689896cfe35cf61338eb24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 Ottiene o imposta un flag che specifica se le funzioni di libreria a virgola mobile matematiche trascendenti utilizzano FMA3 istruzioni nel codice compilato per X64 piattaforme.  

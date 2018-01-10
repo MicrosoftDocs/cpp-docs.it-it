@@ -1,9 +1,8 @@
 ---
 redirect_url: /cpp/build/reference/creating-precompiled-header-files#example-code-for-pch
-ms.translationtype: MT
-ms.sourcegitcommit: 0fa935667ed1ec0410e8981758dce25b88324718
 ms.openlocfilehash: fc7a64f16aaccb7f0645f42b7aa52db7252568f1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---

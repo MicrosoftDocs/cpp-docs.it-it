@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 96dff858d068f9d9bf9c6c47e1f444603c2a5729
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70ae055d69341cc773b8b40ed1111b65ba5683cf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qvec-report (livello di segnalazione parallelizzazione automatica)
 Abilita la funzionalità di reporting del compilatore [parallelizzazione automatica](../../parallel/auto-parallelization-and-auto-vectorization.md) e specifica il livello dei messaggi informativi per l'output durante la compilazione.  
@@ -53,4 +54,4 @@ Abilita la funzionalità di reporting del compilatore [parallelizzazione automat
  [Opzioni /Q (operazioni di basso livello)](../../build/reference/q-options-low-level-operations.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
- [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Programmazione parallela in codice nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)

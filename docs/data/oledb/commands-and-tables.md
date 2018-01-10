@@ -1,48 +1,51 @@
 ---
-title: "Comandi e tabelle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessorRowset (classe), classi di comandi e di tabelle"
-  - "CCommand (classe), OLE DB (modelli consumer)"
-  - "comandi [C++], Modelli consumer OLE DB"
-  - "CTable (classe)"
-  - "OLE DB (modelli consumer), supporto comandi"
-  - "OLE DB (modelli consumer), supporto tabelle"
-  - "rowset, accesso"
-  - "tabelle [C++], Modelli consumer OLE DB"
+title: Comandi e tabelle | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, table support
+- CCommand class, OLE DB consumer templates
+- commands [C++], OLE DB Consumer Templates
+- CTable class
+- CAccessorRowset class, command and table classes
+- rowsets, accessing
+- tables [C++], OLE DB Consumer Templates
+- OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c42422c156a51cac161f0cc75dfd1947b92eb20e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Comandi e tabelle
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I comandi e le tabelle consentono di accedere ai rowset, ovvero aprire i rowset, eseguire comandi e associare le colonne.  Le classi [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) generano, rispettivamente, un'istanza dell'oggetto comando e un'istanza dell'oggetto tabella.  Queste classi derivano da [CAccessorRowset](../../data/oledb/caccessorrowset-class.md), come illustrato nella figura riportata di seguito.  
+# <a name="commands-and-tables"></a>Comandi e tabelle
+Comandi e tabelle consentono di accedere ai set di righe; vale a dire, aprire i set di righe, eseguire i comandi e associare le colonne. Il [CCommand](../../data/oledb/ccommand-class.md) e [CTable](../../data/oledb/ctable-class.md) classi creare gli oggetti comando e di tabella, rispettivamente. Queste classi derivano da [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) come illustrato nella figura seguente.  
   
- ![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vcCommandsTables")  
-Classi dei comandi e delle tabelle  
+ ![CCommand e CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
+Comando e le classi di tabella  
   
- Nella tabella precedente `TAccessor` rappresenta uno qualsiasi dei tipi di funzione di accesso elencati in [Tipi di funzioni di accesso](../../data/oledb/accessors-and-rowsets.md).  *TRowset* rappresenta qualsiasi tipo di rowset elencato in [Tipi di rowset](../../data/oledb/accessors-and-rowsets.md).  *TMultiple* specifica il tipo di risultati, ovvero uno o più insiemi di risultati.  
+ Nella tabella precedente, `TAccessor` può essere qualsiasi tipo di funzione di accesso elencata nella [tipi di funzione di accesso](../../data/oledb/accessors-and-rowsets.md). *TRowset* può essere qualsiasi tipo di set di righe elencata nella [tipi di Rowset](../../data/oledb/accessors-and-rowsets.md). *TMultiple* specifica il tipo di risultato (uno o più set di risultati).  
   
- La [Creazione guidata consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) consente di specificare se si desidera creare un oggetto comando o tabella.  
+ Il [la creazione guidata Consumer OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) consente di specificare se si desidera che un oggetto comando o di tabella.  
   
--   Per le origini dati senza comandi, è possibile utilizzare la classe `CTable`.  In genere, viene utilizzata per rowset semplici che non specificano parametri e non richiedono più insiemi di risultati.  Questa classe semplice apre una tabella di un'origine dati tramite un nome di tabella specificato dal programmatore.  
+-   Per le origini dati senza comandi, è possibile utilizzare la `CTable` classe. In genere viene utilizzato per set di righe semplici che non specificano parametri e non richiedono più risultati. Questa classe semplice apre una tabella in un'origine dati utilizzando un nome di tabella specificato.  
   
--   Per le origini dati che supportano i comandi è invece possibile utilizzare la classe `CCommand`.  Per eseguire un comando, chiamare [Open](../../data/oledb/ccommand-open.md) su questa classe.  In alternativa, è possibile chiamare `Prepare` per preparare un comando che si desidera eseguire più volte.  
+-   Per le origini dati che supportano i comandi, è possibile utilizzare la `CCommand` classe. Per eseguire un comando, chiamare [aprire](../../data/oledb/ccommand-open.md) in questa classe. In alternativa, è possibile chiamare `Prepare` per preparare un comando che si desidera eseguire più volte.  
   
-     **CCommand** ha tre argomenti del modello: un tipo di funzione di accesso, un tipo di rowset e un tipo di risultati `CNoMultipleResults`, predefinito, oppure `CMultipleResults`.  Se si specifica `CMultipleResults`, la classe `CCommand` supporterà l'interfaccia **IMultipleResults** e gestirà più rowset.  Nell'esempio [DBVIEWER](http://msdn.microsoft.com/it-it/07620f99-c347-4d09-9ebc-2459e8049832) viene illustrato come gestire risultati multipli.  
+     **CCommand** dispone di tre argomenti di modello: un tipo di funzione di accesso, un tipo di set di righe e un tipo di risultato (`CNoMultipleResults`, per impostazione predefinita, o `CMultipleResults`). Se si specifica `CMultipleResults`, `CCommand` classe supporta il **IMultipleResults** l'interfaccia e gestisce più set di righe. Il [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) esempio viene illustrato come gestire più risultati.  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

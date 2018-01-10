@@ -1,32 +1,33 @@
 ---
-title: "logical_not (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not (funzione) [STL/CLR]"
+title: logical_not (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_not
+dev_langs: C++
+helpviewer_keywords: logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# logical_not (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe modello descrive un funtore che, una volta chiamato, restituisce true solo se entrambi i suoi test di argomento restituiscono false.  Si usa specificare un oggetto funzione in termini del relativo tipo di argomento.  
+# <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
+La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il relativo argomento testa come false. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Arg>  
@@ -47,33 +48,33 @@ public:
     };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  Arg  
- Il tipo degli argomenti.  
+ Tipo degli argomenti.  
   
-## Funzioni del membro  
+## <a name="member-functions"></a>Funzioni membro  
   
 |Definizione dei tipi|Descrizione|  
-|--------------------------|-----------------|  
-|argument\_type|Tipo dell'argomento del funtore.|  
-|delegate\_type|Tipo dell'argomento del delegato generico.|  
-|result\_type|Tipo del risultato del funtore.|  
+|---------------------|-----------------|  
+|argument_type|Il tipo dell'argomento funtore.|  
+|delegate_type|Il tipo del delegato generico.|  
+|result_type|Il tipo del risultato funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|logical\_not|Costruisce il funtore.|  
+|logical_not|Costruisce il funtore.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|operator\(\)|Calcola la funzione desiderata.|  
-|operatore delegate\_type^|Esegue il cast del funtore ad un delegato.|  
+|--------------|-----------------|  
+|operator()|Calcola la funzione desiderata.|  
+|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
   
-## Note  
- La classe modello descrive un funtore con un solo argomento.  Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come funzione, restituisca true solo se i test dell'argomento restituiscono false.  
+## <a name="remarks"></a>Note  
+ La classe modello descrive una funzione di un solo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il relativo argomento test come false.  
   
- È anche possibile passare l'oggetto come un argomento di funzione il cui tipo è `delegate_type^` ed esso verrà convertito nel modo appropriato.  
+ È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_logical_not.cpp   
@@ -106,12 +107,15 @@ int main()
   
 ```  
   
-  **4 0**  
- **0 1**   
-## Requisiti  
- **Intestazione:** \<cliext\/functional\>  
+```Output  
+4 0  
+0 1  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [negate](../dotnet/negate-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

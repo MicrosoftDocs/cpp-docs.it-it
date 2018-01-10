@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 700a5d39d2752ba334f06b04382dab792d5f81e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>Istruzione for (C++)
 Esegue ripetutamente un'istruzione finché la condizione non diventa false. Per informazioni sull'intervallo basata per istruzione, vedere [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md).  
@@ -136,7 +137,7 @@ for (int i = 0 ; i < 5 ; i++) {
   
  Per impostazione predefinita, in [/Ze](../build/reference/za-ze-disable-language-extensions.md), una variabile dichiarata in un `for` ciclo rimane nell'ambito fino a quando il `for` termina l'ambito contiene del ciclo.  
   
- [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) consente il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare /Za..  
+ [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) consente il comportamento standard delle variabili dichiarate nei cicli for senza la necessità di specificare /Za.  
   
  È anche possibile utilizzare le differenze di ambito del ciclo `for` per dichiarare nuovamente le variabili in /Ze come segue:  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2db4e697f50c98197041ad3470ae553371dda85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b21ebd2adf20eb0812e9a0fb5b900e657f8eddc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-tools"></a>Strumenti per la compilazione in C/C++
 Visual C++ fornisce gli strumenti da riga di comando seguenti per la visualizzazione o la modifica dell'output di compilazione:  

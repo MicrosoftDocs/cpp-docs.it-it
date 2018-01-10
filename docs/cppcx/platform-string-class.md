@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 744ec295f7bcb86e3228d8f3c62637ad17c53450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstring-class"></a>Classe Platform::String
 Rappresenta una raccolta sequenziale di caratteri Unicode, tipicamente utilizzata per rappresentare del testo. Per ulteriori informazioni ed esempi, vedere [stringhe](../cppcx/strings-c-cx.md).  
@@ -47,10 +48,10 @@ public ref class String sealed : Object,
     IPrintable  
 ```  
   
-## <a name="iterators"></a>Iteratori  
+## <a name="iterators"></a>Iterators  
  Per enumerare i caratteri in un oggetto String, è possibile utilizzare due funzioni di iteratore, che non sono membri della classe String, con la funzione del modello `std::for_each` .  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |`const char16* begin(String^ s)`|Restituisce un puntatore che punta all'inizio dell'oggetto String specificato.|  
 |`const char16* end(String^ s)`|Restituisce un puntatore successivo alla fine dell'oggetto String specificato.|  
@@ -62,7 +63,7 @@ public ref class String sealed : Object,
   
  **Costruttori**  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |[String:: String](#ctor)|Inizializza una nuova istanza della classe String.|  
   
@@ -89,7 +90,7 @@ public ref class String sealed : Object,
   
  La classe String include gli operatori seguenti.  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |[String:: operator = = (operatore)](#operator-equality)|Indica se due oggetti String specificati hanno lo stesso valore.|  
 |[operatore+ Operatore](#operator-plus)|Concatena due oggetti stringa in un nuovo oggetto stringa.|  

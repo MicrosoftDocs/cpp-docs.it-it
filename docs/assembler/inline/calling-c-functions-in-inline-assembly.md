@@ -1,34 +1,35 @@
 ---
-title: "Chiamata di funzioni C++ in assembly inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm (parola chiave) [C++], funzioni chiamanti"
-  - "chiamate di funzione, funzioni C++"
-  - "chiamate di funzione, assembly inline"
-  - "funzioni [C++], chiamata in assembly inline"
-  - "assembly inline, funzioni chiamanti"
-  - "Visual C++, funzioni"
+title: Funzioni di chiamata C in Assembly Inline | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- function calls, C functions
+- function calls, in inline assembly
+- functions [C], calling in inline assembly
+- Visual C, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d337e7a276318d6a1d39087b6809e3f62838cad8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Chiamata di funzioni C in assembly inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sezione specifica Microsoft  
- Un blocco `__asm` può chiamare le funzioni C, incluse le routine di libreria C.  Nell'esempio seguente viene chiamata la routine di libreria `printf`:  
+# <a name="calling-c-functions-in-inline-assembly"></a>Chiamare le funzioni C nell'assembly inline
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Un blocco `__asm` può chiamare le funzioni C, incluse le routine di libreria C. Nell'esempio seguente viene chiamata la routine di libreria `printf`:  
   
 ```  
 // InlineAssembler_Calling_C_Functions_in_Inline_Assembly.cpp  
@@ -58,7 +59,7 @@ int main( void )
 }  
 ```  
   
- Poiché gli argomenti di funzione vengono passati nello stack, si inseriscono semplicemente gli argomenti necessari, puntatori di stringa nell'esempio precedente, prima di chiamare la funzione.  Gli argomenti sono inseriti in ordine inverso, pertanto si staccano dallo stack nell'ordine desiderato.  Per emulare l'istruzione C  
+ Poiché gli argomenti di funzione vengono passati nello stack, si inseriscono semplicemente gli argomenti necessari, puntatori di stringa nell'esempio precedente, prima di chiamare la funzione. Gli argomenti sono inseriti in ordine inverso, pertanto si staccano dallo stack nell'ordine desiderato. Per emulare l'istruzione C  
   
 ```  
 printf( format, hello, world );  
@@ -68,5 +69,5 @@ printf( format, hello, world );
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Assembler inline](../../assembler/inline/inline-assembler.md)

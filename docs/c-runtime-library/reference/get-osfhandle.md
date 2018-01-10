@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft Docs
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-standard-libraries
@@ -35,11 +35,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3b15b4577d1d8c0b24df82acff76494474c4e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b810edac60b08ccc31d6767cb11b7176fb981b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -55,15 +56,16 @@ intptr_t _get_osfhandle(
   
 ### <a name="parameters"></a>Parametri
 
-*FD* descrittore del file esistente.  
+*daemon di filtri*  
+Descrittore di file esistente.  
   
 ## <a name="return-value"></a>Valore restituito
 
-Un file del sistema operativo se gestire *fd* è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce `INVALID_HANDLE_VALUE` (-1) e imposta `errno` a `EBADF`, che indica un handle di file non valido.  
+Restituisce un handle di file del sistema operativo se *fd* è valido. In caso contrario, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, questa funzione restituisce `INVALID_HANDLE_VALUE` (-1) e imposta `errno` a `EBADF`, che indica un handle di file non valido.  
   
 ## <a name="remarks"></a>Note
 
-Per chiudere un file con handle di file del sistema operativo viene ottenuto da `_get_osfhandle`, chiamare [ \_chiudere](../../c-runtime-library/reference/close.md) nel descrittore di file *fd*. L'handle sottostante viene inoltre chiuso da una chiamata a `_close`, pertanto non è necessario chiamare la funzione Win32 `CloseHandle` sull'handle originale.  
+Per chiudere un file di handle di file il cui sistema operativo () consente di ottenere `_get_osfhandle`, chiamare [ \_chiudere](../../c-runtime-library/reference/close.md) nel descrittore di file *fd*. Non chiamare `CloseHandle` sul valore restituito di questa funzione. L'handle di file del sistema operativo sottostante è di proprietà per il *fd* descrittore di file e viene chiuso quando `_close` viene chiamato su *fd*. Se il descrittore del file è di proprietà di un `FILE *` flusso, quindi chiamare [fclose](../../c-runtime-library/reference/fclose-fcloseall.md) su quel `FILE *` flusso viene chiuso il descrittore del file sia l'handle di file del sistema operativo sottostante. In questo caso, non chiamare `_close` nel descrittore di file.
   
 ## <a name="requirements"></a>Requisiti  
   
