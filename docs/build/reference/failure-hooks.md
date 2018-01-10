@@ -1,30 +1,30 @@
 ---
-title: "Hook di errore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caricamento ritardato di DLL, errore di hook"
+title: Errore di hook | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1609b713fef253e8beab270ee2ed048466da6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Hook di errore
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'hook di errore viene attivato in maniera analoga all'[hook di notifica](../../build/reference/notification-hooks.md).  È necessario che il valore restituito dalla routine di hook sia appropriato per consentire il proseguimento dell'esecuzione \(HINSTANCE o FARPROC\) oppure corrisponda a 0 per indicare che deve essere generata un'eccezione.  
+# <a name="failure-hooks"></a>Hook di errore
+Hook di errore è abilitata in modo analogo la [hook di notifica](../../build/reference/notification-hooks.md). La routine di hook deve restituire un valore appropriato in modo che l'elaborazione può continuare (HINSTANCE o FARPROC) oppure 0 per indicare che deve essere generata un'eccezione.  
   
- La variabile puntatore che fa riferimento alla funzione definita dall'utente è:  
+ La variabile del puntatore che fa riferimento alla funzione definita dall'utente è:  
   
 ```  
 // This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}  
@@ -32,19 +32,19 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- La struttura **DelayLoadInfo** contiene tutti i dati pertinenti necessari alla creazione di accurati report degli errori, compreso il valore di `GetLastError`.  
+ Il **DelayLoadInfo** struttura contiene tutti i dati pertinenti necessari per report accurato degli errori, compreso il valore di `GetLastError`.  
   
- Se la notifica è **dliFailLoadLib**, il valore restituito dalla funzione hook può essere:  
-  
--   0 se non è possibile gestire l'errore.  
-  
--   Un HMODULE se mediante l'hook di errore è stato corretto il problema e caricata la libreria.  
-  
- Se la notifica è **dliFailGetProc**, il valore della funzione hook può essere:  
+ Se la notifica è **dliFailLoadLib**, la funzione hook può restituire:  
   
 -   0 se non è possibile gestire l'errore.  
   
--   Un indirizzo di routine valido \(indirizzo della funzione di importazione\), se è stato possibile ottenerlo grazie all'hook di errore.  
+-   Un modulo HMODULE, se l'hook di errore viene risolto e caricata la libreria.  
   
-## Vedere anche  
+ Se la notifica è **dliFailGetProc**, la funzione hook può restituire:  
+  
+-   0 se non è possibile gestire l'errore.  
+  
+-   Un indirizzo valido proc (indirizzo della funzione import), se l'errore hook è riuscito a ottenere l'indirizzo.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Gestione e notifica degli errori](../../build/reference/error-handling-and-notification.md)

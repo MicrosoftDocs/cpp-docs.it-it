@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b478e11cb4b3b04d92a693fca85cd6257b594514
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 571772a5a75a36a3c49adeb560a4814a5c7fcae6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 Ottiene un valore dall'ambiente corrente.  Versioni di [dupenv_s, wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) che allocano la memoria con [malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) per fornire informazioni di debug aggiuntive.  
@@ -132,7 +115,7 @@ errno_t _wdupenv_s_dbg(
 |`_dupenv_s_dbg`|\<crtdbg.h>|  
 |`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -166,7 +149,7 @@ nonexistentvariable = (null)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Process and Environment Control](../../c-runtime-library/process-and-environment-control.md)  (Controllo processo e ambiente)  
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [Environmental Constants](../../c-runtime-library/environmental-constants.md)  (Costanti di ambiente)  
  [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
  [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

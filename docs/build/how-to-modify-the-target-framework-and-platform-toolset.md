@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a9ab87cc24a106e70e9662f58e7c7266dd39d8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed85e0f1e1ce94401c505281c0e693a4904f92d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedura: modificare il framework di destinazione e il set di strumenti della piattaforma
 È possibile modificare le impostazioni di progetto Visual C++ per versioni diverse di .NET Framework di destinazione e utilizzare i set di strumenti della piattaforma diversa. Per impostazione predefinita, il sistema del progetto usa la versione .NET Framework e la versione del set di strumenti corrispondenti alla versione di Visual Studio usata per creare il progetto. È possibile modificare il set di strumenti della piattaforma di destinazione modificando le proprietà del progetto. È possibile modificare il framework di destinazione modificando il file del progetto (vcxproj). Non è necessario mantenere una codebase separata per ogni destinazione di compilazione.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Per modificare il set di strumenti della piattaforma di destinazione, è necessario assicurarsi che sia installata la versione associata di Visual Studio o Windows Platform SDK. Ad esempio, per fare riferimento alla piattaforma Itanium con il set di strumenti della piattaforma **Windows7.1SDK** , è necessario che siano installati [Microsoft Windows SDK per Windows 7 e .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) . È tuttavia possibile usare un'altra versione compatibile di Visual Studio per lo sviluppo, purché si faccia riferimento alla versione di .NET Framework e al set di strumenti della piattaforma corretti.  
   
- È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per altre informazioni, vedere il post sul [multitargeting nativo C++](http://go.microsoft.com/fwlink/?LinkId=196619) nel blog di Visual C++.  
+ È possibile estendere ulteriormente la piattaforma di destinazione creando un set di strumenti della piattaforma personalizzato. Per ulteriori informazioni, vedere [C++ multitargeting nativo](http://go.microsoft.com/fwlink/p/?linkid=196619) sul blog di Visual C++.  
   
 ### <a name="to-change-the-target-framework"></a>Per modificare il framework di destinazione  
   

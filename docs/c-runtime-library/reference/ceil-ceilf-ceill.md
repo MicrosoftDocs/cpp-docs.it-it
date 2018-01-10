@@ -22,6 +22,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
@@ -39,11 +40,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 124ddd7ec5f6cbef9f4f3a9a01f04533fe8d977b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 Calcola il limite massimo di un valore.  
@@ -77,9 +79,9 @@ long double ceill(
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|nessuno|`_DOMAIN`|  
+|± `QNAN`,`IND`|none|`_DOMAIN`|  
   
- `ceil` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `ceil` ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
 ## <a name="remarks"></a>Note  
  Poiché C++ consente l'overload, è possibile chiamare overload di `ceil`. In un programma C `ceil` accetta e restituisce sempre un valore double.  

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81148525b70f3c5ff351feb9561699f3b9b5e932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee213f1aa381415444288dbab4473cae6f5fc7b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-using-def-files"></a>Importazione tramite i file DEF
 Se si sceglie di utilizzare **declspec** insieme a un file con estensione def, è necessario modificare il file. def per utilizzare i dati al posto di costante per ridurre la probabilità che la generazione di codice non corretto causa un problema:  
@@ -51,7 +52,7 @@ __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
 if (ulDataInDll == 0L)   /*sample code fragment*/  
 ```  
   
- -oppure-  
+ oppure  
   
 ```  
 ULONG *ulDataInDll;      /*prototype*/  

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 9d1c04acc5754627906448db9ac4f3afd65fbe7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9d538e42d4173008343df186bd2579dc088fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-namespace"></a>spazio dei nomi predefinito
 Il `default` dello spazio dei nomi definisce l'ambito dei tipi incorporati supportati da C + + CX.  
@@ -40,7 +41,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>Tipi incorporati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |`char16`|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|  
 |`float32`|Numero a virgola mobile IEEE 754 a 32 bit.|  

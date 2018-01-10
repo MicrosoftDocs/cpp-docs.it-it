@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file translation [C++], about file translation
 - translation [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 188574c43ca3650599fae58c0da1306ab49b5007
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>Cenni preliminari sulla conversione di file
 I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di questi file viene convertito nel seguente ordine concettuale (l'ordine effettivo segue la regola "as if" (come se): ossia la conversione deve essere eseguita come se fossero stati completati questi passaggi):  
@@ -57,7 +55,7 @@ I programmi C++, come i programmi C, sono composti da uno o più file. Ognuno di
   
 -   Una macro predefinita **cplusplus**, viene definito solo per C++. Vedere [macro predefinite](../preprocessor/predefined-macros.md) nel *riferimenti al preprocessore* per ulteriori informazioni.  
   
--   Il preprocessore C non riconosce gli operatori C++: **.\* **, ** -> \* **, e `::`. Vedere [operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [espressioni](../cpp/expressions-cpp.md), per ulteriori informazioni sugli operatori.  
+-   Il preprocessore C non riconosce gli operatori C++: **.\*** ,  **-> \*** , e `::`. Vedere [operatori](../cpp/cpp-built-in-operators-precedence-and-associativity.md) e [espressioni](../cpp/expressions-cpp.md), per ulteriori informazioni sugli operatori.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Convenzioni lessicali](../cpp/lexical-conventions.md)

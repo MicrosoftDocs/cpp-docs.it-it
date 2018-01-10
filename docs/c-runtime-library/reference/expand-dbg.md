@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6062cec95c2471408db4e67f97dac4fddb5233e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Ridimensiona un blocco di memoria specificato nell'heap espandendo o contraendo il blocco (solo versione di debug).  
@@ -92,7 +93,7 @@ void *_expand_dbg(
 |-------------|---------------------|  
 |`_expand_dbg`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

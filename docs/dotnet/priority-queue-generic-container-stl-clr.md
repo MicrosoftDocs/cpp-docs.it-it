@@ -1,42 +1,43 @@
 ---
-title: "priority_queue::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container (membro) [STL/CLR]"
+title: priority_queue::generic_container (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: b938c433-7ef1-4077-93c2-2aee8ddf4d67
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05aad642e7009522dd4968cec1a1242ba2d2d077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo dell'interfaccia generica del contenitore.  
+# <a name="priorityqueuegenericcontainer-stlclr"></a>priority_queue::generic_container (STL/CLR)
+Il tipo dell'interfaccia generica per il contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Microsoft::VisualC::StlClr::IPriorityQueue<Value>  
     generic_container;  
 ```  
   
-## Note  
- Il tipo viene descritta l'interfaccia generica per questa classe di adattatori del contenitore del modello.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive l'interfaccia generica per questa classe di adattatori di contenitore di modello.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_priority_queue_generic_container.cpp   
@@ -78,14 +79,17 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**  
- **d b e c**  
- **c e d b**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+d c b a  
+e d b a c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)

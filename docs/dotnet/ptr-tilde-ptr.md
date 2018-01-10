@@ -1,47 +1,48 @@
 ---
-title: "ptr::~ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: 'PTR:: ~ ptr | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c8eb71e9975f06bfae5fe20c3ccae6d296a47f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Destructs `com::ptr`.  
+# <a name="ptrptr"></a>ptr::~ptr
+Distrugge un `com::ptr`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 ~ptr();  
 ```  
   
-## Note  
- La distruzione, `com::ptr` rilascia tutti i riferimenti al proprietario dell'oggetto COM.  Presupponendo che sono necessari altri riferimenti utilizzato all'oggetto COM, l'oggetto COM verrà eliminato e la memoria verrà liberata.  
+## <a name="remarks"></a>Note  
+ In caso di distruzione, il `com::ptr` rilascia tutti i riferimenti appartiene al relativo oggetto COM. Supponendo che non sono presenti altri riferimenti per l'oggetto COM, verrà eliminato l'oggetto COM e la memoria liberata.  
   
-## Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto di `IXMLDOMDocument` il membro privato.  Nella funzione di `main`, distruttori i due oggetti di `XmlDocument` verranno chiamati quando escono dell'ambito del blocco di `try`, con conseguente distruttore sottostante di `com::ptr` chiamato, rilasciando tutti i riferimenti di proprietà all'oggetto COM.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`.  Nel `main` (funzione), i due `XmlDocument` distruttori degli oggetti verranno chiamati quando escono dall'ambito del `try` blocco, determinando sottostante `com::ptr` distruttore viene chiamato, rilasciare i riferimenti di tutte le proprietà per il modello COM oggetto.  
   
 ```  
 // comptr_dtor.cpp  
@@ -102,12 +103,12 @@ int main() {
 }  
 ```  
   
-## Requisiti  
- **Header file**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\com\ptr.h >  
   
- msclr::com di**Spazio dei nomi**  
+ **Namespace** msclr:: com  
   
-## Vedere anche  
- [Membri ptr](../dotnet/ptr-members.md)   
- [ptr::ptr](../dotnet/ptr-ptr.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Membri PTR](../dotnet/ptr-members.md)   
+ [PTR::PTR](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

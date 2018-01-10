@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportFile
+apiname: _CrtSetReportFile
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8487ca011355ad248bc38c2fc2d3265f0fad4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7769c38c939b0deb1e1c61d53fad6b500f3860dd
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 Dopo aver usato [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) per specificare `_CRTDBG_MODE_FILE`, è possibile specificare l'handle di file per ricevere il testo del messaggio. `_CrtSetReportFile` viene anche usato da [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) per specificare la destinazione del testo (solo versione di debug).  
@@ -62,7 +59,7 @@ _HFILE _CrtSetReportFile(
  Nuovo file di report per `reportType`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Al termine, `_CrtSetReportFile` restituisce il precedente file di report definito per il tipo di report specificato in `reportType`. Se viene passato un valore non valido per `reportType`, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `_CRTDBG_HFILE_ERROR`. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Al termine, `_CrtSetReportFile` restituisce il precedente file di report definito per il tipo di report specificato in `reportType`. Se viene passato un valore non valido per `reportType`, questa funzione richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `_CRTDBG_HFILE_ERROR`. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ## <a name="remarks"></a>Note  
  `_CrtSetReportFile` viene usato con la funzione [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) per definire la destinazione o le destinazioni per un tipo specifico di report generati da `_CrtDbgReport`. Se è stato chiamato `_CrtSetReportMode` per assegnare la modalità di creazione di report `_CRTDBG_MODE_FILE` per un tipo di report specifico, deve essere chiamato `_CrtSetReportFile` per definire il flusso da usare come destinazione o il file specifico. Quando [_DEBUG](../../c-runtime-library/debug.md) non è definito, le chiamate a `_CrtSetReportFile` vengono rimosse durante la pre-elaborazione.  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _findclose
+apiname: _findclose
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _findclose
 - findclose
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4747592dbda7a903d5d8a50cebde9ef006ec765d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findclose"></a>_findclose
 Chiude l'handle di ricerca specificato e rilascia le risorse associate.  
@@ -81,7 +64,7 @@ int _findclose(
 |--------------|---------------------|  
 |`_findclose`|\<io.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [System Calls](../../c-runtime-library/system-calls.md)  (Chiamate di sistema)  

@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9b72da1cb8da3a74334b09e4e3b99cc3cad3789
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d57afcd518455ffb836e4d724a68b7d3e5682d6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passaggio di argomenti e convenzioni di denominazione
 **Sezione specifica Microsoft**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 |Parola chiave|Pulizia dello stack|Passaggio dei parametri|  
 |-------------|-------------------|-----------------------|  
 |[__cdecl](../cpp/cdecl.md)|Chiamante|Inserisce i parametri nello stack in ordine inverso (da destra a sinistra)|  
-|[__clrcall](../cpp/clrcall.md)|n/d|Carica in ordine i parametri nello stack dell'espressione CLR (da sinistra a destra).|  
+|[__clrcall](../cpp/clrcall.md)|N/D|Carica in ordine i parametri nello stack dell'espressione CLR (da sinistra a destra).|  
 |[__stdcall](../cpp/stdcall.md)|Chiamato|Inserisce i parametri nello stack in ordine inverso (da destra a sinistra)|  
 |[__fastcall](../cpp/fastcall.md)|Chiamato|Archiviati nei registri, quindi inseriti nello stack|  
 |[__thiscall](../cpp/thiscall.md)|Chiamato|Inserito nello stack. **questo** puntatore archiviato in ECX|  

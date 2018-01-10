@@ -43,11 +43,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 Aggiunge al massimo i primi `n` byte di una stringa di caratteri multibyte a un'altra. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
@@ -103,7 +104,7 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>Note  
  La funzione `_mbsnbcat` aggiunge a `dest`, al massimo, i primi `count` byte di `src`. Se il byte immediatamente prima del carattere Null in `dest` è un byte di apertura, il byte iniziale di `src` sovrascrive questo byte di apertura. In caso contrario, il byte iniziale di `src` sovrascrive il carattere di terminazione Null di `dest`. Se un byte null viene visualizzato in `src` prima che `count` byte vengano aggiunti, `_mbsnbcat` aggiunge tutti i byte da `src` fino al carattere null. Se `count` è maggiore della lunghezza di `src`, la lunghezza di `src` viene usata invece di `count`. La stringa risultante termina con un carattere Null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbcat` della funzione usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione `_mbsnbcat_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbcat` della funzione usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione `_mbsnbcat_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  **Nota sulla sicurezza** Usare una stringa con terminazione Null. Le dimensioni della stringa con terminazione Null non devono essere superiori a quelle del buffer di destinazione. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   

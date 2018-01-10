@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e9ccf9e391baea7d74a25318d6ca5ea8313c3cb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17e65bcae544224bb8987e1ffae084aafcb6b86a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stackgenericvalue-stlclr"></a>stack::generic_value (STL/CLR)
 Il tipo di elemento per l'utilizzo con l'interfaccia generica per il contenitore.  

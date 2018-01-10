@@ -1,78 +1,78 @@
 ---
-title: "Modifiche al sistema di compilazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.msbuild.changes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sistema di compilazione (modifiche), $(Inherit)"
-  - "sistema di compilazione (modifiche), $(NoInherit)"
-  - "sistema di compilazione (modifiche), .vsprops"
-  - "sistema di compilazione (modifiche), regole di compilazione personalizzate"
-  - "sistema di compilazione (modifiche), MSBuild"
-  - "sistema di compilazione (modifiche), file di progetto (vcxprog)"
-  - "MSBuild, modifiche del sistema di compilazione"
+title: Modifiche al sistema di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.msbuild.changes
+dev_langs: C++
+helpviewer_keywords:
+- Build system changes, project file (.vcxprog)
+- Build system changes, custom build rules
+- Build system changes, MSBuild
+- MSBuild, build system changes
+- Build system changes, .vsprops
+- Build system changes, $(Inherit)
+- Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Modifiche al sistema di compilazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il sistema MSBuild è utilizzato per compilare progetti Visual C\+\+.  Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato.  Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente.  In questo documento vengono illustrate le differenze nel sistema di compilazione corrente.  
+# <a name="build-system-changes"></a>Modifiche al sistema di compilazione
+Il sistema MSBuild è utilizzato per compilare progetti Visual C++. Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato. Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente. Questo documento vengono illustrate le differenze nel sistema di compilazione corrente.  
   
-## L'estensione di file vcproj è ora vcxproj  
- Per i file di progetto non viene più utilizzata l'estensione vcproj.  In Visual Studio i file di progetto creati in una versione precedente di Visual C\+\+ vengono convertiti automaticamente nel formato utilizzato dal sistema corrente.  Per ulteriori informazioni su come aggiornare manualmente un progetto, vedere [\/Upgrade](../Topic/-Upgrade%20\(devenv.exe\).md).  
+## <a name="vcproj-is-now-vcxproj"></a>vcproj è ora vcxproj  
+ File di progetto non è più utilizzano l'estensione del nome file con estensione vcproj. Visual Studio converte automaticamente i file di progetto che sono stati creati con una versione precedente di Visual C++ per il formato utilizzato dal sistema corrente. Per ulteriori informazioni su come eseguire manualmente l'aggiornamento di un progetto, vedere [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe).  
   
- Nella versione corrente l'estensione di un file di progetto è vcxproj.  
+ Nella versione corrente, l'estensione di file per un file di progetto è con estensione vcxproj.  
   
-## L'estensione di file vsprops è ora props  
- Nelle versioni precedenti una *finestra delle proprietà di progetto* è un file basato su XML con estensione vsprops.  Una finestra delle proprietà di progetto consente di specificare opzioni per costruire strumenti, ad esempio il compilatore o il linker, e creare macro definite dall'utente  
+## <a name="vsprops-is-now-props"></a>vsprops è ora props  
+ Nelle versioni precedenti, un *finestra delle proprietà del progetto* è un file basato su XML che è un'estensione di file vsprops. Una finestra delle proprietà di progetto consente di specificare opzioni per gli strumenti di compilazione, ad esempio il compilatore o del linker e creare macro definite dall'utente.  
   
- Nella versione corrente l'estensione di file di una finestra delle proprietà di progetto è props.  
+ Nella versione corrente, l'estensione di file per una finestra delle proprietà di progetto è generalmente props.  
   
-## Regole di compilazione personalizzate e file con estensione rules  
- Nelle versioni precedenti un *file delle regole* è un file basato su XML con estensione rules.  Un file delle regole consente di definire regole di compilazione personalizzate e incorporarle nel processo di compilazione di un progetto Visual C\+\+.  Una regola di compilazione personalizzata, che può essere associata a una o più estensioni di file, consente di passare i file di input a uno strumento che crea uno o più file di output.  
+## <a name="custom-build-rules-and-rules-files"></a>Regole e i file con estensione rules di compilazione personalizzata  
+ Nelle versioni precedenti, un *file delle regole* è un file basato su XML che è un'estensione di file con estensione rules. Un file di regole consente di definire le regole di compilazione personalizzata e includerli nel processo di compilazione di un progetto di Visual C++. Una regola di compilazione personalizzata, che può essere associata a uno o più estensioni di file, consente di passare i file di input a uno strumento che consente di creare uno o più file di output.  
   
- In questa versione le regole di compilazione personalizzate vengono rappresentate da tre tipi di file, con estensione xml, props e targets, anziché da un file con estensione rules.  Quando si esegue la migrazione di un file con estensione rules creato mediante una versione precedente di Visual C\+\+ alla versione corrente, i file con estensione xml, props e targets equivalenti vengono creati e archiviati nel progetto insieme con il file con estensione rules originale.  
+ In questa versione, le regole di compilazione personalizzata sono rappresentate da tre tipi di file con estensione XML, con estensione props e targets, anziché un file con estensione rules. Quando un file con estensione rules che è stato creato con una versione precedente di Visual C++ viene eseguita la migrazione alla versione corrente, i file con estensione XML, con estensione props e targets equivalenti vengono creati e archiviati nel progetto insieme al file con estensione rules originale.  
   
 > [!IMPORTANT]
->  Nella versione corrente, [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] non supporta la creazione di nuove regole.  Per questo motivo, il modo più semplice per utilizzare un file di regole da un progetto creato con una versione precedente di Visual C\+\+ è di eseguire la migrazione del progetto nella versione corrente.  
+>  Nella versione corrente, [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] non supporta la creazione di nuove regole. Per questo motivo, il modo più semplice per utilizzare un file di regole da un progetto creato con una versione precedente di Visual C++ è di eseguire la migrazione del progetto nella versione corrente.  
   
-## Macro di ereditarietà  
- Nelle versioni precedenti le macro **$\(Inherit\)** specificano l'ordine in cui le proprietà ereditate appaiono sulla riga di comando composta dal sistema di compilazione del progetto.  La macro **$\(NoInherit\)** fa sì che venga ignorata qualsiasi occorrenza di $\(Inherit\) e che non vengano ereditate le proprietà che sarebbero altrimenti state ereditate.  Ad esempio, per impostazione predefinita, la macro $\(Inherit\) comporta l'aggiunta dei file specificati tramite l'opzione del compilatore [\/I \(Directory di inclusione aggiuntive\)](../build/reference/i-additional-include-directories.md) alla riga di comando.  
+## <a name="inheritance-macros"></a>Macro di ereditarietà  
+ Nelle versioni precedenti, il **$ (Inherit)** (macro) specifica l'ordine in cui vengono visualizzate le proprietà ereditate nella riga di comando che è composto dal sistema di compilazione del progetto. Il **$ (NoInherit)** (macro), tutte le occorrenze di $ (Inherit) che verranno ignorati e le proprietà che verrebbero altrimenti ereditati, non essere ereditata. Ad esempio, per impostazione predefinita la macro $ (Inherit), i file specificati utilizzando il [/I (directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md) l'opzione del compilatore da aggiungere alla riga di comando.  
   
- Nella versione corrente l'ereditarietà viene supportata specificando il valore di una proprietà come concatenazione di uno o più valori letterali e macro della proprietà.  Le macro **$\(Inherit\)** e **$\(NoInherit\)** non sono supportate.  
+ Nella versione corrente, specificando il valore di una proprietà come concatenazione di uno o più valori letterali e macro di proprietà è supportata l'ereditarietà. Il **$ (Inherit)** e **$ (NoInherit)** macro non sono supportate.  
   
- Nell'esempio seguente un elenco delimitato da punti e virgola viene assegnato a una proprietà in una pagina delle proprietà.  L'elenco è composto dalla concatenazione del letterale *\<value\>* e del valore della proprietà `MyProperty`, a cui si accede tramite la notazione di macro, **$\(***MyProperty***\)**.  
+ Nell'esempio seguente, un elenco delimitato da punto e virgola viene assegnato a una proprietà in una pagina delle proprietà. L'elenco è costituito da concatenazione dei parametri di  *\<valore >* letterale e il valore della `MyProperty` proprietà, a cui si accede tramite la notazione (macro), **$(**  *MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## File con estensione vcxproj.user  
- In un file utente \(con estensione vcxproj.user\) vengono archiviate proprietà specifiche dell'utente, ad esempio le impostazioni di debug e distribuzione.  Il file con estensione vcxproj.user viene applicato a tutti i progetti per un determinato utente.  
+## <a name="vcxprojuser-files"></a>. file vcxproj. User  
+ Un file utente (. vcxproj) archivia le proprietà specifiche dell'utente per le impostazioni di esempio, debug e distribuzione. Il file vcxproj si applica a tutti i progetti per un determinato utente.  
   
-## File con estensione vcxproj.filters  
- Quando si utilizza **Esplora soluzioni** per aggiungere un file a un progetto, il file di filtro \(con estensione vcxproj.filters\) definisce la posizione in cui viene aggiunto il file nella visualizzazione ad albero di **Esplora soluzioni**, a seconda dell'estensione di file.  
+## <a name="vcxprojfilters-file"></a>. File vcxproj  
+ Quando **Esplora** viene utilizzato per aggiungere un file a un progetto, il file dei filtri (. vcxproj) definisce in che punto il **Esplora** il file viene aggiunto, in base alla relativa estensione visualizzazione ad albero.  
   
-## Impostazioni delle directory di VC\+\+  
- Le impostazioni delle directory di Visual C\+\+ vengono specificate nella [Directory di VC\+\+ \(pagina delle proprietà\)](../ide/vcpp-directories-property-page.md).  Nelle versioni precedenti di Visual Studio, le impostazioni delle directory vengono applicate per ciascun utente e l'elenco delle directory escluse viene specificato nel file sysincl.dat.  
+## <a name="vc-directories-settings"></a>Impostazioni delle directory di VC + +  
+ Impostazioni delle directory di Visual C++ vengono specificate nella [pagina delle proprietà directory di VC + +](../ide/vcpp-directories-property-page.md). Nelle versioni precedenti di Visual Studio, per ogni utente di applicare le impostazioni delle directory e nel file SYSINCL viene specificato l'elenco delle directory escluse.  
   
- Non è possibile modificare le impostazioni delle directory di VC\+\+ se si esegue [devenv \/resetsettings](../Topic/-ResetSettings%20\(devenv.exe\).md) dalla riga di comando.  Inoltre, non si possono modificare le impostazioni aprendo il menu **Strumenti**, facendo clic su **Importa\/Esporta impostazioni** e selezionando l'opzione **Reimposta tutte le impostazioni**.  
+ Se si esegue, non è possibile modificare le impostazioni di directory di VC + + [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) nella riga di comando. È inoltre possibile modificare le impostazioni se si apre il **strumenti** menu, fare clic su **Importa / Esporta impostazioni**e quindi selezionare il **Reimposta tutte le impostazioni** opzione.  
   
- Eseguire la migrazione delle impostazioni delle directory di VC\+\+ da un file con estensione vssettings creato da una versione precedente di Visual C\+\+.  Aprire il menu **Strumenti**, fare clic su **Importa\/Esporta impostazioni**, selezionare **Importa le impostazioni di ambiente selezionate** e seguire le istruzioni della procedura guidata.  In alternativa, quando si avvia per la prima volta Visual Studio, nella finestra di dialogo **Seleziona impostazioni di ambiente predefinite** selezionare **Esegui la migrazione delle impostazioni appropriate da una versione precedente e applicale insieme alle impostazioni predefinite selezionate di seguito**.  
+ Eseguire la migrazione delle impostazioni delle directory di VC + + da un file vssettings creato da una versione precedente di Visual C++. Aprire il **strumenti** menu, fare clic su **Importa / Esporta impostazioni**selezionare **Importa le impostazioni di ambiente selezionate**e quindi seguire le istruzioni della procedura guidata. O quando si avvia Visual Studio per la prima volta, nel **scegliere le impostazioni di ambiente predefinite** nella finestra di dialogo **esegue la migrazione delle impostazioni appropriate da una versione precedente e di applicarle oltre le impostazioni predefinite selezionato sotto**.  
   
-## Vedere anche  
- [MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

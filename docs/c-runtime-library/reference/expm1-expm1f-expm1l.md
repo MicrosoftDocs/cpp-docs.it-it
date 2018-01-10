@@ -38,11 +38,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d22e0e6d8228947532bbbb60ebe9b4cc3b84b50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fe98cb7002bcdbf428115666e07401f26205733
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
 Calcola l'esponenziale in base e di un valore, meno uno.  

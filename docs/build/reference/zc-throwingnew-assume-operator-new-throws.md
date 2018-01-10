@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Presupponi operatore nuovo genera un'eccezione)  
 Quando il `/Zc:throwingNew` è specificata l'opzione, il compilatore ottimizza le chiamate a `operator new` per ignorare i controlli per un puntatore null restituito. Questa opzione indica al compilatore di supporre che tutti collegati le implementazioni di `operator new` e gli allocatori personalizzati conformi allo standard C++ e generano un errore di allocazione. Per impostazione predefinita in Visual Studio, il compilatore genera pessimistico controlli null (`/Zc:throwingNew-`) per queste chiamate, perché gli utenti possono creare collegamenti con un'implementazione non generanti di `operator new` o scrivere routine allocatore personalizzato che restituiscono puntatori null.  

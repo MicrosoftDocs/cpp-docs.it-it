@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2913
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2913
+f1_keywords: C2913
+dev_langs: C++
+helpviewer_keywords: C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9485e0bb8df2ae23a571f2546823e6b6742ffa84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 156c4cd921dc9ac7d55b28114f6bb457f15b8a4a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2913"></a>Errore del compilatore C2913
 specializzazione esplicita. 'declaration' non è una specializzazione del modello di classe  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3332c33e2d2b79106cf88f143fe99cb91bbce670
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e17ff0c468f3b99a1c97114c93ea64ecfa9499e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 Ottiene un valore dall'ambiente corrente.  
@@ -165,7 +149,7 @@ nonexistentvariable = (null)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Process and Environment Control](../../c-runtime-library/process-and-environment-control.md)  (Controllo processo e ambiente)  
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [Environmental Constants](../../c-runtime-library/environmental-constants.md)  (Costanti di ambiente)  
  [_dupenv_s_dbg, _wdupenv_s_dbg](../../c-runtime-library/reference/dupenv-s-dbg-wdupenv-s-dbg.md)   
  [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   

@@ -1,50 +1,51 @@
 ---
-title: "Classe CDynamicStringAccessorA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessorA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessorA (classe)"
+title: Classe CDynamicStringAccessorA | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessorA
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25d53a92f24fa485e080f02c6c889263b3abe18f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CDynamicStringAccessorA
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consente di accedere a un'origine dati quando non si conosce lo schema di database \(struttura sottostante.  
+# <a name="cdynamicstringaccessora-class"></a>Classe CDynamicStringAccessorA
+Consente di accedere a un'origine dati quando si ha alcuna conoscenza dello schema del database (struttura sottostante).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;  
 ```  
   
-## Note  
- Entrambe richiesta che la raccolta di provider tutti i dati utilizzati dall'archivio dati in formato stringa, ma `CDynamicStringAccessor` richiede dati della stringa ANSI.  
+## <a name="remarks"></a>Note  
+ Entrambi richiedono che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa, ma `CDynamicStringAccessor` richieste ANSI della stringa di dati.  
   
- `CDynamicStringAccessorA` eredita **GetString** e `SetString` da `CDynamicStringAccessor`.  Quando si utilizzano questi metodi in `CDynamicStringAccessorA` oggetto, ***BaseType*** è **CHAR**.  
+ `CDynamicStringAccessorA`eredita **GetString** e `SetString` da `CDynamicStringAccessor`. Quando si utilizzano questi metodi in un `CDynamicStringAccessorA` oggetto ***BaseType*** è **CHAR**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione**: atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CAccessor](../../data/oledb/caccessor-class.md)   
- [Classe CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Riferimenti per i modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [CAccessor (classe)](../../data/oledb/caccessor-class.md)   
+ [CDynamicParameterAccessor (classe)](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Classe CManualAccessor](../../data/oledb/cmanualaccessor-class.md)   
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)

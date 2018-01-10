@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>Spazi dei nomi (C++)
 Uno spazio dei nomi è un'area dichiarativa che fornisce un ambito per gli identificatori (nomi di tipi, funzioni, variabili e così via) al suo interno. Gli spazi dei nomi vengono usati per organizzare il codice in gruppi logici e per evitare conflitti tra nomi, che si possono verificare in particolare quando la codebase include più librerie. Tutti gli identificatori nell'ambito dello spazio dei nomi sono visibili tra loro senza qualifica. Gli identificatori all'esterno di spazio dei nomi è possono accedere ai membri tramite il nome completo di ogni identificatore, ad esempio `std::vector<std::string> vec;`, oppure tramite un [dichiarazione using](../cpp/using-declaration.md) per un singolo identificatore (`using std::string`), o un [direttiva using](../cpp/namespaces-cpp.md#using_directives) per tutti gli identificatori dello spazio dei nomi (`using namespace std;`). È consigliabile che il codice nel file di intestazione usi sempre il nome completo dello spazio dei nomi.  
@@ -281,4 +278,3 @@ namespace
   
 ## <a name="see-also"></a>Vedere anche  
  [Dichiarazioni e definizioni](declarations-and-definitions-cpp.md)
-

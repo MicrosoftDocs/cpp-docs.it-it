@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDbgFlag
+apiname: _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -35,8 +33,7 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -59,30 +56,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ef1773e534c08a15f10fe2048a5036a957c6a1f4
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Recupera o modifica lo stato del flag **_crtDbgFlag** per controllare il comportamento di allocazione del gestore dell'heap di debug (solo versione di debug).  
@@ -195,7 +178,7 @@ _CrtSetDbgFlag( tmpFlag );
 |-------------|---------------------|  
 |`_CrtSetDbgFlag`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

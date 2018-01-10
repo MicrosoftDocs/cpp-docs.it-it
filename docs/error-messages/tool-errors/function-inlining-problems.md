@@ -1,37 +1,38 @@
 ---
-title: "Problemi di inline di funzioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Ob1 C++ (opzione del compilatore)"
-  - "/Ob2 C++ (opzione del compilatore)"
-  - "problemi di inline di funzioni"
-  - "funzioni inline, problemi"
-  - "-Ob1 C++ (opzione del compilatore)"
-  - "-Ob2 C++ (opzione del compilatore)"
+title: Problemi di inline di funzioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- /Ob1 C++ compiler option
+- inline functions, problems
+- -Ob1 C++ compiler option
+- /Ob2 C++ compiler option
+- -Ob2 C++ compiler option
+- function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Problemi di inline di funzioni
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se si utilizza l'inline di funzioni, procedere come indicato di seguito.  
+# <a name="function-inlining-problems"></a>Problemi di inline di funzioni
+Se si utilizza l'inline delle funzioni, è necessario:  
   
--   Implementare le funzioni inline nel file di intestazione da includere.  
+-   Definire le funzioni inline implementate nel file di intestazione che è includere.  
   
--   Attivare l'inline nel file di intestazione.  
+-   Avere inline nel file di intestazione.  
   
 ```  
 // LNK2019_function_inline.cpp  
@@ -46,7 +47,7 @@ struct _load_config_used {
 void _load_config_used::Test() { printf("in Test\n"); }  
 ```  
   
- quindi  
+ E quindi,  
   
 ```  
 // LNK2019_function_inline_2.cpp  
@@ -63,11 +64,11 @@ int main() {
 }  
 ```  
   
- Se si utilizza la direttiva del compilatore `#pragma inline_depth`, accertarsi di avere impostato un valore pari a 2 o superiore.  Un valore pari a zero disattiva l'inline.  Accertarsi inoltre di utilizzare l'opzione del compilatore **\/Ob1** o **\/Ob2**.  
+ Se si utilizza il `#pragma inline_depth` del compilatore direttiva, assicurarsi impostare un valore uguale o maggiore di 2. Un valore pari a zero per disattivare l'incorporamento. Assicurarsi inoltre che si utilizza il **/Ob1** o **/Ob2** opzioni del compilatore.  
   
- L'utilizzo combinato di opzioni del compilatore inline e non inline su moduli diversi talvolta può causare problemi.  Se si crea una libreria C\+\+ con l'inline di funzione attivato \([\/Ob1](../../build/reference/ob-inline-function-expansion.md) o [\/Ob2](../../build/reference/ob-inline-function-expansion.md)\), mentre il file di intestazione corrispondente che descrive le funzioni ha l'inline disattivato \(nessuna opzione\), viene generato l'errore LNK2001.  Le funzioni non vengono rese inline nel codice dal file di intestazione, ma, poiché non si trovano nel file della libreria, non è disponibile alcun indirizzo per risolvere il riferimento.  
+ Combinazione di opzioni di compilazione inline e non inline in moduli diversi può causare problemi. Se si crea una libreria di C++ con attivata l'inline delle funzioni ([/Ob1](../../build/reference/ob-inline-function-expansion.md) o [/Ob2](../../build/reference/ob-inline-function-expansion.md)) ma il file di intestazione corrispondente che descrive le funzioni ha l'inline disattivato (nessuna opzione), verrà visualizzato l'errore LNK2001. Le funzioni vengono rese inline nel codice dal file di intestazione, ma poiché non sono nel file di libreria non è disponibile alcun indirizzo per risolvere il riferimento.  
   
- Analogamente, l'errore LNK2019 viene generato anche da un progetto che utilizza l'inline di funzioni definendo le funzioni in un file cpp anziché nel file di intestazione.  Il file di intestazione viene incluso ovunque sia appropriato, ma le funzioni vengono rese inline solo quando il file cpp passa attraverso il compilatore. Pertanto, le funzioni vengono rilevate dal linker come esterni non risolti quando sono utilizzate in altri moduli.  
+ Analogamente, un progetto che utilizza l'inline delle funzioni, ma definisce le funzioni in un file con estensione cpp anziché nell'intestazione del file verrà visualizzato anche l'errore LNK2019. Il file di intestazione è incluso ovunque sia appropriato, ma le funzioni sono solo inline quando il file con estensione cpp passa attraverso il compilatore. Pertanto, il linker rileva le funzioni come esterni non risolti quando usate in altri moduli.  
   
 ```  
 // LNK2019_FIP.h  
@@ -76,7 +77,7 @@ struct testclass {
 };  
 ```  
   
- quindi  
+ E poi  
   
 ```  
 // LNK2019_FIP.cpp  
@@ -85,7 +86,7 @@ struct testclass {
 inline void testclass::PublicStatMemFunc1(void) {}  
 ```  
   
- quindi  
+ E poi  
   
 ```  
 // LNK2019_FIP_2.cpp  
@@ -100,5 +101,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Errore degli strumenti del linker LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

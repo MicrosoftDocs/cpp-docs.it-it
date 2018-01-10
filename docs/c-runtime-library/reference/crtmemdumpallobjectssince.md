@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtMemDumpAllObjectsSince
+apiname: _CrtMemDumpAllObjectsSince
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtMemDumpAllObjectsSince
 - _CrtMemDumpAllObjectsSince
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtMemDumpAllObjectsSince function
 - CrtMemDumpAllObjectsSince function
 ms.assetid: c48a447a-e6bb-475c-9271-a3021182a0dc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 93904e03c38a74005682aabfc30c69b6f96b14c7
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d71b5d13b5616717c0b3fc0ac6eae0fc1ca8b551
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 Esegue il dump delle informazioni sugli oggetti nell'heap dall'inizio dell'esecuzione del programma o da uno stato di heap specificato (solo versione di debug).  
@@ -80,7 +62,7 @@ Esegue il dump delle informazioni sugli oggetti nell'heap dall'inizio dell'esecu
   
  Se l'applicazione ha una funzione di hook di dump installata tramite [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md), ogni volta che `_CrtMemDumpAllObjectsSince` esegue il dump delle informazioni su un tipo `_CLIENT_BLOCK` del blocco, chiama anche la funzione di dump offerta dall'applicazione. Per impostazione predefinita, i blocchi di runtime di C interni (`_CRT_BLOCK`) non sono inclusi nelle operazioni di dump della memoria. La funzione [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) può essere usata per attivare il bit `_CRTDBG_CHECK_CRT_DF` di **_crtDbgFlag** per includere questi blocchi. I blocchi contrassegnati come liberati o ignorati (**FREE_BLOCK**, **IGNORE_BLOCK**) non sono inclusi nel dump della memoria.  
   
- Per altre informazioni sulle funzioni dello stato dell'heap e sulla struttura `_CrtMemState`, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details) (Funzioni per la creazione di report sullo stato dell'heap). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Per altre informazioni sulle funzioni dello stato dell'heap e sulla struttura `_CrtMemState`, vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details) (Funzioni per la creazione di report sullo stato dell'heap). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -88,7 +70,7 @@ Esegue il dump delle informazioni sugli oggetti nell'heap dall'inizio dell'esecu
 |-------------|---------------------|  
 |**_CrtMemDumpAll-ObjectsSince**|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

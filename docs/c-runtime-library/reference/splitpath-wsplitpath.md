@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - splitpath
 - _wsplitpath
 - _tsplitpath
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _splitpath function
 - pathnames
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bbd6a163df9daf8e699f3ecf52325786fe89d8ea
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ad76dd59e0119e46030eb19223d678927b3fd077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath, _wsplitpath
 Suddivide un nome di percorso nei componenti. Sono disponibili versioni più sicure di queste funzioni. Vedere [_splitpath_s, _wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md).  
@@ -122,7 +106,7 @@ void _wsplitpath(
   
  La tabella seguente elenca i valori delle costanti manifeste.  
   
-|Nome|Valore|  
+|nome|Valore|  
 |----------|-----------|  
 |_MAX_DRIVE|3|  
 |_MAX_DIR|256|  
@@ -140,9 +124,9 @@ void _wsplitpath(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`_splitpath`|\<stdlib.h>|  
-|`_wsplitpath`|\<stdlib.h> o \<wchar.h>|  
+|`_wsplitpath`|\<stdlib.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md).  

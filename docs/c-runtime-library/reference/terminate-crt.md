@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: daf280ba64288a92f7b1deb60a429c56ffc98498
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b04cd56f2239bcee291a0de37f23f7eb2e699f1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 Chiama `abort` o una funzione specificata con `set_terminate`.  
@@ -63,7 +64,7 @@ void terminate( void );
 |-------------|---------------------|  
 |`terminate`|\<eh.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -117,4 +118,4 @@ term_func() was called by terminate().
  [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
  [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
  [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+ [Imprevisto](../../c-runtime-library/reference/unexpected-crt.md)

@@ -44,11 +44,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9dcaa743305c7034d3c3b7ba3f587da2630632f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b308c6a86fd4f60be19fd3a95d935e6932d0079
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 Converte una stringa in un integer `long long`.  
@@ -170,8 +171,8 @@ Overflow condition occurred.
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)   

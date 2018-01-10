@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3027
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3027
+f1_keywords: C3027
+dev_langs: C++
+helpviewer_keywords: C3027
 ms.assetid: 6562a5c2-2f28-4b36-91ca-2a64c0f0501a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8c787d316ad0421f3dcfb5341a72d6c43d727e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f5d1302b5572d145a30efcde0ed4bf12babd671d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3027"></a>Errore del compilatore C3027
 'clause': prevista espressione aritmetica o del puntatore  

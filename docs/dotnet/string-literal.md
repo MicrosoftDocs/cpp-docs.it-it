@@ -1,38 +1,41 @@
 ---
-title: "Stringhe letterali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stringhe letterali"
-  - "stringhe [C++], stringhe letterali"
+title: Valore letterale stringa | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- string literals
+- strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Stringhe letterali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La gestione dei valori letterali stringa è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="string-literal"></a>Stringhe letterali
+La gestione di valori letterali stringa è stata modificata dalle estensioni gestite per C++ in Visual C++.  
   
- Nella progettazione con le estensioni gestite per C\+\+, una stringa letterale gestita viene indicata anteponendo una `S`.  Di seguito è riportato un esempio.  
+ Nelle estensioni gestite per la progettazione del linguaggio C++, una stringa letterale gestita è stata indicata anteponendo la stringa letterale con un `S`. Ad esempio:  
   
 ```  
 String *ps1 = "hello";  
 String *ps2 = S"goodbye";  
 ```  
   
- La riduzione delle prestazioni tra le due inizializzazioni risulta significativa, come illustrato dalla rappresentazione CIL riportata di seguito basata su **ildasm**:  
+ La riduzione delle prestazioni tra le due inizializzazioni è risultata per essere non semplice, come il codice CIL seguente rappresentazione illustrato dalla **ildasm**:  
   
 ```  
 // String *ps1 = "hello";  
@@ -48,15 +51,15 @@ ldstr      "goodbye"
 stloc.0  
 ```  
   
- Ricordando di anteporre il prefisso `S` a una stringa letterale si ottiene un risparmio significativo.  Nella nuova sintassi, la gestione delle stringhe letterali è trasparente e determinata dal contesto di utilizzo.  Non è più necessario specificare il prefisso `S`.  
+ Si tratta di un notevole risparmio per semplicemente ricordare (o learning) come prefisso una valore letterale stringa per con un `S`. Nella nuova sintassi, la gestione di valori letterali stringa è trasparente, determinato dal contesto di utilizzo. Il `S` non deve essere specificata.  
   
- Nei casi in cui è necessario indirizzare il compilatore in modo esplicito verso una determinata interpretazione,  si applica un cast esplicito.  Di seguito è riportato un esempio.  
+ Per quanto riguarda i casi in cui è necessario in modo esplicito indicare al compilatore di una determinata interpretazione? In questi casi, si applica un cast esplicito. Ad esempio:  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- La stringa letterale corrisponde ora a `String` con conversione semplice, anziché conversione standard.  Ciò modifica la risoluzione di insiemi di funzioni in overload comprendenti `String` e `const char*` come parametri formali antagonisti.  La risoluzione precedentemente risolta in un'istanza di `const char*` viene ora contrassegnata come ambigua.  Di seguito è riportato un esempio.  
+ Inoltre, la stringa letterale corrisponde ora un `String` con una conversione semplice, anziché una conversione standard. Anche se può sembrare non modifica la risoluzione di set di funzioni in overload che includono un `String` e `const char*` come parametri formali concorrenti. La risoluzione di una volta risolti in un `const char*` istanza ora viene contrassegnata come ambigua. Ad esempio:  
   
 ```  
 ref struct R {  
@@ -68,48 +71,48 @@ int main () {
    R r;  
    // old syntax: f( const char* );  
    // new syntax: error: ambiguous  
-   r.f("ABC");   
+   r.f("ABC");   
 }  
 ```  
   
- Perché c'è una differenza?  Poiché all'interno del programma esistono più istanze denominate `f`, è necessario applicare alla chiamata l'algoritmo di risoluzione dell'overload della funzione.  La risoluzione formale di una funzione in overload prevede tre passaggi.  
+ Motivo per cui esiste una differenza? Poiché più di un'istanza denominata `f` esiste all'interno del programma, questa operazione richiede l'algoritmo di risoluzione dell'overload di funzione da applicare alla chiamata. La risoluzione formale di una funzione in overload prevede tre passaggi.  
   
-1.  Raccolta delle funzioni candidate.  Le funzioni candidate sono costituite dai metodi all'interno dell'ambito che corrispondono a livello lessicale al nome della funzione richiamata.  Poiché la chiamata di `f()` viene eseguita tramite un'istanza di `R`, tutte le funzioni denominate `f` che non sono membri di `R` o della gerarchia di classi base non sono funzioni candidate.  Nell'esempio sono incluse due funzioni candidate,  corrispondenti alle due funzioni membro di `R` denominate `f`.  In questa fase, una chiamata ha esito negativo se l'insieme delle funzioni candidate è vuoto.  
+1.  Raccolta di funzioni candidate. Le funzioni candidate sono i metodi all'interno dell'ambito lessicale corrispondano al nome della funzione richiamata. Ad esempio, poiché `f()` viene richiamato tramite un'istanza di `R`, tutte le funzioni denominate `f` che non si tratta di un membro del `R` (o della relativa gerarchia di classe di base) non sono funzioni candidate. In questo esempio, esistono due funzioni candidate. Queste sono le due funzioni membro di `R` denominato `f`. Durante questa fase, una chiamata ha esito negativo se il set di funzioni candidate è vuoto.  
   
-2.  Insieme delle funzioni valide tra le funzioni candidate.  Una funzione è valida se può essere richiamata con gli argomenti specificati nella chiamata, dati il numero di argomenti e i relativi tipi.  Nell'esempio, entrambe le funzioni candidate rappresentano funzioni valide.  In questa fase, una chiamata ha esito negativo se l'insieme delle funzioni valide è vuoto.  
+2.  Il set di funzioni valide tra le funzioni candidate. Una funzione è valida è quello che può essere richiamato con gli argomenti specificati nella chiamata, dato il numero di argomenti e i relativi tipi. In questo esempio, entrambe le funzioni candidate sono funzioni valide. Durante questa fase, una chiamata ha esito negativo se il set di funzioni valide è vuoto.  
   
-3.  Selezionare la funzione che rappresenta la corrispondenza ottimale con la chiamata.  A tale scopo, classificare le conversioni applicate per trasformare gli argomenti nel tipo dei parametri delle funzioni valide.  Questa operazione risulta relativamente semplice con una funzione con singolo parametro, ma diventa più complessa in presenza di più parametri.  In questa fase, una chiamata ha esito negativo se non è presente una corrispondenza ottimale,  ovvero se le conversioni necessarie per trasformare il tipo dell'argomento effettivo nel tipo del parametro formale presentano lo stesso livello di efficienza.  La chiamata viene contrassegnata come ambigua.  
+3.  Selezionare la funzione che rappresenta la migliore corrispondenza della chiamata. Questa operazione viene eseguita, classificare le conversioni applicate per trasformare gli argomenti per il tipo dei parametri di funzione valido. Questo è relativamente semplice con una funzione singolo parametro. diventa più complesso quando sono presenti più parametri. Durante questa fase, una chiamata ha esito negativo se è presente alcuna corrispondenza migliore. Ovvero, se le conversioni necessarie per trasformare il tipo dell'argomento effettivo per il tipo del parametro formale sono ugualmente valide. La chiamata viene contrassegnata come ambigua.  
   
- Nelle estensioni gestite, nella risoluzione di questa chiamata viene richiamata l'istanza di `const char*` come corrispondenza ottimale.  Nella nuova sintassi, la conversione necessaria per ottenere la corrispondenza di `"abc"` con `const char*` e `String^` è equivalente, ovvero caratterizzata dallo stesso livello di efficienza, e la chiamata viene pertanto contrassegnata come ambigua.  
+ Nelle estensioni gestite, la risoluzione di questa chiamata viene richiamata la `const char*` istanza come corrispondenza ottimale. Nella nuova sintassi, la conversione necessaria per la corrispondenza `"abc"` a `const char*` e `String^` sono ora equivalenti, vale a dire, ugualmente valida - e pertanto la chiamata è contrassegnata, vale a dire come ambigua.  
   
- È pertanto necessario definire quanto segue:  
+ Questo ci conduce a due domande:  
   
--   Il tipo dell'argomento effettivo `"abc"`  
+-   Che cos'è il tipo dell'argomento effettivo, `"abc"`?  
   
--   L'algoritmo per determinare quando una conversione di tipo risulta più efficiente di un'altra  
+-   Che cos'è l'algoritmo per determinare quando una conversione di tipo è migliore di altro?  
   
- Il tipo della stringa letterale `"abc"` è `const char[4]`. Alla fine di ogni stringa letterale è presente un carattere di terminazione null implicito.  
+ Il tipo di valore letterale stringa `"abc"` è `const char[4]` -non c'è un carattere di terminazione null implicito alla fine di ogni stringa letterale.  
   
- L'algoritmo per determinare quando una conversione di tipo risulta più efficiente di un'altra prevede l'inserimento delle conversioni di tipo possibili in una gerarchia.  Di seguito viene illustrata tale gerarchia. Tutte le conversioni sono implicite.  Utilizzando una notazione di cast esplicita viene ignorata la gerarchia, così come la consueta precedenza degli operatori di un'espressione viene ignorata in presenza di parentesi.  
+ L'algoritmo per determinare quando una conversione di tipo è migliore di altro prevede l'inserimento le conversioni dei tipi possibili in una gerarchia. Ecco la conoscenza di tale gerarchia - tali conversioni, naturalmente, sono implicite. Utilizzando una notazione cast esplicito esegue l'override della gerarchia simile a quello parentesi esegue l'override di precedenza degli operatori normale di un'espressione.  
   
-1.  Una corrispondenza esatta è ottimale.  Per costituire una corrispondenza esatta, un argomento non deve corrispondere esattamente al tipo di parametro. È sufficiente un elevato grado di approssimazione.  Questo principio è essenziale per comprendere l'esempio e le modifiche apportate al linguaggio.  
+1.  Una corrispondenza esatta è migliore. Sorprendentemente, per un argomento di essere una corrispondenza esatta, non deve corrispondere esattamente al tipo di parametro; solo deve essere sufficientemente vicino. Si tratta della chiave per conoscere cosa accade in questo esempio, e come è stata modificata la lingua.  
   
-2.  Una promozione è preferibile rispetto a una conversione standard.  La promozione di `short int` a `int`, ad esempio, è preferibile rispetto alla conversione di `int` in `double`.  
+2.  Una promozione è preferibile rispetto a una conversione standard. Innalzamento di livello, ad esempio, un `short int` per un `int` è preferibile rispetto alla conversione di un `int` in un `double`.  
   
-3.  Una conversione standard è preferibile rispetto a una conversione boxing.  La conversione di `int` in `double`, ad esempio, è preferibile rispetto alla conversione boxing di `int` in `Object`.  
+3.  Una conversione standard è preferibile rispetto a una conversione boxing. Ad esempio, la conversione di un `int` in un `double` è preferibile rispetto alla conversione boxing un `int` in un `Object`.  
   
-4.  Una conversione boxing è preferibile rispetto a una conversione definita dall'utente implicita.  La conversione boxing di `int` in `Object`, ad esempio, è preferibile rispetto all'applicazione di un operatore di conversione di una classe di valori `SmallInt`.  
+4.  Una conversione boxing è migliore di una conversione implicita definita dall'utente. Ad esempio, la conversione boxing un `int` in un `Object` è preferibile rispetto all'applicazione di un operatore di conversione di un `SmallInt` classe di valori.  
   
-5.  Una conversione definita dall'utente implicita è preferibile rispetto a nessuna conversione.  Una conversione definita dall'utente implicita rappresenta l'ultima possibilità per evitare un errore, a condizione che la firma formale possa contenere una matrice di parametri o puntini di sospensione nella posizione corrispondente.  
+5.  Una conversione implicita definita dall'utente è migliore di alcuna conversione affatto. Una conversione implicita definita dall'utente è l'ultima uscita prima dell'errore (tenendo però che la firma formale potrebbe contenere una matrice di parametri o i puntini di sospensione in tale posizione).  
   
- Come sopra accennato, una corrispondenza esatta non è necessariamente esatta.  Ad esempio, `const char[4]` non corrisponde esattamente a `const char*` o `String^`, ma l'ambiguità dell'esempio riguarda due corrispondenze esatte in conflitto.  
+ In tal caso, la cosa significa che una corrispondenza esatta non è necessariamente esattamente una corrispondenza? Ad esempio, `const char[4]` corrisponde esattamente a `const char*` o `String^`, ma l'ambiguità dell'esempio riguarda due corrispondenze esatte in conflitto.  
   
- Una corrispondenza esatta include diverse conversioni semplici.  Nello standard ISO C\+\+ sono applicabili quattro conversioni semplici qualificabili come corrispondenza esatta.  Tre sono denominate trasformazioni di lvalue.  Un quarto tipo viene denominato conversione di qualificazione.  Le tre trasformazioni di lvalue vengono trattate come una corrispondenza esatta migliore rispetto a una corrispondenza che richiede una conversione di qualificazione.  
+ Una corrispondenza esatta, in questo caso, include un numero di conversioni semplici. Esistono quattro conversioni semplici standard ISO c++ che possono essere applicati e comunque considerata una corrispondenza esatta. Tre sono definiti per le trasformazioni di lvalue. Un quarto tipo viene chiamato una conversione di qualificazione. Le tre trasformazioni di lvalue vengono considerate come una corrispondenza esatta migliore rispetto a uno che richiedono una conversione di qualificazione.  
   
- Una forma di trasformazione di lvalue è rappresentata dalla conversione da matrice nativa a puntatore,  utilizzata per la corrispondenza tra `const char[4]` e `const char*`.  La corrispondenza tra `f("abc")` e `f(const char*)` è pertanto una corrispondenza esatta.  Nelle precedenti rappresentazioni del linguaggio costituisce infatti la corrispondenza ottimale.  
+ Una forma della trasformazione lvalue è la matrice nativa al puntatore conversione. Si tratta gli elementi coinvolti in corrispondenza un `const char[4]` a `const char*`. Pertanto, la corrispondenza di `f("abc")` a `f(const char*)` è una corrispondenza esatta. In versioni precedenti del linguaggio, questo è infatti la migliore corrispondenza.  
   
- Affinché la chiamata venga contrassegnata come ambigua dal compilatore, è pertanto necessario che la conversione di `const char[4]` in `String^` sia anche una corrispondenza esatta tramite conversione semplice.  Questa modifica introdotta nella nuova versione del linguaggio  rappresenta il motivo per cui la chiamata viene ora contrassegnata come ambigua.  
+ Il compilatore chiamata venga contrassegnata come ambigua, è pertanto necessario che la conversione di un `const char[4]` per un `String^` anche essere una corrispondenza esatta tramite conversione semplice. Questa è la modifica che è stata introdotta la nuova versione di lingua. E per questo motivo la chiamata a questo punto viene contrassegnata come ambiguo.  
   
-## Vedere anche  
- [Modifica generale del linguaggio](../dotnet/general-language-changes-cpp-cli.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modifiche generali del linguaggio (C + c++ /CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [String](../windows/string-cpp-component-extensions.md)

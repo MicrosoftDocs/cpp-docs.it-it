@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 Converte un valore a virgola mobile in stringa. Questa è una versione di [_gcvt](../../c-runtime-library/reference/gcvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -83,20 +84,20 @@ errno_t _gcvt_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|Valore restituito|Valore in `buffer`|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|INVIO|Valore in `buffer`|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
-|Non `NULL` (punta alla memoria valida)|zero|any|qualsiasi|`EINVAL`|Non modificato.|  
-|Non `NULL` (punta alla memoria valida)|any|qualsiasi|>= `sizeInBytes`|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|zero|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|qualsiasi|qualsiasi|>= `sizeInBytes`|`EINVAL`|Non modificato.|  
   
- **Problemi relativi alla sicurezza**  
+ **Problemi di sicurezza**  
   
  `_gcvt_s` può generare una violazione di accesso se `buffer` non punta alla memoria valida e non è `NULL`.  
   
 ## <a name="remarks"></a>Note  
  La funzione `_gcvt_s` converte un elemento `value` a virgola mobile in una stringa di caratteri (che include un separatore decimale e un possibile byte del segno) e archivia la stringa in `buffer`. `buffer` deve essere sufficientemente grande da contenere il carattere convertito oltre a un carattere Null di terminazione, che viene aggiunto automaticamente. Un buffer di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore a virgola mobile. Se viene usata una dimensione del buffer pari a `digits` + 1, la funzione non sovrascriverà la fine del buffer, pertanto assicurarsi di specificare un buffer sufficiente per questa operazione. `_gcvt_s` tenta di produrre un numero di cifre pari a `digits` in formato decimale. Se non è possibile, produce un numero di cifre pari a `digits` in formato esponenziale. Gli zeri finali possono essere eliminati nella conversione.  
   
- In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -106,7 +107,7 @@ errno_t _gcvt_s(
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

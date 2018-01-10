@@ -62,11 +62,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aa59a7855942b9a67db41038261cc8eb5f7da71d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a2029db9b38ca1edad0e20764278ec77d205c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 Convertono un valore di tempo in una stringa e lo regolano per le impostazioni di fuso orario locale. Queste sono versioni di [ctime, _ctime64, _wctime, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) con miglioramenti di sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -149,7 +150,7 @@ errno_t _wctime64_s(
   
 ## <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`numberOfElements`|`time`|Valore restituito|Valore in `buffer`|  
+|`buffer`|`numberOfElements`|`time`|INVIO|Valore in `buffer`|  
 |--------------|------------------------|------------|------------|-----------------------|  
 |`NULL`|qualsiasi|qualsiasi|`EINVAL`|Non modificato|  
 |Non `NULL` (punta alla memoria valida)|0|qualsiasi|`EINVAL`|Non modificato|  
@@ -166,13 +167,13 @@ Wed Jan 02 02:03:55 1980\n\0
   
  Viene usato un formato 24 ore. Tutti i campi hanno una larghezza costante. Il carattere di nuova riga ('\n') e il carattere null ('\0') occupano le ultime due posizioni della stringa.  
   
- La stringa di caratteri convertita viene anche regolata in base alle impostazioni di fuso orario locale. Vedere le funzioni `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime32_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](../../c-runtime-library/reference/tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.  
+ La stringa di caratteri convertita viene anche modificata in base alle impostazioni di fuso orario locale. Vedere le funzioni `time`, [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime32_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md) per informazioni sulla configurazione dell'ora locale e la funzione [_tzset](../../c-runtime-library/reference/tzset.md) per informazioni sulla definizione delle variabili di ambiente e globali del fuso orario.  
   
  `_wctime32_s` e `_wctime64_s` sono la versione a caratteri wide di `_ctime32_s` e `_ctime64_s`; restituiscono un puntatore alla stringa di caratteri wide. In caso contrario, `_ctime64_s`, `_wctime32_s` e `_wctime64_s` si comportano in modo identico a `_ctime32_s`.  
   
- `ctime_s` è una funzione inline equivalente a `_ctime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il precedente `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `ctime_s` verrà valutata come `_ctime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
+ `ctime_s` è una funzione inline equivalente a `_ctime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t`a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `ctime_s` verrà valutata come `_ctime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
   
- In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -187,9 +188,9 @@ Wed Jan 02 02:03:55 1980\n\0
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
-|`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> o \<wchar.h>|  
+|`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
@@ -232,7 +233,7 @@ The time is Fri Apr 25 13:03:39 2003
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

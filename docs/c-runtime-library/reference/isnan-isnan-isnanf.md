@@ -1,58 +1,59 @@
 ---
-title: "isNaN, isNaN, _isnanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_isnan"
-  - "_isnanf"
-  - "isnan"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_isnan"
-  - "isnan"
-  - "math/isnan"
-  - "math/_isnan"
-  - "math/_isnanf"
-  - "_isnanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NAN (non un numero)"
-  - "_isnan (funzione)"
-  - "formato a virgola mobile IEEE"
-  - "non un numero (NAN)"
-  - "isnan (funzione)"
+title: isnan, _isnan, _isnanf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _isnan
+- _isnanf
+- isnan
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _isnan
+- isnan
+- math/isnan
+- math/_isnan
+- math/_isnanf
+- _isnanf
+dev_langs: C++
+helpviewer_keywords:
+- NAN (not a number)
+- _isnan function
+- IEEE floating-point representation
+- Not a Number (NANs)
+- isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ea88de83d10699c07dd387a616178c0043e925c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# isNaN, isNaN, _isnanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verifica se un valore a virgola mobile non è un numero \(NAN\).  
+# <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
+Verifica se un valore a virgola mobile non è un numero (NaN, Not a Number).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int isnan(  
@@ -73,32 +74,32 @@ bool isnan(
 ) throw(); /* C++ only */  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *x*  
  Valore a virgola mobile da verificare.  
   
-## Valore restituito  
- In C, il `isnan` macro e `_isnan` e `_isnanf` funzioni restituiscono un valore diverso da zero se l'argomento `x` è NAN; in caso contrario restituiscono 0.  
+## <a name="return-value"></a>Valore restituito  
+ In C, la macro `isnan` e le funzioni `_isnan` e `_isnanf` restituiscono un valore diverso da zero se l'argomento `x` è NaN. In caso contrario restituiscono 0.  
   
- In C\+\+, il `isnan` modello le funzioni restituiscono `true` Se l'argomento `x` è NAN; in caso contrario restituiscono `false`.  
+ In C++, le funzioni modello `isnan` restituiscono `true` se l'argomento `x` è NaN. In caso contrario restituiscono `false`.  
   
-## Note  
- C `isnan` macro e `_isnan` e `_isnanf` funzioni testano valore a virgola mobile *x*, restituendo un valore diverso da zero se *x* non è un valore di numero \(NAN\). NAN viene generata quando il risultato dell'operazione a virgola mobile non può essere rappresentato in formato a virgola mobile IEEE 754 per il tipo specificato. Per informazioni sulla modalità di rappresentazione NAN per l'output, vedere [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+## <a name="remarks"></a>Note  
+ La macro C `isnan` e le funzioni `_isnan` e `_isnanf` verificano il valore a virgola mobile *x* e restituiscono un valore diverso da zero se *x* è un valore NaN (Not a Number). Viene generato un valore NaN quando il risultato dell'operazione a virgola mobile non può essere rappresentato in formato a virgola mobile IEEE 754 per il tipo specificato. Per informazioni sulla rappresentazione di un valore NaN per l'output, vedere [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
- Se compilato come C\+\+, il `isnan` \(macro\) non è definito e un `isnan` definita funzione di modello. Restituisce un valore di tipo `bool` anziché un intero.  
+ Se compilata come C++, la macro `isnan` non è definita e viene invece definita una funzione modello `isnan`. Restituisce un valore di tipo `bool` invece di un intero.  
   
- Il `_isnan` e `_isnanf` funzioni sono specifici di Microsoft. Il `_isnanf` funzione è disponibile solo quando compilato per x64.  
+ Le funzioni `_isnan` e `_isnanf` sono specifiche di Microsoft. La funzione `_isnanf` è disponibile solo per la compilazione per la piattaforma x64.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Routine|Intestazione obbligatoria \(C\)|Intestazione obbligatoria \(C\+\+\)|  
-|-------------|-------------------------------------|-----------------------------------------|  
-|`isnan`, `_isnanf`|\<math.h\>|\<math.h\> o \<cmath\>|  
-|`_isnan`|\<float.h\>|\< float. h \> o \< cfloat \>|  
+|Routine|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|  
+|-------------|---------------------------|-------------------------------|  
+|`isnan`, `_isnanf`|\<math.h>|\<math.h> o \<cmath>|  
+|`_isnan`|\<float.h>|\<float.h> o \<cfloat>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [\_finite, \_finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [fpclass, \_fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+## <a name="see-also"></a>Vedere anche  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [_finite, _finitef](../../c-runtime-library/reference/finite-finitef.md)   
+ [_fpclass, _fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)

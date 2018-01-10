@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e1dda25ab045262dffb34085519f4cf8b8bf226c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l
 Scrivere dati formattati in una stringa. Queste sono versioni di [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -136,7 +120,7 @@ int swprintf_s(
  `locale`  
  Impostazioni locali da usare.  
   
- Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  Il numero di caratteri scritti o -1 se si è verificato un errore. Se `buffer` o `format` è un puntatore Null, `sprintf_s` e `swprintf_s` restituiscono -1 e impostano `errno` su `EINVAL`.  
@@ -148,7 +132,7 @@ int swprintf_s(
   
  La differenza principale tra `sprintf_s` e `sprintf` è che `sprintf_s` controlla la stringa di formato per i caratteri di formattazione validi, mentre `sprintf` controlla solo se la stringa di formato o il buffer è un puntatore `NULL` . Se il controllo non riesce, il gestore di parametro non valido viene richiamato, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta `errno` su `EINVAL`.  
   
- Un'altra differenza principale tra `sprintf_s` e `sprintf` è che `sprintf_s` accetta un parametro di lunghezza che specifica la dimensione del buffer di output in caratteri. Se il buffer è troppo piccolo per il testo formattato, incluso il carattere di terminazione Null, il buffer viene impostato su una stringa vuota inserendo un carattere Null in `buffer``[0]`e viene richiamato il gestore di parametro non valido. A differenza di `_snprintf`, `sprintf_s` garantisce che il buffer avrà una terminazione Null, a meno che le dimensioni del buffer non siano zero.  
+ Un'altra differenza principale tra `sprintf_s` e `sprintf` è che `sprintf_s` accetta un parametro di lunghezza che specifica la dimensione del buffer di output in caratteri. Se il buffer è troppo piccolo per il testo formattato, incluso il carattere di terminazione Null, il buffer viene impostato su una stringa vuota inserendo un carattere Null in `buffer[0]`e viene richiamato il gestore di parametro non valido. A differenza di `_snprintf`, `sprintf_s` garantisce che il buffer avrà una terminazione Null, a meno che le dimensioni del buffer non siano zero.  
   
  `swprintf_s` è una versione a caratteri "wide" di `sprintf_s`. Gli argomenti puntatori per `swprintf_s` sono stringhe a caratteri "wide". Il rilevamento degli errori di codifica in `swprintf_s` può essere diverso da quello di `sprintf_s`. Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   

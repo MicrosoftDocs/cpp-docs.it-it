@@ -54,11 +54,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7a3b2048a7d5e05032960cdba7be4c5952b0a755
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e0cae612e1ee27b841089176ce1e2dfa368d29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p, _scprintf_p_l, _scwprintf_p, _scwprintf_p_l
 Restituisce il numero di caratteri nella stringa formattata, con la possibilità di specificare l'ordine in cui i parametri vengono utilizzati nella stringa di formato.  
@@ -99,7 +100,7 @@ int _scwprintf_p _l(
 ## <a name="return-value"></a>Valore restituito  
  Restituisce il numero di caratteri che verrebbero generati se la stringa dovesse essere stampata o inviata a un file o un buffer tramite i codici di formattazione specificati. Il valore restituito non include il carattere Null di terminazione. `_scwprintf_p` esegue la stessa funzione per i caratteri wide.  
   
- La differenza tra `_scprintf_p` e `_scprintf` è che `_scprintf_p` supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ La differenza tra `_scprintf_p` e `_scprintf` è che `_scprintf_p` supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
   
  Se `format` è un puntatore `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
   
@@ -127,7 +128,7 @@ int _scwprintf_p _l(
 |`_scprintf_p`, `_scprintf_p_l`|\<stdio.h>|  
 |`_scwprintf_p`, `_scwprintf_p_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   

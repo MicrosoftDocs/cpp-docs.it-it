@@ -1,16 +1,14 @@
 ---
-title: Classe CAtlTransactionManager | Documenti di Microsoft
+title: Classe CAtlTransactionManager | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
-- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
 - ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
 - ATLTRANSACTIONMANAGER/ATL::Close
 - ATLTRANSACTIONMANAGER/ATL::Commit
@@ -30,35 +28,19 @@ f1_keywords:
 - ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
 - ATLTRANSACTIONMANAGER/ATL::m_bFallback
 - ATLTRANSACTIONMANAGER/ATL::m_hTransaction
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlTransactionManager class
+dev_langs: C++
+helpviewer_keywords: CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: bc6162eaf1a4c8c3848a32e861019ff50e4f850c
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Classe CAtlTransactionManager
 Classe CAtlTransactionManager fornisce un wrapper per le funzioni di gestione transazioni (kernel).  
@@ -85,26 +67,26 @@ class CAtlTransactionManager;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Chiudere](#close)|Chiude un handle di transazione.|  
+|[Chiudi](#close)|Chiude una l'handle della transazione.|  
 |[Eseguire il commit](#commit)|Richieste che eseguire il commit della transazione.|  
 |[Creare](#create)|Crea l'handle della transazione.|  
-|[CreateFile](#createfile)|Crea o apre un file, flusso di file o directory come un'operazione transazionale.|  
+|[CreateFile](#createfile)|Crea o apre un file, un flusso di file o directory come un'operazione transazionale.|  
 |[DeleteFile](#deletefile)|Elimina un file esistente come un'operazione transazionale.|  
-|[FindFirstFile](#findfirstfile)|Cerca in una directory per un file o sottodirectory come un'operazione transazionale.|  
-|[GetFileAttributes](#getfileattributes)|Recupera gli attributi di sistema di file per un file o directory specificata come un'operazione transazionale.|  
-|[GetFileAttributesEx](#getfileattributesex)|Recupera gli attributi di sistema di file per un file o directory specificata come un'operazione transazionale.|  
+|[FindFirstFile](#findfirstfile)|Cerca una directory per un file o sottodirectory di un'operazione transazionale.|  
+|[GetFileAttributes](#getfileattributes)|Recupera gli attributi di file system per un file o directory specificata come un'operazione transazionale.|  
+|[GetFileAttributesEx](#getfileattributesex)|Recupera gli attributi di file system per un file o directory specificata come un'operazione transazionale.|  
 |[GetHandle](#gethandle)|Restituisce l'handle della transazione.|  
 |[IsFallback](#isfallback)|Determina se le chiamate di fallback sono abilitate.|  
 |[MoveFile](#movefile)|Sposta un file esistente o una directory, inclusi i relativi elementi figlio, come un'operazione transazionale.|  
-|[RegCreateKeyEx](#regcreatekeyex)|Crea la chiave del Registro di sistema e lo associa a una transazione. Se la chiave esiste già, la funzione aperto.|  
-|[RegDeleteKey](#regdeletekey)|Elimina una sottochiave e i relativi valori da visualizzazione specifico della piattaforma specificata del Registro di sistema come un'operazione transazionale.|  
-|[RegOpenKeyEx](#regopenkeyex)|Apre la chiave del Registro di sistema e lo associa a una transazione.|  
-|[Rollback](#rollback)|Richiede di essere eseguito il rollback della transazione.|  
+|[RegCreateKeyEx](#regcreatekeyex)|Crea la chiave del Registro di sistema specificato e lo associa a una transazione. Se la chiave esiste già, la funzione si apre.|  
+|[RegDeleteKey](#regdeletekey)|Elimina una sottochiave e i relativi valori dalla visualizzazione del Registro di sistema specifiche della piattaforma specificata come un'operazione transazionale.|  
+|[RegOpenKeyEx](#regopenkeyex)|Apre la chiave del Registro di sistema specificato e lo associa a una transazione.|  
+|[Rollback](#rollback)|Richieste che è possibile eseguire il rollback della transazione.|  
 |[SetFileAttributes](#setfileattributes)|Imposta gli attributi per un file o directory come un'operazione transazionale.|  
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`Se il fallback è supportato. `FALSE` in caso contrario.|  
 |[m_hTransaction](#m_htransaction)|L'handle della transazione.|  
@@ -125,7 +107,7 @@ virtual ~CAtlTransactionManager();
 ```  
   
 ### <a name="remarks"></a>Note  
- Nell'elaborazione normale, la transazione viene automaticamente eseguito il commit e chiuso. Se il distruttore viene chiamato durante un'operazione di rimozione di eccezione, la transazione è eseguito il rollback e chiuso.  
+ Nella normale elaborazione, la transazione viene automaticamente eseguito il commit e chiuso. Se il distruttore viene chiamato durante un'operazione di rimozione di eccezione, la transazione viene eseguito il rollback e chiuso.  
   
 ##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
  Costruttore CAtlTransactionManager.  
@@ -136,7 +118,7 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>Parametri  
  `bFallback`  
- `TRUE`indica il supporto di fallback. Se sottoposto a transazione ha esito negativo, la classe chiama automaticamente la funzione "non in transazioni". `FALSE`non indica che nessuna chiamata "fallback".  
+ `TRUE`indica il fallback di supporto. Se la funzione sottoposta a transazione non riesce, la classe chiama automaticamente la funzione "non in transazioni". `FALSE`non indica nessuna chiamata "fallback".  
   
  `bAutoCreateTransaction`  
  `TRUE`indica che il gestore delle transazioni viene creato automaticamente nel costruttore. `FALSE`indica che non è.  
@@ -183,7 +165,7 @@ inline BOOL Create();
  Il wrapper chiama il `CreateTransaction` (funzione). Per controllare  
   
 ##  <a name="createfile"></a>CreateFile  
- Crea o apre un file, flusso di file o directory come un'operazione transazionale.  
+ Crea o apre un file, un flusso di file o directory come un'operazione transazionale.  
   
 ```
 inline HANDLE CreateFile(
@@ -198,28 +180,28 @@ inline HANDLE CreateFile(
   
 ### <a name="parameters"></a>Parametri  
  `lpFileName`  
- Il nome di un oggetto per creare o aprire.  
+ Il nome di un oggetto può essere creato o aperto.  
   
  `dwDesiredAccess`  
- L'accesso all'oggetto, che può essere riepilogato come lettura, scrittura, entrambi o Nessuno (zero). I valori più comuni sono GENERIC_READ, GENERIC_WRITE o entrambi: GENERIC_READ | GENERIC_WRITE.  
+ L'accesso all'oggetto, che può essere riepilogato come lettura, scrittura, entrambi o Nessuno (zero). I valori più diffusi sono GENERIC_READ, GENERIC_WRITE o entrambi: GENERIC_READ &#124; GENERIC_WRITE.  
   
  `dwShareMode`  
- La modalità di condivisione di un oggetto che può essere di lettura, scrittura, entrambi, eliminare, tutti gli elementi o Nessuno: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.  
+ La modalità di condivisione di un oggetto che può essere di lettura, scrittura, entrambi, eliminare, tutti questi o none: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.  
   
  `lpSecurityAttributes`  
  Un puntatore a una struttura SECURITY_ATTRIBUTES che contiene un descrittore di sicurezza facoltativo e determina se l'handle restituito può essere ereditato dai processi figlio. Il parametro può essere `NULL`.  
   
  `dwCreationDisposition`  
- Un'azione da eseguire sui file che esistevano e non esistono. Questo parametro deve essere uno dei valori seguenti, che non possono essere combinati: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING o TRUNCATE_EXISTING.  
+ Un'operazione da eseguire sui file che esistano e non esistono. Questo parametro deve essere uno dei valori seguenti, che non possono essere combinati: CREATE_ALWAYS, CREATE_NEW, OPEN_ALWAYS, OPEN_EXISTING o TRUNCATE_EXISTING.  
   
  `dwFlagsAndAttributes`  
- I flag e gli attributi di file. Questo parametro può includere qualsiasi combinazione degli attributi di file disponibili (FILE_ATTRIBUTE_ *). Tutti gli altri attributi di file di eseguire l'override FILE_ATTRIBUTE_NORMAL. Questo parametro può contenere anche le combinazioni di flag (FILE_FLAG_\*) per il controllo del comportamento di memorizzazione nel buffer, accedere a modalità e altri flag speciali. La loro combinazione con qualsiasi FILE_ATTRIBUTE_\* valori.  
+ Il flag e gli attributi di file. Questo parametro può includere qualsiasi combinazione degli attributi di file disponibili (FILE_ATTRIBUTE_ *). Tutti gli altri attributi di file di eseguire l'override FILE_ATTRIBUTE_NORMAL. Questo parametro può contenere anche le combinazioni di flag (FILE_FLAG_\*) per il controllo del comportamento di memorizzazione nel buffer, accedere a modalità e altri flag speciale. La loro combinazione con qualsiasi FILE_ATTRIBUTE_\* valori.  
   
  `hTemplateFile`  
- Un handle valido in un file di modello con il diritto di accesso GENERIC_READ. Il file di modello fornisce gli attributi di file e gli attributi estesi per il file che viene creato. Questo parametro può essere `NULL`.  
+ Un handle valido in un file di modello con il diritto di accesso GENERIC_READ. Il file del modello fornisce gli attributi di file e agli attributi estesi per il file che viene creato. Questo parametro può essere `NULL`.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce un handle che può essere utilizzato per accedere all'oggetto.  
+ Restituisce un handle che può essere usato per accedere all'oggetto.  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `CreateFileTransacted` (funzione).  
@@ -239,7 +221,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
  Il wrapper chiama il `DeleteFileTransacted` (funzione).  
   
 ##  <a name="findfirstfile"></a>FindFirstFile  
- Cerca in una directory per un file o sottodirectory come un'operazione transazionale.  
+ Cerca una directory per un file o sottodirectory di un'operazione transazionale.  
   
 ```
 inline HANDLE FindFirstFile(
@@ -249,10 +231,10 @@ inline HANDLE FindFirstFile(
   
 ### <a name="parameters"></a>Parametri  
  `lpFileName`  
- La directory o percorso e il nome del file da cercare. Questo parametro può includere caratteri jolly, ad esempio un asterisco (*) o un (punto interrogativo).  
+ La directory o percorso e il nome del file da cercare. Questo parametro può includere caratteri jolly, ad esempio un asterisco (*) o una (punto interrogativo).  
   
  `pNextInfo`  
- Puntatore alla struttura WIN32_FIND_DATA che riceve informazioni su un file trovato o sottodirectory.  
+ Puntatore alla struttura WIN32_FIND_DATA che riceve informazioni relative a un file trovato o una sottodirectory.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se la funzione ha esito positivo, il valore restituito è un handle di ricerca utilizzato in una chiamata successiva a `FindNextFile` o `FindClose`. Se la funzione ha esito negativo o non riesce a individuare i file dalla stringa di ricerca nel `lpFileName` parametro, il valore restituito è INVALID_HANDLE_VALUE.  
@@ -261,7 +243,7 @@ inline HANDLE FindFirstFile(
  Il wrapper chiama il `FindFirstFileTransacted` (funzione).  
   
 ##  <a name="getfileattributes"></a>GetFileAttributes  
- Recupera gli attributi di sistema di file per un file o directory specificata come un'operazione transazionale.  
+ Recupera gli attributi di file system per un file o directory specificata come un'operazione transazionale.  
   
 ```
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
@@ -275,7 +257,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
  Il wrapper chiama il `GetFileAttributesTransacted` (funzione).  
   
 ##  <a name="getfileattributesex"></a>GetFileAttributesEx  
- Recupera gli attributi di sistema di file per un file o directory specificata come un'operazione transazionale.  
+ Recupera gli attributi di file system per un file o directory specificata come un'operazione transazionale.  
   
 ```
 inline BOOL GetFileAttributesEx(
@@ -292,7 +274,7 @@ inline BOOL GetFileAttributesEx(
  Il livello di informazioni di attributo da recuperare.  
   
  `lpFileInformation`  
- Un puntatore a un buffer che riceve le informazioni sugli attributi. Il tipo di informazioni sugli attributi che vengono archiviati in questo buffer viene determinato dal valore di `fInfoLevelId`. Se il `fInfoLevelId` parametro è GetFileExInfoStandard, questo parametro punta a una struttura WIN32_FILE_ATTRIBUTE_DATA.  
+ Un puntatore a un buffer che riceve le informazioni sugli attributi. Il tipo di informazioni sugli attributi che vengono archiviati in questo buffer viene determinato dal valore di `fInfoLevelId`. Se il `fInfoLevelId` parametro è GetFileExInfoStandard quindi questo parametro punta a una struttura WIN32_FILE_ATTRIBUTE_DATA.  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `GetFileAttributesTransacted` (funzione).  
@@ -305,7 +287,7 @@ HANDLE GetHandle() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce l'handle di transazione per una classe. Restituisce `NULL` se il `CAtlTransactionManager` non è collegato a un handle.  
+ Restituisce l'handle della transazione per una classe. Restituisce `NULL` se il `CAtlTransactionManager` non è collegato a un handle.  
   
 ### <a name="remarks"></a>Note  
   
@@ -351,13 +333,13 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
  Il nome corrente del file esistente o della directory nel computer locale.  
   
  `lpNewFileName`  
- Il nuovo nome per il file o directory. Questo nome non deve esistere già. Un nuovo file potrebbe trovarsi su unità o un file diverso. Una nuova directory deve essere nella stessa unità.  
+ Il nuovo nome per il file o directory. Questo nome non deve esistere già. Un nuovo file potrebbe essere in un'unità o un sistema di file diverso. Una nuova directory deve essere nella stessa unità.  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `MoveFileTransacted` (funzione).  
   
 ##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
- Crea la chiave del Registro di sistema e lo associa a una transazione. Se la chiave esiste già, la funzione aperto.  
+ Crea la chiave del Registro di sistema specificato e lo associa a una transazione. Se la chiave esiste già, la funzione si apre.  
   
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -392,22 +374,22 @@ inline LSTATUS RegCreateKeyEx(
  Maschera che specifica i diritti di accesso per la chiave.  
   
  `lpSecurityAttributes`  
- Puntatore a una struttura SECURITY_ATTRIBUTES che determina se l'handle restituito può essere ereditato dai processi figlio. Se `lpSecurityAttributes` è `NULL`, l'handle non può essere ereditata.  
+ Puntatore a una struttura SECURITY_ATTRIBUTES che determina se l'handle restituito può essere ereditato dai processi figlio. Se `lpSecurityAttributes` è `NULL`, l'handle non può essere ereditato.  
   
  `phkResult`  
- Un puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` funziona dopo aver terminato di utilizzare l'handle.  
+ Puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` dopo aver terminato di utilizzare l'handle.  
   
  `lpdwDisposition`  
- Un puntatore a una variabile che riceve uno dei valori di disposizione seguenti: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.  
+ Un puntatore a una variabile che riceve il disposizione con i valori possibili seguenti: REG_CREATED_NEW_KEY o REG_OPENED_EXISTING_KEY.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. In caso contrario, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.  
+ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `RegCreateKeyTransacted` (funzione).  
   
 ##  <a name="regdeletekey"></a>RegDeleteKey  
- Elimina una sottochiave e i relativi valori da visualizzazione specifico della piattaforma specificata del Registro di sistema come un'operazione transazionale.  
+ Elimina una sottochiave e i relativi valori dalla visualizzazione del Registro di sistema specifiche della piattaforma specificata come un'operazione transazionale.  
   
 ```
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
@@ -421,13 +403,13 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 |`lpSubKey`|Il nome della chiave da eliminare.|  
   
 ### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. In caso contrario, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.  
+ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h.  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `RegDeleteKeyTransacted` (funzione).  
   
 ##  <a name="regopenkeyex"></a>RegOpenKeyEx  
- Apre la chiave del Registro di sistema e lo associa a una transazione.  
+ Apre la chiave del Registro di sistema specificato e lo associa a una transazione.  
   
 ```
 inline LSTATUS RegOpenKeyEx(
@@ -452,16 +434,16 @@ inline LSTATUS RegOpenKeyEx(
  Maschera che specifica i diritti di accesso per la chiave.  
   
  `phkResult`  
- Un puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` funziona dopo aver terminato di utilizzare l'handle.  
+ Puntatore a una variabile che riceve un handle per la chiave creata o aperta. Se la chiave non è una delle chiavi del Registro di sistema predefinito, chiamare il `RegCloseKey` dopo aver terminato di utilizzare l'handle.  
   
 ### <a name="return-value"></a>Valore restituito  
- Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. In caso contrario, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h  
+ Se la funzione ha esito positivo, il valore restituito è ERROR_SUCCESS. Se la funzione ha esito negativo, il valore restituito è un codice di errore diverso da zero definito nel file Winerror. h  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `RegOpenKeyTransacted` (funzione).  
   
 ##  <a name="rollback"></a>Rollback  
- Richiede di essere eseguito il rollback della transazione.  
+ Richieste che è possibile eseguire il rollback della transazione.  
   
 ```
 inline BOOL Rollback();
@@ -485,11 +467,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Il nome del file o directory.  
   
  `dwAttributes`  
- Gli attributi di file da impostare per il file. Per ulteriori informazioni, vedere [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699).  
+ Gli attributi del file da impostare per il file. Per ulteriori informazioni, vedere [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
   
 ### <a name="remarks"></a>Note  
  Il wrapper chiama il `SetFileAttributesTransacted` (funzione).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Componenti COM Desktop ATL](../../atl/atl-com-desktop-components.md)
-
+ [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)

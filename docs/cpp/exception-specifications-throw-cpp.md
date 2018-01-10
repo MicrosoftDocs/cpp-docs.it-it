@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Le specifiche di eccezione (throw, noexcept) (C++)
 Specifiche di eccezione sono una funzionalità del linguaggio C++ che indicano lo scopo del programmatore sui tipi di eccezioni che possono essere propagati da una funzione. È possibile specificare che una funzione può o non può uscire da un'eccezione utilizzando un *specifica di eccezione*. Il compilatore può usare queste informazioni per ottimizzare le chiamate alla funzione e la funzione di escape per terminare il programma se un'eccezione imprevista. Esistono due tipi di specifica di eccezione. Il *noexcept specifica* è una novità in C++ 11. Specifica se il set di potenziali eccezioni da fare in modo che la funzione è vuoto. Il *specifica di eccezione dinamiche*, o `throw(optional_type_list)` specifica, è deprecata in C++ 11 ed è supportato solo parzialmente da Visual Studio. Questa specifica di eccezione è stata progettata per fornire informazioni di riepilogo sulle eccezioni che possono essere generate da una funzione, ma in pratica è stato trovato un problema. Stato di non condizionale di una specifica di eccezione dinamiche che è risultata piuttosto utile `throw()` specifica. Ad esempio, la dichiarazione di funzione:  
@@ -64,9 +65,9 @@ Sebbene Visual C++ supporta completamente il `noexcept` espressione, si allontan
   
 |Funzione|/EHsc|/EHs|/EHa|/EHac|  
 |--------------|------------|-----------|-----------|------------|  
-|Funzione C++ senza alcuna specifica di eccezione|Sì|Sì|Sì|Sì|  
-|Funzione C++ con `noexcept`, `noexcept(true)`, o `throw()` specifica di eccezione|No|No|Sì|Sì|  
-|Funzione C++ con `noexcept(false)`, `throw(...)`, o `throw(type)` specifica di eccezione|Sì|Sì|Sì|Sì|  
+|Funzione C++ senza alcuna specifica di eccezione|Yes|Sì|Sì|Yes|  
+|Funzione C++ con `noexcept`, `noexcept(true)`, o `throw()` specifica di eccezione|No|No|Sì|Yes|  
+|Funzione C++ con `noexcept(false)`, `throw(...)`, o `throw(type)` specifica di eccezione|Yes|Sì|Sì|Yes|  
   
 ## <a name="example"></a>Esempio  
   

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b7666325caafdbdf2a56eeb1c02c183d0ead54e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 738721eb3fc37ba076157129cb88a22f2c90e464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling-and-notification"></a>Gestione e notifica degli errori
 Per ulteriori informazioni sulla gestione degli errori e la notifica, vedere [informazioni sulla funzione di supporto](understanding-the-helper-function.md).  

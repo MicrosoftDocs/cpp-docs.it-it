@@ -1,31 +1,34 @@
 ---
-title: "Procedura: ottenere un puntatore a una matrice di byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici di byte"
-  - "puntatori, a matrice Byte"
+title: 'Procedura: ottenere un puntatore a matrice di Byte | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- pointers, to Byte array
+- Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 270f2b6b79edc4b5c3ab0846381bb65788b12504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: ottenere un puntatore a una matrice di byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile ottenere un puntatore al blocco di matrice in una matrice <xref:System.Byte> recuperando l'indirizzo del primo elemento e assegnandolo a un puntatore.  
+# <a name="how-to-obtain-a-pointer-to-byte-array"></a>Procedura: ottenere un puntatore a una matrice di byte
+È possibile ottenere un puntatore al blocco di matrice in un <xref:System.Byte> matrice utilizzando l'indirizzo del primo elemento e l'assegnazione a un puntatore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // pointer_to_Byte_array.cpp  
@@ -40,5 +43,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

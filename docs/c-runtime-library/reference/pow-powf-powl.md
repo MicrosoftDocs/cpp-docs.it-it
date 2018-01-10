@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43156626c92160003a5ef0d5364b5a006df5141e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16a0d7beefff97eca04e5f94ab720cda4728935f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 Calcolare il valore di `x` elevato alla potenza di `y`.  
@@ -109,7 +110,7 @@ long double powl(
 ## <a name="remarks"></a>Note  
  `pow` non riconosce i valori a virgola mobile integrali maggiori di 2<sup>64</sup> (ad esempio, `1.0E100`).  
   
- `pow` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
+ `pow` ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
  Dato che C++ consente l'overload, è possibile chiamare i vari overload di `pow`. In un programma C `pow` accetta sempre due valori double e restituisce un valore double.  
   

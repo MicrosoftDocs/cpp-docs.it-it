@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: faa791e75817e3845b0f445cc741c88b7461a7c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2073e4fcb365b3beb10d4040c0f54d9f61a0431
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-macros"></a>Macro di nomi file
 Macro nome file sono già definite come nomi di file specificati nella dipendenza (specifiche non il nome del file su disco). Queste macro non è necessario essere racchiuso tra parentesi quando viene richiamato. specificare un solo simbolo $, come illustrato.  

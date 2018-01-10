@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8d6163c6377a6d8c92875b3bb5ba76b07a94d38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Ricerca di manifesti)
 Specifica il comportamento per la ricerca del manifesto.  

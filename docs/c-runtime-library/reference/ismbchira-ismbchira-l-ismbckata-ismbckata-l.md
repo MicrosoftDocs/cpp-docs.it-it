@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0e257ac4a1998e75fc47e719df2163d49654c71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c696603c7012a1ee95c118a12d45c2fc9132cfcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 **Funzioni specifiche per la tabella codici 932**  
@@ -95,7 +96,7 @@ int _ismbckata_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.  
   
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 |Routine|Condizione di test (solo per la tabella codici 932)|  
 |-------------|-------------------------------------------|  
@@ -121,5 +122,5 @@ int _ismbckata_l(
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

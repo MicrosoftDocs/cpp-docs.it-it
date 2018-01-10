@@ -1,52 +1,53 @@
 ---
-title: "Pragma e parole chiave di ottimizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parole chiave [C++], per ottimizzazione"
-  - "ottimizzazione, parole chiave e pragma"
-  - "pragma, per ottimizzazione"
+title: Ottimizzazione pragma e parole chiave | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keywords [C++], for optimization
+- pragmas, for optimization
+- optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d6332ef1f223f00bc099fdda8fe4cf6e7b27f21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Pragma e parole chiave di ottimizzazione
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Diverse parole chiave e pragma utilizzabili nel codice C o C\+\+ influiscono sull'ottimizzazione:  
+# <a name="optimization-pragmas-and-keywords"></a>Pragma e parole chiave di ottimizzazione
+Diverse parole chiave e pragma utilizzabili nel codice C o C++ influiscono sull'ottimizzazione:  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [\_\_assume](../../intrinsics/assume.md)  
+-   [__assume](../../intrinsics/assume.md)  
   
--   [inline, \_inline o \_\_forceinline](../../misc/inline-inline-forceinline.md)  
+-   [inline, inline, o \__forceinline](../../cpp/inline-functions-cpp.md)  
   
--   [\#pragma auto\_inline](../../preprocessor/auto-inline.md)  
+-   [auto_inline #pragma](../../preprocessor/auto-inline.md)  
   
--   [\#pragma check\_stack](../../preprocessor/check-stack.md)  
+-   [#pragma check_stack](../../preprocessor/check-stack.md)  
   
--   [\#pragma function](../../preprocessor/function-c-cpp.md)  
+-   [#pragma (funzione)](../../preprocessor/function-c-cpp.md)  
   
--   [\#pragma inline\_depth](../../preprocessor/inline-depth.md)  
+-   [inline_depth #pragma](../../preprocessor/inline-depth.md)  
   
--   [\#pragma inline\_recursion](../../preprocessor/inline-recursion.md)  
+-   [inline_recursion #pragma](../../preprocessor/inline-recursion.md)  
   
--   [\#pragma intrinsic](../../preprocessor/intrinsic.md)  
+-   [#pragma intrinseco](../../preprocessor/intrinsic.md)  
   
--   [\#pragma optimize](../../preprocessor/optimize.md)  
+-   [ottimizzare #pragma](../../preprocessor/optimize.md)  
   
--   [Parola chiave register](http://msdn.microsoft.com/it-it/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)  
+-   [parola chiave Register](../../cpp/storage-classes-cpp.md#register)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- qsort_s
+apiname: qsort_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- qsort_s
-dev_langs:
-- C++
+f1_keywords: qsort_s
+dev_langs: C++
 helpviewer_keywords:
 - arrays [C++], sorting
 - quick-sort algorithm
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e4ba4fcb5acc8c914cf240e5b858a945bd55cc86
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 Esegue un ordinamento rapido. Questa è una versione di [qsort](../../c-runtime-library/reference/qsort.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -106,7 +88,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
  La matrice viene ordinata in ordine crescente, come definito dalla funzione di confronto. Per ordinare una matrice in ordine decrescente, invertire il senso di "maggiore di" e "minore di" nella funzione di confronto.  
   
- Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, allora la funzione restituisce e `errno` viene impostato su `EINVAL`. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, allora la funzione restituisce e `errno` viene impostato su `EINVAL`. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
@@ -114,7 +96,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |---------|----------|-------------|---------|-----------|-----------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|  
 |qualsiasi|`NULL`|qualsiasi|!= 0|qualsiasi|`EINVAL`|  
-|qualsiasi|qualsiasi|qualsiasi|any|<= 0|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|<= 0|`EINVAL`|  
 |qualsiasi|qualsiasi|`NULL`|qualsiasi|qualsiasi|`EINVAL`|  
   
  `qsort_s` ha lo stesso comportamento di `qsort` ma dispone del parametro `context` e imposta `errno`. Passando un parametro `context`, le funzioni di confronto possono utilizzare un puntatore a un oggetto per accedere alla funzionalità dell'oggetto o ad altre informazioni non accessibili tramite un puntatore a un elemento. L'aggiunta del `context` parametro rende `qsort_s` più sicura perché `context` può essere utilizzato per evitare i bug reentrancy introdotti dall'utilizzo di variabili statiche per rendere disponibili informazioni condivise il `compare` (funzione).  
@@ -125,7 +107,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> e \<search.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   

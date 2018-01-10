@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -44,31 +42,16 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d0f921aa46915220bb92f8ed1834f4c0e28ed57d
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 13f358548b7155b281ffd77821b9a413e1e6fb43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf, _fprintf_l, fwprintf, _fwprintf_l
 Stampare dati formattati in un flusso. Sono disponibili versioni più sicure di queste funzioni. Vedere [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md).  
@@ -116,14 +99,14 @@ int _fwprintf_l(
 ## <a name="return-value"></a>Valore restituito  
  `fprintf` restituisce il numero di byte scritti. `fwprintf` restituisce il numero di caratteri wide scritti. Ognuna di queste funzioni restituisce invece un valore negativo quando si verifica un errore di output. Se `stream` o `format` è `NULL`, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e imposteranno `errno` su `EINVAL`. Non viene controllata la presenza di caratteri di formattazione validi nella stringa di formato come avviene quando si usa `fprintf_s` o `fwprintf_s`.  
   
- Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La funzione `fprintf` formatta e stampa una serie di caratteri e di valori nell'elemento di output `stream`. Ogni funzione `argument` (se presente) viene convertita e restituita in base alla specifica di formato corrispondente in `format`. Per `fprintf`, la sintassi e la modalità d'uso dell'argomento `format` sono uguali a quelle di `printf`.  
   
  `fwprintf` è una versione a caratteri wide di `fprintf`. In `fwprintf`, `format` è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. `fprintf` non supporta attualmente l'output in un flusso UNICODE.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
 > [!IMPORTANT]
 >  Assicurarsi che `format` non sia una stringa definita dall'utente.  
@@ -135,7 +118,7 @@ int _fwprintf_l(
 |`_ftprintf`|`fprintf`|`fprintf`|`fwprintf`|  
 |`_ftprintf_l`|`_fprintf_l`|`_fprintf_l`|`_fwprintf_l`|  
   
- Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -144,7 +127,7 @@ int _fwprintf_l(
 |`fprintf`, `_fprintf_l`|\<stdio.h>|  
 |`fwprintf`, `_fwprintf_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

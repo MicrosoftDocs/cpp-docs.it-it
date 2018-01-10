@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 719843e2ea337011757beda5c4504c7e889ed920
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219f173e69741fbe1ce67ebd1725aadae04e326a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Ignora le opzioni dell'intestazione precompilata)
 Tutte le altre cause `/Y` compilatore opzioni verrà ignorato (e non è possibile stesso essere sottoposto a override).  

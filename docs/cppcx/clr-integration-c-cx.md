@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0220d13f6c378d5081f6043382e7d58888ff3c2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9851a7aa0d1dad84a37504b479c551ffa63bcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-integration-ccx"></a>Integrazione CLR (C++/CX)
 Alcuni tipi di Windows Runtime ricevano una gestione speciale in C + + CX e le lingue che si basano su common language runtime (CLR). Questo articolo illustra il mapping di numerosi tipi di un linguaggio in un altro linguaggio. Ad esempio, CLR esegue il mapping di Windows.Foundation.IVector to System.Collections.IList, Windows.Foundation.IMap a System.Collections.IDictionary e così via. Analogamente, C + + CX appositamente esegue il mapping di tipi come Platform:: Delegate e platform:: String.  

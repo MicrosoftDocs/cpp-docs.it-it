@@ -69,11 +69,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac2b681b605c4485ed87cecebb51afa6261cafff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Converte un intero in una stringa. Queste sono versioni di [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -149,12 +150,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|predefinito|buffer|sizeInCharacters|radix|Restituzione|  
+|predefinito|buffer|sizeInCharacters|radix|INVIO|  
 |-----------|------------|----------------------|-----------|------------|  
 |qualsiasi|`NULL`|qualsiasi|qualsiasi|`EINVAL`|  
-|qualsiasi|any|<=0|any|`EINVAL`|  
-|qualsiasi|any|<= lunghezza della stringa di risultato richiesta|qualsiasi|`EINVAL`|  
-|qualsiasi|qualsiasi|any|`radix` < 2 o `radix` > 36|`EINVAL`|  
+|qualsiasi|qualsiasi|<=0|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|<= lunghezza della stringa di risultato richiesta|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|`radix` < 2 o `radix` > 36|`EINVAL`|  
   
  **Problemi relativi alla sicurezza**  
   
@@ -163,7 +164,7 @@ errno_t _itow_s(
 ## <a name="remarks"></a>Note  
  Ad eccezione dei parametri e del valore restituito, le funzioni `_itoa_s` hanno lo stesso comportamento delle versioni meno sicure corrispondenti.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -182,11 +183,11 @@ errno_t _itow_s(
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  
 |`_ui64toa_s`|\<stdlib.h>|  
-|`_itow_s`|\<stdlib.h> o \<wchar.h>|  
-|`_i64tow_s`|\<stdlib.h> o \<wchar.h>|  
-|`_ui64tow_s`|\<stdlib.h> o \<wchar.h>|  
+|`_itow_s`|\<stdlib.h> or \<wchar.h>|  
+|`_i64tow_s`|\<stdlib.h> or \<wchar.h>|  
+|`_ui64tow_s`|\<stdlib.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -254,6 +255,6 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
  [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adc340a30fcf0292c3dc7fa0e595d488b4046431
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>Modalità di compilazione di un file bsc in BSCMAKE
 BSCMAKE viene compilato o ricompilato un file BSC in modo più efficiente che possibile. Per evitare potenziali problemi, è importante comprendere il processo di compilazione.  

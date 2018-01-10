@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 025acdf18d0e5322ef43de800e3577233a93cb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Converte una stringa di caratteri wide nella relativa rappresentazione di stringa di caratteri multibyte. Questa è una versione di [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -124,9 +106,9 @@ errno_t wcsrtombs_s(
   
  Se `count` è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), `wcsrtombs_s` converte la parte di stringa più ampia possibile che può rientrare nel buffer di destinazione, lasciando però spazio per un carattere di terminazione Null.  
   
- Se `wcsrtombs_s` converte correttamente la stringa di origine, inserisce la dimensione in byte della stringa convertita, incluso il carattere di terminazione Null, in `*``pReturnValue`, a condizione che `pReturnValue` non sia `NULL`. Ciò si verifica anche se l'argomento `mbstr` è `NULL` e consente di determinare le dimensioni del buffer richieste. Si noti che se `mbstr` è `NULL`, `count` viene ignorato.  
+ Se `wcsrtombs_s` converte correttamente la stringa di origine, inserisce la dimensione in byte della stringa convertita, incluso il carattere di terminazione Null, in `*pReturnValue`, a condizione che `pReturnValue` non sia `NULL`. Ciò si verifica anche se l'argomento `mbstr` è `NULL` e consente di determinare le dimensioni del buffer richieste. Si noti che se `mbstr` è `NULL`, `count` viene ignorato.  
   
- Se `wcsrtombs_s` rileva un carattere wide che non può convertire in carattere multibyte, inserisce -1 in `*``pReturnValue`, imposta il buffer di destinazione su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
+ Se `wcsrtombs_s` rileva un carattere wide che non può convertire in carattere multibyte, inserisce -1 in `*pReturnValue`, imposta il buffer di destinazione su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
   
  Se le sequenze a cui punta `wcstr` e `mbstr` si sovrappongono, il comportamento di `wcsrtombs_s` non è definito. `wcsrtombs_s` viene influenzato dalla categoria LC_TYPE delle impostazioni locali correnti.  
   
@@ -135,7 +117,7 @@ errno_t wcsrtombs_s(
   
  La funzione `wcsrtombs_s` differisce da [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) per la possibilità di essere riavviata. Lo stato di conversione viene archiviato in `mbstate` per le chiamate successive alle stesse o ad altre funzioni riavviabili. I risultati non sono definiti quando si usano insieme funzioni riavviabili e non riavviabili. Ad esempio, un'applicazione deve usare `wcsrlen` anziché `wcslen` se viene usata una chiamata successiva a `wcsrtombs_s` invece di `wcstombs_s.`.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  La funzione `wcsrtombs_s` è multithread-safe a condizione che nessuna funzione nel thread corrente chiami `setlocale` mentre questa funzione è in esecuzione e `mbstate` è Null.  
@@ -194,8 +176,8 @@ The string was successfully converted.
 |`wcsrtombs_s`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
  [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   

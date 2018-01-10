@@ -38,11 +38,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cbba6a51a51720248667cf04738ad16203717db9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 462fecfcd9400d10dbc943fded0d04fb7a0cf010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
 Converte un carattere wide nel carattere multibyte corrispondente. Sono disponibili versioni più sicure di queste funzioni. Vedere [wctomb_s, _wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md).  
@@ -72,9 +73,9 @@ int _wctomb_l(
  Se `wctomb` converte il carattere wide in un carattere multibyte, restituisce il numero di byte (che non è mai maggiore di `MB_CUR_MAX`) nel caratteri wide. Se `wchar` è il carattere Null wide (L'\0'), `wctomb` restituisce 1. Se il puntatore di destinazione `mbchar` è NULL, `wctomb` restituisce 0. Se la conversione non è possibile che in impostazioni locali correnti, `wctomb` restituisce -1 e `errno` è impostato su `EILSEQ`.  
   
 ## <a name="remarks"></a>Note  
- La funzione `wctomb` converte l'argomento `wchar` nel carattere multibyte corrispondente e archivia il risultato in `mbchar`. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. `wctomb` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_wctomb_l` è identica a `wctomb`, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La funzione `wctomb` converte l'argomento `wchar` nel carattere multibyte corrispondente e archivia il risultato in `mbchar`. È possibile chiamare la funzione da qualsiasi punto in un qualsiasi programma. `wctomb` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_wctomb_l` è identica a `wctomb`, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- `wctomb` convalida i propri parametri. Se `mbchar` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce -1.  
+ `wctomb` convalida i propri parametri. Se `mbchar` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce -1.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -82,7 +83,7 @@ int _wctomb_l(
 |-------------|---------------------|  
 |`wctomb`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Questo programma illustra il comportamento della funzione wctomb.  
@@ -114,8 +115,8 @@ Convert a wide character:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
  [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   

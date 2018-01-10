@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -24,21 +23,19 @@ f1_keywords:
 - And
 - std.and
 - std::and
-dev_langs:
-- C++
-helpviewer_keywords:
-- and macro
+dev_langs: C++
+helpviewer_keywords: and macro
 ms.assetid: 2644ab57-8e1b-48f0-9021-cafe3e26bdc4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1d28d0258584eab48aeaa77eaa78fe7640cb3300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a0da716b77da95f5911bbb05b2f5cd4b8fcd07e5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="and"></a>e
 Alternativa all'operatore &&.  

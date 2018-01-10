@@ -1,32 +1,33 @@
 ---
-title: "binary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate (funzione) [STL/CLR]"
+title: binary_negate (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3780c89c178c0c71f3388d2bd846ed7d52af3ceb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# binary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe modello descrive un functor che, una volta chiamato, restituisce il NOT logico del relativo functor archiviato a due argomenti.  Si usa per specificare un oggetto funzione in termini del relativo functor archiviato.  
+# <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
+La classe modello descrive una funzione che, quando viene chiamato, restituisce l'operatore logico non del relativo stored funtore di due argomenti. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Fun>  
@@ -50,35 +51,35 @@ public:
     };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  Fun  
- Tipo del functor archiviato.  
+ Tipo del funtore stored.  
   
-## Funzioni del membro  
+## <a name="member-functions"></a>Funzioni membro  
   
-|Definizione del tipo|Descrizione|  
-|--------------------------|-----------------|  
-|delegate\_type|Tipo del delegato generico.|  
-|first\_argument\_type|Tipo del primo argomento functor.|  
-|result\_type|Tipo del risultato del functor.|  
-|second\_argument\_type|Tipo del secondo argomento functor.|  
-|stored\_function\_type|Tipo del functor.|  
+|Definizione dei tipi|Descrizione|  
+|---------------------|-----------------|  
+|delegate_type|Il tipo del delegato generico.|  
+|first_argument_type|Il tipo del primo argomento funtore.|  
+|result_type|Il tipo del risultato funtore.|  
+|second_argument_type|Il tipo del secondo argomento funtore.|  
+|stored_function_type|Tipo del funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|binary\_negate|Costruisce il functor.|  
+|binary_negate|Costruisce il funtore.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|operator\(\)|Calcola la funzione desiderata.|  
-|operatore delegate\_type^\(\)|Esegue il cast del functor ad un delegato.|  
+|--------------|-----------------|  
+|operator()|Calcola la funzione desiderata.|  
+|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
   
-## Note  
- La classe modello descrive un functor a due argomenti che memorizza un altro functor a due argomenti.  Definisce l'operatore membro `operator()` così, quando l'oggetto viene chiamato come funzione, restituisce il NOT logico del functor archiviato chiamato con i due argomenti.  
+## <a name="remarks"></a>Note  
+ La classe modello descrive un funtore di due argomenti che archivia un altro funtore di due argomenti. Definisce l'operatore membro `operator()` restituisce in modo che, quando l'oggetto viene chiamato come una funzione, l'operatore logico non di un funtore stored chiamato con due argomenti.  
   
- È anche possibile passare l'oggetto come un argomento di funzione il cui tipo è `delegate_type^` ed esso verrà convertito nel modo appropriato.  
+ È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +129,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Requisiti  
- **Intestazione:** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [not2](../dotnet/not2-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [not2 (STL/CLR)](../dotnet/not2-stl-clr.md)

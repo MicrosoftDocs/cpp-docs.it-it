@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-helper-function"></a>Informazioni sulla funzione di supporto
 La funzione di supporto per il caricamento ritardato supportato dal linker è ciò che effettivamente carica la DLL in fase di esecuzione. È possibile modificare la funzione di supporto per personalizzare il comportamento scrivendo una funzione personalizzata e collegarla al programma anziché utilizzare la funzione di supporto fornito in Delayimp. Una funzione di supporto serve tutte le DLL a caricamento ritardato.  

@@ -1,26 +1,27 @@
 ---
-title: "Utilizzo dei registri | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Registrare l'utilizzo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizzo dei registri
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'architettura [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] fornisce 16 registri di uso generale \(in seguito indicati come registri Integer\) e 16 registri XMM\/YMM disponibili per l'uso con virgola mobile.  I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati con una chiamata.  I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.  
+# <a name="register-usage"></a>Utilizzo dei registri
+L'architettura [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] fornisce 16 registri di uso generale (in seguito indicati come registri Integer) e 16 registri XMM/YMM disponibili per l'uso con virgola mobile. I registri volatili sono registri temporanei che il chiamante suppone vengano eliminati con una chiamata. I registri non volatili devono conservare i relativi valori durante le chiamate di funzione e, se usati, devono essere salvati dal chiamante.  
   
  Nella tabella seguente viene descritto il modo in cui ogni registro viene usato durante le chiamate di funzione:  
   
@@ -32,7 +33,7 @@ L'architettura [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] f
 |RDX|Volatile|Secondo argomento Integer|  
 |R8|Volatile|Terzo argomento Integer|  
 |R9|Volatile|Quarto argomento Integer|  
-|R10:R11|Volatile|Deve essere mantenuto in base alle esigenze del chiamante. Viene usato nelle istruzioni syscall\/sysret.|  
+|R10:R11|Volatile|Deve essere mantenuto in base alle esigenze del chiamante. Viene usato nelle istruzioni syscall/sysret.|  
 |R12:R15|Non volatile|Deve essere mantenuto dal chiamato.|  
 |RDI|Non volatile|Deve essere mantenuto dal chiamato.|  
 |RSI|Non volatile|Deve essere mantenuto dal chiamato.|  
@@ -45,8 +46,8 @@ L'architettura [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] f
 |XMM3, YMM3|Volatile|Quarto argomento FP; quarto argomento di tipo vettore quando si usa `__vectorcall`.|  
 |XMM4, YMM4|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; quinto argomento di tipo vettore quando si usa `__vectorcall`.|  
 |XMM5, YMM5|Volatile|Deve essere mantenuto in base alle esigenze del chiamante; sesto argomento di tipo vettore quando si usa `__vectorcall`.|  
-|XMM6:XMM15, YMM6:YMM15|Non volatile \(XMM\), volatile \(metà superiore di YMM\)|Deve essere mantenuto in base alle esigenze del chiamato.  I registri YMM devono essere mantenuti in base alle esigenze del chiamante.|  
+|XMM6:XMM15, YMM6:YMM15|Non volatile (XMM), volatile (metà superiore di YMM)|Deve essere mantenuto dal chiamato. I registri YMM devono essere mantenuti in base alle esigenze del chiamante.|  
   
-## Vedere anche  
- [Convenzioni del software x64](../build/x64-software-conventions.md)   
- [\_\_vectorcall](../cpp/vectorcall.md)
+## <a name="see-also"></a>Vedere anche  
+ [x64 convenzioni del software](../build/x64-software-conventions.md)   
+ [__vectorcall](../cpp/vectorcall.md)

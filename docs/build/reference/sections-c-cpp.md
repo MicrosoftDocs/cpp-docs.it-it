@@ -1,73 +1,71 @@
 ---
-title: "SECTIONS (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SECTIONS (istruzione) file .def"
+title: NELLE SEZIONI (C/C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SECTIONS
+dev_langs: C++
+helpviewer_keywords: SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# SECTIONS (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Introduce una sezione di una o più `definitions` che rappresentano identificatori di accesso per sezioni del file di output del progetto.  
+# <a name="sections-cc"></a>SECTIONS (C/C++)
+Introduce una sezione di uno o più `definitions` che sono identificatori di accesso per sezioni nel file di output del progetto.  
   
 ```  
 SECTIONS  
 definitions  
 ```  
   
-## Note  
- Ciascuna definizione deve essere riportata su una riga separata.  La parola chiave `SECTIONS` può trovarsi sulla stessa riga della prima definizione o su una riga precedente.  Il file DEF può contenere una o più istruzioni `SECTIONS`.  
+## <a name="remarks"></a>Note  
+ Ogni definizione deve essere riportata in una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga della prima definizione o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni.  
   
- Mediante l'istruzione `SECTIONS` è possibile impostare attributi per una o più sezioni del file di immagine, nonché eseguire l'override degli attributi predefiniti per ciascun tipo di sezione.  
+ Questo `SECTIONS` istruzione imposta gli attributi per uno o più sezioni nel file di immagine e può essere utilizzato per eseguire l'override gli attributi predefiniti per ogni tipo di sezione.  
   
- Il formato delle `definitions`il seguente:  
+ Il formato per `definitions` è:  
   
  `.section_name specifier`  
   
- dove `.section_name` è il nome di una sezione dell'immagine del programma e `specifier` è rappresentato da uno o più dei seguenti modificatori di accesso:  
+ dove `.section_name` è il nome di una sezione dell'immagine del programma e `specifier` è uno o più dei seguenti modificatori di accesso:  
   
 |Modificatore|Descrizione|  
-|------------------|-----------------|  
+|--------------|-----------------|  
 |`EXECUTE`|La sezione è eseguibile|  
 |`READ`|Consente operazioni di lettura sui dati|  
 |`SHARED`|Condivide la sezione tra tutti i processi che caricano l'immagine|  
 |`WRITE`|Consente operazioni di scrittura sui dati|  
   
- Separare i nomi degli identificatori con uno spazio.  Di seguito è riportato un esempio.  
+ Separare i nomi degli identificatori con uno spazio. Ad esempio:  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS` contrassegna l'inizio di un elenco di `definitions` di sezione.  Ogni `definition` deve trovarsi su una riga separata.  La parola chiave `SECTIONS` può trovarsi sulla stessa riga della prima `definition` o su una riga precedente.  Il file DEF può contenere una o più istruzioni `SECTIONS`.  La parola chiave `SEGMENTS` è supportata come sinonimo di `SECTIONS`.  
+ `SECTIONS`Contrassegna l'inizio di un elenco di sezione `definitions`. Ogni `definition` deve essere su una riga separata. Il `SECTIONS` parola chiave può essere sulla stessa riga del primo `definition` o su una riga precedente. Il file con estensione DEF può contenere uno o più `SECTIONS` istruzioni. Il `SEGMENTS` (parola chiave) è supportato come sinonimo di `SECTIONS`.  
   
- Versioni precedenti di Visual C\+\+ supportate:  
+ Le versioni precedenti di Visual C++ supportate:  
   
 ```  
 section [CLASS 'classname'] specifier  
 ```  
   
- La parola chiave `CLASS` è supportata per garantire la compatibilità con le versioni precedenti, ma è ignorata.  
+ Il `CLASS` (parola chiave) è supportato per compatibilità, ma viene ignorato.  
   
- Un metodo equivalente per specificare attributi di sezione consiste nell'uso dell'opzione [\/SECTION](../../build/reference/section-specify-section-attributes.md).  
+ È un metodo equivalente per specificare gli attributi di sezione con il [/sezione](../../build/reference/section-specify-section-attributes.md) opzione.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Regole relative alle istruzioni di definizione dei moduli](../../build/reference/rules-for-module-definition-statements.md)

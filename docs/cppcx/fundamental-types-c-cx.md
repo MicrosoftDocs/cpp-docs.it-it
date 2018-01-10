@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1984ba2b2291c14403af1237a9c990de2c0e0217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types-ccx"></a>Tipi fondamentali (C++/CX)
 Oltre i tipi incorporati C++ standard, C + + CX supporta il sistema di tipo definito dall'architettura di Windows Runtime fornendo i typedef per i tipi di Windows Runtime fondamentali che eseguono il mapping ai tipi C++ standard... C + + CX implementa Boolean, carattere e i tipi numerici fondamentali. Questi typedef sono definiti nello spazio dei nomi `default` , che non deve mai essere specificato in modo esplicito. Inoltre, C + + CX fornisce wrapper e implementazioni concrete per determinati tipi di Windows Runtime e le interfacce.  
@@ -27,7 +28,7 @@ Oltre i tipi incorporati C++ standard, C + + CX supporta il sistema di tipo defi
 |Spazio dei nomi|C + + nome CX|Definizione|Nome in C++ standard|Intervallo di valori|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |Piattaforma|Booleano|Valore booleano a 8 bit.|bool|`true` (diverso da zero) e `false` (zero)|  
-|default|char16|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|wchar_t<br /><br /> -oppure-<br /><br /> L'c'|(Specificato dallo standard Unicode)|  
+|default|char16|Valore non numerico a 16 bit che rappresenta un punto di codice Unicode (UTF-16).|wchar_t<br /><br /> oppure<br /><br /> L'c'|(Specificato dallo standard Unicode)|  
   
 ## <a name="numeric-types"></a>Tipi numerici  
  La tabella seguente elenca i tipi numerici incorporati. I tipi numerici vengono dichiarati nello spazio dei nomi `default` e sono typedef per il corrispondente tipo incorporato C++. Non tutti i tipi predefiniti di C++ (long, ad esempio) sono supportati in Windows Runtime. Per coerenza e chiarezza, è consigliabile utilizzare C + + nome CX.  
@@ -48,14 +49,14 @@ Oltre i tipi incorporati C++ standard, C + + CX supporta il sistema di tipo defi
 ## <a name="windows-runtime-types"></a>Tipi di Windows Runtime  
  Nella tabella seguente sono elencati alcuni tipi aggiuntivi definiti dall'architettura di Windows Runtime e compilati in C + + CX. Object e String sono tipi di riferimento. Gli altri sono tipi di valore. Tutti questi tipi vengono dichiarati nello spazio dei nomi `Platform` . Per un elenco completo, vedere [Platform namespace](../cppcx/platform-namespace-c-cx.md).  
   
-|Nome|Definizione|  
+|nome|Definizione|  
 |----------|----------------|  
-|Oggetto|Rappresenta un tipo Windows Runtime.|  
+|Object|Rappresenta un tipo Windows Runtime.|  
 |Stringa|Serie di caratteri che rappresenta un testo.|  
 |Rect|Set di quattro numeri a virgola mobile che rappresentano la posizione e le dimensioni di un rettangolo.|  
 |SizeT|Coppia ordinata di numeri a virgola mobile che specificano un'altezza e una larghezza.|  
 |Punto|Coppia ordinata di coordinate x e y a virgola mobile, che definiscono un punto su un piano bidimensionale.|  
-|Guid|Valore non numerico a 128 bit usato come identificatore univoco.|  
+|GUID|Valore non numerico a 128 bit usato come identificatore univoco.|  
 |UIntPtr|Solo per uso interno. Valore a 64 bit senza segno usato come puntatore.|  
 |IntPtr|Solo per uso interno.  Valore a 64 bit con segno usato come puntatore.|  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _puttc
 - putwc
 - putc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - streams, writing characters to
 - characters, writing
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e7df1c7810719092874990286c1b22b7e7ec6faa
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7a381664f64f89f2a7040b04885b1f01efe885c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putc-putwc"></a>putc, putwc
 Scrive un carattere in un flusso.  
@@ -91,7 +74,7 @@ wint_t putwc(
 ## <a name="return-value"></a>Valore restituito  
  Restituisce il carattere scritto. Per indicare un errore o una condizione di fine file, `putc` e `putchar` restituiscono`EOF`; `putwc` e `putwchar` restituiscono **WEOF**. Per tutte e quattro le routine, usare [ferror](../../c-runtime-library/reference/ferror.md) o [feof](../../c-runtime-library/reference/feof.md) per verificare la presenza di un errore o della fine del file. Se alla funzione viene passato un puntatore Null per `stream`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `EOF` o **WEOF** e impostano `errno` su `EINVAL`.  
   
- Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La routine `putc` scrive il carattere singolo `c` nell'elemento `stream` di output in corrispondenza della posizione corrente. È possibile passare qualsiasi intero a `putc`, ma vengono scritti solo gli 8 bit inferiori. La routine `putchar` è identica a **putc(** `c`**, stdout )**. Per ogni routine, se si verifica un errore di lettura, viene impostato l'indicatore di errore per il flusso. `putc` e `putchar` sono rispettivamente simili a `fputc` e `_fputchar`, ma vengono implementati sia come funzioni che come macro (vedere [Raccomandazioni per la scelta tra funzioni e macro](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). `putwc` e `putwchar` sono versioni a caratteri wide di `putc` e `putchar` rispettivamente. `putwc` e `putc` si comportano in modo analogo, se il flusso viene aperto in modalità ANSI. `putc` non supporta attualmente l'output in un flusso UNICODE.  

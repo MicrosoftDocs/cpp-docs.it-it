@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ffb86fed1f7a3a4b6960fd13db84cdb3da7ce7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Creazione guidata consumer OLE DB ATL
 Questa procedura guidata imposta una classe consumer OLE DB con le associazioni dati necessaria per accedere all'origine dati specificata tramite il provider OLE DB specificato.  
@@ -65,7 +66,7 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
   
     3. **Selezionare il database nel server:** fare clic sul menu a discesa per visualizzare tutti i database registrati nel server di dati e selezionare uno.  
   
-         -oppure-  
+         oppure  
   
  **Collegare un file di database come un nome di database:** specificare un file da utilizzare come database, immettere il nome percorso esplicito.  
   
@@ -180,7 +181,7 @@ Questa procedura guidata imposta una classe consumer OLE DB con le associazioni 
  **Modifica**  
  Specifica che il consumer supporta gli aggiornamenti dei dati della riga nel set di righe.  
   
- **Inserimento**  
+ **Inserisci**  
  Specifica che il consumer supporta l'inserimento di righe nel set di righe.  
   
  **Eliminazione**  

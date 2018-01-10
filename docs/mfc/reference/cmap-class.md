@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>Classe CMap
 Classe Collection dizionario che esegue il mapping delle chiavi univoche ai valori.  
@@ -81,7 +82,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-structures"></a>Strutture pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|Una struttura annidata che contiene un valore di chiave e il valore dell'oggetto associato.|  
   
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  Specifica un riferimento a un **posizione** valore restituito da una precedente `GetNextAssoc` o `GetStartPosition` chiamare.  
   
- *CHIAVE*  
+ *KEY*  
  Parametro di modello che specifica il tipo di chiave della mappa.  
   
  `rKey`  

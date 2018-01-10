@@ -1,32 +1,34 @@
 ---
-title: "Procedura: recuperare testo dagli Appunti (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Appunti, recupero di testo"
-  - "testo, recupero dagli Appunti"
+title: 'Procedura: recuperare testo dagli Appunti (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: recuperare testo dagli Appunti (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene utilizzata la funzione membro <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> per restituire un puntatore all'interfaccia <xref:System.Windows.Forms.IDataObject>.  È possibile quindi effettuare una query a questa interfaccia per conoscere il formato dei dati e recuperare i dati effettivi.  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>Procedura: recuperare testo dagli Appunti (C++/CLI)
+Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> restituiscono un puntatore a funzione membro di <xref:System.Windows.Forms.IDataObject> interfaccia. Questa interfaccia può essere eseguita una query per il formato dei dati e utilizzata per recuperare i dati effettivi.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // read_clipboard.cpp  
@@ -62,6 +64,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## Vedere anche  
- [Operazioni Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operazioni Windows (C + c++ /CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

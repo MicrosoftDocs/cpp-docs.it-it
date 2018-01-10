@@ -23,11 +23,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 652fff2a1cfcc15257f8eebb5a4c3ac8cddedd33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d37c9ae6ea54a39d800c892127998c3d778013de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carrayrowsetcarrayrowset"></a>CArrayRowset::CArrayRowset
 Crea un nuovo oggetto `CArrayRowset`.  

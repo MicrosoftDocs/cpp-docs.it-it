@@ -1,32 +1,33 @@
 ---
-title: "logical_or (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or (funzione) [STL/CLR]"
+title: logical_or (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_or
+dev_langs: C++
+helpviewer_keywords: logical_or function [STL/CLR]
 ms.assetid: 3b5eac9b-4aaf-4395-8d76-49100487d85a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7d80fd86c0426d54a803c3111911f284507bcb11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# logical_or (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe modello descrive un functor che, una volta chiamato, restituirà true solo se il primo argomento o il secondo test come true.  La si specifica un oggetto funzione in termini del relativo tipo di argomento.  
+# <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
+La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento o il secondo test come true. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### Parametri  
- Argomento  
- Il tipo degli argomenti.  
+#### <a name="parameters"></a>Parametri  
+ Arg  
+ Tipo degli argomenti.  
   
-## Funzioni del membro  
+## <a name="member-functions"></a>Funzioni membro  
   
-|Definizione del tipo|Descrizione|  
-|--------------------------|-----------------|  
-|delegate\_type|Il tipo di delegato generico.|  
-|first\_argument\_type|Il tipo del primo argomento di functor.|  
-|result\_type|Il tipo di risultato di functor.|  
-|second\_argument\_type|Il tipo di argomento di functor secondo.|  
+|Definizione dei tipi|Descrizione|  
+|---------------------|-----------------|  
+|delegate_type|Il tipo del delegato generico.|  
+|first_argument_type|Il tipo del primo argomento funtore.|  
+|result_type|Il tipo del risultato funtore.|  
+|second_argument_type|Il tipo del secondo argomento funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|logical\_or|Costruisce il functor.|  
+|logical_or|Costruisce il funtore.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|operator\(\)|Calcola la funzione desiderata.|  
-|delegate\_type^ dell'operatore|Esegue il cast di functor a un delegato.|  
+|--------------|-----------------|  
+|operator()|Calcola la funzione desiderata.|  
+|operatore delegate_type ^|Esegue il cast il funtore a un delegato.|  
   
-## Note  
- La classe modello descrive un functor a due argomenti.  Definisce l'operatore `operator()` membro in modo che, quando l'oggetto viene chiamato come funzione, restituire true solo se il primo argomento o i secondi test come true.  
+## <a name="remarks"></a>Note  
+ La classe modello descrive un funtore di due argomenti. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, viene restituito true solo se il primo argomento o il secondo test come true.  
   
- È anche possibile passare l'oggetto poiché un argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
+ È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_logical_or.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **0 0**  
- **1 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/functional\>  
+```Output  
+2 0  
+0 0  
+1 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [logical\_and](../dotnet/logical-and-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)

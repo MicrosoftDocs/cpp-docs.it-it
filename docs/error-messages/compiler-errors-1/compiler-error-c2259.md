@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2259
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2259
+f1_keywords: C2259
+dev_langs: C++
+helpviewer_keywords: C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bcb7b24bb39ba204653d2a99d6bc1d3e5d8142b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2259"></a>Errore del compilatore C2259
 'class': Impossibile creare un'istanza di classe astratta  
@@ -124,4 +120,3 @@ int main() {
    MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259  
 }  
 ```  
-

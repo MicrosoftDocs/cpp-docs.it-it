@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d7eaeb62f3d8231d7b1a5bca503cd355f7a7aca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process"></a>processo
 Specifica che il processo dell'applicazione gestita deve includere una sola copia di una variabile globale specifica, di una variabile membro statica o di una variabile locale statica condivisa tra tutti i domini dell'applicazione presenti nel processo. Questa viene usata principalmente da utilizzare durante la compilazione con **/clr: pure**, perché in **/clr: pure** sono variabili globali e statiche per ogni dominio applicazione, per impostazione predefinita. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015. Durante la compilazione con **/clr**, sono variabili globali e statiche per processo per impostazione predefinita (non è necessario utilizzare `__declspec(process)`.  

@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end (membro) [STL/CLR]"
+title: 'hash_multiset:: end (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 6f4b222c-2f82-445e-80e5-6e2afd233d4b
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1be1fd2fe32687f27f17f6a29e0e5b97eadc4a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce la fine della sequenza controllata.  
+# <a name="hashmultisetend-stlclr"></a>hash_multiset::end (STL/CLR)
+Designa la fine della sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator end();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore bidirezionale che punta a oltre la fine della sequenza selezionata.  Utilizzarla per ottenere un iteratore che definisce la fine della sequenza controllata; il doesn dello stato non di modifica se la lunghezza di sequenza selezionata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore bidirezionale che punta appena oltre la fine della sequenza controllata. È utilizzato per ottenere un iteratore che definisce la fine della sequenza controllata. il relativo stato modifica se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multiset_end.cpp   
@@ -65,14 +66,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)

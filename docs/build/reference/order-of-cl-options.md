@@ -1,30 +1,29 @@
 ---
-title: "Ordine delle opzioni CL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore cl.exe, impostazione delle opzioni"
+title: Ordine delle opzioni CL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords: cl.exe compiler, setting options
 ms.assetid: 300908ce-ae00-4b45-964b-e4e69ff6777b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef67792b01d4d4dab535bfb180cd70beb2316b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Ordine delle opzioni CL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le opzioni possono apparire in qualsiasi punto nella riga di comando CL, ad eccezione dell'opzione \/link che deve essere specificata per ultima.  Il compilatore analizza le opzioni specificate nella [variabile di ambiente CL](../../build/reference/cl-environment-variables.md), quindi legge la riga di comando da sinistra a destra, elaborando i file di comando nell'ordine in cui vengono rilevati.  Ogni opzione si applica a tutti i file indicati nella riga di comando.  Qualora venga rilevato un conflitto di opzioni, CL utilizzerà quella all'estrema destra.  
+# <a name="order-of-cl-options"></a>Ordine delle opzioni CL
+Le opzioni possono apparire in un punto qualsiasi nella riga di comando di CL, ad eccezione dell'opzione /link deve trovarsi per ultimo. Il compilatore inizia con le opzioni specificate nel [variabile di ambiente CL](../../build/reference/cl-environment-variables.md) e quindi legge la riga di comando da sinistra a destra, l'elaborazione dei file di comando nell'ordine vengono rilevati. Ogni opzione si applica a tutti i file nella riga di comando. Se vengono rilevate CL opzioni in conflitto, viene usata l'opzione all'estrema destra.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md)

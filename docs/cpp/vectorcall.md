@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e61efe58ae718e7381d6404f54c0887f556ac34c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Sezione specifica Microsoft**  
@@ -81,11 +82,11 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 ```  
   
 ## <a name="vectorcall-convention-on-x64"></a>Convenzione __vectorcall su piattaforme x64  
- La convenzione di chiamata `__vectorcall` su piattaforme x64 estende la convenzione di chiamata standard x64 per sfruttare i registri aggiuntivi. Sia gli argomenti di tipo Integer che gli argomenti di tipo vettore vengono mappati ai registri in base alla posizione nell'elenco di argomenti. Gli argomenti HVA vengono allocati nei registri vettoriali inutilizzati.  
+ La convenzione di chiamata `__vectorcall` su piattaforme x64 estende la convenzione di chiamata standard x64 per sfruttare i registri aggiuntivi. Sia gli argomenti tipo Integer che gli argomenti tipo vettore vengono mappati ai registri in base alla posizione nell'elenco di argomenti. Gli argomenti HVA vengono allocati nei registri vettoriali inutilizzati.  
   
- Quando uno dei primi quattro argomenti, in ordine da sinistra a destra, sono argomenti di tipo Integer, vengono passati nel registro corrispondente a tale posizione, ovvero RCX, RDX, R8 o R9. Un puntatore nascosto `this` viene trattato come primo argomento di tipo Integer. Quando un argomento HVA in uno dei primi quattro argomenti non può essere passato nei registri disponibili, viene invece passato un riferimento alla memoria allocata dal chiamante nel registro dei tipi Integer corrispondente. Gli argomenti di tipo Integer dopo la posizione del quarto parametro vengono passati allo stack.  
+ Quando uno dei primi quattro argomenti, in ordine da sinistra a destra, sono argomenti di tipo Integer, vengono passati nel registro corrispondente a tale posizione, ovvero RCX, RDX, R8 o R9. Un puntatore nascosto `this` viene trattato come primo argomento di tipo Integer. Quando un argomento HVA in uno dei primi quattro argomenti non può essere passato nei registri disponibili, viene invece passato un riferimento alla memoria allocata dal chiamante nel registro dei tipi Integer corrispondente. Gli argomenti tipo Integer dopo la posizione del quarto parametro vengono passati allo stack.  
   
- Quando uno dei primi sei argomenti, in ordine da sinistra a destra, sono argomenti di tipo vettore, vengono passati per valore nei registri vettoriali SSE da 0 a 5 in base alla posizione dell'argomento. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. In questo caso esiste una differenza rispetto alla convenzione di chiamata x64 standard, poiché i tipi vettore sono passati per valore anziché per riferimento e vengono utilizzati registri aggiuntivi. Lo spazio dello shadow stack allocato per gli argomenti di tipo vettore è fissato a 8 byte e [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opzione non è valida. Gli argomenti tipo vettore nelle posizioni del settimo parametro e successive vengono passati nello stack per riferimento alla memoria allocata dal chiamante.  
+ Quando uno dei primi sei argomenti, in ordine da sinistra a destra, sono argomenti tipo vettore, vengono passati per valore nei registri vettoriali SSE da 0 a 5 in base alla posizione dell'argomento. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. In questo caso esiste una differenza rispetto alla convenzione di chiamata x64 standard, poiché i tipi vettore sono passati per valore anziché per riferimento e vengono utilizzati registri aggiuntivi. Lo spazio dello shadow stack allocato per gli argomenti di tipo vettore è fissato a 8 byte e [/homeparams](../build/reference/homeparams-copy-register-parameters-to-stack.md) opzione non è valida. Gli argomenti tipo vettore nelle posizioni del settimo parametro e successive vengono passati nello stack per riferimento alla memoria allocata dal chiamante.  
   
  Dopo che i registri sono stati allocati per gli argomenti vettoriali, i membri dati degli argomenti HVA vengono allocati in ordine crescente ai registri vettoriali inutilizzati da XMM0 a XMM5 (o da YMM0 a YMM5), per i tipi `__m256`), finché sono disponibili registri sufficienti per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato per riferimento alla memoria allocata dal chiamante. Lo spazio dello shadow stack per un argomento HVA è fissato a 8 byte con contenuto non definito. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione. Gli argomenti HVA in una delle prime quattro posizioni non assegnati ai registri vettoriali vengono passati per riferimento nel registro di tipi Integer corrispondente a tale posizione. Gli argomenti HVA passati per riferimento dopo la posizione del quarto parametro vengono inseriti nello stack.  
   
@@ -195,7 +196,7 @@ int __cdecl main( void )
   
  I primi due argomenti di tipo Integer presenti nell'elenco di parametri da sinistra a destra vengono inseriti rispettivamente in ECX e in EDX. Un puntatore nascosto `this` viene trattato come primo argomento di tipo Integer e viene passato in ECX. I primi sei argomenti di tipo vettore vengono passati per valore attraverso i registri vettoriali SSE da 0 - 5 oppure nei registri YMM o XMM in base alle dimensioni dell'argomento.  
   
- I primi sei argomenti di tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. Nessuno spazio dello shadow stack viene allocato per gli argomenti di tipo vettore passati dal registro. Il settimo argomento tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.  
+ I primi sei argomenti di tipo vettore, in ordine da sinistra a destra, vengono passati per valore nei registri vettoriali SSE da 0 a 5. I tipi a virgola mobile e `__m128` vengono passati nei registri XMM, mentre i tipi `__m256` vengono passati nei registri YMM. Nessuno spazio dello shadow stack viene allocato per gli argomenti tipo vettore passati dal registro. Il settimo argomento tipo vettore e quelli successivi vengono passati nello stack per riferimento alla memoria allocata dal chiamante. La limitazione dell'errore del compilatore [C2719](../error-messages/compiler-errors-2/compiler-error-c2719.md) non si applica a questi argomenti.  
   
  Dopo che i registri sono stati allocati per gli argomenti vettoriali, i membri dati degli argomenti HVA vengono allocati in ordine crescente ai registri vettoriali inutilizzati da XMM0 a XMM5 (o da YMM0 a YMM5), per i tipi `__m256`), finché sono disponibili registri sufficienti per l'intero HVA. Se non sono disponibili registri sufficienti, l'argomento HVA verrà passato sullo stack per riferimento alla memoria allocata dal chiamante. Nessuno spazio dello stack shadow viene allocato per un argomento HVA. Gli argomenti HVA vengono assegnati ai registri in ordine da sinistra a destra nell'elenco dei parametri e possono trovarsi in qualsiasi posizione.  
   

@@ -1,50 +1,51 @@
 ---
-title: "Esecuzione di NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file di comando"
-  - "file di comando, NMAKE"
-  - "NMAKE (programma), esecuzione"
-  - "NMAKE (programma), destinazioni"
-  - "file di risposta, NMAKE"
-  - "destinazioni"
-  - "destinazioni, compilazione"
+title: Esecuzione di NMAKE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- targets, building
+- response files, NMAKE
+- targets
+- command files
+- NMAKE program, targets
+- NMAKE program, running
+- command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a6c39612cf4df47665f7ea3d529b77ee4e70ce8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Esecuzione di NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Sintassi  
+# <a name="running-nmake"></a>Esecuzione di NMAKE
+## <a name="syntax"></a>Sintassi  
   
 ```  
 NMAKE [option...] [macros...] [targets...] [@commandfile...]  
 ```  
   
-## Note  
- NMAKE consente di compilare soltanto le *destinazioni* specificate o, se non ne è stata specificata alcuna, la prima destinazione presente nel makefile.  La prima destinazione del makefile può essere una [pseudo\-destinazione](../build/pseudotargets.md) dalla quale vengono compilate altre destinazioni.  In NMAKE vengono utilizzati i makefile specificati con l'opzione \/F. Se tale opzione non è stata specificata, viene utilizzato il makefile contenuto nella directory corrente.  Se non è stato specificato alcun makefile, vengono utilizzate le regole di inferenza per compilare le *destinazioni* dalla riga di comando.  
+## <a name="remarks"></a>Note  
+ Specificata solo le compilazioni NMAKE *destinazioni* o, se non viene specificato, il primo di destinazione nel makefile. Può essere la destinazione del makefile prima un [pseudo](../build/pseudotargets.md) per compilare altre destinazioni. NMAKE vengono utilizzati i makefile specificato con /F; Se non è specificata l'opzione /F, viene utilizzato il file Makefile nella directory corrente. Se non viene specificato alcun makefile, vengono utilizzate le regole di inferenza per compilare della riga di comando *destinazioni*.  
   
- Nel file di testo `commandfile` o file di risposta è contenuto l'input della riga di comando.  Altro input può precedere o seguire @`commandfile`.  È consentito indicare un percorso.  In `commandfile` le interruzioni di riga sono considerate come spazi.  Racchiudere sempre le definizioni delle macro tra virgolette se contengono spazi.  
+ Il `commandfile` file di testo (o file di risposta) contenga l'input della riga di comando. Altri tipi di input possono precedere o seguire`commandfile`. È consentito un percorso. In `commandfile`, interruzioni di riga sono considerate come spazi. Racchiudere le definizioni di macro tra virgolette se contengono spazi.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
  [Opzioni di NMAKE](../build/nmake-options.md)  
   
  [Tools.ini e NMAKE](../build/tools-ini-and-nmake.md)  
   
  [Codici di uscita di NMAKE](../build/exit-codes-from-nmake.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Riferimenti a NMAKE](../build/nmake-reference.md)

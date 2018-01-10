@@ -1,24 +1,23 @@
 ---
-title: Operatori di spazio dei nomi Concurrency (AMP) | Documenti di Microsoft
+title: Operatori di spazio dei nomi Concurrency (AMP) | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Operatori di spazio dei nomi Concurrency (AMP)
 ||||  
@@ -45,10 +44,10 @@ bool operator== (
  La classificazione degli argomenti di tupla.  
   
  `_Lhs`  
- Una delle tuple da confrontare.  
+ Uno delle tuple da confrontare.  
   
  `_Rhs`  
- Una delle tuple da confrontare.  
+ Uno delle tuple da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true`Se le tuple sono uguali. in caso contrario, `false`.  
@@ -71,10 +70,10 @@ bool operator!= (
  La classificazione degli argomenti di tupla.  
   
  `_Lhs`  
- Una delle tuple da confrontare.  
+ Uno delle tuple da confrontare.  
   
  `_Rhs`  
- Una delle tuple da confrontare.  
+ Uno delle tuple da confrontare.  
   
 ### <a name="return-value"></a>Valore restituito  
  `true`Se le tuple non sono uguali. in caso contrario, `false`.  
@@ -197,10 +196,10 @@ _Tuple_type<_Rank>   operator*(
  La classificazione degli argomenti di tupla.  
   
  `_Lhs`  
- Una delle tuple da moltiplicare.  
+ Uno delle tuple da moltiplicare.  
   
  `_Rhs`  
- Una delle tuple da moltiplicare.  
+ Uno delle tuple da moltiplicare.  
   
 ### <a name="return-value"></a>Valore restituito  
  Il prodotto component-wise di argomenti specificati.  
@@ -233,7 +232,7 @@ _Tuple_type<_Rank>   operator/(
  La classificazione degli argomenti di tupla.  
   
  `_Lhs`  
- La tupla da dividere.  
+ Tupla da dividere.  
   
  `_Rhs`  
  La tupla per cui dividere.  
@@ -278,5 +277,4 @@ _Tuple_type<_Rank>   operator%(
  Il risultato del modulo della primo argomento specificato, il secondo argomento specificato.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concorrenza Namespace](concurrency-namespace-cpp-amp.md)
-
+ [Namespace di concorrenza](concurrency-namespace-cpp-amp.md)

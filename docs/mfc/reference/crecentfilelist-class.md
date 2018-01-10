@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - AFXADV/CRecentFileList::Remove
 - AFXADV/CRecentFileList::UpdateMenu
 - AFXADV/CRecentFileList::WriteList
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRecentFileList [MFC], CRecentFileList
 - CRecentFileList [MFC], Add
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a485a15ce0e2557e874b871eb273b15da7748bc5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecentfilelist-class"></a>Classe CRecentFileList
 Supporta il controllo dell'elenco dei file usati di recente.  
@@ -260,7 +258,6 @@ virtual void WriteList();
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
 
 
 

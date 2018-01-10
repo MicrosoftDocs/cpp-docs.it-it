@@ -1,35 +1,37 @@
 ---
-title: "IRowsetLocateImpl::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetLocateImpl.Compare"
-  - "IRowsetLocateImpl::Compare"
-  - "IRowsetLocateImpl.Compare"
-  - "ATL::IRowsetLocateImpl::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compare (metodo)"
+title: 'IRowsetLocateImpl:: compare | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetLocateImpl.Compare
+- IRowsetLocateImpl::Compare
+- IRowsetLocateImpl.Compare
+- ATL::IRowsetLocateImpl::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 6f84052c-c68c-480a-982f-03748faa7d5d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9eaa0aaecd1ff30e51416aaaccebcc8fe6746222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetLocateImpl::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
 Confronta due segnalibri.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -43,24 +45,24 @@ Confronta due segnalibri.
 );  
 ```  
   
-#### Parametri  
- Vedere [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx)*in OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Note  
- Uno dei bookmark può essere un OLE standard [segnalibro standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx) DB\- definito \(**DBBMK\_FIRST**, **DBBMK\_LAST**, o **DBBMK\_INVALID**\).  Il valore restituito in `pComparison` indica la relazione tra i due segnalibri:  
+## <a name="remarks"></a>Note  
+ Entrambi i segnalibri possono essere standard definite da OLE DB [segnalibro standard](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST**, **DBBMK_LAST**, o **DBBMK_INVALID**). Il valore restituito in `pComparison` indica la relazione tra due segnalibri:  
   
--   **DBCOMPARE\_LT** \(`cbBookmark1` è prima di `cbBookmark2`\).  
+-   **DBCOMPARE_LT** (`cbBookmark1` prima `cbBookmark2`.)  
   
--   **DBCOMPARE\_EQ** \(`cbBookmark1` è uguale a `cbBookmark2`\).  
+-   **DBCOMPARE_EQ** (`cbBookmark1` è uguale a `cbBookmark2`.)  
   
--   **DBCOMPARE\_GT** \(`cbBookmark1` è rappresentata `cbBookmark2`\).  
+-   **DBCOMPARE_GT** (`cbBookmark1` dopo `cbBookmark2`.)  
   
--   **DBCOMPARE\_NE** \(segnalibri sono uguali e non ordinati.\)  
+-   **DBCOMPARE_NE** (i segnalibri sono uguali e non ordinato).  
   
--   **DBCOMPARE\_NOTCOMPARABLE** \(i segnalibri non possono essere confrontati.\)  
+-   **DBCOMPARE_NOTCOMPARABLE** (non è possibile confrontare i segnalibri.)  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)

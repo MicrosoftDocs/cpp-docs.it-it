@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::hash_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::hash_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_delegate (membro) [STL/CLR]"
+title: hash_multiset::hash_delegate (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::hash_delegate
+dev_langs: C++
+helpviewer_keywords: hash_delegate member [STL/CLR]
 ms.assetid: 61ccfdfb-6a3c-40aa-902f-49e004a31a75
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6451dcd954e85e539a007778214923ea377196dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::hash_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Viene trovato un elemento che corrisponde alla chiave specificata.  
+# <a name="hashmultisethashdelegate-stlclr"></a>hash_multiset::hash_delegate (STL/CLR)
+Trova un elemento che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 hasher^ hash_delegate();  
 ```  
   
-## Note  
- La funzione membro restituisce il delegato utilizzato per convertire un valore di chiave in integer.  Utilizzarla per l'hashing una chiave.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce il delegato utilizzato per convertire un valore di chiave in un intero. È utilizzato per una chiave hash.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_multiset_hash_delegate.cpp   
@@ -55,13 +56,16 @@ int main()
   
 ```  
   
-  **hash \(L'a\) \= 1616896120**  
-**hash \(L'b\) \= 570892832**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_set\>  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_set >  
   
-## Vedere anche  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::hasher](../dotnet/hash-multiset-hasher-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::hasher (STL/CLR)](../dotnet/hash-multiset-hasher-stl-clr.md)

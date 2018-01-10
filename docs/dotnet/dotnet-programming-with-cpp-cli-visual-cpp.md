@@ -18,18 +18,21 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 829f7302cf1086162c81be78acb05abcdb0fdf1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1c18ea36a4ebced809ea32e74dca9dcb00e3968
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>Programmazione .NET con C++/CLI (Visual C++)
 Gli argomenti seguenti descrivono come Visual C++ può essere destinato alla piattaforma .NET.  
   
  Per impostazione predefinita, i progetti CLR creati con 2015 sono destinati a.NET Framework 4.5.2. Per impostare .NET Framework 4.6 come destinazione quando si crea un nuovo progetto, nella finestra di dialogo **Nuovo progetto** modificare il framework di destinazione nell'elenco a discesa in alto al centro della finestra. Per modificare il framework di destinazione per un progetto esistente, chiudere il progetto, modificare il file di progetto (con estensione vcxproj) e modificare il valore della versione del framework di destinazione in 4.6. Alla successiva apertura del progetto, le impostazioni avranno effetto.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Attività C++/CLI](../dotnet/cpp-cli-tasks.md)  
   
  [Interoperabilità .NET e nativa](../dotnet/native-and-dotnet-interoperability.md)  

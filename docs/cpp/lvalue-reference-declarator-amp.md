@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&'
-dev_langs:
-- C++
+f1_keywords: '&'
+dev_langs: C++
 helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6aa0c0a18d77f685369681c0d0400ada6f879e9d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5bea07ed3139240279848d94184564ec821a8cd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Dichiaratore di riferimento lvalue:&amp;
 Contiene l'indirizzo di un oggetto, ma sintatticamente si comporta come un oggetto.  

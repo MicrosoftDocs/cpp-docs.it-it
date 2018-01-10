@@ -1,32 +1,33 @@
 ---
-title: "unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique (funzione) [STL/CLR]"
+title: Unique (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unique
+dev_langs: C++
+helpviewer_keywords: unique function [STL/CLR]
 ms.assetid: 833cc314-b452-4659-bbb4-575c2bb63855
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1fcefbfbef8d8bb68923e8b051dc9cbde24b487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Elimina elementi duplicati che sono adiacenti all'altro in un intervallo specificato.  
+# <a name="unique-stlclr"></a>unique (STL/CLR)
+Rimuove gli elementi duplicati adiacenti l'uno rispetto all'altro in un intervallo specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt> inline  
@@ -35,13 +36,13 @@ template<class _FwdIt, class _Pr> inline
     _FwdIt unique(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `unique`STL.  Per ulteriori informazioni, vedere [univoco](../Topic/unique%20\(%3Calgorithm%3E\).md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `unique`. Per ulteriori informazioni, vedere [univoco](../standard-library/algorithm-functions.md#unique).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

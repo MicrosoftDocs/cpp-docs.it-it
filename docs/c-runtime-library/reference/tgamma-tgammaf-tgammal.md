@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Determina la funzione gamma del valore specificato.  
@@ -86,19 +87,19 @@ long double tgammal(
   
  Può verificarsi un errore di intervallo se la grandezza di `x` è troppo grande o troppo piccola per il tipo di dati. Può verificarsi un errore di dominio o un errore di intervallo se `x` <=0.  
   
-|Problema|Valore restituito|  
+|Problema|INVIO|  
 |-----------|------------|  
-|x = ±0|±INFINITY|  
+|x = ± 0|±INFINITY|  
 |x = intero negativo|NaN|  
 |x =  -INFINITY|NaN|  
-|x = +INFINITY|+INFINITY|  
+|x = +INFINITY|+INFINITO|  
 |x = NaN|NaN|  
 |Eerrore di dominio|NaN|  
 |Errore polo|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|  
 |Errore di intervallo di overflow|±HUGE_VAL, ±HUGE_VALF o ±HUGE_VALL|  
 |Errore di intervallo di underflow|Valore corretto dopo l'arrotondamento.|  
   
- Gli errori vengono segnalati come specificato in [matherr](../../c-runtime-library/reference/matherr.md).  
+ Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Note  
  Dato che C++ consente l'overload, è possibile chiamare overload di tgamma che accettano e restituiscono i tipi float e long double. In un programma C tgamma accetta e restituisce sempre un valore double.  
@@ -111,8 +112,8 @@ long double tgammal(
 |--------------|--------------|------------------|  
 |`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [lgamma, lgammaf, lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)

@@ -1,60 +1,60 @@
 ---
-title: "&lt;include&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<include> C++ (tag XML)"
-  - "include C++ (tag XML)"
+title: '&lt;includere&gt; (Visual C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs: C++
+helpviewer_keywords:
+- include C++ XML tag
+- <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;include&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tag \<include\> consente di fare riferimento ai commenti in un altro file che descrivono i tipi e i membri del codice sorgente,  eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile utilizzare \<include\> per includere commenti standard “boilerplate„ utilizzate in tutto il team o azienda.  
+# <a name="ltincludegt-visual-c"></a>&lt;includere&gt; (Visual C++)
+Il tag \<include> consente di fare riferimento ai commenti di un altro file per la descrizione dei tipi e dei membri del codice sorgente, eliminando la necessità di inserire i commenti relativi alla documentazione direttamente nel file del codice sorgente.  Ad esempio, è possibile utilizzare \<includono > può inserire commenti "standard" standard che vengono utilizzati in tutto il team o la società.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <include file='filename' path='tagpath' />  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `filename`  
- Nome del file che contiene la documentazione.  È possibile qualificare il nome del file tramite un percorso.  Racchiuderlo tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `filename`.  
+ Il nome del file contenente la documentazione. È possibile qualificare il nome del file con un percorso.  Racchiudere il nome tra virgolette singole o doppie.  Il compilatore genera un avviso se non trova `filename`.  
   
  `tagpath`  
- Un'espressione XPath valida che seleziona desiderato nodo\- impostato contenuto nel file.  
+ Un'espressione XPath valida che consente di selezionare il set di nodi desiderato contenuto nel file.  
   
  `name`  
  Identificatore del nome contenuto nel tag che precede i commenti. `name` ha sempre un `id`.  
   
  `id`  
- ID del tag che precede i commenti.  Racchiuderlo tra virgolette singole o doppie.  
+ ID del tag che precede i commenti.  Racchiudere il nome tra virgolette singole o doppie.  
   
-## Note  
- Il tag \<include\> utilizza la sintassi XML XPath.  Consultare la documentazione di XPath per le modalità di utilizzo di \<include\>.  
+## <a name="remarks"></a>Note  
+ Il tag \<include> usa la sintassi XML XPath. Fare riferimento alla documentazione di XPath per individuare i modi personalizzare mediante \<includono >.  
   
- Eseguire la compilazione con [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare in un file i commenti per la creazione della documentazione.  
+ Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
-## Esempio  
- In questo esempio vengono presi in considerazione più file.  Il primo file, che utilizza \<include\>, contiene i commenti della documentazione:  
+## <a name="example"></a>Esempio  
+ In questo esempio vengono presi in considerazione più file. Il primo file, che utilizza \<includono >, contiene i commenti della documentazione seguente:  
   
 ```  
 // xml_include_tag.cpp  
@@ -74,7 +74,7 @@ public ref class Test2 {
 };  
 ```  
   
- Nel secondo file, xml\_include\_tag.doc, sono contenuti i seguenti commenti relativi alla documentazione:  
+ Il secondo file, xml_include_tag.doc, contiene i commenti alla documentazione seguenti:  
   
 ```  
 <MyDocs>  
@@ -94,7 +94,7 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## Output di programma  
+## <a name="program-output"></a>Output di programma  
   
 ```  
 <?xml version="1.0"?>  
@@ -117,5 +117,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

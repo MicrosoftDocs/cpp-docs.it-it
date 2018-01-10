@@ -1,38 +1,37 @@
 ---
-title: "Avviso del compilatore (livello 1) C4129 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4129"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4129"
+title: Compilatore (livello 1) Avviso C4129 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4129
+dev_langs: C++
+helpviewer_keywords: C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6405c7c156f34b49ab892304ee51a6b996ac2595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4129
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'carattere': sequenza di caratteri di escape sconosciuta  
+# <a name="compiler-warning-level-1-c4129"></a>Compilatore (livello 1) Avviso C4129
+'character': sequenza di caratteri escape sconosciuta  
   
- L'oggetto `character` che segue una barra rovesciata \(\\\) in una costante carattere o stringa non è riconosciuto come sequenza di escape valida.  La barra rovesciata viene ignorata e non viene stampata,  mentre viene stampato il carattere che la segue.  
+ Il `character` dopo una barra rovesciata (\\) in un carattere o una stringa costante non è riconosciuto come una sequenza di escape valida. La barra rovesciata viene ignorata e non è stata stampata. Il carattere che segue la barra rovesciata viene stampato.  
   
- Per stampare una singola barra rovesciata, immetterne una doppia \(\\\\\).  
+ Per stampare una singola barra rovesciata, specificare una doppia barra rovesciata (\\\\).  
   
- Nella sezione 2.13.2 di C\+\+ standard vengono descritte le sequenze di caratteri di escape.  
+ C++ standard, nella sezione 2.13.2 vengono illustrate le sequenze di escape.  
   
- Il seguente codice di esempio genera l'errore C4129:  
+ L'esempio seguente genera l'errore C4129:  
   
 ```  
 // C4129.cpp  

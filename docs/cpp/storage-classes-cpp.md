@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
 - external_cpp
 - static_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- storage classes [C++], basic concepts
+dev_langs: C++
+helpviewer_keywords: storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Classi di archiviazione (C++)  
   
@@ -221,14 +218,12 @@ void DoSomething()
 ```  
   
 Aspetti da tenere presenti circa il `thread_local` identificatore:  
+
+- Inizializzati in modo dinamico le variabili locali del thread nelle DLL potrebbero non essere state inizializzate correttamente in tutti i thread di chiamata. Per ulteriori informazioni, vedere [thread](thread.md).
   
 -  Il `thread_local` identificatore può essere combinato con `static` o `extern`.  
   
 -  È possibile applicare `thread_local` solo a dichiarazioni di dati e delle definizioni. `thread_local` non può essere utilizzato in definizioni o dichiarazioni di funzione.  
-  
--  L'utilizzo di `thread_local` può interferire con [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni delle DLL. 
-  
--  Nei sistemi XP `thread_local` potrebbe non funzionare correttamente se una DLL Usa `thread_local` dati e viene caricata dinamicamente tramite `LoadLibrary`.  
   
 -  È possibile specificare `thread_local` solo per elementi di dati con durata di archiviazione statica. Inclusi gli oggetti dati globali (sia `static` e `extern`), gli oggetti statici locali e i membri dati statici delle classi. Qualsiasi variabile locale dichiarata `thread_local` static in modo implicito se non viene specificata nessun altra classe di archiviazione; in altre parole, nell'ambito del blocco `thread_local` equivale a `thread_local static`. 
   
@@ -329,4 +324,3 @@ Esistono diversi punti da tenere presenti circa il programma:
 ## <a name="see-also"></a>Vedere anche  
   
  [Dichiarazioni e definizioni](../cpp/declarations-and-definitions-cpp.md)
-

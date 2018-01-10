@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __super_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __super keyword [C++]
+f1_keywords: __super_cpp
+dev_langs: C++
+helpviewer_keywords: __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 64600f8cf642b0c7906873a73aa4da41897a57f5
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 93585337ae34e7c95d1c11b0a970afc8b36987bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="super"></a>__super
 **Sezione specifica Microsoft**  

@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a00464ce6d8ffe93ffed63818dd52b913f7224ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaration-of-a-clr-array"></a>Dichiarazione di una matrice CLR
 La sintassi di dichiarazione, creazione di un'istanza e l'inizializzazione di una matrice gestita ha modificato dalle estensioni gestite per C++ in Visual C++.  
@@ -44,7 +47,7 @@ Int32 f() [];
 int GetArray() __gc[];  
 ```  
   
- In Visual C++, la dichiarazione è molto più semplice. Di seguito è riportato un esempio:  
+ In Visual C++, la dichiarazione è molto più semplice. Ad esempio,  
   
 ```  
 array<Int32>^ f();  

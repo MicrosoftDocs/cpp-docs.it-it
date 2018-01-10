@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed1767ed8fe33e074fbf4811fb45e9d9dbab4590
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7414ef9e3746e1af4fa3122ff658b7dfd8a04df0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="startup-and-termination-c"></a>Avvio e terminazione (C++)
 Avvio del programma e chiusura sono facilitati utilizzando due funzioni: [principale](../cpp/main-program-startup.md) e [uscire](../cpp/program-termination.md). È possibile eseguire altro codice di avvio e di chiusura.  

@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4986819ccd6c56548c4be0a2bdf529d3fb5b9f58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd5fcdbb71c1555d06e094f5e08f9da795f0d5a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaulttypenameequals-method"></a>Metodo default::(type_name)::Equals
 Determina se l'oggetto specificato è uguale all'oggetto corrente.  

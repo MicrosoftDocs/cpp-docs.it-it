@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>Cenni preliminari su MSBuild (Visual C++)  
   
@@ -131,11 +132,11 @@ Nella tabella seguente sono elencate diverse destinazioni utili per utenti.
 |Compilazione|Compila il progetto.<br /><br /> Questa è la destinazione predefinita per un progetto.|  
 |ClCompile|Esegue lo strumento compilatore di Visual C++, cl.exe.|  
 |Pulisci|File di compilazione eliminazioni temporanee e di livello intermedie.|  
-|LIB|Esegue lo strumento Gestione librerie Microsoft a 32 Bit, lib.exe.|  
+|Lib|Esegue lo strumento Gestione librerie Microsoft a 32 Bit, lib.exe.|  
 |Collegamento|Esegue lo strumento linker Visual C++, link.exe.|  
 |ManifestResourceCompile|Estrae un elenco di risorse da un manifesto e quindi esegue lo strumento compilatore di risorse di Microsoft Windows, rc.exe.|  
 |MIDL|Esegue lo strumento del compilatore (MIDL (Microsoft Interface Definition Language), midl.exe.|  
-|Ricompila|Pulisce e quindi compila il progetto.|  
+|Rebuild|Pulisce e quindi compila il progetto.|  
 |ResourceCompile|Esegue lo strumento compilatore di risorse di Microsoft Windows, rc.exe.|  
 |XdcMake|Esegue lo strumento di documentazione XML, xdcmake.exe.|  
 |XSD|Esegue lo strumento XML Schema Definition, xsd.exe.|  

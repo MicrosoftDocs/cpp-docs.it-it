@@ -1,72 +1,73 @@
 ---
-title: "Passaggio dei parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Passaggio dei parametri | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: e838ee5f-c2fe-40b0-9a23-8023c949c820
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Passaggio dei parametri
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I primi quattro argomenti Integer vengono passati nei registri.  I valori Integer vengono passati \(in ordine da sinistra verso destra\) in RCX, in RDX, in R8 e in R9.  Gli argomenti cinque e superiore vengono passati nello stack.  Tutti gli argomenti sono allineati a destra nei registri.  Di conseguenza, il chiamato può ignorare i bit più significativi del registro e accedere soltanto alla parte del registro necessaria.  
+# <a name="parameter-passing"></a>Passaggio dei parametri
+I primi quattro argomenti integer vengono passati nei registri. I valori interi vengono passati (in ordine da sinistra a destra) in RCX, RDX, R8 e R9. Argomenti 5 e versioni successive vengono passati nello stack. Tutti gli argomenti sono giustificati a destra nei registri. In questo modo il chiamato può ignorare i bit superiori del registro, se necessario e può accedere solo la parte del registro necessaria.  
   
- Gli argomenti a virgola mobile e precisione doppia vengono passati in XMM0 – XMM3 \(fino a 4\) con lo slot integer \(RCX, RDX, R8, R9\) che in genere viene utilizzato per lo slot cardinale da ignorare \(vedere l'esempio\) e viceversa.  
+ Gli argomenti a virgola mobile e precisione doppia vengono passati in XMM0 - XMM3 (fino a 4) con lo slot di integer (ovvero RCX, RDX, R8 e R9) che in genere utilizzato per lo slot cardinale da ignorato (vedere l'esempio) e viceversa.  
   
- i tipi , matrici e le stringhe di[\_\_m128](../cpp/m128.md) non sono mai stati passati per valore immediato ma anziché un puntatore passato alla memoria allocata dal chiamante.  Strutture o unioni di \_\_m64 di dimensioni 8, 16, 32, o 64 bit e vengono passati come se fossero Integer della stessa dimensione.  Strutture o unioni diverso da queste dimensioni vengono passati come puntatore alla memoria allocata dal chiamante.  Per questi tipi aggregati passati come puntatore \(incluso \_\_m128\), per la memoria temporanea allocata dal chiamante verrà utilizzato un allineamento a 16 byte.  
+ [m128](../cpp/m128.md) tipi, le matrici e le stringhe non vengono mai passate per valore immediato, ma invece viene passato un puntatore alla memoria allocata dal chiamante. Le strutture o unioni di dimensioni di 8, 16, 32 o 64 bit a e m64 vengono passate come se fossero interi delle stesse dimensioni. Le strutture o unioni diverso da queste dimensioni vengono passate come un puntatore alla memoria allocata dal chiamante. Per questi tipi di aggregazione passata come un puntatore (inclusi \_m128), la memoria temporanea allocata dal chiamante verrà allineata a 16 byte.  
   
- Le funzioni intrinseche che non allocano spazio dello stack né chiamano altre funzioni possono utilizzare altri registri volatili per passare argomenti di registro aggiuntivi, poiché non esiste alcuna relazione tra il compilatore e l'implementazione delle funzioni intrinseche.  Questo consente di migliorare ulteriormente le prestazioni.  
+ Funzioni intrinseche che non si allocano spazio dello stack e non chiamano altre funzioni è possono utilizzare altri registri volatili per passare gli argomenti di registro aggiuntivi, poiché non esiste una stretta associazione tra il compilatore e l'implementazione di una funzione intrinseca. Si tratta di un'ulteriore opportunità per migliorare le prestazioni.  
   
- Spetta al chiamato eseguire, se necessario, il dump dei parametri di registro nel relativo spazio di shadow.  
+ Il chiamato ha la responsabilità di dump i parametri nel relativo spazio di shadow se necessario.  
   
- Nella tabella riportata di seguito è indicato il modo in cui vengono passati i parametri:  
+ Nella tabella seguente sono riepilogati come parametri vengono passati:  
   
 |Tipo di parametro|Modalità di passaggio|  
-|-----------------------|---------------------------|  
-|A virgola mobile|I primi 4 parametri vengono passati in XMM0\-XMM3.  Gli altri vengono passati nello stack.|  
-|Integer|I primi 4 parametri vengono passati in RCX, RDX, R8, R9.  Gli altri vengono passati nello stack.|  
-|Aggregati \(8, 16, 32 o 64 bit\) e \_\_m64|I primi 4 parametri vengono passati in RCX, RDX, R8, R9.  Gli altri vengono passati nello stack.|  
-|Aggregati \(altro\)|Per puntatore.  I primi 4 parametri vengono passati come puntatori in RCX, RDX, R8 e R9.|  
-|\_\_m128|Per puntatore.  I primi 4 parametri vengono passati come puntatori in RCX, RDX, R8 e R9.|  
+|--------------------|----------------|  
+|Virgola mobile|I primi 4 parametri - da XMM0 a XMM3. Gli altri vengono passati nello stack.|  
+|Integer|I primi 4 parametri, ovvero RCX, RDX, R8, R9. Gli altri vengono passati nello stack.|  
+|Funzioni di aggregazione (8, 16, 32 o 64 bit) e m64|I primi 4 parametri, ovvero RCX, RDX, R8, R9. Gli altri vengono passati nello stack.|  
+|Funzioni di aggregazione (other)|Dal puntatore. I primi 4 parametri passati come puntatori in RCX, RDX, R8 e R9|  
+|__m128|Dal puntatore. I primi 4 parametri passati come puntatori in RCX, RDX, R8 e R9|  
   
-## Esempio 1 di passaggio di argomenti \(tutti integer\)  
+## <a name="example-of-argument-passing-1---all-integers"></a>Esempio 1: tutti i valori interi di passaggio di argomenti  
   
 ```  
 func1(int a, int b, int c, int d, int e);    
 // a in RCX, b in RDX, c in R8, d in R9, e pushed on stack  
 ```  
   
-## Esempio 2 di passaggio di argomenti \(tutti a virgola mobile\)  
+## <a name="example-of-argument-passing-2---all-floats"></a>Esempio 2 - tutti gli elementi mobili passaggio di argomenti  
   
 ```  
 func2(float a, double b, float c, double d, float e);    
 // a in XMM0, b in XMM1, c in XMM2, d in XMM3, e pushed on stack  
 ```  
   
-## Esempio 3 di passaggio di argomenti \(sia integer che a virgola mobile\)  
+## <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Esempio 3 - misto di valori integer o float di passaggio di argomenti  
   
 ```  
 func3(int a, double b, int c, float d);    
 // a in RCX, b in XMM1, c in R8, d in XMM3  
 ```  
   
-## Esempio 4 di passaggio di argomenti \(\_\_m64, \_\_m128 e aggregati\)  
+## <a name="example-of-argument-passing-4--m64-m128-and-aggregates"></a>Esempio 4 di passaggio di argomenti- m64, \_m128 e aggregazioni  
   
 ```  
 func4(__m64 a, _m128 b, struct c, float d);  
 // a in RCX, ptr to b in RDX, ptr to c in R8, d in XMM3  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Convenzione di chiamata](../build/calling-convention.md)

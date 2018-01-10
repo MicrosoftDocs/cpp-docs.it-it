@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 181dcba15098f7cd75eec083ab977969bde622ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array e WriteOnlyArray (C++/CX)
 È possibile usare liberamente matrici di tipo C regolari o [std:: Array](../standard-library/array-class-stl.md) in C + + programma CX (sebbene [std:: Vector](../standard-library/vector-class.md) è spesso una scelta migliore), ma in qualsiasi API pubblicata nei metadati, è necessario convertire una matrice di tipo C o vettoriale per una [platform:: Array](../cppcx/platform-array-class.md) o [platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md) tipo a seconda della modalità di utilizzo. Il tipo [Platform::Array](../cppcx/platform-array-class.md) non è altrettanto efficace o potente di [std::vector](../standard-library/vector-class.md). Pertanto, come regola generale, se ne sconsiglia l'utilizzo in codice interno che esegue una grande quantità di operazioni sugli elementi di matrice.  

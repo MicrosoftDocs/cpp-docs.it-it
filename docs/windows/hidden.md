@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a33faa8f0b21e26842f6ad6fc98c16228f8335ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c038eb4869cb3191dd26b5c4ea8e1c6cc182e366
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hidden"></a>hidden
 Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzatore per utente.  
@@ -47,7 +50,7 @@ Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzator
 |**Si applica a**|`interface`, **classe**, `struct`, metodo, proprietà|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

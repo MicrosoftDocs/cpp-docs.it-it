@@ -1,45 +1,46 @@
 ---
-title: "generate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::generate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generate (funzione) [STL/CLR]"
+title: generare (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::generate
+dev_langs: C++
+helpviewer_keywords: generate function [STL/CLR]
 ms.assetid: 970f209f-31db-47c4-a0bb-4c3e579adb52
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e5e5ebe9b6037de30bb95d578072167c64521849
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# generate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Assegna i valori generati da un oggetto funzione a ogni elemento in un intervallo.  
+# <a name="generate-stlclr"></a>generate (STL/CLR)
+Assegna i valori generati da un oggetto funzione a ogni elemento di un intervallo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt, class _Fn0> inline  
     void generate(_FwdIt _First, _FwdIt _Last, _Fn0 _Func);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `generate`STL.  Per ulteriori informazioni, vedere [generare](../Topic/generate.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `generate`. Per ulteriori informazioni, vedere [generare](../standard-library/algorithm-functions.md#generate).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Funzioni dello spazio dei nomi Concurrency:: Graphics | Documenti di Microsoft'
+title: 'Funzioni dello spazio dei nomi Concurrency:: Graphics | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,18 +9,18 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: Graphics
 |||  
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/17/2017
 |[copy](#copy)|[copy_async](#copy_async)|  
   
 ##  <a name="copy"></a>Copy (funzione) (Namespace Concurrency:: Graphics)  
- Copia una trama di origine in un buffer di destinazione, o copia di un buffer di origine in un buffer di destinazione. Il formato generale di questa funzione è `copy(src, dest)`.  
+ Copia di una trama di origine in un buffer di destinazione o copia di un buffer di origine in un buffer di destinazione. Il formato generale di questa funzione è `copy(src, dest)`.  
   
 ```  
 template <
@@ -150,7 +150,7 @@ void copy (
  Offset nella destinazione in corrispondenza del quale iniziare la copia.  
   
  `InputIterator`  
- Il tipo di interator input.  
+ Il tipo di interator l'input.  
   
  `OutputIterator`  
  Il tipo di iteratore di output.  
@@ -171,10 +171,10 @@ void copy (
  Un iteratore di inizio nel contenitore di origine.  
   
  `last`  
- Un iteratore finale nel contenitore di origine.  
+ Iteratore di fine in un contenitore di origine.  
   
-##  <a name="copy_async"></a>copy_async (funzione) (Namespace Concurrency:: Graphics)  
- Copia in modo asincrono una trama di origine in un buffer di destinazione, o copia di un buffer di origine in un buffer di destinazione e quindi restituisce un [completion_future](completion-future-class.md) oggetto che può restare in attesa. Impossibile copiare i dati durante l'esecuzione di codice in un tasto di scelta rapida. Il formato generale di questa funzione è `copy(src, dest)`.  
+##  <a name="copy_async"></a>copy_async (Namespace Concurrency:: Graphics) (funzione)  
+ Copia in modo asincrono una trama di origine in un buffer di destinazione, o copia di un buffer di origine in un buffer di destinazione e quindi restituisce un [completion_future](completion-future-class.md) oggetto che può restare in attesa. Impossibile copiare i dati durante l'esecuzione di codice in un acceleratore. Il formato generale di questa funzione è `copy(src, dest)`.  
   
 ```  
 template<
@@ -292,7 +292,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Offset nella destinazione in corrispondenza del quale iniziare la copia.  
   
  `InputIterator`  
- Il tipo di interator input.  
+ Il tipo di interator l'input.  
   
  `OutputIterator`  
  Il tipo di iteratore di output.  
@@ -313,7 +313,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Un iteratore di inizio nel contenitore di origine.  
   
  `last`  
- Un iteratore finale nel contenitore di origine.  
+ Iteratore di fine in un contenitore di origine.  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** amp_graphics.h  
@@ -322,4 +322,3 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

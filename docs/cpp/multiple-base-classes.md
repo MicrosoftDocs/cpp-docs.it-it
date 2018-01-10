@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 947084ca5bf59494a3574950f5148f5b4d3f0770
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-base-classes"></a>Più classi base
 Come descritto in [ereditarietà multipla](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), una classe può essere derivata da più di una classe base. In un modello di ereditarietà multipla (in cui le classi sono derivate da più di una classe base), le classi di base vengono specificate utilizzando il *base-list* elemento grammatica. Ad esempio, la dichiarazione di classe per `CollectionOfBook`, derivata da `Collection` e `Book`, può essere specificata come segue:  
@@ -45,7 +43,7 @@ class CollectionOfBook : public Book, public Collection {
   
 -   L'ordine con cui viene eseguita l'inizializzazione per costruttore. Se il codice si basa sul presupposto che la parte `Book` di `CollectionOfBook` sia inizializzata prima della parte `Collection`, l'ordine di specifica è significativo. L'inizializzazione viene eseguita nell'ordine in cui vengono specificate le classi di *base-list*.  
   
--   L'ordine con cui vengono richiamati i distruttori per eseguire la pulizia. Anche in questo caso, se una "parte" specifica della classe deve essere presente mentre l'altra parte viene eliminata, l'ordine è significativo. I distruttori vengono chiamati in ordine inverso delle classi specificate nel *base-list*.  
+-   L'ordine con cui vengono richiamati i distruttori per eseguire la pulizia. Anche in questo caso, se una "parte" specifica della classe deve essere presente mentre l'altra parte viene eliminata definitivamente, l'ordine è significativo. I distruttori vengono chiamati in ordine inverso delle classi specificate nel *base-list*.  
   
     > [!NOTE]
     >  L'ordine di specifica delle classi base può influire sul layout di memoria della classe. Non prendere decisioni relative alla programmazione in base all'ordine dei membri base nella memoria.  

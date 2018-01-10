@@ -4,36 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
 C++ supporta l'allocazione dinamica e la deallocazione di oggetti utilizzando il [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori. Questi operatori allocano memoria per gli oggetti da un pool denominato archivio libero. Il `new` operatore chiama la funzione speciale [operatore new](../cpp/new-operator-cpp.md)e `delete` operatore chiama la funzione speciale [operatore delete](../cpp/delete-operator-cpp.md).  
   
- In Visual C++ .NET 2002, la `new` funzione nella libreria C++ Standard supporterà il comportamento specificato nello standard C++, che consiste nel generare un'eccezione std:: bad_alloc se l'allocazione di memoria ha esito negativo. Se si desidera la versione non generanti di `new`, collegare il programma con nothrownew.obj. Tuttavia, in caso di collegamento a nothrownew.obj, il valore predefinito `operator new` nella libreria Standard C++ non funziona più.  
+ Il `new` funzione nella libreria Standard C++ supporta il comportamento specificato nello standard C++, che consiste nel generare un'eccezione std:: bad_alloc se l'allocazione di memoria ha esito negativo. Se si desidera la versione non generanti di `new`, collegare il programma con nothrownew.obj. Tuttavia, in caso di collegamento a nothrownew.obj, il valore predefinito `operator new` nella libreria Standard C++ non funziona più.  
   
  Per un elenco dei file della libreria che costituiscono la libreria di Runtime C e la libreria Standard di C++, vedere [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).  
   
@@ -58,7 +56,7 @@ I due ambiti delle funzioni `operator new` sono descritti nella tabella seguente
 |**:: operatore new**|Global|  
 |*Nome classe* **:: operatore new**|Classe|  
   
- Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito da STDDEF. H) e il tipo restituito è sempre **void \* **.  
+ Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito da STDDEF. H) e il tipo restituito è sempre **void \*** .  
   
  Globale **operatore new** funzione viene chiamata quando la **nuova** operatore viene usato per allocare oggetti di tipi predefiniti, definiti dall'utente gli oggetti del tipo di classe che non contengono **operatore new** funzioni e le matrici di qualsiasi tipo. Quando il **nuova** operatore viene usato per allocare oggetti di un tipo di classe in cui un **operatore new** è definito, tale classe **operatore new** viene chiamato.  
   
@@ -155,7 +153,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- Solo uno dei due formati precedenti può essere presente per una determinata classe. La prima forma accetta un singolo argomento di tipo **void \* **, che contiene un puntatore all'oggetto da deallocare. La seconda forma, ovvero dimensioni deallocazione, accetta due argomenti, il primo dei quali è un puntatore al blocco di memoria per deallocare e il secondo dei quali è il numero di byte da deallocare. Il tipo restituito di entrambe le forme è `void` (**operatore delete** non può restituire un valore).  
+ Solo uno dei due formati precedenti può essere presente per una determinata classe. La prima forma accetta un singolo argomento di tipo **void \*** , che contiene un puntatore all'oggetto da deallocare. La seconda forma, ovvero dimensioni deallocazione, accetta due argomenti, il primo dei quali è un puntatore al blocco di memoria per deallocare e il secondo dei quali è il numero di byte da deallocare. Il tipo restituito di entrambe le forme è `void` (**operatore delete** non può restituire un valore).  
   
  Lo scopo del secondo form consiste nel velocizzare la ricerca per la categoria di dimensioni corrette dell'oggetto da eliminare, che spesso non è archiviato in prossimità di allocazione di se stesso e probabilmente rimosso dalla cache; il secondo modulo è particolarmente utile quando un **operatore delete** da una classe base viene utilizzata per eliminare un oggetto di una classe derivata.  
   
@@ -232,5 +230,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

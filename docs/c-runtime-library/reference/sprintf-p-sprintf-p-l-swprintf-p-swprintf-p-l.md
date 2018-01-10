@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -51,31 +49,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 35501213c0d9e0ee60472e4082bc03eabe8440e0
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Scrivere dati formattati su una stringa con la possibilità di specificare l'ordine dei parametri utilizzati nella stringa di formato.  
@@ -127,13 +110,13 @@ int _swprintf_p_l(
  `locale`  
  Impostazioni locali da usare.  
   
- Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  Il numero di caratteri scritti o -1 se si è verificato un errore.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_sprintf_p` formatta e archivia una serie di caratteri e di valori in `buffer`. Ogni argomento di `argument_list` (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in `format`. Il `format` argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere `NULL` viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra `_sprintf_p` e `sprintf_s` è che `_sprintf_p` supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ La funzione `_sprintf_p` formatta e archivia una serie di caratteri e di valori in `buffer`. Ogni argomento di `argument_list` (se presente) viene convertita e restituita in base alla specifica del formato corrispondente in `format`. Il `format` argomento Usa il [formattare sintassi specifica per le funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). Un carattere `NULL` viene aggiunto dopo l'ultimo carattere scritto. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito. La differenza tra `_sprintf_p` e `sprintf_s` è che `_sprintf_p` supporta i parametri posizionali, che consentono di specificare l'ordine in cui gli argomenti vengono utilizzati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
   
  `_swprintf_p` è una versione a caratteri "wide" di `_sprintf_p`. Gli argomenti puntatori per `_swprintf_p` sono stringhe a caratteri "wide". Il rilevamento degli errori di codifica in `_swprintf_p` può essere diverso da quello di `_sprintf_p`. `_swprintf_p` e `fwprintf_p` si comportano in modo identico con la differenza che `_swprintf_p` scrive l'output in una stringa anziché in una destinazione di tipo `FILE` e `_swprintf_p` richiede il parametro `count` per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
@@ -153,7 +136,7 @@ int _swprintf_p_l(
 |`_sprintf_p`, `_sprintf_p_l`|\<stdio.h>|  
 |`_swprintf_p`, `_swprintf_p_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

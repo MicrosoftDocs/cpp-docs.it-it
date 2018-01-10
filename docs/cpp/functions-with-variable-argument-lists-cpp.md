@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cde959d2a2b17bf346a23aca7a7724523b69b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Elenchi di funzioni con argomenti variabili (C++)
 Le dichiarazioni di funzione, in cui l'ultimo membro sono i puntini di sospensione (...), possono accettare un numero variabile di argomenti. In questi casi, C++ fornisce il controllo di tipo solo per gli argomenti dichiarati esplicitamente. È possibile usare elenchi di argomenti variabili quando è necessario rendere una funzione così generale che anche il numero e i tipi di argomenti possono variare. La famiglia di funzioni è un esempio delle funzioni che utilizzano elenchi di argomenti variabili. `printf` *argument-declaration-list*  

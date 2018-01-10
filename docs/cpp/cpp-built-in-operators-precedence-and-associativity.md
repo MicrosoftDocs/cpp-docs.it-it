@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operatori C++ predefiniti, precedenza e associazione
 
@@ -63,7 +64,7 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |[AddressOf](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Riferimento indiretto](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Creare l'oggetto](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[Eliminare oggetto](../cpp/delete-operator-cpp.md)|[eliminare](../cpp/delete-operator-cpp.md)|
+|[Eliminare oggetto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Precedenza di gruppo, 4, per un'associatività da destra a sinistra**|
 |[Puntatore a membro (oggetti o puntatori)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; - > &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -72,7 +73,7 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |[Divisione](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Precedenza gruppo 6, per un'associatività da destra a sinistra**|
-|[Aggiunta](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Addizione](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Sottrazione](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**Precedenza gruppo 7, a un'associatività da destra a sinistra**|
 |[Spostamento a sinistra](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
@@ -112,7 +113,7 @@ Operatore *precedenza* specifica l'ordine delle operazioni nelle espressioni che
 |**Precedenza gruppo 17, da destra a sinistra associatività**|
 |[espressione throw](../cpp/try-throw-and-catch-statements-cpp.md)|[throw](../cpp/try-throw-and-catch-statements-cpp.md)|
 |**Precedenza gruppo 18, per un'associatività da destra a sinistra**|
-|[Valori delimitati da virgole](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
+|[Virgola](../cpp/comma-operator.md)|[,](../cpp/comma-operator.md)|
 
 ## <a name="see-also"></a>Vedere anche
 

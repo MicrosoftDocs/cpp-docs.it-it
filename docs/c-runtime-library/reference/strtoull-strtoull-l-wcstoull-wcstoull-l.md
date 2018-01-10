@@ -45,11 +45,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fb85ae9aa0c21d2afdc5c4cb5a906154cb42c6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8af8a6c2d96eb0fa4fd37a41e7f022743ab78d7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 Converte le stringhe in un valore integer long long senza segno.  
@@ -102,7 +103,7 @@ unsigned long long _wcstoull_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni converte la stringa di input `nptr` in un valore integer `unsigned long long`.  
   
- `strtoull` interrompe la lettura della stringa `nptr` in corrispondenza del primo carattere che non riconosce come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`. L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` e `wcstoull` usano le impostazioni locali correnti. `_strtoull_l` e `_wcstoull_l` sono identiche, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `strtoull` interrompe la lettura della stringa `nptr` in corrispondenza del primo carattere che non riconosce come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`. L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` e `wcstoull` usano le impostazioni locali correnti. `_strtoull_l` e `_wcstoull_l` sono identiche, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
   
@@ -126,7 +127,7 @@ unsigned long long _wcstoull_l(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`strtoull`|\<stdlib.h>|  
-|`wcstoull`|\<stdlib.h> o \<wchar.h>|  
+|`wcstoull`|\<stdlib.h> or \<wchar.h>|  
 |`_strtoull_l`|\<stdlib.h>|  
 |`_wcstoull_l`|\<stdlib.h> or \<wchar.h>|  
   
@@ -136,8 +137,8 @@ unsigned long long _wcstoull_l(
  Vedere l'esempio per [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   

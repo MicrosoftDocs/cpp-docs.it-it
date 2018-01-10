@@ -1,34 +1,36 @@
 ---
-title: "CAccessorBase::ReleaseAccessors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorBase::ReleaseAccessors"
-  - "CAccessorBase.ReleaseAccessors"
-  - "ReleaseAccessors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAccessors (metodo)"
+title: 'CAccessorBase:: Releaseaccessors | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
+dev_langs: C++
+helpviewer_keywords: ReleaseAccessors method
 ms.assetid: f08bc88e-0552-4a9c-9c65-b4061094649a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a46278b59803ffafbd0b9ee4db2b77249b425fa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessorBase::ReleaseAccessors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rilascia le funzioni di accesso create dalla classe.  
+# <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
+Rilascia le funzioni di accesso creati dalla classe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,18 +39,18 @@ Rilascia le funzioni di accesso create dalla classe.
 );  
 ```  
   
-#### Parametri  
- *punk*  
- \[in\] il puntatore A un'interfaccia di **IUnknown** per l'oggetto COM per il quale le funzioni di accesso è stato creato.  
+#### <a name="parameters"></a>Parametri  
+ *pUnk*  
+ [in] Un puntatore a un **IUnknown** interfaccia per l'oggetto COM per cui sono state create le funzioni di accesso.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Chiamato da [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).  
+## <a name="remarks"></a>Note  
+ Chiamato da [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)

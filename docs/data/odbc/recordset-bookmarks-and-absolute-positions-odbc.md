@@ -1,62 +1,64 @@
 ---
-title: "Recordset: bookmark e absolute position (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SetAbsolutePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "posizioni assolute, recordset ODBC"
-  - "segnalibri"
-  - "segnalibri, CDBVariant"
-  - "segnalibri, recordset ODBC"
-  - "CDBVariant (classe), segnalibri"
-  - "cursori [ODBC], posizione assoluta in recordset"
-  - "GetBookmark (metodo)"
-  - "recordset ODBC, posizioni assolute"
-  - "recordset ODBC, segnalibri"
-  - "posizionamento di record"
-  - "posizionamento di record"
-  - "recordset, posizioni assolute"
-  - "recordset, segnalibri"
-  - "SetAbsolutePosition (metodo)"
-  - "SetAbsolutePosition (metodo), segnalibri"
-  - "SetBookmark (metodo)"
+title: 'Recordset: Bookmark e Absolute Position (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SetAbsolutePosition
+dev_langs: C++
+helpviewer_keywords:
+- CDBVariant class, bookmarks
+- absolute positions, ODBC recordsets
+- bookmarks, CDBVariant
+- bookmarks, ODBC recordsets
+- ODBC recordsets, absolute positions
+- ODBC recordsets, bookmarks
+- cursors [ODBC], absolute position in recordsets
+- recordsets, bookmarks
+- bookmarks
+- SetAbsolutePosition method
+- recordsets, absolute positions
+- positioning records
+- SetBookmark method
+- record positioning
+- GetBookmark method
+- SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: bookmark e absolute position (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Recordset: bookmark e absolute position (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- Durante lo spostamento all'interno di un recordset, è spesso necessario tornare a un record specifico.  Il bookmark e la absolute position di un record forniscono due diversi metodi per l'esecuzione di questa operazione.  
+ Durante la navigazione all'interno di un recordset, è spesso necessario un modo per la restituzione di un record specifico. Un record segnalibro e la posizione assoluta forniscono due diversi metodi.  
   
- In questo argomento vengono fornite informazioni su:  
+ Questo argomento viene illustrato:  
   
--   [Bookmark in ODBC MFC](#_core_bookmarks_in_mfc_odbc).  
+-   [Come usare segnalibri](#_core_bookmarks_in_mfc_odbc).  
   
--   [Absolute position in ODBC MFC](#_core_absolute_positions_in_mfc_odbc).  
+-   [Come impostare il record corrente utilizzando posizioni assolute](#_core_absolute_positions_in_mfc_odbc).  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> Bookmark in ODBC MFC  
- Un bookmark identifica un record in modo univoco.  Quando ci si sposta all'interno di un recordset, non è sempre possibile basarsi sulla absolute position di un record, poiché i record possono essere eliminati dal recordset.  Per tenere traccia in modo affidabile della posizione di un record, utilizzare un bookmark.  La classe `CRecordset` fornisce le funzioni membro per effettuare le operazioni riportate di seguito.  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a>Segnalibri in ODBC MFC  
+ Un segnalibro identifica in modo univoco un record. Quando si Esplora un recordset, è sempre possibile basarsi sulla posizione assoluta di un record perché i record possono essere eliminati dal recordset. Il metodo affidabile per tenere traccia della posizione di un record è utilizzare il segnalibro. Classe `CRecordset` fornisce le funzioni membro per:  
   
--   Recupero del bookmark del record corrente per salvarlo in una variabile \([GetBookmark](../Topic/CRecordset::GetBookmark.md)\).  
+-   Recupero del segnalibro del record corrente, pertanto è possibile salvarlo in una variabile ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
   
--   Spostamento rapido su un determinato record, specificando il relativo bookmark salvato in precedenza in una variabile \([SetBookmark](../Topic/CRecordset::SetBookmark.md)\).  
+-   Spostamento rapido su un determinato record, specificando il segnalibro è stato salvato in precedenza in una variabile ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)).  
   
- Nell'esempio seguente viene illustrato l'utilizzo delle funzioni membro sopra riportate per contrassegnare e tornare in seguito al record corrente:  
+ Nell'esempio seguente viene illustrato come utilizzare queste funzioni membro per contrassegnare il record corrente e ritornare in seguito a esso:  
   
 ```  
 // rs is a CRecordset or  
@@ -71,23 +73,23 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );  
 ```  
   
- Non è necessario estrarre il tipo di dati sottostante dall'oggetto [CDBVariant Class](../../mfc/reference/cdbvariant-class.md).  Assegnare il valore mediante `GetBookmark` e tornare al bookmark tramite `SetBookmark`.  
+ Non è necessario per il tipo sottostante di dati da estrarre il [CDBVariant (classe)](../../mfc/reference/cdbvariant-class.md) oggetto. Assegnare il valore con `GetBookmark` e tornare al bookmark con `SetBookmark`.  
   
 > [!NOTE]
->  Il supporto dei bookmark dipende dal driver ODBC e dal tipo di recordset utilizzati.  È possibile determinare facilmente se i segnalibri sono supportati chiamando [CRecordset::CanBookmark](../Topic/CRecordset::CanBookmark.md).  Se i segnalibri sono supportati, sarà inoltre necessario scegliere di implementarli in modo esplicito specificando l'opzione **CRecordset::useBookmarks** nella funzione membro [CRecordset::Open](../Topic/CRecordset::Open.md).  Si consiglia inoltre di controllare la persistenza dei bookmark dopo aver eseguito determinate operazioni sui recordset.  Se, ad esempio, si esegue **Requery** su un recordset, i bookmark potrebbero non essere più validi.  Chiamare [CDatabase::GetBookmarkPersistence](../Topic/CDatabase::GetBookmarkPersistence.md) per controllare se è possibile chiamare in modo sicuro `SetBookmark`.  
+>  A seconda dei driver ODBC e il tipo di recordset, i segnalibri potrebbero non essere supportati. È possibile determinare facilmente se i segnalibri sono supportati tramite la chiamata [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark). Inoltre, se i segnalibri sono supportati, è necessario in modo esplicito scegliere implementarle specificando il **CRecordset:: useBookmarks** opzione il [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) funzione membro. È inoltre necessario verificare la persistenza dei segnalibri dopo alcune operazioni di recordset. Ad esempio, se si **Requery** un recordset, i segnalibri potrebbero non essere più validi. Chiamare [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) per verificare se è possibile chiamare `SetBookmark`.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> Absolute position in ODBC MFC  
- Oltre ai bookmark, la classe `CRecordset` consente di impostare il record corrente specificando una posizione sequenziale,  definita absolute position.  
-  
-> [!NOTE]
->  La absolute position non è disponibile per i recordset di tipo forward\-only.  Per ulteriori informazioni sui recordset forward only, vedere [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md).  
-  
- Per spostare il puntatore del record corrente utilizzando una posizione assoluta, chiamare [CRecordset::SetAbsolutePosition](../Topic/CRecordset::SetAbsolutePosition.md).  Quando si passa un valore a `SetAbsolutePosition`, il record corrispondente alla posizione sequenziale diventa il record corrente.  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a>Posizioni assolute in ODBC MFC  
+ Oltre ai segnalibri, classe `CRecordset` consente di impostare il record corrente specificando una posizione ordinale. Si tratta di posizionamento assoluto.  
   
 > [!NOTE]
->  La absolute position di un record potrebbe non essere affidabile.  Se infatti si eliminano record dal recordset, la posizione di tutti i record successivi a quelli eliminati verrà modificata.  Per spostare il record corrente, si consiglia di utilizzare i bookmark.  Per ulteriori informazioni, vedere [Bookmark in ODBC MFC](#_core_bookmarks_in_mfc_odbc).  
+>  Il posizionamento assoluto non è disponibile nei recordset forward-only. Per ulteriori informazioni su recordset forward-only, vedere [Recordset (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- Per ulteriori informazioni sulla navigazione all'interno dei recordset, vedere [Recordset: scorrimento \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md).  
+ Per spostare il puntatore del record corrente utilizzando una posizione assoluta, chiamare [CRecordset:: SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition). Quando si passa un valore per `SetAbsolutePosition`, il record corrispondente alla posizione ordinale diventa il record corrente.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)
+> [!NOTE]
+>  La posizione assoluta di un record è potrebbe non essere affidabile. Se l'utente elimina i record dal recordset, la posizione ordinale di tutti i record successivi. I segnalibri sono il metodo consigliato per spostare il record corrente. Per ulteriori informazioni, vedere [segnalibri in MFC ODBC](#_core_bookmarks_in_mfc_odbc).  
+  
+ Per ulteriori informazioni sulla navigazione del recordset, vedere [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)

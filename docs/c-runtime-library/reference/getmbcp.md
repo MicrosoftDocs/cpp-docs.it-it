@@ -34,11 +34,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4bc1000e9443d60e966ef6a929ed134acd44f1b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72df20c67db5229cede51aa7c3492984d2ce9c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getmbcp"></a>_getmbcp
 Recupera la tabella codici corrente.  
@@ -58,7 +59,7 @@ int _getmbcp( void );
 |-------------|---------------------|  
 |`_getmbcp`|\<mbctype.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_setmbcp](../../c-runtime-library/reference/setmbcp.md)

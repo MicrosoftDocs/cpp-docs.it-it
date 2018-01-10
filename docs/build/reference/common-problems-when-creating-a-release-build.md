@@ -1,46 +1,47 @@
 ---
-title: "Problemi comuni durante la creazione di una build di rilascio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilazioni di debug, differenza dalle build di rilascio"
-  - "allocatore di memoria debug"
-  - "debug [MFC], build di rilascio"
-  - "heap (problemi di layout)"
-  - "memoria [C++], sovrascrittura"
-  - "MFC [C++], build di rilascio"
-  - "ottimizzazione [C++], compilatore"
-  - "puntatori, errati"
-  - "progetti [C++], configurazione di debug"
-  - "build di rilascio, compilazione di applicazioni"
-  - "build di rilascio, risoluzione dei problemi"
-  - "errati (puntatori)"
-  - "risoluzione dei problemi di build di rilascio"
-  - "risoluzione dei problemi in Visual C++"
-  - "generazione di codice non prevista"
+title: Problemi comuni durante la creazione di una Build di rilascio | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- unexpected code generation
+- debugging [MFC], release builds
+- release builds, troubleshooting
+- stray pointers
+- debug builds, difference from release builds
+- MFC [C++], release builds
+- heap layout problems
+- pointers, stray
+- release builds, building applications
+- debug memory allocator
+- optimization [C++], compiler
+- projects [C++], debug configuration
+- troubleshooting Visual C++
+- troubleshooting release builds
+- memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 44b5528a2d6bedaaaa7ddce582f58042e084b3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Problemi comuni durante la creazione di una build di rilascio
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Durante lo sviluppo, il progetto viene di solito compilato e testato mediante una build di debug.  Se si compila quindi l'applicazione per una build di rilascio, è possibile che si verifichi una violazione di accesso.  
+# <a name="common-problems-when-creating-a-release-build"></a>Problemi comuni durante la creazione di una build di rilascio
+Durante lo sviluppo, in genere compilerà e testerà con una build di debug del progetto. Se si compila quindi l'applicazione per una build di rilascio, è possibile che si verifichi una violazione di accesso.  
   
- Nell'elenco che segue sono esposte le principali differenze tra le build di debug e le build di rilascio \(non di debug\).  Esistono anche altre differenze, ma quelle che seguono sono le differenze principali che possono comportare il blocco di un'applicazione eseguita in una build di rilascio quando viene eseguita in una build di debug.  
+ L'elenco seguente mostra le differenze principali tra debug e di una build di rilascio (non di debug). Esistono altre differenze, ma di seguito sono le differenze principali che può provocare un errore dell'applicazione in una build di rilascio quando viene eseguita in una build di debug.  
   
--   [Layout dell'heap](#_core_heap_layout)  
+-   [Layout di heap](#_core_heap_layout)  
   
 -   [Compilazione](#_core_compilation)  
   
@@ -48,26 +49,26 @@ Durante lo sviluppo, il progetto viene di solito compilato e testato mediante un
   
 -   [Ottimizzazioni](#_core_optimizations)  
   
- Per informazioni sul rilevamento degli errori della build di rilascio nelle build di debug, vedere l'opzione di compilazione [\/GZ \(Attiva controllo errori in fase di esecuzione dello stack frame\)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).  
+ Vedere il [/GZ (Catch di errori di Build di rilascio in)](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md) opzione del compilatore per informazioni sulla versione di intercettare errori nelle build di debug di compilazione.  
   
-##  <a name="_core_heap_layout"></a> Layout dell'heap  
- Il layout dell'heap è il responsabile di circa il 90% dei problemi che si verificano quando un'applicazione funziona come build di debug, ma non come build di rilascio.  
+##  <a name="_core_heap_layout"></a>Layout di heap  
+ Il layout dell'heap sarà la causa di circa il 90% dei problemi evidenti quando un'applicazione è debug, ma non per il rilascio.  
   
- Quando si compila il progetto per eseguire il debug, si utilizza l'allocatore di memoria di debug.  Questo significa che attorno a tutte le allocazioni di memoria vengono disposti byte di protezione.  Questi byte di protezione rilevano eventuali sovrascritture di memoria.  Dal momento che il layout dell'heap della versione di rilascio è diverso rispetto a quello della versione di debug, è possibile che una sovrascrittura di memoria non crei alcun problema in una build di debug, ma abbia conseguenze molto gravi in una build di rilascio.  
+ Quando si compila il progetto per il debug, si utilizza l'allocatore di memoria di debug. Ciò significa che tutte le allocazioni di memoria byte guard inseriti attorno a esse. Questi byte guard rilevare una sovrascrittura di memoria. Poiché il layout dell'heap è diverso tra release e debug versioni, una sovrascrittura di memoria non potrebbe creare problemi in una build di debug, ma può produrre effetti irreversibili in una build di rilascio.  
   
- Per ulteriori informazioni, vedere [Controllo delle sovrascritture di memoria](../../build/reference/checking-for-memory-overwrites.md) e [Utilizzo della build di debug per il controllo della sovrascrittura di memoria](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
+ Per ulteriori informazioni, vedere [controllare sovrascritture di memoria](../../build/reference/checking-for-memory-overwrites.md) e [utilizzare la Build di Debug per il controllo della sovrascrittura di memoria](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md).  
   
-##  <a name="_core_compilation"></a> Compilazione  
- Numerose macro MFC e la maggior parte dell'implementazione MFC si comportano in modo diverso quando si compila la versione di rilascio.  In particolare, la macro ASSERT non fornisce codice in una build di rilascio e di conseguenza non viene eseguito alcun codice presente in tali macro.  Per ulteriori informazioni, vedere [Analisi delle istruzioni ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
+##  <a name="_core_compilation"></a>Compilazione  
+ Molte delle macro MFC e gran parte delle modifiche all'implementazione MFC quando si compila per il rilascio. In particolare, la macro di ASSERZIONE restituisce alcun valore in una build di rilascio, pertanto nessuna parte del codice presente in verrà eseguita. Per ulteriori informazioni, vedere [analisi delle istruzioni ASSERT](../../build/reference/using-verify-instead-of-assert.md).  
   
- Nelle build di rilascio, per aumentare la velocità, alcune funzioni vengono rese inline.  Nelle build di rilascio vengono in genere attivate le ottimizzazioni.  Viene inoltre utilizzato un diverso allocatore di memoria.  
+ Alcune funzioni vengono impostati come inline per aumentare la velocità nelle build di rilascio. In genere le ottimizzazioni sono attivate in una build di rilascio. È inoltre utilizzato un allocatore di memoria diverse.  
   
-##  <a name="_core_pointer_support"></a> Supporto per i puntatori  
- La mancanza di informazioni di debug rimuove il padding dall'applicazione.  In una build di rilascio ci sono quindi maggiori possibilità che puntatori errati rimandino a memoria non inizializzata anziché a informazioni di debug.  
+##  <a name="_core_pointer_support"></a>Supporto per i puntatori  
+ La mancanza di informazioni di debug rimuove il riempimento dall'applicazione. In una build di rilascio, errati (puntatori) hanno una maggiore probabilità di che punta alla memoria non inizializzata anziché fare riferimento a informazioni di debug.  
   
-##  <a name="_core_optimizations"></a> Ottimizzazioni  
- A seconda della natura di alcuni segmenti di codice, è possibile che il compilatore di ottimizzazione generi del codice imprevisto.  Si tratta di un problema estremamente remoto, ma in alcune occasioni si verifica.  Per informazioni su come risolvere il problema, vedere [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md).  
+##  <a name="_core_optimizations"></a>Ottimizzazioni  
+ A seconda della natura di determinati segmenti di codice, il compilatore di ottimizzazione potrebbe generare codice imprevisto. Questa è la causa meno probabile dei problemi di compilazione di rilascio, ma si verificano in alcuni casi. Per una soluzione, vedere [ottimizzazione del codice](../../build/reference/optimizing-your-code.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Build di rilascio](../../build/reference/release-builds.md)   
- [Correzione dei problemi della build di rilascio](../../build/reference/fixing-release-build-problems.md)
+ [Correzione dei problemi della build di versione](../../build/reference/fixing-release-build-problems.md)

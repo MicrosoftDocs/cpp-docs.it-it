@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,23 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d0f4ac9be945802b596505f723b1a9da00356d8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 Determina se un particolare carattere multibyte è un carattere grafico.  
@@ -91,7 +75,7 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- è diverso da zero per `c`oppure zero in caso contrario. `_ismbbgraph` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. `_ismbbgraph_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ è diverso da zero per `c` oppure zero in caso contrario. `_ismbbgraph` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. `_ismbbgraph_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   

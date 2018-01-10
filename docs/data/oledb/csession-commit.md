@@ -1,56 +1,58 @@
 ---
-title: "CSession::Commit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession.Commit"
-  - "ATL.CSession.Commit"
-  - "ATL::CSession::Commit"
-  - "CSession::Commit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Commit (metodo)"
+title: 'CSession:: commit | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession.Commit
+- ATL.CSession.Commit
+- ATL::CSession::Commit
+- CSession::Commit
+dev_langs: C++
+helpviewer_keywords: Commit method
 ms.assetid: 1d5f56b9-000c-4bae-a975-89d3452f499f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d7cec85c3f667b5ea0423ad6caf998c53bad6307
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CSession::Commit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consente di eseguire il commit della transazione.  
+# <a name="csessioncommit"></a>CSession::Commit
+Il commit della transazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT Commit(   
-   BOOL bRetaining = FALSE,   
-   DWORD grfTC = XACTTC_SYNC,   
-   DWORD grfRM = 0    
+      HRESULT Commit(   
+   BOOL bRetaining = FALSE,   
+   DWORD grfTC = XACTTC_SYNC,   
+   DWORD grfRM = 0    
 ) const throw( );  
 ```  
   
-#### Parametri  
- Vedere [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx) in *OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [ITransaction:: commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Valore restituito  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Per ulteriori informazioni, vedere [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx).  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere [ITransaction:: commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CSession](../../data/oledb/csession-class.md)

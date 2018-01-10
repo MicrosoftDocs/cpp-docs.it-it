@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 642a811f1be5afcda31d83abfd22c122e7d1b369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversioni di tipi e indipendenza dai tipi (C++ moderno)
 In questo documento vengono identificati i problemi comuni di conversione dei tipi e viene descritto come evitarli quando si scrive codice C++.  
@@ -32,7 +33,7 @@ In questo documento vengono identificati i problemi comuni di conversione dei ti
 ### <a name="widening-conversions-promotion"></a>Conversione di ampliamento (promozione)  
  In una conversione di ampliamento un valore in una variabile più piccola viene assegnato a una variabile più grande senza perdita di dati. Poiché le conversioni di ampliamento sono sempre sicure, vengono eseguite automaticamente senza generare avvisi. Le seguenti conversioni sono di ampliamento.  
   
-|Da|Per|  
+|Da|A|  
 |----------|--------|  
 |Qualsiasi tipo integrale signed o unsigned escluso `long long` o `__int64`|`double`|  
 |`bool` o `char`|Qualsiasi altro tipo predefinito|  

@@ -1,75 +1,78 @@
 ---
-title: "CTablePrivileges, CTablePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCatalog"
-  - "m_bIsGrantable"
-  - "IS_GRANTABLE"
-  - "m_szType"
-  - "m_szSchema"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "CTablePrivileges"
-  - "CTablePrivilegeInfo"
-  - "m_szName"
-  - "m_szGrantee"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTablePrivilegeInfo (classe di parametri)"
-  - "CTablePrivileges (classe typedef)"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szCatalog"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szType"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CTablePrivileges, CTablePrivilegeInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCatalog
+- m_bIsGrantable
+- IS_GRANTABLE
+- m_szType
+- m_szSchema
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- CTablePrivileges
+- CTablePrivilegeInfo
+- m_szName
+- m_szGrantee
+dev_langs: C++
+helpviewer_keywords:
+- GRANTOR
+- CTablePrivilegeInfo parameter class
+- m_szSchema
+- TABLE_CATALOG
+- m_szType
+- m_szCatalog
+- TABLE_NAME
+- IS_GRANTABLE
+- TABLE_SCHEMA
+- m_szName
+- m_szGrantee
+- CTablePrivileges typedef class
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
 ms.assetid: ffcd6f73-022e-452a-8342-f2b9362d256b
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4af4debc152e2c1c84dcfd1fbd7f4950922fa7df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CTablePrivileges, CTablePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CTablePrivileges** typedef per implementare la propria classe di parametri **CTablePrivilegeInfo**.  
+# <a name="ctableprivileges-ctableprivilegeinfo"></a>CTablePrivileges, CTablePrivilegeInfo
+Chiamare la classe typedef **CTablePrivileges** per implementare la relativa classe di parametro **CTablePrivilegeInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica le tabelle definite nel catalogo accessibili a un utente specifico.  
+ Questa classe identifica le tabelle definite nel catalogo accessibili a un determinato utente.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di TABLE\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms725428.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe TABLE_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms725428.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szCatalog|TABLE\_CATALOG|  
-|m\_szSchema|TABLE\_SCHEMA|  
-|m\_szName|TABLE\_NAME|  
-|m\_szType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szCatalog|TABLE_CATALOG|  
+|m_szSchema|TABLE_SCHEMA|  
+|m_szName|TABLE_NAME|  
+|m_szType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

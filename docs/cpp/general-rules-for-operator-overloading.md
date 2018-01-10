@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>Regole generali per overload di operatori
 Le regole seguenti vincolano l'implementazione degli operatori di overload. Tuttavia, non si applicano al [nuova](../cpp/new-operator-cpp.md) e [eliminare](../cpp/delete-operator-cpp.md) operatori, analizzati separatamente.  
@@ -58,7 +55,7 @@ Le regole seguenti vincolano l'implementazione degli operatori di overload. Tutt
   
 -   Gli operatori binari dichiarati come funzioni membro accettano un argomento; se dichiarati come funzioni globali, accettano due argomenti.  
   
--   Se è possibile utilizzare un operatore unario o un operatore binario (**&**, ** \* **, ** + **, e ** - **), è possibile eseguire l'overload separatamente ogni utilizzo.  
+-   Se è possibile utilizzare un operatore unario o un operatore binario (**&**,  **\*** ,  **+** , e  **-** ), è possibile eseguire l'overload separatamente ogni utilizzo.  
   
 -   Operatori di overload non possono avere argomenti predefiniti.  
   

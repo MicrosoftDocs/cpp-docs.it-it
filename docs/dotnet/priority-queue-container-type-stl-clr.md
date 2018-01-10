@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::container_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::container_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "container_type (membro) [STL/CLR]"
+title: 'priority_queue:: container_type (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::container_type
+dev_langs: C++
+helpviewer_keywords: container_type member [STL/CLR]
 ms.assetid: 97d79791-53cb-48f9-a139-69502517569f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 385ea09eb46a2253b859d7bbc46f9062b0430ec8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::container_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuecontainertype-stlclr"></a>priority_queue::container_type (STL/CLR)
 Tipo del contenitore sottostante.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef Container value_type;  
 ```  
   
-## Note  
- Il tipo è sinonimo del parametro di template `Container`.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo del parametro di modello `Container`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_priority_queue_container_type.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **c a b**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+c a b  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::get\_container](../dotnet/priority-queue-get-container-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::get_container (STL/CLR)](../dotnet/priority-queue-get-container-stl-clr.md)

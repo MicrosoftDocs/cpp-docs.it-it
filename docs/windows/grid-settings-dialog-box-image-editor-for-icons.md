@@ -1,47 +1,50 @@
 ---
-title: "Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.GridSettings"
-  - "vc.editors.gridsettings"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Impostazioni griglia (finestra di dialogo)"
+title: Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.dialog.GridSettings
+- vc.editors.gridsettings
+dev_langs: C++
+helpviewer_keywords: Grid Settings dialog box
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1b3df26fc7612c236197903ecb9ce0e1d9de6b14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di specificare le impostazioni della griglia per l'immagine e visualizza le linee della griglia al di sopra dell'immagine modificata.  Queste linee, molto utili nelle operazioni di modifica dell'immagine, non vengono tuttavia salvate come parte dell'immagine.  
+# <a name="grid-settings-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Impostazioni griglia (Editor di immagini per le icone)
+Consente di specificare le impostazioni della griglia per l'immagine e visualizza le linee della griglia sull'immagine modificata. Le righe sono utili per la modifica dell'immagine, ma non vengono salvate come parte dell'immagine stessa.  
   
  **Griglia in pixel**  
- Se selezionata, questa opzione consente di visualizzare una griglia intorno a ciascun pixel nell'editor di immagini.  La griglia viene visualizzata solo quando è attivo un fattore di ingrandimento uguale o superiore a 4×.  
+ Se selezionata, viene visualizzata una griglia attorno a ciascun pixel nell'editor di immagini. La griglia viene visualizzata solo in 4 × e risoluzioni più elevate.  
   
- **Affianca griglia**  
- Se selezionata, questa opzione consente di visualizzare una griglia intorno a blocchi di pixel nell'editor di immagini, che variano a seconda dei valori specificati per la spaziatura della griglia.  
+ **Griglia affiancata**  
+ Se selezionata, viene visualizzata una griglia intorno ai blocchi di pixel nell'editor di immagini, specificato dai valori di spaziatura della griglia.  
   
  **Larghezza**  
- Consente di specificare la larghezza di ciascun blocco affiancato.  Questa opzione si rivela utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.  
+ Specifica la larghezza di ogni blocco affiancato. Ciò è utile quando si disegnano le bitmap che contiene più immagini che sono disposti a intervalli regolari.  
   
  **Altezza**  
- Consente di specificare l'altezza di ciascun blocco affiancato.  Questa opzione si rivela utile quando si disegnano bitmap contenenti più immagini disposte a intervalli regolari.  
+ Specifica l'altezza di ciascun blocco affiancato. Ciò è utile quando si disegnano le bitmap che contiene più immagini che sono disposti a intervalli regolari.  
   
-## Requisiti  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
-## Vedere anche  
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Ridimensionamento di un'immagine](../windows/resizing-an-image-image-editor-for-icons.md)   
+ [Editor di immagini per le icone](../windows/image-editor-for-icons.md)
+

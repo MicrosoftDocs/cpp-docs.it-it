@@ -1,79 +1,79 @@
 ---
-title: "_set_fmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_fmode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_fmode"
-  - "set_fmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_fmode (funzione)"
-  - "conversione di file [C++], modalità predefinita"
-  - "conversione di file [C++], impostazione modalità"
-  - "set_fmode (funzione)"
+title: _set_fmode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _set_fmode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_fmode
+- set_fmode
+dev_langs: C++
+helpviewer_keywords:
+- file translation [C++], default mode
+- _set_fmode function
+- file translation [C++], setting mode
+- set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# _set_fmode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Imposta la modalità di conversione di file predefinita per le operazioni di I\/O dei file.  
+# <a name="setfmode"></a>_set_fmode
+Imposta la modalità di conversione di file predefinita per le operazioni di I/O dei file.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-errno_t _set_fmode(   
-   int mode   
+errno_t _set_fmode(   
+   int mode   
 );  
 ```  
   
-#### Parametri  
- \[in\] `mode`  
- La modalità di traslazione del file desiderata: `_O_TEXT` o `_O_BINARY`.  
+#### <a name="parameters"></a>Parametri  
+ [in] `mode`  
+ Modalità di conversione di file desiderata: `_O_TEXT` o `_O_BINARY`.  
   
-## Valore restituito  
- Restituisce zero se ha esito positivo, un codice di errore in caso di errore.  If `mode` non è `_O_TEXT` o `_O_BINARY` o `_O_WTEXT`, viene richiamato il gestore di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, la funzione imposta `errno` e imposta `EINVAL` su `EINVAL`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce zero in caso di esito positivo, un codice di errore in caso di esito negativo. Se `mode` non è `_O_TEXT` o `_O_BINARY` o `_O_WTEXT`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `EINVAL`.  
   
-## Note  
- La funzione imposta la variabile globale di [\_fmode](../../c-runtime-library/fmode.md).  Questa variabile specifica la modalità di traslazione di file predefinita per le operazioni `_open` e `_pipe` di I\/O per i file.  
+## <a name="remarks"></a>Note  
+ La funzione imposta la variabile globale [_fmode](../../c-runtime-library/fmode.md). Questa variabile specifica la modalità di conversione di file predefinita per le operazioni di I/O di file `_open` e `_pipe`.  
   
- `_O_TEXT` e `_O_BINARY` sono definiti in Fcntl.h.  `EINVAL` è definito in Errno.h.  
+ `_O_TEXT` e `_O_BINARY` sono definiti in Fcntl.h. `EINVAL` è definito in Errno.h.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|Intestazione facoltativa|  
-|-------------|-------------------------------|------------------------------|  
-|`_set_fmode`|\<stdlib.h\>|\<fcntl.h\>, \<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_set_fmode`|\<stdlib.h>|\<fcntl.h>, \<errno.h>|  
   
- Per ulteriori informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_set_fmode.c  
@@ -131,10 +131,13 @@ int main()
 }  
 ```  
   
-  **Default Mode is binary**  
-**A   B   C   D   E   F   G   H   I   J   K   L**    
-## Vedere anche  
- [\_fmode](../../c-runtime-library/fmode.md)   
- [\_get\_fmode](../../c-runtime-library/reference/get-fmode.md)   
- [\_setmode](../../c-runtime-library/reference/setmode.md)   
- [I\/O file modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md)
+```Output  
+Default Mode is binary  
+A   B   C   D   E   F   G   H   I   J   K   L     
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [_fmode](../../c-runtime-library/fmode.md)   
+ [_get_fmode](../../c-runtime-library/reference/get-fmode.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
+ [I/O file in modalità testo e binaria](../../c-runtime-library/text-and-binary-mode-file-i-o.md)

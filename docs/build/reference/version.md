@@ -1,39 +1,39 @@
 ---
-title: "/VERSION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/version"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/VERSION EDITBIN (opzione)"
-  - "VERSION EDITBIN (opzione)"
-  - "-VERSION EDITBIN (opzione)"
+title: -VERSIONE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /version
+dev_langs: C++
+helpviewer_keywords:
+- /VERSION editbin option
+- -VERSION editbin option
+- VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94bd726afcd4477432765b9b44bd18fcbb7bcd80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /VERSION
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="version"></a>/VERSION
 ```  
 /VERSION:left[,right]  
 ```  
   
-## Note  
- Questa opzione consente di inserire un numero di versione nell'intestazione dell'immagine.  
+## <a name="remarks"></a>Note  
+ Questa opzione inserisce un numero di versione nell'intestazione dell'immagine.  
   
- Tutta la parte numerica del numero di versione, a sinistra del punto decimale, è rappresentata da `left`.  La parte frazionaria del numero di versione, a destra del punto decimale, è rappresentata da `right`.  
+ La parte di numero intero della versione del numero, la parte a sinistra del separatore decimale, è rappresentato da `left`. La parte frazionaria della versione del numero, la parte a destra del separatore decimale, è rappresentato da `right`.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di EDITBIN](../../build/reference/editbin-options.md)

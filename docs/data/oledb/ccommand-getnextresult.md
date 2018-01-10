@@ -1,36 +1,38 @@
 ---
-title: "CCommand::GetNextResult | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CCommand::GetNextResult"
-  - "CCommand::GetNextResult"
-  - "GetNextResult"
-  - "CCommand.GetNextResult"
-  - "ATL.CCommand.GetNextResult"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetNextResult (metodo)"
+title: 'CCommand:: GetNextResult | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CCommand::GetNextResult
+- CCommand::GetNextResult
+- GetNextResult
+- CCommand.GetNextResult
+- ATL.CCommand.GetNextResult
+dev_langs: C++
+helpviewer_keywords: GetNextResult method
 ms.assetid: 63df9b55-9490-45c4-934a-879c5c2725d8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a3bf105f0c85d831d1a8e4bb0048a1385e6275da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand::GetNextResult
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera il gruppo di risultati seguente si ne è disponibile.  
+# <a name="ccommandgetnextresult"></a>CCommand::GetNextResult
+Recupera il successivo set di risultati se ne è disponibile.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,23 +42,23 @@ Recupera il gruppo di risultati seguente si ne è disponibile.
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *pulRowsAffected*  
- \[in\/out\] un puntatore alla memoria in cui il numero di righe interessate da un comando viene restituito.  
+ [in/out] Puntatore alla memoria in cui viene restituito il numero di righe interessate da un comando.  
   
  `bBind`  
- \[in\] specifica se associare il comando automaticamente dopo l'esecuzione.  L'impostazione predefinita è **true**, che causa il comando essere associato automaticamente.  L'impostazione `bBind` a **false** impedisce l'associazione automatica di comando per associare a esso le manualmente. \(L'associazione manuale è di particolare interesse per gli utenti di OLAP.\)  
+ [in] Specifica se associare automaticamente il comando dopo l'esecuzione. Il valore predefinito è **true**, che fa sì che il comando da associare automaticamente. Impostazione `bBind` a **false** impedisce l'associazione automatica del comando in modo che è possibile associare manualmente. (Associazione manuale è di particolare interesse per gli utenti OLAP).  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Se un gruppo di risultati in precedenza è stato recuperato, versioni di questa funzione il gruppo di risultati precedente e separa le colonne.  Se `bBind` è **true**, associare nuove colonne.  
+## <a name="remarks"></a>Note  
+ Se un set di risultati è stato recuperato in precedenza, questa funzione rilascia il set di risultati precedente e separa le colonne. Se `bBind` è **true**, associa le nuove colonne.  
   
- È consigliabile chiamare questa funzione solo se è stato specificato risultati più impostando il parametro di template `CCommand`*TMultiple*\=`CMultipleResults`.  
+ È consigliabile chiamare questa funzione solo se è stato specificato più risultati impostando il `CCommand` parametro di modello *TMultiple*=`CMultipleResults`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CCommand](../../data/oledb/ccommand-class.md)

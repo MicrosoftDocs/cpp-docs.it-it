@@ -1,32 +1,33 @@
 ---
-title: "stack::stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack (membro) [STL/CLR]"
+title: 'stack:: stack (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a59b353bb6ca1dc55933234c68f39f4b76dd16a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# stack::stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruisce un oggetto dell'adattatore del contenitore.  
+# <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
+Costruisce un oggetto adattatore di contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 stack();  
@@ -35,39 +36,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  right  
  Oggetto da copiare.  
   
- di cui è stato eseguito il wrapping  
- Contenitore di cui è stato eseguito il wrapping da utilizzare.  
+ il wrapping  
+ Sottoposta a wrapping contenitore da usare.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `stack();`  
   
- crea un contenitore di cui è stato eseguito il wrapping vuoto.  Utilizzarla per specificare una sequenza iniziale controllata vuota.  
+ Crea un contenitore vuoto sottoposta a wrapping. È utilizzata per specificare una sequenza controllata iniziale vuota.  
   
  Il costruttore:  
   
  `stack(stack<Value, Container>% right);`  
   
- crea un contenitore di cui è stato eseguito il wrapping che è una copia di `right.get_container()`.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`dello stack.  
+ Crea un contenitore incluso che è una copia di `right.get_container()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `right`.  
   
  Il costruttore:  
   
  `stack(stack<Value, Container>^ right);`  
   
- crea un contenitore di cui è stato eseguito il wrapping che è una copia di `right->get_container()`.  Utilizzarla per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `*right`dello stack.  
+ Crea un contenitore incluso che è una copia di `right->get_container()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto stack `*right`.  
   
  Il costruttore:  
   
  `explicit stack(container_type% wrapped);`  
   
- utilizza il contenitore esistente `wrapped` come contenitore di cui è stato eseguito il wrapping.  Viene utilizzato per costruire uno stack da un contenitore esistente.  
+ Usa il contenitore esistente `wrapped` come contenitore sottoposto a wrapping. È utilizzato per costruire un stack da un contenitore esistente.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -107,17 +108,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Requisiti  
- **Intestazione:**\<cliext\/stack\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/stack >  
   
-## Vedere anche  
- [stack](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [stack (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack:: Assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,23 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 125b35ecc01c58808fab939649f9b71f5c4ca85f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Determina se un byte è un byte finale di un carattere multibyte.  
@@ -88,7 +72,7 @@ int _ismbbtrail_l(
  `_ismbbtrail` restituisce un valore diverso da zero se l'Integer `c` è il secondo byte di un carattere multibyte. Ad esempio, solo nella tabella codici 932, gli intervalli validi sono da 0x40 a 0x7E e da 0x80 a 0xFC.  
   
 ## <a name="remarks"></a>Note  
- `_ismbbtrail` usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. `_ismbbtrail_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_ismbbtrail` usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. `_ismbbtrail_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -99,7 +83,7 @@ int _ismbbtrail_l(
   
  \* Per le costanti manifeste per le condizioni di test.  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione per byte](../../c-runtime-library/byte-classification.md)   

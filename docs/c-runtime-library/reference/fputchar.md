@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fputchar
+apiname: fputchar
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,20 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- fputchar
-dev_langs:
-- C++
-helpviewer_keywords:
-- fputchar function
+f1_keywords: fputchar
+dev_langs: C++
+helpviewer_keywords: fputchar function
 ms.assetid: d6cf3492-ace9-47a7-9f7d-3c25aa8ad526
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2248c0850defedcea1273c5d28aa990795c25509
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 36db16b81a80168b6adfd676c489132f28d79bbc
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputchar"></a>fputchar
 Questa funzione POSIX è deprecata. In alternativa, usare [_fputchar](../../c-runtime-library/reference/fputchar-fputwchar.md) conforme a ISO C++.

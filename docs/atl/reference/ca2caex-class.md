@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLCONV/ATL::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::m_psz
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2CAEX class
+dev_langs: C++
+helpviewer_keywords: CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2caex-class"></a>Classe CA2CAEX
 Questa classe è utilizzata dalla macro di conversione di stringhe `CA2CTEX` e `CT2CAEX`e typedef **CA2CA**.  
@@ -156,4 +139,3 @@ operator LPCSTR() const throw();
  [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

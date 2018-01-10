@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7532a9b2bb0b04b1d56b92551df17e7c7466c8f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0ff9c0c58498361764dcc1b6c454c9b629d9bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editbin-reference"></a>Riferimenti a EDITBIN
 Microsoft COFF Binary File Editor (EDITBIN. EXE) consente di modificare i file binari comuni oggetto formato COFF (File). È possibile utilizzare EDITBIN per modificare i file oggetto, i file eseguibili e librerie a collegamento dinamico (DLL).  

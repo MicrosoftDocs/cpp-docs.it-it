@@ -13,17 +13,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b92eb646b152a7bbd4588fe953a762389ce111dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff80109c1f3a5e03ecb85406cdaea24804f96783
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile assegnare i sistemi operativi e librerie di runtime che non sono supportate dal set di strumenti predefinito. Ad esempio, passando il set di strumenti della piattaforma, è possibile utilizzare C++ 11, C++ 14 e miglioramenti di C++ 17 lingue supportati dal compilatore Visual C++ in Visual Studio per creare App destinate [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. È possibile inoltre utilizzare set di strumenti della piattaforma meno recenti per gestire il codice legacy binario compatibile e comunque sfruttare le funzionalità più recenti dell'IDE di Visual Studio.  
   
 > [!NOTE]
->  Se si utilizza [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], è necessario installare [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aggiornamento 4 per aggiungere il supporto di set di strumenti della piattaforma per [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Per scaricare e installare una copia di [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aggiornamento 4, vedere [Microsoft Visual Studio Express 2012 per Windows Desktop](http://go.microsoft.com/fwlink/?LinkID=265464) nel Microsoft Download Center. Installare quindi [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/?LinkID=335900) per ottenere il set di strumenti della piattaforma v110_xp. Usare Windows Update per ricevere gli aggiornamenti più recenti del software dopo l'installazione.  
+>  Se si utilizza [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)], è necessario installare [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aggiornamento 4 per aggiungere il supporto di set di strumenti della piattaforma per [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. Per scaricare e installare una copia di [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] aggiornamento 4, vedere [Microsoft Visual Studio Express 2012 per Windows Desktop](http://go.microsoft.com/fwlink/p/?linkid=265464) nel Microsoft Download Center. Installare quindi [Visual Studio 2012 Update 4](http://go.microsoft.com/fwlink/p/?linkid=335900) per ottenere il set di strumenti della piattaforma v110_xp. Usare Windows Update per ricevere gli aggiornamenti più recenti del software dopo l'installazione.  
   
 ## <a name="windows-xp-targeting-experience"></a>Esperienza destinata a Windows XP  
  Il set di strumenti della piattaforma Windows XP incluso in Visual Studio è una versione di [!INCLUDE[win7](../build/includes/win7_md.md)] SDK incluso in [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)], ma usa il compilatore C++ corrente. Configura inoltre le proprietà del progetto in base ai valori predefiniti appropriati, ad esempio specificando un linker compatibile per supportare una versione precedente. Solo Windows le app desktop vengono create utilizzando il set di strumenti della piattaforma Windows XP vengono eseguite su [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)], ma queste App possono essere eseguite anche nei sistemi operativi di Windows più recenti.  
@@ -41,8 +42,8 @@ Poiché Visual Studio supporta più set di strumenti della piattaforma, è possi
   
 |Libreria|Set di strumenti della piattaforma predefinito per il supporto delle app desktop Windows|Set di strumenti della piattaforma predefinito per il supporto delle app di [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]|Set di strumenti della piattaforma di Windows XP per il supporto di [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|  
 |-------------|-------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|CRT|X|X|X|  
-|Libreria standard C++|X|X|X|  
+|CRT|X|X|x|  
+|Libreria standard C++|x|X|X|  
 |ATL|X|X|X|  
 |ConCRT/PPL|X|X|X|  
 |MFC|X||X|  

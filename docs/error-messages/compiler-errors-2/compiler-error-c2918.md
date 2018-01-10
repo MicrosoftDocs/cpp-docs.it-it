@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2918
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2918
+f1_keywords: C2918
+dev_langs: C++
+helpviewer_keywords: C2918
 ms.assetid: e452f7ef-0590-45e6-9c7c-ee75dc014670
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0b48b8fff4f269da84a908caa1eb408affd1117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 9e30037823fb2d6c3826a5c16f25683b0f4d0da6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2918"></a>Errore del compilatore C2918
 'name': impossibile utilizzare proprietà indicizzate sulla superficie pubblicata di un tipo WinRT  

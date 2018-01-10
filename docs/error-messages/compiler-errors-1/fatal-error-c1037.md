@@ -15,18 +15,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 594cd5a316351139b38691eac23e45f12c86c4b4
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 39dad9377327aba993831bb6680aec7cb7ce79ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1037"></a>Errore irreversibile C1037
 impossibile aprire il file oggetto nomefile  
   
  Non è possibile aprire il file oggetto specificato da [/Fo](../../build/reference/fo-object-file-name.md) .  
   
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
 1.  Il nome del file non è valido.  
   

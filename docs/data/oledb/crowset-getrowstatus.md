@@ -1,61 +1,63 @@
 ---
-title: "CRowset::GetRowStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.GetRowStatus"
-  - "ATL.CRowset<TAccessor>.GetRowStatus"
-  - "ATL::CRowset<TAccessor>::GetRowStatus"
-  - "CRowset::GetRowStatus"
-  - "ATL::CRowset::GetRowStatus"
-  - "CRowset<TAccessor>::GetRowStatus"
-  - "ATL.CRowset.GetRowStatus"
-  - "CRowset<TAccessor>.GetRowStatus"
-  - "GetRowStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowStatus (metodo)"
+title: 'CRowset:: GetRowStatus | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.GetRowStatus
+- ATL.CRowset<TAccessor>.GetRowStatus
+- ATL::CRowset<TAccessor>::GetRowStatus
+- CRowset::GetRowStatus
+- ATL::CRowset::GetRowStatus
+- CRowset<TAccessor>::GetRowStatus
+- ATL.CRowset.GetRowStatus
+- CRowset<TAccessor>.GetRowStatus
+- GetRowStatus
+dev_langs: C++
+helpviewer_keywords: GetRowStatus method
 ms.assetid: 7a29a235-cb7e-40c1-92ce-5441751febee
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: af94964b3aa68348ad976353845d4647f20d1ef9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::GetRowStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="crowsetgetrowstatus"></a>CRowset::GetRowStatus
 Restituisce lo stato di tutte le righe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT GetRowStatus(   
-   DBPENDINGSTATUS* pStatus    
+      HRESULT GetRowStatus(   
+   DBPENDINGSTATUS* pStatus    
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pStatus`  
- \[out\] puntatore A una posizione `GetRowStatus` restituisce il valore dello stato.  Vedere DBPENDINGSTATUS in OLE DB Programmer's Reference.  
+ [out] Un puntatore a un percorso in cui `GetRowStatus` restituisce il valore di stato. Vedere DBPENDINGSTATUS nel riferimento per programmatori OLE DB.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider; in questo caso, il metodo restituisce **E\_NOINTERFACE**.  È inoltre necessario disporre **DBPROP\_IRowsetUpdate** a `VARIANT_TRUE` chiamare **Apri** la tabella o il comando che contiene il rowset.  
+## <a name="remarks"></a>Note  
+ Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportato in tutti i provider; in questo caso, il metodo restituisce **E_NOINTERFACE**. È inoltre necessario impostare **DBPROP_IRowsetUpdate** a `VARIANT_TRUE` prima di chiamare **aprire** la tabella o un comando contenente il set di righe.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CRowset](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
  [IRowsetUpdate::GetRowStatus](https://msdn.microsoft.com/en-us/library/ms724377.aspx)

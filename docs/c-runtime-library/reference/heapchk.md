@@ -36,11 +36,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fcbafbb98385878dbc84f300e8d2bf0dac581c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 790d887009137ccc9115484b2ace57302c94d851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapchk"></a>_heapchk
 Esegue verifiche della coerenza sull'heap.  
@@ -72,7 +73,7 @@ int _heapchk( void );
  Inoltre, se si verifica un errore, `_heapchk` imposta `errno` su `ENOSYS`.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_heapchk` è utile per eseguire il debug di problemi relativi all'heap tramite il controllo della coerenza minima dell'heap. Se il sistema operativo non supporta `_heapchk` (ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.  
+ La funzione `_heapchk` è utile per eseguire il debug di problemi relativi all'heap tramite il controllo della coerenza minima dell'heap. Se il sistema operativo non supporta `_heapchk`(ad esempio, Windows 98), la funzione restituisce `_HEAPOK` e imposta `errno` su `ENOSYS`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -80,7 +81,7 @@ int _heapchk( void );
 |-------------|---------------------|---------------------|  
 |`_heapchk`|\<malloc.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,28 +1,30 @@
 ---
-title: "Esecuzione di una query con parametri | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "query, esecuzione mediante la classe CCommand"
+title: Esecuzione di una Query con parametri | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Esecuzione di una query con parametri
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio seguente viene eseguita una semplice query con parametri che recupera i record con un campo relativo all'età, maggiore di 30, da una tabella di un database di Microsoft Access.  Per supportare il parametro, il record utente deve avere una mappa aggiuntiva.  Il codice seguente, utilizzato in un progetto ATL, è basato sulla classe `CCommand` anziché sulla classe `CTable` utilizzata nell'esempio precedente, [Scorrimento di un rowset semplice](../../data/oledb/traversing-a-simple-rowset.md):  
+# <a name="issuing-a-parameterized-query"></a>Esecuzione di una query con parametri
+Nell'esempio seguente genera una semplice query con parametri che recupera i record con un campo di validità (che è maggiore di 30) da una tabella in un database Microsoft Access. Per supportare il parametro, il record dell'utente deve avere una mappa aggiuntiva. Il codice seguente, in un progetto ATL, Usa il `CCommand` classe anziché il `CTable` classe utilizzata nell'esempio precedente, [scorrimento di un Rowset semplice](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +52,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Il record utente `CArtists` ha il seguente formato:  
+ Il record dell'utente, `CArtists`, simile al seguente:  
   
 ```  
 class CArtists  
@@ -76,5 +78,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## Vedere anche  
- [Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

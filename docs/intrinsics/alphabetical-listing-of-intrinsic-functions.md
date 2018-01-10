@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a07e596531957294be304efb6a95cc05ce75aec4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4708d45defe151b85ad132621838f1648aebc457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Elenco in ordine alfabetico di funzioni intrinseche
 Le sezioni seguenti descrivono le funzioni intrinseche specifiche di Microsoft disponibili in alcune o in tutte le architetture. Sono disponibili altre funzioni intrinseche supportate dai produttori di processori, nei file di intestazione o sui relativi siti Web. Vedere il [oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md), [x86 intrinseci](../intrinsics/x86-intrinsics-list.md), e [x64 intrinseci](../intrinsics/x64-amd64-intrinsics-list.md) sezioni per i collegamenti a documentazione del produttore. Funzioni di libreria di runtime (CRT) C che dispongono di funzioni intrinseche implementate non sono documentate in questo contesto. Queste funzioni sono documentate nel [riferimento alla libreria di Run-Time C](../c-runtime-library/c-run-time-library-reference.md).  

@@ -1,46 +1,50 @@
 ---
-title: "Changing the Magnification Factor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], magnification in Image editor"
-  - "magnification, Image editor"
-  - "Image editor [C++], magnification"
+title: Modifica il fattore di ingrandimento (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], magnification in Image editor
+- magnification, Image editor
+- Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Magnification Factor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per impostazione predefinita, l'editor di immagini consente di visualizzare nel riquadro di sinistra l'immagine alle dimensioni effettive e nel riquadro di destra la stessa immagine ingrandita 6 volte rispetto alle dimensioni effettive.  Il fattore di ingrandimento, riportato sulla barra di stato nella parte inferiore dell'area di lavoro, rappresenta il rapporto tra le dimensioni effettive dell'immagine e le dimensioni visualizzate.  Il fattore predefinito è 6 e l'intervallo è compreso tra 1 e 10.  
+# <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Modifica del fattore di ingrandimento (Editor di immagini per le icone)
+Per impostazione predefinita, l'editor di immagini consente di visualizzare la vista nel riquadro sinistro alle dimensioni effettive e la visualizzazione nel riquadro di destra dimensioni effettive di 6 volte. Il fattore di ingrandimento (visualizzato nella barra di stato nella parte inferiore dell'area di lavoro) è il rapporto tra le dimensioni effettive dell'immagine e le dimensioni di visualizzazione. Il fattore di predefinito è 6 e l'intervallo è compreso tra 1 e 10.  
   
-### Per modificare il fattore di ingrandimento  
+### <a name="to-change-the-magnification-factor"></a>Per modificare il fattore di ingrandimento  
   
-1.  Selezionare il riquadro dell'editor di immagini di cui si desidera modificare il fattore di ingrandimento.  
+1.  Selezionare il **Editor di immagini** riquadro cui si desidera modificare il fattore di ingrandimento.  
   
-2.  Sulla [barra degli strumenti dell'editor di immagini](../mfc/toolbar-image-editor-for-icons.md) fare clic sulla freccia a destra dello [strumento Ingrandisci](../mfc/toolbar-image-editor-for-icons.md) e selezionare un fattore di ingrandimento dal sottomenu: **1X**, **2X**, **6X** o **8X**.  
+2.  Nel [barra degli strumenti dell'Editor di immagini](../windows/toolbar-image-editor-for-icons.md), fare clic sulla freccia a destra del [strumento Ingrandisci](../windows/toolbar-image-editor-for-icons.md) e selezionare il fattore di ingrandimento dal sottomenu: **1 X**, **2 X**, **6 X**, o **8 X**.  
   
     > [!NOTE]
-    >  Per selezionare un fattore di ingrandimento diverso da quelli elencati nello strumento **Ingrandisci**, utilizzare i tasti di scelta rapida.  
+    >  Per selezionare un fattore di ingrandimento diversi da quelli elencati nel **Ingrandisci** strumento, usare i tasti di scelta rapida.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Window Panes](../mfc/window-panes-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Riquadri della finestra](../windows/window-panes-image-editor-for-icons.md)
+

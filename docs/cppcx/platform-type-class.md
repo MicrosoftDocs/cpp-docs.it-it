@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 260a7f5a8d5a100edd6995c381a79b5552c0744b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c292426b9d04fd5b3d9785224f9b2d48f129f0db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenute chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) su qualsiasi oggetto o o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struttura.  

@@ -53,11 +53,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1502f2bc315df705f7a135305388277c6d44918e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>Classe CMFCDropDownToolbarButton
 Tipo di pulsante della barra degli strumenti che, quando viene selezionato, si comporta come un pulsante normale. Tuttavia, visualizzata una barra degli strumenti elenco a discesa ( [CMFCDropDownToolBar classe](../../mfc/reference/cmfcdropdowntoolbar-class.md) se l'utente tiene premuto il pulsante della barra verso il basso.  
@@ -90,7 +91,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Determina se la barra degli strumenti elenco a discesa è aperto.|  
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Determina se è possibile visualizzare il pulsante con un bordo esteso. (Esegue l'override [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Chiamato dal framework per calcolare le dimensioni del pulsante per il contesto di dispositivo specificato e lo stato di ancoraggio. (Esegue l'override [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|Chiamato dal framework per gestire il [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) messaggio. Esegue l'override di `CMCToolBarButton::OnCancelMode`.|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Chiamato dal framework per gestire il [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) messaggio. Esegue l'override`CMCToolBarButton::OnCancelMode`.|  
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Chiamato dal framework quando il pulsante viene inserito in una nuova barra degli strumenti. (Esegue l'override [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|Chiamato dal framework quando l'utente fa clic sul pulsante del mouse. (Esegue l'override [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Chiamato dal framework quando l'utente rilascia il pulsante del mouse. (Esegue l'override [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
@@ -103,7 +104,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>Membri di dati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Specifica il periodo di tempo che un utente deve tenere premuto il pulsante del mouse prima che venga visualizzata la barra degli strumenti elenco a discesa.|  
   

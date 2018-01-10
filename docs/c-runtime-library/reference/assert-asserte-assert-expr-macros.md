@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -25,8 +24,7 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -35,30 +33,16 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a0d8c456f20fc048bab91ec5bc9e1639b93adb6d
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 07be60643ad77e1138c3c23a1dd358a1d4177f25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>Macro _ASSERT, _ASSERTE, _ASSERT_EXPR
 Valutare un'espressione e generare un report di debug quando il risultato è `False` (solo versione di debug).  

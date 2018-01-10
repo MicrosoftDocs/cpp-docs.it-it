@@ -1,35 +1,32 @@
 ---
-title: Errore del compilatore C2134 | Documenti di Microsoft
+title: Errore del compilatore C2134 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2134
-dev_langs:
-- C++
+f1_keywords: C2134
+dev_langs: C++
 ms.assetid: d45cb3e8-0be4-4bd6-8be9-5f8d2384363f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5d249fd24f575ef99b537b1993761bcf168ca803
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 99d68fa6ef0ab9b49a79e061d3e62156542459b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2134"></a>Errore del compilatore C2134
-'funzione': chiamata non produce un'espressione costante  
+'function': chiamata non produce un'espressione costante  
   
- Una funzione dichiarata come constexpr solo possono chiamare altre funzioni dichiarate come constexpr.  
+ Una funzione dichiarata come constexpr è possibile chiamare solo altre funzioni dichiarate come constexpr.  
   
- Nell'esempio seguente viene generato l'errore C2134:  
+ L'esempio seguente genera l'errore C2134:  
   
 ```  
 // C2134.cpp  

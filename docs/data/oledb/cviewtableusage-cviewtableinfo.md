@@ -1,66 +1,69 @@
 ---
-title: "CViewTableUsage, CViewTableInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szCatalog"
-  - "CViewTableInfo"
-  - "m_szTableCatalog"
-  - "m_szSchema"
-  - "m_szTableName"
-  - "m_szName"
-  - "CViewTableUsage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CViewTableInfo (classe di parametri)"
-  - "CViewTableUsage (classe typedef)"
-  - "m_szCatalog"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CViewTableUsage, CViewTableInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szCatalog
+- CViewTableInfo
+- m_szTableCatalog
+- m_szSchema
+- m_szTableName
+- m_szName
+- CViewTableUsage
+dev_langs: C++
+helpviewer_keywords:
+- CViewTableInfo parameter class
+- CViewTableUsage typedef class
+- m_szSchema
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szCatalog
+- TABLE_NAME
+- TABLE_SCHEMA
+- m_szName
+- m_szTableCatalog
+- m_szTableName
 ms.assetid: 10b74f2a-8010-4f97-acc2-ffce07349981
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6839893f0beffa13ee2c2688d465369688627ca0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CViewTableUsage, CViewTableInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe typedef **CViewTableUsage** per implementare la propria classe di parametri **CViewTableInfo**.  
+# <a name="cviewtableusage-cviewtableinfo"></a>CViewTableUsage, CViewTableInfo
+Chiamare la classe typedef **CViewTableUsage** per implementare la relativa classe di parametro **CViewTableInfo**.  
   
-## Note  
- Vedere [Classi Rowset dello Schema e Classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica le tabelle visualizzate, definite nel catalogo, accessibili a un utente specifico.  
+ Questa classe identifica il tabelle visualizzate, definite nel catalogo, che sono accessibili a un determinato utente.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset VIEW\_TABLE\_USAGE](https://msdn.microsoft.com/en-us/library/ms719727.aspx) nel *Riferimento di programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe VIEW_TABLE_USAGE](https://msdn.microsoft.com/en-us/library/ms719727.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
-|Membri di dati|Colonne OLE DB|  
-|--------------------|--------------------|  
-|m\_szCatalog|VIEW\_CATALOG|  
-|m\_szSchema|VIEW\_SCHEMA|  
-|m\_szName|VIEW\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
+|Membri dati|Colonne OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|VIEW_CATALOG|  
+|m_szSchema|VIEW_SCHEMA|  
+|m_szName|VIEW_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

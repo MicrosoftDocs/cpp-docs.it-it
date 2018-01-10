@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject (classe)
 Questa classe implementa **IUnknown** per un oggetto aggregato o aggregato.  
@@ -80,7 +64,7 @@ class CComPolyObject : public IUnknown,
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Incrementa il conteggio di riferimenti dell'oggetto.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Statico) Consente di creare un nuovo **CComPolyObject** `contained` **>** oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Statico) Consente di creare un nuovo **CComPolyObject <** `contained`  **>**  oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Esegue l'inizializzazione finale di `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Esegue la distruzione finale di `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Recupera un puntatore all'interfaccia richiesta.|  
@@ -154,7 +138,7 @@ CComPolyObject(void* pv);
  Libera tutte le risorse allocate, chiamate [FinalRelease](#finalrelease), e decrementa il modulo conteggio dei blocchi.  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- Consente di creare un nuovo **CComPolyObject** `contained` **>** oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Consente di creare un nuovo **CComPolyObject <** `contained`  **>**  oggetto senza l'overhead di [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,7 +148,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Parametri  
  `pp`  
- [out] Un puntatore a un **CComPolyObject** `contained` **>** puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
+ [out] Un puntatore a un **CComPolyObject <** `contained`  **>**  puntatore. Se `CreateInstance` ha esito negativo, `pp` è impostato su **NULL**.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un valore `HRESULT` standard.  
@@ -247,4 +231,3 @@ STDMETHOD_(ULONG, Release)();
  [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

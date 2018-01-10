@@ -1,44 +1,46 @@
 ---
-title: "fpclassify | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fpclassify"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "fpclassify"
-  - "math/fpclassify"
-helpviewer_keywords: 
-  - "fpclassify (macro)"
-  - "fpclassify (funzione)"
+title: fpclassify | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: fpclassify
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- fpclassify
+- math/fpclassify
+helpviewer_keywords:
+- fpclassify macro
+- fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3f1dac5272bbc8cf956bf8bcfdbd31b1f71b4708
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# fpclassify
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce la classificazione dell'argomento a virgola mobile.  
+# <a name="fpclassify"></a>fpclassify
+Restituisce la classificazione a virgola mobile dell'argomento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int fpclassify(   
@@ -59,32 +61,32 @@ int fpclassify(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `x`  
  Valore a virgola mobile da verificare.  
   
-## Valore restituito  
- `fpclassify` Restituisce un valore intero che indica la classe a virgola mobile dell'argomento `x`. Questa tabella mostra i valori possibili restituiti da `fpclassify`, definito in \< Math. h \>.  
+## <a name="return-value"></a>Valore restituito  
+ `fpclassify` restituisce un valore intero che indica la classe a virgola mobile dell'argomento `x`. Questa tabella mostra i valori possibili restituiti da `fpclassify`, definiti in \<math.h>.  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|`FP_NAN`|Quiet, segnalare o NaN indeterminato|  
-|`FP_INFINITE`|Un infinito positivo o negativo|  
-|`FP_NORMAL`|Un valore diverso da zero normalizzato positivo o negativo|  
-|`FP_SUBNORMAL`|Un valore positivo o negativo denormalizzato|  
-|`FP_ZERO`|Un numero positivo o negativo di valore pari a zero|  
+|-----------|-----------------|  
+|`FP_NAN`|NaN silenzioso, segnalatore o indeterminato|  
+|`FP_INFINITE`|Infinito positivo o negativo|  
+|`FP_NORMAL`|Valore diverso da zero normalizzato positivo o negativo|  
+|`FP_SUBNORMAL`|Valore denormalizzato positivo o negativo|  
+|`FP_ZERO`|Valore zero positivo o negativo|  
   
-## Note  
- In C, `fpclassify` è una macro; in C\+\+, `fpclassify` è una funzione in overload utilizzando tipi di argomento del `float`, `double`, o `long double`. In entrambi i casi, il valore restituito dipende dal tipo effettivo dell'espressione argomento e non su qualsiasi rappresentazione intermedia. Ad esempio, una normale `double` o `long double` valore può diventare un infinito, denormalizzato o zero valore quando viene convertito in un `float`.  
+## <a name="remarks"></a>Note  
+ In C, `fpclassify` è una macro. In C++, `fpclassify` è una funzione in overload che usa i tipi di argomento `float`, `double` o `long double`. In entrambi i casi, il valore restituito dipende dal tipo effettivo dell'espressione argomento e non da qualsiasi rappresentazione intermedia. Ad esempio, un valore `double` o `long double` normale può diventare un valore infinito, denormalizzato o zero quando viene convertito in `float`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Funzione\/Macro|Intestazione obbligatoria \(C\)|Intestazione obbligatoria \(C\+\+\)|  
-|---------------------|-------------------------------------|-----------------------------------------|  
-|`fpclassify`|\<math.h\>|\<math.h\> o \<cmath\>|  
+|Funzione/Macro|Intestazione obbligatoria (C)|Intestazione obbligatoria (C++)|  
+|---------------------|---------------------------|-------------------------------|  
+|`fpclassify`|\<math.h>|\<math.h> o \<cmath>|  
   
- Il `fpclassify` macro e `fpclassify` funzioni rispettare il C99 e specifiche del linguaggio C\+\+ 11. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ La macro `fpclassify` e le funzioni `fpclassify` sono conformi alle specifiche C99 e C++11. Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [isNaN, isNaN, \_isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+## <a name="see-also"></a>Vedere anche  
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)

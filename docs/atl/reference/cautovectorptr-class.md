@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 Questa classe rappresenta un oggetto del puntatore intelligente usando il vettore di nuovo ed Elimina gli operatori.  

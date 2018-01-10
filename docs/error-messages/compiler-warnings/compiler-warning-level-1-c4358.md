@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4358 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4358"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4358"
+title: Compilatore avviso (livello 1) C4358 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4358
+dev_langs: C++
+helpviewer_keywords: C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e006bed5e805118c394b9107aa5eb91660aa542
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4358
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operatore': il tipo restituito di delegati combinati non è 'void'; il valore restituito è indefinito  
+# <a name="compiler-warning-level-1-c4358"></a>Avviso del compilatore (livello 1) C4358
+'operator': il tipo restituito di delegati combinati non 'void'; valore restituito è indefinito  
   
- Due delegati sono stati combinati e il valore restituito non è void.  Se vengono combinati due delegati con valori restituiti non void, il compilatore non sarà in grado di eseguire un'assegnazione corretta se viene utilizzato il valore restituito del delegato.  
+ Due delegati sono stati combinati e il valore restituito non void. Se si combinano due delegati con i valori restituiti non void, il compilatore non sarà in grado di eseguire un'assegnazione corretta se viene utilizzato il valore restituito del delegato.  
   
- Il seguente codice di esempio genera l'errore C4358:  
+ L'esempio seguente genera l'errore C4358:  
   
 ```  
 // C4358.cpp  

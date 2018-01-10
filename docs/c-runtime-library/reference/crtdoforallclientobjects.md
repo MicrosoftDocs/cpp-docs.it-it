@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtDoForAllClientObjects
+apiname: _CrtDoForAllClientObjects
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,21 @@ f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
 - crtdbg/_CrdDoForAllClientObjects
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: df96a24b04473099daaca29472f90c9770181e82
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dff8b99d6378928583cea0c5eec7d69130c56557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 Chiama una funzione fornita dall'applicazione per tutti i tipi di `_CLIENT_BLOCK` nell'heap (solo versione di debug).  
@@ -83,7 +66,7 @@ void _CrtDoForAllClientObjects(
   
  Per altre informazioni sul tipo `_CLIENT_BLOCK` e su come può essere usato da altre funzioni di debug, vedere [Types of blocks on the debug heap](/visualstudio/debugger/crt-debug-heap-details). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
- Se `pfn` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su `EINVAL` e viene restituito il risultato della funzione.  
+ Se `pfn` è `NULL`, verrà richiamato il gestore di parametri non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su `EINVAL` e viene restituito il risultato della funzione.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -91,7 +74,7 @@ void _CrtDoForAllClientObjects(
 |-------------|---------------------|  
 |`_CrtDoForAllClientObjects`|\<crtdbg.h>, \<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie** : Solo versioni di debug delle librerie di runtime C universali.  
   

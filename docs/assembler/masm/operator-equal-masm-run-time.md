@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5494a88c51b1b43691fe00144029b0372b7acd59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a545ac19fdd8db1a80b6daf0b85846e293b21e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator--masm-run-time"></a>Operatore == (runtime MASM)
 È uguale a. Utilizzato solo in [. Se](../../assembler/masm/dot-if.md), [. MENTRE](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.  

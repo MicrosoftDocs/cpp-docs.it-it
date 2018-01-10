@@ -44,11 +44,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ade54aef0413e6db897b00f7bfa2e78c428366a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac2fd19254cce03b7cd7efc4324f5dc03c608b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 Crea un nome di file univoco. Sono disponibili versioni più sicure di queste funzioni. Vedere [_mktemp_s, _wmktemp_s](../../c-runtime-library/reference/mktemp-s-wmktemp-s.md).  
@@ -118,7 +119,7 @@ fna12345
   
  In caso di errore viene impostato `errno`. Se `template` ha un formato non valido (ad esempio meno di 6 X), `errno` viene impostato su `EINVAL`. Se `_mktemp` non è in grado di creare un nome univoco, perché esistono già tutti i 26 possibili nomi di file, `_mktemp` imposta il modello su una stringa vuota e restituisce `EEXIST`.  
   
- In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -127,7 +128,7 @@ fna12345
 |`_mktemp`|\<io.h>|  
 |`_wmktemp`|\<io.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

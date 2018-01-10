@@ -41,11 +41,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b317e80379137bd7ada957b6b89b1c8b82c115a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f7a2d8baac49543f09d3d2fa35764ae127f5507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 Copia l'ora corrente in un buffer. Queste sono versioni di [_strtime, _wstrtime](../../c-runtime-library/reference/strtime-wstrtime.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -85,7 +86,7 @@ errno_t _wstrtime_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`numberOfElements`|Valore restituito|Contenuto di `buffer`|  
+|`buffer`|`numberOfElements`|INVIO|Contenuto di `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(qualsiasi)|`EINVAL`|Non modificato|  
 |Non `NULL` (che punta a un buffer valido)|0|`EINVAL`|Non modificato|  
@@ -102,7 +103,7 @@ errno_t _wstrtime_s(
   
  `_wstrtime` è una versione a caratteri wide di `_strtime`. L'argomento e il valore restituito di `_wstrtime` sono stringhe a caratteri wide. A parte ciò, queste funzioni si comportano in modo identico.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:  
   
@@ -117,7 +118,7 @@ errno_t _wstrtime_s(
 |`_strtime_s`|\<time.h>|  
 |`_wstrtime_s`|\<time.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -163,7 +164,7 @@ OS date:            04/25/03
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
  [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   

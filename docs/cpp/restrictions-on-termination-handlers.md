@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 593cb54298682c53f534e92f6553d86d2118d98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71486b167f4e9939d4913b3660ed3513dc02b8f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrictions-on-termination-handlers"></a>Limitazioni ai gestori di terminazione
 Non è possibile utilizzare un'istruzione `goto` per eseguire un salto in un blocco di istruzioni `__try` o `__finally`. È tuttavia necessario inserire il blocco di istruzioni attraverso il normale flusso di controllo. È tuttavia possibile eseguire un salto da un blocco di istruzioni `__try`. Non è inoltre possibile annidare un gestore eccezioni o un gestore di terminazione all'interno di un blocco `__finally`.  

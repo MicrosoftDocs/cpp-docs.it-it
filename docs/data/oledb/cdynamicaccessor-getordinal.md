@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::GetOrdinal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetOrdinal"
-  - "ATL::CDynamicAccessor::GetOrdinal"
-  - "CDynamicAccessor::GetOrdinal"
-  - "ATL.CDynamicAccessor.GetOrdinal"
-  - "GetOrdinal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetOrdinal (metodo)"
+title: 'CDynamicAccessor:: GetOrdinal | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetOrdinal
+- ATL::CDynamicAccessor::GetOrdinal
+- CDynamicAccessor::GetOrdinal
+- ATL.CDynamicAccessor.GetOrdinal
+- GetOrdinal
+dev_langs: C++
+helpviewer_keywords: GetOrdinal method
 ms.assetid: 2095b71c-a7a4-4034-89a1-77a78cb9633f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b86ce9f5b27e7dc51cbebdbbd24b90dd9effa5fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetOrdinal
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera il numero di colonne dato il nome di una colonna.  
+# <a name="cdynamicaccessorgetordinal"></a>CDynamicAccessor::GetOrdinal
+Recupera il numero di colonna dato il nome di una colonna.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -44,18 +46,18 @@ bool GetOrdinal(
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pColumnName`  
- \[in\] Un puntatore ad una stringa di caratteri che contiene il nome della colonna.  
+ [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.  
   
  *pOrdinal*  
- \[out\] Un puntatore al numero di colonne.  
+ [out] Puntatore al numero di colonna.  
   
-## Valore restituito  
- Restituisce **true** se viene trovata una colonna con il nome specificato.  In caso contrario, la funzione restituirà **false**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce **true** se viene trovata una colonna con il nome specificato. In caso contrario, questa funzione restituisce **false**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

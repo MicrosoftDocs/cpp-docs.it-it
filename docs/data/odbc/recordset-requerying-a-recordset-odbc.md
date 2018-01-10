@@ -1,67 +1,70 @@
 ---
-title: "Recordset: ripetizione di una query in un recordset (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recordset ODBC, ripetizione di query"
-  - "recordset, ripetizione di query"
-  - "aggiornamento di recordset"
-  - "Requery (metodo)"
-  - "ripetizione di query in recordset"
+title: 'Recordset: Ripetizione di query in un Recordset (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, requerying
+- requerying recordsets
+- Requery method
+- ODBC recordsets, requerying
+- refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: ripetizione di una query in un recordset (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset: ripetizione di una query in un recordset (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- In questo argomento vengono illustrati l'utilizzo di un oggetto recordset per ripetere una query, ovvero eseguire un aggiornamento di se stesso dal database, e le situazioni in cui eseguire tale operazione mediante la funzione membro [Requery](../Topic/CRecordset::Requery.md).  
+ Questo argomento viene illustrato come è possibile utilizzare un oggetto recordset per rieseguire una query (aggiornamento) in modo automatico dal database e quando si potrebbe voler eseguire questa operazione con il [Requery](../../mfc/reference/crecordset-class.md#requery) funzione membro.  
   
- La ripetizione di una query di un recordset viene effettuata principalmente per le ragioni indicate di seguito.  
+ I motivi principali per la ripetizione di query in un recordset sono:  
   
--   Aggiornare il recordset in relazione ai record aggiunti personalmente e a quelli aggiunti o eliminati da altri utenti \(quelli eliminati personalmente sono già riflessi nel recordset\).  
+-   Portare il recordset aggiornato rispetto al record aggiunti dall'utente o da altri utenti e i record eliminati da altri utenti (quelle eliminate sono già riflessi nel set di record).  
   
--   Aggiornare il recordset in base alle modifiche dei valori dei parametri.  
+-   Aggiornare il recordset in base alle variazioni dei valori di parametro.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> Aggiornamento dei recordset  
- Accade di frequente che si desideri ripetere una query dell'oggetto recordset al fine di aggiornarlo.  In un ambiente di database multiutente altri utenti possono apportare modifiche ai dati per tutta la durata del recordset.  Per ulteriori informazioni sui casi in cui il recordset riflette le modifiche apportate da altri utenti e quelli in cui i recordset di altri utenti riflettono le modifiche apportate dal programmatore, vedere [Recordset: aggiornamento dei record \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a>Aggiornamento dei Recordset Data  
+ Spesso, è necessario rieseguire una query dell'oggetto recordset per attivare la modalità aggiornato. In un ambiente di database multiutente, altri utenti possono apportare modifiche ai dati durante il ciclo di vita del recordset. Per ulteriori informazioni quando il recordset riflette le modifiche apportate da altri utenti e quando il recordset di altri utenti rifletta le modifiche, vedere [Recordset: aggiornamento dei record (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) e [Dynaset](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a> Ripetizione di una query in base a nuovi parametri  
- La funzione [Requery](../Topic/CRecordset::Requery.md) viene di frequente utilizzata per l'esecuzione di un'operazione ugualmente importante: la selezione di un nuovo gruppo di record in base alle modifiche dei valori dei parametri.  
+##  <a name="_core_requerying_based_on_new_parameters"></a>Ripetizione di query in base a nuovi parametri  
+ Un altro frequenti, ugualmente importante, utilizzare [Requery](../../mfc/reference/crecordset-class.md#requery) consiste nel selezionare un nuovo set di record in base alle variazioni dei valori di parametro.  
   
 > [!TIP]
->  Se si chiama **Requery** con diversi valori dei parametri anziché chiamare nuovamente **Open**, si otterrà probabilmente un incremento della velocità delle query.  
+>  Velocità delle query è probabilmente molto più rapida se si chiama **Requery** con diversi valori dei parametri anziché chiamare **aprire** nuovamente.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Ripetere una query su dynaset e gli snapshot  
- Poiché i dynaset vengono utilizzati per la presentazione di un recordset con dati dinamici e aggiornati, se si desidera riflettere le aggiunte di altri utenti, sarà necessario ripetere di frequente la query dei dynaset.  Gli snapshot, d'altra parte, sono utili in quanto offrono un contenuto statico affidabile per la preparazione di report, il calcolo di totali e così via.  Talvolta può tuttavia essere necessario ripetere una query anche negli snapshot.  In un ambiente multiutente è possibile che i dati dello snapshot perdano la sincronizzazione con l'origine dati man mano che altri utenti apportano modifiche al database.  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>Ripetizione di query in Visual Studio i dynaset. Snapshot  
+ Poiché i dynaset sono utilizzati per presentare un set di record con dati aggiornati dinamici, sarà necessario ripetere dynaset spesso se si desidera riflettere le aggiunte di altri utenti. Gli snapshot, d'altra parte, sono utili perché può fare affidamento sul relativo contenuto statico mentre preparare i report, calcolare i totali e così via. Comunque, si potrebbe desiderare di requery anche uno snapshot. In un ambiente multiutente, dati dello snapshot potrebbero perdere la sincronizzazione con l'origine dati come gli altri utenti di modificare il database.  
   
-#### Per ripetere una query di un oggetto recordset  
+#### <a name="to-requery-a-recordset-object"></a>La query di un oggetto recordset  
   
-1.  Chiamare la funzione membro [Requery](../Topic/CRecordset::Requery.md) dell'oggetto.  
+1.  Chiamare il [Requery](../../mfc/reference/crecordset-class.md#requery) funzione membro dell'oggetto.  
   
- In alternativa, è possibile chiudere e riaprire il recordset originale.  In entrambi i casi, il nuovo recordset rappresenta lo stato corrente dell'origine dati.  
+ In alternativa, è possibile chiudere e riaprire il recordset originale. In entrambi i casi, il nuovo recordset rappresenta lo stato corrente dell'origine dati.  
   
- Per un esempio, vedere [Visualizzazioni di record: inserimento di dati in una casella combinata di un nuovo recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
+ Per un esempio, vedere [visualizzazioni di Record: inserimento di una casella di riepilogo da un secondo Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).  
   
 > [!TIP]
->  Per ottimizzare le prestazioni di **Requery**, non modificare il [filtro](../../data/odbc/recordset-filtering-records-odbc.md) o l'[ordinamento](../../data/odbc/recordset-sorting-records-odbc.md) del recordset.  Prima di chiamare **Requery** modificare solo il valore del parametro.  
+>  Per ottimizzare **Requery** prestazioni, evitare di modificare il recordset [filtro](../../data/odbc/recordset-filtering-records-odbc.md) o [ordinamento](../../data/odbc/recordset-sorting-records-odbc.md). Modificare solo il valore del parametro prima di chiamare **Requery**.  
   
- Se la chiamata a **Requery** non viene eseguita correttamente, è possibile rieseguirla o chiudere normalmente l'applicazione in uso.  È possibile che una chiamata a **Requery** o a **Open** non venga eseguita correttamente per una serie di ragioni, quali  un eventuale errore di rete, l'utilizzo, durante la chiamata, dell'accesso esclusivo da parte di un altro utente dopo il rilascio dei dati esistenti ma prima del recupero dei nuovi dati oppure un'eventuale eliminazione della tabella su cui è basato il recordset in uso.  
+ Se il **Requery** chiamata ha esito negativo, è possibile riprovare a eseguire la chiamata; in caso contrario, l'applicazione deve chiudere normalmente. Una chiamata a **Requery** o **aprire** potrebbe non riuscire per una serie di motivi. Ad esempio, si verifica un errore di rete; In alternativa, durante la chiamata, dopo il rilascio di dati esistenti, ma prima sono ottenuti i nuovi dati, un altro utente può ottenere l'accesso esclusivo; oppure è stato possibile eliminare la tabella da cui dipende il recordset.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: associazione dinamica di colonne di dati \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
- [Recordset: creazione e chiusura di recordset \(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Associazione dinamica di colonne di dati (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [Recordset: creazione e chiusura di recordset (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

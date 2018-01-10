@@ -1,35 +1,37 @@
 ---
-title: "Debugging Tips | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, debug"
-  - "servizi, debug"
+title: Debug suggerimenti (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, debugging
+- services, debugging
 ms.assetid: 48c60244-d0ce-4466-85fa-6fa65fcfe86c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe85ea42673e9d4b2b78edb2b2342153ad701fb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Debugging Tips
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I seguenti argomenti vengono descritte alcune operazioni utili per eseguire il debug del servizio:  
+# <a name="debugging-tips"></a>Suggerimenti relativi al debug
+Gli argomenti seguenti delineano alcune operazioni per il debug del servizio:  
   
--   [Utilizzando Gestione attività](../atl/using-task-manager.md)  
+-   [Uso di Gestione attività](../atl/using-task-manager.md)  
   
 -   [Visualizzazione delle asserzioni](../atl/displaying-assertions.md)  
   
--   [Eseguendo il programma come server locale](../atl/running-the-program-as-a-local-server.md)  
+-   [Esecuzione del programma come server locale](../atl/running-the-program-as-a-local-server.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Servizi](../atl/atl-services.md)
+

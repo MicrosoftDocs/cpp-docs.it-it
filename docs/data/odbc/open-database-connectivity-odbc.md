@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa72d261a0b41375ccc6d9bd7da027f78a2e3b55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 28fe1e6237b424c35e70bbd8240ddb3c8189e283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-database-connectivity-odbc"></a>Open Database Connectivity (ODBC)
 La libreria MFC (Microsoft Foundation Classes) fornisce le classi per la programmazione con ODBC (Open Database Connectivity). A partire da Visual Studio 2015 e ODBC di SQL Server 2012 è il modo migliore per connettersi alle origini dati SQL.
@@ -29,7 +32,7 @@ La libreria MFC (Microsoft Foundation Classes) fornisce le classi per la program
  Per ulteriori informazioni sull'utilizzo dell'API ODBC senza MFC, vedere il [Open Database Connectivity (ODBC)](https://msdn.microsoft.com/en-us/library/ms710252.aspx) SDK in MSDN.  
   
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
   
 -   [ODBC](odbc-basics.md), Open Database Connectivity standard e API  
   

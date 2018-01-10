@@ -1,85 +1,88 @@
 ---
-title: "CCharacterSets, CCharacterSetInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCollateName"
-  - "m_szCatalog"
-  - "DEFAULT_COLLATE_NAME"
-  - "m_szCollateSchema"
-  - "FORM_OF_USE"
-  - "DEFAULT_COLLATE_SCHEMA"
-  - "m_szCollateCatalog"
-  - "CCharacterSets"
-  - "CHARACTER_SET_NAME"
-  - "DEFAULT_COLLATE_CATALOG"
-  - "CHARACTER_SET_SCHEMA"
-  - "m_szFormOfUse"
-  - "NUMBER_OF_CHARACTERS"
-  - "m_szSchema"
-  - "CHARACTER_SET_CATALOG"
-  - "CCharacterSetInfo"
-  - "m_nNumCharacters"
-  - "m_szName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCharacterSetInfo (classe di parametri)"
-  - "CCharacterSets (classe typedef)"
-  - "CHARACTER_SET_CATALOG"
-  - "CHARACTER_SET_NAME"
-  - "CHARACTER_SET_SCHEMA"
-  - "DEFAULT_COLLATE_CATALOG"
-  - "DEFAULT_COLLATE_NAME"
-  - "DEFAULT_COLLATE_SCHEMA"
-  - "FORM_OF_USE OLE DB (colonna)"
-  - "m_nNumCharacters"
-  - "m_szCatalog"
-  - "m_szCollateCatalog"
-  - "m_szCollateName"
-  - "m_szCollateSchema"
-  - "m_szFormOfUse"
-  - "m_szName"
-  - "m_szSchema"
-  - "NUMBER_OF_CHARACTERS"
+title: CCharacterSets, CCharacterSetInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCollateName
+- m_szCatalog
+- DEFAULT_COLLATE_NAME
+- m_szCollateSchema
+- FORM_OF_USE
+- DEFAULT_COLLATE_SCHEMA
+- m_szCollateCatalog
+- CCharacterSets
+- CHARACTER_SET_NAME
+- DEFAULT_COLLATE_CATALOG
+- CHARACTER_SET_SCHEMA
+- m_szFormOfUse
+- NUMBER_OF_CHARACTERS
+- m_szSchema
+- CHARACTER_SET_CATALOG
+- CCharacterSetInfo
+- m_nNumCharacters
+- m_szName
+dev_langs: C++
+helpviewer_keywords:
+- DEFAULT_COLLATE_SCHEMA
+- m_nNumCharacters
+- m_szSchema
+- NUMBER_OF_CHARACTERS
+- m_szCollateCatalog
+- CCharacterSetInfo parameter class
+- m_szCatalog
+- CCharacterSets typedef class
+- m_szCollateName
+- m_szName
+- m_szCollateSchema
+- FORM_OF_USE OLE DB column
+- CHARACTER_SET_NAME
+- DEFAULT_COLLATE_CATALOG
+- DEFAULT_COLLATE_NAME
+- m_szFormOfUse
+- CHARACTER_SET_SCHEMA
+- CHARACTER_SET_CATALOG
 ms.assetid: 029d068c-8bb2-4fc0-8709-78ce7f74446e
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 41945cbb34c8e984922d46671b591426d94067cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CCharacterSets, CCharacterSetInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CCharacterSets** typedef per implementare la propria classe di parametri **CCharacterSetInfo**.  
+# <a name="ccharactersets-ccharactersetinfo"></a>CCharacterSets, CCharacterSetInfo
+Chiamare la classe typedef **CCharacterSets** per implementare la relativa classe di parametro **CCharacterSetInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica i set di caratteri definiti nel catalogo accessibili a un utente specifico.  
+ Questa classe identifica i set di caratteri definiti nel catalogo a cui un determinato utente può accedere.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di CHARACTER\_SETS](https://msdn.microsoft.com/en-us/library/ms722638.aspx) in *Riferimenti per Programmatori di OLE DB* per ulteriori informazioni sullo schema e le colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [Rowset CHARACTER_SETS](https://msdn.microsoft.com/en-us/library/ms722638.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
-|Membri di dati|Colonne OLE DB|  
-|--------------------|--------------------|  
-|m\_szCatalog|CHARACTER\_SET\_CATALOG|  
-|m\_szSchema|CHARACTER\_SET\_SCHEMA|  
-|m\_szName|CHARACTER\_SET\_NAME|  
-|m\_szFormOfUse|FORM\_OF\_USE|  
-|m\_nNumCharacters|NUMBER\_OF\_CHARACTERS|  
-|m\_szCollateCatalog|DEFAULT\_COLLATE\_CATALOG|  
-|m\_szCollateSchema|DEFAULT\_COLLATE\_SCHEMA|  
-|m\_szCollateName|DEFAULT\_COLLATE\_NAME|  
+|Membri dati|Colonne OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|CHARACTER_SET_CATALOG|  
+|m_szSchema|CHARACTER_SET_SCHEMA|  
+|m_szName|CHARACTER_SET_NAME|  
+|m_szFormOfUse|FORM_OF_USE|  
+|m_nNumCharacters|NUMBER_OF_CHARACTERS|  
+|m_szCollateCatalog|DEFAULT_COLLATE_CATALOG|  
+|m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|  
+|m_szCollateName|DEFAULT_COLLATE_NAME|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

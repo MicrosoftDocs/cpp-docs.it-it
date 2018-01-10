@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2763bdf1c3efd4571b6bfbe68b26ef46c941aed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28e35d5f2eb2f07cd1b02fa8b1edc3f41b2c2174
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s, _cgetws_s
 Ottiene una stringa di caratteri dalla console. Queste versioni di [_cgets e _cgetws](../../c-runtime-library/cgets-cgetws.md) offrono miglioramenti della sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -93,9 +94,9 @@ errno_t _cgetws_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`numberOfElements`|`pSizeRead`|Valore restituito|Contenuto di `buffer`|  
+|`buffer`|`numberOfElements`|`pSizeRead`|INVIO|Contenuto di `buffer`|  
 |--------------|------------------------|-----------------|------------|--------------------------|  
-|`NULL`|any|any|`EINVAL`|n/d|  
+|`NULL`|qualsiasi|qualsiasi|`EINVAL`|N/D|  
 |non `NULL`|zero|qualsiasi|`EINVAL`|non modificato|  
 |non `NULL`|qualsiasi|`NULL`|`EINVAL`|stringa di lunghezza zero|  
   
@@ -104,7 +105,7 @@ errno_t _cgetws_s(
   
  Se si verifica un errore durante l'operazione o nella convalida dei parametri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e viene restituito `EINVAL`.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -122,5 +123,5 @@ errno_t _cgetws_s(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   
+ [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
  [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

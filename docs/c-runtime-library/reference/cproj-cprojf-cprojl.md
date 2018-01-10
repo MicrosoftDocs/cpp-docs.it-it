@@ -43,11 +43,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a627a629bc095ecc01f7f7f3b866c05047205340
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 086abc1446302145eb2749cec10fb07c9d81014a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 Recupera la proiezione di un numero complesso sulla sfera di Reimann.  

@@ -43,11 +43,12 @@ caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5a81cdcba10d65c496a946fb8847fdb09b1ff70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 Apre un file. Sono disponibili versioni più sicure di queste funzioni che eseguono la convalida di parametri aggiuntivi e restituiscono codici di errore. Vedere [fopen_s, _wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md).  
@@ -75,14 +76,14 @@ FILE *_wfopen(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste funzioni restituisce un puntatore al file aperto. Un valore di puntatore Null indica un errore. Se `filename` o `mode` è `NULL` o una stringa vuota, queste funzioni attivano il gestore di parametri non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `NULL` e impostano `errno` su `EINVAL`.  
   
- Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ## <a name="remarks"></a>Note  
  La funzione `fopen` apre il file specificato da `filename`. Per impostazione predefinita, una stringa narrow `filename` viene interpretata usando la codepage ANSI (CP_ACP). Nelle applicazioni per Windows Desktop può essere modificata nella codepage OEM (CP_OEMCP) usando la funzione [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) . È possibile usare la funzione [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) per determinare se `filename` viene interpretato con la codepage ANSI o con quella OEM predefinita di sistema. `_wfopen` è una versione a caratteri "wide" di `fopen`. Gli argomenti per `_wfopen` sono stringhe a caratteri "wide". In caso contrario, `_wfopen` e `fopen` si comportano in modo identico. L'uso solo di `_wfopen` non ha effetto sul set di caratteri codificati usato nel flusso di file.  
   
  `fopen` accetta percorsi validi nel file system in corrispondenza del punto di esecuzione. `fopen` accetta percorsi UNC o percorsi in cui vengono usate unità di rete mappate a condizione che il sistema che esegue il codice abbia accesso alla condivisione o un'unità mappata al momento dell'esecuzione. Quando si creano i percorsi per `fopen`, verificare che le unità, i percorsi o le condivisioni di rete saranno disponibili nell'ambiente di esecuzione. È possibile usare barre (/) o barre rovesciate (\\) come separatori di directory in un percorso.  
   
- Controllare sempre il valore restituito per verificare se il puntatore è NULL prima di eseguire qualsiasi altra operazione sul file. Se si verifica un errore, la variabile globale `errno` viene impostata e può essere usata per ottenere informazioni specifiche sugli errori. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Controllare sempre il valore restituito per verificare se il puntatore è NULL prima di eseguire qualsiasi altra operazione sul file. Se si verifica un errore, la variabile globale `errno` viene impostata e può essere usata per ottenere informazioni specifiche sugli errori. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ## <a name="unicode-support"></a>Supporto per Unicode  
  `fopen` supporta flussi di file di Unicode. Per aprire un file Unicode, passare un flag `ccs` che specifica la codifica voluta a `fopen`, come segue.  

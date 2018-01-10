@@ -14,11 +14,12 @@ caps.latest.revision: "66"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab900cf342754aed7d7d9ba7f9a499c537ad8a22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee6062b04c1f406fe3286f6035eba1cda65ef1fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opzioni del compilatore elencate in ordine alfabetico
 Di seguito viene riportato un elenco completo in ordine alfabetico delle opzioni del compilatore. Per un elenco organizzato per categorie, vedere [Opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  

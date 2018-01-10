@@ -1,55 +1,56 @@
 ---
-title: "Percorso di ricerca utilizzato da Windows per l&#39;individuazione di una DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], percorso di ricerca di Windows"
-  - "ricerca di DLL"
-  - "ricerche di DLL conosciute [C++]"
-  - "individuazione di DLL"
-  - "percorsi di ricerca [C++]"
-  - "ricerca [C++], DLL"
-  - "Windows [C++], percorso di ricerca DLL"
+title: Ricerca percorso usato da Windows per individuare una DLL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- searching [C++], DLLs
+- DLLs [C++], Windows search path
+- Windows [C++], DLL search path
+- known DLL searches [C++]
+- locating DLLs
+- finding DLLs
+- search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Percorso di ricerca utilizzato da Windows per l&#39;individuazione di una DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indipendentemente dal tipo di collegamento utilizzato \(implicito o esplicito\), viene prima effettuata la ricerca delle DLL conosciute, ad esempio Kernel32.dll e User32.dll.  Le DLL vengono quindi cercate nella sequenza riportata di seguito.  
+# <a name="search-path-used-by-windows-to-locate-a-dll"></a>Percorso di ricerca usato da Windows per l'individuazione di una DLL
+Con il collegamento sia impliciti che espliciti, Windows cerca innanzitutto "DLL nota", ad esempio Kernel32 e User32. dll. Windows esegue quindi la ricerca per le DLL nella sequenza seguente:  
   
 1.  La directory in cui si trova il modulo eseguibile per il processo corrente.  
   
 2.  La directory corrente.  
   
-3.  La directory di sistema di Windows.  La funzione **GetSystemDirectory** recupera il percorso di questa directory.  
+3.  La directory di sistema di Windows. Il **GetSystemDirectory** funzione recupera il percorso della directory.  
   
-4.  La directory Windows.  La funzione **GetWindowsDirectory** recupera il percorso di questa directory.  
+4.  La directory di Windows. Il **GetWindowsDirectory** funzione recupera il percorso della directory.  
   
 5.  Le directory elencate nella variabile di ambiente PATH.  
   
     > [!NOTE]
-    >  La variabile di ambiente LIBPATH non viene utilizzata.  
+    >  La variabile d'ambiente LIBPATH non viene utilizzata.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Collegamento implicito](../build/linking-implicitly.md)  
+-   [Come collegare in modo implicito a una DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Collegamento esplicito](../build/linking-explicitly.md)  
+-   [Come collegare in modo esplicito a una DLL](../build/linking-an-executable-to-a-dll.md#linking-explicitly)  
   
--   [Scelta del metodo di collegamento da utilizzare](../build/determining-which-linking-method-to-use.md)  
+-   [Determinare quale metodo di collegamento](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Vedere anche  
- [DLL in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [DLL in Visual C++](../build/dlls-in-visual-cpp.md)

@@ -1,28 +1,28 @@
 ---
-title: "Commenti in un makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "makefile, commenti"
+title: I commenti in un Makefile | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dfd8e3dda4014048a4f39191b555b1eff1d97288
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Commenti in un makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Anteporre un simbolo di cancelletto \(\#\) al commento.  Tutto il testo a partire dal cancelletto fino al successivo carattere di nuova riga verrà ignorato.  Esempi:  
+# <a name="comments-in-a-makefile"></a>Commenti in un makefile
+Anteporre un commento con un simbolo di cancelletto (#). NMAKE ignora il testo compreso il simbolo di numero e il successivo carattere di nuova riga. Esempi:  
   
 ```  
 # Comment on line by itself  
@@ -42,11 +42,11 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this  
 ```  
   
- Per specificare un simbolo di cancelletto, anteporre un accento circonflesso \(**^**\) come nell'esempio seguente:  
+ Per specificare un simbolo di cancelletto, anteporvi un accento circonflesso (**^**), come segue:  
   
 ```  
 DEF = ^#define  #Macro for a C preprocessing directive  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Contenuto di un makefile](../build/contents-of-a-makefile.md)

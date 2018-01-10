@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 789a57914e002ea33f705647ec4a6f80d8470f00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ddaa4bf15894b1afe4edec952b5c707a1dcfac0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Procedura: specificare directory di inclusione per le risorse
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Per specificare le directory di inclusione per uno specifico file rc  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nella Guida per gli sviluppatori di .NET Framework. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [procedura dettagliata: utilizzo di risorse per la localizzazione con ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

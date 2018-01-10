@@ -1,34 +1,35 @@
 ---
-title: "Procedura: utilizzare matrici in C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], unidimensionali"
+title: 'Procedura: utilizzare matrici in C + + CLI | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b061437cfe34ee0ec9c00242bf0e62b1e7426f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: utilizzare matrici in C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo articolo viene descritto come utilizzare le matrici in [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-use-arrays-in-ccli"></a>Procedura: utilizzare matrici in C++/CLI
+In questo articolo viene descritto come utilizzare matrici in C + + CLI.  
   
-## Matrice unidimensionale  
- Il seguente codice di esempio mostra come creare matrici unidimensionali di riferimento, valore e tipi di puntatore nativi.  Viene inoltre illustrato come restituire una matrice unidimensionale da una funzione e come passare una matrice unidimensionale come argomento di una funzione.  
+## <a name="single-dimension-arrays"></a>Matrici unidimensionali  
+ L'esempio seguente viene illustrato come creare le matrici unidimensionali di riferimento, valore e tipi di puntatore nativo. Viene inoltre illustrato come restituire una matrice unidimensionale da una funzione e come passare una matrice unidimensionale come argomento a una funzione.  
   
-```  
+```cpp  
 // mcppv2_sdarrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -138,25 +139,31 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine("MyStruct1[{0}] = {1}", i, MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**MyClass1\[0\] \= 20**  
-**MyClass1\[1\] \= 21**  
-**MyClass2\[0\] \= 30**  
-**MyClass2\[1\] \= 31**  
-**MyClass2\[0\] \= 32**  
-**MyClass2\[1\] \= 33**  
-**MyStruct1\[0\] \= 40**  
-**MyStruct1\[1\] \= 41** Nell'esempio successivo viene illustrato come eseguire l'inizializzazione aggregata delle matrici unidimensionali gestite.  
+IntArray[0] = 10  
+IntArray[1] = 11  
   
+MyClass1[0] = 20  
+MyClass1[1] = 21  
+  
+MyClass2[0] = 30  
+MyClass2[1] = 31  
+  
+MyClass2[0] = 32  
+MyClass2[1] = 33  
+  
+MyStruct1[0] = 40  
+MyStruct1[1] = 41  
 ```  
+  
+ Nell'esempio successivo viene illustrato come eseguire l'inizializzazione aggregata su matrici gestite unidimensionali.  
+  
+```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,21 +200,23 @@ int main() {
    array<N*>^ native1 = gcnew array<N*>{new N(0), new N(1), new N(2)};  
    array<N*>^ native2 = {new N(0), new N(1), new N(2)};  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0, 0] = 0  
+MyClass0[0, 1] = 0  
+MyClass0[1, 0] = 1  
+MyClass0[1, 1] = 1  
   
-  **MyClass0\[0, 0\] \= 0**  
-**MyClass0\[0, 1\] \= 0**  
-**MyClass0\[1, 0\] \= 1**  
-**MyClass0\[1, 1\] \= 1**  
-**IntArray\[0, 0\] \= 10**  
-**IntArray\[0, 1\] \= 10**  
-**IntArray\[1, 0\] \= 11**  
-**IntArray\[1, 1\] \= 11** In questo esempio viene illustrato come eseguire l'inizializzazione aggregata su una matrice multidimensionale gestita:  
-  
+IntArray[0, 0] = 10  
+IntArray[0, 1] = 10  
+IntArray[1, 0] = 11  
+IntArray[1, 1] = 11  
 ```  
+  
+ In questo esempio viene illustrato come eseguire l'inizializzazione aggregata in una matrice gestita a più dimensioni:  
+  
+```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -249,10 +258,10 @@ int main() {
 }  
 ```  
   
-## Matrici irregolari  
- In questa sezione viene illustrato come creare matrici unidimensionali di matrici gestite di riferimento, valore e tipi di puntatore nativi.  Viene inoltre illustrato come restituire una matrice unidimensionale di matrici gestite da una funzione e come passare una matrice unidimensionale come argomento di una funzione.  
+## <a name="jagged-arrays"></a>Matrici di matrici  
+ In questa sezione viene illustrato come creare le matrici unidimensionali di matrici gestite di riferimento, valore e tipi di puntatore nativo. Viene inoltre illustrato come restituire una matrice unidimensionale di matrici gestite da una funzione e come passare una matrice unidimensionale come argomento a una funzione.  
   
-```  
+```cpp  
 // mcppv2_array_of_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -330,23 +339,26 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine(MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**40**  
-**41** Il seguente codice di esempio mostra come eseguire un'inizializzazione aggregata con le matrici irregolari.  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
   
+40  
+41  
 ```  
+  
+ L'esempio seguente viene illustrato come eseguire l'inizializzazione aggregata con matrici di matrici.  
+  
+```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -431,25 +443,28 @@ int main() {
       Console::WriteLine();  
    }  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**\[ 1 2 \]**  
-**\[ 3 4 5 \]**  
-**\[ 0 1 \]**  
-**\[ 2 3 4 \]**  
-**\[ a b c d e f \]**  
-**\[ g h \]**   
-## Matrici gestite come parametri di tipo modello  
- In questo esempio viene illustrato come utilizzare una matrice gestita come parametro ad un modello:  
+[ 1 2 ]  
+[ 3 4 5 ]  
   
+[ 0 1 ]  
+[ 2 3 4 ]  
+  
+[ a b c d e f ]  
+[ g h ]  
 ```  
+  
+## <a name="managed-arrays-as-template-type-parameters"></a>Le matrici gestite come parametri di tipo modello  
+ In questo esempio viene illustrato come utilizzare una matrice gestita come un parametro a un modello:  
+  
+```cpp  
 // mcppv2_template_type_params.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -469,16 +484,16 @@ int main() {
    retval += larr->Length - 10;  
    Console::WriteLine("Return Code: {0}", retval);  
 }  
-  
 ```  
   
- **Output**  
-  
-  **Return Code: 0**   
-## typedefs per matrici gestite  
- In questo esempio viene illustrato come impostare un typedef per una matrice gestita:  
-  
+```Output  
+Return Code: 0  
 ```  
+  
+## <a name="typedefs-for-managed-arrays"></a>TypeDef per matrici gestite  
+ In questo esempio viene illustrato come creare un typedef per una matrice gestita:  
+  
+```cpp  
 // mcppv2_typedef_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -489,15 +504,14 @@ typedef array<array<G^>^> jagged_array;
 int main() {  
    jagged_array ^ MyArr = gcnew jagged_array (10);  
 }  
-  
 ```  
   
-## Ordinamento di matrici  
- A differenza delle matrici C\+\+ standard, le matrici gestite derivano in modo implicito da una classe base di matrice da cui ereditano il comportamento comune.  Un esempio è il metodo `Sort`, che può essere utilizzato per ordinare gli elementi in una matrice.  
+## <a name="sorting-arrays"></a>Ordinamento di matrici  
+ A differenza delle matrici C++ standard, le matrici gestite in modo implicito derivano da una classe di base della matrice da cui ereditano il comportamento comune. Un esempio è la `Sort` metodo, che può essere utilizzato per ordinare gli elementi in una matrice.  
   
- Per le matrici contenenti tipi intrinseci di base, è possibile chiamare il metodo `Sort`.  È possibile eseguire l'override dei criteri di ordinamento ed è obbligatorio farlo quando si desidera eseguire l'ordinamento per le matrici di tipi complessi.  In questo caso, il tipo di elemento della matrice deve implementare il metodo [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx).  
+ Per le matrici che contengono tipi intrinseci di base, è possibile chiamare il `Sort` metodo. È possibile ignorare i criteri di ordinamento e, è necessario quando si desidera eseguire l'ordinamento per le matrici di tipi complessi. In questo caso, è necessario implementare il tipo di elemento di matrice di [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) metodo.  
   
-```  
+```cpp  
 // array_sort.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -508,15 +522,14 @@ int main() {
    for (int i=0; i < a->Length; i++)  
       Console::Write("{0} ", a[i] );  
 }  
-  
 ```  
   
-## Ordinare matrici mediante criteri personalizzati  
- Per ordinare le matrici contenenti tipi intrinseci di base, è sufficiente chiamare il metodo `Array::Sort`.  Tuttavia, per ordinare le matrici contenenti tipi complessi o eseguire l'override di criteri di ordinamento predefiniti, eseguire l'override del metodo [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx).  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>Ordinamento di matrici mediante criteri personalizzati  
+ Per ordinare le matrici che contengono tipi intrinseci di base, è sufficiente chiamare il `Array::Sort` metodo. Tuttavia, per le matrici di ordinamento che contengono i tipi complessi o eseguire l'override di criteri di ordinamento predefinito, eseguire l'override di [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) metodo.  
   
- Nell'esempio seguente, una struttura denominata `Element` è derivata da <xref:System.IComparable> e viene scritta per fornire un metodo <xref:System.IComparable.CompareTo%2A> che utilizza la media di due numeri interi come criterio di ordinamento.  
+ Nell'esempio seguente, una struttura denominata `Element` è derivato da <xref:System.IComparable>e scritti per fornire un <xref:System.IComparable.CompareTo%2A> metodo che usa la media dei due numeri interi come criterio di ordinamento.  
   
-```  
+```cpp  
 using namespace System;  
   
 value struct Element : public IComparable {  
@@ -558,10 +571,10 @@ int main() {
 }  
 ```  
   
-## Covarianza di matrici  
- Data la classe di riferimento D che dispone di una classe base diretta o indiretta B, una matrice di tipo D può essere assegnata ad una variabile di matrice di tipo B.  
+## <a name="array-covariance"></a>Covarianza  
+ Classe di riferimento D che contiene classi base dirette o indirette B specificata, una matrice di tipo D può essere assegnata a una variabile di matrice di tipo b.  
   
-```  
+```cpp  
 // clr_array_covariance.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -572,11 +585,11 @@ int main() {
 }  
 ```  
   
- Un'assegnazione ad un elemento di matrice sarà compatibile con il tipo dinamico della matrice.  Un'assegnazione ad un elemento di matrice con un tipo non compatibile genera un'eccezione `System::ArrayTypeMismatchException` .  
+ Un'assegnazione a un elemento di matrice dovrà essere compatibili con l'assegnazione con il tipo dinamico della matrice. Un'assegnazione a un elemento di matrice con un tipo incompatibile genera `System::ArrayTypeMismatchException` generata.  
   
- La covarianza di matrice non si applica alle matrici di tipo classe di valore.  Ad esempio, le matrici di Int32 non possono essere convertite in matrici di Object^, neanche tramite boxing.  
+ La covarianza non si applica alle matrici di tipo classe di valore. Ad esempio, le matrici di Int32 non possono essere convertite in oggetto ^ matrici, nemmeno tramite boxing.  
   
-```  
+```cpp  
 // clr_array_covariance2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -609,5 +622,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Array](../windows/arrays-cpp-component-extensions.md)

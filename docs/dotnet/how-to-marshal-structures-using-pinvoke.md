@@ -18,11 +18,14 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Effettuare il marshalling di strutture tramite PInvoke
 In questo documento viene illustrato come funzioni native che accettano stringhe di tipo C possono essere chiamate da funzioni gestite che forniscono un'istanza di <xref:System.String> tramite P/Invoke. Sebbene sia consigliabile utilizzare la funzionalità di interoperabilità C++ anziché P/Invoke perché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare, se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere i seguenti documenti:  

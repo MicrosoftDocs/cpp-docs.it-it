@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,37 +26,22 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 298f293e5ea0533fb27ae8c259900bc4f1cd0d2a
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0407b18bed459aefaa904e32c39f491af73cba6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdaylight"></a>_get_daylight
 Recupera l'offset ora legale in ore.  
@@ -91,10 +75,10 @@ Recupera l'offset ora legale in ore.
 |-------------|---------------------|  
 |`_get_daylight`|\<time.h>|  
   
- Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
  [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   

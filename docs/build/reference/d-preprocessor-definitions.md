@@ -24,11 +24,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30459805268a8b2eac9e94d0aeb1da4cfff28a46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-preprocessor-definitions"></a>/D (definizioni preprocessore)
 Definisce un simbolo di pre-elaborazione per un file di origine.  

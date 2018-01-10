@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0957ff70d5163c142282a15ac597de5504537636
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 30ac988240e32351a8659b5145bd621bc490aaba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>Procedura: recuperare il nome di un computer locale (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato il recupero del nome del computer locale (il nome del computer perché viene visualizzato in una rete). Questo scopo, è possibile ottenere il <xref:System.Environment.MachineName%2A> stringa, definita nel <xref:System.Environment> dello spazio dei nomi.  

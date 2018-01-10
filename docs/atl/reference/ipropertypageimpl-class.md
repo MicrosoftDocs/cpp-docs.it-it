@@ -42,11 +42,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 345379de254338fa8d344ee21b022439380d9851
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbc62bd72ee5a639e8df0ada365cd7baac7d0c31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (classe)
 Questa classe implementa **IUnknown** e fornisce un'implementazione predefinita del [interfaccia IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) interfaccia.  

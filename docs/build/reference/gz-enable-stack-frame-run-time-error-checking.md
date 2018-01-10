@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f3e4dc59154d64d79db0f4d15471b51ce67bed58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 621878aacaf2a1b36ed0014451ada504d8a24556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Attiva controllo errori in fase di esecuzione dello stack frame)
 Esegue le stesse operazioni come la [/RTC (controlli errore di Run-Time)](../../build/reference/rtc-run-time-error-checks.md) opzione. Deprecato.  

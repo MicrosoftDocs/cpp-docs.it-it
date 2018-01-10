@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - functions [C++], paramters
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e74cbde44cad618720983fbda4a6cf9ce8b75dc1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-type-function-arguments"></a>Argomenti della funzione tipo-riferimento
 È spesso più efficiente passare alle funzioni riferimenti anziché oggetti di grandi dimensioni. In questo modo il compilatore può passare l'indirizzo dell'oggetto rispettando la sintassi che sarebbe stata usata per accedere all'oggetto. Si consideri l'esempio seguente che usa la struttura `Date`.  
@@ -80,7 +78,7 @@ long JulianFromGregorian( const Date& GDate );
   
  Questo prototipo garantisce che la funzione `JulianFromGregorian` non modificherà il relativo argomento.  
   
- Qualsiasi funzione con prototipo che usa un tipo di riferimento può accettare un oggetto dello stesso tipo al suo posto, poiché non esiste una conversione standard da *typename* a *typename* ** & **.  
+ Qualsiasi funzione con prototipo che usa un tipo di riferimento può accettare un oggetto dello stesso tipo al suo posto, poiché non esiste una conversione standard da *typename* a *typename*  **&** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti](../cpp/references-cpp.md)

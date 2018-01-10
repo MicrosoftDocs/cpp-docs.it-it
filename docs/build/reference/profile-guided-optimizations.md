@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 467888dc773a8d84e5a1b3fc1fd2c337b06654be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2d72ddda460a88830f7f7692f4c9707fa3101a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimizations"></a>Ottimizzazioni guidate da profilo (PGO)
 L'ottimizzazione PGO consente di ottimizzare un file di output, dove l'utilità di ottimizzazione usa i dati delle esecuzioni dei test del file EXE o DLL. I dati rappresentano le probabili prestazioni del programma in un ambiente di produzione.  
@@ -80,7 +81,7 @@ L'ottimizzazione PGO consente di ottimizzare un file di output, dove l'utilità 
   
  Per ulteriori informazioni su esecuzione dell'ottimizzazione manuale nell'IDE o sulla riga di comando, vedere [plug-in di Guided Optimization profilo](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Plug-in di ottimizzazione PGO](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)  
   
  [Strumenti per l'ottimizzazione manuale PGO](../../build/reference/tools-for-manual-profile-guided-optimization.md)  

@@ -1,45 +1,46 @@
 ---
-title: "auto_gcroot::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.operator!"
-  - "auto_gcroot.operator!"
-  - "msclr::auto_gcroot::operator!"
-  - "auto_gcroot::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::operator!"
+title: auto_gcroot::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.operator!
+- auto_gcroot.operator!
+- msclr::auto_gcroot::operator!
+- auto_gcroot::operator!
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::operator!
 ms.assetid: f9728be3-2e09-4c01-a594-43e0d59d40d3
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 525c03560d636ec8c16c26392a241f4826b31cda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operatore per utilizzare `auto_gcroot` in un'espressione condizionale.  
+# <a name="autogcrootoperator"></a>auto_gcroot::operator!
+Operatore per l'utilizzo di `auto_gcroot` in un'espressione condizionale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool operator!() const;  
 ```  
   
-## Valore restituito  
- `true` se l'oggetto di cui è stato eseguito il wrapping non è valido; `false` in caso contrario.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se l'oggetto sottoposto a wrapping è valido. `false` in caso contrario.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // msl_auto_gcroot_operator_not.cpp  
@@ -62,14 +63,17 @@ int main() {
 }  
 ```  
   
-  **s non è valida**  
-**ora s è valida**  
-**ora s non è valida**   
-## Requisiti  
- msclr \<\\ auto\_gcroot.h di**File di intestazione** \>  
+```Output  
+s is invalid  
+now s is valid  
+now s is invalid  
+```  
   
- msclr di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\auto_gcroot.h >  
   
-## Vedere anche  
- [Membri auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+ **Namespace** msclr  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

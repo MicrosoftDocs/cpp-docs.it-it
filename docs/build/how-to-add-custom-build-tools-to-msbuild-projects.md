@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9dd91f7f4d28db62b8c74f087784ce1dbc8afd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efa484e4ad57a3a1f27621e16dddcf90135b7057
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Procedura: aggiungere uno strumento di compilazione personalizzato a progetti MSBuild
 Uno strumento di compilazione personalizzata è uno strumento della riga di comando, definiti dall'utente che è associato a un determinato file.  

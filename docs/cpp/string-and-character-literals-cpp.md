@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- R
-dev_langs:
-- C++
+f1_keywords: R
+dev_langs: C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c7254d4cc8dcbbaa0916a77ee6c52da05dc8ec9c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -251,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>Valori letterali stringa non elaborata (C++11)  
- Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, ovvero contenente qualsiasi carattere grafico, incluse le virgolette doppie ("), barra rovesciata (\\), o carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per gli esempi vedere la pagina relativa alle [domande frequenti di Bjarne Stroustrup su C++11](http://go.microsoft.com/fwlink/?LinkId=401172).  
+ Un valore letterale stringa non elaborato è una matrice con terminazione null, di qualsiasi tipo di carattere, ovvero contenente qualsiasi carattere grafico, incluse le virgolette doppie ("), barra rovesciata (\\), o carattere di nuova riga. I valori letterali stringa non elaborata vengono spesso usati nelle espressioni regolari che usano le classi di caratteri e nelle stringhe HTML e XML. Per esempi, vedere l'articolo seguente: [frequenti di Bjarne Stroustrup su C++ 11](http://go.microsoft.com/fwlink/p/?linkid=401172).  
   
 ```cpp  
 // represents the string: An unescaped \ character  

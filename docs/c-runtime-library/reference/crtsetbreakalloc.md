@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetBreakAlloc
+apiname: _CrtSetBreakAlloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 70262673935e67fc6ee868a400fd57358a31547a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a11b7847e83a129099e0f54cccce35032cf68fe4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 Imposta un punto di interruzione su un numero di ordine di allocazione dell'oggetto (solo versione di debug).  
@@ -66,7 +63,7 @@ Imposta un punto di interruzione su un numero di ordine di allocazione dell'ogge
   
  Il numero di ordine di allocazione dell'oggetto è archiviato nel campo *lRequest* della struttura**_CrtMemBlockHeader**, definito in Crtdbg.h. Quando le informazioni relative a un blocco di memoria vengono restituite da una delle funzioni di dump del debug, tale numero viene racchiuso tra parentesi graffe, ad esempio {36}.  
   
- Per informazioni su come usare `_CrtSetBreakAlloc` con altre funzioni di gestione della memoria, vedere [Tracking Heap Allocation Requests](/visualstudio/debugger/crt-debug-heap-details) (Rilevamento di richieste di allocazione di heap). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Per informazioni su come usare `_CrtSetBreakAlloc` con altre funzioni di gestione della memoria, vedere [Tracking Heap Allocation Requests](/visualstudio/debugger/crt-debug-heap-details) (Rilevamento di richieste di allocazione di heap). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -74,7 +71,7 @@ Imposta un punto di interruzione su un numero di ordine di allocazione dell'ogge
 |-------------|---------------------|  
 |`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,21 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 094d10069b854d122e835f7d12f9ef095775db2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule (classe)
 In ATL 7.0, `CComAutoThreadModule` è obsoleta: vedere [classi di modulo ATL](../../atl/atl-module-classes.md) per altri dettagli.  
@@ -102,7 +86,7 @@ class CComAutoThreadModule : public CComModule
   
  Per impostazione predefinita, la creazione guidata applicazioni COM ATL (Creazione guidata progetto ATL in Visual Studio .NET) verrà derivare il modulo da `CComModule`. Per utilizzare `CComAutoThreadModule`, modificare la definizione di classe. Ad esempio:  
   
- [!code-cpp[NVC_ATL_AxHost n. 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -259,4 +243,3 @@ LONG Unlock();
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Classi Module](../../atl/atl-module-classes.md)
-

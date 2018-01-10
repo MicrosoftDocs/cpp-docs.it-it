@@ -1,32 +1,33 @@
 ---
-title: "inner_product (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inner_product"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inner_product (funzione) [STL/CLR]"
+title: inner_product (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inner_product
+dev_langs: C++
+helpviewer_keywords: inner_product function [STL/CLR]
 ms.assetid: 97d7a507-7494-4216-aedf-0546ed0edb3f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d61de34fcb029000ac27efcf74bd1321d1b7e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# inner_product (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Calcola la somma del prodotto è costituito da due intervalli e aggiunta a un valore iniziale specificato o calcola il risultato di una routine generalizzata in cui la somma e le operazioni binari del prodotto vengono sostituite da altre operazioni binarie specificate.  
+# <a name="innerproduct-stlclr"></a>inner_product (STL/CLR)
+Calcola la somma del prodotto tra gli elementi di due intervalli e aggiunge tale somma a un valore iniziale specificato oppure calcola il risultato di una procedura generalizzata in cui le operazioni binarie di somma e prodotto vengono sostituite da altre operazioni binarie specificate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _InIt1, class _InIt2, class _Ty> inline  
@@ -38,13 +39,13 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
         _Ty _Val, _Fn21 _Func1, _Fn22 _Func2);  
 ```  
   
-## Note  
- Questa funzione si comporta lo stesso della funzione numerica `inner_product`STL.  Per ulteriori informazioni, vedere [inner\_product](../Topic/inner_product.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione numerica della libreria Standard C++ `inner_product`. Per ulteriori informazioni, vedere [inner_product](../standard-library/numeric-functions.md#inner_product).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/numeric\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/numeric >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [numeric](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

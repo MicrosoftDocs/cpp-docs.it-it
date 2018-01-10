@@ -1,41 +1,42 @@
 ---
-title: "__incfsbyte, __incfsword, __incfsdword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incfsword"
-  - "__incfsbyte_cpp"
-  - "__incfsbyte"
-  - "__incfsdword"
-  - "__incfsword_cpp"
-  - "__incfsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__incfsword (funzione intrinseca)"
-  - "__incfsdword (funzione intrinseca)"
-  - "__incfsbyte (funzione intrinseca)"
+title: __incfsbyte __incfsword, __incfsdword | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incfsword
+- __incfsbyte_cpp
+- __incfsbyte
+- __incfsdword
+- __incfsword_cpp
+- __incfsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incfsword intrinsic
+- __incfsdword intrinsic
+- __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 541d92916c6a093d6eb8a60c30f5355f74a3b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __incfsbyte, __incfsword, __incfsdword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
+**Sezione specifica Microsoft**  
   
- Aggiungerne uno al valore in una posizione di memoria specificata da un offset relativo all'inizio del segmento di `FS` .  
+ Aggiungere 1 al valore in una posizione di memoria specificata da un offset relativo all'inizio del `FS` segmento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __incfsbyte(   
@@ -49,25 +50,25 @@ void __incfsdword(
 );  
 ```  
   
-#### Parametri  
- \[in\] `Offset`  
- L'offset dall'inizio di `FS`.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Offset`  
+ L'offset dall'inizio del `FS`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
-## Note  
- Queste intrinseci sono disponibili solo in modalità kernel e le routine sono disponibili solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Queste funzioni intrinseche sono disponibili solo in modalità kernel e le routine sono disponibili solo come funzioni intrinseche.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_\_addfsbyte, \_\_addfsword, \_\_addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+## <a name="see-also"></a>Vedere anche  
+ [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

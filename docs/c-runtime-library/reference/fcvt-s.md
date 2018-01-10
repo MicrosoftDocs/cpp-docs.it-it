@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Converte un numero a virgola mobile in una stringa. Questa è una versione di [_fcvt](../../c-runtime-library/reference/fcvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,12 +92,12 @@ errno_t _fcvt_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`sizeInBytes`|valore|count|dec|segno|Restituzione|Valore in `buffer`|  
+|`buffer`|`sizeInBytes`|predefinito|count|dec|segno|Restituzione|Valore in `buffer`|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
-|Non `NULL` (punta alla memoria valida)|<=0|any|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
-|any|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
-|any|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
   
  **Problemi di sicurezza**  
   
@@ -111,7 +112,7 @@ errno_t _fcvt_s(
   
  La differenza tra `_ecvt_s` e `_fcvt_s` consiste nell'interpretazione del parametro `count`. `_ecvt_s`interpreta `count` come il numero totale di cifre nella stringa di output e `_fcvt_s` interpreta `count` come il numero di cifre dopo il separatore decimale.  
   
- In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -121,7 +122,7 @@ errno_t _fcvt_s(
 |--------------|---------------------|---------------------|  
 |`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie:** tutte le versioni delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   

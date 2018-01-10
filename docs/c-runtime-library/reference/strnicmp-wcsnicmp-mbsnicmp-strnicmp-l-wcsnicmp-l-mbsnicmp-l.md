@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - CORECRT_WSTRING/_wcsnicmp_l
 - string/_strnicmp
 - string/_strnicmp_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsnicmp function
 - _tcsncicmp function
@@ -74,36 +72,22 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d1e4b6e775ad1b46c988c5c5ca3af1ceafa29135
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c926c23553545a76bc8e1d0a0427c20ea65f3156
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Confronta il numero specificato di caratteri di due stringhe senza fare distinzione tra maiuscole e minuscole.  
   
 > [!IMPORTANT]
->  `_mbsnicmp` e `_mbsnicmp_l` non possono essere usati nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnicmp` e `_mbsnicmp_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -169,7 +153,7 @@ int _mbsnicmp_l(
   
  I caratteri da 91 a 96 nella tabella ASCII ('[', '\\', ']', '^', '_' e '\`') sono considerati minori rispetto a qualsiasi carattere alfabetico. Questo ordinamento è identico a quello di `stricmp`.  
   
- `_wcsnicmp` e `_mbsnicmp` sono le versioni a caratteri wide e a caratteri multibyte di `_strnicmp`. Gli argomenti di `_wcsnicmp` sono stringhe di caratteri wide, mentre gli argomenti di `_mbsnicmp` sono stringhe di caratteri multibyte. `_mbsnicmp` riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce `_NLSCMPERROR` in caso di errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni vengono influenzate dalle impostazioni locali: le versioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali, mentre le versioni che hanno il suffisso `_l` usano il parametro `locale` passato dall'utente. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_wcsnicmp` e `_mbsnicmp` sono le versioni a caratteri wide e a caratteri multibyte di `_strnicmp`. Gli argomenti di `_wcsnicmp` sono stringhe di caratteri wide, mentre gli argomenti di `_mbsnicmp` sono stringhe di caratteri multibyte. `_mbsnicmp` riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte corrente e restituisce `_NLSCMPERROR` in caso di errore. Per altre informazioni, vedere [Tabelle codici](../../c-runtime-library/code-pages.md). A parte ciò, queste tre funzioni si comportano in modo identico. Queste funzioni vengono influenzate dalle impostazioni locali: le versioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali, mentre le versioni che hanno il suffisso `_l` usano il parametro `locale` passato dall'utente. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Tutte queste funzioni convalidano i relativi parametri. Se `string1` o `string2` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`.  
   

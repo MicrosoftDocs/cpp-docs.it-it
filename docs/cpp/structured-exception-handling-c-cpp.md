@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9098ac4914bdb9e054d4db27c0a5498c0f9d9ea8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Anche se Windows e Visual C++ supportano la gestione delle eccezioni strutturata (SEH, Structured Exception Handling), è consigliabile usare la gestione delle eccezioni C++ conforme allo standard ISO, poiché rende il codice più portabile e flessibile. Tuttavia, nel codice esistente per tipi specifici di programmi, potrebbe essere necessario usare la gestione delle eccezioni strutturata.  

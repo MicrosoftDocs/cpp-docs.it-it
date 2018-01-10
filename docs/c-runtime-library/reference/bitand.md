@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -24,21 +23,19 @@ f1_keywords:
 - std::bitand
 - std.bitand
 - bitand
-dev_langs:
-- C++
-helpviewer_keywords:
-- bitand function
+dev_langs: C++
+helpviewer_keywords: bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fdc65eaa632fe35c3418b2c962e22689f570f536
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 7036915724400938046cdadace2ead63a9adc6d3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitand"></a>bitand
 Alternativa all'operatore &.  

@@ -1,36 +1,38 @@
 ---
-title: "CDBErrorInfo::GetAllErrorInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDBErrorInfo.GetAllErrorInfo"
-  - "CDBErrorInfo::GetAllErrorInfo"
-  - "ATL::CDBErrorInfo::GetAllErrorInfo"
-  - "GetAllErrorInfo"
-  - "CDBErrorInfo.GetAllErrorInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetAllErrorInfo (metodo)"
+title: 'Cdberrorinfo:: Getallerrorinfo | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDBErrorInfo.GetAllErrorInfo
+- CDBErrorInfo::GetAllErrorInfo
+- ATL::CDBErrorInfo::GetAllErrorInfo
+- GetAllErrorInfo
+- CDBErrorInfo.GetAllErrorInfo
+dev_langs: C++
+helpviewer_keywords: GetAllErrorInfo method
 ms.assetid: 630049fa-d296-497a-bbf6-f5d3d71d271d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 46e233800f814b39e4e14f0b357c381a3e71311e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDBErrorInfo::GetAllErrorInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce tutti i tipi di informazioni sugli errori contenuti in un record di errore.  
+# <a name="cdberrorinfogetallerrorinfo"></a>CDBErrorInfo::GetAllErrorInfo
+Restituisce tutti i tipi di informazioni sull'errore contenute in un record di errore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -45,40 +47,40 @@ Restituisce tutti i tipi di informazioni sugli errori contenuti in un record di 
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *ulRecordNum*  
- \[in\] numero in base zero del record per il quale restituire informazioni sugli errori.  
+ [in] Il numero in base zero del record per cui restituire informazioni sull'errore.  
   
  `lcid`  
- \[in\] ID delle impostazioni locali per informazioni sugli errori vengano restituiti.  
+ [in] L'ID impostazioni locali per le informazioni sull'errore da restituire.  
   
  `pbstrDescription`  
- \[out\] puntatore A una descrizione di testo dell'errore o NULL se le impostazioni locali non sono supportate.  Vedere la sezione Osservazioni.  
+ [out] Puntatore a una descrizione dell'errore o NULL se le impostazioni locali non sono supportata. Vedere la sezione Osservazioni.  
   
  `pbstrSource`  
- \[out\] puntatore A una stringa contenente il nome del componente che ha generato l'errore.  
+ [out] Un puntatore a una stringa contenente il nome del componente che ha generato l'errore.  
   
  `pguid`  
- \[out\] puntatore Al GUID dell'interfaccia che ha definito l'errore.  
+ [out] Puntatore al GUID dell'interfaccia che definisce l'errore.  
   
  *pdwHelpContext*  
- \[out\] puntatore All'ID del contesto della guida dell'errore.  
+ [out] Un puntatore all'ID di contesto della Guida per l'errore.  
   
  *pbstrHelpFile*  
- \[out\] puntatore A una stringa contenente il percorso del file della Guida che descrive l'errore.  
+ [out] Un puntatore a una stringa contenente il percorso del file della Guida che descrive l'errore.  
   
-## Valore restituito  
- `S_OK` in caso di esito positivo.  Vedere [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx)*in OLE DB Programmer's Reference* per altri valori restituiti.  
+## <a name="return-value"></a>Valore restituito  
+ `S_OK` se l'operazione riesce. Vedere [IErrorRecords::GetErrorInfo](https://msdn.microsoft.com/en-us/library/ms711230.aspx) nel *riferimento per programmatori OLE DB* per gli altri valori restituiti.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Note  
- Il valore di output di `pbstrDescription` viene ottenuto chiamando IErrorInfo::GetDescription internamente, che imposta il valore SU NULL se le impostazioni locali non sono supportate, o se entrambe le condizioni seguenti sono vere:  
+## <a name="remarks"></a>Note  
+ Il valore di output di `pbstrDescription` utilizzato internamente dalla chiamata IErrorInfo:: GetDescription, che imposta il valore su NULL se le impostazioni locali non sono supportata o se si verificano entrambe le condizioni seguenti:  
   
-1.  il valore di `lcid` non sono gli Stati Uniti e inglesi  
+1.  il valore di `lcid` non siano stati uniti Inglese e  
   
-2.  il valore di `lcid` non è uguale al valore restituito da GetUserDefaultLCID.  
+2.  il valore di `lcid` è diverso da quello restituito da viene impostata dalla.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,39 +24,23 @@ apilocation:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbtowc
-dev_langs:
-- C++
+f1_keywords: mbtowc
+dev_langs: C++
 helpviewer_keywords:
 - mbtowc function
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 52f2c1d3defb822f00095a24bfcc87bd07fc8cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 Converte un carattere multibyte in un carattere wide corrispondente.  
@@ -95,7 +78,7 @@ int _mbtowc_l(
  Se **mbchar** non è **NULL** e se l'oggetto a cui punta `mbchar` rappresenta un carattere multibyte valido, `mbtowc` restituisce la lunghezza in byte del carattere multibyte. Se `mbchar` è **NULL** o l'oggetto a cui punta è un carattere Null wide (L'\0'), la funzione restituisce 0. Se l'oggetto che `mbchar` punti a non formano un carattere multibyte valido all'interno della prima *conteggio* caratteri, viene restituito -1.  
   
 ## <a name="remarks"></a>Note  
- La funzione `mbtowc` converte un numero di byte pari a *count* o meno a cui punta `mbchar`, se `mbchar` non è **NULL**, in un carattere wide corrispondente. `mbtowc` archivia il carattere wide risultante in *wchar* se *wchar* non è **NULL**. `mbtowc` non esamina più di `MB_CUR_MAX` byte. `mbtowc` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbtowc_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La funzione `mbtowc` converte un numero di byte pari a *count* o meno a cui punta `mbchar`, se `mbchar` non è **NULL**, in un carattere wide corrispondente. `mbtowc` archivia il carattere wide risultante in *wchar* se *wchar* non è **NULL**. `mbtowc` non esamina più di `MB_CUR_MAX` byte. `mbtowc` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbtowc_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -104,7 +87,7 @@ int _mbtowc_l(
 |`mbtowc`|\<stdlib.h>|  
 |**_mbtowc_l**|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
@@ -169,9 +152,9 @@ Attempt to convert a NULL pointer to a wide character:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [wcstombs, _wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   

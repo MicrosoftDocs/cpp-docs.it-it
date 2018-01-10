@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9147d85afaee50a2b0c2e47debe5603d6e208712
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fe74f9374a6fb74a514fd2655b2e1dbadf02639
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2767"></a>Errore del compilatore C2767
 gestita o mancata corrispondenza della dimensione WinRTarray: previsto argomento/i N - forniti M  

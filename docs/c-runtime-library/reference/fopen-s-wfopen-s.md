@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49a884b8ae4ea34c02a0ca57563077add4d9d6fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 Apre un file. Queste versioni di [fopen, wfopen](../../c-runtime-library/reference/fopen-wfopen.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -85,9 +86,9 @@ errno_t _wfopen_s(
   
 |`pFile`|`filename`|`mode`|Valore restituito|Contenuto di `pFile`|  
 |-------------|----------------|------------|------------------|------------------------|  
-|`NULL`|any|qualsiasi|`EINVAL`|non modificato|  
-|any|`NULL`|qualsiasi|`EINVAL`|non modificato|  
-|any|any|NULL|`EINVAL`|non modificato|  
+|`NULL`|qualsiasi|qualsiasi|`EINVAL`|non modificato|  
+|qualsiasi|`NULL`|qualsiasi|`EINVAL`|non modificato|  
+|qualsiasi|qualsiasi|NULL|`EINVAL`|non modificato|  
   
 ## <a name="remarks"></a>Note  
  I file aperti da `fopen_s` e da `_wfopen_s` non sono condivisibili. Se è necessario che un file sia condivisibile, usare [_fsopen, _wfsopen](../../c-runtime-library/reference/fsopen-wfsopen.md) con la costante di modalità di condivisione appropriata, ad esempio `_SH_DENYNO` per la condivisione in lettura/scrittura.  
@@ -98,7 +99,7 @@ errno_t _wfopen_s(
   
  Queste funzioni convalidano i relativi parametri. Se `pFile`, `filename` o `mode` è un puntatore Null, queste funzioni generano un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  
   
- Controllare sempre il valore restituito per verificare se la funzione è stata completata prima di eseguire eventuali altre operazioni sul file. Se si verifica un errore, viene restituito il codice di errore e la variabile globale `errno` viene impostata. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Controllare sempre il valore restituito per verificare se la funzione è stata completata prima di eseguire eventuali altre operazioni sul file. Se si verifica un errore, viene restituito il codice di errore e la variabile globale `errno` viene impostata. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ## <a name="unicode-support"></a>Supporto Unicode  
  `fopen_s` supporta flussi di file di Unicode. Per aprire un file Unicode nuovo e esistente, passare un flag `ccs` che specifica la codifica voluta a `fopen_s`:  
@@ -209,7 +210,7 @@ errno_t _wfopen_s(
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|Nessuno|  
-|`n`|Nessuno|  
+|`n`|nessuno|  
 |`S`|`_O_SEQUENTIAL`|  
 |`R`|`_O_RANDOM`|  
 |`T`|`_O_SHORTLIVED`|  
@@ -227,7 +228,7 @@ errno_t _wfopen_s(
 |`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Ottiene la directory di lavoro corrente.  
@@ -76,7 +77,7 @@ wchar_t *_wgetcwd(
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore a `buffer`. Un valore `NULL` restituito indica un errore e `errno` viene impostato su `ENOMEM`, indicando che non vi è memoria sufficiente per allocare `maxlen` byte (quando un argomento `NULL` viene fornito come `buffer`) oppure in `ERANGE`, indicando che il percorso è più lungo di `maxlen` caratteri. Se `maxlen` è minore o uguale a zero, questa funzione richiama il gestore di parametro non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md).  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La funzione `_getcwd` ottiene il percorso completo della directory di lavoro corrente per l'unità predefinita e la archivia in `buffer`. L'argomento Integer `maxlen` specifica la lunghezza massima per il percorso. Si verifica un errore se supera la lunghezza del percorso (incluso il carattere di terminazione null) `maxlen`. L'argomento `buffer` può essere `NULL`. Viene allocato automaticamente un buffer con dimensione di almeno `maxlen` (più grande solo se necessario) usando `malloc`, per archiviare il percorso. Questo buffer può essere successivamente liberato chiamando `free` e passandogli il valore restituito `_getcwd` (un puntatore al buffer allocato).  

@@ -1,42 +1,43 @@
 ---
-title: "hash_map::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_compare (membro) [STL/CLR]"
+title: 'hash_map:: key_compare (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: 9564d049-67fc-4293-b896-c4a96e771f86
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c80ff17cc69a93c436618dd646b03f665d1c7720
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il delegato dell'ordine per due chiavi.  
+# <a name="hashmapkeycompare-stlclr"></a>hash_map::key_compare (STL/CLR)
+Delegato per due chiavi di ordinamento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## Note  
- Il tipo è sinonimo del delegato che determina l'ordine dei relativi argomenti principali.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo per il delegato che determina l'ordine dei relativi argomenti di chiave.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_key_compare.cpp   
@@ -72,19 +73,23 @@ int main()
   
 ```  
   
-  **confronta \(L'a, L'a\) \= True**  
-**confronta \(L'a, L'b\) \= True**  
-**confronta \(L'b, L'a\) \= False**  
-**confronta \(L'a, L'a\) \= False**  
-**confronta \(L'a, L'b\) \= False**  
-**confronta \(L'b, L'a\) \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **Spazio dei nomi:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_comp](../dotnet/hash-map-key-comp-stl-clr.md)   
- [hash\_map::key\_type](../dotnet/hash-map-key-type-stl-clr.md)   
- [hash\_map::value\_compare](../dotnet/hash-map-value-compare-stl-clr.md)
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
+  
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: key_comp (STL/CLR)](../dotnet/hash-map-key-comp-stl-clr.md)   
+ [hash_map:: KEY_TYPE (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)   
+ [hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)

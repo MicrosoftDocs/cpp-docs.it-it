@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - wsearchenv
 - _searchenv
 - searchenv
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wsearchenv function
 - files [C++], finding
@@ -43,36 +41,22 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 2c71b97e925ab23c893eefd6092efffe57bea3a7
-ms.contentlocale: it-it
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9996c9aad085beaef46d2a3188503eba582602d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv, _wsearchenv
 Usa i percorsi di ambiente per cercare un file. Sono disponibili versioni più sicure di queste funzioni. Vedere [_searchenv_s, _wsearchenv_s](../../c-runtime-library/reference/searchenv-s-wsearchenv-s.md).  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -126,7 +110,7 @@ void _wsearchenv(
   
  Per altre informazioni su `errno` e i codici di errore, vedere [Costanti errno](../../c-runtime-library/errno-constants.md).  
   
- In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++, queste funzioni presentano overload di modello che richiamano le relative controparti più sicure e più recenti. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -139,7 +123,7 @@ void _wsearchenv(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`_searchenv`|\<stdlib.h>|  
-|`_wsearchenv`|\<stdlib.h> o \<wchar.h>|  
+|`_wsearchenv`|\<stdlib.h> or \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   

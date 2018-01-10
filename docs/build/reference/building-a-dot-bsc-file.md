@@ -1,34 +1,34 @@
 ---
-title: "Compilazione di un file BSC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".bsc (file), compilazione"
-  - "bsc (file), compilazione"
+title: La creazione di una. File BSC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, building
+- bsc files, building
 ms.assetid: 304e240d-692a-4f8b-b9ed-891c01bbb2ad
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0490a9df1f58ac009bda61b330e29c153a080e05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Compilazione di un file BSC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE consente di compilare un nuovo file di informazioni di visualizzazione dai file sbr appena creati.  Consente inoltre di mantenere un file bsc esistente usando i file sbr dei file oggetto che hanno subito modifiche dall'ultima compilazione.  
+# <a name="building-a-bsc-file"></a>Compilazione di un file BSC
+BSCMAKE è possibile creare un nuovo file di informazioni dai file SBR appena creato. Consente inoltre di mantenere un file BSC esistente usando i file sbr per i file di oggetti che sono state modificate dall'ultima compilazione.  
   
--   [Creazione di un file SBR](../../build/reference/creating-an-dot-sbr-file.md)  
+-   [Come creare un file SBR](../../build/reference/creating-an-dot-sbr-file.md)  
   
--   [Modalità di compilazione di un file bsc in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
+-   [La modalità di compilazione di un file BSC in BSCMAKE](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)  
   
-## Vedere anche  
- [Riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)

@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a0f0ebd9d413a8ab49abcc08102cd33948e24fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0d010e7b04093446792eb122a67227880b7a395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenv-wgetenv"></a>getenv, _wgetenv
 Ottiene un valore dall'ambiente corrente. Sono disponibili versioni più sicure di queste funzioni. Vedere [getenv_s, _wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md).  
@@ -150,6 +151,6 @@ New LIB variable is: c:\mylib;c:\yourlib
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [Costanti di ambiente](../../c-runtime-library/environmental-constants.md)

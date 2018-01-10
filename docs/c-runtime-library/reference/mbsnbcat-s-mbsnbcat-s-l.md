@@ -43,11 +43,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 03c7a32169811d8df85cd283c1c9335b952079f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7288c00de4f09175d7fffd816267201011892953
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
 Aggiunge a una stringa di caratteri multibyte, al massimo, i primi `n` byte di un'altra stringa di caratteri multibyte. Queste sono versioni di [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -118,9 +119,9 @@ errno_t _mbsnbcat_s_l(
 ## <a name="remarks"></a>Note  
  La funzione `_mbsnbcat_s` aggiunge a `dest`, al massimo, i primi `count` byte di `src`. Se il byte immediatamente prima del carattere null in `dest` è un byte iniziale, viene sovrascritto dal byte iniziale di `src`. In caso contrario, il byte iniziale di `src` sovrascrive il carattere di terminazione Null di `dest`. Se un byte null viene visualizzato in `src` prima che `count` byte vengano aggiunti, `_mbsnbcat_s` aggiunge tutti i byte da `src` fino al carattere null. Se `count` è maggiore della lunghezza di `src`, la lunghezza di `src` viene usata invece di `count`. La stringa risultante termina con un carattere null. Se la copia avviene tra stringhe che si sovrappongono, il comportamento non è definito.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione che quelle che non dispongono del suffisso `_l` usano le impostazioni locali correnti, mentre quelle che dispongono del suffisso `_l` usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, ad eccezione che quelle che non dispongono del suffisso `_l` usano le impostazioni locali correnti, mentre quelle che dispongono del suffisso `_l` usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando quindi la necessità di specificare un argomento di dimensione e possono usare automaticamente le funzioni più recenti e sicure che sostituiscono quelle precedenti, meno sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando quindi la necessità di specificare un argomento di dimensione e possono usare automaticamente le funzioni più recenti e sicure che sostituiscono quelle precedenti, meno sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50d1c551f0ae51daafb3d83075091fa299db0fed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freea"></a>_freea
 Dealloca o libera un blocco di memoria.  
@@ -66,7 +67,7 @@ void _freea(
   
  Dopo che un blocco di memoria è stato liberato, [_heapmin](../../c-runtime-library/reference/heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.  
   
- Una chiamata a `_freea` deve accompagnare tutte le chiamate a `_malloca`. È anche un errore chiamare `_freea` due volte sulla stessa memoria. Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, in particolare con le funzionalità [malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) abilitate definendo `_CRTDBG_MAP_ALLOC`, è più facile trovare chiamate mancanti o duplicate a `_freea`. Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Una chiamata a `_freea` deve accompagnare tutte le chiamate a `_malloca`. È anche un errore chiamare `_freea` due volte sulla stessa memoria. Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, in particolare con le funzionalità [malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) abilitate definendo `_CRTDBG_MAP_ALLOC`, è più facile trovare chiamate mancanti o duplicate a `_freea`. Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  `_freea` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
   
@@ -76,7 +77,7 @@ void _freea(
 |--------------|---------------------|  
 |`_freea`|\<stdlib.h> e \<malloc.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [_malloca](../../c-runtime-library/reference/malloca.md).  

@@ -12,16 +12,17 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 10c3cd585548cf406db71b54aadabf246d0054d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae9da167a3210e704b9d8b209e601e8269311513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-apps-and-libraries-ccx"></a>Compilazione di applicazioni e librerie (C++/CX)
 Negli argomenti di questa sezione forniscono alcune informazioni sull'utilizzo del sistema di compilazione per generare un componente Windows Runtime o app Universal Windows Platform.  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 -   [Opzioni del compilatore e del Linker](../cppcx/compiler-and-linker-options-c-cx.md)  
   

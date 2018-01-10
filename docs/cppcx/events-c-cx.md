@@ -12,11 +12,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: aef6920b9133280a20cc41344fa707a2cb1cfe97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af74c81186591062214e2a8eb1695a2d177cfc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="events-ccx"></a>Eventi (C++/CX)
 Tipo può dichiarare un Runtime di Windows (pubblicati) eventi e il codice client nello stesso componente o in altri componenti può sottoscrivere tali eventi associando i metodi chiamati *gestori eventi* con l'evento. A un singolo evento possono essere associati più gestori eventi. Quando l'oggetto di pubblicazione genera l'evento, vengono richiamati tutti i gestori eventi. In questo modo, una classe di sottoscrizione può eseguire qualsiasi azione personalizzata appropriata quando l'editore genera l'evento . Un evento è un tipo delegato che specifica la firma che tutti i gestori eventi devono avere per sottoscrivere l'evento.  

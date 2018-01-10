@@ -1,41 +1,42 @@
 ---
-title: "hash_map::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end (membro) [STL/CLR]"
+title: 'hash_map:: end (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: bda12a48-cc2b-426f-a4e8-992c88f61736
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cb11504783e67a5cfce84dfd275646b1b91d3e01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce la fine della sequenza controllata.  
+# <a name="hashmapend-stlclr"></a>hash_map::end (STL/CLR)
+Designa la fine della sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator end();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore bidirezionale che punta a oltre la fine della sequenza selezionata.  Utilizzarla per ottenere un iteratore che definisce la fine della sequenza controllata; il doesn dello stato non di modifica se la lunghezza di sequenza selezionata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore bidirezionale che punta appena oltre la fine della sequenza controllata. È utilizzato per ottenere un iteratore che definisce la fine della sequenza controllata. il relativo stato modifica se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_end.cpp   
@@ -69,14 +70,17 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**\*\-\- \-\-end\(\) \= \[b 2\]**  
-**\*\-\-end\(\) \= \[c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --end() = [b 2]  
+*--end() = [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)

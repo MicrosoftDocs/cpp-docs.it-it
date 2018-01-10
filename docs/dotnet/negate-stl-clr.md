@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976cec2760669afe86b31778eb09431ba1651557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7a9ae9fa1270a2a7f417e46681b21120eeded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="negate-stlclr"></a>negate (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce il relativo argomento negato. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -57,7 +60,7 @@ public:
 |delegate_type|Il tipo del delegato generico.|  
 |result_type|Il tipo del risultato funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |negate|Costruisce il funtore.|  
   

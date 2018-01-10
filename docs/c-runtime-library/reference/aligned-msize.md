@@ -33,11 +33,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f4b39fda75013cb69e57b6f8c62bc3155261e1db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f94bf064f4fe6e604675eba28867ccdc460530d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedmsize"></a>_aligned_msize
 Restituisce le dimensioni di un blocco di memoria allocato nell'heap.  
@@ -68,7 +69,7 @@ size_t _msize(
 ## <a name="remarks"></a>Note  
  La funzione `_aligned_msize` restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) o [_aligned_realloc](../../c-runtime-library/reference/aligned-realloc.md). I valori `alignment` e `offset` devono corrispondere ai valori passati alla funzione che ha allocato il blocco.  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_aligned_msize` viene risolto in [_aligned_msize_dbg](../../c-runtime-library/reference/aligned-msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_aligned_msize` viene risolto in [_aligned_msize_dbg](../../c-runtime-library/reference/aligned-msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  Questa funzione convalida il relativo parametro. Se `memblock` è un puntatore Null o `alignment` non è una potenza di 2, `_msize` richiama un gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
   
@@ -78,7 +79,7 @@ size_t _msize(
 |-------------|---------------------|  
 |`_msize`|\<malloc.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

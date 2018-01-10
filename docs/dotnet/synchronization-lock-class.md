@@ -1,31 +1,33 @@
 ---
-title: "Sincronizzazione (classe lock) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock (classe)"
+title: Sincronizzazione (classe lock) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6b3c377f54b4d60f5d7b74f062488f1b99ba5ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Sincronizzazione (classe lock)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un meccanismo per automatizzare la creazione di blocco che consentono di sincronizzare l'accesso a un oggetto.  
+# <a name="synchronization-lock-class"></a>Sincronizzazione (classe lock)
+Fornisce un meccanismo per automatizzare l'acquisizione di un blocco che sincronizza l'accesso a un oggetto.  
   
-## In questa sezione  
- [blocco](../dotnet/lock.md)  
+## <a name="in-this-section"></a>In questa sezione  
+ [lock](../dotnet/lock.md)  
   
-## Vedere anche  
- [Libreria di supporto per C\+\+](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>Vedere anche  
+ [Libreria di supporto per C++](../dotnet/cpp-support-library.md)

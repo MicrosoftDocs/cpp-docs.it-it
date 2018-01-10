@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- c1192
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1192
+f1_keywords: c1192
+dev_langs: C++
+helpviewer_keywords: C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b742c92c6832a8b0500befb56fea5781fa40cc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f7cea5935018e1d9a011be61081e5d3b979b2eb1
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1192"></a>Errore irreversibile C1192
 \#using non riuscito in 'file'  

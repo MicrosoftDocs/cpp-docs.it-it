@@ -19,18 +19,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 923fc7074c4d139d680ed9dee96a0dc54a185f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d80d490dd53a6a27c610532cb26825dc29f34cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="graphics-operations-ccli"></a>Operazioni di grafica (C++/CLI)
 Viene illustrato l'utilizzo di manipolazione di immagine di [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
  Gli argomenti seguenti illustrano l'utilizzo del <xref:System.Drawing.Image?displayProperty=fullName> classe per eseguire la modifica delle immagini.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Convertire formati di file immagine con .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
   
  [Procedura: Visualizzare immagini con .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  

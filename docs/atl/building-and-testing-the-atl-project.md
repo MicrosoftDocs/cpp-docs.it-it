@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2bb3fc7d9d1e47546e4475057a11dcf560a84c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a3dbd570a16228c02215560e8133a77b98a2489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-and-testing-the-atl-project"></a>Compilazione e test del progetto ATL
 Come accennato [inserimento di un controllo composito](../atl/inserting-a-composite-control.md), uno dei componenti del progetto iniziali è una pagina HTML predefinita che ospita il nuovo controllo composito. Dopo aver completato la modifica del controllo composito, fare clic su **Compila soluzione** o **Ricompila soluzione** dal **compilare** menu. Una volta il progetto venga compilato correttamente, caricare la pagina HTML, che si trovano nella directory radice del progetto di controllo composito, Internet Explorer o un altro browser e testare le funzionalità del controllo.  

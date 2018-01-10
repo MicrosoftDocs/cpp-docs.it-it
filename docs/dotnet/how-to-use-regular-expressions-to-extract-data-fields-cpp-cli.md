@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a297ee1676fb3ffbff45d46334d20280beeab078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a82afb894b31dcbee88c7ecdf0720ef198c866b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>Procedura: utilizzare espressioni regolari per estrarre campi dati (C++/CLI)
 Esempio di codice seguente viene illustrato l'utilizzo di espressioni regolari per estrarre dati da una stringa formattata. Nell'esempio di codice viene illustrato come utilizzare la <xref:System.Text.RegularExpressions.Regex> classe per specificare un criterio che corrisponde a un indirizzo di posta elettronica. In questo modello include gli identificatori di campo che possono essere utilizzati per recuperare le parti di nome host di ogni indirizzo di posta elettronica. La <xref:System.Text.RegularExpressions.Match> classe viene utilizzata per eseguire la ricerca effettiva. Se l'indirizzo di posta elettronica specificato è valido, il nome utente e i nomi host vengono estratti e visualizzati.  

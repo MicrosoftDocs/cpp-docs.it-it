@@ -1,64 +1,66 @@
 ---
-title: "CEnumerator::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CEnumerator.Open"
-  - "CEnumerator::Open"
-  - "ATL::CEnumerator::Open"
-  - "CEnumerator.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (metodo)"
+title: 'CEnumerator:: Open | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CEnumerator.Open
+- CEnumerator::Open
+- ATL::CEnumerator::Open
+- CEnumerator.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: b22821a0-257a-4543-ad0c-2649d4ac092e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3a5c35b3806e04f20417c7053248d1a098456403
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CEnumerator::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Associa il moniker dell'enumeratore, se si è specificato, quindi viene recuperato il rowset dell'enumeratore chiamando [ISourcesRowset::GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx).  
+# <a name="cenumeratoropen"></a>CEnumerator::Open
+Associa il moniker per l'enumeratore, se uno è specificato, recupera il set di righe per l'enumeratore chiamando [ISourcesRowset:: GetSourcesRowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT Open(   
-   LPMONIKER pMoniker    
+      HRESULT Open(   
+   LPMONIKER pMoniker    
 ) throw( );  
-HRESULT Open(   
-   const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR    
+HRESULT Open(   
+   const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR    
 ) throw( );  
-HRESULT Open(   
-   const CEnumerator& enumerator    
+HRESULT Open(   
+   const CEnumerator& enumerator    
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pMoniker`  
- \[in\] puntatore A un moniker per un enumeratore.  
+ [in] Puntatore a un moniker per l'enumeratore.  
   
  *pClsid*  
- \[in\] puntatore A **CLSID** di un enumeratore.  
+ [in] Un puntatore al **CLSID** dell'enumeratore.  
   
  `enumerator`  
- \[in\] riferimento A un enumeratore.  
+ [in] Un riferimento a un enumeratore.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CEnumerator](../../data/oledb/cenumerator-class.md)

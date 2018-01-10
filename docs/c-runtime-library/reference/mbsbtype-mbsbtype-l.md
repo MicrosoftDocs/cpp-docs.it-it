@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,24 +28,23 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05c106136c36d09b06e5b168a0c582b87c306d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a20ff8b10229714a434dc0f77748f37f9c15064a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 Restituisce il tipo di byte all'interno di una stringa.  
@@ -91,7 +89,7 @@ int _mbsbtype_l(
 ## <a name="remarks"></a>Note  
  La funzione `_mbsbtype` determina il tipo di un byte in una stringa di caratteri multibyte. La funzione esamina solo i byte in corrispondenza dell'offset `count` in `mbstr`, ignorando i caratteri non validi prima del byte specificato.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso `_l` usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione con il suffisso `_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione di questa funzione senza il suffisso `_l` usa le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. La versione con il suffisso `_l` è identica, ad eccezione del fatto che usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se la stringa di input è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `_MBC_ILLEGAL`.  
   

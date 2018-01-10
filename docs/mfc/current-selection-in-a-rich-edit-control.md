@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b41b99ca515cb91c097cb20c3ef0cd0e5dccb64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Selezione corrente in un controllo Rich Edit
 L'utente può selezionare il testo in un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) utilizzando il mouse o tastiera. La selezione corrente è l'intervallo di caratteri selezionati o la posizione del punto di inserimento, se i caratteri non vengono selezionate. Un'applicazione può ottenere informazioni relative alla selezione corrente, impostare la selezione corrente, determinare se evidenziare le modifiche di selezione corrente e Mostra o Nascondi la selezione.  

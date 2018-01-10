@@ -1,32 +1,33 @@
 ---
-title: "helpstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstring attribute [C++]"
+title: HelpString | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstring
+dev_langs: C++
+helpviewer_keywords: helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3df545f5d87d36c26d999dc3a5fbee8720830c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# helpstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente di specificare la stringa di caratteri utilizzata per descrivere l'elemento cui è associata.  
+# <a name="helpstring"></a>helpstring
+Specifica una stringa di caratteri utilizzato per descrivere l'elemento a cui viene applicata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,35 +36,34 @@ Consente di specificare la stringa di caratteri utilizzata per descrivere l'elem
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `string`  
- Il testo della stringa della guida.  
+ Il testo della stringa della Guida.  
   
-## Note  
- **viene copiato nella helpstring** L'attributo di C\+\+ ha la stessa funzionalità di  [viene copiato nella helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **helpstring** attributo C++ ha la stessa funzionalità come il [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [valore predefinito](../windows/defaultvalue.md) per un esempio di utilizzo  **viene copiato nella helpstring**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [defaultvalue](../windows/defaultvalue.md) per un esempio di come utilizzare **helpstring**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|`interface`,  `typedef`,  **classe**, metodo, proprietà|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|`interface`, `typedef`, **classe**, metodo, proprietà|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../windows/helpfile.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [HelpFile](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79dbc2ff2e47e7aa277a2176dbd8605c5a78c749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a1a03dd6ecc52cd3921428e681fe5affa11d275
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 Esegue il wrapping di una raccolta di .NET per l'utilizzo come un contenitore STL/CLR. Oggetto `collection_adapter` è una classe modello che descrive un oggetto contenitore STL/CLR semplice. Esegue il wrapping di un'interfaccia della libreria di classi Base (BCL) e restituisce una coppia iteratore che consente di modificare la sequenza controllata.  

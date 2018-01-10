@@ -53,11 +53,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd7c3fd10461033c6b66a96eecd4d5e6ec5941b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fe06748a6e349f612fdf564c9aed917e43f164b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tolower-tolower-towlower-tolowerl-towlowerl"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 Converte un carattere in minuscolo.  
@@ -95,7 +96,7 @@ int _towlower_l(
  Ognuna di queste routine converte una copia di `c` in minuscolo, se la conversione è possibile, e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.  
   
 ## <a name="remarks"></a>Note  
- Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione della combinazione di maiuscole/minuscole di `towlower` dipende dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` accettano le impostazioni locali come parametro e usano tali impostazioni invece di quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Ognuna di queste routine converte una determinata lettera maiuscola in minuscola, se possibile e rilevante. La conversione della combinazione di maiuscole/minuscole di `towlower` dipende dalle impostazioni locali. La combinazione di maiuscole/minuscole viene modificata solo per i caratteri rilevanti per le impostazioni locali correnti. Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` accettano le impostazioni locali come parametro e usano tali impostazioni invece di quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Affinché `_tolower` possa fornire i risultati previsti, [__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) e [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) devono entrambe restituire un valore diverso da zero.  
   
@@ -117,14 +118,14 @@ int _towlower_l(
 |`_tolower`|\<ctype.h>|  
 |`towlower`|\<ctype.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio in [Funzioni to](../../c-runtime-library/to-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
  [Funzioni to](../../c-runtime-library/to-functions.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

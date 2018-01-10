@@ -1,32 +1,33 @@
 ---
-title: "set::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase (membro) [STL/CLR]"
+title: 'set:: Erase (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 0596514b-d4cd-4d2d-8223-3bee6980261c
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3aa0e69fbd936dfaccde88ca624a14ea2b066e6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# set::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rimuove gli elementi alle posizioni specificate.  
+# <a name="seterase-stlclr"></a>set::erase (STL/CLR)
+Rimuove gli elementi in corrispondenza delle posizioni specificate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +35,29 @@ iterator erase(iterator first, iterator last);
 size_type erase(key_type key)  
 ```  
   
-#### Parametri  
- first  
+#### <a name="parameters"></a>Parametri  
+ primo  
  Inizio dell'intervallo da cancellare.  
   
- chiave  
- Valore chiave da cancellare.  
+ key  
+ Valore della chiave da cancellare.  
   
  last  
  Fine dell'intervallo da cancellare.  
   
- where  
+ dove  
  Elemento da cancellare.  
   
-## Note  
- La prima funzione membro rimuove l'elemento della sequenza controllata puntata da `where` e restituisce un iteratore che definisce il primo elemento che rimane oltre l'elemento rimosso o [set::end](../dotnet/set-end-stl-clr.md)`()` se tale elemento non esiste.  Viene utilizzato per rimuovere un singolo elemento.  
+## <a name="remarks"></a>Note  
+ La prima funzione membro rimuove l'elemento della sequenza controllata a cui puntata `where`e restituisce un iteratore che definisce il primo elemento rimanente oltre l'elemento rimosso, o [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md) `()` se tale elemento non esiste. Utilizzarlo per rimuovere un singolo elemento.  
   
- La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo `[``first``,` `last``)` e restituisce un iteratore che definisce il primo elemento che rimane oltre tutti gli elementi eliminati o `end()` se tale elemento non esiste.  Utilizzarla per rimuovere zero o più elementi adiacenti.  
+ La seconda funzione membro rimuove gli elementi della sequenza controllata nell'intervallo [`first`, `last`) e restituisce un iteratore che definisce il primo elemento rimanente successivo a tutti gli elementi eliminati, o `end()` se tale elemento non è presente... Utilizzarlo per rimuovere zero o più elementi adiacenti.  
   
- La terza funzione membro elimina qualsiasi elemento della sequenza controllata la cui chiave ha ordinamento equivalente a `key` e restituisce un conteggio del numero di elementi rimossi.  Utilizzarla per eliminare e contare tutti gli elementi che soddisfano una chiave specificata.  
+ La terza funzione membro rimuove qualsiasi elemento della sequenza controllata la cui chiave ha un ordinamento equivalente a `key`e restituisce un conteggio del numero di elementi rimossi. Utilizzarla per rimuovere e il conteggio di tutti gli elementi che corrispondono a una chiave specificata.  
   
- Ogni cancellazione di elemento richiede un tempo proporzionale al logaritmo del numero di elementi della sequenza controllata.  
+ La cancellazione di ogni elemento richiede tempo proporzionale al logaritmo del numero di elementi nella sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_set_erase.cpp   
@@ -97,16 +98,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Requisiti  
- **Intestazione:** \<cliext\/set\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [set](../dotnet/set-stl-clr.md)   
- [set::clear](../dotnet/set-clear-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [set (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::clear (STL/CLR)](../dotnet/set-clear-stl-clr.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b2eb3e0e55442ad4525dea266d4f1ebc4f87039
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f5c32e92ccdbccbeb2683e44d6d5aaeabc6db8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2679"></a>Errore del compilatore C2679
 'operator' binario: è stato trovato alcun operatore che accetti un operando di destra di tipo 'type' (o nessuna conversione accettabile)  

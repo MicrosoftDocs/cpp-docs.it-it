@@ -1,112 +1,115 @@
 ---
-title: "CProcedureColumns, CProcedureColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_guidType"
-  - "CProcedureColumnInfo"
-  - "IS_NULLABLE"
-  - "m_szCatalog"
-  - "m_nRowsetNumber"
-  - "m_nColumnPropID"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "COLUMN_GUID"
-  - "m_szColumnName"
-  - "NUMERIC_PRECISION"
-  - "m_nDataType"
-  - "m_szSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "m_nPrecision"
-  - "m_szName"
-  - "CProcedureColumns"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "m_bIsNullable"
-  - "m_nScale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CProcedureColumnInfo (classe di parametri)"
-  - "CProcedureColumns (classe typedef)"
-  - "DATA_TYPE"
-  - "DESCRIPTION (membro dati classe)"
-  - "IS_NULLABLE"
-  - "m_bIsNullable"
-  - "m_guidColumn"
-  - "m_guidType"
-  - "m_nColumnPropID"
-  - "m_nDataType"
-  - "m_nMaxLength"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_nPrecision"
-  - "m_nRowsetNumber"
-  - "m_nScale"
-  - "m_szCatalog"
-  - "m_szColumnName"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
+title: CProcedureColumns, CProcedureColumnInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_guidType
+- CProcedureColumnInfo
+- IS_NULLABLE
+- m_szCatalog
+- m_nRowsetNumber
+- m_nColumnPropID
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- COLUMN_GUID
+- m_szColumnName
+- NUMERIC_PRECISION
+- m_nDataType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- COLUMN_PROPID
+- m_guidColumn
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- m_nPrecision
+- m_szName
+- CProcedureColumns
+- DATA_TYPE
+- m_nOctetLength
+- m_bIsNullable
+- m_nScale
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- COLUMN_PROPID
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_guidType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- m_szCatalog
+- CProcedureColumns typedef class
+- m_nPrecision
+- m_nOrdinalPosition
+- m_nColumnPropID
+- NUMERIC_SCALE
+- m_nRowsetNumber
+- m_szColumnName
+- COLUMN_NAME
+- m_nOctetLength
+- IS_NULLABLE
+- m_szName
+- m_bIsNullable
+- m_szDescription
+- m_nDataType
+- m_nScale
+- COLUMN_GUID
+- CHARACTER_MAXIMUM_LENGTH
+- m_guidColumn
+- CProcedureColumnInfo parameter class
 ms.assetid: c82626c4-8047-4b9c-b342-e35bf37b7611
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b11e91c450e082cbb46e2f17975ff98a95f8d25d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedureColumns, CProcedureColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CProcedureColumns** typedef per implementare la propria classe di parametri **CProcedureColumnInfo**.  
+# <a name="cprocedurecolumns-cprocedurecolumninfo"></a>CProcedureColumns, CProcedureColumnInfo
+Chiamare la classe typedef **CProcedureColumns** per implementare la relativa classe di parametro **CProcedureColumnInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe restituisce informazioni sulle colonne del rowset restituito da routine.  
+ Questa classe restituisce informazioni sulle colonne di set di righe restituiti dalle stored procedure.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di PROCEDURE\_COLUMNS](https://msdn.microsoft.com/en-us/library/ms723092.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe PROCEDURE_COLUMNS](https://msdn.microsoft.com/en-us/library/ms723092.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_nRowsetNumber|ROWSET\_NUMBER|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_guidType|TYPE\_GUID|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nPrecision|NUMERIC\_PRECISION|  
-|m\_nScale|NUMERIC\_SCALE|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_nRowsetNumber|ROWSET_NUMBER|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_guidType|TYPE_GUID|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nPrecision|NUMERIC_PRECISION|  
+|m_nScale|NUMERIC_SCALE|  
+|m_szDescription|DESCRIPTION|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

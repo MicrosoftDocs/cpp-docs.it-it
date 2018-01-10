@@ -1,56 +1,59 @@
 ---
-title: "Recordset: dichiarazione di una classe per una query gi&#224; definita (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "recordset ODBC, query"
-  - "query e recordset predefiniti"
-  - "recordset, query predefinite"
-  - "recordset, stored procedure"
-  - "stored procedure, e recordset"
+title: "Recordset: Dichiarazione di una classe per una Query già definita (ODBC) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, queries
+- predefined queries and recordsets
+- stored procedures, and recordsets
+- recordsets, predefined queries
+- recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ecdc146610fe20dcc007d6b1223d7108e1ee595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: dichiarazione di una classe per una query gi&#224; definita (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset: dichiarazione di una classe per una query già definita (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- In questo argomento viene illustrata la creazione di una classe di recordset per una query già definita, talvolta detta stored procedure, come in Microsoft SQL Server.  
+ In questo argomento viene illustrato come creare una classe per una query già definita (talvolta definita come una stored procedure, come Microsoft SQL Server).  
   
 > [!NOTE]
->  L'argomento è relativo agli oggetti derivati da `CRecordset` per cui il recupero di massa di righe non è ancora stato implementato.  Qualora venga implementato il recupero di massa di righe, la procedura sarà simile.  Per comprendere le differenze tra i recordset che implementano il recupero di massa di righe e quelli che non lo implementano, vedere [Recordset: recupero di massa di record \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Questo argomento si applica agli oggetti derivati da `CRecordset` in quale riga bulk recupero non è stato implementato. Se viene implementato il recupero di massa di righe, il processo è molto simile. Per comprendere le differenze tra i recordset che implementano il recupero di massa di righe e quelli che non, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Alcuni sistemi di gestione di database \(DBMS\) consentono di creare una query già definita e di chiamarla dai programmi come una funzione.  La query ha un nome, può accettare parametri e restituire record.  Nella procedura riportata in questo argomento viene descritta la chiamata a una query già definita che restituisce record e probabilmente accetta parametri.  
+ Alcuni sistemi di gestione di database (DBMS) consentono di creare una query predefinita e lo chiama da programmi come una funzione. La query ha un nome, può accettare parametri e può restituire i record. La procedura descritta in questo argomento viene descritto come chiamare una query predefinita che restituisce i record (e probabilmente accetta parametri).  
   
- Le classi di database non supportano l'aggiornamento delle query già definite.  La differenza tra una query già definita per snapshot e una query già definita per dynaset non sta nella possibilità di aggiornarle ma nella capacità di visualizzare le modifiche apportate da altri utenti \(o da altri recordset del programma\) nel recordset.  
+ Le classi di database non supportano l'aggiornamento delle query predefinita. La differenza tra una query di snapshot predefinita e una query predefinita dynaset non aggiornabilità ma se le modifiche apportate da altri utenti (o altri recordset nel programma) sono visibili nel recordset.  
   
 > [!TIP]
->  Non è necessario utilizzare un recordset per chiamare una query già definita che non restituisce record.  Preparare l'istruzione SQL come descritto di seguito, ma eseguirla chiamando la funzione membro [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md) di `CDatabase`.  
+>  Non è necessario un recordset per chiamare una query predefinita che non restituisce i record. Preparare l'istruzione SQL, come descritto di seguito, ma eseguirla chiamando il `CDatabase` funzione membro [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).  
   
- È possibile creare un'unica classe di recordset per la gestione delle chiamate a una query già definita. Tuttavia, è necessario impostare manualmente parte dell'operazione,  in quanto le procedure guidate non supportano la creazione di una classe per questo scopo specifico.  
+ È possibile creare una classe recordset singolo per gestire la chiamata di una query già definita, ma è necessario eseguire alcune delle operazioni manualmente. Le procedure guidate non supportano la creazione di una classe per questo scopo specifico.  
   
-#### Per creare una classe per le chiamate a una query già definita \(stored procedure\)  
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>Per creare una classe per la chiamata di una query predefinita (stored procedure)  
   
-1.  Utilizzare la [Creazione guidata consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) tramite il comando **Aggiungi classe** per creare una classe di recordset per la tabella contenente la maggior parte delle colonne restituite dalla query.  In tal modo, è possibile porre le basi da cui partire.  
+1.  Utilizzare il [Creazione guidata Consumer ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) da **Aggiungi classe** per creare una classe per la tabella contenente più colonne restituite dalla query. Questo offre un punto di partenza.  
   
-2.  Aggiungere manualmente i membri dati di campo per tutte le colonne di tutte le tabelle restituite dalla query, ma non create automaticamente dalla procedura guidata.  
+2.  Aggiungere manualmente i membri di dati campo per tutte le colonne di tutte le tabelle restituite dalla query, ma che la procedura guidata non è stata creata automaticamente.  
   
-     Se ad esempio la query restituisce tre colonne, ciascuna delle quali è contenuta in due tabelle aggiuntive, aggiungere alla classe sei membri dati di campo con tipi di dati appropriati.  
+     Ad esempio, se la query restituisce tre colonne da due tabelle aggiuntive, aggiungere alla classe sei membri di dati di campo (dei tipi di dati appropriato).  
   
-3.  Aggiungere manualmente le chiamate alle funzioni [RFX](../../data/odbc/record-field-exchange-rfx.md) nella funzione membro [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) della classe, di cui una corrispondente al tipo di dati di ciascun membro dati di campo aggiunto.  
+3.  Aggiungere manualmente [RFX](../../data/odbc/record-field-exchange-rfx.md) funzione chiama la [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) aggiunto di funzione membro della classe, uno corrispondente al tipo di dati di ogni membro dati di campo.  
   
     ```  
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:   
@@ -58,39 +61,39 @@ L'argomento è relativo alle classi ODBC MFC.
     ```  
   
     > [!NOTE]
-    >  È necessario conoscere i tipi di dati e l'ordine delle colonne restituite nel gruppo di risultati.  È necessario inoltre che ci sia una corrispondenza tra l'ordine delle chiamate alle funzioni RFX in `DoFieldExchange` e l'ordine delle colonne nel gruppo di risultati.  
+    >  È necessario conoscere i tipi di dati e l'ordine delle colonne restituite nel risultato è impostato. L'ordine delle chiamate alle funzioni RFX chiamate `DoFieldExchange` deve corrispondere all'ordine delle colonne del set di risultati.  
   
-4.  Aggiungere manualmente le inizializzazioni per i nuovi membri dati di campo nel costruttore della classe del recordset.  
+4.  Aggiungere manualmente le inizializzazioni per i nuovi membri dati di campo nel costruttore della classe recordset.  
   
-     È inoltre necessario incrementare il valore di inizializzazione per il membro dati [m\_nFields](../Topic/CRecordset::m_nFields.md).  La procedura guidata scrive l'inizializzazione solo per i membri dati di campo aggiunti automaticamente.  Di seguito è riportato un esempio.  
+     È inoltre necessario incrementare il valore di inizializzazione per il [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) (membro dati). La procedura guidata scrive l'inizializzazione, ma comprende solo membri di dati del campo che viene aggiunto automaticamente. Ad esempio:  
   
     ```  
     m_nFields += 6;  
     ```  
   
-     Non è necessario inizializzare in questa fase alcuni tipi di dati, come `CLongBinary` o le matrici di byte.  
+     Alcuni tipi di dati non devono essere inizializzati in questo caso, ad esempio, `CLongBinary` o matrici di byte.  
   
-5.  Se la query accetta parametri, aggiungere un membro dati di parametro, una chiamata alla funzione RFX e un'inizializzazione per ogni parametro.  
+5.  Se la query accetta parametri, aggiungere un membro dati di parametro per ogni parametro, una chiamata alla funzione RFX e un'inizializzazione.  
   
-6.  È necessario incrementare `m_nParams` per ciascun parametro aggiunto, come è stato fatto per `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura.  Per ulteriori informazioni, vedere [Recordset: applicazione di parametri a un recordset \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
+6.  È necessario incrementare `m_nParams` per ciascun parametro, viene aggiunto come `m_nFields` per i campi aggiunti nel passaggio 4 di questa procedura. Per ulteriori informazioni, vedere [Recordset: applicazione di parametri a un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).  
   
-7.  Scrivere manualmente una stringa di istruzione SQL con il seguente formato:  
+7.  Consente di scrivere manualmente una stringa di istruzione SQL con il formato seguente:  
   
     ```  
     {CALL proc-name [(? [, ?]...)]}  
     ```  
   
-     dove **CALL** è una parola chiave ODBC, **proc\-name** è il nome della query noto all'origine dati e gli elementi ? sono segnaposto per i valori dei parametri forniti al recordset in fase di esecuzione, se disponibili.  Nell'esempio riportato di seguito viene illustrata la preparazione di un segnaposto per un parametro.  
+     dove **CHIAMARE** è una parola chiave ODBC, **nome procedura** è il nome della query sull'origine dati, è noto e "?" sono i segnaposto per i valori dei parametri forniti per il recordset in fase di esecuzione (se presente) . Nell'esempio seguente viene preparato un segnaposto per un parametro:  
   
     ```  
     CString mySQL = "{CALL Delinquent_Accts (?)}";  
     ```  
   
-8.  Nel codice che apre il recordset impostare i valori dei membri dati di parametro del recordset, quindi chiamare la funzione membro **Open**, passando la stringa SQL per il parametro **lpszSQL**.  In alternativa, sostituire la stringa restituita dalla funzione membro `GetDefaultSQL` nella classe.  
+8.  Nel codice che apre il recordset, impostare i valori di parametro del recordset membri dati e quindi chiamare il **aprire** funzione membro, passando la stringa SQL il **lpszSQL** parametro. In alternativa, sostituire la stringa restituita dal `GetDefaultSQL` funzione membro nella classe.  
   
- Negli esempi riportati di seguito viene illustrata la procedura per chiamare una query già definita, denominata `Delinquent_Accts`, che utilizza un parametro per un numero di zona di vendita.  Questa query restituisce tre colonne: `Acct_No`, `L_Name`, `Phone`.  Tutte le colonne sono contenute nella tabella Customers.  
+ Negli esempi seguenti viene illustrano la procedura per la chiamata di una query già definita, denominata `Delinquent_Accts`, che accetta un parametro per un numero di zona di vendita. Questa query restituisce tre colonne: `Acct_No`, `L_Name`, `Phone`. Tutte le colonne sono dalla tabella Customers.  
   
- Nel recordset riportato di seguito sono specificati i membri dati di campo per le colonne restituite dalla query e un parametro per il numero della zona di vendita richiesto in fase di esecuzione.  
+ Il recordset seguente specifica i membri di dati campo per le colonne restituite dalla query e un parametro per le vendite della zona richiesto in fase di esecuzione.  
   
 ```  
 class CDelinquents : public CRecordset  
@@ -104,9 +107,9 @@ class CDelinquents : public CRecordset
 };  
 ```  
   
- Questa dichiarazione di classe viene scritta automaticamente dalla procedura guidata, fatta eccezione per il membro `m_lDistParam` aggiunto manualmente.  Gli altri membri non sono riportati in questa sede.  
+ Questa dichiarazione di classe viene dalla procedura guidata, tranne che per il `m_lDistParam` membro aggiunto manualmente. Altri membri non vengono visualizzati qui.  
   
- Nell'esempio riportato di seguito vengono illustrate le inizializzazioni per i membri dati nel costruttore `CDelinquents`.  
+ Nell'esempio seguente vengono illustrate le inizializzazioni per i membri dati di `CDelinquents` costruttore.  
   
 ```  
 CDelinquents::CDelinquents(CDatabase* pdb)  
@@ -123,9 +126,9 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }  
 ```  
   
- Si notino le inizializzazioni per [m\_nFields](../Topic/CRecordset::m_nFields.md) e [m\_nParams](../Topic/CRecordset::m_nParams.md).  `m_nFields` viene inizializzato dalla procedura guidata, mentre `m_nParams` dal programmatore.  
+ Si notino le inizializzazioni per [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) e [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). La procedura guidata consente di inizializzare `m_nFields`; è inizializzare `m_nParams`.  
   
- Nell'esempio seguente sono illustrate le funzioni RFX in `CDelinquents::DoFieldExchange`:  
+ L'esempio successivo mostra le funzioni RFX `CDelinquents::DoFieldExchange`:  
   
 ```  
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)  
@@ -139,9 +142,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Oltre a effettuare le chiamate a RFX per le tre colonne restituite, questo codice gestisce l'associazione del parametro passato in fase di esecuzione.  Il parametro viene immesso nella colonna `Dist_No` \(numero della zona\).  
+ Oltre a rendere RFX per le tre colonne restituite, questo codice gestisce l'associazione il parametro passato in fase di esecuzione. Il parametro viene immesso il `Dist_No` colonna (numero di zona).  
   
- Nell'esempio riportato di seguito viene illustrata l'impostazione della stringa SQL e l'utilizzo di tale stringa per l'apertura del recordset.  
+ Nell'esempio seguente viene illustrato come impostare la stringa SQL e come utilizzarla per aprire il recordset.  
   
 ```  
 // Construct a CDelinquents recordset object  
@@ -154,13 +157,13 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...  
 ```  
   
- Questo codice crea uno snapshot, a cui passa un parametro ottenuto in precedenza dall'utente, e chiama la query già definita.  Durante l'esecuzione della query, vengono restituiti i record relativi alla zona di vendita specificata.  Ciascun record contiene le colonne per il numero di conto, il cognome e il numero di telefono del cliente.  
+ Questo codice crea uno snapshot, lo passa un parametro ottenuto in precedenza dall'utente e chiama la query predefinita. Quando la query viene eseguita, restituisce i record per la zona di vendita specificato. Ogni record contiene colonne per il numero di account, il cognome del cliente e il numero di telefono del cliente.  
   
 > [!TIP]
->  Si consiglia di gestire un valore restituito \(parametro di output\) da una stored procedure.  Per ulteriori informazioni e un esempio, vedere [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md).  
+>  È possibile gestire un valore restituito (parametro di output) da una stored procedure. Per ulteriori informazioni e un esempio, vedere [CFieldExchange::](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: ripetizione di una query in un recordset \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
- [Recordset: dichiarazione di una classe per una tabella \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Recordset: esecuzione di un join \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Ripetizione di query in un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
+ [Recordset: Dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Recordset: esecuzione di un join (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

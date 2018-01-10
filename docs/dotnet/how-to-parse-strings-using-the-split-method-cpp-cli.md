@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be3443995966c5ce7b9c2fe4a156c8d6c79069d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7494a615d1a253c6617601f38e5d01755c718b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Procedura: analizzare stringhe tramite il metodo Split (C++/CLI)
 Esempio di codice seguente viene illustrato l'utilizzo di <xref:System.String.Split%2A?displayProperty=fullName> metodo per estrarre le parole da una stringa. Stringa che contiene più tipi di descrittori di parole viene costruita e quindi analizzata chiamando <xref:System.String.Split%2A> con un elenco di descrittori. Quindi, ogni parola della frase viene visualizzato separatamente.  

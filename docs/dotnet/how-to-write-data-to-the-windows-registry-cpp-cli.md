@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bb95ab9a70fd0144256f85d3fae6ccc3c034c1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f3bd5cedbf3c981964c9d03eb8a30fc5e1652081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Procedura: inserire dati nel Registro di sistema di Windows (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare il <xref:Microsoft.Win32.Registry.CurrentUser> chiave per creare un'istanza scrivibile del <xref:Microsoft.Win32.RegistryKey> classe corrispondente il **Software** chiave. Il <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> metodo viene quindi utilizzato per creare una nuova chiave e aggiungere coppie chiave/valore.  

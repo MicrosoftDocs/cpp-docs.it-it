@@ -1,52 +1,54 @@
 ---
-title: "Procedura: elaborare eventi di Windows Form da classi C++ native | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione eventi, interoperabilità .NET/nativa"
-  - "gestione eventi, interoperabilità gestita/nativa"
-  - "gestione eventi, sink di .NET in C++"
-  - "gestione eventi, Windows Form in C++"
+title: 'Procedura: elaborare eventi di Windows Form da classi C++ Native | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- event handling, managed/native interop
+- event handling, sinking .NET in C++
+- event handling, .NET/native interop
+- event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2dd3778dad837ffe23d17b58b4e579844dc71f40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: elaborare eventi di Windows Form da classi C++ native
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile attivare classi C\+\+ native in modo da ricevere callback da eventi gestiti generati da controlli Windows Form o da altri form in formato mappa macro MFC.  L'elaborazione di eventi in visualizzazioni e finestre di dialogo è simile alla stessa attività effettuata sui controlli.  
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Procedura: elaborare eventi di Windows Form da classi C++ native
+È possibile abilitare le classi C++ native ricevere callback da eventi gestiti generati da controlli Windows Form o in altri formati in formato di mappa macro MFC. Elaborazione di eventi in visualizzazioni e finestre di dialogo è simile alla stessa operazione per i controlli.  
   
- A tal fine, è necessario:  
+ A tale scopo, è necessario:  
   
--   Collegare un gestore eventi `OnClick` al controllo utilizzando [MAKE\_DELEGATE](../Topic/MAKE_DELEGATE.md).  
+-   Collegare un `OnClick` gestore eventi per il controllo usando [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate).  
   
--   Creare una mappa di delegati utilizzando [BEGIN\_DELEGATE\_MAP](../Topic/BEGIN_DELEGATE_MAP.md), [END\_DELEGATE\_MAP](../Topic/END_DELEGATE_MAP.md) e [EVENT\_DELEGATE\_ENTRY](../Topic/EVENT_DELEGATE_ENTRY.md).  
+-   Creare una mappa di delegati utilizzando [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), e [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).  
   
- In questo esempio vengono proseguite le operazioni effettuate in [Procedura: eseguire associazioni dati DDX\/DDV con Windows Form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
+ In questo esempio continua il lavoro fatto in [procedura: eseguire associazione dati DDX/DDV con Windows Form](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).  
   
- A questo punto il controllo MFC verrà associato \(`m_MyControl`\) a un delegato del gestore eventi gestito denominato `OnClick` per l'evento gestito <xref:System.Windows.Forms.Control.Click>.  
+ A questo punto, associare il controllo MFC (`m_MyControl`) con un delegato del gestore eventi gestito denominato `OnClick` per gestito <xref:System.Windows.Forms.Control.Click> evento.  
   
-### Per allegare il gestore eventi OnClick:  
+### <a name="to-attach-the-onclick-event-handler"></a>Per collegare il gestore dell'evento OnClick:  
   
-1.  Aggiungere la seguente riga di codice all'implementazione di BOOL CMFC01Dlg::OnInitDialog:  
+1.  Aggiungere il codice seguente all'implementazione di BOOL CMFC01Dlg:  
   
     ```  
     m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );  
     ```  
   
-2.  Aggiungere il seguente codice alla sezione pubblica nella dichiarazione di classe CMFC01Dlg : public CDialog.  
+2.  Aggiungere il codice seguente alla sezione pubblica nella dichiarazione di classe CMFC01Dlg: public CDialog.  
   
     ```  
     // delegate map  
@@ -57,7 +59,7 @@ manager: "ghogen"
     void OnClick( System::Object^ sender, System::EventArgs^ e );  
     ```  
   
-3.  Infine, aggiungere l'implementazione per `OnClick` a CMFC01Dlg.cpp:  
+3.  Infine, aggiungere l'implementazione per `OnClick` a CMFC01Dlg. cpp:  
   
     ```  
     void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)  
@@ -66,8 +68,8 @@ manager: "ghogen"
     }  
     ```  
   
-## Vedere anche  
- [MAKE\_DELEGATE](../Topic/MAKE_DELEGATE.md)   
- [BEGIN\_DELEGATE\_MAP](../Topic/BEGIN_DELEGATE_MAP.md)   
- [END\_DELEGATE\_MAP](../Topic/END_DELEGATE_MAP.md)   
- [EVENT\_DELEGATE\_ENTRY](../Topic/EVENT_DELEGATE_ENTRY.md)
+## <a name="see-also"></a>Vedere anche  
+ [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)   
+ [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)   
+ [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)   
+ [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)

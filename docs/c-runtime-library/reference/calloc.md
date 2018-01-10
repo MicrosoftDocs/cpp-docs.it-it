@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6b157deaad8e0506cc92fbe634f256052410a4ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e660413b3d3a95748432d411e92ef03a8e262409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calloc"></a>calloc
 Alloca una matrice in memoria con elementi inizializzati a 0.  
@@ -72,7 +73,7 @@ _set_new_mode(1)
   
  all'inizio del programma o collegarsi a NEWMODE.OBJ (vedere [Opzioni di collegamento](../../c-runtime-library/link-options.md)).  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `calloc` viene risolto in [_realloc_dbg](../../c-runtime-library/reference/calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `calloc` viene risolto in [_realloc_dbg](../../c-runtime-library/reference/calloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  `calloc` è contrassegnato come `__declspec(noalias)` e `__declspec(restrict)` e questo garantisce che la funzione non modifichi le variabili globali e il puntatore restituito non venga associato a un alias. Per altre informazioni, vedere [noalias](../../cpp/noalias.md) e [restrict](../../cpp/restrict.md).  
   

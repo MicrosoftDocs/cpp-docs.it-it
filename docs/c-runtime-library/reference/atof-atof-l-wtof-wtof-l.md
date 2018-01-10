@@ -57,11 +57,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72c6538cea2b1eaca61615a8b2db9041aa1eb74b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3232acdfdda7cf5a9e19eeb34d4578b9443cc3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof, _atof_l, _wtof, _wtof_l
 Convertire una stringa in double.  
@@ -178,8 +179,8 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)   

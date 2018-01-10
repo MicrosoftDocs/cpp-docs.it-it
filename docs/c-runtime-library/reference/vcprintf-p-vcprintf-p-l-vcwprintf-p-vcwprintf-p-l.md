@@ -1,70 +1,71 @@
 ---
-title: "_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vcprintf_p"
-  - "_vcwprintf_p_l"
-  - "_vcprintf_p_l"
-  - "_vcwprintf_p"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vcwprintf_p"
-  - "vcprintf_p_l"
-  - "_vcprintf_p"
-  - "_vcprintf_p_l"
-  - "vcwprintf_p_l"
-  - "vcprintf_p"
-  - "_vcwprintf_p"
-  - "_vcwprintf_p_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vcprintf_p (funzione)"
-  - "_vcprintf_p_l (funzione)"
-  - "_vcwprintf_p (funzione)"
-  - "_vcwprintf_p_l (funzione)"
-  - "_vtcprintf_p (funzione)"
-  - "_vtcprintf_p_l (funzione)"
-  - "vcprintf_p (funzione)"
-  - "vcprintf_p_l (funzione)"
-  - "vcwprintf_p (funzione)"
-  - "vcwprintf_p_l (funzione)"
-  - "vtcprintf_p (funzione)"
-  - "vtcprintf_p_l (funzione)"
+title: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vcprintf_p
+- _vcwprintf_p_l
+- _vcprintf_p_l
+- _vcwprintf_p
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vcwprintf_p
+- vcprintf_p_l
+- _vcprintf_p
+- _vcprintf_p_l
+- vcwprintf_p_l
+- vcprintf_p
+- _vcwprintf_p
+- _vcwprintf_p_l
+dev_langs: C++
+helpviewer_keywords:
+- _vtcprintf_p_l function
+- vcprintf_p_l function
+- _vcprintf_p_l function
+- vtcprintf_p_l function
+- vcprintf_p function
+- _vcwprintf_p function
+- _vcprintf_p function
+- vcwprintf_p function
+- vcwprintf_p_l function
+- vtcprintf_p function
+- _vcwprintf_p_l function
+- _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0909838cb526212d52d156f9af0366bcdcb7f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vcprintfp-vcprintfpl-vcwprintfp-vcwprintfpl"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 Scrive l'output formattato nella console usando un puntatore a un elenco di argomenti e supporta i parametri posizionali nella stringa di formato.  
   
 > [!IMPORTANT]
->  Questa API non può essere usata nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  Per altre informazioni, vedere l'argomento relativo alle [funzioni CRT non supportate con \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int _vcprintf_p(  
@@ -87,7 +88,7 @@ int _vcwprintf_p_l(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `format`  
  Specifica del formato.  
   
@@ -97,42 +98,42 @@ int _vcwprintf_p_l(
  `locale`  
  Impostazioni locali da usare.  
   
- Per ulteriori informazioni, vedere [Sintassi per la specifica del formato: funzioni printf wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per altre informazioni, vedere [Sintassi per la specifica del formato: funzioni printf e wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
-## Valore restituito  
- Il numero di caratteri che vengono scritti o un valore negativo se si verifica un errore di output.  Se `format` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e viene restituito \-1.  
+## <a name="return-value"></a>Valore restituito  
+ Il numero di caratteri che vengono scritti o un valore negativo se si verifica un errore di output. Se `format` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e viene restituito -1.  
   
-## Note  
- Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi usa la funzione `_putch` per formattare e scrivere i dati specificati nella console.  \(`_vcwprintf_p` usa `_putwch` anziché `_putch`.  `_vcwprintf_p` è la versione a caratteri wide di `_vcprintf_p`.  Accetta una stringa di caratteri wide come argomento\).  
+## <a name="remarks"></a>Note  
+ Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi usa la funzione `_putch` per formattare e scrivere i dati specificati nella console. (`_vcwprintf_p` utilizza `_putwch` anziché `_putch`. `_vcwprintf_p` è la versione a caratteri wide di `_vcprintf_p`. Accetta una stringa di caratteri wide come argomento).  
   
  Le versioni di queste funzioni con il suffisso `_l` sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali correnti.  
   
- Eventuali `argument` vengono convertiti ed emessi in base alla specifica del formato corrispondente in `format`.  La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato.  Per altre informazioni, vedere [Parametri posizionali printf\_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Eventuali `argument` vengono convertiti ed emessi in base alla specifica del formato corrispondente in `format`. La specifica del formato supporta i parametri posizionali in modo da poter specificare l'ordine in cui gli argomenti vengono usati nella stringa di formato. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
   
- Queste funzioni non convertono i caratteri di avanzamento di riga in combinazioni di caratteri di ritorno a capo ed avanzamento di riga \(CR e LF\) quando vengono restituiti.  
+ Queste funzioni non convertono i caratteri di avanzamento di riga in combinazioni di caratteri di ritorno a capo ed avanzamento di riga (CR e LF) quando vengono restituiti.  
   
 > [!IMPORTANT]
->  Assicurarsi che `format` non sia una stringa definita dall'utente.  Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
+>  Assicurarsi che `format` non sia una stringa definita dall'utente. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
- Queste funzioni convalidano il puntatore di input e la stringa di formato.  Se `format` o `argument` è `NULL` o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  Se l'esecuzione può continuare, queste funzioni restituiscono \-1 e impostano `errno` su `EINVAL`.  
+ Queste funzioni convalidano il puntatore di input e la stringa di formato. Se `format` o `argument` è `NULL` o se la stringa di formato contiene caratteri di formattazione non validi, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
   
-### Mapping di routine di testo generico  
+### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
-|Routine Tchar.h|\_UNICODE e \_MBCS non definiti|\_MBCS definito|\_UNICODE definito|  
-|---------------------|-------------------------------------|---------------------|------------------------|  
+|Routine Tchar.h|_UNICODE e _MBCS non definiti|_MBCS definito|_UNICODE definito|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_vtcprintf_p`|`_vcprintf_p`|`_vcprintf_p`|`_vcwprintf_p`|  
 |`_vtcprintf_p_l`|`_vcprintf_p_l`|`_vcprintf_p_l`|`_vcwprintf_p_l`|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Routine|Intestazione obbligatoria|  
-|-------------|-------------------------------|  
-|`_vcprintf_p`, `_vcprintf_p_l`|\<conio.h\> e \<stdarg.h\>|  
-|`_vcwprintf_p`, `_vcwprintf_p_l`|\<conio.h\> e \<stdarg.h\>|  
+|-------------|---------------------|  
+|`_vcprintf_p`, `_vcprintf_p_l`|\<conio.h> e \<stdarg.h>|  
+|`_vcwprintf_p`, `_vcwprintf_p_l`|\<conio.h> e \<stdarg.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // crt_vcprintf_p.c  
@@ -143,9 +144,11 @@ int _vcwprintf_p_l(
 // An error formatting function that's used to print to the console.  
 int eprintf(const char* format, ...)  
 {  
-  va_list args;  
-  va_start(args, format);  
-  return _vcprintf_p(format, args);  
+   va_list args;  
+   va_start(args, format);  
+   int result = _vcprintf_p(format, args);  
+   va_end(args);  
+   return result;
 }  
   
 int main()  
@@ -156,10 +159,13 @@ int main()
 }  
 ```  
   
-  **parameter 2 \= 222; parameter 1 \= one**  
-**38 characters printed**   
-## Vedere anche  
- [I\/O console e porta](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [va\_arg, va\_copy, va\_end, va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
- [Parametri posizionali printf\_p](../../c-runtime-library/printf-p-positional-parameters.md)
+```Output  
+parameter 2 = 222; parameter 1 = one  
+38 characters printed  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)   
+ [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md)

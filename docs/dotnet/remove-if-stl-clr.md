@@ -1,45 +1,46 @@
 ---
-title: "remove_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::remove_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_if (funzione) [STL/CLR]"
+title: remove_if (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::remove_if
+dev_langs: C++
+helpviewer_keywords: remove_if function [STL/CLR]
 ms.assetid: de501d3f-965b-4a99-b833-f6fa303fbcdc
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8e9b30e7f3627758ed905f95f1b700cfa5034e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# remove_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rimuove gli elementi che soddisfano un predicato con un intervallo specificato senza pregiudicare l'ordine degli elementi rimanenti e restituire la fine del nuovo intervallo esente dal valore specificato.  
+# <a name="removeif-stlclr"></a>remove_if (STL/CLR)
+Elimina gli elementi che soddisfano un predicato da un intervallo specificato senza alterare l'ordine degli elementi rimanenti e restituendo la fine di un nuovo intervallo senza il valore specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt, class _Pr> inline  
     _FwdIt remove_if(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `remove_if`STL.  Per ulteriori informazioni, vedere [remove\_if](../Topic/remove_if.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `remove_if`. Per ulteriori informazioni, vedere [remove_if](../standard-library/algorithm-functions.md#remove_if).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

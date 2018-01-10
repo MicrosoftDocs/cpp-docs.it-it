@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d632bc05f07e8b3c3afdb356cefae7e52d001e82
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c8f28a0979c5942765c5292fb56af6e4ba25aab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
 Recupera la radice quadrata di un numero complesso, con discontinuità della funzione lungo l'asse negativo reale.  
@@ -81,7 +82,7 @@ _Lcomplex csqrtl(
   
 |Input|Eccezione SEH|Eccezione `_matherr`|  
 |-----------|-------------------|--------------------------|  
-|± QNAN, IND|nessuno|_DOMAIN|  
+|± QNAN, IND|none|_DOMAIN|  
 |- ∞|none|_DOMAIN|  
   
 ## <a name="remarks"></a>Note  
@@ -96,7 +97,7 @@ _Lcomplex csqrtl(
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

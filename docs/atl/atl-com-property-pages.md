@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-property-pages"></a>Pagine delle proprietà COM ATL
 Pagine delle proprietà COM forniscono un'interfaccia utente per l'impostazione delle proprietà (o chiamare i metodi) di uno o più oggetti COM. Pagine delle proprietà sono ampiamente utilizzati per i controlli ActiveX per fornire le interfacce utente avanzate che consentono di impostare in fase di progettazione le proprietà del controllo.  
@@ -35,7 +36,7 @@ Pagine delle proprietà COM forniscono un'interfaccia utente per l'impostazione 
   
  Per ulteriori informazioni, vedere [finestre delle proprietà e pagine delle proprietà](http://msdn.microsoft.com/library/windows/desktop/ms686577) nel [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Specifica delle pagine delle proprietà](../atl/specifying-property-pages.md)  
  Elenca i passaggi per la specifica delle pagine delle proprietà per il controllo e viene illustrato un esempio di classe.  
   

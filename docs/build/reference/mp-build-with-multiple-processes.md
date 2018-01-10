@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (compilazione con più processi)
 L'opzione **/MP** può ridurre il tempo totale di compilazione dei file di origine nella riga di comando. L'opzione **/MP** fa sì che il compilatore crei una o più copie di se stesso, ciascuna in un processo separato. Queste copie quindi compilano simultaneamente i file di origine. Pertanto, il tempo totale di compilazione dei file di origine può essere notevolmente ridotto.  

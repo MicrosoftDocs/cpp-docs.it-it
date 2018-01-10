@@ -54,11 +54,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecb29e00a4baa5bd1ad36fe47bade09a8cc7f56f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e65837945b8c28ee0968dbeaded4fbdbf7e79c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 Esegue il confronto di stringhe usando le impostazioni locali correnti o una categoria di stato di conversione LC_COLLATE specificata.  
@@ -121,7 +122,7 @@ int _mbscoll_l(
   
  Tutte queste funzioni convalidano i relativi parametri. Se `string1` o `string2` è un puntatore Null o se `count` è maggiore di `INT_MAX`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`.  
   
- Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni locali, dato che ogni set di impostazioni locali prevede regole diverse per l'ordinamento dei caratteri. Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano le impostazioni locali passate in un parametro invece delle impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Il confronto delle due stringhe è un'operazione che dipende dalle impostazioni locali, dato che ogni set di impostazioni locali prevede regole diverse per l'ordinamento dei caratteri. Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali del thread corrente per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano le impostazioni locali passate in un parametro invece delle impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -142,7 +143,7 @@ int _mbscoll_l(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   

@@ -1,74 +1,77 @@
 ---
-title: "CConstraintTableUsage, CConstraintTableUsageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CConstraintTableUsageInfo"
-  - "CONSTRAINT_TABLE_USAGE"
-  - "m_szTableSchema"
-  - "m_szConstraintCatalog"
-  - "CONSTRAINT_NAME"
-  - "m_szTableCatalog"
-  - "m_szConstraintSchema"
-  - "m_szTableName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "CConstraintTableUsage"
-  - "m_szConstraintName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CConstraintTableUsage (classe typedef)"
-  - "CConstraintTableUsageInfo (classe di parametri)"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "CONSTRAINT_TABLE_USAGE"
-  - "m_szConstraintCatalog"
-  - "m_szConstraintName"
-  - "m_szConstraintSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: CConstraintTableUsage, CConstraintTableUsageInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CConstraintTableUsageInfo
+- CONSTRAINT_TABLE_USAGE
+- m_szTableSchema
+- m_szConstraintCatalog
+- CONSTRAINT_NAME
+- m_szTableCatalog
+- m_szConstraintSchema
+- m_szTableName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- CConstraintTableUsage
+- m_szConstraintName
+dev_langs: C++
+helpviewer_keywords:
+- CConstraintTableUsage typedef class
+- m_szConstraintCatalog
+- CONSTRAINT_CATALOG
+- m_szTableSchema
+- CConstraintTableUsageInfo parameter class
+- TABLE_CATALOG
+- CONSTRAINT_TABLE_USAGE
+- TABLE_NAME
+- CONSTRAINT_NAME
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szTableCatalog
+- m_szConstraintName
+- m_szTableName
+- m_szConstraintSchema
 ms.assetid: 666b44de-3922-4c5e-ad17-d5ea27120174
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bf806ac79d74a3ce0ba265722a1633854d925778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CConstraintTableUsage, CConstraintTableUsageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CConstraintTableUsage** typedef per implementare la propria classe di parametri **CConstraintTableUsageInfo**.  
+# <a name="cconstrainttableusage-cconstrainttableusageinfo"></a>CConstraintTableUsage, CConstraintTableUsageInfo
+Chiamare la classe typedef **CConstraintTableUsage** per implementare la relativa classe di parametro **CConstraintTableUsageInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica le tabelle utilizzate dai vincoli referenziali, dai vincoli univoci, dai vincoli CHECK e le asserzioni, definite nel catalogo e di proprietà da un utente specificato.  
+ Questa classe identifica le tabelle utilizzate da vincoli referenziali, vincoli unique, vincoli check e le asserzioni definite nel catalogo e appartenenti a un determinato utente.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di CONSTRAINT\_TABLE\_USAGE](https://msdn.microsoft.com/en-us/library/ms724522.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe CONSTRAINT_TABLE_USAGE](https://msdn.microsoft.com/en-us/library/ms724522.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szConstraintCatalog|CONSTRAINT\_CATALOG|  
-|m\_szConstraintSchema|CONSTRAINT\_SCHEMA|  
-|m\_szConstraintName|CONSTRAINT\_NAME|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szConstraintCatalog|CONSTRAINT_CATALOG|  
+|m_szConstraintSchema|CONSTRAINT_SCHEMA|  
+|m_szConstraintName|CONSTRAINT_NAME|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

@@ -46,11 +46,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 199e4c459c97995701b5b7cc74f55f153703f925
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0d0fc911c052e58b1f2aeb9b656f737746bd2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 Converte un valore di ora in una struttura. Queste sono versioni di [_gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -84,7 +85,7 @@ errno_t _gmtime64_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`_tm`|`time`|Valore restituito|Valore in `_tm`|  
+|`_tm`|`time`|INVIO|Valore in `_tm`|  
 |-----------|------------|------------|--------------------|  
 |`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
 |Non `NULL` (punta alla memoria valida)|`NULL`|`EINVAL`|Tutti i campi impostati su -1.|  
@@ -129,7 +130,7 @@ errno_t _gmtime64_s(
   
  `_gmtime64_s`, che usa la struttura `__time64_t`, consente di esprimere le date fino alle 23.59.59 del 31 dicembre 3000 UTC, mentre `gmtime32_s` rappresenta solo le date fino alle 23.59.59 del 18 gennaio 2038 UTC. La mezzanotte del 1 gennaio 1970 è il limite inferiore dell'intervallo di date per entrambe queste funzioni.  
   
- `gmtime_s` è una funzione inline equivalente a `_gmtime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `gmtime_s` verrà allineata a `_gmtime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
+ `gmtime_s` è una funzione inline equivalente a `_gmtime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t`a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `gmtime_s` verrà allineata a `_gmtime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -139,7 +140,7 @@ errno_t _gmtime64_s(
 |`_gmtime32_s`|\<time.h>|  
 |`_gmtime64_s`|\<time.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -186,7 +187,7 @@ Coordinated universal time is Fri Apr 25 20:12:33 2003
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

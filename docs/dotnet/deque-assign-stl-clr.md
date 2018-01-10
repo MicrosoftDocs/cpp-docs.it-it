@@ -1,32 +1,33 @@
 ---
-title: "deque::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign (membro) [STL/CLR]"
+title: 'deque:: Assign (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 03fafdbb-6b10-4464-b3dc-0cc5cb8ac980
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ae8bb7a21a336987d30cb41a7a1ff9d586db830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# deque::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeassign-stlclr"></a>deque::assign (STL/CLR)
 Sostituisce tutti gli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,32 +36,32 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parametri  
- Conteggio  
+#### <a name="parameters"></a>Parametri  
+ `count`  
  Numero di elementi da inserire.  
   
- first  
+ `first`  
  Inizio dell'intervallo da inserire.  
   
- last  
+ `last`  
  Fine dell'intervallo da inserire.  
   
- right  
+ `right`  
  Enumerazione da inserire.  
   
- val  
+ `val`  
  Valore dell'elemento da inserire.  
   
-## Note  
- La prima funzione membro sostituisce la sequenza controllata con una ripetizione di elementi `count` di valore `val`.  Utilizzarla per riempire il contenitore con elementi aventi tutti lo stesso valore.  
+## <a name="remarks"></a>Note  
+ La prima funzione membro sostituisce la sequenza controllata con una ripetizione di `count` degli elementi di valore `val`. Utilizzarla per riempire il contenitore con elementi tutti con lo stesso valore.  
   
- Se `InIt` è un tipo integer, la seconda funzione membro si comporta come `assign((size_type)``first``, (value_type)``last``)`.  Altrimenti, essa sostituisce la sequenza controllata con la sequenza `[``first``,` `last``)`.  Utilizzarla per rendere la sequenza selezionata una copia di un'altra sequenza.  
+ Se `InIt` è di tipo integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)`. In caso contrario, sostituisce la sequenza controllata con la sequenza [`first`, `last`). È usata per garantire il controllato sequenza una copia di un'altra sequenza.  
   
- La terza funzione membro sostituisce la sequenza selezionata con la sequenza definita dall'enumeratore `right`.  Utilizzarla per rendere la sequenza controllata una copia di una sequenza descritta da un enumeratore.  
+ La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dall'enumeratore `right`. Utilizzarla per creare la sequenza controllata una copia di una sequenza descritta dall'enumeratore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cliext_deque_assign.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -96,14 +97,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **a b**  
- **a b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/deque\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/deque >  
   
-## Vedere anche  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)
