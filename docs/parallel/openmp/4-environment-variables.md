@@ -1,45 +1,45 @@
 ---
-title: "4. Environment Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4. Le variabili di ambiente | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cef1bac78afbcc8b852c3bd42e0904e1963137c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 4. Environment Variables
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Questo capitolo vengono descritte le variabili di ambiente di OpenMP c e C\+\+ API \(o i meccanismi specifici per la piattaforma equivalenti\) che controllo l'esecuzione del codice parallelo.  I nomi delle variabili di ambiente devono essere maiuscoli.  I valori vengono fanno distinzione tra maiuscole e minuscole e possono contenere spazi iniziale e finale.  Le modifiche ai valori dopo il programma ha avviato vengono ignorate.  
+# <a name="4-environment-variables"></a>4. Variabili di ambiente
+In questo capitolo descrive le variabili di ambiente OpenMP C e C++ API (o meccanismi specifici per la piattaforma equivalente) che controllano l'esecuzione del codice parallelo.  I nomi delle variabili di ambiente devono essere maiuscolo. I valori assegnati sono tra maiuscole e minuscole e possono avere spazi vuoti iniziali e finali.  Le modifiche ai valori dopo il programma di avvio vengono ignorate.  
   
  Le variabili di ambiente sono i seguenti:  
   
--   **OMP\_SCHEDULE** imposta il tipo di pianificazione e la dimensione di runtime del blocco.  
+-   **OMP_SCHEDULE** imposta la dimensione di tipo e il blocco di pianificazione in fase di esecuzione.  
   
--   **OMP\_NUM\_THREADS** imposta il numero di thread da utilizzare durante l'esecuzione.  
+-   **OMP_NUM_THREADS** imposta il numero di thread da utilizzare durante l'esecuzione.  
   
--   **OMP\_DYNAMIC** abilita o disabilita la modifica dinamica del numero di thread.  
+-   **OMP_DYNAMIC** attiva o disattiva la regolazione dinamica del numero di thread.  
   
--   **OMP\_NESTED** abilita o disabilita il parallelismo annidato.  
+-   **OMP_NESTED** Abilita o disabilita il parallelismo annidato.  
   
- Gli esempi in questo capitolo illustrato solo come queste variabili possono essere impostate in ambienti shell di UNIX C\# \(csh\).  Nella shell di Korn negli ambienti di DOS le azioni sono simili, come segue:  
+ Negli esempi in questo capitolo viene illustrato solo come queste variabili possono essere impostate in ambienti shell (csh) Unix C. In Korn shell e gli ambienti DOS le azioni sono simili, come indicato di seguito:  
   
  csh:  
- setenv OMP\_SCHEDULE “dinamico„  
+ SetEnv OMP_SCHEDULE "dinamico"  
   
  ksh:  
- esportazione OMP\_SCHEDULE\= " dinamica„  
+ esportare OMP_SCHEDULE = "dinamico"  
   
  DOS:  
- impostare OMP\_SCHEDULE\= " dinamico„
+ impostare OMP_SCHEDULE = "dinamico"

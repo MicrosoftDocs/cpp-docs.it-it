@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfd7344b01360df6af3ccf7a153eda3451d2482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 Funzione interna usata all'avvio per comunicare a CRT se l'app è un'app console o un'app GUI.  
@@ -52,7 +53,7 @@ void __cdecl _set_app_type(
 |_crt_console_app|Applicazione console (riga di comando).|  
 |_crt_gui_app|Applicazione GUI (Windows).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  In genere, non è necessario chiamare questa funzione. Fa parte del codice di avvio del runtime C eseguito prima della chiamata di `main` nell'app.
  
 ## <a name="requirements"></a>Requisiti  

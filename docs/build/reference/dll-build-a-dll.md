@@ -1,68 +1,68 @@
 ---
-title: "/DLL (compilazione di una DLL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DLL (opzione del linker) [C++]"
-  - "-DLL (opzione del linker)"
-  - "DLL (opzione del linker) [C++]"
-  - "DLL [C++], compilazione"
-  - "esportazione di DLL [C++], specifica di esportazioni"
+title: -DLL (compilazione di una DLL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dll
+dev_langs: C++
+helpviewer_keywords:
+- -DLL linker option
+- /DLL linker option [C++]
+- exporting DLLs [C++], specifying exports
+- DLLs [C++], building
+- DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 28a501590e127e5f27a465366611b4dbf3be175c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /DLL (compilazione di una DLL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dll-build-a-dll"></a>/DLL (compilazione di una DLL)
 ```  
 /DLL  
 ```  
   
-## Note  
- L'opzione \/DLL compila una DLL come file di output principale.  Una DLL contiene in genere esportazioni utilizzabili in altri programmi.  Sono disponibili tre metodi per la specifica delle esportazioni, elencati di seguito nell'ordine in cui se ne consiglia l'utilizzo:  
+## <a name="remarks"></a>Note  
+ L'opzione /DLL compila una DLL come file di output principale. Una DLL contiene in genere le esportazioni che possono essere utilizzate da un altro programma. Sono disponibili tre metodi per la specifica di esportazioni, elencate in ordine di utilizzo consigliato:  
   
-1.  [\_\_declspec\(dllexport\)](../../cpp/dllexport-dllimport.md) nel codice sorgente  
+1.  [dllexport](../../cpp/dllexport-dllimport.md) nel codice sorgente  
   
-2.  Istruzione [EXPORTS](../../build/reference/exports.md) in un file def  
+2.  Un [esportazioni](../../build/reference/exports.md) istruzione in un file. def  
   
-3.  Una specifica [\/EXPORT](../../build/reference/export-exports-a-function.md) in un comando LINK  
+3.  Un [/esportazione](../../build/reference/export-exports-a-function.md) specifica in un comando LINK  
   
- In uno stesso programma è possibile che vengano utilizzati più metodi.  
+ Un programma può utilizzare più di un metodo.  
   
- Un altro metodo per compilare una DLL consiste nell'utilizzo dell'istruzione di definizione moduli **LIBRARY**.  L'utilizzo congiunto delle opzioni \/BASE e \/DLL equivale all'utilizzo dell'istruzione **LIBRARY**.  
+ È possibile compilare una DLL con il **libreria** istruzione di definizione moduli. Le opzioni /BASE e /DLL insieme equivalgono al **libreria** istruzione.  
   
- Non specificare questa opzione all'interno dell'ambiente di sviluppo in quanto è utilizzabile solo alla riga di comando.  L'opzione viene impostata quando si crea un progetto DLL con una Creazione guidata applicazioni.  
+ Non si specifica questa opzione interno dell'ambiente di sviluppo. Questa opzione è utilizzabile solo nella riga di comando. Questa opzione viene impostata quando si crea un progetto di DLL con una creazione guidata applicazione.  
   
- Se la libreria di importazione viene creata nel corso di un'operazione preliminare precedente alla creazione della dll, l'insieme di file oggetto da passare durante la compilazione della dll deve corrispondere a quello passato durante la compilazione della libreria di importazione.  
+ Si noti che se si crea la libreria di importazione in un passaggio preliminare prima della creazione della DLL, è necessario passare lo stesso set di file oggetto quando si compila il file DLL, come è stato passato quando si compila la libreria di importazione.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Proprietà di configurazione**.  
+2.  Fare clic su di **le proprietà di configurazione** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Generale**.  
+3.  Fare clic su di **generale** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Tipo configurazione**.  
+4.  Modificare il **tipo di configurazione** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCPropertySheet.ConfigurationType%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

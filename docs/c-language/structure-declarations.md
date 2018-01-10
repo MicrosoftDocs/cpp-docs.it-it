@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>Dichiarazioni di struttura
 Una "dichiarazione di struttura" denomina un tipo e specifica una sequenza di valori variabili (denominati "membri" o " campi" della struttura) con tipi differenti. Un identificatore facoltativo, denominato "tag," fornisce il nome del tipo di struttura e può essere utilizzato nei riferimenti successivi a tale tipo. Una variabile del tipo di struttura contiene l'intera sequenza definita dal tipo specificato. Le strutture in C sono simili ai tipi noti come "record" in altri linguaggi.  

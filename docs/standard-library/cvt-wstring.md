@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b3c5825b32a30bba5572de3333d8870086a67b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56af79669b4240a32f7dc6ac134beae4ac402b2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
 L'intestazione `<cvt/wstring>` nelle versioni precedenti di Visual Studio definiva la classe modello [Classe wstring_convert](../standard-library/wstring-convert-class.md) nello spazio dei nomi stdext::cvt. L'intestazione viene mantenuta per compatibilità con le versioni precedenti. Il nuovo codice deve usare la versione della classe definita in [\<<locale>](../standard-library/locale.md) nello spazio dei nomi `std`  
@@ -37,7 +38,7 @@ L'intestazione `<cvt/wstring>` nelle versioni precedenti di Visual Studio defini
 ## <a name="requirements"></a>Requisiti  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
 
 
 

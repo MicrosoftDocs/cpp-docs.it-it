@@ -1,49 +1,32 @@
 ---
-title: Classe CInterfaceArray | Documenti di Microsoft
+title: Classe CInterfaceArray | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInterfaceArray
 - ATLCOLL/ATL::CInterfaceArray
 - ATLCOLL/ATL::CInterfaceArray::CInterfaceArray
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInterfaceArray class
+dev_langs: C++
+helpviewer_keywords: CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a2a99eb3cff4f2381d4c58e4d1a7aaa167e83896
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ece9858d0be171febaeb52e820e922665ac2a351
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacearray-class"></a>Classe CInterfaceArray
-Questa classe fornisce metodi utili per la costruzione di una matrice di puntatori a interfaccia COM.  
+Questa classe fornisce metodi utili quando si crea una matrice di puntatori a interfaccia COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +42,7 @@ class CInterfaceArray :
  Un'interfaccia COM che specifica il tipo di puntatore da archiviare.  
   
  `piid`  
- Un puntatore a IID del `I`.  
+ Un puntatore per l'IID del `I`.  
   
 ## <a name="members"></a>Membri  
   
@@ -90,11 +73,10 @@ CInterfaceArray() throw();
 ```  
   
 ### <a name="remarks"></a>Note  
- Consente di inizializzare la matrice di puntatore intelligente.  
+ Inizializza una matrice di puntatore intelligente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlArray](../../atl/reference/catlarray-class.md)   
  [Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
  [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

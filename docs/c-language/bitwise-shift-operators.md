@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b876ca52fd142c885ae51d5f7c505cc7f4af8bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e13e65e42febf2256e11bcb428e98805cdd6550f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitwise-shift-operators"></a>Operatori di spostamento bit per bit
 Gli operatori shift spostano il primo operando sinistro (`<<`) o destro (`>>`) in base al numero di posizioni che il secondo operando specifica.  

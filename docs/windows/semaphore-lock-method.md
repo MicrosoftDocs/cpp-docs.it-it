@@ -1,30 +1,31 @@
 ---
-title: "Metodo Semaphore::Lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lock (metodo)"
+title: 'Metodo Semaphore:: lock | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock
+dev_langs: C++
+helpviewer_keywords: Lock method
 ms.assetid: 0eef6ede-dc7d-4f09-a6c8-2f7d39d65bfa
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 11531a07f161722947d03a53392b8315b7593958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo Semaphore::Lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Attendere l'oggetto corrente o l'oggetto semaforo associato all'handle specificato, è in stato segnalato o è trascorso l'intervallo di timeout specificato.  
+# <a name="semaphorelock-method"></a>Metodo Semaphore::Lock
+Attende l'oggetto corrente o l'oggetto semaforo associato all'handle specificato, non è in stato segnalato o è trascorso l'intervallo di timeout specificato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,19 +42,19 @@ static SyncLock Lock(
   
 #### <a name="parameters"></a>Parametri  
  `milliseconds`  
- L'intervallo di timeout, in millisecondi. Il valore predefinito è INFINITE, attende indefinitamente.  
+ L'intervallo di timeout, espresso in millisecondi. Il valore predefinito è INFINITE, attende indefinitamente.  
   
  `h`  
- Handle per un oggetto semaforo.  
+ Un handle a un oggetto semaforo.  
   
 ## <a name="return-value"></a>Valore restituito  
- Un Details::SyncLockWithStatusT\<HandleTraits::SemaphoreTraits>  
+ Un Details:: synclockwithstatust\<handletraits:: Semaphoretraits >  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
 ## <a name="see-also"></a>Vedere anche  
-[Semaphore (classe)](../windows/semaphore-class.md)
+[Classe Semaphore](../windows/semaphore-class.md)
  

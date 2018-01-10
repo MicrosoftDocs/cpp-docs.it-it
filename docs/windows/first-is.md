@@ -1,32 +1,33 @@
 ---
-title: "first_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.first_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first_is attribute"
+title: first_is | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.first_is
+dev_langs: C++
+helpviewer_keywords: first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 13637f9381e233f5bcffe4dbacc9a86765b40b84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# first_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica l'indice del primo elemento di matrice da un flusso.  
+# <a name="firstis"></a>first_is
+Specifica l'indice del primo elemento della matrice deve essere trasmesso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,15 +36,15 @@ Specifica l'indice del primo elemento di matrice da un flusso.
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *espressione*  
- Una o più espressioni di C.  Gli slot vuoti dell'argomento sono consentiti.  
+ Una o più espressioni del linguaggio C. Sono consentiti gli slot di argomenti vuoto.  
   
-## Note  
- **first\_is** L'attributo di C\+\+ ha la stessa funzionalità di  [first\_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **first_is** attributo C++ ha la stessa funzionalità come il [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) attributo MIDL.  
   
-## Esempio  
- Il seguente codice seguente vengono mostrati vari modi per specificare una sezione di una matrice:  
+## <a name="example"></a>Esempio  
+ Il codice seguente illustra vari modi per specificare una sezione in una matrice:  
   
 ```  
 // cpp_attr_ref_first_is.cpp  
@@ -65,25 +66,24 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|Campo in `struct` o  **unione**, parametro di interfaccia, metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Campo `struct` o **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [last\_is](../windows/last-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributi dei parametri](../windows/parameter-attributes.md)   
+ [last_is](../windows/last-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

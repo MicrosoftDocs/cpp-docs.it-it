@@ -1,30 +1,31 @@
 ---
-title: "Overflow del buffer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "buffer (overflow) [C++]"
-  - "buffer [C++], dimensioni dei caratteri"
-  - "MBCS [C++], overflow del buffer"
+title: Overflow del buffer | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buffers [C++], character sizes
+- buffer overflows [C++]
+- MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Overflow del buffer
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se si apportano variazioni alle dimensioni in byte dei caratteri, è possibile che si verifichino problemi durante la memorizzazione dei caratteri in un buffer.  Si consideri il codice seguente, con cui i caratteri vengono copiati dalla stringa `sz` in un buffer denominato `rgch`:  
+# <a name="buffer-overflow"></a>Overflow del buffer
+Variazione delle dimensioni dei caratteri può causare problemi quando si inserisce i caratteri in un buffer. Si consideri il codice seguente, che copia i caratteri da una stringa, `sz`, in un buffer, `rgch`:  
   
 ```  
 cb = 0;  
@@ -32,7 +33,7 @@ while( cb < sizeof( rgch ) )
     rgch[ cb++ ] = *sz++;  
 ```  
   
- Ci si chiederà se l'ultimo byte copiato era un "byte iniziale".  L'esempio seguente non risolve il problema, in quanto può provocare un overflow del buffer:  
+ La domanda è: è stato l'ultimo byte copiato un byte iniziale? Di seguito non risolve il problema perché può provocare un overflow del buffer:  
   
 ```  
 cb = 0;  
@@ -44,7 +45,7 @@ while( cb < sizeof( rgch ) )
 }  
 ```  
   
- La chiamata a `_mbccpy` tenta di eseguire l'operazione corretta, ovvero copiare il carattere intero, sia esso composto da uno o due byte.  Non tiene conto, tuttavia, del fatto che l'ultimo carattere copiato potrebbe non entrare nel buffer se l'ampiezza è di due byte.  La soluzione corretta è quindi la seguente:  
+ Il `_mbccpy` chiamata tenta di eseguire l'operazione corretta, copiare il carattere completo, se è 1 o 2 byte. Ma non viene preso in considerazione che l'ultimo carattere copiato potrebbe non essere adatte buffer se il carattere è 2 byte. La soluzione corretta è:  
   
 ```  
 cb = 0;  
@@ -56,11 +57,11 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- Questo codice consente di effettuare un controllo per individuare l'eventuale overflow del buffer nel test del ciclo, utilizzando `_mbclen` per verificare la dimensione del carattere corrente a cui fa riferimento `sz`.  Se si esegue una chiamata alla funzione `_mbsnbcpy`, è possibile sostituire il codice del ciclo `while` con una riga singola di codice,  Di seguito è riportato un esempio.  
+ Questo codice di test per l'eventuale overflow del buffer nel ciclo di test, utilizzando `_mbclen` per verificare la dimensione del carattere corrente a cui puntata `sz`. Effettuando una chiamata al `_mbsnbcpy` funzione, è possibile sostituire il codice di `while` ciclo con una singola riga di codice. Ad esempio:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3fa97dff482226c7a9e6554a0479eb76b25c47f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f82fe529586579109434da447e26b15dcb9503a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-user-components"></a>Componenti utente di automazione remota
 È necessario verificare che tutti i computer client contenga il programma client e supporta il controllo delle DLL è necessaria. È inoltre necessario verificare che l'applicazione server e supporta il controllo delle DLL richiede siano presenti nel computer server. Infine, è necessario verificare che l'applicazione server è registrato in ogni computer client prima di poter eseguire RAC Manager per configurare la connessione. Se il programma di autoregistrazione (come nella maggior parte saranno), è necessario solo eseguire il programma di server nel computer client per la registrazione. In caso contrario, potrebbe essere necessario eseguire un file di registrazione che fornisce, o modificare manualmente il Registro di sistema.  

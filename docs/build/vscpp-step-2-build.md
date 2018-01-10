@@ -1,8 +1,8 @@
 ---
-title: 'Passaggio 2: compilazione ed eseguire un progetto di applicazione console C++ | Documenti Microsoft'
+title: Compilare ed eseguire un progetto di applicazione console C++ | Documenti Microsoft
 description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilare ed eseguire un progetto di applicazione console C++
 
@@ -23,9 +24,9 @@ Dopo aver creato un progetto di applicazione console C++ e ha immesso il codice,
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Dispone di Visual Studio con lo sviluppo Desktop con carico di lavoro C++ installato e in esecuzione nel computer in uso. Se non è ancora installato, seguire i passaggi in [passaggio 0 - supporto di installazione di C++ in Visual Studio](../build/vscpp-step-0-installation.md).
+- Dispone di Visual Studio con lo sviluppo Desktop con carico di lavoro C++ installato e in esecuzione nel computer in uso. Se non è ancora installato, seguire i passaggi in [il supporto di installazione di C++ in Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Creare un "Hello, World!" progetto e immettere il codice sorgente. Se non hai fatto ancora, seguire i passaggi in [passaggio 1: creare un progetto di applicazione console C++](../build/vscpp-step-1-create.md).
+- Creare un "Hello, World!" progetto e immettere il codice sorgente. Se non hai fatto ancora, seguire i passaggi in [creare un progetto di applicazione console C++](../build/vscpp-step-1-create.md).
 
 Se Visual Studio è simile al seguente, si è pronti per compilare ed eseguire l'app:
 
@@ -67,7 +68,7 @@ Complimenti, compilata ed eseguire un'applicazione console in Visual Studio.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver compilato ed Esegui questa app semplice, si è pronti per progetti più complessi. Vedere la Guida introduttiva, esercitazioni e codice di esempio per esempi di operazioni che è possibile eseguire in C++ in Visual Studio.
+Dopo aver compilato ed Esegui questa app semplice, si è pronti per progetti più complessi. Vedere [tramite l'IDE di Visual Studio per lo sviluppo Desktop C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) per ulteriori procedure dettagliate che esplorare le funzionalità di Visual C++ in Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Guida alla risoluzione dei problemi
 

@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2218d7b563666429aeeed07059b4e32640ffefe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 506dafbbb2f1954584af0e6be613ecbcc9292a0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
 Determina se un carattere multibyte specificato corrisponde ad alfa.  
@@ -73,7 +74,7 @@ int _ismbbalpha_l(
 isalpha || _ismbbkalnum  
 ```  
   
- è diverso da zero per `c`oppure zero in caso contrario. `_ismbbalpha` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. `_ismbbalpha_l` è identica, ma usa le impostazioni locali passate.  
+ è diverso da zero per `c` oppure zero in caso contrario. `_ismbbalpha` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. `_ismbbalpha_l` è identico, ma usa le impostazioni locali che gli vengono passate.  
   
 ## <a name="requirements"></a>Requisiti  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b05a8d994b1df7140c7f9bd4db984931b1896f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7d2522169588aa285c91c535eb31360679d8136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage"></a>Collegamento
 I nomi degli identificatori possono fare riferimento a identificatori diversi in ambiti diversi. Un identificatore dichiarato in più ambiti o più volte nello stesso ambito, può essere forzato a fare riferimento allo stesso identificatore o alla stessa funzione attraverso un processo chiamato "collegamento". Con il collegamento si stabiliscono le parti del programma in cui è possibile fare riferimento a un identificatore, ovvero la sua "visibilità". Esistono tre tipi di collegamento: [interno](../c-language/internal-linkage.md), [esterno](../c-language/external-linkage.md) e [nessun collegamento](../c-language/no-linkage.md).  

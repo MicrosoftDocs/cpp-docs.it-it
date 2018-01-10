@@ -1,32 +1,33 @@
 ---
-title: "SafeAdd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeAdd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeAdd (funzione)"
+title: SafeAdd | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeAdd
+dev_langs: C++
+helpviewer_keywords: SafeAdd function
 ms.assetid: 3f82b91d-59fe-4ee1-873b-d056182fa8be
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e8b668f5b164934cff6643d73d9b4b6169a9d4b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# SafeAdd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeadd"></a>SafeAdd
 Somma due numeri in modo che protegge dall'overflow.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +38,34 @@ inline bool SafeAdd (
 ) throw ();  
 ```  
   
-#### Parametri  
- \[in\] `t`  
- Il primo numero da aggiungere.  L'espressione deve essere di tipo T.  
+#### <a name="parameters"></a>Parametri  
+ [in] `t`  
+ Il primo numero da aggiungere. Deve essere di tipo T.  
   
- \[in\] `u`  
- Il secondo numero da aggiungere.  L'espressione deve essere di tipo U.  
+ [in] `u`  
+ Il secondo numero da aggiungere. Deve essere di tipo U.  
   
- \[out\] `result`  
- Il parametro `SafeAdd` dove archiviare il risultato.  
+ [out] `result`  
+ Il parametro in cui `SafeAdd` archivia il risultato.  
   
-## Valore restituito  
- `true` se non si verificano errori; `false` se si verifica un errore.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se si verifica alcun errore; `false` se si verifica un errore.  
   
-## Note  
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per una singola operazione di addizione senza creare un'istanza di [Classe SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Note  
+ Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione singola aggiunta senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Questo metodo deve essere utilizzato solo quando una singola un'operazione matematica deve essere protetta.  Se sono presenti più operazioni, è necessario utilizzare la classe di `SafeInt` anziché chiamare le singole funzioni autonome.  
+>  Questo metodo deve essere utilizzato solo quando è necessario proteggere una singola operazione matematica. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
   
- Per ulteriori informazioni sui tipi T e U del modello, vedere [Funzioni SafeInt](../windows/safeint-functions.md).  
+ Per ulteriori informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
   
-## Requisiti  
- **Intestazione:** safeint.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** SafeInt. h  
   
- **Spazio dei nomi:** Microsoft::Utilities  
+ **Namespace:** Microsoft:: Utilities  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni SafeInt](../windows/safeint-functions.md)   
  [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)   
+ [SafeInt (classe)](../windows/safeint-class.md)   
  [SafeSubtract](../windows/safesubtract.md)

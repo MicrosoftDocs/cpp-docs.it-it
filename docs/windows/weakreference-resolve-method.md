@@ -1,32 +1,33 @@
 ---
-title: "Metodo WeakReference::Resolve | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::Resolve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resolve (metodo)"
+title: 'Metodo WeakReference:: Resolve | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::Resolve
+dev_langs: C++
+helpviewer_keywords: Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d4da4689ffd8fa0a633b3f481b0292d060e57345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo WeakReference::Resolve
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="weakreferenceresolve-method"></a>Metodo WeakReference::Resolve
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,29 +37,29 @@ STDMETHOD(Resolve)
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- Un ID di interfaccia.  
+ ID di interfaccia.  
   
  `ppvObject`  
  Quando questa operazione viene completata, una copia del riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
   
--   S\_OK se l'operazione riesce e il conteggio dei riferimenti forti è zero.  Il parametro `ppvObject` viene impostato su `nullptr`.  
+-   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è zero. Il parametro `ppvObject` viene impostato su `nullptr`.  
   
--   S\_OK se l'operazione riesce e il conteggio dei riferimenti forti è diverso da zero.  Il parametro `ppvObject` è settato a riferimento forte.  
+-   S_OK se l'operazione ha esito positivo e il conteggio dei riferimenti forti è diverso da zero. Il `ppvObject` parametro è impostato per il riferimento sicuro.  
   
--   In caso contrario, un HRESULT che indica il motivo per cui questa operazione non è riuscita.  
+-   In caso contrario, HRESULT che indica il motivo per questa operazione non riuscita.  
   
-## Note  
- Imposta il puntatore specificato con il valore corrente dei riferimenti forti se il conteggio è diverso da zero.  
+## <a name="remarks"></a>Note  
+ Imposta il puntatore specificato per il valore di riferimento forte corrente se il conteggio dei riferimenti forti è diverso da zero.  
   
-## Requisiti  
- **Intestazione:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
- **Spazio dei nomi:** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe WeakReference](../windows/weakreference-class1.md)   
+## <a name="see-also"></a>Vedere anche  
+ [WeakReference Class1](../windows/weakreference-class1.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

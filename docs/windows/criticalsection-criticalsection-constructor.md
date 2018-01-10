@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bf4e9cd4d4fde31f1809e7d583e662188558d5b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 532a7b2e046bbdb64db118741a939dadb049f081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectioncriticalsection-constructor"></a>Costruttore CriticalSection::CriticalSection
 Inizializza un oggetto di sincronizzazione che è simile a un oggetto mutex, ma può essere utilizzato da solo i thread di un singolo processo.  
@@ -37,7 +40,7 @@ explicit CriticalSection(
  Il conteggio di selezione per l'oggetto sezione critica. Il valore predefinito è 0.  
   
 ## <a name="remarks"></a>Note  
- Per ulteriori informazioni sulle sezioni crticial e spincounts, vedere il **InitializeCriticalSectionAndSpinCount** funzione nell'area di sincronizzazione della documentazione di Windows API.  
+ Per ulteriori informazioni sulle sezioni critiche e spincounts, vedere il **InitializeCriticalSectionAndSpinCount** funzione nell'area di sincronizzazione della documentazione di Windows API.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** corewrappers. h  

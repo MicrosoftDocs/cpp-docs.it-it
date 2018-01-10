@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>Cenni preliminari sulle dichiarazioni
 Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di un set di identificatori. Una dichiarazione che causa anche la prenotazione delle risorse di archiviazione per l'oggetto o la funzione denominati dall'identificatore è chiamata "definizione". Le dichiarazioni C per variabili, funzioni e tipi hanno la sintassi seguente:  
@@ -55,7 +56,7 @@ Una "dichiarazione" consente di specificare l'interpretazione e gli attributi di
   
  Le dichiarazioni possono contenere uno o più degli attributi facoltativi elencati in *attribute-seq*; *seq* è l'abbreviazione di sequenza. Questi attributi specifici di Microsoft eseguono una varietà di funzioni, che saranno discusse più dettagliatamente nel resto di questo manuale.  
   
- Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Di seguito è riportato un esempio:  
+ Nella forma generale di una dichiarazione di variabili, *type-specifier* restituisce il tipo di dati della variabile. *type-specifier* può essere un'istruzione composta, ad esempio quando il tipo viene modificato da **const** o da `volatile`. `declarator` fornisce il nome della variabile, possibilmente modificato in modo da dichiarare un tipo di matrice o puntatore. Ad esempio,  
   
 ```  
 int const *fp;  

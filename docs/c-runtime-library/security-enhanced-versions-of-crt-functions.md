@@ -17,18 +17,19 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 468f63d8e98dd161baec0b0db33f5dab8e750695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>Versioni con sicurezza avanzata delle funzioni CRT
 Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per altre informazioni relative al miglioramento della sicurezza in CRT, vedere [Funzionalità di sicurezza in CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
  **Funzioni sicure**  
   
-|Funzione CRT|Funzione di sicurezza avanzata|Uso|  
+|Funzione CRT|Funzione di sicurezza avanzata|Usa|  
 |------------------|--------------------------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Determina l'autorizzazione di accesso ai file|  
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|Alloca memoria sullo stack|  
@@ -111,4 +112,4 @@ Sono disponibili altre versioni sicure delle routine di libreria di runtime. Per
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Converte un carattere wide nel carattere multibyte corrispondente|  
   
 ## <a name="see-also"></a>Vedere anche  
- [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
+ [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

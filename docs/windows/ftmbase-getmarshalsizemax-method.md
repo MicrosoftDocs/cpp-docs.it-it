@@ -1,32 +1,33 @@
 ---
-title: "Metodo FtmBase::GetMarshalSizeMax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetMarshalSizeMax (metodo)"
+title: 'Metodo ftmbase:: GetMarshalSizeMax | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+dev_langs: C++
+helpviewer_keywords: GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d68889531c270db190f861eb20a34783b88987f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo FtmBase::GetMarshalSizeMax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ottiene il limite superiore del numero di byte necessari per eseguire il marshalling di un puntatore a interfaccia specificato all'oggetto specificato.  
+# <a name="ftmbasegetmarshalsizemax-method"></a>Metodo FtmBase::GetMarshalSizeMax
+Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling di puntatore a interfaccia specificato per l'oggetto specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHODIMP GetMarshalSizeMax(  
@@ -39,36 +40,36 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- Riferimento all'identificatore di interfaccia del marshalling.  
+ Riferimento all'identificatore dell'interfaccia da cui effettuare il marshalling.  
   
  `pv`  
- Puntatore a interfaccia da disporre; può essere NULL.  
+ Puntatore a interfaccia deve essere sottoposto a marshalling; può essere NULL.  
   
  `dwDestContext`  
- Contesto di destinazione in cui l'interfaccia specificata deve essere unmarshaled.  
+ Contesto di destinazione in cui l'interfaccia specificata è essere sottoposta a unmarshalling.  
   
- Specificare uno o più valori di enumerazione di MSHCTX.  
+ Specificare uno o più valori di enumerazione MSHCTX.  
   
- Attualmente, la disposizione può verificarsi in un altra stanza del processo corrente \(MSHCTX\_INPROC\) o in un altro processo nello stesso computer come processo corrente \(MSHCTX\_LOCAL\).  
+ Attualmente, l'unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nel processo corrente (MSHCTX_LOCAL) nello stesso computer.  
   
  `pvDestContext`  
  Riservato per utilizzi futuri; deve essere NULL.  
   
  `mshlflags`  
- La flag indica se i dati da disporre devono essere trasmessi al processo client — il caso tipico — oppure se devono essere scritti in una tabella globale, in cui possono essere recuperati da più client.  Specificare uno o più valori di enumerazione di MSHLFLAGS.  
+ Flag che indica se i dati di cui effettuare il marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scrivere in una tabella globale, in cui può essere recuperato da più client. Specificare uno o più valori di enumerazione MSHLFLAGS.  
   
  `pSize`  
- Quando questa operazione viene completata, un puntatore al limite superiore alla quantità di dati da immettere nel flusso di disposizione.  
+ Quando questa operazione viene completata, puntatore per il limite superiore per la quantità di dati da scrivere nel flusso di marshalling.  
   
-## Valore restituito  
- S\_OK se ha esito positivo; in caso contrario, E\_FAIL o E\_NOINTERFACE.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se ha esito positivo. in caso contrario, E_FAIL o E_NOINTERFACE.  
   
-## Requisiti  
- **Header:** ftm.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** ftm.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe FtmBase](../windows/ftmbase-class.md)

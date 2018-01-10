@@ -1,32 +1,33 @@
 ---
-title: "idl_module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_module attribute"
+title: idl_module | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_module
+dev_langs: C++
+helpviewer_keywords: idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# idl_module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica un punto di ingresso in un file DLL.  
+# <a name="idlmodule"></a>idl_module
+Specifica un punto di ingresso in un file con estensione dll.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -43,45 +44,45 @@ Specifica un punto di ingresso in un file DLL.
 function declaration  
 ```  
   
-#### Parametri  
- **nome**  
+#### <a name="parameters"></a>Parametri  
+ **name**  
  Un nome definito dall'utente per il blocco di codice che verrà visualizzato nel file IDL.  
   
- **nomedll** \(facoltativo\)  
+ **NomeDLL** (facoltativo)  
  Il file DLL che contiene l'esportazione.  
   
- `uuid` \(facoltativo\)  
+ `uuid` (facoltativo)  
  ID univoco.  
   
- **viene copiato nella helpstring** \(facoltativo\)  
+ **HelpString** (facoltativo)  
  Una stringa di caratteri utilizzata per descrivere la libreria dei tipi.  
   
- **helpstringcontext** \(facoltativo\)  
- L'ID di un argomento della Guida in un file CHM o di .hlp.  
+ **helpstringcontext** (facoltativo)  
+ L'ID di un argomento della Guida in un file hlp o chm.  
   
- **helpcontext** \(facoltativo\)  
- La guida all'ID della libreria dei tipi.  
+ **helpcontext** (facoltativo)  
+ L'ID Guida per questa libreria dei tipi.  
   
- **nascosto** \(facoltativo\)  
- Un parametro che impedisce la raccolta da visualizzare.  vedere [nascosto](http://msdn.microsoft.com/library/windows/desktop/aa366861) Attributo MIDL per ulteriori informazioni.  
+ **hidden** (facoltativo)  
+ Un parametro che impedisce la libreria di visualizzazione. Per altre informazioni, vedere l'attributo MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- ***limitato***  \(facoltativo\)  
- I membri della raccolta non possono essere chiamati in modo arbitrario.  vedere [limitato](http://msdn.microsoft.com/library/windows/desktop/aa367157) Attributo MIDL per ulteriori informazioni.  
+ ***con restrizioni*** (facoltativo)  
+ I membri della raccolta possono essere chiamati in modo arbitrario. Per altre informazioni, vedere l'attributo MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
  *dichiarazione di funzione*  
  La funzione che verrà definita.  
   
-## Note  
- `idl_module` L'attributo di C\+\+ consente di specificare il punto di ingresso in un file DLL, che consente di importare da un file DLL.  
+## <a name="remarks"></a>Note  
+ Il `idl_module` attributo C++ consente di specificare il punto di ingresso in un file con estensione dll, che consente di importare da un file con estensione dll.  
   
- **idl\_module** l'attributo presenta funzionalità simile a  [modulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) Attributo MIDL.  
+ Il **idl_module** presenta funzionalità simili a quelle di [modulo](http://msdn.microsoft.com/library/windows/desktop/aa367099) attributo MIDL.  
   
- È possibile esportare qualsiasi elemento da un oggetto COM che è possibile esportare da un file DLL inserendo un punto di ingresso della DLL nel blocco di libreria di file IDL.  
+ È possibile esportare qualsiasi elemento da un oggetto COM che è possibile esportare da un file DLL inserendo un punto di ingresso DLL nel blocco di libreria di un file IDL.  
   
- L'utilizzo di imperativo `idl_module` in due passaggi.  Innanzitutto, è necessario definire una coppia di stato o DLL.  Quindi, quando si utilizzano `idl_module` per specificare un punto di ingresso, specificare il nome e tutti gli attributi aggiuntivi.  
+ Il deve utilizzare `idl_module` in due passaggi. In primo luogo, è necessario definire una coppia nome/DLL. Quindi, quando si utilizza `idl_module` per specificare un punto di ingresso, specificare il nome e gli altri attributi.  
   
-## Esempio  
- Nel codice seguente viene illustrato come utilizzare `idl_module` attributo:  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato come utilizzare il `idl_module` attributo:  
   
 ```  
 // cpp_attr_ref_idl_module.cpp  
@@ -92,21 +93,20 @@ function declaration
 void FuncName(int i);  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [entry](../windows/entry.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

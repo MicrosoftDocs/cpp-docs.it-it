@@ -1,41 +1,43 @@
 ---
-title: "Attribute Categories | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], grouped by category"
+title: Attributo categorie | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: attributes [C++], grouped by category
 ms.assetid: 0f0679dc-2c1e-4463-b6a8-5829e36782e1
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0fd2c9754269e339d4aabba2a24f3a626afa4b8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Categories
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il riferimento di attributi vengono descritti i vari tipi di attributi che è possibile utilizzare in Visual C\+\+.  
+# <a name="attribute-categories"></a>Categorie di attributi
+Il riferimento agli attributi descrive i vari tipi di attributi che è possibile utilizzare in Visual C++.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [Attributi COM](../windows/com-attributes.md)  
- Inserisce il codice per supportare le numerose aree di sviluppo COM.  
+ Inserisce il codice per il supporto di numerose aree dello sviluppo COM.  
   
  [Attributi IDL](../windows/idl-attributes.md)  
- Inserisce il codice che crea o modifica il file associato IDL in un file di codice sorgente senza una procedura guidata e senza avere familiarità con la struttura e la sintassi del file.  
+ Inserisce il codice che crea o modifica il file idl associato all'interno di un file di codice sorgente senza una procedura guidata e acquisire familiarità con la struttura e la sintassi del file.  
   
  [Attributi del consumer OLE DB](../windows/ole-db-consumer-attributes.md)  
- Inserisce il codice, in base a [Modelli consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), per creare un consumer OLE DB di lavoro che esegue attività quali tabelle di apertura, eseguendo i controlli e dei dati.  
+ Inserisce il codice, in base il [modelli Consumer OLE DB](../data/oledb/ole-db-consumer-templates-reference.md), per creare un lavoro OLE DB consumer che esegue attività, ad esempio tabelle di apertura, l'esecuzione di comandi e l'accesso ai dati.  
   
  [Attributi del compilatore](../windows/compiler-attributes.md)  
- Inserisce il codice che esegue diverse attività di programmazione comuni.  
+ Inserisce il codice che esegue un'ampia gamma di attività comuni di programmazione.  
   
- [programmazione con attributi](../windows/attributed-programming-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali in cui è descritta la programmazione con attributi.
+ [Programmazione con attributi](../windows/attributed-programming-concepts.md)  
+ Vengono forniti collegamenti ad argomenti concettuali relativi alla programmazione con attributi.

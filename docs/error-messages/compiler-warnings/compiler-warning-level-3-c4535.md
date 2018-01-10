@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 3) C4535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4535"
+title: Compilatore avviso (livello 3) C4535 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4535
+dev_langs: C++
+helpviewer_keywords: C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a6079066a29d7d22430e8707d6548d8a4d53d231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 3) C4535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-calling \_set\_se\_translator\(\) richiede \/EHa  
+# <a name="compiler-warning-level-3-c4535"></a>Avviso del compilatore (livello 3) C4535
+set_se_translator () chiamata richiede /EHa  
   
- Per utilizzare [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md), è necessario specificare l'opzione del compilatore [\/EHa](../../build/reference/eh-exception-handling-model.md) e non **\/EHs**.  
+ L'utilizzo di [set_se_translator](../../c-runtime-library/reference/set-se-translator.md) richiede il [/EHa](../../build/reference/eh-exception-handling-model.md) l'opzione del compilatore e non **/EHs**.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4535:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4535.  
   
 ```  
 // C4535.cpp  

@@ -33,11 +33,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aa51c97ec58d5e083b2cad7b622e3b75a04749
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 411d89c7796ea9ab48c013d4efd53aedd9225aba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemfile-class"></a>Classe CMemFile
 Il [CFile](../../mfc/reference/cfile-class.md)-classe derivata che supporta file di memoria.  

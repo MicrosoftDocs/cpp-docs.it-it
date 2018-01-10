@@ -4,54 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
-- No header/ATL::IAxWinHostWindow
-- No header/ATL::AttachControl
-- No header/ATL::CreateControl
-- No header/ATL::CreateControlEx
-- No header/ATL::QueryControl
-- No header/ATL::SetExternalDispatch
-- No header/ATL::SetExternalUIHandler
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindow interface
+- ATLIFACE/ATL::IAxWinHostWindow
+- ATLIFACE/ATL::AttachControl
+- ATLIFACE/ATL::CreateControl
+- ATLIFACE/ATL::CreateControlEx
+- ATLIFACE/ATL::QueryControl
+- ATLIFACE/ATL::SetExternalDispatch
+- ATLIFACE/ATL::SetExternalUIHandler
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindow-interface"></a>Interfaccia IAxWinHostWindow
 Questa interfaccia fornisce metodi per la modifica di un controllo e il relativo oggetto host.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -224,7 +207,6 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
  [Interfaccia IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

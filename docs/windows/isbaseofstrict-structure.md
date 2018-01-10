@@ -1,32 +1,33 @@
 ---
-title: "Struttura IsBaseOfStrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsBaseOfStrict"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsBaseOfStrict (struttura)"
+title: IsBaseOfStrict (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsBaseOfStrict
+dev_langs: C++
+helpviewer_keywords: IsBaseOfStrict structure
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a8e40bec0f4dedf02aab14b2c8072ccc3e60bbb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura IsBaseOfStrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="isbaseofstrict-structure"></a>IsBaseOfStrict (struttura)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -41,33 +42,33 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Base`  
  Tipo di base.  
   
  `Derived`  
  Il tipo derivato.  
   
-## Note  
- Testa se un tipo è la base di un altro.  
+## <a name="remarks"></a>Note  
+ Verifica se un tipo è la base di un altro tipo.  
   
- Il primo modello verifica se un tipo è derivato da un tipo base, il quale potrebbe produrre **true** o **false**.  Il secondo modello verifica se un tipo è derivato da se stesso, il quale produce sempre **false**.  
+ Il primo modello verifica se un tipo è derivato da un tipo di base, che potrebbe restituire **true** o **false**. Il secondo modello verifica se un tipo derivato da se stessa, che restituisce sempre **false**.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costanti pubbliche  
+### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
-|[Costante IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Indica se un tipo è la base di un altro.|  
+|[Costante IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Indica se un tipo di base di un altro.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IsBaseOfStrict`  
   
-## Requisiti  
- **Header:** internal.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

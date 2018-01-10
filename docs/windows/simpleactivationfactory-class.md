@@ -1,32 +1,33 @@
 ---
-title: "Classe SimpleActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleActivationFactory (classe)"
+title: Classe SimpleActivationFactory | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory
+dev_langs: C++
+helpviewer_keywords: SimpleActivationFactory class
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe SimpleActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un meccanismo semplice per creare un Windows Runtime o una classe di base COM classica.  
+# <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (classe)
+Fornisce un meccanismo semplice per creare una classe base di Windows Runtime o COM classica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -35,28 +36,28 @@ template<
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Base`  
- Una classe di base.  
+ Classe di base.  
   
-## Osservazioni  
+## <a name="remarks"></a>Note  
  La classe di base deve fornire un costruttore predefinito.  
   
- Nel frammento di codice d'esempio seguente viene illustrato come utilizzare SimpleActivationFactory con la macro [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md).  
+ Esempio di codice riportato di seguito viene illustrato come utilizzare SimpleActivationFactory con la [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro).  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Crea un'istanza dell'interfaccia specificata.|  
-|[Metodo SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Ottiene il nome di classe runtime di un'istanza della classe specificata dal parametro di modello di classe `Base`.|  
-|[Metodo SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Ottiene il livello di attendibilità di istanza della classe specificata dal parametro di template di classe `Base`.|  
+|[Metodo SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Ottiene il nome della classe di runtime di un'istanza della classe specificata per il `Base` il parametro di modello di classe.|  
+|[Metodo SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Ottiene il livello di attendibilità di un'istanza della classe specificata per il `Base` il parametro di modello di classe.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
@@ -79,10 +80,10 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `SimpleActivationFactory`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

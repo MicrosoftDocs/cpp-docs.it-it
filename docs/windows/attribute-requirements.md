@@ -1,39 +1,42 @@
 ---
-title: "Attribute Requirements | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Attributo requisiti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
 ms.assetid: e42ca06f-5f3c-40b5-972a-39ecf522d227
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99a4df4c92fca7ff55c5bf800938554052122c9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Requirements
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I requisiti elencati per gli attributi C\+\+ sono descritti i tipi di progetto, le impostazioni del compilatore e altre informazioni necessarie affinché un attributo corretto.  Le categorie di informazioni vengono descritte di seguito.  
+# <a name="attribute-requirements"></a>Requisiti relativi agli attributi
+I requisiti elencati per gli attributi di C++ vengono descritti i tipi di progetto, le impostazioni del compilatore e altre informazioni necessarie per un attributo a funzionare. Le categorie di informazioni sono descritti di seguito.  
   
 > [!NOTE]
->  Utilizzando gli attributi su una classe che deriva da una classe che utilizza gli attributi non è supportato.  
+>  Utilizzo degli attributi in una classe che deriva da una classe che utilizza gli attributi non è supportata.  
   
-## Header  
- Questo elenchi campi i file di intestazione che devono essere importati prima di un attributo possa essere utilizzato.  
+## <a name="header"></a>Header  
+ Questo campo sono elencati i file di intestazione che devono essere inclusi prima di poter utilizzare un attributo.  
   
-## Project  
+## <a name="project"></a>Progetto  
  Questo campo vengono descritti i tipi di progetto in cui un attributo può essere utilizzato.  
   
-## Compilatore  
- Questo campo vengono fornite le opzioni del compilatore che devono essere presenti per questo attributo non vengano utilizzate.  
+## <a name="compiler"></a>Compilatore  
+ Questo campo fornisce le opzioni del compilatore che devono essere presente per l'attributo da utilizzare.  
   
-## Vedere anche  
- [Attribute Contexts](../windows/attribute-contexts.md)   
- [Attributes by Group](../windows/attributes-by-group.md)
+## <a name="see-also"></a>Vedere anche  
+ [Contesti di attributi](../windows/attribute-contexts.md)   
+ [Attributi per gruppo](../windows/attributes-by-group.md)

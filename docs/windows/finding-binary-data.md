@@ -1,50 +1,53 @@
 ---
-title: "Finding Binary Data | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.binary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hexadecimal bytes in binary data"
-  - "strings [C++], searching for"
-  - "file searches [C++]"
-  - "binary data, finding"
-  - "ASCII characters, finding in binary data"
+title: Ricerca di dati binari | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.binary
+dev_langs: C++
+helpviewer_keywords:
+- hexadecimal bytes in binary data
+- strings [C++], searching for
+- file searches [C++]
+- binary data, finding
+- ASCII characters, finding in binary data
 ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 60e37ee1412639f68cc21e65154e4537b244ac9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Finding Binary Data
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile effettuare la ricerca di stringhe ASCII o di byte esadecimali.  Per trovare, ad esempio, "Hello" è possibile cercare la stringa "Hello" oppure "48 65 6C 6C 6F" \(l'equivalente esadecimale\).  
+# <a name="finding-binary-data"></a>Ricerca di dati binari
+È possibile cercare stringhe ASCII o byte esadecimali. Ad esempio, per trovare "Hello", è possibile cercare una la stringa "Hello" oppure "48 65 6C 6C 6F" (l'equivalente esadecimale).  
   
-### Per cercare dati binari  
+### <a name="to-find-binary-data"></a>Per trovare i dati binari  
   
-1.  Scegliere [Trova](../Topic/Find%20Command.md) dal menu **Modifica**.  
+1.  Dal **modifica** menu, fare clic su [trovare](/visualstudio/ide/reference/find-command).  
   
-2.  Nella casella **Trova** digitare i dati da cercare oppure, se la ricerca è stata già compiuta in precedenza, selezionare la corrispondente stringa di ricerca dall'elenco a discesa.  
+2.  Nel **trova** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare i dati che si desidera trovare.  
   
-3.  Selezionare una delle opzioni di **Trova**.  
+3.  Selezionare una qualsiasi del **trovare** opzioni.  
   
-4.  Scegliere **Trova successivo**.  
+4.  Fare clic su **Trova successivo**.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Binary Editor](../mfc/binary-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Binary Editor](binary-editor.md)
+

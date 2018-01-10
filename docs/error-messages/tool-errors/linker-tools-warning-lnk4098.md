@@ -1,50 +1,49 @@
 ---
-title: "Avviso degli strumenti del linker LNK4098 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4098"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4098"
+title: Strumenti del linker LNK4098 avviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4098
+dev_langs: C++
+helpviewer_keywords: LNK4098
 ms.assetid: 1f1b1408-1316-4e34-80f5-6a02f2db0ac1
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b199c19417d7d3be866109fff7361fb4ead959d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso degli strumenti del linker LNK4098
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-la libreria predefinita 'libreria' è in conflitto con l'utilizzo di altre librerie; utilizzare \/NODEFAULTLIB:libreria  
+# <a name="linker-tools-warning-lnk4098"></a>Avviso degli strumenti del linker LNK4098
+è in conflitto 'library' DEFAULTLIB con utilizzo di altre librerie; utilizzare /NODEFAULTLIB: libreria  
   
- Si è tentato di effettuare il collegamento con librerie non compatibili.  
+ Si sta tentando di collegarsi alle librerie incompatibile.  
   
 > [!NOTE]
->  Le librerie di runtime contengono ora direttive per impedire l'unione di tipi diversi  Questo avviso viene generato se si tenta di utilizzare nello stesso programma tipi diversi o versioni di debug e non di debug della libreria di runtime.  Se si tenta di collegare un file compilato in modo da utilizzare un tipo di libreria di runtime con un altro file che ne utilizza un altro tipo, ad esempio a thread singolo e multithreading, viene generato questo avviso.  Tutti i file di origine devono utilizzare la stessa libreria di runtime.  Per ulteriori informazioni, vedere le opzioni del compilatore \(**\/MD**, **\/MT**, **\/LD**\) in [Utilizzo della libreria di runtime](../../build/reference/md-mt-ld-use-run-time-library.md).  
+>  Le librerie di runtime contengono ora direttive per impedire che combinano diversi tipi. Viene visualizzato questo avviso se si tenta di utilizzare tipi diversi di debug e le versioni non di debug della libreria di runtime nello stesso programma. Ad esempio, se è stato compilato un file per l'utilizzo di una libreria di run-time e un altro file per l'utilizzo di un altro tipo (ad esempio, a thread singolo e multithreading) e ha tentato di collegamento, si otterrà questo avviso. È necessario compilare tutti i file di origine per utilizzare la stessa libreria di runtime. Vedere il [utilizzo della libreria Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md) (**/MD**, **/MT**, **/LD**) le opzioni del compilatore per altre informazioni.  
   
- È possibile utilizzare l'opzione del linker [\/VERBOSE:LIB](../../build/reference/verbose-print-progress-messages.md) per determinare le librerie cercate dal linker.  Se viene visualizzato l'avviso LNK4098 e si desidera creare un file eseguibile che utilizza, ad esempio, le librerie di runtime non di debug a thread singolo, utilizzare l'opzione **\/VERBOSE:LIB** per individuare le librerie utilizzate dal linker.  Tra le librerie utilizzate, verrà stampata LIBC.lib, non LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib o MSVCRTD.lib.  Per far sì che il linker ignori le librerie di runtime errate, utilizzare [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per ciascuna libreria da ignorare.  
+ È possibile utilizzare l'opzione del linker [/verbose: lib](../../build/reference/verbose-print-progress-messages.md) commutatore per determinare le librerie dal linker. Se si riceve LNK4098 e si desidera creare un file eseguibile che utilizza, ad esempio, il thread singolo, librerie di runtime non di debug, utilizzare il **/verbose: lib** opzione per individuare le librerie dal linker. Il linker deve stampare LIBC.lib e non LIBCMT.lib, MSVCRT.lib, LIBCD.lib, LIBCMTD.lib o MSVCRTD.lib come le librerie. È possibile indicano al linker di ignorare le librerie di runtime errate utilizzando [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) per ogni raccolta che si desidera ignorare.  
   
- La tabella che segue indica quali librerie ignorare a seconda della libreria di runtime che si desidera utilizzare.  
+ La tabella seguente illustra le librerie a cui devono essere ignorate a seconda della libreria di runtime in cui si desidera utilizzare.  
   
-|Per utilizzare questa libreria di runtime|Ignorare queste librerie|  
-|-----------------------------------------------|------------------------------|  
-|A thread singolo \(libc.lib\)|libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Multithreading \(libcmt.lib\)|libc.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|Multithreading con DLL \(msvcrt.lib\)|libc.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
-|A thread singolo di debug \(libcd.lib\)|libc.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|  
-|Multithreading di debug \(libcmtd.lib\)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|  
-|Multithreading con DLL di debug \(msvcrtd.lib\)|libc.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|  
+|Utilizzare questa libreria di run-time|Ignorare queste librerie|  
+|-----------------------------------|----------------------------|  
+|A thread singolo (libc.lib)|LIBCMT.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
+|Multithreading (libcmt.lib)|LIBC.lib, msvcrt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
+|Multithreading con DLL (msvcrt.lib)|LIBC.lib, libcmt.lib, libcd.lib, libcmtd.lib, msvcrtd.lib|  
+|Eseguire il debug a thread singolo (libcd.lib)|LIBC.lib, libcmt.lib, msvcrt.lib, libcmtd.lib, msvcrtd.lib|  
+|Eseguire il debug con multithreading (libcmtd.lib)|LIBC.lib, libcmt.lib, msvcrt.lib, libcd.lib, msvcrtd.lib|  
+|Eseguire il debug multithreading con DLL (msvcrtd.lib)|LIBC.lib, libcmt.lib, msvcrt.lib, libcd.lib, libcmtd.lib|  
   
- Se, ad esempio, viene generato questo avviso e si desidera creare un file eseguibile che utilizzi la versione a thread singolo non di debug delle librerie di runtime, utilizzare le seguenti opzioni con il linker:  
+ Ad esempio, se si desidera creare un file eseguibile che utilizza la versione non di debug, a thread singolo delle librerie di runtime viene generato questo avviso, è possibile utilizzare le opzioni seguenti con il linker:  
   
 ```  
 /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:msvcrtd.lib  

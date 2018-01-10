@@ -1,59 +1,59 @@
 ---
-title: "2.7.1 threadprivate Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.1 direttiva threadprivate | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.1 threadprivate Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`threadprivate` la direttiva in ambito file denominato, l'spazio di nomi\-ambito, o le variabili statiche di ambito blocco specificate in variabile\-elenco privato a un thread.  *variabile\-elenco* è un elenco delimitato da virgole di variabili che non dispongono di un tipo incompleto.  La sintassi di `threadprivate` la direttiva è la seguente:  
+# <a name="271-threadprivate-directive"></a>2.7.1 Direttiva threadprivate
+Il `threadprivate` direttiva rende l'ambito file denominato, ambito spazio dei nomi o variabili statiche con ambito blocco specificate nella *elenco variabili* privata di un thread. *elenco di variabili* è un elenco delimitato da virgole delle variabili che non dispone di un tipo incompleto. La sintassi del `threadprivate` direttiva è come segue:  
   
 ```  
 #pragma omp threadprivate(variable-list) new-line  
 ```  
   
- Ciascuna copia di un oggetto `threadprivate` la variabile viene inizializzata una volta, in un punto non specificato nel programma prima del primo riferimento a tale copia e nel modo consueto \(ovvero, come la copia master verrà inizializzata in un'esecuzione seriale del programma\).  Si noti che se un oggetto viene fatto riferimento in un inizializzatore esplicito di un oggetto `threadprivate` la variabile e il valore dell'oggetto viene modificato prima del primo riferimento a una copia della variabile, il comportamento sarà non specificato.  
+ Ogni copia di un `threadprivate` variabile viene inizializzata una sola volta, in un momento specificato nel programma prima del primo riferimento a tale copia e, nel modo consueto (ad esempio, come la copia master verrebbe inizializzata durante l'esecuzione del programma seriale). Si noti che se un oggetto viene fatto riferimento in un inizializzatore esplicito di un `threadprivate` variabile e il valore dell'oggetto viene modificato prima il primo riferimento a una copia della variabile, quindi non è specificato il comportamento.  
   
- Come a una variabile privata, un thread non deve fare riferimento alla copia di un altro thread di un oggetto `threadprivate` oggetto.  Durante le aree seriali e le aree master del programma, i riferimenti saranno la copia master del thread dell'oggetto.  
+ Come con qualsiasi variabile privata, un thread non deve fare riferimento a copia di un altro thread di un `threadprivate` oggetto. Durante seriale e regioni principale del programma, i riferimenti saranno quello di copia del thread principale dell'oggetto.  
   
- Dopo la prima area parallela esegue, i dati in `threadprivate` gli oggetti è garantito mantenere solo se il meccanismo dinamico dei thread è stato disabilitato e se il numero di thread rimane invariato per tutte le aree parallele.  
+ Dopo aver eseguito la prima area parallela, i dati di `threadprivate` è garantito che gli oggetti vengono mantenute solo se il meccanismo di thread dinamico è stato disabilitato e se il numero di thread rimane invariato per tutte le aree parallele.  
   
- Le restrizioni a `threadprivate` la direttiva è la seguente:  
+ Le restrizioni per il `threadprivate` direttiva sono i seguenti:  
   
--   In `threadprivate` la direttiva per le variabili dello spazio dei nomi\-ambito o di ambito file deve trovarsi all'esterno di qualsiasi definizione o dichiarazione e deve precedere da tutti i riferimenti alle variabili del relativo elenco.  
+-   Oggetto `threadprivate` direttiva per le variabili di ambito file o di ambito dello spazio dei nomi deve trovarsi all'esterno di qualsiasi definizione o dichiarazione e deve precedere a livello lessicale tutti i riferimenti a una delle variabili nel relativo elenco.  
   
--   ogni variabile in variabile\-elenco la proprietà di un oggetto `threadprivate` la direttiva all'ambito dello spazio dei nomi o del file deve fare riferimento a una dichiarazione di variabile in l o dello spazio dei nomi del file che precede lessicale la direttiva.  
+-   Ogni variabile di *elenco variabili* di un `threadprivate` direttiva in ambito file o spazio dei nomi deve fare riferimento a una dichiarazione di variabile nell'ambito dello spazio dei nomi o di file che deve precede la direttiva.  
   
--   In `threadprivate` la direttiva per le variabili statiche di ambito blocco deve essere inserito nella variabile e non in un ambito annidato.  La direttiva deve precedere da tutti i riferimenti alle variabili del relativo elenco.  
+-   Oggetto `threadprivate` la direttiva per le variabili statiche con ambito blocco deve trovarsi nell'ambito della variabile e non in un ambito annidato. La direttiva deve precedere a livello lessicale tutti i riferimenti a una delle variabili nel relativo elenco.  
   
--   ogni variabile in variabile\-elenco la proprietà di un oggetto `threadprivate` la direttiva in blocco deve fare riferimento a una dichiarazione di variabile nello stesso ambito che precede lessicale la direttiva.  La dichiarazione di variabile necessario utilizzare l'identificatore statico della classe di archiviazione.  
+-   Ogni variabile di *elenco variabili* di un `threadprivate` direttiva nell'ambito del blocco deve fare riferimento a una dichiarazione di variabile nello stesso ambito che deve precede la direttiva. La dichiarazione di variabile è necessario utilizzare l'identificatore di classe di archiviazione statica.  
   
--   Se una variabile specificata in un oggetto `threadprivate` direttiva in un'unica unità di conversione, deve essere specificata in un oggetto  `threadprivate` direttiva in ogni unità di conversione in cui è dichiarata.  
+-   Se si specifica una variabile un `threadprivate` direttiva in un'unità di conversione, deve essere specificato un `threadprivate` direttiva in ogni unità di conversione in cui viene dichiarato.  
   
--   In `threadprivate` la variabile non sia inclusa in una clausola tranne  `copyin`,  `copyprivate`,  `schedule`,  `num_threads`, o  **se** clausola.  
+-   A `threadprivate` variabile non deve trovarsi in qualsiasi clausola, ad eccezione di `copyin`, `copyprivate`, `schedule`, `num_threads`, o **se** clausola.  
   
--   L'indirizzo di un oggetto `threadprivate` la variabile non è una costante address.  
+-   L'indirizzo di un `threadprivate` la variabile non è una costante di indirizzo.  
   
--   In `threadprivate` la variabile non deve avere un tipo incompleto o un tipo di riferimento.  
+-   Oggetto `threadprivate` variabile non deve avere un tipo incompleto o un tipo riferimento.  
   
--   In `threadprivate` la variabile con il tipo di classe non POD deve disporre di un costruttore di copia accessibile e ambiguità se viene dichiarata con un inizializzatore esplicito.  
+-   Oggetto `threadprivate` variabile con tipo di classe non POD deve avere un costruttore di copia accessibile, non ambiguo, se è dichiarata con un inizializzatore esplicito.  
   
- Nell'esempio seguente viene illustrato come modificare una variabile visualizzato in un inizializzatore può causare un comportamento non specificato e anche come evitare questo problema utilizzando un oggetto ausiliario e un costruttore di copia.  
+ Nell'esempio seguente viene illustrato come modificare una variabile che viene visualizzato in un inizializzatore di può causare un comportamento non specificato, nonché come evitare questo problema utilizzando un oggetto ausiliario e un costruttore di copia.  
   
 ```  
 int x = 1;  
@@ -75,8 +75,8 @@ void f(int n) {
 }  
 ```  
   
-## riferimenti incrociati:  
+## <a name="cross-references"></a>Riferimenti:  
   
--   I thread dinamici, vedere [parte 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39.  
+-   Thread dinamico, vedere [sezione 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39.  
   
--   `OMP_DYNAMIC` la variabile di ambiente, vedere  [parte 4,3](../../parallel/openmp/4-3-omp-dynamic.md) nella pagina 49.
+-   `OMP_DYNAMIC`vedere variabile di ambiente [sezione 4.3](../../parallel/openmp/4-3-omp-dynamic.md) nella pagina 49.

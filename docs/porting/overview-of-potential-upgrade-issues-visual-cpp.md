@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 Nel corso degli anni il compilatore Visual C++ ha subito molte modifiche, che si aggiungono alle modifiche apportate al linguaggio C++, alla libreria standard C++, al runtime C (CRT) e ad altre librerie come MFC e ATL. Di conseguenza, quando si aggiorna un'applicazione da una versione precedente di Visual C++ è possibile che il codice che prima veniva compilato correttamente mostri errori e avvisi del compilatore e del linker. Più la base di codice è vecchia, maggiore è la possibilità di tali errori. Questa panoramica riepiloga i tipi di problemi più comuni che possono verificarsi e offre collegamenti a informazioni più dettagliate.  

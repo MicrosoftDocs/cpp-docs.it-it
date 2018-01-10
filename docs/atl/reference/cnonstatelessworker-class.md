@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08b440a60b23182c3efff1c0236773ad2b98bf97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnonstatelessworker-class"></a>Classe CNonStatelessWorker
 Riceve richieste da un pool di thread e li passa un oggetto di lavoro che viene creato ed eliminato in ogni richiesta.  

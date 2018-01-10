@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83cd51bbba64a9b28e8b3cf7f9a1ecadd369d16b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: caa0c3cc2c379362972d1b24e80f3ebb94d9f878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Procedura: dichiarare e utilizzare i puntatori interni e le matrici gestite (C++/CLI)
 L'esempio C + + CLI illustra come dichiarare e utilizzare un puntatore interno a una matrice.  

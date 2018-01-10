@@ -1,49 +1,65 @@
 ---
-title: Funzioni globali di identificatore di sicurezza | Documenti di Microsoft
+title: Funzioni globali di identificatore di sicurezza | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::Sids::AccountOps
+- atlsecurity/ATL::Sids::Admins
+- atlsecurity/ATL::Sids::AnonymousLogon
+- atlsecurity/ATL::Sids::AuthenticatedUser
+- atlsecurity/ATL::Sids::BackupOps
+- atlsecurity/ATL::Sids::Batch
+- atlsecurity/ATL::Sids::CreatorGroup
+- atlsecurity/ATL::Sids::CreatorGroupServer
+- atlsecurity/ATL::Sids::CreatorOwner
+- atlsecurity/ATL::Sids::CreatorOwnerServer
+- atlsecurity/ATL::Sids::Dialup
+- atlsecurity/ATL::Sids::Guests
+- atlsecurity/ATL::Sids::Interactive
+- atlsecurity/ATL::Sids::Local
+- atlsecurity/ATL::Sids::Network
+- atlsecurity/ATL::Sids::NetworkService
+- atlsecurity/ATL::Sids::Null
+- atlsecurity/ATL::Sids::PowerUsers
+- atlsecurity/ATL::Sids::PrintOps
+- atlsecurity/ATL::Sids::Proxy
+- atlsecurity/ATL::Sids::RasServers
+- atlsecurity/ATL::Sids::Replicator
+- atlsecurity/ATL::Sids::RestrictedCode
+- atlsecurity/ATL::Sids::Self
+- atlsecurity/ATL::Sids::ServerLogon
+- atlsecurity/ATL::Sids::Service
+- atlsecurity/ATL::Sids::System
+- atlsecurity/ATL::Sids::SystemOps
+- atlsecurity/ATL::Sids::TerminalServer
+- atlsecurity/ATL::Sids::Users
+- atlsecurity/ATL::Sids::World
+dev_langs: C++
 helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9e51fe30b0519514df34f1a77b1e731f51047520
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6975b6b73c6d81fc9347a2395cd36747ce235b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-identifier-global-functions"></a>Funzioni globali di identificatore di sicurezza
-Queste funzioni restituiscono comuni ben noto SID oggetti.  
+Queste funzioni restituiscono SID noto comuni di oggetti.  
   
 > [!IMPORTANT]
->  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite nel [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Le funzioni elencate nella tabella seguente non possono essere utilizzate nelle applicazioni eseguite in Windows Runtime.  
   
 |||  
 |-|-|  
@@ -181,9 +197,9 @@ CSid NetworkService() throw(...);
 ```  
   
 ### <a name="remarks"></a>Note  
- Utilizzare NetworkService per consentire all'utente NT Authority\Servizio di rete per la lettura di un oggetto di sicurezza CPerfMon. NetworkService aggiunge un SecurityAttribute al codice ATL Server in modo da permettere alla DLL di accesso con l'account NetworkService in [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] e maggiore del sistema operativo.  
+ Per abilitare l'utente NT Authority\Servizio di rete per la lettura di un oggetto di sicurezza CPerfMon, utilizzare NetworkService. NetworkService aggiunge un stato al codice ATL Server consentirà la DLL di eseguire l'accesso con l'account NetworkService a [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] e maggiore del sistema operativo.  
   
- Quando i contatori di log personalizzate vengono creati con la classe ATLServer CPerfMon nella MMC di Perfmon, i contatori non vengano visualizzate quando si visualizza il file di registro, sebbene vengano visualizzati correttamente nella visualizzazione in tempo reale. Contatori delle prestazioni personalizzati CPerfMon non dispone delle autorizzazioni necessarie per l'esecuzione con il servizio "Avvisi e registri di prestazioni" (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (o versione successiva) sistemi operativi. Questo servizio viene eseguito con l'account "NT AUTHORITY\NetworkService".  
+ Quando i contatori di log personalizzati vengono creati con le classi ATLServer CPerfMon in MMC di Perfmon, i contatori potrebbero emergere quando si visualizza il file di log, sebbene vengano visualizzati correttamente nella visualizzazione in tempo reale. Contatori delle prestazioni personalizzati CPerfMon non dispone delle autorizzazioni necessarie per l'esecuzione con il servizio "Avvisi e registri di prestazioni" (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (o versione successiva) i sistemi operativi. Questo servizio viene eseguito con l'account "NT AUTHORITY\NetworkService".  
   
 ##  <a name="null"></a>Sids::null  
  Restituisce il SID di SECURITY_NULL_RID.  
@@ -283,4 +299,3 @@ CSid World() throw(...);
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni](../../atl/reference/atl-functions.md)
-

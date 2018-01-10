@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 808f1293c9d5d96a2691cf18c087990a16087144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 488eb8f2c9bbc321595d3e89164ae6633019d36e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>Qualificatori: accesso a oggetti volatili
 **ANSI 3.5.5.3** Indica cosa costituisce un accesso a un oggetto che dispone di un tipo qualificato volatile  

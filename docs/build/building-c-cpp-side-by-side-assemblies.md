@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilazione di assembly side-by-side C/C++
 Oggetto [assembly side-by-side](http://msdn.microsoft.com/library/windows/desktop/ff951640) è una raccolta di risorse, ovvero un gruppo di DLL, classi windows, server COM, librerie dei tipi o interfacce, disponibile per un'applicazione può utilizzare in fase di esecuzione. Il vantaggio principale di creazione di un nuovo assembly DLL si più versioni di assembly possono essere utilizzate dalle applicazioni nello stesso momento che è possibile per gli assembly attualmente installato servizio in caso di una versione di aggiornamento.  

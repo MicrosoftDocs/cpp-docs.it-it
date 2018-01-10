@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fb2ce8a8a2df102f2e455668ab798957b9ad46c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc"></a>malloc
 Alloca blocchi di memoria.  
@@ -72,7 +54,7 @@ void *malloc(
  Byte da allocare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `malloc` restituisce un puntatore void allo spazio allocato o `NULL` se la memoria disponibile è insufficiente. Per restituire un puntatore a un tipo diverso da `void`, usare un cast del tipo sul valore restituito. Lo spazio di archiviazione a cui punta il valore restituito è sicuramente allineato in modo corretto per l'archiviazione di qualsiasi tipo di oggetto con un requisito di allineamento minore o uguale a quello dell'allineamento fondamentale. (In Visual C++, l'allineamento fondamentale è l'allineamento richiesto per un `double`, o 8 byte. Nel codice destinato a piattaforme a 64 bit, è 16 byte.) Usare [aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) per allocare spazio di archiviazione per gli oggetti con un requisito di allineamento maggiore, ad esempio, i tipi SSE [__m128](../../cpp/m128.md) e `__m256` e i tipi dichiarati con `__declspec(align(``n``))` dove `n` è maggiore di 8. Se `size` è 0, `malloc` alloca un elemento di lunghezza zero nell'heap e restituisce un puntatore valido a tale elemento. Controllare sempre il valore restituito da `malloc`, anche se la quantità di memoria richiesta è limitata.  
+ `malloc` restituisce un puntatore void allo spazio allocato o `NULL` se la memoria disponibile è insufficiente. Per restituire un puntatore a un tipo diverso da `void`, usare un cast del tipo sul valore restituito. Lo spazio di archiviazione a cui punta il valore restituito è sicuramente allineato in modo corretto per l'archiviazione di qualsiasi tipo di oggetto con un requisito di allineamento minore o uguale a quello dell'allineamento fondamentale. (In Visual C++, l'allineamento fondamentale è l'allineamento richiesto per un `double`, o 8 byte. Nel codice destinato a piattaforme a 64 bit, è 16 byte.) Usare [aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) per allocare spazio di archiviazione per gli oggetti con un requisito di allineamento maggiore, ad esempio, i tipi SSE [__m128](../../cpp/m128.md) e `__m256` e i tipi dichiarati con `__declspec(align( n ))` dove `n` è maggiore di 8. Se `size` è 0, `malloc` alloca un elemento di lunghezza zero nell'heap e restituisce un puntatore valido a tale elemento. Controllare sempre il valore restituito da `malloc`, anche se la quantità di memoria richiesta è limitata.  
   
 ## <a name="remarks"></a>Note  
  La funzione `malloc` alloca un blocco di memoria di almeno `size` byte. Il blocco può essere maggiore di `size` byte a causa dello spazio necessario per le informazioni sull'allineamento e la manutenzione.  
@@ -94,7 +76,7 @@ void *malloc(
 |[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
 |[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- La funzione C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) imposta la nuova modalità del gestore per `malloc`. La nuova modalità del gestore indica se, in caso di errore, `malloc` deve chiamare la routine del nuovo gestore come impostato tramite [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `malloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `malloc` non riesce ad allocare memoria, `malloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per ignorare il valore predefinito, chiamare `_set_new_mode(1)` anticipata nel programma, o il collegamento con NEWMODE. OBJ (vedere [Opzioni collegamento](../../c-runtime-library/link-options.md)).  
+ La funzione C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) imposta la nuova modalità del gestore per `malloc`. La nuova modalità del gestore indica se, in caso di errore, `malloc` deve chiamare la routine del nuovo gestore come impostato da [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `malloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `malloc` non riesce ad allocare memoria, `malloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per ignorare il valore predefinito, chiamare `_set_new_mode(1)` anticipata nel programma, o il collegamento con NEWMODE. OBJ (vedere [Opzioni collegamento](../../c-runtime-library/link-options.md)).  
   
  Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `malloc` viene risolto in [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
   
@@ -154,4 +136,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

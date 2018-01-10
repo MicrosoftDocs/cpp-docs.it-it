@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e22f2d3c69bf4f0daf38c4f59b416d8d44a431a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-options"></a>Opzioni collegamento
 La directory lib CRT include un certo numero di file di oggetti piccoli che abilitano specifiche funzionalità CRT senza apportare modifiche al codice. Queste funzionalità sono denominate "opzioni di collegamento" perché è sufficiente aggiungerle alla riga di comando del linker per usarle.  
@@ -54,14 +55,14 @@ La directory lib CRT include un certo numero di file di oggetti piccoli che abil
 |Codice nativo e /clr|Modalità pure|Descrizione|  
 |----------------------|---------------|-----------------|  
 |binmode.obj|pbinmode.obj|Imposta la modalità binaria come modalità di conversione di file predefinita. Vedere [_fmode](../c-runtime-library/fmode.md).|  
-|chkstk.obj|n/d|Fornisce il controllo dello stack e il supporto di alloca quando non si usa CRT.|  
+|chkstk.obj|N/D|Fornisce il controllo dello stack e il supporto di alloca quando non si usa CRT.|  
 |commode.obj|pcommode.obj|Imposta il flag di commit globale su "commit". Vedere [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) e [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|  
-|fp10.obj|n/d|Modifica il controllo della precisione predefinito in 64 bit. Vedere [Supporto delle funzioni a virgola mobile](../c-runtime-library/floating-point-support.md).|  
+|fp10.obj|N/D|Modifica il controllo della precisione predefinito in 64 bit. Vedere [Supporto delle funzioni a virgola mobile](../c-runtime-library/floating-point-support.md).|  
 |invalidcontinue.obj|pinvalidcontinue.obj|Imposta un gestore di parametri non validi predefinito che non esegue alcuna operazione, vale a dire che i parametri non validi passati alle funzioni CRT impostano semplicemente errno e restituiscono un risultato di errore.|  
-|loosefpmath.obj|n/d|Assicura che il codice a virgola mobile tolleri i valori denormalizzati.|  
+|loosefpmath.obj|N/D|Assicura che il codice a virgola mobile tolleri i valori denormalizzati.|  
 |newmode.obj|pnewmode.obj|Fa sì che [malloc](../c-runtime-library/reference/malloc.md) chiami il nuovo gestore in caso di errore. Vedere [_set_new_mode](../c-runtime-library/reference/set-new-mode.md), [_set_new_handler](../c-runtime-library/reference/set-new-handler.md), [calloc](../c-runtime-library/reference/calloc.md) e [realloc](../c-runtime-library/reference/realloc.md).|  
 |noarg.obj|pnoarg.obj|Disabilita tutte le elaborazioni di argc e argv.|  
-|nochkclr.obj|n/d|Non effettua alcuna operazione. Rimuovere dal progetto.|  
+|nochkclr.obj|N/D|Non effettua alcuna operazione. Rimuovere dal progetto.|  
 |noenv.obj|pnoenv.obj|Disabilita la creazione di un ambiente memorizzato nella cache per CRT.|  
 |nothrownew.obj|pnothrownew.obj|Abilita la versione di new che non genera eccezioni in CRT. Vedere [Operatori new e delete](../cpp/new-and-delete-operators.md).|  
 |setargv.obj|psetargv.obj|Consente l'espansione dei caratteri jolly negli argomenti della riga di comando. Vedere [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).|  
@@ -69,4 +70,4 @@ La directory lib CRT include un certo numero di file di oggetti piccoli che abil
 |wsetargv.obj|pwsetargv.obj|Consente l'espansione dei caratteri jolly negli argomenti della riga di comando. Vedere [Espansione di argomenti con caratteri jolly](../c-language/expanding-wildcard-arguments.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
+ [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

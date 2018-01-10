@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f475e7870c1ae093966a77a57e299dd9c007b8f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2be8059f67b94cd7ee068430639a27a69b43c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-arrays"></a>Archiviazione di matrici
 Lo spazio di archiviazione associato a un tipo di matrice è lo spazio di archiviazione necessario per tutti i relativi elementi. Gli elementi di una matrice vengono archiviati in posizioni di memoria contigue e crescenti, dal primo elemento all'ultimo.  

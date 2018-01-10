@@ -1,11 +1,10 @@
 ---
-title: Classe critical_section | Documenti di Microsoft
+title: Classe critical_section | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical_section class
+dev_langs: C++
+helpviewer_keywords: critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 58821589a4b7596b80179a77dfd6a5772531f053
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>Classe critical_section
 Un'esclusione reciproca non rientrante che tiene conto in modo esplicito del runtime di concorrenza.  
@@ -76,14 +59,14 @@ class critical_section;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[critical_section](#ctor)|Costruisce una nuova sezione critica.|  
-|[~ critical_section distruttore](#dtor)|Elimina una sezione critica.|  
+|[~ critical_section distruttore](#dtor)|Elimina definitivamente una sezione critica.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[lock](#lock)|Acquisisce la sezione critica.|  
-|[native_handle](#native_handle)|Restituisce un handle nativo specifico di piattaforma, se presente.|  
+|[native_handle](#native_handle)|Restituisce l'handle nativo una piattaforma specifica, se presente.|  
 |[try_lock](#try_lock)|Tenta di acquisire il blocco senza bloccarsi.|  
 |[try_lock_for](#try_lock_for)|Tenta di acquisire il blocco senza bloccarsi per un numero specifico di millisecondi.|  
 |[unlock](#unlock)|Sblocca la sezione critica.|  
@@ -95,7 +78,7 @@ class critical_section;
  `critical_section`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -109,7 +92,7 @@ critical_section();
   
 ##  <a name="dtor"></a>~ critical_section 
 
- Elimina una sezione critica.  
+ Elimina definitivamente una sezione critica.  
   
 ```
 ~critical_section();
@@ -127,13 +110,13 @@ void lock();
 ```  
   
 ### <a name="remarks"></a>Note  
- Spesso è preferibile utilizzare il [scoped_lock](#critical_section__scoped_lock_class) costrutto per acquisire e rilasciare un `critical_section` oggetto in un'eccezione modo sicuro.  
+ Spesso è preferibile utilizzare il [scoped_lock](#critical_section__scoped_lock_class) costrutto per acquisire e rilasciare un `critical_section` oggetto un'eccezione come in modo sicuro.  
   
  Se il blocco è già utilizzato dal contesto di chiamata, un [improper_lock](improper-lock-class.md) verrà generata l'eccezione.  
   
 ##  <a name="native_handle"></a>native_handle 
 
- Restituisce un handle nativo specifico di piattaforma, se presente.  
+ Restituisce l'handle nativo una piattaforma specifica, se presente.  
   
 ```
 native_handle_type native_handle();
@@ -162,11 +145,11 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
   
 ### <a name="parameters"></a>Parametri  
  `_Critical_section`  
- La sezione critica da bloccare.  
+ Sezione critica da bloccare.  
   
 ##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
- Elimina un `scoped_lock` dell'oggetto e rilascia la sezione critica fornita nel relativo costruttore.  
+ Elimina definitivamente un `scoped_lock` dell'oggetto e rilascia la sezione critica fornita nel relativo costruttore.  
   
 ```
 ~scoped_lock();
@@ -198,7 +181,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>Valore restituito  
  Se è stato acquisito il blocco, il valore `true`; in caso contrario, il valore `false`.  
   
-##  <a name="unlock"></a>sbloccare 
+##  <a name="unlock"></a>lo sblocco 
 
  Sblocca la sezione critica.  
   
@@ -209,4 +192,3 @@ void unlock();
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe reader_writer_lock](reader-writer-lock-class.md)
-

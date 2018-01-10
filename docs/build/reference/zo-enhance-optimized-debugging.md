@@ -1,60 +1,61 @@
 ---
-title: "/Zo (Ottimizzare il debug) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "-Zo"
-  - "/Zo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zo (opzione del compilatore) [C++]"
-  - "Zo (opzione del compilatore) [C++]"
-  - "-Zo (opzione del compilatore) [C++]"
+title: -Zo (ottimizzare il debug) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- -Zo
+- /Zo
+dev_langs: C++
+helpviewer_keywords:
+- Zo compiler option [C++]
+- /Zo compiler option [C++]
+- -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 326bd1c6c435dec97c309014dfc81ca444cc5eb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /Zo (Ottimizzare il debug)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="zo-enhance-optimized-debugging"></a>/Zo (Ottimizzare il debug)
 Genera informazioni di debug avanzate per il codice ottimizzato nelle compilazioni non di debug.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 /Zo[-]  
 ```  
   
-## Note  
- L'opzione del compilatore **\/Zo** genera informazioni di debug avanzate per il codice ottimizzato.  L'ottimizzazione può usare i registri per le variabili locali, riordinare il codice, vettorizzare i cicli e rendere inline le chiamate di funzione.  Queste ottimizzazioni possono nascondere la relazione tra il codice sorgente e il codice oggetto compilato.  L'opzione **\/Zo** indica al compilatore di generare informazioni di debug aggiuntive per le variabili locali e le funzioni rese inline.  Usarla per visualizzare le variabili nelle finestre **Auto**, **Variabili locali** e **Espressioni di controllo** quando si esegue il codice ottimizzato un'istruzione alla volta nel debugger di Visual Studio.  Consente anche le analisi dello stack per mostrare le funzioni rese inline nel debugger WinDBG.  Per le compilazioni di debug in cui sono disabilitate le ottimizzazioni \([\/Od](../../build/reference/od-disable-debug.md)\) non sono necessarie le informazioni di debug aggiuntive generate quando viene specificato **\/Zo**.  Usare l'opzione **\/Zo** per eseguire il debug delle configurazioni di rilascio con l'ottimizzazione attivata.  Per altre informazioni sulle opzioni di ottimizzazione, vedere [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md).  L'opzione **\/Zo** viene incorporata per impostazione predefinita in Visual Studio 2015 quando si specificano le informazioni di debug con **\/Zi** o **\/Z7**.  Specificare **\/Zo\-** per disabilitare in modo esplicito l'opzione del compilatore.  
+## <a name="remarks"></a>Note  
+ Il **/Zo** opzione del compilatore genera informazioni di debug avanzate per il codice ottimizzato. L'ottimizzazione può usare i registri per le variabili locali, riordinare il codice, vettorizzare i cicli e rendere inline le chiamate di funzione. Queste ottimizzazioni possono nascondere la relazione tra il codice sorgente e il codice oggetto compilato. Il **/Zo** opzione indica al compilatore di generare informazioni di debug aggiuntive per le variabili locali e delle funzioni inline. Utilizzarla per visualizzare le variabili di **Auto**, **variabili locali**, e **espressioni di controllo** ottimizzato di windows se si esegue il codice nel debugger di Visual Studio. Consente anche le analisi dello stack per mostrare le funzioni rese inline nel debugger WinDBG. Compilazioni che sono disabilitate le ottimizzazioni di debug ([/Od](../../build/reference/od-disable-debug.md)) non è necessario le informazioni di debug aggiuntive generate quando si **/Zo** specificato. Utilizzare il **/Zo** commutatore per eseguire il debug delle configurazioni di rilascio con l'ottimizzazione attivata. Per ulteriori informazioni sulle opzioni di ottimizzazione, vedere [Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md). Il **/Zo** opzione è abilitata per impostazione predefinita in Visual Studio quando si specificano le informazioni di debug con **/Zi** o **/Z7**. Specificare **/Zo-** disabilitare in modo esplicito l'opzione del compilatore.  
   
- L'opzione **\/Zo** è disponibile in Visual Studio 2013 Update 3 e sostituisce l'opzione **\/d2Zi\+** non documentata in precedenza.  
+ Il **/Zo** commutatore è disponibile a partire da Visual Studio 2013 Update 3 e sostituisce il non documentato in precedenza **/d2Zi+** passare.  
   
-### Per impostare l'opzione \/Zo del compilatore in Visual Studio  
+### <a name="to-set-the-zo-compiler-option-in-visual-studio"></a>Per impostare l'opzione /Zo del compilatore in Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per altre informazioni, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire il **pagine delle proprietà** la finestra di dialogo per il progetto. Per ulteriori informazioni, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Proprietà di configurazione**, **C\/C\+\+**.  
+2.  Selezionare il **le proprietà di configurazione**, **C/C++** cartella.  
   
-3.  Selezionare la pagina delle proprietà **Riga di comando**.  
+3.  Selezionare il **riga di comando** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Opzioni aggiuntive** in modo da includere `/Zo`, quindi fare clic su **OK**.  
+4.  Modificare il **opzioni aggiuntive** proprietà da includere `/Zo` e quindi scegliere **OK**.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md)   
- [\/Z7, \/Zi, \/ZI \(Formato informazioni di debug\)](../../build/reference/z7-zi-zi-debug-information-format.md)   
- [Modifica e continuazione](../Topic/Edit%20and%20Continue.md)
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)   
+ [/Z7, /Zi, /ZI (formato informazioni di Debug)](../../build/reference/z7-zi-zi-debug-information-format.md)   
+ [Modifica e continuazione](/visualstudio/debugger/edit-and-continue)

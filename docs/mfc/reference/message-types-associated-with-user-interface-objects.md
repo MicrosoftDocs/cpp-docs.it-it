@@ -15,18 +15,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4982d8bf2738bb3cbdaaa3fbee50f97a004990a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ff4c7aac0c73406503df2f2384249279d3d7f97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>Tipi di messaggi associati a oggetti dell'interfaccia utente
 La tabella seguente illustra i tipi di oggetti con cui si lavora e i tipi di messaggi associati.  
   
 ### <a name="user-interface-objects-and-associated-messages"></a>Oggetti dell'interfaccia utente e i messaggi associati  
   
-|ID oggetto|Messaggi|  
+|ID oggetto|Messages|  
 |---------------|--------------|  
 |Nome della classe, che rappresenta la finestra che lo contiene|Messaggi di Windows appropriati per un [CWnd](../../mfc/reference/cwnd-class.md)-classe derivata: una finestra di dialogo, finestra, finestra figlio, finestra figlio MDI o una finestra cornice in primo piano.|  
 |Identificatore del menu o i tasti di scelta rapida|-   **COMANDO** messaggio (viene eseguita la funzione del programma).<br />-   **UPDATE_COMMAND_UI** messaggio (aggiorna dinamicamente la voce di menu).|  

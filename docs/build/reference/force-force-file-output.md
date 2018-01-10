@@ -1,66 +1,67 @@
 ---
-title: "/FORCE (Forza l&#39;output del file) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ForceLink"
-  - "/force"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FORCE (opzione del linker)"
-  - "output di file nel linker"
-  - "FORCE (opzione del linker)"
-  - "-FORCE (opzione del linker)"
+title: -FORCE (Output File Force) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ForceLink
+- /force
+dev_langs: C++
+helpviewer_keywords:
+- FORCE linker option
+- file output in linker
+- /FORCE linker option
+- -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ec19beec52a217df1237de41d0bd81ab447a56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /FORCE (Forza l&#39;output del file)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="force-force-file-output"></a>/FORCE (Forza l'output del file)
 ```  
 /FORCE:[MULTIPLE|UNRESOLVED]  
 ```  
   
-## Note  
- L'opzione \/FORCE indica al linker che è necessario creare un file exe o una DLL valida anche se un simbolo è con riferimenti ma non definito oppure è definito più volte.  
+## <a name="remarks"></a>Note  
+ L'opzione /FORCE indica al linker di creare un file valido .exe o DLL anche se un simbolo viene fatto riferimento ma non definito o è definito più volte.  
   
- L'opzione \/FORCE accetta un argomento facoltativo:  
+ L'opzione /FORCE può assumere un argomento facoltativo:  
   
--   Utilizzare \/FORCE:MULTIPLE per creare un file di output indipendentemente dal fatto che LINK trovi più definizioni per un simbolo.  
+-   Utilizzare /FORCE: multiple per creare un file di output LINK trovi più di una definizione per un simbolo o meno.  
   
--   Utilizzare \/FORCE:UNRESOLVED per creare un file di output indipendentemente dal fatto che LINK trovi un simbolo non definito. \/FORCE:UNRESOLVED verrà ignorato se il simbolo del punto di ingresso non è risolto.  
+-   Utilizzare /FORCE: UNRESOLVED per creare un file di output LINK trovi un simbolo non definito o meno. /Force: non risolto viene ignorata se il simbolo del punto di ingresso non è stato risolto.  
   
- Se si specifica \/FORCE senza argomenti, verranno considerati sia i simboli non risolti che quelli definiti più volte.  
+ /Force senza argomenti implica multipli e risolti.  
   
- È possibile che un file creato con questa opzione presenti un'esecuzione anomala.  Quando è specificata l'opzione \/FORCE, il collegamento incrementale non viene eseguito.  
+ Creata un file con questa opzione potrebbe non funzionare come previsto. Il linker non verrà collegato in modo incrementale quando è specificata l'opzione /FORCE.  
   
- Se un modulo viene compilato con **\/clr**, **\/FORCE** non creerà un'immagine.  
+ Se un modulo compilato con **/clr**, **/Force** non creerà un'immagine.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
+3.  Fare clic sulla pagina delle proprietà **Riga di comando** .  
   
-4.  Digitare l'opzione nella casella **Opzioni aggiuntive**.  
+4.  Digitare l'opzione nel **opzioni aggiuntive** casella.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

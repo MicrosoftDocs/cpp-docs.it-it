@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cdc3bd0d6370848859b16ce30eff6a224d83a60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d472026649bbe1d72a9afba42f224b0b9159258d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-initialization"></a>Inizializzazione CRT
 In questo argomento viene descritto come CRT inizializza gli stati globali nel codice nativo.  
@@ -101,4 +102,4 @@ RELOCATIONS #6
  Pertanto, la libreria CRT utilizza sia `__xc_a` che `__xc_z` per determinare l'inizio e la fine dell'elenco di inizializzatori globali a causa del modo in cui vengono disposti nella memoria dopo che l'immagine viene caricata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
+ [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

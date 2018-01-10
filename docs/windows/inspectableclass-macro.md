@@ -1,53 +1,53 @@
 ---
-title: "Macro InspectableClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::InspectableClass"
-dev_langs: 
-  - "C++"
+title: Macro InspectableClass | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::InspectableClass
+dev_langs: C++
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1ac1f84c76bb61d24ee25e8ca431e13620f6f85a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Macro InspectableClass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Imposta il nome e il livello di attendibilità di classe di runtime.  
+# <a name="inspectableclass-macro"></a>Macro InspectableClass
+Imposta il nome e l'attendibilità del livello di classe runtime.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
-  
 InspectableClass(  
    runtimeClassName,   
    trustLevel)  
-  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `runtimeClassName`  
- Il nome testuale completo della classe runtime.  
+ Il nome completo testuale della classe di runtime.  
   
  `trustLevel`  
- Uno dei valori enumerati di [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx).  
+ Uno del [TrustLevel](http://msdn.microsoft.com/library/br224625.aspx) valori enumerati.  
   
-## Note  
- La macro `InspectableClass` può essere utilizzata solo con i tipi [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+## <a name="remarks"></a>Note  
+ Il `InspectableClass` macro può essere utilizzata solo con tipi di Windows Runtime.  
   
-## Requisiti  
- **Intestazione:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe RuntimeClass](../windows/runtimeclass-class.md)

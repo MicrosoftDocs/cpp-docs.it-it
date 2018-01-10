@@ -1,41 +1,42 @@
 ---
-title: "Metodo Module::ReleaseNotifier::Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::ReleaseNotifier::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Invoke (metodo)"
+title: 'Releasenotifier:: Invoke (metodo) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::ReleaseNotifier::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: f62686fe-74bf-482b-a46b-6a3c09b80e7e
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e2eff342264bf7866a4eb95147bca7ce41acb997
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo Module::ReleaseNotifier::Invoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una volta implementata, chiama un gestore eventi quando l'ultimo oggetto in un modulo viene rilasciato.  
+# <a name="modulereleasenotifierinvoke-method"></a>Metodo Module::ReleaseNotifier::Invoke
+Quando implementato, chiama un gestore eventi quando viene rilasciato l'ultimo oggetto in un modulo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 virtual void Invoke() = 0;  
 ```  
   
-## Requisiti  
- **Header:** module.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

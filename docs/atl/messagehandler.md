@@ -1,46 +1,44 @@
 ---
-title: "MessageHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MessageHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MessageHandler function"
+title: MessageHandler | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MessageHandler
+dev_langs: C++
+helpviewer_keywords: MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f5a09439cf47c695af0d3b7d6c7724cffcb9ccb4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# MessageHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**MessageHandler** è il nome della funzione identificata dal secondo parametro di una macro `MESSAGE_HANDLER` nella mappa messaggi.  
+# <a name="messagehandler"></a>MessageHandler
+**MessageHandler** è il nome della funzione identificata dal secondo parametro del `MESSAGE_HANDLER` macro della mappa del messaggio.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      LRESULT   
-      MessageHandler  
-      (  
-   UINT uMsg,  
-   WPARAM wParam,  
-   LPARAM lParam,  
-   BOOL& bHandled  
-);  
+ 
+    LRESULT 
+    MessageHandler 
+ (
+    UINT uMsg,  
+    WPARAM wParam,  
+    LPARAM lParam,  
+    BOOL& bHandled);
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `uMsg`  
  Specifica il messaggio.  
   
@@ -51,15 +49,16 @@ caps.handback.revision: 6
  Ulteriori informazioni specifiche del messaggio.  
   
  `bHandled`  
- Imposta `bHandled` della mappa messaggi a **TRUE** prima `MessageHandler` viene chiamato.  Se `MessageHandler` completamente non gestisce il messaggio, deve impostare `bHandled` a **FALSE** per indicare un'ulteriore elaborazione delle necessità del messaggio.  
+ I set di mapping dei messaggi `bHandled` a **TRUE** prima `MessageHandler` viene chiamato. Se `MessageHandler` non gestire completamente il messaggio, è necessario impostare `bHandled` a **FALSE** per indicare che il messaggio richiede un'ulteriore elaborazione.  
   
-## Valore restituito  
- Il risultato di elaborazione dei messaggi.  0 se ha esito positivo.  
+## <a name="return-value"></a>Valore restituito  
+ Il risultato dell'elaborazione del messaggio. 0 se ha esito positivo.  
   
-## Note  
- Per un esempio di utilizzo di questo gestore messaggi in una mappa messaggi, vedere [MESSAGE\_HANDLER](../Topic/MESSAGE_HANDLER.md).  
+## <a name="remarks"></a>Note  
+ Per un esempio dell'utilizzo di questo gestore di messaggi in una mappa messaggi, vedere [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).  
   
-## Vedere anche  
- [Implementing a Window](../atl/implementing-a-window.md)   
- [Message Maps](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+## <a name="see-also"></a>Vedere anche  
+ [Implementazione di una finestra](../atl/implementing-a-window.md)   
+ [Mappe messaggi](../atl/message-maps-atl.md)   
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

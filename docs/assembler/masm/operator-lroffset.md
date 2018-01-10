@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bb13d7b86ea50fdabcb37389f9a1fb99dcf9c63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c463a32e486c2a83b988648d1336cb88d26db0eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-lroffset"></a>Operatore LROFFSET
 Restituisce l'offset di *espressione*. Uguale a **OFFSET**, ma genera un offset risolto caricatore, che consente di rilocare i segmenti di codice.  

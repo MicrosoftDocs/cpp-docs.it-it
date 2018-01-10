@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d92c5e162541b2b805074740d542a52866c48a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>Campi per la specifica di formato: funzioni scanf e wscanf
 Le informazioni riportate si applicano all'intera famiglia di funzioni `scanf`, incluse le versioni sicure e descrivono i simboli utilizzati per comunicare alle funzioni `scanf` come analizzare il flusso di input, come il flusso di input `stdin` per `scanf`, in valori che vengono inseriti nelle variabili del programma.  

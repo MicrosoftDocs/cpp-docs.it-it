@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab60d1275925504a746f8b6d01003129fd688673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-identifiers"></a>Identificatori C
 Gli "Identificatori" o i "simboli" sono i nomi forniti per variabili, tipi, funzioni ed etichette nel programma. I nomi degli identificatori devono essere diversi in ortografia e maiuscolo/minuscolo da tutte le parole chiave. Non è possibile utilizzare le parole chiave (C o Microsoft) come identificatori; sono riservate per un utilizzo speciale. Un identificatore viene creato specificandolo nella dichiarazione di una variabile, di un tipo o di una funzione. In questo esempio, `result` è un identificatore per una variabile intera e `main` e `printf` sono nomi degli identificatori per le funzioni.  

@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6a524e552728df0cee3e320aa36bf92d687c539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compatibility"></a>Compatibilità
 La libreria run-time di C universale (UCRT) supporta la maggior parte delle librerie standard di C necessarie per la conformità a C++. Implementa la libreria C99 (ISO/IEC 9899:1999) con le eccezioni delle macro generiche di tipo definite in \<<tgmath.h> e la compatibilità di tipo strict in \<complex.h>. UCRT implementa anche un subset di grandi dimensioni della libreria C POSIX.1 (ISO/IEC 9945-1:1996, POSIX System Application Program Interface), ma non è completamente conforme agli standard POSIX specifici.  Inoltre, UCRT implementa diverse funzioni e macro specifiche per Microsoft non incluse in uno standard.  
@@ -39,9 +40,9 @@ La libreria run-time di C universale (UCRT) supporta la maggior parte delle libr
   
 |Titolo|Descrizione|  
 |-----------|-----------------|  
-|[Windows Store Apps, the Windows Runtime, and the C Run-Time](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md) (App di Windows Store, Windows Runtime e runtime del linguaggio C)|Descrive i casi in cui le routine UCRT non sono compatibili con le app di Windows universale o le app di Windows Store.|  
-|[ANSI C Compliance](../c-runtime-library/ansi-c-compliance.md) (Conformità ANSI C)|Descrive la denominazione conforme agli standard in UCRT.|  
+|[App di Windows Store, Windows Runtime e runtime del linguaggio C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Descrive i casi in cui le routine UCRT non sono compatibili con le app di Windows universale o le app di Windows Store.|  
+|[Conformità ANSI C](../c-runtime-library/ansi-c-compliance.md)|Descrive la denominazione conforme agli standard in UCRT.|  
 |[UNIX](../c-runtime-library/unix.md)|Fornisce indicazioni per trasferire i programmi su UNIX.|  
 |[Windows Platforms (CRT)](../c-runtime-library/windows-platforms-crt.md) (Piattaforme Windows (CRT))|Elenca i sistemi operativi che CRT supporta.|  
-|[Backward Compatibility](../c-runtime-library/backward-compatibility.md) (Compatibilità con le versioni precedenti)|Descrive come eseguire il mapping dei nomi CRT precedenti ai nuovi.|  
-|[CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)|Fornisce una panoramica sui file della libreria CRT (.lib) e le opzioni del compilatore associate.|
+|[Compatibilità con le versioni precedenti](../c-runtime-library/backward-compatibility.md)|Descrive come eseguire il mapping dei nomi CRT precedenti ai nuovi.|  
+|[Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)|Fornisce una panoramica sui file della libreria CRT (.lib) e le opzioni del compilatore associate.|

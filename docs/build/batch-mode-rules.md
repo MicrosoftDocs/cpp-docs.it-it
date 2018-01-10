@@ -1,46 +1,47 @@
 ---
-title: "Regole in modalit&#224; batch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regole di inferenza in modalità batch in NMAKE"
-  - "regole di inferenza in NMAKE"
-  - "NMAKE (programma), regole di inferenza"
+title: "Regole in modalità batch | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0faeb66f728c826f8d499ee6f033cecc7250a5b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Regole in modalit&#224; batch
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>Regole in modalità batch
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- Le regole di inferenza in modalità batch consentono una sola chiamata della regola di inferenza quando quest'ultima è sottoposta a N comandi.  In assenza di regole di inferenza in modalità batch, sarebbe necessario richiamare N comandi.  N è il numero di dipendenti che attivano la regola di inferenza.  
+ Le regole di inferenza in modalità batch forniscono solo una singola chiamata della regola di inferenza quando N comandi go tramite questa regola di inferenza. Senza regole di inferenza in modalità batch, sarebbe necessario N comandi da richiamare. N è il numero di dipendenti che attivano la regola di inferenza.  
   
- I makefile contenenti regole di inferenza in modalità batch devono utilizzare NMAKE 1.62 o versione successiva.  Per controllare la versione di NMAKE, eseguire la macro \_NMAKE\_VER disponibile in NMAKE 1.62 o versione successiva.  Questa macro restituisce una stringa che indica la versione di Visual C\+\+.  
+ Makefile che contengono regole di inferenza in modalità batch devono utilizzare NMAKE 1.62 o versione successiva. Per controllare la versione NMAKE, eseguire la macro NMAKE_VER disponibile con NMAKE versione 1.62 o versione successiva. La macro restituisce una stringa che rappresenta la versione del prodotto Visual C++.  
   
- L'unica differenza sintattica rispetto alla regola di inferenza standard consiste nel fatto che la regola di inferenza in modalità batch termina con una coppia di due punti \(::\).  
+ L'unica differenza sintattica dalla regola di inferenza standard è che la regola di inferenza in modalità batch è terminata con un doppio carattere due punti (:).  
   
 > [!NOTE]
->  Lo strumento richiamato deve consentire la gestione di più file.  Nelle regole di inferenza in modalità batch la macro utilizzata per accedere ai file dipendenti deve essere `$<`.  
+>  Lo strumento richiamato deve essere in grado di gestire più file. La regola di inferenza in modalità batch è necessario utilizzare `$<` come la macro per accedere ai file dipendenti.  
   
- L'utilizzo delle regole di inferenza in modalità batch può rendere più rapido il processo di compilazione.  I file vengono infatti forniti più velocemente al compilatore in batch dal momento che il driver del compilatore viene richiamato una sola volta.  Le prestazioni del compilatore C e C\+\+, ad esempio, sono migliori quando viene gestito un insieme di file, in quanto il compilatore può rimanere in memoria durante il processo.  
+ Le regole di inferenza in modalità batch possono velocizzare il processo di compilazione. Risulta più veloce per fornire i file per il compilatore in batch, poiché il driver del compilatore viene richiamato una sola volta. Ad esempio, il compilatore C e C++ offre prestazioni migliori quando si gestisce un set di file perché è possibile rimanere in memoria durante il processo.  
   
- Nell'esempio seguente viene illustrato l'utilizzo delle regole di inferenza in modalità batch:  
+ Nell'esempio seguente viene illustrato come utilizzare le regole di inferenza in modalità batch:  
   
 ```  
 #  
@@ -65,7 +66,7 @@ $(Objs) :
 #end of makefile  
 ```  
   
- Se non vengono utilizzate le regole di inferenza in modalità batch, verrà prodotto il seguente output:  
+ NMAKE produce il seguente output senza regole di inferenza in modalità batch:  
   
 ```  
 E:\tmp> nmake -f test.mak -a NOBatch=1  
@@ -82,7 +83,7 @@ foo3.cpp
 foo4.cpp  
 ```  
   
- Se, invece, vengono utilizzate le regole di inferenza in modalità batch, l'output sarà il seguente:  
+ NMAKE produce il seguente risultato con le regole di inferenza in modalità batch:  
   
 ```  
 E:\tmp> nmake -f test.mak -a  
@@ -98,5 +99,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Regole di inferenza](../build/inference-rules.md)

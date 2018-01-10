@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e780bda6850ef2096ecaf1dbffeefdb9d11c9f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilare il codice C/C++ nella riga di comando
 
@@ -48,7 +49,7 @@ Collegamenti di prompt dei comandi vengono installati in una specifica di versio
 
 I nomi effettivi di cartella e il collegamento dello menu Start variano a seconda della versione di [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] è stato installato e l'installazione del nome alternativo, se si imposta uno. Ad esempio, se è installato Visual 2017 di Studio che è stato concesso una nome alternativo di installazione di 15.3, il collegamento del prompt dei comandi per sviluppatori è denominato **prompt dei comandi per sviluppatori per Visual Studio 2017 (15.3)**, in una cartella denominata  **Visual Studio 2017**. 
 
-Se è stato installato il [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/?linkid=840931) o [compilare strumenti di Visual C++ 2015](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, potrebbe essere presente solo nativo specifico o strumenti di opzioni di prompt dei comandi per gli sviluppatori. 
+Se è stato installato il [Build Tools per Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) o [compilare strumenti di Visual C++ 2015](http://landinghub.visualstudio.com/visual-cpp-build-tools) edition, potrebbe essere presente solo nativo specifico o strumenti di opzioni di prompt dei comandi per gli sviluppatori. 
 
 <a name="developer_command_prompt"></a>
 ## <a name="to-open-a-developer-command-prompt-window"></a>Per aprire una finestra del prompt dei comandi per sviluppatori  
@@ -86,11 +87,11 @@ Il modo più semplice per specificare un'architettura di compilazione specifica 
 |Argomento di vcvarsall.bat architettura|Compilatore|Architettura del computer host|Architettura dell'output di compilazione|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|x86 nativo a 32 bit|x86, x64|x86|  
-|x86\_amd64 o x86\_x64|x64 su x86 (incrociato)|x86, x64|x64|  
+|x86\_amd64 o x86\_x64|x64 su x86 (incrociato)|x86, x64|X64|  
 |x86_arm|ARM su x86 (incrociato)|x86, x64|ARM|  
-|AMD64 o x64|x64 nativo a 64 bit|x64|x64|  
-|AMD64\_x86 o x64\_x86|x86 su x64|x64|x86|  
-|AMD64\_arm o x64\_arm|ARM su x64|x64|ARM|  
+|AMD64 o x64|x64 nativo a 64 bit|X64|X64|  
+|AMD64\_x86 o x64\_x86|x86 su x64|X64|x86|  
+|AMD64\_arm o x64\_arm|ARM su x64|X64|ARM|  
   
 È possibile utilizzare il **archiviare** o **uwp** le opzioni per specificare il tipo di piattaforma o nessuna delle due per specificare un'applicazione desktop. Per specificare la versione di Windows SDK, è possibile utilizzare un numero completo di Windows 10 SDK, ad esempio 10.0.10240.0 o specificare 8.1 per utilizzare il SDK di Windows 8.1. Consente di specificare il set di strumenti del compilatore di Visual Studio 2015; 14.0 Per impostazione predefinita, l'ambiente è impostata per utilizzare il set di strumenti del compilatore di Visual Studio 2017.
 
@@ -148,7 +149,7 @@ Usare NMAKE (nmake.exe) per automatizzare le attività di compilazione di proget
   
 Quando si compila dalla riga di comando, è possibile ottenere informazioni sugli avvisi, errori e messaggi. Avviare [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] e quindi nella barra dei menu, scegliere **Guida**, **ricerca**.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
 
 Negli articoli inclusi in questa sezione della documentazione viene illustrato come compilare app nella riga di comando, viene descritto come personalizzare l'ambiente di compilazione da riga di comando per usare i set di strumenti a 64 bit e le piattaforme x86, x64 e ARM e vengono fornite informazioni su come usare gli strumenti di sviluppo da riga di comando MSBuild e NMAKE.  
   
@@ -164,7 +165,7 @@ Descrive come creare e compilare un programma C++/CLI che usa .NET Framework.
 [Procedura dettagliata: Compilazione di un programma in C++/CX dalla riga di comando](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)  
 Descrive come creare e compilare un programma C++/CX che usa Windows Runtime.  
   
-[Impostare il percorso e le variabili di ambiente per le compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
+[Impostare le variabili di percorso e di ambiente per le compilazioni da riga di comando](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)  
 Viene descritto come avviare una finestra del prompt dei comandi con le variabili di ambiente necessarie impostato per le compilazioni da riga di comando che hanno come destinazione x86, x64 e ARM piattaforme usando un set di strumenti a 32 o 64 bit.  
   
 [Riferimenti a NMAKE](../build/nmake-reference.md)  

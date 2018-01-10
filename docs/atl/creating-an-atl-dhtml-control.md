@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7b0c9ad01bf8ffbfbd4c554aec3f3627c8be2fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3854431f9224f56ae5c579ccb6cd8997b68824be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-atl-dhtml-control"></a>Creazione di un controllo DHTML ATL
 Creazione guidata controllo ATL automatizza il processo di creazione di un controllo DHTML. Genera i file di risorse necessari, tra cui un file HTML contenente il codice di esempio.  

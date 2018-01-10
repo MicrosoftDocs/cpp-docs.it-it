@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a2f99bef901a09298404eabfe36f39bd1dd2b6bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5acdc01a58cf0d501be5947cddf710d1b7c6d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdb-files-as-linker-input"></a>File PDB come input del linker
 Oggetto file (con estensione obj) compilati usando l'opzione /Zi contengono il nome di un database di programma (PDB). Non si specifica nome del file PDB dell'oggetto al linker. COLLEGAMENTO utilizza il nome incorporato per trovare il file PDB, se necessario. Questo vale anche per gli oggetti debuggable contenuti in una libreria. il file PDB per una libreria di debug deve essere disponibile per il linker insieme alla libreria.  

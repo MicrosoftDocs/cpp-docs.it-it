@@ -1,32 +1,31 @@
 ---
-title: "parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel OpenMP directive"
+title: parallelo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: parallel
+dev_langs: C++
+helpviewer_keywords: parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f6b10c681eb12d38d33c50fe9e652ffd095dd4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Definisce un'area parallela, cioé codice che verrà eseguito da più thread in parallelo.  
+# <a name="parallel"></a>parallel
+Definisce un'area parallela, ovvero il codice eseguito da più thread in parallelo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma omp parallel [clauses]  
@@ -35,14 +34,14 @@ Definisce un'area parallela, cioé codice che verrà eseguito da più thread in 
 }  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
- `clause` \(facoltativo\)  
- zero o più clausole.  Vedere la sezione relativa alle osservazioni per un elenco delle clausole supportate da **parallelo**.  
+ `clause` (facoltativo)  
+ Zero o più clausole.  Vedere la sezione Osservazioni per un elenco di clausole supportate da **parallela**.  
   
-## Note  
- **parallelo** la direttiva supporta le clausole seguenti di OpenMP:  
+## <a name="remarks"></a>Note  
+ Il **parallela** direttiva supporta le clausole OpenMP seguenti:  
   
 -   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
@@ -52,20 +51,20 @@ Definisce un'area parallela, cioé codice che verrà eseguito da più thread in 
   
 -   [if](../../../parallel/openmp/reference/if-openmp.md)  
   
--   [num\_threads](../../../parallel/openmp/reference/num-threads.md)  
+-   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [condiviso](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **parallelo** può anche essere utilizzato con  [sections](../../../parallel/openmp/reference/sections-openmp.md) e  [for](../../../parallel/openmp/reference/for-openmp.md) direttive.  
+ **parallelo** può anche essere utilizzato con il [sezioni](../../../parallel/openmp/reference/sections-openmp.md) e [per](../../../parallel/openmp/reference/for-openmp.md) direttive.  
   
- Per ulteriori informazioni, vedere [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Per ulteriori informazioni, vedere [2.3 costrutto parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Esempio  
- Di seguito viene illustrato come impostare il numero di thread e definire un'area parallela.  Per impostazione predefinita, il numero di thread è uguale al numero di processori logici nel computer.  Ad esempio, se si dispone di un computer con un processore fisico dotato di hyperthreading abilitato, deve avere due processori logici e, di conseguenza, due thread.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente viene illustrato come impostare il numero di thread e definire un'area parallela. Per impostazione predefinita, il numero di thread è uguale al numero di processori logici nel computer. Ad esempio, se si dispone di un computer con un processore fisico che ha attivato l'hyperthreading, avrà due processori logici e, pertanto, due thread.  
   
 ```  
 // omp_parallel.cpp  
@@ -82,12 +81,15 @@ int main() {
 }  
 ```  
   
-  **Hello dal thread 0**  
-**Hello dal thread 1**  
-**Hello dal thread 2**  
-**Hello dal thread 3**   
-## Commento  
- Tenere presente che l'ordine di output può variare su computer diversi.  
+```Output  
+Hello from thread 0  
+Hello from thread 1  
+Hello from thread 2  
+Hello from thread 3  
+```  
   
-## Vedere anche  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="comment"></a>Commento  
+ Si noti che l'ordine dell'output può variare in computer diversi.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive](../../../parallel/openmp/reference/openmp-directives.md)

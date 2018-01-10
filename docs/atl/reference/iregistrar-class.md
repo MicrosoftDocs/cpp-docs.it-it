@@ -1,11 +1,10 @@
 ---
-title: Interfaccia IRegistrar | Documenti di Microsoft
+title: Interfaccia IRegistrar | Documenti Microsoft
 ms.custom: 
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iregistrar-interface"></a>Interfaccia IRegistrar
-Questa interfaccia è definita in atliface.h e viene utilizzata internamente dalle funzioni membro da CAtlModule come [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Questa interfaccia è definita in atliface.h e viene utilizzata internamente dalle funzioni membro da CAtlModule, ad esempio [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +40,7 @@ Questa interfaccia è definita in atliface.h e viene utilizzata internamente dal
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Note
-Vedere l'argomento [utilizzando parametri sostituibili (preprocessore del Registrar di)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per ulteriori dettagli.  
+Vedere l'argomento [utilizzando parametri sostituibili (il Registrar preprocessore)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) per altri dettagli.  
 
 ## <a name="members"></a>Membri  
   
@@ -128,7 +111,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
 ```  
   
 ##  <a name="stringunregister"></a>IRegistrar::StringUnregister
- Annulla la registrazione dei dati di tipo stringa specificata.  
+ Annulla la registrazione di dati della stringa specificata.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -158,8 +141,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
 ```  
  
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo dei parametri sostituibili (preprocessore del Registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+ [Uso dei parametri sostituibili (preprocessore del registrar)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi di modulo](../../atl/atl-module-classes.md)   
+ [Classi Module](../../atl/atl-module-classes.md)   
  [Registro di sistema ATL (Registrar)](../../atl/atl-registry-component-registrar.md)  
-

@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c61ced7e0931f1dba46a7a6b760755f799d29b6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-programming-faq"></a>Domande frequenti sulla programmazione con attributi
 Questo argomento sono incluse le seguenti domande frequenti:  
@@ -47,7 +50,7 @@ Questo argomento sono incluse le seguenti domande frequenti:
 ##  <a name="vcconattributeprogrammmingfaqanchor1"></a>Che cos'è un valore HRESULT?  
  Un `HRESULT` è un tipo di dati semplici che viene spesso utilizzato come valore restituito da attributi e ATL in generale. Nella tabella seguente vengono descritti i diversi valori. Altri valori sono contenuti nel file Winerror. h file di intestazione.  
   
-|Nome|Descrizione|Valore|  
+|nome|Descrizione|Valore|  
 |----------|-----------------|-----------|  
 |S_OK|Operazione riuscita|0x00000000|  
 |E_UNEXPECTED|Errore imprevisto|0x8000ffff|  
@@ -90,7 +93,7 @@ class CMyClass
 |[default](../windows/default-cpp.md)|[defaultvalue](../windows/defaultvalue.md)|[defaultvtable](../windows/defaultvtable.md)|  
 |[emitidl](../windows/emitidl.md)|[entry](../windows/entry.md)|[first_is](../windows/first-is.md)|  
 |[helpcontext](../windows/helpcontext.md)|[helpfile](../windows/helpfile.md)|[helpstring](../windows/helpstring.md)|  
-|[helpstringcontext](../windows/helpstringcontext.md)|[helpstringdll](../windows/helpstringdll.md)|[id](../windows/id.md)|  
+|[helpstringcontext](../windows/helpstringcontext.md)|[helpstringdll](../windows/helpstringdll.md)|[ID](../windows/id.md)|  
 |[iid_is](../windows/iid-is.md)|[import](../windows/import.md)|[importlib](../windows/importlib.md)|  
 |[include](../windows/include-cpp.md)|[includelib](../windows/includelib-cpp.md)|[last_is](../windows/last-is.md)|  
 |[length_is](../windows/length-is.md)|[max_is](../windows/max-is.md)|[no_injected_text](../windows/no-injected-text.md)|  

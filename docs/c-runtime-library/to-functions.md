@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>Funzioni to
 Ognuna delle funzioni **to** e le relative macro associate, se presenti, convertono un singolo carattere in un altro carattere.  
@@ -52,10 +53,10 @@ Ognuna delle funzioni **to** e le relative macro associate, se presenti, convert
 |`__toascii`|`__toascii`|Converte `c` in un carattere ASCII|  
 |`tolower`|`tolower`|Converte `c` in minuscolo se appropriato|  
 |`_tolower`|`_tolower`|Converte `c` in minuscolo|  
-|`towlower`|Nessuno|Converte `c` nella lettera minuscola con carattere wide corrispondente|  
+|`towlower`|nessuno|Converte `c` nella lettera minuscola con carattere wide corrispondente|  
 |`toupper`|`toupper`|Converte `c` in maiuscolo se appropriato|  
 |`_toupper`|`_toupper`|Converte `c` in maiuscolo|  
-|`towupper`|Nessuno|Converte c nella lettera maiuscola con carattere wide corrispondente|  
+|`towupper`|nessuno|Converte c nella lettera maiuscola con carattere wide corrispondente|  
   
  Per usare le versioni funzione delle routine **to** definite anche come macro, rimuovere le definizioni di macro con le direttive `#undef` o non includere CTYPE.H. Se si usa l'opzione del compilatore /Za, il compilatore usa la versione funzione di `toupper` o `tolower`. Le dichiarazioni delle funzioni `toupper` e `tolower` sono in STDLIB.H.  
   
@@ -120,6 +121,6 @@ sOME OF these LETTERS ARE cAPITALS.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../c-runtime-library/locale.md)   
+ [Data Conversion](../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../c-runtime-library/is-isw-routines.md)

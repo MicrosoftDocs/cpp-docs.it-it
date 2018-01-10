@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno
 Quando un intero con segno viene convertito in un intero senza segno di dimensione uguale o maggiore e il valore dell'intero con segno non è negativo, tale valore rimane invariato. La conversione viene eseguita mediante l'estensione del segno dell'intero con segno. Un intero con segno viene convertito in un intero con segno più corto troncando i bit più significativi. Il risultato viene interpretato come un valore senza segno, come illustrato in questo esempio.  
@@ -43,12 +44,12 @@ printf_s( "%hu\n", u );  // Prints 65533
   
 ### <a name="conversions-from-signed-integral-types"></a>Conversioni dai tipi integrali con segno  
   
-|Da|Per|Metodo|  
+|Da|A|Metodo|  
 |----------|--------|------------|  
 |**char**1|**short**|Estensione del segno|  
 |**char**|**long**|Estensione del segno|  
-|**char**|**char senza segno**|Mantenimento del modello; il bit più significativo perde la funzione come bit di segno|  
-|**char**|**short senza segno**|Estensione del segno a **short**; conversione di **short** in **short senza segno**|  
+|**char**|**unsigned char**|Mantenimento del modello; il bit più significativo perde la funzione come bit di segno|  
+|**char**|**unsigned short**|Estensione del segno a **short**; conversione di **short** in **short senza segno**|  
 |**char**|**long senza segno**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|  
 |**char**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|  
 |**char**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|  
@@ -56,16 +57,16 @@ printf_s( "%hu\n", u );  // Prints 65533
 |**short**|**char**|Mantenimento del byte meno significativo|  
 |**short**|**long**|Estensione del segno|  
 |**short**|**char senza segno**|Mantenimento del byte meno significativo|  
-|**short**|**short senza segno**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|  
-|**short**|**long senza segno**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|  
+|**short**|**unsigned short**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|  
+|**short**|**unsigned long**|Estensione del segno a **long**; conversione di **long** in **long senza segno**|  
 |**short**|**float**|Estensione del segno a **long**; conversione di **long** in **float**|  
 |**short**|**double**|Estensione del segno a **long**; conversione di **long** in **double**|  
 |**short**|**long double**|Estensione del segno a **long**; conversione di **long** in **double**|  
 |**long**|**char**|Mantenimento del byte meno significativo|  
 |**long**|**short**|Mantenimento della parola meno significativa|  
-|**long**|**char senza segno**|Mantenimento del byte meno significativo|  
+|**long**|**unsigned char**|Mantenimento del byte meno significativo|  
 |**long**|**short senza segno**|Mantenimento della parola meno significativa|  
-|**long**|**long senza segno**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|  
+|**long**|**unsigned long**|Mantenimento del modello di bit; il bit più significativo perde la funzione come bit di segno|  
 |**long**|**float**|Rappresentazione come **float**. Se **long** non può essere rappresentato con esattezza, la precisione diminuisce.|  
 |**long**|**double**|Rappresentazione come **double**. Se **long** non può essere rappresentato con esattezza come **double**, la precisione diminuisce.|  
 |**long**|**long double**|Rappresentazione come **double**. Se **long** non può essere rappresentato con esattezza come **double**, la precisione diminuisce.|  

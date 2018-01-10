@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbbee2fc1402a49aa773afc8eb6ae830edaffcc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ba88017e0003c7a552c985516dba9a6254317a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-at-the-command-line"></a>Generazione di manifesti dalla riga di comando
 Quando si compilano applicazioni C/C++ dalla riga di comando utilizzando nmake o strumenti simili, il manifesto viene generato dopo il linker ha elaborato tutti i file oggetto e la compilazione del file binario finale. Il linker raccoglie informazioni sull'assembly archiviati nei file oggetto e combina queste informazioni in un file manifesto finale. Per impostazione predefinita il linker genererà un file denominato < binary_name >. \<estensione >. manifest per descrivere il file binario finale. Il linker incorpora un file manifesto nel file binario e può solo generare un manifesto come file esterno. Esistono diversi modi per incorporare un manifesto all'interno del file binario finale, ad esempio usando il [strumento manifesto (mt.exe)](http://msdn.microsoft.com/library/aa375649) o la compilazione del manifesto in un file di risorse. È importante tenere presente che debbano di regole specifiche da seguire quando si incorpora un manifesto all'interno del file binario finale per abilitare funzionalità quali il collegamento incrementale, firma, e modifica e continuazione. Queste e altre opzioni sono illustrate [procedura: incorporare un manifesto all'interno di un'applicazione C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md) durante la compilazione sulla riga di comando.  

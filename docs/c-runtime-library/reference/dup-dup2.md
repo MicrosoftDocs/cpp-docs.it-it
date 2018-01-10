@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _dup2
 - _dup
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _dup2 function
 - dup function
@@ -37,30 +35,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dup-dup2"></a>_dup, _dup2
 Crea un secondo descrittore del file per un file aperto (`_dup`) o riassegna un descrittore del file (`_dup2`).  
@@ -87,7 +71,7 @@ int _dup2(
 ## <a name="return-value"></a>Valore restituito  
  `_dup` restituisce un nuovo descrittore del file. `_dup2` restituisce 0 per indicare l'esito positivo. Se si verifica un errore, ogni funzione restituisce -1 e imposta `errno` a `EBADF` se il descrittore del file non è valido o a `EMFILE` se altri descrittori di file non sono disponibili. Nel caso di un descrittore del file non valido, la funzione richiama anche il gestore dei parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md) (Convalida dei parametri).  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Le funzioni `_dup` e `_dup2` associano un secondo descrittore del file a un file attualmente aperto. Tali funzioni possono essere utilizzate per associare un descrittore del file predefinito, come quello per `stdout`, con un file diverso. Le operazioni sul file possono essere eseguite utilizzando qualsiasi descrittore del file. Il tipo di accesso consentito per il file non viene influenzato dalla creazione di un nuovo descrittore. `_dup` restituisce il descrittore del file disponibile per il file specificato. `_dup2` impone `fd2` per fare riferimento allo stesso file di `fd1`. Se `fd2` è associato a un file aperto al momento della chiamata, tale file verrà chiuso.  

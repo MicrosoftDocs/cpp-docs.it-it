@@ -1,60 +1,62 @@
 ---
-title: "Adding Formatting or Special Characters to a String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "special characters, adding to strings"
-  - "ASCII characters, adding to strings"
-  - "strings [C++], formatting"
-  - "strings [C++], special characters"
+title: Aggiunta in una stringa di caratteri speciali o di formattazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- special characters, adding to strings
+- ASCII characters, adding to strings
+- strings [C++], formatting
+- strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ca91ef9742f2dfb10a0af12c74ca58f80035d131
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Formatting or Special Characters to a String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per aggiungere caratteri speciali o di formattazione a una stringa  
+# <a name="adding-formatting-or-special-characters-to-a-string"></a>Aggiunta di formattazione o di caratteri speciali a una stringa
+### <a name="to-add-formatting-or-special-characters-to-a-string"></a>Per aggiungere una stringa di caratteri speciali o di formattazione  
   
-1.  Aprire la tabella di stringhe facendo doppio clic sulla relativa icona in [Visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di stringhe facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare la stringa che si desidera modificare.  
+2.  Selezionare la stringa di cui che si desidera modificare.  
   
-3.  Nella [finestra Proprietà](../Topic/Properties%20Window.md) aggiungere una delle sequenze di escape standard, elencate di seguito, al testo della casella **Titolo** e premere **INVIO**.  
+3.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), aggiungere una delle sequenze di escape standard elencati di seguito per il testo di **didascalia** , quindi premere **invio**.  
   
-    |Per ottenere|Digitare|  
-    |------------------|--------------|  
-    |Nuova riga|\\n|  
-    |Ritorno a capo|\\r|  
-    |Tab|\\t|  
-    |barra rovesciata \(\\\)|\\\\|  
-    |Carattere ASCII|\\ddd \(notazione ottale\)|  
-    |Avviso acustico|\\a|  
+    |Per questo tipo|Digitare quanto segue|  
+    |-----------------|---------------|  
+    |Nuova riga|\n|  
+    |Ritorno a capo|\r|  
+    |Scheda|\t|  
+    |Barra rovesciata (\\)|\\\|  
+    |Carattere ASCII|\ddd (notazione ottale)|  
+    |Avviso (campana)|\a|  
   
 > [!NOTE]
->  L'editor stringhe non supporta il set completo di caratteri ASCI di escape.  È possibile utilizzare solo quelli elencati sopra.  
+>  L'editor di stringa non supporta il set completo di ASCII di caratteri di escape. È possibile utilizzare solo quelli elencati sopra.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, ovvero quelli che utilizzano Common Language Runtime, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisiti**  
   
  Win32  
   
-## Vedere anche  
- [String Editor](../mfc/string-editor.md)   
- [Stringhe](_win32_Strings)   
- [Informazioni sulle stringhe](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Vedere anche  
+ [Editor stringhe](../windows/string-editor.md)   
+

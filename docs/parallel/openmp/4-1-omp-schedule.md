@@ -1,29 +1,29 @@
 ---
-title: "4.1 OMP_SCHEDULE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 4.1 OMP_SCHEDULE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d0dce411-2351-4ee9-a1cc-c0322a58b65c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 4.1 OMP_SCHEDULE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**OMP\_SCHEDULE** si applica solo a  **per** e  **parallelo per** direttive con il tipo di pianificazione  **runtime**.  Il tipo di pianificazione e le dimensioni del blocco per tutti i questi cicli possono essere impostati in fase di esecuzione impostando la variabile di ambiente su uno dei tipi riconosciuti di pianificazione e un facoltativo *chunk\_size*.  
+# <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
+**OMP_SCHEDULE** si applica solo a **per** e **parallela per** direttive con il tipo di pianificazione **runtime**. Le dimensioni di tipo e il blocco di pianificazione per tutti i cicli di questo tipo possono impostare in fase di esecuzione impostando la variabile di ambiente per uno dei tipi di pianificazione riconosciuto e facoltativa *chunk_size*.  
   
- per **per** e  **parallelo per** direttive di tipo pianificazione diverso  **runtime**,  **OMP\_SCHEDULE** viene ignorato.  il valore predefinito per questa variabile di ambiente è implementazione\-definito.  Se l'elemento facoltativo *chunk\_size* è impostato, il valore deve essere positivo.  se chunk\_size non è impostato, un valore 1 viene utilizzato, tranne nel caso di un oggetto **statico** pianificazione.  Per una proprietà **statico** la pianificazione, la dimensione predefinita del blocco viene impostata allo spazio di iterazione del ciclo diviso per il numero di thread applicati al ciclo.  
+ Per **per** e **parallela per** direttive che dispongono di un tipo di pianificazione diverso da **runtime**, **OMP_SCHEDULE** viene ignorato. Il valore predefinito per questa variabile di ambiente è definito dall'implementazione. Se l'opzione facoltativa *chunk_size* è impostata, il valore deve essere positivo. Se *chunk_size* non è impostato, si presuppone un valore pari a 1, tranne nel caso di un **statico** pianificazione. Per un **statico** pianificazione, le dimensioni del blocco predefinito sono impostata per lo spazio di iterazione ciclo diviso per il numero di thread applicato al ciclo.  
   
  Esempio:  
   
@@ -32,8 +32,8 @@ setenv OMP_SCHEDULE "guided,4"
 setenv OMP_SCHEDULE "dynamic"  
 ```  
   
-## riferimenti incrociati:  
+## <a name="cross-references"></a>Riferimenti:  
   
--   **per** la direttiva, vedere  [parte 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11.  
+-   **per** direttiva, vedere [sezione 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11.  
   
--   **parallelo per** la direttiva, vedere  [parte 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) nella pagina 16.
+-   **parallelo per** direttiva, vedere [sezione 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) nella pagina 16.

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 902044e23974b882c52f5cb715d42f0fe1f2f610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-dll-wizard"></a>Procedura guidata DLL MFC
 Quando si utilizza la procedura guidata DLL MFC per creare un progetto DLL MFC, si riceverà un'applicazione con funzionalità incorporate che, durante la compilazione verrà implementata la funzionalità di base di un [DLL](../../build/dlls-in-visual-cpp.md). Il programma di avvio MFC include i file di origine (. cpp) di C++, file di risorse (RC) e un file di progetto (vcxproj). Il codice generato in questi file di avvio è basato su MFC. Per ulteriori informazioni, vedere il file Readme. txt per il progetto in Visual Studio, viene generata e [classi e funzioni generate dalla creazione guidata DLL MFC](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

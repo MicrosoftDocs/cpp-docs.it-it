@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 54a309b75d5e6b1773b7dd9bb294a1538397fd05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f98014ae0a610c1618e971cd833523ff9535b6ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Nomi delle impostazioni locali, lingue e stringhe relative a paesi
 L'argomento *locale* delle funzioni `setlocale` e `_create_locale` può essere impostato usando i nomi delle impostazioni locali, le lingue, i codici di paese/area geografica e le tabelle codici supportati dall'API NLS di Windows. L'argomento *locale* assume il formato seguente:  

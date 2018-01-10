@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 571cb758016d3682289ee787dc8886768538d27b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddce7d73919e7e7942d8ddd7954ce6cbec4789fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 Converte un valore di ora e lo corregge per il fuso orario locale. Queste sono versioni di [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -83,8 +84,8 @@ errno_t _localtime64_s(
   
 |`_tm`|`time`|Valore restituito|Valore in `_tm`|Richiama il gestore di parametri non validi|  
 |-----------|------------|------------------|--------------------|---------------------------------------|  
-|`NULL`|qualsiasi|`EINVAL`|Non modificato|Sì|  
-|Non `NULL` (punta alla memoria valida)|`NULL`|`EINVAL`|Tutti i campi impostati su -1|Sì|  
+|`NULL`|qualsiasi|`EINVAL`|Non modificato|Yes|  
+|Non `NULL` (punta alla memoria valida)|`NULL`|`EINVAL`|Tutti i campi impostati su -1|Yes|  
 |Non `NULL` (punta alla memoria valida)|minore di 0 o maggiore di `_MAX__TIME64_T`|`EINVAL`|Tutti i campi impostati su -1|No|  
   
  Nel caso delle prime due condizioni di errore viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono `EINVAL`.  
@@ -99,7 +100,7 @@ errno_t _localtime64_s(
   
  `_localtime64_s`, che usa la struttura `__time64_t`, consente di esprimere le date fino alle 23.59.59 del 18 gennaio 3001 UTC (Coordinated Universal Time), mentre `_localtime32_s` rappresenta le date fino alle 23.59.59 del 18 gennaio 2038 UTC.  
   
- `localtime_s` è una funzione inline equivalente a `_localtime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t` a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `localtime_s` verrà valutata come `_localtime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
+ `localtime_s` è una funzione inline equivalente a `_localtime64_s` e `time_t` è equivalente a `__time64_t`. Se è necessario forzare il compilatore in modo che interpreti `time_t` come il vecchio `time_t`a 32 bit, è possibile definire `_USE_32BIT_TIME_T`. In questo modo `localtime_s` verrà valutata come `_localtime32_s`. Questa operazione non è consigliabile perché potrebbero verificarsi errori per l'applicazione dopo il 18 gennaio 2038 e l'uso non è consentito in piattaforme a 64 bit.  
   
  I campi del tipo di struttura [tm](../../c-runtime-library/standard-types.md) archiviano i valori seguenti, ognuno dei quali è un `int`.  
   
@@ -138,7 +139,7 @@ errno_t _localtime64_s(
 |`_localtime32_s`|\<time.h>|  
 |`_localtime64_s`|\<time.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -197,7 +198,7 @@ Fri Apr 25 01:19:27 PM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

@@ -1,59 +1,61 @@
 ---
-title: "Classi di finestra ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, finestre"
-  - "creazione di sottoclassi delle classi di finestre ATL"
-  - "creazione di superclassi"
-  - "creazione di superclassi, ATL"
-  - "finestre [C++], ATL"
-  - "finestre [C++], creazione di sottoclassi"
-  - "finestre [C++], creazione di superclassi"
+title: Classi di finestra ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, windows
+- windows [C++], subclassing
+- windows [C++], superclassing
+- windows [C++], ATL
+- subclassing ATL window classes
+- superclassing
+- superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d4cce6fd98d4ea476900d8b248442fdddbe3c2d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classi di finestra ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL include diverse classi che consentono di utilizzare e distribuire le finestre.  Queste classi, ad altre classi ATL, forniscono un'implementazione efficiente non comporta un sovraccarico al codice.  
+# <a name="atl-window-classes"></a>Classi di finestra ATL
+ATL include diverse classi che consentono di usare e implementare le finestre. Queste classi, come le altre classi ATL, forniscono un'implementazione efficiente che non impone un overhead nel codice.  
   
- Questa sezione descrive le classi di finestre ATL e viene spiegato come utilizzarle.  
+ In questa sezione vengono descritte le classi di finestra ATL e viene spiegato come utilizzarli.  
   
-## In questa sezione  
- [Introduzione alle classi di finestre ATL](../atl/introduction-to-atl-window-classes.md)  
- Vengono descritte brevemente ogni classe della finestra ATL e vengono forniti collegamenti a materiale di riferimento su di essi.  
+## <a name="in-this-section"></a>In questa sezione  
+ [Introduzione alle classi di finestra ATL](../atl/introduction-to-atl-window-classes.md)  
+ Brevemente descrive ogni classe di finestra ATL e vengono forniti i collegamenti al materiale di riferimento su di essi.  
   
- [Utilizzo di una finestra](../atl/using-a-window.md)  
+ [Uso di una finestra](../atl/using-a-window.md)  
  Viene illustrato come utilizzare `CWindow` per modificare una finestra.  
   
  [Implementazione di una finestra](../atl/implementing-a-window.md)  
- Vengono illustrati i gestori di messaggi, le mappe dei messaggi e utilizzando `CWindowImpl`.  Include i dettagli di una superclasse basata su e sulla creazione di una sottoclasse.  
+ Vengono illustrati i gestori di messaggi, le mappe messaggi e l'utilizzo `CWindowImpl`. Include informazioni dettagliate sulla creazione di superclassi e creazione di una sottoclasse.  
   
- [implementare una finestra di dialogo](../atl/implementing-a-dialog-box.md)  
- Vengono illustrati i due metodi per l'aggiunta della classe di finestre di dialogo e viene illustrato un esempio di codice.  
+ [Implementazione di una finestra di dialogo](../atl/implementing-a-dialog-box.md)  
+ Vengono illustrati i due metodi per l'aggiunta di una classe di finestra di dialogo e viene illustrato un esempio di codice.  
   
- [Utilizzando Windows contenuto](../atl/using-contained-windows.md)  
- Vengono descritte le finestre contenute in ATL, che sono finestre che il delegato i messaggi un oggetto contenitore anziché gestirli nella propria classe.  
+ [Uso delle finestre contenute](../atl/using-contained-windows.md)  
+ Vengono illustrate le finestre contenute in ATL, che sono finestre che delegano i messaggi a un oggetto contenitore anziché gestirli nella relativa classe.  
   
- [Tratti di informazioni sulla finestra](../atl/understanding-window-traits.md)  
- Vengono illustrate le classi di tratti della finestra in ATL.  Queste classi forniscono un metodo semplice per la standardizzazione degli stili utilizzati per la creazione di un oggetto finestra.  
+ [Informazioni sui tratti delle finestre](../atl/understanding-window-traits.md)  
+ Vengono illustrate le classi di finestra tratti in ATL. Queste classi forniscono un metodo semplice per la standardizzazione stili utilizzati per la creazione di un oggetto window.  
   
-## Sezioni correlate  
+## <a name="related-sections"></a>Sezioni correlate  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- Vengono forniti collegamenti ad argomenti concettuali sulla programmazione mediante Active Template Library.  
+ Fornisce collegamenti ad argomenti concettuali sulla programmazione con Active Template Library.  
   
- [Classi di supporto Windows](../atl/windows-support-classes.md)  
- Vengono elencate le classi aggiuntive ATL che supportano le finestre e le mappe messaggi in ATL.
+ [Classi di supporto per Windows](../atl/windows-support-classes.md)  
+ Vengono elencate ulteriori classi ATL che supportano windows e mappe messaggi in ATL.
+

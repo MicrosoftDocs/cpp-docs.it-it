@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>Controllo dei flussi
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) restituisce l'indirizzo di un oggetto di tipo `FILE`. Si utilizza questo indirizzo come l'argomento `stream` a diverse funzioni di libreria per eseguire varie operazioni in un file aperto. Per un flusso di byte, tutti gli input vengono eseguiti come se ogni carattere fosse letto chiamando [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) e tutti gli output vengono eseguiti come se ogni carattere fosse scritto chiamando [fputc](../c-runtime-library/reference/fputc-fputwc.md). Per un flusso di caratteri wide, tutti gli input vengono eseguiti come se ogni carattere fosse letto chiamando [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) e tutti gli output vengono eseguiti come se ogni carattere fosse scritto chiamando [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

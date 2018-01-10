@@ -32,11 +32,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b8f39673701ca61b6423e7247f52c0de5a846b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4b50ae3036a6f262312c7a05c2de093a977a588
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>Recupero di dati da un oggetto Dialog
 Il framework fornisce un modo semplice per inizializzare i valori dei controlli in una finestra di dialogo e per recuperare i valori dai controlli. Il metodo manuale più consiste nel chiamare funzioni, ad esempio il `SetDlgItemText` e `GetDlgItemText` funzioni membro della classe `CWnd`, che si applicano a finestre di controllo. Con queste funzioni, è accedere ciascun controllo individualmente per impostare o ottenere il relativo valore, la chiamata di funzioni, ad esempio `SetWindowText` e `GetWindowText`. L'utilizzo del framework consente di automatizzare sia l'inizializzazione e il recupero.  

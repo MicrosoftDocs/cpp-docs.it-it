@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 36e90d781c4cc4512f4869247c296b69b19c1f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 Calcola l'arcotangente di `x` (`atan`, `atanf` e `atanl`) o l'arcotangente di `y`/`x` (`atan2`, `atan2f` e `atan2l`).  
@@ -126,10 +110,10 @@ long double atan2l(
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
-|± `QNAN`,`IND`|nessuno|`_DOMAIN`|  
+|± `QNAN`,`IND`|none|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Note  
- La funzione `atan` calcola l'arcotangente (la funzione inversa della tangente) di `x`. `atan2` calcola l'arcotangente di `y`/`x` (se `x` è uguale a 0, `atan2` restituisce π/2 se `y` è positivo, -π/2 se `y` è negativo o 0 se `y` è 0).  
+ La funzione `atan` calcola l'arcotangente (la funzione inversa della tangente) di `x`. `atan2`Calcola l'arcotangente `y` / `x` (se `x` è uguale a 0, `atan2` restituisce π/2 se `y` è positivo, - π/2 se `y` è negativo o 0 se `y` è 0.)  
   
  `atan` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
@@ -173,7 +157,7 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   

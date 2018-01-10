@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25511a531d78e26c752f9694a8f3845d408bdd58
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: d2b4df05d64cb97032477ca50ff4b0ce572829b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simple-data-type-classes"></a>Classi del tipo di dati semplice
 Le classi seguenti incapsulano coordinate di disegno, stringhe di caratteri e informazioni di data e ora che consentono un utilizzo conveniente della sintassi di C++. Questi oggetti vengono utilizzati ampiamente come parametri alle funzioni membro delle classi di Windows nella libreria di classi. Poiché `CPoint`, `CSize`, e `CRect` corrispondono al **punto**, **dimensioni**, e `RECT` strutture, rispettivamente, in Windows SDK, è possibile utilizzare oggetti di questi Ogni volta che è possibile utilizzare queste strutture di linguaggio C, le classi C++. Le classi forniscono utili interfacce attraverso le funzioni membro. `CStringT` fornisce stringhe di caratteri dinamiche molto flessibili. `CTime`, `COleDateTime`, `CTimeSpan`, e **COleTimeSpan** rappresentano valori di data e ora. Per ulteriori informazioni su queste classi, vedere l'articolo [data e ora](../atl-mfc-shared/date-and-time.md).  

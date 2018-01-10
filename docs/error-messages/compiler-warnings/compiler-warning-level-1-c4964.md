@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 1) C4964 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4964"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4964"
+title: Compilatore avviso (livello 1) C4964 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4964
+dev_langs: C++
+helpviewer_keywords: C4964
 ms.assetid: b89c9274-8a92-4b7c-aa30-3fbb1b68ac73
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b1c7483b82c363898bc16ed5fc7d48f9cf0b35c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4964
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nessuna opzione di ottimizzazione specificata; le informazioni sul profilo non verranno raccolte  
+# <a name="compiler-warning-level-1-c4964"></a>Avviso del compilatore (livello 1) C4964
+Nessuna opzione di ottimizzazione specificata; informazioni sul profilo non verranno raccolti  
   
- Sono stati specificati [\/GL](../../build/reference/gl-whole-program-optimization.md) e [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md), ma non è stata richiesta alcuna ottimizzazione. Di conseguenza, non verrà generato alcun file pgc e non sarà quindi possibile eseguire ottimizzazioni PGO.  
+ [/GL](../../build/reference/gl-whole-program-optimization.md) e [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) sono state specificate, ma non le ottimizzazioni sono stati richiesti in modo che non verranno generati alcun file. pgc e, pertanto, non saranno possibile eseguire alcuna ottimizzazione PGO.  
   
- Se si desidera che vengano generati file pgc quando si esegue l'applicazione, specificare una delle opzioni del compilatore [\/O](../../build/reference/o-options-optimize-code.md).  
+ Se si desidera che il file. pgc da generare quando si esegue l'applicazione, specificare uno del [/O](../../build/reference/o-options-optimize-code.md) opzioni del compilatore.  
   
- Il seguente codice di esempio genera l'errore C4964:  
+ L'esempio seguente genera l'errore C4964:  
   
 ```  
 // C4964.cpp  

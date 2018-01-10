@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd4d4f1b6132ed5e44134f502fe673030306b14b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-or-deleting-a-string"></a>Aggiunta o eliminazione di una stringa
 È possibile inserire rapidamente nuove voci nella tabella di stringhe utilizzando l'editor di stringa. Le nuove stringhe vengono inserite alla fine della tabella e vengono assegnate il successivo identificatore disponibile. È quindi possibile modificare le proprietà ID, Value o Caption nel [finestra proprietà](/visualstudio/ide/reference/properties-window) in base alle esigenze.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

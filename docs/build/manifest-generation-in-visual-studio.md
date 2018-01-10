@@ -1,45 +1,45 @@
 ---
-title: "Generazione di manifesti in Visual Studio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "manifesti [C++]"
+title: Generazione di manifesti in Visual Studio | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Generazione di manifesti in Visual Studio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La generazione di un file manifesto per un particolare progetto può essere controllata nella finestra di dialogo **Pagine delle proprietà** del progetto.  Nella scheda **Proprietà di configurazione** selezionare **Linker**, **File manifesto** e quindi **Genera manifesto**.  Per impostazione predefinita, le proprietà dei nuovi progetti sono impostate per generare un file manifesto.  È tuttavia possibile disabilitare la generazione del manifesto per un progetto utilizzando la proprietà **Genera manifesto**.  Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per il progetto.  In caso contrario, il linker ignorerà le informazioni sull'assembly al momento della risoluzione delle dipendenze del codice dell'applicazione e il manifesto non verrà generato.  
+# <a name="manifest-generation-in-visual-studio"></a>Generazione di manifesti in Visual Studio
+La generazione di un file manifesto per un particolare progetto può essere controllata nel progetto **pagine delle proprietà** finestra di dialogo. Nel **le proprietà di configurazione** scheda, fare clic su **Linker**, quindi **File manifesto**, quindi **Genera manifesto**. Per impostazione predefinita, le proprietà del progetto di nuovi progetti sono per generare un file manifesto. Tuttavia è possibile disabilitare la generazione del manifesto per un progetto utilizzando il **Genera manifesto** proprietà del progetto. Quando questa proprietà è impostata su **Sì**, viene generato il manifesto per il progetto. In caso contrario il linker ignora le informazioni sull'assembly durante la risoluzione delle dipendenze del codice dell'applicazione e non genera il manifesto.  
   
- Il sistema di compilazione di Visual Studio consente di incorporare il manifesto nel file binario finale dell'applicazione o di generarlo come file esterno.   Tale comportamento è controllato dall'opzione **Incorpora manifesto** nella finestra di dialogo **Proprietà progetto**.  Per impostare tale proprietà, aprire il nodo **Strumento Manifesto** e selezionare **Input e output**.   Se il manifesto non è incorporato, viene generato come file esterno e salvato nella stessa directory del file binario finale.  Se il manifesto è incorporato, i manifesti finali verranno incorporati tramite il processo riportato di seguito:  
+ Il sistema di compilazione in Visual Studio consente il manifesto incorporato nel file binario finale dell'applicazione o generato come file esterno. Questo comportamento è controllato dal **Incorpora manifesto** opzione il **le proprietà del progetto** finestra di dialogo. Per impostare questa proprietà, aprire il **strumento manifesto** nodo, quindi selezionare **di Input e Output**. Se il manifesto non è incorporato, viene generato come file esterno e salvato nella stessa directory del file binario finale. Se il manifesto è incorporato, Visual Studio incorpora i manifesti finali utilizzando il processo seguente:  
   
-1.  Dopo che il codice sorgente viene compilato in file oggetto, vengono raccolte informazioni sull'assembly dipendente.  Durante il collegamento del file binario finale, il linker genera un manifesto temporaneo che verrà utilizzato in seguito per generare il manifesto finale.  
+1.  Una volta compilato il codice sorgente per i file oggetto, il linker raccoglie informazioni sull'assembly dipendente. Durante il collegamento del file binario finale, il linker genera un manifesto temporaneo che verrà utilizzato successivamente per generare il manifesto finale.  
   
-2.  Al termine della creazione del manifesto temporaneo e del collegamento, verrà eseguito lo strumento Manifesto per unire un manifesto finale e salvarlo come file esterno.  
+2.  Al termine di intermedio manifesto e collegamento, verrà eseguito lo strumento manifesto per unire un manifesto finale e salvarlo come file esterno.  
   
-3.  In seguito, il sistema di compilazione del progetto rileverà se all'interno del manifesto generato dallo strumento Manifesto sono contenute informazioni diverse rispetto al manifesto già incorporato nel file binario.  
+3.  Il progetto di sistema di compilazione, quindi rileva se il manifesto generato dallo strumento manifesto contiene informazioni diverse rispetto al manifesto già incorporato nel file binario.  
   
-4.  Se il manifesto incorporato nel file binario risulta diverso da quello generato dallo strumento Manifesto oppure se il file binario non contiene un manifesto incorporato, verrà nuovamente chiamato il linker per incorporare il file manifesto esterno all'interno del file binario come risorsa.  
+4.  Se il manifesto incorporato nel file binario è diverso da quello generato dallo strumento manifesto, o il file binario non contiene un manifesto incorporato, Visual Studio richiama il linker ancora una volta per incorporare il file manifesto esterno all'interno del file binario come un risorsa.  
   
-5.  Se il manifesto incorporato nel file binario è uguale al manifesto generato dallo strumento Manifesto, la compilazione continuerà con i passaggi successivi.  
+5.  Se il manifesto incorporato nel file binario è lo stesso del manifesto generato dallo strumento manifesto, la compilazione continuerà con i passaggi successivi.  
   
- Il manifesto verrà incorporato all'interno del file binario finale come risorsa di testo e potrà essere visualizzato aprendo il file binario finale come file in Visual Studio.  Per assicurarsi che il manifesto punti alle librerie corrette, seguire i passaggi illustrati in [Informazioni sulle dipendenze di un'applicazione Visual C\+\+](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) o seguire i suggerimenti contenuti nella sezione [Risoluzione dei problemi](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
+ Il manifesto è incorporato nel file binario finale come risorsa di testo e possono essere visualizzato aprendo il file binario finale come file in Visual Studio. Per verificare che il manifesto punti alle librerie corrette, seguire i passaggi descritti in [le dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) o le indicazioni descritte nel [allarisoluzionedeiproblemi](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sezione.  
   
-## Vedere anche  
- [Procedura: incorporare un manifesto in un'applicazione C\/C\+\+](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
- [Assembly privati](_win32_private_assemblies)   
- [Strumento Manifesto](http://msdn.microsoft.com/library/aa375649)   
- [Informazioni sulla generazione di manifesti per programmi C\/C\+\+](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: incorporare un manifesto all'interno di un'applicazione C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
+ [Informazioni sugli assembly privato](http://msdn.microsoft.com/library/ff951638)   
+ [Strumento manifesto](http://msdn.microsoft.com/library/aa375649)   
+ [Informazioni sulla generazione di manifesti per programmi C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- filesystem/std::experimental::filesystem::filesystem_error
-dev_langs:
-- C++
+f1_keywords: filesystem/std::experimental::filesystem::filesystem_error
+dev_langs: C++
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 87ae0515eba774f73ee0d4283a020ce27c3fbe6f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a70b489fa3e7a570cf4cd8ea4abf6af583e72a0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filesystemerror-class"></a>Classe filesystem_error
 Classe base per tutte le eccezioni generate per segnalare un overflow del sistema di basso livello.  
@@ -98,9 +81,8 @@ const char *what() const noexcept;
  **Spazio nomi:** std::experimental::filesystem  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [Classe system_error](../standard-library/system-error-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
  [\<exception>](../standard-library/exception.md)
-
 

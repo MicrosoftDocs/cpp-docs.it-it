@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1e3d50dd4ecf19b1a7bcee7b5efc0d6e2e57d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373dc99b7c4292501a41e17ba4d7393972c31c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>Costanti carattere e inclusione condizionale
 **ANSI 3.8.1** Indica se il valore di una costante carattere a un solo carattere in un'espressione costante che controlla l'inclusione condizionale corrisponde al valore della stessa costante carattere nel set di caratteri di esecuzione. Indica se tale costante carattere può avere un valore negativo  

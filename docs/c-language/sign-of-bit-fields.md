@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b990242843bd02e9d42e5ea818d111b0685ce40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa93bba1ac6706f3712959399021b5888e60b619
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sign-of-bit-fields"></a>Segno dei campi di bit
 **ANSI 3.5.2.1** Se un campo `int` "normale" viene considerato come campo di bit **signed int** o come campo di bit unsigned int  

@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac8f0cd386d8fece71f47b5c3d2048bead7cca1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outp-outpw-outpd"></a>_outp, _outpw, _outpd
 Restituisce, in una porta, un byte (`_outp`), una parola (`_outpw`) o una parola doppia (`_outpd`).  
@@ -100,11 +101,11 @@ unsigned long dataword
 |`_outpw`|\<conio.h>|  
 |`_outpd`|\<conio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [I/O su console e porta](../c-runtime-library/console-and-port-i-o.md)   
+ [Console e porta I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

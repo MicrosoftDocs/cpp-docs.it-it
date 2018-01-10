@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>Prologo ed epilogo
 Ogni funzione alloca spazio dello stack, chiama altre funzioni, consente di salvare i registri non volatili o utilizza la gestione delle eccezioni deve essere un prologo, i cui indirizzi limite sono descritti nei dati di rimozione associati alla voce di tabella rispettiva funzione (vedere [Eccezioni (x64)](../build/exception-handling-x64.md)). Il prologo Salva argomento registri nei relativi indirizzi iniziali se necessario, inserisce i registri non volatili nello stack, alloca la parte fissa dello stack per le variabili locali e i temporanei e facoltativamente stabilisce un puntatore ai frame. I dati di rimozione deve descrivere l'azione del prologo e deve fornire le informazioni necessarie per annullare gli effetti del codice di prologo.  
@@ -60,7 +61,7 @@ lea      R13, 128[RSP]
   
  Il codice di epilogo deve seguire una serie di regole per il codice di rimozione precise per eseguire correttamente la rimozione tramite le eccezioni e gli interrupt. Questo riduce la quantità di dati richiesti, di rimozione perché non di dati aggiuntivi necessari per descrivere ogni epilogo. Al contrario, il codice di rimozione è possibile determinare che un epilogo è in esecuzione per l'analisi in avanti di un flusso di codice per identificare un epilogo.  
   
- Se non viene utilizzato alcun puntatore ai frame in funzione, quindi l'epilogo deve prima di deallocare la parte fissa dello stack di registri non volatili e il controllo viene restituito alla funzione chiamante. Di seguito è riportato un esempio:  
+ Se non viene utilizzato alcun puntatore ai frame in funzione, quindi l'epilogo deve prima di deallocare la parte fissa dello stack di registri non volatili e il controllo viene restituito alla funzione chiamante. Ad esempio,  
   
 ```  
 add      RSP, fixed-allocation-size  

@@ -13,23 +13,22 @@ f1_keywords:
 - type_traits/std::result_of
 - type_traits/std::result_of_t
 - type_traits/std::result_of::type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::result_of
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 256f24ad40234db2bbc191a50b0d7e05de39c073
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 08e4fc22725962d06bee35ed1adf63e3c9230ced
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resultof-class"></a>Classe result_of
 Determina il tipo restituito del tipo chiamabile che accetta i tipi di argomento specificati.  
@@ -65,7 +64,6 @@ template<class T>
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

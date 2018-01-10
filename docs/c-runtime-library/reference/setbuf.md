@@ -31,11 +31,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a57e815376414724b2c92977c52a309f86c63b50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b57d77172204c54ac0079beecd920c7fdfab829
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setbuf"></a>setbuf
 Controlla il buffering del flusso. Questa funzione è deprecata. In alternativa, usare [setvbuf](../../c-runtime-library/reference/setvbuf.md).  
@@ -67,7 +68,7 @@ void setbuf(
 |-------------|---------------------|  
 |`setbuf`|\<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_heap_handle
+apiname: _get_heap_handle
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _get_heap_handle
 - get_heap_handle
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - heap functions
 - memory allocation, heap memory
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3445aab4a7ca4407d1a6913de2bcea3f5ec274a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 2e8c08ed0ccffb7196133de89d4b9588333e1bfa
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 Restituisce l'handle dell'heap che viene usato dal sistema di runtime del linguaggio C.  

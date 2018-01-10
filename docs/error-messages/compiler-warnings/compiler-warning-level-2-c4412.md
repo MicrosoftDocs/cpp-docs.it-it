@@ -1,53 +1,35 @@
 ---
-title: Compilatore (livello 2) avviso C4412 | Documenti di Microsoft
+title: Compilatore avviso (livello 2) C4412 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4412
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4412
+f1_keywords: C4412
+dev_langs: C++
+helpviewer_keywords: C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 92aa12514088d0fbffbe826a495d76b49ab311d1
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92898b9c8e8845ecc8bc650b80cf41a33b3a59d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avviso del compilatore (livello 2) C4412
-'funzione': funzione firma contiene il tipo 'type'. Gli oggetti C++ sono non è sicuro passare tra codice pure e mista o nativa.  
+'function': funzione firma contiene il tipo 'type'. Gli oggetti di C++ sono non è sicuro passare tra codice pure e misto o nativo.  
   
  Il **/clr: pure** l'opzione del compilatore è deprecato in Visual Studio 2015.  
   
- Il compilatore ha rilevato una situazione potenzialmente pericolosa che potrebbe provocare un errore di runtime: è stata effettuata una chiamata da un **/clr: pure** modulo a una funzione che è stata importata tramite dllimport e la firma della funzione contiene un tipo unsafe. Un tipo è sicuro se contiene una funzione membro o un membro dati che è un tipo unsafe o un riferimento indiretto a un tipo unsafe.  
+ Il compilatore ha rilevato una situazione potenzialmente non sicuro che potrebbe causare un errore di runtime: è in corso una chiamata da un **/clr: pure** compilando a una funzione che è stata importata tramite dllimport e la firma della funzione contiene un tipo unsafe . Un tipo unsafe se contiene una funzione membro o è un membro dati che è un tipo unsafe o un riferimento indiretto a un tipo unsafe.  
   
- Questo non è sicuro a causa della differenza tra codice pure e native convenzioni di chiamata predefinita o misto nativo e gestito. Durante l'importazione (tramite `dllimport`) una funzione in un **/clr: pure** modulo, assicurarsi che le dichiarazioni di ogni tipo nella firma sono identiche a quelli del modulo che esporta la funzione (prestando particolare attenzione alle differenze nelle convenzioni di chiamata implicite).  
+ Questo è unsafe causato dalla differenza di convenzioni tra codice pure e native di chiamata predefinita o misto nativo e gestito. Durante l'importazione (tramite `dllimport`) una funzione in un **/clr: pure** compilando, assicurarsi che siano identiche a quelli del modulo che esporta la funzione (prestando particolare attenzione alle dichiarazioni di ogni tipo nella firma differenze nelle convenzioni di chiamata implicite).  
   
  Una funzione membro virtuale è particolarmente soggetta a produrre risultati imprevisti.  Tuttavia, anche una funzione non virtuale deve essere testata per assicurarsi di ottenere i risultati corretti. Se si è certi di ottenere i risultati corretti, è possibile ignorare questo avviso.  
   
@@ -58,7 +40,7 @@ ms.lasthandoff: 02/24/2017
  Per risolvere il problema, rimuovere tutte le funzioni dal tipo.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C4412.  
+ L'esempio seguente genera l'errore C4412.  
   
 ```  
 // C4412.cpp  
@@ -85,7 +67,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente è un file di intestazione che vengono dichiarati due tipi. Il `Unsafe` tipo è unsafe perché contiene una funzione membro.  
+ L'esempio seguente è un file di intestazione che dichiara due tipi. Il `Unsafe` tipo è unsafe perché contiene una funzione membro.  
   
 ```  
 // C4412.h  
@@ -120,9 +102,9 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```  
   
 ## <a name="example"></a>Esempio  
- L'impostazione predefinita la convenzione di chiamata un **/clr: pure** compilazione è diversa da una compilazione nativa.  Quando è incluso, C4412 `Test` valore predefinito è `__clrcall`. Se viene compilato ed eseguito il programma (non utilizzare **/c**), verrà generata un'eccezione.  
+ Il valore predefinito la convenzione di chiamata un **/clr: pure** compilazione è diversa da una compilazione nativa.  Quando viene incluso, C4412 `Test` per impostazione predefinita `__clrcall`. Se viene compilato ed eseguito il programma (non utilizzare **/c**), verrà generata un'eccezione.  
   
- Nell'esempio seguente viene generato l'errore C4412.  
+ L'esempio seguente genera l'errore C4412.  
   
 ```  
 // C4412_3.cpp  

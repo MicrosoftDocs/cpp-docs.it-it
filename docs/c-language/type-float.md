@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>Tipo float
 I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical and Electronics Engineers). I valori a precisione singola con tipo float hanno 4 byte costituiti da un bit del segno, da un esponente binario a 8 bit excess-127 e da una mantissa a 23 bit. La mantissa rappresenta un numero compreso tra 1,0 e 2,0. Poiché il bit più significativo della mantissa è sempre 1, non viene archiviato nel numero. Questa rappresentazione specifica un intervallo incluso approssimativamente tra 3,4E-38 e 3,4E+38 per il tipo float.  
@@ -40,7 +41,7 @@ I numeri a virgola mobile utilizzano il formato IEEE (Institute of Electrical an
   
 |Tipo|Cifre significative|Numero di byte|  
 |----------|------------------------|---------------------|  
-|mobile|6 - 7|4|  
+|float|6 - 7|4|  
 |double|15 - 16|8|  
   
  Le variabili a virgola mobile sono rappresentate da una mantissa che contiene il valore del numero e da un esponente che contiene l'ordine di grandezza di tale numero.  

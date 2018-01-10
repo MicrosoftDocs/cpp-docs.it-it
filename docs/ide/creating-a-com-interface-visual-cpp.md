@@ -1,53 +1,51 @@
 ---
-title: "Creazione di un&#39;interfaccia COM (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.com.creating.interfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM (interfacce), creazione"
+title: Creazione di un'interfaccia COM (Visual C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.com.creating.interfaces
+dev_langs: C++
+helpviewer_keywords: COM interfaces, creating
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e7b5820686c3e6f01c37cbf527d0e631e5bcc25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creazione di un&#39;interfaccia COM (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In Visual C\+\+ sono disponibili procedure guidate e modelli che consentono di creare progetti che utilizzano la tecnologia COM nella definizione di interfacce e di interfacce dispatch per gli oggetti COM e le classi di automazione.  
+# <a name="creating-a-com-interface-visual-c"></a>Creazione di un'interfaccia COM (Visual C++)
+Visual C++ fornisce modelli e procedure guidate per creare progetti che usano nella definizione di interfacce COM e dispatch per gli oggetti COM e classi di automazione.  
   
- È possibile utilizzare queste procedure guidate per eseguire le tre attività frequenti descritte di seguito.  
+ È possibile utilizzare queste procedure guidate per eseguire le seguenti tre attività comuni:  
   
 -   [Aggiunta del supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md)  
   
-     Aggiungere il supporto ATL a un'applicazione MFC dopo aver creato un progetto MFC mediante la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md) e l'esecuzione della creazione guidata codice **Aggiungi supporto ATL a MFC**.  È possibile utilizzare questo supporto solo per oggetti COM semplici aggiunti a un eseguibile MFC o a un progetto DLL.  Questi oggetti ATL possono avere più interfacce.  
+     Aggiungi supporto ATL a un'applicazione MFC, dopo aver creato un progetto MFC mediante la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md) ed eseguendo quindi il **Aggiungi supporto ATL a MFC** guidata codice. Questo supporto si applica solo a oggetti COM semplici aggiunti a un progetto DLL o un eseguibile MFC. Questi oggetti ATL possono avere più interfacce.  
   
 -   [Creazione di un controllo ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md)  
   
-     Avviare la [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) per creare un controllo ActiveX con un'interfaccia dispatch e una mappa eventi definite rispettivamente nel file IDL e nella classe di controlli.  
+     Aprire il [Creazione guidata controllo ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md) per creare un controllo ActiveX con un'interfaccia dispatch e una mappa eventi definiti nel file IDL e la classe del controllo, rispettivamente.  
   
 -   [Aggiunta di un controllo ATL](../atl/reference/adding-an-atl-control.md)  
   
-     Utilizzare in combinazione la [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) e la [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) per creare un controllo ActiveX ATL.  
+     Utilizzare una combinazione del [Creazione guidata progetto ATL](../atl/reference/atl-project-wizard.md) e [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md) per creare un controllo ActiveX ATL.  
   
-     È anche possibile aggiungere un controllo ATL a un progetto MFC al quale è stato aggiunto il supporto ATL, come descritto in precedenza.  Inoltre, se si seleziona **Controllo ATL** nella finestra di dialogo **Aggiungi classe** senza avere già aggiunto il supporto ATL al progetto MFC, viene visualizzata una finestra di dialogo di conferma dell'aggiunta del supporto ATL al progetto MFC.  
+     È anche possibile aggiungere un controllo ATL a un progetto MFC a cui è stato aggiunto il supporto ATL, come descritto in precedenza. Inoltre, se si seleziona **controllo ATL** nel **Aggiungi classe** la finestra di dialogo se non sono ancora aggiunti supporto ATL a un progetto MFC, Visual Studio visualizza una finestra di dialogo di conferma di aggiunta del supporto ATL per il Progetto MFC.  
   
-     È possibile utilizzare questa procedura guidata per generare il file di origine IDL e una mappa COM nelle classi dei progetti.  
+     Questa procedura guidata genera file di origine IDL e di una mappa COM nelle classi del progetto.  
   
- Una volta aperto un progetto ATL, è possibile utilizzare la finestra di dialogo [Aggiungi classe](../ide/add-class-dialog-box.md) per accedere a ulteriori procedure guidate e modelli per aggiungere le interfacce COM al progetto.  Utilizzando le seguenti procedure guidate è possibile definire una o più interfacce per l'oggetto:  
+ Dopo aver aperto, un progetto ATL il [Aggiungi classe](../ide/add-class-dialog-box.md) la finestra di dialogo consente di scegliere di altre procedure guidate e modelli per aggiungere le interfacce COM al progetto. Le seguenti procedure guidate consentono di stabilire una o più interfacce per l'oggetto:  
   
--   [Creazione guidata componente ATL COM\+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
+-   [Creazione guidata componente ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)  
   
 -   [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md)  
   
@@ -55,10 +53,10 @@ In Visual C\+\+ sono disponibili procedure guidate e modelli che consentono di c
   
 -   [Creazione guidata controllo ATL](../atl/reference/atl-control-wizard.md)  
   
- È inoltre possibile implementare nuove interfacce nel controllo COM facendo clic con il pulsante destro del mouse sulla classe Control dell'oggetto in Visualizzazione classi e scegliendo [Implementa interfaccia](../ide/implement-interface-wizard.md).  
+ Inoltre, è possibile implementare nuove interfacce nel controllo COM facendo clic sulla classe del controllo dell'oggetto in visualizzazione classi e facendo clic su [implementa interfaccia](../ide/implement-interface-wizard.md).  
   
 > [!NOTE]
->  In Visual Studio non sono disponibili procedure guidate per l'aggiunta di un'interfaccia a un progetto.  Per aggiungere un'interfaccia a un progetto ATL o [aggiungere supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md), aggiungere un oggetto semplice mediante la [Creazione guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md).  In alternativa, aprire il file IDL del progetto e creare l'interfaccia immettendo quanto segue:  
+>  Visual Studio non fornisce una procedura guidata per aggiungere un'interfaccia a un progetto. È possibile aggiungere un'interfaccia a un progetto ATL o a un [aggiunta del supporto ATL a un progetto MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) mediante l'aggiunta di un oggetto semplice mediante il [guidata oggetto semplice ATL](../atl/reference/atl-simple-object-wizard.md). In alternativa, aprire il file IDL del progetto e creare l'interfaccia digitando:  
   
 ```  
 interface IMyInterface {  
@@ -66,20 +64,20 @@ interface IMyInterface {
   
 ```  
   
- Per ulteriori informazioni, vedere [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [Aggiunta di oggetti e controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md).  
+ Vedere [che implementa un'interfaccia](../ide/implementing-an-interface-visual-cpp.md) e [aggiunta di oggetti e i controlli a un progetto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) per ulteriori informazioni.  
   
- In Visual C\+\+ è possibile visualizzare e [modificare le interfacce COM](../ide/editing-a-com-interface.md) definite per i progetti in diversi modi.  In [Visualizzazione classi](http://msdn.microsoft.com/it-it/8d7430a9-3e33-454c-a9e1-a85e3d2db925) è possibile visualizzare le icone per qualsiasi interfaccia o interfaccia dispatch definita in un file IDL nel progetto C\+\+.  
+ Visual C++ fornisce diversi modi per visualizzare e [modificare le interfacce COM](../ide/editing-a-com-interface.md) definite per i progetti. [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) Visualizza le icone per qualsiasi interfaccia o dispatch definita in un file IDL nel progetto C++.  
   
- Per le classi di oggetti COM basate su ATL, la mappa COM nella classe ATL viene letta in Visualizzazione classi in modo da visualizzare la relazione tra la classe ATL e le eventuali interfacce implementate.  
+ Per le classi di oggetti COM basati su ATL, Visualizzazione classi legge la mappa COM nella classe ATL per visualizzare la relazione tra la classe ATL e le eventuali interfacce implementate.  
   
- È possibile utilizzare le interfacce disponibili in Visualizzazione classi e nei relativi menu di scelta rapida per le operazioni seguenti:  
+ In visualizzazione classi e il relativo menu di scelta rapida, è possibile utilizzare le interfacce come indicato di seguito:  
   
--   Aggiunta di oggetti ATL a un'applicazione basata su MFC.  
+-   Aggiungere gli oggetti ATL a un'applicazione basata su MFC.  
   
--   Aggiunta di metodi, proprietà ed eventi.  
+-   Aggiungere metodi, proprietà ed eventi.  
   
--   Visualizzazione del codice di interfaccia di un elemento facendo doppio clic su di esso.  
+-   Passare direttamente al codice dell'interfaccia di un elemento facendo doppio clic sull'elemento.  
   
-## Vedere anche  
- [Creazione di progetti desktop tramite le creazioni guidate applicazioni](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Creazione di progetti Desktop mediante creazioni guidate applicazione](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)

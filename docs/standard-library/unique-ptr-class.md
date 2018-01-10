@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>Classe unique_ptr
 Consente di archiviare un puntatore a un oggetto o a una matrice di proprietà. L'oggetto/la matrice non è di proprietà di altri `unique_ptr`. L'oggetto/la matrice viene eliminato quando viene eliminato `unique_ptr`.  
@@ -135,7 +136,7 @@ public:
 |-|-|  
 |[unique_ptr](#unique_ptr)|Esistono sette costruttori per `unique_ptr`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

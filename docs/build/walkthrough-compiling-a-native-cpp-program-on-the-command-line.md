@@ -18,11 +18,12 @@ caps.latest.revision: "63"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 723410eb8b634e3e01c26b505e619eed7fc371d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando
 Visual C++ include un compilatore C++ da riga di comando che consente di creare qualsiasi tipo di programma, dalle app console di base alle app di Windows universale, alle applicazioni Windows Store e ai componenti .NET.  
@@ -36,7 +37,7 @@ Visual C++ include un compilatore C++ da riga di comando che consente di creare 
   
  Visual Studio è un ambiente di sviluppo integrato potente che supporta un editor completo, gestori di risorse, debugger e compilatori per molti linguaggi e piattaforme. Per informazioni su queste funzionalità e su come scaricare e installare Visual Studio, inclusi l'edizione gratuita di Visual Studio Community, vedere [VisualStudio.com](https://www.visualstudio.com/).  
   
- Strumenti di compilazione di Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessarie per compilare programmi C e C++. È ideale per le esercitazioni di compilazione o classe esercita e installa relativamente rapidamente. Per installare solo gli strumenti da riga di comando, scaricare [strumenti di compilazione di Visual Studio](https://go.microsoft.com/fwlink/?linkid=840931) ed eseguire il programma di installazione. Per ulteriori informazioni, vedere [strumenti di compilazione di Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
+ Strumenti di compilazione di Visual Studio installa solo i compilatori della riga di comando, strumenti e le librerie che necessarie per compilare programmi C e C++. È ideale per le esercitazioni di compilazione o classe esercita e installa relativamente rapidamente. Per installare solo gli strumenti da riga di comando, scaricare [strumenti di compilazione di Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931) ed eseguire il programma di installazione. Per ulteriori informazioni, vedere [strumenti di compilazione di Visual C++](http://landinghub.visualstudio.com/visual-cpp-build-tools).  
   
  Prima di compilare un programma C o C++ nella riga di comando, è necessario verificare che siano installati gli strumenti e che è possibile accedervi dalla riga di comando. Visual C++ è complessi requisiti per l'ambiente della riga di comando per trovare gli strumenti, intestazioni e librerie utilizzate. **Non è possibile utilizzare Visual C++ in una finestra del prompt dei comandi normale**. Fortunatamente, Visual C++ viene installato per poter avviare un prompt dei comandi per sviluppatori con l'ambiente impostato per la generazione dalla riga di comando di scelta rapida. Sfortunatamente, i nomi dei collegamenti del prompt di sviluppatore e dove si trovano sono diversi in quasi tutte le versioni di Visual C++ e in versioni diverse di Windows. La prima attività di questa procedura dettagliata consiste nel trovare quello corretto da utilizzare.  
   

@@ -40,11 +40,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7eb4fffa289bd747c25ebf6f9433f37eff94919d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cc24746771c4e494648796847afee58e0bdf09c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 Calcola l'arcoseno.  
@@ -81,7 +82,7 @@ long double asinl(
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
 |± ∞|`INVALID`|`_DOMAIN`|  
-|± `QNAN`,`IND`|nessuno|`_DOMAIN`|  
+|± `QNAN`,`IND`|none|`_DOMAIN`|  
 |&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Note  
@@ -97,7 +98,7 @@ long double asinl(
  Per altre informazioni, vedere [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   

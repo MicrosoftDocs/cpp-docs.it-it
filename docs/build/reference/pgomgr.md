@@ -1,81 +1,82 @@
 ---
-title: "pgomgr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pgomgr (programma)"
-  - "ottimizzazioni PGO, pgomgr"
+title: pgomgr | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- pgomgr program
+- profile-guided optimizations, pgomgr
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cbb9a4f8b92a1cd495e1312c1aa8a8f77cefcd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# pgomgr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Aggiunge i dati di profilo di uno o più file pgc al file pgd.  
+# <a name="pgomgr"></a>pgomgr
+Aggiunge dati di profilo da uno o più file. pgc al file pgd.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 pgomgr [options] pgcfiles pgdfile  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `options`  
- Per pgomgr possono essere specificate le opzioni seguenti:  
+ In pgomgr, è possono specificare le opzioni seguenti:  
   
- **\/help** — Visualizza tutte le opzioni di pgomgr disponibili \(abbreviazione di \/?\).  
+ **/help:**Visualizza le opzioni disponibili pgomgr (abbreviazione di /?).  
   
- **\/clear** — Fa sì che nel file pgd vengano cancellate tutte le informazioni sul profilo.  Quando si specifica **\/clear**, non è possibile specificare un file pgc.  
+ **/Clear:**fa sì che il file pgd la cancellazione di tutte le informazioni del profilo. Non è possibile specificare un pgc file quando **/Clear** specificato.  
   
- **\/detail** — Visualizza statistiche dettagliate, incluse informazioni sul coverage del grafico di flusso.  
+ **/Detail**, vengono visualizzate statistiche dettagliate, incluse le informazioni di code coverage grafico del flusso.  
   
- **\/summary** — Visualizza statistiche per funzione.  
+ **/Summary**: Visualizza le statistiche per ogni funzione.  
   
- —**\/unique** — Quando utilizzata con **\/summary**, determina la visualizzazione dei nomi di funzione decorati.  Quando non si utilizza \/unique, l'impostazione predefinita prevede che vengano visualizzati i nomi di funzione non decorati.  
+ **/Unique**, se utilizzata con **/summary**, determina decorati per visualizzare i nomi di funzione.  L'impostazione predefinita, quando è univoco non utilizzato, è per visualizzare i nomi di funzione non decorato.  
   
- **\/merge**\[**:***n*\] — Fa sì che i dati dei file pgc vengano aggiunti al file pgd.  Il parametro opzionale, *n*, consente di specificare che i dati devono essere aggiunti per *n* volte.  Anziché realizzare uno scenario sei volte, è ad esempio possibile realizzarlo una volta in un'esecuzione di test e quindi aggiungerlo al file pgd sei volte con **pgomgr \/merge:6**.  
+ **/merge**[**:***n*]**-**fa sì che i dati nel file devono essere aggiunti al file pgd o. pgc file.  Il parametro facoltativo,  *n* , consente di specificare che i dati devono essere aggiunti  *n*  volte.  Se, ad esempio, uno scenario comunemente farebbe 6 volte, è possibile eseguire una volta in un'esecuzione dei test e aggiungerlo al file pgd sei volte con **pgomgr /merge: 6**.  
   
  `pgcfiles`  
- Uno o più file pgc di cui si desidera unire i dati di profilo nel file pgd.  È possibile specificare uno o più file pgc.  Se non si specifica alcun file pgc, pgomgr unirà tutti quelli con nome uguale al file pgd.  
+ Uno o più file pgc i cui dati di profilo che si desidera unire il file pgd. È possibile specificare un file pgc singolo o più file. pgc. Se non si specifica alcun file pgc, pgomgr consentirà di unire tutti i file pgc i cui nomi sono gli stessi file pgd.  
   
  `pgdfile`  
- File pgd in cui vengono uniti i dati dei file pgc.  
+ Il file pgd in cui si uniscono i dati dal file. pgc o file.  
   
-## Note  
+## <a name="remarks"></a>Note  
   
 > [!NOTE]
->  Questo strumento può essere avviato solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)],  Non è possibile avviarlo dal prompt dei comandi di sistema o da Esplora file.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
-## Esempio  
- Nell'esempio riportato di seguito vengono eliminati i dati di profilo dal file pgd.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente, il file pgd è stato cancellato di dati di profilo.  
   
 ```  
 pgomgr /clear myapp.pgd  
 ```  
   
- Nell'esempio riportato di seguito i dati di profilo in myapp1.pgc vengono aggiunti al file pgd per tre volte.  
+ Nell'esempio seguente, i dati del profilo in MyApp1 è stato aggiunto al file pgd 3 volte.  
   
 ```  
 pgomgr /merge:3 myapp1.pgc myapp.pgd  
 ```  
   
- Nell'esempio riportato di seguito i dati di profilo di ogni file myapp\#.pgc vengono aggiunti al file myapp.pgd.  
+ Nell'esempio seguente, i dati di profilo da tutti i file #. pgc myapp vengono aggiunti al file pgd.  
   
 ```  
 pgomgr -merge myapp1.pgd  
 ```  
   
-## Vedere anche  
- [Strumenti per l'ottimizzazione PGO \(Profile Guided Optimization, Ottimizzazione guidata da profilo\)](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+## <a name="see-also"></a>Vedere anche  
+ [Strumenti per l'ottimizzazione manuale PGO](../../build/reference/tools-for-manual-profile-guided-optimization.md)

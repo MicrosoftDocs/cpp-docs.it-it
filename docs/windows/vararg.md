@@ -1,32 +1,33 @@
 ---
-title: "vararg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.vararg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vararg attribute"
+title: vararg | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.vararg
+dev_langs: C++
+helpviewer_keywords: vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ee82536c4cb172fb825487c7780bafcc1f007a59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# vararg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vararg"></a>vararg
 Specifica che la funzione accetta un numero variabile di argomenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,10 +35,10 @@ Specifica che la funzione accetta un numero variabile di argomenti.
   
 ```  
   
-## Note  
- **vararg** L'attributo di C\+\+ ha la stessa funzionalità di  [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **vararg** attributo C++ ha la stessa funzionalità come il [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) attributo MIDL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente viene illustrato un utilizzo di **vararg**:  
   
 ```  
@@ -54,20 +55,19 @@ __interface X : public IUnknown
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di metodo](../windows/method-attributes.md)   

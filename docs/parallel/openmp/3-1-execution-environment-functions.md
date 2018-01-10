@@ -1,44 +1,44 @@
 ---
-title: "3.1 Execution Environment Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1 esecuzione di funzioni di ambiente | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7d3e6f47-ce01-4dab-946b-bccc220e2ddd
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f6317a1744fba98d9f38c31e39f876bc03a8abfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1 Execution Environment Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le funzioni descritte in questi in effetti della sezione e thread del monitor, in processori e in parallelo:  
+# <a name="31-execution-environment-functions"></a>3.1 Esecuzione di funzioni di ambiente
+Le funzioni descritte in questa sezione interessano e monitorare i thread, processori e ambienti paralleli:  
   
--   **omp\_set\_num\_threads** funzione.  
+-   il **omp_set_num_threads** (funzione).  
   
--   **omp\_get\_num\_threads** funzione.  
+-   il **omp_get_num_threads** (funzione).  
   
--   **omp\_get\_max\_threads** funzione.  
+-   il **omp_get_max_threads** (funzione).  
   
--   **omp\_get\_thread\_num** funzione.  
+-   il **omp_get_thread_num** (funzione).  
   
--   **omp\_get\_num\_procs** funzione.  
+-   il **omp_get_num_procs** (funzione).  
   
--   **omp\_in\_parallel** funzione.  
+-   il **omp_in_parallel** (funzione).  
   
--   **omp\_set\_dynamic** funzione.  
+-   il **omp_set_dynamic** (funzione).  
   
--   **omp\_get\_dynamic** funzione.  
+-   il **omp_get_dynamic** (funzione).  
   
--   **omp\_set\_nested** funzione.  
+-   il **omp_set_nested** (funzione).  
   
--   **omp\_get\_nested** funzione.
+-   il **omp_get_nested** (funzione).

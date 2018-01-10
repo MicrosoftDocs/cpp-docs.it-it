@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83519f28361505b9c227c7db5522bfffcc5133a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7c80606f72e8c9ebfbd14290de1128a982433a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-helpers-for-masm"></a>Helper di rimozione per MASM
 Per poter scrivere routine assembly corrette, esistono una serie di pseudo-operazioni che può essere usata in parallelo con le istruzioni di assembly effettivo per creare l'appropriato. pdata e xdata. Esistono anche un set di macro per semplifica l'utilizzo delle pseudo-operazioni per la maggior parte delle situazioni.  

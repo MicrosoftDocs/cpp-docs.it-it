@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc380109f228077e9ee2a928202bf7514a7c2ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba264612923e101c63b5ec3503bbfbce426d8bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execution-character-set"></a>Set di caratteri di esecuzione
 Questo contenuto fa spesso riferimento al "set di caratteri di esecuzione". Il set di caratteri di esecuzione non è necessariamente lo stesso del set di caratteri di origine utilizzato per la scrittura di programmi C. Il set di caratteri di esecuzione include tutti i caratteri nel set di caratteri di origine e il carattere null, il carattere di nuova riga, il backspace, la tabulazione orizzontale, la tabulazione verticale, il ritorno a capo e le sequenze di escape. I set di caratteri di esecuzione e di origine possono variare in altre implementazioni.  

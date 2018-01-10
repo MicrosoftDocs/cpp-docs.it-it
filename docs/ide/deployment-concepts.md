@@ -1,57 +1,58 @@
 ---
-title: "Concetti principali della distribuzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "distribuzione di applicazioni [C++], informazioni sulla distribuzione di applicazioni"
-  - "dipendenze [C++], distribuzione di applicazioni"
-  - "distribuzione di applicazioni [C++], informazioni sulla distribuzione di applicazioni"
-  - "librerie [C++], problemi relativi alla distribuzione di applicazioni"
-  - "Windows Installer [C++]"
+title: Concetti relativi alla distribuzione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows Installer [C++]
+- dependencies [C++], application deployment and
+- application deployment [C++], about application deployment
+- deploying applications [C++], about deploying applications
+- libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b40865266548067e2dda3782e66802c0dbe2844e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Concetti principali della distribuzione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione vengono illustrate le principali considerazioni sulla distribuzione di applicazioni C\+\+.  
+# <a name="deployment-concepts"></a>Concetti principali della distribuzione
+Questa sezione illustra le principali considerazioni per la distribuzione di applicazioni C++.  
   
-## Distribuzione in C\+\+ mediante Windows Installer  
- I progetti di Visual C\+\+ in genere utilizzano il programma di installazione tradizionale di Windows Installer per la distribuzione.  Per preparare la distribuzione mediante Windows Installer, l'applicazione viene assemblata in un file setup.exe e tale file viene distribuito insieme a un package di installazione \(con estensione msi\).  Gli utenti dovranno quindi eseguire setup.exe per installare l'applicazione.  
+## <a name="windows-installer-deployment-in-c"></a>Distribuzione di Windows Installer in C++  
+ Progetti Visual C++, in genere, utilizzare il programma di installazione tradizionale di Windows Installer per la distribuzione. Per preparare una distribuzione di Windows Installer, un pacchetto dell'applicazione in un file setup.exe e distribuire tale file, insieme a un pacchetto di installazione (MSI). Gli utenti, quindi, eseguire setup.exe per installare l'applicazione.  
   
- Nell'assemblare l'applicazione, viene aggiunto un progetto di installazione alla soluzione. Quando viene compilato, il progetto crea il file di installazione e quelli del package di installazione da distribuire agli utenti.   Per ulteriori informazioni, vedere [Scelta di un metodo di distribuzione](../ide/choosing-a-deployment-method.md).  
+ Un pacchetto dell'applicazione mediante l'aggiunta di un progetto di installazione per la soluzione. durante la compilazione, viene creato il programma di installazione e il programma di installazione i file di pacchetto da distribuire agli utenti. Per ulteriori informazioni, vedere [scelta di un metodo di distribuzione](../ide/choosing-a-deployment-method.md).  
   
-## Dipendenze di libreria  
- Quando un'applicazione C\/C\+\+ viene compilata con funzionalità fornite dalle librerie di Visual C\+\+, diventa dipendente dalla presenza di tali librerie in fase di esecuzione.  Per poter essere eseguita, l'applicazione deve essere collegata, in modo statico o dinamico, alle librerie di Visual C\+\+ necessarie.  Se un'applicazione viene collegata in modo dinamico a una libreria di Visual C\+\+, è necessario che al momento dell'esecuzione tale libreria sia presente in modo che possa essere caricata.  Se invece l'applicazione viene collegata in modo statico a una libreria di Visual C\+\+, non sarà necessaria la presenza delle DLL corrispondenti sul computer dell'utente.  Il collegamento statico presenta tuttavia alcuni aspetti negativi, quali l'aumento delle dimensioni dei file dell'applicazione e la possibilità di maggiori difficoltà nella manutenzione.  Per ulteriori informazioni, vedere [Vantaggi dell'utilizzo delle DLL](../build/advantages-of-using-dlls.md).  
+## <a name="library-dependencies"></a>Dipendenze libreria  
+ Quando un'applicazione C/C++ viene compilata con funzionalità fornite dalle librerie di Visual C++, diventa dipendente dalla presenza di tali librerie in fase di esecuzione. Affinché l'esecuzione dell'applicazione, è necessario collegare, in modo statico o dinamico, le librerie di Visual C++ necessari. Se un'applicazione in modo dinamico i collegamenti a una raccolta di Visual C++, quindi, durante l'esecuzione di tale libreria devono essere presenti in modo può essere caricato. D'altra parte, se l'applicazione collegata in modo statico in una raccolta di Visual C++, quindi non è necessario le DLL corrispondenti siano presenti nel computer dell'utente. Collegamento statico, tuttavia, presenta alcuni aspetti negativi, ad esempio l'aumento delle dimensioni dei file dell'applicazione e rendendo potenzialmente più difficile la manutenzione. Per ulteriori informazioni, vedere [vantaggi dell'utilizzo delle DLL](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls).  
   
-## Creazione del package e ridistribuzione  
- Le librerie di Visual C\+\+ vengono inserite nel package come DLL e tutte le librerie necessarie per le applicazioni C\/C\+\+ vengono installate mediante Visual Studio nel computer dello sviluppatore.   Al momento della distribuzione di un'applicazione agli utenti, tuttavia, non è possibile in molti casi richiedere loro di installare Visual Studio per consentire l'esecuzione dell'applicazione.  È importante pertanto che sia possibile ridistribuire solo le parti di Visual C\+\+ necessarie per la corretta esecuzione dell'applicazione.  
+## <a name="packaging-and-redistributing"></a>Creazione di pacchetti e la ridistribuzione  
+ Sono inclusi nel pacchetto di librerie di Visual C++ come DLL, e tutte le librerie necessarie per le applicazioni C/C++ sono installate da Visual Studio sul computer dello sviluppatore. Tuttavia, quando si distribuisce l'applicazione agli utenti, non è consentita in molti casi di installazione di Visual Studio per eseguire l'applicazione. È importante essere in grado di ridistribuire solo le parti di Visual C++ necessari per eseguire correttamente l'applicazione.  
   
- Per ulteriori informazioni sulla creazione del package e la ridistribuzione, vedere gli argomenti riportati di seguito:  
+ Per ulteriori informazioni sulla creazione di pacchetti e la ridistribuzione, vedere gli argomenti seguenti:  
   
 -   [Determinazione delle DLL da ridistribuire](../ide/determining-which-dlls-to-redistribute.md).  
   
 -   [Scelta di un metodo di distribuzione](../ide/choosing-a-deployment-method.md).  
   
- Per esempi di distribuzione e suggerimenti relativi alla risoluzione dei problemi, vedere:  
+ Per esempi di distribuzione e suggerimenti sulla risoluzione dei problemi, vedere:  
   
 -   [Esempi di distribuzione](../ide/deployment-examples.md).  
   
--   [Risoluzione dei problemi](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
+-   [Risoluzione dei problemi di C/C++ di applicazioni isolate e assembly Side-by-side](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
   
-## Vedere anche  
- [Distribuzione di applicazioni desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [Informazioni sulle dipendenze di un'applicazione Visual C\+\+](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
- [Windows Installer Deployment](http://msdn.microsoft.com/it-it/121be21b-b916-43e2-8f10-8b080516d2a0)
+## <a name="see-also"></a>Vedere anche  
+ [Distribuzione di applicazioni Desktop](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [Informazioni sulle dipendenze di un'applicazione Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
+ [Distribuzione con Windows Installer](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)

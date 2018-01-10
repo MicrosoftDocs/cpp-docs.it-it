@@ -1,33 +1,32 @@
 ---
-title: "Aggiunta guidata variabile membro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.variable.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aggiunta guidata variabile membro [C++]"
+title: Aggiunta guidata variabile membro | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.variable.overview
+dev_langs: C++
+helpviewer_keywords: Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Aggiunta guidata variabile membro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare questa procedura guidata per aggiungere una dichiarazione di variabile membro al file di intestazione e, a seconda delle opzioni, di aggiungere il codice al file CPP.  Dopo aver aggiunto la variabile membro mediante la procedura guidata è possibile modificare il codice nell'ambiente di sviluppo.  
+# <a name="add-member-variable-wizard"></a>Aggiunta guidata variabile membro
+Questa procedura guidata consente di aggiungere una dichiarazione di variabile membro per il file di intestazione e, a seconda delle opzioni, è possibile aggiungere codice al file con estensione cpp. Dopo aver aggiunto la variabile membro utilizzando la procedura guidata, è possibile modificare il codice nell'ambiente di sviluppo.  
   
  **Accesso**  
- Consente di impostare l'accesso alla variabile membro.  I modificatori di accesso sono parole chiave che specificano il tipo di accesso di altre classi alla variabile membro.  Per ulteriori informazioni sulla definizione dell'accesso, vedere [Controllo dell'accesso ai membri](../cpp/member-access-control-cpp.md).  Per impostazione predefinita, il livello di accesso alla variabile membro è impostato su **public**.  
+ Imposta l'accesso alla variabile membro. Modificatori di accesso sono parole chiave che specificano l'accesso alla variabile membro altre classi. Vedere [controllo di accesso ai membri](../cpp/member-access-control-cpp.md) per ulteriori informazioni sull'impostazione di accesso. Il livello di accesso a variabili membro è impostato su **pubblica** per impostazione predefinita.  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -35,12 +34,12 @@ caps.handback.revision: 6
   
 -   [private](../cpp/private-cpp.md)  
   
- **Tipo variabile**  
- Consente di impostare il tipo per la variabile membro che si sta aggiungendo.  
+ **Tipo di variabile**  
+ Imposta il tipo restituito per la variabile membro che si sta aggiungendo.  
   
--   Per le variabili membro diverse dal controllo finestra di dialogo, selezionare una voce dall'elenco dei tipi disponibili.  
+-   Se si aggiunge una variabile membro che non è un controllo di finestra di dialogo, selezionare dall'elenco dei tipi disponibili.  
   
-     Per informazioni sui tipi, vedere [Tipi fondamentali](../cpp/fundamental-types-cpp.md).  
+     Per informazioni sui tipi, vedere [tipi fondamentali](../cpp/fundamental-types-cpp.md).  
   
     |||  
     |-|-|  
@@ -50,47 +49,47 @@ caps.handback.revision: 6
     |`int`|`unsigned long`|  
     |**long**||  
   
--   Se si aggiunge una variabile membro per un controllo finestra di dialogo, in questa casella verrà immesso il tipo di oggetto restituito per un controllo o valore.  Se si seleziona **Controllo**, in **Tipo variabile** sarà specificata la classe base del controllo selezionato nella casella **ID controllo**.  Se il controllo finestra di dialogo può contenere un valore e si seleziona **Valore**, in **Tipo variabile** sarà specificato il tipo appropriato per il valore contenuto dal controllo.  Per ulteriori informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md).  
+-   Se si aggiunge una variabile membro per un controllo di finestra di dialogo, questa casella viene compilata con il tipo di oggetto restituito per un controllo o un valore. Se si seleziona **controllo**, quindi **tipo di variabile** specifica la classe di base del controllo in cui si seleziona il **ID controllo** casella. Se il controllo di finestra di dialogo può contenere un valore e se si seleziona **valore**, quindi **tipo di variabile** specifica il tipo appropriato per il valore di controllo può contenere. Vedere [controlli finestra di dialogo e i tipi di variabile](../ide/dialog-box-controls-and-variable-types.md) per ulteriori informazioni.  
   
-     Il valore dipende dalla selezione effettuata in **ID controllo** e non può essere modificato.  
+     Questo valore varia a seconda della selezione eseguita nel **ID controllo** e non può essere modificato.  
   
- **Nome variabile**  
- Consente di impostare il nome della variabile membro che si sta aggiungendo.  Per impostazione predefinita, le variabili membro iniziano con la stringa di identificazione "m\_".  
+ **Nome della variabile**  
+ Imposta il nome della variabile membro che si sta aggiungendo. Le variabili membro iniziano con la stringa di identificazione "m _," a cui viene fornito automaticamente per impostazione predefinita.  
   
- **Variabile controllo**  
- Consente di specificare che la variabile membro gestisce un controllo in una finestra di dialogo con supporto per [scambio e convalida dei dati](../mfc/dialog-data-exchange-and-validation.md).  Per ulteriori informazioni, vedere [DoDataExchange](../Topic/CWnd::DoDataExchange.md).  L'opzione è disponibile solo per le variabili membro aggiunte alle classi derivate da [CDialog](../mfc/reference/cdialog-class.md).  Selezionare questa casella per attivare le opzioni **ID controllo** e **Tipo controllo**.  
+ **Variabile di controllo**  
+ Indica che la variabile membro gestisce un controllo all'interno di una finestra di dialogo [scambio di dati e la convalida dei dati](../mfc/dialog-data-exchange-and-validation.md) supportano. Vedere [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) per ulteriori informazioni. Questa opzione è disponibile solo per le variabili membro aggiunte alle classi derivate da [CDialog](../mfc/reference/cdialog-class.md). Selezionare questa casella per attivare il **ID controllo** e **tipo di controllo** opzioni.  
   
- **ID controllo**  
- Consente di impostare l'ID per la variabile di controllo che si sta aggiungendo.  Selezionare dall'elenco l'ID corrispondente al tipo di controllo per il quale si sta aggiungendo la variabile membro.  L'elenco è attivo solo quando si seleziona la casella **Variabile controllo** e contiene unicamente gli ID per i controlli già aggiunti alla finestra di dialogo.  Per il pulsante standard **OK**, ad esempio, l'ID controllo è **IDOK**.  
+ **ID di controllo**  
+ Imposta l'ID per la variabile di controllo che si sta aggiungendo. Selezionare dall'elenco di ID per il tipo di controllo che si desidera aggiungere la variabile membro. L'elenco è attivo solo quando il **la variabile di controllo** casella è selezionata, ed è limitato agli ID per i controlli già aggiunti alla finestra di dialogo. Ad esempio, per lo standard **OK** pulsante, l'ID di controllo è **IDOK**.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Controllo**|Per impostazione predefinita per il tipo di controllo è selezionata questa opzione.  Consente di gestire il controllo stesso, non lo stato o il contenuto come per una casella di riepilogo, una casella combinata o di testo.|  
-|**Valore**|L'opzione è disponibile solo per i tipi di controllo che contengono un valore, come caselle di testo, o che riflettono uno stato, come caselle di controllo, e per i quali è possibile gestire intervallo, contenuto o stato.  Per ulteriori informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md).|  
+|------------|-----------------|  
+|**Controllo**|Questa opzione è impostata per impostazione predefinita per il tipo di controllo. Gestisce il controllo stesso e non lo stato o contenuto (come si desideri farlo con una casella di riepilogo, una casella combinata o casella di modifica) del controllo.|  
+|**Valore**|Questa opzione è disponibile solo per i tipi di controllo che possono contenere un valore (ad esempio una casella di modifica) o riflettere uno stato (ad esempio una casella di controllo) e per cui si può gestire l'intervallo, nel contenuto o stato. Vedere [controlli finestra di dialogo e i tipi di variabile](../ide/dialog-box-controls-and-variable-types.md) per ulteriori informazioni.|  
   
  **Categoria**  
- Consente di specificare se la variabile si basa su un tipo di controllo o sul valore del controllo.  
+ Specifica se la variabile è basata su un tipo di controllo o il valore del controllo.  
   
  **Tipo di controllo**  
- Consente di impostare il tipo di controllo che si sta aggiungendo  Il testo presente in questa casella non è modificabile.  Il tipo di controllo per un pulsante, ad esempio, è **BUTTON**, mentre per una casella combinata è **COMBOBOX**.  Per ulteriori informazioni, vedere [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md).  
+ Imposta il tipo di controllo da aggiungere. Questa casella non è possibile modificare. Ad esempio, un pulsante ha il tipo di controllo **pulsante**, e una casella combinata è il tipo di controllo **COMBOBOX**. Vedere [controlli finestra di dialogo e i tipi di variabile](../ide/dialog-box-controls-and-variable-types.md) per ulteriori informazioni.  
   
  **Numero massimo caratteri**  
- Disponibile solo quando **Tipo variabile** è impostato su [CString](../atl-mfc-shared/reference/cstringt-class.md).  Consente di specificare il numero massimo di caratteri che il controllo può contenere.  
+ Disponibile solo quando **tipo di variabile** è impostato su [CString](../atl-mfc-shared/reference/cstringt-class.md). Indica il numero massimo di caratteri che può contenere il controllo.  
   
  **Valore minimo**  
- Disponibile solo quando il tipo di variabile è **BOOL**, `int`, **UINT**, **long**, `DWORD`, **float**, **double**, **BYTE**, **short**, [COLECurrency](../mfc/reference/colecurrency-class.md) o [CTime](../atl-mfc-shared/reference/ctime-class.md).  Consente di indicare il valore più basso accettabile per un intervallo di proporzioni o date.  
+ Disponibile solo quando il tipo di variabile è **BOOL**, `int`, **UINT**, **lungo**, `DWORD`, **float**, **doppie**, **BYTE**, **breve**, [COLECurrency](../mfc/reference/colecurrency-class.md) o [CTime](../atl-mfc-shared/reference/ctime-class.md). Indica il valore minimo accettabile per un intervallo di scala o Data.  
   
  **Valore massimo**  
- Disponibile solo quando il tipo di variabile è **BOOL**, `int`, **UINT**, **long**, `DWORD`, **float**, **double**, **BYTE**, **short**, `COLECurrency` o `CTime`.  Consente di indicare il valore più alto accettabile per un intervallo di proporzioni o date.  
+ Disponibile solo quando il tipo di variabile è **BOOL**, `int`, **UINT**, **lungo**, `DWORD`, **float**, **doppie**, **BYTE**, **breve**, `COLECurrency` o `CTime`. Indica il valore massimo accettabile per un intervallo di scala o Data.  
   
- **File H**  
- Per i controlli ActiveX le cui variabili membro richiedono una classe wrapper.  Consente di impostare il nome del file di intestazione per aggiungere la dichiarazione di classe.  
+ **file con estensione h**  
+ Per i controlli ActiveX, il cui variabili membro richiedono una classe wrapper. Imposta il nome del file di intestazione per aggiungere la dichiarazione di classe.  
   
- **File CPP**  
- Per i controlli ActiveX le cui variabili membro richiedono una classe wrapper.  Consente di impostare il nome del file di implementazione per aggiungere la definizione di classe.  
+ **file con estensione cpp**  
+ Per i controlli ActiveX, il cui variabili membro richiedono una classe wrapper. Imposta il nome del file di implementazione per aggiungere la definizione di classe.  
   
- **Commento**  
- Consente di riportare un commento nel file di intestazione per la variabile membro.  
+ **Commentoo**  
+ Fornisce un commento nel file di intestazione per la variabile membro.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)

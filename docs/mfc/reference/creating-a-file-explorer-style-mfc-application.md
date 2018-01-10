@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8e97253f74365ef0b3c3a235257c85ceee37b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>Creazione di un'applicazione MFC di tipo Esplora file
 Molte applicazioni di sistema di Windows utilizzano l'interfaccia utente (UI) per Esplora File. Quando si avvia Esplora File, ad esempio, viene visualizzata un'applicazione con una barra di divisione verticale della barra di divisione dell'area client. La parte sinistra dell'area client offre funzionalità di esplorazione ed e il lato destro dell'area client Mostra i dettagli relativi alla selezione effettuata nel riquadro a sinistra. Quando un utente fa clic su un elemento nel riquadro a sinistra, l'applicazione ripopola il riquadro di destra. In un'applicazione MDI, è possibile utilizzare i comandi nel **vista** menu per modificare la quantità di dettagli visualizzati nel riquadro a destra. (In un'applicazione SDI o multipli documento di primo livello, è possibile modificare i dettagli utilizzando solo i pulsanti della barra degli strumenti.)  

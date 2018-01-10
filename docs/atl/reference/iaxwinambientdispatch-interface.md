@@ -4,76 +4,59 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
-- No header/ATL::IAxWinAmbientDispatch
-- No header/ATL::get_AllowContextMenu
-- No header/ATL::get_AllowShowUI
-- No header/ATL::get_AllowWindowlessActivation
-- No header/ATL::get_BackColor
-- No header/ATL::get_DisplayAsDefault
-- No header/ATL::get_DocHostDoubleClickFlags
-- No header/ATL::get_DocHostFlags
-- No header/ATL::get_Font
-- No header/ATL::get_ForeColor
-- No header/ATL::get_LocaleID
-- No header/ATL::get_MessageReflect
-- No header/ATL::get_OptionKeyPath
-- No header/ATL::get_ShowGrabHandles
-- No header/ATL::get_ShowHatching
-- No header/ATL::get_UserMode
-- No header/ATL::put_AllowContextMenu
-- No header/ATL::put_AllowShowUI
-- No header/ATL::put_AllowWindowlessActivation
-- No header/ATL::put_BackColor
-- No header/ATL::put_DisplayAsDefault
-- No header/ATL::put_DocHostDoubleClickFlags
-- No header/ATL::put_DocHostFlags
-- No header/ATL::put_Font
-- No header/ATL::put_ForeColor
-- No header/ATL::put_LocaleID
-- No header/ATL::put_MessageReflect
-- No header/ATL::put_OptionKeyPath
-- No header/ATL::put_UserMode
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinAmbientDispatch interface
+- ATLIFACE/ATL::IAxWinAmbientDispatch
+- ATLIFACE/ATL::get_AllowContextMenu
+- ATLIFACE/ATL::get_AllowShowUI
+- ATLIFACE/ATL::get_AllowWindowlessActivation
+- ATLIFACE/ATL::get_BackColor
+- ATLIFACE/ATL::get_DisplayAsDefault
+- ATLIFACE/ATL::get_DocHostDoubleClickFlags
+- ATLIFACE/ATL::get_DocHostFlags
+- ATLIFACE/ATL::get_Font
+- ATLIFACE/ATL::get_ForeColor
+- ATLIFACE/ATL::get_LocaleID
+- ATLIFACE/ATL::get_MessageReflect
+- ATLIFACE/ATL::get_OptionKeyPath
+- ATLIFACE/ATL::get_ShowGrabHandles
+- ATLIFACE/ATL::get_ShowHatching
+- ATLIFACE/ATL::get_UserMode
+- ATLIFACE/ATL::put_AllowContextMenu
+- ATLIFACE/ATL::put_AllowShowUI
+- ATLIFACE/ATL::put_AllowWindowlessActivation
+- ATLIFACE/ATL::put_BackColor
+- ATLIFACE/ATL::put_DisplayAsDefault
+- ATLIFACE/ATL::put_DocHostDoubleClickFlags
+- ATLIFACE/ATL::put_DocHostFlags
+- ATLIFACE/ATL::put_Font
+- ATLIFACE/ATL::put_ForeColor
+- ATLIFACE/ATL::put_LocaleID
+- ATLIFACE/ATL::put_MessageReflect
+- ATLIFACE/ATL::put_OptionKeyPath
+- ATLIFACE/ATL::put_UserMode
+dev_langs: C++
+helpviewer_keywords: IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e9d53dc257920e40dbf6a2f360d1289676d121fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Interfaccia IAxWinAmbientDispatch
 Questa interfaccia fornisce metodi per specificare le caratteristiche del controllo ospitato o del contenitore.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -97,7 +80,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[get_Font](#get_font)|Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.|  
 |[get_ForeColor](#get_forecolor)|Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.|  
 |[get_LocaleID](#get_localeid)|Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.|  
-|[get_MessageReflect](#get_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
+|[get_MessageReflect](#get_messagereflect)|Il **MessageReflect** ambiente proprietà specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
 |[get_OptionKeyPath](#get_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.|  
 |[get_ShowGrabHandles](#get_showgrabhandles)|Il **ShowGrabHandles** proprietà ambiente consente il controllo sapere se è necessario disegnare se stesso con quadratini di ridimensionamento.|  
 |[get_ShowHatching](#get_showhatching)|Il **ShowHatching** proprietà ambiente consente il controllo sapere se deve essere disegnato stesso tratteggio.|  
@@ -112,7 +95,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |[put_Font](#put_font)|Il **carattere** proprietà specifica il tipo di carattere ambiente del contenitore.|  
 |[put_ForeColor](#put_forecolor)|Il `ForeColor` proprietà specifica il colore di primo piano dell'ambiente del contenitore.|  
 |[put_LocaleID](#put_localeid)|Il **LocaleID** proprietà specifica l'ID impostazioni locali di ambiente del contenitore.|  
-|[put_MessageReflect](#put_messagereflect)|Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
+|[put_MessageReflect](#put_messagereflect)|Il **MessageReflect** ambiente proprietà specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.|  
 |[put_OptionKeyPath](#put_optionkeypath)|Il **OptionKeyPath** proprietà specifica il percorso della chiave del Registro di sistema per le impostazioni utente.|  
 |[put_UserMode](#put_usermode)|Il **UserMode** proprietà specifica la modalità dell'ambiente utente del contenitore.|  
   
@@ -307,7 +290,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
  Con questo metodo è possibile individuare l'ambiente LocalID, vale a dire, il valore LocaleID del programma del controllo viene utilizzato in. Quando si conosce l'ID delle impostazioni locali, è possibile chiamare codice per caricare le didascalie specifiche delle impostazioni locali, testo del messaggio di errore, e così via da un file di risorse o di una DLL satellite.  
   
 ##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
- Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
+ Il **MessageReflect** ambiente proprietà specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
   
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -559,7 +542,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
  L'implementazione dell'oggetto host ATL Usa impostazioni locali predefinite dell'utente come valore predefinito di questa proprietà.  
   
 ##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
- Il **MessageReflect** proprietà di ambiente specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
+ Il **MessageReflect** ambiente proprietà specifica se il contenitore rifletteranno i messaggi per il controllo ospitato.  
   
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
@@ -611,7 +594,6 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  [Interfaccia IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

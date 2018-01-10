@@ -1,50 +1,32 @@
 ---
-title: Classe invalid_compute_domain | Documenti di Microsoft
+title: Classe invalid_compute_domain | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_compute_domain
 - AMPRT/invalid_compute_domain
 - AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_compute_domain class
+dev_langs: C++
+helpviewer_keywords: invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: e37012f62a40649876d043c3a0e89a1655c40455
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9dc142b921efb6b52fd5b5ce7a89432b4727951c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="invalidcomputedomain-class"></a>Classe invalid_compute_domain
-L'eccezione generata quando il runtime non è possibile avviare un kernel tramite il dominio di calcolo specificato il [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sito di chiamata.  
+# <a name="invalidcomputedomain-class"></a>invalid_compute_domain (classe)
+Eccezione generata quando il runtime non è possibile avviare un kernel con il dominio di calcolo specificato al [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) sito di chiamata.  
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -92,8 +74,7 @@ invalid_compute_domain() throw();
  Descrizione dell'errore.  
   
 ### <a name="return-value"></a>Valore restituito  
- Un'istanza di `invalid_compute_domain` (classe)  
+ Un'istanza di `invalid_compute_domain` classe  
     
 ## <a name="see-also"></a>Vedere anche  
- [Concorrenza Namespace (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -35,16 +35,17 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1e302fb7003358a75cb0b3022c4264c1e63518e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-strings-in-visual-c"></a>Testo e stringhe in Visual C++
 Un aspetto importante dello sviluppo di applicazioni per i mercati internazionali è la rappresentazione appropriata di set di caratteri locale. Il set di caratteri ASCII definisce i caratteri nell'intervallo da 0x00 e 0x7F. Sono presenti altri set di caratteri, principalmente europei, che definiscono i caratteri all'interno dell'intervallo da 0x00 e 0x7F in modo identico al set di caratteri ASCII e definire un carattere esteso impostare tra 0x80 e 0xFF. Pertanto, un set di 8 bit, i caratteri a byte singolo (SBCS) è sufficiente per rappresentare il set di caratteri ASCII, nonché i set di caratteri di molte lingue europee. Tuttavia, alcuni set di caratteri non europei, come il Kanji giapponese, includono molti più caratteri rispetto a uno schema di codifica a byte singolo può rappresentare e pertanto richiedono caratteri multibyte (MBCS) codifica del set.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Unicode e MBCS](../text/unicode-and-mbcs.md)  
  Viene descritto il supporto di Visual C++ per la programmazione Unicode e MBCS.  
   

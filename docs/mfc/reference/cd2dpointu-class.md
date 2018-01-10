@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CD2DPointU
 - AFXRENDERTARGET/CD2DPointU
 - AFXRENDERTARGET/CD2DPointU::CD2DPointU
-dev_langs:
-- C++
-helpviewer_keywords:
-- CD2DPointU [MFC], CD2DPointU
+dev_langs: C++
+helpviewer_keywords: CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f5af7ab3327a7c3d2f1afc31ad8cc2bde144eeb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: b0da6e31ccc14e9e050da9f246582abb173ec31b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dpointu-class"></a>Classe CD2DPointF
 Wrapper per `D2D1_POINT_2U`.  
@@ -91,4 +88,3 @@ operator CPoint();
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

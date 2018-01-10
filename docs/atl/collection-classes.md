@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d2aacc778e6df974f364f2be9da72aa46fed8f4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a0c710629b69ffe690767d2d2948ce73631344d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-classes"></a>Classi Collection
 Le classi seguenti forniscono supporto per le matrici, elenchi, mappe e anche metodi tratti per consentire l'accesso agli elementi e i confronti.  

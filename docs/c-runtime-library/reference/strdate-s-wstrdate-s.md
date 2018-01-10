@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e4d3f6b2b7617705b38c0b8e13ca2ed65fcf8d81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 Copia la data di sistema corrente in un buffer. Queste sono versioni di [_strdate, _wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -86,7 +87,7 @@ errno_t _wstrdate_s(
   
 ## <a name="error-conditions"></a>Condizioni di errore  
   
-|`buffer`|`numberOfElements`|Valore restituito|Contenuto di `buffer`|  
+|`buffer`|`numberOfElements`|INVIO|Contenuto di `buffer`|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(qualsiasi)|`EINVAL`|Non modificato|  
 |Non `NULL` (che punta a un buffer valido)|0|`EINVAL`|Non modificato|  
@@ -105,7 +106,7 @@ errno_t _wstrdate_s(
   
  Se `buffer` è un puntatore `NULL` o se `numberOfElements` è minore di 9 caratteri, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL` se il buffer è `NULL` o se `numberOfElements` è minore o uguale a 0 oppure impostano `errno` su `ERANGE` se `numberOfElements` è minore di 9.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mapping"></a>Mapping di routine di testo generico:  
   
@@ -125,7 +126,7 @@ errno_t _wstrdate_s(
  Vedere l'esempio per [time](../../c-runtime-library/reference/time-time32-time64.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione del tempo](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [asctime_s, _wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
  [gmtime_s, _gmtime32_s, _gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   

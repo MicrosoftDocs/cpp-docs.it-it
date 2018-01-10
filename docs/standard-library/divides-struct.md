@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::divides
-- divides
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::divides
+dev_langs: C++
 helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: a82ec380e3be786dfdac2b8ebe3b108d5776c3a9
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 07f59d65b5231e7e102dcf154ef2bc64ed8cbf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="divides-struct"></a>Struct divides
 Oggetto funzione predefinito che esegue l'operazione di divisione ( `operator/`) negli argomenti.  
@@ -75,7 +57,7 @@ struct divides<void>
  Operando destro dell'operatore di divisione. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Risultato di `Left``/``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator/`.  
+ Risultato di `Left / Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator/`.  
   
 ## <a name="example"></a>Esempio  
   
@@ -141,7 +123,6 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

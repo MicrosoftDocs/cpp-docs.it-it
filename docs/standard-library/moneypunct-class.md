@@ -57,11 +57,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c475dc3a992ef31c90f3be184428d8c9aa79fe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunct-class"></a>Classe moneypunct
 La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per descrivere le sequenze `CharType` utilizzate per rappresentare un campo di input o output monetario. Se il parametro di modello `Intl` è `true`, vengono rispettate le convenzioni internazionali.  
@@ -91,7 +92,7 @@ class moneypunct;
 |-|-|  
 |[moneypunct](#moneypunct)|Costruttore di oggetti di tipo `moneypunct`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -498,7 +499,7 @@ explicit moneypunct(size_t _Refs = 0);
   
 -   \>1: questi valori non definiti.  
   
- Non è possibile offrire esempi diretti, poiché il distruttore è protetto.  
+ Non è possibile fornire esempi diretti, poiché il distruttore è protetto.  
   
  Il costruttore inizializza l'oggetto di base con [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
@@ -780,5 +781,5 @@ English_Canada.1252 domestic thousands separator: ,
   
 ## <a name="see-also"></a>Vedere anche  
  [\<locale>](../standard-library/locale.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

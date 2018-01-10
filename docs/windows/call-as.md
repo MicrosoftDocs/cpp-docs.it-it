@@ -1,32 +1,33 @@
 ---
-title: "call_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.call_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_as attribute"
+title: call_as | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.call_as
+dev_langs: C++
+helpviewer_keywords: call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3df1cd801a82533592594618742b7727051bde53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# call_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Consente a un oggetto [locale](../windows/local-cpp.md) funzione da eseguire il mapping a una funzione remota in modo che quando la funzione remota viene chiamata, richiamare la funzione locale.  
+# <a name="callas"></a>call_as
+Consente un [locale](../windows/local-cpp.md) funzione può essere mappata a una funzione remota in modo che quando viene chiamata la funzione remota, la funzione locale viene richiamata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,15 +36,15 @@ Consente a un oggetto [locale](../windows/local-cpp.md) funzione da eseguire il 
 ) ]  
 ```  
   
-#### Parametri  
- *funzione*  
- La funzione locale che si desidera essere chiamato quando una funzione remota viene richiamata.  
+#### <a name="parameters"></a>Parametri  
+ *function*  
+ La funzione locale che si desidera essere chiamato quando viene richiamata una funzione remota.  
   
-## Note  
- **call\_as** L'attributo di C\+\+ ha la stessa funzionalità di  [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **call_as** attributo C++ ha la stessa funzionalità come il [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) attributo MIDL.  
   
-## Esempio  
- Nel codice seguente viene illustrato come è possibile utilizzare **call\_as** per eseguire il mapping di una funzione non utilizzabile in modalità remota**f1**\) a una funzione utilizzabile in modalità remota**Remf1**\):  
+## <a name="example"></a>Esempio  
+ Nel codice seguente viene illustrato come utilizzare **call_as** per eseguire il mapping di una funzione nonremotable (**f1**) a una funzione utilizzabile in remoto (**Remf1**):  
   
 ```  
 // cpp_attr_ref_call_as.cpp  
@@ -57,21 +58,20 @@ __interface IMInterface {
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
+ [locale](../windows/local-cpp.md)   

@@ -1,82 +1,85 @@
 ---
-title: "Adding Event Handlers for Dialog Box Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, adding event handlers to controls"
-  - "controls [C++], event handlers"
-  - "dialog box controls, events"
-  - "event handlers, for dialog box controls"
+title: Aggiunta di gestori eventi per i controlli della finestra di dialogo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, adding event handlers to controls
+- controls [C++], event handlers
+- dialog box controls, events
+- event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: afe50d56d6b96cc4bc0b871f72c27feb0a750e89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Event Handlers for Dialog Box Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per le finestre di dialogo di progetto già associate a una classe, quando si creano i gestori eventi è possibile usufruire di alcune procedure rapide.  È possibile creare rapidamente un gestore per l'evento di notifica del controllo predefinito o per qualsiasi messaggio di Windows.  
+# <a name="adding-event-handlers-for-dialog-box-controls"></a>Aggiunta di gestori eventi per i controlli della finestra di dialogo
+Per finestre di dialogo di progetto che sono già associati a una classe, è possibile sfruttare alcune scelte rapide durante la creazione di gestori eventi. È possibile creare rapidamente un gestore per l'evento di notifica di controllo predefinito o per qualsiasi messaggio di Windows.  
   
-#### Per creare un gestore per l'evento di notifica del controllo predefinito  
+#### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Per creare un gestore per l'evento di notifica di controllo predefinito  
   
-1.  Fare doppio clic sul controllo.  Verrà aperto l'editor di testo.  
+1.  Fare doppio clic sul controllo. Verrà aperto l'editor di testo.  
   
-2.  Aggiungere il codice del gestore della notifica del controllo nell'editor di testo.  
+2.  Aggiungere il codice del gestore notifica di controllo nell'editor di testo.  
   
-#### Per creare un gestore eventi per qualsiasi messaggio di Windows  
+#### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Per creare un gestore per qualsiasi messaggio di Windows  
   
-1.  Fare clic sul controllo per il quale si desidera gestire l'evento di notifica.  
+1.  Scegliere il controllo per il quale si desidera gestire l'evento di notifica.  
   
-2.  Nella [finestra Proprietà](../Topic/Properties%20Window.md) scegliere il pulsante **Eventi di controllo**. Verrà visualizzato l'elenco degli eventi comuni di Windows associati al controllo.  Per il pulsante **OK** standard della finestra di dialogo **Informazioni su**, ad esempio, vengono elencati i seguenti eventi di notifica:  
+2.  Nel [finestra proprietà](/visualstudio/ide/reference/properties-window), fare clic su di **eventi di controllo** pulsante per visualizzare l'elenco di eventi comuni di Windows associato al controllo. Ad esempio, lo standard **OK** pulsante il **su** la finestra di dialogo sono elencati gli eventi di notifica seguente:  
   
-     **BN\_CLICKED**  
+ **BN_CLICKED**  
   
-     **BN\_DOUBLECLICKED**  
+ **BN_DOUBLECLICKED**  
   
-     **BN\_KILLFOCUS**  
+ **BN_KILLFOCUS**  
   
-     **BN\_SETFOCUS**  
+ **BN_SETFOCUS**  
   
     > [!NOTE]
-    >  In alternativa, selezionare la finestra di dialogo e scegliere il pulsante **Eventi di controllo** per visualizzare l'elenco degli eventi comuni di Windows per tutti i controlli della finestra di dialogo.  
+    >  In alternativa, selezionare la finestra di dialogo e scegliere il **eventi di controllo** pulsante per visualizzare l'elenco di eventi comuni di Windows per tutti i controlli nella finestra di dialogo.  
   
-3.  Nella finestra **Proprietà** fare clic sulla colonna destra accanto all'evento da gestire, quindi selezionare il nome dell'evento di notifica suggerito \(**OnBnClickedOK**, ad esempio, gestisce **BN\_CLICKED**\).  
+3.  Nel **proprietà** finestra, fare clic sulla colonna destra accanto all'evento da gestire e quindi selezionare il nome di evento di notifica suggerito (ad esempio, **OnBnClickedOK** handle **BN_CLICKED** ).  
   
     > [!NOTE]
-    >  In alternativa, anziché selezionare il nome del gestore eventi predefinito è possibile specificare il nome personalizzato per il gestore eventi.  
+    >  In alternativa, è possibile fornire un nome del gestore eventi di propria scelta, anziché selezionare il nome del gestore eventi predefinito.  
   
-     Dopo avere selezionato l'evento, viene aperto l'editor di testo e visualizzato il codice del gestore eventi.  All'elemento **OnBnClickedOK** predefinito, ad esempio, viene aggiunto il seguente codice:  
+     Dopo aver selezionato l'evento, Visual Studio apre l'Editor di testo e viene visualizzato il codice del gestore eventi. Ad esempio, il codice seguente viene aggiunto per il valore predefinito **OnBnClickedOK**:  
   
-    ```  
+ ```  
     void CAboutDlg::OnBnClickedOk(void)  
-    {  
-       // TODO: Add your control notification handler code here  
-    }  
-    ```  
+ { *// TODO: Add your control notification handler code here  
+ }  
+ ```  
   
- Per aggiungere il gestore eventi a una classe diversa da quella che implementa la finestra di dialogo, utilizzare la [Creazione guidata gestore eventi](../ide/event-handler-wizard.md).  Per ulteriori informazioni, vedere [Aggiunta di un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).  
+ Se si desidera aggiungere il gestore dell'evento a una classe diversa da quella che implementa la finestra di dialogo, utilizzare il [Creazione guidata gestore eventi](../ide/event-handler-wizard.md). Per ulteriori informazioni, vedere [aggiungendo un gestore eventi](../ide/adding-an-event-handler-visual-cpp.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Requisiti  
+### <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Default Control Events](../mfc/default-control-events.md)   
- [Defining Member Variables for Dialog Controls](../mfc/defining-member-variables-for-dialog-controls.md)   
- [Tipi di variabili e controlli di finestre di dialogo](../ide/dialog-box-controls-and-variable-types.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Eventi di controlli predefiniti](../windows/default-control-events.md)   
+ [Definizione di variabili membro per i controlli di finestra di dialogo](../windows/defining-member-variables-for-dialog-controls.md)   
+ [Tipi di variabili e i controlli finestra di dialogo](../ide/dialog-box-controls-and-variable-types.md)   
  [Aggiunta di una classe](../ide/adding-a-class-visual-cpp.md)   
  [Aggiunta di una funzione membro](../ide/adding-a-member-function-visual-cpp.md)   
  [Aggiunta di una variabile membro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Override di una funzione virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Una funzione Virtual in override](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Gestore messaggi MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+

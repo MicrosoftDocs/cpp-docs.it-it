@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753660b38d67b410927ce831b936a998353e622
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importazione ed esportazione di funzioni inline
 Funzioni importate possono essere definite come inline. L'effetto è simile alla definizione inline una funzione standard. le chiamate alla funzione vengono espanse nel codice inline, analogamente a una macro. Questa funzionalità è particolarmente utile per un metodo di supporto C++ classi in una DLL che può rendere inline alcune delle loro membro funzioni per efficienza.  

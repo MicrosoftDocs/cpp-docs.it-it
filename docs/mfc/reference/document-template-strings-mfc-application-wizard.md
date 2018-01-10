@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.doctemp
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, document template strings
+f1_keywords: vc.appwiz.mfc.exe.doctemp
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d2fdabb971ab9aad06f5500b98e9d8591266c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 96cbb565ffae20d449b2164280fa461b2acfd4fd
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>Stringhe modello documento, Creazione guidata applicazione MFC
 In questa pagina della creazione guidata applicazione MFC, fornire o ridefinire le opzioni seguenti per la localizzazione e la gestione dei documenti. Stringhe modello documento sono disponibili per le applicazioni che includono **Supporto architettura documento/visualizzazione** nel [tipo di applicazione](../../mfc/reference/application-type-mfc-application-wizard.md). Non sono disponibili per le finestre di dialogo. Poiché la maggior parte delle stringhe di modello di documento sono visibili e utilizzate dagli utenti dell'applicazione, vengono localizzate nel **lingua della risorsa** indicato nella **tipo di applicazione** pagina della procedura guidata.  
@@ -51,5 +47,4 @@ In questa pagina della creazione guidata applicazione MFC, fornire o ridefinire 
   
 ## <a name="see-also"></a>Vedere anche  
  [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
-
 

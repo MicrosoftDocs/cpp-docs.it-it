@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 4) C4673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4673"
+title: Compilatore avviso (livello 4) C4673 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4673
+dev_langs: C++
+helpviewer_keywords: C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bff39a9045ba1543f42eb7e02b82565421969d8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-se si genera 'identificatore' il sito di rilevamento ignorerà i tipi seguenti  
+# <a name="compiler-warning-level-4-c4673"></a>Avviso del compilatore (livello 4) C4673
+generare i seguenti tipi di 'identifier' non verrà considerata sito di rilevamento  
   
- Non è possibile gestire nel blocco **catch** un oggetto generato come eccezione.  Dopo la riga contenente l'avviso, vengono elencati tutti i tipi che non è possibile gestire,  ad ognuno dei quali è abbinato un avviso specifico.  Per ulteriori informazioni, leggere l'avviso corrispondente al tipo specifico.  
+ Un oggetto throw non può essere gestito nel **catch** blocco. Ogni tipo che non può essere gestita è elencato nell'output degli errori immediatamente successiva alla riga contenente l'avviso. Ogni tipo non gestito dispone di un avviso. Leggere l'avviso per ogni tipo specifico per altre informazioni.  
   
- Il seguente codice di esempio genera l'errore C4673:  
+ L'esempio seguente genera l'errore C4673:  
   
 ```  
 // C4673.cpp  

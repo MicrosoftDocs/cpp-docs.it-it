@@ -1,40 +1,43 @@
 ---
-title: "Propriet&#224; Type dei tasti di scelta rapida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Type (proprietà)"
-  - "VIRTKEY"
+title: "Proprietà del tipo di acceleratore | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Type property
+- VIRTKEY
 ms.assetid: 8c349bc4-e6ad-43fa-959e-f29168af35b8
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 214d8ca9c45a3657215833764268794b152bd337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Propriet&#224; Type dei tasti di scelta rapida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La proprietà **Type** dei tasti di scelta rapida determina se la combinazione di tasti di scelta rapida associata all'ID del tasto di scelta rapida sia una combinazione di tasti virtuali oppure un valore tasto ASCII\/ANSI.  
+# <a name="accelerator-type-property"></a>Proprietà Type dei tasti di scelta rapida
+Tasto di scelta rapida **tipo** proprietà determina se la combinazione di tasti di scelta rapida associata all'ID di tasti di scelta rapida è una combinazione di tasti virtuali oppure un valore di chiave ASCII/ANSI:  
   
--   Se la proprietà **Type** è impostata su **ASCII**, il [modificatore](../windows/accelerator-modifier-property.md) può essere soltanto None o Alt oppure può disporre di un tasto di scelta rapida che utilizza CTRL, specificato facendo precedere il tasto da ^.  
+-   Se il **tipo** proprietà è **ASCII**, [modificatore](../windows/accelerator-modifier-property.md) può solo essere None o Alt, oppure è possibile disporre di un tasto di scelta rapida che utilizza il tasto CTRL (specificato anteponendo la chiave con un ^).  
   
--   Se la proprietà **Type** è impostata su **VIRTKEY**, è valida qualsiasi combinazione di valori di modificatori e di tasti.  
+-   Se il **tipo** proprietà **VIRTKEY**, qualsiasi combinazione di valori di modifica e la chiave è valida.  
   
     > [!NOTE]
-    >  Se in una tabella di tasti di scelta rapida si desidera immettere un valore che deve essere considerato come un valore ASCII\/ANSI, è sufficiente fare clic sulla proprietà Type corrispondente alla voce della tabella e selezionare ASCII dalla casella di riepilogo a discesa.  Se, tuttavia, per specificare il valore della proprietà Key si utilizza il comando **Digita carattere** \(menu **Modifica**\), è necessario modificare la proprietà **Type** da VIRTKEY in ASCII *prima* di immettere il codice per la proprietà Key.  
+    >  Se si desidera immettere un valore nella tabella di tasti di scelta rapida e deve essere considerato come ASCII/ANSI, semplicemente scegliere il tipo per la voce nella tabella ASCII selezionare dall'elenco a discesa. Tuttavia, se si utilizza il **digita** comando (**modifica** menu) per specificare la chiave, è necessario modificare il **tipo** proprietà da VIRTKEY in ASCII *prima* immettendo il codice di chiave.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)   
+ [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

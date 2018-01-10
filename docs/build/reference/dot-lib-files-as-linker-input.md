@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ad61a8fa3672dd6f243c611e8ad363769dc5fa05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-files-as-linker-input"></a>File lib come input del linker
 COLLEGAMENTO accetta librerie standard COFF e COFF librerie di importazione, che in genere dispongono di estensione. lib. Le librerie standard contengono gli oggetti e vengono create nello strumento LIB. Librerie di importazione contengono informazioni sull'esportazione in altri programmi e vengono create dal collegamento durante la compilazione di un programma che contiene esportazioni o dallo strumento LIB. Per informazioni sull'utilizzo di LIB per creare standard o librerie di importazione, vedere [riferimenti a LIB](../../build/reference/lib-reference.md). Per informazioni dettagliate sull'uso di collegamento per creare una libreria di importazione, vedere il [/DLL](../../build/reference/dll-build-a-dll.md) opzione.  

@@ -1,58 +1,58 @@
 ---
-title: "__rdtsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtsc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__rdtsc (funzione intrinseca)"
-  - "rdtsc (istruzione)"
-  - "Read Time Stamp Counter (istruzione)"
+title: __rdtsc | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtsc
+dev_langs: C++
+helpviewer_keywords:
+- __rdtsc intrinsic
+- rdtsc instruction
+- Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd108c36dc60f6186d247cd3cf61d27d1dad3239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtsc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="rdtsc"></a>__rdtsc
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione di `rdtsc` , che restituisce il timestamp di tempo del processore.  Il timestamp di tempo del processore registra il numero di cicli di clock dall'ultima reimpostazione.  
+ Genera il `rdtsc` (istruzione), che restituisce il timestamp del processore. Il timestamp processore registra il numero di cicli di clock dall'ultimo ripristino.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned __int64 __rdtsc();  
 ```  
   
-## Valore restituito  
- Intero senza segno a 64 bit che rappresenta un numero.  
+## <a name="return-value"></a>Valore restituito  
+ Intero senza segno a 64 bit che rappresenta un conteggio di tick.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
- Interpretazione del valore di TSC in questa generazione dell'hardware differisce da quella nelle versioni precedenti di [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)].  Vedere i manuali hardware per ulteriori informazioni.  
+ L'interpretazione del valore TSC in questa generazione di hardware è diverso da quello nelle versioni precedenti di [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. Manuali dell'hardware per altre informazioni, vedere.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // rdtsc.cpp  
@@ -70,8 +70,11 @@ int main()
 }  
 ```  
   
-  **3363423610155519 cicli**   
-## Microsoft FINALE specifico  
+```Output  
+3363423610155519 ticks  
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 68b61a6aad55ef1f6b8b5807d857a4d7239ebb51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe7c49607f466d8fd1d333883414b24d7837432b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inferred-dependents-and-rules"></a>Dipendenti dedotti e regole
 NMAKE presuppone un dipendente dedotto per una destinazione se esiste una regola di inferenza è applicabile. Una regola viene applicata se:  

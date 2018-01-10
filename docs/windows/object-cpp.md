@@ -1,33 +1,33 @@
 ---
-title: "object (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.object"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "object attribute"
+title: oggetto (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.object
+dev_langs: C++
+helpviewer_keywords: object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5714d7c3bd029c7b1df636044ed1968f53600848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# object (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-identifica un'interfaccia personalizzata.  
+# <a name="object-c"></a>object (C++)
+Identifica un'interfaccia personalizzata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,32 +35,31 @@ identifica un'interfaccia personalizzata.
   
 ```  
   
-## Note  
- Nel precedente una definizione di interfaccia, **oggetto** Cause dell'attributo di C\+\+ l'interfaccia da inserire nel file IDL come interfaccia personalizzata.  
+## <a name="remarks"></a>Note  
+ Quando precede una definizione di interfaccia, il **oggetto** attributo C++ fa sì che l'interfaccia da inserire nel file IDL come un'interfaccia personalizzata.  
   
- Qualsiasi interfaccia contrassegnata con oggetto deve ereditare da **IUnknown**.  Questa condizione viene soddisfatta se una delle interfacce di base ereditano da **IUnknown**.  Se nessuna interfaccia di base eredita da **IUnknown**, il compilatore genera l'interfaccia contrassegnata con  **oggetto** per derivare da  **IUnknown**.  
+ Qualsiasi interfaccia contrassegnata con l'oggetto deve ereditare da **IUnknown**. Questa condizione viene soddisfatta se una delle interfacce di base ereditare **IUnknown**. Se nessuna interfaccia di base eredita da **IUnknown**, il compilatore genererà l'interfaccia contrassegnata con **oggetto** da cui derivare **IUnknown**.  
   
-## Esempio  
- vedere [nonbrowsable](../windows/nonbrowsable.md) per un esempio di utilizzo  **oggetto**.  
+## <a name="example"></a>Esempio  
+ Vedere [nonbrowsable](../windows/nonbrowsable.md) per un esempio di come utilizzare **oggetto**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`interface`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [dual](../windows/dual.md)   
- [dispinterface](../windows/dispinterface.md)   
- [custom](../windows/custom-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di interfaccia](../windows/interface-attributes.md)   
+ [doppia](../windows/dual.md)   
+ [interfaccia dispatch](../windows/dispinterface.md)   
+ [personalizzato](../windows/custom-cpp.md)   
+ [__interface](../cpp/interface.md)   

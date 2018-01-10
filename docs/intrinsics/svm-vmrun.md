@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04467cc1d6d13a5c7c983aae48d2208622a75683
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 000e798dce3fba367a8666d4b5c97bd25fd53253
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Sezione specifica Microsoft**  
@@ -45,7 +46,7 @@ void __svm_vmrun(
 ## <a name="remarks"></a>Note  
  Il `__svm_vmrun` funzione utilizza una quantità minima di informazioni di VMCB per iniziare a eseguire il codice guest della macchina virtuale. Utilizzare il [__svm_vmsave](../intrinsics/svm-vmsave.md) o [__svm_vmload](../intrinsics/svm-vmload.md) funzione se sono necessarie ulteriori informazioni per gestire un complesso interrupt o passare a un altro guest.  
   
- Il `__svm_vmrun` è equivalente alla funzione di `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nel [corporation AMD](http://go.microsoft.com/fwlink/?LinkId=23746) sito.  
+ Il `__svm_vmrun` è equivalente alla funzione di `VMRUN` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Volume manuale del programmatore di architettura AMD64 2: programmazione di sistema," numero documento 24593, revisione 3.11 o versione successiva, nel [corporation AMD](http://go.microsoft.com/fwlink/p/?linkid=23746) sito.  
   
 ## <a name="requirements"></a>Requisiti  
   

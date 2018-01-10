@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Riferimenti alla riga di comando dell'assembler ARM
 Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che consente di compilare in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del comune oggetto formato COFF (File). Il linker può collegare il codice COFF con codice oggetto a cui viene generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Aggiungere la directory specificata per il percorso di ricerca.  
   
  -predefinire`directive`  
- Specificare una direttiva SETA, SETL o set predefinire un simbolo. Esempio: **armasm.exe-predefinire "Conteggio SETA 150" source.asm**. Per ulteriori informazioni, vedere il [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Specificare una direttiva SETA, SETL o set predefinire un simbolo. Esempio: **armasm.exe-predefinire "Conteggio SETA 150" source.asm**. Per ulteriori informazioni, vedere il [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Disabilitare tutti i messaggi di avviso.  

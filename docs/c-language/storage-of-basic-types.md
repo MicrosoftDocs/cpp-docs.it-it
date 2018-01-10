@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f510ce5459ec24a11996f02829e7d40d1ef9a37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dff8df934a0c812ca798d5a1e87188e2468902ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-basic-types"></a>Archiviazione di tipi di base
 Nella tabella seguente viene riepilogata l'archiviazione associata a ogni tipo di base.  

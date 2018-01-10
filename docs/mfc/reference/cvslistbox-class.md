@@ -1,0 +1,295 @@
+---
+title: Classe CVSListBox | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CVSListBox
+- AFXVSLISTBOX/CVSListBox
+- AFXVSLISTBOX/CVSListBox::CVSListBox
+- AFXVSLISTBOX/CVSListBox::AddItem
+- AFXVSLISTBOX/CVSListBox::EditItem
+- AFXVSLISTBOX/CVSListBox::GetCount
+- AFXVSLISTBOX/CVSListBox::GetItemData
+- AFXVSLISTBOX/CVSListBox::GetItemText
+- AFXVSLISTBOX/CVSListBox::GetSelItem
+- AFXVSLISTBOX/CVSListBox::RemoveItem
+- AFXVSLISTBOX/CVSListBox::SelectItem
+- AFXVSLISTBOX/CVSListBox::SetItemData
+- AFXVSLISTBOX/CVSListBox::GetListHwnd
+dev_langs: C++
+helpviewer_keywords:
+- CVSListBox [MFC], CVSListBox
+- CVSListBox [MFC], AddItem
+- CVSListBox [MFC], EditItem
+- CVSListBox [MFC], GetCount
+- CVSListBox [MFC], GetItemData
+- CVSListBox [MFC], GetItemText
+- CVSListBox [MFC], GetSelItem
+- CVSListBox [MFC], RemoveItem
+- CVSListBox [MFC], SelectItem
+- CVSListBox [MFC], SetItemData
+- CVSListBox [MFC], GetListHwnd
+ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
+---
+# <a name="cvslistbox-class"></a>Classe CVSListBox
+La `CVSListBox` classe supporta un controllo elenco modificabile.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+class CVSListBox : public CVSListBoxBase  
+```  
+  
+## <a name="members"></a>Membri  
+  
+### <a name="public-constructors"></a>Costruttori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CVSListBox::CVSListBox](#cvslistbox)|Costruisce un oggetto `CVSListBox`.|  
+|`CVSListBox::~CVSListBox`|Distruttore.|  
+  
+### <a name="public-methods"></a>Metodi pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CVSListBox::AddItem](#additem)|Aggiunge una stringa a un controllo elenco. Esegue l'override`CVSListBoxBase::AddItem`.|  
+|[CVSListBox::EditItem](#edititem)|Avvia un'operazione di modifica del testo di un elemento controllo elenco. Esegue l'override`CVSListBoxBase::EditItem`.|  
+|[CVSListBox::GetCount](#getcount)|Recupera il numero di stringhe in un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetCount`.|  
+|[CVSListBox::GetItemData](#getitemdata)|Recupera un valore a 32 bit specifico dell'applicazione associata a un elemento controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetItemData`.|  
+|[CVSListBox::GetItemText](#getitemtext)|Recupera il testo di un elemento controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetItemText`.|  
+|[CVSListBox::GetSelItem](#getselitem)|Recupera l'indice in base zero dell'elemento attualmente selezionato in un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::GetSelItem`.|  
+|`CVSListBox::PreTranslateMessage`|Converte i messaggi della finestra prima che vengano inviati per la [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) funzioni di Windows. Per ulteriori informazioni e la sintassi del metodo, vedere [CWnd:: PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). Esegue l'override`CVSListBoxBase::PreTranslateMessage`.|  
+|[CVSListBox::RemoveItem](#removeitem)|Rimuove un elemento da un controllo elenco modificabile. Esegue l'override`CVSListBoxBase::RemoveItem`.|  
+|[CVSListBox::SelectItem](#selectitem)|Seleziona una stringa di controllo elenco modificabile. Esegue l'override`CVSListBoxBase::SelectItem`.|  
+|[CVSListBox::SetItemData](#setitemdata)|Associa un elemento controllo elenco modificabile di un valore specifico dell'applicazione a 32 bit. Esegue l'override`CVSListBoxBase::SetItemData`.|  
+  
+### <a name="protected-methods"></a>Metodi protetti  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Restituisce l'handle del controllo visualizzazione elenco incorporato corrente.|  
+  
+## <a name="remarks"></a>Note  
+ La `CVSListBox` classe fornisce un set di pulsanti di modifica che consente all'utente di creare, modificare, eliminare o riordinare gli elementi in un controllo elenco.  
+  
+ Di seguito è un'immagine del controllo elenco modificabile. La seconda voce di elenco, il titolo è "Item2", è selezionata per la modifica.  
+  
+ ![Controllo CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
+  
+ Se si utilizza l'editor di risorse per aggiungere un controllo elenco modificabile, si noti che il **della casella degli strumenti** riquadro dell'editor non fornisce un controllo elenco modificabile predefinito. In alternativa, aggiungere un controllo statico, ad esempio il **casella di gruppo** controllo. Il framework utilizza il controllo statico come segnaposto per specificare le dimensioni e posizione del controllo elenco modificabile.  
+  
+ Per utilizzare un controllo elenco modificabile in un modello di finestra di dialogo, dichiarare un `CVSListBox` variabile nella classe finestra di dialogo. Per supportare lo scambio di dati tra la variabile e il controllo, definire un `DDX_Control` voce macro di `DoDataExchange` metodo nella finestra di dialogo. Per impostazione predefinita, viene creato il controllo elenco modificabile senza i pulsanti di modifica. Utilizzare il metodo CVSListBoxBase::SetStandardButtons ereditato per abilitare i pulsanti di modifica.  
+  
+ Per ulteriori informazioni, vedere directory degli esempi, il `New Controls` di esempio, i file Page3.cpp e Page3.h.  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
+  
+ [CWnd](../../mfc/reference/cwnd-class.md)  
+  
+ [CStatic](../../mfc/reference/cstatic-class.md)  
+  
+ `CVSListBoxBase`  
+  
+ [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
+  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** afxvslistbox.h  
+  
+##  <a name="additem"></a>CVSListBox::AddItem  
+ Aggiunge una stringa a un controllo elenco.  
+  
+```  
+virtual int AddItem(
+    const CString& strIext,  
+    DWORD_PTR dwData=0,  
+    int iIndex=-1);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `strIext`  
+ Un riferimento a una stringa.  
+  
+ [in] `dwData`  
+ Un valore a 32 bit specifico dell'applicazione associata con la stringa. Il valore predefinito è 0.  
+  
+ [in] `iIndex`  
+ Indice in base zero della posizione che conterrà la stringa. Se il `iIndex` parametro è -1, la stringa viene aggiunta alla fine dell'elenco. Il valore predefinito è -1.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Indice in base zero della posizione della stringa nel controllo elenco.  
+  
+### <a name="remarks"></a>Note  
+ Utilizzare il [CVSListBox::GetItemData](#getitemdata) metodo per recuperare il valore specificato per il `dwData` parametro. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
+  
+##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
+ Costruisce un oggetto `CVSListBox`.  
+  
+```  
+CVSListBox();
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="edititem"></a>CVSListBox::EditItem  
+ Avvia un'operazione di modifica del testo di un elemento controllo elenco.  
+  
+```  
+virtual BOOL EditItem(int iIndex);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iIndex`  
+ Indice in base zero di un elemento controllo elenco.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se l'operazione di modifica viene avviato correttamente. in caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ L'utente inizia un'operazione di modifica facendo doppio clic sull'etichetta di un elemento o premendo il **F2** o **barra spaziatrice** chiave quando un elemento ha lo stato attivo.  
+  
+##  <a name="getcount"></a>CVSListBox::GetCount  
+ Recupera il numero di stringhe in un controllo elenco modificabile.  
+  
+```  
+virtual int GetCount() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Numero di elementi nel controllo elenco.  
+  
+### <a name="remarks"></a>Note  
+ Si noti che il conteggio è maggiore del valore di indice dell'ultimo elemento in quanto l'indice in base zero.  
+  
+##  <a name="getitemdata"></a>CVSListBox::GetItemData  
+ Recupera un valore a 32 bit specifico dell'applicazione associata a un elemento controllo elenco modificabile.  
+  
+```  
+virtual DWORD_PTR GetItemData(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iIndex`  
+ Indice in base zero dell'elemento controllo elenco modificabile.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Il valore a 32 bit che è associato l'elemento specificato.  
+  
+### <a name="remarks"></a>Note  
+ Utilizzare il [CVSListBox::SetItemData](#setitemdata) o [CVSListBox::AddItem](#additem) metodo per associare il valore a 32 bit con l'elemento controllo elenco. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
+  
+##  <a name="getitemtext"></a>CVSListBox::GetItemText  
+ Recupera il testo di un elemento controllo elenco modificabile.  
+  
+```  
+virtual CString GetItemText(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iIndex`  
+ Indice in base zero dell'elemento controllo elenco modificabile.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Oggetto [CString](../../atl-mfc-shared/reference/cstringt-class.md) oggetto che contiene il testo dell'elemento specificato.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+ Restituisce l'handle del controllo visualizzazione elenco incorporato corrente.  
+  
+```  
+virtual HWND GetListHwnd() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Handle per il controllo di visualizzazione elenco incorporato.  
+  
+### <a name="remarks"></a>Note  
+ Utilizzare questo metodo per recuperare un handle del controllo visualizzazione elenco incorporato che supporta la `CVSListBox` classe.  
+  
+##  <a name="getselitem"></a>CVSListBox::GetSelItem  
+ Recupera l'indice in base zero dell'elemento attualmente selezionato in un controllo elenco modificabile.  
+  
+```  
+virtual int GetSelItem() const;  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Se questo metodo dà esito positivo, l'indice in base zero dell'elemento attualmente selezionato; in caso contrario, -1.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="removeitem"></a>CVSListBox::RemoveItem  
+ Rimuove un elemento da un controllo elenco modificabile.  
+  
+```  
+virtual BOOL RemoveItem(int iIndex);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iIndex`  
+ Indice in base zero dell'elemento controllo elenco modificabile.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE`Se viene rimosso l'elemento specificato. in caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+  
+##  <a name="selectitem"></a>CVSListBox::SelectItem  
+ Seleziona una stringa di controllo elenco modificabile.  
+  
+```  
+virtual BOOL SelectItem(int iItem);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iItem`  
+ Indice in base zero dell'elemento controllo elenco modificabile.  
+  
+### <a name="return-value"></a>Valore restituito  
+ `TRUE` se questo metodo dà esito positivo; in caso contrario, `FALSE`.  
+  
+### <a name="remarks"></a>Note  
+ Questo metodo consente di selezionare l'elemento specificato e, se necessario, scorre l'elemento nella visualizzazione.  
+  
+##  <a name="setitemdata"></a>CVSListBox::SetItemData  
+ Associa un elemento controllo elenco modificabile di un valore specifico dell'applicazione a 32 bit.  
+  
+```  
+virtual void SetItemData(
+    int iIndex,  
+    DWORD_PTR dwData);
+```  
+  
+### <a name="parameters"></a>Parametri  
+ [in] `iIndex`  
+ Indice in base zero dell'elemento controllo elenco modificabile.  
+  
+ [in] `dwData`  
+ Un valore a 32 bit. Questo valore può essere un valore integer specifico dell'applicazione o un puntatore a altri dati.  
+  
+### <a name="remarks"></a>Note  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Grafico delle gerarchie](../../mfc/hierarchy-chart.md)   
+ [Classi](../../mfc/reference/mfc-classes.md)
