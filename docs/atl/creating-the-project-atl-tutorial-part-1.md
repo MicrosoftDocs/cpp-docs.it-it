@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Creazione del progetto (Esercitazione di ATL, parte 1)
 Questa esercitazione vengono descritti dettagliatamente tramite un progetto ATL senza attributo che crea un oggetto ActiveX che consente di visualizzare un poligono. L'oggetto include opzioni per consentire all'utente di modificare il numero dei lati che costituiscono il poligono e il codice per aggiornare la visualizzazione.  

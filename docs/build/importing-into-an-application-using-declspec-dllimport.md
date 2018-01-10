@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f16c9f5c96712c311928e0389fec0a1ce1f0dca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>Importazione in un'applicazione tramite __declspec(dllimport)
 Viene considerato un programma che utilizza i simboli pubblici definiti da una DLL di importarli. Quando si crea il file di intestazione per le applicazioni che utilizzano le DLL per la compilazione, utilizzare **declspec** nelle dichiarazioni dei simboli pubblici. La parola chiave **declspec** funziona se si esporta DEF (file) o con il **dllexport** (parola chiave).  

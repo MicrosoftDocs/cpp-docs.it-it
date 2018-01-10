@@ -16,16 +16,17 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-desktop-components"></a>Per altre informazioni, vedere Applicazioni desktop ATL COM.
 Il riferimento ATL documenta il modello libreria ATL (Active), un set di classi C++ basate su modelli che semplificano la programmazione di oggetti modello COM (Component Object). Per sfruttare appieno i vantaggi di ATL, è consigliabile una conoscenza del funzionamento con COM.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulle classi ATL](../atl/atl-class-overview.md)  
  Vengono forniti collegamenti a brevi descrizioni delle classi ATL organizzate per categoria.  
   

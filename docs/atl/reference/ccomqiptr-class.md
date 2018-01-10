@@ -1,49 +1,32 @@
 ---
-title: Classe CComQIPtr | Documenti di Microsoft
+title: Classe CComQIPtr | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr
 - ATLCOMCLI/ATL::CComQIPtr::CComQIPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComQIPtr class
+dev_langs: C++
+helpviewer_keywords: CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e2060a0be3f9780191c316c2df41115e66033d4d
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptr-class"></a>Classe CComQIPtr
-Una classe di puntatore intelligente per la gestione dei puntatori a interfaccia COM.  
+Una classe del puntatore intelligente per la gestione dei puntatori a interfaccia COM.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -57,7 +40,7 @@ class CComQIPtr: public CComPtr<T>
  Un'interfaccia COM che specifica il tipo di puntatore da archiviare.  
   
  `piid`  
- Un puntatore a IID del `T`.  
+ Un puntatore per l'IID del `T`.  
   
 ## <a name="members"></a>Membri  
   
@@ -71,10 +54,10 @@ class CComQIPtr: public CComPtr<T>
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComQIPtr::operator =](#operator_eq)|Assegna un puntatore al puntatore di membro.|  
+|[CComQIPtr::operator =](#operator_eq)|Assegna un puntatore al puntatore a membro.|  
   
 ## <a name="remarks"></a>Note  
- ATL utilizza `CComQIPtr` e [CComPtr](../../atl/reference/ccomptr-class.md) per gestire i puntatori a interfaccia COM, che derivano da [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Entrambe le classi eseguono conteggio automatico tramite chiamate a `AddRef` e **versione**. Gli operatori di overload gestiscono operazioni dei puntatori.  
+ Utilizza ATL `CComQIPtr` e [CComPtr](../../atl/reference/ccomptr-class.md) per gestire i puntatori a interfaccia COM, che derivano da [CComPtrBase](../../atl/reference/ccomptrbase-class.md). Conteggio automatico tramite chiamate a eseguire entrambe le classi `AddRef` e **versione**. Gli operatori di overload gestiscono operazioni dei puntatori.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CComPtrBase](../../atl/reference/ccomptrbase-class.md)  
@@ -104,7 +87,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  Un'interfaccia COM.  
   
  `piid`  
- Un puntatore a IID del `T`.  
+ Un puntatore per l'IID del `T`.  
   
 ##  <a name="operator_eq"></a>CComQIPtr::operator =  
  L'operatore di assegnazione.  
@@ -123,7 +106,7 @@ T* operator= (IUnknown* lp) throw();
  Un'interfaccia COM.  
   
  `piid`  
- Un puntatore a IID del `T`.  
+ Un puntatore per l'IID del `T`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore a aggiornato `CComQIPtr` oggetto.  
@@ -134,4 +117,3 @@ T* operator= (IUnknown* lp) throw();
  [Classe CComPtrBase](../../atl/reference/ccomptrbase-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Classe CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)
-

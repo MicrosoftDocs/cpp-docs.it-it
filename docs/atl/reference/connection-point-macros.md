@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 19eb60af9da72f3c158b9eacbfbfbdf478f1382d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f98b5abd00f1d7ac3e3d69b0e22b549fdea35a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-point-macros"></a>Macro di punto di connessione
 Queste macro definiscono mappe di punto di connessione e le voci.  

@@ -1,64 +1,63 @@
 ---
-title: "ARM Assembler Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Direttive assembly ARM | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
-# ARM Assembler Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per la maggior parte assembler del ARM di Microsoft utilizza il linguaggio assembly ARM che è documentato nel capitolo 7 del [Guida di strumenti assembler ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  Tuttavia, l'implementazione Microsoft di alcune direttive di assembly differiscono dalle direttive di assembly ARM.  In questo articolo vengono illustrate le differenze.  
+# <a name="arm-assembler-directives"></a>Direttive assembly ARM
+La maggior parte, l'assembler ARM Microsoft utilizza il linguaggio assembly ARM, documentato nel capitolo 7 del [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Tuttavia, l'implementazione Microsoft di alcune direttive dell'assembly diversi da direttive assembly ARM. In questo articolo vengono illustrate le differenze.  
   
-## Implementazioni di Microsoft di direttive Assembly ARM  
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Implementazioni di Microsoft delle direttive Assembly ARM  
  AREA  
- L'assembler ARM Microsoft supporta questi attributi AREA: allineare, codice, CODEALIGN, dati, NOINIT, READONLY, READWRITE, THUMB, ARM.  
+ L'assembler ARM Microsoft supporta questi attributi AREA: allineare, codice CODEALIGN, i dati, NOINIT, sola lettura, lettura/scrittura, THUMB ARM.  
   
- Tutto eccetto la casella di scorrimento e ARM funzionano esattamente come documentato nel [Guida di strumenti assembler ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Tutti tranne quelli THUMB e ARM funzionano come documentato nel [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
- In assembler del ARM Microsoft THUMB indica che una sezione di codice contiene codice Thumb ed è il valore predefinito per le sezioni di codice.  ARM indica che la sezione contiene codice ARM.  
+ Nell'assembler ARM Microsoft, THUMB indica che una sezione di codice contiene codice Thumb ed è il valore predefinito per le sezioni di codice.  ARM indica che la sezione contiene codice ARM.  
   
  ATTR  
  Non supportato.  
   
  ORGANIZZAZIONE16  
- Non supportato poiché implica sintassi Thumb pre\-doppio monitor, che non consente di assembler del ARM di Microsoft.  Utilizzare invece la direttiva di THUMB con sintassi doppio monitor.  
+ Non è supportato perché implica la sintassi Thumb di pre-registrazione accesso utenti, che non consente l'assembler ARM Microsoft.  Utilizzare la direttiva THUMB, con la sintassi di registrazione accesso utenti.  
   
  COMUNI  
- Specifica di un allineamento per l'area comune non è supportata.  
+ Specifica di un tipo di allineamento per l'area comune non è supportata.  
   
  DCDO  
  Non supportato.  
   
- DN, QN, SN  
- Specifica di un tipo o una corsia sull'alias di registro non è supportata.  
+ SN DN, QN,  
+ Specifica di un tipo o una corsia dell'alias di registro non è supportata.  
   
  VOCE  
  Non supportato.  
   
  EQU  
- Specifica di un tipo di simbolo definito non è supportata.  
+ Specifica di un tipo per il simbolo definito non è supportata.  
   
  ESPORTAZIONE e GLOBAL  
  ```  
-  
 EXPORTsym {[type]}  
-  
 ```  
   
- `sym`è il simbolo da esportare.  `[type]`, se specificato, può essere rappresentato da `[DATA]` per indicare che il simbolo punta a dati o `[FUNC]` per indicare che il simbolo punta al codice.  
+ `sym`è il simbolo da esportare.  `[type]`, se specificato, può essere `[DATA]` per indicare che il simbolo punta ai dati o `[FUNC]` per indicare che il simbolo punta al codice.  
   
  GLOBALE è un sinonimo per l'esportazione.  
   
@@ -68,51 +67,49 @@ EXPORTsym {[type]}
  FRAME  
  Non supportato.  
   
- Process e funzione  
- Sebbene la sintassi di assembly supporta la specifica di un personalizzato convenzione di chiamata su procedure elencando i registri sono Salva chiamante e quelli che sono chiamato\-Salva l'assembler ARM di Microsoft accetta la sintassi ma ignora gli elenchi di registro.  Le informazioni di debug sono prodotto dall'assembler supportano solo la convenzione di chiamata predefinita.  
+ Process e (funzione)  
+ Sebbene la sintassi di assembly supporta la specifica di un oggetto personalizzato convenzione di chiamata sulle procedure, elencando i registri salvataggio chiamante e quelle chiamato salvataggio, l'assembler ARM Microsoft accetta la sintassi ma ignora gli elenchi di registro.  Le informazioni di debug che viene generate dall'assembler supportano solo la convenzione di chiamata predefinita.  
   
  IMPORTAZIONE ed EXTERN  
  ```  
-  
 IMPORT sym{, WEAK alias{, TYPE t}}  
-  
 ```  
   
  `sym`è il nome del simbolo da importare.  
   
- Se debole `alias` è specificato, indica che `sym` è un debole esterno.  Se non viene trovata alcuna definizione per esso in fase di collegamento, quindi associare tutti i riferimenti a essa invece `alias`.  
+ Se debole `alias` è specificato, indica che `sym` è un esterno debole. Se non viene trovata alcuna definizione per tale in fase di collegamento, è possibile associare invece tutti i riferimenti `alias`.  
   
- Se tipo  `t` è specificato, quindi `t` indica il modo in cui il linker deve tentare di risolvere `sym`.  Questi valori per `t` sono possibili:   
-1\-Non si esegue una ricerca di raccolta di`sym`   
-2, Eseguire una ricerca di raccolta di`sym`   
-3\-`sym` è un alias per `alias` \(predefinito\)  
+ Se tipo `t` non viene specificato, `t` indica come il linker deve tentare di risolvere `sym`.  Questi valori per `t` sono possibili:   
+1-non eseguire la ricerca della libreria di`sym`  
+2: eseguire una ricerca di libreria`sym`  
+3-`sym` è un alias per `alias` (impostazione predefinita)  
   
- EXTERN è sinonimo di importazione, a eccezione di quelli `sym` viene importato solo se sono presenti i riferimenti dell'assembly corrente.  
+ EXTERN è un sinonimo per l'importazione, con la differenza che `sym` vengono importati solo se sono presenti riferimenti a esso nell'assembly corrente.  
   
  MACRO  
- Non è supportato l'utilizzo di una variabile per contenere il codice di condizione di una macro.  Valori predefiniti per le macro di parametri non sono supportati.  
+ L'utilizzo di una variabile per contenere il codice di condizione di una macro non è supportato. Valori predefiniti per la macro di parametri non sono supportati.  
   
  NOFP  
  Non supportato.  
   
- OPT, TTL, SUBT  
- Non supportata perché l'assembler ARM Microsoft non produce le inserzioni.  
+ CONSENSO ESPLICITO, DURATA (TTL), SUBT  
+ Non è supportato poiché l'assembler ARM Microsoft non produce elenchi.  
   
  PRESERVE8  
  Non supportato.  
   
  RILOCAZIONE  
- `RELOC n`solo seguire un'istruzione o una direttiva di definizione dei dati.  Non vi è alcun "simbolo anonimo" che può essere riposizionato.  
+ `RELOC n`può solo seguire un'istruzione o una direttiva di definizione dati. Non vi è alcun "simbolo anonimo" che può essere ripristinato.  
   
- È NECESSARIO  
+ RICHIEDI  
  Non supportato.  
   
  REQUIRE8  
  Non supportato.  
   
  THUMBX  
- Non è supportato perché l'assembler ARM Microsoft non supporta il set di istruzioni 2EE Thumb.  
+ Non è supportato poiché l'assembler ARM Microsoft non supporta il set di istruzioni Thumb-2EE.  
   
-## Vedere anche  
- [ARM Assembler Command\-Line Reference](../../assembler/arm/arm-assembler-command-line-reference.md)   
- [ARM Assembler Diagnostic Messages](../../assembler/arm/arm-assembler-diagnostic-messages.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento della riga di comando di Assembler ARM](../../assembler/arm/arm-assembler-command-line-reference.md)   
+ [Messaggi di diagnostica assembler ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)

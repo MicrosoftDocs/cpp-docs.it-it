@@ -1,26 +1,27 @@
 ---
-title: "Gestore specifico del linguaggio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Gestore specifico del linguaggio | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6503e0cd-2d3a-4330-a925-8bed8c27c2be
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Gestore specifico del linguaggio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando i flag UNW\_FLAG\_EHANDLER o UNW\_FLAG\_UHANDLER sono impostati, in UNWIND\_INFO deve essere specificato l'indirizzo relativo del gestore specifico del linguaggio.  Come descritto nella sezione precedente, il gestore specifico del linguaggio viene chiamato durante la ricerca di un gestore eccezioni o di un'operazione di rimozione e  ha il seguente prototipo:  
+# <a name="language-specific-handler"></a>Gestore specifico del linguaggio
+L'indirizzo relativo del gestore specifico del linguaggio è presente in UNWIND_INFO ogni volta che vengano impostati flag UNW_FLAG_EHANDLER o UNW_FLAG_UHANDLER. Come descritto nella sezione precedente, viene chiamato il gestore specifico del linguaggio come parte della ricerca per un gestore di eccezioni o come parte di un'operazione di rimozione. Contiene il prototipo seguente:  
   
 ```  
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (  
@@ -31,13 +32,13 @@ typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
 );  
 ```  
   
- **ExceptionRecord** fornisce un puntatore a un record di eccezione, che utilizza la definizione Win64 standard.  
+ **ExceptionRecord** fornisce un puntatore a un record di eccezione, che presenta la definizione Win64 standard.  
   
- **EstablisherFrame** indica l'indirizzo della base dell'allocazione fissa dello stack relativa alla funzione corrente.  
+ **EstablisherFrame** è l'indirizzo di base dell'allocazione dello stack predefinito per questa funzione.  
   
- **ContextRecord** punta al contesto dell'eccezione esistente al momento della generazione dell'eccezione \(nel caso del gestore eccezioni\) o al contesto di rimozione corrente \(nel caso del gestore della terminazione\).  
+ **ContextRecord** punta al contesto dell'eccezione corrente o di ora (nel caso del gestore eccezioni) è stato generato l'eccezione "rimozione" contesto (nel caso del gestore di terminazione).  
   
- **DispatcherContext** punta al contesto del dispatcher relativo alla funzione corrente.  Questo oggetto è definito nel modo seguente:  
+ **DispatcherContext** punta al contesto del dispatcher per questa funzione. Contiene la definizione seguente:  
   
 ```  
 typedef struct _DISPATCHER_CONTEXT {  
@@ -52,21 +53,21 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;  
 ```  
   
- **ControlPc** indica il valore di RIP all'interno della funzione corrente.  Corrisponde all'indirizzo di un'eccezione o all'indirizzo di uscita della funzione.  Si tratta del RIP che verrà utilizzato per determinare se il controllo si trova in un costrutto vigilato all'interno della funzione corrente, ad esempio un blocco \_\_try di \_\_try\/\_\_except o \_\_try\/\_\_finally.  
+ **ControlPc** è il valore di RIP all'interno di questa funzione. Si tratta di un indirizzo di eccezione o l'indirizzo di uscita della funzione. Si tratta del RIP che verrà utilizzato per determinare se il controllo è all'interno di un costrutto protetto all'interno della funzione (ad esempio, un blocco try per \_try /\_except o \_try /\_finally).  
   
- **ImageBase** indica la base dell'immagine \(indirizzo di caricamento\) del modulo contenente la funzione corrente, da aggiungere agli offset a 32 bit utilizzati nella voce nella tabella delle funzioni e nella struttura UNWIND\_INFO per registrare gli indirizzi relativi.  
+ **ImageBase** è la base dell'immagine (indirizzo di caricamento) del modulo che contiene la funzione, per essere aggiunto agli offset a 32 bit utilizzati nella voce di funzione e UNWIND_INFO per registrare gli indirizzi relativi.  
   
- **FunctionEntry** fornisce un puntatore alla voce RUNTIME\_FUNCTION contenente gli indirizzi relativi della base dell'immagine per la voce nella tabella delle funzioni e la struttura UNWIND\_INFO associati alla funzione corrente.  
+ **FunctionEntry** fornisce un puntatore al RUNTIME_FUNCTION funzione voce contenente la funzione e gli indirizzi relativi info base dell'immagine per questa funzione.  
   
- **EstablisherFrame** indica l'indirizzo della base dell'allocazione fissa dello stack relativa alla funzione corrente.  
+ **EstablisherFrame** è l'indirizzo di base dell'allocazione dello stack predefinito per questa funzione.  
   
- **TargetIp** fornisce un indirizzo di istruzione facoltativo che specifica l'indirizzo di continuazione della rimozione.  Questo indirizzo viene ignorato se **EstablisherFrame** non è specificato.  
+ **TargetIp** fornisce un indirizzo istruzione facoltativo che specifica l'indirizzo di continuazione della rimozione. Questo indirizzo viene ignorato se **EstablisherFrame** non è specificato.  
   
- **ContextRecord** punta al contesto dell'eccezione e viene utilizzato dal codice di invio\/rimozione eccezioni del sistema.  
+ **ContextRecord** punta al contesto dell'eccezione, viene utilizzato per il codice di invio/rimozione eccezione di sistema.  
   
- **LanguageHandler** punta alla routine del gestore specifico del linguaggio che deve essere chiamata.  
+ **LanguageHandler** punta alla routine del gestore specifico del linguaggio Java la chiamata.  
   
- **HandlerData** punta ai dati del gestore specifico del linguaggio relativi alla funzione corrente.  
+ **HandlerData** punta ai dati del gestore specifico del linguaggio per questa funzione.  
   
-## Vedere anche  
- [Gestione delle eccezioni \(x64\)](../build/exception-handling-x64.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle eccezioni (x64)](../build/exception-handling-x64.md)

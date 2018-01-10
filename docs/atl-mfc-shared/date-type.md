@@ -21,18 +21,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b487cc29bb61943bca676b3473897f04be59230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-type"></a>DATE (tipo)
 Il **data** tipo viene implementato utilizzando un numero a virgola mobile a 8 byte. Giorni sono rappresentati in incrementi di numero intero a partire dal 30 dicembre 1899, mezzanotte all'ora zero. I valori di ora sono espressi come valore assoluto della parte frazionaria del numero. Nella tabella seguente vengono illustrate le diverse date insieme a loro **data** equivalente numerico di tipo:  
   
 |Data e ora|Rappresentazione|  
 |-------------------|--------------------|  
-|Mezzanotte del 30 dicembre 1899|0.00|  
+|Mezzanotte del 30 dicembre 1899|0,00|  
 |Mezzanotte del 1 gennaio 1900|2.00|  
 |Mezzanotte del 4 gennaio 1900|5.00|  
 |4 gennaio 1900, 6 ore|5.25|  
@@ -58,7 +59,7 @@ Il **data** tipo viene implementato utilizzando un numero a virgola mobile a 8 b
 |30 dicembre 1899, 18.00.|-0.75|  
 |30 dicembre 1899, mezzogiorno|-0.50|  
 |30 dicembre 1899, 6 ore|-0.25|  
-|Mezzanotte del 30 dicembre 1899|0.00|  
+|Mezzanotte del 30 dicembre 1899|0,00|  
 |30 dicembre 1899, 6 ore|0.25|  
 |30 dicembre 1899, mezzogiorno|0.50|  
 |30 dicembre 1899, 18.00.|0.75|  

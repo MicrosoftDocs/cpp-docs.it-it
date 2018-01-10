@@ -1,62 +1,60 @@
 ---
-title: "ATL/MFC Shared Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "vc.classes.shared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFileTime class, shared class"
-  - "CFileTimeSpan class, shared class"
-  - "CFixedStringT class, shared class"
-  - "COleDateTime class, shared class"
-  - "COleDateTimeSpan class, shared class"
-  - "CPoint class, shared class"
-  - "CRect class, shared class"
-  - "CSimpleStringT class, shared class"
-  - "CSize class, shared class"
-  - "CStrBufT class, shared class"
-  - "CString objects, shared class"
-  - "CStringData class, shared class"
-  - "CStringT class, shared class"
-  - "IAtlStringMgr class, shared class"
-  - "shared classes"
-  - "shared classes, MFC e ATL"
+title: Classi condivise ATL a MFC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords: vc.classes.shared
+dev_langs: C++
+helpviewer_keywords:
+- CPoint class, shared class
+- CFileTimeSpan class, shared class
+- COleDateTime class, shared class
+- CFixedStringT class, shared class
+- CStrBufT class, shared class
+- CFileTime class, shared class
+- CRect class, shared class
+- CSimpleStringT class, shared class
+- CStringT class, shared class
+- CSize class, shared class
+- CStringData class, shared class
+- IAtlStringMgr class, shared class
+- shared classes, MFC and ATL
+- COleDateTimeSpan class, shared class
+- CString objects, shared class
+- shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2da6815b1620d855c6850c657a85e539c3e4b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ATL/MFC Shared Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-A partire da Visual C\+\+ .NET 2002, diverse classi di utilità MFC esistenti sono state riscritte o rivisto si sta per ridurre le relative dipendenze da altre classi MFC.  Queste classi di utilità possono ora essere utilizzate in qualsiasi progetto C\+\+ nativo.  Questa sezione include solo le classi già disponibili per i progetti MFC e ora sono state condivisi, con alcune nuove classi correlate alle modifiche in `CString`.  Non include classi ATL, che possano essere utilizzate in qualsiasi tipo di progetto C\+\+ nativa tramite l'inclusione di intestazione adatta.  
+# <a name="atlmfc-shared-classes"></a>Classi condivise ATL/MFC
+Queste classi di utilità possono essere utilizzate in qualsiasi progetto C++ nativo senza richiedere qualsiasi DLL MFC.  
   
-## In questa sezione  
- [Classi condivise tra MFC e ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
- Vengono forniti collegamenti alle classi condivise tra MFC e ATL.  
+## <a name="in-this-section"></a>In questa sezione  
+ [Classi condivise da MFC e ATL](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+ Vengono forniti collegamenti alle classi condivise da MFC e ATL.  
   
-## Sezioni correlate  
- [Riferimento di Active Template Library \(ATL\)](../atl/atl-com-desktop-components.md)  
- Viene fornito materiale di riferimento per la Libreria ATL, un insieme di classi C\+\+ basate su modelli che semplifica la programmazione di oggetti COM.  
+## <a name="related-sections"></a>Sezioni correlate  
+ [Riferimento di Active Template Library (ATL)](../atl/atl-com-desktop-components.md)  
+ Viene fornito materiale di riferimento per la Libreria ATL, un insieme di classi C++ basate su modelli che semplifica la programmazione di oggetti COM.  
   
- [Riferimenti alla libreria Microsoft Foundation classes \(MFC\)](../mfc/mfc-desktop-applications.md)  
- Viene fornito materiale di riferimento per la libreria MFC, un set di classi in quanto costituiscono un framework di applicazione, ovvero il framework di un'applicazione scritta per l'api Windows.  
+ [Microsoft Foundation Class Library (MFC) Reference](../mfc/mfc-desktop-applications.md)  
+ Fornisce materiale di riferimento per la libreria MFC, un set di classi che costituisce un framework applicazione, ovvero il framework di un'applicazione scritta per l'API di Windows.  
   
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/it-it/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- Vengono forniti collegamenti a codice di esempio in cui vengono illustrate le funzionalità di Visual C\+\+ e le librerie e le tecnologie supportate.  
+ [Librerie di Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad esempio ATL, MFC, modelli OLE DB, la libreria di runtime del linguaggio C e la libreria standard C++.  
   
- [Librerie di Visual C\+\+](http://msdn.microsoft.com/it-it/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Vengono forniti collegamenti alle varie librerie fornite con Visual C\+\+, ad esempio ATL, MFC, i modelli OLE DB, la libreria di runtime C e standard C\+\+.  
-  
- [Debug](../Topic/Debugging%20in%20Visual%20Studio.md)  
+ [Debug](/visualstudio/debugger/debugging-in-visual-studio)  
  Vengono forniti collegamenti relativi all'utilizzo del debugger di Visual Studio per la correzione di errori logici nell'applicazione o nelle stored procedure.
+

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b64e6c167df00d072b70a2f39e882a84357b4eab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environment-variable-macros"></a>Macro di variabili di ambiente
 NMAKE eredita le definizioni di macro di variabili di ambiente esistano prima dell'avvio della sessione. Se nell'ambiente del sistema operativo è stata impostata una variabile, è disponibile come una macro di NMAKE. I nomi ereditati vengono convertiti in caratteri maiuscoli. Prima di pre-elaborazione viene eseguita l'ereditarietà. Utilizzare l'opzione /E per le macro ereditate dalle variabili di ambiente per eseguire l'override delle macro con lo stesso nome nel makefile.  

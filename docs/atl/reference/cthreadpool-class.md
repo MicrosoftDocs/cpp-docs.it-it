@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (classe)
 Questa classe fornisce un pool di thread di lavoro di elaborazione di una coda di elementi di lavoro.  
@@ -98,15 +81,15 @@ class CThreadPool : public IThreadPoolConfig
 |[CThreadPool::Shutdown](#shutdown)|Chiamare questo metodo per arrestare il pool di thread.|  
   
 ## <a name="remarks"></a>Note  
- Nel pool di thread vengono creati e distrutti quando viene inizializzato, ridimensionato o arrestare il pool di. Un'istanza della classe *lavoro* verrà creato nello stack di ogni thread di lavoro nel pool. Ogni istanza verrà in tempo reale per la durata del thread.  
+ Nel pool di thread vengono creati e distrutti quando viene inizializzato, ridimensionato o arrestare il pool. Un'istanza della classe *lavoro* verrà creato nello stack di ogni thread di lavoro nel pool. Ogni istanza verrà in tempo reale per la durata del thread.  
   
- Subito dopo la creazione di un thread, *lavoro*:: `Initialize` verrà chiamato sull'oggetto associata al thread. Immediatamente prima dell'eliminazione di un thread, *lavoro*:: `Terminate` verrà chiamato. Entrambi i metodi devono accettare un **void\*** argomento. Il valore di questo argomento viene passato al pool di thread tramite il `pvWorkerParam` parametro di [CThreadPool::Initialize](#initialize).  
+ Subito dopo la creazione di un thread, *lavoro*:: `Initialize` verrà chiamato sull'oggetto associata al thread. Immediatamente prima dell'eliminazione di un thread, *lavoro*:: `Terminate` verrà chiamato. Entrambi i metodi devono accettare un **void\***  argomento. Il valore di questo argomento viene passato al pool di thread tramite il `pvWorkerParam` parametro di [CThreadPool::Initialize](#initialize).  
   
- Quando sono disponibili gli elementi di lavoro fra i thread di lavoro e coda di lavoro, un thread di lavoro effettuerà il pull un elemento all'esterno della coda e chiamare il **Execute** metodo del *lavoro* oggetto per il thread. Tre elementi vengono quindi passati al metodo: l'elemento dalla coda, lo stesso `pvWorkerParam` passato a *lavoro*:: `Initialize` e *lavoro*:: `Terminate`e un puntatore di [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per la coda di porta di completamento i/o.  
+ Quando sono disponibili gli elementi di lavoro fra i thread di lavoro e coda di lavoro, un thread di lavoro effettuerà il pull un elemento all'esterno della coda e chiamare il **Execute** metodo il *lavoro* oggetto per tale thread. Tre elementi vengono quindi passati al metodo: l'elemento dalla coda, lo stesso `pvWorkerParam` passato a *lavoro*:: `Initialize` e *lavoro*:: `Terminate`e un puntatore di [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) struttura utilizzata per la coda di porta di completamento i/o.  
   
  Il *lavoro* classe dichiara il tipo degli elementi che saranno accodate nel pool di thread fornendo un typedef, *lavoro*:: `RequestType`. Questo tipo deve essere in grado di sottoposto a cast da e verso un **ULONG_PTR**.  
   
- Un esempio di un *lavoro* classe è [CNonStatelessWorker classe](../../atl/reference/cnonstatelessworker-class.md).  
+ Un esempio di un *lavoro* classe [CNonStatelessWorker classe](../../atl/reference/cnonstatelessworker-class.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `IUnknown`  
@@ -331,4 +314,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [Interfaccia IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Classi](../../atl/reference/atl-classes.md)
-

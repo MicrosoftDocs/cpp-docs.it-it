@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c76d640171a6068421ff4199b6e77480db28d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af16748bb3b2048ce854ccc7a03b2400039184a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonextensible-attribute"></a>nonextensible (attributo)
 Se un'interfaccia duale non viene estesa in fase di esecuzione (ovvero, se non sono forniti metodi o proprietà tramite **IDispatch:: Invoke** che non sono disponibili tramite vtable), è necessario applicare il **nonextensible** attributo alla definizione di interfaccia. Questo attributo fornisce informazioni per le lingue client (ad esempio Visual Basic) che può essere usato per abilitare la verifica del codice completo in fase di compilazione. Se questo attributo viene omesso, i bug possono rimanere nascosti nel codice client in fase di esecuzione.  

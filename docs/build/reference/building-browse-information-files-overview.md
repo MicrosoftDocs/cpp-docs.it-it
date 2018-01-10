@@ -1,57 +1,58 @@
 ---
-title: "Cenni preliminari sulla compilazione di file di informazioni di visualizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".bsc (file), informazioni su .bsc (file)"
-  - "BSC (file di informazioni di visualizzazione)"
-  - "BSC (file di informazioni di visualizzazione), creazione"
-  - "bsc (file), informazioni su file bsc"
+title: 'File di informazioni: Panoramica | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, about .bsc files
+- bsc files, about bsc files
+- browse information files (.bsc)
+- browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Al fine di creare informazioni per la visualizzazione dei simboli, mediante il compilatore viene creato un file sbr per ciascuno dei file di origine del progetto. Successivamente, BSCMAKE.EXE concatena i vari file sbr in un unico file bsc.  
+# <a name="building-browse-information-files-overview"></a>Cenni preliminari sulla compilazione di file di informazioni di visualizzazione
+Per creare informazioni di visualizzazione per l'esplorazione di simbolo, il compilatore crea un file sbr per ogni file di origine nel progetto, quindi BSCMAKE. EXE concatena i file SBR in un unico file BSC.  
   
- La generazione di file sbr e bsc richiede diverso tempo, pertanto, per impostazione predefinita, in Visual C\+\+ queste funzioni sono disattivate.  Se si desidera visualizzare le informazioni correnti, riattivare le opzioni di visualizzazione e compilare nuovamente il progetto.  
+ Generazione di file sbr e BSC richiede tempo, in modo Visual C++ consente di disattivare queste funzioni per impostazione predefinita. Se si desidera visualizzare le informazioni correnti, è necessario attivare le opzioni di ricerca e compilare di nuovo il progetto.  
   
- Per comunicare al compilatore che si desidera creare file sbr, utilizzare [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md).  Per creare file bsc, è possibile richiamare [BSCMAKE](../../build/reference/bscmake-command-line.md) dalla riga di comando.  In tal modo si ottiene un controllo più preciso sulla manipolazione dei file di informazioni di visualizzazione.  Per ulteriori informazioni, vedere [Riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md).  
+ Utilizzare [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) o [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) per indicare al compilatore di creare i file SBR. Per creare file BSC, è possibile chiamare [BSCMAKE](../../build/reference/bscmake-command-line.md) dalla riga di comando. Mediante l'utilità BSCMAKE dalla riga di comando offre un controllo più preciso sulla manipolazione dei file di informazioni. Vedere [riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md) per ulteriori informazioni.  
   
 > [!TIP]
->  È possibile attivare la generazione del file sbr e lasciare disattivata la generazione del file bsc.  In tal modo le operazioni di compilazione risultano rapide ed è anche possibile creare velocemente un nuovo file bsc attivando la generazione dei file bsc e compilando il progetto.  
+>  È possibile attivare la generazione di file SBR lasciando disattivata la generazione del file BSC. In questo modo fast compila ma consente anche di creare rapidamente un nuovo file BSC attivando la generazione di file BSC e compilazione del progetto.  
   
- Riducendo la dimensione del file bsc, verranno ridotti anche il tempo, la memoria e lo spazio su disco necessari per compilarlo.  
+ È possibile ridurre il tempo, memoria e spazio su disco necessario per compilare un file BSC riducendo le dimensioni del file BSC.  
   
- Per informazioni sulla compilazione di un file di visualizzazione nell'ambiente di sviluppo, vedere [Pagina delle proprietà Generale \(Progetto\)](../../ide/general-property-page-project.md).  
+ Vedere [pagina delle proprietà Generale (progetto)](../../ide/general-property-page-project.md) per informazioni su come creare un file del browser nell'ambiente di sviluppo.  
   
-### Per creare un file bsc di dimensione minore  
+### <a name="to-create-a-smaller-bsc-file"></a>Per creare un file BSC più piccolo  
   
-1.  Utilizzare le [opzioni della riga di comando di BSCMAKE](../../build/reference/bscmake-options.md) per escludere informazioni dal file di informazioni di visualizzazione.  
+1.  Utilizzare [opzioni della riga di comando di BSCMAKE](../../build/reference/bscmake-options.md) per escludere informazioni dal file di informazioni di visualizzazione.  
   
-2.  Omettere simboli locali in uno o più file sbr durante la compilazione o l'assemblaggio.  
+2.  Omette i simboli locali in uno o più file SBR durante la compilazione o l'assemblaggio.  
   
-3.  Se un file oggetto non contiene informazioni necessarie per la fase di debug corrente, omettere il corrispondente file sbr dal comando BSCMAKE durante la ricompilazione del file di informazioni di visualizzazione.  
+3.  Se un file oggetto non contiene informazioni necessarie per la fase di debug corrente, omettere il corrispondente file sbr dal comando BSCMAKE quando si ricompila il file di informazioni.  
   
-### Per combinare le informazioni di visualizzazione provenienti da diversi progetti in un unico file di visualizzazione \(bsc\)  
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>Per combinare le informazioni di esplorazione da diversi progetti in un unico file (BSC)  
   
-1.  Non compilare il file bsc al livello di progetto oppure utilizzare l'opzione \/n per evitare il troncamento dei file sbr.  
+1.  Non compilare il file BSC al livello del progetto oppure utilizzare l'opzione /n per impedire che i file SBR vengano troncati.  
   
-2.  Dopo aver completato la compilazione di tutti i progetti, eseguire BSCMAKE con tutti i file sbr come input.  Sono accettati i caratteri jolly.  Se, ad esempio, le directory di progetto C:\\X, C:\\Y e C:\\Z contengono diversi file sbr e si desidera combinarli in un unico file bsc, si potrà compilare il file bsc combinato mediante il comando BSCMAKE C:\\X\\\*.sbr C:\\Y\\\*.sbr C:\\Z\\\*.sbr \/o c:\\directory\_desiderata\\filecombinato.bsc.  
+2.  Dopo che tutti i progetti vengono compilati, eseguire BSCMAKE con tutti i file sbr come input. Sono consentiti caratteri jolly. Ad esempio, se si dispone di directory di progetto C:\X C:\Y e C:\Z con i file sbr e si desidera combinarli in un unico file BSC, quindi utilizzare BSCMAKE C:\X\\*.sbr C:\Y\\\*SBR C:\Z\\\*. SBR /o c:\whatever_directory\combined.bsc per compilare il file BSC combinato.  
   
-## Vedere anche  
- [Strumenti per la compilazione in C\/C\+\+](../../build/reference/c-cpp-build-tools.md)   
- [Riferimenti a BSCMAKE](../../build/reference/bscmake-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Strumenti di compilazione di C/C++](../../build/reference/c-cpp-build-tools.md)   
+ [Riferimento a BSCMAKE](../../build/reference/bscmake-reference.md)

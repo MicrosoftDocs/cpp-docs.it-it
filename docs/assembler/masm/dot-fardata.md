@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 16c079344bff69094fdd9d76d9e03032dd453b49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63e712ff69f3735f69968eb1888762463ddc6ed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fardata"></a>.FARDATA
 Se usato con [. MODELLO](../../assembler/masm/dot-model.md), viene avviato un segmento di dati decisamente per dati inizializzati (nome del segmento FAR_DATA o *nome*).  

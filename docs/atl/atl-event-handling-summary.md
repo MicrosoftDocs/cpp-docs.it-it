@@ -1,57 +1,60 @@
 ---
-title: "ATL Event Handling Summary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gestione eventi, implementazione"
+title: Riepilogo di gestione dell'evento ATL | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ATL Event Handling Summary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In genere la gestione eventi COM è un processo relativamente semplice.  Esistono tre passaggi principali:  
+# <a name="atl-event-handling-summary"></a>Riepilogo della gestione degli eventi ATL
+In generale, la gestione degli eventi COM è un processo relativamente semplice. Esistono tre passaggi principali:  
   
--   Implementare l'interfaccia eventi sull'oggetto.  
+-   Implementa l'interfaccia eventi sull'oggetto.  
   
--   Consigli origine evento che l'oggetto desidera ricevere gli eventi.  
+-   Informare l'origine eventi che l'oggetto richiede la ricezione di eventi.  
   
--   Unadvise origine evento quando l'oggetto non ha più ricevere eventi.  
+-   Annullare gli avvisi per l'origine evento quando l'oggetto non serve più la ricezione di eventi.  
   
-## Implementazione dell'interfaccia  
- Esistono quattro modi principali di implementare un'interfaccia utilizzando ATL.  
+## <a name="implementing-the-interface"></a>Implementazione dell'interfaccia  
+ Esistono quattro modi per implementare un'interfaccia con ATL.  
   
-|Derivare da|Appropriato per il tipo di interfaccia|È necessario implementare qualsiasi methods\*|Richiede una libreria dei tipi in fase di esecuzione|  
-|-----------------|--------------------------------------------|---------------------------------------------------|----------------------------------------------------------|  
-|l'interfaccia|Vtable|Sì|No|  
-|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|Duale|Sì|Sì|  
-|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Interfaccia dispatch|No|Sì|  
+|Derivare da|Adatto per il tipo di interfaccia|È necessario implementare tutti i metodi *|Richiede una libreria dei tipi in fase di esecuzione|  
+|-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
+|L'interfaccia|Vtable|Yes|No|  
+|[IDispatchImpl.](../atl/reference/idispatchimpl-class.md)|Doppio|Yes|Yes|  
+|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Interfaccia dispatch|No|Yes|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Interfaccia dispatch|No|No|  
   
- \* In utilizzando le classi di supporto ATL, non è necessario mai di implementare metodi `IDispatch` o **IUnknown** manualmente.  
+ \*Quando si utilizzano le classi di supporto ATL, non è necessario implementare la **IUnknown** o `IDispatch` metodi manualmente.  
   
-## Consigliare e Unadvising origine evento  
- Sono disponibili tre metodi principali di e consigliare di unadvising un'origine eventi mediante ATL.  
+## <a name="advising-and-unadvising-the-event-source"></a>Consigli l'origine evento  
+ Esistono tre modi principali per consigli di un'origine eventi mediante ATL.  
   
-|Consigli la funzione|Funzione di Unadvise|Il più appropriato per l'utilizzo con|È necessario tenere traccia dei cookie?|Commenti|  
-|--------------------------|--------------------------|-------------------------------------------|---------------------------------------------|--------------|  
-|[AtlAdvise](../Topic/AtlAdvise.md), [CComPtrBase::Advise](../Topic/CComPtrBase::Advise.md)|[AtlUnadvise](../Topic/AtlUnadvise.md)|Vtable o interfacce duali|Sì|`AtlAdvise` è una funzione globale ATL.  `CComPtrBase::Advise` viene utilizzato da [CComPtr](../atl/reference/ccomptr-class.md) e da [CComQIPtr](../atl/reference/ccomqiptr-class.md).|  
-|[IDispEventSimpleImpl::DispEventAdvise](../Topic/IDispEventSimpleImpl::DispEventAdvise.md)|[IDispEventSimpleImpl::DispEventUnadvise](../Topic/IDispEventSimpleImpl::DispEventUnadvise.md)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|No|Meno parametri che `AtlAdvise` poiché la classe base rende più lavoro.|  
-|[CComCompositeControl::AdviseSinkMap \(TRUE\)](../Topic/CComCompositeControl::AdviseSinkMap.md)|[CComCompositeControl::AdviseSinkMap \(FALSE\)](../Topic/CComCompositeControl::AdviseSinkMap.md)|Controlli ActiveX in controlli compositi|No|`CComCompositeControl::AdviseSinkMap` consigliabile qualsiasi mapping del sink delle voci nel caso.  Lo stesso unadvises di funzione voci.  Questo metodo viene chiamato automaticamente dalla classe `CComCompositeControl`.|  
-|[CAxDialogImpl::AdviseSinkMap \(TRUE\)](../Topic/CAxDialogImpl::AdviseSinkMap.md)|[CAxDialogImpl::AdviseSinkMap \(FALSE\)](../Topic/CAxDialogImpl::AdviseSinkMap.md)|Controlli ActiveX in una finestra di dialogo|No|`CAxDialogImpl::AdviseSinkMap` consigliata e unadvises tutti i controlli ActiveX nella finestra di dialogo.  Questa operazione viene eseguita automaticamente automaticamente.|  
+|Funzione di notifica|Annullare gli avvisi per funzione|Più adatto per l'utilizzo con|È necessario tenere traccia di un cookie|Commenti|  
+|---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
+
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise), [CComPtrBase:: Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)| Vtable o interfacce duali | Sì | `AtlAdvise` funzione ATL globale. `CComPtrBase::Advise`viene utilizzato da [CComPtr](../atl/reference/ccomptr-class.md) e [CComQIPtr](../atl/reference/ccomqiptr-class.md). |  
+
+|[IDispEventSimpleImpl:: DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl:: DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md) o [ IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)| Non | Parametri di un numero inferiore rispetto a `AtlAdvise` poiché la classe di base funziona più. |  
+|[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)| Controlli ActiveX in controlli compositi | Non | `CComCompositeControl::AdviseSinkMap` informa tutte le voci di sink di eventi della mappa. La stessa funzione unadvises le voci. Questo metodo viene chiamato automaticamente dalla `CComCompositeControl` classe. |  
+|[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)| Controlli ActiveX in una finestra di dialogo | Non | `CAxDialogImpl::AdviseSinkMap` informa e unadvises tutti i controlli ActiveX nella risorsa della finestra di dialogo. Questa operazione viene eseguita automaticamente per l'utente. |  
   
-## Vedere anche  
- [Gestione di eventi](../atl/event-handling-and-atl.md)   
- [Supporting IDispEventImpl](../atl/supporting-idispeventimpl.md)
+## <a name="see-also"></a>Vedere anche  
+ [Gestione degli eventi](../atl/event-handling-and-atl.md)   
+ [Supporto di IDispEventImpl](../atl/supporting-idispeventimpl.md)
+

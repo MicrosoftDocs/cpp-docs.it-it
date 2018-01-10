@@ -1,39 +1,40 @@
 ---
-title: "operator AND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "And"
-  - "operator AND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator AND"
-  - "AND operator"
+title: operatore AND | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- And
+- operator AND
+dev_langs: C++
+helpviewer_keywords:
+- operator AND
+- AND operator
 ms.assetid: 6862d248-c169-4db8-a478-9d0ce4fdd1e3
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a3247c80bf9b72757407247dd30ee12972793b96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator AND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce il risultato di un'operazione di AND bit per bit per *expression1* e *expression2*.  
+# <a name="operator-and"></a>Operatore AND
+Restituisce il risultato di un'operazione AND bit per bit per *expression1* e *expression2*.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 expression1 AND expression2  
 ```  
   
-## Vedere anche  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a operatori](../../assembler/masm/operators-reference.md)

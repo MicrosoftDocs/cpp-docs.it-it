@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>Sintassi relativa ai nomi file
 Sintassi di nomi file nei comandi rappresenta i componenti del primo nome file dipendenti (che può essere un dipendente implicito). FileName componenti sono unità del file, percorso, nome di base e l'estensione come specificato, non quelli presenti sul disco. Utilizzare **%s** per rappresentare il nome file completo. Utilizzare **% &#124;** [*parti*]**F** (una barra verticale carattere segue il simbolo di percentuale) rappresentano le parti del nome file, in cui *parti* può essere zero o più lettere seguenti, in qualsiasi ordine.  

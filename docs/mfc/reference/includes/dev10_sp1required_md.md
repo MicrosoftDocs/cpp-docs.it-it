@@ -1,3 +1,1 @@
----
----
 È necessario Visual Studio 2010 SP1.

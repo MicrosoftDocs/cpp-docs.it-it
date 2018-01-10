@@ -1,40 +1,41 @@
 ---
-title: "Macro di comando e di opzione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "macro di comandi in NMAKE"
-  - "macro, macro di comandi"
-  - "macro, macro di opzioni"
-  - "macro di opzioni"
+title: Macro di comandi e opzioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- options macros
+- command macros in NMAKE
+- macros, options macros
+- macros, command macros
 ms.assetid: 50dff03c-0dc3-4a8a-9a17-57e0e4ea9bac
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 06f5d48395c0395a85c90096bf2dbad8627ac41a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Macro di comando e di opzione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le macro di comando sono già definite per i prodotti Microsoft.  Le macro di opzione rappresentano le opzioni di tali prodotti e, per impostazione predefinita, non sono definite.  Entrambi i tipi di macro, oltre a essere utilizzati in regole di inferenza già definite, possono essere utilizzati in blocchi di descrizione o in regole di inferenza definite dall'utente.  Le macro di comando possono essere ridefinite per rappresentare una parte o tutta una riga di comando, incluse le opzioni.  Le macro di opzione generano una stringa null se non vengono definite.  
+# <a name="command-macros-and-options-macros"></a>Macro di comando e di opzione
+Macro di comandi sono predefinite per i prodotti Microsoft. Macro di opzioni rappresentano le opzioni per questi prodotti e non sono definite per impostazione predefinita. Entrambi vengono utilizzati nelle regole di inferenza predefiniti e può essere utilizzati in blocchi di descrizione o le regole di inferenza definite dall'utente. Macro di comandi possono essere ridefinite per rappresentare o parte di una riga di comando, incluse le opzioni. Macro di opzioni generano una stringa null se lasciato non definito.  
   
-|Prodotto Microsoft|Macro di comando|Definita come|Macro di opzione|  
-|------------------------|----------------------|-------------------|----------------------|  
-|Macro Assembler|**AS**|ml|**AFLAGS**|  
-|Compilatore Basic|**BC**|bc|**BFLAGS**|  
-|Compilatore C|**CC**|cl|**CFLAGS**|  
-|Compilatore C\+\+|**CPP**|cl|**CPPFLAGS**|  
-|Compilatore C\+\+|**CXX**|cl|**CXXFLAGS**|  
-|Compilatore di risorse|**RC**|rc|**RFLAGS**|  
+|Prodotto Microsoft|Macro di comando|Definito come|Macro di opzioni|  
+|-----------------------|-------------------|----------------|-------------------|  
+|Macro Assembler|**COME**|ml|**AFLAGS**|  
+|Compilatore di base|**BC**|BC|**BFLAGS**|  
+|Compilatore C|**CC**|CL|**CFLAGS**|  
+|Compilatore C++|**CPP**|CL|**CPPFLAGS**|  
+|Compilatore C++|**CXX**|CL|**CXXFLAGS**|  
+|Compilatore di risorse|**RC**|RC|**RFLAGS**|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Macro speciali di NMAKE](../build/special-nmake-macros.md)

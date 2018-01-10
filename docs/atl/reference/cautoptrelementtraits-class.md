@@ -1,11 +1,10 @@
 ---
-title: Classe CAutoPtrElementTraits | Documenti di Microsoft
+title: Classe CAutoPtrElementTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoPtrElementTraits
 - ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 1c543eaa678d86e083207915bcb4f43766ee23c5
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ffbec269e7bbf750cc3b877aa7a93d1cde74756b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrelementtraits-class"></a>Classe CAutoPtrElementTraits
 Questa classe fornisce metodi e funzioni statiche typedef utile durante la creazione di raccolte di puntatori intelligenti.  
@@ -68,7 +51,7 @@ class CAutoPtrElementTraits
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Il tipo di dati da utilizzare per l'aggiunta di elementi per l'oggetto di classe di raccolta.|  
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.|  
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.|  
   
 ## <a name="remarks"></a>Note  
  Questa classe fornisce metodi e funzioni statiche TypeDef per consentire la creazione di oggetti di classe di raccolta che contiene i puntatori intelligenti. Le classi [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) e [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) derivano da `CAutoPtrElementTraits`. Se la compilazione di una raccolta di puntatori intelligenti che richiede vettore new e delete operatori, utilizzare [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) invece.  
@@ -95,7 +78,7 @@ typedef CAutoPtr<T>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
- Il tipo di dati da utilizzare per recuperare elementi dall'oggetto classe di insiemi.  
+ Il tipo di dati da utilizzare per recuperare gli elementi dall'oggetto della classe di raccolta.  
   
 ```
 typedef T *& OUTARGTYPE;
@@ -104,4 +87,3 @@ typedef T *& OUTARGTYPE;
 ## <a name="see-also"></a>Vedere anche  
  [Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f3d72b72280ecc841cc349f20c68f90a6cbd227
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>Esportazione di classi di stringa usando CStringT
 In passato, gli sviluppatori MFC è sono derivata da `CString` specializzare proprie classi di stringa. In Microsoft Visual C++ .NET (MFC 8.0), il [CString](../atl-mfc-shared/using-cstring.md) classe è stata sostituita da una classe di modello denominata [CStringT](../atl-mfc-shared/reference/cstringt-class.md). Questo fornito diversi vantaggi:  

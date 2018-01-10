@@ -1,41 +1,42 @@
 ---
-title: "Pseudo operazioni in modalit&#224; raw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Raw Pseudo operazioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Pseudo operazioni in modalit&#224; raw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento sono elencate le pseudo operazioni.  
+# <a name="raw-pseudo-operations"></a>Pseudo operazioni in modalità raw
+Questo argomento elenca le pseudo operazioni.  
   
-## Note  
+## <a name="remarks"></a>Note  
   
 |Pseudo operazione|Descrizione|  
-|-----------------------|-----------------|  
-|PROC FRAME \[:ehandler\]|Fa sì che MASM generi una voce nella tabella delle funzioni in .pdata e le informazioni di rimozione in .xdata per il comportamento della fase di rimozione nella gestione delle eccezioni strutturata di una funzione.  Se il parametro ehandler è presente, questa procedura viene inserita in .xdata come gestore specifico del linguaggio.<br /><br /> Quando si utilizza l'attributo FRAME, la procedura deve essere seguita da una direttiva .ENDPROLOG.  Se si tratta di una funzione foglia, come definito in [Tipi di funzioni](../build/function-types.md), l'attributo FRAME non è necessario. Questo è valido anche per il resto delle seguenti pseudo operazioni.|  
-|.PUSHREG reg|Genera una voce di codice di rimozione UWOP\_PUSH\_NONVOL per il numero di registro specificato utilizzando l'offset corrente nel prologo.<br /><br /> Questa istruzione deve essere utilizzata soltanto con registri integer non volatili.  Per gli inserimenti di registri volatili, utilizzare in alternativa un'istruzione .ALLOCSTACK 8.|  
-|.SETFRAME reg, offset|Inserisce il campo Frame Register e l'offset nelle informazioni di rimozione utilizzando il registro e l'offset specificati.  L'offset deve essere un multiplo di 16 e minore o uguale a 240.  Questa istruzione genera anche una voce di codice di rimozione UWOP\_SET\_FPREG per il registro specificato tramite l'offset corrente nel prologo.|  
-|.ALLOCSTACK dimensione|Genera una voce UWOP\_ALLOC\_SMALL o UWOP\_ALLOC\_LARGE con la dimensione specificata per l'offset corrente nel prologo.<br /><br /> L'operando "dimensione" deve essere un multiplo di 8.|  
-|.SAVEREG reg, offset|Genera una voce di codice di rimozione UWOP\_SAVE\_NONVOL o UWOP\_SAVE\_NONVOL\_FAR per il registro e l'offset specificati utilizzando l'offset corrente nel prologo.  MASM sceglierà la codifica più efficiente.<br /><br /> L'offset deve essere positivo e un multiplo di 8.  L'offset viene calcolato rispetto alla base del frame della procedura, in genere in RSP, oppure, se si utilizza un puntatore ai frame, rispetto al puntatore ai frame non scalato.|  
-|.SAVEXMM128 reg, offset|Genera una voce di codice di rimozione UWOP\_SAVE\_XMM128 o UWOP\_SAVE\_XMM128\_FAR per il registro XMM e l'offset specificati utilizzando l'offset corrente nel prologo.  MASM sceglierà la codifica più efficiente.<br /><br /> L'offset deve essere positivo e un multiplo di 16.  L'offset viene calcolato rispetto alla base del frame della procedura, in genere in RSP, oppure, se si utilizza un puntatore ai frame, rispetto al puntatore ai frame non scalato.|  
-|.PUSHFRAME \[codice\]|Genera una voce di codice di rimozione UWOP\_PUSH\_MACHFRAME.  Se il codice facoltativo è specificato, alla voce di codice di rimozione viene assegnato un modificatore pari a 1.  In caso contrario, il modificatore è pari a 0.|  
-|.ENDPROLOG|Indica la fine delle dichiarazioni del prologo.  Questa istruzione deve trovarsi nei primi 255 byte della funzione.|  
+|----------------------|-----------------|  
+|PROC FRAME [: il parametro ehandler]|Cause MASM per generare una funzione tabella voce pdata e. XData informazioni di rimozione per strutturata di una funzione il comportamento di rimozione di gestione delle eccezioni.  Se il parametro ehandler è presente, questa procedura viene inserita in. xdata come gestore specifico del linguaggio.<br /><br /> Quando viene utilizzato l'attributo FRAME, deve essere seguito da un. Direttiva ENDPROLOG.  Se la funzione è una funzione foglia (come definito in [tipi di funzione](../build/function-types.md)) è non è necessario il resto di queste pseudo-operazioni l'attributo FRAME.|  
+|. Reg PUSHREG|Genera una voce di codice di rimozione UWOP_PUSH_NONVOL per il numero di registro specificato con l'offset corrente nel prologo.<br /><br /> Deve essere utilizzato solo con registri integer non volatili.  Per gli inserimenti di registri volatili, utilizzare un. 8 ALLOCSTACK, invece|  
+|. Reg SETFRAME, offset|Operazioni di inserimento nel frame registrare campo e l'offset in informazioni di rimozione utilizzando il registro specificato e l'offset. L'offset deve essere un multiplo di 16 e minore o uguale a 240. Questa direttiva genera inoltre una rimozione codice UWOP_SET_FPREG per il registro specificato utilizzando l'offset corrente di prologo.|  
+|. ALLOCSTACK dimensione|Genera una voce UWOP_ALLOC_SMALL o UWOP_ALLOC_LARGE con la dimensione specificata per l'offset corrente nel prologo.<br /><br /> L'operando di dimensioni deve essere un multiplo di 8.|  
+|. SAVEREG reg, offset|Genera un UWOP_SAVE_NONVOL o una voce di codice di rimozione UWOP_SAVE_NONVOL_FAR per il registro specificato e l'offset utilizzando l'offset corrente di prologo. MASM sceglierà la codifica più efficiente.<br /><br /> Offset deve essere positivo e un multiplo di 8.  Offset è relativo alla base del frame della stored procedure, che è in genere in RSP, o, se si utilizza un puntatore ai frame, il puntatore ai frame non in scala.|  
+|. SAVEXMM128 reg, offset|Genera un UWOP_SAVE_XMM128 o una voce di codice di rimozione UWOP_SAVE_XMM128_FAR per il registro XMM specificato e l'offset utilizzando l'offset corrente di prologo. MASM sceglierà la codifica più efficiente.<br /><br /> Offset deve essere positivo e un multiplo di 16.  Offset è relativo alla base del frame della stored procedure, che è in genere in RSP, o, se si utilizza un puntatore ai frame, il puntatore ai frame non in scala.|  
+|. PUSHFRAME [codice]|Genera una voce di codice di rimozione UWOP_PUSH_MACHFRAME. Se il codice facoltativo viene specificato, la voce di codice di rimozione viene assegnata un modificatore di 1. In caso contrario, il modificatore è 0.|  
+|.ENDPROLOG|Segnala la fine delle dichiarazioni di prologo.  Deve trovarsi nei primi 255 byte della funzione.|  
   
- Di seguito è riportato un esempio di prologo di funzione, in cui è illustrato l'utilizzo corretto della maggior parte dei codici operativi:  
+ Di seguito è riportato un prologo di funzione di esempio con l'utilizzo corretto della maggior parte dei codici operativi:  
   
 ```  
 sample PROC FRAME     
@@ -84,5 +85,5 @@ ret
 sample ENDP  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Helper di rimozione per MASM](../build/unwind-helpers-for-masm.md)

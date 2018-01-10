@@ -1,1 +1,1 @@
-Windows Software Development Kit \(SDK\)
+Windows Software Development Kit (SDK)

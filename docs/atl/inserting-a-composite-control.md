@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f58c671860f1e02f28f4b5a406d290df2479e2d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c733c02a3855c02803be242a6bfc8ddd13abd75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inserting-a-composite-control"></a>Inserimento di un controllo composito
 Il **Aggiungi classe** la finestra di dialogo consente di inserire un oggetto ATL in un progetto. Accedere a questa finestra di dialogo facendo clic con il nome del progetto in Esplora soluzioni, scegliendo **Aggiungi**e quindi fare clic su **Aggiungi classe**.  

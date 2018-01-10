@@ -26,11 +26,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1714d660cad6474f0b038a40e2ad1efdf5aa5743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee9edf9430c0333317a767e8f8c114453a6d80f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Dimensioni delle variabili e dei tipi in assembly inline
 **Sezione specifica Microsoft**  
@@ -51,7 +52,7 @@ int arr[8];
   
  le espressioni assembly e C seguenti impostano la dimensione di `arr` e dei relativi elementi.  
   
-|__asm|C|Dimensioni|  
+|__asm|C|Dimensione|  
 |-------------|-------|----------|  
 |**LUNGHEZZA** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|  
 |**DIMENSIONI** arr|`sizeof`(arr)|32|  

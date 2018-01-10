@@ -1,46 +1,47 @@
 ---
-title: "Invoking Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StringRegister"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "script, invoking registry in ATL"
-  - "StringRegister method"
+title: Chiamata di script (ATL) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StringRegister
+dev_langs: C++
+helpviewer_keywords:
+- StringRegister method
+- scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbf969f601bd90e84bf0ee15ae2ea3dcb392610
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Invoking Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="invoking-scripts"></a>Chiamata di script
+[Utilizzo dei parametri sostituibili (il Registrar preprocessore)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) illustra mappe di sostituzione e viene indicato il metodo di registrazione **AddReplacement**. Il Registrar dispone di otto altri metodi specifici dello script e tutte sono descritte nella tabella seguente.  
+  
+|Metodo|La sintassi e la descrizione|  
+|------------|-------------------------|  
+|**ResourceRegister**|**HRESULT ResourceRegister (LPCOLESTR***NomeFileris* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Registra lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. `nID`e `szType` contengono rispettivamente ID e il tipo, la risorsa.|  
+|**ResourceUnregister**|**HRESULT ResourceUnregister (LPCOLESTR***NomeFileris* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Annulla la registrazione lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. `nID`e `szType` contengono rispettivamente ID e il tipo, la risorsa.|  
+|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***NomeFileris* **, LPCOLESTR***IDdm* **, LPCOLESTR** `szType` **);** <br /><br /> Registra lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. *IDdm* e `szType` contengono rispettivamente di identificatore di stringa e il tipo, la risorsa.|  
+|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***NomeFileris* **, LPCOLESTR***IDdm* **, LPCOLESTR** `szType` **);** <br /><br /> Annulla la registrazione lo script contenuto in una risorsa del modulo. *NomeFileris* indica il percorso UNC per il modulo stesso. *IDdm* e `szType` contengono rispettivamente di identificatore di stringa e il tipo, la risorsa.|  
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);** <br /><br /> Registra lo script in un file. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|  
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);** <br /><br /> Annulla la registrazione in un file di script. *nome del file* è un percorso UNC di un file che contiene uno script di risorsa (o è).|  
+|**StringRegister**|**HRESULT StringRegister (LPCOLESTR***dati***);** <br /><br /> Registra lo script in una stringa. *dati* contiene lo script stesso.|  
+|**StringUnregister**|**HRESULT StringUnregister (LPCOLESTR***dati***);** <br /><br /> Annulla la registrazione di script in una stringa. *dati* contiene lo script stesso.|  
+  
+ **ResourceRegisterSz** e **ResourceUnregisterSz**, sono simili a **ResourceRegister** e **ResourceUnregister**, ma è possibile specificare un Identificatore di stringa.  
+  
+ I metodi **FileRegister** e **FileUnregister** sono utili se non si desidera che lo script in una risorsa o se si desidera che lo script nel proprio file. I metodi **StringRegister** e **StringUnregister** consentono il file RGS essere archiviato in una stringa allocata in modo dinamico.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Creazione degli script del Registro di sistema](../atl/creating-registrar-scripts.md)
 
-[Utilizzo di parametri sostituibili \(il preprocessore di registrazione\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) vengono descritte le mappe di sostituzione e descritti il metodo **AddReplacement**di registrazione.  Il registrar presenta otto altri metodi specifici per gli script e vengono descritti nella tabella seguente.  
-  
-|Metodo|Descrizione e sintassi|  
-|------------|----------------------------|  
-|**ResourceRegister**|*resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType`\);di**HRESULT ResourceRegister\( LPCOLESTR**<br /><br /> Registra lo script contenuto nella risorsa di un modulo.  *il resFileName* indica il percorso UNC nel modulo stesso.  `nID` e `szType` contengono l'id e il tipo di risorsa, rispettivamente.|  
-|**ResourceUnregister**|*resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType`\);di**HRESULT ResourceUnregister\( LPCOLESTR**<br /><br /> Annulla la registrazione di script contenuto nella risorsa di un modulo.  *il resFileName* indica il percorso UNC nel modulo stesso.  `nID` e `szType` contengono l'id e il tipo di risorsa, rispettivamente.|  
-|**ResourceRegisterSz**|*SzID* **, LPCOLESTR**  `szType`\);di**, LPCOLESTR** *di resFileName*di**HRESULT ResourceRegisterSz\( LPCOLESTR**<br /><br /> Registra lo script contenuto nella risorsa di un modulo.  *il resFileName* indica il percorso UNC nel modulo stesso.  *lo szID* e `szType` contengono l'identificatore di stringa e il tipo di risorsa, rispettivamente.|  
-|**ResourceUnregisterSz**|*SzID* **, LPCOLESTR**  `szType`\);di**, LPCOLESTR** *di resFileName*di**HRESULT ResourceUnregisterSz\( LPCOLESTR**<br /><br /> Annulla la registrazione di script contenuto nella risorsa di un modulo.  *il resFileName* indica il percorso UNC nel modulo stesso.  *lo szID* e `szType` contengono l'identificatore di stringa e il tipo di risorsa, rispettivamente.|  
-|**FileRegister**|*nome file* \);di**HRESULT FileRegister\( LPCOLESTR**<br /><br /> Registra lo script in un file.  *il nome file* è un percorso UNC a un file che contiene o\) è uno script di risorsa.|  
-|**FileUnregister**|*nome file* \);di**HRESULT FileUnregister\( LPCOLESTR**<br /><br /> Annulla la registrazione di script in un file.  *il nome file* è un percorso UNC a un file che contiene o\) è uno script di risorsa.|  
-|**StringRegister**|*dati* \);di**HRESULT StringRegister\( LPCOLESTR**<br /><br /> Registra lo script in una stringa.  *i dati* contengono lo stesso script.|  
-|**StringUnregister**|*dati* \);di**HRESULT StringUnregister\( LPCOLESTR**<br /><br /> Annulla la registrazione di script in una stringa.  *i dati* contengono lo stesso script.|  
-  
- **ResourceRegisterSz** e **ResourceUnregisterSz**, sono simili a **ResourceRegister** e a **ResourceUnregister**, ma che consentono di specificare un identificatore di stringa.  
-  
- I metodi **FileRegister** e **FileUnregister** sono utili se non si desidera che lo script in una risorsa o se si desidera che lo script nel proprio file.  I metodi **StringRegister** e **StringUnregister** consentono il file RGS da archiviare in una stringa allocata in modo dinamico.  
-  
-## Vedere anche  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
 - ATL::_U_MENUorID
 - _U_MENUorID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umenuorid-class"></a>Classe _U_MENUorID
 Questa classe fornisce wrapper per **CreateWindow** e **CreateWindowEx**.  
@@ -93,4 +91,3 @@ _U_MENUorID(HMENU hMenu);
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

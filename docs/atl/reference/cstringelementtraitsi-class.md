@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2a2cbe93826ed2cad5d33d50df119d0ff5cb298
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7803d85c7adf346a06f87d35aba7f42e47f77b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 Questa classe fornisce funzioni statiche relative alle stringhe archiviate in oggetti di classe di raccolta. È simile a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), ma consente di eseguire confronti tra maiuscole e minuscole.  

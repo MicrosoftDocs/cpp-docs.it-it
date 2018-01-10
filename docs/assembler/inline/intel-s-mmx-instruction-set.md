@@ -1,31 +1,31 @@
 ---
-title: "Set di istruzioni per MMX di Intel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set di istruzioni per MMX"
+title: Intel &#39; Set di istruzioni MMX s | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MMX instruction set
 ms.assetid: 705deb2d-c3fd-4696-9e22-8bcf25866daf
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8aa4dc38a8ed04c2df04eaa944d43769ae996f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Set di istruzioni per MMX di Intel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Sezione specifica Microsoft  
- Il compilatore di Visual C\+\+ consente di utilizzare il set di istruzioni di MMX \(multimedia extension\) di Intel nell'assembler inline.  Le istruzioni MMX sono supportate anche dal disassembly del debugger.  Il compilatore genera un messaggio di avviso se la funzione contiene istruzioni MMX, ma non contiene un'istruzione EMMS per impostare lo stato dei contenuti multimediali su vuoto.  Per ulteriori informazioni, vedere il sito Web di Intel.  
+# <a name="intel39s-mmx-instruction-set"></a>S Set di istruzioni per MMX di Intel &#39;
+## <a name="microsoft-specific"></a>Sezione specifica Microsoft  
+ Il compilatore di Visual C++ consente di utilizzare il set di istruzioni di MMX (multimedia extension) di Intel nell'assembler inline. Le istruzioni MMX sono supportate anche dal disassembly del debugger. Il compilatore genera un messaggio di avviso se la funzione contiene istruzioni MMX, ma non contiene un'istruzione EMMS per impostare lo stato dei contenuti multimediali su vuoto. Per ulteriori informazioni, vedere il sito Web di Intel.  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Utilizzo di linguaggio assembly in blocchi \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)

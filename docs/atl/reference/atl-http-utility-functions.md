@@ -7,14 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-http-utility-functions"></a>Funzioni di utilità HTTP ATL
 
@@ -53,7 +54,7 @@ inline BOOL AtlCanonicalizeUrl(
  Buffer allocata dal chiamante di ricevere l'URL in forma canonica.  
   
  `pdwMaxLength`  
- Puntatore a una variabile che contiene la lunghezza in caratteri di `szCanonicalized`. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, escluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
+ Puntatore a una variabile che contiene la lunghezza in caratteri di `szCanonicalized`. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, incluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
   
  `dwFlags`  
  Flag ATL_URL che controllano il comportamento di questa funzione. 
@@ -98,7 +99,7 @@ inline BOOL AtlCombineUrl(
  Buffer allocata dal chiamante di ricevere l'URL in forma canonica.  
   
  `pdwMaxLength`  
- Puntatore a una variabile che contiene la lunghezza in caratteri di `szBuffer`. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, escluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
+ Puntatore a una variabile che contiene la lunghezza in caratteri di `szBuffer`. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, incluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
   
  `dwFlags`  
  Flag che controllano il comportamento di questa funzione. Vedere [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
@@ -136,7 +137,7 @@ inline BOOL AtlEscapeUrl(
  Buffer allocata dal chiamante a cui verrà scritto l'URL convertito.  
   
  `pdwStrLen`  
- Puntatore a una variabile di tipo DWORD. Se la funzione ha esito positivo, `pdwStrLen` riceve il numero di caratteri scritti nel buffer, escluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null. Quando si utilizza la versione a caratteri "wide" di questo metodo, `pdwStrLen` riceve il numero di caratteri richiesti, non il numero di byte.  
+ Puntatore a una variabile di tipo DWORD. Se la funzione ha esito positivo, `pdwStrLen` riceve il numero di caratteri scritti nel buffer, incluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null. Quando si utilizza la versione a caratteri "wide" di questo metodo, `pdwStrLen` riceve il numero di caratteri richiesti, non il numero di byte.  
   
  `dwMaxLength`  
  Le dimensioni del buffer `lpszStringOut`.  
@@ -203,7 +204,7 @@ inline BOOL AtlUnescapeUrl(
  Buffer allocata dal chiamante a cui verrà scritto l'URL convertito.  
   
  `pdwStrLen`  
- Puntatore a una variabile di tipo DWORD. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, escluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
+ Puntatore a una variabile di tipo DWORD. Se la funzione ha esito positivo, la variabile riceve il numero di caratteri scritti nel buffer, incluso il carattere di terminazione null. Se la funzione ha esito negativo, la variabile riceve la lunghezza in byte del buffer incluso lo spazio per il carattere di terminazione null.  
   
  `dwMaxLength`  
  Le dimensioni del buffer `lpszStringOut`.  
@@ -259,5 +260,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>Vedere anche  
  [Concetti](../../atl/active-template-library-atl-concepts.md)   
  [Componenti Desktop COM ATL](../../atl/atl-com-desktop-components.md)   
-
 
