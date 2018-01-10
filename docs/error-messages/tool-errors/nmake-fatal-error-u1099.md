@@ -1,35 +1,34 @@
 ---
-title: "Errore irreversibile U1099 di NMAKE  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1099"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1099"
+title: Errore irreversibile U1099 di NMAKE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1099
+dev_langs: C++
+helpviewer_keywords: U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf8d662960e5857686f3f8301cc8481f350d4b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore irreversibile U1099 di NMAKE 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nmake-fatal-error-u1099"></a>Errore irreversibile U1099 di NMAKE 
 overflow dello stack  
   
- Il makefile in corso di elaborazione è troppo complesso per l'allocazione di stack corrente di NMAKE.  L'allocazione a disposizione di NMAKE è di 0x3000 \(12 KB\).  
+ Il file di progetto in fase di elaborazione è troppo complesso per l'allocazione dello stack corrente in NMAKE. NMAKE ha un'allocazione di 0x3000 (12 KB).  
   
- Per aumentare l'allocazione per lo stack di NMAKE, eseguire l'utilità [editbin \/stack](../../build/reference/stack.md) con un'opzione di stack maggiore:  
+ Per aumentare l'allocazione dello stack NMAKE, eseguire il [editbin /stack](../../build/reference/stack.md) utilità con un'opzione di stack maggiore:  
   
- **editbin \/STACK:reserve NMAKE.EXE**  
+ **EDITBIN /STACK:reserve NMAKE. FILE EXE**  
   
- dove *reserve* è un numero maggiore di quello dell'allocazione per lo stack corrente di NMAKE.
+ dove *riservare* è un numero maggiore di allocazione dello stack corrente in NMAKE.

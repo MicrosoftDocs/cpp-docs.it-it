@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2667
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2667
+f1_keywords: C2667
+dev_langs: C++
+helpviewer_keywords: C2667
 ms.assetid: 3c91d9d1-18fa-4e0d-a9ba-984d38980ca3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c00e469b2c89c0fa7c3966ec31410324bf6c2ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f30a41f953df5754a35ccd1c42c8a88e7ae6743b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2667"></a>Errore del compilatore C2667
 'function': nessun numero overload dispone di una conversione ottimale  

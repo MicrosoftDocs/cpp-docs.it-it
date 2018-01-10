@@ -1,31 +1,34 @@
 ---
-title: "Procedura: eseguire il wrapping di una classe nativa affinch&#233; possa essere utilizzata in C# | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classi [C++], Visual C# e"
-  - "codice nativo [C++], Visual C# e"
+title: 'Procedura: eseguire il wrapping di classe nativa per l''utilizzo da c# | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e206fcfe0c8c4d82276e8c477061fd0522fe5722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: eseguire il wrapping di una classe nativa affinch&#233; possa essere utilizzata in C# #
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo esempio viene illustrato come eseguire il wrapping di una classe C\+\+ nativa in modo che possa essere utilizzata da codice creato in C\# o altri linguaggi .NET.  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Procedura: eseguire il wrapping di una classe nativa affinché possa essere utilizzata in C#
+Questo esempio viene illustrato come eseguire il wrapping di una classe C++ nativa in modo che possa essere utilizzata da codice creato in c# o altri linguaggi .NET.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +78,5 @@ private:
 };  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

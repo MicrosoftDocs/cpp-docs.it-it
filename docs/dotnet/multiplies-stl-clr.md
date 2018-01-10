@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c816361e20dd571bb243b11870bd4e0571e2364e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1012997408f108192425a4a7c127baa873b34795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplies-stlclr"></a>multiplies (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce il primo argomento per il secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -60,7 +63,7 @@ public:
 |result_type|Il tipo del risultato funtore.|  
 |second_argument_type|Il tipo del secondo argomento funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |multiplies|Costruisce il funtore.|  
   

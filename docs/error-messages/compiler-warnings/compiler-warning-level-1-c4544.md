@@ -1,32 +1,31 @@
 ---
-title: "Avviso del compilatore (livello 1) C4544 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4544"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4544"
+title: Compilatore avviso (livello 1) C4544 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4544
+dev_langs: C++
+helpviewer_keywords: C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b84683c4b3fffcb9e23c6d80fb3f81684006f15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4544
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4544"></a>Avviso del compilatore (livello 1) C4544
 'declaration': argomento di modello predefinito ignorato in questa dichiarazione di modello  
   
- Un argomento di modello predefinito è stato specificato in un percorso non corretto ed è stato ignorato.  Un argomento di modello predefinito per un modello di classe può essere specificato solo nella dichiarazione o nella definizione del modello di classe e non in un membro del modello di classe.  
+ Un argomento di modello predefinito è stato specificato in un percorso non corretto ed è stato ignorato. Un argomento di modello predefinito per un modello di classe può essere specificato solo nella dichiarazione o nella definizione del modello di classe e non in un membro del modello di classe.  
   
  Questo esempio genera l'errore C4545 e l'esempio successivo mostra come correggerlo:  
   

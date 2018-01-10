@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 752aa0cdfb85868314bb93a1934fb17f1bd009fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 77eb1c6f18d7e76d9483e9cff425dc60087ea393
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="less-stlclr"></a>less (STL/CLR)
 La classe modello descrive una funzione che, quando viene chiamato, restituisce true solo se il primo argomento è minore del secondo. Utilizzare, specificare un oggetto funzione in relazione al relativo tipo di argomento.  
@@ -60,7 +63,7 @@ public:
 |result_type|Il tipo del risultato funtore.|  
 |second_argument_type|Il tipo del secondo argomento funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
 |less|Costruisce il funtore.|  
   

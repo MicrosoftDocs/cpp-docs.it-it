@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59d17c57bc694974210aed652568f913bbfc7c40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4c65785008c7257fc2f3714d9bf78395f4a8e40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-add-class-wizard"></a>Creazione guidata aggiunta classe MFC
 Utilizzare questa procedura guidata codice per aggiungere una classe a un progetto MFC esistente oppure per aggiungere una classe a un progetto ATL che supporta MFC. È anche possibile aggiungere classi MFC per i progetti Win32 che dispongono del supporto MFC. Le funzionalità specificate durante la creazione del progetto determinano le opzioni disponibili nella finestra di dialogo.  

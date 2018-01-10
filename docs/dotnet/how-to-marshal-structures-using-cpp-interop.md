@@ -1,38 +1,40 @@
 ---
-title: "Procedura: effettuare il marshalling di strutture utilizzando l&#39;interoperabilit&#224; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interoperabilità C++, strutture"
-  - "marshalling dei dati [C++], strutture"
-  - "interoperabilità [C++], strutture"
-  - "marshalling [C++], strutture"
-  - "strutture [C++], marshalling"
+title: "Procedura: effettuare il marshalling strutture utilizzando l'interoperabilità C++ | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85c0b4301b0fb55acdc74344d1ca3fc1b6b393d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: effettuare il marshalling di strutture utilizzando l&#39;interoperabilit&#224; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato un facet di interoperabilità Visual C\+\+.  Per ulteriori informazioni, vedere [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-structures-using-c-interop"></a>Procedura: Effettuare il marshalling di strutture utilizzando l'interoperabilità C++
+In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per ulteriori informazioni, vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Negli esempi di codice riportati di seguito vengono utilizzate le direttive \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file. Queste funzioni, tuttavia, vengono eseguite nello stesso modo anche se definite in file diversi.  I file che contengono soltanto funzioni non gestite non richiedono necessariamente la compilazione con [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Utilizzo di esempi di codice seguente il [managed, unmanaged](../preprocessor/managed-unmanaged.md) direttive #pragma per implementare funzioni gestite e nello stesso file, ma gestite nello stesso modo se definiti in file separati. File che contengono solo funzioni non gestite non richiedono la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato il passaggio di una struttura da una funzione gestita a una funzione non gestita, sia per valore che per riferimento.  Poiché la struttura in questo esempio contiene soltanto semplici tipi di dati intrinseci \(vedere [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), non è necessario alcun marshalling speciale.  Per eseguire il marshalling delle strutture non copiabili, ad esempio quelle che contengono puntatori, vedere [Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione gestita a una funzione non gestita, per valore e per riferimento. Poiché la struttura in questo esempio contiene soltanto semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), è necessario alcun marshalling speciale. Per effettuare il marshalling delle strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +90,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato il passaggio di una struttura da una funzione non gestita a una funzione gestita, sia per valore che per riferimento.  Poiché la struttura in questo esempio contiene soltanto semplici tipi di dati intrinseci \(vedere [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), non è necessario alcun marshalling speciale.  Per eseguire il marshalling delle strutture non copiabili, ad esempio quelle che contengono puntatori, vedere [Procedura: effettuare il marshalling di puntatori incorporati utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato il passaggio di una struttura da una funzione non gestita a una funzione gestita, per valore e per riferimento. Poiché la struttura in questo esempio contiene soltanto semplici tipi di dati intrinseci (vedere [tipi copiabili e Non copiabili](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), è necessario alcun marshalling speciale. Per effettuare il marshalling delle strutture non copiabili da blt, ad esempio quelle che contengono puntatori, vedere [procedura: effettuare il marshalling incorporate puntatori Using C++ Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +156,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

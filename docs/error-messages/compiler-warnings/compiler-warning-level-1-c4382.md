@@ -1,58 +1,40 @@
 ---
-title: Compilatore avviso (livello 1) C4382 | Documenti di Microsoft
+title: Compilatore avviso (livello 1) C4382 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4382
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4382
+f1_keywords: C4382
+dev_langs: C++
+helpviewer_keywords: C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4571fe618b0ae89251d2748fbbcdfcb654201054
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4b0cef09795553759487e28ef61babe75b35ce03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4382"></a>Avviso del compilatore (livello 1) C4382
-generazione di 'tipo': un tipo con distruttore clrcall o costruttore di copia può essere rilevato solo in /clr: pura modulo  
+generazione di 'type': un tipo con distruttore clrcall o costruttore di copia può essere rilevato solo in /clr: pura modulo  
   
  Il **/clr: pure** l'opzione del compilatore è deprecato in Visual Studio 2015.  
   
- Quando viene compilato con **/clr** (non **/clr: pure**), la gestione delle eccezioni si prevede che le funzioni membro in un tipo nativo da [cdecl](../../cpp/cdecl.md) e non [clrcall](../../cpp/clrcall.md). I tipi nativi con funzioni membro che utilizzano `__clrcall` la convenzione di chiamata non può essere intercettati in un modulo compilato con **/clr**.  
+ Quando viene compilato con **/clr** (non **/clr: pure**), la gestione delle eccezioni prevede che le funzioni membro in un tipo nativo da [cdecl](../../cpp/cdecl.md) e non [clrcall](../../cpp/clrcall.md). I tipi nativi con funzioni membro tramite `__clrcall` la convenzione di chiamata non può essere intercettato in un modulo compilato con **/clr**.  
   
- Se l'eccezione verrà rilevata in un modulo compilato con **/clr: pure**, è possibile ignorare questo avviso.  
+ Se l'eccezione viene intercettata in un modulo compilato con **/clr: pure**, è possibile ignorare questo avviso.  
   
  Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene generato l'errore C4382.  
+ L'esempio seguente genera l'errore C4382.  
   
 ```  
 // C4382.cpp  

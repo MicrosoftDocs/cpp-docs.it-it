@@ -1,44 +1,28 @@
 ---
-title: Classe scoped_d3d_access_lock | Documenti di Microsoft
+title: Classe scoped_d3d_access_lock | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fd7f377e1dfe4e99f566da4782be5c2ccfdddbff
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 Wrapper RAII per un blocco di accesso D3D su un oggetto accelerator_view.  
@@ -118,7 +102,7 @@ scoped_d3d_access_lock(// [3] move constructor
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>operatore = 
+## <a name="operator_eq"></a>operator = 
 
 Acquisisce la proprietà di un blocco di accesso D3D da un altro `scoped_d3d_access_lock` oggetto, il rilascio del blocco precedente.  
  
@@ -128,11 +112,10 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
   
 ### <a name="parameters"></a>Parametri  
  `_Other`  
- Accelerator_view dalla quale spostare il blocco di accesso D3D.  
+ Accelerator_view da cui si desidera spostare il blocco di accesso D3D.  
   
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `scoped_accelerator_view_lock`.  
 
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::direct3d](concurrency-direct3d-namespace.md)
-

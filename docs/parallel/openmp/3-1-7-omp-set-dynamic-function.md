@@ -1,47 +1,47 @@
 ---
-title: "3.1.7 omp_set_dynamic Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.1.7 funzione omp_set_dynamic | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1fba961b-b82c-4a1e-ab0f-e4be826e50ab
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 87cdd627dd01697fa3d3718a2dc769f4017630a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.7 omp_set_dynamic Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**omp\_set\_dynamic** la funzione attiva o disabilita la modifica dinamica del numero di thread disponibili per l'esecuzione delle aree parallele.  Il formato è il seguente:  
+# <a name="317-ompsetdynamic-function"></a>3.1.7 Funzione omp_set_dynamic
+Il **omp_set_dynamic** funzione attiva o disattiva la regolazione dinamica del numero di thread disponibili per l'esecuzione di aree parallele. Il formato è il seguente:  
   
 ```  
 #include <omp.h>  
 void omp_set_dynamic(int dynamic_threads);  
 ```  
   
- se *dynamic\_threads* restituisce un valore diverso da zero, il numero di thread utilizzati per eseguire le aree parallele successive possono essere regolati automaticamente dall'ambiente di runtime al meglio utilizzano le risorse di sistema.  Di conseguenza, il numero di thread specificati dall'utente è il conteggio dei thread massimo.  Il numero di thread del team che esegue un'area parallela rimane fisso per la durata dell'area parallela e viene segnalato da **omp\_get\_num\_threads** funzione.  
+ Se *dynamic_threads* restituisce un valore diverso da zero, il numero di thread utilizzati per l'esecuzione di aree parallele successive è possibile modificare automaticamente dall'ambiente di runtime per utilizzare al meglio le risorse di sistema. Di conseguenza, il numero di thread specificato dall'utente è il numero massimo di thread. Il numero di thread del team, l'esecuzione di un'area parallela rimane fisso per la durata di tale area parallela e viene segnalato dal **omp_get_num_threads** (funzione).  
   
- se *dynamic\_threads* restituisce 0, regolazione dinamica è disabilitato.  
+ Se *dynamic_threads* restituisce 0, la regolazione dinamica è disabilitata.  
   
- La funzione presenta effetti descritti in precedenza in caso di chiamata da una parte del programma in cui **omp\_in\_parallel** restituisce zero di funzione.  Se viene chiamata da una parte del programma in cui **omp\_in\_parallel** la funzione restituisce un valore diverso da zero, il comportamento di questa funzione è definita.  
+ Questa funzione non ha gli effetti descritti in precedenza quando viene chiamato da una parte del programma in cui il **omp_in_parallel** funzione restituisce zero. Se viene chiamato da una parte del programma in cui il **omp_in_parallel** funzione restituisce un valore diverso da zero, il comportamento di questa funzione è indefinito.  
   
- una chiamata a **omp\_set\_dynamic** ha la precedenza su  **OMP\_DYNAMIC** variabile di ambiente.  
+ Una chiamata a **omp_set_dynamic** ha la precedenza sul **OMP_DYNAMIC** variabile di ambiente.  
   
- L'impostazione predefinita per la modifica dinamica dei thread è implementazione\-definita.  Di conseguenza, i codici utenti che dipendono da un numero specifico dei thread per l'esecuzione corretta devono disabilitare in modo esplicito i thread dinamici.  Le implementazioni non sono necessarie per consentire di modificare dinamicamente il numero di thread, ma sono necessarie fornire l'interfaccia per supportare la portabilità tra tutte le piattaforme.  
+ Il valore predefinito per la regolazione dinamica dei thread è definito dall'implementazione. Di conseguenza, i codici di utente che dipendono da un numero specifico di thread per l'esecuzione corretta devono disabilitare in modo esplicito thread dinamico. Le implementazioni non sono necessari per offrire la possibilità di modificare dinamicamente il numero di thread, ma viene richiesto di fornire l'interfaccia per supportare la portabilità in tutte le piattaforme.  
   
-## riferimenti incrociati:  
+## <a name="cross-references"></a>Riferimenti:  
   
--   **omp\_get\_num\_threads** la funzione, vedere  [parte 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) nella pagina 37.  
+-   **omp_get_num_threads** funzione, vedere [sezione 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) nella pagina 37.  
   
--   **OMP\_DYNAMIC** la variabile di ambiente, vedere  [parte 4,3](../../parallel/openmp/4-3-omp-dynamic.md) nella pagina 49.  
+-   **OMP_DYNAMIC** vedere variabile di ambiente [sezione 4.3](../../parallel/openmp/4-3-omp-dynamic.md) nella pagina 49.  
   
--   **omp\_in\_parallel** la funzione, vedere  [parte 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) nella pagina 38.
+-   **omp_in_parallel** funzione, vedere [sezione 3.1.6](../../parallel/openmp/3-1-6-omp-in-parallel-function.md) nella pagina 38.

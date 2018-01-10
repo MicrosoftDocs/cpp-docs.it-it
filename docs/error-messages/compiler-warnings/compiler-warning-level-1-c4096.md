@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 1) C4096 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4096"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4096"
+title: Compilatore (livello 1) Avviso C4096 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4096
+dev_langs: C++
+helpviewer_keywords: C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3c8fd8e18743a4cf0c9004236ab60bb30219119e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4096
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'a': l'interfaccia non è un'interfaccia COM. Non verrà inviata all'IDL  
+# <a name="compiler-warning-level-1-c4096"></a>Compilatore (livello 1) Avviso C4096
+'a': interfaccia non è un'interfaccia COM. non verrà inviata all'IDL  
   
- Una definizione di interfaccia che poteva essere ritenuta un'interfaccia COM non è stata definita come tale e, di conseguenza, non verrà inviata al file IDL.  
+ Una definizione di interfaccia desiderato come interfaccia COM non è stata definita come un'interfaccia COM e pertanto non verrà creata per il file IDL.  
   
- Per un elenco degli attributi che caratterizzano le interfacce COM, vedere [Attributi di interfaccia](../../windows/interface-attributes.md).  
+ Vedere [gli attributi di interfaccia](../../windows/interface-attributes.md) per un elenco degli attributi che indicano un'interfaccia è un'interfaccia COM.  
   
- Il seguente codice di esempio genera l'errore C4096:  
+ L'esempio seguente genera l'errore C4096:  
   
 ```  
 // C4096.cpp  

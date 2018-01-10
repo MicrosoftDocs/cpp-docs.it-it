@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2143
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2143
+f1_keywords: C2143
+dev_langs: C++
+helpviewer_keywords: C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fa7560b3b7d13beb416c2f500c0ab692e9f0d717
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2143"></a>Errore del compilatore C2143
 Errore di sintassi: manca 'token1' prima di 'token2'  
@@ -191,4 +187,3 @@ int main()
     int j = 0; // C2143  
 }  
 ```  
-

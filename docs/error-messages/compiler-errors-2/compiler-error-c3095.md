@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3095
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3095
+f1_keywords: C3095
+dev_langs: C++
+helpviewer_keywords: C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 265062e7ba739dbef8e917d44d46ebd9261a289e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a47e7b6ee006bc7a490a01a825a29a265586b0aa
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3095"></a>Errore del compilatore C3095
 'attribute': l'attributo non può essere ripetuto  

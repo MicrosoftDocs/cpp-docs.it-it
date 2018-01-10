@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcd94b8b797a03bb81107daab5b3b1e3259bda34
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="html-basics"></a>Nozioni fondamentali su HTML
 La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML delle pagine, che è esplorare. Quando si visualizza l'origine verrà visualizzato un numero di HTML (Hypertext markup) tag, racchiuso tra parentesi acute (<>), frammisti con testo.  
@@ -41,7 +42,7 @@ La maggior parte dei browser hanno la possibilità di esaminare l'origine HTML d
  </HTML>  
  ```  
   
-4.  Dal **File** menu, scegliere **salvare**e salvare il file come c:\webpages\First.htm.. Lasciare il file è aperto nell'editor.  
+4.  Dal **File** menu, scegliere **salvare**e salvare il file come c:\webpages\First.htm. Lasciare il file è aperto nell'editor.  
   
 5.  Commutatore nel browser e dal **File** menu, scegliere **aprire**, o tipo `file://C:/webpages/first.htm` nella casella di modifica URL del browser. Si noterà una pagina vuota con la didascalia della finestra "Top HTML Tags".  
   

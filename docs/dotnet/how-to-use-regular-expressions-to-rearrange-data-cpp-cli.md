@@ -1,34 +1,36 @@
 ---
-title: "Procedura: utilizzare espressioni regolari per ridisporre i dati (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dati [C++], ridisposizione"
-  - "espressioni regolari [C++], ridisposizione di dati"
+title: 'Procedura: utilizzare espressioni regolari per ridisporre i dati (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf60fff6c15313a6f7df1104f67c1f043f885eac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: utilizzare espressioni regolari per ridisporre i dati (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come utilizzare le espressioni regolari di .NET Framework per ridisporre o riformattare i dati.  Vengono utilizzate le classi <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> per estrarre il nome e il cognome da una stringa e vengono quindi visualizzati tali elementi in ordine inverso.  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Procedura: utilizzare espressioni regolari per ridisporre i dati (C++/CLI)
+Esempio di codice seguente viene illustrato come utilizzare il supporto di espressioni regolari di .NET Framework per ridisporre o riformattare i dati. Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Text.RegularExpressions.Regex> e <xref:System.Text.RegularExpressions.Match> classi per estrarre i nomi e cognomi da una stringa e quindi visualizzare questi elementi di nome in ordine inverso.  
   
- La classe <xref:System.Text.RegularExpressions.Regex> viene utilizzata per costruire un'espressione regolare in cui sia indicato il formato corrente dei dati.  Si presuppone che i due nomi siano separati da una virgola e che sia possibile utilizzare un numero qualsiasi di spazi prima e dopo la virgola.  Viene quindi utilizzato il metodo <xref:System.Text.RegularExpressions.Match> per analizzare ciascuna stringa.  Se l'operazione riesce, il nome e il cognome vengono recuperati dall'oggetto <xref:System.Text.RegularExpressions.Match> e visualizzati.  
+ La <xref:System.Text.RegularExpressions.Regex> classe viene utilizzata per costruire un'espressione regolare che descrive il formato corrente dei dati. I due nomi si presuppone che siano separati da una virgola e possono usare qualsiasi quantità di spazio intorno la virgola. Il <xref:System.Text.RegularExpressions.Match> metodo viene quindi utilizzato per analizzare ciascuna stringa. Se ha esito positivo, nome e cognome vengono recuperati il <xref:System.Text.RegularExpressions.Match> dell'oggetto e visualizzati.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +68,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Espressioni regolari di .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Espressioni regolari di .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

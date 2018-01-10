@@ -1,47 +1,46 @@
 ---
-title: "Avviso del compilatore (livello 1) C4727 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4727"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4727"
+title: Compilatore avviso (livello 1) C4727 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4727
+dev_langs: C++
+helpviewer_keywords: C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 813c2ab18cc81c4477ae094e6c2aa771e3135b7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4727
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"PCH denominato file\_pch con lo stesso timestamp trovato in file\_obj\_1 e file\_obj\_2.  Verrà utilizzato il primo PCH.  
+# <a name="compiler-warning-level-1-c4727"></a>Avviso del compilatore (livello 1) C4727
+"PCH denominato file_pch con lo stesso timestamp trovato in file_obj_1 e file_obj_2.  Tramite il primo PCH.  
   
- L'avviso C4727 viene restituito quando si esegue la compilazione di più moduli con **\/Yc** e nel caso in cui il compilatore abbia contrassegnato tutti i file obj con lo stesso timestamp pch.  
+ Durante la compilazione di più moduli con avviso C4727 **/Yc**, e in cui il compilatore non è in grado di contrassegnare tutti i file obj con lo stesso timestamp pch.  
   
- Per risolvere il problema, compilare un file di origine con **\/Yc \/c** \(consente di creare il pch\), e compilare gli altri separatamente con **\/Yu \/c** \(consente di utilizzare il pch\), quindi collegarli tra loro.  
+ Per risolvere, compilare un file di origine con **/Yc /c** (Crea file pch) e compilare gli altri separatamente con **/Yu /c** (Usa pch), quindi collegarli tra loro.  
   
- Se si esegue quanto riportato di seguito e viene comunque generato l'avviso C4727:  
+ Pertanto, se è riportato di seguito e genera l'errore C4727:  
   
- **cl \/clr \/GL a.cpp b.cpp c.cpp \/Ycstdafx.h**  
+ **cl /clr /GL a.cpp cpp b. cpp c.cpp /Ycstdafx.h**  
   
- È necessario eseguire quanto riportato di seguito:  
+ Si potrebbe eseguire le operazioni seguenti:  
   
- **cl \/clr \/GL a.cpp \/Ycstdafx.h \/c**  
+ **cl /clr /GL a.cpp /Ycstdafx.h /c**  
   
- **cl \/clr \/GL b.cpp c.cpp \/Yustdafx.h \/link a.obj**  
+ **cl /clr /GL cpp b. cpp c.cpp /Yustdafx.h /link. obj**  
   
- Per ulteriori informazioni, vedere  
+ Per altre informazioni, vedere  
   
--   [\/Yc \(Crea il file di intestazione precompilato\)](../../build/reference/yc-create-precompiled-header-file.md)  
+-   [/Yc (Crea File di intestazione precompilata)](../../build/reference/yc-create-precompiled-header-file.md)  
   
--   [\/Yu \(Utilizza il file di intestazione precompilato\)](../../build/reference/yu-use-precompiled-header-file.md)
+-   [/Yu (utilizza il File di intestazione precompilata)](../../build/reference/yu-use-precompiled-header-file.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4738c829f346126dfed7990c50186a7c267df1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1532647327c039994a1d09ee8b7eacc2c341f88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>Procedura: recuperare il nome utente corrente (C++/CLI)
 Esempio di codice seguente viene illustrato il recupero del nome dell'utente corrente (il nome dell'utente connesso in Windows). Il nome viene archiviato nel <xref:System.Environment.UserName%2A> stringa, definita nel <xref:System.Environment> dello spazio dei nomi.  

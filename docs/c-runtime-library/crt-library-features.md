@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>Funzionalità libreria CRT
 Questo argomento descrive i vari file lib che formano le librerie di runtime C, nonché le opzioni del compilatore associate e le direttive del preprocessore.  
@@ -46,8 +47,8 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
   
 |Libreria|DLL associata|Caratteristiche|Opzione|Direttive per il preprocessore|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libucrt.lib|Nessuna|Collega in modo statico la libreria UCRT al codice.|**/MT**|_MT|  
-|libucrtd.lib|Nessuna|Versione di debug della libreria UCRT per il collegamento statico. Non ridistribuibile.|**/MTd**|_DEBUG, _MT|  
+|libucrt.lib|nessuno|Collega in modo statico la libreria UCRT al codice.|**/MT**|_MT|  
+|libucrtd.lib|nessuno|Versione di debug della libreria UCRT per il collegamento statico. Non ridistribuibile.|**/MTd**|_DEBUG, _MT|  
 |ucrt.lib|ucrtbase.dll|Libreria di importazione DLL per la libreria UCRT.|**/MD**|_MT, _DLL|  
 |ucrtd.lib|ucrtbased.dll|Libreria di importazione DLL per la versione di debug della libreria UCRT. Non ridistribuibile.|**/MDd**|_DEBUG, _MT, _DLL|  
   
@@ -57,8 +58,8 @@ Questo argomento descrive i vari file lib che formano le librerie di runtime C, 
   
 |Libreria|DLL associata|Caratteristiche|Opzione|Direttive per il preprocessore|  
 |-------------|--------------------|---------------------|------------|-----------------------------|  
-|libvcruntime.lib|Nessuna|Collegata in modo statico al codice.|**/MT**|_MT|  
-|libvcruntimed.lib|Nessuna|Versione di debug per il collegamento statico. Non ridistribuibile.|**/MTd**|_MT, _DEBUG|  
+|libvcruntime.lib|nessuno|Collegata in modo statico al codice.|**/MT**|_MT|  
+|libvcruntimed.lib|nessuno|Versione di debug per il collegamento statico. Non ridistribuibile.|**/MTd**|_MT, _DEBUG|  
 |vcruntime.lib|vcruntime\<version>.dll|Libreria di importazione DLL per la libreria vcruntime.|**/MD**|_MT, _DLL|  
 |vcruntimed.lib|vcruntime\<version>d.dll|Libreria di importazione DLL per la libreria vcruntime di debug. Non ridistribuibile.|**/MDd**|_DEBUG, _MT, _DLL|  
   

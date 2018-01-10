@@ -1,68 +1,139 @@
 ---
-title: "Classe Platform::Collections::BackInsertIterator | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections::BackInsertIterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BackInsertIterator (classe)"
+title: Classe platform::Collections::BackInsertIterator | Documenti Microsoft
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
+dev_langs: C++
+helpviewer_keywords: BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 057aebfcba1936bc2a59fbb8b9fb51bff3197b6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe Platform::Collections::BackInsertIterator
-Rappresenta un iteratore che inserisce, anziché sovrascrivere, elementi nel back\-end di una raccolta sequenziale.  
+# <a name="platformcollectionsbackinsertiterator-class"></a>Classe Platform::Collections::BackInsertIterator
+Rappresenta un iteratore che inserisce, anziché sovrascrivere, elementi nel back-end di una raccolta sequenziale.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-template <  
-   typename T  
->  
-class BackInsertIterator : public ::std::iterator< ::std::output_iterator_tag, void, void, void, void>;  
+template <typename T>  
+class BackInsertIterator : 
+public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  Tipo di elemento nella raccolta corrente.  
   
-## Note  
- La classe BackInsertIterator implementa le regole richieste da [Classe back\_insert\_iterator](../standard-library/back-insert-iterator-class.md).  
+### <a name="remarks"></a>Note  
+ La classe BackInsertIterator implementa le regole richieste da [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md).  
   
-## Membri  
+### <a name="members"></a>Membri  
   
-### Costruttori pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[BackInsertIterator::BackInsertIterator \(costruttore\)](../cppcx/backinsertiterator-backinsertiterator-constructor.md)|Inizializza una nuova istanza della classe BackInsertIterator.|  
-  
-### Operatori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[BackInsertIterator::operator\* \(operatore\)](../cppcx/backinsertiterator-operator-dereference-operator.md)|Recupera un riferimento all'oggetto BackInsertIterator corrente.|  
-|[BackInsertIterator::operator\+\+ \(operatore\)](../cppcx/backinsertiterator-operator-increment-operator.md)|Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.|  
-|[BackInsertIterator::operator\= \(operatore\)](../cppcx/backinsertiterator-operator-assign-operator.md)|Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.|  
+|[Backinsertiterator:: Backinsertiterator](#ctor)|Inizializza una nuova istanza della classe BackInsertIterator.|  
   
-## Gerarchia di ereditarietà  
+### <a name="public-operators"></a>Operatori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Operatore BackInsertIterator::operator*](#operator-dereference)|Recupera un riferimento all'oggetto BackInsertIterator corrente.|  
+|[Operatore BackInsertIterator::operator++](#operator-increment)|Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.|  
+|[Operatore BackInsertIterator::operator=](#operator-assign)|Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `BackInsertIterator`  
   
-## Requisiti  
+### <a name="requirements"></a>Requisiti  
  **Intestazione:** collection.h  
   
  **Spazio dei nomi:** Platform::Collections  
   
-## Vedere anche  
- [\(NOTINBUILD\) Spazio dei nomi Platform](http://msdn.microsoft.com/it-it/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+---
+## <a name="ctor"></a>Costruttore backinsertiterator:: Backinsertiterator
+Inizializza una nuova istanza della classe `BackInsertIterator`.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+explicit BackInsertIterator(  
+   Windows::Foundation::Collections::IVector<T>^ v);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ `v`  
+ Un IVector\<T > oggetto.  
+  
+### <a name="remarks"></a>Note  
+ Un oggetto `BackInsertIterator` inserisce gli elementi dopo l'ultimo elemento dell'oggetto specificato dal parametro `v`.  
+ 
+## <a name="operator-assign"></a>Backinsertiterator:: operator = (operatore)
+Aggiunge l'oggetto specificato alla fine della raccolta sequenziale corrente.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```    
+BackInsertIterator& operator=( const T& t);  
+```  
+  
+#### <a name="parameters"></a>Parametri  
+ `t`  
+ Oggetto da aggiungere alla raccolta corrente.  
+  
+### <a name="return-value"></a>Valore restituito  
+ Riferimento all'oggetto BackInsertIterator corrente.  
+
+## <a name="operator-dereference"></a>Backinsertiterator:: operator * (operatore)
+Recupera un riferimento all'oggetto BackInsertIterator corrente.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+BackInsertIterator& operator*();  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Riferimento all'oggetto BackInsertIterator corrente.  
+  
+### <a name="remarks"></a>Note  
+ Questo operatore restituisce un riferimento all'oggetto BackInsertIterator corrente, non a qualsiasi elemento nella raccolta corrente.  
+ 
+## <a name="operator-increment"></a>Backinsertiterator:: operator + + (operatore)
+Restituisce un riferimento all'oggetto BackInsertIterator corrente. L'iteratore è invariato.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+``` 
+  
+BackInsertIterator& operator++();  
+  
+BackInsertIterator operator++(int);  
+```  
+  
+### <a name="return-value"></a>Valore restituito  
+ Riferimento all'oggetto BackInsertIterator corrente.  
+  
+### <a name="remarks"></a>Note  
+ In base alla progettazione, l'esempio della prima sintassi determina dei pre-incrementi dell'oggetto BackInsertIterator corrente e la seconda sintassi ne determina dei post-incrementi. Il tipo `int` nella seconda sintassi indica un'operazione di post-incremento, non un effettivo operando Integer.  
+  
+ Tuttavia, questo operatore in realtà non modifica l'oggetto BackInsertIterator. Restituisce invece un riferimento all'iteratore corrente invariato. Questo è lo stesso comportamento di [operatore *](#dereference-operator).  
+  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Piattaforma Namespace](platform-namespace-c-cx.md)

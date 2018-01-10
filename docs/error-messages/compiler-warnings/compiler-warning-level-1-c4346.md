@@ -1,36 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+title: Compilatore (livello 1) Avviso C4346 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6e6d425004fcc4dc26271b2bb56dbeffccc46311
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'nome': il nome dipendente non è un tipo  
+# <a name="compiler-warning-level-1-c4346"></a>Avviso del compilatore (livello 1) C4346
+'name': nome dipendente non è un tipo  
   
- Se un nome dipendente deve essere trattato come un tipo, è richiesta la parola chiave [typename](../../cpp/typename.md).  Si tratta di una nuova modifica del compilatore Visual C\+\+ .NET 2003, effettuata in conformità allo standard ISO C\+\+.  
+ Il [typename](../../cpp/typename.md) parola chiave è obbligatoria se è un nome dipendente venga considerato un tipo. Per il codice funziona allo stesso modo in tutte le versioni di Visual C++, aggiungere `typename` alla dichiarazione.  
   
- Affinché il codice funzioni allo stesso modo in tutte le versioni di Visual C\+\+, aggiungere `typename` alla dichiarazione.  
-  
- Il seguente codice di esempio genera l'errore C4346:  
+ L'esempio seguente genera l'errore C4346:  
   
 ```  
 // C4346.cpp  
@@ -43,7 +40,7 @@ struct C {
 };  
 ```  
   
- Negli esempi seguenti sono illustrati altri casi in cui è richiesta la parola chiave **typename**:  
+ Negli esempi seguenti vengono illustrati altri esempi in cui il **typename** (parola chiave) è necessario:  
   
 ```  
 // C4346b.cpp  
@@ -64,7 +61,7 @@ struct M : public L<typename T::Type, T::Value>
 };  
 ```  
   
- e  
+ E questo  
   
 ```  
 // C4346c.cpp  

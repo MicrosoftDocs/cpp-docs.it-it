@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94e1978c5c0188410cf8d6d6bfdfe08d9af620e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Informazioni sulle dipendenze di un'applicazione Visual C++
 Per determinare le librerie di Visual C++ dipende da un'applicazione, è possibile visualizzare le proprietà del progetto. (In Esplora soluzioni fare doppio clic sul progetto e scegliere **proprietà** per aprire la **pagine delle proprietà** la finestra di dialogo.) È anche possibile utilizzare lo strumento Dependency Walker (depends.exe) che offre un quadro più completo delle dipendenze.  

@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4047 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4047"
+title: Compilatore (livello 1) Avviso C4047 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d42913533129fad2cbdc803e6f3d81bdea3ebd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4047
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operatore': 'identificatore1' differisce da 'identificatore2' nei livelli dei riferimenti indiretti  
+# <a name="compiler-warning-level-1-c4047"></a>Compilatore (livello 1) Avviso C4047
+'operator': 'identifier1' differisce da 'identifier2' nei livelli dei riferimenti indiretti  
   
- Un puntatore può puntare a una variabile \(un livello di riferimento indiretto\), a un altro puntatore che punta a una variabile \(due livelli di riferimento indiretto\) e così via.  
+ Un puntatore può puntare a una variabile (un livello di riferimento indiretto), a un altro puntatore che punta a una variabile (due livelli di riferimento indiretto) e così via.  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C4047:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4047:  
   
 ```  
 // C4047.c  
@@ -47,8 +46,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C4047:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4047:  
   
 ```  
 // C4047b.c  

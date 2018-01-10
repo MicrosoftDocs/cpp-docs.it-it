@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3104
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3104
+f1_keywords: C3104
+dev_langs: C++
+helpviewer_keywords: C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b23007d4985319a7570b9efb4a0f14f639a0c0d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3104"></a>Errore del compilatore C3104
 argomento di attributo non valido  
@@ -82,4 +78,3 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-

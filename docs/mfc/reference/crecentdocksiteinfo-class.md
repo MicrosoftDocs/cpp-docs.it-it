@@ -41,11 +41,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 564d7a301ad224c6ae41b83b56b685ba1f427333
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d0c3869b2a290de348b7c93630907d0e0c7613d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecentdocksiteinfo-class"></a>Classe CRecentDockSiteInfo
 Il `CRecentDockSiteInfo` classe è una classe helper che archivia le informazioni sullo stato recenti per il [classe CPane](../../mfc/reference/cpane-class.md).  

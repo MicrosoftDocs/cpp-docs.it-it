@@ -1,31 +1,31 @@
 ---
-title: "A.14   Using the flush Directive without a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: A.14 utilizzando la direttiva scaricamento senza un elenco | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio seguente viene ad [parte 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) nella pagina 20\) è possibile distinguere gli oggetti condivisi interessati da a  `flush` direttiva senza l'elenco degli oggetti condivisi che non sono interessati:  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.13   Utilizzo della direttiva flush senza elenco
+Nell'esempio seguente (per [sezione 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) nella pagina 20) distingue gli oggetti condivisi interessati un `flush` direttiva con alcun elenco di oggetti condivisi che non sono interessati:  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // omp_flush_without_list.c  

@@ -1,38 +1,40 @@
 ---
-title: "Procedura: effettuare il marshalling di matrici utilizzando l&#39;interoperabilit&#224; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "matrici [C++], marshalling"
-  - "interoperabilità C++, matrici"
-  - "marshalling dei dati [C++], matrici"
-  - "interoperabilità [C++], matrici"
-  - "marshalling [C++], matrici"
+title: "Procedura: marshalling di matrici utilizzando l'interoperabilità C++ | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- arrays [C++], marshaling
+- marshaling [C++], arrays
+- interop [C++], arrays
+- C++ Interop, arrays
+- data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 526a87029f6447183988391c9b7b5a95baa8b8c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: effettuare il marshalling di matrici utilizzando l&#39;interoperabilit&#224; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato un facet di interoperabilità Visual C\+\+.  Per ulteriori informazioni, vedere [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedura: Effettuare il marshalling di matrici utilizzando l'interoperabilità C++
+In questo argomento viene illustrato un facet di interoperabilità di Visual C++. Per ulteriori informazioni, vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- Negli esempi di codice riportati di seguito vengono utilizzate le direttive \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file. Queste funzioni, tuttavia, vengono eseguite nello stesso modo anche se definite in file diversi.  I file che contengono soltanto funzioni non gestite non richiedono necessariamente la compilazione con [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Utilizzo di esempi di codice seguente il [managed, unmanaged](../preprocessor/managed-unmanaged.md) direttive #pragma per implementare funzioni gestite e nello stesso file, ma gestite nello stesso modo se definiti in file separati. File che contengono solo funzioni non gestite non richiedono la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come passare una matrice gestita a una funzione non gestita.  La funzione gestita utilizza [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) per disattivare la Garbage Collection per la matrice prima di chiamare la funzione non gestita.  Fornendo alla funzione non gestita un puntatore bloccato nell'heap GC, è possibile evitare il sovraccarico legato alla creazione di una copia della matrice.  Per dimostrare che la funzione non gestita sta accedendo alla memoria heap GC, le modifiche apportate al contenuto della matrice vengono applicate alla funzione gestita nel momento in cui riprende il controllo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come passare una matrice gestita a una funzione non gestita. La funzione gestita utilizza [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) per disattivare la garbage collection per la matrice prima di chiamare la funzione non gestita. Grazie alla funzione non gestita con un puntatore bloccato nell'heap GC, è possibile evitare il sovraccarico di esecuzione di una copia della matrice. Per dimostrare che la funzione non gestita è l'accesso a memoria heap GC, che modifica il contenuto della matrice e le modifiche vengono applicate quando la funzione gestita riprende il controllo.  
   
 ```  
 // PassArray1.cpp  
@@ -89,8 +91,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come passare una matrice non gestita a una funzione gestita.  Anziché creare una matrice gestita e copiare il relativo contenuto, la funzione gestita accede direttamente alla memoria della matrice. In questo modo, le modifiche apportate dalla funzione gestita possono essere applicate anche nella funzione non gestita nel momento in cui riprende il controllo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come passare una matrice non gestita a una funzione gestita. La funzione gestita accede alla memoria di matrice direttamente (anziché la creazione di una matrice gestita e copiare il contenuto della matrice), che consente le modifiche apportate dalla funzione gestita in base a funzione non gestita quando riacquisisce il controllo.  
   
 ```  
 // PassArray2.cpp  
@@ -136,5 +138,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

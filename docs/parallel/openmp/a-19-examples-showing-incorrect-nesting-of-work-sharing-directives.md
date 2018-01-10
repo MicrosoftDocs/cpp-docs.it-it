@@ -1,29 +1,29 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Esempi A.19 che mostrano l'annidamento non corretto di direttive di condivisione del lavoro | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3f8a4e1ca62a77c16dafedd0921ca842d7a048
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Gli esempi di questa sezione vengono illustrate le regole direttive di annidamento.  Per ulteriori informazioni sull'annidamento la direttiva, vedere [parte 2,9](../../parallel/openmp/2-9-directive-nesting.md) nella pagina 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Esempi sull'annidamento non corretto di direttive per la condivisione del lavoro
+Gli esempi in questa sezione illustrano le regole di nidificazione della direttiva. Per ulteriori informazioni su annidamento di direttive, vedere [sezione 2.9](../../parallel/openmp/2-9-directive-nesting.md) nella pagina 33.  
   
- Nell'esempio non è conforme perché l'interno e esterno `for` le direttive sono annidate e vincolano gli stessi  `parallel` direttiva:  
+ Nell'esempio seguente non è conforme perché l'interno ed esterno `for` direttive sono annidate e associati allo stesso `parallel` direttiva:  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +41,7 @@ void wrong1(int n)
 }  
 ```  
   
- La versione seguente dinamicamente annidata esempio precedente viene inoltre non compatibile:  
+ La seguente versione dinamicamente nidificata dell'esempio precedente è inoltre non conforme:  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +64,7 @@ void work1(int i, int n)
 }  
 ```  
   
- Nell'esempio non è conforme perché `for` e  `single` le direttive sono annidate e sono associati alla stessa area parallela:  
+ Nell'esempio seguente non è conforme in quanto il `for` e `single` direttive sono nidificate e vengono associate alla stessa area parallela:  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +81,7 @@ void wrong3(int n)
 }  
 ```  
   
- Nell'esempio non è conforme perché `barrier` direttiva in un oggetto  `for` può provocare un deadlock:  
+ Nell'esempio seguente non è conforme in quanto un `barrier` direttiva all'interno di un `for` può causare deadlock:  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +99,7 @@ void wrong4(int n)
 }  
 ```  
   
- Nell'esempio non è conforme perché `barrier` risultati in deadlock dovuto al fatto che un solo thread alla volta possibile attivare la sezione critica:  
+ Nell'esempio seguente non è conforme in quanto il `barrier` risultati deadlock dovuto al fatto che un solo thread alla volta può accedere alla sezione critica:  
   
 ```  
 void wrong5()  
@@ -116,7 +116,7 @@ void wrong5()
 }  
 ```  
   
- Nell'esempio non è conforme perché `barrier` risultati in deadlock dovuto al fatto che solo un thread esegue  `single` sezione:  
+ Nell'esempio seguente non è conforme in quanto il `barrier` risultati deadlock che solo un thread esegue il `single` sezione:  
   
 ```  
 void wrong6()  

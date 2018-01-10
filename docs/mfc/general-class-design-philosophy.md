@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4c5c15e7d18fb768b7b0fffa99140ae64075da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-class-design-philosophy"></a>Filosofia di progettazione classi generale
 Microsoft Windows è stato progettato molto prima che il linguaggio C++ è diventato più diffuso. Poiché migliaia di applicazioni di utilizza il linguaggio C Windows application programming interface (API), tale interfaccia verrà mantenuta in futuro. Qualsiasi interfaccia di Windows in C++ deve pertanto essere integrata nell'API in linguaggio C procedura. In questo modo si garantisce che le applicazioni C++ sarà in grado di coesistere con le applicazioni C.  

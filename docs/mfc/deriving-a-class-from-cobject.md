@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0569f745c1531e59d9b45f54c957176de4896f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e151d8c3ec44286807baf5e68d4e4eac17e306
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivazione da una classe da CObject
 Questo articolo descrive i passaggi minimi necessari per derivare una classe da [CObject](../mfc/reference/cobject-class.md). Altri `CObject` articoli di classe vengono descritti i passaggi necessari per sfruttare i vantaggi di specifico `CObject` funzionalità, ad esempio la serializzazione e di diagnostica supporto per il debug.  
@@ -57,7 +58,7 @@ Questo articolo descrive i passaggi minimi necessari per derivare una classe da 
 |Base `CObject` funzionalità|No|No|No|  
 |`DECLARE_DYNAMIC`|Sì|No|No|  
 |`DECLARE_DYNCREATE`|Sì|Sì|No|  
-|`DECLARE_SERIAL`|Sì|Sì|Sì|  
+|`DECLARE_SERIAL`|Sì|Sì|Yes|  
   
 #### <a name="to-use-basic-cobject-functionality"></a>Utilizzare la funzionalità di base da CObject  
   

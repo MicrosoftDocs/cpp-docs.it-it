@@ -1,54 +1,56 @@
 ---
-title: "adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/adapter>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<adapter> (intestazione) [STL/CLR]"
-  - "<cliext/adapter> (intestazione) [STL/CLR]"
-  - "adapter [STL/CLR]"
+title: scheda (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/adapter>
+dev_langs: C++
+helpviewer_keywords:
+- <adapter> header [STL/CLR]
+- adapter [STL/CLR]
+- <cliext/adapter> header [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 347fab2782f9ff19681dbaab25b7ec86ef8721ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'intestazione `<cliext/adapter>` di STL\/CLR specifica due classi modello \(`collection_adapter` e `range_adapter`\) e la funzione `make_collection`del modello.  
+# <a name="adapter-stlclr"></a>adapter (STL/CLR)
+L'intestazione STL/CLR `<cliext/adapter>` specifica due classi di modello (`collection_adapter` e `range_adapter`), la funzione di modello e `make_collection`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #include <cliext/adapter>  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
   
 |Classe|Descrizione|  
-|------------|-----------------|  
-|[collection\_adapter](../dotnet/collection-adapter-stl-clr.md)|Esegue il wrapping della raccolta di \(BCL\) la libreria di classi di base come intervallo.|  
-|[range\_adapter](../dotnet/range-adapter-stl-clr.md)|Esegue il wrapping dell'intervallo come una raccolta di BCL.|  
+|-----------|-----------------|  
+|[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)|Esegue il wrapping dell'insieme di libreria di classi Base (BCL) come un intervallo.|  
+|[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)|Esegue il wrapping dell'intervallo come una raccolta di BCL.|  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[make\_collection](../dotnet/make-collection-stl-clr.md)|Crea un adattatore dell'intervallo utilizzando una coppia di iteratore.|  
+|[make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)|Crea un adattatore di intervallo mediante una coppia di iteratori.|  
   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [Libreria STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)

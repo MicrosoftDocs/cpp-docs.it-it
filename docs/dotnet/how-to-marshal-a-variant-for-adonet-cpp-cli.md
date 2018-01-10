@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 166116f54882048f3cd763b2f61e6b4fd56e5357
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 504f9553b85acefa085a7a8d6c85768ff934bab7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Procedura: Effettuare il marshalling di VARIANT per ADO.NET (C++/CLI)
 Di seguito viene illustrato come aggiungere un nativo `VARIANT` a un database e come effettuare il marshalling un <xref:System.Object?displayProperty=fullName> da un database a un nativo `VARIANT`.  

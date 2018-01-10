@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3346384b6b77b3ef965bb2b58b99c78f315f183
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-image-lists-with-header-controls"></a>Utilizzo di elenchi di immagini con controlli Header
 Gli elementi di intestazione hanno la possibilità di visualizzare un'immagine all'interno di un elemento dell'intestazione. Questa immagine, archiviata in un elenco di immagini associato, è 16 x 16 pixel e ha le stesse caratteristiche di immagini icona utilizzate in un controllo visualizzazione elenco. Per implementare correttamente questo comportamento, è necessario prima creare e inizializzare l'elenco di immagini, associare l'elenco di controllo header e quindi modificare gli attributi dell'elemento dell'intestazione che consente di visualizzare l'immagine.  

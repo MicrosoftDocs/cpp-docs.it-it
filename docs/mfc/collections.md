@@ -28,11 +28,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88afc0f7ae61dcf822a84c514fbc98da2bf827c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collections"></a>Raccolte
 La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti. Queste classi sono di due tipi:  
@@ -49,7 +50,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
   
  Più avanti in questo argomento viene descritta brevemente ciascuna delle forme di raccolta fornite. Per confrontare le funzionalità delle forme che consentono di scegliere la soluzione migliore per il programma, vedere [suggerimenti per la scelta di una classe Collection](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
--   Elenco  
+-   List  
   
      La classe elenco fornisce un elenco di elementi ordinato e non indicizzato, implementato come elenco a doppio collegamento. Un elenco ha un inizio e una fine e aggiungere o rimuovere elementi dall'inizio o dalla fine o inserire o eliminare elementi al centro è molto veloce.  
   
@@ -76,7 +77,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
 ##  <a name="_core_the_collection_classes_not_based_on_templates"></a>Le classi Collection non basate su modelli  
  Se nell'applicazione vengono utilizzate già le classi di raccolta MFC non create da modelli, è possibile continuare a utilizzarle. Tuttavia, per le nuove raccolte, si consiglia di utilizzare le classi basate su modelli. Nella tabella seguente sono elencate le classi di raccolta MFC che non sono basate su modelli.  
   
-### <a name="nontemplate-collection-classes"></a>Classi di raccolta non basate su modelli  
+### <a name="nontemplate-collection-classes"></a>Classi Collection non basate su modelli  
   
 |Matrici|Elenchi|Mappe|  
 |------------|-----------|----------|  
@@ -110,7 +111,7 @@ La libreria MFC fornisce classi Collection per la gestione di gruppi di oggetti.
   
 -   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### <a name="template-based-collection-class-tasks"></a>Attività delle classi di raccolta basate su modello  
+#### <a name="template-based-collection-class-tasks"></a>Attività delle classi Collection basate su modello  
   
 -   [Classi basate su modello](../mfc/template-based-classes.md)  
   

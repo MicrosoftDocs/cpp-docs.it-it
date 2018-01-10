@@ -115,11 +115,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6675a7b9130a87be9be36c158e5716cc1afe3d55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1aa415846d8f504ef907bf4e9a041b86062853cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 La `CMFCTabCtrl` classe fornisce funzionalità per un controllo struttura a schede. Il controllo scheda visualizza una finestra ancorabile con schede flat o tridimensionali nella parte superiore o inferiore. Le schede possono visualizzare testo e un'immagine e possono cambiare colore quando sono attive.  
@@ -146,7 +147,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Consente di visualizzare la scheda specificata del controllo scheda corrente e imposta lo stato attivo in tale scheda.|  
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||  
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Specifica se il framework per ridimensionare l'area client di tutte le finestre di controllo scheda quando un elemento dell'interfaccia utente del controllo scheda.|  
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Decompressi le dimensioni dell'area della scheda specificata. Esegue l'override di `CMFCBaseTabCtrl::CalcRectEdit`.|  
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Decompressi le dimensioni dell'area della scheda specificata. Esegue l'override`CMFCBaseTabCtrl::CalcRectEdit`.|  
 |[CMFCTabCtrl::Create](#create)|Crea il controllo scheda e lo collega al `CMFCTabCtrl` oggetto.|  
 |`CMFCTabCtrl::CreateObject`|Usato dal framework per creare un'istanza dinamica di questo tipo di classe.|  
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Mostra o nasconde il pulsante chiude ( **X**) nella scheda attiva.|  
@@ -202,7 +203,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ### <a name="data-members"></a>Membri di dati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Impedisce la visualizzazione attiva di perde lo stato attivo quando una nuova scheda viene inserita e attivata.|  
   
@@ -758,7 +759,7 @@ BOOL ModifyTabStyle(Style style);
 ### <a name="remarks"></a>Note  
  Il valore di `style` parametro può essere uno dei seguenti `CMFCTabCtrl::Style` enumerazioni.  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |STYLE_3D|Visualizza le schede tridimensionale, rettangolare con angoli arrotondati.|  
 |STYLE_3D_ONENOTE|Visualizza le schede tridimensionale lato "uno" verticale e un lato inclinato e che abbia gli angoli arrotondati.|  
@@ -960,7 +961,7 @@ void SetResizeMode(ResizeMode resizeMode);
 ### <a name="remarks"></a>Note  
  Il `resizeMode` parametro può essere uno dei seguenti `ResizeMode` valori di enumerazione.  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |RESIZE_NO|Non è possibile ridimensionare il controllo struttura a schede.|  
 |RESIZE_VERT|Può assumere il controllo struttura a schede in verticale, ma non in senso orizzontale.|  

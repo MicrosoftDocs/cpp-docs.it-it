@@ -1,39 +1,38 @@
 ---
-title: "Errore irreversibile del compilatore di risorse RW1022 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW1022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW1022"
+title: Errore irreversibile del compilatore di risorse RW1022 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW1022
+dev_langs: C++
+helpviewer_keywords: RW1022
 ms.assetid: 6747c8a9-9c9b-4422-b414-0645d22092d0
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a78e54496b1b0db11d8b6d6f85b5142db0d4ad6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore irreversibile del compilatore di risorse RW1022
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Errore di I\/O durante la scrittura del file.**  
+# <a name="resource-compiler-fatal-error-rw1022"></a>Errore irreversibile del compilatore di risorse RW1022
+**File di scrittura degli errori dei / o**  
   
- Non è possibile scrivere in un file con il compilatore di risorse.  
+ Il compilatore di risorse non è riuscito a scrivere in un file.  
   
-### Possibili cause  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
-1.  Lo spazio su disco è insufficiente.  La quantità di spazio disponibile deve essere almeno doppia rispetto a quella del file eseguibile che si intende creare.  
+1.  Spazio su disco insufficiente. Spazio disponibile deve essere uguale almeno due volte le dimensioni del file eseguibile che si sta creando.  
   
-2.  Il volume è di sola lettura.  
+2.  Volume di sola lettura.  
   
 3.  Settore danneggiato.  
   
-4.  Si è verificata una violazione di condivisione.
+4.  Violazione di condivisione.

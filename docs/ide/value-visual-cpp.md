@@ -1,48 +1,48 @@
 ---
-title: "&lt;value&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "value"
-  - "<value>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<value> C++ (tag XML)"
-  - "value C++ (tag XML)"
+title: '&lt;valore&gt; (Visual C++) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- value
+- <value>
+dev_langs: C++
+helpviewer_keywords:
+- value C++ XML tag
+- <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;value&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tag di \<value\> consente di descrivere una proprietà e i metodi di accesso della proprietà.  Si noti che quando si aggiunge una proprietà con una creazione guidata codice nell'ambiente di sviluppo integrato di Visual Studio, viene aggiunto un tag di [\<summary\>](../ide/summary-visual-cpp.md) per la nuova proprietà.  È quindi necessario aggiungere manualmente un tag \<value\> per descrivere il valore rappresentato dalla proprietà.  
+# <a name="ltvaluegt-visual-c"></a>&lt;valore&gt; (Visual C++)
+Il \<valore > tag consente di descrivere una proprietà e metodi della proprietà. Si noti che quando si aggiunge una proprietà con una procedura guidata codice nell'ambiente di sviluppo integrato di Visual Studio, verrà aggiunto un [ \<riepilogo >](../ide/summary-visual-cpp.md) tag per la nuova proprietà. È quindi necessario aggiungere manualmente un tag \<value> per descrivere il valore rappresentato dalla proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 <value>property-description</value>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `property-description`  
  Descrizione della proprietà.  
   
-## Note  
- Eseguire la compilazione con [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare in un file i commenti per la creazione della documentazione.  
+## <a name="remarks"></a>Note  
+ Compilare con [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) per elaborare i commenti relativi alla documentazione in un file.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // xml_value_tag.cpp  
@@ -66,5 +66,5 @@ public:
 };  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Documentazione di XML](../ide/xml-documentation-visual-cpp.md)

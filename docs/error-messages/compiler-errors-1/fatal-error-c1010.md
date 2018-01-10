@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1010
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1010
+f1_keywords: C1010
+dev_langs: C++
+helpviewer_keywords: C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b2123118be2a8a382f6b718499c5af16f88d111
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 65a1842e8f7c920e053b3cdbcd41ea09583133b8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1010"></a>Errore irreversibile C1010
 fine file imprevista durante la ricerca dell'intestazione precompilata. Si è omesso di aggiungere ' #include nome ' all'origine?  

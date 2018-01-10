@@ -1,36 +1,35 @@
 ---
-title: C2397 errore del compilatore | Documenti di Microsoft
+title: C2397 errore del compilatore | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2397
-dev_langs:
-- C++
+f1_keywords: C2397
+dev_langs: C++
 ms.assetid: b418cf5a-d50d-4a6c-98a7-994ae35046d1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 31f2b548fd13bc7702d44ef4a6d5dc5c34a5eb3c
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 315d375524884ec987fea747b1d3c20f2ad56173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2397"></a>C2397 errore del compilatore
-la conversione da 'tipo_1' a 'tipo_2' richiede una conversione di restrizione  
+conversione da 'type_1' a 'type_2' richiede una conversione di narrowing  
   
- È stata trovata una conversione di narrowing implicita quando si utilizza l'inizializzazione uniforme.  
+ Quando si utilizza l'inizializzazione uniforme, è stata trovata una conversione di narrowing implicita.  
   
- Il linguaggio C consente le conversioni di restrizione implicite nell'assegnazione e inizializzazione e C++ comporterà di conseguenza, anche se la restrizione imprevisto è una causa di molti errori di codice. Per rendere più sicuro il codice, lo standard C++ richiede un messaggio di diagnostica quando si verifica una conversione di narrowing in un elenco di inizializzazione. In Visual C++, la diagnostica è C2397 errore del compilatore quando si utilizza l'inizio della sintassi supportata l'inizializzazione uniforme in Visual Studio 2015. Il compilatore genera [C4838 di avviso del compilatore (livello 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md) quando si utilizza l'elenco o la sintassi di inizializzazione aggregata supportata da Visual Studio 2013.  
+ Il linguaggio C consente conversioni implicite verso un assegnazioni e l'inizializzazione e C++ segue seme, anche se la restrizione imprevisto è una causa di molti errori di codice. Per rendere più sicuro il codice, lo standard C++ richiede un messaggio di diagnostica quando si verifica una conversione di narrowing in un elenco di inizializzazione. In Visual C++, la diagnostica è C2397 errore del compilatore quando si utilizza l'inizio di inizializzazione uniforme sintassi supportata in Visual Studio 2015. Il compilatore genera [C4838 di avviso del compilatore (livello 1)](../../error-messages/compiler-warnings/compiler-warning-level-1-c4838.md) quando si utilizza l'elenco o una sintassi di inizializzazione aggregata supportata da Visual Studio 2013.  
   
- Conversione di restrizione può essere corretta quando si conosce in grado di soddisfare la gamma di valori convertiti nella destinazione. In questo caso, saperne di più rispetto a quando il compilatore. Se si apporta una conversione di narrowing intenzionalmente, rendere esplicito intenzioni utilizzando un cast statico. In caso contrario, questo messaggio di errore indica quasi sempre che si dispone di un bug nel codice. È possibile correggere l'errore, verificare gli oggetti che è possibile inizializzare hanno tipi di dimensioni sufficienti per gestire gli input.  
+ Una conversione di narrowing può essere corretta quando si conosce in grado di soddisfare la gamma di valori convertiti nella destinazione. In questo caso, saperne di più rispetto al compilatore. Se si apporta una conversione di narrowing intenzionalmente, rendere esplicito intenzioni usando un cast statico. In caso contrario, questo messaggio di errore indica quasi sempre che disporre di un bug nel codice. È possibile risolvere questo problema assicurandosi che gli oggetti che è inizializzare hanno tipi di dimensioni sufficienti per gestire gli input.  
   
- Nell'esempio seguente viene generato l'errore C2397 e viene illustrato un modo per risolvere questo problema:  
+ L'esempio seguente genera l'errore C2397 e viene illustrato un modo per risolvere questo problema:  
   
 ```  
 // C2397.cpp -- C++ narrowing conversion diagnostics  

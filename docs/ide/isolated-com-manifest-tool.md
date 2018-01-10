@@ -1,56 +1,54 @@
 ---
-title: "COM isolato, Strumento Manifesto, Propriet&#224; di configurazione, finestra di dialogo Pagine delle propriet&#224; di &lt;nomeprogetto&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.RegistrarScriptFile"
-  - "VC.Project.VCManifestTool.ComponentFileName"
-  - "VC.Project.VCManifestTool.TypeLibraryFile"
-  - "VC.Project.VCManifestTool.ReplacementsFile"
-dev_langs: 
-  - "C++"
+title: "Strumento manifesto isolato proprietà COM (Visual C++) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.RegistrarScriptFile
+- VC.Project.VCManifestTool.ComponentFileName
+- VC.Project.VCManifestTool.TypeLibraryFile
+- VC.Project.VCManifestTool.ReplacementsFile
+dev_langs: C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# COM isolato, Strumento Manifesto, Propriet&#224; di configurazione, finestra di dialogo Pagine delle propriet&#224; di &lt;nomeprogetto&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare questa finestra di dialogo per specificare le opzioni **COM isolato** di [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+# <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Isolamento COM, strumento manifesto, proprietà di configurazione, &lt;Projectname&gt; la finestra di dialogo Pagine delle proprietà
+Utilizzare questa finestra di dialogo per specificare **COM isolato** opzioni per [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- Per accedere alla finestra di dialogo, aprire le pagine delle proprietà del progetto o la finestra delle proprietà.  Espandere il nodo **Strumento Manifesto** in **Proprietà comuni**, quindi selezionare **COM isolato**.  
+ Per accedere a questa finestra di dialogo pagina delle proprietà, aprire le pagine delle proprietà per il progetto o la finestra delle proprietà. Espandere il **strumento manifesto** nodo **proprietà comuni**, quindi selezionare **COM isolato**.  
   
-## Elenco attività  
+## <a name="task-list"></a>Elenco attività  
   
--   [Procedura: compilare applicazioni isolate per l'utilizzo di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
+-   [Procedura: Compilare applicazioni isolate per l'utilizzo di componenti COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
-## Elenco UIElement  
+## <a name="uielement-list"></a>Elenco UIElement  
  **File libreria dei tipi**  
- Utilizza l'opzione \/tlb per specificare il nome file della libreria dei tipi \(file TLB\) che verrà utilizzato dallo strumento Manifesto per generare il file del manifesto.  
+ Usa l'opzione /tlb. per specificare il nome del file della libreria dei (file con estensione tlb) che lo strumento manifesto verrà utilizzato per generare il file manifesto.  
   
- **File script registrazione**  
- Utilizza l'opzione \/rgs per specificare il nome file dello script di registrazione \(file RGS\) che verrà utilizzato dallo strumento Manifesto per generare il file del manifesto.  
+ **File di Script di registrazione**  
+ Utilizza l'opzione /rgs per specificare il nome del file di script di registrazione (file con estensione RGS) che lo strumento manifesto verrà utilizzato per generare il file manifesto.  
   
- **Nome file componente**  
- Utilizza l'opzione \/dll per specificare il nome della risorsa che verrà generata dallo strumento Manifesto.  È necessario specificare un valore per la proprietà quando è specificato un valore per **File libreria dei tipi** o **File script registrazione**.  
+ **Nome File del componente**  
+ Usa l'opzione /dll per specificare il nome della risorsa che genera lo strumento manifesto. È necessario immettere un valore per questa proprietà quando un valore per **File libreria dei tipi** o **File Script registrazione** specificati.  
   
  **File sostitutivo**  
- Utilizza l'opzione \/replacements per specificare il percorso completo al file che contiene i valori delle stringhe sostituibili nel file RGS.  
+ Usa l'opzione /replacements per specificare il percorso completo del file che contiene i valori per le stringhe sostituibili nel file RGS.  
   
-## Vedere anche  
- [\_win32\_isolated\_applications](http://msdn.microsoft.com/library/aa375190)   
- [Assembly side\-by\-side](_win32_side_by_side_assemblies)   
- [ClickOnce Application Manifest](../Topic/ClickOnce%20Application%20Manifest.md)   
- [Pagine delle proprietà dello strumento Manifesto](../ide/manifest-tool-property-pages.md)   
- [Procedura: aprire le pagine delle proprietà dei progetti](../misc/how-to-open-project-property-pages.md)   
- [Procedura: modificare finestre delle proprietà di progetto](../misc/how-to-edit-project-property-sheets.md)
+## <a name="see-also"></a>Vedere anche  
+ [Applicazioni isolate](http://msdn.microsoft.com/library/aa375190)   
+ [Manifesto dell'applicazione ClickOnce](/visualstudio/deployment/clickonce-application-manifest)   
+ [Pagine delle proprietà dello strumento manifesto](../ide/manifest-tool-property-pages.md)   
+ [Utilizzo di Proprietà del progetto](../ide/working-with-project-properties.md)   

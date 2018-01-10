@@ -171,11 +171,12 @@ caps.latest.revision: "40"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36057304130150dbd12cf33f708d1d82cd52e0c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenu-class"></a>Classe CMFCPopupMenu
 Implementa la funzionalità del menu di scelta rapida di Windows e la estende aggiungendo funzionalità quali menu con barra a comparsa e descrizioni comandi.
@@ -250,7 +251,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::MoveTo](#moveto)||  
 |[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|Esegue l'override di `CFrameWnd::OnCmdMsg`.|  
 |[CMFCPopupMenu::PostCommand](#postcommand)||  
-|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|Esegue l'override di `CFrameWnd::PreTranslateMessage`.|  
+|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|Esegue l'override`CFrameWnd::PreTranslateMessage`.|  
 |[CMFCPopupMenu::RecalcLayout](#recalclayout)|Chiamato dal framework quando le barre di controllo standard vengono mostrate o nascoste oppure quando la finestra cornice viene ridimensionata. (Esegue l'override [RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
 |[CMFCPopupMenu::RemoveAllItems](#removeallitems)|Cancella tutti gli elementi da un menu a comparsa.|  
 |[CMFCPopupMenu::RemoveItem](#removeitem)|Rimuove l'elemento specificato da un menu a comparsa.|  

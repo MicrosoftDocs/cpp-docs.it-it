@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_constructible
+f1_keywords: type_traits/std::is_constructible
+dev_langs: C++
+helpviewer_keywords: is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a2d2127ec8f007dbf301fca7e01a59a7ef462cd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b89f074cdb81024a847da3c7c77389e6a73f80d8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isconstructible-class"></a>Classe is_constructible
 Verifica se un tipo è costruibile quando vengono usati i tipi di argomento specificati.  
@@ -54,7 +51,6 @@ struct is_constructible;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

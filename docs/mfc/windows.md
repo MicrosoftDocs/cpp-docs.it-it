@@ -18,13 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55b1445675762bb715e7b879e8336b7ccf73c7eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e81be5ef0216f7d8a28ea7d5046c127f18670a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="windows"></a>Windows
+# <a name="windows"></a>WINDOWS
 Questa serie di articoli vengono illustrati gli oggetti di finestra nel framework MFC. Tutte le finestre MFC derivano dalla classe [CWnd](../mfc/reference/cwnd-class.md), inclusi finestre cornice, visualizzazioni, finestre di dialogo e controlli.  
   
  Viene descritto il primo gruppo di articoli [oggetti delle finestre](../mfc/window-objects.md) in generale. Fare riferimento a questo gruppo per informazioni generali su C++ oggetti delle finestre, sulle modalità di incapsulamento HWND e come è utilizzarli durante la creazione di finestre personalizzate, ad esempio le finestre figlio.  

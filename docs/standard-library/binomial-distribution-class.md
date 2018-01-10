@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator!=
-- random/std::binomial_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::binomial_distribution [C++]
 - std::binomial_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ae3889c06ddc69e81ae5e144c70d68d7dc34c3ce
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>Classe binomial_distribution
 Genera una distribuzione binomiale.  
@@ -97,7 +94,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo integ
   
 I membri di proprietà `t()` e `p()` restituiscono i valori rispettivi per i parametri di distribuzione attualmente archiviati `t` e `p`.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
@@ -107,7 +104,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla funzione di probabilità discreta binomiale, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione binomiale](http://go.microsoft.com/fwlink/LinkId=398469).  
+Per informazioni dettagliate sulla funzione di probabilità discreta binomiale, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione binomiale](http://go.microsoft.com/fwlink/p/?linkid=398469).  
   
 ## <a name="example"></a>Esempio  
   
@@ -296,7 +293,6 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 
 
 

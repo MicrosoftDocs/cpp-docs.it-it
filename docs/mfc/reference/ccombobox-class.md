@@ -119,11 +119,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a8b9c9de69f9042f68cc04d435070ade9b24dd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 Fornisce la funzionalità di una casella combinata di Windows.  
@@ -206,9 +207,9 @@ class CComboBox : public CWnd
   
 |Stile|Quando la casella di elenco è visibile|Controllo statico o di modifica|  
 |-----------|-------------------------------|-----------------------------|  
-|Semplice|Sempre|Modifica|  
-|Drop-down|Quando eliminato verso il basso|Modifica|  
-|Elenco a discesa|Quando eliminato verso il basso|Statico|  
+|Semplice|Sempre|Edit|  
+|Drop-down|Quando eliminato verso il basso|Edit|  
+|Elenco a discesa|Quando eliminato verso il basso|Static|  
   
  È possibile creare un `CComboBox` oggetto da un modello di finestra di dialogo o direttamente nel codice. In entrambi i casi, chiamare prima il costruttore `CComboBox` per costruire il `CComboBox` dell'oggetto, quindi chiamare il [crea](#create) funzione membro per creare il controllo e associarlo al `CComboBox` oggetto.  
   
@@ -618,7 +619,7 @@ BOOL GetCueBanner(
 ### <a name="return-value"></a>Valore restituito  
  Nel primo overload, un [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo dell'intestazione della segnalazione, se presente; in caso contrario, un `CString` oggetto che ha lunghezza zero.  
   
- -oppure-  
+ oppure  
   
  Nel secondo overload, `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
   

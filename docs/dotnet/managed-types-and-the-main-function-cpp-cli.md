@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1a6d8b330108c5fba953567493551894036a7a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 706cd8b15dffb1cde4fc5bbc399789b2aafd6ddf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>Tipi gestiti e funzione main (C++/CLI)
 Quando si scrive un'applicazione utilizzando **/clr**, gli argomenti del **Main ()** funzione non può essere di un tipo gestito.  

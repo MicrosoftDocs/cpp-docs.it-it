@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3862
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3862
+f1_keywords: C3862
+dev_langs: C++
+helpviewer_keywords: C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 63fa12348ee2ab58782fad02719918bfe7929ff8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: af959252ce5b404d8646ad61e02c5e480b41ed83
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3862"></a>Errore del compilatore C3862
 'function': non è possibile compilare una funzione non gestita con /clr: pure o /CLR: safe  

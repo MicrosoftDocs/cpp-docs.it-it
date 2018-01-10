@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c084e38085c9cb1144a35900699a11bd58f3f105
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2143a89d9b91c9c6db53beedce0875ee76f34cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="header-items-in-a-header-control"></a>Elementi di intestazione in un controllo Header
 Si dispone di un controllo notevole sull'aspetto e comportamento degli elementi di intestazione che costituiscono un controllo header ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)). Ogni elemento intestazione può essere una stringa, un'immagine bitmap, un'immagine da un elenco di immagini associato o un valore a 32 bit definito dall'applicazione associata. La stringa, bitmap o l'immagine viene visualizzato nell'elemento dell'intestazione.  

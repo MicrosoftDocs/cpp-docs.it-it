@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3270
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3270
+f1_keywords: C3270
+dev_langs: C++
+helpviewer_keywords: C3270
 ms.assetid: 70e6e76b-7415-48f5-a61e-2ed50caf08e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f5557a9d6f1e45bd8e9815eae260a95556309b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 326f53f06c6cc4d93eb85f265df161c7b2b86535
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3270"></a>Errore del compilatore C3270
 'campo': l'attributo FieldOffset può essere utilizzato solo nel contesto di StructLayout(Explicit); in questo caso è necessario  
@@ -47,4 +43,3 @@ public value struct MYUNION
    // ...  
 };  
 ```  
-

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3227
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3227
+f1_keywords: C3227
+dev_langs: C++
+helpviewer_keywords: C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 633cd271aec369bfe7503f4dd1c02ca9ce412f2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 2f65791d709b5790144cd919bf06b61fd94da973
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3227"></a>Errore del compilatore C3227
 'parameter': Impossibile utilizzare 'keyword' per allocare un tipo generico  

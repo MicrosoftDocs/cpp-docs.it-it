@@ -1,32 +1,33 @@
 ---
-title: "binder2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder2nd (funzione) [STL/CLR]"
+title: binder2nd (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder2nd
+dev_langs: C++
+helpviewer_keywords: binder2nd function [STL/CLR]
 ms.assetid: f4be8722-1778-4cb9-9ec7-ad1443f6899f
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# binder2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe modello descrive un functor di un solo argomento che, una volta chiamato, restituisce il relativo functor archiviato a due argomenti chiamato dal primo argomento fornito e il secondo argomento archiviato.  La si specifica un oggetto funzione in termini di relativo functor archiviato.  
+# <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
+La classe modello descrive una funzione di un argomento che, quando viene chiamato, restituisce il funtore di due argomenti stored chiamato con il primo argomento specificato e il secondo argomento stored. Utilizzare, specificare un oggetto funzione in termini del funtore stored.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Fun>  
@@ -49,35 +50,35 @@ public:
     };  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  Fun  
- Il tipo di functor archiviato.  
+ Tipo del funtore stored.  
   
-## Funzioni del membro  
+## <a name="member-functions"></a>Funzioni membro  
   
-|Definizione del tipo|Descrizione|  
-|--------------------------|-----------------|  
-|delegate\_type|Il tipo di delegato generico.|  
-|first\_argument\_type|Il tipo del primo argomento di functor.|  
-|result\_type|Il tipo di risultato di functor.|  
-|second\_argument\_type|Il tipo di argomento di functor secondo.|  
-|stored\_function\_type|Il tipo di functor.|  
+|Definizione dei tipi|Descrizione|  
+|---------------------|-----------------|  
+|delegate_type|Il tipo del delegato generico.|  
+|first_argument_type|Il tipo del primo argomento funtore.|  
+|result_type|Il tipo del risultato funtore.|  
+|second_argument_type|Il tipo del secondo argomento funtore.|  
+|stored_function_type|Tipo del funtore.|  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|binder2nd|Costruisce il functor.|  
+|binder2nd|Costruisce il funtore.|  
   
 |Operatore|Descrizione|  
-|---------------|-----------------|  
-|operator\(\)|Calcola la funzione desiderata.|  
-|operatore delegate\_type^\(\)|Esegue il cast di functor a un delegato.|  
+|--------------|-----------------|  
+|operator()|Calcola la funzione desiderata.|  
+|operatore delegate_type^()|Esegue il cast il funtore a un delegato.|  
   
-## Note  
- La classe modello descrive un functor di un solo argomento che memorizza un functor a due argomenti e un secondo argomento.  Definisce l'operatore `operator()` membro in modo che, quando l'oggetto viene chiamato come funzione, restituire il risultato della chiamata del functor archiviato con il primo argomento fornito e il secondo argomento archiviato.  
+## <a name="remarks"></a>Note  
+ La classe modello descrive una funzione di un argomento che archivia un funtore di due argomenti e un secondo argomento. Definisce l'operatore membro `operator()` in modo che, quando l'oggetto viene chiamato come una funzione, restituisce il risultato della chiamata il funtore archiviato con il primo argomento specificato e il secondo argomento stored.  
   
- È anche possibile passare l'oggetto poiché un argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
+ È anche possibile passare l'oggetto come argomento di funzione il cui tipo è `delegate_type^` e verrà convertito in modo appropriato.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_binder2nd.cpp   
@@ -120,13 +121,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Requisiti  
- **Intestazione:**\<cliext\/functional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [bind2nd](../dotnet/bind2nd-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)

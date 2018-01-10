@@ -1,32 +1,33 @@
 ---
-title: "list::unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique (membro) [STL/CLR]"
+title: 'List:: unique (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::unique
+dev_langs: C++
+helpviewer_keywords: unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 056f15dc0e7808a7f0ada7267a60e13d4c75d83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# list::unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rimuove elementi adiacenti che superano un test specificato.  
+# <a name="listunique-stlclr"></a>list::unique (STL/CLR)
+Rimuove gli elementi adiacenti che superano un test specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void unique();  
@@ -34,16 +35,16 @@ template<typename Pred2>
     void unique(Pred2 pred);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  pred  
  Operatore di confronto per le coppie di elementi.  
   
-## Note  
- La prima funzione membro eliminato dalla sequenza selezionata \(erases\) ogni elemento in cui si confronta uguale all'elemento precedente \-\- se l'elemento `X` precede l'elemento `Y` e `X == Y`, la funzione membro rimuove `Y`.  Utilizzarla per rimuovere tutte tranne una copia di ogni sottosequenza di elementi adiacenti che il confronto di uguale.  Si noti che se la sequenza selezionata è ordinata, ad esempio chiamando [list::sort](../dotnet/list-sort-stl-clr.md)`()`, la funzione membro lascia solo gli elementi con valori univoci. \(Il nome\).  
+## <a name="remarks"></a>Note  
+ La prima funzione membro rimuove la sequenza controllata (Cancella) confronta ogni elemento è uguale all'elemento precedente, se elemento `X` precede l'elemento `Y` e `X == Y`, la funzione membro rimuove `Y`. Utilizzarlo per rimuovere tutte tranne una copia di ogni sottosequenza degli elementi adiacenti che risultano uguali. Si noti che se viene ordinato la sequenza controllata, ad esempio chiamando come [List:: Sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, la funzione membro lascia solo gli elementi con valori univoci. come indicato dal nome.  
   
- La seconda funzione membro si comporta come il primo, ma eliminato ogni elemento `Y` che segue un elemento `X` per il quale `pred``(X, Y)`.  È possibile utilizzarlo per rimuovere tutte tranne una copia di ogni sottosequenza di elementi adiacenti che soddisfano una funzione predicativa o delegate specificato.  Si noti che se la sequenza selezionata è ordinata, ad esempio chiamando `sort(``pred``)`, la funzione membro lascia solo gli elementi che non dispongono di un ordine equivalente con altri elementi.  
+ La seconda funzione membro si comporta come la prima, ad eccezione del fatto che rimuove ogni elemento `Y` che segue un elemento `X` per il quale `pred(X, Y)`. Utilizzarlo per rimuovere tutte tranne una copia di ogni sottosequenza degli elementi adiacenti che soddisfano una funzione di predicato o il delegato specificato. Si noti che se viene ordinato la sequenza controllata, ad esempio chiamando come `sort(pred)`, la funzione membro lascia solo gli elementi che non dispongono di un ordinamento equivalente a tutti gli altri elementi.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_unique.cpp   
@@ -81,16 +82,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **una a**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [List:: remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)   
+ [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)
