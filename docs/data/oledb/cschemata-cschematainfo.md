@@ -37,11 +37,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1171117cba0d4a6448326d6e45d455557d9442b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d4f8fe97c1d315ff247ef2799120801995a20cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cschemata-cschematainfo"></a>CSchemata, CSchemataInfo
 Chiamare la classe typedef **CSchemata** per implementare la relativa classe di parametro **CSchemataInfo**.  

@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eecb599d84cedd742a15c4a5572ce4c130b19669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>Creazione di un oggetto CToolBarCtrl
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) gli oggetti contengono diverse strutture di dati interni, ovvero un elenco delle immagini bitmap, un elenco di stringhe di pulsante etichetta e un elenco di `TBBUTTON` strutture, che associare un'immagine e/o di stringa con la posizione, lo stile, lo stato, e ID di comando del pulsante. Ognuno degli elementi di queste strutture di dati viene definito un indice in base zero. Prima di poter usare un `CToolBarCtrl` dell'oggetto, è necessario impostare queste strutture di dati. Per un elenco delle strutture di dati, vedere [controlli barra degli strumenti](https://msdn.microsoft.com/library/47xcww9x.aspx) in Windows SDK. L'elenco di stringhe è utilizzabile solo per le etichette di pulsante; è possibile recuperare le stringhe dalla barra degli strumenti.  
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) gli oggetti contengono diverse strutture di dati interni, ovvero un elenco delle immagini bitmap, un elenco di stringhe di pulsante etichetta e un elenco di `TBBUTTON` strutture, che associare un'immagine e/o di stringa con la posizione, lo stile, lo stato, e ID di comando del pulsante. Ognuno degli elementi di queste strutture di dati viene definito un indice in base zero. Prima di poter usare un `CToolBarCtrl` dell'oggetto, è necessario impostare queste strutture di dati. Per un elenco delle strutture di dati, vedere [controlli barra degli strumenti](controls-mfc.md) in Windows SDK. L'elenco di stringhe è utilizzabile solo per le etichette di pulsante; è possibile recuperare le stringhe dalla barra degli strumenti.  
   
  Per utilizzare un oggetto `CToolBarCtrl`, in genere vengono effettuate le seguenti operazioni:  
   

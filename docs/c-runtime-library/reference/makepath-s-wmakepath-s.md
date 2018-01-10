@@ -40,11 +40,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e3a2885adffda35b4e55117b5ffa591ecf487c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s, _wmakepath_s
 Crea un nome di percorso da componenti. Queste sono versioni di [_makepath, _wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -113,10 +114,10 @@ errno_t _wmakepath_s(
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
-|`path`|`sizeInWords` / `sizeInBytes`|Valore restituito|Contenuto di `path`|  
+|`path`|`sizeInWords` / `sizeInBytes`|INVIO|Contenuto di `path`|  
 |------------|------------------------------------|------------|------------------------|  
 |`NULL`|qualsiasi|`EINVAL`|non modificato|  
-|any|<= 0|`EINVAL`|non modificato|  
+|qualsiasi|<= 0|`EINVAL`|non modificato|  
   
  Se si verifica una delle condizioni di errore sopra indicate, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e le funzioni restituiscono `EINVAL`. `NULL` è consentito per i parametri `drive`, `fname` e `ext`. Per informazioni sul comportamento di questi parametri quando sono puntatori null o stringhe vuote, vedere la sezione Osservazioni.  
   
@@ -133,7 +134,7 @@ errno_t _wmakepath_s(
   
  Se il percorso è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Inoltre, `errno` è impostato su `EINVAL`. I valori `NULL` sono consentiti per tutti gli altri parametri.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -142,9 +143,9 @@ errno_t _wmakepath_s(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`_makepath_s`|\<stdlib.h>|  
-|`_wmakepath_s`|\<stdlib.h> o \<wchar.h>|  
+|`_wmakepath_s`|\<stdlib.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

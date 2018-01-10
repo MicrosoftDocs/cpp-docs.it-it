@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ff8aa3f62a50ae544de61953054bd8906ed5971
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 Converte le stringhe in un valore a virgola mobile e precisione long double.  
@@ -97,7 +98,7 @@ long double wcstold_l(
 |`_tcstold`|`strtold`|`strtold`|`wcstold`|  
 |`_tcstold_l`|`_strtold_l`|`_strtold_l`|`_wcstold_l`|  
   
- L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali correnti determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtold_l` e `_wcstold_l` sono identiche a `_strtold` e `_wcstold`, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali correnti determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtold_l` e `_wcstold_l` sono identiche a `_strtold` e `_wcstold`, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
   
@@ -112,7 +113,7 @@ long double wcstold_l(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`strtold`, `_strtold_l`|\<stdlib.h>|  
-|`wcstold`, `_wcstold_l`|\<stdlib.h> o \<wchar.h>|  
+|`wcstold`, `_wcstold_l`|\<stdlib.h> or \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
@@ -150,9 +151,9 @@ string = 3.1415926535898This stopped it
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   
  [strtod, _strtod_l, wcstod, _wcstod_l](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)   
  [strtol, wcstol, _strtol_l, _wcstol_l](../../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)   

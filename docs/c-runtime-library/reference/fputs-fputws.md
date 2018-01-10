@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d3d9a9225a3b6bc0dafd8804f62c61a94acb43c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4fcfe29abceb102534cd376c563917f3804d6df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 Scrive una stringa in un flusso.  
@@ -71,7 +72,7 @@ int fputws(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste funzioni restituisce un valore non negativo se ha esito positivo. In caso di errore, `fputs` e `fputws` restituiscono `EOF`. Se `str` o `stream` è un puntatore Null, queste funzioni richiamano il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e quindi `fputs` restituisce `EOF` e `fputws` restituisce `WEOF`.  
   
- Per altre informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni copia `str` nell'elemento `stream` di output nella posizione corrente. `fputws` copia l'argomento a caratteri wide `str` in `stream` come stringa di caratteri multibyte o stringa di caratteri wide a seconda che `stream` venga aperto rispettivamente in modalità testo oppure in modalità binaria. Nessuna delle funzioni copia il carattere Null di terminazione.  

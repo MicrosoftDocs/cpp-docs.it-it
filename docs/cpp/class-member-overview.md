@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>Panoramica dei membri di classe
 Una classe o uno struct è costituito dai rispettivi membri. Il lavoro effettuato da una classe viene eseguito dalle rispettive funzioni membro. Lo stato mantenuto viene archiviato nei rispettivi membri dati. L'inizializzazione dei membri viene eseguita dai costruttori e operazioni di pulitura, ad esempio la liberazione di memoria e il rilascio delle risorse avviene mediante i distruttori. In C++11 e versioni successive i membri dati possono e in genere devono essere inizializzati in corrispondenza del momento della dichiarazione.  
@@ -113,11 +111,11 @@ int TestRun::_instances{ 0 };
   
 2.  Costruttore di copia  
   
-3.  **(C + + 11) ** Costruttore di spostamento  
+3.  **(C + + 11)**  Costruttore di spostamento  
   
 4.  Operatore di assegnazione di copia  
   
-5.  **(C + + 11) ** Operatore di assegnazione di spostamento  
+5.  **(C + + 11)**  Operatore di assegnazione di spostamento  
   
 6.  Distruttore  
   
@@ -179,4 +177,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi e struct](../cpp/classes-and-structs-cpp.md)
-

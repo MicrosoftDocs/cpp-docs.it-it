@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5792191a7dcff961b2b5be39c4c15855ca99348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc1692805c3e1bced7cb7662f0da8b7a1fea092c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-references-property-page"></a>Pagina delle proprietà Riferimenti Web
 Il **riferimenti Web** pagina delle proprietà specifica la modalità di generazione di classe proxy del servizio Web XML. Se si aggiunge un riferimento web al progetto, verrà generata una classe di proxy del servizio Web XML. Vedere [Aggiungi riferimento Web](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5) per ulteriori informazioni.  
@@ -36,7 +37,7 @@ Il **riferimenti Web** pagina delle proprietà specifica la modalità di generaz
  **Non visualizzare messaggio di avvio**  
  Non viene visualizzato il banner di Web Services Description Language Tool (Wsdl.exe).  
   
- **Namespace**  
+ **Spazio dei nomi**  
  Specifica il nome del proxy web generato.  
   
  **Riferimenti aggiuntivi**  

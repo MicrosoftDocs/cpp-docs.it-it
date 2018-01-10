@@ -1,11 +1,10 @@
 ---
-title: Classe ordered_message_processor | Documenti di Microsoft
+title: Classe ordered_message_processor | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - AGENTS/concurrency::ordered_message_processor::sync_send
 - AGENTS/concurrency::ordered_message_processor::wait
 - AGENTS/concurrency::ordered_message_processor::process_incoming_message
-dev_langs:
-- C++
-helpviewer_keywords:
-- ordered_message_processor class
+dev_langs: C++
+helpviewer_keywords: ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 1c3147001db16b610992d2501ed12ad4bd001fc9
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5b97d0003469acbe307b75b3278c8821628e333d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="orderedmessageprocessor-class"></a>Classe ordered_message_processor
 Un `ordered_message_processor` è un `message_processor` che consente ai blocchi del messaggio di elaborare messaggi nell'ordine in cui vengono ricevuti.  
@@ -75,23 +58,23 @@ class ordered_message_processor : public message_processor<T>;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[ordered_message_processor](#ctor)|Costruisce un oggetto `ordered_message_processor`.|  
-|[~ ordered_message_processor distruttore](#dtor)|Elimina il `ordered_message_processor` oggetto.|  
+|[~ ordered_message_processor distruttore](#dtor)|Elimina definitivamente il `ordered_message_processor` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[async_send](#async_send)|Le code dei messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono. (Esegue l'override di [message_processor:: async_send](message-processor-class.md#async_send).)|  
-|[inizializzare](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e pianificazione di callback appropriata.|  
+|[async_send](#async_send)|Accoda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono. (Esegue l'override [message_processor:: async_send](message-processor-class.md#async_send).)|  
+|[inizializzare](#initialize)|Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e alla pianificazione di callback appropriati.|  
 |[initialize_batched_processing](#initialize_batched_processing)|Inizializza l'elaborazione batch dei messaggi|  
-|[sync_send](#sync_send)|In modo sincrono accoda i messaggi e viene avviata un'attività di elaborazione, se non è già stato fatto. (Esegue l'override di [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
-|[attesa](#wait)|Attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per assicurarsi che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco. (Esegue l'override di [message_processor:: Wait](message-processor-class.md#wait).)|  
+|[sync_send](#sync_send)|In modo sincrono in coda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto. (Esegue l'override [message_processor:: sync_send](message-processor-class.md#sync_send).)|  
+|[attesa](#wait)|Attesa di selezione specifiche del processore utilizzata nei distruttori di blocchi di messaggi per verificare che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco. (Esegue l'override [message_processor:: Wait](message-processor-class.md#wait).)|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|La funzione di elaborazione che viene chiamata in modo asincrono. Rimuove dalla coda di messaggi e inizia l'elaborazione. (Esegue l'override di [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
+|[process_incoming_message](#process_incoming_message)|La funzione di elaborazione che viene chiamata in modo asincrono. Rimuove dalla coda di messaggi e inizia l'elaborazione. (Esegue l'override [message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message).)|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [message_processor](message-processor-class.md)  
@@ -105,7 +88,7 @@ class ordered_message_processor : public message_processor<T>;
   
 ##  <a name="async_send"></a>async_send 
 
- Le code dei messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono.  
+ Accoda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto in modo asincrono.  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
@@ -117,7 +100,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg);
   
 ##  <a name="initialize"></a>inizializzare 
 
- Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e pianificazione di callback appropriata.  
+ Inizializza il `ordered_message_processor` oggetto con il gruppo di funzione, utilità di pianificazione e alla pianificazione di callback appropriati.  
   
 ```
 void initialize(
@@ -128,13 +111,13 @@ void initialize(
   
 ### <a name="parameters"></a>Parametri  
  `_PScheduler`  
- Puntatore all'utilità di pianificazione da utilizzare per la pianificazione di attività leggera.  
+ Un puntatore all'utilità di pianificazione da utilizzare per la pianificazione di attività leggera.  
   
  `_PScheduleGroup`  
  Puntatore al gruppo di pianificazione da utilizzare per la pianificazione di attività leggera.  
   
  `_Handler`  
- Funtore gestore richiamato durante il callback.  
+ Il funtore gestore richiamato durante il callback.  
   
 ##  <a name="initialize_batched_processing"></a>initialize_batched_processing 
 
@@ -148,10 +131,10 @@ virtual void initialize_batched_processing(
   
 ### <a name="parameters"></a>Parametri  
  `_Processor`  
- Funtore processore richiamato durante il callback.  
+ Il funtore processore richiamato durante il callback.  
   
  `_Propagator`  
- Funtore propagazione richiamato durante il callback.  
+ Il funtore propagazione richiamato durante il callback.  
   
 ##  <a name="ctor"></a>ordered_message_processor 
 
@@ -162,18 +145,18 @@ ordered_message_processor();
 ```  
   
 ### <a name="remarks"></a>Note  
- Questo `ordered_message_processor` non pianificherà gestori asincroni o sincroni fino a quando il `initialize` viene chiamata la funzione.  
+ Questo `ordered_message_processor` non pianificherà gestori asincroni o sincroni fino a quando il `initialize` funzione viene chiamata.  
   
 ##  <a name="dtor"></a>~ ordered_message_processor 
 
- Elimina il `ordered_message_processor` oggetto.  
+ Elimina definitivamente il `ordered_message_processor` oggetto.  
   
 ```
 virtual ~ordered_message_processor();
 ```  
   
 ### <a name="remarks"></a>Note  
- Attende che tutte le operazioni asincrone in sospeso prima di eliminare il processore.  
+ Prima di eliminare il processore è in attesa per tutte le operazioni asincrone in sospeso.  
   
 ##  <a name="process_incoming_message"></a>process_incoming_message 
 
@@ -185,7 +168,7 @@ virtual void process_incoming_message();
   
 ##  <a name="sync_send"></a>sync_send 
 
- In modo sincrono accoda i messaggi e viene avviata un'attività di elaborazione, se non è già stato fatto.  
+ In modo sincrono in coda i messaggi e avvia un'attività di elaborazione, se non è già stato fatto.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
@@ -197,7 +180,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
   
 ##  <a name="wait"></a>attesa 
 
- Attesa di rotazione specifico del processore utilizzata nei distruttori di blocchi di messaggi per assicurarsi che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco.  
+ Attesa di selezione specifiche del processore utilizzata nei distruttori di blocchi di messaggi per verificare che tutte le attività di elaborazione asincrona dispongano di tempo per il completamento prima di eliminare il blocco.  
   
 ```
 virtual void wait();
@@ -205,4 +188,3 @@ virtual void wait();
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

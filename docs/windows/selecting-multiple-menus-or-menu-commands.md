@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e3953c1b351f7c14a54afa254985da8ab7a4d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8f4c57e9dbf8236e6d730bb452d8a416a7e520ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>Selezione di più menu o comandi di menu
 È possibile selezionare più nomi di menu o comandi di menu per eseguire operazioni di massa, ad esempio l'eliminazione o la modifica delle proprietà.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

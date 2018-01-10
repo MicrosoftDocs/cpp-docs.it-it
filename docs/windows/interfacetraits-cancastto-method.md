@@ -1,32 +1,33 @@
 ---
-title: "Metodo InterfaceTraits::CanCastTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo (metodo)"
+title: 'Metodo interfacetraits:: Cancastto | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3d8dfe6c1873d9cf897494eb6157c2be3baeb435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo InterfaceTraits::CanCastTo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="interfacetraitscancastto-method"></a>Metodo InterfaceTraits::CanCastTo
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,29 +40,29 @@ static __forceinline bool CanCastTo(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ptr`  
- Il nome del puntatore ad un tipo.  
+ Il nome di un puntatore a un tipo.  
   
  `riid`  
- L'interfaccia ID di `Base`.  
+ L'ID di interfaccia di `Base`.  
   
  `ppv`  
- Se l'operazione ha successo, `ppv` punta all'interfaccia specificata da `Base`.  In caso contratio, `ppv` viene impostato a `nullptr`.  
+ Se questa operazione ha esito positivo, `ppv` punta all'interfaccia specificata da `Base`. In caso contrario, `ppv` è impostato su `nullptr`.  
   
-## Valore restituito  
- `true` se l'operazione ha esito positivo e su `ptr` viene eseguito il cast da un puntatore a `Base`; in caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se questa operazione ha esito positivo e `ptr` viene eseguito il cast a un puntatore a `Base`; in caso contrario, `false` .  
   
-## Note  
- Indica se sul puntatore specificato è possibile eseguire il cast da puntatore a `Base`.  
+## <a name="remarks"></a>Note  
+ Indica se il puntatore specificato può essere convertito in un puntatore a `Base`.  
   
- Per ulteriori informazioni su `Base`, vedere la sezione pubblica Typedef in [Struttura InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Per ulteriori informazioni su `Base`, vedere la sezione typedef pubblici in [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md).  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Struttura InterfaceTraits](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>Vedere anche  
+ [InterfaceTraits (struttura)](../windows/interfacetraits-structure.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

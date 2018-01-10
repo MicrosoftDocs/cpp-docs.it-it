@@ -55,11 +55,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4131e6ab9d73a5e55b478dfff8e68e0eca0dc614
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ee095257ddf3fd322a7e42e3f6fff6ac7cec76a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (classe)
 Fornisce la funzionalità del controllo barra di stato comune di Windows.  

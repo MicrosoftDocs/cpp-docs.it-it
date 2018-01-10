@@ -1,32 +1,33 @@
 ---
-title: "Metodo InvokeHelper::Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Invoke (metodo)"
+title: 'Metodo InvokeHelper:: Invoke | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: 98618815-c30e-4699-b3dd-203c91b1bf3b
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8707ac96c0417eddb015d7e802433bf071dda80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo InvokeHelper::Invoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="invokehelperinvoke-method"></a>Metodo InvokeHelper::Invoke
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHOD(  
@@ -61,7 +62,7 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `arg1`  
  Argomento 1.  
   
@@ -89,17 +90,17 @@ STDMETHOD(
  `arg9`  
  Argomento 9.  
   
-## Valore restituito  
- S\_OK se ha esito positivo; in caso contrario, un HRESULT, che descrive l'errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se ha esito positivo. in caso contrario, HRESULT che descrive l'errore.  
   
-## Note  
- Chiama il gestore eventi la cui firma contiene il numero specificato di argomenti.  
+## <a name="remarks"></a>Note  
+ Chiama il gestore dell'evento la cui firma contiene il numero di argomenti specificato.  
   
-## Requisiti  
- **Header:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Struttura InvokeHelper](../windows/invokehelper-structure.md)   
+## <a name="see-also"></a>Vedere anche  
+ [InvokeHelper (struttura)](../windows/invokehelper-structure.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

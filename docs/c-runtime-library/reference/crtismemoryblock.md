@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtIsMemoryBlock
+apiname: _CrtIsMemoryBlock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 739a3625f264492ec59d3b5e9f9fef67b3c20df7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 Verifica che un blocco di memoria specificato sia nell'heap locale e che abbia un identificatore di tipo blocco dell'heap di debug valido (solo versione di debug).  
@@ -88,7 +85,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 &filename, &linenumber ) );  
 ```  
   
- Per informazioni su come usare `_CrtIsMemoryBlock` con altre funzioni di debug e macro, vedere [Macros for Reporting](/visualstudio/debugger/macros-for-reporting) (Macro per la creazione di report). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Per informazioni su come usare `_CrtIsMemoryBlock` con altre funzioni di debug e macro, vedere [Macros for Reporting](/visualstudio/debugger/macros-for-reporting) (Macro per la creazione di report). Per informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -96,7 +93,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 |-------------|---------------------|  
 |`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

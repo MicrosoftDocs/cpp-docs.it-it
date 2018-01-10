@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9475dd6192eb6bc1abd00e3614c18482be415c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 239ace3f23987bc4f704515e7f87d62ba2e26543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Codice di visualizzazione record creato dalla creazione guidata applicazione (accesso ai dati MFC)
 Il [Creazione guidata applicazione MFC](../mfc/reference/database-support-mfc-application-wizard.md) esegue l'override della vista `OnInitialUpdate` e `OnGetRecordset` funzioni membro. Dopo aver creato la finestra cornice, il documento e la visualizzazione, il framework chiama `OnInitialUpdate` per inizializzare la visualizzazione. `OnInitialUpdate` ottiene un puntatore al recordset dal documento. Una chiamata alla classe di base [CView:: OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) funzione apre il recordset. Nel codice seguente viene illustrato questo processo per un `CRecordView`:  

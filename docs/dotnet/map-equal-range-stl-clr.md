@@ -1,45 +1,46 @@
 ---
-title: "map::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range (membro) [STL/CLR]"
+title: 'Map:: equal_range (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: c0d7409c-344d-4102-99c4-aeab8643a073
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 665475d63129bab1c1413d51f6324aba52806fc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# map::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I rileva variano che corrisponde a una chiave specificata.  
+# <a name="mapequalrange-stlclr"></a>map::equal_range (STL/CLR)
+Trova un intervallo che corrisponde a una chiave specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Parametri  
- chiave  
+#### <a name="parameters"></a>Parametri  
+ key  
  Valore della chiave da cercare.  
   
-## Note  
- La funzione membro restituisce una coppia degli iteratori `cliext::pair<iterator, iterator>(` [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)`(``key``),` [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)`(``key``))`.  Utilizzarla per determinare attualmente l'intervallo degli elementi nella sequenza controllata che corrispondono a una chiave specificata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce una coppia di iteratori `cliext::pair<iterator, iterator>(` [Map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [Map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Utilizzarla per determinare l'intervallo di elementi attualmente presenti nella sequenza controllata che corrispondono a una chiave specificata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_equal_range.cpp   
@@ -76,17 +77,20 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**equal\_range L'x \(vuoto\) \= True**  
- **\[b 2\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)   
- [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: Count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [Map:: Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [Map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)   
+ [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)

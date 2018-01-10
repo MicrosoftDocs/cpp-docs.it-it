@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2005
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK2005
+f1_keywords: LNK2005
+dev_langs: C++
+helpviewer_keywords: LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 40097ea2b5c5519a5b883aad09788cf2f802ea36
-ms.contentlocale: it-it
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2005"></a>Errore degli strumenti del linker LNK2005
 *simbolo* già definito nell'oggetto  
@@ -49,7 +31,7 @@ Questo errore è seguito dall'errore irreversibile [LNK1169](../../error-message
   
 ### <a name="possible-causes-and-solutions"></a>Possibili cause e soluzioni  
   
-In genere, questo errore indica che è stato interrotto il *regola di unica definizione*, che consente una sola definizione per il modello utilizzato, funzione, tipo o oggetto in un file oggetto specificato e una sola definizione attraverso l'intera eseguibile per oggetti visibili esternamente o funzioni.  
+In genere, questo errore indica che è stato interrotto il *regola di unica definizione*, che consente una sola definizione per il modello utilizzato, funzione, tipo o oggetto in un file oggetto specificato e una sola definizione tra l'eseguibile per intero oggetti visibili esternamente o funzioni.  
   
 Ecco alcune cause comuni di questo errore.  
   
@@ -118,7 +100,7 @@ Ecco alcune cause comuni di questo errore.
   
 -   Questo errore può verificarsi se si collega più di una versione della libreria standard o CRT. Ad esempio, se si tenta di collegare il file eseguibile sia di vendita al dettaglio e librerie di debug CRT o entrambe le versioni statiche e dinamiche di una libreria o due versioni diverse di una libreria standard, questo errore potrebbe risultare più volte. Per risolvere questo problema, rimuovere il comando di collegamento tutte tranne una copia di ogni raccolta. Non è consigliabile si combinare delle vendite al dettaglio e il debug di librerie o versioni diverse di una libreria, nello stesso eseguibile.  
   
-    Per indicare al linker di utilizzare librerie diverse dalle impostazioni predefinite, nella riga di comando, specificare le librerie per utilizzare e il [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) possibile disabilitare le librerie predefinite. Nell'IDE, aggiungere i riferimenti al progetto per specificare le librerie da utilizzare e quindi aprire il **pagine delle proprietà** per il progetto e nella finestra di dialogo di **Linker**, **Input** pagina delle proprietà, impostare **ignorare tutte le librerie predefinite**, o **Ignora librerie predefinite specifiche** proprietà per disabilitare le librerie predefinite.   
+    Per indicare al linker di utilizzare librerie diverse dalle impostazioni predefinite, nella riga di comando, specificare le librerie per utilizzare e il [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) possibile disabilitare le librerie predefinite. Nell'IDE, aggiungere i riferimenti al progetto per specificare le librerie da utilizzare e quindi aprire il **pagine delle proprietà** per il progetto e nella finestra di dialogo di **Linker**, **Input** proprietà impostare uno **ignorare tutte le librerie predefinite**, o **Ignora librerie predefinite specifiche** proprietà per disabilitare le librerie predefinite.   
   
 -   Questo errore può verificarsi se si combina l'uso di librerie statiche e dinamiche quando si utilizza il [/clr](../../build/reference/clr-common-language-runtime-compilation.md) opzione. Ad esempio, questo errore può verificarsi se si compila una DLL da utilizzare nell'eseguibile che si collega nella libreria CRT statica. Per risolvere questo problema, utilizzare solo le librerie statiche o solo le raccolte dinamiche per l'intero file eseguibile e per tutte le librerie create per l'utilizzo del file eseguibile.  
   
@@ -147,4 +129,3 @@ Se si utilizza una versione precedente del set di strumenti, vedere gli articoli
   
 -   [Quando si compila un progetto .exe eseguibile ATL in Visual C++, si ricevono errori LNK2005](https://support.microsoft.com/kb/184235).  
   
-

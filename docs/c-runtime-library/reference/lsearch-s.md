@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lsearch_s
+apiname: _lsearch_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -37,30 +34,16 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4969a12a821040c007a43248dc15927ee9f6ab40
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 Esegue una ricerca lineare di un valore. Questa è una versione di [_lsearch](../../c-runtime-library/reference/lsearch.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,7 +83,7 @@ void *_lsearch_s(
 ## <a name="return-value"></a>Valore restituito  
  Se viene trovato `key`, `_lsearch_s` restituisce un puntatore all'elemento della matrice in `base` che corrisponde a `key`. Se `key` non viene trovato, `_lsearch_s` restituisce un puntatore all'elemento appena aggiunto alla fine della matrice.  
   
- Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Per altre informazioni vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Se alla funzione vengono passati parametri non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ### <a name="error-conditions"></a>Condizioni di errore  
   
@@ -108,8 +91,8 @@ void *_lsearch_s(
 |-----------|------------|---------------|-----------|------------|-------------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|  
 |qualsiasi|`NULL`|qualsiasi|!= 0|qualsiasi|`EINVAL`|  
-|qualsiasi|qualsiasi|qualsiasi|any|zero|`EINVAL`|  
-|any|qualsiasi|`NULL`|any|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|zero|`EINVAL`|  
+|qualsiasi|qualsiasi|`NULL`|any|qualsiasi|`EINVAL`|  
   
 ## <a name="remarks"></a>Note  
  La funzione `_lsearch_s` esegue una ricerca lineare del valore `key` in una matrice di `num` elementi, ognuno di `width` byte. A differenza di `bsearch_s`, `_lsearch_s` non richiede che la matrice sia ordinata. Se `key` non viene trovato, `_lsearch_s` lo aggiunge alla fine della matrice e incrementa `num`.  
@@ -124,7 +107,7 @@ void *_lsearch_s(
 |-------------|---------------------|  
 |`_lsearch_s`|\<search.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Ricerca e ordinamento](../../c-runtime-library/searching-and-sorting.md)   

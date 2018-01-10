@@ -1,33 +1,33 @@
 ---
-title: "string (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "string attribute"
+title: stringa (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.string
+dev_langs: C++
+helpviewer_keywords: string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7579dc9d3f7aec17982a0f60e20719c0b52eda42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# string (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-indica che l'unidimensionale `char`,  `wchar_t`,  **byte** \(o equivalente\) la matrice o un puntatore a una matrice deve essere considerato come stringa.  
+# <a name="string-c"></a>string (C++)
+Indica che l'oggetto unidimensionale `char`, `wchar_t`, **byte** (o equivalente) matrice o del puntatore a una matrice di questo tipo deve essere considerato come una stringa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,11 +35,11 @@ indica che l'unidimensionale `char`,  `wchar_t`,  **byte** \(o equivalente\) la 
   
 ```  
   
-## Note  
- **stringa** L'attributo di C\+\+ ha la stessa funzionalità di  [stringa](http://msdn.microsoft.com/library/windows/desktop/aa367270) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **stringa** attributo C++ ha la stessa funzionalità come il [stringa](http://msdn.microsoft.com/library/windows/desktop/aa367270) attributo MIDL.  
   
-## Esempio  
- Nel codice seguente viene illustrato come utilizzare **stringa** in un'interfaccia e un typedef:  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato come utilizzare **stringa** su un'interfaccia e in un typedef:  
   
 ```  
 // cpp_attr_ref_string.cpp  
@@ -54,21 +54,20 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|Una matrice o un puntatore a una matrice, parametro di interfaccia, metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|Matrice o puntatore a una matrice, un parametro di interfaccia, un metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Array Attributes](../windows/array-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di matrice](../windows/array-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

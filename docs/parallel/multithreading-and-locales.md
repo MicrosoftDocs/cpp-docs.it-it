@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e60083aa67cc640dafb5c096b83d3097df04db1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e60235bb011cb130b06a51a498cd8b5b88a56232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-and-locales"></a>Multithreading e impostazioni locali
 Libreria di Runtime C sia la libreria Standard C++ forniscono supporto per la modifica delle impostazioni locali del programma. In questo argomento vengono illustrati i problemi che si verificano quando si utilizza la funzionalità delle impostazioni locali di entrambe le librerie in un'applicazione multithreading.  
@@ -445,7 +446,7 @@ unsigned __stdcall RunThreadB(void *params)
  [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
  [setlocale](../preprocessor/setlocale.md)   
  [Internazionalizzazione](../c-runtime-library/internationalization.md)   
- [Impostazioni locali](../c-runtime-library/locale.md)   
+ [Locale](../c-runtime-library/locale.md)  (Impostazioni locali)  
  [\<clocale >](../standard-library/clocale.md)   
  [\<locale>](../standard-library/locale.md)   
  [Classe locale](../standard-library/locale-class.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <tuple>
-dev_langs:
-- C++
-helpviewer_keywords:
-- tuple header
+f1_keywords: <tuple>
+dev_langs: C++
+helpviewer_keywords: tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b84a2094205e3db7935d5768a3f86ba765487685
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 Definisce un modello `tuple` le cui istanze contengono oggetti di tipi diversi.  
@@ -64,5 +60,4 @@ Definisce un modello `tuple` le cui istanze contengono oggetti di tipi diversi.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<array>](../standard-library/array.md)
-
 

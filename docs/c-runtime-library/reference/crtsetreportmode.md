@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportMode
+apiname: _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 3b5e6aedfb1cc216c621a18c74d45cdf084c5d11
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 Specifica la destinazione o le destinazioni per un tipo determinato di report generati da `_CrtDbgReport` e le macro che chiamano [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md), ad esempio [le macro _ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [le macro _ASSERT, _ASSERTE, _ASSERT_EXPR](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md), [le macro _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) e [le macro _RPT, _RPTF, _RPTW, _RPTFW](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) (solo versione di debug).  
@@ -62,7 +59,7 @@ int _CrtSetReportMode(
  Nuova modalità di report o modalità per `reportType`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Al termine, `_CrtSetReportMode` restituisce la precedente o le precedenti modalità di report per il tipo di report specificato in `reportType`. Se viene passato un valore non valido, ad esempio `reportType`, o viene specificata una modalità non valida per `reportMode`, `_CrtSetReportMode` richiama il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce -1. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Al termine, `_CrtSetReportMode` restituisce la precedente o le precedenti modalità di report per il tipo di report specificato in `reportType`. Se viene passato un valore non valido, ad esempio `reportType`, o viene specificata una modalità non valida per `reportMode`, `_CrtSetReportMode` richiama il gestore di parametri non validi come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce -1. Per altre informazioni, vedere [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (errno, _doserrno, _sys_errlist e _sys_nerr).  
   
 ## <a name="remarks"></a>Note  
  `_CrtSetReportMode` specifica la destinazione di output per `_CrtDbgReport`. Poiché le macro `_ASSERT`, `_ASSERTE`, `_RPT`, e `_RPTF` chiamano `_CrtDbgReport`, `_CrtSetReportMode` specifica la destinazione dell'output di testo determinato con queste macro.  
@@ -109,7 +106,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie:** solo le versioni di debug delle [funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md).  
   

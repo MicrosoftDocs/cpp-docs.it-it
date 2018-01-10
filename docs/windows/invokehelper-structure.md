@@ -1,32 +1,33 @@
 ---
-title: "Struttura InvokeHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeHelper (struttura)"
+title: InvokeHelper (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper
+dev_langs: C++
+helpviewer_keywords: InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acabc6833e23c4f17bc337b67a89578bc95bbd6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura InvokeHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="invokehelper-structure"></a>InvokeHelper (struttura)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -87,50 +88,50 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `TDelegateInterface`  
  `TCallback`  
- Il tipo della funzione del gestore eventi.  
+ Il tipo di funzione del gestore eventi.  
   
  `argCount`  
  Il numero di argomenti in una specializzazione InvokeHelper.  
   
-## Note  
- Fornisce un'implementazione del metodo Invoke\(\) basato sul numero specificato e sul tipo di argomenti.  
+## <a name="remarks"></a>Note  
+ Fornisce un'implementazione del metodo Invoke () in base al numero specificato e il tipo di argomenti.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`Traits`|Un sinonimo per la classe che definisce il tipo di ciascun argomento del gestore eventi.|  
+|`Traits`|Un sinonimo per la classe che definisce il tipo di argomento ogni gestore dell'evento.|  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Inizializza una nuova istanza della classe InvokeHelper.|  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Chiama il gestore eventi la cui firma contiene il numero specificato di argomenti.|  
+|[Metodo InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Chiama il gestore dell'evento la cui firma contiene il numero di argomenti specificato.|  
   
-### Membri dati pubblici  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati InvokeHelper::callback\_](../windows/invokehelper-callback-data-member.md)|Rappresenta il gestore eventi da chiamare quando si verifica un evento .|  
+|[Membro dati InvokeHelper::callback_ Data](../windows/invokehelper-callback-data-member.md)|Rappresenta il gestore eventi da chiamare quando si verifica un evento.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `InvokeHelper`  
   
-## Requisiti  
- **Header:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

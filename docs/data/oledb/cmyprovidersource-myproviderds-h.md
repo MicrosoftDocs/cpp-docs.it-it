@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: adaf048dca30544ed9daf84fc388ad00df741ecf
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 Le classi del provider utilizzano l'ereditarietà multipla. Il codice seguente mostra la catena di ereditarietà per l'oggetto origine dati:  

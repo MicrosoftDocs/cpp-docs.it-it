@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76158677ee1ea31be493722f736c56c82120a3af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 938640ed85e51d2b94b292bfe78a8d912b095188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Trascinamento di file in una finestra cornice
 La finestra cornice gestisce una relazione con Esplora File o File Manager.  

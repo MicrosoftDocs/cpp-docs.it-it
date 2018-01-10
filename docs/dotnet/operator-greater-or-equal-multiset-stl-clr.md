@@ -1,33 +1,33 @@
 ---
-title: "operator&gt;= (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator>="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator>= (membro) [STL/CLR]"
+title: operatore&gt;= (multiset) (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator>=
+dev_langs: C++
+helpviewer_keywords: operator>= member [STL/CLR]
 ms.assetid: 978cc521-e810-4f3a-85e7-880d6b45db59
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 22f95612a8e1eb50ff9ecc021f4b8dfb5abc1d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt;= (multiset) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Elenco maggiore o uguale confronto.  
+# <a name="operatorgt-multiset-stlclr"></a>operatore&gt;= (multiset) (STL/CLR)
+Elenco maggiore o uguale a confronto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Key>  
@@ -35,17 +35,17 @@ template<typename Key>
         multiset<Key>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  left  
  Contenitore sinistro da confrontare.  
   
  right  
- Contenitore appropriato da confrontare.  
+ Contenitore destro da confrontare.  
   
-## Note  
- La funzione di operatore restituisce `!(``left` `<` `right``)`.  È possibile utilizzarlo per verificare se `left` non è stato ordinato prima di `right` quando i due multi\-insieme sono elemento confrontata dall'elemento.  
+## <a name="remarks"></a>Note  
+ La funzione di operatore restituisce `!(left < right)`. Utilizzati per verificare se `left` non viene ordinato prima `right` quando il due multiset vengono confrontato elemento per elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_multiset_operator_ge.cpp   
@@ -85,19 +85,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \>\= \[a b c\] è true**  
-**\[a b c\] \>\= \[a b d\] è false**   
-## Requisiti  
- **Intestazione:**\<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] >= [a b c] is True  
+[a b c] >= [a b d] is False  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/set >  
   
-## Vedere anche  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [operator\=\= \(multiset\)](../dotnet/operator-equality-multiset-stl-clr.md)   
- [operator\!\= \(multiset\)](../dotnet/operator-inequality-multiset-stl-clr.md)   
- [operator\< \(multiset\)](../dotnet/operator-less-than-multiset-stl-clr.md)   
- [operator\> \(multiset\)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
- [operator\<\= \(multiset\)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [operatore = = (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)   
+ [operatore! = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)   
+ [operatore\< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)   
+ [operatore > (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
+ [operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)

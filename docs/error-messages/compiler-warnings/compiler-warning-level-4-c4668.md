@@ -1,37 +1,36 @@
 ---
-title: "Avviso del compilatore (livello 4) C4668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4668"
+title: Compilatore avviso (livello 4) C4668 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4668
+dev_langs: C++
+helpviewer_keywords: C4668
 ms.assetid: c6585460-bc4a-4a15-9242-4cbfce53c961
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8cd54cbc252bf86fdc974fd0e5a87e44d5c853e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4668"></a>Avviso del compilatore (livello 4) C4668
 'simbolo' non è definita come macro del preprocessore. Sostituzione con '0' per 'direttive'  
   
- È stato utilizzato un simbolo non definito con una direttiva del preprocessore.  Il simbolo restituirà false.  Per definire un simbolo, utilizzare la [direttiva \#define](../../preprocessor/hash-define-directive-c-cpp.md) o l'opzione del compilatore [\/D](../../build/reference/d-preprocessor-definitions.md).  
+ Utilizzato un simbolo che non è stato definito con una direttiva del preprocessore. Il simbolo restituirà false. Per definire un simbolo, è possibile utilizzare il [#define (direttiva)](../../preprocessor/hash-define-directive-c-cpp.md) o [/D](../../build/reference/d-preprocessor-definitions.md) l'opzione del compilatore.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
-## Esempio  
- Il seguente codice di esempio genera l'errore C4668:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4668:  
   
 ```  
 // C4668.cpp  

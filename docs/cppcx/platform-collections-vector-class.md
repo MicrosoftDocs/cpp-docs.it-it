@@ -30,11 +30,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 35299f80b85432286859ed76afdd7a599809f67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c371b6805616ff0b114be24bb291469eae2dd26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvector-class"></a>Classe Platform::Collections::Vector
 Rappresenta una raccolta sequenziale di oggetti a cui è possibile accedere tramite indice.  
@@ -100,7 +101,7 @@ template <typename T, typename E>
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |evento [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Si verifica quando l'oggetto Vector subisce delle modifiche.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  

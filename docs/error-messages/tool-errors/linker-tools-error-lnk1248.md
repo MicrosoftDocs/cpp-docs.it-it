@@ -1,7 +1,7 @@
 ---
 title: Strumenti del linker LNK1248 errore | Documenti Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 12/28/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -10,18 +10,18 @@ ms.topic: error-reference
 f1_keywords: LNK1248
 dev_langs: C++
 helpviewer_keywords: LNK1248
-ms.assetid: bcddf9e5-d6df-474c-a207-af28d086f491
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e39f215f25461d9f61764889bda985724980dec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb5c1792fa86636a72d492c86170a20bdce19309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-tools-error-lnk1248"></a>Errore degli strumenti del linker LNK1248
-dimensioni dell'immagine ('size') superano la dimensione massima consentita (80000000)  
-  
- È stato rilevato che le dimensioni del file di output supera la dimensione massima consentita per un'immagine del programma. È consigliabile creare il programma in più DLL. Per ulteriori informazioni sul programma eseguibile (PE), vedere l'articolo "Peering all'interno del PE: a presentazione di Win32 Portable Executable File Format" nel [MSDN Library](http://go.microsoft.com/fwlink/?linkid=556).
+
+> dimensioni dell'immagine ('*dimensioni*') supera la dimensione massima consentita (80000000)
+
+È stato rilevato che le dimensioni del file di output supera la dimensione massima consentita per un'immagine di programma a 32 bit. È consigliabile creare il programma in più DLL.

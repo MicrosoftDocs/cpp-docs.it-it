@@ -1,32 +1,33 @@
 ---
-title: "COLUMN_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_LENGTH (macro)"
+title: COLUMN_ENTRY_LENGTH | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_LENGTH macro
 ms.assetid: 1758babf-204c-4d1d-b82a-f9a607072e9a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8e24c3e97efed6fb2d338e9b33910fd1aab1a893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="columnentrylength"></a>COLUMN_ENTRY_LENGTH
 Rappresenta un'associazione sul rowset alla colonna specifica nel database.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,43 +41,43 @@ length
   
 ```  
   
-#### Parametri  
- Vedere [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) nel *riferimento di programmatore OLE DB*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) nel *di riferimento per programmatori OLE DB*.  
   
  `nOrdinal`  
- \[in\] numero di colonne, a partire da uno.  Il segnalibro corrisponde alla colonna zero.  
+ [in] Il numero di colonna, a partire da uno. Segnalibro corrisponde alla colonna zero.  
   
  `data`  
- \[in\] Membro dati corrispondente nel record utente.  
+ [in] Membro dati corrispondente nel record utente.  
   
  *length*  
- \[in\] La variabile da associare alla lunghezza della colonna.  
+ [in] Variabile da associare alla lunghezza della colonna.  
   
-## Note  
- Questa macro supporta la variabile *length*.  Viene utilizzata nei seguenti posti:  
+## <a name="remarks"></a>Note  
+ Questa macro supporta il *lunghezza* variabile. Viene utilizzata nelle seguenti posizioni:  
   
--   Tra le macro [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) e [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md).  
+-   Tra le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) e [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macro.  
   
--   Tra le macro [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) e [END\_ACCESSOR](../../data/oledb/end-accessor.md).  
+-   Tra le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macro.  
   
--   Tra le macro [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) e [END\_PARAM\_MAP](../../data/oledb/end-param-map.md).  
+-   Tra le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) e [END_PARAM_MAP](../../data/oledb/end-param-map.md) macro.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
- [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a397789958e229363f535ed9b39f83ed928cb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   Specifica di un numero fisso di thread
 Alcuni programmi si basano su un numero fisso, predefinito di thread per eseguire correttamente.  Poiché l'impostazione predefinita per la regolazione dinamica del numero di thread è definito dall'implementazione, tali programmi possono scegliere di disattivare la funzionalità di thread dinamico e impostare il numero di thread in modo esplicito per garantire la portabilità. Nell'esempio seguente viene illustrato come eseguire questa operazione utilizzando `omp_set_dynamic` ([sezione 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39), e `omp_set_num_threads` ([sezione 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) nella pagina 36):  

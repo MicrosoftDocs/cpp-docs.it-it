@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>Differenze nella gestione eccezioni
 La differenza principale tra gestione delle eccezioni strutturata e gestione delle eccezioni C++ è che il modello di gestione delle eccezioni C++ gestisce i tipi, mentre il modello di gestione delle eccezioni strutturata di C gestisce le eccezioni di un solo tipo (in particolare, `unsigned int`). In altre parole, le eccezioni C sono identificate da un intero senza segno, mentre le eccezioni C++ sono identificate dal tipo di dati. Quando viene generata un'eccezione in C, ogni possibile gestore esegue un filtro che esamina il contesto di eccezione C e determina se accettare l'eccezione, passarla a un altro gestore o ignorarla. Quando viene generata un'eccezione in C++, può essere di qualsiasi tipo.  

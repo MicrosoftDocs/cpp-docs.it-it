@@ -41,11 +41,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b376efd87c6ab38f87acea71082fd5bf6bd38b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 476df668657739c9f67ca1323c2c0ce630260110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 Registra una routine da chiamare in fase di uscita.  
@@ -81,7 +82,7 @@ _onexit_t_m _onexit_m(
 |-------------|---------------------|  
 |`_onexit`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -136,7 +137,7 @@ This is executed next.
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
  [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [__dllonexit](../../c-runtime-library/dllonexit.md)

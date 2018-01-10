@@ -31,11 +31,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61d750fce6e31923636b4eb8c0181bf405b7be39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1be3f7141a8483aa7b0d43195b08506691e34fe3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="free"></a>free
 Dealloca o libera un blocco di memoria.  
@@ -59,7 +60,7 @@ void free(
   
  Dopo che un blocco di memoria è stato liberato, [_heapmin](../../c-runtime-library/reference/heapmin.md) riduce la quantità di memoria libera nell'heap unendo le aree inutilizzate e rilasciandole nuovamente al sistema operativo. La memoria liberata che non viene rilasciata al sistema operativo viene ripristinata al pool libero ed è disponibile nuovamente per l'allocazione.  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `free` viene risolto in [_free_dbg](../../c-runtime-library/reference/free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `free` viene risolto in [_free_dbg](../../c-runtime-library/reference/free-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  `free` è contrassegnato `__declspec(noalias)`, pertanto si garantisce che la funzione non modifichi le variabili globali. Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
   

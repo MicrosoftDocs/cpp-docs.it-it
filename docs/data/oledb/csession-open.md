@@ -1,35 +1,37 @@
 ---
-title: "CSession::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CSession::Open"
-  - "CSession::Open"
-  - "CSession.Open"
-  - "ATL.CSession.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open (metodo)"
+title: 'CSession:: Open | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CSession::Open
+- CSession::Open
+- CSession.Open
+- ATL.CSession.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CSession::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Verrà aperta una nuova sessione per l'oggetto origine dati.  
+# <a name="csessionopen"></a>CSession::Open
+Apre una nuova sessione per l'oggetto origine dati.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,24 +42,24 @@ Verrà aperta una nuova sessione per l'oggetto origine dati.
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `ds`  
- \[in\] l'origine dati per il quale la sessione deve essere aperta.  
+ [in] L'origine dati per cui è necessario aprire la sessione.  
   
  *pPropSet*  
- \[in\] puntatore A una matrice di strutture che contengono [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) proprietà e valori da impostare.  Vedere [Insiemi di proprietà e gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx)*in OLE DB Programmer's Reference* in [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Un puntatore a una matrice di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture contenenti le proprietà e valori da impostare. Vedere [set di proprietà e i gruppi di proprietà](https://msdn.microsoft.com/en-us/library/ms713696.aspx) nel *di riferimento per programmatori OLE DB* in Windows SDK.  
   
  `ulPropSets`  
- \[in\] numero di strutture di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) passate nell'argomento *di pPropSet*.  
+ [in] Il numero di [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) strutture passato il *pPropSet* argomento.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- È necessario aprire l'oggetto origine dati utilizzando [CDataSource::Open](../../data/oledb/cdatasource-open.md) prima di passarli a `CSession::Open`.  
+## <a name="remarks"></a>Note  
+ È necessario aprire l'oggetto origine dati usando [CDataSource:: Open](../../data/oledb/cdatasource-open.md) prima di passarlo a `CSession::Open`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CSession](../../data/oledb/csession-class.md)

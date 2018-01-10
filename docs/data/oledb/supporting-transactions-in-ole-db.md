@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7b1e937a7fa1ab33ff74d3c4e42856928320fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9be6fb1c86b43f7833818648d84875b1e4c55b59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Supporto delle transazioni in OLE DB
 Oggetto [transazione](../../data/transactions-mfc-data-access.md) è un modo per raggruppare o batch, una serie di aggiornamenti a un'origine dati in modo che tutti esito positivo e viene eseguito il commit in una sola volta oppure (se uno di essi ha esito negativo) non viene eseguito il commit e viene eseguito il rollback dell'intera transazione. Questo processo assicura l'integrità del risultato nell'origine dati.  

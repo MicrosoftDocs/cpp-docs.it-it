@@ -55,11 +55,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cedbcd404e0f9dd575fe19486e97382e5975196c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbutton-class"></a>Classe CMFCColorButton
 Il `CMFCColorButton` e [CMFCColorBar classe](../../mfc/reference/cmfccolorbar-class.md) classi vengono utilizzate insieme per implementare un controllo di selezione colore.  
@@ -107,7 +108,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>Membri di dati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |`m_bAltColorDlg`|Valore booleano. Se `TRUE`, il framework Visualizza il [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) colore dialogo quando il *altri* si fa clic sul pulsante, o se `FALSE`, la finestra di dialogo colore di sistema. Il valore predefinito è `TRUE`. Per ulteriori informazioni, vedere [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
 |`m_bAutoSetFocus`|Valore booleano. Se `TRUE`, il framework imposta lo stato attivo nel menu colore quando viene visualizzato il menu o se `FALSE`, non modificare lo stato attivo. Il valore predefinito è `TRUE`.|  

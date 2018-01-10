@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2988
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2988
+f1_keywords: C2988
+dev_langs: C++
+helpviewer_keywords: C2988
 ms.assetid: c07ada8d-7cdf-4496-8656-cc3851e76b46
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 758ace0f9e97336fd3aeb91a6a17131db72d8fdc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 8667a2e13a30348c67d2427467eabde2649c343f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2988"></a>Errore del compilatore C2988
 dichiarazione/definizione di modello non riconoscibile  

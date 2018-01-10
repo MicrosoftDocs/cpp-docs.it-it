@@ -1,45 +1,49 @@
 ---
-title: "Copying a Device Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "display devices, copying images"
-  - "cursors, copying"
-  - "icons, copying"
+title: Copia un'immagine per dispositivo (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- display devices, copying images
+- cursors, copying
+- icons, copying
 ms.assetid: 0510c20c-f820-4770-92a5-e9263a63d8be
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fc1b9952fae493b8d6174dc88ea2a6b727fe50cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Copying a Device Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per copiare un'immagine per periferica  
+# <a name="copying-a-device-image-image-editor-for-icons"></a>Copia di un'immagine per dispositivo (Editor di immagini per le icone)
+### <a name="to-copy-a-device-image"></a>Per copiare un'immagine per dispositivo  
   
-1.  Scegliere **Tipi di immagine icona correnti** dal menu **Immagine** e selezionare un'immagine dall'elenco delle immagini correnti.  Ad esempio, selezionare la versione da 32 × 32 a 16 colori di un'icona.  
+1.  Nel **immagine** menu, fare clic su **immagine** e selezionare un'immagine nell'elenco di immagini corrente. Ad esempio, scegliere 32 × 32 a 16 colori versione di un'icona.  
   
-2.  Copiare l'immagine icona correntemente visualizzata premendo **CTRL\+C**.  
+2.  Copiare l'immagine dell'icona visualizzata (**CTRL + C**).  
   
-3.  Aprire una diversa immagine dell'icona in un'altra finestra dell'**Editor immagini**.  Aprire ad esempio la versione da 16 × 16 a 16 colori dell'icona.  
+3.  Aprire un'altra immagine dell'icona in un altro **Editor di immagini** finestra. Ad esempio, aprire il 16 × 16 a 16 colori versione dell'icona.  
   
-4.  Incollare l'immagine icona premendo **CTRL\+V** da una finestra dell'**Editor immagini** all'altra.  Se si incolla una dimensione maggiore in una dimensione minore, sarà possibile utilizzare i quadratini di ridimensionamento dell'icona per modificare le dimensioni dell'immagine.  
+4.  Incolla l'immagine dell'icona (**CTRL + V**) da uno **Editor di immagini** finestra a altra. Se si sta incollando una dimensione maggiore in una dimensione più piccola, è possibile utilizzare gli handle di icona per ridimensionare l'immagine.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)
+

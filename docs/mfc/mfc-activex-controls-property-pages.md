@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dd62127d5fb09675d6c91963d85dd6ae7f44f35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dde35df301c34a6c3a29c48d5ad145681b64a72e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controlli ActiveX MFC: pagine delle proprietà
 Pagine delle proprietà consente a un utente di un controllo ActiveX visualizzare e modificare le proprietà del controllo ActiveX. Queste proprietà sono accessibili tramite la chiamata di una controllo proprietà della finestra di dialogo che contiene uno o più pagine delle proprietà che forniscono un'interfaccia grafica personalizzata per visualizzare e modificare le proprietà del controllo.  
@@ -41,7 +42,7 @@ Pagine delle proprietà consente a un utente di un controllo ActiveX visualizzar
  ![Finestra di dialogo proprietà per Circ3](../mfc/media/vc373i1.gif "vc373i1")  
 La finestra di dialogo proprietà  
   
- In questo articolo vengono trattati argomenti relativi all'utilizzo delle pagine delle proprietà in un controllo ActiveX. tra cui:  
+ In questo articolo vengono trattati argomenti relativi all'utilizzo delle pagine delle proprietà in un controllo ActiveX. Sono inclusi:  
   
 -   [Implementazione della pagina di proprietà predefinito per un controllo ActiveX](#_core_implementing_the_default_property_page)  
   
@@ -107,7 +108,7 @@ La finestra di dialogo proprietà
   
 ### <a name="property-page-functions"></a>Pagina delle proprietà di funzioni  
   
-|Nome della funzione|Utilizzare questa funzione per collegamento|  
+|Nome funzione|Utilizzare questa funzione per collegamento|  
 |-------------------|-------------------------------|  
 |`DDP_CBIndex`|Indice della stringa selezionata in una casella combinata con una proprietà del controllo.|  
 |`DDP_CBString`|La stringa selezionata in una casella combinata con una proprietà del controllo. La stringa selezionata può iniziare con le stesse lettere come il valore della proprietà, ma non è necessario che completamente.|  

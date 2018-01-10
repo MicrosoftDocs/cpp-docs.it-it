@@ -1,45 +1,46 @@
 ---
-title: "rotate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::rotate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rotate (funzione) [STL/CLR]"
+title: Ruota (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::rotate
+dev_langs: C++
+helpviewer_keywords: rotate function [STL/CLR]
 ms.assetid: 61dc89a9-a928-4eb3-89d6-2f5927df0f13
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 82ede9e68bc15e9e534e1cec75930809197fc133
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# rotate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Scambia gli elementi in due intervalli adiacenti.  
+# <a name="rotate-stlclr"></a>rotate (STL/CLR)
+Scambia gli elementi di due intervalli adiacenti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _FwdIt> inline  
     void rotate(_FwdIt _First, _FwdIt _Mid, _FwdIt _Last);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `rotate`STL.  Per ulteriori informazioni, vedere [rotate](../Topic/rotate.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `rotate`. Per ulteriori informazioni, vedere [ruota](../standard-library/algorithm-functions.md#rotate).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

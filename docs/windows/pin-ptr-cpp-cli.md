@@ -1,107 +1,109 @@
 ---
-title: "pin_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pin_ptr_cpp"
-  - "stdcli::language::pin_ptr"
-  - "pin_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pinning pointers"
-  - "pin_ptr keyword [C++]"
+title: pin_ptr (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- pin_ptr_cpp
+- stdcli::language::pin_ptr
+- pin_ptr
+dev_langs: C++
+helpviewer_keywords:
+- pinning pointers
+- pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 28
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "28"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# pin_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dichiara un *puntatore di blocco*, utilizzato solo con il Common Language Runtime.  
+# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+Dichiara un *puntatore di blocco*, che viene utilizzata solo con common language runtime.  
   
-## Tutti i runtime  
- \(Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime\).  
+## <a name="all-runtimes"></a>Tutti i runtime  
+ Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
   
-## Windows Runtime  
- \(Questa funzionalità del linguaggio non è supportata nel runtime di Windows.\)  
+## <a name="windows-runtime"></a>Windows Runtime  
+ (Questa funzionalità del linguaggio non supportata in Windows Runtime).  
   
-## Common Language Runtime  
- Un *puntatore di blocco* è un puntatore interno che impedisce lo spostamento dell'oggetto puntato nell'heap del garbage collection.  Ovvero, il valore di un puntatore di blocco non viene modificato dal Common Language Runtime.  Ciò si rivela necessario quando si passa l'indirizzo di una classe gestita a una funzione non gestita in modo che l'indirizzo non cambierà in modo imprevisto durante la risoluzione della chiamata della funzione non gestita.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Oggetto *puntatore di blocco* è un puntatore interno che impedisce l'oggetto a cui punta venga spostato nell'heap sottoposto a garbage collection. Ovvero, il valore di un puntatore di blocco non viene modificato da common language runtime. Ciò è necessario quando si passa l'indirizzo di una classe gestita a una funzione non gestita in modo che l'indirizzo non cambierà in modo imprevisto durante la risoluzione della chiamata di funzione non gestita.  
   
-### Sintassi  
+### <a name="syntax"></a>Sintassi  
   
 ```cpp  
-[cli::]pin_ptr<cv_qualifier type> var = &initializer;  
+[cli::]pin_ptr<cv_qualifiertype>var = &initializer;  
 ```  
   
-### Parametri  
- *cv\_qualifier*  
- Qualificatori `const` o `volatile`.  Per impostazione predefinita, un puntatore di blocco è `volatile`.  È ridondante ma non un errore dichiarare un puntatore di blocco `volatile`.  
+### <a name="parameters"></a>Parametri  
+ *cv_qualifier*  
+ `const`o `volatile` qualificatori. Per impostazione predefinita, è un puntatore di blocco `volatile`. È ridondante ma non un errore per dichiarare un puntatore di blocco `volatile`.  
   
  *type*  
  Tipo di `initializer`.  
   
  *var*  
- Il nome della variabile `pin_ptr`.  
+ Nome della variabile `pin_ptr`.  
   
  *initializer*  
- Un membro di un tipo di riferimento, di un elemento di un array gestito o di un qualsiasi altro oggetto che è possibile assegnare ad un puntatore nativo.  
+ Membro di un tipo di riferimento, elemento di una matrice gestita o qualsiasi altro oggetto che è possibile assegnare a un puntatore nativo.  
   
-### Osservazioni  
- Un `pin_ptr` rappresenta un superset della funzionalità di un puntatore nativo.  Pertanto, qualsiasi cosa che possa essere assegnata ad un puntatore nativo può anche essere assegnata ad un `pin_ptr`.  Un puntatore interno può eseguire lo stesso gruppo di operazioni dei puntatori nativi, incluso il confronto e l'aritmetica dei puntatori.  
+### <a name="remarks"></a>Note  
+ Oggetto `pin_ptr` rappresenta un superset della funzionalità di un puntatore nativo. Pertanto, qualsiasi elemento che può essere assegnato a un puntatore nativo può anche essere assegnato a un `pin_ptr`. In un puntatore interno può essere eseguito lo stesso set di operazioni dei puntatori nativi, inclusi il confronto e l'aritmetica dei puntatori.  
   
- Un oggetto o un sotto\-oggetto di una classe gestita può essere bloccato, in questo caso il Common Language Runtime non lo sposterà durante il Garbage Collection.  L'uso principale di questo è passare un puntatore ai dati gestiti come parametro effettivo di una chiamata a funzione non gestita.  Durante un ciclo di raccolta, il runtime verificherà i metadati creati per il puntatore di blocco e non sposterà l'elemento a cui indica.  
+ Un oggetto o un oggetto secondario di una classe gestita può essere bloccata, nel qual caso common language runtime non verrà spostata durante l'operazione di garbage collection. L'utilizzo principale di questo consiste nel passare un puntatore a dati gestiti come parametro effettivo di una chiamata di funzione non gestita. Durante un ciclo di raccolta, il runtime esamina i metadati creati per il puntatore di blocco e non può essere spostata l'elemento a che cui punta.  
   
- Bloccando un oggetto si bloccano anche i suoi campi valore; ovvero campi primitivi o di tipo valore.  Tuttavia, i campi dichiarati dal gestore di traccia \(`%`\) non vengono bloccati.  
+ Aggiunta di un oggetto aggiunge anche i campi di valore; ovvero, i campi della primitiva o valore type. Tuttavia, i campi dichiarati dall'handle di rilevamento (`%`) non sono stati bloccati.  
   
- Bloccare un sotto\-oggetto definito in un oggetto gestito ha l'effetto di bloccare l'intero oggetto.  
+ Aggiunta di un oggetto secondario definito in un oggetto gestito ha l'effetto di blocco dell'intero oggetto.  
   
- Se il puntatore di blocco viene riassegnato per puntare ad un nuovo valore, l'istanza precedente a cui puntava non verrà più considerata bloccata.  
+ Se il puntatore di blocco viene riassegnato per puntare a un nuovo valore, l'istanza precedente a cui puntata non è più considerato bloccato.  
   
- Un oggetto viene bloccato solo mentre un `pin_ptr` punta ad esso.  L'oggetto non è più bloccato quando il suo puntatore di blocco esce dall'ambito o viene impostato su [nullptr](../windows/nullptr-cpp-component-extensions.md).  Dopo che `pin_ptr` esce dall'ambito, l'oggetto che era bloccato può essere spostato nell'heap dal Garbage Collector.  Qualsiasi puntatore nativo che punta ancora all'oggetto non verrà aggiornato e dereferenziare uno di essi può generare un'eccezione irreversibile.  
+ Un oggetto viene aggiunto solo durante un `pin_ptr` fa riferimento ad esso. L'oggetto non è più bloccato quando il puntatore di blocco diventa esterno all'ambito o è impostato su [nullptr](../windows/nullptr-cpp-component-extensions.md). Dopo il `pin_ptr` esce dall'ambito, l'oggetto che è stato aggiunto possono essere spostate nell'heap di garbage collection. Eventuali puntatori nativi che ancora puntano all'oggetto non verranno aggiornati e deallocare che fanno riferimento a uno di essi potrebbero generare un'eccezione irreversibile.  
   
- Se nessuno dei puntatori di blocco punta all'oggetto \(tutti i puntatori di blocco sono stati disconnesso dall'ambito, sono stati riassegnati per puntare altri oggetti o sono stati assegnati a [nullptr](../windows/nullptr-cpp-component-extensions.md)\), viene garantito che l'oggetto non è bloccato.  
+ Se i puntatori di blocco non puntano all'oggetto (tutti i puntatori di blocco fuori dall'ambito, sono stati assegnati in modo da puntare ad altri oggetti o sono stati assegnati [nullptr](../windows/nullptr-cpp-component-extensions.md)), l'oggetto è garantito che non venga bloccata.  
   
- Un puntatore di blocco può puntare ad un handle di riferimento, ad un gestore di tipo valore o di tipo boxed, ad un membro di tipo gestito o ad un elemento di un array gestito.  Non può puntare ad un tipo di riferimento.  
+ Un puntatore di blocco può puntare a un handle di riferimento, tipo di valore o handle di tipo boxed, membro di un tipo gestito o un elemento di una matrice gestita. Non può fare riferimento a un tipo riferimento.  
   
- Prendere l'indirizzo di un `pin_ptr` che punta ad un oggetto nativo causa un comportamento indefinito.  
+ Accettare l'indirizzo di un `pin_ptr` che punta a un oggetto nativo provoca un comportamento indefinito.  
   
- I puntatori di blocco possono essere dichiarati solo come variabili locali non statiche nello stack.  
+ Puntatori di blocco possono essere dichiarati solo come variabili locali statiche nello stack.  
   
- I puntatori di blocco non possono essere utilizzati come:  
+ Puntatori di blocco non possono essere utilizzati come:  
   
--   parametri di funzione  
+-   funzione (parametri)  
   
--   il tipo restituito di una funzione.  
+-   il tipo restituito di una funzione  
   
 -   un membro di una classe  
   
 -   il tipo di destinazione di un cast.  
   
- `pin_ptr` è nello spazio dei nomi `cli`.  Per ulteriori informazioni, vedere [Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `pin_ptr`nel `cli` dello spazio dei nomi. Per ulteriori informazioni, vedere [Platform, default e cli spazi dei nomi](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
- Per ulteriori informazioni sui puntatori interni, vedere [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md).  
+ Per ulteriori informazioni sui puntatori interni, vedere [interior_ptr (C + + CLI)](../windows/interior-ptr-cpp-cli.md).  
   
- Per ulteriori informazioni sui puntatori di blocco, vedere [How to: Pin Pointers and Arrays](../windows/how-to-pin-pointers-and-arrays.md) e [How to: Declare Pinning Pointers and Value Types](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
+ Per ulteriori informazioni sui puntatori di blocco, vedere [come: Pin puntatori e matrici](../windows/how-to-pin-pointers-and-arrays.md) e [procedura: dichiarare puntatori di blocco e i tipi di valore](../windows/how-to-declare-pinning-pointers-and-value-types.md).  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- L'esempio seguente utilizza `pin_ptr` per vincolare la posizione del primo elemento di un array.  
+ L'esempio seguente usa `pin_ptr` per vincolare la posizione del primo elemento della matrice.  
   
 ```  
 // pin_ptr_1.cpp  
@@ -149,9 +151,13 @@ int main() {
   
  **Output**  
   
-  **45** **Esempio**  
+```Output  
+45  
+```  
   
- L'esempio seguente mostra che un puntatore interno può essere convertito in un puntatore di blocco e che il tipo restituito dall'operatore address\-of \(`&`\) è un puntatore interno quando l'operando è nell'heap gestito.  
+ **Esempio**  
+  
+ Nell'esempio seguente viene illustrato che un puntatore interno può essere convertito in un puntatore di blocco e il tipo restituito dell'operatore address-of (`&`) è un puntatore interno quando l'operando è nell'heap gestito.  
   
 ```  
 // pin_ptr_2.cpp  
@@ -183,9 +189,13 @@ int main() {
   
  **Output**  
   
- **1** **Esempio**  
+```Output  
+1  
+```  
   
- L'esempio seguente mostra che un puntatore di blocco può essere castato ad un altro tipo.  
+ **Esempio**  
+  
+ Nell'esempio seguente viene illustrato che è possibile eseguire il cast di un puntatore a un altro tipo.  
   
 ```  
 // pin_ptr_3.cpp  
@@ -211,5 +221,7 @@ int main() {
   
  **Output**  
   
- **8**   
-**255**
+```Output  
+8  
+255  
+```

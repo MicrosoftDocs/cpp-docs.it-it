@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc2da54365af1d09d92608c4e6f37c3b04fd7230
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97f3b609a68071f34e1841128a66b5518e1b17db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-mfc-topics"></a>Argomenti MFC generali
 In questa serie di articoli sono inclusi dettagli tecnici sulla libreria Microsoft Foundation Class (MFC) e una panoramica del framework MFC e dei relativi componenti principali e sottosistemi.  
@@ -30,7 +31,7 @@ In questa serie di articoli sono inclusi dettagli tecnici sulla libreria Microso
   
  Il framework MFC rappresenta un metodo efficace che consente di creare applicazioni partendo dal lavoro di esperti programmatori di Windows. MFC riduce il tempo di sviluppo; rende il codice più portabile; fornisce un ampio supporto senza ridurre la libertà e la flessibilità di programmazione e semplifica l'accesso agli elementi e alle tecnologie dell'interfaccia utente "difficili da programmare", come la tecnologia Active, OLE e la programmazione per Internet. Inoltre, MFC semplifica la programmazione di database tramite Data Access Objects (DAO) e Open Database Connectivity (ODBC) e la programmazione di rete tramite Windows Sockets. MFC semplifica la programmazione di funzionalità come le finestre delle proprietà ("finestre di dialogo a schede"), l'anteprima di stampa e le barre degli strumenti mobili e personalizzabili.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  `MFC Samples`, che vengono forniti [esempi di Visual C++](../visual-cpp-samples.md)  
   
  [Uso dei file di origine MFC](../mfc/using-the-mfc-source-files.md)  

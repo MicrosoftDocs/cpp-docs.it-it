@@ -1,48 +1,51 @@
 ---
-title: "Associazione dinamica di colonne nel provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colonne [C++], associazione dinamica di colonne"
-  - "associazione dinamica di colonne"
-  - "provider [C++], associazione dinamica di colonne"
+title: Associazione dinamica di colonne nel Provider | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Associazione dinamica di colonne nel provider
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Accertarsi che l'associazione dinamica delle colonne sia effettivamente indispensabile.  Può essere necessaria per varie ragioni:  
+# <a name="dynamically-binding-columns-in-your-provider"></a>Associazione dinamica di colonne nel provider
+Verificare che sia davvero necessario associazione dinamica di colonne. Potrebbe essere necessaria, perché:  
   
--   Le colonne del rowset non sono definite in fase di compilazione.  
+-   Le colonne del set di righe non sono definite in fase di compilazione.  
   
--   Sono supportati elementi, ad esempio i bookmark, che aggiungono colonne.  
+-   Si supporta un elemento, ad esempio i segnalibri che aggiunge colonne.  
   
-### Per implementare l'associazione dinamica delle colonne  
+### <a name="to-implement-dynamic-column-binding"></a>Per implementare l'associazione dinamica di colonne  
   
-1.  Rimuovere eventuali voci **PROVIDER\_COLUMN\_MAP** dal codice.  
+1.  Rimuovere qualsiasi **PROVIDER_COLUMN_MAP**s dal codice.  
   
-2.  Aggiungere la seguente dichiarazione al record utente, ovvero la struttura:  
+2.  Nel record utente (struttura), aggiungere la seguente dichiarazione:  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Implementare la funzione `GetColumnInfo`.  Questa funzione definisce la modalità di memorizzazione delle informazioni.  Può essere necessario ottenere proprietà o altre informazioni per questa funzione.  È possibile creare una macro, analoga alla macro [COLUMN\_ENTRY](../../data/oledb/column-entry.md), per aggiungere informazioni personalizzate.  
+3.  Implementare il `GetColumnInfo` (funzione). Questa funzione definisce la modalità di archiviazione di informazioni. Potrebbe essere necessario ottenere le proprietà o altre informazioni per questa funzione. Si potrebbe voler creare una macro simile al [COLUMN_ENTRY](../../data/oledb/column-entry.md) (macro), per aggiungere informazioni personalizzate.  
   
-     Nell'esempio riportato di seguito viene illustrata una funzione `GetColumnInfo`.  
+     Nell'esempio seguente un `GetColumnInfo` (funzione).  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +98,5 @@ Accertarsi che l'associazione dinamica delle colonne sia effettivamente indispen
     }  
     ```  
   
-## Vedere anche  
- [Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4946 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4946"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4946"
+title: Compilatore avviso (livello 1) C4946 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4946
+dev_langs: C++
+helpviewer_keywords: C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 800d940c3005762bddf6402a14af4416da4bc50e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4946
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-reinterpret\_cast utilizzato tra le classi correlate 'classe1' e 'classe2'  
+# <a name="compiler-warning-level-1-c4946"></a>Avviso del compilatore (livello 1) C4946
+reinterpret_cast utilizzato tra le classi correlate 'classe1' e 'classe2'  
   
- Non utilizzare [reinterpret\_cast](../../cpp/reinterpret-cast-operator.md) per eseguire il cast tra tipi correlati.  Utilizzare [static\_cast](../../cpp/static-cast-operator.md) invece, o per tipi polimorfici, utilizzare [dynamic\_cast](../../cpp/dynamic-cast-operator.md).  
+ Non utilizzare [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) per eseguire il cast tra tipi correlati. Utilizzare [static_cast](../../cpp/static-cast-operator.md) o, per tipi polimorfici, utilizzare [dynamic_cast](../../cpp/dynamic-cast-operator.md).  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
  Nell'esempio riportato di seguito il codice genera l'errore C4946:  
   

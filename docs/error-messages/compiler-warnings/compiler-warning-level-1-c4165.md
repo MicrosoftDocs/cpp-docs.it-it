@@ -1,38 +1,34 @@
 ---
-title: Compilatore (livello 1) avviso C4165 | Documenti di Microsoft
+title: Compilatore (livello 1) avviso C4165 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4165
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4165
+f1_keywords: C4165
+dev_langs: C++
+helpviewer_keywords: C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 9f2007a2f43cd7641979b663c58efb3a8e276246
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e31f0e0440b0c31197ded21464edc9d686c4864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4165"></a>Compilatore (livello 1) avviso C4165
-'HRESULT' verrà convertito in 'bool'. Continuare?  
+'HRESULT' viene convertito in 'bool'; continuare che questo è ciò che si desidera?  
   
-Quando si utilizza un valore HRESULT in un [se](../../cpp/if-else-statement-cpp.md) istruzione, il valore HRESULT verrà convertito in un [bool](../../cpp/bool-cpp.md) a meno che non verifica in modo esplicito per la variabile come HRESULT. Per impostazione predefinita, questo avviso non è attivo.  
+Quando si utilizza un valore HRESULT in un [se](../../cpp/if-else-statement-cpp.md) istruzione, verrà convertito in valore HRESULT un [bool](../../cpp/bool-cpp.md) a meno che non verifica in modo esplicito per la variabile come un valore HRESULT. Per impostazione predefinita, questo avviso non è attivo.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene generato l'errore C4165:  
+L'esempio seguente genera l'errore C4165:  
   
 ```cpp  
 // C4165.cpp  

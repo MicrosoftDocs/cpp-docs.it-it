@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2026
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2026
+f1_keywords: C2026
+dev_langs: C++
+helpviewer_keywords: C2026
 ms.assetid: 8e64b6e1-b967-479b-be97-d12dc4a8e389
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: acee7db1513dd3e999a90218ea674930c2a13f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2026"></a>Errore del compilatore C2026
 caratteri finali troncato stringa troppo grande.  

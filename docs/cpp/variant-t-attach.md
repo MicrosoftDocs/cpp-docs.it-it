@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t::Attach
 - _variant_t.Attach
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Attach method [C++]
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 33e21d3bea71c80b8b60df222682fda560fbce9c
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: effeaaaf3f8df9eb100d5e92e760eb439a865552
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttattach"></a>_variant_t::Attach
 **Sezione specifica Microsoft**  

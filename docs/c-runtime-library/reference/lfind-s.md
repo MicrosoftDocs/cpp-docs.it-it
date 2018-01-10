@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a49c732be3c1f378340d00c414acee91e6e62978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 Esegue una ricerca lineare della chiave specificata. Questa è una versione di [_lfind](../../c-runtime-library/reference/lfind.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -89,8 +90,8 @@ void *_lfind_s(
 |---------|----------|-------------|---------|----------|-----------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|  
 |qualsiasi|`NULL`|qualsiasi|!= 0|qualsiasi|`EINVAL`|  
-|qualsiasi|qualsiasi|qualsiasi|any|zero|`EINVAL`|  
-|any|qualsiasi|`NULL`|any|qualsiasi|`EINVAL`|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|zero|`EINVAL`|  
+|qualsiasi|qualsiasi|`NULL`|any|qualsiasi|`EINVAL`|  
   
 ## <a name="remarks"></a>Note  
  La funzione `_lfind_s` esegue una ricerca lineare del valore `key` in una matrice di `num` elementi, ognuno di `width` byte. A differenza di `bsearch_s`, `_lfind_s` non richiede che la matrice sia ordinata. L'argomento `base` è un puntatore alla base della matrice in cui eseguire la ricerca. L'argomento `compare` è un puntatore a una routine fornita dall'utente che confronta due elementi di matrice e quindi restituisce un valore che ne specifica la relazione. `_lfind_s` chiama la routine `compare` una o più volte durante la ricerca, passando il puntatore `context` e i puntatori a due elementi della matrice per ogni chiamata. La routine `compare` deve confrontare gli elementi e quindi restituire un valore diverso da zero (che indica che gli elementi sono diversi) o 0 (che indica che gli elementi sono identici).  
@@ -103,7 +104,7 @@ void *_lfind_s(
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,30 +1,32 @@
 ---
-title: "Aggiunta di un&#39;interfaccia al provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli del provider OLE DB, interfacce oggetto"
+title: Aggiunta di un'interfaccia al Provider | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Aggiunta di un&#39;interfaccia al provider
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Determinare a quale oggetto si desidera aggiungere l'interfaccia. In genere l'interfaccia viene aggiunta a oggetti DataSource, Rowset, Command o Session creati tramite la Creazione guidata provider OLE DB ATL.  È possibile che l'oggetto a cui si desidera aggiungere l'interfaccia non sia supportato dal provider.  In tal caso eseguire la Creazione guidata provider OLE DB ATL per creare l'oggetto.  Fare clic con il pulsante destro del mouse sul progetto in Visualizzazione classi, scegliere **Aggiungi classe** dal menu **Aggiungi**, quindi **Provider OLE DB ATL**.  È possibile inserire il codice dell'interfaccia in una directory separata, quindi copiare i file nel progetto del provider.  
+# <a name="adding-an-interface-to-your-provider"></a>Aggiunta di un'interfaccia al provider
+Determinare quale oggetto a cui si desidera aggiungere l'interfaccia a (in genere dati origine, il set di righe, comando o sessione oggetti creati dalla creazione guidata Provider OLE DB). È possibile che l'oggetto che è necessario aggiungere l'interfaccia sia quello che attualmente non supporta il provider. In tal caso, eseguire la creazione guidata Provider OLE DB ATL per creare l'oggetto. Fare clic sul progetto in visualizzazione classi, fare clic su **Aggiungi classe** dal **Aggiungi** menu e quindi fare clic su **Provider OLE DB ATL**. È possibile inserire il codice dell'interfaccia in una directory distinta e quindi copiare i file di progetto del provider.  
   
- Se si è creata una nuova classe per il supporto dell'interfaccia, l'oggetto dovrà ereditare da tale classe.  È ad esempio possibile aggiungere la classe **IRowsetIndexImpl** a un oggetto Rowset:  
+ Se è stata creata una nuova classe per supportare l'interfaccia, rendere l'oggetto di ereditare da quella classe. Ad esempio, è possibile aggiungere la classe **IRowsetIndexImpl** a un oggetto set di righe:  
   
 ```  
 template <class Creator>  
@@ -33,7 +35,7 @@ public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
    public IRowsetIndexImpl< ... >   
 ```  
   
- Aggiungere l'interfaccia a **COM\_MAP** dell'oggetto utilizzando la macro COM\_INTERFACE\_ENTRY.  Se non è presente alcuna mappa, crearne una.  Di seguito è riportato un esempio.  
+ Aggiungere l'interfaccia **COM_MAP** nell'oggetto tramite la macro COM_INTERFACE_ENTRY. Se è disponibile alcuna mappa, crearne uno. Ad esempio:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -41,7 +43,7 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
- Per l'oggetto Rowset eseguire la concatenazione con la mappa dell'oggetto padre in modo che l'oggetto possa delegare alla classe padre.  In questo esempio viene aggiunta la macro COM\_INTERFACE\_ENTRY\_CHAIN alla mappa:  
+ Per l'oggetto set di righe, catena la mappa dell'elemento padre dell'oggetto in modo che sia possibile delegare l'oggetto alla classe padre. In questo esempio, aggiungere la macro COM_INTERFACE_ENTRY_CHAIN alla mappa:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  
@@ -50,5 +52,5 @@ BEGIN_COM_MAP(CAgentRowset)
 END_COM_MAP()  
 ```  
   
-## Vedere anche  
- [Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

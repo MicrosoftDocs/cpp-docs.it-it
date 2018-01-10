@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -54,30 +52,16 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3d99dbf05d6ce70177b6ef3c5344e5f4059c0aac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 Copia i caratteri di una stringa in un'altra.  Queste versioni di [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -191,9 +175,9 @@ errno_t _mbsncpy_s_l(
   
 |`strDest`|`numberOfElements`|`strSource`|Valore restituito|Contenuto di `strDest`|  
 |---------------|------------------------|-----------------|------------------|---------------------------|  
-|`NULL`|any|qualsiasi|`EINVAL`|non modificato|  
-|any|qualsiasi|`NULL`|`EINVAL`|`strDest`[0] impostato su 0|  
-|any|0|any|`EINVAL`|non modificato|  
+|`NULL`|qualsiasi|qualsiasi|`EINVAL`|non modificato|  
+|qualsiasi|qualsiasi|`NULL`|`EINVAL`|`strDest`[0] impostato su 0|  
+|any|0|qualsiasi|`EINVAL`|non modificato|  
 |non `NULL`|troppo piccolo|qualsiasi|`ERANGE`|`strDest`[0] impostato su 0|  
   
 ## <a name="remarks"></a>Note  
@@ -201,7 +185,7 @@ errno_t _mbsncpy_s_l(
   
  Esiste un'eccezione a quanto indicato nel paragrafo precedente. Se `count` è `_TRUNCATE`, viene copiata la parte di `strSource` che rientra in `strDest`, lasciando comunque spazio per un carattere Null di terminazione che viene sempre aggiunto.  
   
- Di seguito è riportato un esempio:  
+ Ad esempio,  
   
  `char dst[5];`  
   
@@ -223,9 +207,9 @@ errno_t _mbsncpy_s_l(
   
  `wcsncpy_s` e `_mbsncpy_s` sono le versioni a caratteri wide e a caratteri multibyte di `strncpy_s`. Gli argomenti e il valore restituito di `wcsncpy_s` e `mbsncpy_s` variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -422,7 +406,7 @@ After strncpy_s (with null-termination):
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
  [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)   

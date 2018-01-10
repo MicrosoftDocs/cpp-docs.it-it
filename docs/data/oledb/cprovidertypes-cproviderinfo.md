@@ -1,123 +1,126 @@
 ---
-title: "CProviderTypes, CProviderInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_bIsLong"
-  - "m_szLocalTypeName"
-  - "m_guidType"
-  - "m_bCaseSensitive"
-  - "m_szVersion"
-  - "m_szCreateParams"
-  - "IS_NULLABLE"
-  - "m_bAutoUniqueValue"
-  - "LITERAL_SUFFIX"
-  - "COLUMN_SIZE"
-  - "CProviderTypes"
-  - "LOCAL_TYPE_NAME"
-  - "MINIMUM_SCALE"
-  - "m_nMinScale"
-  - "m_nColumnSize"
-  - "m_szLiteralSuffix"
-  - "m_bFixedPrecScale"
-  - "m_szLiteralPrefix"
-  - "m_nMaxScale"
-  - "m_szTypeLib"
-  - "m_nDataType"
-  - "m_bUnsignedAttribute"
-  - "m_nSearchable"
-  - "m_bBestMatch"
-  - "m_szTypeName"
-  - "DATA_TYPE"
-  - "MAXIMUM_SCALE"
-  - "CProviderInfo"
-  - "FIXED_PREC_SCALE"
-  - "m_bIsNullable"
-  - "IS_LONG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_SIZE"
-  - "CProviderInfo (classe di parametri)"
-  - "CProviderTypes (classe typedef)"
-  - "DATA_TYPE"
-  - "FIXED_PREC_SCALE"
-  - "IS_LONG"
-  - "IS_NULLABLE"
-  - "LITERAL_SUFFIX"
-  - "LOCAL_TYPE_NAME"
-  - "m_bAutoUniqueValue"
-  - "m_bBestMatch"
-  - "m_bCaseSensitive"
-  - "m_bFixedPrecScale"
-  - "m_bIsLong"
-  - "m_bIsNullable"
-  - "m_bUnsignedAttribute"
-  - "m_guidType"
-  - "m_nColumnSize"
-  - "m_nDataType"
-  - "m_nMaxScale"
-  - "m_nMinScale"
-  - "m_nSearchable"
-  - "m_szCreateParams"
-  - "m_szLiteralPrefix"
-  - "m_szLiteralSuffix"
-  - "m_szLocalTypeName"
-  - "m_szTypeLib"
-  - "m_szTypeName"
-  - "m_szVersion"
-  - "MAXIMUM_SCALE"
-  - "MINIMUM_SCALE"
+title: CProviderTypes, CProviderInfo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_bIsLong
+- m_szLocalTypeName
+- m_guidType
+- m_bCaseSensitive
+- m_szVersion
+- m_szCreateParams
+- IS_NULLABLE
+- m_bAutoUniqueValue
+- LITERAL_SUFFIX
+- COLUMN_SIZE
+- CProviderTypes
+- LOCAL_TYPE_NAME
+- MINIMUM_SCALE
+- m_nMinScale
+- m_nColumnSize
+- m_szLiteralSuffix
+- m_bFixedPrecScale
+- m_szLiteralPrefix
+- m_nMaxScale
+- m_szTypeLib
+- m_nDataType
+- m_bUnsignedAttribute
+- m_nSearchable
+- m_bBestMatch
+- m_szTypeName
+- DATA_TYPE
+- MAXIMUM_SCALE
+- CProviderInfo
+- FIXED_PREC_SCALE
+- m_bIsNullable
+- IS_LONG
+dev_langs: C++
+helpviewer_keywords:
+- DATA_TYPE
+- MAXIMUM_SCALE
+- m_nMinScale
+- m_guidType
+- LOCAL_TYPE_NAME
+- m_bAutoUniqueValue
+- m_bBestMatch
+- m_bIsLong
+- m_bUnsignedAttribute
+- CProviderInfo parameter class
+- FIXED_PREC_SCALE
+- m_nColumnSize
+- m_szVersion
+- CProviderTypes typedef class
+- m_szCreateParams
+- IS_NULLABLE
+- m_bIsNullable
+- m_szTypeLib
+- m_szLiteralPrefix
+- m_nMaxScale
+- m_nDataType
+- m_bCaseSensitive
+- m_bFixedPrecScale
+- m_nSearchable
+- MINIMUM_SCALE
+- m_szTypeName
+- m_szLocalTypeName
+- IS_LONG
+- LITERAL_SUFFIX
+- COLUMN_SIZE
+- m_szLiteralSuffix
 ms.assetid: 6f1620ff-c2f0-4f5b-931c-27b0cd2a580d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7e0f3b5e505695eca01437bf8d1999ffccca881a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CProviderTypes, CProviderInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Chiamare la classe **CProviderTypes** typedef per implementare la propria classe di parametri **CProviderInfo**.  
+# <a name="cprovidertypes-cproviderinfo"></a>CProviderTypes, CProviderInfo
+Chiamare la classe typedef **CProviderTypes** per implementare la relativa classe di parametro **CProviderInfo**.  
   
-## Note  
- Vedere [Classi di rowset dello schema e classi typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
+## <a name="remarks"></a>Note  
+ Vedere [classi Rowset dello Schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) per ulteriori informazioni sull'utilizzo delle classi typedef.  
   
- Questa classe identifica i tipi di dati \(base\) supportate dal provider di dati.  
+ Questa classe identifica i tipi di dati (base) supportati dal provider di dati.  
   
- Nella tabella seguente sono elencati i membri dati di classi e le relative colonne corrispondenti di OLE DB.  Vedere [Rowset di PROVIDER\_TYPES](https://msdn.microsoft.com/en-us/library/ms709785.aspx)*in OLE DB Programmer's Reference* per ulteriori informazioni sullo schema e colonne.  
+ Nella tabella seguente sono elencati i membri dati della classe e le corrispondenti colonne BD OLE. Vedere [set di righe PROVIDER_TYPES](https://msdn.microsoft.com/en-us/library/ms709785.aspx) nel *riferimento per programmatori OLE DB* per ulteriori informazioni sullo schema e le colonne.  
   
 |Membri dati|Colonne OLE DB|  
-|-----------------|--------------------|  
-|m\_szTypeName|TYPE\_NAME|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_nColumnSize|COLUMN\_SIZE|  
-|m\_szLiteralPrefix|LITERAL\_PREFIX|  
-|m\_szLiteralSuffix|LITERAL\_SUFFIX|  
-|m\_szCreateParams|CREATE\_PARAMS|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_bCaseSensitive|CASE\_SENSITIVE|  
-|m\_nSearchable|ESPLORABILE|  
-|m\_bUnsignedAttribute|UNSIGNED\_ATTRIBUTE|  
-|m\_bFixedPrecScale|FIXED\_PREC\_SCALE|  
-|m\_bAutoUniqueValue|AUTO\_UNIQUE\_VALUE|  
-|m\_szLocalTypeName|LOCAL\_TYPE\_NAME|  
-|m\_nMinScale|MINIMUM\_SCALE|  
-|m\_nMaxScale|MAXIMUM\_SCALE|  
-|m\_guidType|GUID|  
-|m\_szTypeLib|TYPELIB|  
-|m\_szVersion|VERSION|  
-|m\_bIsLong|IS\_LONG|  
-|m\_bBestMatch|BEST\_MATCH|  
+|------------------|--------------------|  
+|m_szTypeName|TYPE_NAME|  
+|m_nDataType|DATA_TYPE|  
+|m_nColumnSize|COLUMN_SIZE|  
+|m_szLiteralPrefix|:: SQLGETTYPEINFO|  
+|m_szLiteralSuffix|LITERAL_SUFFIX|  
+|m_szCreateParams|CREATE_PARAMS|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_bCaseSensitive|CASE_SENSITIVE|  
+|m_nSearchable|RICERCA|  
+|m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|  
+|m_bFixedPrecScale|FIXED_PREC_SCALE|  
+|m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|  
+|m_szLocalTypeName|LOCAL_TYPE_NAME|  
+|m_nMinScale|MINIMUM_SCALE|  
+|m_nMaxScale|MAXIMUM_SCALE|  
+|m_guidType|GUID|  
+|m_szTypeLib|LIBRERIA DEI TIPI|  
+|m_szVersion|VERSION|  
+|m_bIsLong|IS_LONG|  
+|m_bBestMatch|BEST_MATCH|  
   
-## Requisiti  
- **Intestazione:** atldbsch.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** atldbsch. h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CRestrictions](../../data/oledb/crestrictions-class.md)

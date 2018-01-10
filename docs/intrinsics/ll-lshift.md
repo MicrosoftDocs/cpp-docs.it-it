@@ -1,36 +1,37 @@
 ---
-title: "__ll_lshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_lshift_cpp"
-  - "__ll_lshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ll_lshift (funzione intrinseca)"
-  - "__ll_lshift (funzione intrinseca)"
+title: __ll_lshift | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_lshift_cpp
+- __ll_lshift
+dev_langs: C++
+helpviewer_keywords:
+- ll_lshift intrinsic
+- __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 958ade238317d1577bd93d373b9e8ce4aa1f4234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __ll_lshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="lllshift"></a>__ll_lshift
+**Sezione specifica Microsoft**  
   
- Scorre il valore a 64 bit fornito del numero specificato di bit.  
+ Passa il valore a 64 bit a sinistra del numero specificato di bit.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 unsigned __int64 __ll_lshift(  
@@ -39,30 +40,30 @@ unsigned __int64 __ll_lshift(
 );  
 ```  
   
-#### Parametri  
- \[in\] `Mask`  
- Il valore Integer a 64 bit di scorrimento sinistro.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Mask`  
+ Il valore integer a 64 bit da spostare a sinistra.  
   
- \[in\] `nBit`  
- Il numero di bit da spostare.  
+ [in] `nBit`  
+ Numero di bit da spostare.  
   
-## Valore restituito  
- La maschera di sinistra i bit di `nBit` .  
+## <a name="return-value"></a>Valore restituito  
+ La maschera spostato a sinistra di `nBit` bits.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Se il programma viene compilato utilizzando l'architettura a 64 bit e `nBit` è maggiore di 63, il numero di bit mediante lo scorrimento è modulo 64 di `nBit` .  Se il programma viene compilato utilizzando l'architettura a 32 bit e `nBit` è maggiore di 31, il numero di bit mediante lo scorrimento è modulo 32 di `nBit` .  
+## <a name="remarks"></a>Note  
+ Se si compila il programma usando l'architettura a 64 bit e `nBit` è maggiore di 63, il numero di bit da spostare è `nBit` modulo 64. Se si compila il programma usando l'architettura a 32 bit e `nBit` è maggiore di 31, il numero di bit da spostare è `nBit` modulo 32.  
   
- `ll` nel nome indica che si tratta di un'operazione su `long long` \(`__int64`\).  
+ Il `ll` nel nome indica che si tratta di un'operazione in `long long` (`__int64`).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // ll_lshift.cpp  
@@ -83,17 +84,17 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 10000  
 ```  
   
- **nota** non rappresenta la versione senza segno l'operazione di spostamento a sinistra.  Questo perché `__ll_lshift` già utilizza un parametro di input senza segno.  A differenza di spostamento a destra, non esiste alcuna dipendenza del segno per lo spostamento a sinistra, poiché il bit meno significativi nel risultato è sempre impostato su zero indipendentemente dal segno del valore di.  
+ **Nota** non è disponibile alcuna versione senza segno dell'operazione di spostamento a sinistra. In questo modo `__ll_lshift` è già utilizzato da un parametro di input senza segno. Differenza di spostamento a destra, non si verifica alcuna dipendenza di accesso per lo spostamento a sinistra, poiché il bit meno significativo nel risultato è sempre impostato su zero indipendentemente dal segno del valore spostato.  
   
-### Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)   
+## <a name="see-also"></a>Vedere anche  
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

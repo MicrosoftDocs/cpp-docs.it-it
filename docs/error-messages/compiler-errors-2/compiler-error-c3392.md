@@ -1,45 +1,26 @@
 ---
-title: Errore del compilatore C3392 | Documenti di Microsoft
+title: Errore del compilatore C3392 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3392
+f1_keywords: C3392
+dev_langs: C++
+helpviewer_keywords: C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: ca0d37c75c61e1280c0f13ef6a26cd4ab920d1d9
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 32477f657a3293617b3831be1812aececa521df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3392"></a>Errore del compilatore C3392
 'type_arg': argomento di tipo non valido per il parametro generico 'param' del 'generic_type' generico. Deve avere un costruttore pubblico senza parametri  
@@ -47,7 +28,7 @@ ms.lasthandoff: 02/24/2017
  L'istanza di un tipo generico è stata creata in modo non corretto. Controllare la definizione del tipo. Per ulteriori informazioni, vedere [Generics](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene utilizzato c# per creare un componente che contiene un tipo generico che dispone di determinati vincoli che non sono supportati durante la creazione di tipi generici in C + + CLI. Per ulteriori informazioni, vedere [vincoli sui parametri di tipo](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+L'esempio seguente viene utilizzato c# per creare un componente che contiene un tipo generico che dispone di determinati vincoli che non sono supportati durante la creazione di tipi generici in C + + CLI. Per altre informazioni, vedere [Vincoli sui parametri di tipo](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3392.cs  
@@ -59,7 +40,7 @@ where V : struct
 where N : new() {}  
 ```  
   
-Quando il componente C3392.dll è disponibile, l'esempio seguente genera C3392.  
+Quando il componente C3392.dll è disponibile, l'esempio seguente genera l'errore C3392.  
   
 ```cpp  
 // C3392_b.cpp  

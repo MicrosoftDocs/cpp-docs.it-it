@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c401cebf9fd09686a532031322793fd9bedac50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Riferimenti ai modelli consumer OLE DB
 Modelli Consumer OLE DB contiene le classi seguenti. Il materiale di riferimento sono inoltre inclusi argomenti in di [macro per i modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  

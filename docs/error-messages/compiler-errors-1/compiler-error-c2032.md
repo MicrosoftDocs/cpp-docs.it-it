@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2032
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2032
+f1_keywords: C2032
+dev_langs: C++
+helpviewer_keywords: C2032
 ms.assetid: 625d7c83-70b6-42c2-a558-81fbc0026324
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 87703c289dc522f62c29fd2110e969fd44abf645
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 81bbe4c9e5242f68a5e0e304858c13c9274c1743
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2032"></a>Errore del compilatore C2032
 'identifier': funzione non può essere membro di struct/unione '  

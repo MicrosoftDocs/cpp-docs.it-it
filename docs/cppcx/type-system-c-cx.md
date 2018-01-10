@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c1839fad0c929f6e24b74f74c2cc91e29e07005b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5c0db625db458bf4fb530ba4b07e742b1aad964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-system-ccx"></a>Sistema di tipi (C++/CX)
 Tramite l'architettura di Windows Runtime, è possibile utilizzare C + + CX, Visual Basic, Visual c# e JavaScript per scrivere App e componenti che direttamente accedere all'API Windows e interagiscono con altri componenti e App di Windows Runtime. Piattaforma Windows universale che vengono scritti in C++ compilata nel codice nativo eseguibile direttamente nella CPU. Piattaforma Windows universale che vengono scritti in c# o Visual Basic compilate in Microsoft intermediate language (MSIL) ed eseguite in common language runtime (CLR). Piattaforma Windows universale che vengono scritte in JavaScript eseguite in un ambiente di runtime. Componenti stessi del sistema operativo Windows Runtime sono scritti in C++ ed eseguiti come codice nativo. Tutti questi componenti e App Universal Windows Platform comunicano direttamente attraverso l'interfaccia di Windows Runtime application binaria (ABI).  

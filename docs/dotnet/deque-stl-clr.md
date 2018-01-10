@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 La classe modello descrive un oggetto che controlla una sequenza di lunghezza variabile di elementi che dispone di accesso casuale. Utilizzare il contenitore `deque` per gestire una sequenza di elementi che è simile a un blocco contiguo di archiviazione, ma che possibile aumentare o diminuire in delle estremità senza la necessità di copiare tutti gli elementi rimanenti. In questo modo può implementare in modo efficiente un `double-ended queue`. (Da qui il nome.)  

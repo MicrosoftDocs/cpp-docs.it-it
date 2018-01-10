@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93fe57edc4840d7d053ea61598b3da2c7f4ca05a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3876ee887cfeec811d88684927ea9a03af1a8f1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 Includere l'intestazione STL/CLR `<cliext/utility>` per definire la classe modello `pair` e diverse funzioni di modello di supporto.  

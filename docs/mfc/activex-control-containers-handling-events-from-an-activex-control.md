@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
-ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>Contenitori di controlli ActiveX: gestione di eventi da un controllo ActiveX
 Questo articolo viene illustrato l'utilizzo della finestra proprietà per installare gestori di eventi per i controlli ActiveX in un contenitore di controlli ActiveX. I gestori eventi vengono utilizzati per ricevere le notifiche (dal controllo) di determinati eventi ed eseguire un'azione in risposta. Questa notifica viene chiamata l'evento "generazione".  
@@ -71,11 +69,10 @@ Questo articolo viene illustrato l'utilizzo della finestra proprietà per instal
   
 4.  Selezionare l'evento che si desidera che la classe di finestra di dialogo per gestire. Per questo esempio, selezionare **fare clic su**.  
   
-5.  Selezionare la casella di riepilogo a destra, ** \<Aggiungi > ClickCircctrl1**.  
+5.  Selezionare la casella di riepilogo a destra,  **\<Aggiungi > ClickCircctrl1**.  
   
 6.  Fare doppio clic su nuova funzione di gestione da Visualizzazione classi per passare al codice del gestore di evento nell'implementazione (. I file CPP) di `CContainerDlg`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Contenitori di controlli ActiveX](../mfc/activex-control-containers.md)
-
 

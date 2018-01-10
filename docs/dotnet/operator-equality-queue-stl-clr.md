@@ -1,33 +1,33 @@
 ---
-title: "operator== (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== (membro) [STL/CLR]"
+title: operatore = = (coda) (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: ad183c61-a24a-4851-aac7-2a47a1371ec2
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7ca0d4596db074ef5896358d6e73d8422f6f5419
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator== (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Confronto di uguale accoda.  
+# <a name="operator-queue-stlclr"></a>operator== (queue) (STL/CLR)
+Confronto uguale a coda.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  left  
  Contenitore sinistro da confrontare.  
   
  right  
- Contenitore appropriato da confrontare.  
+ Contenitore destro da confrontare.  
   
-## Note  
- La funzione di operatore restituisce true solo se le sequenze controllate da `left` e da `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left``[i] ==` `right``[i]`.  È possibile utilizzarlo per verificare se `left` viene ordinato uguale a `right` quando le due code sono elemento confrontata dall'elemento.  
+## <a name="remarks"></a>Note  
+ La funzione di operatore restituisce true solo se le sequenze controllate da `left` e `right` hanno la stessa lunghezza e, per ogni posizione `i`, `left[i] ==` `right[i]`. Utilizzati per verificare se `left` viene ordinato identico `right` quando due code vengono confrontato elemento per elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_queue_operator_eq.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \=\= a b \[in\] è true**  
-**\[a b c\] \=\= a b \[d\] è false**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [queue](../dotnet/queue-stl-clr.md)   
- [operator\!\= \(queue\)](../dotnet/operator-inequality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [coda (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [operatore! = (coda) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   
+ [operatore\< (coda) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [operatore > = (coda) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [operatore > (coda) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)

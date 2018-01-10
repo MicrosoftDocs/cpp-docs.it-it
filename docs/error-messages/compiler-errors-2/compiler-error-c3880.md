@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e86108e0ab2608f7f59f160d9f7a849b83ef71a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a1aba2a8cc76e1f47650b4a4fd4c47e95e98d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3880"></a>Errore del compilatore C3880
 'var': non può essere un membro dati literal  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
 -   tipo integrale  
   
--   string  
+-   stringa  
   
 -   enumerazione con un tipo integrale o sottostante  
   

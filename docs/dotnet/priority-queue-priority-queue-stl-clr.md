@@ -1,32 +1,33 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue (membro) [STL/CLR]"
+title: 'priority_queue:: priority_queue (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03d0054f3c755c3dd6e4bd653c972a0f7aa6735d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruisce un oggetto dell'adattatore del contenitore.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
+Costruisce un oggetto adattatore di contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 priority_queue();  
@@ -44,84 +45,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### Parametri  
- continuazione  
+#### <a name="parameters"></a>Parametri  
+ cont  
  Contenitore da copiare.  
   
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  pred  
- Predicato utilizzato per ordinare la sequenza selezionata.  
+ Ordinamento di predicato per la sequenza controllata.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `priority_queue();`  
   
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato predefinito dell'ordine.  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato dell'ordinamento predefinito. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- crea un contenitore di cui è stato eseguito il wrapping che è una copia di `right.get_container()`, con il predicato `right.value_comp()`dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto coda `right`, con lo stesso ordine di predicato.  
+ Crea un contenitore incluso che è una copia di `right.get_container()`, con il predicato ordinamento `right.value_comp()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto coda `right`, con il predicato di ordinamento stesso.  
   
  Il costruttore:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- crea un contenitore di cui è stato eseguito il wrapping che è una copia di `right->get_container()`, con il predicato `right->value_comp()`dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto coda `*right`, con lo stesso ordine di predicato.  
+ Crea un contenitore incluso che è una copia di `right->get_container()`, con il predicato ordinamento `right->value_comp()`. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto coda `*right`, con il predicato di ordinamento stesso.  
   
  Il costruttore:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato specificato dell'ordine.  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato ordinamento `pred`. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato `pred` order, quindi esegue tutti gli elementi di `cont` di utilizzarla per specificare una sequenza iniziale controllata da un contenitore esistente, con il predicato specificato dell'ordine.  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato ordinamento `pred`, quindi inserisce gli elementi della `cont` è utilizzata per specificare una sequenza controllata iniziale da un contenitore esistente, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
-  
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato predefinito dell'ordine, quindi richiesto la sequenza `[``first``,` `last``)`.  Utilizzarla per specificare una sequenza selezionata iniziale da un eqeuence specificato, con il predicato specificato dell'ordine.  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato di ordinamento predefinito, quindi inserisce la sequenza [`first`, `last`). È utilizzata per specificare una sequenza controllata iniziale da un eqeuence specificato, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred);`  
-  
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato `pred` order, quindi richiesto la sequenza `[``first``,` `last``)`.  Utilizzarla per specificare una sequenza selezionata iniziale da un seqeuence specificato, con il predicato specificato dell'ordine.  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato ordinamento `pred`, quindi inserisce la sequenza [`first`, `last`). È utilizzata per specificare una sequenza controllata iniziale da un seqeuence specificato, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- `priority_queue(InIt first, InIt last,`  
+ Crea un contenitore vuoto sottoposta a wrapping, con il predicato ordinamento `pred`, quindi inserisce gli elementi della `cont` più la sequenza [`first`, `last`). È utilizzata per specificare una sequenza controllata iniziale da un contenitore esistente e un seqeuence specificato, con il predicato di ordinamento specificato.  
   
- `value_compare^ pred, container_type% cont);`  
+## <a name="example"></a>Esempio  
   
- crea un contenitore di cui è stato eseguito il wrapping vuoto, con il predicato `pred` order, quindi esegue tutti gli elementi di `cont` più la sequenza `[``first``,` `last``)`.  Utilizzarla per specificare una sequenza iniziale controllata da un contenitore esistente e da un seqeuence specificato, con il predicato specificato dell'ordine.  
-  
-## Esempio  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +195,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **c a b**  
-**size\(\) \= 0**  
- **c b**  
- **c b**  
- **c a b**  
- **c b**  
- **a b c c b**  
- **c a b**  
- **c a b**  
- **c b**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

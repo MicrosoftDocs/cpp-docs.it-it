@@ -1,29 +1,28 @@
 ---
-title: "Errore irreversibile U1034 di NMAKE  | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1034"
+title: Errore irreversibile U1034 di NMAKE | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1034
+dev_langs: C++
+helpviewer_keywords: U1034
 ms.assetid: 27e678c2-23e2-4247-87f7-66493784af33
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61290723cd8ad3764b52454713c2df5f16a93f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore irreversibile U1034 di NMAKE 
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-errore di sintassi: manca il separatore  
+# <a name="nmake-fatal-error-u1034"></a>Errore irreversibile U1034 di NMAKE 
+Errore di sintassi: manca il separatore  
   
- Manca il segno di due punti \(**:**\) che separa destinazioni e file dipendenti.
+ I due punti (**:**) che separa le destinazioni e dipendenti è mancante.

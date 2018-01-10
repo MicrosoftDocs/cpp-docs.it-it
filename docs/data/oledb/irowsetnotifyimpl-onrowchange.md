@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c765561ce1320944888e599fd4d9f7bf1da04976
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d20e144ae700a19fb6b87820fd092bff11d3bc88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifyimplonrowchange"></a>IRowsetNotifyImpl::OnRowChange
 Notifica il consumer della prima modifica a una riga o di qualsiasi modifica che interessa l'intera riga.  

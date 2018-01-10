@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operatori di incremento e decremento in forma suffissa: ++ e --
 ## <a name="syntax"></a>Sintassi  
@@ -55,7 +53,7 @@ i++;
   
  Quando un operatore suffisso viene applicato a un argomento di funzione, non è garantito che il valore dell'argomento venga incrementato o decrementato prima di essere passato alla funzione.  Per ulteriori informazioni, vedere la sezione 1.9.17 in C++ standard.  
   
- Applicare l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro per la rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, definita in precedenza il * n *elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.  
+ Applicare l'operatore di incremento suffisso a un puntatore a una matrice di oggetti di tipo **lungo** incrementata di quattro per la rappresentazione interna del puntatore. Questo comportamento fa sì che il puntatore, definita in precedenza il  *n* elemento della matrice, per fare riferimento al (*n*+ 1) elemento th.  
   
  Gli operandi di incremento e operatori di decremento suffisso devono essere modificabili (non **const**) l-value di tipo aritmetico o puntatore. Il tipo del risultato è uguale a quello del *postfix-expression*, ma non è un l-value.  
   

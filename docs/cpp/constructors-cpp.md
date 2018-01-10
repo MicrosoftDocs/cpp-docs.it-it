@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>Costruttori (C++)
 Un costruttore è un tipo di funzione membro che inizializza un'istanza della relativa classe. Ha nome uguale a quello della classe e non restituisce alcun valore. Un costruttore può avere parametri di qualsiasi tipo e una classe può avere qualsiasi numero di costruttori in overload. I costruttori possono avere qualsiasi tipo di accessibilità, ovvero possono essere pubblici, protetti o privati. Se non si definisce alcun costruttore, il compilatore genererà un costruttore predefinito che non accetta parametri. È possibile eseguire l'override di questo comportamento dichiarando un costruttore predefinito come eliminato.  
@@ -578,7 +576,7 @@ Press Enter to exit.
   
  L'istruzione using porta nell'ambito tutti i costruttori dalla classe base, ad eccezione di quelli che hanno una firma identica ai costruttori disponibili nella classe derivata. In genere, è consigliabile usare i costruttori ereditanti quando la classe derivata non dichiara nuovi membri dati o nuovi costruttori.  
   
- Un modello di classe può ereditare tutti i costruttori da un argomento di tipo, se tale tipo specifica una classe base:  
+ Un modello di classe può ereditare tutti i costruttori da un argomento tipo, se tale tipo specifica una classe base:  
   
 ```  
 template< typename T >  
@@ -613,7 +611,7 @@ class Derived : T {
   
  Un costruttore di copia generato dal compilatore configura un nuovo oggetto ed esegue una copia membro per membro dei contenuti dell'oggetto da copiare. I costruttori delle classi base o dei membri vengono chiamati solo se esistono; in caso contrario, viene eseguita la copia bit per bit.  
   
- Se tutte le classi di base e dei membri di una classe `type` hanno costruttori di copia che accettano un **const** argomento, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo **const** `type` **&**. In caso contrario, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo `type` ** & **.  
+ Se tutte le classi di base e dei membri di una classe `type` hanno costruttori di copia che accettano un **const** argomento, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo **const** `type` **&**. In caso contrario, il costruttore di copia generato dal compilatore accetta un unico argomento di tipo `type`  **&** .  
   
  È possibile utilizzare un costruttore per inizializzare un **const** o `volatile` oggetto, ma il costruttore stesso non può essere dichiarato come **const** o `volatile`. La classe di archiviazione ammessa solo per un costruttore è **inline**; uso di qualsiasi altro modificatore di classe di archiviazione, inclusi il `__declspec` (parola chiave), con un costruttore genera un errore del compilatore.  
   
@@ -699,4 +697,3 @@ int main()
   
  `Base::Base` chiama la funzione `f`, che è una funzione virtuale. In genere, `Derived::f` viene chiamato perché l'oggetto `d` è di tipo `Derived`. Poiché la funzione `Base::Base` è un costruttore, l'oggetto non è ancora del tipo `Derived` e viene chiamato `Base::f`.  
   
-

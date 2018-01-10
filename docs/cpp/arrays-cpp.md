@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>Matrici (C++)
 Una matrice è una raccolta di oggetti simili. Il caso più semplice di una matrice è un vettore che può essere dichiarato dalla seguente sequenza:  
@@ -56,7 +54,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Inizializzatore facoltativo.  Vedere [inizializzatori](../cpp/initializers.md).  
   
- Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui * n * è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
+ Il numero di elementi nella matrice è dato dall'espressione costante. Il primo elemento nella matrice è l'elemento 0 e l'ultimo elemento è il (*n*-1) elemento, in cui  *n*  è il numero di elementi della matrice può contenere. Il *espressione costante* deve essere di tipo integrale e deve essere maggiore di 0. Una matrice con dimensione zero è valida solo quando la matrice è l'ultimo campo in un `struct` o **unione** e quando le estensioni Microsoft (/Ze) sono abilitate.  
   
  Nell'esempio seguente viene illustrato come definire una matrice in fase di esecuzione:  
   

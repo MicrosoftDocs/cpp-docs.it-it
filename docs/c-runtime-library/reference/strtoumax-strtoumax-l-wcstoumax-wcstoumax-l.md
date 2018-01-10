@@ -44,11 +44,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15553980eb54bf5be149abddc17fb69ceb648aee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16ac81afeec1fece3f6a5039835b9f950a8b6768
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 Converte le stringhe in un valore intero con il tipo Integer senza segno supportato più grande.  
@@ -101,7 +102,7 @@ uintmax_t _wcstoumax_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni converte la stringa di input `nptr` in un valore integer `uintmax_t`.  
   
- `strtoumax` interrompe la lettura della stringa `nptr` in corrispondenza del primo carattere che non riconosce come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`. L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoumax` e `wcstoumax` usano le impostazioni locali correnti. `_strtoumax_l` e `_wcstoumax_l` sono identiche, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `strtoumax` interrompe la lettura della stringa `nptr` in corrispondenza del primo carattere che non riconosce come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`. L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base in `nptr`. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoumax` e `wcstoumax` usano le impostazioni locali correnti. `_strtoumax_l` e `_wcstoumax_l` sono identiche, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
   
@@ -125,7 +126,7 @@ uintmax_t _wcstoumax_l(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`strtoumax`|\<stdlib.h>|  
-|`wcstoumax`|\<stdlib.h> o \<wchar.h>|  
+|`wcstoumax`|\<stdlib.h> or \<wchar.h>|  
 |`_strtoumax_l`|\<stdlib.h>|  
 |`_wcstoumax_l`|\<stdlib.h> or \<wchar.h>|  
   
@@ -135,8 +136,8 @@ uintmax_t _wcstoumax_l(
  Vedere l'esempio per [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   

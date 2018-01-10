@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 474d4f82b41eaab43c5e87ca335b911db0b4e64e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
 Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto del modulo corrente. Il gestore dell'evento è specificato da un oggetto e il relativo membro puntatore al metodo.  
@@ -53,7 +56,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Membro dati Module::MethodReleaseNotifier::method_](../windows/module-methodreleasenotifier-method-data-member.md)|Contiene un puntatore al gestore dell'evento per l'oggetto methodreleasenotifier corrente.|  
 |[Membro dati Module::MethodReleaseNotifier::object_](../windows/module-methodreleasenotifier-object-data-member.md)|Contiene un puntatore all'oggetto la cui funzione membro è il gestore eventi per l'oggetto methodreleasenotifier corrente.|  

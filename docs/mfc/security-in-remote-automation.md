@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7ad2d09d45747733bd79fd6fe2a7139cef5269a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e535fac6330d6268629e8e3681fec47c7b0d65d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-in-remote-automation"></a>Sicurezza nell'automazione remota
 L'automazione remota supporta un livello di sicurezza di base per consentire a un writer dell'applicazione server (o, piuttosto, l'amministratore) di specificare la modalità di attivazione remota di un oggetto specifico. Tutti gli oggetti di automazione in un sistema specifico possono essere impostati a livello globale in modo che l'attivazione remota sia abilitata o meno. Inoltre, e più spesso, queste funzionalità vengono assegnate a singoli oggetti. Automazione remota utilizza una chiave nelle impostazioni del Registro di sistema di ciascun oggetto, **AllowRemoteActivation**, per determinare se un determinato server può essere attivato in remoto. Se le impostazioni a livello di sistema utilizzano questa modalità, è possibile assegnare questa chiave a tutti gli oggetti nel Registro di sistema e impostare lo stato di ciascun oggetto su "sì" o "no" in base alle proprie esigenze.  

@@ -15,10 +15,9 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -26,12 +25,11 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiteratorgt-operators"></a>Operatori &lt;iterator&gt;
 ||||  
@@ -752,5 +750,4 @@ The difference: rVPOS2 - rVPOS1= 4.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<iterator>](../standard-library/iterator.md)
-
 

@@ -1,34 +1,33 @@
 ---
-title: "Avviso di compilazione progetto PRJ0029 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0029"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0029"
+title: Progetto PRJ0029 avviso di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0029
+dev_langs: C++
+helpviewer_keywords: PRJ0029
 ms.assetid: f02c09c6-09f3-4d44-8cd4-9a25336be1ea
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 924b37c40ee8b008fbf0a10896ef53e51fcbcc0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso di compilazione progetto PRJ0029
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La proprietà "Output" per l'istruzione di compilazione personalizzata a livello di progetto non è impostata.L'istruzione verrà ignorata.  
+# <a name="project-build-warning-prj0029"></a>Avviso di compilazione progetto PRJ0029
+La proprietà 'Output' per il passaggio di compilazione personalizzata a livello di progetto non è impostata. L'istruzione di compilazione personalizzata verrà ignorata.  
   
- Un'istruzione di compilazione personalizzata non è stata eseguita perché non è stato specificato alcun output.  
+ Un'istruzione di compilazione personalizzata non è stata eseguita perché è stato specificato alcun output.  
   
- Per correggere l'errore, effettuare una delle seguenti operazioni:  
+ Per correggere l'errore, effettuare una delle seguenti:  
   
 -   Escludere l'istruzione di compilazione personalizzata dalla compilazione.  
   

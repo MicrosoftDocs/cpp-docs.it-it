@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::piecewise_linear_distribution::param_type::densities
 - random/std::piecewise_linear_distribution::param_type::operator==
 - random/std::piecewise_linear_distribution::param_type::operator!=
-- random/std::piecewise_linear_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::piecewise_linear_distribution [C++]
 - std::piecewise_linear_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7764537c09b9e1d226e1a5d847f94d4825e50870
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cdb6dd498d4680c757187cfe30aba304809c3680
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="piecewiselineardistribution-class"></a>Classe piecewise_linear_distribution
 Genera una distribuzione lineare a tratti con intervalli di larghezza diversa e probabilità a variabilità lineare in ogni intervallo.  
@@ -363,7 +360,6 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 
 
 

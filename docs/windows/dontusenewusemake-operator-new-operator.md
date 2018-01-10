@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5424108692bd97bdea890aff85ab7428276dd430
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea5cfa85dcf2873dcb8fe287e251511e3e48dbb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>Operatore DontUseNewUseMake::operator new
 Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  

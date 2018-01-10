@@ -34,11 +34,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 48b187a22f21f44c10857b10bc4d07f3b347a139
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c09e3aa17eca569b4c878c853e47ab5c59b02964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strset-wcsset"></a>strset, wcsset
 Queste funzioni sono deprecate. Usare invece le funzioni conformi ISO C++ [strset, strset_l, wcsset, wcsset_l, mbsset, mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) o le funzioni con sicurezza avanzata [strset_s, strset_s_l, wcsset_s, wcsset_s_l, mbsset_s, mbsset_s_l](../../c-runtime-library/reference/strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md).

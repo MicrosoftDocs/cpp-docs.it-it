@@ -1,50 +1,53 @@
 ---
-title: "Recordset: esecuzione di un join (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "associazione dati [C++], colonne nei recordset"
-  - "associazione dati [C++], colonne dei recordset"
-  - "filtri [C++], condizioni join per recordset"
-  - "join [C++], in recordset"
-  - "ODBC (recordset) [C++], join"
-  - "recordset [C++], associazione dati"
-  - "recordset [C++], join di tabelle"
+title: 'Recordset: Esecuzione di un Join (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4091cd8e60eed569782021c811f12af227e79673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: esecuzione di un join (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-performing-a-join-odbc"></a>Recordset: esecuzione di un join (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
-## Definizione di join  
- L'operazione di join, una comune attività di accesso ai dati, consente di utilizzare i dati contenuti in più tabelle tramite un unico oggetto recordset.  Il join di due o più tabelle produce un recordset in grado di contenere le colonne di ciascuna tabella ma visualizzate nell'applicazione come tabella singola.  Il join utilizza talvolta tutte le colonne di tutte le tabelle, mentre la clausola SQL **SELECT** in un join consente di utilizzare solo alcune delle colonne di ciascuna tabella.  Le classi di database supportano esclusivamente i join in sola lettura e non quelli aggiornabili.  
+## <a name="what-a-join-is"></a>Che cos'è un Join  
+ L'operazione di join, un'attività di accesso ai dati comuni, consente di lavorare con dati provenienti da più di una tabella utilizzando un unico oggetto recordset. Unione di due o più tabelle produce un recordset che può contenere colonne di ogni tabella, ma viene visualizzato come una singola tabella per l'applicazione. Il join utilizza talvolta tutte le colonne di tutte le tabelle, ma talvolta SQL **selezionare** clausola in un join utilizza solo alcune colonne di ogni tabella. Le classi di database supportano i join di sola lettura, ma non aggiornabili.  
   
- Per selezionare i record contenenti le colonne di tabelle unite in join, sono necessari gli elementi riportati di seguito.  
+ Per selezionare i record contenenti le colonne di tabelle unite in join, è necessario quanto segue:  
   
--   Un elenco di tabelle contenente i nomi di tutte le tabelle da unire.  
+-   Un elenco di tabelle contenenti i nomi di tutte le tabelle da unire in join.  
   
--   Un elenco di colonne contenente i nomi di tutte le colonne partecipanti.  Le colonne con lo stesso nome ma contenute in tabelle differenti sono qualificate dal nome della tabella.  
+-   Un elenco di colonne contenente i nomi di tutte le colonne coinvolte. Le colonne con lo stesso nome ma di tabelle diverse vengono qualificate dal nome della tabella.  
   
--   Un filtro \(clausola SQL **WHERE**\) che specifica le colonne in base alle quali si esegue il join delle tabelle.  Il filtro esegue il join e ha la seguente forma: "Tabella1.ColChiave \= Tabella2.ColChiave".  
+-   Un filtro (SQL **dove** clausola) che specifica le colonne in cui vengono unite le tabelle. Questo filtro assume il formato "Tabella1. ColChiave = Tabella2. ColChiave" ed esegue il join.  
   
- È possibile unire più di due tabelle con lo stesso metodo, eguagliando più coppie di colonne, ciascuna delle quali unita dalla parola chiave SQL **AND**.  
+ È possibile unire più di due tabelle nello stesso modo facendo corrispondere più coppie di colonne, ciascuna unite tramite la parola chiave SQL **AND**.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: dichiarazione di una classe per una query già definita \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Recordset: dichiarazione di una classe per una tabella \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [Recordset: ripetizione di una query in un recordset \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Dichiarazione di una classe per una Query già definita (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [Recordset: Dichiarazione di una classe per una tabella (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [Recordset: ripetizione di una query in un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

@@ -123,11 +123,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 511c39ecef8a9f099cf8ca71f73b891a96bc0ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 90ec0d78dc9a95f80dec04141184f5376d0e6556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolumns-ccolumnsinfo"></a>CColumns, CColumnsInfo
 Chiamare la classe typedef **CColumns** per implementare la relativa classe di parametro **CColumnsInfo**.  
@@ -168,7 +171,7 @@ Chiamare la classe typedef **CColumns** per implementare la relativa classe di p
 |m_szDomainCatalog|DOMAIN_CATALOG|  
 |m_szDomainSchema|DOMAIN_SCHEMA|  
 |m_szDomainName|DOMAIN_NAME|  
-|m_szDescription|DESCRIZIONE|  
+|m_szDescription|DESCRIPTION|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbsch. h  

@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Assembly misti (nativi e gestiti)
 Assembly misti sono in grado di contenere i computer non gestito e le istruzioni MSIL. In questo modo possono chiamare ed essere chiamato da componenti .NET, mantenendo la compatibilità con i componenti che non sono completamente gestiti. Utilizzo di assembly misti, gli sviluppatori possono creare applicazioni che usano una combinazione di funzionalità gestite e non gestito. In questo modo, gli assembly misti è ideale per la migrazione di applicazioni Visual C++ esistente alla piattaforma .NET.  
@@ -36,7 +39,7 @@ Assembly misti sono in grado di contenere i computer non gestito e le istruzioni
   
  Visual C++ supporta la generazione di tre tipi distinti di assembly gestiti: mista, pura e verificabile. Quest'ultimo sono illustrati in [codice Pure e verificabile (C + + CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: migrare a /clr](../dotnet/how-to-migrate-to-clr.md)  
  Vengono descritte le procedure consigliate per l'introduzione o l'aggiornamento delle funzionalità .NET nell'applicazione.  
   

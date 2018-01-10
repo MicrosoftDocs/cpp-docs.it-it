@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 080b4fcfb005d0d04c10ad5c0a6f4d1c7a49fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58b53159bab17ef0fddf5b26606889f89412856e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>Procedura: scrivere un file di testo (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato come creare un file di testo e scrivere il testo utilizzando il <xref:System.IO.StreamWriter> (classe), che è definito nel <xref:System.IO> dello spazio dei nomi. Il <xref:System.IO.StreamWriter> costruttore accetta il nome del file da creare. Se il file esiste, viene sovrascritto (a meno che non passare True come secondo <xref:System.IO.StringWriter> argomento del costruttore).  

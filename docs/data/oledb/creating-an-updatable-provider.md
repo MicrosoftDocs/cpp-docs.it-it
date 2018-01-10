@@ -1,89 +1,92 @@
 ---
-title: "Creazione di un provider aggiornabile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "notifiche, supporto nei provider"
-  - "provider OLE DB, creazione"
-  - "provider OLE DB, aggiornabile"
+title: Creazione di un Provider aggiornabile | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, updatable
+- notifications, support in providers
+- OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creazione di un provider aggiornabile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In Visual C\+\+ 6.0 erano supportati solo provider in sola lettura.  In Visual C\+\+ .NET sono supportati provider aggiornabili, ovvero provider in grado di aggiornare l'archivio dati scrivendovi dati.  In questo argomento verrà illustrato come creare provider aggiornabili utilizzando i modelli OLE DB.  
+# <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
+Visual C++ supporta provider aggiornabile o i provider che è possibile aggiornare (scrivere) nell'archivio dati. In questo argomento viene illustrato come creare provider aggiornabili utilizzando i modelli OLE DB.  
   
- A tal fine si presupporrà l'esistenza di un provider già funzionante.  Per creare un provider aggiornabile sono necessari due passaggi.  In primo luogo è necessario decidere in che modo il provider apporterà modifiche all'archivio dati, in particolare se le modifiche dovranno essere rese effettive immediatamente o solo tramite esecuzione di un comando di aggiornamento.  Nella sezione [Modifica dei provider per renderli aggiornabili](#vchowmakingprovidersupdatable) vengono illustrate le modifiche e le impostazioni necessarie nel codice del provider.  
+ In questo argomento si presuppone che si inizi con un provider utilizzabile. Sono disponibili due passaggi per la creazione di un provider aggiornabile. È innanzitutto necessario decidere come il provider verrà apportate modifiche all'archivio dati; in particolare, se le modifiche devono essere effettuate immediatamente o posticipata finché non viene eseguito un comando di aggiornamento. La sezione "[provider per renderli aggiornabili](#vchowmakingprovidersupdatable)" descrive le modifiche e le impostazioni necessarie nel codice del provider.  
   
- In secondo luogo è necessario verificare che il provider contenga tutte le funzionalità necessarie per supportare quelle eventualmente richieste dal consumer.  Se il consumer deve aggiornare l'archivio dati, nel provider dovrà essere incluso il codice per la memorizzazione permanente dei dati nell'archivio dati.  Per eseguire queste operazioni sull'origine dati è ad esempio possibile utilizzare la libreria di runtime del linguaggio C o MFC.  Nella sezione [Scrittura nell'origine dati](#vchowwritingtothedatasource) viene descritto come scrivere nell'origine dati, come trattare i valori **NULL** e predefiniti e come impostare i flag di colonna.  
+ Successivamente, è necessario assicurarsi che provider contiene tutte le funzionalità per supportare che il consumer può richiedere di esso. Se il consumer deve aggiornare l'archivio dati, il provider deve contenere codice che mantiene i dati nell'archivio dati. Ad esempio, utilizzare la libreria di Run-Time C o MFC per eseguire tali operazioni sull'origine dati. La sezione "[scrittura all'origine dati](#vchowwritingtothedatasource)" viene descritto come scrivere l'origine dati, gestire **NULL** e i valori predefiniti e impostare i flag di colonna.  
   
 > [!NOTE]
->  UpdatePV è un esempio di provider aggiornabile.  È uguale a MyProv, ma con l'aggiunta del supporto per l'aggiornamento.  
+>  UpdatePV è un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con supporto aggiornabile.  
   
-##  <a name="vchowmakingprovidersupdatable"></a> Modifica dei provider per renderli aggiornabili  
- Per rendere aggiornabile un provider è innanzitutto importante determinare quali operazioni si desidera che il provider esegua sull'archivio dati e in che modo dovranno essere eseguite queste operazioni.  In particolare è importante definire se gli aggiornamenti all'archivio dati dovranno essere eseguiti immediatamente oppure rimandati in batch fino all'esecuzione di un comando di aggiornamento.  
+##  <a name="vchowmakingprovidersupdatable"></a>Rendendo provider aggiornabili  
+ La chiave per la creazione di un provider aggiornabile è comprendere quali operazioni si desidera che il provider esegua all'archivio dati e come si vuole che il provider per eseguire tali operazioni. In particolare, il problema principale è che gli aggiornamenti all'archivio dati devono essere eseguita immediatamente o posticipata (batch) fino a quando non viene eseguito un comando di aggiornamento.  
   
- In primo luogo è necessario decidere se ereditare da `IRowsetChangeImpl` o `IRowsetUpdateImpl` nella classe del rowset.  In base all'implementazione scelta, saranno interessate le funzionalità di tre metodi: `SetData`, **InsertRows** e `DeleteRows`.  
+ È innanzitutto necessario decidere se ereditare da `IRowsetChangeImpl` o `IRowsetUpdateImpl` nella classe del set di righe. In base all'implementazione scelta, saranno interessate le funzionalità dei tre metodi: `SetData`, **InsertRows**, e `DeleteRows`.  
   
--   Se si eredita da [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), chiamando questi tre metodi l'archivio dati verrà modificato immediatamente.  
+-   Se si eredita da [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md), chiamando questi tre metodi modificato immediatamente l'archivio dati.  
   
--   Se si eredita da [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), le modifiche all'archivio dati verranno rimandate fino a quando verrà chiamato **Update**, `GetOriginalData` o **Undo**.  Se l'aggiornamento comprende diverse modifiche, esse verranno apportate in batch. Tenere presente che l'esecuzione di modifiche in batch può comportare un considerevole sovraccarico di memoria.  
+-   Se si eredita da [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md), i metodi di rinviare le modifiche all'archivio dati finché non si chiama **aggiornamento**, `GetOriginalData`, o **Annulla**. Se l'aggiornamento comporta diverse modifiche, esse vengono eseguite in modalità batch (si noti che l'invio in batch di modifiche può aggiungere overhead di memoria considerevole).  
   
- `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl` e pertanto offre non solo funzionalità di modifica, ma anche funzionalità di esecuzione in batch.  
+ Si noti che `IRowsetUpdateImpl` deriva da `IRowsetChangeImpl`. Di conseguenza, `IRowsetUpdateImpl` offre solo modifica funzionalità oltre a funzionalità di batch.  
   
-#### Per rendere aggiornabile un provider  
+#### <a name="to-support-updatability-in-your-provider"></a>Per supportare l'aggiornamento nel provider  
   
-1.  Nella classe del rowset ereditare da `IRowsetChangeImpl` o `IRowsetUpdateImpl`.  Queste classi offrono interfacce corrette per la modifica dell'archivio dati.  
+1.  Nella classe del set di righe, ereditare da `IRowsetChangeImpl` o `IRowsetUpdateImpl`. Queste classi forniscono interfacce appropriate per modificare l'archivio dati:  
   
      **Aggiunta di IRowsetChange**  
   
-     Aggiungere `IRowsetChangeImpl` alla catena di ereditarietà utilizzando il seguente codice:  
+     Aggiungere `IRowsetChangeImpl` alla catena di ereditarietà di utilizzo del formato:  
   
     ```  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
-     Aggiungere inoltre `COM_INTERFACE_ENTRY(IRowsetChange)` alla sezione `BEGIN_COM_MAP` della classe del rowset.  
+     Aggiungere inoltre `COM_INTERFACE_ENTRY(IRowsetChange)` per il `BEGIN_COM_MAP` sezione nella classe del set di righe.  
   
      **Aggiunta di IRowsetUpdate**  
   
-     Aggiungere `IRowsetUpdate` alla catena di ereditarietà utilizzando il seguente codice:  
+     Aggiungere `IRowsetUpdate` alla catena di ereditarietà di utilizzo del formato:  
   
     ```  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
     > [!NOTE]
-    >  È opportuno rimuovere la riga di `IRowsetChangeImpl` dalla catena di ereditarietà.  Questa eccezione alla direttiva sopra esposta deve includere il codice di `IRowsetChangeImpl`.  
+    >  È necessario rimuovere il `IRowsetChangeImpl` riga dalla catena di ereditarietà. Questa eccezione alla direttiva indicata in precedenza deve includere il codice per `IRowsetChangeImpl`.  
   
-2.  Aggiungere quanto segue alla mappa COM \(**BEGIN\_COM\_MAP ... END\_COM\_MAP**\):  
+2.  Aggiungere quanto segue alla mappa COM (**BEGIN_COM_MAP... END_COM_MAP**):  
   
-    |Implementazione scelta|Codice da aggiungere alla mappa COM|  
-    |----------------------------|-----------------------------------------|  
+    |Se si implementa|Aggiungere alla mappa COM|  
+    |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  Nel comando aggiungere quanto segue alla mappa degli insiemi di proprietà \(**BEGIN\_PROPSET\_MAP ... END\_PROPSET\_MAP**\):  
+3.  Nel comando, aggiungere quanto segue alla mappa del set di proprietà (**BEGIN_PROPSET_MAP... END_PROPSET_MAP**):  
   
-    |Implementazione scelta|Codice da aggiungere alla mappa degli insiemi di proprietà|  
-    |----------------------------|----------------------------------------------------------------|  
+    |Se si implementa|Aggiungere alla mappa di set di proprietà|  
+    |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  Nella mappa degli insiemi di proprietà includere inoltre tutte le impostazioni riportate di seguito:  
+4.  Nel mapping dei set di proprietà, è necessario anche includere tutte le seguenti impostazioni riportate di seguito:  
   
     ```  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -103,93 +106,93 @@ In Visual C\+\+ 6.0 erano supportati solo provider in sola lettura.  In Visual C
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)  
     ```  
   
-     Per conoscere i valori utilizzati in queste chiamate di macro, cercare nel file Atldb.h gli ID e i valori delle proprietà. Se Atldb.h presenta differenze rispetto alla documentazione online, il file è da considerare prioritario rispetto alla documentazione.  
+     È possibile trovare i valori utilizzati per queste chiamate della macro cercando in Atldb. h per l'ID di proprietà e i valori (se Atldb. h è diverso dalla documentazione online, Atldb. h sostituisce la documentazione).  
   
     > [!NOTE]
-    >  Molte impostazioni di **VARIANT\_FALSE** e `VARIANT_TRUE` sono necessarie per i modelli OLE DB. Nella specifica OLE DB è indicato che possono essere di lettura\/scrittura, tuttavia nei modelli OLE DB è supportato un solo valore.  
+    >  Molti di **VARIANT_FALSE** e `VARIANT_TRUE` impostazioni sono necessarie per i modelli OLE DB; la specifica OLE DB è indicato che possono essere in lettura/scrittura, ma i modelli OLE DB possono supportare solo un valore.  
   
      **Se si implementa IRowsetChangeImpl**  
   
-     Se si implementa `IRowsetChangeImpl`, sarà necessario impostare per il provider le proprietà elencate di seguito.  Queste proprietà sono utilizzate principalmente per richiedere interfacce tramite **ICommandProperties::SetProperties**.  
+     Se si implementa `IRowsetChangeImpl`, è necessario impostare le proprietà seguenti per il provider. Queste proprietà vengono utilizzate principalmente per richiedere interfacce tramite **ICommandProperties:: SetProperties**.  
   
-    -   `DBPROP_IRowsetChange`: verrà impostata automaticamente **DBPROP\_IRowsetChange**.  
+    -   `DBPROP_IRowsetChange`: Verrà impostata automaticamente **DBPROP_IRowsetChange**.  
   
-    -   `DBPROP_UPDATABILITY`: maschera di bit che specifica i metodi supportati con `IRowsetChange`, ovvero `SetData`, `DeleteRows` o `InsertRow`.  
+    -   `DBPROP_UPDATABILITY`: Una maschera di bit che specifica i metodi supportati `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.  
   
-    -   `DBPROP_CHANGEINSERTEDROWS`: il consumer può chiamare **IRowsetChange::DeleteRows** o `SetData` per le righe appena inserite.  
+    -   `DBPROP_CHANGEINSERTEDROWS`: Il consumer può chiamare **IRowsetChange:: DeleteRows** o `SetData` per le righe appena inserite.  
   
-    -   `DBPROP_IMMOBILEROWS`: nel rowset le righe inserite o aggiornate non verranno riordinate.  
+    -   `DBPROP_IMMOBILEROWS`: Set di righe non riordinerà le righe inserite o aggiornate.  
   
      **Se si implementa IRowsetUpdateImpl**  
   
-     Se si implementa `IRowsetUpdateImpl`, oltre a tutte le proprietà già elencate per `IRowsetChangeImpl` sarà necessario impostare per il provider le seguenti proprietà:  
+     Se si implementa `IRowsetUpdateImpl`, è necessario impostare le proprietà seguenti per il provider inoltre a tutte le proprietà per `IRowsetChangeImpl` elencati in precedenza:  
   
     -   `DBPROP_IRowsetUpdate`.  
   
-    -   `DBPROP_OWNINSERT`: deve essere READ\_ONLY e VARIANT\_TRUE.  
+    -   `DBPROP_OWNINSERT`: Deve essere READ_ONLY e VARIANT_TRUE.  
   
-    -   `DBPROP_OWNUPDATEDELETE`: deve essere READ\_ONLY e VARIANT\_TRUE.  
+    -   `DBPROP_OWNUPDATEDELETE`: Deve essere READ_ONLY e VARIANT_TRUE.  
   
-    -   `DBPROP_OTHERINSERT`: deve essere READ\_ONLY e VARIANT\_TRUE.  
+    -   `DBPROP_OTHERINSERT`: Deve essere READ_ONLY e VARIANT_TRUE.  
   
-    -   `DBPROP_OTHERUPDATEDELETE`: deve essere READ\_ONLY e VARIANT\_TRUE.  
+    -   `DBPROP_OTHERUPDATEDELETE`: Deve essere READ_ONLY e VARIANT_TRUE.  
   
-    -   `DBPROP_REMOVEDELETED`: deve essere READ\_ONLY e VARIANT\_TRUE.  
+    -   `DBPROP_REMOVEDELETED`: Deve essere READ_ONLY e VARIANT_TRUE.  
   
     -   `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  Se si supportano le notifiche, potrebbero essere necessarie anche altre proprietà. Per un elenco di tali proprietà, vedere la sezione relativa a `IRowsetNotifyCP`.  
+        >  Se si supportano le notifiche, potrebbe essere anche altre proprietà. vedere la sezione `IRowsetNotifyCP` per questo elenco.  
   
-     Per un esempio di impostazione delle proprietà, vedere la mappa degli insiemi di proprietà in **CUpdateCommand** \(nel file Rowset.h\) nell'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+     Ad esempio di come vengono impostate le proprietà, vedere la proprietà di mappa **CUpdateCommand** (in rowset) in [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f).  
   
-##  <a name="vchowwritingtothedatasource"></a> Scrittura nell'origine dati  
- Per leggere dall'origine dati, chiamare la funzione **Execute**.  Per scrivere nell'origine dati, chiamare la funzione `FlushData`. In termini generali, flush indica il salvataggio su disco delle modifiche apportate a una tabella o a un indice.  
+##  <a name="vchowwritingtothedatasource"></a>Scrittura all'origine dati  
+ Per leggere dall'origine dati, chiamare il **Execute** (funzione). Per scrivere l'origine dati, chiamare il `FlushData` (funzione). (In senso generale, scaricamento mezzi per salvare le modifiche apportate a una tabella o indice su disco).  
   
 ```  
 FlushData(HROW, HACCESSOR);  
 ```  
   
- Gli argomenti dell'handle della riga \(*HROW*\) e dell'handle della funzione di accesso \(*HACCESSOR*\) consentono di specificare l'area in cui scrivere.  In genere si scrive in un singolo campo di dati alla volta.  
+ L'handle di riga (*HROW*) e l'handle di accesso (*HACCESSOR*) argomenti consentono di specificare l'area in cui scrivere. In genere si scrive un singolo campo dati alla volta.  
   
- Il metodo `FlushData` consente di scrivere i dati nel formato in cui sono stati memorizzati in origine.  Se non si esegue l'override di questa funzione, il provider funzionerà correttamente, ma le modifiche non verranno scaricate e memorizzate nell'archivio dati.  
+ Il `FlushData` metodo scrive i dati nel formato in cui è memorizzato in origine. Se non si esegue l'override di questa funzione, il provider funzionerà correttamente, ma le modifiche non verranno scaricate nell'archivio dati.  
   
-### Quando eseguire lo svuotamento con memorizzazione su disco  
- I modelli provider chiamano `FlushData` ogni volta che è necessario scrivere i dati nell'archivio dati. In genere, ma non sempre, questo si verifica in seguito alle chiamate alle seguenti funzioni:  
+### <a name="when-to-flush"></a>Quando lo scaricamento  
+ La chiamata di modelli di provider `FlushData` ogni volta che i dati devono essere scritte nell'archivio dati; ciò in genere (ma non sempre) si verifica come risultato di chiamate alle funzioni seguenti:  
   
--   **IRowsetChange::DeleteRows**  
+-   **IRowsetChange:: DeleteRows**  
   
--   **IRowsetChange::SetData**  
+-   **IRowsetChange:: SetData**  
   
--   **IRowsetChange::InsertRows** se sono presenti nuovi dati da inserire nella riga  
+-   **IRowsetChange::** (se è disponibile nuovi dati da inserire nella riga)  
   
--   **IRowsetUpdate::Update**  
+-   **IRowsetUpdate:: Update**  
   
-### Funzionamento  
- Il consumer effettua una chiamata che richiede uno svuotamento, ad esempio **Update**, e questa chiamata viene passata al provider che esegue sempre le seguenti operazioni:  
+### <a name="how-it-works"></a>Come funziona  
+ Il consumer effettua una chiamata che richiede uno scaricamento (ad esempio **aggiornamento**) e la chiamata viene passata al provider, che esegue sempre le operazioni seguenti:  
   
--   Chiama `SetDBStatus` ogni volta che è presente un limite per il valore di stato. Vedere *OLE DB Programmers Reference*, capitolo 6 *Data Parts: Status*.  
+-   Chiamate `SetDBStatus` ogni volta che si dispone di un valore di stato associato (vedere *Guida per programmatori OLE DB*, capitolo 6, *le parti di dati: stato*).  
   
--   Controlla i flag delle colonne.  
+-   Controlla il flag di colonna.  
   
 -   Chiama `IsUpdateAllowed`.  
   
- Questi tre passaggi garantiscono la sicurezza.  Il provider chiama quindi `FlushData`.  
+ Questi tre passaggi garantiscono la protezione. Il provider chiama quindi `FlushData`.  
   
-### Implementazione di FlushData  
- Per implementare `FlushData` è necessario:  
+### <a name="how-to-implement-flushdata"></a>Come implementare FlushData  
+ Per implementare `FlushData`, è necessario prendere in considerazione diversi fattori:  
   
--   Verificare che l'archivio dati sia in grado di gestire le modifiche.  
+-   Assicurarsi che l'archivio dati è possibile gestire le modifiche.  
   
--   Gestire i valori **NULL**.  
+-   Gestione **NULL** valori.  
   
 -   Gestire i valori predefiniti.  
   
- Per implementare un metodo `FlushData` personalizzato, attenersi alla seguente procedura:  
+ Per implementare la propria `FlushData` metodo, è necessario:  
   
--   Scorrere il codice fino alla classe del rowset.  
+-   Passare alla classe del set di righe.  
   
--   Nella classe del rowset inserire la seguente dichiarazione:  
+-   Nel set di righe classe inserire la dichiarazione di:  
   
 ```  
 HRESULT FlushData(HROW, HACCESSOR)  
@@ -200,19 +203,19 @@ HRESULT FlushData(HROW, HACCESSOR)
   
 -   Fornire un'implementazione di `FlushData`.  
   
- L'implementazione di `FlushData` può essere considerata ottimale se vengono memorizzate solo le righe e le colonne effettivamente aggiornate.  È possibile utilizzare i parametri *HROW* e *HACCESSOR* per determinare quale riga e quale colonna vengono memorizzate per l'ottimizzazione.  
+ L'implementazione di `FlushData` archivia solo le righe e colonne che vengono effettivamente aggiornate. È possibile utilizzare il *HROW* e *HACCESSOR* parametri per determinare la riga corrente e la colonna viene archiviata per l'ottimizzazione.  
   
- In genere i maggiori problemi possono derivare dall'utilizzo di un archivio dati personalizzato nativo.  Se possibile, tentare di operare come segue:  
+ In genere, la sfida collabora con un archivio di dati nativi. Se possibile, provare a:  
   
--   Mantenere il più semplice possibile il metodo di scrittura nell'archivio dati.  
+-   Mantenere il metodo di scrittura nell'archivio di dati più semplice possibile.  
   
--   Gestire i valori **NULL** \(facoltativo ma consigliato\).  
+-   Gestire **NULL** values (facoltativo ma consigliato).  
   
--   Gestire i valori predefiniti \(facoltativo ma consigliato\).  
+-   Gestire i valori predefiniti (facoltativi ma consigliato).  
   
- Si consiglia di rendere disponibili nell'archivio dati valori effettivi specificati per i valori **NULL** e predefiniti.  Sarebbe inoltre opportuno estrapolare tali dati.  In caso contrario, si consiglia di non consentire valori **NULL** e predefiniti.  
+ Il modo migliore per eseguire è che i valori effettivi specificati nell'archivio dati per **NULL** e i valori predefiniti. È consigliabile se è possibile estrapolare tali dati. Se non consiglia di non consentire **NULL** e i valori predefiniti.  
   
- Di seguito è riportato un esempio di implementazione di `FlushData` nella classe `RUpdateRowset` dell'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f). Vedere Rowset.h nel codice di esempio.  
+ Nell'esempio seguente come `FlushData` viene implementato nel `RUpdateRowset` classe il [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio (vedere rowset nel codice di esempio):  
   
 ```  
 ///////////////////////////////////////////////////////////////////////////  
@@ -294,24 +297,24 @@ HRESULT FlushData(HROW, HACCESSOR)
 }  
 ```  
   
-### Gestione delle modifiche  
- Affinché il provider sia in grado di gestire le modifiche, assicurarsi innanzitutto che l'archivio dati, ad esempio un file di testo o un file video, presenti le funzionalità che consentono di apportare modifiche.  In caso contrario, sarà opportuno creare tale codice separatamente dal progetto del provider.  
+### <a name="handling-changes"></a>Gestione delle modifiche  
+ Per gestire le modifiche dal provider, è innanzitutto necessario assicurarsi che l'archivio dati (ad esempio un file di testo o file video) ha le funzionalità che consentono di apportare modifiche. In caso contrario, è necessario creare tale codice separatamente dal progetto del provider.  
   
-### Gestione dei dati NULL  
- È possibile che un utente finale invii dati **NULL**.  Quando si scrivono valori **NULL** nei campi dell'origine dati, si possono verificare alcuni problemi.  Si immagini, ad esempio, un'applicazione per l'immissione di ordini che accetta i valori relativi a città e CAP. Potranno essere accettati uno solo dei valori o entrambi, ma non nessuno dei due, perché in tal caso sarebbe impossibile effettuare la consegna.  Sarà pertanto necessario limitare alcune combinazioni di valori **NULL** in determinati campi, in base allo scopo dell'applicazione.  
+### <a name="handling-null-data"></a>Gestione dati NULL  
+ È possibile che un utente finale invierà **NULL** dati. Quando si scrive **NULL** valori ai campi dell'origine dati, si possono verificare problemi potenziali. Si immagini un'applicazione di immissione di ordini che accetta i valori per città e CAP. sarà possibile accettare i valori di uno o entrambi, ma non nessuno, perché in questo caso sarebbe impossibile recapito. Pertanto è necessario limitare alcune combinazioni di **NULL** valori nei campi appropriati per l'applicazione.  
   
- Durante lo sviluppo del provider è necessario definire come verranno memorizzati i dati, come verranno letti i dati dall'archivio dati e come verranno comunicate le informazioni all'utente.  In particolare è necessario determinare in che modo modificare lo stato dei dati del rowset nell'origine dati, ad esempio DataStatus \= **NULL**.  È necessario decidere quale valore restituire quando un consumer accede a un campo che contiene un valore **NULL**.  
+ Gli sviluppatori di provider, è necessario considerare come verranno memorizzati tali dati, come verranno letti i dati dall'archivio dati e come è possibile specificare che all'utente. In particolare, è necessario considerare come modificare lo stato di dati di set di righe di dati nell'origine dati (ad esempio DataStatus = **NULL**). Decidere quale valore da restituire quando un utente accede a un campo contenente un **NULL** valore.  
   
- Vedere il codice dell'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f) in cui viene illustrato in che modo un provider può gestire dati **NULL**.  In UpdatePV il provider memorizza i dati **NULL** scrivendo la stringa "NULL" nell'archivio dati.  Quando vengono letti i dati **NULL** dall'archivio dati, dopo la lettura della stringa viene svuotato il buffer creando una stringa **NULL**.  Viene inoltre eseguito un override di `IRowsetImpl::GetDBStatus` con cui viene restituito **DBSTATUS\_S\_ISNULL** se tale valore è vuoto.  
+ Esaminare il codice nel [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ; esempio viene illustrato come è possibile gestire un provider **NULL** dati. Nell'esempio UpdatePV, il provider Archivia **NULL** dati scrivendo la stringa "NULL" nell'archivio dati. Quando legge **NULL** archiviano i dati dai dati, della stringa e quindi svuota il buffer, la creazione di un **NULL** stringa. Include inoltre un override di `IRowsetImpl::GetDBStatus` in cui viene restituito **DBSTATUS_S_ISNULL** se tale valore è vuoto.  
   
-### Contrassegno delle colonne nullable  
- Se si implementano anche rowset dello schema \(vedere `IDBSchemaRowsetImpl`\), sarà opportuno specificare che la colonna è nullable nel rowset **DBSCHEMA\_COLUMNS**, contrassegnato in genere nel provider da **C***xxx***SchemaColSchemaRowset**.  
+### <a name="marking-nullable-columns"></a>Contrassegno delle colonne che ammettono valori null  
+ Se si implementano anche rowset dello schema (vedere `IDBSchemaRowsetImpl`), l'implementazione deve essere specificato nella **DBSCHEMA_COLUMNS** set di righe (in genere contrassegnati nel provider da **C***xxx* **SchemaColSchemaRowset**) che la colonna è nullable.  
   
- È inoltre necessario specificare che tutte le colonne che sono nullable contengono il valore **DBCOLUMNFLAGS\_ISNULLABLE** nella versione di `GetColumnInfo` in uso.  
+ È inoltre necessario specificare che tutte le colonne che ammettono valori null contengono il **DBCOLUMNFLAGS_ISNULLABLE** nella versione del valore di `GetColumnInfo`.  
   
- Se nell'implementazione dei modelli OLE DB si omette di contrassegnare le colonne nullable, sarà dato per scontato che esse debbano contenere un valore e il provider non consentirà al consumer di inviare valori Null.  
+ Nell'implementazione di modelli OLE DB, se non è possibile contrassegnare le colonne che ammettono i valori null, il provider presuppone che si deve contenere un valore e non consentirà al consumer di inviare valori null.  
   
- Nell'esempio riportato di seguito viene illustrata l'implementazione della funzione **CommonGetColInfo** in **CUpdateCommand** \(vedere UpProvRS.cpp\) in UpdatePV.  Le colonne nullable sono contrassegnate da **DBCOLUMNFLAGS\_ISNULLABLE**.  
+ L'esempio seguente mostra come **CommonGetColInfo** funzione è implementata **CUpdateCommand** (vedere UpProvRS) in UpdatePV. Si noti come le colonne hanno **DBCOLUMNFLAGS_ISNULLABLE** per le colonne che ammettono valori null.  
   
 ```  
 /////////////////////////////////////////////////////////////////////////////  
@@ -366,12 +369,12 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 }  
 ```  
   
-### Valori predefiniti  
- Oltre ai valori **NULL**, è necessario gestire anche le modifiche ai valori predefiniti.  
+### <a name="default-values"></a>Valori predefiniti  
+ Come con **NULL** dati, è necessario gestire le modifiche ai valori predefiniti.  
   
- Per impostazione predefinita, `FlushData` ed **Execute** restituiscono `S_OK`.  Se pertanto non si effettua l'override della funzione, le modifiche verranno apparentemente apportate in modo corretto, restituendo `S_OK`, ma non verranno in realtà trasmesse all'archivio dati.  
+ Il valore predefinito di `FlushData` e **Execute** deve restituire `S_OK`. Pertanto, se non si esegue l'override di questa funzione, le modifiche vengano visualizzate abbia esito positivo (`S_OK` verrà restituito), ma non verranno trasmesse all'archivio dati.  
   
- Nell'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f) in Rowset.h il metodo `SetDBStatus` gestisce i valori predefiniti come segue:  
+ Nel [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) sample (in rowset), il `SetDBStatus` metodo gestisce i valori predefiniti, come segue:  
   
 ```  
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -408,12 +411,12 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }  
 ```  
   
-### Flag delle colonne  
- Se le colonne supportino valori predefiniti, è necessario impostarlo tramite metadati nella classe **\<***classe provider***\>SchemaRowset**.  Impostare *m\_bColumnHasDefault* \= `VARIANT_TRUE`.  
+### <a name="column-flags"></a>Flag di colonna  
+ Se si supportano i valori predefiniti le colonne, è necessario impostare utilizzando i metadati di  **\<**  *classe provider***> SchemaRowset** classe. Impostare *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
- È inoltre necessario impostare i flag delle colonne, che possono essere specificati mediante il tipo enumerato **DBCOLUMNFLAGS**.  I flag delle colonne descrivono le caratteristiche delle colonne.  
+ Inoltre necessario impostare i flag di colonna, vengono specificati utilizzando il **DBCOLUMNFLAGS** tipo enumerato. I flag di colonna vengono descritte le caratteristiche della colonna.  
   
- Nella classe `CUpdateSessionColSchemaRowset` in Session.h dell'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f) la prima colonna è impostata, ad esempio, come segue:  
+ Ad esempio, nel `CUpdateSessionColSchemaRowset` classe [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) (in Session. h), la prima colonna è impostata in questo modo:  
   
 ```  
 // Set up column 1  
@@ -428,7 +431,7 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);  
 ```  
   
- Nel codice viene specificato, tra l'altro, che la colonna supporta un valore predefinito di 0, che è scrivibile e che tutti i dati della colonna hanno la stessa lunghezza.  Se si desidera che i dati di una colonna abbiano lunghezza variabile, non impostare questo flag.  
+ Questo codice specifica, ad esempio, che la colonna supporta un valore predefinito di 0, che è scrivibile, e che tutti i dati nella colonna hanno la stessa lunghezza. Se si desiderano che i dati in una colonna a lunghezza variabile, è necessario non impostare questo flag.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7be8bbf011964411431d754afa058763e70e3265
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metodi generati mediante la Creazione guidata consumer
 La creazione guidata Consumer OLE DB ATL e la creazione guidata applicazione MFC genera alcune funzioni di cui è necessario essere consapevoli. Si noti che alcuni metodi vengono implementati in modo diverso in progetti con attributi, pertanto vi sono alcune considerazioni; ogni case è descritto di seguito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).  

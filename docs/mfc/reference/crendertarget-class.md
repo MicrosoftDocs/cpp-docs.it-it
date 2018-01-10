@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -65,8 +64,7 @@ f1_keywords:
 - AFXRENDERTARGET/CRenderTarget::m_lstResources
 - AFXRENDERTARGET/CRenderTarget::m_pRenderTarget
 - AFXRENDERTARGET/CRenderTarget::m_pTextFormatDefault
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRenderTarget [MFC], CRenderTarget
 - CRenderTarget [MFC], Attach
@@ -123,16 +121,16 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a12ec4bd293901ed1b8928ecd4e425b335e11890
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crendertarget-class"></a>Classe CRenderTarget
 Wrapper per ID2D1RenderTarget.  
@@ -220,7 +218,7 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|Un elenco dei puntatori agli oggetti CD2DResource.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Un puntatore a un oggetto ID2D1RenderTarget.|  
@@ -1049,4 +1047,3 @@ BOOL VerifyResource(CD2DResource* pResource);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

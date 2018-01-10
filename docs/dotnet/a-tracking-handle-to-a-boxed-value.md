@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a986dcea2eec183ae09eb9af275082922257ef76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: baae8c5317f1e5c9c5acf5bef26a4b79de281a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Handle di rilevamento a un valore boxed
 L'utilizzo di un handle a un tipo di valore di riferimento di rilevamento è stato modificato dalle estensioni gestite per C++ a Visual C++.  

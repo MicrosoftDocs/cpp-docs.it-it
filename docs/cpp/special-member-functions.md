@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 12/06/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - special member functions [C++]
 - constructors [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 460e6e2ba25566cb4a2295ca4b35590405b51eb3
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ff4fc72d2a40cc52ec614cbd5b470738ad1aa391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-member-functions"></a>Funzioni membro speciali  
   
@@ -49,4 +47,3 @@ Schema di bit automaticamente di eseguire la copia predefinita e costruzione di 
 
 
  
-

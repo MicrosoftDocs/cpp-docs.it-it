@@ -1,60 +1,62 @@
 ---
-title: "CDynamicAccessor::GetColumnFlags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetColumnFlags"
-  - "ATL::CDynamicAccessor::GetColumnFlags"
-  - "ATL.CDynamicAccessor.GetColumnFlags"
-  - "CDynamicAccessor::GetColumnFlags"
-  - "GetColumnFlags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnFlags (metodo)"
+title: 'CDynamicAccessor:: Getcolumnflags | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetColumnFlags
+- ATL::CDynamicAccessor::GetColumnFlags
+- ATL.CDynamicAccessor.GetColumnFlags
+- CDynamicAccessor::GetColumnFlags
+- GetColumnFlags
+dev_langs: C++
+helpviewer_keywords: GetColumnFlags method
 ms.assetid: b2ba2f3a-2c61-4a49-abfb-75823908ccf4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: da04aa98fabab36cc455dfdff2d90d8da59f6886
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnFlags
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Recupera le caratteristiche delle colonne.  
+# <a name="cdynamicaccessorgetcolumnflags"></a>CDynamicAccessor::GetColumnFlags
+Recupera le caratteristiche della colonna.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      bool GetColumnFlags(   
-   DBORDINAL nColumn,   
-   DBCOLUMNFLAGS* pFlags    
+      bool GetColumnFlags(   
+   DBORDINAL nColumn,   
+   DBCOLUMNFLAGS* pFlags    
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nColumn`  
- \[in\] numero di colonne.  I numeri di colonne iniziano con 1.  Un valore 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore 0 si intende la colonna del segnalibro, se presente.  
   
  `pFlags`  
- \[out\] puntatore A una maschera di bit che vengono descritte le caratteristiche delle colonne.  Vedere "tipo enumerato DBCOLUMNFLAGS" in [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)*in OLE DB Programmer's Reference*.  
+ [out] Puntatore a una maschera di bit che descrive le caratteristiche della colonna. Vedere la sezione "Tipo enumerato DBCOLUMNFLAGS" in [IColumnsInfo:: GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Valore restituito  
- Restituisce **true** se le caratteristiche delle colonne recuperate correttamente.  Negli altri casi, viene restituito **false**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce **true** se le caratteristiche di colonna vengono recuperate correttamente. Negli altri casi, viene restituito **false**.  
   
-## Note  
- Il numero di colonne è sottoposto a offset di uno.  La colonna zero è un caso speciale; è il segnalibro se disponibile.  
+## <a name="remarks"></a>Note  
+ Il numero di colonna offset da uno. Colonna zero è un caso speciale: il segnalibro è se disponibile.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

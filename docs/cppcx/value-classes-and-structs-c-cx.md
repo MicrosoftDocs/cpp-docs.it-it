@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 15fd185e085af9ffe58976b6c2859e905cccff6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4392125d1834f31b02e4087644f8b8a06ad238f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classi e struct di valore (C++/CX)
 Oggetto *struct di valore* o *classe di valori* POD Runtime compatibile ("plain precedente struttura di dati") di Windows Installer. con una dimensione fissa e costituita solo da campi; a differenza di una classe di riferimento, non dispone di proprietà.  

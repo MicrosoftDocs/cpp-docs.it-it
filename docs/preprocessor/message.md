@@ -1,48 +1,49 @@
 ---
-title: "messaggio | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "message_CPP"
-  - "vc-pragma.message"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "message (pragma)"
-  - "pragma, messaggio"
+title: messaggio | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- message_CPP
+- vc-pragma.message
+dev_langs: C++
+helpviewer_keywords:
+- message pragma
+- pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad91fdc0fb024fe87c2096f91962f715c0835262
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# messaggio
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="message"></a>messaggio
 Invia un valore letterale stringa all'output standard senza terminare la compilazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 #pragma message( messagestring )  
 ```  
   
-## Note  
- Un utilizzo tipico del pragma **message** consiste nel visualizzare i messaggi informativi in fase di compilazione.  
+## <a name="remarks"></a>Note  
+ Un tipico utilizzo del **messaggio** pragma consiste nel visualizzare i messaggi informativi in fase di compilazione.  
   
- Il parametro *messagestring* può essere una macro che si espande in un valore letterale stringa; le macro di questo tipo possono essere concatenate con valori letterali stringa in qualsiasi combinazione.  
+ Il *messagestring* parametro può essere una macro che si espande in un valore letterale stringa e consente di concatenare tali macro con valori letterali stringa in qualsiasi combinazione.  
   
- Se si utilizza una macro predefinita nel pragma **message**, tale macro deve restituire una stringa differente, in caso contrario è necessario convertire l'output della macro in una stringa.  
+ Se si utilizza una macro predefinita nel **messaggio** pragma, la macro deve restituire una stringa, altrimenti sarà necessario convertire l'output della macro in una stringa.  
   
- Nel frammento di codice seguente viene utilizzato il pragma **message** per visualizzare i messaggi durante la compilazione:  
+ Il frammento di codice seguente utilizza il **messaggio** pragma per visualizzare i messaggi durante la compilazione:  
   
 ```  
 // pragma_directives_message1.cpp  
@@ -67,5 +68,5 @@ Invia un valore letterale stringa all'output standard senza terminare la compila
 #pragma message("")  
 ```  
   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

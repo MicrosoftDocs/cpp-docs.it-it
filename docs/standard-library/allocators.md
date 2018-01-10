@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 74e453298857b94c2c4eb62c5387d4e727f7bb7c
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb2c193fd12578e69abef2db555ebbc4fa061e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocators"></a>Allocatori
 Gli allocatori vengono usati dalla libreria standard C++ per gestire l'allocazione e la deallocazione di elementi archiviati in contenitori. Tutti i contenitori dalla libreria standard C++, a eccezione di std::array, hanno un parametro di modello di tipo `allocator<Type>`, dove `Type` rappresenta il tipo di elemento del contenitore. Ad esempio, la classe vector viene dichiarata come segue:  
@@ -50,10 +34,10 @@ template <
 class vector  
 ```  
   
- La libreria standard C++ offre un'implementazione predefinita per un allocatore. In C++11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*. In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni. Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente. In C++&11; tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](../standard-library/allocator-class.md).  
+ La libreria standard C++ offre un'implementazione predefinita per un allocatore. In C++11 e versioni successive, l'allocatore predefinito viene aggiornato in modo da esporre un'interfaccia più piccola. Il nuovo allocatore viene chiamato *allocatore minimo*. In particolare, il membro `construct()` dell'allocatore minimo supporta la semantica di spostamento, che consente di migliorare notevolmente le prestazioni. Nella maggior parte dei casi, l'allocatore predefinito dovrebbe essere sufficiente. In C++ 11 tutti i tipi e le funzioni della a libreria standard che accettano un parametro di tipo allocatore supportano l'iinterfaccia dell'allocatore minimo, tra cui `std::function`, `shared_ptr, allocate_shared()` e `basic_string`.  Per altre informazioni sull'allocatore predefinito, vedere [Classe allocator](../standard-library/allocator-class.md).  
   
 ## <a name="writing-your-own-allocator-c11"></a>Scrittura di un codificatore personalizzato (C++11)  
- L'allocatore predefinito usa `new` e `delete` per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++&11; ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.  
+ L'allocatore predefinito usa `new` e `delete` per allocare e deallocare la memoria. Se si vuole usare un altro metodo di allocazione della memoria, ad esempio l'uso di memoria condivisa, è necessario creare un allocatore personale. Se si usa C++ 11 ed è necessario scrivere un nuovo allocatore personalizzato, renderlo un allocatore minimo se possibile. Anche se è già stato implementato un allocatore obsoleto, provare a modificarlo in modo che diventi un *allocatore minimo* per sfruttare il più efficiente metodo `construct()` che verrà visualizzato automaticamente.  
   
  Un allocatore minimo richiede molto meno boilerplate e consente di concentrarsi sulle funzioni membro `allocate` e `deallocate` che eseguono tutto il lavoro. Durante la creazione di un allocatore minimo, non implementare i membri tranne quelli illustrati nell'esempio riportato di seguito:  
   
@@ -147,7 +131,6 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

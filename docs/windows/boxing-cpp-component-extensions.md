@@ -1,50 +1,52 @@
 ---
-title: "Boxing  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing, Visual C++"
+title: Conversione boxing (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Boxing  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il compilatore Visual C\+\+ è in grado di convertire i tipi valore in oggetti in un processo denominato *conversione boxing* e di convertire gli oggetti in tipi valore in un processo denominato *conversione unboxing*.  
+# <a name="boxing--c-component-extensions"></a>Boxing (Estensioni del componente C++)
+Il compilatore Visual C++ è possibile convertire i tipi di valore agli oggetti in un processo denominato *boxing*e convertire gli oggetti per i tipi di valore in un processo denominato *unboxing*.  
   
-## Tutti i runtime  
+## <a name="all-runtimes"></a>Tutti i runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino a tutti i runtime.  
   
-## Windows Runtime  
- [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)] supporta una sintassi abbreviata per eseguire il boxing dei tipi valore ed eseguire l'unboxing dei tipi riferimento.  Un tipo valore viene sottoposto a boxing quando viene assegnato a una variabile di tipo `Object`.  Una variabile `Object` è unboxed quando viene assegnata a una variabile di tipo valore e viene specificato il tipo unboxed tra parentesi, ovvero quando viene eseguito il cast della variabile oggetto a un tipo valore.  
+## <a name="windows-runtime"></a>Windows Runtime  
+ C + + CX supporta una sintassi abbreviata per i tipi di valore di conversione boxing e unboxing di tipi di riferimento. Un tipo valore viene sottoposto a boxing quando viene assegnato a una variabile di tipo `Object`. Una variabile `Object` è unboxed quando viene assegnata a una variabile di tipo valore e viene specificato il tipo unboxed tra parentesi, ovvero quando viene eseguito il cast della variabile oggetto a un tipo valore.  
   
 ```  
   
-Platform::Object^ object_variable  = value_variable;  
+  Platform::Object^  
+  object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
   
 ```  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-### Esempi  
- Nell'esempio di codice seguente viene eseguita la conversione boxing e unboxing di un valore `DateTime`.  Innanzitutto, nell'esempio si ottiene un valore DateTime che rappresenta la data e l'ora correnti e le assegna a una variabile DateTime.  Quindi il valore DateTime è sottoposto a boxing tramite l'assegnazione a una variabile Object.  Infine, viene eseguita la conversione unboxing del valore boxed tramite l'assegnazione a un'altra variabile DateTime.  
+### <a name="examples"></a>Esempi  
+ Nell'esempio di codice seguente viene eseguita la conversione boxing e unboxing di un valore `DateTime`. Innanzitutto, nell'esempio si ottiene un valore DateTime che rappresenta la data e l'ora correnti e le assegna a una variabile DateTime. Quindi il valore DateTime è sottoposto a boxing tramite l'assegnazione a una variabile Object. Infine, viene eseguita la conversione unboxing del valore boxed tramite l'assegnazione a un'altra variabile DateTime.  
   
- Per verificare l'esempio, creare un progetto BlankApplication, sostituire il metodo BlankPage::OnNavigatedTo\(\) e quindi specificare i punti di interruzione nella parentesi quadra di chiusura e l'assegnazione alla variabile str1.  Quando l'esempio raggiunge la parentesi di chiusura, esaminare str1.  
+ Per verificare l'esempio, creare un progetto BlankApplication, sostituire il metodo BlankPage::OnNavigatedTo() e quindi specificare i punti di interruzione nella parentesi quadra di chiusura e l'assegnazione alla variabile str1. Quando l'esempio raggiunge la parentesi di chiusura, esaminare str1.  
   
 ```  
   
@@ -80,27 +82,27 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 ```  
   
- Per altre informazioni, vedere [Boxing \(C\+\+ CX\)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
+ Per ulteriori informazioni, vedere [Boxing (C + + CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx).  
   
-## Common Language Runtime  
- Il compilatore Visual C\+\+ ora esegue la conversione boxing dei tipi valore in <xref:System.Object>.  Ciò è possibile a causa di una conversione definita dal compilatore per convertire i tipi valore in <xref:System.Object>.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Il compilatore Visual C++ ora esegue la conversione boxing dei tipi valore in <xref:System.Object>.  Ciò è possibile a causa di una conversione definita dal compilatore per convertire i tipi valore in <xref:System.Object>.  
   
- La conversione boxing e unboxing consente di trattare i tipi valore come oggetti.  I tipi valore, inclusi i tipi di struct e i tipi predefiniti quali int, possono essere convertiti da e verso il tipo <xref:System.Object>.  
+ La conversione boxing e unboxing consente di trattare i tipi valore come oggetti. I tipi valore, inclusi i tipi di struct e i tipi predefiniti quali int, possono essere convertiti da e verso il tipo <xref:System.Object>.  
   
  Per altre informazioni, vedere:  
   
--   [Procedura: richiedere la conversione boxing in modo esplicito](../dotnet/how-to-explicitly-request-boxing.md)  
+-   [Procedura: Richiedere la conversione boxing in modo esplicito](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [Procedura: utilizzare gcnew per creare tipi di valore e utilizzare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [Procedura: Usare gcnew per creare tipi di valore e usare la conversione boxing implicita](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
 -   [Procedura: Unbox](../dotnet/how-to-unbox.md)  
   
 -   [Conversioni standard e conversione boxing implicita](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
  Nell'esempio seguente viene illustrato come funziona la conversione boxing implicita.  
@@ -177,14 +179,25 @@ int main() {
   
  **Output**  
   
-  **1**  
- **xx \= 10**  
- **in A**  
- **Classe V passata con la conversione boxing implicita**  
- **Classe V passata con la conversione boxing forzata**  
- **Funzione interfaccia**  
- **in func1\(V2^\)**  
- **in func2\(System::ValueType^\)**  
- **in func2\(System::ValueType^\)**   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+  
+xx = 10  
+  
+in A  
+  
+Class V passed using implicit boxing  
+  
+Class V passed with forced boxing  
+  
+Interface function  
+  
+in func1(V2^)  
+  
+in func2(System::ValueType^)  
+  
+in func2(System::ValueType^)  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

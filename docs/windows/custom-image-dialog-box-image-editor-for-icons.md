@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b05f0ac4270e19eee14f1a16683d82d082cda1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>Finestra di dialogo dell'immagine personalizzata (Editor di immagini per le icone)
 Consente di creare una nuova immagine con dimensioni personalizzate e numero di colori.
@@ -33,7 +36,7 @@ Consente di creare una nuova immagine con dimensioni personalizzate e numero di 
  Fornisce uno spazio, è possibile scegliere il numero di colori per l'immagine personalizzata: 2, 16 o 256.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nuovo \<dispositivo > finestra di dialogo Tipo immagine](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   

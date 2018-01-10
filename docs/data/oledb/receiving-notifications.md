@@ -1,40 +1,43 @@
 ---
-title: "Ricezione di notifiche | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventi (C++), notifiche in OLE DB"
-  - "notifiche [C++], eventi"
-  - "notifiche [C++], OLE DB (consumer)"
-  - "OLE DB (consumer), notifiche"
-  - "provider OLE DB, notifiche"
-  - "ricezione di notifiche in OLE DB"
-  - "rowset, notifiche di eventi"
+title: Ricezione di notifiche | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- notifications [C++], OLE DB consumers
+- receiving notifications in OLE DB
+- events [C++], notifications in OLE DB
+- notifications [C++], events
+- OLE DB consumers, notifications
+- rowsets, event notifications
+- OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 768130d8ae72ea7788d3bf0ff0fcb5756558b437
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Ricezione di notifiche
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In OLE DB sono incluse le interfacce necessarie per ricevere notifiche in corrispondenza di determinati eventi.  Per ulteriori informazioni, vedere [OLE DB Object Notifications](https://msdn.microsoft.com/en-us/library/ms725406.aspx) in *OLE DB Programmer's Reference \(Platform SDK\)* \(informazioni in lingua inglese\).  Per la configurazione di questi eventi viene utilizzato il meccanismo dei punti di connessione COM standard.  Un oggetto ATL che, ad esempio, debba recuperare degli eventi tramite `IRowsetNotify` implementa l'interfaccia `IRowsetNotify` aggiungendo `IRowsetNotify` all'elenco derivato dalla classe ed esponendo tale interfaccia attraverso una macro **COM\_INTERFACE\_ENTRY**.  
+# <a name="receiving-notifications"></a>Ricezione di notifiche
+OLE DB fornisce interfacce per la ricezione di notifiche quando si verificano gli eventi. Questi elementi sono descritti [OLE DB Object Notifications](https://msdn.microsoft.com/en-us/library/ms725406.aspx) nel *riferimento per programmatori OLE DB*. Il programma di installazione di questi eventi viene utilizzato il meccanismo di punto di connessione COM standard. Ad esempio, un oggetto ATL che si desidera recuperare gli eventi tramite `IRowsetNotify` implementa il `IRowsetNotify` interfaccia aggiungendo `IRowsetNotify` all'elenco derivato dalla classe ed esporlo tramite un **COM_INTERFACE_ENTRY** (macro).  
   
- `IRowsetNotify` prevede tre metodi, che è possibile chiamare in situazioni diverse.  Se si desidera rispondere a uno solo di questi metodi, è possibile utilizzare la classe [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md), che restituisce **E\_NOTIMPL** per i metodi non desiderati.  
+ `IRowsetNotify`dispone di tre metodi, che possono essere chiamati in momenti diversi. Se si desidera rispondere a uno solo di questi metodi, è possibile utilizzare il [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) classe, che restituisce **E_NOTIMPL** per i metodi non si è interessati in.  
   
- Quando si crea il rowset, è necessario indicare al provider che si desidera che l'oggetto rowset restituito supporti la classe **IConnectionPointContainer**, necessaria per impostare la notifica.  
+ Quando si crea il set di righe, è necessario indicare al provider che si desidera che l'oggetto set di righe restituito per supportare **IConnectionPointContainer**, che è necessario impostare la notifica.  
   
- Nel codice riportato di seguito viene mostrato come aprire il rowset da un oggetto ATL e utilizzare la funzione `AtlAdvise` per impostare il sink di notifica.  `AtlAdvise` restituisce un cookie utilizzato per la chiamata a `AtlUnadvise`.  
+ Il codice seguente viene illustrato come aprire il set di righe da un oggetto ATL e utilizzare il `AtlAdvise` funzione per impostare il sink di notifica. `AtlAdvise`Restituisce un cookie che viene utilizzato quando si chiama `AtlUnadvise`.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -45,5 +48,5 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

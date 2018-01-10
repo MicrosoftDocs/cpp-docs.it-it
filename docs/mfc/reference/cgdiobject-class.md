@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>Classe CGdiObject
 Fornisce una classe di base per diversi generi di oggetti GDI (Graphics Device Interface) di Windows, quali bitmap, aree, pennelli, penne, tavolozze e tipi di carattere.  
@@ -226,7 +227,7 @@ int GetObject(
 ### <a name="remarks"></a>Note  
  La funzione recupera una struttura di dati il cui tipo dipende dal tipo dell'oggetto grafico, come illustrato nell'elenco seguente:  
   
-|Oggetto|Tipo di buffer|  
+|Object|Tipo di buffer|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
@@ -247,7 +248,7 @@ UINT GetObjectType() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Il tipo di oggetto, se ha esito positivo. in caso contrario 0. Il valore può essere uno dei valori seguenti:  
+ Il tipo di oggetto, se ha esito positivo. in caso contrario 0. Il valore può essere uno dei seguenti:  
   
 - **OBJ_BITMAP** Bitmap  
   

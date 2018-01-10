@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74dd05bfa1619b9acfe5695fdf0491d4d4b65a78
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c1a73790124adbc1ff8a89290bf4e1d7a4fa6824
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Operazioni di flusso nei controlli Rich Edit
 È possibile utilizzare i flussi per trasferire i dati in o da un controllo rich edit ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). Un flusso è definito da un [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) struttura, che specifica un buffer e una funzione di callback definita dall'applicazione.  

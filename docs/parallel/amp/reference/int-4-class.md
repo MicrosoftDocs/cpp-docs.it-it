@@ -1,11 +1,10 @@
 ---
-title: Classe int_4 | Documenti di Microsoft
+title: Classe int_4 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::abrg
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2a974f97837ff6e4d57aec3c3f2558077a65b3c9
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int4-class"></a>Classe int_4
 Rappresenta uno short vector di quattro valori integer.  
@@ -323,7 +307,7 @@ class int_4;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore int_4](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore int_4](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -473,22 +457,22 @@ class int_4;
 |int_4::operator-||  
 |int_4::operator:||  
 |% int_4::operator =||  
-|int_4::operator / =||  
+|int_4::operator & =||  
 |int_4::operator * =||  
 |int_4::operator / =||  
 |int_4::operator ^ =||  
-|int_4::operator | =||  
+|int_4::operator &#124; =||  
 |int_4::operator ~||  
 |int_4::operator + +||  
 |+ = int_4::operator||  
-|int_4::operator\<=||  
+|int_4::operator <\<=||  
 |int_4::operator =||  
 |int_4::operator =||  
 |int_4::operator >> =||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[dimensioni (costante)](#int_4__size)||  
   
@@ -635,7 +619,7 @@ class int_4;
   
 ##  <a name="ctor"></a>int_4 
 
- Predefinito costruttore inizializza tutti gli elementi con 0.  
+ Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ```  
 int_4() restrict(amp,
@@ -702,7 +686,7 @@ explicit inline int_4(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ##  <a name="int_4__size"></a>dimensioni 
 
@@ -712,4 +696,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

@@ -1,5 +1,5 @@
 ---
-title: spazio dei nomi Concurrency operatori | Documenti di Microsoft
+title: spazio dei nomi Concurrency operatori | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,19 +9,18 @@ ms.topic: article
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-- concrt/concurrency:[operator&amp;&amp
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators"></a>spazio dei nomi Concurrency operatori
 ||||  
@@ -30,7 +29,7 @@ ms.lasthandoff: 03/17/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>operatore | | (Operatore)  
+##  <a name="operator_lor"></a>operatore &#124; &#124; (Operatore)  
  Crea un'attività che verrà completata correttamente quando una delle attività fornite come argomenti verranno completate correttamente.  
   
 ```  
@@ -220,7 +219,7 @@ inline bool operator<(
  `true`Se il vettore simultaneo sul lato sinistro dell'operatore è minore di vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe il `std` dello spazio dei nomi.  
+ Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
@@ -254,7 +253,7 @@ inline bool operator<= (
  `true`Se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe il `std` dello spazio dei nomi.  
+ Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
@@ -288,7 +287,7 @@ inline bool operator>(
  `true` se il vettore simultaneo sul lato sinistro dell'operatore è maggiore rispetto a quello sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe il `std` dello spazio dei nomi.  
+ Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
@@ -322,10 +321,9 @@ inline bool operator>= (
  `true`Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
- Il comportamento di questo operatore è identico all'operatore equivalente per la `vector` classe il `std` dello spazio dei nomi.  
+ Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

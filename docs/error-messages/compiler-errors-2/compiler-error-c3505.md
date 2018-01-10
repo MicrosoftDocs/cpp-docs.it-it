@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 47ca6c4e8e8c01e97ed0098c84c8ea8c64f387a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7b13350ea7a2ffaf232e990bd3ade42d0c44a6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3505"></a>Errore del compilatore C3505
 
@@ -33,4 +34,4 @@ Per ulteriori informazioni, vedere,
   
 -   [Procedura: Abilitare un set di strumenti Visual C++ a 64 bit dalla riga di comando](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)  
   
--   [Procedura: configurare progetti di Visual C++ a 64 Bit, x64 piattaforme](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+-   [Procedura: Configurare i progetti Visual C++ per piattaforme x64 a 64 bit](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

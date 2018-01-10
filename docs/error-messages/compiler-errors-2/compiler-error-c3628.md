@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 131b2829991d0d8c40b64c903afd45b485b9ba55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16e2e2a83cc5dbf52e7030e10d00c3cdfe7891d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3628"></a>Errore del compilatore C3628
 'base class': gestite o WinRTclasses supportano solo l'ereditarietà pubblica  

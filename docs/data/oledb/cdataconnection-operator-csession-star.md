@@ -1,37 +1,39 @@
 ---
-title: "CDataConnection::operator CSession* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.operatorCSession*"
-  - "CDataConnection::operatorCSession*"
-  - "operatorCSession*"
-  - "CSession*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession* (operatore)"
-  - "operatore CSession*"
+title: 'CDataConnection:: operator CSession * | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.operatorCSession*
+- CDataConnection::operatorCSession*
+- operatorCSession*
+- CSession*
+dev_langs: C++
+helpviewer_keywords:
+- operator CSession*
+- CSession* operator
 ms.assetid: 0b0feede-5c3e-4835-be5b-03651597014d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 53efb82e9f78b4ea5a76b4f200012ed98fb513d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::operator CSession*
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdataconnectionoperator-csession"></a>CDataConnection::operator CSession*
 Restituisce un puntatore all'oggetto `CSession` contenuto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -39,15 +41,15 @@ operator const CSession*() throw( );
   
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Questo operatore restituisce un puntatore all'oggetto `CSession` contenuto, consentendo di passare un oggetto `CDataConnection` dove è previsto un puntatore `CSession`.  
   
-## Esempio  
- Vedere [operatore CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) per un esempio di utilizzo.  
+## <a name="example"></a>Esempio  
+ Vedere [operatore CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) per un esempio di utilizzo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CDataConnection](../../data/oledb/cdataconnection-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CDataConnection (classe)](../../data/oledb/cdataconnection-class.md)   
  [CDataConnection::operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md)

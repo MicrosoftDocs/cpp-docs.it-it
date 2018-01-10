@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 510f222972b8d9306f7b248799679f0dd499288a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4fecb21b35e3941862cc38edc28a2b1e25ff6bcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
 Chiamato da [Execute](../../data/oledb/icommandimpl-execute.md) per creare un singolo set di righe.  

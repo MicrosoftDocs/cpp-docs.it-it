@@ -43,11 +43,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0a94b0d15059c0ecf67a7a33b3be646ed7a2f59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5dc706f59672f60874a5f525bb37067c1b13ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 Verifica se un carattere multibyte è minuscolo o maiuscolo.  
@@ -87,7 +88,7 @@ int _ismbcupper_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni testa una particolare condizione su un determinato carattere multibyte.  
   
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 |Routine|Condizione di test|Esempio della tabella codici 932|  
 |-------------|--------------------|---------------------------|  
@@ -110,7 +111,7 @@ int _ismbcupper_l(
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
  [Routine _ismbc](../../c-runtime-library/ismbc-routines.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)   
  [Routine _ismbb](../../c-runtime-library/ismbb-routines.md)

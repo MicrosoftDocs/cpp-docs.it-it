@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d3551252d04dc97f6e2b4dd13df61edda576744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinformsview-class"></a>Classe CWinFormsView
 Fornisce una funzionalità generica per l'hosting di un controllo Windows Form come visualizzazione MFC.  
@@ -52,7 +53,7 @@ class CWinFormsView : public CView;
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
-|Nome||  
+|nome||  
 |----------|-|  
 |[Controllo CWinFormsView::operator ^](#operator_control)|Esegue il cast di un tipo come un puntatore a un controllo Windows Form.|  
   

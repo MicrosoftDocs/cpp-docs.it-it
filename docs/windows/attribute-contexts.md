@@ -1,42 +1,44 @@
 ---
-title: "Attribute Contexts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], contexts"
+title: Attributo contesti | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: attributes [C++], contexts
 ms.assetid: 3086351f-77a8-4048-99e9-3b6b041b9437
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Contexts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gli attributi C\+\+ possono essere descritti utilizzando quattro campi di base: la destinazione può essere applicato \(**si applica a**\), se sono ripetibili o meno \(**ripetibile**\), la presenza di associazione degli altri attributi \(**attributi obbligatori**\) e incompatibilità con altri attributi \(**attributi non validi**\).  Questi campi vengono elencati in una tabella descrittiva nell'argomento di riferimento di ogni attributo.  Ognuno di questi campi viene descritto di seguito.  
+# <a name="attribute-contexts"></a>Contesti di attributi
+Gli attributi di C++ possono essere descritte con quattro campi di base: la destinazione possono essere applicate alle (**si applica a**), se sono ripetibili o meno (**Repeatable**), la necessaria la presenza di altri attributi ( **Gli attributi obbligatori**) e le incompatibilità con gli altri attributi (**attributi non validi**). Questi campi sono elencati in una tabella associata nell'argomento di riferimento di ogni attributo. Ciascuno di questi campi è descritta di seguito.  
   
-## Si applica a  
- Questo campo vengono descritti gli elementi del linguaggio diversi di C\+\+ come destinazioni validi per l'attributo specificato.  Ad esempio, se un attributo specifica la “classe„ in **si applica a** campo, questo indica che l'attributo può essere applicato solo a una classe valida di C\+\+.  Se l'attributo viene applicato a una funzione membro di una classe, un errore di sintassi risulterebbe.  
+## <a name="applies-to"></a>Si applica a  
+ Questo campo descrive i vari elementi di linguaggio C++ che rappresentano le destinazioni legali per l'attributo specificato. Ad esempio, se un attributo specifica "class" nel **si applica a** campo indica che l'attributo può essere applicato solo a una classe C++ valida. Se l'attributo viene applicato a una funzione membro di una classe, si comporta un errore di sintassi.  
   
- Per ulteriori informazioni, vedere [Attributi da utilizzare](../windows/attributes-by-usage.md).  
+ Per ulteriori informazioni, vedere [attributi tramite l'utilizzo di](../windows/attributes-by-usage.md).  
   
-## ripetibile  
- Questo campo indica se l'attributo può essere applicato ripetutamente allo stesso database di destinazione.  La maggior parte degli attributi non è ripetibile.  
+## <a name="repeatable"></a>Ripetibile  
+ Questo campo indica se l'attributo può essere applicato più volte alla stessa destinazione. La maggior parte degli attributi non sono ripetibili.  
   
-## attributi obbligatori  
- Questo elenchi campi altri attributi che devono essere presenti ovvero applicate allo stesso database di destinazione\) per l'attributo specificato funzionino correttamente.  Per un attributo è raro disporre di tutte le voci per questo campo.  
+## <a name="required-attributes"></a>Attributi obbligatori  
+ Questo campo sono elencati gli altri attributi che devono essere presenti (che viene applicato alla stessa destinazione) per l'attributo specificato funzionare correttamente. È raro che un attributo di tutte le voci per questo campo.  
   
-## attributi non validi  
- Questo elenchi campi altri attributi che sono incompatibili con l'attributo specificato.  Per un attributo è raro disporre di tutte le voci per questo campo.  
+## <a name="invalid-attributes"></a>Attributi non validi  
+ Questo campo sono elencati gli altri attributi che non sono compatibili con l'attributo specificato. È raro che un attributo di tutte le voci per questo campo.  
   
-## Vedere anche  
- [C\+\+ Attributes Reference](../windows/cpp-attributes-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti relativi agli attributi di C++](../windows/cpp-attributes-reference.md)

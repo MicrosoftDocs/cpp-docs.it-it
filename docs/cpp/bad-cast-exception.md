@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3594b8b1c08fb828e41f60ad49861f29904b67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7880a01f247d5dc3cce5a6f247297ef65289367
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="badcast-exception"></a>Eccezione bad_cast
 Viene generata l'eccezione `bad_cast` dall'operatore `dynamic_cast` come risultato di un cast non riuscito a un tipo di riferimento.  

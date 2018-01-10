@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2865
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2865
+f1_keywords: C2865
+dev_langs: C++
+helpviewer_keywords: C2865
 ms.assetid: 973eb6a0-c99a-4d25-b3e5-fe0539794d77
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 149ca019ef30d66dba63bc927d79064a269d8c70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5cbe54ebcae8753c0c5b6701ca839202ba7da533
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2865"></a>Errore del compilatore C2865
 'function': confronto non valido per handle_o_puntatore  

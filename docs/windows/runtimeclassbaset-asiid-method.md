@@ -1,32 +1,33 @@
 ---
-title: "Metodo RuntimeClassBaseT::AsIID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsIID (metodo)"
+title: 'Metodo runtimeclassbaset:: Asiid | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: 90d7df8a-cf9e-4eef-8837-bc1a25f3fa1a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 482edbcabf368f68a720910717650be78ac11c62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo RuntimeClassBaseT::AsIID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="runtimeclassbasetasiid-method"></a>Metodo RuntimeClassBaseT::AsIID
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -39,30 +40,30 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Un tipo che implementa l'id dell'interfaccia specificata dal parametro `riid`.  
+ Un tipo che implementa l'ID di interfaccia specificato dal parametro `riid`.  
   
  `implements`  
  Una variabile del tipo specificato dal parametro di modello `T`.  
   
  `riid`  
- ID dell'interfaccia da richiamare.  
+ Per recuperare l'ID di interfaccia.  
   
  `ppvObject`  
- Se l'operazione ha esito positivo, un puntatore a un puntatore a un'interfaccia specificata dal parametro `riid`.  
+ Se questa operazione ha esito positivo, un puntatore-a-a-puntatore all'interfaccia specificata dal parametro `riid`.  
   
-## Valore restituito  
- S\_OK se ha esito positivo; in caso contrario, un HRESULT, che descrive l'errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se ha esito positivo. in caso contrario, HRESULT che descrive l'errore.  
   
-## Note  
- Recupera un puntatore all'interfaccia ID.  
+## <a name="remarks"></a>Note  
+ Recupera un puntatore all'ID di interfaccia specificato.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

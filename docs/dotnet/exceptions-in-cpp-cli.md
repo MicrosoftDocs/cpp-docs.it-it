@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7ff6cb106745ff4f5c1d26d6992d3114f772f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 35469281b96b2989c2c511855b46c9eba76c58a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-in-ccli"></a>Eccezioni in C++/CLI
 Gli articoli in questa sezione della documentazione illustrano eccezioni in C + + CLI e delle differenze rispetto alla gestione delle eccezioni standard.  

@@ -15,11 +15,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f811197526d2d3da0700af27be84151da79d67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e55fd4ad47470a86a0a3d61cc847c20fb21768e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-c"></a>custom (C++)
 Definisce i metadati per un oggetto della libreria dei tipi.  
@@ -38,7 +41,7 @@ Definisce i metadati per un oggetto della libreria dei tipi.
  *UUID*  
  ID univoco.  
   
- *value*  
+ *valore*  
  Un valore che può essere impostato in una variabile variant.  
   
 ## <a name="remarks"></a>Note  
@@ -53,9 +56,9 @@ Definisce i metadati per un oggetto della libreria dei tipi.
 |||  
 |-|-|  
 |**Si applica a**|COM non `interface`, **classe**, `enum`s, `idl_module` metodi, i membri di interfaccia, i parametri di interfaccia, `typedef`s, **unione**s, `struct`s|  
-|**Ripetibile**|Sì|  
+|**Ripetibile**|Yes|  
 |**Attributi obbligatori**|**Coclasse** (se utilizzato nella classe)|  
-|**Attributi non validi**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __hook_cpp
-dev_langs:
-- C++
+f1_keywords: __hook_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hook"></a>__hook
 Associa un metodo del gestore a un evento.  
@@ -86,7 +83,7 @@ long __hook(
 ## <a name="remarks"></a>Note  
  Utilizzare la funzione intrinseca `__hook` in un ricevitore di eventi per associare o dissociare un metodo del gestore con un metodo dell'evento. Il gestore specificato viene quindi chiamato quando l'origine genera l'evento specificato. È possibile associare più gestori a un singolo evento o associare più eventi a un singolo gestore.  
   
- Esistono due tipologie di `__hook`. È possibile utilizzare la prima tipologia (a quattro argomenti) nella maggior parte dei casi, in particolare, per i ricevitori di eventi COM in cui il *layout_dependent* parametro il [event_receiver](../windows/event-receiver.md) attributo **false **.  
+ Esistono due tipologie di `__hook`. È possibile utilizzare la prima tipologia (a quattro argomenti) nella maggior parte dei casi, in particolare, per i ricevitori di eventi COM in cui il *layout_dependent* parametro il [event_receiver](../windows/event-receiver.md) attributo **false** .  
   
  In questi casi non è necessario associare tutti i metodi in un'interfaccia prima di generare un evento a uno dei metodi; solo il metodo che gestisce l'evento deve essere associato. È possibile utilizzare la seconda forma (a due argomenti) di `__hook` solo per i ricevitori di eventi COM in cui *layout_dependent***= true**.  
   

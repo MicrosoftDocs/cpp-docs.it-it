@@ -1,32 +1,33 @@
 ---
-title: "vector::vector (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector (membro) [STL/CLR]"
+title: 'Vector:: Vector (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::vector
+dev_langs: C++
+helpviewer_keywords: vector member [STL/CLR]
 ms.assetid: a0b5e807-1ef2-422b-b772-1f96cd62fb51
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a321e18c9fc921e1d88961b4f282c29917fa7962
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# vector::vector (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorvector-stlclr"></a>vector::vector (STL/CLR)
 Costruisce un oggetto contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 vector();  
@@ -39,52 +40,52 @@ template<typename InIt>
 vector(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parametri  
- Conteggio  
+#### <a name="parameters"></a>Parametri  
+ count  
  Numero di elementi da inserire.  
   
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
- val  
+ Val  
  Valore dell'elemento da inserire.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `vector();`  
   
- inizializza la sequenza selezionata senza alcun elemento.  Utilizzarla per specificare una sequenza iniziale controllata vuota.  
+ Inizializza la sequenza controllata senza elementi. È utilizzata per specificare una sequenza controllata iniziale vuota.  
   
  Il costruttore:  
   
  `vector(vector<Value>% right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``.`[vector::begin](../dotnet/vector-begin-stl-clr.md)`(),` `right``.`[vector::end](../dotnet/vector-end-stl-clr.md)`())`.  Utilizzarla per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`vettoriale.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`). Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto vector `right`.  
   
  Il costruttore:  
   
  `vector(vector<Value>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``->`[vector::begin](../dotnet/vector-begin-stl-clr.md)`(),` `right``->`[vector::end](../dotnet/vector-end-stl-clr.md)`())`.  Utilizzarla per specificare una sequenza selezionata iniziale mediante la copia della sequenza selezionata dall'oggetto di vettore che l'handle venga `right`.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`). Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto vector con handle `right`.  
   
  Il costruttore:  
   
  `explicit vector(size_type count);`  
   
- inizializza la sequenza selezionata con gli elementi di `count` ognuna con valore `value_type()`.  Viene utilizzato per riempire il contenitore di elementi tutto con il valore predefinito.  
+ Inizializza la sequenza controllata con `count` elementi con valore `value_type()`. Utilizzarla per riempire il contenitore con elementi tutti con il valore predefinito.  
   
  Il costruttore:  
   
  `vector(size_type count, value_type val);`  
   
- inizializza la sequenza selezionata con gli elementi di `count` ognuna con valore `val`.  Utilizzarla per riempire il contenitore di elementi tutto con lo stesso valore.  
+ Inizializza la sequenza controllata con `count` elementi con valore `val`. Utilizzarla per riempire il contenitore con elementi tutti con lo stesso valore.  
   
  Il costruttore:  
   
@@ -92,15 +93,15 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `vector(InIt first, InIt last);`  
   
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`). Utilizzarla per creare una copia di un'altra sequenza di sequenza controllata.  
   
  Il costruttore:  
   
  `vector(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`.  Utilizzarla per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta dall'enumeratore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_construct.cpp   
@@ -156,20 +157,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::assign](../dotnet/vector-assign-stl-clr.md)   
- [vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)   
- [vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector:: Assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)   
+ [Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
+ [vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

@@ -34,11 +34,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d0e5e5fb88eae5ca0247f1672e816dc35c601
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>Classe bernoulli_distribution
 Genera una distribuzione Bernoulli.  
@@ -87,7 +88,7 @@ La classe descrive una distribuzione che produce valori di tipo `bool`, distribu
   
 Il membro di proprietà `p()` restituisce il valore per il parametro di distribuzione attualmente archiviato `p`.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
@@ -97,7 +98,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla funzione di probabilità discreta di Bernoulli, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Bernoulli](http://go.microsoft.com/fwlink/LinkId=398467).  
+Per informazioni dettagliate sulla funzione di probabilità discreta di Bernoulli, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Bernoulli](http://go.microsoft.com/fwlink/p/?linkid=398467).  
   
 ## <a name="example"></a>Esempio  
   

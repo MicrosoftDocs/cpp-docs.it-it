@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e7130c37799ad67054fd4c71f8c1eb5a27aadde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fbddc8fb0b4e382c954fe4b11f100ecefdff75d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Visualizzazione di un menu come menu di scelta rapida
 In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di menu come barra dei menu. Tuttavia, potrebbero esserci risorse di menu che vengono aggiunte alla barra dei menu dell'applicazione durante l'esecuzione del programma.  
@@ -36,7 +39,7 @@ In genere, quando si usa l'Editor dei menu, viene visualizzata una risorsa di me
   
 
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

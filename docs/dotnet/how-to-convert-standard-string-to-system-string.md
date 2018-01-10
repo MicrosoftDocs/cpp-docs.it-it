@@ -1,32 +1,35 @@
 ---
-title: "Procedura: convertire stringhe standard in System::String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "libreria C++ standard, conversione di stringhe in System::String"
-  - "stringhe (conversione) [C++], stringa di libreria C++ standard"
-  - "stringhe [C++], conversione"
+title: 'Procedura: convertire stringhe Standard in System:: String | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting strings to System::String
+- string conversion [C++], C++ Standard Library string
+- strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c6a2bc4fb1a73954e182ea192047a7ec6ca20c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: convertire stringhe standard in System::String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come convertire una stringa standard della libreria C\+\+ \([\<string\>](../standard-library/string.md)\) in un oggetto <xref:System.String>.  
+# <a name="how-to-convert-standard-string-to-systemstring"></a>Procedura: convertire stringhe standard in System::String
+In questo argomento viene illustrato come convertire una stringa della libreria Standard C++ ([\<stringa >](../standard-library/string.md)) a un <xref:System.String>.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // convert_standard_string_to_system_string.cpp  
@@ -48,8 +51,11 @@ int main() {
 }  
 ```  
   
-  **test**  
-**test**  
-**test**   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+test  
+test  
+test  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

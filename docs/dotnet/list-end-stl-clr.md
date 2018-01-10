@@ -1,41 +1,42 @@
 ---
-title: "list::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end (membro) [STL/CLR]"
+title: 'List:: end (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: c3444164-2c6e-4cbd-8765-1ce7d30fc43e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1525d116a391fca2dab676528706d831f435f8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# list::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce la fine della sequenza controllata.  
+# <a name="listend-stlclr"></a>list::end (STL/CLR)
+Designa la fine della sequenza controllata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 iterator end();  
 ```  
   
-## Note  
- La funzione membro restituirà un iteratore di accesso casuale che punta a oltre la fine della sequenza selezionata.  Utilizzarla per ottenere un iteratore che definisce la fine della sequenza controllata; il doesn dello stato non di modifica se la lunghezza di sequenza selezionata.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un iteratore ad accesso casuale che punta appena oltre la fine della sequenza controllata. È utilizzato per ottenere un iteratore che definisce la fine della sequenza controllata. il relativo stato modifica se viene modificata la lunghezza della sequenza controllata.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_end.cpp   
@@ -71,17 +72,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**  
- **un x\-y**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+ a x y  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::begin](../dotnet/list-begin-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [elenco (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List:: back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [List::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)

@@ -38,30 +38,16 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 Calcola il logaritmo naturale di 1 più il valore specificato.  
@@ -98,7 +84,7 @@ long double log1pl(
 ## <a name="return-value"></a>Valore restituito  
  In caso di esito positivo restituisce il logaritmo naturale (base e) di (`x`+1).  
   
- In caso contrario, può restituire uno dei valori seguenti:  
+ In caso contrario può restituire uno dei valori seguenti:  
   
 |Input|Risultato|Eccezione SEH|errno|  
 |-----------|------------|-------------------|-----------|  
@@ -106,8 +92,8 @@ long double log1pl(
 |Valori denormalizzati|Come input|UNDERFLOW||  
 |±0|Come input|||  
 |-1|-inf|DIVBYZERO|ERANGE|  
-|< -1|nan|INVALID|EDOM|  
-|-inf|nan|INVALID|EDOM|  
+|< -1|nan|NON VALIDO|EDOM|  
+|-inf|nan|NON VALIDO|EDOM|  
 |±SNaN|Come input|INVALID||  
 |±QNaN, indefinito|Come input|||  
   
@@ -126,9 +112,9 @@ long double log1pl(
 |--------------|--------------|------------------|  
 |`log1p`,                `log1pf`,  `log1pl`|\<math.h>|\<cmath>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [log2, log2f, log2l](../../c-runtime-library/reference/log2-log2f-log2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

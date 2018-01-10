@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8307b8984ee1b5b6074ee309fdf8a74fe46ea9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>Moniker asincroni in Internet
 Internet richiede nuovi approcci per la progettazione dell'applicazione a causa l'accesso di rete lenta. Le applicazioni devono eseguire l'accesso alla rete in modo asincrono per evitare di bloccare l'interfaccia utente. Classe MFC [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) fornisce un supporto asincrono per il download dei file.  

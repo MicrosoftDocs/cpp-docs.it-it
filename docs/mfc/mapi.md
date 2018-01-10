@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505b9b16bb3c84e92a640f136c5aa58fdaaa13a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de955ecc25137f5305806ca5ba03ed15930574dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapi"></a>MAPI
 In questo articolo viene illustrata l'interfaccia Messaging Application Programming Interface (MAPI) di Microsoft per gli sviluppatori di applicazioni di messaggistica client. MFC fornisce supporto per un sottoinsieme di MAPI nella classe **CDocument** ma non include l'intera API. Per ulteriori informazioni, vedere [supporto MAPI in MFC](../mfc/mapi-support-in-mfc.md).  
@@ -36,7 +37,7 @@ In questo articolo viene illustrata l'interfaccia Messaging Application Programm
   
  Per ulteriori informazioni su MAPI, vedere gli articoli nella Guida in messaggistica Win32 (MAPI) di Windows SDK.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Supporto MAPI in MFC](../mfc/mapi-support-in-mfc.md)  
   
 ## <a name="see-also"></a>Vedere anche  

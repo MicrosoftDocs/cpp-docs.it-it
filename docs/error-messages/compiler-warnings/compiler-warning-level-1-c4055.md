@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>Avviso del compilatore (livello 1) C4055  
   
 'conversion': da puntatore a dati 'type1' a puntatore a funzione 'type2'  

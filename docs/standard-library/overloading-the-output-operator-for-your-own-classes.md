@@ -1,43 +1,27 @@
 ---
-title: Overload dell&quot;operatore &lt;&lt; per classi personalizzate | Microsoft Docs
+title: Overload dell'operatore &lt;&lt; per classi personalizzate | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 22eb3fbef373c2e80989c49887cfa8b3c9eadc61
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d3a1a1ee84cece4babf673acd4858796adc53bc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>Overload dell'operatore &lt;&lt; per classi personalizzate
 I flussi di input usano l'operatore di inserimento (`<<`) per i tipi standard. È possibile eseguire l'overload dell'operatore `<<` per le classi personalizzate.  
@@ -96,5 +80,4 @@ cout <<"The date is" <<dt <<flush;
   
 ## <a name="see-also"></a>Vedere anche  
  [Output Streams](../standard-library/output-streams.md) (Flussi di output)
-
 

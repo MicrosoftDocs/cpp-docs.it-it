@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76e59007b1ed45e01310795f7ada35576a57bb60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4927349bc0f6519bfaa2b64e8de89d8ad74a4b7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listconstiterator-stlclr"></a>list::const_iterator (STL/CLR)
 Tipo di un iteratore costante per la sequenza controllata.  

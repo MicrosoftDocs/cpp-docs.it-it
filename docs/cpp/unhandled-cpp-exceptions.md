@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6954c3eecfb3e6048a653401f4238b950e3aecf0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7410d34b7b9f31c96cf7e991133770099735a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhandled-c-exceptions"></a>Eccezioni C++ non gestite
 Se un gestore corrispondente (o i puntini di sospensione **catch** gestore) non è disponibile per l'eccezione corrente, predefinito `terminate` viene chiamata la funzione di runtime. È inoltre possibile chiamare in modo esplicito `terminate` in uno qualsiasi dei gestori. L'azione predefinita `terminate` consiste nel chiamare `abort`. Se si desidera chiamare `terminate` un'altra funzione nel programma prima di uscire dall'applicazione, chiamare la funzione `set_terminate` con il nome della funzione da chiamare come unico argomento. È possibile chiamare `set_terminate` in qualsiasi punto del programma. Il `terminate` routine chiama sempre l'ultima funzione fornita come argomento di `set_terminate`.  

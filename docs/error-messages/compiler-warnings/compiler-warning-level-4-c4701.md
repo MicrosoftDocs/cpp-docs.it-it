@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 4) C4701 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4701"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4701"
+title: Compilatore avviso (livello 4) C4701 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4701
+dev_langs: C++
+helpviewer_keywords: C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d001827c1d3e73ee4724aa52543231a43d41af5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4701
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzata variabile locale 'nome' potenzialmente non inizializzata.  
+# <a name="compiler-warning-level-4-c4701"></a>Avviso del compilatore (livello 4) C4701
+potenzialmente non inizializzata utilizzata variabile locale 'nome'  
   
- La variabile locale *name* può essere utilizzata senza che le venga assegnato un valore.  La situazione può provocare risultati imprevisti.  
+ La variabile locale *nome* potrebbe essere stato usato senza essere assegnato un valore. Ciò potrebbe provocare risultati imprevisti.  
   
-## Esempio  
- Nel codice seguente vengono generati gli errore C4701 and C4703.  
+## <a name="example"></a>Esempio  
+ Nel codice seguente vengono generati gli errori C4701 e C4703.  
   
 ```cpp  
 #include <malloc.h>  
@@ -51,8 +50,13 @@ void main()
 }  
 ```  
   
-  **c:\\src\\test.cpp\(10\) : avviso C4701: utilizzata variabile locale "p" potenzialmente non inizializzata**  
- **c:\\src\\test.cpp\(10\) : avviso C4703: utilizzata variabile locale "p" potenzialmente non inizializzata** Per risolvere il problema, inizializzare la variabile come indicato nel codice seguente:  
+```Output  
+c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used  
+c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used  
+  
+```  
+  
+ Per risolvere il problema, inizializzare la variabile come indicato nel codice seguente:  
   
 ```cpp  
 #include <malloc.h>  
@@ -74,6 +78,6 @@ void main()
 }  
 ```  
   
-## Vedere anche  
- [Avviso del compilatore \(livello 4\) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
- [Avvisi, \/sdl e migliorare rilevamento variabile non inizializzata](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+## <a name="see-also"></a>Vedere anche  
+ [Compilatore avviso (livello 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
+ [Gli avvisi, /sdl e miglioramento del rilevamento della variabile non inizializzato](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

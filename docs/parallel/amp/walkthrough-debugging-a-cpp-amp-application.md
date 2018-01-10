@@ -18,14 +18,15 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3dc050418d8053e04053d5eafbd328e49bd473b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procedura dettagliata: Debug di un'applicazione C++ AMP
-In questo argomento viene illustrato come eseguire il debug di un'applicazione che usa C++ Accelerated Massive Parallelism (C++ AMP) per poter sfruttare l'unità di elaborazione grafica (GPU). Usa un programma parallelo riduzione che sommi un'ampia gamma di valori integer. In questa procedura dettagliata vengono illustrate le attività seguenti:  
+In questo argomento viene illustrato come eseguire il debug di un'applicazione che usa C++ Accelerated Massive Parallelism (C++ AMP) per poter sfruttare l'unità di elaborazione grafica (GPU). Usa un programma parallelo riduzione che sommi un'ampia gamma di valori integer. Questa procedura dettagliata illustra le attività seguenti:  
   
 -   Avviare il debugger della GPU.  
   
@@ -60,7 +61,7 @@ In questo argomento viene illustrato come eseguire il debug di un'applicazione c
   
 4.  Scegliere **applicazione Console Win32**, tipo `AMPMapReduce` nel **nome** , quindi scegliere il **OK** pulsante.  
   
-5.  Scegliere il **Avanti** pulsante.  
+5.  Fare clic su **Avanti**.  
   
 6.  Cancella il **intestazione precompilata** casella di controllo e quindi scegliere il **fine** pulsante.  
   
@@ -212,11 +213,11 @@ In questo argomento viene illustrato come eseguire il debug di un'applicazione c
      ![Punti di interruzione CPU](../../parallel/amp/media/campcpubreakpoints.png "campcpubreakpoints")  
 Punti di interruzione CPU  
   
-5.  Nella barra dei menu, scegliere **Debug**, **Avvia debug**.  
+5.  Nella barra dei menu scegliere **Debug**, **Avvia debug**.  
   
 6.  Nel **variabili locali** finestra, osservare il valore per `stride_size` fino a quando non viene raggiunto il punto di interruzione riga 70.  
   
-7.  Nella barra dei menu, scegliere **Debug**, **Termina debug**.  
+7.  Sulla barra del menu scegliere **Debug**, **Termina debug**.  
   
 ## <a name="debugging-the-gpu-code"></a>Debug del codice GPU  
  In questa sezione viene illustrato come eseguire il debug di codice della GPU, ovvero il codice contenuto nel `sum_kernel_tiled` (funzione). Il codice della GPU calcola la somma di numeri interi per ogni "blocco" in parallelo.  
@@ -238,7 +239,7 @@ Punti di interruzione CPU
      ![Punti di interruzione GPU](../../parallel/amp/media/campgpubreakpoints.png "campgpubreakpoints")  
 Punto di interruzione GPU  
   
-7.  Nella barra dei menu, scegliere **Debug**, **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug in quanto le righe di codice vengono eseguite sulla CPU GPU.  
+7.  Nella barra dei menu scegliere **Debug**, **Avvia debug**. I punti di interruzione nel codice della CPU alle righe 67 e 70 non vengono eseguiti durante il debug in quanto le righe di codice vengono eseguite sulla CPU GPU.  
   
 ### <a name="to-use-the-gpu-threads-window"></a>Utilizzare la finestra thread GPU  
   
@@ -393,5 +394,5 @@ Thread raggruppati nella finestra thread GPU
  [Debug del codice GPU](/visualstudio/debugger/debugging-gpu-code)   
  [Procedura: utilizzare la finestra thread GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   
  [Procedura: utilizzare la finestra Espressioni di controllo parallelo](/visualstudio/debugger/how-to-use-the-parallel-watch-window)   
- [Analisi del codice AMP C++ con il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)
+ [Analisi del codice AMP C++ con il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
 

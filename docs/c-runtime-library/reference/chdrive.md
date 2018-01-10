@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chdrive
+apiname: _chdrive
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - chdrive
 - _chdrive
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - drives, changing
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 946f5bee25b093d024eecc030527be39ad1a0162
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b7733a366ade87dd937eb20eab97a5258db8787a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chdrive"></a>_chdrive
 Modifica l'unità di lavoro corrente.  
@@ -82,7 +65,7 @@ int _chdrive(
 ## <a name="remarks"></a>Note  
  Se `drive` non è compreso nell'intervallo da 1a 26, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione **_chdrive** restituisce -1, `errno` viene impostato su `EACCES` e `_doserrno` viene impostato su `ERROR_INVALID_DRIVE`.  
   
- La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per altre informazioni, visitare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) e cercare **SetCurrentDirectory**.  
+ La funzione **_chdrive** non è thread-safe poiché dipende dalla funzione **SetCurrentDirectory** che non è a sua volta thread-safe. Per usare **_chdrive** in modo sicuro in un'applicazione multithread, è necessario includere la propria sincronizzazione dei thread. Per altre informazioni, visitare [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) e cercare **SetCurrentDirectory**.  
   
  La funzione **_chdrive** modifica solo l'unità di lavoro corrente. **_chdir** modifica la directory di lavoro corrente.  
   
@@ -92,7 +75,7 @@ int _chdrive(
 |-------------|---------------------|  
 |**_chdrive**|\<direct.h>|  
   
- Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [_getdrive](../../c-runtime-library/reference/getdrive.md).  

@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4102
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4102
+f1_keywords: C4102
+dev_langs: C++
+helpviewer_keywords: C4102
 ms.assetid: 349f308a-daf3-48c6-bd53-6c38b73f8880
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 97b607c06b5695f06355bf87d39bc6daa53b57d5
-ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92161f1c1b6d4a11babfeda11b23c9c71cad3398
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4102"></a>Avviso del compilatore (livello 3) C4102
 'label': etichetta senza riferimenti  

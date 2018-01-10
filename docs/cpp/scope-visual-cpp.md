@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dcf85a2feff9aa16434f626804edefa4dbe4610e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>Ambito (Visual C++)
 I nomi in C++ possono essere usati solo in alcune aree del programma. Quest'area viene denominata "l'ambito" del nome. L'ambito determina la "durata" di un nome che non indica un oggetto con estensione statica. L'ambito determina inoltre la visibilità di un nome quando vengono chiamati i costruttori e i distruttori di classe e quando vengono inizializzate le variabili locali per l'ambito. (Per ulteriori informazioni, vedere [costruttori](../cpp/constructors-cpp.md) e [distruttori](../cpp/destructors-cpp.md).) Esistono cinque tipi di ambito:  

@@ -1,100 +1,100 @@
 ---
-title: "Aggiunta guidata metodo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.method.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aggiunta guidata metodo [C++]"
-  - "metodi [C++], aggiunta tramite procedure guidate"
+title: Aggiunta guidata metodo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.method.overview
+dev_langs: C++
+helpviewer_keywords:
+- Add Method Wizard [C++]
+- methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Aggiunta guidata metodo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare questa procedura guidata per aggiungere un metodo a un'interfaccia.  A seconda del tipo di progetto o di interfaccia cui si aggiunge il metodo, vengono visualizzate opzioni differenti.  
+# <a name="add-method-wizard"></a>Aggiunta guidata metodo
+Utilizzare questa procedura guidata per aggiungere un metodo su un'interfaccia. A seconda del tipo di progetto o un tipo di interfaccia a cui si sta aggiungendo un metodo, la procedura guidata consente di visualizzare diverse opzioni.  
   
-## Nomi  
+## <a name="names"></a>Nomi  
  **Tipo restituito**  
- Tipo di dati restituito dal metodo.  `HRESULT` è consigliato per tutti i tipi di interfaccia, in quanto consente una modalità di restituzione standard degli errori.  
+ Il tipo di dati restituito dal metodo. `HRESULT`è consigliabile per tutti i tipi di interfaccia, perché fornisce un modo standard per restituire errori.  
   
-|Tipo di interfaccia|Descrizione|  
-|-------------------------|-----------------|  
-|Interfaccia duale|`HRESULT`.  Non modificabile.|  
-|Interfaccia personalizzata|`HRESULT`.  Non modificabile.|  
-|Interfaccia personalizzata locale|Specificare il tipo restituito desiderato o selezionarlo dall'elenco.|  
-|Interfaccia dispatch|Specificare il tipo restituito desiderato o selezionarlo dall'elenco.|  
-|Interfaccia dispatch del controllo ActiveX MFC|Se si implementa un metodo predefinito, il tipo restituito sarà impostato sul valore appropriato e non sarà modificabile.  Se si seleziona un metodo dall'elenco **Nome metodo** e si fa clic su **Personalizzato** in **Selezionare il tipo di metodo**, sarà possibile selezionare un tipo restituito dall'elenco.|  
+|Tipo interfaccia|Descrizione|  
+|--------------------|-----------------|  
+|Interfaccia duale|`HRESULT`. Non sarà possibile modificarla.|  
+|Interfaccia personalizzata|`HRESULT`. Non sarà possibile modificarla.|  
+|Interfaccia personalizzata locale|Specificare un tipo restituito personalizzato o selezionare dall'elenco.|  
+|Interfaccia dispatch|Specificare un tipo restituito personalizzato o selezionare dall'elenco.|  
+|Interfaccia dispatch del controllo ActiveX MFC|Se si implementa un metodo, il tipo restituito è impostato sul valore appropriato e non può essere modificato. Se si seleziona un metodo di **nome del metodo** elenco e fare clic su **personalizzato** in **selezionare il tipo di metodo**, selezionare un tipo restituito dall'elenco.|  
   
  **Nome del metodo**  
- Consente di impostare il nome del metodo.  
+ Imposta il nome del metodo.  
   
-|Tipo di interfaccia|Descrizione|  
-|-------------------------|-----------------|  
-|Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Specificare un nome per il metodo personalizzato.|  
-|Interfaccia dispatch MFC|Specificare un nome per il metodo personalizzato o selezionarne uno dall'elenco.  Se si seleziona un nome dall'elenco, nella casella **Tipo restituito** verrà visualizzato il valore appropriato, che non sarà modificabile.|  
-|Interfaccia dispatch del controllo ActiveX MFC|Specificare il proprio metodo oppure selezionare il metodo predefinito [DoClick](../Topic/COleControl::DoClick.md) o [Refresh](../Topic/COleControl::Refresh.md).  Per ulteriori informazioni, vedere [Controlli ActiveX MFC: aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md).|  
+|Tipo interfaccia|Descrizione|  
+|--------------------|-----------------|  
+|Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Fornire il proprio nome di metodo.|  
+|Interfaccia dispatch MFC|Fornire il proprio nome di metodo o selezionare un nome di metodo suggerito dall'elenco. Se si seleziona un nome dall'elenco, il valore appropriato viene visualizzato il **tipo restituito** casella e non è modificabile.|  
+|Interfaccia dispatch del controllo ActiveX MFC|Fornire una propria oppure selezionare uno dei metodi predefiniti [DoClick](../mfc/reference/colecontrol-class.md#doclick) e [aggiornamento](../mfc/reference/colecontrol-class.md#refresh). Vedere [controlli ActiveX MFC: aggiunta di metodi predefiniti](../mfc/mfc-activex-controls-adding-stock-methods.md) per ulteriori informazioni.|  
   
  **Tipo di metodo**  
- Disponibile solo per i controlli ActiveX MFC.  Se, anziché selezionare un metodo dall'elenco, si specifica un nome di metodo nella casella **Nome metodo**, questa casella non sarà disponibile.  
+ Questa opzione è disponibile solo per i controlli ActiveX MFC. Se si specifica un nome di metodo nel **nome del metodo** casella, invece di selezionare un metodo dall'elenco, questa casella è disponibile.  
   
- Se si seleziona uno dei metodi dell'elenco **Nome metodo**, selezionare l'implementazione predefinita o un'implementazione personalizzata.  
+ Se si seleziona uno dei metodi di **nome del metodo** , selezionare l'implementazione predefinita o un'implementazione personalizzata.  
   
 |Tipo di metodo|Descrizione|  
-|--------------------|-----------------|  
-|**Predefinito**|Valore predefinito.  Inserisce l'implementazione predefinita del metodo selezionato nell'elenco **Nome metodo**.  Se si seleziona **Predefinito** non sarà possibile modificare **Tipo restituito**.|  
-|**Personalizzato**|Inserisce un'implementazione stub del metodo selezionato nell'elenco **Nome metodo**.  Per i tipi di metodi personalizzati è possibile immettere un tipo restituito personalizzato o selezionarne uno dall'elenco **Tipo restituito**.|  
+|-----------------|-----------------|  
+|**Azionario**|Valore predefinito. Inserisce l'implementazione predefinita del metodo in cui si seleziona il **nome del metodo** elenco. **Tipo restituito** non può essere modificato se si seleziona **Stock**.|  
+|**Personalizzato**|Inserisce un'implementazione stub del metodo selezionato nella **nome del metodo** elenco. Per i tipi di metodi personalizzati, è possibile fornire un tipo restituito personalizzato o selezionarne uno dal **tipo restituito** elenco.|  
   
  **Nome interno**  
- Disponibile per i soli metodi personalizzati aggiunti a un'interfaccia dispatch MFC.  Imposta il nome utilizzato nella mappa di invio, il file di intestazione \(con estensione H\) e il file di implementazione \(con estensione CPP\).  Per impostazione predefinita, questo nome corrisponde a **Nome metodo**.  È possibile modificare il nome del metodo se si utilizza un'interfaccia dispatch MFC o se si aggiunge un metodo personalizzato a un'interfaccia dispatch del controllo ActiveX MFC.  
+ È disponibile per solo i metodi personalizzati aggiunti a un'interfaccia dispatch MFC. Imposta il nome utilizzato nella mappa di invio, il file di intestazione (h) e il file di implementazione (. cpp). Per impostazione predefinita, questo nome è identico **nome del metodo**. Se si sta utilizzando un'interfaccia dispatch MFC o se si sta aggiungendo un metodo personalizzato a un'interfaccia dispatch del controllo ActiveX MFC, è possibile modificare il nome del metodo.  
   
-|Tipo di interfaccia|Descrizione|  
-|-------------------------|-----------------|  
+|Tipo interfaccia|Descrizione|  
+|--------------------|-----------------|  
 |Interfaccia duale ATL, interfaccia personalizzata e interfaccia personalizzata locale|Non disponibile|  
-|Interfaccia dispatch MFC|Impostata sul nome del metodo per impostazione predefinita.  È possibile modificare il nome interno.|  
-|Interfaccia dispatch del controllo ActiveX MFC|È possibile impostare il nome interno solo per i metodi personalizzati.  Per i metodi predefiniti non viene utilizzato alcun nome interno.|  
+|Interfaccia dispatch MFC|Per impostazione predefinita, impostare il nome del metodo. È possibile modificare il nome interno.|  
+|Interfaccia dispatch del controllo ActiveX MFC|È possibile impostare il nome interno solo per i metodi personalizzati. Metodi predefiniti non utilizzano un nome interno.|  
   
  **Attributi dei parametri**  
- Consente di impostare eventuali attributi aggiuntivi per il parametro specificato in **Nome parametro**.  
+ Imposta attributi aggiuntivi per il parametro specificato **nome del parametro**.  
   
-|Attributo parametro|Descrizione|Combinazioni consentite|  
-|-------------------------|-----------------|-----------------------------|  
-|**In**|Indica che il parametro viene passato dalla procedura chiamante a quella chiamata.|solo **in**<br /><br /> **in** e **out**|  
-|**Out**|Indica che il parametro del puntatore viene restituito dalla procedura chiamata a quella chiamante \(dal server al client\).|solo **out**<br /><br /> **in** e **out**<br /><br /> **out** e **retval**|  
+|Attributo di parametro|Descrizione|Combinazioni consentite|  
+|-------------------------|-----------------|--------------------------|  
+|**In**|Indica che il parametro viene passato dalla routine chiamante alla routine chiamata.|**in** solo<br /><br /> **in** e **out**|  
+|**Out**|Indica che il parametro del puntatore viene restituito dalla procedura chiamata alla routine chiamante (dal server al client).|**out** solo<br /><br /> **in** e **out**<br /><br /> **out** e **retval**|  
 |**Retval**|Indica che il parametro riceve il valore restituito del membro.|**retval** e out|  
   
  **Tipo di parametro**  
- Consente di impostare il tipo di dati del parametro.  Selezionare il tipo desiderato dall'elenco.  
+ Imposta il tipo di dati del parametro. Selezionare il tipo dall'elenco.  
   
- **Nome parametro**  
- Imposta il nome di un parametro da passare attraverso il metodo.  Dopo aver digitato il nome, fare clic su **Aggiungi** per aggiungerlo all'elenco dei parametri che verranno passati attraverso il metodo.  Se non si specifica alcun nome di parametro, verranno ignorati gli eventuali attributi del parametro \(solo ATL\) o le selezioni effettuate in **Tipo parametro**.  
+ **Nome del parametro**  
+ Imposta il nome di un parametro da passare attraverso il metodo. Dopo aver digitato il nome, è necessario fare clic su **Aggiungi** per aggiungerlo all'elenco di parametri che verranno passati attraverso il metodo. Se non si specifica un nome di parametro, la procedura guidata ignora gli attributi di parametro (solo ATL) o **tipo di parametro** selezioni.  
   
- Dopo avere scelto **Aggiungi**, il nome del parametro verrà visualizzato in **Elenco parametri**.  
+ Quando si fa clic su **Aggiungi**, viene visualizzato il nome di parametro **elenco parametri**.  
   
- **Nota** Se si specifica un nome di parametro e si sceglie **Fine** senza aver fatto clic su **Aggiungi**, il parametro non verrà aggiunto al metodo.  Sarà necessario individuare il metodo e inserire il parametro manualmente.  
+ **Nota** se si specifica un nome di parametro e quindi fare clic su **fine** prima di scegliere **Aggiungi**, il parametro non viene aggiunto al metodo. È necessario trovare il metodo e inserire il parametro manualmente.  
   
  **Aggiungi**  
- Consente di aggiungere a **Elenco parametri** il parametro specificato in **Nome parametro**, nonché il tipo e gli attributi del parametro.  Fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
+ Aggiunge il parametro specificato in **nome del parametro**e i relativi attributi di tipo e un parametro, per **elenco parametri**. È necessario fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
   
  **Rimuovi**  
- Consente di rimuovere dall'elenco il parametro selezionato nella casella di riepilogo **Elenco parametri**.  
+ Rimuove il parametro selezionato nella **elenco parametri** dall'elenco.  
   
- **Elenco parametri**  
- Consente di visualizzare tutti i parametri aggiunti per il metodo nonché i modificatori e i tipi di tali parametri.  Quando si aggiungono parametri, **Elenco parametri** viene aggiornato in modo da indicare ciascun parametro con i relativi modificatore e tipo.  
+ **Elenco di parametri**  
+ Visualizza tutti i parametri e ai modificatori e i tipi aggiunti per il metodo. Quando si aggiungono parametri, la procedura guidata Aggiorna **elenco parametri** per visualizzare ogni parametro, con il modificatore e il tipo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di un metodo](../ide/adding-a-method-visual-cpp.md)   
  [Attributi IDL, Aggiunta guidata metodo](../ide/idl-attributes-add-method-wizard.md)

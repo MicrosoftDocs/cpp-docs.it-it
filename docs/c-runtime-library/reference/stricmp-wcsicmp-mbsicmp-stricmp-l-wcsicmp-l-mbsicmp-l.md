@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -65,30 +63,16 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3502f864ce5450e86acd673d2911ed7f5393e5fe
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Esegue un confronto di stringhe senza distinzione tra maiuscole/minuscole.  
@@ -147,7 +131,7 @@ int _mbsicmp_l(
  In caso di errore, `_mbsicmp` restituisce `_NLSCMPERROR`, definito in \<string.h> e \<mbstring.h>.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_stricmp` esegue un confronto ordinale tra `string1` e `string2` dopo aver convertito tutti i caratteri in minuscolo e restituisce un valore che ne indica la relazione. `_stricmp` è diverso da `_stricoll` perché il confronto con `_stricmp` è interessato solo da `LC_CTYPE`, che determina quali caratteri sono in maiuscolo e quali in minuscolo. La funzione `_stricoll` confronta le stringhe in base alle categorie `LC_CTYPE` e `LC_COLLATE` delle impostazioni locali, che includono sia i caratteri maiuscoli/minuscoli che l'ordine delle regole di confronto. Per altre informazioni sulla categoria `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) e [Categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali per il comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso sono identiche, ma usano le impostazioni locali passate. Se le impostazioni locali non sono state impostate, vengono usate le impostazioni locali di C. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La funzione `_stricmp` esegue un confronto ordinale tra `string1` e `string2` dopo aver convertito tutti i caratteri in minuscolo e restituisce un valore che ne indica la relazione. `_stricmp` è diverso da `_stricoll` perché il confronto con `_stricmp` è interessato solo da `LC_CTYPE`, che determina quali caratteri sono in maiuscolo e quali in minuscolo. La funzione `_stricoll` confronta le stringhe in base alle categorie `LC_CTYPE` e `LC_COLLATE` delle impostazioni locali, che includono sia i caratteri maiuscoli/minuscoli che l'ordine delle regole di confronto. Per altre informazioni sulla categoria `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) e [Categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali per il comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso sono identiche, ma usano le impostazioni locali passate. Se le impostazioni locali non sono state impostate, vengono usate le impostazioni locali di C. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
 >  `_stricmp` è equivalente a `_strcmpi`. Possono essere usati indifferentemente, ma `_stricmp` è lo standard preferito.  

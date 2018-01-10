@@ -1,47 +1,46 @@
 ---
-title: "Errore di compilazione progetto PRJ0006 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0006"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0006"
+title: Progetto PRJ0006 errore di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0006
+dev_langs: C++
+helpviewer_keywords: PRJ0006
 ms.assetid: ce092be4-1652-414f-8cb5-b97ef5841f89
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 817450fb6b72f985d7ff49f7e65f9dfa0933b4d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore di compilazione progetto PRJ0006
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Impossibile aprire il file temporaneo "file".Accertarsi che il file esista e che la directory non sia protetta da scrittura.  
+# <a name="project-build-error-prj0006"></a>Errore di compilazione progetto PRJ0006
+Impossibile aprire il file temporaneo 'file'. Verificare che il file esista e che la directory non sia protetto da scrittura.  
   
- Non è stato possibile creare un file temporaneo durante il processo di compilazione.  Di seguito sono indicate alcune delle possibili cause:  
+ Visual C++ non può creare un file temporaneo durante il processo di compilazione. Motivi sono:  
   
--   Non è presente una directory temp.  
+-   Nessuna directory temporanea.  
   
--   La directory temp è di sola lettura.  
+-   Directory temporanea di sola lettura.  
   
--   Lo spazio disponibile su disco è insufficiente.  
+-   Spazio su disco.  
   
--   La cartella $\(IntDir\) è di sola lettura o contiene file temporanei di sola lettura.  
+-   La cartella $ (IntDir) è in sola lettura o contiene i file temporanei che sono di sola lettura.  
   
- Questo errore si verifica anche in seguito all'errore PRJ0007: Impossibile creare la directory di output "directory".  L'errore PRJ0007 indica che non è possibile creare la directory $\(IntDir\) e pertanto non sarà possibile la creazione di file temporanei.  
+ Questo errore si verifica anche in seguito all'errore PRJ0007: Impossibile creare la directory di output 'directory'. L'errore PRJ0007 indica che non è stato possibile creare la directory di $ (IntDir), la creazione di file temporanei non sarà possibile eseguire.  
   
- I file temporanei vengono creati ogni volta che si specifica:  
+ File temporanei vengono creati ogni volta che specifica:  
   
--   Un file di risposta  
+-   Un file di risposta.  
   
--   Un'istruzione di compilazione personalizzata  
+-   Un'istruzione di compilazione personalizzata.  
   
--   Un evento di compilazione
+-   Un evento di compilazione.

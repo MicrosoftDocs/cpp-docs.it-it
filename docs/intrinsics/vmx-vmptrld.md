@@ -1,71 +1,71 @@
 ---
-title: "__vmx_vmptrld | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrld"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmptrld (funzione intrinseca)"
-  - "VMPTRLD (istruzione)"
+title: __vmx_vmptrld | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrld
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrld intrinsic
+- VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 78c6ba1a4545a03ae7f67821cf649eb936b4ed8a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmptrld
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="vmxvmptrld"></a>__vmx_vmptrld
+**Sezione specifica Microsoft**  
   
- Carica il puntatore a una struttura di controllo corrente della macchina \(VMCS\) virtuale dall'indirizzo specificato.  
+ Carica il puntatore alla struttura di controllo di macchina virtuale corrente (VMCS) dall'indirizzo specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-int __vmx_vmptrld(   
-   unsigned __int64 *VmcsPhysicalAddress   
+int __vmx_vmptrld(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### Parametri  
- \[in\] \*`VmcsPhysicalAddress`  
- L'indirizzo dove il puntatore di VMCS viene archiviato.  
+#### <a name="parameters"></a>Parametri  
+ [in] *`VmcsPhysicalAddress`  
+ L'indirizzo in cui è memorizzato il puntatore VMCS.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  0  
- L'operazione è riuscita.  
+ Operazione completata.  
   
  1  
- L'operazione non riesce con lo stato esteso disponibile in `VM-instruction error field` corrente VMCS.  
+ Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.  
   
  2  
- L'operazione non riesce senza stato disponibile.  
+ Operazione non riuscita senza stato disponibile.  
   
-## Note  
- Il puntatore di VMCS è un indirizzo fisico a 64 bit.  
+## <a name="remarks"></a>Note  
+ Il puntatore VMCS è un indirizzo fisico a 64 bit.  
   
- La funzione di `__vmx_vmptrld` equivale all'istruzione macchina di `VMPTRLD` .  Questa funzione supporta l'interazione di monitoraggio della macchina virtuale dell'host con un sistema operativo guest e le relative applicazioni.  Per ulteriori informazioni, ricerca del documento, “caratteristica tecnica di virtualizzazione Intel per l'architettura di IA\-32 Intel,„ numero di documento C97063\-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) al sito.  
+ Il `__vmx_vmptrld` è equivalente alla funzione di `VMPTRLD` istruzioni in linguaggio macchina. Questa funzione supporta l'interazione di monitoraggio della macchina virtuale di un host con un sistema operativo guest e le relative applicazioni. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) sito.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrst](../intrinsics/vmx-vmptrst.md)
+ [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

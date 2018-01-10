@@ -1,35 +1,35 @@
 ---
-title: "Procedura: definire un costruttore statico di interfaccia (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttori [C++]"
-  - "costruttore statico di interfaccia"
-  - "costruttori statici, interfaccia"
+title: 'Procedura: definire un costruttore statico di interfaccia (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- constructors [C++]
+- static constructors, interface
+- interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8bdafde3fd6485b98ff960433218b49c0aa99eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: definire un costruttore statico di interfaccia (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un'interfaccia può avere un costruttore statico, che può essere utilizzato per inizializzare i membri dati statici.  Un costruttore statico verrà chiamato al massimo una volta e verrà chiamato prima della prima volta che un membro di interfaccia statico della classe.  
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Procedura: definire un costruttore statico di interfaccia (C++/CLI)
+Un'interfaccia può avere un costruttore statico, che può essere utilizzato per inizializzare i membri dati statici.  Un costruttore statico verrà chiamato al massimo una volta e verrà chiamato prima del primo accesso a un membro di interfaccia statico.  
   
- Per ulteriori informazioni sui costruttori statici, vedere [Procedura: definire costruttori statici in una classe o un struct](../misc/how-to-define-static-constructors-in-a-class-or-struct.md).  
-  
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // mcppv2_interface_class2.cpp  
@@ -59,9 +59,12 @@ int main() {
 }  
 ```  
   
-  **nel costruttore statico MyInterface**  
-**99**  
-**99**  
-**99**   
-## Vedere anche  
- [interface class](../windows/interface-class-cpp-component-extensions.md)
+```Output  
+in MyInterface static constructor  
+99  
+99  
+99  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [classe di interfaccia](../windows/interface-class-cpp-component-extensions.md)

@@ -1,72 +1,73 @@
 ---
-title: "Funzioni intrinseche _InterlockedExchange | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedExchange_rel"
-  - "_InterlockedExchange8_nf"
-  - "_InterlockedExchange_acq_cpp"
-  - "_InterlockedExchange_nf"
-  - "_InterlockedExchange64_nf"
-  - "_InterlockedExchange_HLEAcquire"
-  - "_InterlockedExchange_cpp"
-  - "_InterlockedExchange64_acq_cpp"
-  - "_InterlockedExchange64_acq"
-  - "_InterlockedExchange64_HLERelease"
-  - "_InterlockedExchange8_acq"
-  - "_InterlockedExchange16_acq"
-  - "_InterlockedExchange"
-  - "_InterlockedExchange64_HLEAcquire"
-  - "_InterlockedExchange8"
-  - "_InterlockedExchange64_rel"
-  - "_InterlockedExchange_acq"
-  - "_InterlockedExchange16"
-  - "_InterlockedExchange16_rel"
-  - "_InterlockedExchange16_nf"
-  - "_InterlockedExchange64"
-  - "_InterlockedExchange_HLERelease"
-  - "_InterlockedExchange64_cpp"
-  - "_InterlockedExchange8_rel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzione intrinseca _InterlockedExchange"
-  - "funzione intrinseca _InterlockedExchange_acq"
-  - "_InterlockedExchange16"
-  - "_InterlockedExchange16_acq"
-  - "_InterlockedExchange16_nf"
-  - "_InterlockedExchange16_rel"
-  - "funzione intrinseca _InterlockedExchange64"
-  - "funzione intrinseca _InterlockedExchange64_acq"
-  - "_InterlockedExchange8"
-  - "_InterlockedExchange8_acq"
-  - "_InterlockedExchange8_nf"
-  - "_InterlockedExchange8_rel"
-  - "funzione intrinseca InterlockedExchange"
-  - "funzione intrinseca InterlockedExchange_acq"
-  - "funzione intrinseca InterlockedExchange64"
-  - "funzione intrinseca InterlockedExchange64_acq"
+title: Funzioni intrinseche InterlockedExchange | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedExchange_rel
+- _InterlockedExchange8_nf
+- _InterlockedExchange_acq_cpp
+- _InterlockedExchange_nf
+- _InterlockedExchange64_nf
+- _InterlockedExchange_HLEAcquire
+- _InterlockedExchange_cpp
+- _InterlockedExchange64_acq_cpp
+- _InterlockedExchange64_acq
+- _InterlockedExchange64_HLERelease
+- _InterlockedExchange8_acq
+- _InterlockedExchange16_acq
+- _InterlockedExchange
+- _InterlockedExchange64_HLEAcquire
+- _InterlockedExchange8
+- _InterlockedExchange64_rel
+- _InterlockedExchange_acq
+- _InterlockedExchange16
+- _InterlockedExchange16_rel
+- _InterlockedExchange16_nf
+- _InterlockedExchange64
+- _InterlockedExchange_HLERelease
+- _InterlockedExchange64_cpp
+- _InterlockedExchange8_rel
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedExchange8
+- _InterlockedExchange64 intrinsic
+- _InterlockedExchange_acq intrinsic
+- InterlockedExchange64 intrinsic
+- _InterlockedExchange64_acq intrinsic
+- InterlockedExchange64_acq intrinsic
+- _InterlockedExchange16_acq
+- _InterlockedExchange8_acq
+- _InterlockedExchange16
+- _InterlockedExchange8_rel
+- InterlockedExchange_acq intrinsic
+- InterlockedExchange intrinsic
+- _InterlockedExchange16_rel
+- _InterlockedExchange16_nf
+- _InterlockedExchange intrinsic
+- _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9541b3b3099d7ef088b80552410e77baec2370f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Funzioni intrinseche _InterlockedExchange
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedexchange-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchange
 **Sezione specifica Microsoft**  
   
  Genera un'istruzione atomica per impostare un valore specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 long _InterlockedExchange(  
@@ -151,43 +152,43 @@ __int64 _InterlockedExchange64_rel(
 );  
 ```  
   
-#### Parametri  
- \[in, out\] `Target`  
- Puntatore al valore da scambiare.  La funzione imposta questa variabile su `Value` e restituisce il valore precedente.  
+#### <a name="parameters"></a>Parametri  
+ [in, out] `Target`  
+ Puntatore al valore da scambiare. La funzione imposta questa variabile su `Value` e restituisce il valore precedente.  
   
- \[in\] `Value`  
+ [in] `Value`  
  Valore da scambiare con il valore a cui punta `Target`.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Restituisce il valore iniziale a cui punta `Target`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|Intestazione|  
-|-------------------------|------------------|------------------|  
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h\>|  
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h\>|  
+|---------------|------------------|------------|  
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin. h >|  
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin. h >|  
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<h >|  
   
-## Note  
- `_InterlockedExchange` fornisce il supporto intrinseco del compilatore per la funzione Win32 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] [InterlockedExchange](http://msdn.microsoft.com/library/ms683590.aspx).  
+## <a name="remarks"></a>Note  
+ `_InterlockedExchange`fornisce il supporto intrinseco del compilatore per Win32 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedExchange](http://msdn.microsoft.com/library/ms683590.aspx) (funzione).  
   
  Ci sono diverse varianti di `_InterlockedExchange` che variano in base ai tipi di dati interessati e all'uso della semantica di acquisizione o di rilascio specifica del processore.  
   
  Mentre la funzione `_InterlockedExchange` opera su valori integer a 32 bit, `_InterlockedExchange8` opera su valori integer a 8 bit, `_InterlockedExchange16` opera su valori integer a 16 bit e `_InterlockedExchange64` opera su valori integer a 64 bit.  
   
- Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica.  Le funzioni intrinseche con suffisso `_nf` \("nessun limite"\) non fungono da barriera di memoria.  
+ Sulle piattaforme ARM usare le funzioni intrinseche con i suffissi `_acq` e `_rel` per la semantica di acquisizione e di rilascio, ad esempio all'inizio e alla fine di una sezione critica. Le funzioni intrinseche con suffisso `_nf` ("nessun limite") non fungono da barriera di memoria.  
   
- Sulle piattaforme Intel che supportano le istruzioni HLE \(Hardware Lock Elision\), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware.  Se queste funzioni intrinseche vengono chiamate su piattaforme che non supportano HLE, l'hint viene ignorato.  
+ Sulle piattaforme Intel che supportano le istruzioni HLE (Hardware Lock Elision), le funzioni intrinseche con suffissi `_HLEAcquire` e `_HLERelease` includono un hint per il processore che consente di accelerare le prestazioni eliminando un passaggio di blocco scrittura nell'hardware. Se queste funzioni intrinseche vengono chiamate su piattaforme che non supportano HLE, l'hint viene ignorato.  
   
  Queste routine sono disponibili solo come funzioni intrinseche.  
   
-## Esempio  
- Per un esempio di come usare `_InterlockedExchange`, vedere [\_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
+## <a name="example"></a>Esempio  
+ Per un esempio di come utilizzare `_InterlockedExchange`, vedere [InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)   
+ [Parole chiave](../cpp/keywords-cpp.md)   
  [Conflitti con il compilatore x86](../build/conflicts-with-the-x86-compiler.md)

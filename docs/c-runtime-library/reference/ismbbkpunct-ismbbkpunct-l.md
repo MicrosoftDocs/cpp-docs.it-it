@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d9de718397d7af13b2c3a4aa9b015ce756362c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 981799a9ac33e77664abc75949bebc1843abf484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct, _ismbbkpunct_l
 Verifica se un carattere multibyte è un carattere di punteggiatura.  
@@ -68,7 +69,7 @@ int _ismbbkpunct_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_ismbbkpunct` restituisce un valore diverso da zero se l'Integer `c` è un simbolo di punteggiatura non ASCII oppure 0 in caso contrario. Ad esempio, solo nella tabella codici 932, `_ismbbkpunct` verifica la punteggiatura Katakana. `_ismbbkpunct` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. `_ismbbkpunct_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_ismbbkpunct` restituisce un valore diverso da zero se l'Integer `c` è un simbolo di punteggiatura non ASCII oppure 0 in caso contrario. Ad esempio, solo nella tabella codici 932, `_ismbbkpunct` verifica la punteggiatura Katakana. `_ismbbkpunct` usa le impostazioni locali correnti per qualsiasi impostazione del carattere dipendente dalle impostazioni locali. `_ismbbkpunct_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   

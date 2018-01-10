@@ -17,11 +17,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: e7d8a15321af845de5b90c1522873dcd3218e6aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93a655b3f26b0e590e2873ca871cf6357fb7130e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformoutofboundsexception-class"></a>Classe Platform::OutOfBoundsException
 Generata quando un'operazione tenta di accedere a dati memorizzati al di fuori dell'intervallo valido.  

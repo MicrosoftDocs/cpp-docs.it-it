@@ -1,62 +1,63 @@
 ---
-title: "Classe ISessionPropertiesImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISessionPropertiesImpl (classe)"
+title: Classe ISessionPropertiesImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ISessionPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9ff8eda4d593ff0c6064313a7be243ec498b15c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe ISessionPropertiesImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un'implementazione dell'interfaccia di [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx).  
+# <a name="isessionpropertiesimpl-class"></a>Classe ISessionPropertiesImpl
+Fornisce un'implementazione del [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) interfaccia.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE ISessionPropertiesImpl :  
-   public ISessionProperties,    
+   public ISessionProperties,    
    public CUtlProps<PropClass>  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  La classe, derivata da `ISessionPropertiesImpl`.  
   
  `PropClass`  
- Una classe di proprietà definibile dall'utente che per impostazione predefinita a `T`.  
+ Una classe di proprietà definibili dall'utente che per impostazione predefinita `T`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi di interfaccia  
+### <a name="interface-methods"></a>Metodi di interfaccia  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Restituisce l'elenco delle proprietà del gruppo di proprietà della sessione di test attualmente impostato nella sessione.|  
-|[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Impostare le proprietà nel gruppo di proprietà della sessione.|  
+|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Restituisce l'elenco delle proprietà del gruppo di proprietà di sessione attualmente impostati nella sessione.|  
+|[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Imposta le proprietà del gruppo di proprietà di sessione.|  
   
-## Note  
- Un'interfaccia richiesta sulle sessioni.  Questa classe implementa le proprietà della sessione chiamando una funzione statica definita da [mappa degli insiemi di proprietà](../../data/oledb/begin-propset-map.md).  La mappa degli insiemi di proprietà deve essere specificata nella classe di sessione.  
+## <a name="remarks"></a>Note  
+ Un'interfaccia obbligatoria sulle sessioni. Questa classe implementa le proprietà della sessione chiamando una funzione statica definita mediante il [mapping di set di proprietà](../../data/oledb/begin-propset-map.md). Il mapping di set di proprietà deve essere specificato nella classe di sessione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

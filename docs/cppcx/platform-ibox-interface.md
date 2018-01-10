@@ -1,51 +1,75 @@
 ---
-title: "Interfaccia Platform::IBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IBox"
-dev_langs: 
-  - "C++"
+title: 'Interfaccia platform:: ibox | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Namespace not found::Platform
+- VCCORLIB/Namespace not found::Platform::Value
+dev_langs: C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a86eca75bb5470585ba68fe3b7fcdb55c861434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Interfaccia Platform::IBox
-L'interfaccia [Platform::IBox](../cppcx/platform-ibox-interface.md) è il nome C\+\+ per l'interfaccia `Windows::Foundation::IReference`.  
+# <a name="platformibox-interface"></a>Interfaccia Platform::IBox
+L'interfaccia [Platform::IBox](../cppcx/platform-ibox-interface.md) è il nome C++ per l'interfaccia `Windows::Foundation::IReference` .  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 template <typename T>  
 interface class IBox  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  Tipo del valore boxed.  
   
-## Note  
- L'interfaccia `IBox<T>` viene principalmente utilizzata internamente per rappresentare tipi di valore nullable, come descritto in [Classi e struct di valore \(C\+\+\/CX\)](../cppcx/value-classes-and-structs-c-cx.md). L'interfaccia viene anche utilizzata per eseguire il boxing dei tipi di valore passati a metodi C\+\+ che accettano parametri di tipo `Object^`. Puoi dichiarare esplicitamente un parametro di input come `IBox<SomeValueType>`. Per un esempio, vedere [Conversione boxing](../cppcx/boxing-c-cx.md).  
+### <a name="remarks"></a>Note  
+ L'interfaccia `IBox<T>` viene principalmente utilizzata internamente per rappresentare tipi di valore nullable, come descritto in [Classi e struct di valore (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md). L'interfaccia viene anche utilizzata per eseguire il boxing dei tipi di valore passati a metodi C++ che accettano parametri di tipo `Object^`. Puoi dichiarare esplicitamente un parametro di input come `IBox<SomeValueType>`. Per un esempio, vedere [Boxing](../cppcx/boxing-c-cx.md).  
   
-## Requisiti  
+### <a name="requirements"></a>Requisiti  
   
-## Membri  
- L'interfaccia `Platform::IBox` eredita dall'interfaccia [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md).`IBox` dispone di questi membri:  
+### <a name="members"></a>Membri  
+ L'interfaccia `Platform::IBox` eredita dall'interfaccia [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) . `IBox` dispone di questi membri:  
   
  **Proprietà**  
   
 |Metodo|Descrizione|  
 |------------|-----------------|  
-|Valore|Restituisce il valore di tipo unboxed archiviato in precedenza in questa istanza di `IBox`.|  
+|[Valore](#value)|Restituisce il valore di tipo unboxed archiviato in precedenza in questa istanza di `IBox` .|  
+
+## <a name="value"></a>Proprietà ibox:: value
+Restituisce il valore memorizzato in origine in questo oggetto.  
   
-## Vedere anche  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+property T Value {T get();}  
+```  
+  
+### <a name="parameters"></a>Parametri  
+ `T`  
+ Tipo del valore boxed.  
+  
+### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
+ Restituisce il valore memorizzato in origine in questo oggetto.  
+  
+### <a name="remarks"></a>Note  
+ Per un esempio, vedere [Boxing](../cppcx/boxing-c-cx.md).  
+  
+  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

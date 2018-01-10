@@ -52,11 +52,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 465260a07a6e18922a67cbb12f3e36b75f60e51a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b920931cf524ef44d1c09814576dbf22e54a640b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p, _vscprintf_p_l, _vscwprintf_p, _vscwprintf_p_l
 Restituisce il numero di caratteri nella stringa formattata utilizzando un puntatore a un elenco di argomenti, con la possibilità di specificare l'ordine in cui gli argomenti vengono utilizzati.  
@@ -94,13 +95,13 @@ int _vscwprintf_p _l(
  `locale`  
  Impostazioni locali da usare.  
   
- Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  `_vscprintf_p` restituisce il numero di caratteri che verrebbero generati se la stringa a cui punta l'elenco di argomenti venisse stampata o inviata a un file o un buffer tramite i codici di formattazione specificati. Il valore restituito non include il carattere Null di terminazione. `_vscwprintf_p` esegue la stessa funzione per i caratteri wide.  
   
 ## <a name="remarks"></a>Note  
- Queste funzioni differiscono da `_vscprintf` e `_vscwprintf` solo per il fatto che supportano la possibilità di specificare l'ordine in cui vengono usati gli argomenti. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Queste funzioni differiscono da `_vscprintf` e `_vscwprintf` solo per il fatto che supportano la possibilità di specificare l'ordine in cui vengono usati gli argomenti. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
   
  Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
@@ -123,7 +124,7 @@ int _vscwprintf_p _l(
 |`_vscprintf_p`, `_vscprintf_p_l`|\<stdio.h>|  
 |`_vscwprintf_p`, `_vscwprintf_p_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  

@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d408e0e6fe021caf7f3722a55528020d94bb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-and-typedefs-c"></a>Alias e typedef (C++)
 È possibile utilizzare un *dichiarazione di alias* per dichiarare un nome da utilizzare come un sinonimo per un tipo dichiarato in precedenza. (Questo meccanismo viene anche informalmente definito come un *alias del tipo*). È inoltre possibile utilizzare questo meccanismo per creare un *modello di alias*, che può essere particolarmente utile per gli allocatori personalizzati.  
@@ -147,7 +148,7 @@ int main ()
 1701 1764 1664  
 ```  
   
-## <a name="typedefs"></a>Typedef  
+## <a name="typedefs"></a>Definizioni typedef  
  A `typedef` dichiarazione introduce un nome che, all'interno dell'ambito, diventa un sinonimo del tipo di base di *dichiarazione di tipo* parte della dichiarazione.  
   
  È possibile usare le dichiarazioni typedef per costruire nomi più brevi o più significativi per i tipi già definiti dal linguaggio o per i tipi dichiarati. I nomi di typedef consentono di incapsulare dettagli di implementazione che possono cambiare.  

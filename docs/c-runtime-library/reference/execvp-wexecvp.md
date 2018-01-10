@@ -38,11 +38,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 431a79be49b723c874409c030a166a7ef78b9730
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38ab921dc120fc82e05845c62dcc355167ad09c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execvp-wexecvp"></a>_execvp, _wexecvp
 Carica ed esegue nuovi processi figlio.  
@@ -83,7 +84,7 @@ intptr_t _wexecvp(
 |`ENOEXEC`|Il file specificato non è eseguibile o il formato del file eseguibile non è valido.|  
 |`ENOMEM`|Memoria insufficiente per eseguire il nuovo processo; la memoria disponibile è stata danneggiata; o esiste un blocco non valido che indica che il processo chiamante non è stato allocato correttamente.|  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni carica ed esegue un nuovo processo, passa una matrice di puntatori agli argomenti della riga di comando e usa la variabile di ambiente `PATH` per individuare il file da eseguire.  
@@ -97,13 +98,13 @@ intptr_t _wexecvp(
 |`_execvp`|\<process.h>|\<errno.h>|  
 |`_wexecvp`|\<process.h> o \<wchar.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio in [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Process and Environment Control](../../c-runtime-library/process-and-environment-control.md)  (Controllo processo e ambiente)  
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [Funzioni _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   

@@ -1,65 +1,70 @@
 ---
-title: "Criteri dell&#39;utilit&#224; di pianificazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "criteri dell'utilità di pianificazione"
+title: "Criteri dell'utilità di pianificazione | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Criteri dell&#39;utilit&#224; di pianificazione
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo documento viene descritto il ruolo dei criteri dell'utilità di pianificazione nel runtime di concorrenza.  I *criteri dell'utilità di pianificazione* controllano la strategia utilizzata dall'utilità di pianificazione quando vengono gestite le attività.  Ad esempio, si consideri un'applicazione che richiede che alcune attività siano eseguite con `THREAD_PRIORITY_NORMAL` e altre attività con `THREAD_PRIORITY_HIGHEST`.  È possibile creare due istanze dell'utilità di pianificazione: uno che specifica `THREAD_PRIORITY_NORMAL` per i criteri di `ContextPriority` e l'altra che specifica `THREAD_PRIORITY_HIGHEST` per gli stessi criteri.  
+# <a name="scheduler-policies"></a>Criteri dell'utilità di pianificazione
+Questo documento descrive il ruolo dei criteri dell'utilità di pianificazione nel Runtime di concorrenza. Oggetto *criteri dell'utilità di pianificazione* controlla la strategia utilizzata l'utilità di pianificazione quando gestisce le attività. Ad esempio, si consideri un'applicazione per cui viene richiesto che alcune attività vengano eseguite in corrispondenza di `THREAD_PRIORITY_NORMAL` e altre attività in corrispondenza di `THREAD_PRIORITY_HIGHEST`.  È possibile creare due istanze dell'utilità di pianificazione: una tramite cui viene specificato che i criteri `ContextPriority` devono essere `THREAD_PRIORITY_NORMAL` e un'altra tramite cui viene specificato che gli stessi criteri devono essere `THREAD_PRIORITY_HIGHEST`.  
   
- Utilizzando i criteri dell'utilità di pianificazione, è possibile dividere le risorse di elaborazione disponibili e assegnare un set prestabilito di risorse a ogni utilità di pianificazione.  Si consideri, ad esempio, un algoritmo parallelo che non possa essere utilizzato con più di quattro processori.  È possibile creare criteri dell'utilità di pianificazione che limitano le attività a utilizzare non più di quattro processori contemporaneamente.  
+ Utilizzando i criteri dell'utilità di pianificazione, è possibile dividere le risorse di elaborazione disponibili e assegnare un set prestabilito di risorse a ogni utilità di pianificazione. Ad esempio, si consideri un algoritmo parallelo che non è scalabile oltre quattro processori. È possibile creare un criterio di pianificazione che limita le attività per utilizzare contemporaneamente non più di quattro processori.  
   
 > [!TIP]
->  Il runtime di concorrenza fornisce un'utilità di pianificazione predefinita.  Di conseguenza, non è necessario crearne una nell'applicazione.  Poiché l'utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con la [PPL \(Parallel Patterns Library\)](../../parallel/concrt/parallel-patterns-library-ppl.md) o la [Libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se non si ha familiarità con il runtime di concorrenza.  
+>  Tramite il runtime di concorrenza viene fornita un'utilità di pianificazione predefinita. Di conseguenza, non è necessario crearne una nell'applicazione. Poiché l'utilità di pianificazione consente di ottimizzare le prestazioni delle applicazioni, è consigliabile iniziare con il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) o [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) se si è familiarità con il Runtime di concorrenza.  
   
- Quando si utilizza il metodo [concurrency::CurrentScheduler::Create](../Topic/CurrentScheduler::Create%20Method.md), [concurrency::Scheduler::Create](../Topic/Scheduler::Create%20Method.md) o [concurrency::Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md) per creare un'istanza dell'utilità di pianificazione, è possibile fornire un oggetto [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) contenente una raccolta di coppie chiave\-valore che specificano il comportamento dell'utilità di pianificazione.  Il costruttore `SchedulerPolicy` accetta un numero variabile di argomenti.  Il primo argomento rappresenta il numero di elementi dei criteri che verranno specificati.  Gli argomenti restanti sono coppie chiave\-valore per ogni elemento dei criteri.  Nell'esempio seguente viene creato un oggetto `SchedulerPolicy` che specifica tre elementi dei criteri.  Il runtime utilizza valori predefiniti per le chiavi dei criteri che non sono specificate.  
+ Quando si utilizza il [concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create), [Concurrency](reference/scheduler-class.md#create), o [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) metodo per creare un'istanza dell'utilità di pianificazione, forniscono un [SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) oggetto che contiene una raccolta di coppie chiave-valore che specificano il comportamento dell'utilità di pianificazione. Il `SchedulerPolicy` costruttore accetta un numero variabile di argomenti. Il primo argomento è il numero di elementi dei criteri che si devono specificare. Gli argomenti rimanenti sono coppie chiave-valore per ogni elemento dei criteri. Nell'esempio seguente viene creato un `SchedulerPolicy` oggetto che specifica i tre elementi dei criteri. Nel runtime vengono utilizzati valori predefiniti per le chiavi dei criteri che non sono specificate.  
+
   
- [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/CPP/scheduler-policies_1.cpp)]  
+ [!code-cpp[concrt-scheduler-policy#2](../../parallel/concrt/codesnippet/cpp/scheduler-policies_1.cpp)]  
   
- L'enumerazione [concurrency::PolicyElementKey](../Topic/PolicyElementKey%20Enumeration.md) definisce le chiavi dei criteri associate all'Utilità di pianificazione.  Nella tabella seguente vengono descritte le chiavi dei criteri e il valore predefinito utilizzato dal runtime per ognuna di esse.  
+
+ Il [Concurrency:: PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) enumerazione definisce le chiavi dei criteri associate all'utilità di pianificazione. Nella tabella seguente vengono descritte le chiavi dei criteri e il valore predefinito utilizzato dal runtime per ognuno di essi.  
   
 |Chiave dei criteri|Descrizione|Valore predefinito|  
-|------------------------|-----------------|------------------------|  
-|`SchedulerKind`|Un valore [concurrency::SchedulerType](../Topic/SchedulerType%20Enumeration.md) che specifica il tipo di thread da utilizzare per pianificare le attività.|`ThreadScheduler` \(utilizzare thread normali\).  Questo è l'unico valore valido per questa chiave.|  
-|`MaxConcurrency`|Un valore `unsigned int` che specifica il numero massimo di risorse di concorrenza che l'utilità di pianificazione utilizza.|[concurrency::MaxExecutionResources](../Topic/MaxExecutionResources%20Constant.md)|  
-|`MinConcurrency`|Un valore `unsigned int` che specifica il numero minimo di risorse di concorrenza che l'utilità di pianificazione utilizza.|`1`|  
-|`TargetOversubscriptionFactor`|Un valore `unsigned int` che specifica il numero di thread da allocare per ogni risorsa di elaborazione.|`1`|  
-|`LocalContextCacheSize`|Un valore `unsigned int` che specifica il numero massimo di contesti che possono essere memorizzati nella cache nella coda locale di ogni processore virtuale.|`8`|  
-|`ContextStackSize`|Un valore `unsigned int` che specifica la dimensione dello stack, in kilobyte, da riservare per ogni contesto.|`0` \(utilizzare la dimensione dello stack predefinita\)|  
-|`ContextPriority`|Un valore `int` che specifica la priorità dei thread di ogni contesto.  Può trattarsi di qualsiasi valore che è possibile passare a [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) o `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
-|`SchedulingProtocol`|Un valore [concurrency::SchedulingProtocolType](../Topic/SchedulingProtocolType%20Enumeration.md) che specifica l'algoritmo di pianificazione da utilizzare.|`EnhanceScheduleGroupLocality`|  
-|`DynamicProgressFeedback`|Un valore [concurrency::DynamicProgressFeedbackType](../Topic/DynamicProgressFeedbackType%20Enumeration.md) che specifica se ribilanciare le risorse in base alle informazioni sullo stato di avanzamento basato sulle statistiche.<br /><br /> **Nota** Non impostare questi criteri su `ProgressFeedbackDisabled` perché sono riservati per essere utilizzati dal runtime.|`ProgressFeedbackEnabled`|  
+|----------------|-----------------|-------------------|  
+|`SchedulerKind`|Oggetto [Concurrency:: SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valore che specifica il tipo di thread da usare per pianificare le attività.|`ThreadScheduler` (utilizzare thread normali). È l'unico valore valido per questa chiave.|  
+|`MaxConcurrency`|Un `unsigned int` valore che specifica il numero massimo di risorse di concorrenza che utilizza l'utilità di pianificazione.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  
+|`MinConcurrency`|Un `unsigned int` valore che specifica il numero minimo di risorse di concorrenza che utilizza l'utilità di pianificazione.|`1`|  
+|`TargetOversubscriptionFactor`|Un `unsigned int` valore che specifica il numero di thread da allocare per ogni risorsa di elaborazione.|`1`|  
+|`LocalContextCacheSize`|Un `unsigned int` valore che specifica il numero massimo di contesti che possono essere memorizzati nella cache nella coda locale di ogni processore virtuale.|`8`|  
+|`ContextStackSize`|Un `unsigned int` valore che specifica la dimensione dello stack, in kilobyte, da riservare per ogni contesto.|`0`(utilizzare la dimensione predefinita)|  
+|`ContextPriority`|Un `int` valore che specifica la priorità di thread di ogni contesto. Può trattarsi di qualsiasi valore che è possibile passare a [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) o `INHERIT_THREAD_PRIORITY`.|`THREAD_PRIORITY_NORMAL`|  
+
+|`SchedulingProtocol`| Oggetto [Concurrency:: SchedulingProtocolType](reference/concurrency-namespace-enums.md#schedulingprotocoltype) valore che specifica l'algoritmo di pianificazione da utilizzare. |`EnhanceScheduleGroupLocality`|  
+|`DynamicProgressFeedback`| Oggetto [Concurrency:: DynamicProgressFeedbackType](reference/concurrency-namespace-enums.md#dynamicprogressfeedbacktype) valore che specifica se ribilanciare le risorse in base alle informazioni di stato di avanzamento basato sulle statistiche.<br /><br /> **Nota** questo criterio non è impostato su `ProgressFeedbackDisabled` perché è riservato per l'utilizzo dal runtime. |`ProgressFeedbackEnabled`|  
+
   
- Ogni utilità di pianificazione utilizza criteri personalizzati quando vengono pianificate le attività.  I criteri associati a un'utilità di pianificazione non influiscono sul comportamento di un'altra utilità di pianificazione.  Inoltre, una volta creato l'oggetto `Scheduler` non è possibile modificare i criteri dell'utilità di pianificazione.  
+ Ogni utilità di pianificazione utilizza un proprio criterio durante la programmazione di attività. I criteri associati a un'utilità di pianificazione non influiscono sul comportamento di nessun'altra utilità di pianificazione. Inoltre, non è possibile modificare i criteri dell'utilità di pianificazione dopo aver creato il `Scheduler` oggetto.  
   
 > [!IMPORTANT]
->  Utilizzare i criteri dell'utilità di pianificazione solo per controllare gli attributi per i thread creati dal runtime.  Non modificare l'affinità o la priorità dei thread creati dal runtime perché questo potrebbe causare un comportamento indefinito.  
+>  Utilizzare solo i criteri dell'utilità di pianificazione per controllare gli attributi per i thread creati dal runtime. Non modificare l'affinità o la priorità dei thread creati dal runtime poiché si potrebbe verificare un comportamento non definito.  
   
- Il runtime crea un'utilità di pianificazione predefinita se non se ne crea una esplicitamente.  Se si desidera utilizzare l'utilità di pianificazione predefinita nell'applicazione, ma si desidera specificare i criteri dell'utilità di pianificazione da utilizzare, chiamare il metodo [concurrency::Scheduler::SetDefaultSchedulerPolicy](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md) prima di pianificare il lavoro parallelo.  Se non si chiama il metodo `Scheduler::SetDefaultSchedulerPolicy`, il runtime utilizza i valori dei criteri predefiniti indicati nella tabella.  
+ Se si crea una esplicitamente, il runtime crea un'utilità di pianificazione predefinita per l'utente. Se si desidera utilizzare l'utilità di pianificazione predefinita nell'applicazione, ma si desidera specificare criteri dell'utilità di pianificazione da utilizzare, chiamare il [concurrency::Scheduler::SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy) metodo prima di pianificare il lavoro parallelo. Se non si chiama il `Scheduler::SetDefaultSchedulerPolicy` (metodo), il runtime utilizza i criteri predefiniti i valori dalla tabella.  
   
- Utilizzare i metodi [concurrency::CurrentScheduler::GetPolicy](../Topic/CurrentScheduler::GetPolicy%20Method.md) e [concurrency::Scheduler::GetPolicy](../Topic/Scheduler::GetPolicy%20Method.md) per recuperare una copia dei criteri dell'utilità di pianificazione.  I valori dei criteri ricevuti da questi metodi possono differire dai valori dei criteri specificati quando viene creata l'utilità di pianificazione.  
+ Utilizzare il [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-class.md#getpolicy) e [concurrency::Scheduler::GetPolicy](reference/scheduler-class.md#getpolicy) metodi per recuperare una copia dei criteri dell'utilità di pianificazione. I valori dei criteri che si ricevano da questi metodi possono differire da valori di criteri che specificano quando si crea l'utilità di pianificazione.  
   
-## Esempio  
- Per esaminare gli esempi in cui vengono utilizzati i criteri dell'utilità di pianificazione specifici per controllare il comportamento dell'utilità di pianificazione, vedere [Procedura: Definire criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) e [Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
+## <a name="example"></a>Esempio  
+ Per esaminare gli esempi che utilizzano criteri dell'utilità di pianificazione specifici per controllare il comportamento dell'utilità di pianificazione, vedere [procedura: specificare criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) e [procedura: creare agenti che utilizzano dell'utilità di pianificazione criteri specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Procedura: Definire criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
+ [Procedura: specificare criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
  [Procedura: Creare agenti che usano criteri dell'utilità di pianificazione specifici](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
+

@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f298085fab156e8aecd0931dc72e358409a979d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>Classe allocator
 La classe del modello descrive un oggetto che gestisce l'allocazione e la liberazione dello spazio di archiviazione per matrici di oggetti di tipo **Type**. Un oggetto della classe **allocator** è l'oggetto allocatore predefinito specificato nei costruttori per diverse classi di modello del contenitore della libreria standard C++.  
@@ -94,7 +95,7 @@ class allocator
 |-|-|  
 |[allocator](#allocator)|Costruttori usati per la creazione di oggetti `allocator`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

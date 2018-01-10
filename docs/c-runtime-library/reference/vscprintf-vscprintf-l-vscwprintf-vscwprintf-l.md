@@ -53,11 +53,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a52c7643a465bfaf24db6988d531943284e6416
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf, _vscprintf_l, _vscwprintf, _vscwprintf_l
 Restituisce il numero di caratteri nella stringa formattata usando un puntatore a un elenco di argomenti.  
@@ -95,7 +96,7 @@ int _vscwprintf_l(
  `locale`  
  Impostazioni locali da usare.  
   
- Per altre informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
+ Per ulteriori informazioni, vedere [Specifiche di formato](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ## <a name="return-value"></a>Valore restituito  
  `_vscprintf` restituisce il numero di caratteri che verrebbero generati se la stringa a cui punta l'elenco di argomenti venisse stampata o inviata a un file o un buffer tramite i codici di formattazione specificati. Il valore restituito non include il carattere Null di terminazione. `_vscwprintf` esegue la stessa funzione per i caratteri wide.  
@@ -105,7 +106,7 @@ int _vscwprintf_l(
  Se `format` è un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, le funzioni restituiranno -1 e imposteranno `errno` su `EINVAL`.  
   
 ## <a name="remarks"></a>Note  
- Ogni `argument` (se presente) viene convertito in base alla specifica di formato corrispondente in `format`. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento `format` per [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Ogni `argument` (se presente) viene convertito in base alla specifica di formato corrispondente in `format`. Il formato è costituito da caratteri ordinari e ha lo stesso formato e la stessa funzione dell'argomento `format` per la funzione [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
   
 > [!IMPORTANT]
 >  Se `format` è una stringa definita dall'utente, assicurarsi che abbia terminazione Null e il numero e il tipo corretti di parametri. Per altre informazioni, vedere [Evitare sovraccarichi del buffer](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
@@ -124,7 +125,7 @@ int _vscwprintf_l(
 |`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
 |`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md).  

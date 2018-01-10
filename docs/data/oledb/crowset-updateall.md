@@ -1,75 +1,77 @@
 ---
-title: "CRowset::UpdateAll | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset::UpdateAll"
-  - "ATL.CRowset.UpdateAll"
-  - "CRowset<TAccessor>.UpdateAll"
-  - "ATL.CRowset<TAccessor>.UpdateAll"
-  - "UpdateAll"
-  - "CRowset.UpdateAll"
-  - "ATL::CRowset<TAccessor>::UpdateAll"
-  - "CRowset<TAccessor>::UpdateAll"
-  - "ATL::CRowset::UpdateAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UpdateAll (metodo)"
+title: 'CRowset:: UpdateAll | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset::UpdateAll
+- ATL.CRowset.UpdateAll
+- CRowset<TAccessor>.UpdateAll
+- ATL.CRowset<TAccessor>.UpdateAll
+- UpdateAll
+- CRowset.UpdateAll
+- ATL::CRowset<TAccessor>::UpdateAll
+- CRowset<TAccessor>::UpdateAll
+- ATL::CRowset::UpdateAll
+dev_langs: C++
+helpviewer_keywords: UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::UpdateAll
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Trasmette tutte le modifiche in sospeso apportate a tutte le righe dall'ultima raccolta o chiamata di **Aggiorna** su.  
+# <a name="crowsetupdateall"></a>CRowset::UpdateAll
+Trasmette le modifiche apportate a tutte le righe dall'ultimo recupero in sospeso o **aggiornamento** chiamare su di esso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
+      HRESULT UpdateAll(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW** pphRow = NULL,   
+   DBROWSTATUS** ppStatus = NULL    
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pcRows`  
- \[out\] puntatore Al percorso in cui `UpdateAll` restituisce il numero di righe che ha tentato di aggiornare, se necessario.  
+ [out] Un puntatore alla posizione in cui `UpdateAll` restituisce il numero di righe di cui si è tentato di aggiornare, se necessario.  
   
  `pphRow`  
- \[out\] il puntatore Alla memoria in cui `UpdateAll` restituisce l'handle della riga ha tentato di aggiornare.  Nessuna handle viene restituito se `pphRow` è null.  
+ [out] Puntatore alla memoria in cui `UpdateAll` restituisce l'handle della riga di cui si è tentato di aggiornare. Se non viene restituito alcun handle `pphRow` è null.  
   
  `ppStatus`  
- \[out\] puntatore Al percorso in cui **Aggiorna** restituisce il valore dello stato della riga.  Il alcuno stato viene restituito se `ppStatus` è null.  
+ [out] Un puntatore alla posizione in cui **aggiornamento** restituisce il valore di stato di riga. Se non viene restituito alcun stato `ppStatus` è null.  
   
-## Note  
- Trasmette tutte le modifiche in sospeso apportate a tutte le righe poiché le righe per ultimo recuperate o aggiornato si sta utilizzando [Aggiorna](../../data/oledb/crowset-update.md) o di `UpdateAll`.  `UpdateAll` aggiornati a ogni riga che è stata modificata, indipendentemente dal fatto che si dispone ancora dell'handle per questi \(vedere `pphRow`\) o meno.  
+## <a name="remarks"></a>Note  
+ Trasmette le modifiche in sospeso apportate a tutte le righe, poiché tali righe sono state ultimo recupero o aggiornata mediante [aggiornamento](../../data/oledb/crowset-update.md) o `UpdateAll`. `UpdateAll`aggiornerà tutte le righe che sono stata modificata, indipendentemente dal fatto se si conosce ancora l'handle per tali (vedere `pphRow`) o non.  
   
- Ad esempio, se si utilizzasse **Inserimento** per inserire cinque righe in un rowset, è possibile chiamare **Aggiorna** cinque volte oppure chiamare una volta `UpdateAll` per tutte aggiornabili.  
+ Ad esempio, se è stato utilizzato **inserire** per inserire cinque righe in un set di righe, è possibile chiamare **aggiornare** cinque volte oppure chiamare `UpdateAll` una volta per aggiornarli tutti.  
   
- Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider; in questo caso, il metodo restituisce **E\_NOINTERFACE**.  È inoltre necessario disporre **DBPROP\_IRowsetUpdate** a `VARIANT_TRUE` chiamare **Apri** la tabella o il comando che contiene il rowset.  
+ Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportato in tutti i provider; in questo caso, il metodo restituisce **E_NOINTERFACE**. È inoltre necessario impostare **DBPROP_IRowsetUpdate** a `VARIANT_TRUE` prima di chiamare **aprire** la tabella o un comando contenente il set di righe.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CRowset](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset::SetData](../../data/oledb/crowset-setdata.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
+ [IRowsetUpdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset:: SetData](../../data/oledb/crowset-setdata.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

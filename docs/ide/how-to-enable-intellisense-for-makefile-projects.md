@@ -1,61 +1,61 @@
 ---
-title: "Procedura: abilitare IntelliSense per progetti makefile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.IntelliSense"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IntelliSense, progetti Makefile"
-  - "progetti Makefile, IntelliSense"
+title: 'Procedura: abilitare IntelliSense per progetti Makefile | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCNMakeTool.IntelliSense
+dev_langs: C++
+helpviewer_keywords:
+- Makefile projects, IntelliSense
+- IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: abilitare IntelliSense per progetti makefile
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il funzionamento di IntelliSense nell'ambiente di sviluppo integrato \(IDE\) con i progetti makefile di Visual C\+\+ è compromesso quando determinate impostazioni di progetto, od opzioni del compilatore, sono impostate in modo errato.  Attenersi alla procedura di seguito riportata per configurare i progetti makefile di Visual C\+\+. In questo modo, IntelliSense potrà funzionare correttamento con i progetti makefile nell'ambiente di sviluppo di Visual Studio.  
+# <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedura: abilitare IntelliSense per progetti makefile
+Funzionamento dell'IDE per progetti makefile Visual C++ quando determinate impostazioni o le opzioni del compilatore, del progetto di IntelliSense vengono impostati in modo non corretto. Utilizzare questa procedura per configurare i progetti makefile Visual C++, in modo che il funzionamento di IntelliSense è quando i progetti makefile sono aperti nell'ambiente di sviluppo di Visual Studio.  
   
-### Per attivare IntelliSense in modo che funzioni con i progetti makefile nell'ambiente di sviluppo integrato \(IDE\)  
+### <a name="to-enable-intellisense-for-makefile-projects-in-the-ide"></a>Per abilitare IntelliSense per progetti makefile nell'IDE  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà**.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../misc/how-to-open-project-property-pages.md).  
+1.  Aprire il **pagine delle proprietà** la finestra di dialogo. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  
   
-2.  Espandere il nodo **Proprietà di configurazione**.  
+2.  Espandere il **le proprietà di configurazione** nodo.  
   
-3.  Selezionare la pagina delle proprietà **NMake**, quindi modificare le proprietà di **IntelliSense** in base alle necessità.  
+3.  Selezionare il **NMake** proprietà pagina e quindi modificare le proprietà di **IntelliSense** come appropriato.  
   
-    -   Impostare la proprietà **Definizioni preprocessore** per definire i simboli del preprocessore nel progetto makefile.  Per ulteriori informazioni vedere [\/D \(definizioni preprocessore\)](../build/reference/d-preprocessor-definitions.md).  
+    -   Impostare il **definizioni preprocessore** proprietà per definire i simboli del preprocessore nel progetto makefile. Vedere [/D (definizioni preprocessore)](../build/reference/d-preprocessor-definitions.md), per ulteriori informazioni.  
   
-    -   Impostare la proprietà **Percorsi di ricerca** per specificare l'elenco delle directory in cui il compilatore dovrà effettuare la ricerca dei riferimenti da risolvere che sono stati passati alle direttive del preprocessore nel progetto makefile.  Per ulteriori informazioni, vedere [\/I \(Directory di inclusione aggiuntive\)](../build/reference/i-additional-include-directories.md).  
+    -   Impostare il **percorsi di ricerca** proprietà per specificare l'elenco delle directory in cui il compilatore effettuerà la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile. Vedere [/I (directory di inclusione aggiuntive)](../build/reference/i-additional-include-directories.md), per ulteriori informazioni.  
   
-         Per i progetti che sono compilati utilizzando CL.EXE da una finestra di comando, impostare la variabile di ambiente **INCLUDE** per specificare le directory in cui il compilatore effettuerà la ricerca dei riferimenti da risolvere che sono stati passati alle direttive del preprocessore nel progetto makefile.  
+         Per i progetti vengono compilati utilizzando CL. EXE da una finestra di comando, impostare il **INCLUDE** variabile di ambiente per specificare directory di cui il compilatore effettuerà la ricerca per risolvere i riferimenti di file che vengono passati alle direttive del preprocessore nel progetto makefile.  
   
-    -   Impostare la proprietà **Inclusioni imposte** per specificare quali file di intestazione dovranno essere elaborati durante la compilazione del progetto makefile.  Per ulteriori informazioni, vedere [\/FI \(Specifica il file di inclusione da utilizzare\)](../build/reference/fi-name-forced-include-file.md).  
+    -   Impostare il **inclusioni** proprietà per specificare quali file di intestazione al processo durante la compilazione del progetto makefile. Vedere [/FI (nome forzato File di inclusione)](../build/reference/fi-name-forced-include-file.md), per ulteriori informazioni.  
   
-    -   Impostare la proprietà **Percorso di ricerca assembly** per specificare l'elenco delle directory in cui il compilatore dovrà effettuare la ricerca dei riferimenti agli assembly .NET da risolvere.  Per ulteriori informazioni, vedere [\/AI \(Specifica le directory di metadati\)](../build/reference/ai-specify-metadata-directories.md).  
+    -   Impostare il **percorso di ricerca Assembly** proprietà per specificare l'elenco delle directory in cui il compilatore effettuerà la ricerca per risolvere i riferimenti agli assembly .NET nel progetto. Vedere [/AI (specifica le directory di metadati)](../build/reference/ai-specify-metadata-directories.md), per ulteriori informazioni.  
   
-    -   Impostare la proprietà **Assembly imposti** per specificare quali assembly .NET dovranno essere elaborati durante la compilazione del progetto makefile.  Per ulteriori informazioni, vedere [\/FU \(Specifica file \#using da utilizzare\)](../build/reference/fu-name-forced-hash-using-file.md).  
+    -   Impostare il **assembly imposti** proprietà per specificare quali assembly .NET per l'elaborazione durante la compilazione del progetto makefile. Vedere [/FU (Name Forced #using File)](../build/reference/fu-name-forced-hash-using-file.md), per ulteriori informazioni.  
   
-    -   Impostare la proprietà **Opzioni aggiuntive** per specificare opzioni aggiuntive del compilatore che devono essere utilizzate da Intellisense in caso di analisi di file C\+\+.  
+    -   Impostare il **opzioni aggiuntive** proprietà per specificare opzioni aggiuntive del compilatore devono essere utilizzati da Intellisense durante l'analisi di file C++.  
   
-4.  Scegliere **OK** per chiudere le pagine delle proprietà.  
+4.  Fare clic su **OK** per chiudere le pagine delle proprietà.  
   
-5.  Utilizzare il comando **Salva tutto** per salvare le impostazioni di progetto che sono state modificate.  
+5.  Utilizzare il **Salva tutto** comando per salvare le impostazioni di progetto modificato.  
   
- All'apertura successiva del progetto makefile nell'ambiente di sviluppo di Visual Studio, eseguire il comando **Pulisci soluzione** e in seguito il comando **Compila soluzione**.  Ora IntelliSense funzionerà correttamente nell'ambiente di sviluppo integrato \(IDE\).  
+ Alla successiva apertura del progetto makefile nell'ambiente di sviluppo di Visual Studio, eseguire il **Pulisci soluzione** comando e quindi la **Compila soluzione** comando progetto makefile. IntelliSense dovrebbe funzionare correttamente nell'IDE.  
   
-## Vedere anche  
- [Utilizzo di IntelliSense](../Topic/Using%20IntelliSense.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo di IntelliSense](/visualstudio/ide/using-intellisense)   
  [Riferimenti a NMAKE](../build/nmake-reference.md)   
- [Procedura: creare un progetto C\+\+ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)
+ [Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)

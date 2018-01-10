@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Problemi di versione per tipi di valore annidati in tipi nativi (C++/CLI)
 Si consideri un componente di assembly firmato (nome sicuro) utilizzato per compilare un assembly client. Il componente contiene un tipo di valore utilizzato nel client come il tipo per un membro di un'unione nativa, una classe o una matrice. Se una versione futura del componente viene modificato il layout del tipo di valore o la dimensione, è necessario ricompilare il client.  

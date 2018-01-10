@@ -1,54 +1,55 @@
 ---
-title: "C++ AMP (C++ Accelerated Massive Parallelism) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Accelerated Massive Parallelism, introduzione"
-  - "C++ AMP (vedere C++ Accelerated Massive Parallelism)"
+title: C++ AMP (C++ Accelerated Massive Parallelism) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- C++ AMP (see C++ Accelerated Massive Parallelism)
+- C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-caps.latest.revision: 22
-caps.handback.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6bda8be9d3cc939e95ccfe68397eef259dd3a2f4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
-# C++ AMP (C++ Accelerated Massive Parallelism)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C\+\+ AMP \(C\+\+ Accelerated Massive Parallelism\) accelera l'esecuzione del codice C\+\+ sfruttando il parallelismo dell'hardware che è in genere presente come una unità di elaborazione grafica \(GPU\) in una scheda grafica discreta.  Il modello di programmazione C\+\+ AMP supporta matrici multidimensionali, indicizzazione, trasferimento di memoria, e tiling.  Include inoltre una libreria di funzioni matematiche.  È possibile utilizzare le estensioni del linguaggio C\+\+ AMP per controllare come i dati vengono spostati dalla CPU alla GPU e viceversa.  
+# <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
+C++ AMP (C++ Accelerated Massive Parallelism) accelera l'esecuzione del codice C++ che possono sfruttare l'hardware di dati in parallelo in genere presente come un'unità di elaborazione grafica (GPU) su una scheda grafica discreta. Il modello di programmazione C++ AMP include il supporto per le matrici multidimensionali, l'indicizzazione, il trasferimento di memoria e l'affiancamento. Include inoltre una libreria di funzioni matematiche. È possibile utilizzare le estensioni del linguaggio C++ AMP per controllare la modalità di spostamento dati dalla CPU alla GPU e il backup.  
   
-## Argomenti correlati  
+## <a name="related-topics"></a>Argomenti correlati  
   
 |Titolo|Descrizione|  
-|------------|-----------------|  
-|[Cenni preliminari su C\+\+ AMP](../../parallel/amp/cpp-amp-overview.md)|Vengono descritte le funzionalità principali di C\+\+ AMP e della libreria matematica.|  
-|[Utilizzo di espressioni lambda, oggetti funzione e funzioni con restrizioni](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|Viene descritto come utilizzare espressioni lambda, oggetti funzione, e funzioni soggette a restrizioni nelle chiamate al metodo [parallel\_for\_each](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md).|  
-|[Utilizzo di sezioni](../../parallel/amp/using-tiles.md)|Viene descritto come utilizzare i riquadri per accelerare il codice C\+\+ AMP.|  
-|[Utilizzo degli oggetti accelerator e accelerator\_view](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|Viene descritto come utilizzare gli acceleratori per personalizzare l'esecuzione del codice su GPU.|  
-|[Utilizzo di C\+\+ AMP nelle applicazioni Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|Viene descritto come utilizzare un C\+\+ AMP nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] che utilizzano i tipi di Windows Runtime.|  
-|[Grafica \(C\+\+ AMP\)](../../parallel/amp/graphics-cpp-amp.md)|Viene descritto come utilizzare la libreria grafica di C\+\+ AMP.|  
-|[Procedura dettagliata: moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Viene illustrata la moltiplicazione di matrici utilizzando codice C\+\+ AMP e l'affiancamento.|  
-|[Procedura dettagliata: Debug di un'applicazione C\+\+ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che utilizza la riduzione parallela per riassumere una grande matrice di Integer.|  
+|-----------|-----------------|  
+|[Panoramica di C++ AMP](../../parallel/amp/cpp-amp-overview.md)|Descrive le funzionalità chiave di C++ AMP e la libreria matematica.|  
+|[Uso di espressioni lambda, oggetti funzione e funzioni con restrizioni](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|Viene descritto come utilizzare espressioni lambda, oggetti funzione e funzioni con restrizioni in chiamate al [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) metodo.|  
+|[Uso di sezioni](../../parallel/amp/using-tiles.md)|Viene descritto come utilizzare i riquadri per accelerare il codice C++ AMP.|  
+|[Uso degli oggetti accelerator e accelerator_view](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|Viene descritto come utilizzare i tasti di scelta rapida per personalizzare l'esecuzione del codice sulla GPU.|  
+|[Uso di C++ AMP nelle app di Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|Viene descritto come utilizzare C++ AMP in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] App che usano i tipi di Windows Runtime.|  
+|[Grafica (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|Viene descritto come utilizzare la libreria di C++ AMP grafica.|  
+|[Procedura dettagliata: moltiplicazione di matrici](../../parallel/amp/walkthrough-matrix-multiplication.md)|Illustra la moltiplicazione mediante il codice C++ AMP e affiancamento.|  
+|[Procedura dettagliata: debug di un'applicazione C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|Viene illustrato come creare ed eseguire il debug di un'applicazione che utilizza la riduzione parallela da sommare un'ampia gamma di valori integer.|  
   
-## Riferimento  
- [Riferimento \(C\+\+ AMP\)](../../parallel/amp/reference/reference-cpp-amp.md)  
+## <a name="reference"></a>Riferimenti  
+ [Riferimento (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)  
   
- [Parola chiave tile\_static](../../cpp/tile-static-keyword.md)  
+ [Parola chiave tile_static](../../cpp/tile-static-keyword.md)  
   
- [restrict \(C\+\+ AMP\)](../../cpp/restrict-cpp-amp.md)  
+ [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)  
   
-## Altre risorse  
- [Programmazione parallela nel blog del codice nativo](http://go.microsoft.com/fwlink/p/?LinkId=238472)  
+## <a name="other-resources"></a>Altre risorse  
+ [Programmazione parallela in codice nativo Blog](http://go.microsoft.com/fwlink/p/?linkid=238472)  
   
- [Progetti di esempio di C\+\+ AMP per il download](http://go.microsoft.com/fwlink/p/?LinkId=248508)  
+ [Progetti di esempio C++ AMP per il download](http://go.microsoft.com/fwlink/p/?linkid=248508)  
   
- [Analisi del codice C\+\+ AMP mediante il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/?LinkID=253987&clcid=0x409)
+ [Analisi del codice AMP C++ con il Visualizzatore di concorrenza](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)
+

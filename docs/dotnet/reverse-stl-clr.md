@@ -1,45 +1,46 @@
 ---
-title: "reverse (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::reverse"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse (funzione) [STL/CLR]"
+title: reverse (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::reverse
+dev_langs: C++
+helpviewer_keywords: reverse function [STL/CLR]
 ms.assetid: dce0c588-fd18-45fa-b8c6-feccb9f15bb7
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 00546929b751f9bb13bc87097d0b687f3050b3bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# reverse (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inverte l'ordine degli elementi in un intervallo.  
+# <a name="reverse-stlclr"></a>reverse (STL/CLR)
+Inverte l'ordine degli elementi all'interno di un intervallo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _BidIt> inline  
     void reverse(_BidIt _First, _BidIt _Last);  
 ```  
   
-## Note  
- Questa funzione si comporta come se fosse la funzione `reverse`STL.  Per ulteriori informazioni, vedere [reverse](../Topic/reverse.md).  
+## <a name="remarks"></a>Note  
+ Questa funzione si comporta come la funzione della libreria Standard C++ `reverse`. Per ulteriori informazioni, vedere [inversa](../standard-library/algorithm-functions.md#reverse).  
   
-## Requisiti  
- **Intestazione:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/algoritmo >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>Vedere anche  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,49 +1,51 @@
 ---
-title: "Modifiche nell&#39;ordine di inizializzazione del costruttore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costruttori, C++"
+title: Modifiche nell'ordine di inizializzazione costruttore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Modifiche nell&#39;ordine di inizializzazione del costruttore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'ordine di inizializzazione dei costruttori di classe è stato modificato in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="changes-in-constructor-initialization-order"></a>Modifiche nell'ordine di inizializzazione del costruttore
+L'ordine di inizializzazione per i costruttori di classe è cambiato da estensioni gestite per C++ a Visual C++.  
   
-## Confronto dell'ordine di inizializzazione del costruttore  
- Nelle estensioni gestite per C\+\+ l'inizializzazione del costruttore viene eseguita nell'ordine seguente:  
+## <a name="comparison-of-constructor-initialization-order"></a>Confronto dell'ordine di inizializzazione di costruttore  
+ Nelle estensioni gestite per C++, l'inizializzazione di costruttore si è verificato nell'ordine seguente:  
   
-1.  Il costruttore della classe base, se disponibile, viene richiamato.  
+1.  Il costruttore della classe di base, se presente, viene richiamato.  
   
-2.  L'elenco di inizializzazione della classe viene valutato.  
+2.  Elenco di inizializzazione della classe viene valutato.  
   
-3.  Il corpo del codice del costruttore della classe viene eseguito.  
+3.  Il corpo di codice del costruttore della classe viene eseguito.  
   
- Questo ordine di esecuzione segue le stesse convenzioni della programmazione C\+\+ nativa.  Il nuovo linguaggio Visual C\+\+ stabilisce l'ordine di esecuzione seguente per le classi CLR:  
+ In questo ordine di esecuzione segue le stesse convenzioni di programmazione in C++ nativa. Il nuovo linguaggio di Visual C++ indica l'ordine di esecuzione seguenti per le classi CLR:  
   
-1.  L'elenco di inizializzazione della classe viene valutato.  
+1.  Elenco di inizializzazione della classe viene valutato.  
   
-2.  Il costruttore della classe base, se disponibile, viene richiamato.  
+2.  Il costruttore della classe di base, se presente, viene richiamato.  
   
-3.  Il corpo del codice del costruttore della classe viene eseguito.  
+3.  Il corpo di codice del costruttore della classe viene eseguito.  
   
- Si noti che questa modifica si riferisce solo alle classi CLR. Per le classi native in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] valgono ancora le convenzioni precedenti.  In entrambi i casi, queste regole vengono propagate a cascata verso l'alto nell'intera gerarchia di una classe determinata.  
+ Si noti che questa modifica si applica solo alle classi CLR. classi native in Visual C++ ancora le convenzioni precedenti. In entrambi i casi, queste regole propagate verso l'alto la catena di tutta la gerarchia di una determinata classe.  
   
- Si consideri l'esempio di codice seguente utilizzando le estensioni gestite per C\+\+:  
+ Si consideri l'esempio di codice seguente utilizzando le estensioni gestite per C++:  
   
 ```  
 __gc class A  
@@ -68,15 +70,15 @@ private:
 };  
 ```  
   
- In base all'ordine di inizializzazione del costruttore stabilito sopra, la costruzione di nuove istanze della classe `B` avverrà nell'ordine di esecuzione seguente:  
+ L'ordine di inizializzazione del costruttore stabilito sopra, seguente dovremmo vedere il seguente ordine di esecuzione di nuove istanze della classe `B` vengono costruiti:  
   
-1.  Il costruttore della classe base `A` viene richiamato.  Il membro `_n` viene inizializzato con il valore `1`.  
+1.  Il costruttore della classe di base `A` viene richiamato. Il `_n` membro viene inizializzato con `1`.  
   
-2.  L'elenco di inizializzazione della classe `B` viene valutato.  Il membro `_m` viene inizializzato con il valore `1`.  
+2.  Elenco di inizializzazione per la classe `B` viene valutata. Il `_m` membro viene inizializzato con `1`.  
   
-3.  Il corpo del codice della classe `B` viene eseguito.  
+3.  Il corpo di codice della classe `B` viene eseguita.  
   
- Si consideri ora lo stesso codice nella nuova sintassi di Visual C\+\+:  
+ Si consideri ora lo stesso codice nella nuova sintassi di Visual C++:  
   
 ```  
 ref class A  
@@ -101,20 +103,20 @@ private:
 };  
 ```  
   
- Nella nuova sintassi la costruzione di nuove istanze della classe `B` avviene nell'ordine di esecuzione seguente:  
+ L'ordine di esecuzione di nuove istanze della classe `B` vengono costruiti sotto la nuova sintassi è:  
   
-1.  L'elenco di inizializzazione della classe `B` viene valutato.  Il membro `_m` viene inizializzato con `0` \(`0` è il valore non inizializzato del membro della classe `_m`\).  
+1.  Elenco di inizializzazione per la classe `B` viene valutata. Il `_m` membro viene inizializzato con `0` (`0` è il valore non inizializzato il `_m` membro della classe).  
   
-2.  Il costruttore della classe base `A` viene richiamato.  Il membro `_n` viene inizializzato con il valore `1`.  
+2.  Il costruttore della classe di base `A` viene richiamato. Il `_n` membro viene inizializzato con `1`.  
   
-3.  Il corpo del codice della classe `B` viene eseguito.  
+3.  Il corpo di codice della classe `B` viene eseguita.  
   
- Si noti come una sintassi simile produca risultati diversi per questi esempi di codice.  Il costruttore della classe `B` dipende da un valore della classe base `A` per l'inizializzazione del relativo membro.  Tuttavia, il costruttore della classe `A` non è ancora stato richiamato.  Tale dipendenza può essere particolarmente pericolosa quando la classe ereditata dipende da un'allocazione di memoria o risorsa che deve essere eseguita nel costruttore della classe base.  
+ Si noti che una sintassi simile produce risultati diversi per questi esempi di codice. Il costruttore della classe `B` dipende dal valore dalla classe base `A` per inizializzare il membro. Tuttavia, il costruttore di classe `A` non è stato ancora richiamato. Tale dipendenza può essere particolarmente pericolosa quando un'allocazione di memoria o risorse a cui si verificano nel costruttore della classe base dipende dalla classe ereditata.  
   
-## Implicazioni del passaggio dalle estensioni gestite per C\+\+ a Visual C\+\+ 2010  
- In molti casi, le modifiche all'ordine di esecuzione dei costruttori di classe devono essere trasparenti per il programmatore perché le classi base non hanno alcuna nozione del comportamento delle classi ereditate.  Tuttavia, come illustrato in questi esempi di codice, i costruttori delle classi ereditate possono essere influenzati notevolmente dal fatto che i relativi elenchi di inizializzazione dipendano dai valori dei membri della classe base.  Quando si trasferisce il codice dalle estensioni gestite per C\+\+ alla nuova sintassi, prendere in considerazione il trasferimento dei costrutti nel corpo del costruttore di classe, dove è garantito che l'esecuzione avvenga per ultima.  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>Implicazioni del passaggio dalle estensioni gestite per C++ a Visual C++ 2010  
+ In molti casi le modifiche all'ordine di esecuzione dei costruttori di classe devono essere trasparente al programmatore di perché le classi di base non dispongono di alcun concetto di comportamento delle classi ereditate. Tuttavia, come illustrano in questi esempi di codice, i costruttori delle classi ereditate possono essere notevolmente influenzati quando i relativi elenchi di inizializzazione dipendono dai valori dei membri della classe base. Quando si sposta il codice dalle estensioni gestite per C++ per la nuova sintassi, è consigliabile spostare tali costrutti al corpo del costruttore della classe, in cui esecuzione è garantita per essere trovarsi per ultimo.  
   
-## Vedere anche  
- [Tipi gestiti \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Tipi gestiti (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [Costruttori](../cpp/constructors-cpp.md)   
- [Inizializzatori del costruttore](../misc/constructor-initializers.md)
+ 

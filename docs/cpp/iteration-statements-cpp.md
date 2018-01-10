@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f81ffa2e6b8f1dc07e409b737f76cb8e6aca5258
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c06ae1c043551bbb4ed6469ab3f87d1ed86fd92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iteration-statements-c"></a>Istruzioni di iterazione (C++)
 Le istruzioni di iterazione determinano l'esecuzione di istruzioni (o istruzioni composte) nessuna o più volte, soggette ad alcuni criteri di ciclo-chiusura. Quando queste istruzioni sono composte, vengono eseguiti in ordine, tranne quando entrambi i [interruzione](../cpp/break-statement-cpp.md) istruzione o [continuare](../cpp/continue-statement-cpp.md) viene rilevata un'istruzione.  
@@ -33,8 +34,8 @@ Le istruzioni di iterazione determinano l'esecuzione di istruzioni (o istruzioni
 |---------------|------------------|--------------------|---------------|  
 |`while`|All'inizio del ciclo|No|No|  
 |**do**|Alla fine del ciclo|No|No|  
-|**for**|All'inizio del ciclo|Sì|Sì|  
-|**basato su intervallo per**|All'inizio del ciclo|Sì|Sì|  
+|**for**|All'inizio del ciclo|Yes|Yes|  
+|**basato su intervallo per**|All'inizio del ciclo|Yes|Yes|  
   
  La parte di istruzione di un'istruzione di iterazione non può essere una dichiarazione. Tuttavia, può essere un'istruzione composta che contiene una dichiarazione.  
   

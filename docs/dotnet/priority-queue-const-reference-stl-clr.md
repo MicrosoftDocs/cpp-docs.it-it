@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference (membro) [STL/CLR]"
+title: priority_queue::const_reference (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: 53829d08-f875-497a-bb90-655e7f1fd213
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7a95ee848f52fd493970b509171cd2155230a1d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il tipo di un riferimento costante a un elemento.  
+# <a name="priorityqueueconstreference-stlclr"></a>priority_queue::const_reference (STL/CLR)
+Tipo di un riferimento costante a un elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## Note  
- Il tipo viene descritto un riferimento costante a un elemento.  
+## <a name="remarks"></a>Note  
+ Il tipo descrive un riferimento costante a un elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_priority_queue_const_reference.cpp   
@@ -62,13 +63,16 @@ int main()
   
 ```  
   
-  **c a b**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+c b a  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::reference](../dotnet/priority-queue-reference-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::Reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)   
+ [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)
