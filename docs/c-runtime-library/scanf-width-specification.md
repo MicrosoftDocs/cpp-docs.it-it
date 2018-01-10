@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>Specifica della larghezza per scanf
 Le informazioni si applicano all’interpretazione di stringhe di formato nella famiglia di funzioni `scanf`, incluse le versioni protette, quali `scanf_s`. Queste funzioni presumono normalmente che il flusso di input sia suddiviso in una sequenza di token. I token sono separati da spazi vuoti (spazi, tabulazioni o caratteri di nuova riga) o nel caso dei tipi numerici, dalla fine naturale di un tipo di dati numerici secondo quanto indicato dal primo carattere che non può essere convertito in testo numerico. Tuttavia, è possibile utilizzare la specifica della larghezza per fare in modo di interrompere l'analisi dell'input prima della fine naturale di un token.  

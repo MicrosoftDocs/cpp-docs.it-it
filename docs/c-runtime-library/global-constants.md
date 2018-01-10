@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afb5230ae5ee15061988f9e426393c7de16a788e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 552ce3e1e1f535cf01f458af28c44aeb5cf8980b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-constants"></a>Costanti globali
 La libreria di runtime Microsoft contiene le definizioni per le costanti globali utilizzate dalle routine della libreria. Per utilizzare queste costanti, includere i file di intestazione appropriati come indicato nella descrizione per ciascuna costante. Le costanti globali vengono elencate nella tabella seguente.  

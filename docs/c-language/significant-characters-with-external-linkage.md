@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f85349ef67e658ec71b064abf30ea46061dbc021
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c420cf5ca72b18aefb93fb03d82c35b38ec21d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="significant-characters-with-external-linkage"></a>Caratteri significativi con collegamento esterno
 **ANSI 3.1.2** Il numero di caratteri significativi con collegamento esterno  

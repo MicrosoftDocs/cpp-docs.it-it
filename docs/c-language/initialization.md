@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 599052b4515c4d297996d7afa329f508673edd33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81b4414d663e24ac0e5186ef7722c313b2755950
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initialization"></a>Inizializzazione
 "Inizializzatore" è un valore o una sequenza di valori da assegnare alla variabile dichiarata. È possibile impostare una variabile su un valore iniziale applicando un inizializzatore al dichiaratore nella dichiarazione di variabile. Il valore o i valori dell'inizializzazione sono assegnati alla variabile.  

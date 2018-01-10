@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>Funzioni vprintf
 Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e quindi formatta e scrive i dati specificati in una destinazione particolare. Le funzioni differiscono per il tipo di convalida dei parametri eseguita, per l'uso di stringhe di caratteri di tipo wide o a byte singolo, per la destinazione di output e per il modo in cui viene specificato l'ordine in cui i parametri vengono usati nella stringa di formato.  
@@ -50,30 +51,30 @@ Ognuna delle funzioni `vprintf` accetta un puntatore a un elenco di argomenti e 
   
 |Funzione|Funzione controparte|Destinazione di output|Convalida dei parametri|Supporto parametro posizionale|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|no|  
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|no|  
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|no|  
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|No|  
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Controllo dei valori null.|No|  
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|No|  
 |**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Controllo dei valori null e del formato valido.|sì|  
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|no|  
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|no|  
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|No|  
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Stream*|Controllo dei valori null.|No|  
 |**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Stream*|Controllo dei valori null e del formato valido.|sì|  
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|no|  
-|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Controllo dei valori null.|no|  
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Stream*|Controllo dei valori null e del formato valido.|No|  
+|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Controllo dei valori null.|No|  
 |**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|sì|  
-|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|no|  
+|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|No|  
 |`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Controllo dei valori null.|no|  
 |**vwprintf_p**|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|sì|  
-|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|no|  
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
+|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Controllo dei valori null e del formato valido.|No|  
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
 |**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|sì|  
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|no|  
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|No|  
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
 |**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|sì|  
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|no|  
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|no|  
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|memoria a cui punta *buffer*|Controllo dei valori null e del formato valido.|No|  
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|memoria a cui punta *buffer*|Controllo dei valori null.|No|  
   
  L'argomento `argptr` è di tipo `va_list`, definito in VARARGS.H e in STDARG.H. La variabile `argptr` deve essere inizializzata da **va_start** e può essere reinizializzata da chiamate successive di `va_arg`. `argptr` quindi punterà all'inizio di un elenco di argomenti che vengono convertiti e trasmessi in output in base alle specifiche corrispondenti nell'argomento *format*. *format* ha la stessa forma e la stessa funzione dell'argomento *format* di [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Nessuna di queste funzioni chiama `va_end`. Per una descrizione più completa di ogni funzione `vprintf`, vedere la descrizione della funzione corrispondente come indicato nella tabella precedente.  
   

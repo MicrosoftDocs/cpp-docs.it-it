@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 22bb1bd71a49c6d43a71f50155ca9470efe9c796
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87be2be7856f3c6c60750b790807605387b22973
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-deletecrt"></a>Operatore delete (CRT)
 A partire da Visual Studio 2013, UCRT (Universal C Runtime) non supporta più le funzioni degli operatori new e delete specifiche di C++. Questi elementi fanno ora parte della libreria standard C++. Per altre informazioni, vedere [new and delete operators](../cpp/new-and-delete-operators.md) (operatori new e delete) e [new operator](../cpp/delete-operator-cpp.md) (operatore new) nella documentazione di riferimento del linguaggio C++. 

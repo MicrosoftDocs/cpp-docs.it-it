@@ -27,11 +27,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72a9e61f7ddf4731dd8cd47af9f7fc8e0c007f47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa1cc76bf925a334b78e5f15565c089081cfe9d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="is-isw-routines"></a>is, isw Routines
 |||  
@@ -346,7 +347,7 @@ int main( void )
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../c-runtime-library/locale.md)   
+ [Locale](../c-runtime-library/locale.md)  (Impostazioni locali)  
  [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Interpretazione di sequenze di caratteri multibyte](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [Funzioni to](../c-runtime-library/to-functions.md)

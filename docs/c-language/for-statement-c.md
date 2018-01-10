@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13d292cebbb8aa3aa6a65fbc41b8b38934732b5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18c2b89e8c09ca7ddb6ba7f2cc02c9b400265a35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>Istruzione for (C)
 L'istruzione **for** consente di ripetere un'istruzione o un'istruzione composta un numero specificato di volte. Il corpo di un'istruzione **for** viene eseguito zero o più volte fino a quando una condizione facoltativa non restituisce false. È possibile usare espressioni facoltative nell'istruzione **for** per inizializzare e modificare i valori durante l'esecuzione dell'istruzione **for**.  

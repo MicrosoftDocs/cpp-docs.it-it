@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdaf9fe5b2d41491683d34ea029a546433cd709d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e419cbd30b523121ae1902b49a25d60c0b9d21eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-allocation"></a>Allocazione di memoria
 Usare queste routine per allocare, liberare e riallocare memoria.  
   
 ### <a name="memory-allocation-routines"></a>Routine di allocazione della memoria  
   
-|Routine|Uso|  
+|Routine|Usa|  
 |-------------|---------|  
 |[_alloca](../c-runtime-library/reference/alloca.md), [_malloca](../c-runtime-library/reference/malloca.md)|Allocare memoria dallo stack|  
 |[calloc](../c-runtime-library/reference/calloc.md)|Allocare memoria per la matrice, inizializzando ogni byte nel blocco allocato a 0|  

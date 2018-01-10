@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Gestione di file
 Usare queste routine per creare, eliminare e modificare file e per impostate e verificare le autorizzazioni di accesso ai file.  
@@ -48,7 +49,7 @@ Usare queste routine per creare, eliminare e modificare file e per impostate e v
   
  Queste routine operano sui file specificati da un percorso o nome file.  
   
-|Routine|Usare|  
+|Routine|Usa|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Verifica l'impostazione di autorizzazione file|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Modifica l'impostazione di autorizzazione file|  
@@ -66,7 +67,7 @@ Usare queste routine per creare, eliminare e modificare file e per impostate e v
   
  Queste routine aprono i file.  
   
-|Routine|Usare|  
+|Routine|Usa|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Apre un file e restituisce un puntatore al file aperto.|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Aprire un flusso con condivisione di file e restituisce un puntatore al file aperto.|  
@@ -77,7 +78,7 @@ Usare queste routine per creare, eliminare e modificare file e per impostate e v
   
  Queste routine consentono di modificare la rappresentazione del file tra una struttura `FILE`, un descrittore di file e un handle di file Win32.  
   
-|Routine|Uso|  
+|Routine|Usa|  
 |-------------|---------|  
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Associa un flusso a un file che è stato precedentemente aperto per I/O di basso livello e restituisce un puntatore al flusso aperto.|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|Ottenere il descrittore di file associato al flusso.|  

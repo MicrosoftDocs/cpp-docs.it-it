@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea315c065e6f76215939bc4ccd70bcc907361ff4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65be3d2e59a9d672db18ba332d608fdf031f16e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-declarations-and-definitions"></a>Dichiarazioni e definizioni di funzioni
 I prototipi di funzione stabiliscono il nome della funzione, il tipo restituito e il tipo e il numero di parametri formali. Una definizione di funzione include il corpo della funzione.  

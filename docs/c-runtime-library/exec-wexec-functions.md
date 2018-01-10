@@ -64,11 +64,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1f571a6d0a84ca6d2990ed4910ef52ea0d54e2d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2b01ce48463f3aad723bee38ee9f3ef1b499c3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exec-wexec-functions"></a>Funzioni _exec, _wexec
 Ogni funzione in questa famiglia carica ed esegue un nuovo processo:  

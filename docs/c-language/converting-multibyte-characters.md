@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a7eccca8949a724538d9c92d790d2dced48e2e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 051f419c37ef8a769f10b97620d2a0b1e0b475d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-multibyte-characters"></a>Conversione dei caratteri multibyte
 **ANSI 3.1.3.4** Le impostazioni locali correnti usate per convertire i caratteri multibyte nei corrispondenti caratteri wide (codici) per una costante a caratteri wide  

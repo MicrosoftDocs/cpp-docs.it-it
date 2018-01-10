@@ -32,11 +32,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 937a452b145fd3d30518f8c4b786ab79b46d5cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a0ad6631d9171e8fcdc59e13e60eda2cc729c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setoutputformat"></a>_set_output_format
 Consente di personalizzare i formati di output usati dalle funzioni di I/O formattate.  
@@ -59,7 +60,7 @@ unsigned int _set_output_format(
 ## <a name="return-value"></a>Valore restituito  
  Formato di output precedente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Note  
  `_set_output_format` viene usato per configurare l'output delle funzioni di I/O formattate, come [printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md). Attualmente, l'unica convenzione di formattazione che può essere modificata da questa funzione è il numero di cifre visualizzate negli esponenti dell'output di numeri a virgola mobile.  
   
  Per impostazione predefinita, l'output di numeri a virgola restituito da funzioni quali `printf_s`, `wprintf_s`e dalle funzioni correlate nella libreria C standard di Visual C++ stampa tre cifre per l'esponente, anche se non sono necessarie tre cifre per rappresentare il valore dell'esponente. Per arrivare a tre cifre, vengono aggiunti zeri. `_set_output_format` consente di modificare questo comportamento in modo da stampare solo due cifre per l'esponente a meno che le dimensioni dell'esponente non ne richiedano una terza.  
@@ -72,7 +73,7 @@ unsigned int _set_output_format(
 |-------------|---------------------|  
 |`_set_output_format`|\<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

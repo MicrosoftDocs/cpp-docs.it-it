@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 Molte funzioni CRT precedenti hanno versioni più sicure e recenti. Se esiste una funzione sicura, la precedente versione, meno sicura, è contrassegnata come deprecata e la nuova versione ha il suffisso `_s` ("sicura").  
@@ -96,4 +97,4 @@ strcpy(szBuf, "test"); // warning: deprecated
 ## <a name="see-also"></a>Vedere anche  
  [Convalida dei parametri](../c-runtime-library/parameter-validation.md)   
  [Overload di modelli sicuri](../c-runtime-library/secure-template-overloads.md)   
- [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
+ [Funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md)

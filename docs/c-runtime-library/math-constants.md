@@ -32,11 +32,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7f88876aed83dc9a2441142c8707b59387c0ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d68559e9248d7123d299f3bf5ee43a9fd05669dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="math-constants"></a>Costanti Math
 ## <a name="syntax"></a>Sintassi  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 |Simbolo|Espressione|Valore|  
 |------------|----------------|-----------|  
-|M_E|e|2.71828182845904523536|  
+|M_E|h|2.71828182845904523536|  
 |M_LOG2E|log2(e)|1.44269504088896340736|  
 |M_LOG10E|log10(e)|0.434294481903251827651|  
 |M_LN2|ln(2)|0.693147180559945309417|  

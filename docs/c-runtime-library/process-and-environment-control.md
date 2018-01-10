@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>Controllo processo e ambiente
 Le routine di controllo dei processi consentono di avviare, arrestare e gestire i processi dall'interno di un programma, mentre le routine di controllo dell'ambiente consentono di ottenere e modificare le informazioni relative all'ambiente del sistema operativo.  
   
 ### <a name="process-and-environment-control-functions"></a>Funzioni di controllo dei processi e dell'ambiente  
   
-|Routine|Uso|  
+|Routine|Usa|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|Interrompe il processo senza svuotare i buffer né chiamare funzioni registrate da `atexit` e `_onexit`|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Verifica la presenza di errori logici|  
@@ -86,13 +87,13 @@ Le routine di controllo dei processi consentono di avviare, arrestare e gestire 
 |Funzioni|Uso della variabile PATH per individuare il file|Convenzione per il passaggio degli argomenti|Impostazioni dell'ambiente|  
 |---------------|--------------------------------------|----------------------------------|--------------------------|  
 |`_execl, _spawnl`|No|Elenco|Ereditate dal processo chiamante|  
-|`_execle, _spawnle`|No|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
-|`_execlp, _spawnlp`|Sì|Elenco|Ereditate dal processo chiamante|  
-|`_execlpe, _spawnlpe`|Sì|Elenco|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execle, _spawnle`|No|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execlp, _spawnlp`|Yes|List|Ereditate dal processo chiamante|  
+|`_execlpe, _spawnlpe`|Yes|List|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
 |`_execv, _spawnv`|No|Matrice|Ereditate dal processo chiamante|  
 |`_execve, _spawnve`|No|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
-|`_execvp, _spawnvp`|Sì|Matrice|Ereditate dal processo chiamante|  
-|`_execvpe, _spawnvpe`|Sì|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
+|`_execvp, _spawnvp`|Yes|Matrice|Ereditate dal processo chiamante|  
+|`_execvpe, _spawnvpe`|Yes|Matrice|Puntatore alla tabella dell'ambiente per il nuovo processo passato come ultimo argomento|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)

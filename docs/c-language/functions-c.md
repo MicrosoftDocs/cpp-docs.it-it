@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37cfce894d3a08f8429e37f1365e70e8bc4d4d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7935b355042ed7221684fe60a69b5286cd39f00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>Funzioni (C)
 La funzione è l'unità modulare fondamentale in C. Una funzione viene in genere creata per un'attività specifica e spesso il suo nome corrisponde a tale attività. Una funzione contiene dichiarazioni e istruzioni. In questa sezione viene descritto come dichiarare, definire e chiamare le funzioni C. Altri argomenti illustrati sono:  
