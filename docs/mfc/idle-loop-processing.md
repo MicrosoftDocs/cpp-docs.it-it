@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 787f9eb4b7c058c7a6f4e43eaba781546627fa04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: baabba60ffaf886b7a34acfbff5b923a4495fa1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idle-loop-processing"></a>Elaborazione di cicli inattivi
 Molte applicazioni eseguono lunghe elaborazioni "in"background. Talvolta, considerazioni sulle prestazioni è necessario utilizzare il multithreading per tale lavoro. Thread comportano un overhead di sviluppo aggiuntivo, in modo che non sono consigliati per attività semplici come il tempo di inattività lavoro MFC avviene nella [OnIdle](../mfc/reference/cwinthread-class.md#onidle) (funzione). In questo articolo è incentrato sull'elaborazione di inattività. Per ulteriori informazioni sul multithreading, vedere [argomenti relativi al Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).  

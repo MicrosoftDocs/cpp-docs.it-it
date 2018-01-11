@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e48212de73a614ec7baca9bbd5a919d16941486c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 507f684a0c5c7a923cd5c8e16bc9578b8b68e511
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>Utilizzo di elenchi di immagini in un controllo Toolbar
 Per impostazione predefinita, le immagini utilizzate dai pulsanti in un controllo barra degli strumenti vengono archiviate come una singola bitmap. È anche possibile archiviare le immagini dei pulsanti in un set di elenchi di immagini. L'oggetto di controllo della barra degli strumenti è possibile utilizzare fino a tre elenchi di immagini separato:  
