@@ -1,66 +1,65 @@
 ---
-title: "Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.importwiz.location"
-dev_langs: 
-  - "C++"
+title: Nuovo progetto da codice esistente - file di origine (Visual C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.importwiz.location
+dev_langs: C++
 ms.assetid: 29ddffb9-5918-4d72-8c7a-a365f9de96dd
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzare questa pagina della Creazione guidata nuovo progetto da file di codice esistenti per specificare:  
+# <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Specifica il percorso di progetto e i file di origine, Creazione guidata nuovo progetto da file di codice esistenti
+Utilizzare questa pagina della procedura guidata Crea nuovo progetto da file di codice esistenti per specificare:  
   
--   Il percorso completo del nuovo progetto  
+-   Il percorso della directory del nuovo progetto  
   
--   Le cartelle nelle quali cercare i file di origine esistenti  
+-   La directory per cercare i file di origine esistenti  
   
--   I tipi di file che la creazione guidata importerà nel nuovo progetto.  
+-   I tipi di file, che la procedura guidata importerà nel nuovo progetto  
   
-## Elenco attività  
- [Procedura: creare un progetto C\+\+ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
+## <a name="task-list"></a>Elenco attività  
+ [Procedura: Creare un progetto C++ da codice esistente](../ide/how-to-create-a-cpp-project-from-existing-code.md)  
   
-## Elenco UIElement  
- **Percorso del file di progetto**  
- Specifica il percorso completo del nuovo progetto  La creazione guidata posizionerà tutti i file e le sottocartelle del nuovo progetto in questo percorso.  
+## <a name="uielement-list"></a>Elenco UIElement  
+ **Percorso file di progetto**  
+ Specifica il percorso della directory del nuovo progetto. Questo percorso è in cui la creazione guidata posizionerà tutti i file (e le sottodirectory) del nuovo progetto.  
   
  **Sfoglia**  
- Visualizza la finestra di dialogo **Percorso del file di progetto**, che consente di specificare la cartella che conterrà il nuovo progetto.  Il controllo consente di visualizzare la cartella desiderata.  
+ Consente di visualizzare il **percorso del file di progetto** finestra di dialogo che consente di specificare la cartella che conterrà il nuovo progetto. Questo controllo consente di passare alla cartella desiderata.  
   
  **Nome progetto**  
- Consente di specificare il nome del nuovo progetto.  I file di progetto, che hanno estensioni quali vcxproj, adotteranno questo nome.  I file di codice esistenti manterranno il nome originale.  
+ Specifica il nome del nuovo progetto. File di progetto, che hanno estensioni di file, ad esempio con estensione vcxproj adotteranno questo nome. File di codice esistenti consente di mantenere il nome originale.  
   
- **Aggiungi al progetto file dalle cartelle**  
- Quando l'opzione è selezionata, la creazione guidata copia i file di codice esistenti dalla directory di origine, specificata nella casella di riepilogo sotto il controllo, nel nuovo progetto.  
+ **Aggiungere file al progetto da queste cartelle**  
+ Se selezionata, imposta la procedura guidata per copiare i file di codice esistenti dalla directory di origine (che sono specificate nella casella di riepilogo sotto il controllo) nel nuovo progetto.  
   
- **Aggiungi sottocartelle**  
- Indica di copiare nel nuovo progetto i file di codice contenuti nella cartella visualizzata nella colonna **Cartella**, comprese le sottocartelle.  
+ **Per aggiungere sottocartelle**  
+ Specifica per copiare i file di codice da tutte le sottodirectory della directory elencati **cartella** colonna nel nuovo progetto.  
   
  **Cartella**  
- Indica il percorso della cartella che contiene file di codice esistenti da copiare nel nuovo progetto.  In questa colonna sono elencate tutte le cartelle nelle quali la creazione guidata effettuerà la ricerca dei file di codice esistenti.  
+ Indica il percorso della directory che contiene i file di codice esistenti da copiare nel nuovo progetto. Questa colonna elenca tutte le directory che la procedura guidata eseguirà la ricerca dei file di codice esistenti.  
   
  **Aggiungi**  
- Visualizza la finestra di dialogo **Aggiungi al progetto file dalla cartella**, che consente di specificare le cartelle nelle quali la creazione guidata effettuerà la ricerca dei file di codice.  
+ Consente di visualizzare il **aggiungere file al progetto da questa cartella** nella finestra di dialogo che consente la specifica directory che la procedura guidata eseguirà la ricerca dei file di codice esistenti.  
   
  **Rimuovi**  
- Elimina il percorso di cartella selezionato nella casella di riepilogo a sinistra del controllo.  
+ Elimina il percorso della directory selezionata in elenco casella a sinistra di questo controllo.  
   
  **Tipi di file da aggiungere al progetto**  
- Specifica i tipi di file che la creazione guidata aggiungerà al nuovo progetto in funzione delle estensioni di file fornite.  Le estensioni di file sono precedute dal carattere jolly asterisco e sono delimitate da un punto e virgola nell'elenco delle estensioni di file.  
+ Specifica i tipi di file che la procedura guidata aggiungerà al nuovo progetto basato sulle estensioni di file specificato. Estensioni di file sono precedute con il carattere jolly asterisco e sono delimitate nell'elenco di estensioni di file da un punto e virgola.  
   
  **Mostra tutti i file in Esplora soluzioni**  
- Specifica che tutti i file del nuovo progetto saranno visualizzati nella finestra Esplora soluzioni.  Per impostazione predefinita l'opzione è selezionata.
+ Specifica che tutti i file nel nuovo progetto per essere visibile e visualizzato nella finestra Esplora soluzioni. Questa opzione è attivata per impostazione predefinita.

@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 879078481cde75841cf180329ef67a6badfa4b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a44e528e871d784c432730799c44ac91af465be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-security-c"></a>Sicurezza Internet (C++)
 La sicurezza del codice è un fattore importante per gli sviluppatori e gli utenti delle applicazioni Internet. Esistono rischi: codice dannoso, il codice che è stato manomesso e codice da siti o autori sconosciuti.  

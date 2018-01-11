@@ -1,36 +1,36 @@
 ---
-title: "3. Funzioni della libreria run-time | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3. Funzioni della libreria run-time | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1cbedf8782c9c5ccb25bda3f8b43df8a526f268
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 3. Funzioni della libreria run-time
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione vengono descritte le funzioni di libreria di runtime OpenMP C e C++. L'intestazione **\< omp.h >** dichiara due tipi, diverse funzioni che consentono di controllare l'ambiente di esecuzione parallela di query e bloccare le funzioni che possono essere utilizzate per sincronizzare l'accesso ai dati.  
+# <a name="3-run-time-library-functions"></a>3. Funzioni della libreria run-time
+In questa sezione descrive le funzioni di libreria di runtime OpenMP C e C++. L'intestazione  **\<omp.h >** dichiara due tipi, diverse funzioni che consentono di controllare l'ambiente di esecuzione parallela di query e bloccare le funzioni che possono essere usate per sincronizzare l'accesso ai dati.  
   
- Il tipo di **omp_lock_t** è in grado di rappresentare un blocco è disponibile un tipo di oggetto o che un thread proprietario di un blocco. Questi blocchi vengono dette *blocchi semplici*.  
+ Il tipo **omp_lock_t** è in grado di rappresentare un blocco è disponibile un tipo di oggetto o un blocco di proprietario di un thread. Questi blocchi vengono dette *blocchi semplici*.  
   
- Il tipo di **omp_nest_lock_t** è un tipo di oggetto in grado di rappresentare che è disponibile un blocco o l'identità del thread che possiede il blocco e un *nidificazione conteggio* (descritta di seguito). Questi blocchi vengono dette *blocchi annidabili*.  
+ Il tipo **omp_nest_lock_t** è un tipo di oggetto in grado di rappresentare che è disponibile un blocco o l'identità del thread che possiede il blocco e un *nidificazione conteggio* (descritte di seguito). Questi blocchi vengono dette *blocchi annidabile*.  
   
- Le funzioni della libreria sono funzioni esterne con il collegamento "C".  
+ Le funzioni della libreria sono funzioni esterne con collegamento "C".  
   
  Le descrizioni in questo capitolo sono divisi negli argomenti seguenti:  
   
--   Esecuzione di funzioni di ambiente (vedere [sezione 3.1](../../parallel/openmp/3-1-execution-environment-functions.md) nella pagina 35).  
+-   Funzioni di ambiente di esecuzione (vedere [sezione 3.1](../../parallel/openmp/3-1-execution-environment-functions.md) nella pagina 35).  
   
--   Blocco di funzioni (vedere [sezione 3.2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41).
+-   Funzioni di blocco (vedere [sezione 3.2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41).

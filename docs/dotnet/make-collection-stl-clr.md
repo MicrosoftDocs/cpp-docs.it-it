@@ -1,54 +1,55 @@
 ---
-title: "make_collection (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_collection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_collection (funzione) [STL/CLR]"
+title: make_collection (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_collection
+dev_langs: C++
+helpviewer_keywords: make_collection function [STL/CLR]
 ms.assetid: c25fb0cb-ebd8-4198-a565-bad28d32ee19
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# make_collection (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fare `range_adapter` da una coppia di iteratore.  
+# <a name="makecollection-stlclr"></a>make_collection (STL/CLR)
+Rendere un `range_adapter` da una coppia di iteratori.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Iter>  
     range_adapter<Iter> make_collection(Iter first, Iter last);  
 ```  
   
-#### Parametri  
- ITER  
- Il tipo degli iteratori di cui è stato eseguito il wrapping.  
+#### <a name="parameters"></a>Parametri  
+ `Iter`  
+ Tipo degli iteratori di sottoposta a wrapping.  
   
- innanzitutto  
- Primo iteratore di cui eseguire il wrapping.  
+ `first`  
+ Primo iteratore per eseguire il wrapping.  
   
- last  
- Come iteratore di cui eseguire il wrapping.  
+ `last`  
+ Secondo iteratore per eseguire il wrapping.  
   
-## Note  
- La funzione di modello restituisce `gcnew range_adapter<Iter>(``first``,` `last``)`.  Utilizzarla per costruire un oggetto di `range_adapter``<Iter>` da una coppia degli iteratori.  
+## <a name="remarks"></a>Note  
+ La funzione modello restituisce `gcnew range_adapter<Iter>(first, last)`. Utilizzato per costruire un `range_adapter<Iter>` oggetto da una coppia di iteratori.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // cliext_make_collection.cpp   
 // compile with: /clr   
 #include <cliext/adapter>   
@@ -91,15 +92,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**Count \= 3**  
-**IsSynchronized \= False**  
-**Nullptr \= True SyncRoot non**  
- **&#124; a b c &#124;**   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+```Output  
+ a b c  
+Count = 3  
+IsSynchronized = False  
+SyncRoot not nullptr = True  
+ | a b c |  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
-## Vedere anche  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

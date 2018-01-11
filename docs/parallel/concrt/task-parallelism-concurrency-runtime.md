@@ -19,11 +19,12 @@ caps.latest.revision: "56"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26b41c4fa3f3cdc9840eecbd31790b7cf82d7659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un processo specifico e in genere eseguita in parallelo con altre attività. Un'attività può essere scomposta in attività aggiuntive più precise, organizzate in un *gruppo di attività*.  
@@ -325,7 +326,7 @@ Message from task: 42
 |[Procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md)|Viene illustrato come combinare le funzionalità esistenti del runtime di concorrenza con funzionalità ancora più avanzate.|  
 |[PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Viene descritta la libreria PPL che fornisce un modello di programmazione imperativa per lo sviluppo di applicazioni simultanee.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
  [Classe task (runtime di concorrenza)](../../parallel/concrt/reference/task-class.md)  
   
  [Classe task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)  

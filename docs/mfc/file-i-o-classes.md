@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d5321c2e4167c38123f57ff8e416e50bc8ac5a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 454e64d67321282030126d2aab023e9f587c1cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-io-classes"></a>Classi I/O di file
 Queste classi forniscono un'interfaccia per i file su disco tradizionali, i file in memoria, flussi attivi e Windows sockets. Tutte le classi derivate da `CFile` può essere utilizzato con un `CArchive` oggetto per eseguire la serializzazione.  

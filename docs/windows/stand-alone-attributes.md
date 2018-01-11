@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17009c1e9c1f7a771b717a96d1aadc4a680fe78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stand-alone-attributes"></a>Attributi autonomi
 Un attributo autonomo non funziona su una parola chiave C++, ma è più simile a una riga di codice. Le istruzioni di un attributo autonomo richiedono un punto e virgola alla fine della riga.  

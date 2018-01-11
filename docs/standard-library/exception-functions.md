@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,12 +31,11 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltexceptiongt-functions"></a>Funzioni &lt;exception&gt;
 ||||  
@@ -44,7 +43,7 @@ ms.lasthandoff: 10/03/2017
 |[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
 |[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|  
 |[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|  
-|[unexpected](#unexpected)|  
+|[Imprevisto](#unexpected)|  
   
 ##  <a name="current_exception"></a>  current_exception  
  Ottiene un puntatore intelligente all'eccezione corrente.  
@@ -309,5 +308,4 @@ void unexpected();
   
 ## <a name="see-also"></a>Vedere anche  
  [\<exception>](../standard-library/exception.md)
-
 

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4439
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4439
+f1_keywords: C4439
+dev_langs: C++
+helpviewer_keywords: C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 150690bc5d2778945eec95c8576b2cc57050bbe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: eec228922a6f5796587243fe2d1f2c6cc1cf6b1c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4439"></a>Avviso del compilatore C4439
 'function': definizione di funzione con un tipo gestito nella firma deve avere un clrcall convenzione di chiamata  

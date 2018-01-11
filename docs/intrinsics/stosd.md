@@ -1,69 +1,69 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosd (istruzione)"
-  - "rep stosd (istruzione)"
-  - "__stosd (funzione intrinseca)"
+title: __stosd | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="stosd"></a>__stosd
+**Sezione specifica Microsoft**  
   
- Genera un'istruzione della stringa dell'archivio \(`rep stosd`\).  
+ Genera un'istruzione di archivio stringa (`rep stosd`).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parametri  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parametri  
+ [out] `Dest`  
  La destinazione dell'operazione.  
   
- \[in\] `Data`  
- Dati da memorizzare.  
+ [in] `Data`  
+ I dati da archiviare.  
   
- \[in\] `Count`  
- La lunghezza del blocco di primi quattro byte da scrivere.  
+ [in] `Count`  
+ La lunghezza del blocco di Double Word da scrivere.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il risultato è che i primi quattro byte `Data` vengono scritti in un blocco di primi quattro byte di `Count` alla posizione di memoria a cui fa riferimento da `Dest`.  
+## <a name="remarks"></a>Note  
+ Il risultato è che la parola doppia `Data` viene scritto in un blocco di `Count` parole doppie in corrispondenza della posizione di memoria a cui puntava `Dest`.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // stosd.c  
@@ -88,8 +88,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## Microsoft FINALE specifico  
+```Output  
+0 99999 99999 0  
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

@@ -1,11 +1,10 @@
 ---
-title: Struttura short_vector_traits | Documenti di Microsoft
+title: Struttura short_vector_traits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,37 +12,21 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: aa123da5dfb5675a4b44d386224bf17e79df40a3
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>Struttura short_vector_traits
-short_vector_traits consente il recupero di un tipo scalare e un tipo scalare di un tipo di short vector o la lunghezza del vettore sottostante  
+short_vector_traits consente il recupero della lunghezza del vettore sottostante e il tipo scalare di un tipo di vettore short o un tipo scalare  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -121,7 +104,7 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Costante short_vector_traits:: Size](#size)||  
   
@@ -146,5 +129,4 @@ static int const size = 1;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concurrency:: Graphics Namespace](concurrency-graphics-namespace.md)
-
+ [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)

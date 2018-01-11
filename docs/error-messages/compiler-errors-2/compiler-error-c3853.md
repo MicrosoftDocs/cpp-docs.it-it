@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3853
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3853
+f1_keywords: C3853
+dev_langs: C++
+helpviewer_keywords: C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 67d28c19d873c57c2566254077e605769534b1f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 54a05062cfc3f0871e16b500c8a3c4b6c3787b15
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3853"></a>Errore del compilatore C3853
 '=': reinizializzare un riferimento o un'assegnazione mediante un riferimento a funzione non è valido  

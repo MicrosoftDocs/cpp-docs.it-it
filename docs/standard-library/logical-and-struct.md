@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::logical_and
-- logical_and
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::logical_and
+dev_langs: C++
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 8108658a9efceeb048aac2c9aa4ffd160626a31b
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 033cb6ffdfab217be5642f5ce5c9bb6ab9af68fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-struct"></a>Struct logical_and
 Oggetto funzione predefinito che esegue l'operazione di congiunzione logica ( `operator&&`) negli argomenti.  
@@ -75,7 +57,7 @@ struct logical_and<void>
  Operando destro dell'operazione di congiunzione logica. Il modello non specializzato accetta un argomento di riferimento lvalue di tipo `Type`. Il modello specializzato esegue un inoltro perfetto degli argomenti di riferimento lvalue e rvalue del tipo dedotto `U`.  
   
 ## <a name="return-value"></a>Valore restituito  
- Risultato di `Left``&&``Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&&`.  
+ Risultato di `Left && Right`. Il modello specializzato esegue un inoltro perfetto del risultato, con il tipo restituito da `operator&&`.  
   
 ## <a name="remarks"></a>Note  
  Per i tipi definiti dall'utente, non si verifica alcun corto circuito nella valutazione degli operandi. Entrambi gli argomenti vengono valutati da `operator&&`.  
@@ -160,7 +142,6 @@ The deque which is the conjuction of d1 & d2 is:
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

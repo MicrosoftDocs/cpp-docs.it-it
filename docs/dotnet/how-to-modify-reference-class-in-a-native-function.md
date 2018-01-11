@@ -1,32 +1,35 @@
 ---
-title: "Procedura: modificare una classe di riferimenti in una funzione nativa | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "platform invoke, classe di riferimento"
-  - "tipi di riferimento, modifica in una funzione nativa C++"
+title: 'Procedura: modificare la classe di riferimento in una funzione nativa | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: modificare una classe di riferimenti in una funzione nativa
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile passare una classe di riferimenti con una matrice CLR a una funzione nativa e quindi modificare la classe utilizzando i servizi PInvoke.  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>Procedura: modificare una classe di riferimenti in una funzione nativa
+È possibile passare una classe di riferimento con una matrice CLR a una funzione nativa e modificare la classe, utilizzando servizi PInvoke.  
   
-## Esempio  
- Compilare la seguente libreria nativa.  
+## <a name="example"></a>Esempio  
+ Compilare la libreria nativa seguente.  
   
 ```  
 // modify_ref_class_in_native_function.cpp  
@@ -54,7 +57,7 @@ extern "C"  {
 };  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Compilare il seguente assembly.  
   
 ```  
@@ -89,8 +92,11 @@ int main() {
 }  
 ```  
   
-  **str: Hello**  
-**In native: intarr: 100, 200**  
-**In managed: intarr: 300, 400**   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

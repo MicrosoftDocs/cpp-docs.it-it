@@ -1,42 +1,41 @@
 ---
-title: "Avviso del compilatore (livello 4) C4256 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4256"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4256"
+title: Compilatore avviso (livello 4) C4256 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4256
+dev_langs: C++
+helpviewer_keywords: C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4bbaec27948f061cb21eeb432446517d4f9a6b2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4256
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'funzione': il costruttore di una classe con basi virtuali ha '...'. Le chiamate potrebbero non essere compatibili con precedenti versioni di Visual C\+\+.  
+# <a name="compiler-warning-level-4-c4256"></a>Avviso del compilatore (livello 4) C4256
+'function': costruttore di classe con basi virtuali ha '...'; le chiamate potrebbero non essere compatibili con le versioni precedenti di Visual C++  
   
- Possibile incompatibilità.  
+ Possibili incompatibilità.  
   
- Si consideri il codice di esempio seguente.  Se la definizione del costruttore S2::S2 \(int i,... \) è stata compilata con una versione del compilatore di Visual C\+\+ precedenti alla versione 7, ma il seguente esempio viene compilato mediante la versione corrente, la chiamata al costruttore per S3 non funzionerà correttamente a causa di una modifica della convenzione di chiamata speciale.  Utilizzando Visual C\+\+ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.  
+ Si prenda in considerazione il seguente esempio di codice. Se la definizione del costruttore s2:: s2 (int i,...) è stato compilato con una versione del compilatore Visual C++ precedenti alla versione 7, ma nell'esempio seguente viene compilato utilizzando la versione corrente, la chiamata al costruttore per S3 non funzionerà correttamente perché una modifica di convenzione di chiamata speciale. Utilizzando Visual C++ 6.0, in entrambi i casi la chiamata non funziona comunque, a meno che non venga passato alcun parametro per i puntini di sospensione.  
   
  Per risolvere il problema,  
   
 1.  Non utilizzare i puntini di sospensione in un costruttore.  
   
-2.  Assicurarsi che tutti i componenti del progetto vengano compilati con la versione corrente, incluse le eventuali librerie che definiscono o fanno riferimento a questa classe, quindi disabilitare l'avviso utilizzando il pragma [warning](../../preprocessor/warning.md).  
+2.  Assicurarsi che tutti i componenti del progetto sono compilati con la versione corrente (incluse le eventuali librerie che definiscono o fanno riferimento a questa classe), quindi disattivare l'avviso utilizzando il [avviso](../../preprocessor/warning.md) pragma.  
   
- Il seguente codice di esempio genera l'errore C4256:  
+ L'esempio seguente genera l'errore C4256:  
   
 ```  
 // C4256.cpp  

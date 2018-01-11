@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b0949cd28683ff577c29ade459b89185f020377
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c634815065c68cceb3c528222c0fd60e19b6827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>Impostazione dello stato giorno di un controllo calendario mensile
 Uno degli attributi di un controllo calendario mensile è la possibilità di archiviare informazioni, definite come il controllo dello stato del giorno per ogni giorno del mese. Queste informazioni viene utilizzate per evidenziare alcune date per il mese visualizzato.  

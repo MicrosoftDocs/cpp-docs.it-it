@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be83831c79b398de9e9b0791d172cf7608e322aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers"></a>Server
 Un'applicazione server (o l'applicazione componente) Crea OLE elementi (o componenti) per l'utilizzo da applicazioni contenitore. Un'applicazione server di modifica visiva supporta anche la modifica visiva o l'attivazione sul posto. Un altro tipo di server OLE è un [server di automazione](../mfc/automation-servers.md). Alcune applicazioni server supportano solo la creazione di elementi incorporati; altri supportano la creazione di elementi collegati e incorporati. Alcuni browser supportano il collegamento solo, sebbene sia raro. Tutte le applicazioni server devono supportare l'attivazione dalle applicazioni contenitore quando l'utente desidera modificare un elemento. Un'applicazione può essere sia un contenitore e un server. In altre parole, possono incorporare i dati all'interno dei documenti e creare dati che possono essere incorporati come elementi in documenti di altre applicazioni.  
@@ -40,8 +41,8 @@ Un'applicazione server (o l'applicazione componente) Crea OLE elementi (o compon
   
 |Tipo di server|Supporta più istanze|Elementi per ogni documento|Documenti per ogni istanza|  
 |--------------------|---------------------------------|------------------------|----------------------------|  
-|Server ridotto|Sì|1|1|  
-|Server completo SDI|Sì|1 (se è supportato il collegamento, 1 o più)|1|  
+|Server ridotto|Yes|1|1|  
+|Server completo SDI|Yes|1 (se è supportato il collegamento, 1 o più)|1|  
 |Server completo MDI|No (non obbligatorio)|1 (se è supportato il collegamento, 1 o più)|0 o più|  
   
  Un'applicazione server deve supportare più contenitori contemporaneamente, nel caso in cui verrà utilizzato più di un contenitore per modificare un elemento incorporato o collegato. Se il server è un'applicazione SDI (o un server ridotto con un'interfaccia di casella della finestra di dialogo), è possibile che più istanze del server devono essere in grado di eseguire contemporaneamente. In questo modo un'istanza separata dell'applicazione per gestire ogni richiesta del contenitore.  

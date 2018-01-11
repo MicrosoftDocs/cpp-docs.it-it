@@ -117,11 +117,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c638679058d6c914d3dac4207b9ae320c4ee2697
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 56e8e97645d4baa74033af07ba08ab2eae0a3557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmenubar-class"></a>Classe CMFCMenuBar
 Barra dei menu che implementa l'ancoraggio.  
@@ -139,11 +140,11 @@ class CMFCMenuBar : public CMFCToolbar
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CMFCMenuBar::AdjustLocations](#adjustlocations)|Esegue l'override di `CMFCToolBar::AdjustLocations`.|  
+|[CMFCMenuBar::AdjustLocations](#adjustlocations)|Esegue l'override`CMFCToolBar::AdjustLocations`.|  
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Specifica se le etichette di testo possono essere visualizzate sotto le immagini sui pulsanti della barra degli strumenti. (Esegue l'override [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|  
-|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|Esegue l'override di `CPane::AllowShowOnPaneMenu`.|  
+|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|Esegue l'override`CPane::AllowShowOnPaneMenu`.|  
 |[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|Calcola la dimensione orizzontale della barra degli strumenti. (Esegue l'override [CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout).)|  
-|[CMFCMenuBar::CalcLayout](#calclayout)|Esegue l'override di `CMFCToolBar::CalcLayout`.|  
+|[CMFCMenuBar::CalcLayout](#calclayout)|Esegue l'override`CMFCToolBar::CalcLayout`.|  
 |[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Calcola l'altezza massima dei pulsanti della barra degli strumenti. (Esegue l'override [CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight).)|  
 |[CMFCMenuBar::CanBeClosed](#canbeclosed)|Specifica se un utente può chiudere la barra degli strumenti. (Esegue l'override [CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed).)|  
 |[CMFCMenuBar::CanBeRestored](#canberestored)|Determina se il ripristino del sistema una barra degli strumenti per lo stato originale dopo la personalizzazione. (Esegue l'override [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|  
@@ -176,10 +177,10 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::LoadState](#loadstate)|Carica lo stato del `CMFCMenuBar` oggetto dal Registro di sistema.|  
 |[CMFCMenuBar::OnChangeHot](#onchangehot)|Chiamato dal framework quando un utente seleziona un pulsante sulla barra degli strumenti. (Esegue l'override [CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot).)|  
 |[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|Chiamato dal framework quando una finestra cornice viene caricato il menu predefinito dal file di risorse.|  
-|[CMFCMenuBar::OnSendCommand](#onsendcommand)|Esegue l'override di `CMFCToolBar::OnSendCommand`.|  
+|[CMFCMenuBar::OnSendCommand](#onsendcommand)|Esegue l'override`CMFCToolBar::OnSendCommand`.|  
 |[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Chiamato dal framework quando un menu è in modalità di personalizzazione e l'utente modifica il testo della voce di menu.|  
-|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|Esegue l'override di `CMFCToolBar::OnToolHitTest`.|  
-|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override di `CMFCToolBar::PreTranslateMessage`.|  
+|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|Esegue l'override`CMFCToolBar::OnToolHitTest`.|  
+|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override`CMFCToolBar::PreTranslateMessage`.|  
 |[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|Chiamato dal framework quando un menu è in modalità di personalizzazione e l'utente seleziona **reimpostare** per una barra dei menu.|  
 |[CMFCMenuBar::SaveState](#savestate)|Salva lo stato del `CMFCMenuBar` oggetto al Registro di sistema.|  
 |[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|Imposta il menu originale nel file di risorse.|  

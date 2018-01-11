@@ -1,56 +1,57 @@
 ---
-title: "Impostazioni locali e tabelle codici | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set di caratteri [C++], tabelle codici"
-  - "set di caratteri [C++], impostazioni locali"
-  - "tabelle codici [C++]"
-  - "tabelle codici [C++], modifica dinamica"
-  - "tabelle codici [C++], impostazioni locali"
-  - "convenzioni [C++], supporto per caratteri internazionali"
-  - "ID delle impostazioni locali [C++]"
-  - "impostazioni locali [C++]"
-  - "impostazioni locali [C++], informazioni"
-  - "localizzazione [C++], tabelle codici"
-  - "localizzazione [C++], impostazioni locali"
-  - "tabelle codici multibyte [C++]"
+title: Impostazioni locali e tabelle codici | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- locales [C++], about locales
+- locale IDs [C++]
+- locales [C++]
+- code pages [C++]
+- code pages [C++], dynamically changing
+- character sets [C++], code pages
+- multibyte code pages [C++]
+- character sets [C++], locales
+- localization [C++], code pages
+- localization [C++], locales
+- code pages [C++], locales
+- conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Impostazioni locali e tabelle codici
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un ID delle impostazioni locali indica la lingua e le convenzioni locali relative a una determinata zona geografica.  Una lingua può essere parlata in più di un paese\/regione, ad esempio il portoghese è parlato sia in Brasile che in Portogallo.  Al contrario, è possibile che in un paese\/una regione siano parlate più lingue ufficiali.  In Canada, ad esempio, ne esistono due: l'inglese e il francese.  Pertanto per il Canada sono disponibili due diverse impostazioni locali: Inglese \(Canada\) e Francese \(Canada\).  Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.  
+# <a name="locales-and-code-pages"></a>Impostazioni locali e tabelle codici
+Un ID impostazioni locali riflette le convenzioni locali e una lingua per una determinata area geografica. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. Ad esempio, Canada ha due lingue: inglese e francese. Pertanto, Canada dispone di due diverse impostazioni locali: inglese (Canada) e francese (Canada). Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.  
   
- La lingua determina le convenzioni di formattazione del testo e dei dati, mentre il paese\/la regione determinano le convenzioni locali.  Ciascuna lingua possiede una mappatura univoca, rappresentata dalle tabelle codici, che include anche caratteri diversi da quelli dell'alfabeto quali i numeri e la punteggiatura.  La tabella codici corrisponde a un set di caratteri ed è associata alla lingua.  Le [impostazioni locali](../c-runtime-library/locale.md) sono pertanto una combinazione univoca di dati relativi alla lingua, al paese\/alla regione e alla tabella codici.  Le impostazioni locali e della tabella codici possono essere modificate in fase di esecuzione richiamando la funzione [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).  
+ La lingua determina le convenzioni di formattazione del testo e dei dati, mentre il paese determina le convenzioni locali. Ogni linguaggio dispone di un mapping univoco, rappresentato da tabelle codici, che include caratteri diversi da quelli dell'alfabeto (ad esempio segni di punteggiatura e numeri). Una tabella codici è un set di caratteri ed è correlata al linguaggio. Di conseguenza, un [internazionali](../c-runtime-library/locale.md) è una combinazione univoca di lingua, paese e tabella codici. L'impostazione della pagina delle impostazioni locali e il codice può essere modificato in fase di esecuzione chiamando il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) (funzione).  
   
- A lingue diverse possono corrispondere tabelle codici differenti.  La tabella codici ANSI 1252, ad esempio, viene utilizzata per l'inglese e per la maggior parte delle lingue europee, mentre la tabella codici ANSI 932 viene utilizzata per il Kanji giapponese.  Di fatto, tutte le tabelle codici condividono il set di caratteri ASCII per i primi 128 caratteri \(da 0x00 a 0x7F\).  
+ Lingue è potrebbero utilizzare tabelle codici diverse. Ad esempio, la tabella codici ANSI 1252 viene utilizzata per l'inglese e la maggior parte delle lingue europee, e la tabella codici ANSI 932 viene utilizzata per il Kanji giapponese. Quasi tutte le tabelle codici condividono il carattere ASCII impostato per i primi 128 caratteri (0x00 e 0x7F).  
   
- Ogni tabella di codici a byte singolo può essere rappresentata con una tabella con 256 voci nella quale determinati valori di byte corrispondono a determinati caratteri, compresi i numeri e i segni di punteggiatura, o caratteri grafici.  Ogni tabella codici multibyte può essere inoltre rappresentata come una tabella di dimensioni molto grandi, con 64.000 voci, formata da valori a byte doppio per i caratteri.  Tuttavia, in pratica, i primi 256 caratteri \(a byte singolo\) vengono generalmente rappresentati sotto forma di tabella, mentre i rimanenti caratteri \(a byte doppio\) come intervalli di valori.  
+ Eventuali codici a byte singolo possono essere rappresentato in una tabella (con le 256 voci) come un mapping di valori byte in caratteri, compresi i numeri e segni di punteggiatura, o icone. Qualsiasi tabella codici multibyte possono anche essere rappresentato come una tabella di dimensioni molto grande (con le voci di 64 KB) di valori a byte doppio a caratteri. In pratica, tuttavia, vengono generalmente rappresentati come una tabella per i primi 256 caratteri (a byte singolo) e come gli intervalli per i valori a byte doppio.  
   
- Per ulteriori informazioni sulle tabelle codici, vedere [Tabelle codici](../c-runtime-library/code-pages.md).  
+ Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md).  
   
- La libreria di runtime del linguaggio C possiede due tipi di tabelle codici interne: quella delle impostazioni locali e quella multibyte.  È possibile modificare la tabella codici corrente durante l'esecuzione del programma; vedere la documentazione per le funzioni [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [\_setmbcp](../c-runtime-library/reference/setmbcp.md).  Inoltre, la libreria di runtime può ottenere e utilizzare il valore della tabella codici del sistema operativo.  In Windows 2000 la tabella codici del sistema operativo è la tabella codici ANSI predefinita di sistema.  Questa tabella codici rimane invariata durante l'esecuzione del programma.  
+ La libreria di run-time C è disponibili due tipi di tabelle codici interne: locali e multibyte. È possibile modificare la tabella codici corrente durante l'esecuzione del programma (vedere la documentazione per il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funzioni). Inoltre, la libreria run-time potrebbe ottenere e utilizzare il valore della tabella codici del sistema operativo. In Windows 2000, la tabella codici del sistema operativo è la tabella codici "ANSI di sistema predefinito". Questa tabella codici è costante per la durata dell'esecuzione del programma.  
   
- Quando la tabella codici delle impostazioni locali viene cambiata, il funzionamento dell'insieme di funzioni basate sulle impostazioni locali corrisponde a quello impostato dalla tabella codici selezionata.  In base all'impostazione predefinita, tutte le funzioni che dipendono dalle impostazioni locali avviano l'esecuzione con una tabella codici delle impostazioni locali specifica delle impostazioni locali "C".  È possibile modificare la tabella codici interna nonché altre proprietà specifiche delle impostazioni locali richiamando la funzione `setlocale`.  Una chiamata a `setlocale`\(LC\_ALL, ""\) consente di configurare le impostazioni locali su quelle indicate dalla tabella codici dell'utente del sistema operativo.  
+ Quando cambia la tabella codici delle impostazioni locali, il comportamento del set di funzioni a quello impostato per la tabella codici scelto dipende dalla lingua. Per impostazione predefinita, tutte le funzioni dipendente dalle impostazioni locali dall'iniziano dell'esecuzione con una tabella codici delle impostazioni locali univoca per le impostazioni locali "C". È possibile modificare la tabella codici delle impostazioni locali interno (così come altre proprietà specifiche delle impostazioni locali) chiamando il `setlocale` (funzione). Una chiamata a `setlocale`(LC_ALL, "") imposta le impostazioni locali a quello indicato da impostazioni locali dell'utente del sistema operativo.  
   
- In modo analogo, quando la tabella codici multibyte viene modificata, il funzionamento delle funzioni multibyte corrisponde a quello richiesto dalla tabella codici selezionata.  In base all'impostazione predefinita, tutte le funzioni multibyte avviano l'esecuzione con una tabella codici multibyte corrispondente alla tabella codici predefinita del sistema operativo.  È possibile modificare la tabella codici multibyte interna chiamando la funzione `_setmbcp`.  
+ Analogamente, quando la tabella codici multibyte cambia, il comportamento delle modifiche funzioni multibyte a quello impostato dalla tabella codici selezionata. Per impostazione predefinita, tutte le funzioni multibyte avviano l'esecuzione con una tabella codici multibyte corrispondente a una tabella codici predefinita del sistema operativo. È possibile modificare la tabella codici multibyte interna chiamando il `_setmbcp` (funzione).  
   
- La funzione di runtime del linguaggio C `setlocale` imposta, modifica o ricerca alcune o tutte le informazioni sulle impostazioni locali del programma corrente.  La routine [\_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) è una versione a caratteri estesi di `setlocale`. Gli argomenti e i valori restituiti di `_wsetlocale` sono stringhe con caratteri estesi.  
+ La funzione di runtime C `setlocale` imposta, modifica o una query di alcune o tutte le informazioni delle impostazioni locali del programma corrente. Il [wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine è una versione a caratteri wide di `setlocale`; gli argomenti e valori restituiti di `_wsetlocale` sono stringhe a caratteri wide.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Unicode e MBCS](../text/unicode-and-mbcs.md)   
  [Vantaggi della portabilità dei set di caratteri](../text/benefits-of-character-set-portability.md)

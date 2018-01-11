@@ -1,31 +1,31 @@
 ---
-title: "A.23   Examples of the ordered Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Esempi A.23 della direttiva ordinato | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f8fa761b-7fc5-4447-95f9-8571e9ca31bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 83d77bb4f064a7ee69b013b36de919b57486b3e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# A.23   Examples of the ordered Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-È possibile che vengono ordinate più con un oggetto `for` specificato con  `ordered` clausola.  Il primo esempio non è conforme in quanto l'API specificare quanto segue:  
+# <a name="a23---examples-of-the-ordered-directive"></a>A.23   Esempi della direttiva ordered
+È possibile avere più sezioni ordinate con un `for` specificato con il `ordered` clausola. Nel primo esempio non è conforme in quanto l'API specifica le operazioni seguenti:  
   
- “Un'iterazione del ciclo con un oggetto `for` il costrutto non è necessario eseguire la stessa operazione  `ordered` la direttiva più volte e non richiedono l'esecuzione di più  `ordered` direttiva.„ \(Vedere [parte 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22\)  
+ "Un'iterazione di un ciclo con un `for` non deve essere eseguito lo stesso costrutto `ordered` direttiva più di una volta e non deve eseguire più `ordered` direttiva." (Vedere [sezione 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) nella pagina 22)  
   
- in questo esempio non conforme, tutte le iterazioni eseguono 2 sezioni ordinate:  
+ In questo esempio non conforme, tutte le iterazioni eseguire 2 sezioni ordinate:  
   
 ```  
 #pragma omp for ordered  
@@ -41,7 +41,7 @@ for (i=0; i<n; i++)
 }  
 ```  
   
- Nell'esempio conforme seguente viene illustrato un oggetto `for` con più sezione ordinata:  
+ Nel seguente esempio conforme un `for` con più di una sezione ordinata:  
   
 ```  
 #pragma omp for ordered  

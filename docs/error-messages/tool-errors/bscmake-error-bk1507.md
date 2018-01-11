@@ -15,18 +15,19 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: beca820e4a6b5fbfef4c88d85b195c8c4d6e42ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e483d8e8be98f06b3ea5646087a7f3e449320c4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-error-bk1507"></a>Errore BK1507 di BSCMAKE
 Impossibile aprire il file temporaneo 'filename' [: motivo]  
   
  BSCMAKE non è possibile aprire un file temporaneo.  
   
-### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolvere il problema, verificare le seguenti cause possibili:  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
 1.  Il **TMP** variabile di ambiente non è impostata su un'unità valida e una directory.  
   

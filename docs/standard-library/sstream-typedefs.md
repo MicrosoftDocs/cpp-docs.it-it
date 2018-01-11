@@ -16,14 +16,13 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-caps.latest.revision: 9
+caps.latest.revision: "9"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 4839391754e3cfc1c3b621296eef0bf8958097c6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsstreamgt-typedefs"></a>Typedef &lt;sstream&gt;
 ||||  
@@ -114,5 +113,4 @@ typedef basic_stringstream<wchar_t> wstringstream;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<sstream>](../standard-library/sstream.md)
-
 

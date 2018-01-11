@@ -1,11 +1,10 @@
 ---
-title: Classe CurrentScheduler | Documenti di Microsoft
+title: Classe CurrentScheduler | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,35 +20,19 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs:
-- C++
-helpviewer_keywords:
-- CurrentScheduler class
+dev_langs: C++
+helpviewer_keywords: CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 9536dd28eeb375f3b9e018539cefb338812e340b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="currentscheduler-class"></a>Classe CurrentScheduler
 Rappresenta un'astrazione per l'utilità di pianificazione corrente associata al contesto di chiamata.  
@@ -66,31 +49,31 @@ class CurrentScheduler;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto il `_Policy` parametro e lo associa al contesto di chiamata. L'utilità di pianificazione appena creata diventerà l'utilità di pianificazione corrente per il contesto di chiamata.|  
+|[Creare](#create)|Crea una nuova utilità di pianificazione il cui comportamento è descritto il `_Policy` parametro e lo associa al contesto di chiamata. L'utilità di pianificazione appena creato sarà l'utilità di pianificazione corrente per il contesto di chiamata.|  
 |[CreateScheduleGroup](#createschedulegroup)|Di overload. Crea un nuovo gruppo di pianificazione in utilità di pianificazione associata al contesto di chiamata. La versione che accetta il parametro `_Placement` fa sì che le attività all'interno del gruppo di pianificazione appena creata venga data priorità all'esecuzione nella posizione specificata da quel parametro.|  
-|[Detach](#detach)|Disconnette l'utilità di pianificazione corrente dal contesto di chiamata e ripristina l'utilità di pianificazione associata in precedenza come utilità di pianificazione corrente, se presente. Dopo il metodo termina, il contesto di chiamata viene gestito dall'utilità di pianificazione che in precedenza era associato al contesto utilizzando il `CurrentScheduler::Create` o `Scheduler::Attach` (metodo).|  
-|[Ottieni](#get)|Restituisce un puntatore all'utilità di pianificazione associata al contesto di chiamata, noto anche come utilità di pianificazione corrente.|  
+|[Detach](#detach)|Disconnette l'utilità di pianificazione corrente dal contesto di chiamata e ripristina l'utilità di pianificazione associata in precedenza come utilità di pianificazione corrente, se presente. Dopo che questo metodo restituisce, il contesto di chiamata viene quindi gestito dall'utilità di pianificazione che in precedenza era associato al contesto utilizzando il `CurrentScheduler::Create` o `Scheduler::Attach` metodo.|  
+|[Get](#get)|Restituisce un puntatore all'utilità di pianificazione associata al contesto di chiamata, detto anche l'utilità di pianificazione corrente.|  
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Restituisce il numero corrente di processori virtuali per l'utilità di pianificazione associata al contesto di chiamata.|  
 |[GetPolicy](#getpolicy)|Restituisce una copia del criterio creato con l'utilità di pianificazione corrente.|  
 |[ID](#id)|Restituisce un identificatore univoco per l'utilità di pianificazione corrente.|  
 |[IsAvailableLocation](#isavailablelocation)|Determina se una posizione specificata è disponibile nell'utilità di pianificazione corrente.|  
-|[RegisterShutdownEvent](#registershutdownevent)|Cause passato l'handle di eventi di Windows il `_ShutdownEvent` parametro da segnalare quando viene arrestato e si distrugge l'utilità di pianificazione associata al contesto corrente. Al momento che l'evento viene segnalato, tutte le operazioni che è stata pianificata per l'utilità di pianificazione sono stata completata. Tramite questo metodo possono essere registrati più eventi di arresto.|  
-|[ScheduleTask](#scheduletask)|Di overload. Pianifica un'attività leggera in utilità di pianificazione associata al contesto di chiamata. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.|  
+|[RegisterShutdownEvent](#registershutdownevent)|Cause passato l'handle di evento di `_ShutdownEvent` parametro venga segnalato quando viene chiuso e si distrugge l'utilità di pianificazione associata al contesto corrente. Al momento che l'evento viene segnalato, tutte le operazioni che è stata pianificata per l'utilità di pianificazione sono stata completata. Tramite questo metodo è possibile registrare più eventi di arresto.|  
+|[ScheduleTask](#scheduletask)|Di overload. Pianifica un'attività leggera all'interno di utilità di pianificazione associata al contesto di chiamata. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.|  
   
 ## <a name="remarks"></a>Note  
- Se è presente alcuna utilità di pianificazione (vedere [dell'utilità di pianificazione](scheduler-class.md)) associata al contesto di chiamata, molti metodi all'interno di `CurrentScheduler` classe comporterà allegato dell'utilità di pianificazione predefinita del processo. Ciò può implicare l'utilità di pianificazione predefinita il processo viene creato durante la chiamata.  
+ Se è presente alcuna utilità di pianificazione (vedere [dell'utilità di pianificazione](scheduler-class.md)) associato al contesto di chiamata, molti metodi all'interno di `CurrentScheduler` classe comporterà allegato dell'utilità di pianificazione predefinita del processo. Ciò può implicare l'utilità di pianificazione predefinita del processo viene creato durante la chiamata.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CurrentScheduler`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
 ##  <a name="create"></a>Creare 
 
- Crea una nuova utilità di pianificazione il cui comportamento è descritto il `_Policy` parametro e lo associa al contesto di chiamata. L'utilità di pianificazione appena creata diventerà l'utilità di pianificazione corrente per il contesto di chiamata.  
+ Crea una nuova utilità di pianificazione il cui comportamento è descritto il `_Policy` parametro e lo associa al contesto di chiamata. L'utilità di pianificazione appena creato sarà l'utilità di pianificazione corrente per il contesto di chiamata.  
   
 ```
 static void __cdecl Create(const SchedulerPolicy& _Policy);
@@ -101,13 +84,13 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
  I criteri dell'utilità di pianificazione che descrive il comportamento dell'utilità di pianificazione appena creata.  
   
 ### <a name="remarks"></a>Note  
- L'allegato dell'utilità di pianificazione al contesto di chiamata posiziona in modo implicito un conteggio dei riferimenti nell'utilità di pianificazione.  
+ L'allegato dell'utilità di pianificazione nel contesto di chiamata posiziona in modo implicito un conteggio dei riferimenti nell'utilità di pianificazione.  
   
- Dopo la creazione di un'utilità di pianificazione con il `Create` (metodo), è necessario chiamare il [CurrentScheduler:: Detach](#detach) metodo a un certo punto in futuro per consentire l'utilità di pianificazione arrestato.  
+ Dopo la creazione di un'utilità di pianificazione con il `Create` (metodo), è necessario chiamare il [CurrentScheduler:: Detach](#detach) metodo a un certo punto in futuro per consentire l'arresto dell'utilità di pianificazione.  
   
- Se questo metodo viene chiamato da un contesto che è già collegato a un'utilità di pianificazione diverso, l'utilità di pianificazione esistente viene memorizzata come utilità di pianificazione precedente, e l'utilità di pianificazione appena creato diventa l'utilità di pianificazione corrente. Quando si chiama il `CurrentScheduler::Detach` metodo in un secondo momento, l'utilità di pianificazione precedente viene ripristinato come utilità di pianificazione corrente.  
+ Se questo metodo viene chiamato da un contesto che è già collegato a una pianificazione diversa, l'utilità di pianificazione esistente viene memorizzata come utilità di pianificazione precedente e l'utilità di pianificazione appena creato diventa l'utilità di pianificazione corrente. Quando si chiama il `CurrentScheduler::Detach` metodo in un secondo momento, l'utilità di pianificazione precedente viene ripristinato come utilità di pianificazione corrente.  
   
- Questo metodo può generare una varietà di eccezioni, tra cui [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) e [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
+ Questo metodo può generare un'ampia gamma di eccezioni, incluse [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) e [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).  
   
 ##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
@@ -121,7 +104,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
 ### <a name="parameters"></a>Parametri  
  `_Placement`  
- Un riferimento a una posizione in cui verranno data priorità le attività all'interno del gruppo di pianificazione all'esecuzione.  
+ Un riferimento a una posizione in cui le attività all'interno del gruppo di pianificazione verranno data priorità all'esecuzione.  
   
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al gruppo di pianificazione appena creata. Questo `ScheduleGroup` oggetto ha un conteggio dei riferimenti iniziali.  
@@ -129,13 +112,13 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 ### <a name="remarks"></a>Note  
  Tale metodo determinerà la creazione dell'utilità di pianificazione predefinita del processo e/o il collegamento al contesto di chiamata se non è presente alcuna utilità di pianificazione attualmente associata al contesto di chiamata.  
   
- È necessario richiamare il [versione](schedulegroup-class.md#release) metodo su un gruppo di pianificazione dopo aver completato la pianificazione del lavoro a esso. L'utilità di pianificazione rimuoverà la pianificazione di gruppo quando tutto il lavoro posti in coda è stata completata.  
+ È necessario richiamare il [versione](schedulegroup-class.md#release) metodo su un gruppo di pianificazione di una volta la pianificazione del lavoro a esso. L'utilità di pianificazione eliminerà la pianificazione di gruppo quando tutto il lavoro in coda a esso è stata completata.  
   
- Si noti che se è stato creato in modo esplicito questa utilità di pianificazione, è necessario rilasciare tutti i riferimenti ai gruppi all'interno di esso, di pianificazione prima di rilasciare il riferimento nell'utilità di pianificazione, scollegando il contesto corrente da esso.  
+ Si noti che, se è stato creato in modo esplicito questa utilità di pianificazione, è necessario rilasciare tutti i riferimenti ai gruppi all'interno di esso, di pianificazione prima di rilasciare il riferimento nell'utilità di pianificazione, scollegare il contesto corrente da esso.  
   
-##  <a name="detach"></a>Scollegare 
+##  <a name="detach"></a>Disconnetti 
 
- Disconnette l'utilità di pianificazione corrente dal contesto di chiamata e ripristina l'utilità di pianificazione associata in precedenza come utilità di pianificazione corrente, se presente. Dopo il metodo termina, il contesto di chiamata viene gestito dall'utilità di pianificazione che in precedenza era associato al contesto utilizzando il `CurrentScheduler::Create` o `Scheduler::Attach` (metodo).  
+ Disconnette l'utilità di pianificazione corrente dal contesto di chiamata e ripristina l'utilità di pianificazione associata in precedenza come utilità di pianificazione corrente, se presente. Dopo che questo metodo restituisce, il contesto di chiamata viene quindi gestito dall'utilità di pianificazione che in precedenza era associato al contesto utilizzando il `CurrentScheduler::Create` o `Scheduler::Attach` metodo.  
   
 ```
 static void __cdecl Detach();
@@ -144,23 +127,23 @@ static void __cdecl Detach();
 ### <a name="remarks"></a>Note  
  Il `Detach` metodo rimuove in modo implicito un conteggio dei riferimenti dall'utilità di pianificazione.  
   
- Se non vi è alcuna utilità di pianificazione associata al contesto di chiamata, questo metodo genererà un [scheduler_not_attached](scheduler-not-attached-class.md) eccezione generata.  
+ Se è presente alcuna utilità di pianificazione associata al contesto di chiamata, questo metodo comporterà un [scheduler_not_attached](scheduler-not-attached-class.md) venga generata un'eccezione.  
   
- Chiamare questo metodo da un contesto che è all'interno e gestiti dal contesto che è stato collegato utilizzando un metodo diverso da, o un'utilità di pianificazione il [Scheduler:: Attach](scheduler-class.md#attach) o [CurrentScheduler:: Create](#create) metodi, comporterà un [improper_scheduler_detach](improper-scheduler-detach-class.md) eccezione generata.  
+ Chiamare questo metodo da un contesto è interno ed è gestito da un'utilità di pianificazione o un contesto che è stato collegato con un metodo diverso di [Scheduler:: Attach](scheduler-class.md#attach) o [CurrentScheduler:: Create](#create) metodi, comporterà un [improper_scheduler_detach](improper-scheduler-detach-class.md) venga generata un'eccezione.  
   
 ##  <a name="get"></a>Ottieni 
 
- Restituisce un puntatore all'utilità di pianificazione associata al contesto di chiamata, noto anche come utilità di pianificazione corrente.  
+ Restituisce un puntatore all'utilità di pianificazione associata al contesto di chiamata, detto anche l'utilità di pianificazione corrente.  
   
 ```
 static Scheduler* __cdecl Get();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Puntatore all'utilità di pianificazione associata al contesto di chiamata (l'utilità di pianificazione corrente).  
+ Un puntatore all'utilità di pianificazione associata al contesto di chiamata (utilità di pianificazione corrente).  
   
 ### <a name="remarks"></a>Note  
- Tale metodo determinerà la creazione dell'utilità di pianificazione predefinita del processo e/o il collegamento al contesto di chiamata se non è presente alcuna utilità di pianificazione attualmente associata al contesto di chiamata. Nessun riferimento aggiuntivo viene posizionato su di `Scheduler` oggetto restituito da questo metodo.  
+ Tale metodo determinerà la creazione dell'utilità di pianificazione predefinita del processo e/o il collegamento al contesto di chiamata se non è presente alcuna utilità di pianificazione attualmente associata al contesto di chiamata. Nessun riferimento aggiuntivo viene posizionato sul `Scheduler` oggetto restituito da questo metodo.  
   
 ##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
@@ -201,7 +184,7 @@ static unsigned int __cdecl Id();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Se un'utilità di pianificazione è associata al contesto di chiamata, un identificatore univoco dell'utilità di pianificazione; in caso contrario, il valore `-1`.  
+ Se un'utilità di pianificazione è associata al contesto di chiamata, un identificatore univoco per l'utilità di pianificazione; in caso contrario, il valore `-1`.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo non comporterà allegato dell'utilità di pianificazione se il contesto di chiamata non è già associato a un'utilità di pianificazione.  
@@ -228,7 +211,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
 ##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
- Cause passato l'handle di eventi di Windows il `_ShutdownEvent` parametro da segnalare quando viene arrestato e si distrugge l'utilità di pianificazione associata al contesto corrente. Al momento che l'evento viene segnalato, tutte le operazioni che è stata pianificata per l'utilità di pianificazione sono stata completata. Tramite questo metodo possono essere registrati più eventi di arresto.  
+ Cause passato l'handle di evento di `_ShutdownEvent` parametro venga segnalato quando viene chiuso e si distrugge l'utilità di pianificazione associata al contesto corrente. Al momento che l'evento viene segnalato, tutte le operazioni che è stata pianificata per l'utilità di pianificazione sono stata completata. Tramite questo metodo è possibile registrare più eventi di arresto.  
   
 ```
 static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
@@ -236,14 +219,14 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
   
 ### <a name="parameters"></a>Parametri  
  `_ShutdownEvent`  
- Handle per un oggetto evento di Windows che verrà segnalato dal runtime quando viene arrestato e si distrugge l'utilità di pianificazione associata al contesto corrente.  
+ Un handle a un oggetto evento di Windows che verrà segnalato dal runtime quando l'utilità di pianificazione associata al contesto corrente viene chiuso e distrugge.  
   
 ### <a name="remarks"></a>Note  
- Se non vi è alcuna utilità di pianificazione associata al contesto di chiamata, questo metodo genererà un [scheduler_not_attached](scheduler-not-attached-class.md) eccezione generata.  
+ Se è presente alcuna utilità di pianificazione associata al contesto di chiamata, questo metodo comporterà un [scheduler_not_attached](scheduler-not-attached-class.md) venga generata un'eccezione.  
   
 ##  <a name="scheduletask"></a>ScheduleTask 
 
- Pianifica un'attività leggera in utilità di pianificazione associata al contesto di chiamata. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.  
+ Pianifica un'attività leggera all'interno di utilità di pianificazione associata al contesto di chiamata. L'attività leggera sarà posizionata in un gruppo di pianificazione determinato dal runtime. La versione che accetta il parametro `_Placement` comporta che per l'attività venga data priorità all'esecuzione nella posizione specificata.  
   
 ```
 static void __cdecl ScheduleTask(
@@ -261,7 +244,7 @@ static void __cdecl ScheduleTask(
  Puntatore alla funzione da eseguire per utilizzare il corpo dell'attività leggera.  
   
  `_Data`  
- Un puntatore void per i dati che verranno passati come parametro nel corpo dell'attività.  
+ Un puntatore void per i dati che verranno passati come parametro per il corpo dell'attività.  
   
  `_Placement`  
  Riferimento a una posizione in cui per l'attività leggera verrà data priorità all'esecuzione.  
@@ -271,10 +254,9 @@ static void __cdecl ScheduleTask(
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
- [Scheduler (classe)](scheduler-class.md)   
+ [Classe di utilità di pianificazione](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [Utilità di pianificazione](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-
 
 
 

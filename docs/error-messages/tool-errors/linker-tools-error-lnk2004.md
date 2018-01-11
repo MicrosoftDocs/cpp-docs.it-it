@@ -1,34 +1,33 @@
 ---
-title: "Errore degli strumenti del linker LNK2004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2004"
+title: Strumenti del linker LNK2004 errore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2004
+dev_langs: C++
+helpviewer_keywords: LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdbd32bbc59d9c18df5544f07ec7e7097b9e02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore degli strumenti del linker LNK2004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-overflow della correzione relativa a gp in 'destinazione'; la sezione breve 'sezione' è troppo grande o non inclusa nell'intervallo.  
+# <a name="linker-tools-error-lnk2004"></a>Errore degli strumenti del linker LNK2004
+criteri di gruppo overflow della correzione relativa a 'target'; la sezione breve 'section' è troppo grande o non compreso nell'intervallo.  
   
  La sezione è troppo grande.  
   
- Per correggere questo errore, ridurre la dimensione della sezione breve inserendo i dati nella sezione di tipo long tramite \#pragma section\(".nomesezione", read, write, long\) e utilizzando `__declspec(allocate(".sectionname"))` nelle dichiarazioni e definizioni dei dati.  Di seguito è riportato un esempio:  
+ Per correggere l'errore, ridurre le dimensioni della sezione breve, in modo esplicito l'inserimento di dati nella sezione lungo tramite sezione #pragma ("nomesezione", lettura, scrittura, long) e utilizzando `__declspec(allocate(".sectionname"))` su dichiarazioni e definizioni di dati.  Ad esempio,  
   
 ```  
 #pragma section(".data$mylong", read, write, long)  
@@ -41,7 +40,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };  
 ```  
   
- È inoltre possibile spostare i dati raggruppati logicamente all'interno delle relative strutture in modo da creare una raccolta di dati più grandi di 8 byte, che verrà allocata in una sezione di dati long.  Di seguito è riportato un esempio:  
+ È inoltre possibile spostare i dati raggruppati logicamente in una struttura da una raccolta di dati maggiore di 8 byte, che verrà allocato in una sezione di dati di tipo long.  Ad esempio,  
   
 ```  
 // from this...  

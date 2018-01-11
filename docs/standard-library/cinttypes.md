@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8c188744ab421f7b15e5615e342656865f95a204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c505da4e5f955519667fe7513c675dc25ccb6eb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcinttypesgt"></a>&lt;cinttypes&gt;
 Include l'intestazione della libreria C standard \<inttypes.h>. Includendo questa intestazione si include anche \<cstdint>.  
@@ -36,7 +37,7 @@ Include l'intestazione della libreria C standard \<inttypes.h>. Includendo quest
  [\<cstdint >](../standard-library/cstdint.md)   
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)  (Panoramica sulla libreria standard C++)  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

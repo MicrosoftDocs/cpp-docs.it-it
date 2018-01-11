@@ -91,11 +91,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e1099d7d19ec27c55442ce6a0eff61486346466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed8ccb584b9bf750e1f17da9ce3e0bf71058abbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultipaneframewnd-class"></a>Classe CMultiPaneFrameWnd
 Il `CMultiPaneFrameWnd` classe estende [CPaneFrameWnd classe](../../mfc/reference/cpaneframewnd-class.md). Può supportare più riquadri. Anziché un singolo handle incorporato in una barra di controllo, `CMultiPaneFrameWnd` contiene un [CPaneContainerManager classe](../../mfc/reference/cpanecontainermanager-class.md) oggetto che consente all'utente di ancorare un `CMultiPaneFrameWnd` a altro e in modo dinamico creare più mobile, schede Windows.  
@@ -122,7 +123,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|Determina se è possibile ancorare il riquadro corrente a un'altra finestra riquadro o frame. (Esegue l'override [CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached).)|  
 |[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Determina se è possibile ancorare la finestra con mini-cornice a un riquadro. (Esegue l'override [CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|  
 |[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(Esegue l'override [CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|  
-|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|Esegue l'override di `CPaneFrameWnd::CloseMiniFrame`.|  
+|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|Esegue l'override`CPaneFrameWnd::CloseMiniFrame`.|  
 |[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Converte un riquadro in un documento a schede. (Esegue l'override [CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|  
 |[CMultiPaneFrameWnd::DockFrame](#dockframe)||  
 |[CMultiPaneFrameWnd::DockPane](#dockpane)|Ancora il riquadro. (Esegue l'override [CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane).)|  
@@ -145,7 +146,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 |[CMultiPaneFrameWnd::RemovePane](#removepane)|Rimuove un riquadro dalla finestra con mini-cornice. (Esegue l'override [CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane).)|  
 |[CMultiPaneFrameWnd::ReplacePane](#replacepane)|Sostituisce un riquadro con un altro. (Esegue l'override [CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane).)|  
 |[CMultiPaneFrameWnd::SaveState](#savestate)|Salva lo stato del riquadro nel Registro di sistema. (Esegue l'override [CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate).)|  
-|[CMultiPaneFrameWnd::Serialize](#serialize)|Esegue l'override di `CPaneFrameWnd::Serialize`.|  
+|[CMultiPaneFrameWnd::Serialize](#serialize)|Esegue l'override`CPaneFrameWnd::Serialize`.|  
 |[CMultiPaneFrameWnd::SetDockState](#setdockstate)|Imposta lo stato di ancoraggio. (Esegue l'override [CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate).)|  
 |[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||  
 |[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|Imposta lo stato di pre-ancoraggio. (Esegue l'override [CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).)|  

@@ -1,88 +1,89 @@
 ---
-title: "Grammatica del preprocessore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "grammatica, preprocessore"
-  - "preprocessore"
-  - "preprocessore, grammatica"
+title: Grammatica del preprocessore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Grammatica del preprocessore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *identifier* *token\-string*opt  
+# <a name="preprocessor-grammar"></a>Grammatica del preprocessore
+**#define***identificatore* *token-string*consenso esplicito    
   
- *\#* **define**  *identifier*\[**\(** *identifier*opt**,** *...* **,** *identifier*opt **\)**\] *token\-string*opt  
+ *#***definire***identificatore*[**(** *identificatore*opt**,** *...*  **,** *identificatore*opt **)**] *token-string*consenso esplicito    
   
- **defined\(**  *identifier* **\)**  
+ **definito (***identificatore* **)**   
   
- **defined**  *identifier*  
+ **definito***identificatore*   
   
- `#include` **"***path\-spec***"**  
+ `#include`**"***path-spec***"**  
   
- `#include` **\<***path\-spec***\>**  
+ `#include` **\<**  *path-spec***>**  
   
- **\#line**  *digit\-sequence*  **"** *filename* **"** opt  
+ **#line***sequenza di cifre***"** *filename* **"**consenso esplicito      
   
- *\#* **undef**  *identifier*  
+ *#***undef***identificatore*   
   
- **\#error**  *token\-string*  
+ **#error***token di stringa*   
   
- **\#pragma**  *token\-string*  
+ **#pragma***token di stringa*   
   
- *conditional* :  
- *if\-part elif\-parts* opt *else\-part*opt *endif\-line*  
+ *condizionale* :  
+ *Se parte elif-parti*opt*parte else*opt*endif riga*  
   
- *if\-part* :  
- *if\-linetext*  
+ *Se parte* :  
+ *Se linetext*  
   
- *if\-line* :  
- **\#if**  *constant\-expression*  
+ *Se-line* :  
+ **#if***espressione costante*   
   
- **\#ifdef**  *identifier*  
+ **#ifdef***identificatore*   
   
- **\#ifndef**  *identifier*  
+ **#ifndef***identificatore*   
   
- *elif\-parts* :  
- *elif\-line text*  
+ *elif parti* :  
+ *testo della riga di elif*  
   
- *elif\-parts elif\-line text*  
+ *testo della riga di elif elif parti*  
   
- *elif\-line* :  
- **\#elif**  *constant\-expression*  
+ *elif riga* :  
+ **#elif***espressione costante*   
   
- *else\-part* :  
- *else\-linetext*  
+ *parte else* :  
+ *Else linetext*  
   
- *else\-line* :  
+ *riga else* :  
  `#else`  
   
- *endif\-line* :  
+ *endif riga* :  
  `#endif`  
   
- *digit\-sequence* :  
+ *sequenza di cifre* :  
  *digit*  
   
- *digit\-sequence digit*  
+ *digit-sequence digit*  
   
- *digit* : uno tra  
+ *cifra* : uno dei  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *token\-string* :  
+ *stringa di token* :  
  Stringa di token  
   
  *token* :  
@@ -96,17 +97,17 @@ caps.handback.revision: 7
   
  `punctuator`  
   
- *filename* :  
+ *nome del file* :  
  Nome file del sistema operativo valido  
   
- *path\-spec* :  
+ *Path-spec* :  
  Percorso file valido  
   
- *text* :  
+ *testo* :  
  Qualsiasi sequenza di testo  
   
 > [!NOTE]
->  I seguenti non terminal sono descritti in modo dettagliato nell'Appendice A, [Riepilogo di grammatica](../misc/grammar-summary-cpp.md), di *Riferimenti al linguaggio C\+\+*: `constant`, `constant`\-*expression*, *identifier*, *keyword*, `operator` e `punctuator`.  
+>  I seguenti non terminal vengono espanse nel [convenzioni lessicali](../cpp/lexical-conventions.md) sezione la *riferimenti al linguaggio C++*: `constant`, `constant` - *espressione* , *identificatore*, *(parola chiave)*, `operator`, e `punctuator`.  
   
-## Vedere anche  
- [Riepilogo grammatica](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riepilogo grammatica (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

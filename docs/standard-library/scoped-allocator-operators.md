@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: d29a5a99f261776468364717a13b90a1ddde5216
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltscopedallocatorgt-operators"></a>Operatori &lt;scoped_allocator&gt;
 |||  
@@ -68,5 +66,4 @@ bool operator==(
   
 ## <a name="see-also"></a>Vedere anche  
  [<scoped_allocator>](../standard-library/scoped-allocator.md)
-
 

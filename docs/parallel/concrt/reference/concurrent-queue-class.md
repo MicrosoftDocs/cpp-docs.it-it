@@ -1,11 +1,10 @@
 ---
-title: Classe concurrent_queue | Documenti di Microsoft
+title: Classe concurrent_queue | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,34 +19,19 @@ f1_keywords:
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
 - CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
-dev_langs:
-- C++
-helpviewer_keywords:
-- concurrent_queue class
+dev_langs: C++
+helpviewer_keywords: concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentqueue-class"></a>Classe concurrent_queue
 La classe `concurrent_queue` è una classe contenitore di sequenze che consente l'accesso di tipo First in First out ai relativi elementi. Abilita un set limitato di operazioni sicure per concorrenza, ad esempio `push` e `try_pop`.  
@@ -64,7 +48,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
  Il tipo di dati degli elementi da archiviare nella coda.  
   
  `_Ax`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione di memoria per questa coda simultanea. Questo argomento è facoltativo e il valore predefinito è `allocator<``T``>`.  
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli sull'allocazione e deallocazione della memoria per la coda simultanea. Questo argomento è facoltativo e il valore predefinito è `allocator<T>`.  
   
 ## <a name="members"></a>Membri  
   
@@ -72,12 +56,12 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`allocator_type`|Un tipo che rappresenta la classe dell'allocatore per la coda simultanea.|  
-|`const_iterator`|Un tipo che rappresenta un non-thread-safe `const` iteratore sugli elementi in una coda simultanea.|  
-|`const_reference`|Tipo che fornisce un riferimento a un `const` elemento archiviato in una coda per la lettura e l'esecuzione simultanea `const` operazioni.|  
+|`allocator_type`|Tipo che rappresenta la classe allocator per la coda simultanea.|  
+|`const_iterator`|Un tipo che rappresenta un non thread-safe `const` iteratore sopra gli elementi in una coda simultanea.|  
+|`const_reference`|Un tipo che fornisce un riferimento a un `const` elemento archiviato in una coda per la lettura e l'esecuzione simultanea `const` operazioni.|  
 |`difference_type`|Tipo che fornisce la distanza signed tra due elementi in una coda simultanea.|  
 |`iterator`|Tipo che rappresenta un iteratore non thread-safe sugli elementi in una coda simultanea.|  
-|`reference`|Un tipo che fornisce un riferimento a un elemento archiviato in una coda simultanea.|  
+|`reference`|Tipo che fornisce un riferimento a un elemento archiviato in una coda simultanea.|  
 |`size_type`|Tipo che conta il numero di elementi in una coda simultanea.|  
 |`value_type`|Tipo che rappresenta il tipo di dati archiviati in una coda simultanea.|  
   
@@ -93,7 +77,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[clear](#clear)|Cancella la coda simultanea, distruggendo qualsiasi elemento attualmente in coda. Questo metodo non è indipendente dalla concorrenza.|  
-|[empty](#empty)|Verifica se la coda simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.|  
+|[empty](#empty)|Verifica se la coda simultanea è vuota al momento questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.|  
 |[get_allocator](#get_allocator)|Restituisce una copia dell'allocatore utilizzato per costruire la coda simultanea. Questo metodo è indipendente dalla concorrenza.|  
 |[push](#push)|Di overload. Accoda un elemento in corrispondenza della parte finale della coda simultanea. Questo metodo è indipendente dalla concorrenza.|  
 |[try_pop](#try_pop)|Rimuove un elemento dalla coda, se disponibile. Questo metodo è indipendente dalla concorrenza.|  
@@ -108,7 +92,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
  `concurrent_queue`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concurrent_queue.h  
+ **Intestazione:** concurrent_queue. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -143,7 +127,7 @@ concurrent_queue(_InputIterator _Begin,
   
 ### <a name="parameters"></a>Parametri  
  `_InputIterator`  
- Il tipo dell'iteratore di input che specifica un intervallo di valori.  
+ Il tipo di iteratore di input che specifica un intervallo di valori.  
   
  `_Al`  
  Classe Allocator da usare con questo oggetto.  
@@ -178,17 +162,17 @@ concurrent_queue(_InputIterator _Begin,
   
 ##  <a name="empty"></a>vuoto 
 
- Verifica se la coda simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.  
+ Verifica se la coda simultanea è vuota al momento questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.  
   
 ```
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se la coda simultanea è vuota nel momento in cui abbiamo visto, `false` in caso contrario.  
+ `true`Se la coda simultanea era vuota al momento si ricordi `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Sebbene questo metodo è indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`, il valore restituito potrebbe essere non corretto nel momento in cui viene controllato dal thread chiamante.  
+ Quando questo metodo è indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`, il valore restituito potrebbe non essere corretto nel momento in cui viene controllato dal thread chiamante.  
   
 ##  <a name="get_allocator"></a>get_allocator 
 
@@ -213,10 +197,10 @@ void push(T&& _Src);
   
 ### <a name="parameters"></a>Parametri  
  `_Src`  
- L'elemento da aggiungere alla coda.  
+ Elemento da aggiungere alla coda.  
   
 ### <a name="remarks"></a>Note  
- `push`indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`.  
+ `push`è indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`.  
   
 ##  <a name="try_pop"></a>try_pop 
 
@@ -234,9 +218,9 @@ bool try_pop(T& _Dest);
  `true`Se è stato rimosso correttamente dalla coda, un elemento `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Se un elemento è stato rimosso correttamente dalla coda, il parametro `_Dest` riceve il valore rimosso dalla coda, il valore originale nella coda viene distrutto e questa funzione restituisce `true`. Se si è verificato nessun elemento da rimuovere dalla coda, questa funzione restituisce `false` senza blocco e il contenuto di `_Dest` parametro sono definiti.  
+ Se un elemento è stato rimosso correttamente dalla coda, il parametro `_Dest` riceve il valore rimosso dalla coda, il valore originale nella coda viene distrutto e questa funzione restituisce `true`. Se si è verificato alcun elemento da rimuovere dalla coda, questa funzione restituisce `false` senza blocco e il contenuto del `_Dest` parametro sono definiti.  
   
- `try_pop`indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`.  
+ `try_pop`è indipendente dalla concorrenza rispetto alle chiamate ai metodi `push`, `try_pop`, e `empty`.  
   
 ##  <a name="unsafe_begin"></a>unsafe_begin 
 
@@ -252,7 +236,7 @@ const_iterator unsafe_begin() const;
  Un iteratore di tipo `iterator` o `const_iterator` all'inizio dell'oggetto della coda simultanea.  
   
 ### <a name="remarks"></a>Note  
- Gli iteratori per il `concurrent_queue` classe sono destinati principalmente per il debug, come sono lenti e iterazione non è indipendente dalla concorrenza relazione alle altre operazioni di coda.  
+ Gli iteratori per il `concurrent_queue` classe vengono principalmente per il debug, come sono lente e iterazione non è indipendente dalla concorrenza relazione alle altre operazioni di coda.  
   
 ##  <a name="unsafe_end"></a>unsafe_end 
 
@@ -268,7 +252,7 @@ const_iterator unsafe_end() const;
  Un iteratore di tipo `iterator` o `const_iterator` alla fine della coda simultanea.  
   
 ### <a name="remarks"></a>Note  
- Gli iteratori per il `concurrent_queue` classe sono destinati principalmente per il debug, come sono lenti e iterazione non è indipendente dalla concorrenza relazione alle altre operazioni di coda.  
+ Gli iteratori per il `concurrent_queue` classe vengono principalmente per il debug, come sono lente e iterazione non è indipendente dalla concorrenza relazione alle altre operazioni di coda.  
   
 ##  <a name="unsafe_size"></a>unsafe_size 
 
@@ -282,8 +266,7 @@ size_type unsafe_size() const;
  Le dimensioni della coda simultanea.  
   
 ### <a name="remarks"></a>Note  
- `unsafe_size`non è indipendente dalla concorrenza e può produrre risultati non corretti se chiamato contemporaneamente le chiamate ai metodi `push`, `try_pop`, e `empty`.  
+ `unsafe_size`non è indipendente dalla concorrenza e possono produrre risultati non corretti se chiamato contemporaneamente chiamate ai metodi `push`, `try_pop`, e `empty`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)
-

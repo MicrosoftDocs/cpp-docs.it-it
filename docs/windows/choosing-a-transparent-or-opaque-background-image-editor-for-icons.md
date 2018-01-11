@@ -1,63 +1,66 @@
 ---
-title: "Choosing a Transparent or Opaque Background (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opaque backgrounds"
-  - "background colors, images"
-  - "colors [C++], image"
-  - "Image editor [C++], transparent or opague backgrounds"
-  - "background images"
-  - "images [C++], transparency"
-  - "images [C++], opaque background"
-  - "transparent backgrounds"
-  - "transparency, background"
-  - "transparent backgrounds, images"
+title: Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- opaque backgrounds
+- background colors, images
+- colors [C++], image
+- Image editor [C++], transparent or opague backgrounds
+- background images
+- images [C++], transparency
+- images [C++], opaque background
+- transparent backgrounds
+- transparency, background
+- transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Choosing a Transparent or Opaque Background (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando si sposta o si copia una selezione da un'immagine, per impostazione predefinita i pixel della selezione corrispondenti al colore di sfondo corrente risultano trasparenti e in quanto tali non coprono i pixel nella posizione di destinazione.  
+# <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Selezione di uno sfondo opaco o trasparente (Editor di immagini per le icone)
+Quando si sposta o si copia una selezione da un'immagine, qualsiasi pixel della selezione che corrispondono al colore di sfondo corrente sono transparent per impostazione predefinita, essi non nascondano pixel nel percorso di destinazione.  
   
- È possibile passare da uno sfondo trasparente, ovvero l'impostazione predefinita, a uno sfondo opaco e viceversa.  Quando si utilizza uno strumento di selezione, le opzioni **Sfondo trasparente** e **Sfondo opaco** vengono visualizzate nel selettore di opzioni sulla barra degli strumenti dell'editor di immagini, come riportato di seguito.  
+ È possibile passare da uno sfondo trasparente (predefinito) a uno sfondo opaco e viceversa. Quando si utilizza uno strumento di selezione, il **sfondo trasparente** e **sfondo opaco** opzioni vengono visualizzate nel selettore di opzioni nella **Editor di immagini** barra degli strumenti (come illustrato di seguito).  
   
- ![Opzioni sfondo: opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
-Opzioni Sfondo trasparente e Sfondo opaco sulla barra degli strumenti dell'editor di immagini  
+ ![Opzioni sfondo &#45; opaco o trasparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+Opzioni trasparenti e opache sulla barra degli strumenti dell'Editor di immagini  
   
-### Per passare da uno sfondo trasparente a uno sfondo opaco e viceversa  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Per passare da uno sfondo trasparente e opaco  
   
-1.  Fare clic sul selettore **di opzioni** nella barra strumenti dell'**Editor di immagini**, quindi fare clic sull'icona appropriata:  
+1.  Nel **Editor di immagini** sulla barra degli strumenti, fare clic su di **opzione** selettore e quindi fare clic sull'icona appropriata:  
   
-    -   **Sfondo opaco \(O\)**: l'immagine esistente viene coperta da tutte le parti della selezione.  
+    -   **Sfondo opaco (O)**: immagine esistente viene coperta da tutte le parti della selezione.  
   
-    -   **Sfondo trasparente \(T\)**: nelle parti della selezione corrispondenti al colore di sfondo corrente viene visualizzata l'immagine esistente.  
+    -   **Sfondo trasparente (T)**: immagine esistente viene illustrato nelle parti della selezione che corrispondono al colore di sfondo corrente.  
   
- \- oppure \-  
+ \- oppure -  
   
--   Selezionare o deselezionare l'opzione **Opaco** del menu **Immagine**.  
+-   Nel **immagine** menu, seleziona o deselezionare **opaco**.  
   
- Il colore di sfondo può essere modificato mentre una selezione è già attiva, in modo da modificare le parti dell'immagine che risultano trasparenti.  
+ È possibile modificare il colore di sfondo durante l'esecuzione di una selezione attiva per modificare le parti dell'immagine sono transparent.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Utilizzo dei colori](../windows/working-with-color-image-editor-for-icons.md)

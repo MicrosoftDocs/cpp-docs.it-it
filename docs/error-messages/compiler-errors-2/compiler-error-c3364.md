@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3364
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3364
+f1_keywords: C3364
+dev_langs: C++
+helpviewer_keywords: C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cdf9f9a6d4ae6584ff3b30e71a0c74b0ca777afe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6ca9b4d5ca4362e1d728a854bb776573d25969d7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3364"></a>Errore del compilatore C3364
 'delegato': costruttore di delegato: l'argomento deve essere puntatore a funzione membro di classe gestita o una funzione globale  
@@ -54,4 +50,3 @@ int main() {
    // System::Delegate^ pD = gcnew D(pC, &C::mf);  
 }  
 ```  
-

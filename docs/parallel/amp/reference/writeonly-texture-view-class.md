@@ -1,11 +1,10 @@
 ---
-title: Classe writeonly_texture_view | Documenti di Microsoft
+title: Classe writeonly_texture_view | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,18 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5a051b8db98e36ced89783bfa1de2ab5f514c6bc
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writeonlytextureview-class"></a>Classe writeonly_texture_view
 Fornisce l'accesso writeonly su una trama.  
@@ -63,7 +47,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 #### <a name="parameters"></a>Parametri  
  `value_type`  
- Tipo degli elementi di trama.  
+ Tipo degli elementi nella trama.  
   
  `_Rank`  
  Il numero di dimensioni della trama.  
@@ -75,14 +59,14 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |Nome|Descrizione|  
 |----------|-----------------|  
 |`scalar_type`||  
-|`value_type`|Tipo degli elementi di trama.|  
+|`value_type`|Tipo degli elementi nella trama.|  
   
 ### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore writeonly_texture_view](#ctor)|Inizializza una nuova istanza della classe `writeonly_texture_view`.|  
-|[~ writeonly_texture_view distruttore](#ctor)|Elimina il `writeonly_texture_view` oggetto.|  
+|[~ writeonly_texture_view distruttore](#ctor)|Elimina definitivamente il `writeonly_texture_view` oggetto.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -94,11 +78,11 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.|  
+|[operator=](#operator_eq)|Copia l'oggetto specificato `writeonly_texture_view` questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Rank (costante)](#rank)|Ottiene il rango di `writeonly_texture_view` oggetto.|  
   
@@ -114,15 +98,15 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
   
 ##  <a name="dtor"></a>~ writeonly_texture_view 
 
- Elimina il `writeonly_texture_view` oggetto.  
+ Elimina definitivamente il `writeonly_texture_view` oggetto.  
   
 ```  
 ~writeonly_texture_view() restrict(amp,cpu);
 ```  
   
-##  <a name="operator_eq"></a>operatore = 
+##  <a name="operator_eq"></a>operator = 
 
- Copia l'oggetto specificato `writeonly_texture_view` a questo oggetto.  
+ Copia l'oggetto specificato `writeonly_texture_view` questo oggetto.  
   
 ```  
 writeonly_texture_view<value_type, _Rank>& operator= (
@@ -156,7 +140,7 @@ void set(
   
 ### <a name="parameters"></a>Parametri  
  `_Index`  
- L'indice dell'elemento.  
+ Indice dell'elemento.  
   
  `value`  
  Nuovo valore dell'elemento.  
@@ -181,11 +165,10 @@ writeonly_texture_view(
  Il numero di dimensioni della trama.  
   
  `value_type`  
- Tipo degli elementi di trama.  
+ Tipo degli elementi nella trama.  
   
  `_Src`  
  La trama che viene utilizzata per creare il `writeonly_texture_view`.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

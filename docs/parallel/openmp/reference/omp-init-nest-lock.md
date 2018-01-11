@@ -1,32 +1,31 @@
 ---
-title: "omp_init_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_nest_lock OpenMP function"
+title: omp_init_nest_lock | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_nest_lock OpenMP function
 ms.assetid: cf749ec5-de78-4186-9588-ac7c42b02463
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e137206b794344cc466b5b746e04235bd2fbf73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# omp_init_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-inizializza un blocco.  
+# <a name="ompinitnestlock"></a>omp_init_nest_lock
+Inizializza un blocco.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void omp_init_nest_lock(  
@@ -34,18 +33,18 @@ void omp_init_nest_lock(
 );  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
  `lock`  
- una variabile di tipo [omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
+ Una variabile di tipo [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
   
-## Note  
- Il numero iniziale di annidamento è zero.  
+## <a name="remarks"></a>Note  
+ Il numero iniziale di nidificazione è zero.  
   
- Per ulteriori informazioni, vedere [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+ Per ulteriori informazioni, vedere [3.2.1 funzioni omp_init_lock e omp_init_nest_lock funzioni](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_init_nest_lock.cpp  
@@ -82,29 +81,32 @@ int main() {
 }  
 ```  
   
-  **Thread 0 \- avviare area bloccata annidata**  
-**Thread 0 \- area bloccata annidata terminazione**  
-**Thread 0 \- avviare area bloccata annidata**  
-**Thread 0 \- area bloccata annidata terminazione**  
-**Thread 3 \- avviare area bloccata annidata**  
-**Thread 3 \- area bloccata annidata terminazione**  
-**Thread 3 \- avviare area bloccata annidata**  
-**Thread 3 \- area bloccata annidata terminazione**  
-**Thread 3 \- avviare area bloccata annidata**  
-**Thread 3 \- area bloccata annidata terminazione**  
-**Thread 2 \- avviare area bloccata annidata**  
-**Thread 2 \- area bloccata annidata terminazione**  
-**Thread 2 \- avviare area bloccata annidata**  
-**Thread 2 \- area bloccata annidata terminazione**  
-**Thread 2 \- avviare area bloccata annidata**  
-**Thread 2 \- area bloccata annidata terminazione**  
-**Thread 1 \- avviare area bloccata annidata**  
-**Thread 1 \- area bloccata annidata terminazione**  
-**Thread 1 \- avviare area bloccata annidata**  
-**Thread 1 \- area bloccata annidata terminazione**  
-**Thread 1 \- avviare area bloccata annidata**  
-**Thread 1 \- area bloccata annidata terminazione**  
-**Thread 0 \- avviare area bloccata annidata**  
-**Thread 0 \- area bloccata annidata terminazione**   
-## Vedere anche  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 3 - starting nested locked region  
+Thread 3 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 2 - starting nested locked region  
+Thread 2 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 1 - starting nested locked region  
+Thread 1 - ending nested locked region  
+Thread 0 - starting nested locked region  
+Thread 0 - ending nested locked region  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

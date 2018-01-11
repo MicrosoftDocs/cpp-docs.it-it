@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>Strutture di dati di sincronizzazione
 Il Runtime di concorrenza fornisce diverse strutture di dati che consentono di sincronizzare l'accesso ai dati condivisi da più thread. Queste strutture di dati sono utili quando si condividono i dati che vengono modificati raramente. Un oggetto di sincronizzazione, ad esempio, una sezione critica, causando altri thread in attesa fino a quando non è disponibile la risorsa condivisa. Pertanto, se si utilizza tale tipo di oggetto per sincronizzare l'accesso ai dati utilizzate di frequente, è possibile perdere la scalabilità dell'applicazione. Il [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) fornisce il [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (classe), che consente di condividere una risorsa tra diversi thread o attività senza la necessità di sincronizzazione. Per ulteriori informazioni sul `combinable` classe, vedere [contenitori e oggetti paralleli](../../parallel/concrt/parallel-containers-and-objects.md).  

@@ -1,37 +1,36 @@
 ---
-title: "Avviso del compilatore (livello 3) C4641 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4641"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4641"
+title: Compilatore avviso (livello 3) C4641 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4641
+dev_langs: C++
+helpviewer_keywords: C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c140bb3664f72646e74ab9f47909dade76a50ca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 3) C4641
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-3-c4641"></a>Avviso del compilatore (livello 3) C4641
 commento al documento XML con riferimento incrociato ambiguo  
   
- Non è stato possibile risolvere un riferimento in modo non ambiguo.  Per evitare di visualizzare l'avviso, specificare le informazioni sui parametri necessarie affinché il riferimento non sia ambiguo.  
+ Il compilatore non è riuscito a risolvere in modo univoco un riferimento. Per risolvere il problema, specificare le informazioni sui parametri necessari per rendere il riferimento non ambiguo.  
   
- Per ulteriori informazioni, vedere [Documentazione di XML](../../ide/xml-documentation-visual-cpp.md).  
+ Per altre informazioni, vedere [XML Documentation](../../ide/xml-documentation-visual-cpp.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4641:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4641.  
   
 ```  
 // C4641.cpp  

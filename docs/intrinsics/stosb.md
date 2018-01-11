@@ -1,69 +1,69 @@
 ---
-title: "__stosb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosb (istruzione)"
-  - "__stosb (funzione intrinseca)"
-  - "stosb (istruzione)"
+title: __stosb | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosb
+dev_langs: C++
+helpviewer_keywords:
+- rep stosb instruction
+- __stosb intrinsic
+- stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e86154a3d56d7ef9a27640dfe70f739c630de91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __stosb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="stosb"></a>__stosb
+**Sezione specifica Microsoft**  
   
- Genera un'istruzione della stringa dell'archivio \(`rep stosb`\).  
+ Genera un'istruzione di archivio stringa (`rep stosb`).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __stosb(   
-   unsigned char* Dest,   
-   unsigned char Data,   
-   size_t Count   
+void __stosb(   
+   unsigned char* Dest,   
+   unsigned char Data,   
+   size_t Count   
 );  
 ```  
   
-#### Parametri  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parametri  
+ [out] `Dest`  
  La destinazione dell'operazione.  
   
- \[in\] `Data`  
- Dati da memorizzare.  
+ [in] `Data`  
+ I dati da archiviare.  
   
- \[in\] `Count`  
+ [in] `Count`  
  La lunghezza del blocco di byte da scrivere.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__stosb`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il risultato è che il carattere `Data` viene scritto in un blocco di byte di `Count` nella stringa di `Dest` .  
+## <a name="remarks"></a>Note  
+ Il risultato è che il carattere `Data` viene scritto in un blocco di `Count` byte di `Dest` stringa.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // stosb.c  
@@ -85,8 +85,12 @@ int main()
 }  
 ```  
   
-  **\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*@@@@@@\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***   
-## Microsoft FINALE specifico  
+```Output  
+*********************************  
+*@@@@@@**************************  
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

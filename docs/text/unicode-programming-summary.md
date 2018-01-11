@@ -1,78 +1,79 @@
 ---
-title: "Riepilogo della programmazione Unicode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unicode [C++], funzioni MFC e di runtime del linguaggio C"
-  - "Unicode [C++], programmazione"
+title: Riepilogo della programmazione Unicode | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Unicode [C++], programming with
+- Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-caps.latest.revision: 8
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Riepilogo della programmazione Unicode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per utilizzare il supporto MFC e il supporto di runtime del linguaggio C per il formato Unicode, è necessario eseguire le operazioni riportate di seguito.  
+# <a name="unicode-programming-summary"></a>Riepilogo della programmazione Unicode
+Per sfruttare il supporto di run-time C e MFC per Unicode, è necessario:  
   
--   Definire **\_UNICODE**.  
+-   Definire **Unicode**.  
   
-     Definire il simbolo **\_UNICODE** prima di compilare il programma.  
+     Definire il simbolo **Unicode** prima di compilare il programma.  
   
 -   Specificare il punto di ingresso.  
   
-     Nella pagina **Output** della cartella Linker, all'interno della finestra di dialogo [Pagine delle proprietà](../ide/property-pages-visual-cpp.md) del progetto, impostare il simbolo del punto di ingresso su **wWinMainCRTStartup**.  
+     Nel **Output** pagina della cartella del progetto del Linker [pagine delle proprietà](../ide/property-pages-visual-cpp.md) finestra di dialogo, impostare il simbolo di punto di ingresso **wWinMainCRTStartup**.  
   
--   Utilizzare funzioni e tipi di runtime portabili.  
+-   Utilizzare le funzioni di runtime portabili e tipi.  
   
-     Utilizzare le funzioni appropriate di runtime del linguaggio C per la gestione delle stringhe Unicode.  È possibile utilizzare l'insieme di funzioni **wcs**, ma potrebbe essere preferibile l'utilizzo delle macro **\_TCHAR** completamente portabili, attivate a livello di impostazioni internazionali.  Queste macro sono tutte caratterizzate dal prefisso **\_tcs** e ciascuna di esse sostituisce la funzione corrispondente della famiglia **str**.  Queste funzioni sono descritte in dettaglio nella sezione [Internazionalizzazione](../c-runtime-library/internationalization.md) in *Riferimenti alla libreria di runtime*.  Per ulteriori informazioni, vedere [Mapping di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+     Utilizzare le funzioni di runtime C appropriate per la gestione delle stringhe Unicode. È possibile utilizzare il **wcs** famiglia di funzioni, ma è preferibile portabile completamente (abilitato a livello internazionale) **TCHAR** macro. Queste macro sono precedute tutte dal prefisso **tcs**; essi sostituire, uno per uno, per il **str** famiglia di funzioni. Queste funzioni sono descritte dettagliatamente nel [internazionalizzazione](../c-runtime-library/internationalization.md) sezione la *riferimenti alla libreria di Run-Time*. Per ulteriori informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).  
   
-     Utilizzare **\_TCHAR** e i tipi di dati portabili correlati descritti in [Supporto per Unicode](../text/support-for-unicode.md).  
+     Utilizzare **TCHAR** e i tipi di dati portabili correlati descritti [il supporto per Unicode](../text/support-for-unicode.md).  
   
--   Gestire in modo appropriato le stringhe effettive.  
+-   Gestire correttamente le stringhe letterali.  
   
-     Il compilatore di Visual C\+\+ interpreta una stringa effettiva codificata nel modo seguente:  
+     Il compilatore Visual C++ interpreta una stringa letterale codificata come:  
   
     ```  
     L"this is a literal string"  
     ```  
   
-     come una stringa di caratteri Unicode.  È possibile utilizzare lo stesso prefisso per i caratteri effettivi.  Utilizzare le macro **\_T** per codificare le stringhe effettive in modo generico, in modo che vengano compilate come stringhe Unicode in modalità Unicode o come stringhe ANSI, compreso il formato MBCS, in modalità non Unicode.  Anziché, ad esempio:  
+     per indicare una stringa di caratteri Unicode. È possibile utilizzare lo stesso prefisso per i caratteri effettivi. Utilizzare il **t** macro per codificare le stringhe letterali in modo generico, pertanto vengono compilate come stringhe Unicode in Unicode o come stringhe ANSI (compreso il formato MBCS) non Unicode. Ad esempio, invece di:  
   
     ```  
     pWnd->SetWindowText( "Hello" );  
     ```  
   
-     utilizzare:  
+     Utilizzo:  
   
     ```  
     pWnd->SetWindowText( _T("Hello") );  
     ```  
   
-     Se si definisce **\_UNICODE**, **\_T** converte la stringa letterale nel formato con prefisso "L". In caso contrario, **\_T** converte la stringa senza il prefisso "L".  
+     Con **Unicode** definito, **t** Converte la stringa letterale per il form con prefisso L; in caso contrario, **t** Converte la stringa senza il prefisso L.  
   
     > [!TIP]
-    >  La macro **\_T** è identica alla macro `_TEXT`.  
+    >  Il **t** macro è identica al `_TEXT` (macro).  
   
--   Prestare attenzione quando si passa la lunghezza delle stringhe alle funzioni.  
+-   Prestare attenzione passaggio lunghezze di stringa alle funzioni.  
   
-     Alcune funzioni richiedono il numero di caratteri della stringa, mentre altre richiedono il numero di byte.  Se, ad esempio, si definisce **\_UNICODE**, la seguente chiamata a un oggetto `CArchive` non verrà eseguita correttamente \(`str` è di tipo `CString`\):  
+     Alcune funzioni auspicabile che il numero di caratteri in una stringa. altri auspicabile che il numero di byte. Ad esempio, se **Unicode** è definito, la seguente chiamata a un `CArchive` oggetto non funzionerà (`str` è un `CString`):  
   
     ```  
     archive.Write( str, str.GetLength( ) );    // invalid  
     ```  
   
-     In un'applicazione Unicode, la lunghezza indica il numero di caratteri, ma non il numero corretto di byte, poiché ciascun carattere occupa due byte.  È invece necessario utilizzare:  
+     In un'applicazione Unicode, la lunghezza indica il numero di caratteri, ma non il numero corretto di byte, perché ogni carattere è 2 byte. In alternativa, è necessario utilizzare:  
   
     ```  
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid  
@@ -80,25 +81,25 @@ Per utilizzare il supporto MFC e il supporto di runtime del linguaggio C per il 
   
      che specifica il numero corretto di byte da scrivere.  
   
-     Tuttavia, le funzioni membro MFC, che sono orientate ai caratteri anziché ai byte, funzionano anche senza questa codifica supplementare:  
+     Tuttavia, le funzioni membro MFC che sono orientate ai caratteri anziché orientato ai byte, funzionano anche senza questa codifica supplementare:  
   
     ```  
     pDC->TextOut( str, str.GetLength( ) );  
     ```  
   
-     `CDC::TextOut` richiede il numero di caratteri, non il numero di byte.  
+     `CDC::TextOut`accetta un numero di caratteri, non un numero di byte.  
   
--   Per aprire i file Unicode, utilizzare [fopen\_s, \_wfopen\_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).  
+-   Utilizzare [fopen_s, wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) per aprire i file Unicode.  
   
- Riassumendo, MFC e la libreria di runtime forniscono il seguente supporto per la programmazione Unicode in Windows 2000:  
+ Per riepilogare, MFC e la libreria run-time forniscono il supporto per Unicode seguente programmazione in Windows 2000:  
   
--   Fatta eccezione per le funzioni membro delle classi di database, tutte le funzioni MFC sono abilitate per il formato Unicode, incluso `CString`.  Quest'ultimo fornisce anche le funzioni di conversione Unicode\/ANSI.  
+-   Ad eccezione delle funzioni membro di classe database, tutte le funzioni MFC sono abilitata per Unicode, tra cui `CString`. `CString`fornisce inoltre funzioni di conversione Unicode/ANSI.  
   
--   La libreria di runtime fornisce le versioni Unicode di tutte le funzioni per la gestione delle stringhe, nonché le versioni portabili adatte al formato Unicode o MBCS,  ovvero le macro **\_tcs**.  
+-   La libreria run-time fornisce versioni Unicode delle tutte le funzioni di gestione delle stringhe. (La libreria run-time fornisce anche le versioni portabili adatte per Unicode o MBCS. Si tratta di **tcs** macro.)  
   
--   Tchar.h fornisce tipi di dati portabili e le macro **\_T** per la conversione delle stringhe e dei caratteri letterali.  Per ulteriori informazioni, vedere [Mapping di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+-   Tchar. h fornisce tipi di dati portabili e **t** macro per la conversione di stringhe letterali e caratteri. Per ulteriori informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).  
   
--   La libreria di runtime fornisce una versione a caratteri estesi di **main**.  Utilizzare **wmain** per fare in modo che l'applicazione riconosca il formato Unicode.  
+-   La libreria run-time fornisce una versione a caratteri wide di **principale**. Utilizzare **wmain** per rendere l'applicazione riconosce il formato Unicode.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Supporto per Unicode](../text/support-for-unicode.md)

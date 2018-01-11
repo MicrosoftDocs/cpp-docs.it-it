@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_assignable
+f1_keywords: type_traits/std::is_assignable
+dev_langs: C++
+helpviewer_keywords: is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ba99c19328b576900b1c269c24949baa832c8be7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3801ef0c7a4642dd3c07b714441e49d7d5ac6bc0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isassignable-class"></a>Classe is_assignable
 Verifica se un valore di tipo `From` può essere assegnato a un tipo `To`.  
@@ -53,7 +49,6 @@ struct is_assignable;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

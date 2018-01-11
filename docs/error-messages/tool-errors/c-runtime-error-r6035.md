@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>R6035 di errore di Runtime C
 Microsoft Visual C++ libreria di Runtime R6035 errore - un modulo in questa applicazione sta inizializzando i cookie di sicurezza globale del modulo, mentre è attiva una funzione basarsi su tale cookie di sicurezza.  Chiamata di security_init_cookie in precedenza.  
@@ -76,4 +77,4 @@ void DllEntryHelper() {
 >  Messaggio di errore R6035 viene generato da x86 solo eseguire il debug CRT, e solo per la gestione delle eccezioni strutturata, ma la condizione di errore in tutte le piattaforme e per tutti i tipi di eccezione gestisce, ad esempio EH di C++.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controlli di sicurezza del compilatore in dettaglio](http://go.microsoft.com/fwlink/?linkid=7260)
+ [Controlli di sicurezza del compilatore in dettaglio](http://go.microsoft.com/fwlink/p/?linkid=7260)

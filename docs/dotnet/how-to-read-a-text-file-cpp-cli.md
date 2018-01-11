@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68add197649dd494225787775ab772e8ffc0fc89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>Procedura: leggere un file di testo (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato come aprire e leggere un file di testo di una riga alla volta, tramite il <xref:System.IO.StreamReader> classe è definita in cui il <xref:System.IO?displayProperty=fullName> dello spazio dei nomi. Un'istanza di questa classe viene utilizzata per aprire un file di testo e quindi la <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> metodo viene utilizzato per recuperare ogni riga.  

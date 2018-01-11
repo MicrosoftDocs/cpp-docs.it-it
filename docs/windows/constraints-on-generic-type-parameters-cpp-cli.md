@@ -17,14 +17,17 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01cd21e00cbf8947f5eb2ff8d2f578ab4912a03a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Vincoli su parametri di tipo generico (C++/CLI)
-Nelle dichiarazioni di metodo o di tipo generico è possibile qualificare un parametro di tipo con vincoli. Un vincolo è un requisito che deve essere soddisfatto dai tipi utilizzati come argomenti di tipo. Ad esempio, un vincolo potrebbe essere l'implementazione obbligatoria di una determinata interfaccia o l'eredità da una classe specifica da parte dell'argomento di tipo.  
+Nelle dichiarazioni di metodo o di tipo generico è possibile qualificare un parametro di tipo con vincoli. Un vincolo è un requisito che deve essere soddisfatto dai tipi utilizzati come argomenti tipo. Ad esempio, un vincolo potrebbe essere l'implementazione obbligatoria di una determinata interfaccia o l'eredità da una classe specifica da parte dell'argomento di tipo.  
   
  I vincoli sono facoltativi; la mancata specifica di un vincolo per un parametro equivale a vincolare quel parametro a <xref:System.Object>.  
   
@@ -42,11 +45,11 @@ where type-parameter: constraint list
  *elenco di vincoli*  
  *elenco di vincoli* è un elenco delimitato da virgole di specifiche del vincolo. Nell'elenco possono essere incluse le interfacce che devono essere implementate dal parametro di tipo.  
   
- Inoltre può essere compresa una classe. Affinché l'argomento di tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.  
+ Inoltre può essere compresa una classe. Affinché l'argomento tipo soddisfi un vincolo della classe base, deve trattarsi di una classe uguale a quella del vincolo o derivare dal vincolo.  
   
  È inoltre possibile specificare `gcnew()` per indicare che per l'argomento di tipo deve essere disponibile un costruttore pubblico senza parametri oppure `ref class` per indicare che l'argomento di tipo deve essere un tipo di riferimento, inclusi qualsiasi classe, interfaccia, delegato o tipo di matrice oppure `value class` per indicare che l'argomento di tipo deve essere un tipo di valore. Qualsiasi tipo di valore tranne Nullable\<T > può essere specificato.  
   
- È inoltre possibile specificare un parametro generico come vincolo. L'argomento di tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo. Ciò viene definito vincolo di tipo naked.  
+ È inoltre possibile specificare un parametro generico come vincolo. L'argomento tipo fornito per il tipo che si sta vincolando deve corrispondere o derivare dal tipo del vincolo. Ciò viene definito vincolo di tipo naked.  
   
 ## <a name="remarks"></a>Note  
  La clausola di vincolo è costituito da **in** seguito da un parametro di tipo, i due punti (**:**) e dal vincolo tramite cui viene specificata la natura della restrizione per il parametro di tipo. **dove** è una parola chiave sensibile al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md) per ulteriori informazioni. Separare più **dove** clausole con uno spazio.  

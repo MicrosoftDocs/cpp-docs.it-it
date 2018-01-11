@@ -13,16 +13,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 993cfcc7247b67fbc84b135e95746ae0df3b6f1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2d3ec38f4c5607b2dbb1739af9449df0f427e93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>Interoperabilità con altri linguaggi .NET (C++/CLI)
 Gli argomenti in questa sezione illustrano come creare gli assembly in Visual C++ che utilizzano da o offrono funzionalità agli assembly scritti in c# o Visual Basic.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Implementare le parole chiave is e as di C# (C++/CLI)](../dotnet/how-to-implement-is-and-as-csharp-keywords-cpp-cli.md)  
   
  [Procedura: Implementare la parola chiave lock di C# (C++/CLI)](../dotnet/how-to-implement-the-lock-csharp-keyword-cpp-cli.md)  

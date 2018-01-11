@@ -1,7 +1,7 @@
 ---
 title: Errori matematici da M6101 a M6205 | Documenti Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37aa175dff030898cc99e327535b947256ce1274
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9998343b63f9d39b300bfe27892cd8f059efec84
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="math-errors-m6101-through-m6205"></a>Errori matematici da M6101 a M6205
-In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per ottenere informazioni su un determinato messaggio di errore, fare clic sul corrispondente numero di errore nella finestra di Output e premere F1 oppure digitare il numero di errore nel **cercare** dell'indice.
+
+In questa sezione è un riferimento per gli errori generati dalla libreria matematica a virgola mobile di runtime.
+
+È possibile trovare ulteriore assistenza per errori e avvisi nei forum pubblici di Microsoft. È possibile cercare per numero di errore o avviso di [Community di sviluppatori](https://go.microsoft.com/fwlink/p/?linkid=820594) sito. Il [del linguaggio Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158195) forum è a domande e discussioni sulla sintassi del linguaggio C++ e il compilatore opzioni: MSVC. Il [generali di Visual C++](http://go.microsoft.com/fwlink/p/?linkid=158194) forum è per domande su Visual C++ che non sono trattate in altri forum. È anche possibile eseguire la ricerca di errori e avvisi e porre domande su [Overflow dello Stack](http://stackoverflow.com/) per trovare soluzioni.
+
+Per collegamenti a ulteriori informazioni e risorse della community, vedere [della Guida di Visual C++ e Community](../../visual-cpp-help-and-community.md).

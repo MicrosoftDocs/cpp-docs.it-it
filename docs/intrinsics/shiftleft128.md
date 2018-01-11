@@ -1,64 +1,67 @@
 ---
-title: "__shiftleft128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__shiftleft128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__shiftleft128 intrinsic"
+title: shiftleft128 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __shiftleft128
+dev_langs: C++
+helpviewer_keywords: __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1cfb3ed19fce5c737e7b30139ccaf01739888fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __shiftleft128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="shiftleft128"></a>__shiftleft128
 **Sezione specifica Microsoft**  
   
  Sposta una quantità di 128 bit, rappresentata come due quantità di 64 bit `LowPart` e `HighPart`, a sinistra di un numero di bit specificato da `Shift` e restituisce i 64 bit più significativi del risultato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned __int64 __shiftleft128(     unsigned __int64 LowPart,     unsigned __int64 HighPart,     unsigned char Shift  );  
+unsigned __int64 __shiftleft128(   
+   unsigned __int64 LowPart,   
+   unsigned __int64 HighPart,   
+   unsigned char Shift   
+);  
 ```  
   
-#### Parametri  
- \[in\] `LowPart`  
+#### <a name="parameters"></a>Parametri  
+ [in] `LowPart`  
  I 64 bit meno significativi della quantità di 128 bit da spostare.  
   
- \[in\] `HighPart`  
+ [in] `HighPart`  
  I 64 bit più significativi della quantità di 128 bit da spostare.  
   
- \[in\] `Shift`  
+ [in] `Shift`  
  Numero di bit da spostare.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  I 64 bit più significativi del risultato.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il valore `Shift` è sempre modulo 64 in modo che, ad esempio, se si chiama `__shiftleft128(1, 0, 64)`, la funzione sposterà la parte meno significativa di `0` bit a sinistra e restituirà la parte più significativa di `0` e non di `1`, come ci si aspetterebbe altrimenti.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // shiftleft128.c  
@@ -91,10 +94,13 @@ int main()
 }  
 ```  
   
-  **0x100000000000000001 \<\< 1 \= 0x200000000000000002**  
-**0x100000000000000001 \>\> 1 \= 0x080000000000000000**   
-## Fine sezione specifica Microsoft  
+```Output  
+0x100000000000000001 << 1 = 0x200000000000000002  
+0x100000000000000001 >> 1 = 0x080000000000000000  
+```  
   
-## Vedere anche  
- [\_\_shiftright128](../intrinsics/shiftright128.md)   
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
+ [__shiftright128](../intrinsics/shiftright128.md)   
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

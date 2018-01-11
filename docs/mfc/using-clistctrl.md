@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1ffbffede067a34c737216a95351f097ca0eed7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc61b0bb9e1df702424c2e95d3d4ef3b2186dea0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-clistctrl"></a>Utilizzo di CListCtrl
 Utilizzare un controllo elenco per visualizzare qualsiasi disposizione di icone con etichette, come in Esplora file, oppure elenchi in formato colonna di testo, con o senza icone. Per una descrizione delle quattro possibili "visualizzazioni" (non devono essere confuse con le visualizzazioni MFC) è disponibile in un controllo elenco, visualizzazione con icone, visualizzazione Icone piccole, visualizzazione elenco e visualizzazione di report, vedere le visualizzazioni nel [CListCtrl](../mfc/reference/clistctrl-class.md) Cenni preliminari sulla classe.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator!=
-- random/std::gamma_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gamma_distribution [C++]
 - std::gamma_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 048f1956d84837512a3273eeae089d6ffef00ced
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gammadistribution-class"></a>Classe gamma_distribution
 Genera una distribuzione gamma.  
@@ -95,7 +92,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
   
 Le funzioni di proprietà `alpha()` e `beta()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *alpha* e *beta*.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
@@ -105,7 +102,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione gamma](http://go.microsoft.com/fwlink/LinkId=401111).  
+Per informazioni dettagliate, vedere l'articolo di Wolfram MathWorld relativo alla [distribuzione gamma](http://go.microsoft.com/fwlink/p/?linkid=401111).  
   
 ## <a name="example"></a>Esempio  
   
@@ -251,7 +248,6 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
 [\<random>](../standard-library/random.md)
-
 
 
 

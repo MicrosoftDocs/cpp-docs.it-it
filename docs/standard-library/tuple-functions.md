@@ -10,13 +10,9 @@ f1_keywords:
 - tuple/std::get
 - tuple/std::make_tuple
 - tuple/std::tie
-- tuple/std::get
-- tuple/std::make_tuple
-- tuple/std::tie
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::get [C++]
@@ -25,12 +21,11 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
+ms.openlocfilehash: a81820c920339bb3e006af6df11bda855d4d33ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3404df4c21b1abb4153c6163f1fd5537ed87928e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-functions"></a>Funzioni &lt;tuple&gt;
 ||||  
@@ -230,5 +225,4 @@ int main() {
   
 ## <a name="see-also"></a>Vedere anche  
  [\<tuple>](../standard-library/tuple.md)
-
 

@@ -1,44 +1,44 @@
 ---
-title: "File di risorse (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di file [C++], file di risorse"
-  - "file di risorse"
-  - "risorse [C++]"
+title: Il file di risorse (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resource files
+- resources [C++]
+- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# File di risorse (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Le risorse rappresentano elementi di interfaccia che forniscono informazioni all'utente.  Sono considerati risorse le bitmap, le icone, le barre degli strumenti e i cursori.  È possibile modificare alcune risorse in modo da eseguire determinate operazioni come la selezione da un menu o l'immissione di dati in una finestra di dialogo.  
+# <a name="resource-files-c"></a>File di risorse (C++)
+Le risorse sono gli elementi dell'interfaccia che forniscono informazioni all'utente. Bitmap, icone, barre degli strumenti e i cursori sono tutte le risorse. Alcune risorse possono essere modificate per eseguire un'azione, ad esempio la selezione da un menu o l'immissione di dati nella finestra di dialogo.  
   
- Per ulteriori informazioni, vedere [Utilizzo delle risorse](../mfc/working-with-resource-files.md).  
+ Vedere [utilizzo delle risorse](../windows/working-with-resource-files.md) per ulteriori informazioni.  
   
 |Nome file|Directory|Esplora soluzioni|Descrizione|  
-|---------------|---------------|-----------------------|-----------------|  
-|*Projname*.rc|*Projname*|File di origine|File di script di risorsa del progetto,  contenente, a seconda del tipo di progetto e del supporto selezionato \(ad esempio barre degli strumenti, finestre di dialogo o HTML\), i seguenti elementi:<br /><br /> -   Definizione di menu predefiniti<br />-   Tabelle di stringhe e tasti di scelta rapida<br />-   Finestra di dialogo **Informazioni su** predefinita.<br />-   Ulteriori finestre di dialogo<br />-   File icona \(res\\*Projname*.ico\)<br />-   Informazioni sulla versione<br />-   Bitmap<br />-   Barra degli strumenti<br />-   File HTML<br /><br /> Il file di risorse include il file Afxres.rc per le risorse MFC standard.|  
-|Resource.h|*Projname*|File di intestazione|File di intestazione di risorsa comprendente le definizioni delle risorse utilizzate dal progetto.|  
-|*Projname*.rc2|*Projname*\\res|File di origine|File di script contenente risorse aggiuntive utilizzate dal progetto.  È possibile includere il file RC2 all'inizio del file RC del progetto.<br /><br /> Un file RC2 si rivela utile per includere risorse utilizzate da più progetti diversi.  Anziché creare le stesse risorse più volte per i diversi progetti, è possibile inserire tali risorse in un file RC2 e quindi includere quest'ultimo nel file RC principale.|  
-|*Projname*.def|*Projname*|File di origine|File di definizione modulo di un progetto DLL.  Per un controllo, fornisce il nome e la descrizione, nonché la dimensione dell'heap di runtime.|  
-|*Projname*.ico|*Projname*\\res|File di risorse|File icona per il progetto o il controllo,  visualizzato quando l'applicazione viene ridotta a icona.  L'icona viene inoltre utilizzata nella finestra **Informazioni su** dell'applicazione.  Per impostazione predefinita, MFC e ATL forniscono rispettivamente l'icona MFC e ATL.|  
-|*Projname*Doc.ico|*Projname*\\res|File di risorse|File icona per un progetto MFC dotato di supporto per l'architettura documento\/visualizzazione.|  
-|Toolbar.bmp|*Projname*\\res|File di risorse|File bitmap che rappresenta l'applicazione o il controllo in una barra degli strumenti o in una tavolozza.  Questa bitmap è inclusa nel file di risorse del progetto.  La barra di stato e la barra degli strumenti iniziali vengono costruite nella classe **CMainFrame**.|  
-|ribbon.mfcribbon\-ms|*Projname*\\res|File di risorse|File di risorse contenente il codice XML che definisce i pulsanti, i controlli e gli attributi della barra multifunzione.  Per ulteriori informazioni, vedere [Finestra di progettazione della barra multifunzione \(MFC\)](../mfc/ribbon-designer-mfc.md).|  
+|---------------|------------------------|--------------------------------|-----------------|  
+|*NomeProgetto*RC|*NomeProgetto*|File di origine|File di script di risorsa per il progetto. Il file di script di risorsa contiene i seguenti, a seconda del tipo di progetto e il supporto selezionato per il progetto (ad esempio, le barre degli strumenti, finestre di dialogo o HTML):<br /><br /> -Definizione di menu default.<br />-Tabelle di stringhe e tasti di scelta rapida<br />-Il valore predefinito **su** la finestra di dialogo.<br />-Altre finestre di dialogo.<br />-File icona (res\\*Projname*. ico).<br />-Informazioni sulla versione.<br />-Bitmap.<br />-Barra degli strumenti.<br />-File HTML.<br /><br /> Il file di risorse include il file AFXRES. per le risorse standard di Microsoft Foundation Class.|  
+|Resource.h|*NomeProgetto*|File di intestazione|Il file di intestazione di risorse che include le definizioni per le risorse utilizzate dal progetto.|  
+|*NomeProgetto*RC2|*NomeProgetto*\res|File di origine|Il file di script contenente risorse aggiuntive utilizzate dal progetto. È possibile includere il file RC2 all'inizio del file RC del progetto.<br /><br /> Un file RC2 è utile per includere le risorse usate da progetti diversi. Anziché creare le stesse risorse più volte per progetti diversi, è possibile inserirli in un file RC2 e includere il file RC2 nel file RC principale.|  
+|*NomeProgetto*. def|*NomeProgetto*|File di origine|File di definizione del modulo per un progetto DLL. Per un controllo, fornisce il nome e descrizione del controllo, nonché le dimensioni dell'heap di runtime.|  
+|*NomeProgetto*ico|*NomeProgetto*\res|File di risorse|Il file dell'icona per il progetto o un controllo. Questa icona viene visualizzata quando l'applicazione è ridotta a icona. Viene usato anche dell'applicazione **su** casella. Per impostazione predefinita, MFC fornisce l'icona MFC e ATL fornisce l'icona ATL.|  
+|*NomeProgetto*doc. ico|*NomeProgetto*\res|File di risorse|Il file dell'icona per un progetto MFC che include il supporto per l'architettura documento/visualizzazione.|  
+|ToolBar.bmp|*NomeProgetto*\res|File di risorse|Il file di mappa di bit che rappresenta l'applicazione o il controllo in una barra degli strumenti o una tavolozza. Questa bitmap è incluso nel file di risorse del progetto. La barra degli strumenti iniziale e una barra di stato vengono costruiti nel **CMainFrame** classe.|  
+|Ribbon.mfcribbon ms|*NomeProgetto*\res|File di risorse|Il file di risorse che contiene il codice XML che definisce i pulsanti, controlli e gli attributi della barra multifunzione. Per altre informazioni, vedere [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md).|  
   
-## Vedere anche  
- [Tipi di file creati per i progetti di Visual C\+\+](../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)

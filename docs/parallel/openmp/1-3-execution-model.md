@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dddc4c10a77ca5dd277435837169478e0d5daca5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="13-execution-model"></a>1.3 Modello di esecuzione
 OpenMP utilizza il modello fork-join dell'esecuzione parallela. Sebbene il modello fork-join possa risultare utile per risolvere vari problemi, piuttosto progettato per applicazioni basate su matrici di grandi dimensioni. OpenMP è progettato per applicazioni di supporto che verranno eseguito correttamente entrambe come i programmi parallelo (più thread di esecuzione e una libreria di supporto OpenMP completa) e come i programmi sequenziali (direttive ignorate e una libreria di stub OpenMP semplice). Tuttavia, è possibile ed è consentito per lo sviluppo di un programma che non si comporta correttamente quando eseguita in modo sequenziale. Inoltre, diversi gradi di parallelismo potrebbe risultati numerici diversi a causa delle modifiche nell'associazione di operazioni numeriche. Ad esempio, una riduzione dell'addizione seriale potrebbe essere un modello di associazioni di aggiunta di una riduzione parallela. Queste associazioni diverse possono modificare i risultati di addizione a virgola mobile.  

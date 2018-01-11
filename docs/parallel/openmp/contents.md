@@ -13,13 +13,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90f1277375d6c42c99df80f583d5062cf17c083f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46a879f8509aaf0ec97346b3c7e8d8c9457cade
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="contents"></a>Contenuto
+# <a name="contents"></a>Sommario
 [1. Introduzione](../../parallel/openmp/1-introduction.md)  
   
  [1.1 Ambito](../../parallel/openmp/1-1-scope.md)  

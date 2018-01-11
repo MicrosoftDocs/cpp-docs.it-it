@@ -1,32 +1,31 @@
 ---
-title: "Avviso del compilatore (livello 1) C4533 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4533"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4533"
+title: Compilatore avviso (livello 1) C4533 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4533
+dev_langs: C++
+helpviewer_keywords: C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d2cf5a2c4cf663aab73279fc9ff0e0a9c878127b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4533
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-inizializzazione di 'variabile' ignorata da un'istruzione 'goto istruzione'  
+# <a name="compiler-warning-level-1-c4533"></a>Avviso del compilatore (livello 1) C4533
+inizializzazione di 'variable' ignorata da 'istruzione'  
   
- Un'istruzione nel programma ha modificato il flusso di controllo, in modo tale che non è stata eseguita un'istruzione che inizializza una variabile.  Il seguente codice di esempio genera l'errore C4533:  
+ Un'istruzione del programma di modificata il flusso di controllo, in modo che non è stata eseguita un'istruzione che Inizializza una variabile. L'esempio seguente genera l'errore C4533:  
   
 ```  
 // C4533.cpp  

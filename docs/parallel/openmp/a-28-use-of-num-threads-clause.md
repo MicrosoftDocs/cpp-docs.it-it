@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be3da02ea7938b96da16a763111139c4f69335ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 119ff2c78a90dc36baab38925b28ec6b2ff844dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   Utilizzo della clausola num_threads
 Nell'esempio seguente viene illustrato il `num_threads` clausola ([sezione 2.3](../../parallel/openmp/2-3-parallel-construct.md) nella pagina 8). Area parallela viene eseguita con un massimo di 10 thread.  

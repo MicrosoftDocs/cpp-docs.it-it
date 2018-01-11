@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 839a597624c0f1a00ab983ecd5f2f31aeefbd953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7b9c76ffd4366522dce366a165698bd3a26173
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Aggiornamento di un controllo ActiveX esistente
 Controlli ActiveX esistente (precedentemente controlli OLE) può essere utilizzato su Internet senza alcuna modifica. Tuttavia, è consigliabile modificare i controlli per migliorarne le prestazioni. Quando si utilizza il controllo in una pagina Web, esistono ulteriori considerazioni. Il file ocx e tutti i file di supporto devono essere nel computer di destinazione o essere scaricati attraverso Internet. In questo modo le dimensioni del codice e una parte importante di tempi di download. Download possono essere inseriti in un file CAB con firma digitale. È possibile contrassegnare il controllo come sicuri per lo script e come sicuri per l'inizializzazione.  
@@ -85,7 +86,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
  File CAB sono il modo consigliato per i controlli ActiveX pacchetto che utilizza MFC. Creazione di controlli ActiveX MFC in un file CAB del pacchetto consente a un file. inf da includere per l'installazione del controllo del controllo ActiveX e tutte le DLL dipendenti (ad esempio le DLL di MFC). Utilizzando il file CAB automaticamente consente di comprimere il codice per il download più veloci. Se si utilizza un file con estensione CAB per il download dei componenti, risulta più veloce per firmare il file con estensione cab intera di ogni singolo componente.  
   
 ### <a name="creating-cab-files"></a>Creazione di file CAB  
- È possibile scaricare il Kit di sviluppo del file CAB dall'articolo della Knowledge Base [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/linkid=148204). In questo kit sono disponibili gli strumenti necessari per creare i file CAB.  
+ È possibile scaricare il Kit di sviluppo del file CAB dall'articolo della Knowledge Base [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). In questo kit sono disponibili gli strumenti necessari per creare i file CAB.  
   
  Il file CAB a cui puntava `CODEBASE` deve contenere il file ocx per il controllo ActiveX e un file con estensione inf per controllarne l'installazione. Creare il file CAB specificando il nome del file di controllo e un file inf. Non includono file DLL dipendenti che potrebbero già esistere nel sistema in questo file CAB. Ad esempio, le DLL di MFC sono compresso in un file CAB separato e a cui fa riferimento il controllo file. inf.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77bb27558c702d8d10dcbf5e50f369d8d0479716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ab2da8cc885f94bf15164ff17fdef2b2af13a41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Utilizzare CArchive &lt; &lt; e &gt; &gt; operatori
 `CArchive`fornisce <\< e >> operatori per la scrittura e lettura di tipi di dati semplici nonché `CObject`s a e da un file.  

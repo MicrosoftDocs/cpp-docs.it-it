@@ -1,66 +1,68 @@
 ---
-title: "Generics and Templates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], vs. templates"
-  - "templates, C++"
+title: Generics e modelli (Visual C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Generics and Templates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I generics e i modelli sono entrambi funzionalità del linguaggio che forniscono il supporto per i tipi con parametri.  Tuttavia, sono diversi e hanno utilizzi diversi.  Questo argomento fornisce una panoramica delle varie differenze.  
+# <a name="generics-and-templates-visual-c"></a>Generics e modelli (Visual C++)
+Generics e modelli sono entrambi funzionalità del linguaggio che forniscono supporto per tipi con parametri. Tuttavia, sono diversi e vengono utilizzati per scopi diversi. In questo argomento viene fornita una panoramica delle numerose differenze.  
   
- Per ulteriori informazioni, vedere [Windows Runtime and Managed Templates](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) e [Cenni preliminari sui modelli](../Topic/Templates%20Overview.md).  
+ Per ulteriori informazioni, vedere [Windows Runtime e modelli gestiti](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
-## Confrontare i modelli e i generics  
- Differenze chiave tra modelli C\+\+ e generics:  
+## <a name="comparing-templates-and-generics"></a>Confronto tra Generics e modelli  
+ Principali differenze tra generics e modelli C++:  
   
--   I generics sono generici fino a che i tipi non vengono sostituiti in fase di esecuzione.  I modelli sono specializzati in fase di compilazione in modo che non sono più tipi parametrizzati in fase di esecuzione  
+-   I generics sono generici, fino a quando i tipi vengono sostituiti con essi in fase di esecuzione. I modelli sono specializzati in fase di compilazione in modo non sono ancora parametri di tipi in fase di esecuzione  
   
--   Il Common Language Runtime in particolare supporta i generics in MSIL.  Poiché il runtime conosce i generics, i tipi specifici possono essere sostituiti dai tipi generici quando si fa riferimento a un assembly che contiene un tipo generico.  I modelli, invece, risolvono in tipi comuni in fase di compilazione e i tipi risultanti potrebbero non essere specializzati in altri assembly.  
+-   In particolare, common language runtime supporta i generics in MSIL. Poiché il runtime SA sui generics, è possono sostituire tipi specifici per i tipi generici quando si fa riferimento a un assembly contenente un tipo generico. Modelli, al contrario, risolvere in tipi comuni in fase di compilazione e i tipi non possono essere specializzati in altri assembly.  
   
--   I generics specializzati in due assembly diversi con gli stessi argomenti di tipo sono lo stesso tipo.  I modelli specializzati in due assembly diversi con gli stessi argomenti di tipo sono considerati dal runtime come due tipi diversi.  
+-   Generics specializzato in due assembly diversi con lo stesso tipo, gli argomenti sono dello stesso tipo. I modelli specializzati in due assembly diversi con lo stesso tipo, gli argomenti vengono considerati dal runtime di tipi diversi.  
   
--   I generics vengono generati come singola porzione di codice eseguibile utilizzato per tutti gli argomenti di tipo di riferimento \(ciò non accade per i tipi di valore, i quali hanno un'implementazione univoca per tipo di valore\).  Il compilatore JIT è al corrente dei generics e può ottimizzare il codice per i tipi di riferimento o di valore utilizzati come argomenti di tipo.  I modelli generano codice a runtime distinto per ogni specializzazione.  
+-   I generics vengono generati come una singola parte di codice eseguibile che viene utilizzato per tutti gli argomenti di tipo riferimento (ciò non è possibile per i tipi di valore, che dispongono di un'implementazione univoca per ogni tipo di valore). Il compilatore JIT conosce i generics ed è in grado di ottimizzare il codice per i tipi di valore o riferimento che vengono utilizzati come argomenti di tipo. Modelli di generano il codice di runtime separato per ogni specializzazione.  
   
--   I generics non consentono di utilizzare parametri di modello non di tipo, ad esempio `template <int i> C {}`.  I modelli lo consentano.  
+-   Generics non consentono i parametri di modello non di tipo, ad esempio `template <int i> C {}`. I modelli consentono a essi.  
   
--   I generics non permettono la specializzazione esplicita, \(ossia un'implementazione personalizzata di un modello per un tipo specifico\).  I modelli si.  
+-   Generics non consentono la specializzazione esplicita (vale a dire un'implementazione personalizzata di un modello per un tipo specifico). Eseguire modelli.  
   
--   I generics non permettono la specializzazione parziale, \(ossia un'implementazione personalizzata per un sottoinsieme degli argomenti del tipo\).  I modelli si.  
+-   Generics non consentono la specializzazione parziale (un'implementazione personalizzata per un subset degli argomenti di tipo). Eseguire modelli.  
   
--   I generics non consentono l'utilizzo del parametro di tipo come classe base per il tipo generico.  I modelli si.  
+-   Generics non consentono il parametro di tipo essere utilizzata come classe di base per il tipo generico. Eseguire modelli.  
   
--   I modelli supportano parametri modello\-modello \(ad esempio  `template<template<class T> class X> class MyClass`\), ma i generics no.  
+-   I modelli supportano parametri di modello template (ad esempio `template<template<class T> class X> class MyClass`), ma non i generics.  
   
-## Combinare i modelli e i generics  
+## <a name="combining-templates-and-generics"></a>Generics e modelli di combinazione  
   
--   La differenza di base in generics ha implicazioni per compilare applicazioni che combinano i modelli e i generics.  Si supponga, ad esempio, di avere una classe modello per cui si desidera creare un wrapper generico per esporre quel modello ad altri linguaggi come generico.  Non è possibile che generic prenda un parametro di tipo che quindi passa al modello, poiché il modello deve avere il parametro di tipo in fase di compilazione, ma il generico non risolverà il parametro di tipo fino alla fase di esecuzione.  L'annidamento di un modello in un generic non funzionerà in quanto non è possibile espandere i modelli in fase di compilazione per i tipi generici arbitrari che potrebbero essere istanziati in fase di esecuzione.  
+-   La differenza di base in generics ha implicazioni per la creazione di applicazioni che combinano i generics e modelli. Si supponga, ad esempio, che si dispone di una classe modello che si desidera creare wrapper generici per esporre il modello per altri linguaggi come generico. Non è possibile avere il generico accettano un parametro di tipo che viene quindi passato per il modello, poiché il modello deve disporre di tale parametro di tipo in fase di compilazione, ma il tipo generico non risolve il parametro di tipo fino all'esecuzione. Nidificazione di un modello all'interno di un oggetto generico non funzionerà neanche perché non è possibile espandere i modelli in fase di compilazione per i tipi generici arbitrari che può essere creata un'istanza in fase di esecuzione.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- L'esempio seguente mostra un esempio semplice dell'uso dei modelli e dei generics assieme.  In questo esempio, la classe modello passa il suo parametro tramite il tipo generico.  L'inverso non è possibile.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene illustrato un semplice esempio di utilizzo congiunto di modelli e generics. In questo esempio, la classe modello passa il parametro tramite al tipo generico. Non è possibile il contrario.  
   
- Questo linguaggio potrebbe essere utilizzato quando si desidera compilare su un'api generico esistente con il codice del modello che è locale a un assembly di Visual C\+\+, o se è necessario aggiungere un ulteriore livello di parametrizzazione a un tipo generico per usufruire di determinate funzionalità dei modelli che non sono supportate dai generics.  
+ Questo linguaggio potrebbe essere utilizzato quando si desidera compilare su un'API esistente generica con il codice di modello che è locale a un assembly di Visual C++, o quando è necessario aggiungere un ulteriore livello di parametrizzazione per un tipo generico, per poter sfruttare alcune funzionalità dei modelli non supporte s delle generics.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +97,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 F  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Generics](../windows/generics-cpp-component-extensions.md)

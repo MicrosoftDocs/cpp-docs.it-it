@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9beb9e81d767a11b4ca701725ac44cc19cd3c3e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7b968d103631dafcdd2132cb749ae8feed30085
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 Funzione omp_get_thread_num
 Il `omp_get_thread_num` funzione restituisce il numero di thread, all'interno, il team del thread di esecuzione della funzione. Si trova di numero di thread compreso tra 0 e **omp_get_num_threads()**-1 inclusi. Il thread principale del team sia 0.  

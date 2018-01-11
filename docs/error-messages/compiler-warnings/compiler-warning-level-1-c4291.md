@@ -1,38 +1,37 @@
 ---
-title: "Avviso del compilatore (livello 1) C4291 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4291"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4291"
+title: Compilatore avviso (livello 1) C4291 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4291
+dev_langs: C++
+helpviewer_keywords: C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a1c03e12805c35ce04322a7ffb4d48499a9a9f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4291
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'dichiarazione': operatore delete corrispondente non trovato. Se l'inizializzazione comporta un'eccezione, la memoria non verrà liberata  
+# <a name="compiler-warning-level-1-c4291"></a>Avviso del compilatore (livello 1) C4291
+'declaration': operatore delete corrispondente non trovato. memoria non vengono liberata se l'inizializzazione genera un'eccezione  
   
- Viene utilizzato un operatore [new](../../cpp/new-operator-cpp.md) di posizione per il quale non esiste un operatore [delete](../../cpp/delete-operator-cpp.md) di posizione.  
+ Un posizionamento [nuova](../../cpp/new-operator-cpp.md) viene utilizzato per cui non esiste alcuna posizione [eliminare](../../cpp/delete-operator-cpp.md).  
   
- Quando la memoria per un oggetto viene allocata con l'operatore **new**, viene chiamato il costruttore dell'oggetto.  Se il costruttore genera un'eccezione, è necessario deallocare la memoria allocata per l'oggetto.  Questa operazione non può essere eseguita se non esiste una funzione di operatore **delete** corrispondente all'operatore **new**.  
+ Quando di memoria allocata per un oggetto con l'operatore **nuova**, viene chiamato il costruttore dell'oggetto. Se il costruttore genera un'eccezione, è necessario deallocare la memoria allocata per l'oggetto. Questa operazione non può essere eseguita, a meno che un operatore **eliminare** funzione esiste corrispondente all'operatore **nuova**.  
   
- Se si utilizza l'operatore **new** senza altri argomenti e si esegue la compilazione con le opzioni [\/GX](../../build/reference/gx-enable-exception-handling.md), [\/EHs](../../build/reference/eh-exception-handling-model.md) o \/EHa per attivare la gestione delle eccezioni, il codice per chiamare l'operatore **delete** verrà generato nel caso in cui il costruttore generi un'eccezione.  
+ Se si utilizza l'operatore **nuova** senza argomenti aggiuntivi e si esegue la compilazione con [/GX](../../build/reference/gx-enable-exception-handling.md), [/EHs](../../build/reference/eh-exception-handling-model.md), o /EHa opzioni per abilitare la gestione delle eccezioni, il compilatore genera codice per chiamare l'operatore **eliminare** se il costruttore genera un'eccezione.  
   
- Se si utilizza la forma di posizione dell'operatore **new**, ovvero la forma con argomenti in aggiunta alla dimensione dell'allocazione, e il costruttore dell'oggetto genera un'eccezione, il codice per chiamare l'operatore **delete** verrà generato solo se esiste una forma di posizione di tale operatore corrispondente alla forma di posizione dell'operatore **new** che ha allocato la memoria.  Di seguito è riportato un esempio.  
+ Se si usa il form di posizione di **nuova** (operatore) (il form con gli argomenti oltre alla dimensione dell'allocazione) e il costruttore dell'oggetto genera un'eccezione, il compilatore genererà comunque codice per chiamare l'operatore **eliminare**; ma solo se un form di posizione dell'operatore **eliminare** esiste una corrispondenza il form di posizione dell'operatore **nuovo** che allocata la memoria. Ad esempio:  
   
 ```  
 // C4291.cpp  
@@ -83,7 +82,7 @@ int main(void)
 }  
 ```  
   
- Nell'esempio precedente viene generato l'avviso C4291, poiché non è stata definita alcuna forma di posizione dell'operatore **delete** corrispondente alla forma di posizione dell'operatore **new**.  Per risolvere il problema, inserire il seguente codice al di sopra di **main**.  Si noti che tutti i parametri di funzione dell'operatore **delete** di overload corrispondono a quelli dell'operatore **new** di overload, ad eccezione del primo.  
+ Nell'esempio precedente viene generato l'avviso C4291 perché nessun form di posizione dell'operatore **eliminare** è stato definito il form di posizione dell'operatore corrispondente **nuova**. Per risolvere il problema, inserire il codice seguente sopra **principale**. Si noti che tutti dell'operatore di overload **eliminare** parametri di funzione corrispondono a quelli dell'operatore di overload **nuova**, tranne il primo parametro.  
   
 ```  
 void operator delete(void* pMem, char* pszFilename, int nLine)  

@@ -1,69 +1,69 @@
 ---
-title: "2.6.5 flush Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.6.5 direttiva flush | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.5 flush Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**arrossir** la direttiva, se esplicito o implicito, specifica un punto sequenza “cross\-thread„ a cui implementazione è obbligatoria garantire che tutti i thread del team abbiano una visualizzazione uniforme di determinati oggetti \(specificati in\) in memoria.  Ciò significa che le valutazioni precedenti di espressioni che fanno riferimento a tali oggetti sono i punteggi complete e successive non sono ancora state avviate.  Ad esempio, i compilatori devono ripristinare i valori degli oggetti dai registri alla memoria e l'hardware potrebbe avere la necessità di eseguire lo svuotamento con memorizzazione su disco scrive i buffer alla memoria e ricarica i valori degli oggetti dalla memoria.  
+# <a name="265-flush-directive"></a>2.6.5 Direttiva flush
+Il **scaricamento** direttiva, esplicita o implicita, specifica un punto di sequenza "cross-thread" in corrispondenza del quale l'implementazione è necessario per assicurare che tutti i thread in un team dispongano di una visualizzazione coerenza di determinati oggetti (specificati di seguito) in memoria. Ciò significa che precedenti valutazioni delle espressioni che fanno riferimento a tali oggetti siano complete e le successive valutazioni non hanno ancora iniziato. Ad esempio, compilatori necessario ripristinare i valori degli oggetti da registri in memoria e hardware potrebbe essere necessario scaricare i buffer di scrittura per la memoria e ricaricare i valori degli oggetti dalla memoria.  
   
- La sintassi di **arrossir** la direttiva è la seguente:  
+ La sintassi del **scaricamento** direttiva è come segue:  
   
 ```  
 #pragma omp flush [(variable-list)]  new-line  
 ```  
   
- Se gli oggetti che richiedono la sincronizzazione possono essere definiti dalle variabili, quindi tali variabili possono essere specificati in facoltativo *variabile\-elenco*.  se un puntatore è presente in *variabile\-elenco*, il puntatore viene scaricata, non l'oggetto che il puntatore fa riferimento a.  
+ Se tutti gli oggetti che richiedono la sincronizzazione è possibile designare per le variabili, quindi tali variabili possono essere specificate nel parametro *elenco variabili*. Se è presente in un puntatore di *elenco variabili*, l'indicatore di misura viene cancellata, non l'oggetto cui fa riferimento al puntatore del mouse.  
   
- In **arrossir** direttiva senza variabile\-elenco sincronizza tutti gli oggetti condivisi ad eccezione degli oggetti inaccessibili con durata automatica di archiviazione.  \(Questo potrebbe avere più sovraccarico di un oggetto **arrossir** con variabile\-elenco\). In **arrossir** direttiva senza variabile\-elenco è implicito per le direttive seguenti:  
+ Oggetto **scaricamento** senza un *elenco variabili* consente di sincronizzare oggetti condivisi, ad eccezione degli oggetti inaccessibili con durata di archiviazione automatica. (È probabile che presentano un overhead maggiore rispetto a un **scaricamento** con un *elenco variabili*.) A **scaricamento** senza un *elenco variabili* è implicita per le direttive seguenti:  
   
 -   `barrier`  
   
--   La voce a e all'uscita da **critico**  
+-   In entrata e l'uscita da **critico**  
   
--   La voce a e all'uscita da `ordered`  
+-   In entrata e l'uscita da`ordered`  
   
--   La voce a e all'uscita da **parallelo**  
+-   In entrata e l'uscita da **parallela**  
   
--   l'uscita da **per**  
+-   AT uscire da **per**  
   
--   l'uscita da **sezioni**  
+-   Per chiudere at **sezioni**  
   
--   l'uscita da **singolo**  
+-   Per chiudere at **singolo**  
   
--   La voce a e all'uscita da **parallelo per**  
+-   In entrata e l'uscita da **paralleli per**  
   
--   La voce a e all'uscita da **sezioni parallele**  
+-   In entrata e l'uscita da **parallela sezioni**  
   
- La direttiva non è implicita se a `nowait` la clausola è presente.  Notare che **arrossir** la direttiva non è implicita per uno dei seguenti valori:  
+ La direttiva non è implicita, se un `nowait` clausola è presente. Si noti che il **scaricamento** direttiva non è implicita per qualsiasi delle operazioni seguenti:  
   
--   La voce con **per**  
+-   Voce di **per**  
   
--   All'interno o all'uscita da **master**  
+-   Alla voce o Esci dal **master**  
   
--   La voce con **sezioni**  
+-   Voce di **sezioni**  
   
--   La voce con **singolo**  
+-   Voce di **singolo**  
   
- Un riferimento che accede al valore di un oggetto con un tipo volatile\-qualificato si comporta come se vi sia stato su **arrossir** la direttiva specificando tale oggetto al punto di sequenza precedente.  Un riferimento che modifica il valore di un oggetto con un tipo volatile\-qualificato si comporta come se vi sia stato su **arrossir** la direttiva specificando tale oggetto al punto di sequenza successivo.  
+ Un riferimento che accede al valore di un oggetto con un tipo qualificato volatile si comporta come se ci fosse un **scaricamento** direttiva specifica di tale oggetto al precedente punto di sequenza. Un riferimento che modifica il valore di un oggetto con un tipo qualificato volatile si comporta come se ci fosse un **scaricamento** direttiva specifica di tale oggetto al punto di sequenza successivo.  
   
- Si noti che in quanto **arrossir** la direttiva non dispone dell'istruzione in linguaggio c come parte della sintassi, esistono alcune restrizioni relative alla posizione all'interno di un programma.  vedere [Appendice C\#](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) per la grammatica formale.  Nell'esempio riportato di seguito vengono illustrate le seguenti restrizioni.  
+ Si noti che poiché il **scaricamento** direttiva non dispone di un'istruzione del linguaggio C come parte della relativa sintassi, esistono alcune restrizioni relative alla relativa posizione all'interno di un programma. Vedere [appendice C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) per la grammatica formale. Nell'esempio seguente vengono illustrate queste restrizioni.  
   
 ```  
 /* ERROR - The flush directive cannot be the immediate  
@@ -81,6 +81,6 @@ if (x!=0) {
 }  
 ```  
   
- Restrizioni a **arrossir** la direttiva è la seguente:  
+ Restrizioni per il **scaricamento** direttiva sono i seguenti:  
   
--   Una variabile specificata in un oggetto **arrossir** la direttiva non deve avere un tipo di riferimento.
+-   Una variabile specificata un **scaricamento** direttiva non deve avere un tipo di riferimento.

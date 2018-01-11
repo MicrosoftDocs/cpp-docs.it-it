@@ -1,37 +1,36 @@
 ---
-title: "Avviso del compilatore (livello 3) C4521 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4521"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4521"
+title: Compilatore avviso (livello 3) C4521 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4521
+dev_langs: C++
+helpviewer_keywords: C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb06f8d2cdbc29f5c6f98dfaeb23eeffe1167ef8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 3) C4521
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'classe': specificato più di un costruttore di copia predefinito  
+# <a name="compiler-warning-level-3-c4521"></a>Avviso del compilatore (livello 3) C4521
+'class': specificato più di un costruttore di copia  
   
- La classe dispone di più costruttori di copia di un solo tipo.  Questo avviso è di carattere informativo. I costruttori possono essere chiamati nel programma.  
+ La classe contiene più costruttori di copia di un solo tipo. Questo avviso è puramente informativo; i costruttori possono essere chiamati nel programma.  
   
- Per evitare di visualizzare l'avviso, utilizzare il pragma [warning](../../preprocessor/warning.md).  
+ Utilizzare il [avviso](../../preprocessor/warning.md) pragma per non visualizzare questo avviso.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4521:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4521.  
   
 ```  
 // C4521.cpp  

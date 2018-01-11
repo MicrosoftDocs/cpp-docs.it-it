@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 2) C4156 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4156"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4156"
+title: Compilatore (livello 2) Avviso C4156 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4156
+dev_langs: C++
+helpviewer_keywords: C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce2e30be92e555584fef0977674b03a550500e6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 2) C4156
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-eliminazione di un'espressione di matrice senza utilizzare "delete" nella forma usata per le matrici. Sostituita con la forma usata per le matrici  
+# <a name="compiler-warning-level-2-c4156"></a>Compilatore (livello 2) Avviso C4156
+eliminazione di un'espressione di matrice senza utilizzare la forma di matrice di 'delete'. forma di matrice con cui sostituita  
   
- Non è possibile eliminare una matrice con una forma di **delete** diversa da quella usata per le matrici.  Viene pertanto utilizzata la forma per le matrici.  
+ Formato non di matrice **eliminare** non è possibile eliminare una matrice. Il compilatore ha convertito **eliminare** per la forma di matrice.  
   
- L'avviso viene generato solo nelle estensioni Microsoft \(\/Ze\).  
+ Questo avviso viene visualizzato solo nelle estensioni Microsoft (/Ze).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // C4156.cpp  

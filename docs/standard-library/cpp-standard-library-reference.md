@@ -18,18 +18,19 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7c2c20604b2630b5125da839b275170559c08e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc867d0a39a3e3869403c359e2d19a258366b679
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-reference"></a>Riferimento per la libreria standard C++
 Un programma C++ può chiamare un numero elevato di funzioni da questa implementazione conforme della libreria standard di C++. Queste funzioni eseguono servizi essenziali, ad esempio di input e output e forniscono implementazioni efficienti delle operazioni di uso più comune.  
   
  Per altre informazioni sulle librerie di runtime di Visual C++, vedere [CRT Library Features](../c-runtime-library/crt-library-features.md) (Funzionalità libreria CRT).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica sulla libreria standard C++](../standard-library/cpp-standard-library-overview.md)  
  Contiene una panoramica sull'implementazione Microsoft della libreria standard di C++.  
   

@@ -1,62 +1,63 @@
 ---
-title: "make_public | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.make_public"
-  - "make_public_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_public (pragma)"
-  - "pragma, make_public"
+title: make_public | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.make_public
+- make_public_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, make_public
+- make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b28c6cd71e8d8ac1165ff6e3afe95ab1f6d4de0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# make_public
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="makepublic"></a>make_public
 Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma make_public(type)  
 ```  
   
-#### Parametri  
+### <a name="parameters"></a>Parametri  
  `type` è il nome del tipo per cui si desidera disporre di accessibilità pubblica dell'assembly.  
   
-## Note  
- `make_public` è utile per quando il tipo nativo cui si desidera fare riferimento ha origine da un file h che non è possibile modificare.  Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità pubblica dell'assembly, il tipo nativo deve disporre anche di accessibilità pubblica dell'assembly o il compilatore genererà un avviso.  
+## <a name="remarks"></a>Note  
+`make_public` è utile per quando il tipo nativo cui si desidera fare riferimento ha origine da un file h che non è possibile modificare. Se si desidera utilizzare il tipo nativo nella firma di una funzione pubblica in un tipo con visibilità pubblica dell'assembly, il tipo nativo deve disporre anche di accessibilità pubblica dell'assembly o il compilatore genererà un avviso.  
   
- `make_public` deve essere specificato in ambito globale ed è attivo solo dal punto in cui viene dichiarato fino alla fine del file di codice sorgente.  
+`make_public` deve essere specificato in ambito globale ed è attivo solo dal punto in cui viene dichiarato fino alla fine del file di codice sorgente.  
   
- Il tipo nativo può essere privato in modo implicito o esplicito; per ulteriori informazioni vedere [Visibilità di tipi](../misc/type-visibility.md).  
+Il tipo nativo potrebbe essere in modo implicito o esplicito privato. vedere [visibilità del tipo](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) per ulteriori informazioni.  
   
-## Esempio  
- Nell'esempio seguente viene illustrato il contenuto di un file h contenente le definizioni per due struct nativi.  
+## <a name="example"></a>Esempio  
+Nell'esempio seguente viene illustrato il contenuto di un file h contenente le definizioni per due struct nativi.  
   
-```  
+```cpp  
 // make_public_pragma.h  
 struct Native_Struct_1 { int i; };  
 struct Native_Struct_2 { int i; };  
 ```  
   
-## Esempio  
- Nell'esempio di codice seguente viene utilizzato il file di intestazione e viene indicato che, se gli struct nativi non vengono contrassegnati in modo esplicito come pubblici, utilizzando `make_public`, il compilatore genererà un avviso durante il tentativo di utilizzo degli struct nativi nella firma della funzione pubblica di un tipo gestito pubblico.  
+## <a name="example"></a>Esempio  
+Nell'esempio di codice seguente viene utilizzato il file di intestazione e viene indicato che, se gli struct nativi non vengono contrassegnati in modo esplicito come pubblici, utilizzando `make_public`, il compilatore genererà un avviso durante il tentativo di utilizzo degli struct nativi nella firma della funzione pubblica di un tipo gestito pubblico.  
   
-```  
+```cpp  
 // make_public_pragma.cpp  
 // compile with: /c /clr /W1  
 #pragma warning (default : 4692)  
@@ -69,5 +70,5 @@ public ref struct A {
 };  
 ```  
   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+[Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

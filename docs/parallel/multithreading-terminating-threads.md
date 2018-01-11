@@ -1,69 +1,69 @@
 ---
-title: "Multithreading: terminazione dei thread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CREATE_SUSPENDED"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxEndThread (metodo)"
-  - "multithreading [C++], chiusura di thread"
-  - "chiusura anomala di thread"
-  - "avvio di thread"
-  - "arresto di thread"
-  - "chiusura di thread"
-  - "threading [C++], arresto di thread"
-  - "threading [MFC], chiusura di thread"
+title: 'Multithreading: Terminazione dei thread | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CREATE_SUSPENDED
+dev_langs: C++
+helpviewer_keywords:
+- premature thread termination
+- starting threads
+- threading [MFC], terminating threads
+- multithreading [C++], terminating threads
+- threading [C++], stopping threads
+- terminating threads
+- stopping threads
+- AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Multithreading: terminazione dei thread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La terminazione di un thread avviene normalmente in due situazioni: all'uscita dalla funzione di controllo o nell'impossibilità di eseguire il thread fino al suo completamento.  Se in un programma di elaborazione di testi è stato utilizzato un thread per la stampa in background e la stampa viene completata correttamente, la funzione di controllo termina normalmente.  Se l'utente desidera annullare la stampa, tuttavia, il thread di stampa in background deve essere terminato in anticipo.  In questo argomento vengono fornite informazioni sull'implementazione delle diverse situazioni e su come ottenere il codice di uscita di un thread dopo la terminazione.  
+# <a name="multithreading-terminating-threads"></a>Multithreading: terminazione dei thread
+Due situazioni normale causano un'interruzione di thread: non termina la funzione di controllo o il thread non è consentito per l'esecuzione fino al completamento. Se un elaboratore di testo utilizzato un thread in background, la funzione di controllo termina normalmente stampa viene completata correttamente. Se l'utente decide di annullare la stampa, tuttavia, il thread in background stampa deve essere interrotto in modo anomalo. In questo argomento viene illustrato come implementare ogni situazione sia come ottenere il codice di uscita di un thread dopo la terminazione.  
   
--   [Terminazione normale di un thread](#_core_normal_thread_termination)  
+-   [Chiusura di Thread normale](#_core_normal_thread_termination)  
   
--   [Terminazione anticipata di un thread](#_core_premature_thread_termination)  
+-   [Chiusura anomala di Thread](#_core_premature_thread_termination)  
   
--   [Recupero del codice di uscita di un thread](#_core_retrieving_the_exit_code_of_a_thread)  
+-   [Il recupero del codice di uscita di un Thread](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a> Terminazione normale di un thread  
- La normale terminazione di un thread di lavoro è semplice, in quanto consiste nell'uscita dalla funzione di controllo e nella restituzione di un valore che indica il motivo della terminazione.  È possibile utilizzare la funzione [AfxEndThread](../Topic/AfxEndThread.md) oppure un'istruzione `return`.  Generalmente 0 indica il completamento, ma l'impostazione del valore viene decisa dal programmatore.  
+##  <a name="_core_normal_thread_termination"></a>Chiusura di Thread normale  
+ Per un thread di lavoro, chiusura di thread normale è semplice: uscire dalla funzione di controllo e restituire un valore che indica il motivo della chiusura. È possibile utilizzare il [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) funzione o un `return` istruzione. In genere, 0 indica il completamento, ma che è responsabilità dell'utente.  
   
- Altrettanto semplice è il processo per un thread dell'interfaccia utente: dall'interno del thread, chiamare [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945), come descritto in [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  L'unico parametro accettato da **PostQuitMessage** è il codice di uscita del thread.  Come per i thread di lavoro, 0 indica in genere il completamento.  
+ Per un thread dell'interfaccia utente, il processo è semplice: dall'interno del thread dell'interfaccia utente, chiamare [PostQuitMessage](http://msdn.microsoft.com/library/windows/desktop/ms644945) nel [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. L'unico parametro che **PostQuitMessage** è il codice di uscita del thread. Come per il thread di lavoro, 0 indica in genere il completamento.  
   
-##  <a name="_core_premature_thread_termination"></a> Terminazione anticipata di un thread  
- La terminazione anticipata di un thread è relativamente semplice: è sufficiente chiamare [AfxEndThread](../Topic/AfxEndThread.md) dall'interno del thread.  Passare il codice di uscita desiderato come unico parametro.  Questa operazione arresta l'esecuzione del thread, rende disponibile il relativo stack, disconnette tutte le DLL collegate al thread ed elimina l'oggetto thread dalla memoria.  
+##  <a name="_core_premature_thread_termination"></a>Chiusura anomala di Thread  
+ Terminazione di un thread in modo anomalo è semplice: chiamare [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) dall'interno del thread. Passare il codice di uscita desiderata come unico parametro. Questo arresta l'esecuzione del thread, dealloca lo stack del thread, disconnette tutte le DLL associate al thread e consente di eliminare l'oggetto thread dalla memoria.  
   
- È necessario chiamare `AfxEndThread` dall'interno del thread da terminare.  Se si desidera terminare un thread da un altro thread, è necessario impostare un metodo di comunicazione tra i due thread.  
+ `AfxEndThread`deve essere chiamato dall'interno del thread da terminare. Se si desidera terminare un thread da un altro thread, è necessario configurare un metodo di comunicazione tra i due thread.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> Recupero del codice di uscita di un thread  
- Per ottenere il codice di uscita di un thread di lavoro o dell'interfaccia utente, chiamare la funzione [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  Per informazioni su questa funzione, vedere [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  Nella funzione viene utilizzato l'handle per il thread, memorizzato nel membro dati `m_hThread` degli oggetti `CWinThread`, e l'indirizzo di un valore `DWORD`.  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>Il recupero del codice di uscita di un Thread  
+ Per ottenere il codice di uscita del thread di lavoro o il thread dell'interfaccia utente, chiamare il [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) (funzione). Per informazioni su questa funzione, vedere il [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]. Questa funzione accetta l'handle per il thread (archiviati nel `m_hThread` membro dati di `CWinThread` oggetti) e l'indirizzo di un `DWORD`.  
   
- Se il thread è ancora attivo, **STILL\_ACTIVE** viene posizionato da **GetExitCodeThread** nell'indirizzo del valore `DWORD` fornito. In caso contrario, il codice di uscita viene posizionato all'interno di questo indirizzo.  
+ Se il thread è ancora attivo, **GetExitCodeThread** inserisce **viene posizionato da GetExitCodeThread** in fornito `DWORD` indirizzo; in caso contrario, il codice di uscita viene inserito nell'indirizzo.  
   
- Il recupero del codice di uscita degli oggetti [CWinThread](../mfc/reference/cwinthread-class.md) richiede un passaggio aggiuntivo.  In base all'impostazione predefinita, quando un thread `CWinThread` termina, l'oggetto thread viene eliminato.  Non è quindi possibile accedere al membro dati `m_hThread`, perché l'oggetto `CWinThread` non esiste più.  Per ovviare a questa situazione, effettuare una delle seguenti operazioni:  
+ Il recupero del codice di uscita di [CWinThread](../mfc/reference/cwinthread-class.md) oggetti richiede un passaggio aggiuntivo. Per impostazione predefinita, quando un `CWinThread` thread termina, l'oggetto thread viene eliminato. Non è possibile accedere il `m_hThread` (membro dati) poiché il `CWinThread` oggetto non esiste più. Per evitare questa situazione, effettuare una delle seguenti operazioni:  
   
--   Impostare il membro dati `m_bAutoDelete` su **FALSE**.  Questa operazione impedisce l'eliminazione dell'oggetto `CWinThread` dopo la terminazione del thread.  A questo punto è possibile accedere al membro dati `m_hThread` dopo la terminazione del thread.  Se si utilizza questa tecnica, tuttavia, è necessario provvedere all'eliminazione dell'oggetto `CWinThread`, poiché il framework non lo eliminerà automaticamente.  Si tratta del metodo consigliato.  
+-   Impostare il `m_bAutoDelete` un membro dati **FALSE**. In questo modo il `CWinThread` oggetto una volta terminato il thread. È quindi possibile accedere il `m_hThread` (membro dati) una volta terminato il thread. Se si utilizza questa tecnica, tuttavia, è responsabile per l'eliminazione permanente di `CWinThread` dell'oggetto poiché il framework non lo eliminerà automaticamente. Questo è il metodo preferito.  
   
--   Memorizzare separatamente l'handle del thread.  Dopo la creazione del thread, copiare il relativo membro dati `m_hThread` mediante **::DuplicateHandle** in un'altra variabile e accedervi tramite la variabile stessa.  In questo modo l'oggetto viene eliminato automaticamente alla terminazione, ma è comunque possibile stabilire il motivo della terminazione.  Prestare attenzione affinché il thread non termini prima della duplicazione dell'handle.  La soluzione più sicura per eseguire questa operazione è passare **CREATE\_SUSPENDED** a [AfxBeginThread](../Topic/AfxBeginThread.md), memorizzare l'handle, quindi riprendere il thread chiamando [ResumeThread](../Topic/CWinThread::ResumeThread.md).  
+-   Archiviare separatamente l'handle del thread. Dopo la creazione del thread, copiare il relativo `m_hThread` (membro dati) (mediante **:: DuplicateHandle**) a un'altra variabile e accedervi tramite la variabile. In questo modo l'oggetto viene eliminato automaticamente alla terminazione, è comunque possibile stabilire il motivo della terminazione. Assicurarsi che il thread termini prima che è possibile duplicare l'handle. Il modo più sicuro per eseguire questa operazione consiste nel passare **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), archiviare l'handle e quindi riprendere il thread chiamando [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
   
- Entrambi i metodi consentono di determinare il motivo della terminazione dell'oggetto `CWinThread`.  
+ Dei metodi consente di determinare i motivi per cui un `CWinThread` oggetto terminato.  
   
-## Vedere anche  
- [Multithreading con C\+\+ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
- [\_endthread, \_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
- [\_beginthread, \_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Multithreading con C++ e MFC](../parallel/multithreading-with-cpp-and-mfc.md)   
+ [_endthread, _endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659)

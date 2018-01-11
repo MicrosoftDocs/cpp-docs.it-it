@@ -1,48 +1,51 @@
 ---
-title: "Changing the Properties of Multiple Accelerator Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "keyboard shortcuts [C++], property changing"
-  - "accelerator tables [C++], changing properties"
+title: "Modifica delle proprietà di più tasti di scelta rapida | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keyboard shortcuts [C++], property changing
+- accelerator tables [C++], changing properties
 ms.assetid: b55c9bd6-b430-48bb-b942-0e6f21d7abf9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8fbe5ab2202da457c8970d84d304ec97fdedd4a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Properties of Multiple Accelerator Keys
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per modificare le proprietà di più tasti di scelta rapida  
+# <a name="changing-the-properties-of-multiple-accelerator-keys"></a>Modifica delle proprietà di più tasti di scelta rapida
+### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Per modificare le proprietà di più tasti di scelta rapida  
   
-1.  Aprire la tabella dei tasti di scelta rapida facendo doppio clic sull'icona in [Visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare i tasti di scelta rapida che si desidera modificare, facendo clic su ciascuno di essi mentre si tiene premuto **CTRL**.  
+2.  Selezionare i tasti di scelta rapida che si desidera modificare tenendo premuto il **CTRL** mentre si fa clic su ciascuno di essi.  
   
-3.  Passare alla [finestra Proprietà](../Topic/Properties%20Window.md) e digitare i valori che si desidera vengano condivisi da tutti i tasti di scelta rapida selezionati.  
+3.  Passare al [finestra proprietà](/visualstudio/ide/reference/properties-window) e digitare i valori da tutti i tasti di scelta rapida selezionati per condividere.  
   
     > [!NOTE]
-    >  Ciascun valore del modificatore verrà visualizzato nella finestra Proprietà come proprietà booleana.  Se nella finestra Proprietà viene modificato un valore [Modifier](../windows/accelerator-modifier-property.md), la tabella dei tasti di scelta rapida considera il nuovo modificatore come un'aggiunta ai modificatori già presenti.  Per questo motivo, se vengono impostati dei valori di modificatori, è necessario impostarli tutti in modo da garantire che ogni tasto di scelta rapida condivida le stesse impostazioni di Modifier.  
+    >  Ogni valore del modificatore viene visualizzato come una proprietà booleana nella finestra Proprietà. Se si modifica un [modificatore](../windows/accelerator-modifier-property.md) valore nella finestra Proprietà, la tabella di tasti di scelta rapida considera il nuovo modificatore come un'aggiunta ai modificatori già presenti. Per questo motivo, se si imposta alcun valore di modificatore, sarà necessario impostare in modo da garantire che ogni acceleratore condivide le stesse impostazioni di modificatore tutte.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Requisiti**  
   
  Win32  
   
-## Vedere anche  
- [Editing Accelerator Tables](../windows/editing-accelerator-tables.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle tabelle di tasti di scelta rapida](../windows/editing-accelerator-tables.md)   
+ [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

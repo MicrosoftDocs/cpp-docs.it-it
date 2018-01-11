@@ -1,73 +1,73 @@
 ---
-title: "__vmx_vmwrite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmwrite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__vmx_vmwrite (funzione intrinseca)"
-  - "VMWRITE (istruzione)"
+title: __vmx_vmwrite | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmwrite
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmwrite intrinsic
+- VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 00bc9fe617144db7de3425c5732b3f655b30c790
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmwrite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="vmxvmwrite"></a>__vmx_vmwrite
+**Sezione specifica Microsoft**  
   
- Scrive il valore specificato nel campo specificato nella struttura di controllo corrente della macchina \(VMCS\) virtuale.  
+ Scrive il valore specificato per il campo specificato nella struttura di controllo macchina virtuale corrente (VMCS).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned char __vmx_vmwrite(   
+unsigned char __vmx_vmwrite(   
    size_t Field,  
    size_t FieldValue  
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|\[in\] `Field`|Il campo di VMCS da scrivere.|  
-|\[in\] `FieldValue`|Il valore nel campo di VMCS.|  
+|[in] `Field`|Il campo VMCS da scrivere.|  
+|[in] `FieldValue`|Valore da scrivere nel campo VMCS.|  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  0  
- L'operazione è riuscita.  
+ Operazione completata.  
   
  1  
- L'operazione non riesce con lo stato esteso disponibile in `VM-instruction error field` corrente VMCS.  
+ Operazione non riuscita con stato esteso disponibile in `VM-instruction error field` della VMCS corrente.  
   
  2  
- L'operazione non riesce senza stato disponibile.  
+ Operazione non riuscita senza stato disponibile.  
   
-## Note  
- La funzione di `__vmx_vmwrite` equivale all'istruzione macchina di `VMWRITE` .  Il valore del parametro di `Field` è un indice codificato del campo come descritto nella documentazione Intel.  Per ulteriori informazioni, la ricerca del documento, “la caratteristica tecnica di virtualizzazione Intel per l'architettura di IA\-32 Intel, il numero di documento C97063\-002, [Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127) al sito e quindi consultano l'appendice C del documento.  
+## <a name="remarks"></a>Note  
+ Il `__vmx_vmwrite` è equivalente alla funzione di `VMWRITE` istruzioni in linguaggio macchina. Il valore di `Field` parametro è un indice codificato campo descritto nella documentazione di Intel. Per ulteriori informazioni, cercare il documento, "Intel Virtualization tecnica specifica per l'architettura IA-32 Intel," documento C97063-002 numero il [Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127) del sito e quindi consultare l'appendice C di tale documento.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__vmx_vmwrite`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmread](../intrinsics/vmx-vmread.md)
+ [__vmx_vmread](../intrinsics/vmx-vmread.md)

@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>Classe CButton
 Fornisce la funzionalità dei controlli pulsante di Windows.  
@@ -400,7 +401,7 @@ BOOL GetNote(
 ### <a name="return-value"></a>Valore restituito  
  Nel primo overload, un [CString](../../atl-mfc-shared/using-cstring.md) oggetto che contiene il testo della nota associato al controllo di collegamento di comando corrente.  
   
- -oppure-  
+ oppure  
   
  Nel secondo overload, `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
   
@@ -724,7 +725,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
  `true` se questo metodo dà esito positivo; in caso contrario, `false`.  
   
 ### <a name="remarks"></a>Note  
- Se un controllo pulsante o il comando di collegamento è necessaria l'autorizzazione di sicurezza con privilegi elevati per eseguire un'azione, impostare il controllo `elevation required` stato. Successivamente, Windows viene visualizzata l'icona dello scudo controllo Account utente (UAC) sul controllo. Per ulteriori informazioni, vedere "Controllo dell'Account utente" all'indirizzo [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
+ Se un controllo pulsante o il comando di collegamento è necessaria l'autorizzazione di sicurezza con privilegi elevati per eseguire un'azione, impostare il controllo `elevation required` stato. Successivamente, Windows viene visualizzata l'icona dello scudo controllo Account utente (UAC) sul controllo. Per ulteriori informazioni, vedere "Controllo dell'Account utente" all'indirizzo [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).  
   
  Questo metodo invia il [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) messaggio, come descritto in Windows SDK.  
   

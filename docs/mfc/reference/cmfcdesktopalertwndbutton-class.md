@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ddf357c8da29f7e52546c8185f148b854a9611c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Classe CMFCDesktopAlertWndButton
 Consente i pulsanti da aggiungere a una finestra di dialogo Avviso desktop.  
@@ -58,7 +59,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|Valore booleano che specifica se il pulsante viene visualizzato nell'area della didascalia della finestra di dialogo avviso.|  
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|Valore booleano che specifica se il pulsante consente di chiudere la finestra di dialogo avviso.|  
   

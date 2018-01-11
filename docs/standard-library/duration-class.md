@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], duration
-ms.openlocfilehash: 70dc3b3b21961946a73f73e44ae3bed7c283bd4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>Classe duration
 Descrive un tipo che contiene un *intervallo di tempo*, ovvero un tempo trascorso tra due punti temporali.  
@@ -293,6 +294,6 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
  La prima funzione del membro riduce il modulo Div del conteggio dei tick archiviati e restituisce *this. La seconda funzione del membro riduce il modulo Div.count() del conteggio dei tick archiviati e restituisce \*this.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [Struttura duration_values](../standard-library/duration-values-structure.md)

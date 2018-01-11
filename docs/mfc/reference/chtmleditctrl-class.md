@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,23 @@ f1_keywords:
 - AFXHTML/CHtmlEditCtrl::Create
 - AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
 - AFXHTML/CHtmlEditCtrl::GetStartDocument
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CHtmlEditCtrl [MFC], CHtmlEditCtrl
 - CHtmlEditCtrl [MFC], Create
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f3ea794bfcb3d7e62a53ed8423918e5448990dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 8a4cdfd1f11a3420f2d7ec46b1a30bb3eaf20a30
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chtmleditctrl-class"></a>Classe CHtmlEditCtrl
 Fornisce la funzionalità del controllo ActiveX WebBrowser in una finestra MFC.  
@@ -139,5 +137,4 @@ virtual LPCTSTR GetStartDocument();
   
 ## <a name="see-also"></a>Vedere anche  
  [Grafico della gerarchia](../../mfc/hierarchy-chart.md)
-
 

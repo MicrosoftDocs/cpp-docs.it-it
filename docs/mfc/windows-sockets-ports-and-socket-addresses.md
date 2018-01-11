@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 768ccdc197df8d38cb594c2408bb6fc6998dfdcb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c7b2e15761815b75ba8001ad4eb5a5c276f5056
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: porte e indirizzi socket
 Questo articolo illustra la porta"condizioni" e "address" come utilizzato con i socket di Windows.  

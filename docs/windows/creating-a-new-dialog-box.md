@@ -1,52 +1,55 @@
 ---
-title: "Creating a New Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, creating"
-  - "Dialog editor, creating dialog boxes"
+title: Creazione di una nuova finestra di dialogo | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, creating
+- Dialog editor, creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c23021e6e91d7097b1989c486d053bed3a8421b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a New Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per creare una nuova finestra di dialogo  
+# <a name="creating-a-new-dialog-box"></a>Creazione di una nuova finestra di dialogo
+### <a name="to-create-a-new-dialog-box"></a>Per creare una nuova finestra di dialogo  
   
-1.  Fare clic con il pulsante destro del mouse sul file RC in [Visualizzazione risorse](../windows/resource-view-window.md), quindi scegliere **Aggiungi risorsa** dal menu di scelta rapida.  
+1.  In [visualizzazione risorse](../windows/resource-view-window.md), fare doppio clic sul file RC, quindi scegliere **Aggiungi risorsa** dal menu di scelta rapida.  
   
     > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Nella finestra di dialogo **Aggiungi risorsa**, selezionare **Finestra di dialogo** dall'elenco **Tipo di risorsa**, quindi scegliere **Nuova**.  
+2.  Nel **Aggiungi risorsa** nella finestra di dialogo **finestra di dialogo** nel **tipo di risorsa** elenco, quindi fare clic su **New**.  
   
-     Se accanto al tipo di risorsa finestra di dialogo viene visualizzato un segno più \(\+\), significa che sono disponibili dei modelli di finestra di dialogo.  Fare clic sul segno più \(\+\) per espandere l'elenco dei modelli, selezionare un modello, quindi fare clic su Nuovo.  
+     Se è presente un segno più (+) accanto al tipo di risorsa finestra di dialogo, significa che i modelli di finestra di dialogo sono disponibili. Fare clic sul segno più per espandere l'elenco dei modelli, selezionare un modello e fare clic su nuovo.  
   
-     Nell'editor finestre verrà aperta la nuova finestra di dialogo.  
+     Verrà visualizzata la finestra di dialogo del nuovo nell'editor finestre.  
   
-     È inoltre possibile [aprire finestre di dialogo esistenti per la modifica nell'editor finestre](../mfc/viewing-and-editing-resources-in-a-resource-editor.md).  
+     È anche possibile [aprire finestre di dialogo esistente nell'editor di finestra di dialogo per la modifica](../windows/viewing-and-editing-resources-in-a-resource-editor.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [How to: Create a Resource](../windows/how-to-create-a-resource.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Procedura: creare una risorsa](../windows/how-to-create-a-resource.md)   
+ [File di risorse](../windows/resource-files-visual-studio.md)   
+ [Editor finestre](../windows/dialog-editor.md)
+

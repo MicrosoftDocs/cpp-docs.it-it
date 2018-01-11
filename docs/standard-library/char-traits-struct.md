@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>Struct char_traits
 La struct char_traits descrive gli attributi associati a un carattere.  
@@ -61,7 +62,7 @@ struct char_traits;
 ## <a name="remarks"></a>Note  
  Lo struct modello descrive vari tratti di caratteri per il tipo **CharType**. La classe modello [basic_string](../standard-library/basic-string-class.md) nonché diverse classi modello iostream, inclusa [basic_ios](../standard-library/basic-ios-class.md), usano queste informazioni per modificare elementi di tipo **CharType**. Un elemento di questo tipo non deve richiedere una costruzione o una distruzione esplicita. Deve fornire un costruttore predefinito, un costruttore di copia e un operatore di assegnazione con la semantica prevista. Una copia bit per bit deve avere lo stesso effetto di un'assegnazione. Nessuna delle funzioni membro di struct char_traits può generare eccezioni.  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -720,7 +721,7 @@ The character ch3 is not less than the character ch2.
 ##  <a name="move"></a>  char_traits::move  
  Copia un numero specificato di caratteri di una sequenza in un'altra sequenza che potrebbe sovrapporsi.  
   
- Questo metodo è potenzialmente non sicuro, poiché si basa sul chiamante per verificare che i valori passati siano corretti. È preferibile usare [char_traits::_Move_s](#move_s).  
+ Questo metodo è potenzialmente pericoloso poiché si basa sul controllo dei valori passati effettuato dal chiamante. È preferibile usare [char_traits::_Move_s](#move_s).  
   
 ```  
 static char_type *move(char_type* _To,

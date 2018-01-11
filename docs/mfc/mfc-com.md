@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 652e299ad7dc01f070e3fe4ed9738fc9ed47a493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-com"></a>MFC COM
 Un subset di MFC è progettato per il supporto COM, mentre la maggior parte della libreria ATL (Active Template) è progettata per la programmazione COM. Negli argomenti di questa sezione viene descritto il supporto di MFC per COM.  
@@ -60,7 +61,7 @@ Un subset di MFC è progettato per il supporto COM, mentre la maggior parte dell
   
  Inoltre, vedere l'articolo della Knowledge Base Q248019: procedura: impedire Server occupato finestra di dialogo casella da visualizzato durante un COM operazione di lunga durata.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Contenimento dei documenti attivi](../mfc/active-document-containment.md)  
   
  [Automazione](../mfc/automation.md)  

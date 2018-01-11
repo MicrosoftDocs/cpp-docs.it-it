@@ -11,11 +11,9 @@ f1_keywords:
 - regex/std::regex_replace
 - regex/std::regex_search
 - regex/std::swap
-- regex/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::regex_match [C++]
@@ -23,12 +21,11 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
+ms.openlocfilehash: f9ac58b6022d1497f0f06ff08edd29f2e012000f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 82b4ea038efad847c8c6f50873fa4cdd8250c453
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-functions"></a>Funzioni &lt;regex&gt;
 ||||  
@@ -521,5 +518,4 @@ string == aaa
 [Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
 [Classe regex_traits](../standard-library/regex-traits-class.md)  
 [Typedef \<regex>](../standard-library/regex-typedefs.md)  
-
 

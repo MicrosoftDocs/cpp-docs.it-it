@@ -1,69 +1,68 @@
 ---
-title: "Errore del compilatore di risorse RW2003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW2003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW2003"
+title: Errore del compilatore di risorse RW2003 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW2003
+dev_langs: C++
+helpviewer_keywords: RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f388ca21d95e7d675a6b9890a7368765b5c0d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore del compilatore di risorse RW2003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Errore di generazione.  
+# <a name="resource-compiler-error-rw2003"></a>Errore del compilatore di risorse RW2003
+Errore di generazione  
   
-### Possibili cause  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Per risolverlo è possibile verificare le seguenti cause possibili  
   
-1.  **Errore: il file di risorsa di file bitmap non è in formato 3.00.**  
+1.  **Errore: File di risorse di Bitmap file non è in formato 3.00**  
   
-     Le bitmap in formato Windows versione 2.x non possono essere utilizzate nei file di risorse versione 3.x.  La bitmap specificata dovrà essere ridisegnata o convertita in formato 3.x.  
+     Le immagini bitmap in formato Windows versione 2. x non possono essere usate nei file di risorse della versione 3. x. La bitmap deve essere ridisegnata o convertita in formato 3. x.  
   
-2.  **Errore: DIB in formato precedente nel nome di risorsa.  Elaborare il file con SDKPAINT**  
+2.  **Errore: DIB precedente nel nome di risorsa. Passarlo tramite SDKPAINT**  
   
-     Un file DIB \(Device Independent Bitmap, bitmap indipendente dalla periferica\) all'interno della risorsa specificata non è compatibile con il formato Windows 3.0.  L'immagine bitmap dovrà essere ridisegnata o convertita in formato 3.x.  
+     Una Bitmap indipendente di dispositivo (DIB) nella risorsa specificata non è compatibile con il formato 3.0 di Windows. La bitmap deve essere ridisegnata o convertita nel formato 3. x.  
   
-3.  **Errore: il nome risorsa del file di risorsa non è in formato 3.00.**  
+3.  **Errore: Nome-risorsa di file di risorse non è in formato 3.00**  
   
-     Il formato di un'icona o di un cursore all'interno della risorsa specificata risulta essere di una precedente versione di Windows.  L'icona o il cursore dovrà essere ridisegnato o convertito in formato 3.x.  
+     Un'icona o cursore nella risorsa specificata utilizza un formato da una versione precedente di Windows. L'icona o cursore deve essere ridisegnato o convertiti nel formato 3. x.  
   
-4.  **Formato di intestazione DIB sconosciuto.**  
+4.  **Formato di intestazione DIB sconosciuto**  
   
-     L'intestazione della bitmap non è una struttura BITMAPCOREHEADER o BITMAPINFOHEADER.  
+     Intestazione della bitmap non è una struttura struttura BITMAPCOREHEADER o BITMAPINFOHEADER.  
   
-5.  **Impossibile inizializzare le informazioni sui simboli.**  
+5.  **Impossibile inizializzare le informazioni sui simboli**  
   
-     Questo errore si verifica solo in Visual C\+\+.  È possibile che vi siano troppi file aperti o che non sia possibile aprire o scrivere nei file di dati richiesti da Visual C\+\+ per l'importazione dei simboli nello script.  Visual C\+\+ tenta di creare questi file nella directory specificata dalla variabile di ambiente **TMP** o, se non specificata, nella directory corrente.  
+     Questo errore si verifica solo in Visual C++. La causa probabile è che vi siano troppi file aperti o non è possibile aprire o scrivere i file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di creare questi file nella directory specificata dal **TMP** variabile di ambiente o la directory corrente se non è specificato.  
   
-6.  **Impossibile salvare le informazioni sui simboli.**  
+6.  **Impossibile salvare le informazioni sui simboli**  
   
-     Questo errore si verifica solo in Visual C\+\+.  È possibile che vi siano troppi file aperti o che non sia possibile chiudere o scrivere nei file di dati richiesti da Visual C\+\+ per l'importazione dei simboli nello script.  Visual C\+\+ tenta di utilizzare questi file nella directory specificata dalla variabile di ambiente **TMP** o, se non specificata, nella directory corrente.  
+     Questo errore si verifica solo in Visual C++. La causa probabile è che vi siano troppi file aperti o non è possibile chiudere o scrivere i file di dati necessari per Visual C++ importare i simboli nello script. Visual C++ tenta di utilizzare questi file nella directory specificata dal **TMP** variabile di ambiente o la directory corrente se non è specificato.  
   
-7.  **Il file di risorsa del file bitmap non è in formato 2.03.**  
+7.  **File di risorse di file bitmap non è in formato 2.03**  
   
-     Una bitmap utilizza un formato precedente alla versione 2.03.  La bitmap dovrà essere convertita o ridisegnata utilizzando il formato per le versioni 3.00 e successive.  
+     Una bitmap usa un formato precedente alla versione 2.03. La bitmap deve essere convertita o ridisegnata usando il formato per la versione 3.00 o successiva.  
   
-8.  **Risorsa troppo grande.**  
+8.  **Risorsa troppo grande**  
   
-     In Windows 3.1 la dimensione di una risorsa non può superare i 65.000 byte.  Se la risorsa è di dimensioni superiori, non potrà essere compilata con Visual C\+\+ o con il compilatore di risorse della riga di comando.  Questo limite non si applica a cursori, icone, immagini bitmap o altre risorse basate su file.  
+     Per Windows 3.1 una risorsa non può superare 65.000 byte. In caso di una risorsa, quindi non sarà in grado di eseguire la compilazione con Visual C++ o il compilatore di risorse della riga di comando. Questo limite non si applica a cursori, icone, bitmap o altre risorse basate su file.  
   
-9. **Il file di risorsa non è in formato 3.00.**  
+9. **File di risorse non è in formato 3.00**  
   
-     Un cursore o un'icona risulta essere in un formato precedente alla versione 3.00.  La risorsa dovrà essere convertita o ridisegnata utilizzando il formato per le versioni 3.00 e successive.  
+     Un cursore o icona utilizza un formato precedente alla versione 3.00. La risorsa deve essere convertita o ridisegnata utilizzando il formato per la versione 3.00 o successiva.  
   
-10. **Impossibile aprire il file temporaneo.**  
+10. **Impossibile aprire il file temporaneo**  
   
-     Non è possibile aprire un file temporaneo con il compilatore di risorse o con Visual C\+\+.  È possibile che siano disponibili le autorizzazioni di scrittura sulla directory o che la directory non esista.  Il compilatore di risorse o Visual C\+\+ tenta di utilizzare questi file nella directory specificata dalla variabile di ambiente **TMP** o, se non specificata, nella directory corrente.
+     Il compilatore risorse/Visual C++ non è riuscito ad aprire un file temporaneo. La causa probabile è che non si dispone delle autorizzazioni di scrittura per la directory o la directory non esiste. Il compilatore di risorse/Visual C++ tenta di usare questi file nella directory specificata dalla variabile di ambiente **TMP** o nella directory corrente se non è specificata.

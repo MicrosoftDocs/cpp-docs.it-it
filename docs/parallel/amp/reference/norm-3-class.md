@@ -1,11 +1,10 @@
 ---
-title: Classe norm_3 | Documenti di Microsoft
+title: Classe norm_3 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,33 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3145aa734b37a965430810727962f3f13e5fe49f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm3-class"></a>Classe norm_3
 Rappresenta uno short vector di tre numeri normali.  
@@ -127,7 +111,7 @@ class norm_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costruttore norm_3](#ctor)|Di overload. Predefinito costruttore inizializza tutti gli elementi con 0.|  
+|[Costruttore norm_3](#ctor)|Di overload. Predefinito, costruttore inizializza tutti gli elementi con 0.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -185,7 +169,7 @@ class norm_3;
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[dimensioni (costante)](#size)||  
   
@@ -233,7 +217,7 @@ class norm_3;
  **Namespace:** Concurrency:: Graphics  
 
 ## <a name="ctor"></a>Costruttore norm_3
-Predefinito costruttore inizializza tutti gli elementi con 0.  
+Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -294,7 +278,7 @@ explicit inline norm_3(
  Il valore per l'inizializzazione.  
   
  `_Other`  
- Utilizzato per inizializzare l'oggetto.  
+ Oggetto utilizzato per inizializzare.  
   
 ## <a name="a-namesize-size-constant"></a><a name="size">dimensioni (costante)
 ### <a name="syntax"></a>Sintassi  
@@ -305,4 +289,3 @@ static const int size = 3;
  
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency::graphics](concurrency-graphics-namespace.md)
-

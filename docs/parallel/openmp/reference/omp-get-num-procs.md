@@ -1,41 +1,40 @@
 ---
-title: "omp_get_num_procs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_num_procs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_num_procs OpenMP function"
+title: omp_get_num_procs | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_num_procs
+dev_langs: C++
+helpviewer_keywords: omp_get_num_procs OpenMP function
 ms.assetid: 14a10b8f-e59b-4211-a292-687648c9f760
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9870659ef399f53394fd1002c0f5ea4bc946752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# omp_get_num_procs
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce il numero di processori disponibili quando viene chiamata la funzione.  
+# <a name="ompgetnumprocs"></a>omp_get_num_procs
+Restituisce il numero di processori che sono disponibili quando viene chiamata la funzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 int omp_get_num_procs();  
 ```  
   
-## Note  
- Per ulteriori informazioni, vedere [3.1.5 omp\_get\_num\_procs Function](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere [3.1.5 funzione omp_get_num_procs](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_get_num_procs.cpp  
@@ -54,8 +53,11 @@ int main( )
 }  
 ```  
   
-  **\/\/È previsto il seguente output quando l'esempio viene eseguito in un computer con due processori:**  
-**2**  
-**2**   
-## Vedere anche  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+// Expect the following output when the example is run on a two-processor machine:  
+2  
+2  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Funzioni](../../../parallel/openmp/reference/openmp-functions.md)

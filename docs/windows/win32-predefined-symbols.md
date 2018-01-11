@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01aa83fc5d0be468252b8593ee343ff28648d218
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-predefined-symbols"></a>Simboli già definiti di Win32
 Questi simboli sono definiti nel file di intestazione Win32 e supportano le azioni e funzioni di applicazione Windows standard. Questi simboli vengono utilizzati principalmente con elementi dell'interfaccia utente comuni. Quando si lavora con i controlli nell'editor di risorse, questi simboli vengono visualizzati nel [finestra proprietà](/visualstudio/ide/reference/properties-window) associati ai controlli comuni. Ad esempio, se la barra degli strumenti deve essere visualizzato sull'icona dell'applicazione, l'icona sarà associato al simbolo IDI_SMALL nella finestra delle proprietà.  

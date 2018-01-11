@@ -1,28 +1,28 @@
 ---
-title: "2.7 Data Environment | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7 ambiente dei dati | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 74e44b3c-e18c-4773-8e78-cd6c4413ae57
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e018a2c1b20bef640852ced913dc90266e733c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7 Data Environment
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione viene presentata una direttiva e più clausole per il controllo dell'ambiente di dati durante l'esecuzione delle aree parallele, come segue:  
+# <a name="27-data-environment"></a>2.7 Ambiente dei dati
+Questa sezione viene presentata una direttiva e più clausole per controllare l'ambiente di dati durante l'esecuzione di aree parallele, come indicato di seguito:  
   
--   In **threadprivate** la direttiva \(vedere la sezione\) viene fornita per rendere l'ambito file, l'spazio di nomi\-ambito, o le variabili statiche di ambito blocco locali del thread.  
+-   Oggetto **threadprivate** (direttiva) (vedere la sezione seguente) viene fornito per rendere locale a un thread in ambito file, all'ambito dello spazio dei nomi o variabili statiche con ambito blocco.  
   
--   Le clausole che possono essere specificate sulle direttive per controllare gli attributi la condivisione delle variabili per l'intera durata di parallelo o costrutti di suddivisione del lavoro sono descritte in [parte 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.
+-   Le clausole che possono essere specificate per le direttive per controllare gli attributi di condivisione delle variabili per la durata dei costrutti paralleli o di condivisione lavoro sono descritti in [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.

@@ -1,43 +1,46 @@
 ---
-title: "Modifiche nella semantica del distruttore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "distruttori, C++"
-  - "finalizzatori [C++]"
+title: Le modifiche nella semantica del distruttore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- finalizers [C++]
+- destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Modifiche nella semantica del distruttore
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La semantica dei distruttori di classe è stata modificata in modo significativo in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="changes-in-destructor-semantics"></a>Modifiche nella semantica del distruttore
+La semantica per i distruttori di classe è stati modificati in modo significativo rispetto alle estensioni gestite per C++ a Visual C++.  
   
- Nelle estensioni gestite i distruttori di classe sono consentiti all'interno di classi di riferimenti ma non all'interno di classi di valori.  Questo aspetto non è stato modificato nella nuova sintassi.  La semantica del distruttore di classi, tuttavia, è stata modificata.  In questo argomento vengono illustrate le ragioni di tale modifica nonché come questa influisca sulla conversione del codice CLR esistente.  Si tratta probabilmente della modifica più importante a livello di codice tra le due versioni del linguaggio.  
+ Nelle estensioni gestite, un distruttore della classe è stato consentito all'interno di una classe di riferimento, ma non all'interno di una classe di valori. Questo non è stato modificato nella nuova sintassi. Tuttavia, la semantica del distruttore della classe è stati modificati. Questo argomento descrive i motivi di tale modifica nonché il relativo impatto sulla conversione del codice CLR esistente. È probabile che la modifica a livello di programmazione più importante tra le due versioni della lingua.  
   
-## Finalizzazione non deterministica  
- Prima che la memoria associata a un oggetto venga recuperata da Garbage Collector, viene richiamato il metodo associato `Finalize`, se disponibile.  Questo metodo può essere considerato alla stregua di un distruttore particolarmente efficace, dal momento che non è legato alla durata di programma dell'oggetto,  e viene indicato come finalizzazione.  La durata, il momento o l'eventualità della chiamata al metodo `Finalize` non sono definiti.  Per Garbage Collection con finalizzazione non deterministica si intende tutto questo.  
+## <a name="non-deterministic-finalization"></a>Finalizzazione deterministica  
+ Prima la memoria associata a un oggetto venga recuperata da garbage collector, un oggetto associato `Finalize` , se presente, viene richiamato. È possibile pensare di questo metodo come un tipo di distruttore Super perché non è associato alla durata di programma dell'oggetto. Si parla di finalizzazione. Al momento del momento o se un `Finalize` metodo viene richiamato non è definito. Si tratta di cosa si intende quando ci si riferisce per operazione di garbage collection con finalizzazione deterministica.  
   
- La finalizzazione non deterministica funziona in maniera ottimale con la gestione dinamica della memoria.  Quando la memoria disponibile è insufficiente, viene avviato il Garbage Collector  e non è pertanto necessario ricorrere a distruttori per liberare memoria.  La finalizzazione non deterministica non funziona correttamente, tuttavia, in presenza di un oggetto che contiene una risorsa fondamentale, ad esempio una connessione a un database o un blocco.  In questo caso, è necessario rilasciare la risorsa al più presto.  In ambiente nativo, questa operazione viene eseguita mediante una coppia di costruttore e distruttore.  Al termine della durata dell'oggetto, mediante il completamento del blocco locale in cui tale oggetto è dichiarato oppure mediante la risoluzione dello stack a causa di un'eccezione, il distruttore viene eseguito e la risorsa viene rilasciata automaticamente.  Questa procedura, dal funzionamento efficace, non è disponibile con le estensioni gestite.  
+ La finalizzazione deterministica non funziona correttamente con la gestione della memoria dinamica. Quando la memoria disponibile diventa insufficiente, il garbage collector interviene. In un garbage raccolti ambiente, non sono necessari i distruttori per liberare memoria. La finalizzazione non deterministica non funziona correttamente, tuttavia, quando un oggetto gestisce una risorsa critica, ad esempio una connessione al database o di un blocco di qualche tipo. In questo caso, è necessario rilasciare la risorsa appena possibile. Nel mondo nativo, che viene eseguita tramite una coppia di costruttore o distruttore. Non appena termina la durata dell'oggetto, al termine del blocco locale in cui viene dichiarato o quando lo stack mediante a causa di un'eccezione, il distruttore viene eseguito e la risorsa viene rilasciata automaticamente. Questo approccio funziona molto bene, e la sua assenza nelle estensioni gestite Sfortunatamente non è stata completata.  
   
- La soluzione offerta da CLR prevede che una classe implementi il metodo `Dispose` dell'interfaccia `IDisposable`.  Il metodo `Dispose`, tuttavia, richiede una chiamata esplicita da parte dell'utente  e ciò è soggetto a errori.  Nel linguaggio C\# è disponibile una sorta di automazione mediante una speciale istruzione `using`.  La progettazione delle estensioni gestite, invece, non fornisce supporto speciale.  
+ È la soluzione fornita da CLR per una classe implementare il `Dispose` metodo il `IDisposable` interfaccia. In questo caso il problema è che `Dispose` richiede una chiamata esplicita dall'utente. Questa operazione è soggetta a errore. Linguaggio c# offre una sorta di automazione in forma di una speciale `using` istruzione. Estensioni gestite è non fornito alcun supporto speciale.  
   
-## Distruttori nelle estensioni gestite per C\+\+  
- Nelle estensioni gestite il distruttore di una classe di riferimenti viene implementato mediante i due passaggi riportati di seguito:  
+## <a name="destructors-in-managed-extensions-for-c"></a>Distruttori di estensioni gestite per C++  
+ Nelle estensioni gestite, il distruttore di una classe di riferimento viene implementato utilizzando i due passaggi seguenti:  
   
-1.  Il distruttore fornito dall'utente viene rinominato internamente in `Finalize`.  Se la classe dispone di una classe base \(tenere presente che nel modello a oggetti CLR è supportata solo l'ereditarietà singola\), il compilatore inserisce una chiamata del finalizzatore dopo l'esecuzione del codice fornito dall'utente.  Si consideri ad esempio la semplice gerarchia riportata di seguito, tratta dalla specifica di linguaggio delle estensioni gestite:  
+1.  Il distruttore fornito dall'utente viene rinominato internamente in `Finalize`. Se la classe dispone di una classe di base (tenere presente che nel modello a oggetti CLR, è supportata solo l'ereditarietà singola), il compilatore inserisce una chiamata del finalizzatore dopo l'esecuzione del codice fornito dall'utente. Ad esempio, si consideri la seguente gerarchia semplice prelevata dalla specifica di linguaggio estensioni gestite:  
   
 ```  
 __gc class A {  
@@ -51,7 +54,7 @@ public:
 };  
 ```  
   
- In questo esempio, entrambi i distruttori vengono rinominati `Finalize`.  `Finalize` di `B` prevede l'aggiunta di una chiamata del metodo `Finalize` di `A` dopo la chiamata di `WriteLine`.  La chiamata da parte del Garbage Collector avverrà per impostazione predefinita durante la finalizzazione.  Di seguito è riportato l'esito della trasformazione interna:  
+ In questo esempio, entrambi i distruttori vengono rinominati `Finalize`. `B`del `Finalize` dispone di una chiamata di `A`del `Finalize` aggiunti dopo la chiamata di metodo `WriteLine`. Questo è ciò che il garbage collector per impostazione predefinita richiamerà durante la finalizzazione. Ecco il possibile aspetto questa trasformazione interna:  
   
 ```  
 // internal transformation of destructor under Managed Extensions  
@@ -69,9 +72,9 @@ public:
 };  
 ```  
   
-1.  Nel secondo passaggio il compilatore sintetizza un distruttore virtuale.  Questo distruttore viene chiamato direttamente o mediante un'applicazione dell'espressione delete dai programmi utente delle estensioni gestite.  Non viene mai chiamato dal Garbage Collector.  
+1.  Nel secondo passaggio, il compilatore sintetizza un distruttore virtuale. Questo distruttore è ciò che i nostri programmi di estensioni gestite utente richiamano direttamente o tramite un'applicazione dell'espressione delete. Non viene richiamato dal garbage collector.  
   
-     All'interno del distruttore sintetizzato sono incluse due istruzioni.  Un'istruzione è una chiamata a `GC::SuppressFinalize` per assicurarsi che non vi siano ulteriori chiamate di `Finalize`.  La seconda è la vera e propria chiamata di `Finalize`, che rappresenta il distruttore fornito dall'utente per la classe.  Di seguito ne è riportato l'aspetto:  
+     Sono incluse due istruzioni all'interno del distruttore sintetizzato. Uno è una chiamata a `GC::SuppressFinalize` per assicurarsi che vi sono ulteriori chiamate di `Finalize`. Il secondo è la chiamata effettiva del `Finalize`, che rappresenta il distruttore fornito dall'utente per tale classe. Ecco questo aspetto:  
   
 ```  
 __gc class A {  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- Questa implementazione consente all'utente di richiamare esplicitamente il metodo `Finalize` della classe, tuttavia non riguarda strettamente la soluzione del metodo `Dispose`.  È modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+ Questa implementazione consente all'utente di richiamare in modo esplicito la classe `Finalize` metodo ora anziché in un momento in cui si ha alcun controllo, non effettivamente vincola con il `Dispose` soluzione del metodo. Questo viene modificato in Visual C++.  
   
-## Distruttori nella nuova sintassi  
- Nella nuova sintassi, il distruttore viene rinominato internamente al metodo `Dispose` e la classe di riferimenti viene estesa automaticamente in modo da implementare l'interfaccia `IDispose`.  In [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)], pertanto, la coppia di classi viene trasformata come segue:  
+## <a name="destructors-in-new-syntax"></a>Distruttori nella nuova sintassi  
+ Nella nuova sintassi, il distruttore viene rinominato internamente nel `Dispose` metodo e la classe di riferimento viene estesa automaticamente per implementare il `IDispose` interfaccia. Ovvero, in Visual C++, la coppia di classi viene trasformata come segue:  
   
 ```  
 // internal transformation of destructor under the new syntax  
@@ -116,14 +119,14 @@ public:
 };  
 ```  
   
- Se un distruttore viene richiamato esplicitamente nella nuova sintassi oppure viene applicato `delete` a un handle di rilevamento, il metodo `Dispose` sottostante viene richiamato automaticamente.  Se si tratta di una classe derivata, alla chiusura del metodo sintetizzato viene inserita la chiamata al metodo `Dispose` della classe base.  
+ Quando un distruttore viene richiamato in modo esplicito nella nuova sintassi o `delete` viene applicato a un handle di rilevamento, sottostante `Dispose` metodo viene richiamato automaticamente. Se è una classe derivata, una chiamata di `Dispose` metodo della classe di base viene inserito alla fine del metodo sintetizzato.  
   
- Ma ciò non consente di ottenere la finalizzazione deterministica.  Per raggiungere tale obiettivo, è necessario il supporto aggiuntivo di oggetti di riferimento locali. Non è disponibile un supporto analogo nelle estensioni gestite, pertanto la questione non riguarda la conversione.  
+ Ma ciò non ottiene us per la finalizzazione deterministica. Per raggiungere tale obiettivo, è necessario il supporto di altro oggetti di riferimento locale. (Non produce alcun supporto analogo nelle estensioni gestite e non è un problema di conversione).  
   
-## Dichiarazione di un oggetto di riferimento  
- [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] supporta la dichiarazione di un oggetto di una classe di riferimento sullo stack locale oppure come membro di una classe come se fosse direttamente accessibile.  In combinazione con l'associazione del distruttore con il metodo `Dispose`, il risultato ottenuto è la chiamata automatica della semantica di finalizzazione su tipi di riferimento.  
+## <a name="declaring-a-reference-object"></a>Dichiara un oggetto di riferimento  
+ Visual C++ supporta la dichiarazione di un oggetto di una classe di riferimento sullo stack locale o come membro di una classe come se fosse direttamente accessibile. In combinazione con l'associazione del distruttore con il `Dispose` (metodo), il risultato è la chiamata automatica della semantica di finalizzazione su tipi di riferimento.  
   
- In primo luogo, è necessario definire la classe di riferimento in modo che la creazione dell'oggetto funzioni come l'acquisizione di una risorsa mediante il costruttore di classe.  In secondo luogo, all'interno del costruttore di classe è necessario rilasciare la risorsa acquisita al momento della creazione dell'oggetto.  
+ In primo luogo, è possibile definire la classe di riferimento in modo che la creazione dell'oggetto funziona come l'acquisizione di una risorsa tramite il costruttore di classe. In secondo luogo, all'interno del costruttore di classe è rilasciare la risorsa acquisita al momento della creazione dell'oggetto.  
   
 ```  
 public ref class R {  
@@ -131,23 +134,23 @@ public:
    R() { /* acquire expensive resource */ }  
    ~R() { /* release expensive resource */ }  
   
-   // … everything else …  
+   // everything else...  
 };  
 ```  
   
- L'oggetto viene dichiarato localmente mediante il nome di tipo ma senza accento circonflesso.  Qualsiasi utilizzo dell'oggetto, ad esempio la chiamata a un metodo, avviene mediante il punto di selezione dei membri \(`.`\) e non mediante la freccia \(`->`\).  Al termine del blocco, il distruttore associato, trasformato in `Dispose`, verrà richiamato automaticamente, come illustrato di seguito:  
+ L'oggetto viene dichiarato localmente utilizzando il nome del tipo, ma senza accento circonflesso. Tutti gli utilizzi dell'oggetto, ad esempio richiamando un metodo, vengono eseguiti tramite il punto di selezione membro (`.`) anziché freccia (`->`). Alla fine del blocco, il distruttore associato, trasformato in `Dispose`, viene richiamata automaticamente, come illustrato di seguito:  
   
 ```  
 void f() {  
    R r;   
    r.methodCall();  
   
-   // r is automatically destructed here –  
+   // r is automatically destructed here -  
    // that is, r.Dispose() is invoked  
 }  
 ```  
   
- Come per l'istruzione `using` in C\#, ciò non ignora i vincoli del CLR sottostante per cui i tipi di riferimento devono essere allocati nell'heap CLR.  La semantica sottostante rimane invariata.  Se l'utente avesse scritto il codice seguente, simile alla trasformazione interna eseguita dal compilatore, il risultato sarebbe stato equivalente:  
+ Come con la `using` istruzione in c#, ciò non ignora i vincoli del CLR sottostante che i tipi di riferimento deve essere allocato nell'heap di Common Language Runtime. La semantica sottostante restano invariata. L'utente potrebbe allo stesso modo scritto il codice seguente (simile alla trasformazione interna eseguita dal compilatore):  
   
 ```  
 // equivalent implementation  
@@ -160,10 +163,10 @@ void f() {
 }  
 ```  
   
- Nella nuova sintassi, in effetti, i distruttori sono associati ancora una volta ai costruttori come in un meccanismo automatizzato di acquisizione e rilascio legato alla durata dell'oggetto locale.  
+ In effetti, nella nuova sintassi, i distruttori vengono nuovamente associati costruttori come un'acquisizione/rilascio automatico meccanismo legato alla durata di un oggetto locale.  
   
-## Dichiarazione esplicita di Finalize  
- Nella nuova sintassi, come illustrato in precedenza, il distruttore è sintetizzato nel metodo `Dispose`.  Ciò significa che se il distruttore non viene chiamato esplicitamente, durante la finalizzazione il Garbage Collector non individuerà un metodo `Finalize` associato per l'oggetto.  Per supportare distruzione e finalizzazione, è stata introdotta una sintassi speciale per rendere disponibile un finalizzatore.  Di seguito è riportato un esempio.  
+## <a name="declaring-an-explicit-finalize"></a>La dichiarazione esplicita di Finalize  
+ Nella nuova sintassi, come illustrato in precedenza, il distruttore è sintetizzato nel `Dispose` metodo. Ciò significa che quando il distruttore non viene richiamato in modo esplicito, il garbage collector, durante la finalizzazione, non come prima troverà un oggetto associato `Finalize` metodo per l'oggetto. Per supportare la distruzione e finalizzazione, abbiamo introdotto una sintassi speciale per fornire un finalizzatore. Ad esempio:  
   
 ```  
 public ref class R {  
@@ -172,7 +175,7 @@ public:
 };  
 ```  
   
- Il prefisso `!` è analogo al carattere tilde \(`~`\) che introduce un distruttore di classe, vale a dire che entrambi i metodi post\-durata presentano un token di prefisso per il nome della classe.  Se il metodo sintetizzato `Finalize` si verifica all'interno di una classe derivata, al termine viene inserita una chiamata al metodo `Finalize` della classe base.  Se il distruttore viene chiamato in modo esplicito, il finalizzatore viene eliminato.  Di seguito è riportato l'esito della trasformazione:  
+ Il `!` prefisso è analogo a tilde (`~`) che introduce un distruttore della classe, ovvero, entrambi i metodi post-durati presentano un token di prefisso per il nome della classe. Se il sintetizzato `Finalize` metodo si trova all'interno di una classe derivata, una chiamata della classe di base `Finalize` metodo viene inserito alla fine. Se il distruttore viene richiamato in modo esplicito, il finalizzatore viene eliminato. Ecco il possibile aspetto della trasformazione:  
   
 ```  
 // internal transformation under new syntax  
@@ -184,17 +187,17 @@ public:
 };   
 ```  
   
-## Migrazione dalle estensioni gestite per C\+\+ a Visual C\+\+ 2010  
- Il comportamento in fase di runtime di un programma delle estensioni gestite di C\+\+ viene modificato se la compilazione avviene in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] quando una classe di riferimento contiene un distruttore non complesso.  L'algoritmo di conversione richiesto è simile al seguente:  
+## <a name="moving-from-managed-extensions-for-c-to-visual-c-2010"></a>Migrazione dalle estensioni gestite per C++ a Visual C++ 2010  
+ Il comportamento di runtime di estensioni gestite per programma C++ viene modificato quando viene compilato in Visual C++ quando una classe di riferimento contiene un distruttore non semplice. Algoritmo di conversione richiesto è simile al seguente:  
   
-1.  Se è presente un distruttore, riscriverlo in modo che sia il finalizzatore di classe.  
+1.  Se è presente un distruttore, riscrivere in modo che sia il finalizzatore della classe.  
   
-2.  Se è presente un metodo `Dispose`, riscriverlo nel distruttore di classe.  
+2.  Se un `Dispose` metodo è presente, riscriverlo nel distruttore della classe.  
   
-3.  Se il distruttore è presente ma non è disponibile un metodo `Dispose`, mantenere il distruttore durante l'esecuzione della prima operazione.  
+3.  Se un distruttore è presente ma è presente alcun `Dispose` (metodo), mantenere il distruttore durante l'esecuzione del primo elemento.  
   
- Nel corso dello spostamento del codice dalle estensioni gestite alla nuova sintassi, è possibile che l'esecuzione della trasformazione venga trascurata.  Se l'applicazione dipende dall'esecuzione di metodi di finalizzazione associati, il comportamento verrà modificato automaticamente rispetto a quanto previsto.  
+ Lo spostamento di codice dalle estensioni gestite per la nuova sintassi, si potrebbe perdere esecuzione della trasformazione. Se l'applicazione dipende da in qualche modo l'esecuzione dei metodi di finalizzazione associati, il comportamento dell'applicazione verrà automaticamente diverso da quello previsto.  
   
-## Vedere anche  
- [Tipi gestiti \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Distruttori e finalizzatori in Visual C\+\+](../misc/destructors-and-finalizers-in-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tipi gestiti (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
+ [Distruttori e finalizzatori nella procedura: definire e usare classi e struct (C + c++ /CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)

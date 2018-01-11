@@ -1,32 +1,33 @@
 ---
-title: "Procedura: Definire e usare enumerazioni in C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "enum (classe), specifica di tipi sottostanti"
+title: 'Procedura: definire e utilizzare enumerazioni in C + + CLI | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59d3619daecfad221bd9eac31c4950bae5ace4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: Definire e usare enumerazioni in C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento vengono descritte le enumerazioni in C\+\+\/CLI.  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>Procedura: Definire e usare enumerazioni in C++/CLI
+Questo argomento descrive le enumerazioni in C + + CLI.  
   
-## Specificare il tipo sottostante di un'enumerazione  
- Per impostazione predefinita, il tipo sottostante di un'enumerazione è `int`.  Tuttavia, è possibile specificare il tipo da firmare o form senza segno a `int`, di `short`, di `long`, di `__int32`, o di `__int64`.  È inoltre possibile utilizzare `char`.  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>Specifica il tipo sottostante di enum  
+ Per impostazione predefinita, il tipo sottostante di un'enumerazione è `int`.  Tuttavia, è possibile specificare il tipo è con o senza segno forme di `int`, `short`, `long`, `__int32`, o `__int64`.  È inoltre possibile utilizzare `char`.  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -49,12 +50,15 @@ int main() {
   
  **Output**  
   
-  **uniche**  
-**0**  
-**1**  
-**2**   
-## La conversione tra enumerazioni gestite e standard  
- Nessuna conversione standard tra un enum e un tipo integrale; un cast è obbligatorio.  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>Come eseguire la conversione tra enumerazioni gestite e standard  
+ Nessuna conversione standard tra un tipo enum e un tipo integrale. è necessario un cast.  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -76,24 +80,27 @@ int main() {
   
  **Output**  
   
-  **a e day2 coincideranno**   
-## Operatori ed enumerazioni  
- I seguenti operatori sono validi sulle enumerazioni in C\+\+\/CLI:  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>Gli operatori e le enumerazioni  
+ Gli operatori seguenti sono validi per le enumerazioni in C + + CLI:  
   
 |Operatore|  
-|---------------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|--------------|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- Operatori &#124; ^ & ~ \+\+ \-\- vengono definiti solo per le enumerazioni ai tipi sottostanti integrali, escluso il bool.  Entrambi gli operandi devono avere lo stesso tipo di enumerazione.  
+ Operatori &#124; ^ & ~ + +-sono definiti solo per le enumerazioni con integrale sottostante tipi, non inclusi bool.  Entrambi gli operandi devono essere del tipo di enumerazione.  
   
- Il compilatore esegue controllare non statico o dinamico del risultato di un'operazione enum; un'operazione può comportare un valore non compresi gli enumeratori validi di enumerazione.  
+ Il compilatore non esegue alcun controllo statico o dinamico del risultato di un'operazione di enumerazione. un'operazione può comportare un valore non compreso nell'intervallo di enumeratori valido dell'enumerazione.  
   
 > [!NOTE]
->  C\+\+11 introduce enum class nel codice non gestito che sono molto diverse delle classi gestite enum in C\+\+\/CLI.  In particolare, il tipo enum class C\+\+11 non supporta gli stessi operatori come classe gestita enum type in C\+\+\/CLI e il codice sorgente C\+\+\/CLI forniscano un identificatore di accessibilità nelle dichiarazioni di classi gestite enum per distinguerle dalle dichiarazioni di classe non gestite enum \(C\+\+11\).  Per ulteriori informazioni sulle classi in C\+\+\/CLI, C\+\+\/CX e C\+\+11, vedere [enum class](../windows/enum-class-cpp-component-extensions.md).  
+>  C++ 11 introduce i tipi di classe di enumerazione nel codice non gestito che sono significativamente diversi rispetto alle classi di enumerazione gestita in C + + CLI. In particolare, il tipo di classe C + + 11 enum non supporta gli stessi operatori di tipo di classe di enumerazione gestita in C + + CLI e C + + codice sorgente CLI necessario fornire un identificatore di accessibilità nell'enumerazione gestita dichiarazioni di classe per distinguerli da non gestito (C++ 11) dichiarazioni di classe enum. Per ulteriori informazioni sulle classi di enumerazione in C + + CLI, C + + CX e C++ 11, vedere [classe enum](../windows/enum-class-cpp-component-extensions.md).  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -130,8 +137,11 @@ int main() {
   
  **Output**  
   
-  **4**  
-**1**  
-**True**   
-## Vedere anche  
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [classe di enumerazione](../windows/enum-class-cpp-component-extensions.md)

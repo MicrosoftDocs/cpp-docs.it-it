@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2b171766fd4376478a11b4bab4dacf7cef58129a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdbexception-class"></a>Classe CDBException
 Rappresenta una condizione di eccezione generata da classi di database.  
@@ -118,7 +119,7 @@ class CDBException : public CException
   
 - **SQL_INVALID_HANDLE** funzione non riuscita a causa di un handle di ambiente non valido, un handle di connessione o un handle di istruzione. Ciò indica un errore di programmazione. Nessuna informazione aggiuntiva è disponibile la funzione ODBC **SQLError**.  
   
- I codici di con prefisso SQL sono definiti da ODBC. I codici di prefisso "AFX" sono definiti in AFXDB. H, trovato in MFC\Include..  
+ I codici di con prefisso SQL sono definiti da ODBC. I codici di prefisso "AFX" sono definiti in AFXDB. H, trovato in MFC\Include.  
   
 ##  <a name="m_strerror"></a>CDBException::m_strError  
  Contiene una stringa che descrive l'errore che ha causato l'eccezione.  

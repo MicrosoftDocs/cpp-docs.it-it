@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05756f23bc41a85a1810aac23fef6ffcd5de29ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae6626b9f93ec77627eac08959e9877315fc9c1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>Serializzazione: Serializzazione e. Database di Input/Output
 Questo articolo viene illustrato l'utilizzo di oggetti documento e la serializzazione per basato su file di input/output (i) e quando altre tecniche dei / o sono appropriate, in quanto l'applicazione legge e scrive i dati su base per ogni transazione, come applicazioni di database. Se non si usa la serializzazione, è anche non sarà necessario aprire il File, Salva e salvare come comandi. Gli argomenti trattati includono:  

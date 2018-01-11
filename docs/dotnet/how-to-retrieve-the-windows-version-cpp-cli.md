@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65e2c342b1c7be86035955cf2d22fde838c0c3ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b29d77b7bcc56baa9866c2855065052b1d2607c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>Procedura: recuperare la versione di Windows (C++/CLI)
 Esempio di codice riportato di seguito viene illustrato come recuperare le informazioni di piattaforma e la versione del sistema operativo corrente. Queste informazioni vengono archiviate nel <xref:System.Environment.OSVersion%2A?displayProperty=fullName> proprietà ed è costituito da un'enumerazione che descrive la versione di Windows in termini generali e un <xref:System.Environment.Version%2A> oggetto che contiene la build esatta del sistema operativo.  

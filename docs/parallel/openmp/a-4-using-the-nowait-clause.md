@@ -1,27 +1,27 @@
 ---
-title: "A.4   Using the nowait Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Utilizzando la clausola nowait 4 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3de2111-05ea-4ee3-a66c-57bd988712af
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf910f1223a4ccfdd85734ef9bd314d5664679ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# A.4   Using the nowait Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Se sono presenti cicli non correlati all'interno di un'area parallela, è possibile utilizzare `nowait` clausola \([parte 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11\) per evitare la barriera implicita alla fine di l  `for` direttiva, come segue:  
+# <a name="a4---using-the-nowait-clause"></a>A.4   Utilizzo della clausola nowait
+Se sono presenti più cicli indipendenti all'interno di un'area parallela, è possibile utilizzare il `nowait` clausola ([sezione 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) nella pagina 11) per evitare la barriera implicita alla fine del `for` direttiva, come indicato di seguito:  
   
 ```  
 #pragma omp parallel  

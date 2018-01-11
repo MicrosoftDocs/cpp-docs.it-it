@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3371
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3371
+f1_keywords: C3371
+dev_langs: C++
+helpviewer_keywords: C3371
 ms.assetid: f7ecf1aa-ed0a-4f73-81e5-62cf98f88ea1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e0691c1a3598a9f0f143142fb1620448fe47a816
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 1bc5af03841fe0a06b1ae0a31887565a3c1eb197
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3371"></a>Errore del compilatore C3371
 'idl_module': solo la proprietà 'name' è ammessa in questo contesto  

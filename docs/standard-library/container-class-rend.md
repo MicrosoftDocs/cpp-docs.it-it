@@ -14,15 +14,16 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f798f561ecaf52dd6ec28db080896368e43942c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 416f94200224eafbf88a59bfa882f246d445e0f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classrend"></a>Container Class::rend
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionante dei contenitori usati nella libreria standard di C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard di C++).  
+>  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).  
   
  La funzione membro restituisce un iteratore inverso che punta al primo elemento della sequenza (o appena oltre la fine di una sequenza vuota), designando la fine della sequenza inversa.  
   
@@ -37,4 +38,4 @@ reverse_iterator rend();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sample Container Class](../standard-library/sample-container-class.md) (Classe contenitore di esempio)
+ [Classe contenitore di esempio](../standard-library/sample-container-class.md)

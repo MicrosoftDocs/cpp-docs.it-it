@@ -1,31 +1,31 @@
 ---
-title: "A.16   Using Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: L'utilizzo dei blocchi A.16 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# A.16   Using Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio seguente, ad [parte 3,2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41\) si noti che l'argomento alle funzioni di blocco deve avere il tipo`omp_lock_t`e tale evitando di arrossirla.  Le funzioni di blocco determinano i thread per essere inattivi in attesa la voce nella prima sezione critica, ma per eseguire altre attività in attesa la voce al secondo.  `omp_set_lock` blocchi funzionali, ma  `omp_test_lock` la funzione contrario, consentendo il lavoro nel passaggio \(\) da eseguire.  
+# <a name="a16---using-locks"></a>A.16   Utilizzo di blocchi
+Nell'esempio seguente (per [sezione 3.2](../../parallel/openmp/3-2-lock-functions.md) nella pagina 41) si noti che l'argomento alle funzioni di blocco deve avere tipo `omp_lock_t`, e che non è necessario scaricare il.  Le funzioni di blocco che il thread sia inattivo durante l'attesa di una voce per la prima sezione critica, ma di eseguire altre operazioni durante l'attesa di ingresso al secondo.  Il `omp_set_lock` blocchi di funzione, ma la `omp_test_lock` funzione non consentire il lavoro in skip() da eseguire.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // omp_using_locks.c  
