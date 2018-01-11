@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2875
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2875
+f1_keywords: C2875
+dev_langs: C++
+helpviewer_keywords: C2875
 ms.assetid: d589fc0c-08b2-4a79-bc0e-dca5eb80bdd5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72c55b3681071a9737ca4dd9c4cd99b0cd0f8c5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 2e4a6a509bd445b5d3acda538e92d5d4c6b42a6f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2875"></a>Errore del compilatore C2875
 la dichiarazione using comporta una dichiarazione multipla di 'identificatore'  

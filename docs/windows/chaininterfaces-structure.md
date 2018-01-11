@@ -1,32 +1,33 @@
 ---
-title: "Struttura ChainInterfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChainInterfaces (struttura)"
+title: Struttura ChainInterfaces | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces
+dev_langs: C++
+helpviewer_keywords: ChainInterfaces structure
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9417b3950e4df98ed4e13ea1bb40e76c383868e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura ChainInterfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica la verifica e le funzioni di inizializzazione che possono essere applicate a un set di interfaccia ID.  
+# <a name="chaininterfaces-structure"></a>ChainInterfaces (struttura)
+Specifica le funzioni di verifica e inizializzazione che possono essere applicate a un set di ID di interfaccia.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -59,72 +60,72 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I0`  
- \(Richiesto\) Interfaccia ID 0.  
+ (Obbligatorio) Interfaccia ID 0.  
   
  `I1`  
- \(Richiesto\) Interfaccia ID 1.  
+ (Obbligatorio) Interfaccia ID 1.  
   
  `I2`  
- \(Facoltativo\) Interfaccia ID 2.  
+ (Facoltativo) Interfaccia con ID 2.  
   
  `I3`  
- \(Facoltativo\) Interfaccia ID 3.  
+ (Facoltativo) ID di interfaccia 3.  
   
  `I4`  
- \(Facoltativo\) Interfaccia ID 4.  
+ (Facoltativo) ID di interfaccia 4.  
   
  `I5`  
- \(Facoltativo\) Interfaccia ID 5.  
+ (Facoltativo) ID di interfaccia 5.  
   
  `I6`  
- \(Facoltativo\) Interfaccia ID 6.  
+ (Facoltativo) ID di interfaccia 6.  
   
  `I7`  
- \(Facoltativo\) Interfaccia ID 7.  
+ (Facoltativo) Interfaccia ID 7.  
   
  `I8`  
- \(Facoltativo\) Interfaccia ID 8.  
+ (Facoltativo) ID di interfaccia 8.  
   
  `I9`  
- \(Facoltativo\) Interfaccia ID 9.  
+ (Facoltativo) ID di interfaccia 9.  
   
  `DerivedType`  
  Un tipo derivato.  
   
  `BaseType`  
- Il tipo di base di tipo derivato.  
+ Il tipo di base di un tipo derivato.  
   
  `hasImplements`  
- Un valore booleano che se è `true`, significa che è impossibile utilizzare una struttura [MixIn](../windows/mixin-structure.md) con una classe non deriva dalla struttura [Implementa](../windows/implements-structure.md).  
+ Valore booleano che, se `true`, significa che non è possibile utilizzare un [MixIn](../windows/mixin-structure.md) struttura con una classe che deriva dal [implementa](../windows/implements-structure.md) visuale.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi protetti  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se l'id di interfaccia specificato è possibile eseguire il cast a ognuna delle specializzazioni definite dai parametri di modello di ChainInterface.|  
-|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Esegue il cast del puntatore a interfaccia di tipo definito dal parametro di modello `I0` a un puntatore su IUnknown.|  
-|[Metodo ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Archivia l'interfaccia ID definita dal parametro di modello `I0` in una posizione specificata in un array specificata di interfacce ID.|  
-|[Metodo ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica che a ogni interfaccia definita dai parametri di modello da `I0` a `I9` ereditino da IUnknown e\/o da IInspectable e che `I0` eredita da `I1` a `I9`.|  
-  
-### Costanti protette  
+### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costante ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Il numero totale delle interfacce ID contenute nelle interfacce specificate dai parametri di modello da `I0` a `I9`.|  
+|[Metodo ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello ChainInterface.|  
+|[Metodo ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Esegue il cast del tipo definito per il puntatore di interfaccia di `I0` parametro di modello in un puntatore a IUnknown.|  
+|[Metodo ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Archivia l'ID di interfaccia definita per il `I0` parametro di modello in una posizione specificata in una matrice specificata di ID di interfaccia.|  
+|[Metodo ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Verifica che ogni interfaccia definita dai parametri di modello `I0` tramite `I9` eredita da IUnknown e/o IInspectable e che `I0` eredita da `I1` tramite `I9`.|  
   
-## Gerarchia di ereditarietà  
+### <a name="protected-constants"></a>Costanti protette  
+  
+|nome|Descrizione|  
+|----------|-----------------|  
+|[Costante ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Il numero totale di ID contenuti nelle interfacce specificate dai parametri di modello di interfaccia `I0` tramite `I9`.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

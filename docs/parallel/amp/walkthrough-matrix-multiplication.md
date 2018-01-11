@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b66a95499c64970c31c7d71fe5dc43f1aa7854d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procedura dettagliata: moltiplicazione di matrici
 Questa procedura dettagliata viene illustrato come utilizzare C++ AMP per accelerare l'esecuzione di moltiplicazione. Vengono presentati due algoritmi, uno senza affiancamento e uno con affiancamento.  
@@ -39,7 +40,7 @@ Questa procedura dettagliata viene illustrato come utilizzare C++ AMP per accele
   
 3.  Selezionare **progetto vuoto**, immettere `MatrixMultiply` nel **nome** , quindi scegliere il **OK** pulsante.  
   
-4.  Scegliere il **Avanti** pulsante.  
+4.  Fare clic su **Avanti**.  
   
 5.  In **Esplora**, aprire il menu di scelta rapida per **i file di origine**, quindi scegliere **Aggiungi**, **nuovo elemento**.  
   

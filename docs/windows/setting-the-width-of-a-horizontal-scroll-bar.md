@@ -1,47 +1,51 @@
 ---
-title: "Setting the Width of a Horizontal Scroll Bar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "list controls, scroll bar width"
-  - "CListBox::SetHorizontalExtent"
-  - "controls [C++], scroll bar"
-  - "scroll bars, displaying in controls"
-  - "horizontal scroll bar width"
-  - "CListBox class, scroll bar width"
-  - "scroll bars, width"
+title: Impostazione della larghezza di una barra di scorrimento orizzontale | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- list controls, scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars, displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars, width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7aeabed9eaa164a0c19fd6b425f36e68059a548d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Setting the Width of a Horizontal Scroll Bar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando a una finestra di dialogo viene aggiunta una casella di riepilogo con una barra di scorrimento orizzontale mediante classi MFC, la barra di scorrimento non viene automaticamente visualizzata nell'applicazione.  
+# <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Impostazione della larghezza di una barra di scorrimento orizzontale
+Quando si aggiunge una casella di riepilogo con una barra di scorrimento orizzontale per una finestra di dialogo utilizzando le classi MFC, la barra di scorrimento non verrà visualizzati automaticamente nell'applicazione.  
   
-### Per visualizzare la barra di scorrimento  
+### <a name="to-make-the-scroll-bar-appear"></a>Per visualizzare la barra scorrimento  
   
-1.  Impostare una larghezza massima per l'elemento più largo chiamando [CListBox::SetHorizontalExtent](../Topic/CListBox::SetHorizontalExtent.md) nel codice.  
+1.  Impostare una larghezza massima per l'elemento più ampio chiamando [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) nel codice.  
   
-     Se questo valore non viene impostato, la barra di scorrimento non verrà visualizzata, anche se gli elementi nella casella di riepilogo sono più larghi della casella.  
+     Senza questo valore è impostato, la barra di scorrimento non verranno visualizzati, anche quando gli elementi nella casella di riepilogo sono più ampio rispetto alla casella.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
  MFC  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

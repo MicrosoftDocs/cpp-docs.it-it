@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e2c8d500f8621d894439acc9a5d510e92c62914
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrinseci del compilatore e linguaggio dell'assembly
 In questa sezione della documentazione sono contenute informazioni sugli intrinseci del compilatore e sul linguaggio assembly.  

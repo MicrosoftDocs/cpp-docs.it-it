@@ -13,10 +13,9 @@ f1_keywords:
 - set/std::operator&lt;
 - set/std::operator&lt;=
 - set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (set)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 5bae2e375833cae5d775085519e145a4dab69eab
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 ||||  
@@ -774,7 +772,6 @@ The multiset s1 is greater than or equal to the multiset s4.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<set>](../standard-library/set.md)
-
 
 
 

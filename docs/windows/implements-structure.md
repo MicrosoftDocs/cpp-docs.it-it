@@ -1,32 +1,33 @@
 ---
-title: "Implementa la struttura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Implementa la struttura"
+title: Implementa una struttura | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements
+dev_langs: C++
+helpviewer_keywords: Implements structure
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63da9ea650c34b7b1ed75d351587c39e52a88098
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Implementa la struttura
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="implements-structure"></a>Implementa la struttura
 Implementa QueryInterface e GetIid per le interfacce specificate.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -57,68 +58,68 @@ template <
 struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I0`  
- L'interfaccia con ID numero zero \(Obbligatorio\)  
+ ID dell'interfaccia di zero. (Obbligatorio).  
   
  `I1`  
- Il primo ID di interfaccia. \(Facoltativo\)  
+ Il primo ID di interfaccia. (facoltativo)  
   
  `I2`  
- Il secondo ID di interfaccia \(Facoltativo\)  
+ Il secondo ID di interfaccia. (facoltativo)  
   
  `I3`  
- Il terzo ID di interfaccia \(Facoltativo\)  
+ Il terzo ID di interfaccia. (facoltativo)  
   
  `I4`  
- Il quarto ID di interfaccia \(Facoltativo\)  
+ Il quarto ID di interfaccia. (facoltativo)  
   
  `I5`  
- Il quinto ID di interfaccia \(Facoltativo\)  
+ Il quinto ID di interfaccia. (facoltativo)  
   
  `I6`  
- Il sesto ID di interfaccia \(Facoltativo\)  
+ Il sesto ID di interfaccia. (facoltativo)  
   
  `I7`  
- Il settimo ID di interfaccia \(Facoltativo\)  
+ Il settimo ID di interfaccia. (facoltativo)  
   
  `I8`  
- L'ottavo ID di interfaccia \(Facoltativo\)  
+ ID dell'interfaccia ottavo. (facoltativo)  
   
  `I9`  
- Il nono ID di interfaccia \(Facoltativo\)  
+ Il nono ID di interfaccia. (facoltativo)  
   
  `flags`  
- Flag di configurazione per la classe.  Una o più enumerazioni [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) specificate in una struttura [RuntimeClassFlags](../windows/runtimeclassflags-structure.md).  
+ Flag di configurazione per la classe. Uno o più [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) le enumerazioni che vengono specificate in un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) struttura.  
   
-## Osservazioni  
+## <a name="remarks"></a>Note  
  Deriva dall'elenco delle interfacce specificate e implementa i modelli di supporto per QueryInterface e GetIid.  
   
- Ogni `I0` con il parametro di interfaccia `I9` deve derivare da IUnknown, IInspectable, o dal modello [ChainInterfaces](../windows/chaininterfaces-structure.md).  Il parametro `flags` determina se il supporto viene generato da IUnknown o IInspectable.  
+ Ogni `I0` tramite `I9` parametro interfaccia deve derivare da entrambi IUnknown, IInspectable, o [ChainInterfaces](../windows/chaininterfaces-structure.md) modello. Il `flags` parametro determina se il supporto viene generato per IUnknown o IInspectable.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|`ClassFlags`|Un sinonimo per `RuntimeClassFlags<WinRt>`.|  
-  
-### Metodi protetti  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo Implements::CanCastTo](../windows/implements-cancastto-method.md)|Ottiene un puntatore all'interfaccia specificata.|  
-|[Metodo Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Ottiene un puntatore all'interfaccia IUnknown sottostante.|  
-|[Metodo Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Inserisce l'ID di interfaccia specificata dal parametro di indice zero del modello corrente nell'array di elementi specificato.|  
+|`ClassFlags`|Sinonimo di `RuntimeClassFlags<WinRt>`.|  
   
-### Costanti protette  
+### <a name="protected-methods"></a>Metodi protetti  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Costante Implements::IidCount](../windows/implements-iidcount-constant.md)|Mantiene il numero di ID di interfaccia implementati.|  
+|[Metodo Implements::CanCastTo](../windows/implements-cancastto-method.md)|Ottiene un puntatore a interfaccia specificato.|  
+|[Metodo Implements::CastToUnknown](../windows/implements-casttounknown-method.md)|Ottiene un puntatore a interfaccia IUnknown sottostante.|  
+|[Metodo Implements::FillArrayWithIid](../windows/implements-fillarraywithiid-method.md)|Inserisce l'ID di interfaccia specificato dal parametro di modello zero corrente nell'elemento di matrice specificato.|  
   
-## Gerarchia di ereditarietà  
+### <a name="protected-constants"></a>Costanti protette  
+  
+|nome|Descrizione|  
+|----------|-----------------|  
+|[Costante Implements::IidCount](../windows/implements-iidcount-constant.md)|Contiene il numero di ID di interfaccia implementato.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
@@ -131,10 +132,10 @@ struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3,
   
  `Implements`  
   
-## Requisiti  
- **Intestazione:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

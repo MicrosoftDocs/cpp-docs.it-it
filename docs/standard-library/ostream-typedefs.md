@@ -10,14 +10,13 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: bcf7df720a9b3a71ddbb32bd6eeb73f2f1332391
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltostreamgt-typedefs"></a>Typedef &lt;ostream&gt;
 |||  
@@ -46,7 +45,6 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<ostream>](../standard-library/ostream.md)
-
 
 
 

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3d0b0234ea6a3f63f0730b3e0dc965f1e8c8e902
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9200c2f7d9dac0eed888cc22a29c7c4417013c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 Include le intestazioni della libreria C++ standard \<ccomplex> e \<cmath> che offrono macro matematiche di tipo generico equivalenti a \<tgmath.h>.  
@@ -39,7 +40,7 @@ Include le intestazioni della libreria C++ standard \<ccomplex> e \<cmath> che o
  [\<cmath>](../standard-library/cmath.md)   
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [C++ Standard Library Overview](../standard-library/cpp-standard-library-overview.md)  (Panoramica sulla libreria standard C++)  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

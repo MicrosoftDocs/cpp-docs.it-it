@@ -10,14 +10,13 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 1b69623aa9eccfca57667d4f33546512799b172f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerazioni &lt;limits&gt;
 |||  
@@ -76,7 +75,6 @@ enum float_round_style {
   
 ## <a name="see-also"></a>Vedere anche  
  [\<limits>](../standard-library/limits.md)
-
 
 
 

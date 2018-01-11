@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f14e398943d71cab4e520b373834b7373146f221
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2f5df3215f2d3487b919c2c89215dab17d288d4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Carattere strumento Testo (Editor di immagini per le icone)
 Specifica le impostazioni del carattere quando si utilizza il [finestra di dialogo strumento testo](../windows/text-tool-dialog-box-image-editor-for-icons.md) del [Editor di immagini](../windows/image-editor-for-icons.md).  
@@ -48,7 +51,7 @@ Specifica le impostazioni del carattere quando si utilizza il [finestra di dialo
  Elenca gli script di linguaggio disponibili per il tipo di carattere specificato. Quando si seleziona un lingua diversa di script, il set di caratteri per quella lingua diventa disponibile per la creazione di documenti in più lingue.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)

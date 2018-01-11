@@ -16,16 +16,17 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42eae02b1eb789ea1333a8333e2f947457f87a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9aaff86eb5781872675a46863ccfbafff60d24e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>Procedure dettagliate del runtime di concorrenza
 Negli argomenti basata sullo scenario di questa sezione viene illustrato come utilizzare molte delle funzionalità del Runtime di concorrenza.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
  Viene illustrato come utilizzare il [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app.  
   

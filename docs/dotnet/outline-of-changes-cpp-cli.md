@@ -1,35 +1,37 @@
 ---
-title: "Struttura delle modifiche (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Struttura delle modifiche (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura delle modifiche (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questa struttura vengono illustrati esempi di alcune modifiche nel linguaggio da estensioni gestite di C\+\+ a [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  Per ulteriori informazioni, selezionare il collegamento fornito con ogni elemento.  
+# <a name="outline-of-changes-ccli"></a>Struttura delle modifiche (C++/CLI)
+Questa struttura vengono illustrati esempi di alcune delle modifiche nel linguaggio dalle estensioni gestite per C++ in Visual C++. Seguire il collegamento fornito con ogni elemento per altre informazioni.  
   
-## Parole chiave senza doppio carattere di sottolineatura  
- Il doppio carattere di sottolineatura che precede tutte le parole chiave è stato eliminato, con un'unica eccezione.  Di conseguenza, `__value` diventa `value` e `__interface` diventa `interface` e così via.  Per evitare l'incompatibilità del nome tra parole chiave e identificatori nel codice utente, le parole chiave vengono considerate prevalentemente contestuali.  
+## <a name="no-double-underscore-keywords"></a>Parole chiave non doppio carattere di sottolineatura  
+ È stato rimosso il doppio carattere di sottolineatura davanti a tutte le parole chiave, con un'eccezione. Di conseguenza, `__value` diventa `value`, e `__interface` diventa `interface`e così via. Per evitare conflitti di nomi tra le parole chiave e gli identificatori nel codice utente, le parole chiave vengono considerate prevalentemente contestuali.  
   
- Per ulteriori informazioni, vedere [Parole chiave del linguaggio \(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md).  
+ Vedere [parole chiave del linguaggio (C + + CLI)](../dotnet/language-keywords-cpp-cli.md) per ulteriori informazioni.  
   
-## Dichiarazioni di classe  
- Sintassi nelle estensioni gestite:  
+## <a name="class-declarations"></a>Dichiarazioni di classe  
+ Sintassi delle estensioni gestite:  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -49,10 +51,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- Per ulteriori informazioni, vedere [Tipi gestiti \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md).  
+ Vedere [tipi gestiti (C + + CL)](../dotnet/managed-types-cpp-cl.md) per ulteriori informazioni.  
   
-## Dichiarazione degli oggetti  
- Sintassi nelle estensioni gestite:  
+## <a name="object-declaration"></a>Dichiarazione dell'oggetto  
+ Sintassi delle estensioni gestite:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -75,10 +77,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vedere [dichiarazione di un oggetto di classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) per ulteriori informazioni.  
   
-### Allocazione per l'heap gestito  
- Sintassi nelle estensioni gestite:  
+### <a name="managed-heap-allocation"></a>Allocazione di Heap gestito  
+ Sintassi delle estensioni gestite:  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -94,10 +96,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- Per ulteriori informazioni, vedere [Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vedere [dichiarazione di un oggetto di classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) per ulteriori informazioni.  
   
-### Riferimento di rilevamento a nessun oggetto  
- Sintassi nelle estensioni gestite:  
+### <a name="a-tracking-reference-to-no-object"></a>Un riferimento di rilevamento a nessun oggetto  
+ Sintassi delle estensioni gestite:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -123,45 +125,45 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Per ulteriori informazioni, vedere [Dichiarazione di un oggetto classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md).  
+ Vedere [dichiarazione di un oggetto di classe di riferimento CLR](../dotnet/declaration-of-a-clr-reference-class-object.md) per ulteriori informazioni.  
   
-## Dichiarazioni di matrice  
- La matrice CLR è stata riprogettata.  Sebbene sia simile alla raccolta di modelli `vector` di STL, la matrice esegue il mapping alla classe `System::Array` sottostante, quindi non si tratta dell'implementazione di un modello.  
+## <a name="array-declaration"></a>Dichiarazione di matrice  
+ La matrice CLR è stata riprogettata. È simile a stl `vector` raccolta di modelli, ma esegue il mapping a sottostante `System::Array` classe: vale a dire non è un'implementazione del modello.  
   
- Per ulteriori informazioni, vedere [Dichiarazione di una matrice CLR](../dotnet/declaration-of-a-clr-array.md).  
+ Vedere [dichiarazione di una matrice CLR](../dotnet/declaration-of-a-clr-array.md) per ulteriori informazioni.  
   
-### Matrice come parametro  
- Sintassi delle matrici nelle estensioni gestite:  
+### <a name="array-as-parameter"></a>Matrice come parametro  
+ Sintassi di matrice nelle estensioni gestite:  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
 void PrintValues( int myArr __gc[,,]);   
 ```  
   
- Nuova sintassi delle matrici:  
+ Nuova sintassi di matrice:  
   
 ```  
 void PrintValues( array<Object^>^ myArr );  
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### Matrice come tipo restituito  
- Sintassi delle matrici nelle estensioni gestite:  
+### <a name="array-as-return-type"></a>Matrice come tipo restituito  
+ Sintassi di matrice nelle estensioni gestite:  
   
 ```  
 Int32 f() [];   
 int GetArray() __gc[];  
 ```  
   
- Nuova sintassi delle matrici:  
+ Nuova sintassi di matrice:  
   
 ```  
 array<Int32>^ f();  
 array<int>^ GetArray();  
 ```  
   
-### Inizializzazione rapida della matrice CLR locale  
- Sintassi delle matrici nelle estensioni gestite:  
+### <a name="shorthand-initialization-of-local-clr-array"></a>Inizializzazione a sintassi abbreviata della matrice CLR locale  
+ Sintassi di matrice nelle estensioni gestite:  
   
 ```  
 int GetArray() __gc[] {  
@@ -173,7 +175,7 @@ int GetArray() __gc[] {
 }  
 ```  
   
- Nuova sintassi delle matrici:  
+ Nuova sintassi di matrice:  
   
 ```  
 array<int>^ GetArray() {  
@@ -184,22 +186,22 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### Dichiarazione esplicita della matrice CLR  
- Sintassi delle matrici nelle estensioni gestite:  
+### <a name="explicit-clr-array-declaration"></a>Dichiarazione di matrice CLR esplicita  
+ Sintassi di matrice nelle estensioni gestite:  
   
 ```  
 Object* myArray[] = new Object*[2];  
 String* myMat[,] = new String*[4,4];  
 ```  
   
- Nuova sintassi delle matrici:  
+ Nuova sintassi di matrice:  
   
 ```  
 array<Object^>^ myArray = gcnew array<Object^>(2);  
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- Novità del linguaggio: inizializzazione esplicita della matrice dopo gcnew  
+ Novità del linguaggio: inizializzazione esplicita della matrice che segue gcnew  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -208,8 +210,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## Proprietà scalari  
- Sintassi delle proprietà nelle estensioni gestite:  
+## <a name="scalar-properties"></a>Proprietà scalari  
+ Sintassi di proprietà nelle estensioni gestite:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -221,7 +223,7 @@ public:
 };  
 ```  
   
- Nuova sintassi delle proprietà:  
+ Nuova sintassi di proprietà:  
   
 ```  
 public ref class Vector sealed {   
@@ -232,7 +234,7 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
@@ -247,10 +249,10 @@ public:
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Dichiarazione di proprietà](../dotnet/property-declaration.md).  
+ Vedere [dichiarazione di proprietà](../dotnet/property-declaration.md) per ulteriori informazioni.  
   
-## Proprietà indicizzate  
- Sintassi delle proprietà indicizzate nelle estensioni gestite:  
+## <a name="indexed-properties"></a>Proprietà indicizzate  
+ Sintassi di proprietà indicizzate nelle estensioni gestite:  
   
 ```  
 public __gc class Matrix {  
@@ -262,7 +264,7 @@ public:
 };  
 ```  
   
- Nuova sintassi delle proprietà indicizzate:  
+ Nuova sintassi di proprietà indicizzate:  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +298,10 @@ public:
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Dichiarazione degli indici di proprietà](../dotnet/property-index-declaration.md).  
+ Vedere [dichiarazione di proprietà indice](../dotnet/property-index-declaration.md) per ulteriori informazioni.  
   
-## Operatori di overload  
- Sintassi degli operatori di overload nelle estensioni gestite:  
+## <a name="overloaded-operators"></a>Operatori di overload  
+ Sintassi overload di operatore nelle estensioni gestite:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -321,7 +323,7 @@ int main() {
 }  
 ```  
   
- Nuova sintassi degli operatori di overload:  
+ Nuova sintassi degli overload di operatori:  
   
 ```  
 public ref class Vector sealed {  
@@ -342,10 +344,10 @@ int main() {
 }  
 ```  
   
- Per ulteriori informazioni, vedere [Operatori di overload](../dotnet/overloaded-operators.md).  
+ Vedere [operatori di overload](../dotnet/overloaded-operators.md) per ulteriori informazioni.  
   
-## Operatori di conversione  
- Sintassi degli operatori di conversione nelle estensioni gestite:  
+## <a name="conversion-operators"></a>Operatori di conversione  
+ Sintassi dell'operatore di conversione estensioni gestita:  
   
 ```  
 __gc struct MyDouble {  
@@ -355,7 +357,7 @@ __gc struct MyDouble {
 };  
 ```  
   
- Nuova sintassi degli operatori di conversione:  
+ Nuova sintassi dell'operatore di conversione:  
   
 ```  
 ref struct MyDouble {  
@@ -366,10 +368,10 @@ public:
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Modifiche agli operatori di conversione](../dotnet/changes-to-conversion-operators.md).  
+ Vedere [modifiche agli operatori di conversione](../dotnet/changes-to-conversion-operators.md) per ulteriori informazioni.  
   
-## Override esplicito di un membro di interfaccia  
- Sintassi dell'override esplicito nelle estensioni gestite:  
+## <a name="explicit-override-of-an-interface-member"></a>Override esplicito di un membro di interfaccia  
+ Eseguire l'override esplicito nelle estensioni gestite sintassi:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -381,7 +383,7 @@ public __gc class R : public ICloneable {
 };  
 ```  
   
- Nuova sintassi dell'override esplicito:  
+ Nuova sintassi di override esplicito:  
   
 ```  
 public ref class R : public ICloneable {  
@@ -393,10 +395,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Override esplicito di un membro di interfaccia](../dotnet/explicit-override-of-an-interface-member.md).  
+ Vedere [eseguire l'Override esplicito di un membro di interfaccia](../dotnet/explicit-override-of-an-interface-member.md) per ulteriori informazioni.  
   
-## Funzioni virtuali private  
- Sintassi delle funzioni virtuali private nelle estensioni gestite:  
+## <a name="private-virtual-functions"></a>Funzioni virtuali private  
+ Sintassi di funzioni virtuali private nelle estensioni gestite:  
   
 ```  
 __gc class Base {  
@@ -412,7 +414,7 @@ public:
 };  
 ```  
   
- Nuova sintassi delle funzioni virtuali private  
+ Nuova sintassi di funzioni virtuali private  
   
 ```  
 ref class Base {  
@@ -428,9 +430,9 @@ public:
 };  
 ```  
   
- Per ulteriori informazioni, vedere [Funzioni virtuali private](../dotnet/private-virtual-functions.md).  
+ Vedere [funzioni virtuali Private](../dotnet/private-virtual-functions.md) per ulteriori informazioni.  
   
-## Tipo enum di CLR  
+## <a name="clr-enum-type"></a>Tipo enum di CLR  
  Sintassi di enum nelle estensioni gestite:  
   
 ```  
@@ -451,33 +453,33 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- Oltre a questa piccola modifica sintattica, il comportamento del tipo di enumerazione CLR ha subito diverse modifiche:  
+ Oltre a questa piccola modifica sintattica, il comportamento del tipo enum CLR ha subito in diversi modi:  
   
--   La dichiarazione con prototipo di un enum di CLR non è più supportata.  
+-   Una dichiarazione con prototipo di un'enumerazione CLR non è più supportata.  
   
--   Tra le due versioni del linguaggio è stata invertita la risoluzione dell'overload tra i tipi aritmetici incorporati e la gerarchia di classi dell'oggetto [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  Di conseguenza, gli enum di CLR non vengono più implicitamente convertiti in tipi aritmetici.  
+-   La risoluzione dell'overload tra i tipi aritmetici incorporati e la gerarchia di classi di oggetto è invertito tra le estensioni gestite e Visual C++. Come effetto collaterale, enumerazioni CLR non è più in modo implicito vengono convertite in tipi aritmetici.  
   
--   Contrariamente a quanto accade nelle estensioni gestite, nella nuova sintassi un enum di CLR mantiene il proprio ambito.  In passato, gli enumeratori erano visibili all'interno dell'ambito che contiene l'enum, mentre adesso vi sono incapsulati.  
+-   Nella nuova sintassi, un enum di CLR mantiene il proprio ambito, che non è il caso nelle estensioni gestite. In precedenza, gli enumeratori erano visibili all'interno dell'ambito contenitore dell'enumerazione. a questo punto, gli enumeratori sono incapsulati all'interno dell'ambito dell'enumerazione.  
   
- Per ulteriori informazioni, vedere [Tipo enum di CLR](../dotnet/clr-enum-type.md).  
+ Vedere [tipo Enum di CLR](../dotnet/clr-enum-type.md) per ulteriori informazioni.  
   
-## Eliminazione della parola chiave \_\_box  
- Sintassi del boxing nelle estensioni gestite:  
+## <a name="removal-of-box-keyword"></a>Rimozione di box (parola chiave)  
+ Estensioni gestite il boxing di sintassi:  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
 ```  
   
- Nuova sintassi del boxing:  
+ Nuova sintassi di conversione boxing:  
   
 ```  
 Object ^o = 1024; // implicit boxing  
 ```  
   
- Per ulteriori informazioni, vedere [Handle di rilevamento a un valore boxed](../dotnet/a-tracking-handle-to-a-boxed-value.md).  
+ Vedere [A rilevamento Handle per un valore Boxed](../dotnet/a-tracking-handle-to-a-boxed-value.md) per ulteriori informazioni.  
   
-## Puntatore di blocco  
- Sintassi del puntatore di blocco nelle estensioni gestite:  
+## <a name="pinning-pointer"></a>Puntatore di blocco  
+ Estensioni gestite sintassi dei puntatori di blocco:  
   
 ```  
 __gc struct H { int j; };  
@@ -488,7 +490,7 @@ int main() {
 };  
 ```  
   
- Nuova sintassi del puntatore di blocco:  
+ Nuova sintassi dei puntatori di blocco:  
   
 ```  
 ref struct H { int j; };  
@@ -499,9 +501,9 @@ int main() {
 }  
 ```  
   
- Per ulteriori informazioni, vedere [Semantica dei tipi di valore](../dotnet/value-type-semantics.md).  
+ Vedere [la semantica dei tipi di valore](../dotnet/value-type-semantics.md) per ulteriori informazioni.  
   
-## La parola chiave \_\_typeof diventa typeid  
+## <a name="typeof-keyword-becomes-typeid"></a>typeof (parola chiave) diventa typeid  
  Sintassi di typeof nelle estensioni gestite:  
   
 ```  
@@ -516,9 +518,10 @@ Array^ myIntArray =
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- Per ulteriori informazioni, vedere [typeof passa a T::typeid](../dotnet/typeof-goes-to-t-typeid.md).  
+ Vedere [typeof passa a t:: typeid](../dotnet/typeof-goes-to-t-typeid.md) per ulteriori informazioni.  
   
-## Vedere anche  
- [Nozioni di base della migrazione in C\+\+\/CLI](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/it-it/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [C + + CLI nozioni di base della migrazione](../dotnet/cpp-cli-migration-primer.md)   
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)
+
+

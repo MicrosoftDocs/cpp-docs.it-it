@@ -26,11 +26,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 822ce325d188eb371427e5245701a653cc159878
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 762c2a9d9814f9780aeae2d8d61d7006bdc9728c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizzazione o modifica di colori (Editor di immagini per le icone)
 L'editor di immagini [tavolozza dei colori](../windows/colors-window-image-editor-for-icons.md) inizialmente Visualizza 16 colori standard. Oltre ai colori visualizzati, è possibile creare colori personalizzati. È quindi possibile [salvare e caricare una tavolozza colori personalizzata](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
@@ -53,7 +56,7 @@ L'editor di immagini [tavolozza dei colori](../windows/colors-window-image-edito
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   

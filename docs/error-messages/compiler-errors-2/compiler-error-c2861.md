@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2861
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2861
+f1_keywords: C2861
+dev_langs: C++
+helpviewer_keywords: C2861
 ms.assetid: 012bb44d-6c9b-4def-b54e-b19f1f8ddd1b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 927c1fb7e80da9d3a2dd221cb5bab3bb17abb109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 18c51d01b8f273d4546f3411405fe511e31799ef
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2861"></a>Errore del compilatore C2861
 'nome della funzione': non è possibile definire una funzione membro di interfaccia  

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c667616325cf29d959340db38a8336dd6c63e8c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>Nuovo &lt;dispositivo&gt; immagine la finestra di dialogo tipo (Editor di immagini per le icone)
 Consente di creare una nuova immagine per dispositivo di un tipo specificato. Per aprire la **New \<dispositivo > immagine** nella finestra di dialogo fare clic su **tipo nuova immagine** sul **immagine** menu.  
@@ -43,7 +46,7 @@ Consente di creare una nuova immagine per dispositivo di un tipo specificato. Pe
  Apre il [la finestra di dialogo immagine personalizzata](custom-image-dialog-box-image-editor-for-icons.md) in cui è possibile creare una nuova immagine con dimensioni personalizzate e numero di colori.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   

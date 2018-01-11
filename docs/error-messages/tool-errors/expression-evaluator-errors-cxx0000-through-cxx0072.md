@@ -1,7 +1,7 @@
 ---
 title: Errori dell'analizzatore di espressioni da CXX0000 a CXX0072 | Documenti Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5133f771566f0d79d1887ff63dd168b1e19a9282
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 053fa173c19c8aa32169cbe67834cbcf8b7ed7de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expression-evaluator-errors-cxx0000-through-cxx0072"></a>Errori dell'analizzatore di espressioni da CXX0000 a CXX0072
-In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per ottenere informazioni su un determinato messaggio di errore, fare clic sul corrispondente numero di errore nella finestra di Output e premere F1 oppure digitare il numero di errore nel **cercare** dell'indice.
+
+In questa sezione è un riferimento per gli errori generati dagli strumenti di diagnostica.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

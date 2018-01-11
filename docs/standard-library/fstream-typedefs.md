@@ -16,14 +16,13 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 55a148c472048c5531521cd6f4574477e7c31cac
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfstreamgt-typedefs"></a>Typedef &lt;fstream&gt;
 ||||  
@@ -132,7 +131,6 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<fstream>](../standard-library/fstream.md)
-
 
 
 

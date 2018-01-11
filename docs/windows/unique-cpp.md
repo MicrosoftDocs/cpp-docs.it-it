@@ -1,33 +1,33 @@
 ---
-title: "unique (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique attribute"
+title: Unique (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.unique
+dev_langs: C++
+helpviewer_keywords: unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 88ba3e46a9a383ee72f3e979b23a275cc6f95d0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# unique (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-specifica un puntatore univoco.  
+# <a name="unique-c"></a>unique (C++)
+Specifica un puntatore univoco.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,27 +35,26 @@ specifica un puntatore univoco.
   
 ```  
   
-## Note  
- **univoco** L'attributo di C\+\+ ha la stessa funzionalità di  [univoco](http://msdn.microsoft.com/library/windows/desktop/aa367294) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **univoco** attributo C++ ha la stessa funzionalità come il [univoco](http://msdn.microsoft.com/library/windows/desktop/aa367294) attributo MIDL.  
   
-## Esempio  
- vedere [riferimento](../windows/ref-cpp.md) esempio per un esempio di utilizzo  **univoco**.  
+## <a name="example"></a>Esempio  
+ Vedere il [ref](../windows/ref-cpp.md) esempio per un esempio dell'uso di **univoco**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|`typedef`,  `struct`,  **unione**, parametro di interfaccia, metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|`typedef`, `struct`, **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributi di parametro](../windows/parameter-attributes.md)   

@@ -1,49 +1,53 @@
 ---
-title: "Resizing an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], resizing images"
-  - "size [C++], images"
-  - "images [C++], resizing"
-  - "resizing images"
+title: Ridimensionamento di un'immagine intera (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], resizing images
+- size [C++], images
+- images [C++], resizing
+- resizing images
 ms.assetid: 10782937-7eb4-4340-bdec-618ee7d7904b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b605bb3e58cc687d560c2242bbf98b469defa582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Resizing an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per ridimensionare un'intera immagine utilizzando la finestra Proprietà  
+# <a name="resizing-an-entire-image-image-editor-for-icons"></a>Ridimensionamento di un'immagine intera (Editor di immagini per le icone)
+### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Per ridimensionare un'intera immagine utilizzando la finestra proprietà  
   
 1.  Aprire l'immagine di cui si desidera modificare le proprietà.  
   
-2.  Nelle caselle **Larghezza** e **Altezza** della [finestra Proprietà](../Topic/Properties%20Window.md) digitare le dimensioni desiderate.  
+2.  Nel **larghezza** e **altezza** caselle il [finestra proprietà](/visualstudio/ide/reference/properties-window), digitare le dimensioni che si desidera.  
   
-     Se si incrementano le dimensioni dell'immagine, l'editor di immagini estenderà l'immagine verso il basso o verso destra oppure in entrambe le direzioni e riempirà la nuova area con il colore di sfondo corrente.  L'immagine non verrà tuttavia ingrandita.  
+     Se si stanno aumentando le dimensioni dell'immagine, l'editor di immagini estende l'immagine a destra, verso il basso, o entrambi e riempie la nuova area con il colore di sfondo corrente. L'immagine non è estesa.  
   
-     Se si riducono le dimensioni dell'immagine, l'editor di immagini ritaglierà l'immagine lungo il bordo destro o il bordo inferiore oppure lungo entrambi.  
+     Se si siano riducendo le dimensioni dell'immagine, l'editor di immagini Ritaglia l'immagine a destra o al bordo inferiore o a entrambi.  
   
     > [!NOTE]
-    >  Le proprietà Larghezza e Altezza possono essere utilizzate per ridimensionare solo l'intera immagine e non una selezione parziale.  
+    >  È possibile utilizzare le proprietà di larghezza e altezza per ridimensionare l'intera immagine, non per ridimensionare una selezione parziale.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../mfc/resizing-an-image-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Ridimensionamento di un'immagine](../windows/resizing-an-image-image-editor-for-icons.md)
+

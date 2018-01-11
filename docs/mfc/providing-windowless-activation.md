@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 536788ec2a09d00f4bd92cc602ea9a558415ef72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-windowless-activation"></a>Attivazione senza finestra
 Codice di creazione finestre (ovvero tutto ciò che accade quando si chiama **CreateWindow**) è dispendioso da eseguire. Un controllo che gestisce una finestra sullo schermo deve gestire i messaggi per la finestra. I controlli privi di finestra sono quindi più veloci dei controlli con finestre.  
@@ -59,7 +60,7 @@ Codice di creazione finestre (ovvero tutto ciò che accade quando si chiama **Cr
   
  Nei controlli privi di finestra è sempre opportuno utilizzare le funzioni membro `COleControl` anziché le funzioni membro `CWnd` corrispondenti o le funzioni API Win32 correlate.  
   
- È possibile impostare un controllo senza finestra in modo che funga da destinazione di un'operazione di trascinamento della selezione OLE. In genere, ciò richiede che la finestra del controllo sia stata registrata come destinazione di trascinamento. Poiché il controllo non ha una finestra propria, il contenitore utilizza la propria finestra come destinazione di trascinamento. Il controllo fornisce un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento giusto. Per esporre questa interfaccia per il contenitore, eseguire l'override [COleControl:: GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Ad esempio:  
+ È possibile impostare un controllo senza finestra in modo che funga da destinazione di un'operazione di trascinamento e rilascio OLE. In genere, ciò richiede che la finestra del controllo sia stata registrata come obiettivo di rilascio. Poiché il controllo non ha una finestra propria, il contenitore utilizza la propria finestra come obiettivo di rilascio. Il controllo fornisce un'implementazione dell'interfaccia `IDropTarget` a cui il contenitore può delegare le chiamate al momento giusto. Per esporre questa interfaccia per il contenitore, eseguire l'override [COleControl:: GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). Ad esempio:  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   

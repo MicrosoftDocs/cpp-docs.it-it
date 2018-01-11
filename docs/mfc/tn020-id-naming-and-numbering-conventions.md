@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c71ede630740f9d2c0096ae803f81c9c0d6ca23
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a666c2183276b95a9405400de8acc0117c7134e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: convenzioni di numerazione e denominazione ID
 Questa nota descrive la denominazione degli ID e le convenzioni di numerazione MFC 2.0 utilizzate per le risorse, i comandi, stringhe, controlli e finestre figlio.  
@@ -42,7 +43,7 @@ Questa nota descrive la denominazione degli ID e le convenzioni di numerazione M
   
  MFC utilizza il prefisso "IDR _" per indicare un ID di risorsa che si applica a più tipi di risorsa. Per una finestra cornice specificata, ad esempio, MFC Usa lo stesso prefisso "IDR _" per indicare una risorsa di menu, tasti di scelta rapida, stringa e l'icona. La tabella seguente illustra i vari prefissi e il relativo utilizzo:  
   
-|Prefisso|Usare|  
+|Prefisso|Usa|  
 |------------|---------|  
 |IDR _|Per più tipi di risorsa (utilizzati principalmente per i tasti di scelta rapida, menu e barre multifunzione).|  
 |IDD _|Per le risorse modello di finestra di dialogo (ad esempio IDD_DIALOG1).|  
@@ -62,7 +63,7 @@ Questa nota descrive la denominazione degli ID e le convenzioni di numerazione M
   
  All'interno di una risorsa di menu, MFC segue queste convenzioni:  
   
-|Prefisso|Usare|  
+|Prefisso|Usa|  
 |------------|---------|  
 |IDM _|Per le voci di menu che non utilizzano l'architettura di comando MFC.|  
 |ID_|Per i comandi di menu che utilizzano l'architettura di comando MFC.|  

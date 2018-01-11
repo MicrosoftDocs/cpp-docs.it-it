@@ -14,10 +14,9 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -27,12 +26,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltthreadgt-operators"></a>Operatori &lt;thread&gt;
 ||||  
@@ -201,7 +199,6 @@ basic_ostream<Elem, Tr>& operator<<(
   
 ## <a name="see-also"></a>Vedere anche  
  [\<thread>](../standard-library/thread.md)
-
 
 
 

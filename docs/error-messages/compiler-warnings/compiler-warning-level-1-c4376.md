@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4376 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4376"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4376"
+title: Compilatore avviso (livello 1) C4376 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4376
+dev_langs: C++
+helpviewer_keywords: C4376
 ms.assetid: 5f202c74-9489-48fe-b36f-19cd882b1589
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0bb98149ca800fd7cfde7b85ec52e1133bd894
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4376
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-identificatore di accesso 'vecchio\_identificatore' non più supportato. Utilizzare 'nuovo\_identificatore'  
+# <a name="compiler-warning-level-1-c4376"></a>Avviso del compilatore (livello 1) C4376
+Identificatore di accesso ' vecchio_identificatore:' non è più supportata: utilizzare ' new_specifier:' invece  
   
- Per ulteriori informazioni su come specificare l'accessibilità dei tipi e membri nei metadati, vedere [Visibilità dei tipi](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) e [Visibilità dei membri](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) in [Procedura: Definire e usare classi e struct](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
+ Per ulteriori informazioni su come specificare l'accessibilità di tipi e membri nei metadati, vedere [digitare visibilità](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) e [la visibilità di membri](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) in [procedura: definire e usare classi e struct (C + + CLI) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4376:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4376.  
   
 ```  
 // C4376.cpp  

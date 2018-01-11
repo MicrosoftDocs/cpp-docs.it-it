@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06865e305e8c87d6a3b4bb74b7b1c7dae7cd45a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7441dcd893e3e814d738f228d002a947e7f43c8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk2028"></a>Errore degli strumenti del linker LNK2028
 "exported_function" (nome_decorato) a cui fa riferimento nella funzione "function_containing_function_call" (nome_decorato)  

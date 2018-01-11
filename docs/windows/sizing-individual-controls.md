@@ -1,61 +1,65 @@
 ---
-title: "Sizing Individual Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Size to Content command"
-  - "size, controls"
-  - "text, autosizing controls to fit text"
-  - "controls [C++], sizing"
+title: Ridimensionamento di singoli controlli | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Size to Content command
+- size, controls
+- text, autosizing controls to fit text
+- controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b019cd2bbf68a4321bafd6dd960ffbcdba2dddf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Sizing Individual Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per ridimensionare un controllo, utilizzare i quadratini di ridimensionamento.  Quando viene posizionato su un quadratino di ridimensionamento, il puntatore assume una forma diversa in modo da indicare le direzioni in cui è possibile ridimensionare il controllo.  I quadratini di ridimensionamento attivi sono pieni. Se un quadratino di ridimensionamento è vuoto, non sarà possibile ridimensionare il controllo lungo quell'asse.  
+# <a name="sizing-individual-controls"></a>Ridimensionamento di singoli controlli
+Utilizzare i quadratini di ridimensionamento per ridimensionare un controllo. Quando il puntatore è posizionato su un quadratino di ridimensionamento, assume la forma per indicare le direzioni in cui il controllo può essere ridimensionato. Quadratini di ridimensionamento attivi sono pieni. Se un quadratino di ridimensionamento è vuoto, il controllo non può essere ridimensionato lungo l'asse.  
   
- È inoltre possibile modificare la dimensione di un controllo bloccando il controllo su guide o margini oppure allontanando un controllo bloccato e la guida da un altro.  
+ È inoltre possibile modificare le dimensioni di un controllo bloccando il controllo per i margini o le guide alla, o spostando un controllo bloccato e la Guida da un altro.  
   
-### Per ridimensionare un controllo  
+### <a name="to-size-a-control"></a>Per ridimensionare un controllo  
   
 1.  Selezionare il controllo.  
   
-2.  Trascinare i quadratini di ridimensionamento in modo da modificare la dimensione del controllo:  
+2.  Trascinare i quadratini di ridimensionamento per modificare le dimensioni del controllo:  
   
-    -   I quadratini di ridimensionamento nella parte superiore e sui lati modificano la dimensione orizzontale o verticale.  
+    -   Quadratini di ridimensionamento all'inizio e i lati modificare la dimensione orizzontale o verticale.  
   
-    -   I quadratini di ridimensionamento posti negli angoli modificano sia la dimensione orizzontale che quella verticale.  
+    -   Quadratini di ridimensionamento negli angoli modificare dimensioni orizzontali e verticali.  
   
     > [!TIP]
-    >  Tenendo premuto MAIUSC e utilizzando i tasti freccia SINISTRA e freccia DESTRA, è possibile ridimensionare il controllo di un'unità della finestra di dialogo \(DLU, Dialog Unit\) alla volta.  
+    >  È possibile ridimensionare l'unità di una finestra di dialogo (DLU) controllo contemporaneamente tenendo premuto il tasto MAIUSC e utilizzando i tasti freccia giù e freccia destra.  
   
-### Per ridimensionare automaticamente un controllo in base al testo contenuto  
+### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Per ridimensionare automaticamente un controllo per adattarsi al testo all'interno di essa  
   
-1.  Scegliere **Adatta al contenuto** dal menu **Formato**.  
+1.  Scegliere **adatta al contenuto** dal **formato** menu.  
   
- \- oppure \-  
+ \- oppure -  
   
--   Fare clic con il pulsante destro del mouse sul controllo, quindi scegliere **Adatta al contenuto** dal menu di scelta rapida.  
+-   Il pulsante destro del controllo e scegliere **adatta al contenuto** dal menu di scelta rapida.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

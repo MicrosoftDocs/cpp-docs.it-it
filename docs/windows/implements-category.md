@@ -1,32 +1,33 @@
 ---
-title: "implements_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements_category attribute"
+title: implements_category | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements_category
+dev_langs: C++
+helpviewer_keywords: implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6ab6206851385dcf7bf73cf56730093e7fc5c48f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# implements_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica le categorie componenti implementati dalla classe di destinazione.  
+# <a name="implementscategory"></a>implements_category
+Specifica le categorie di componenti implementate dalla classe di destinazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,17 +36,17 @@ Specifica le categorie componenti implementati dalla classe di destinazione.
 ) ]  
 ```  
   
-#### Parametri  
- **implements\_category**  
- L'ID della categoria distribuita.  
+#### <a name="parameters"></a>Parametri  
+ **implements_category**  
+ L'ID della categoria di implementazione.  
   
-## Note  
- **implements\_category** L'attributo C\+\+ specifica le categorie componenti implementati dalla classe di destinazione.  Questa operazione viene eseguita creando un mapping di CATEGORIA e l'aggiunta di voci sono state specificate da **implements\_category** attributo.  Per ulteriori informazioni, vedere [Cosa sono categorie componenti e il loro funzionamento?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
+## <a name="remarks"></a>Note  
+ Il **implements_category** attributo C++ specifica le categorie di componenti implementate dalla classe di destinazione. Questa operazione viene eseguita creando una mappa di categoria e aggiungendo separare le voci specificate per il **implements_category** attributo. Per ulteriori informazioni, vedere [quali sono le categorie di componenti e come si sono funzionano?](http://msdn.microsoft.com/library/windows/desktop/ms694322).  
   
- L'attributo richiede che [coclasse](../windows/coclass.md),  [progid](../windows/progid.md), o  [vi\_progid](../windows/vi-progid.md) attributo o un altro attributo che implica uno di questi\) viene applicato anche allo stesso elemento.  Se qualsiasi singolo attributo viene utilizzato, gli altri due vengono applicate automaticamente.  Ad esempio, se **progid** viene applicato,  **vi\_progid** e  **coclasse** anche applicati.  
+ Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento. Se viene usato un qualsiasi attributo, anche gli altri due vengono applicati automaticamente. Ad esempio, se viene usato **progid** , vengono applicati anche **vi_progid** e **coclass** .  
   
-## Esempio  
- Il codice seguente specifica che nell'oggetto implementi la categoria del controllo.  
+## <a name="example"></a>Esempio  
+ Il codice seguente specifica che l'oggetto seguente implementa la categoria di controllo.  
   
 ```  
 // cpp_attr_ref_implements_category.cpp  
@@ -60,21 +61,21 @@ Specifica le categorie componenti implementati dalla classe di destinazione.
 class CMyClass {};  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**,  `struct`|  
-|**ripetibile**|Sì|  
-|**attributi obbligatori**|Uno dei seguenti elementi: **coclasse**,  **progid**, o  **vi\_progid**|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|**class**, `struct`|  
+|**Ripetibile**|Yes|  
+|**Attributi obbligatori**|Uno dei seguenti: **coclasse**, **progid**, o **vi_progid**|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [IMPLEMENTED\_CATEGORY](../Topic/IMPLEMENTED_CATEGORY.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi COM](../windows/com-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
+ [IMPLEMENTED_CATEGORY](../atl/reference/category-macros.md#implemented_category)   
+ 

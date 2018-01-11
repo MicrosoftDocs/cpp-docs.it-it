@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8c4ad3e504ec9c57a9c0a99d69aeda624407d5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be548966f6e75afde2c137c8beab38903844667c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-general"></a>Pagine delle proprietà HLSL: Generale
 Per configurare le proprietà seguenti del compilatore HLSL (fxc.exe), utilizzare il relativo **generale** pagina delle proprietà. Per informazioni sulle modalità di accesso di **generale** pagina delle proprietà nella cartella HLSL, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md).  

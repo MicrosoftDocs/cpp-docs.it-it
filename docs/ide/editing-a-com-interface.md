@@ -1,48 +1,48 @@
 ---
-title: "Modifica di un&#39;interfaccia COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.com.editing.interfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM (interfacce), modifica"
-  - "metodi [C++], aggiunta a interfacce COM"
-  - "proprietà [C++], aggiunta a interfacce COM"
+title: La modifica di un'interfaccia COM | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.com.editing.interfaces
+dev_langs: C++
+helpviewer_keywords:
+- methods [C++], adding to COM interfaces
+- COM interfaces, editing
+- properties [C++], adding to COM interfaces
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8911f23ce8e28f2da13c3d8305f4f13a861bb60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Modifica di un&#39;interfaccia COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Mediante i comandi del menu di scelta rapida di Visualizzazione classi è possibile definire nuovi metodi e proprietà per le interfacce COM nei progetti di Visual C\+\+.  Utilizzando la Casella degli strumenti è inoltre possibile definire gli eventi per i controlli ActiveX.  
+# <a name="editing-a-com-interface"></a>Modifica di un'interfaccia COM
+Tramite i comandi del menu di scelta rapida Visualizzazione classi, è possibile definire nuovi metodi e proprietà per le interfacce COM nei progetti Visual C++. Dalla casella degli strumenti, inoltre, è possibile definire gli eventi per i controlli ActiveX.  
   
- Per le classi di oggetti COM basate su ATL e MFC, è possibile modificare l'implementazione contemporaneamente all'interfaccia.  
+ Per le classi oggetto ATL e MFC-basato su COM, è possibile modificare l'implementazione della classe nello stesso momento in cui si modifica l'interfaccia.  
   
 > [!NOTE]
->  Per le interfacce definite al di fuori della finestra di dialogo **Aggiungi classe**, i metodi o le proprietà vengono aggiunti al file IDL e gli stub alle classi che implementano i metodi, anche quando le interfacce vengono aggiunte manualmente.  
+>  Per le interfacce che sono state definite all'esterno del **Aggiungi classe** la finestra di dialogo, Visual C++ aggiunge i metodi o proprietà del file IDL, e gli stub alle classi che implementano i metodi, anche quando le interfacce vengono aggiunte manualmente.  
   
- Per personalizzare le interfacce esistenti è possibile utilizzare le procedure guidate seguenti,  disponibili in Visualizzazione classi.  
+ I seguenti tre procedure guidate consentono di personalizzare le interfacce esistenti. Sono disponibili da Visualizzazione classi:  
   
-|Procedura guidata|Tipo di progetto|  
-|-----------------------|----------------------|  
-|[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md)|Progetti ATL o MFC che supportano ATL.  Fare clic con il pulsante destro del mouse sull'interfaccia a cui aggiungere la proprietà.<br /><br /> Il tipo di progetto viene rilevato automaticamente e le opzioni nell'Aggiunta guidata proprietà vengono modificate in base a esso.<br /><br /> -   Per le interfacce dispatch nei progetti creati mediante la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md) il richiamo dell'Aggiunta guidata proprietà fornisce opzioni specifiche di MFC.<br />-   Per le interfacce di controlli ActiveX MFC, l'Aggiunta guidata proprietà fornisce un elenco di metodi e proprietà standard che è possibile utilizzare direttamente o personalizzare per il controllo.<br />-   Per tutte le altre interfacce, nella procedura guidata si trovano opzioni utili nella maggior parte delle situazioni.|  
-|[Aggiunta guidata metodo](../ide/add-method-wizard.md)|Progetti ATL o MFC che supportano ATL.  Fare clic con il pulsante destro del mouse sull'interfaccia a cui aggiungere il metodo.<br /><br /> Viene rilevato automaticamente il tipo di progetto e le opzioni nell'Aggiunta guidata proprietà vengono modificate in base a esso.<br /><br /> -   Per le interfacce dispatch nei progetti creati con la [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md) il richiamo dell'Aggiunta guidata metodo fornisce opzioni specifiche di MFC.<br />-   Per le interfacce di controlli ActiveX MFC, l'Aggiunta guidata metodo fornisce un elenco di metodi e proprietà standard del controllo che è possibile utilizzare direttamente o personalizzare.<br />-   Per tutte le altre interfacce, nelle procedure guidate **Aggiungi metodo** sono disponibili opzioni utili nella maggior parte delle situazioni.|  
+|Wizard|Tipo di progetto|  
+|------------|------------------|  
+|[Aggiunta guidata proprietà](../ide/names-add-property-wizard.md)|Progetti ATL o MFC, supporto ATL. Fare clic sull'interfaccia a cui si desidera aggiungere la proprietà.<br /><br /> Visual C++ rileva il tipo di progetto e modifica di conseguenza le opzioni di aggiunta guidata proprietà:<br /><br /> -Per le interfacce dispatch nei progetti creati tramite il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), richiamare l'aggiunta guidata proprietà fornisce opzioni specifiche di MFC.<br />-Per interfacce di controlli ActiveX MFC, l'aggiunta guidata proprietà fornisce un elenco di metodi e proprietà che è possibile utilizzare come previsto o personalizzare per il controllo.<br />-Per tutte le altre interfacce, nella procedura guidata sono disponibili opzioni utili nella maggior parte dei casi.|  
+|[Aggiunta guidata metodo](../ide/add-method-wizard.md)|Progetti ATL o MFC, supporto ATL. Fare clic sull'interfaccia a cui si desidera aggiungere il metodo.<br /><br /> Visual C++ rileva il tipo di progetto e modifica di conseguenza le opzioni di aggiunta guidata metodo:<br /><br /> -Per le interfacce dispatch nei progetti creati tramite il [Creazione guidata applicazione MFC](../mfc/reference/mfc-application-wizard.md), richiamo dell'Aggiunta guidata metodo fornisce opzioni specifiche di MFC.<br />-Per interfacce di controlli ActiveX MFC, l'aggiunta guidata metodo fornisce un elenco di metodi e proprietà che è possibile utilizzare come previsto o personalizzare per il controllo.<br />-Per tutte le altre interfacce, di **Aggiungi metodo** nelle procedure guidate sono disponibili opzioni utili nella maggior parte dei casi.|  
   
- È inoltre possibile implementare nuove interfacce nel controllo COM facendo clic con il pulsante destro del mouse sulla classe Control dell'oggetto in Visualizzazione classi e scegliendo [Implementa interfaccia](../ide/implement-interface-wizard.md).  
+ Inoltre, è possibile implementare nuove interfacce nel controllo COM facendo clic sulla classe del controllo dell'oggetto in visualizzazione classi e facendo clic su [implementa interfaccia](../ide/implement-interface-wizard.md).  
   
-## Vedere anche  
- [Working with Resource Files](../mfc/working-with-resource-files.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo di file di risorse](../windows/working-with-resource-files.md)   
  [Aggiunta di funzionalità con creazioni guidate codice](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Tipi di progetto Visual C\+\+](../ide/visual-cpp-project-types.md)
+ [Tipi di progetto Visual C++](../ide/visual-cpp-project-types.md)

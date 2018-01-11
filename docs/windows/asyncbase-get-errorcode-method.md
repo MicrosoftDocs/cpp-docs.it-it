@@ -1,32 +1,33 @@
 ---
-title: "Metodo AsyncBase::get_ErrorCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::get_ErrorCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_ErrorCode (metodo)"
+title: 'Metodo asyncbase:: Get_errorcode | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::get_ErrorCode
+dev_langs: C++
+helpviewer_keywords: get_ErrorCode method
 ms.assetid: 50b4f8a2-9a21-4ea0-bb5d-7ff524d62aea
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cec834638af5b718b5a1dd11e8c580eac014ee53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo AsyncBase::get_ErrorCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asyncbasegeterrorcode-method"></a>Metodo AsyncBase::get_ErrorCode
 Recupera il codice di errore per l'operazione asincrona corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(HRESULT* errorCode) override;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `errorCode`  
- La posizione in cui il codice di errore corrente viene memorizzato.  
+ Il percorso in cui è archiviato il codice di errore corrente.  
   
-## Valore restituito  
- S\_OK se ha avuto esito positivo; in caso contrario, E\_ILLEGAL\_METHOD\_CALL se l'operazione asincrona corrente viene chiusa.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se ha esito positivo. in caso contrario, E_ILLEGAL_METHOD_CALL se l'operazione asincrona corrente è chiuso.  
   
-## Requisiti  
- **Header:** async.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Async  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe AsyncBase](../windows/asyncbase-class.md)

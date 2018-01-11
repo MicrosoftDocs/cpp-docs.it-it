@@ -1,53 +1,57 @@
 ---
-title: "Modifying the Layout Grid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], layout grid"
-  - "snap to layout grid"
-  - "grids, turning on or off"
-  - "layout grid in Dialog Editor"
-  - "grids, changing size"
+title: Modifica della griglia di Layout | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], layout grid
+- snap to layout grid
+- grids, turning on or off
+- layout grid in Dialog Editor
+- grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 21cfecebe141ea99ff7d0160e74446475efe4df5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Modifying the Layout Grid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Quando si posizionano o si dispongono i controlli in una finestra di dialogo, è possibile utilizzare la griglia di layout in modo da definirne la posizione con maggiore precisione.  Quando la griglia è attivata, i controlli risultano "bloccati" alle linee tratteggiate della griglia, come a una calamita.  È possibile attivare e disattivare questa funzionalità di "blocco sulla griglia" e modificare la dimensione delle celle della griglia di layout.  
+# <a name="modifying-the-layout-grid"></a>Modifica della griglia di layout
+Quando si posizionano o disposizione dei controlli in una finestra di dialogo, è possibile utilizzare la griglia di layout per il posizionamento più preciso. Quando è attivata la griglia, i controlli vengono visualizzati "blocco" le linee punteggiate della griglia come se magnetizzato. È possibile attivare e disattivare questa funzionalità "Blocca sulla griglia" e modificare le dimensioni delle celle della griglia di layout.  
   
-### Per attivare o disattivare la griglia di layout  
+### <a name="to-turn-the-layout-grid-on-or-off"></a>Per attivare o disattivare la griglia di layout  
   
-1.  Scegliere **Impostazioni guide** dal menu **Formato**.  
+1.  Dal **formato** menu, scegliere **impostazioni Guide**.  
   
-2.  Nella [finestra di dialogo Impostazioni guide](../mfc/guide-settings-dialog-box.md) selezionare o deselezionare il pulsante **Griglia**.  
+2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md)selezionare o deselezionare il **griglia** pulsante.  
   
-     È comunque possibile controllare la griglia nelle singole finestre dell'editor finestre mediante il pulsante **Attiva\/Disattiva griglia** disponibile sulla [barra degli strumenti dell'editor finestre](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md).  
+     È comunque possibile controllare la griglia in singole finestre dell'editor finestre utilizzando il **Attiva/Disattiva griglia** pulsante il [barra degli strumenti finestra di dialogo Editor](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).  
   
-### Per modificare la dimensione della griglia di layout  
+### <a name="to-change-the-size-of-the-layout-grid"></a>Per modificare le dimensioni della griglia di layout  
   
-1.  Scegliere **Impostazioni guide** dal menu **Formato**.  
+1.  Dal **formato** menu, scegliere **impostazioni Guide**.  
   
-2.  Nella [finestra di dialogo Impostazioni guide](../mfc/guide-settings-dialog-box.md) digitare l'altezza e la larghezza in DLU delle celle della griglia.  L'altezza o la larghezza minima è di 4 DLU.  Per ulteriori informazioni sulle DLU, vedere [Disposizione dei controlli nelle finestre di dialogo](../mfc/arrangement-of-controls-on-dialog-boxes.md).  
+2.  Nel [finestra di dialogo Impostazioni Guide](../windows/guide-settings-dialog-box.md), digitare l'altezza e la larghezza in DLU per le celle nella griglia. Larghezza o all'altezza minima è di 4 DLU. Per ulteriori informazioni sulle DLU, vedere [disposizione dei controlli nelle finestre di dialogo](../windows/arrangement-of-controls-on-dialog-boxes.md).  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Requisiti  
   
  Win32  
   
-## Vedere anche  
- [Dialog Editor States \(Guides and Grids\)](../mfc/dialog-editor-states-guides-and-grids.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>Vedere anche  
+ [Stati dell'Editor finestre (guide e griglie)](../windows/dialog-editor-states-guides-and-grids.md)   
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)
+

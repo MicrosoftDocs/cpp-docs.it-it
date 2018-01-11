@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 04/11/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1510
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1510
+f1_keywords: C1510
+dev_langs: C++
+helpviewer_keywords: C1510
 ms.assetid: 150c827f-9514-41a9-8d7e-82f820749bcb
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8d4128580facdc87239d0087fef1cf9eff701854
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 373cd74b1649fb9c1bd87cad1903df183f153c0f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1510"></a>Errore irreversibile C1510
 Impossibile aprire il file clui.dll della risorsa di lingua  

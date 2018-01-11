@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- utility/std::pair
-dev_langs:
-- C++
-helpviewer_keywords:
-- pair class
+f1_keywords: utility/std::pair
+dev_langs: C++
+helpviewer_keywords: pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 95da7f8ab71b6336f8baf2441ca210db42110390
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e8884eb598002d6dbf3e4bc310d163658afc249b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-structure"></a>Struttura pair
 Struct che permette di considerare due oggetti come un singolo oggetto.  
@@ -170,7 +166,6 @@ The element with a key value of
   
 ## <a name="see-also"></a>Vedere anche  
  [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md) (Thread safety nella libreria standard C++)
-
 
 
 

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2898
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2898
+f1_keywords: C2898
+dev_langs: C++
+helpviewer_keywords: C2898
 ms.assetid: 68466e11-2541-4f6b-b772-13a642f30dfb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9496ecd960d8b527cfab2ccfb6ce53b9d76150c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0833d3e4bab22673c6bca5aee64430134762e98f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2898"></a>Errore del compilatore C2898
 'declaration': i modelli di funzione membro non possono essere virtuali  

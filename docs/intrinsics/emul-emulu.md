@@ -1,38 +1,39 @@
 ---
-title: "__emul, __emulu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__emulu_cpp"
-  - "__emul"
-  - "__emul_cpp"
-  - "__emulu"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__emul (funzione intrinseca)"
-  - "__emulu (funzione intrinseca)"
+title: __emul, __emulu | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __emulu_cpp
+- __emul
+- __emul_cpp
+- __emulu
+dev_langs: C++
+helpviewer_keywords:
+- __emul intrinsic
+- __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8592633b0b2356f5a3e9bbdefb509a8f1d1a878d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __emul, __emulu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="emul-emulu"></a>__emul, __emulu
+**Sezione specifica Microsoft**  
   
- Esegue le moltiplicazioni che superano che un intero a 32 bit possibile utilizzare.  
+ Esegue moltiplicazioni che cosa può contenere un intero a 32 bit di overflow.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 __int64 __emul(  
@@ -45,31 +46,31 @@ unsigned __int64 __emulu(
 );  
 ```  
   
-#### Parametri  
- \[in\] `a`  
- Il primo operando Integer della moltiplicazione.  
+#### <a name="parameters"></a>Parametri  
+ [in] `a`  
+ Il primo operando di tipo integer della moltiplicazione.  
   
- \[in\] `b`  
- Il secondo operando Integer della moltiplicazione.  
+ [in] `b`  
+ Il secondo operando di tipo integer della moltiplicazione.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Il risultato della moltiplicazione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__emul`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__emulu`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- `__emul` accetta a due 32 bit i valori con segno e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.  
+## <a name="remarks"></a>Note  
+ `__emul`accetta due valori con segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.  
   
- `__emulu` accetta due valori di Integer senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
+ `__emulu`accetta due valori integer senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // emul.cpp  
@@ -101,14 +102,14 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 -268435456 * 2 = -536870912  
 4294967295 * 251658240 = 1080863910317260800  
 ```  
   
-### Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

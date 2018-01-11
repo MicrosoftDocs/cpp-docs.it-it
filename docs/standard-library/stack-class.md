@@ -31,11 +31,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a0c593042bf92e63b1c1514326440d9aee8101b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 824ca5e9726146323639974f9506d4efbf454d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-class"></a>Classe stack
 Una classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento aggiunto più recentemente a un tipo di contenitore sottostante. La classe stack viene usata quando è importante chiarire che sul contenitore vengono eseguite solo operazioni di stack.  
@@ -73,7 +74,7 @@ class stack
 |-|-|  
 |[stack](#stack)|Costruisce un `stack` vuoto o che rappresenta una copia totale o parziale di un oggetto contenitore di base.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

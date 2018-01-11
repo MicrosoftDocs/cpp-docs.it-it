@@ -1,50 +1,53 @@
 ---
-title: "Building an Attributed Program | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tlb files"
-  - "MIDL"
-  - "MIDL, linker output"
-  - "IDL files"
-  - "tlb files, building attributed programs"
-  - ".tlb files, building attributed programs"
-  - "IDL files, building"
-  - "attributes [C++], building type libraries and .idl files"
-  - ".tlb files"
-  - ".idl files, building"
-  - "type libraries, linker options for building"
+title: Compilazione di programmi con attributi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tlb files
+- MIDL
+- MIDL, linker output
+- IDL files
+- tlb files, building attributed programs
+- .tlb files, building attributed programs
+- IDL files, building
+- attributes [C++], building type libraries and .idl files
+- .tlb files
+- .idl files, building
+- type libraries, linker options for building
 ms.assetid: 04997b5f-bf2c-46ec-b868-c4adebbef5f4
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e3e39bbd2b630d35942c1c5107041b2fbadf7549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Building an Attributed Program
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Dopo avere inserito gli attributi di Visual C\+\+ nel codice sorgente, è possibile utilizzare il compilatore di Visual C\+\+ per scrivere una libreria dei tipi e il file IDL automaticamente.  Le seguenti opzioni del linker consentono di sviluppare i file IDL e .tlb:  
+# <a name="building-an-attributed-program"></a>Compilazione di un programma con attributi
+Dopo avere implementato gli attributi di Visual C++ nel codice sorgente, è il compilatore Visual C++ per produrre un file IDL e di raccolta del tipo per l'utente. Le seguenti opzioni del linker consentono di generare file tlb e IDL:  
   
--   [\/IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
+-   [/IDLOUT](../build/reference/idlout-name-midl-output-files.md)  
   
--   [\/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
+-   [/IGNOREIDL](../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)  
   
--   [\/MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
+-   [/MIDL](../build/reference/midl-specify-midl-command-line-options.md)  
   
--   [\/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
+-   [/TLBOUT](../build/reference/tlbout-name-dot-tlb-file.md)  
   
- Alcuni progetti contengono i file più file IDL.  Questi vengono utilizzati per scrivere due o più file .tlb e facoltativamente per associare essi nel blocco delle risorse.  questo scenario non è attualmente supportato in Visual C\+\+.  
+ Alcuni progetti contengono più file idl indipendenti. Questi vengono utilizzati per produrre due o più file tlb ed eventualmente associati nel blocco di risorse. Questo scenario non è attualmente supportato in Visual C++.  
   
- Inoltre, il linker di Visual C\+\+ restituirà tutte le informazioni su IDL\-correlate a un singolo file MIDL.  Non sarà possibile generare due librerie dei tipi da un singolo progetto.  
+ Inoltre, il linker Visual C++ verrà visualizzate le informazioni di attributi IDL relative tutti in un unico file MIDL. È possibile generare due librerie dei tipi da un singolo progetto.  
   
-## Vedere anche  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concetti](../windows/attributed-programming-concepts.md)

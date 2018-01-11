@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c51be1d55958dce6bacd86eacfd134615c4dc0ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manipulating-the-progress-control"></a>Modifica del controllo Progress
 Esistono tre modi per modificare la posizione corrente di un controllo di stato di avanzamento ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  

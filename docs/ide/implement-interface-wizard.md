@@ -1,66 +1,65 @@
 ---
-title: "Implementazione guidata interfaccia | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.impl.interface.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Implementazione guidata interfaccia [C++]"
+title: Implementazione guidata interfaccia | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.impl.interface.overview
+dev_langs: C++
+helpviewer_keywords: Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Implementazione guidata interfaccia
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare questa procedura guidata per implementare un'interfaccia per un oggetto COM.  Nelle librerie COM disponibili con Visual Studio e Windows sono incluse le implementazioni di molte interfacce.  L'implementazione di un'interfaccia viene associata a un oggetto quando si crea un'istanza di quest'ultimo e fornisce i servizi offerti dall'oggetto.  
+# <a name="implement-interface-wizard"></a>Implementazione guidata interfaccia
+Questa procedura guidata implementa un'interfaccia per un oggetto COM. Le implementazioni di interfacce sono inclusi nelle librerie COM disponibili con Visual Studio e Windows. Implementazione dell'interfaccia è associata a un oggetto quando viene creata un'istanza di tale oggetto e fornisce i servizi offerti dall'oggetto.  
   
- Per informazioni su interfacce e implementazioni, vedere [Interfaces and Interface Implementations](http://msdn.microsoft.com/library/windows/desktop/ms694356) in [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] \(informazioni in lingua inglese\).  
+ Per una descrizione delle interfacce e implementazioni, vedere [interfacce e implementazioni di interfaccia](http://msdn.microsoft.com/library/windows/desktop/ms694356) in Windows SDK.  
   
  **Implementa interfaccia da**  
- Consente di specificare il percorso della libreria dei tipi, da cui viene creata l'interfaccia.  
+ Specifica il percorso della libreria dei tipi, da cui viene creata l'interfaccia.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Project**|La libreria dei tipi fa parte del progetto.|  
-|**Registro di sistema**|La libreria dei tipi è registrata nel sistema.  Le librerie dei tipi registrate sono elencate in **Librerie dei tipi disponibili**.|  
-|**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è contenuta in un file.  È necessario indicare il percorso del file nella casella **Percorso**.|  
+|------------|-----------------|  
+|**Progetto**|La libreria dei tipi fa parte del progetto.|  
+|**Registry**|La libreria dei tipi è registrata nel sistema. Librerie dei tipi registrati sono elencate **librerie dei tipi disponibili**.|  
+|**File**|La libreria dei tipi non è necessariamente registrata nel sistema, ma è contenuta in un file. È necessario specificare il percorso del file in **percorso**.|  
   
  **Librerie dei tipi disponibili**  
- Consente di visualizzare le librerie dei tipi disponibili contenenti le definizioni delle interfacce che è possibile implementare.  Se si fa clic su **File** nella casella **Implementa interfaccia da**, la casella non potrà essere utilizzata per modifiche.  
+ Consente di visualizzare le librerie dei tipi disponibili che contiene le definizioni di interfaccia che è possibile implementare. Se si fa clic **File** in **implementa interfaccia da**, questa casella è disponibile per la modifica.  
   
- **Location**  
- Visualizza il percorso della libreria dei tipi attualmente selezionata nell'elenco **Librerie dei tipi disponibili**.  Se si è selezionato **File** in **Implementa interfaccia da**, fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da utilizzare.  
+ **Percorso**  
+ Visualizza il percorso della libreria dei tipi attualmente selezionato nel **librerie dei tipi disponibili** elenco. Se si seleziona **File** in **implementa interfaccia da**, fare clic sul pulsante con i puntini di sospensione per individuare un file contenente la libreria dei tipi da utilizzare.  
   
  **Interfacce**  
- Consente di visualizzare le interfacce le cui definizioni sono contenute nella libreria dei tipi attualmente selezionata nell'elenco **Librerie dei tipi disponibili**.  
+ Visualizza le interfacce le cui definizioni sono contenuti nella libreria dei tipi attualmente selezionata nel **librerie dei tipi disponibili** casella.  
   
 > [!NOTE]
->  Le interfacce il cui nome corrisponde a quello delle interfacce già implementate dall'oggetto selezionato non vengono visualizzate nella casella **Interfacce**.  
+>  Le interfacce che hanno lo stesso nome a quelle già implementate dall'oggetto selezionato non vengono visualizzate nel **interfacce** casella.  
   
 |Pulsante di trasferimento|Descrizione|  
-|-------------------------------|-----------------|  
-|**\>**|Utilizzare questa opzione per aggiungere all'elenco **Implementa interfacce** il nome dell'interfaccia attualmente selezionata nell'elenco **Interfacce**.|  
-|**\>\>**|Utilizzare questa opzione per aggiungere all'elenco **Implementa interfacce** i nomi di tutte le interfacce disponibili nell'elenco **Interfacce**.|  
-|**\<**|Utilizzare questa opzione per rimuovere il nome dell'interfaccia attualmente selezionata nell'elenco **Implementa interfacce**.|  
-|**\<\<**|Utilizzare questa opzione per rimuovere i nomi di tutte le interfacce attualmente elencate nell'elenco **Implementa interfacce**.|  
+|---------------------|-----------------|  
+|**>**|Aggiunge il **implementare interfacce** il nome dell'interfaccia attualmente selezionato nell'elenco il **interfacce** elenco.|  
+|**>>**|Aggiunge il **implementare interfacce** tutti i nomi di interfaccia disponibili nell'elenco il **interfacce** elenco.|  
+|**<**|Rimuove il nome dell'interfaccia attualmente selezionato nel **implementare interfacce** elenco.|  
+|**<\<**|Rimuove tutti i nomi attualmente nell'interfaccia di **implementare interfacce** elenco.|  
   
- **Implementa interfacce**  
- Consente di visualizzare i nomi delle interfacce selezionate per essere implementate nell'oggetto.  
+ **Implementare le interfacce**  
+ Visualizza i nomi delle interfacce di cui si sono scelto di implementare l'oggetto.  
   
 > [!NOTE]
->  Se si includono più interfacce derivate da `IDispatch` o se si tenta di implementare un'interfaccia derivata da un'altra interfaccia già presente nella classe, è necessario evitare ambiguità nelle voci COM\_MAP.  Per ulteriori informazioni, vedere [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md).  
+>  Se si include più di un'interfaccia che deriva da `IDispatch`, oppure se si tenta di implementare un'interfaccia che deriva da un'altra interfaccia già presente nella classe, quindi è necessario evitare l'ambiguità nelle voci COM_MAP. Vedere [COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2) per ulteriori informazioni.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'interfaccia](../ide/implementing-an-interface-visual-cpp.md)

@@ -1,48 +1,52 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "Proprietà dei pulsanti della barra degli strumenti | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e179cd400b0b8bcc621a7c69a4814eab098fbaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Di seguito vengono illustrate le proprietà dei pulsanti delle barre degli strumenti.  
+# <a name="toolbar-button-properties"></a>Proprietà dei pulsanti delle barre degli strumenti
+Le proprietà di un pulsante della barra degli strumenti sono:  
   
 |Proprietà|Descrizione|  
-|---------------|-----------------|  
-|**ID**|Definisce l'ID del pulsante.  La casella di riepilogo a discesa fornisce i nomi di **ID** comuni.|  
-|**Larghezza**|Imposta la larghezza del pulsante.  L'impostazione consigliata è 16 pixel.|  
-|**Altezza**|Imposta l'altezza del pulsante.  L'altezza di un pulsante modifica l'altezza di tutti i pulsanti della barra degli strumenti.  L'impostazione consigliata è 15 pixel.|  
-|**Prompt**|Definisce il messaggio visualizzato nella barra di stato.  Aggiungendo \\n e un nome è possibile aggiungere una descrizione comandi al pulsante della barra degli strumenti.  Per ulteriori informazioni, vedere [Creazione di una descrizione comandi](../mfc/creating-a-tool-tip-for-a-toolbar-button.md).|  
+|--------------|-----------------|  
+|**ID**|Definisce l'ID del pulsante. L'elenco di riepilogo a discesa include comuni **ID** nomi.|  
+|**Larghezza**|Imposta la larghezza del pulsante. è consigliabile 16 pixel.|  
+|**Altezza**|Imposta l'altezza del pulsante. Si noti che l'altezza di un pulsante Modifica l'altezza di tutti i pulsanti sulla barra degli strumenti. è consigliabile 15 pixel.|  
+|**Prompt**|Definisce il messaggio visualizzato nella barra di stato. \N e un nome si aggiunge una descrizione comandi al pulsante della barra degli strumenti. Per ulteriori informazioni, vedere [la creazione di una descrizione comando](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|  
   
- Le proprietà **Width** e **Height** si applicano a tutti i pulsanti.  Un'immagine bitmap utilizzata per la creazione di una barra degli strumenti ha una larghezza massima di 2048.  Se quindi la larghezza del pulsante viene impostata su 512, sarà possibile disporre di quattro pulsanti, se invece viene impostata su 513, sarà possibile disporre soltanto di tre pulsanti.  
+ **Larghezza** e **altezza** si applicano a tutti i pulsanti. Bitmap che viene utilizzata per creare una barra degli strumenti ha una larghezza massima di 2048. Pertanto, se si imposta la larghezza del pulsante a 512, può avere solo quattro pulsanti e se si imposta la larghezza su 513, può avere solo tre pulsanti.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  MFC o ATL  
   
-## Vedere anche  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle proprietà di un pulsante della barra degli strumenti](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [Editor barra degli strumenti](../windows/toolbar-editor.md)
+

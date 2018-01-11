@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1092
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1092
+f1_keywords: C1092
+dev_langs: C++
+helpviewer_keywords: C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92309c9299303429c61f84911e180468f6354475
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: fac0a5218e1faf16d3db459567c36775acd9bb12
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1092"></a>Errore irreversibile C1092
 Con Modifica e continuazione non sono supportate le modifiche ai tipi di dati. È richiesta la compilazione  

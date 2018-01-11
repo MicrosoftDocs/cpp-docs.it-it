@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: eb269a4c7e85269096e5df8a56e16bf898348118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaultvalue"></a>defaultvalue
 Consente di specificare un valore predefinito per un parametro facoltativo tipizzato.  
@@ -32,7 +35,7 @@ Consente di specificare un valore predefinito per un parametro facoltativo tipiz
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *value*  
+ *valore*  
  Il valore predefinito per il parametro.  
   
 ## <a name="remarks"></a>Note  
@@ -72,7 +75,7 @@ __interface IFireTabCtrl : IDispatch {
 |**Si applica a**|Parametro interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

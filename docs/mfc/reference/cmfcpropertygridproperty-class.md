@@ -177,11 +177,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5f31a6c16e14152f624c3bc6225337621cc887b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b60e2355636ca0cf30ed0a0141ec07f1312f760f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Classe CMFCPropertyGridProperty
 Oggetto `CMFCPropertyGridProperty` oggetto rappresenta un elemento di elenco in un controllo elenco delle proprietà.  
@@ -291,7 +292,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>Membri di dati  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Stringa di formato per un valore di tipo double.|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Stringa di formato per un valore di tipo float.|  
@@ -740,7 +741,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a un oggetto di proprietà che è un elemento figlio di questa proprietà.  
   
- -oppure-  
+ oppure  
   
  In modalità di vendita al dettaglio, `NULL` se il `nIndex` parametro non è valido. In modalità debug, questo metodo asserzioni.  
   
@@ -1258,7 +1259,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
-|[in] `CWnd`|(Non utilizzato). Puntatore a una finestra.|  
+|[in] `CWnd`|Non usato. Puntatore a una finestra.|  
   
 ### <a name="return-value"></a>Valore restituito  
  Questo metodo restituisce sempre `TRUE`.  

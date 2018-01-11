@@ -10,14 +10,13 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: e8596d40b432d0c579a1632f81628a008fc770c0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsystemerrorgt-enums"></a>Enumerazioni &lt;system_error&gt;
 |||  
@@ -72,7 +71,6 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche  
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

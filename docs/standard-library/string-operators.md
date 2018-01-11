@@ -16,10 +16,9 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (string)
@@ -29,12 +28,11 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: caa6cad7f0801b5459bd2999ae38a3da52c00469
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 ||||  
@@ -815,4 +813,3 @@ int main( )
   
 ## <a name="see-also"></a>Vedere anche  
  [\<string>](../standard-library/string.md)
-

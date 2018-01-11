@@ -13,10 +13,9 @@ f1_keywords:
 - deque/std::operator&lt;
 - deque/std::operator&lt;=
 - deque/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (deque)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 81645c8f645a3c3a09ef641b2fce003260bcd5f6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltdequegt-operators"></a>Operatori &lt;deque&gt;
 ||||  
@@ -344,7 +342,6 @@ Deque c1 is greater than or equal to deque c2.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<deque >](../standard-library/deque.md)
-
 
 
 

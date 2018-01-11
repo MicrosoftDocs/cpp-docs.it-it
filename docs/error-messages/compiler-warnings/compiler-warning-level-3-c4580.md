@@ -1,49 +1,31 @@
 ---
-title: Compilatore (livello 3) Avviso C4580 | Documenti di Microsoft
+title: Compilatore avviso (livello 3) C4580 | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4580
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4580
+f1_keywords: C4580
+dev_langs: C++
+helpviewer_keywords: C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: c8cebbda1d3472a2efda43f816e7a13f2f460408
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed0391a1a31b4ab64efa01fc15622831de890489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Avviso del compilatore (livello 3) C4580
 [attribute] è deprecato; specificare System::Attribute o Platform::Metadata come classe base  
   
-[[attributo](../../windows/attribute.md)] non è più la sintassi preferenziale per la creazione di attributi definiti dall'utente. Per ulteriori informazioni, vedere [attributi definiti dall'utente](../../windows/user-defined-attributes-cpp-component-extensions.md). Per il codice CLR, derivare gli attributi da `System::Attribute`. Per il codice Windows Runtime, derivare gli attributi da `Platform::Metadata`.  
+[[attributo](../../windows/attribute.md)] non è più la sintassi preferita per la creazione di attributi definiti dall'utente. Per altre informazioni, vedere [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Per il codice CLR, derivare gli attributi da `System::Attribute`. Per il codice Windows Runtime, derivare gli attributi da `Platform::Metadata`.  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente genera l'errore C3454 e mostra come risolverlo.  

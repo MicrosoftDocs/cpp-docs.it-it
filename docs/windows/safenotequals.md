@@ -1,32 +1,33 @@
 ---
-title: "SafeNotEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeNotEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeNotEquals (funzione)"
+title: SafeNotEquals | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeNotEquals
+dev_langs: C++
+helpviewer_keywords: SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# SafeNotEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safenotequals"></a>SafeNotEquals
 Determina se due numeri non sono uguali.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename T, typename U>  
@@ -36,33 +37,33 @@ inline bool SafeNotEquals (
 ) throw ();  
 ```  
   
-#### Parametri  
- \[in\] `t`  
- Primo numero da confrontare.  Questo deve essere di tipo T.  
+#### <a name="parameters"></a>Parametri  
+ [in] `t`  
+ Il primo numero da confrontare. Deve essere di tipo T.  
   
- \[in\] `u`  
- Secondo numero da confrontare.  Questo deve essere di tipo U.  
+ [in] `u`  
+ Il secondo numero da confrontare. Deve essere di tipo U.  
   
-## Valore restituito  
- `true` se `t` e `u` non sono uguali; in caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se `t` e `u` non sono uguali; in caso contrario `false`.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il metodo migliora `!=` perché `SafeNotEquals` consente di confrontare due tipi diversi di numeri.  
   
- Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettato per una singola operazione di confronto senza creare un'istanza di [Classe SafeInt](../windows/safeint-class.md).  
+ Questo metodo fa parte di [Libreria SafeInt](../windows/safeint-library.md) ed è progettata per un'operazione di confronto singolo senza creare un'istanza di [classe SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Questo metodo deve essere utilizzato solo quando una singola un'operazione matematica deve essere protetta.  Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
+>  Questo metodo deve essere utilizzato solo quando è necessario proteggere una singola operazione matematica. Se sono presenti più operazioni, è necessario utilizzare la classe `SafeInt` anziché chiamare le singole funzioni autonome.  
   
- Per ulteriori informazioni su i tipi di modello T e U, vedere [Funzioni SafeInt](../windows/safeint-functions.md).  
+ Per ulteriori informazioni sui tipi di modello T e U, vedere [funzioni SafeInt](../windows/safeint-functions.md).  
   
-## Requisiti  
- **Intestazione:** safeint.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** SafeInt. h  
   
- **Spazio dei nomi:** Microsoft::Utilities  
+ **Namespace:** Microsoft:: Utilities  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Funzioni SafeInt](../windows/safeint-functions.md)   
  [Libreria SafeInt](../windows/safeint-library.md)   
- [Classe SafeInt](../windows/safeint-class.md)   
+ [SafeInt (classe)](../windows/safeint-class.md)   
  [SafeEquals](../windows/safeequals.md)

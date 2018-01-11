@@ -1,32 +1,33 @@
 ---
-title: "Classe SimpleClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleClassFactory (classe)"
+title: Classe SimpleClassFactory | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleClassFactory
+dev_langs: C++
+helpviewer_keywords: SimpleClassFactory class
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 840862915e90accbab254f5a9003446471608a2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe SimpleClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce un meccanismo semplice per creare una classe di base.  
+# <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
+Fornisce un meccanismo semplice per creare una classe base.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -35,26 +36,26 @@ template<
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Base`  
- Una classe di base.  
+ Classe di base.  
   
-## Osservazioni  
+## <a name="remarks"></a>Note  
  La classe di base deve fornire un costruttore predefinito.  
   
- Nel frammento di codice d'esempio seguente viene illustrato come utilizzare SimpleClassFactory con la macro [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md).  
+ Esempio di codice riportato di seguito viene illustrato come utilizzare SimpleClassFactory con la [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) (macro).  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo SimpleClassFactory::CreateInstance](../windows/simpleclassfactory-createinstance-method.md)|Crea un'istanza dell'interfaccia specificata.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `I0`  
   
  `ChainInterfaces`  
@@ -77,10 +78,10 @@ class SimpleClassFactory : public ClassFactory<>;
   
  `SimpleClassFactory`  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** module.h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

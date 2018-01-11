@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4c22557424ed9460381846a37f4944cb2e9387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 936f6a3bab0a5ad3c6e9cf33110ba67056a918e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-managed-resource-files"></a>Modifica di file di risorse gestite
 Il file di risorse gestite (resx) sono file XML. Quando si aggiunge un file di risorse gestite per il progetto dal **Aggiungi nuovo elemento** nella finestra di dialogo di **Editor risorse gestite** viene visualizzata per impostazione predefinita.  

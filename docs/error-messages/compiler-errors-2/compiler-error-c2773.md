@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2773
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2773
+f1_keywords: C2773
+dev_langs: C++
+helpviewer_keywords: C2773
 ms.assetid: 8d564b26-1623-4d92-aabc-dff33f7b1145
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 22a49a9ec002db11229eb0b17991f6f004aa4ba8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e47f9809cf137db8941405e819da1b48fe06f545
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2773"></a>Errore del compilatore C2773
 \#importare e #using disponibili solo nel compilatore C++  

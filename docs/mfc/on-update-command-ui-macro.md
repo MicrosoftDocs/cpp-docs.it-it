@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 64b9c77d8c851364790d61e7844b46f25880168c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3de873cf70bafa77d7c8f4b05c70ce211b2c2258
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onupdatecommandui-macro"></a>Macro ON_UPDATE_COMMAND_UI
 Utilizzare il **proprietà** finestra per la connessione a un oggetto dell'interfaccia utente a un gestore di aggiornamento di comandi in un oggetto di destinazione di comando. ID dell'oggetto dell'interfaccia utente verrà automaticamente connesso il `ON_UPDATE_COMMAND_UI` macro e creare un gestore dell'oggetto che gestirà l'aggiornamento. Vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md) per ulteriori informazioni.  

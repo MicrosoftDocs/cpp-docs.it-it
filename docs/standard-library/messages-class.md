@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d60a1ba5ac8acbb6fbaf9e5b7e922a1f373f9293
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bf1320e138224b36e0d73e1d2702b9cf85fb8c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-class"></a>Classe messages
 La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per recuperare i messaggi localizzati da un catalogo di messaggi internazionalizzati per le impostazioni locali specificate.  
@@ -66,7 +67,7 @@ class messages : public messages_base;
 |-|-|  
 |[messages](#messages)|Funzione del costruttore del facet dei messaggi.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -250,7 +251,7 @@ protected: messages(
   
 -   \>1: questi valori non definiti.  
   
- Non è possibile offrire esempi diretti, poiché il distruttore è protetto.  
+ Non è possibile fornire esempi diretti, poiché il distruttore è protetto.  
   
  Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
@@ -289,7 +290,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ## <a name="see-also"></a>Vedere anche  
  [\<locale>](../standard-library/locale.md)   
  [Classe messages_base](../standard-library/messages-base-class.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

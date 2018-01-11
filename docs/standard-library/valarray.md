@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aeb679ce2cc8e4e768d5af43ff94c6b2cdb8dea1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 917dfbf870959b6934eaa49cbaab05e27304fb77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 Definisce la classe modello valarray e numerose funzioni e classi modello.  
@@ -66,7 +67,7 @@ Definisce la classe modello valarray e numerose funzioni e classi modello.
 |[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Ottiene l'operatore **AND** logico tra gli elementi corrispondenti di due oggetti valarray di dimensioni equivalenti o tra un oggetto valarray e un valore specificato del tipo di elemento dell'oggetto valarray.|  
 |[operator>](../standard-library/valarray-operators.md#op_gt)|Verifica se gli elementi di un oggetto valarray sono maggiori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato del tipo di elemento dell'oggetto valarray.|  
 |[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Verifica se gli elementi di un oggetto valarray sono maggiori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.|  
-|[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Sposta verso destra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|  
+|[operator>> ](../standard-library/valarray-operators.md#op_gt_gt)|Sposta verso destra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|  
 |[operator<](../standard-library/valarray-operators.md#op_lt)|Verifica se gli elementi di un oggetto valarray sono minori degli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o minori di un valore specificato.|  
 |[operator<=](../standard-library/valarray-operators.md#op_lt_eq)|Verifica se gli elementi di un oggetto valarray sono minori o uguali agli elementi di un oggetto valarray di dimensioni equivalenti o se tutti gli elementi di un oggetto valarray sono maggiori o uguali o minori o uguali a un valore specificato.|  
 |[operator<<](../standard-library/valarray-operators.md#op_lt_lt)|Sposta verso sinistra i bit per ogni elemento di un oggetto valarray di un numero specificato di posizioni o in base a una quantità di elementi specificata da un secondo oggetto valarray.|  
@@ -99,7 +100,7 @@ Definisce la classe modello valarray e numerose funzioni e classi modello.
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

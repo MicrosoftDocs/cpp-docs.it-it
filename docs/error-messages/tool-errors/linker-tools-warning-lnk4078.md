@@ -1,41 +1,40 @@
 ---
-title: "Avviso degli strumenti del linker LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: Strumenti del linker LNK4078 avviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8109ef98237f545a2139be8f0502acd11407314b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso degli strumenti del linker LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-rilevate più sezioni 'nome sezione' con attributi diversi  
+# <a name="linker-tools-warning-lnk4078"></a>Avviso degli strumenti del linker LNK4078
+'section name' trovate più sezioni con attributi diversi  
   
  Sono state rilevate due o più sezioni con lo stesso nome e attributi diversi.  
   
- Questo avviso può venire visualizzato a seguito della creazione di una libreria di importazione o un file di esportazione tramite una versione precedente di LINK o LIB.  
+ Questo avviso può essere causato da un file di libreria o esportazioni importazione che è stato creato da una versione precedente di collegamento o LIB.  
   
  Ricreare il file e ripetere il collegamento.  
   
-## Esempio  
- La visualizzazione dell'avviso LNK4078 può essere anche causata da un'importante modifica, ad esempio quando la sezione denominata da[init\_seg](../../preprocessor/init-seg.md) nella piattaforma x86, precedentemente di lettura\/scrittura, diventa di sola lettura.  
+## <a name="example"></a>Esempio  
+ LNK4078 può essere causato anche da un'importante modifica: la sezione denominata da [init_seg](../../preprocessor/init-seg.md) x86 è lettura/scrittura, l'ora di sola lettura.  
   
- Nell'esempio seguente viene generato l'errore LNK4078:  
+ L'esempio seguente genera l'errore LNK4078.  
   
 ```  
 // LNK4078.cpp  

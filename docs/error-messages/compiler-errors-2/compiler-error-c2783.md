@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2783
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2783
+f1_keywords: C2783
+dev_langs: C++
+helpviewer_keywords: C2783
 ms.assetid: 1ce94a11-bb8b-4be3-a222-f1f105da74b3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 86f8c8aff0974cc1908c38bd8b44b26af4812278
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 1fff9803fa54d1ea18d0ada78c816067731e8c41
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2783"></a>Errore del compilatore C2783
 'declaration': Impossibile dedurre un argomento di modello per 'identifier'  

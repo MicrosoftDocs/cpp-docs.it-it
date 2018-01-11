@@ -1,33 +1,33 @@
 ---
-title: "operator!= (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= (membro) [STL/CLR]"
+title: operatore! = (map) (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: 335c3b24-27ed-4cc8-b49d-02b83ec5fd0b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 705289c4ca29df6360fea7b0f8fee89f4a5a7c5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator!= (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Elenca il confronto non uguale.  
+# <a name="operator-map-stlclr"></a>operator!= (map) (STL/CLR)
+Elenco diverso di confronto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Key,  
@@ -36,17 +36,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  left  
  Contenitore sinistro da confrontare.  
   
  right  
  Contenitore destro da confrontare.  
   
-## Note  
- La funzione operatore restituisce `!(``left` `==` `right``)`.  Utilizzarla per verificare se `left` non viene ordinato allo stesso modo di `right` quando le due mappe vengono confrontate elemento per elemento.  
+## <a name="remarks"></a>Note  
+ La funzione di operatore restituisce `!(left == right)`. Utilizzati per verificare se `left` non viene ordinato identico `right` quando due mappe vengono confrontato elemento per elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_operator_ne.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[d 4\]**  
-**\[a b c\] \!\= \[a b c\] è False**  
-**\[a b c\] \!\= \[a b d\] è True**   
-## Requisiti  
- **Intestazione:** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\< \(map\)](../dotnet/operator-less-than-map-stl-clr.md)   
- [operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operator\> \(map\)](../dotnet/operator-greater-than-map-stl-clr.md)   
- [operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [operatore = = (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [operatore\< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [operatore > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operatore > (map) (STL/CLR)](../dotnet/operator-greater-than-map-stl-clr.md)   
+ [operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

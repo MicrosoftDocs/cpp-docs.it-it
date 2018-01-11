@@ -1,51 +1,52 @@
 ---
-title: "Windows Runtime and Managed Templates (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "templates, with CLR types"
+title: Windows Runtime e modelli gestiti (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Windows Runtime and Managed Templates (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-I modelli consentono di definire un prototipo del runtime di Windows o di un tipo di Common Language Runtime e quindi le variazioni istanziate di quel tipo utilizzando parametri di tipo diverso del modello.  
+# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime e modelli gestiti (Estensioni del componente C++)
+I modelli consentono di definire un prototipo di un tipo Windows Runtime o Common Language Runtime e, successivamente, di creare istanze delle variazioni di quel tipo utilizzando parametri di tipo dei modelli diversi.  
   
-## Tutti i runtime  
- È possibile creare modelli per tipi valore o riferimento.  Per ulteriori informazioni sulla creazione di tipi valore o referenza, vedere [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Tutti i runtime  
+ È possibile creare modelli da tipi di valore o riferimento.  Per ulteriori informazioni sulla creazione di tipi di valore o riferimento, vedere [classi e struct](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Per ulteriori informazioni sui modelli di classe standard C\+\+, vedere [Modelli di classe](../cpp/class-templates.md).  
+ Per ulteriori informazioni sui modelli di classe C++ standard, vedere [modelli di classe](../cpp/class-templates.md).  
   
-## Windows Runtime  
+## <a name="windows-runtime"></a>Windows Runtime  
  Non esistono note per questa funzionalità del linguaggio che si applichino solo a Windows Runtime.  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## Common Language Runtime  
- Esistono alcune limitazioni nel creare modelli della classe da tipi gestiti, che sono illustrati nell'esempio di codice seguente.  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ La creazione di modelli di classe dai tipi gestiti presenta alcune limitazioni che vengono illustrate nell'esempio di codice seguente.  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non è possibile creare un'istanza di un modello gestito con un parametro di modello di tipo generico.  Questo perché i tipi generici vengono risolti in fase di esecuzione.  Per ulteriori informazioni, vedere [Generics and Templates \(Visual C\+\+\)](../windows/generics-and-templates-visual-cpp.md).  
+ È possibile creare un'istanza di un tipo generico con un parametro di modello di tipo gestito, ma non di un modello gestito con un parametro di modello di tipo generico.  Questa condizione dipende dal fatto che i tipi generici vengono risolti in fase di esecuzione.  Per ulteriori informazioni, vedere [Generics e modelli (Visual C++)](../windows/generics-and-templates-visual-cpp.md).  
   
 ```cpp  
 // managed_templates.cpp  
@@ -69,7 +70,7 @@ ref class R {
   
  **Esempio**  
   
- Un tipo generico o una funzione non può essere annidato in modello gestito.  
+ Una funzione o un tipo generico non può essere annidato in modello gestito.  
   
 ```cpp  
 // managed_templates_2.cpp  
@@ -82,7 +83,7 @@ template<class T> public ref class R {
   
  **Esempio**  
   
- Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C\+\+\/CLI, ma è possibile utilizzare reflection.  Se un modello non è istanziato, non viene generato nei metadati.  Se un modello è istanziato, solo le funzioni membro a cui si fa riferimento verranno visualizzate nei metadati.  
+ Non è possibile accedere ai modelli definiti in un assembly a cui viene fatto riferimento con la sintassi del linguaggio C++/CLI, tuttavia è possibile utilizzare la reflection.  Se non viene creata alcuna istanza di un modello, quest'ultimo non viene creato nei metadati.  In caso contrario, nei metadati vengono visualizzate solo le funzioni membro a cui viene fatto riferimento.  
   
 ```cpp  
 // managed_templates_3.cpp  
@@ -114,7 +115,7 @@ int main() {
   
  **Esempio**  
   
- È possibile modificare il modificatore gestito di una classe in una specializzazione parziale o in una specializzazione esplicita di un modello di classe.  
+ È possibile modificare il modificatore gestito di una classe in una specializzazione parziale o esplicita di un modello di classe.  
   
 ```cpp  
 // managed_templates_4.cpp  
@@ -142,5 +143,5 @@ class A <int> {};
   
 ```  
   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

@@ -17,22 +17,25 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f24f2c9629d79b6d3ced25b89f1d61f633ade7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-application-wizard"></a>Creazione guidata applicazione Win32
 La creazione guidata applicazione Win32 di Visual C++ consente di creare uno dei quattro tipi di progetto (elencati nell'intestazione della tabella seguente). In ogni caso, è possibile specificare opzioni aggiuntive appropriate per il tipo di progetto aperto. La tabella seguente indica quali opzioni sono disponibili per ogni tipo di applicazione.  
   
 |Tipo di supporto|Applicazione console|Applicazione (Windows) eseguibile|Libreria a collegamento dinamico|Libreria statica|  
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|  
-|**Progetto vuoto**|Sì|Sì|Sì|No|  
+|**Progetto vuoto**|Yes|Sì|Sì|No|  
 |**Simboli di esportazione**|No|No|Sì|No|  
-|**Intestazione precompilata**|No|No|No|Sì|  
-|**Supporto ATL**|Sì|No|No|No|  
-|**Supporto MFC**|Sì|No|No|Sì|  
+|**Intestazione precompilata**|No|No|No|Yes|  
+|**Supporto ATL**|Yes|No|No|No|  
+|**Supporto MFC**|Yes|No|No|Yes|  
   
 ## <a name="overview"></a>Panoramica  
  Questa pagina di procedura guidata illustra le impostazioni di progetto correnti per l'applicazione Win32 che si sta creando. Per impostazione predefinita, sono impostate le opzioni seguenti:  

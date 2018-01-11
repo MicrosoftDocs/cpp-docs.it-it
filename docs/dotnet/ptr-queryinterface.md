@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface (metodo)"
+title: PTR::QueryInterface | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Eseguire una query all'oggetto COM di proprietà per un'interfaccia e associa il risultato a un altro `com::ptr`.  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+Una query all'oggetto COM di proprietà per un'interfaccia e associa il risultato a un altro `com::ptr`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `other`  
- `com::ptr` che ottiene l'interfaccia.  
+ Il `com::ptr` che riceverà l'interfaccia.  
   
-## Eccezioni  
- Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi errore `HRESULT` viene convertito in eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Eccezioni  
+ Internamente, `QueryInterface` viene chiamato sull'oggetto COM di proprietà e qualsiasi errore `HRESULT` viene convertito in un'eccezione da <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Note  
- Utilizzare questo metodo per creare un wrapper COM per un'interfaccia differente dell'oggetto COM di proprietà del wrapper corrente.  Questo metodo chiama `QueryInterface` tramite l'oggetto COM di proprietà per richiedere un puntatore a un'interfaccia specifica dell'oggetto COM e di connette il puntatore a interfaccia restituito a `com::ptr`passato.  
+## <a name="remarks"></a>Note  
+ Utilizzare questo metodo per creare un wrapper COM per un'interfaccia diversa dell'oggetto COM di proprietà di wrapper corrente. Questo metodo chiama `QueryInterface` oggetto tramite l'oggetto COM di proprietà per richiedere un puntatore a una specifica interfaccia di COM e viene associato il puntatore a interfaccia restituito passato `com::ptr`.  
   
-## Esempio  
- In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto di `IXMLDOMDocument` il membro privato.  La funzione membro di `WriteTopLevelNode` utilizza `QueryInterface` per riempire `com::ptr` locale di `IXMLDOMNode` quindi passare `com::ptr` \(da tracking reference\) a una funzione membro privata che scrive il nome e le proprietà Text del nodo nella console.  
+## <a name="example"></a>Esempio  
+ In questo esempio viene implementata una classe CLR che utilizza `com::ptr` per eseguire il wrapping del relativo oggetto membro privato `IXMLDOMDocument`. Il `WriteTopLevelNode` funzione membro Usa `QueryInterface` per riempire un oggetto locale `com::ptr` con un `IXMLDOMNode` e quindi passa il `com::ptr` (di riferimento di rilevamento) a una funzione membro privato che scrive le proprietà di nome e il testo del nodo nella console.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#document\>persnickety\<\/\#document\>**   
-## Requisiti  
- **Header file**\<msclr\\com\\ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
   
- msclr::com di**Spazio dei nomi**  
+## <a name="requirements"></a>Requisiti  
+ **File di intestazione** \<msclr\com\ptr.h >  
   
-## Vedere anche  
- [Membri ptr](../dotnet/ptr-members.md)   
+ **Namespace** msclr:: com  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Membri PTR](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

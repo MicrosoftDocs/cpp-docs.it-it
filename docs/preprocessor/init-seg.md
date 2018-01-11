@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc8f7c636a3d013d1dd7001e281d35af07961b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initseg"></a>init_seg
 **Sezione specifica C++**  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
 int __cdecl myexit (void (__cdecl *pf)(void))  
 ```  
   
- allora la funzione verrà chiamata al posto di `atexit` della libreria di runtime C. Ciò consente di compilare un elenco dei distruttori che dovranno essere chiamati quando si è pronti a eliminare gli oggetti.  
+ allora la funzione verrà chiamata al posto di `atexit` della libreria di runtime C. Ciò consente di compilare un elenco dei distruttori che dovranno essere chiamati quando si è pronti a eliminare definitivamente gli oggetti.  
   
  Se si desidera posticiparne l'inizializzazione (ad esempio in una DLL) è possibile scegliere di specificare il nome della sezione in modo esplicito. È necessario quindi chiamare i costruttori per ogni oggetto statico.  
   

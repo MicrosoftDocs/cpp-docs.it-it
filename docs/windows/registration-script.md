@@ -1,32 +1,33 @@
 ---
-title: "registration_script | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.registration_script"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registration_script attribute"
+title: registration_script | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.registration_script
+dev_langs: C++
+helpviewer_keywords: registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 40790788fdb5ce73a6c33e62b6ee55d2da4c5364
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# registration_script
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-esegue lo script personalizzato specificato di registrazione.  
+# <a name="registrationscript"></a>registration_script
+Esegue lo script di registrazione personalizzato specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,17 +36,17 @@ esegue lo script personalizzato specificato di registrazione.
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *script*  
- Il percorso completo di un file personalizzato di script di registrazione \(rgs\).  un valore di **nessuno**, ad esempio  `script = "none"`, indica che la coclasse non presenta requisiti di registrazione.  
+ Il percorso completo in un file di script (con estensione RGS) di registrazione personalizzato. Il valore **Nessuno**, ad esempio `script = "none"`, indica che la coclasse che dispone di alcun i requisiti di registrazione.  
   
-## Note  
- **registration\_script** L'attributo di C\+\+ esegue lo script personalizzato di registrazione specificato da  **script**.  Se questo attributo non viene specificato, un file standard rgs \(contenente informazioni per registrare il componente\) viene utilizzato.  Per ulteriori informazioni sui file RGS, vedere [Il componente ATL il Registro Di Sistema \(Ufficiale del registrar\)](../atl/atl-registry-component-registrar.md).  
+## <a name="remarks"></a>Note  
+ Il **registration_script** attributo C++ esegue lo script di registrazione personalizzato specificato da **script**. Se questo attributo viene omesso, viene utilizzato un file con estensione RGS standard (contenente informazioni per la registrazione del componente). Per ulteriori informazioni sui file con estensione RGS, vedere [il componente di registro di sistema ATL (Registrar)](../atl/atl-registry-component-registrar.md).  
   
- L'attributo richiede che [coclasse](../windows/coclass.md),  [progid](../windows/progid.md), o  [vi\_progid](../windows/vi-progid.md) attributo o un altro attributo che implica uno di questi\) viene applicato anche allo stesso elemento.  
+ Questo attributo richiede che anche l'attributo [coclass](../windows/coclass.md), [progid](../windows/progid.md)o [vi_progid](../windows/vi-progid.md) (o un altro attributo che implica uno di questi) sia applicato allo stesso elemento.  
   
-## Esempio  
- Il codice seguente specifica che il componente ha uno script del Registro di sistema denominato cpp\_attr\_ref\_registration\_script.rgs.  
+## <a name="example"></a>Esempio  
+ Il codice seguente specifica che il componente dispone di uno script del Registro di sistema denominato cpp_attr_ref_registration_script.rgs.  
   
 ```  
 // cpp_attr_ref_registration_script.cpp  
@@ -66,21 +67,20 @@ __interface IFace {};
 class CMyClass:public IFace {};  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|**classe**,  `struct`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Uno o più dei seguenti elementi: **coclasse**,  **progid**, o  **vi\_progid**.|  
-|**attributi non validi**|Nessuno|  
+|**Si applica a**|**class**, `struct`|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Uno o più degli attributi seguenti: **coclass**, **progid**o **vi_progid**.|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [COM Attributes](../windows/com-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi COM](../windows/com-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
  [rdx](../windows/rdx.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

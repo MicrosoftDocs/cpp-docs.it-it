@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DTextFormat::IsValid
 - AFXRENDERTARGET/CD2DTextFormat::ReCreate
 - AFXRENDERTARGET/CD2DTextFormat::m_pTextFormat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DTextFormat [MFC], CD2DTextFormat
 - CD2DTextFormat [MFC], Create
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26fbbbe2d9f5edde6e247d69e9e6bc840f05a55b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: b94ab280dab2bd265d7eda89c7c1ad7e9f97f8e9
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dtextformat-class"></a>Classe CD2DTextFormat
 Wrapper per IDWriteTextFormat.  
@@ -82,7 +80,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>Membri dati protetti  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Un puntatore a un oggetto IDWriteTextFormat.|  
   
@@ -233,4 +231,3 @@ virtual HRESULT ReCreate(CRenderTarget* */);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::poisson_distribution::param_type::mean
 - random/std::poisson_distribution::param_type::operator==
 - random/std::poisson_distribution::param_type::operator!=
-- random/std::poisson_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::poisson_distribution [C++]
 - std::poisson_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9ebeb453aefee8310e45779f1fd60c7bd207771
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 1033cc69a3076762cb6ac1b5c50bf6fe7ca2df7b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="poissondistribution-class"></a>Classe poisson_distribution
 Genera una distribuzione di Poisson.  
@@ -92,7 +89,7 @@ La classe di modelli descrive una distribuzione che produce valori di un tipo in
   
 La funzione di proprietà `mean()` restituisce il valore per il parametro di distribuzione archiviato *mean*.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto del parametro di distribuzione archiviato `param_type`.  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
@@ -102,7 +99,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla distribuzione di Poisson, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Poisson](http://go.microsoft.com/fwlink/LinkId=401112).  
+Per informazioni dettagliate sulla distribuzione di Poisson, vedere l'articolo di Wolfram MathWorld relativo alla [Distribuzione di Poisson](http://go.microsoft.com/fwlink/p/?linkid=401112).  
   
 ## <a name="example"></a>Esempio  
   
@@ -223,11 +220,11 @@ Parametro di distribuzione `mean`.
 Struttura di parametri usata per costruire la distribuzione.  
   
 ### <a name="remarks"></a>Note  
- **Precondizione:**`0.0 < mean`  
+ **Precondizione:** `0.0 < mean`  
   
 Il primo costruttore costruisce un oggetto il cui valore `mean` archiviato include il valore *mean*.  
   
-Il secondo costruttore costruisce un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
+Il secondo costruttore crea un oggetto i cui parametri archiviati sono inizializzati da *parm*. È possibile ottenere e impostare i parametri correnti di una distribuzione esistente chiamando la funzione membro `param()`.  
   
 ##  <a name="param_type"></a>  poisson_distribution::param_type  
 Archivia i parametri della distribuzione.  
@@ -253,5 +250,4 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 

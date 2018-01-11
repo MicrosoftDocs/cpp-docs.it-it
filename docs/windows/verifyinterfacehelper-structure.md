@@ -1,32 +1,33 @@
 ---
-title: "Struttura VerifyInterfaceHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInterfaceHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VerifyInterfaceHelper (struttura)"
+title: VerifyInterfaceHelper (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInterfaceHelper
+dev_langs: C++
+helpviewer_keywords: VerifyInterfaceHelper structure
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5ffedd0d370d59056ed895988aadd5362f51a7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura VerifyInterfaceHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] e non si può utilizzare direttamente dal codice.  
+# <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (struttura)
+Supporta l'infrastruttura di libreria di modelli di Windows Runtime C++ e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -41,30 +42,30 @@ template <
 struct VerifyInterfaceHelper<false, I>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `I`  
- Un'interfaccia da verificare.  
+ Un'interfaccia per verificare.  
   
  `isWinRTInterface`  
   
-## Note  
- Verifica che l'interfaccia specificata dal parametro di template soddisfi determinati requisiti.  
+## <a name="remarks"></a>Note  
+ Verifica che l'interfaccia specificata dal parametro di modello soddisfi determinati requisiti.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Metodo VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `VerifyInterfaceHelper`  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

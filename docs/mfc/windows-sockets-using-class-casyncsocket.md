@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 31dc9159c0f66b5c1482efebd482e049b5ef270a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: utilizzo della classe CAsyncSocket
 In questo articolo viene illustrato come utilizzare classe [CAsyncSocket](../mfc/reference/casyncsocket-class.md). Tenere presente che questa classe incapsula le API di Windows Sockets a un livello molto basso. `CAsyncSocket`deve essere utilizzato dai programmatori che conosce le comunicazioni di rete in modo dettagliato ma si desidera la praticità di callback per la notifica degli eventi di rete. In base a questo presupposto, questo articolo fornisce solo istruzioni di base. È probabilmente consigliabile usare `CAsyncSocket` se si desidera semplicità di Windows Sockets di gestione di più protocolli di rete in un'applicazione MFC, ma non si desidera sacrificare la flessibilità. Potrebbe inoltre ritieni che è possibile ottenere una maggiore efficienza programmazione delle comunicazioni più diretta rispetto Impossibile utilizzando il modello alternativo più generico della classe `CSocket`.  
@@ -52,7 +53,7 @@ In questo articolo viene illustrato come utilizzare classe [CAsyncSocket](../mfc
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     -oppure-  
+     oppure  
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
@@ -74,7 +75,7 @@ In questo articolo viene illustrato come utilizzare classe [CAsyncSocket](../mfc
   
 2.  Se il socket è un client, è possibile connettere l'oggetto socket a un server socket, utilizzando [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).  
   
-     -oppure-  
+     oppure  
   
      Se il socket è un server, impostare il socket può mettersi in ascolto (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) per i tentativi di connessione effettuati da un client. Dopo aver ricevuto una richiesta di connessione, accettare con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).  
   

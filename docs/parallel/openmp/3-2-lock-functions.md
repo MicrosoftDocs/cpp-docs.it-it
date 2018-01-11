@@ -1,50 +1,50 @@
 ---
-title: "3.2 Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 3.2 bloccare funzioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0ec855c6-55a9-49d7-bee4-5edae6e86a1b
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 151c809a7bd28a2e4384371f5cec3bd192eed9d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 3.2 Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Le funzioni descritte in questa sezione modificano i blocchi utilizzati per la sincronizzazione.  
+# <a name="32-lock-functions"></a>3.2 Funzioni lock
+Le funzioni descritte in questa sezione manipolare i blocchi utilizzati per la sincronizzazione.  
   
- Per le seguenti funzioni, la variabile di blocco deve avere il tipo **omp\_lock\_t**.  Questa variabile deve essere eseguito solo con queste funzioni.  Tutte le funzioni di blocco richiedono un argomento con un puntatore **omp\_lock\_t** tipo.  
+ Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_lock_t**. Questa variabile deve essere accessibile solo tramite queste funzioni. Tutte le funzioni di blocco richiedono un argomento che dispone di un puntatore a **omp_lock_t** tipo.  
   
--   `omp_init_lock` la funzione inizializza un blocco semplice.  
+-   Il `omp_init_lock` funzione Inizializza un semplice blocco.  
   
--   `omp_destroy_lock` la funzione consente di rimuovere un blocco semplice.  
+-   Il `omp_destroy_lock` funzione rimuove un semplice blocco.  
   
--   `omp_set_lock` resta in attesa di funzione fino a un blocco semplice è disponibile.  
+-   Il `omp_set_lock` funzione attende fino a quando non è disponibile un semplice blocco.  
   
--   `omp_unset_lock` la funzione libera un blocco semplice.  
+-   Il `omp_unset_lock` funzione rilascia un semplice blocco.  
   
--   `omp_test_lock` analisi funzionali un blocco semplice.  
+-   Il `omp_test_lock` funzione verifica un semplice blocco.  
   
- Per le seguenti funzioni, la variabile di blocco deve avere il tipo **omp\_nest\_lock\_t**.  Questa variabile deve essere eseguito solo con queste funzioni.  Tutte le funzioni di blocco nidificabili richiedono un argomento con un puntatore **omp\_nest\_lock\_t** tipo.  
+ Per le funzioni seguenti, la variabile di blocco deve avere tipo **omp_nest_lock_t**.  Questa variabile deve essere accessibile solo tramite queste funzioni. Tutte le funzioni di omp_nest_lock_t richiedono un argomento che dispone di un puntatore a **omp_nest_lock_t** tipo.  
   
--   `omp_init_nest_lock` la funzione inizializza un blocco nidificabile.  
+-   Il `omp_init_nest_lock` funzione Inizializza un blocco annidabile.  
   
--   `omp_destroy_nest_lock` la funzione consente di rimuovere un blocco nidificabile.  
+-   Il `omp_destroy_nest_lock` funzione rimuove un blocco annidabile.  
   
--   `omp_set_nest_lock` resta in attesa di funzione fino a un blocco nidificabile è disponibile.  
+-   Il `omp_set_nest_lock` funzione attende fino a quando non è disponibile un blocco annidabile.  
   
--   `omp_unset_nest_lock` la funzione libera un blocco nidificabile.  
+-   Il `omp_unset_nest_lock` funzione rilascia un blocco annidabile.  
   
--   `omp_test_nest_lock` analisi funzionali un blocco nidificabile.  
+-   Il `omp_test_nest_lock` funzione verifica di un blocco annidabile.  
   
- Le funzioni di blocco di OpenMP accedono alla variabile di blocco in modo tale che sempre letti e aggiornare il valore più recente della variabile del blocco.  Di conseguenza, non è necessario che un programma di OpenMP include esplicito **arrossir** direttive per garantire che il valore della variabile del blocco è coerente tra i thread diversi.  \(È possibile che si verifichi un necessarie **arrossir** direttive per rendere i valori di altre variabili coerenti.\)
+ Le funzioni di blocco OpenMP accedono alla variabile di blocco in modo che possano sempre leggere e aggiornare il valore della variabile di blocco più recente. Pertanto, non è necessario per includere esplicita di un programma OpenMP **scaricamento** direttive per assicurarsi che il blocco valore della variabile sia coerenza fra thread diversi. (In potrebbe essere necessario per **scaricamento** direttive per rendere i valori di altre variabili coerente.)

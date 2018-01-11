@@ -1,32 +1,33 @@
 ---
-title: "Funzione Move | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::Move"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move (funzione)"
+title: Move (funzione) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::Move
+dev_langs: C++
+helpviewer_keywords: Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 360302840d007dde00a16073b546ba31f7ed19b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Funzione Move
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="move-function"></a>Move (funzione)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -37,25 +38,25 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Tipo dell'argomento.  
+ Il tipo di argomento.  
   
  `arg`  
- Un argomento da spostare.  
+ Un argomento a cui spostarsi.  
   
-## Valore restituito  
- Parametro `arg` dopo che sono stati rimossi i tratti di riferimento rvalue o di riferimento, se presenti.  
+## <a name="return-value"></a>Valore restituito  
+ Parametro `arg` dopo tratti di riferimento o di riferimento rvalue, se presenti, sono state rimosse.  
   
-## Note  
- Sposta l'argomento specificato da una posizione a un'altra.  
+## <a name="remarks"></a>Note  
+ Sposta l'argomento specificato da una posizione a altra.  
   
- Per ulteriori informazioni, vedere la sezione **Move Semantics** in [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ Per ulteriori informazioni, vedere il **la semantica di spostamento** sezione [dichiaratore di riferimento Rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## Requisiti  
- **Header:** internal.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

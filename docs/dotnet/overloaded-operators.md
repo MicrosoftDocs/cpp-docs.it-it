@@ -1,31 +1,34 @@
 ---
-title: "Operatori di overload | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overload di operatori, in una classe CLR"
-  - "operatori [C++], overload"
+title: Gli operatori di overload | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatori di overload
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'overload dell'operatore è stato modificato in modo significativo in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="overloaded-operators"></a>Operatori di overload
+Overload dell'operatore ha subito modifiche significative rispetto alle estensioni gestite per C++ a Visual C++.  
   
- Nella dichiarazione di un tipo di riferimento, ad esempio, anziché utilizzare la sintassi `operator+` nativa è necessario scrivere in modo esplicito il nome interno sottostante dell'operatore, in questo caso `op_Addition`.  Inoltre, la chiamata di un operatore deve essere eseguita in modo esplicito tramite tale nome, escludendo così due principali vantaggi dell'overload dell'operatore, ovvero la sintassi intuitiva e la possibilità di combinare nuovi tipi con tipi esistenti.  Di seguito è riportato un esempio.  
+ Nella dichiarazione di un tipo riferimento, ad esempio, anziché tramite l'oggetto nativo `operator+` sintassi, scrivere in modo esplicito il nome interno sottostante dell'operatore, in questo caso, `op_Addition`. Inoltre, deve essere richiamato in modo esplicito tramite tale nome, escludendo così due vantaggi principali correlati all'overload degli operatori la chiamata di un operatore: (a) la sintassi intuitiva e (b) la possibilità di combinare i nuovi tipi con i tipi esistenti. Ad esempio:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +55,7 @@ int main()
 }  
 ```  
   
- Nella nuova sintassi vengono soddisfatte le consuete aspettative di un programmatore in C\+\+ nativo, sia nella dichiarazione che nell'utilizzo degli operatori statici.  Di seguito è riportata la classe `Vector` convertita nella nuova sintassi:  
+ Nella nuova sintassi, vengono ripristinate le aspettative normale di un programmatore in C++ nativo, sia nella dichiarazione e utilizzo degli operatori statici. Ecco il `Vector` classe convertita nella nuova sintassi:  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +82,5 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni di membri in una classe o interfaccia (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

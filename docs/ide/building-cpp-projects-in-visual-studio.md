@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0aea958eb441f3b2b4d1adb993f1b92ae8359530
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: cd4934f3075f963efe59e8d73d8c72347fd53912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Compilazione di progetti C++ in Visual Studio
 Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di Visual Studio sono disponibili vari modi per compilare un'intera soluzione o un singolo progetto. È anche possibile modificare le impostazioni di compilazione e specificare procedure di compilazione personalizzate per aumentare l'efficienza del processo di sviluppo.  
@@ -54,7 +55,7 @@ Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di
   
  Per altre informazioni su come eseguire la compilazione, modificare le impostazioni di compilazione e specificare procedure di compilazione personalizzate, vedere gli articoli seguenti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md)  
  Viene descritto come personalizzare il processo di compilazione nell'ambiente di sviluppo integrato (IDE).  
   
@@ -71,7 +72,7 @@ Nell'ambiente di sviluppo integrato (IDE, Integrated Development Environment) di
  [VC + +, progetti di dialogo Opzioni](vcpp-directories-property-page.md)  
  (Solo progetti MSBuild) Viene descritto come modificare il percorso di ricerca per i file eseguibili e includere file, i file di libreria e file del codice sorgente durante una compilazione.  
   
- [Compilazione e creazione](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio) (Compilazione e creazione)  
  Vengono fornite informazioni sulla compilazione in Visual Studio.  
   
  [Compilazione di programmi C/C++](../build/building-c-cpp-programs.md)  

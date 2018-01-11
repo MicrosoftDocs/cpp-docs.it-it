@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7f400a03f1b9ae877ee7ec681cb038698a92598a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>Procedura: definire e utilizzare delegati (C++/CLI)
 In questo articolo viene illustrato come definire e utilizzare delegati in C + + CLI.  

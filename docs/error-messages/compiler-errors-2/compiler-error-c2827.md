@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2827
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2827
+f1_keywords: C2827
+dev_langs: C++
+helpviewer_keywords: C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61b0e6e6843aa33af9826a14a57f6a21c7e06984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e061c619ca936afaefe392fb808a22c1a19a27ba
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2827"></a>Errore del compilatore C2827
 non è possibile eseguire l'override globale di 'operatore' con forma unaria  

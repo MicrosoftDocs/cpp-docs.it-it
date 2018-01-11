@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37f1eed2287c8fe655a124b1f76f48a203ab1607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Strumenti di Visual C++ e funzionalità in edizioni di Visual Studio
 Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Visual Studio Una X in una cella indica che la funzionalità è disponibile. Una cella vuota indica che la funzionalità non è disponibile. Le note tra parentesi indicano che una funzionalità è disponibile, ma limitata.  
@@ -31,155 +32,155 @@ Le tabelle seguenti illustrano le funzionalità di Visual C++ disponibili in Vis
 ||||||  
 |-|-|-|-|-|  
 |Piattaforma|Visual Studio Express per Windows 10|Visual Studio Express per Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|  
-|Desktop di Windows||X|X|X|  
-|Piattaforma UWP (Universal Windows Platform) (telefono, tablet, PC, Xbox, IoT e HoloLens)|X||X|X|  
-|Windows Store 8.1|||X|X|  
-|Windows Phone 8.0|||X|X|  
-|Android|||X|X|  
-|iOS|||X|X|  
+|Desktop di Windows||x|X|x|  
+|Piattaforma UWP (Universal Windows Platform) (telefono, tablet, PC, Xbox, IoT e HoloLens)|x||X|x|  
+|Windows Store 8.1|||x|x|  
+|Windows Phone 8.0|||x|x|  
+|Android|||x|x|  
+|iOS|||x|x|  
   
 ## <a name="compilers"></a>Compilatori  
   
 |Compilatore|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Compilatore X86 a 32 bit|X|X|X|X|  
-|Compilatore incrociato X86_arm|X||X|X|  
-|Compilatore [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] a 64 bit|||X|X|  
-|Compilatore incrociato X86_[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|X|X|X|X|  
+|Compilatore X86 a 32 bit|x|X|X|x|  
+|Compilatore incrociato X86_arm|x||X|x|  
+|Compilatore [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] a 64 bit|||x|x|  
+|Compilatore incrociato X86_[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|x|X|X|x|  
   
 ## <a name="libraries-and-headers"></a>Librerie e intestazioni  
   
 |Libreria o intestazione|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Intestazioni e librerie Windows e libreria CRT|(X)|X|X|X|  
-|Libreria standard C++|X|X|X|X|  
+|Intestazioni e librerie Windows e libreria CRT|(X)|x|X|x|  
+|Libreria standard C++|x|X|X|X|  
 |ATL|||X|X|  
-|MFC|||X|X|  
-|Libreria di classi .NET Framework||X|X|X|  
-|Libreria di supporto C++ per .NET||X|X|X|  
-|OpenMP|X|X|X|X|  
+|MFC|||X|x|  
+|Libreria di classi .NET Framework||x|X|x|  
+|Libreria di supporto C++ per .NET||x|X|x|  
+|OpenMP|x|X|X|x|  
   
 ## <a name="project-templates"></a>Modelli di progetto  
   
 |Modello|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Modelli XAML per piattaforma UWP, Windows 8.1, Windows Phone 8.0|X||X|X|  
-|Applicazione Direct3D|X||X|X|  
-|DLL (applicazioni Windows Store)|X||X|X|  
-|Libreria statica (applicazioni Windows Store)|X||X|X|  
-|Componente Windows Runtime|X||X|X|  
-|Libreria unit test (applicazioni Windows Store)|X||X|X|  
-|Progetto ATL|||X|X|  
-|Libreria di classi (CLR)||X|X|X|  
-|Applicazione console CLR||X|X|X|  
-|Progetto CLR vuoto||X|X|X|  
-|Creazione guidata personalizzata|||X|X|  
-|Progetto vuoto||X|X|X|  
-|Progetto Makefile||X|X|X|  
-|Controllo ActiveX MFC|||X|X|  
-|Applicazione MFC|||X|X|  
-|DLL MFC|||X|X|  
-|Progetto di test|X|X|X|X|  
-|Progetto console Win32||X|X|X|  
-|Progetto Win32||X|X|X|  
+|Modelli XAML per piattaforma UWP, Windows 8.1, Windows Phone 8.0|x||X|x|  
+|Applicazione Direct3D|x||X|x|  
+|DLL (applicazioni Windows Store)|x||X|x|  
+|Libreria statica (applicazioni Windows Store)|x||X|x|  
+|Componente Windows Runtime|x||X|x|  
+|Libreria unit test (applicazioni Windows Store)|x||X|x|  
+|Progetto ATL|||x|x|  
+|Libreria di classi (CLR)||x|X|x|  
+|Applicazione console CLR||x|X|x|  
+|Progetto CLR vuoto||x|X|x|  
+|Creazione guidata personalizzata|||x|x|  
+|Progetto vuoto||x|X|x|  
+|Progetto Makefile||x|X|x|  
+|Controllo ActiveX MFC|||x|x|  
+|Applicazione MFC|||x|x|  
+|DLL MFC|||x|x|  
+|Progetto di test|x|X|X|x|  
+|Progetto console Win32||x|X|x|  
+|Progetto Win32||x|X|x|  
   
 ## <a name="tools"></a>Strumenti  
   
 |Strumento|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Incremental Linker (Link.exe)|X|X|X|X|  
-|Program Maintenance Utility (Nmake.exe)||X|X|X|  
-|Lib Generator (Lib.exe)|X|X|X|X|  
-|Windows Resource Compiler (Rc.exe)|X|X|X|X|  
-|Windows Resource to Object Converter (CvtRes.exe)||X|X|X|  
-|Browse Information Maintenance Utility (BscMake.exe)|X|X|X|X|  
-|C++ Name Undecorator (Undname.exe)|X|X|X|X|  
-|COFF/PE Dumper (Dumpbin.exe)|X|X|X|X|  
-|COFF/PE Editor (Editbin.exe)|X|X|X|X|  
-|MASM (Ml.exe)|||X|X|  
-|Spy++|||X|X|  
-|ErrLook|||X|X|  
-|AtlTrace|||X|X|  
-|Devenv.com|||X|X|  
-|Regole di inferenza|||X|X|  
-|Aggiornamento di progetti vcproj VCBuild a MSBuild (VCUpgrade.exe)|X|X|X|X|  
-|Ottimizzazioni PGO|||X|X|  
+|Incremental Linker (Link.exe)|x|X|X|x|  
+|Program Maintenance Utility (Nmake.exe)||x|X|x|  
+|Lib Generator (Lib.exe)|x|X|X|x|  
+|Windows Resource Compiler (Rc.exe)|x|X|X|x|  
+|Windows Resource to Object Converter (CvtRes.exe)||x|X|x|  
+|Browse Information Maintenance Utility (BscMake.exe)|x|X|X|x|  
+|C++ Name Undecorator (Undname.exe)|x|X|X|x|  
+|COFF/PE Dumper (Dumpbin.exe)|x|X|X|x|  
+|COFF/PE Editor (Editbin.exe)|x|X|X|x|  
+|MASM (Ml.exe)|||x|x|  
+|Spy++|||x|x|  
+|ErrLook|||x|x|  
+|AtlTrace|||x|x|  
+|Devenv.com|||x|x|  
+|Regole di inferenza|||x|x|  
+|Aggiornamento di progetti vcproj VCBuild a MSBuild (VCUpgrade.exe)|x|X|X|x|  
+|Ottimizzazioni PGO|||x|x|  
   
 ## <a name="debugging-features"></a>Funzionalità di debug  
   
 |Funzionalità di debug|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Debug nativo|X|X|X|X|  
-|natvis (visualizzazione del tipo nativo)|X|X|X|X|  
-|Debug della grafica|X||X|X|  
-|Debug gestito||X|X|X|  
-|Utilizzo GPU|X||X|X|  
-|Utilizzo memoria|X||X|X|  
-|Debug remoto|X|X|X|X|  
-|Debug SQL|||X|X|  
-|Analisi codice statico|Limitato|Limitato|X|X|  
+|Debug nativo|x|X|X|x|  
+|natvis (visualizzazione del tipo nativo)|x|X|X|x|  
+|Debug della grafica|x||X|x|  
+|Debug gestito||x|X|x|  
+|Utilizzo GPU|x||X|x|  
+|Utilizzo memoria|x||X|x|  
+|Debug remoto|x|X|X|x|  
+|Debug SQL|||x|x|  
+|Analisi codice statico|Limitato|Limitato|x|x|  
   
 ## <a name="designers-and-editors"></a>Editor e finestre di progettazione  
   
 |Editor o finestra di progettazione|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|XAML Designer|X||X|X|  
-|Editor/Progettazione stili CSS|X|X|X|X|  
-|Editor/Finestra di progettazione HTML|X|X|X|X|  
-|Editor XML|X|X|X|X|  
-|Editor codice sorgente|X|X|X|X|  
-|Funzionalità di produttività: refactoring, IntelliSense, formattazione codice C++|X|X|X|X|  
-|Progettazione Windows Form||X|X|X|  
-|Data Designer|||X|X|  
-|Editor risorse native (file .rc)|||X|X|  
-|Editor di risorse|X|X|X|X|  
-|Editor dei modelli|X||X|X|  
-|Finestra di progettazione shader|X||X|X|  
+|XAML Designer|x||X|x|  
+|Editor/Progettazione stili CSS|x|X|X|x|  
+|Editor/Finestra di progettazione HTML|x|X|X|x|  
+|Editor XML|x|X|X|x|  
+|Editor codice sorgente|x|X|X|x|  
+|Funzionalità di produttività: refactoring, IntelliSense, formattazione codice C++|x|X|X|x|  
+|Progettazione Windows Form||x|X|x|  
+|Data Designer|||x|x|  
+|Editor risorse native (file .rc)|||x|x|  
+|editor di risorse|x|X|X|x|  
+|Editor dei modelli|x||X|x|  
+|Finestra di progettazione shader|x||X|x|  
   
 ## <a name="data-features"></a>Funzionalità relative ai dati  
   
 |Funzionalità relativa ai dati|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Premium|Visual Studio Enterprise|  
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|---------------------------|------------------------------|  
-|Data Designer|||X|X|X|  
-|Oggetti dati|||X|X|X|  
-|Servizi Web|||X|X|X|  
-|Esplora server|||X|X|X|  
+|Data Designer|||x|X|x|  
+|Oggetti dati|||x|X|x|  
+|Servizi Web|||x|X|x|  
+|Esplora server|||x|X|x|  
   
 ## <a name="build-and-project-systems"></a>Sistemi di compilazione e di progetto  
   
 |Funzionalità di compilazione o di progetto|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Compilazioni da riga di comando (msbuild.exe)|X|X|X|X|  
-|Multitargeting nativo||X|X|X|  
-|Multitargeting gestito||X|X|X|  
-|Compilazioni parallele|X|X|X|X|  
-|Personalizzazioni compilazioni|X|X|X|X|  
-|Estendibilità di pagine delle proprietà|X|X|X|X|  
+|Compilazioni da riga di comando (msbuild.exe)|x|X|X|x|  
+|Multitargeting nativo||x|X|x|  
+|Multitargeting gestito||x|X|x|  
+|Compilazioni parallele|x|X|X|x|  
+|Personalizzazioni compilazioni|x|X|X|x|  
+|Estendibilità di pagine delle proprietà|x|X|X|x|  
   
 ## <a name="automation-and-extensibility"></a>Estendibilità e automazione  
   
 |Estendibilità e automazione|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|  
-|Modelli a oggetti di estendibilità|||X|X|  
-|Modello di codice|||X|X|  
-|modello di progetto|||X|X|  
-|Modello dell'editor di risorse|||X|X|  
-|Modello di procedura guidata|||X|X|  
-|Modello a oggetti del debugger|||X|X|  
+|Modelli a oggetti di estendibilità|||x|x|  
+|Modello di codice|||x|x|  
+|modello di progetto|||x|x|  
+|Modello dell'editor di risorse|||x|x|  
+|Modello di procedura guidata|||x|x|  
+|Modello a oggetti del debugger|||x|x|  
   
 ## <a name="application-lifecycle-management-tools"></a>Strumenti di gestione del ciclo di vita delle applicazioni  
   
 ||||||  
 |-|-|-|-|-|  
 |Strumento|Visual Studio Express per Windows|Visual Studio Express per Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|  
-|Unit test (framework nativo)|X|X|X|X|  
-|Unit test (framework gestito)||X|X|X|  
-|Code coverage||||X|  
-|Test manuali||||X|  
-|Testing esplorativo||||X|  
-|Gestione test case||||X|  
-|Mappa codici e grafici delle dipendenze|||sola lettura|X|  
-|Debug della mappa codici||||X|  
+|Unit test (framework nativo)|x|X|X|x|  
+|Unit test (framework gestito)||x|X|x|  
+|Code coverage||||x|  
+|Test manuali||||x|  
+|Testing esplorativo||||x|  
+|Gestione test case||||x|  
+|Mappa codici e grafici delle dipendenze|||sola lettura|x|  
+|Debug della mappa codici||||x|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare Visual Studio](/visualstudio/install/install-visual-studio)   

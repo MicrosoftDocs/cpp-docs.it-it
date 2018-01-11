@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2842
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2842
+f1_keywords: C2842
+dev_langs: C++
+helpviewer_keywords: C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 47130ec2bf73889130d64f3ca8411bbc38dabf93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 3998ff0b07ba78228ac51bccac047d8889ccf81b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2842"></a>Errore del compilatore C2842
 'class': un tipo gestito o WinRT non può definire il proprio 'operator new' o 'operator delete'  
@@ -44,4 +40,3 @@ ref class G {
    void* operator new( size_t nSize );   // C2842  
 };  
 ```  
-

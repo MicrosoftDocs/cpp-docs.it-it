@@ -1,31 +1,30 @@
 ---
-title: "Errore di compilazione progetto PRJ0034 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0034"
+title: Progetto PRJ0034 errore di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0034
+dev_langs: C++
+helpviewer_keywords: PRJ0034
 ms.assetid: 1da4a55b-231b-4476-8545-6997628fbc00
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e68097d234519cdea75875d355ef798672ad4b22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore di compilazione progetto PRJ0034
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-La proprietà "Dipendenze aggiuntive" per l'istruzione di compilazione personalizzata a livello di progetto contiene "macro" che restituisce "espansione\_macro".  
+# <a name="project-build-error-prj0034"></a>Errore di compilazione progetto PRJ0034
+La proprietà "Dipendenze aggiuntive" per l'oggetto personalizzato a livello di progetto di compilazione contiene "macro" che restituisce "espansione".  
   
- Nella dipendenza aggiuntiva di un'istruzione di compilazione personalizzata di un progetto è presente un errore probabilmente dovuto a un problema di valutazione della macro.  Questo errore potrebbe anche indicare che il percorso non è corretto e che in esso sono presenti caratteri o combinazioni di caratteri non consentiti in un percorso di file.  
+ Un'istruzione di compilazione personalizzata a un progetto è presente un errore nella dipendenza aggiuntiva probabilmente a causa di un problema di valutazione della macro. Questo errore potrebbe indicare anche che il percorso non è corretto, che contengono caratteri o combinazioni di caratteri che non sono validi in un percorso di file.  
   
- Per risolvere questo errore, correggere la macro oppure la specifica del percorso.  Il percorso valutato rappresenta un percorso assoluto dalla directory del progetto.
+ Per correggere l'errore, risolvere la macro o correggere la specifica del percorso. Il percorso valutato è un percorso assoluto della directory del progetto.

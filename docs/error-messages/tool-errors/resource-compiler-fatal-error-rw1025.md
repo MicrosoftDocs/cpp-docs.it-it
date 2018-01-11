@@ -1,34 +1,33 @@
 ---
-title: "Errore irreversibile del compilatore di risorse RW1025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW1025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW1025"
+title: Errore irreversibile del compilatore di risorse RW1025 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW1025
+dev_langs: C++
+helpviewer_keywords: RW1025
 ms.assetid: 561a02af-e7e0-442a-8ad3-a00b2ca1b62e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 487968f8a1242dd4c36e4bbd9b4ede08a5ab4d95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore irreversibile del compilatore di risorse RW1025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Memoria insufficiente nello heap far.  
+# <a name="resource-compiler-fatal-error-rw1025"></a>Errore irreversibile del compilatore di risorse RW1025
+Memoria heap far insufficiente  
   
- Accertarsi che il software residente in memoria non occupi uno spazio eccessivo.  Utilizzare il programma CHKDSK per verificare la quantità di memoria disponibile.  
+ Consente di cercare software residente in memoria che occupi troppo spazio. Utilizzare il programma CHKDSK per individuare la quantità di memoria si dispone.  
   
- Nel caso si stia creando un file di risorsa molto grande, suddividere lo script di risorsa in due file.  Una volta creati i due file RES, riunirli utilizzando la riga di comando MS\-DOS:  
+ Se si sta creando un file di risorse di grandi dimensioni, suddividere lo script di risorsa in due file. Dopo la creazione di due file con estensione res, utilizzare la riga di comando di MS-DOS per riunirle:  
   
 ```  
 copy first.res /b + second.res /b full.res  
