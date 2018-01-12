@@ -1,48 +1,50 @@
 ---
-title: "Date and Time | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "date, MFC"
-  - "MFC, data e ora"
-  - "ora"
-  - "ora, programmazione MFC"
+title: Data e ora | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- time, MFC programming
+- time
+- MFC, date and time
+- dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ed221cfe695ef04a7759fb0385153029ef9a892d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Date and Time
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC supporta vari modi di lavorare con date e ore.  tra cui:  
+# <a name="date-and-time"></a>Data e ora
+MFC supporta diversi metodi di utilizzo di date e ore. Sono inclusi:  
   
--   Classi per tutti gli utilizzi di tempo.  Le classi [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) e [CTime](../atl-mfc-shared/reference/ctime-class.md) incapsulano la maggior parte delle funzionalità associata alla raccolta di tempo ANSI standard, dichiarata in TIME.H.  
+-   Classi di uso generale in. Il [CTime](../atl-mfc-shared/reference/ctime-class.md) e [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) classi includono la maggior parte delle funzionalità associate alla libreria di ora standard ANSI, che è dichiarata nel tempo. H.  
   
--   Supporto all'orologio di sistema.  Con la versione 3,0 di MFC, supporto viene aggiunto a `CTime` per il `SYSTEMTIME` Win32 e i tipi di dati `FILETIME`.  
+-   Supporto dell'orologio di sistema. Con MFC versione 3.0, è stato aggiunto il supporto per `CTime` per Win32 `SYSTEMTIME` e `FILETIME` tipi di dati.  
   
--   Supporto all'automazione [tipo di dati RELATIVO ALLA DATA](../atl-mfc-shared/date-type.md).  I supporti di**DATE** data, ora e valori di data e ora.  Le classi [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) e [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) incapsulano questa funzionalità.  Utilizzano la classe [COleVariant](../mfc/reference/colevariant-class.md) utilizzando il supporto di automazione.  
+-   Supporto per l'automazione [tipo di dati DATE](../atl-mfc-shared/date-type.md). **Data** supporta data, ora e data/ora i valori. Il [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) e [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) classi incapsulano questa funzionalità. Funzionano con la [COleVariant](../mfc/reference/colevariant-class.md) usando il supporto di automazione.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Ciò che si desidera saperne di più  
   
--   [Data e ora: Classi di utilizzo generale](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
+-   [Data e ora: classi generiche](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
--   [Data e ora: supporto di SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+-   [Data e ora: supporto per SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Data e ora: supporto di automazione](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [Data e ora: supporto per l'automazione](../atl-mfc-shared/date-and-time-automation-support.md)  
   
--   [Data e ora: Supporto database](../atl-mfc-shared/date-and-time-database-support.md)  
+-   [Data e ora: supporto per database](../atl-mfc-shared/date-and-time-database-support.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Concetti](../mfc/mfc-concepts.md)   
  [Argomenti MFC generali](../mfc/general-mfc-topics.md)
+

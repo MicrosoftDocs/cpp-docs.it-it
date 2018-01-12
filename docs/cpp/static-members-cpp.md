@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class members [C++], static
 - instance constructors, static members
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 568ceedfcc3cd470cdd9003dfb41c691f9986f25
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-members-c"></a>Membri statici (C++)
 Le classi possono contenere membri dati statici e funzioni membro. Quando un membro dati viene dichiarato come **statico**, solo una copia dei dati viene mantenuta per tutti gli oggetti della classe.
@@ -75,7 +73,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. I membri statici è possibile accedere tramite la selezione dei membri (**.** e ** -> **) gli operatori. Ad esempio:  
+ Affinché il membro statico esista, non è necessario che esistano tutti gli oggetti di tipo classe. I membri statici è possibile accedere tramite la selezione dei membri (**.** e  **->** ) gli operatori. Ad esempio:  
   
 ```  
 BufferedOutput Console;  

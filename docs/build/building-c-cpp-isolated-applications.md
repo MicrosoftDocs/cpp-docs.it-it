@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5af0dde80a143166d9824d2739632ca7e7ed4382
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76b0c1fa5b509ae495a12fb63164d7da01f402aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-isolated-applications"></a>Compilazione di applicazioni isolate C/C++
 Un'applicazione isolata dipende solo gli assembly side-by-side e associa le dipendenze tramite un manifesto. Non è necessaria per l'applicazione deve essere completamente isolata per eseguire correttamente in Windows. Tuttavia, dotando rendere l'applicazione completamente isolata, sarà possibile risparmiare tempo se è necessario in futuro l'applicazione di servizio. Per ulteriori informazioni sui vantaggi di rendere l'applicazione completamente isolata, vedere [applicazioni isolate](http://msdn.microsoft.com/library/aa375190).  

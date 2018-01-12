@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 975a940760678ac06b7de1e7623b717860031da8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cc04c398bc9be13664a91e59a36f7e39fade6db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 Recupera il seno iperbolico inverso di un numero complesso, con tagli branch all'esterno dell'intervallo [-i, + i] lungo l'asse immaginaria.  
@@ -91,7 +92,7 @@ _Lcomplex casinhl(
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   

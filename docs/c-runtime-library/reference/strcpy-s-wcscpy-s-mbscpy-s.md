@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e07e4561674c2a75503961d2d43b1566c7a2e080
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 Copia una stringa. Queste versioni di [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -108,8 +109,8 @@ errno_t _mbscpy_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Valore restituito|Contenuto di `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|qualsiasi|`EINVAL`|non modificato|  
-|any|qualsiasi|`NULL`|`EINVAL`|`strDestination`[0] impostato su 0|  
+|`NULL`|qualsiasi|qualsiasi|`EINVAL`|non modificato|  
+|qualsiasi|qualsiasi|`NULL`|`EINVAL`|`strDestination`[0] impostato su 0|  
 |qualsiasi|0 o troppo piccolo|qualsiasi|`ERANGE`|`strDestination`[0] impostato su 0|  
   
 ## <a name="remarks"></a>Note  
@@ -121,7 +122,7 @@ errno_t _mbscpy_s(
   
  Quando l'esecuzione dell'operazione si conclude correttamente, la stringa di destinazione è sempre con terminazione Null.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando quindi la necessità di specificare un argomento di dimensione, e possono sostituire automaticamente le funzioni precedenti, meno sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFE. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

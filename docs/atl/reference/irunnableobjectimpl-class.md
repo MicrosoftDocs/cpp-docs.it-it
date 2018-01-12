@@ -1,11 +1,10 @@
 ---
-title: Classe IRunnableObjectImpl | Documenti di Microsoft
+title: Classe IRunnableObjectImpl | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - ATLCTL/ATL::IRunnableObjectImpl::LockRunning
 - ATLCTL/ATL::IRunnableObjectImpl::Run
 - ATLCTL/ATL::IRunnableObjectImpl::SetContainedObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - containers, running controls
 - IRunnableObjectImpl class
@@ -25,36 +23,22 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a9b2698c195ac5bd709e6d40d3c30008d3fa26d4
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b1ac939d723596f4b0fc3f1013dd3f02cf2aa06b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irunnableobjectimpl-class"></a>Classe IRunnableObjectImpl
-Questa classe implementa **IUnknown** e fornisce un'implementazione predefinita di [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia.  
+Questa classe implementa **IUnknown** e fornisce un'implementazione predefinita del [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,7 +49,7 @@ class IRunnableObjectImpl
   
 #### <a name="parameters"></a>Parametri  
  `T`  
- La classe derivata da `IRunnableObjectImpl`.  
+ La classe, derivata da `IRunnableObjectImpl`.  
   
 ## <a name="members"></a>Membri  
   
@@ -73,14 +57,14 @@ class IRunnableObjectImpl
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Restituisce il CLSID del controllo in esecuzione. L'implementazione ATL imposta il CLSID `GUID_NULL` e restituisce **E_UNEXPECTED**.|  
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Determina se il controllo è in esecuzione. L'implementazione ATL restituisce **TRUE**.|  
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Blocca il controllo allo stato di esecuzione. L'implementazione ATL restituisce `S_OK`.|  
-|[IRunnableObjectImpl::Run](#run)|Forza l'esecuzione del controllo. L'implementazione ATL restituisce `S_OK`.|  
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indica che è incorporato il controllo. L'implementazione ATL restituisce `S_OK`.|  
+|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Restituisce il CLSID del controllo in esecuzione. L'implementazione di ATL imposta il CLSID `GUID_NULL` e restituisce **E_UNEXPECTED**.|  
+|[IRunnableObjectImpl::IsRunning](#isrunning)|Determina se il controllo è in esecuzione. Restituisce l'implementazione di ATL **TRUE**.|  
+|[IRunnableObjectImpl::LockRunning](#lockrunning)|Blocca il controllo allo stato di esecuzione. Restituisce l'implementazione di ATL `S_OK`.|  
+|[IRunnableObjectImpl::Run](#run)|Forza l'esecuzione del controllo. Restituisce l'implementazione di ATL `S_OK`.|  
+|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Indica che è incorporato il controllo. Restituisce l'implementazione di ATL `S_OK`.|  
   
 ## <a name="remarks"></a>Note  
- Il [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia consente a un contenitore determinare se un controllo è in esecuzione, forza per eseguire o bloccarlo allo stato di esecuzione. Classe `IRunnableObjectImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa **IUnknown** per l'invio di informazioni per il dump Crea dispositivo in modalità debug.  
+ Il [IRunnableObject](http://msdn.microsoft.com/library/windows/desktop/ms692783) interfaccia consente a un contenitore determinare se un controllo è in esecuzione, forza per eseguire o bloccarla allo stato di esecuzione. Classe `IRunnableObjectImpl` fornisce un'implementazione predefinita di questa interfaccia e implementa **IUnknown** per l'invio di informazioni per il dump Crea dispositivo in modalità debug.  
   
  **Articoli correlati** [esercitazione ATL](../../atl/active-template-library-atl-tutorial.md), [creazione di un progetto ATL](../../atl/reference/creating-an-atl-project.md)  
   
@@ -103,7 +87,7 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
  I set di implementazione ATL \* *lpClsid* a `GUID_NULL` e restituisce **E_UNEXPECTED**.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IRunnableObject::GetRunningClass](http://msdn.microsoft.com/library/windows/desktop/ms693734) in Windows SDK.  
   
 ##  <a name="isrunning"></a>IRunnableObjectImpl::IsRunning  
  Determina se il controllo è in esecuzione.  
@@ -113,10 +97,10 @@ virtual BOOL IsRunning();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'implementazione ATL restituisce **TRUE**.  
+ Restituisce l'implementazione di ATL **TRUE**.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IRunnableObject::IsRunning](http://msdn.microsoft.com/library/windows/desktop/ms678496) in Windows SDK.  
   
 ##  <a name="lockrunning"></a>IRunnableObjectImpl::LockRunning  
  Blocca il controllo allo stato di esecuzione.  
@@ -126,10 +110,10 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'implementazione ATL restituisce `S_OK`.  
+ Restituisce l'implementazione di ATL `S_OK`.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IRunnableObject::LockRunning](http://msdn.microsoft.com/library/windows/desktop/ms693361) in Windows SDK.  
   
 ##  <a name="run"></a>IRunnableObjectImpl::Run  
  Forza l'esecuzione del controllo.  
@@ -139,10 +123,10 @@ HRESULT Run(LPBINDCTX lpbc);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'implementazione ATL restituisce `S_OK`.  
+ Restituisce l'implementazione di ATL `S_OK`.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IRunnableObject::Run](http://msdn.microsoft.com/library/windows/desktop/ms694517) in Windows SDK.  
   
 ##  <a name="setcontainedobject"></a>IRunnableObjectImpl::SetContainedObject  
  Indica che è incorporato il controllo.  
@@ -152,12 +136,11 @@ HRESULT SetContainedObject(BOOL fContained);
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- L'implementazione ATL restituisce `S_OK`.  
+ Restituisce l'implementazione di ATL `S_OK`.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IRunnableObject::SetContainedObject](http://msdn.microsoft.com/library/windows/desktop/ms693710) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IRunnableObject::SetContainedObject](http://msdn.microsoft.com/library/windows/desktop/ms693710) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CComControl](../../atl/reference/ccomcontrol-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

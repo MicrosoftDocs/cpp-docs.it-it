@@ -1,37 +1,37 @@
 ---
-title: "File exp come input del linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".file exp [C++]"
-  - "EXP (file)"
-  - "esportazione di dati, file di esportazione (EXP)"
-  - "esportazione di funzioni"
-  - "esportazione di funzioni, informazioni"
-  - "funzioni [C++], esportazione"
-  - "librerie di importazione, file del linker"
-  - "collegamento [C++], esportazioni"
+title: . File exp come Input del Linker | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions
+- import libraries, linker files
+- linking [C++], exports
+- exporting functions, information about exported functions
+- exporting data, export (.exp) files
+- functions [C++], exporting
+- .exp files [C++]
+- EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd6351623b230e3be1e432bd6ee0fb760da5abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# File exp come input del linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I file di esportazione \(EXP\) contengono informazioni sulle funzioni esportate e sugli elementi di dati.  Quando in LIB viene creata una libreria di importazione, viene creato anche un file EXP,  che viene utilizzato quando si esegue il collegamento a un programma in cui vengono eseguite esportazioni e importazioni da un altro programma, direttamente o indirettamente.  Se si esegue il collegamento a un file EXP, in LINK non verrà prodotta una libreria di importazione, in quanto presumibilmente ne sarà già stata creata una in LIB.  Per informazioni dettagliate sui file EXP e sulle librerie di importazione, vedere [Operazioni con librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md).  
+# <a name="exp-files-as-linker-input"></a>File exp come input del linker
+File di esportazione (EXP) contengono informazioni sugli articoli di funzioni e i dati esportati. La creazione di una libreria di importazione, crea anche un file EXP. Utilizzare il file EXP quando si collega un programma che Esporta e Importa da un altro programma, direttamente o indirettamente. Se si collega a un file EXP, collegamento non produce una libreria di importazione, in quanto si presuppone che LIB già stato creato uno. Per ulteriori informazioni sui file EXP e librerie di importazione, vedere [utilizzo di librerie di importazione e file di esportazione](../../build/reference/working-with-import-libraries-and-export-files.md).  
   
-## Vedere anche  
- [File di input LINK](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>Vedere anche  
+ [File di Input LINK](../../build/reference/link-input-files.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

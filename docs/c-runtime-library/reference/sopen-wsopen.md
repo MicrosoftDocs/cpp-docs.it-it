@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2a28e6a05676b7340c4dfbf3e963e6046c7beafa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen, _wsopen
 Apre un file per la condivisione. Sono disponibili versioni più sicure di queste funzioni. Vedere [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -102,7 +103,7 @@ int _wsopen(
  `ENOENT`  
  Il file o il percorso non è stato trovato.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La funzione `_sopen` apre il file specificato da `filename` e prepara il file per la lettura o la scrittura condivisa, come definito da `oflag` e `shflag`. `_wsopen` è una versione a caratteri wide di `_sopen`; l'argomento `filename` in `_wsopen` è una stringa di caratteri wide. In caso contrario, `_wsopen` e `_sopen` si comportano in modo identico.  

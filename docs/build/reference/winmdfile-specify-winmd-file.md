@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a503ef23b6aa1c42bb4b480de7879d2392825869
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 153e5c0bd42b6fdba59e309483f25f09b86fe9fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (specificare il file winmd)
 Specifica il nome di file per il file di output di metadati di Windows Runtime (winmd) generato dal [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) l'opzione del linker.  

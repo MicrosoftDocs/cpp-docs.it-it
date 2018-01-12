@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- while_cpp
-dev_langs:
-- C++
+f1_keywords: while_cpp
+dev_langs: C++
 helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="while-statement-c"></a>Istruzione while (C++)
 Esegue *istruzione* ripetutamente finché *espressione* restituisce zero.  

@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36edbf47bacd20c06c726451d060dec61bce4e8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef81f58fc2180fcc29e943d0a352d1e6301ca7a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 Determina se un carattere multibyte particolare è un simbolo di testo non ASCII.  
@@ -68,7 +69,7 @@ int _ismbbkalnum_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_ismbbkalnum` restituisce un valore diverso da zero se l'Integer `c` è un simbolo di testo non ASCII diverso da un simbolo di punteggiatura o 0 in caso contrario. `_ismbbkalnum` usa le impostazioni locali correnti per le informazioni dei caratteri dipendenti dalle impostazioni locali. `_ismbbkalnum_l` è identico a `_ismbbkalnum` con la differenza che accetta le impostazioni locali come parametro. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_ismbbkalnum` restituisce un valore diverso da zero se l'Integer `c` è un simbolo di testo non ASCII diverso da un simbolo di punteggiatura o 0 in caso contrario. `_ismbbkalnum` usa le impostazioni locali correnti per le informazioni dei caratteri dipendenti dalle impostazioni locali. `_ismbbkalnum_l` è identico a `_ismbbkalnum` con la differenza che accetta le impostazioni locali come parametro. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   

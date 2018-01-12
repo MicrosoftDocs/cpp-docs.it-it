@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wspawnvpe
 - spawnvpe
 - _wspawnvpe
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wspawnvpe function
 - processes, creating
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5c6b6ce9e791ff0a514d5d5d04ba73a6de1b9c90
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eda03fa80228a218e34c472df2400f7bfe1d8a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 Crea ed esegue un nuovo processo.  
@@ -108,7 +92,7 @@ intptr_t _wspawnvpe(
  L'elenco di argomenti supera i 1024 byte  
   
  `EINVAL`  
-L'argomento  `mode` non è valido  
+ L'argomento `mode` non è valido  
   
  `ENOENT`  
  Il file o il percorso non è stato trovato  
@@ -119,7 +103,7 @@ L'argomento  `mode` non è valido
  `ENOMEM`  
  Memoria insufficiente per eseguire il nuovo processo  
   
- Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni crea ed esegue un nuovo processo, passando una matrice di puntatori agli argomenti della riga di comando e una matrice di puntatori alle impostazioni di ambiente. Per trovare il file da eseguire, queste funzioni usano la variabile di ambiente `PATH`.  

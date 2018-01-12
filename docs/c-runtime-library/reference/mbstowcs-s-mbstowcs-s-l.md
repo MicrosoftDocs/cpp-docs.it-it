@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,22 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 822a7058afd6588be6f953c5c2b89d41ec02c87f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 Converte una sequenza di caratteri multibyte in una sequenza di caratteri wide corrispondente. Versioni di [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -142,18 +125,18 @@ errno_t _mbstowcs_s_l(
   
  Se `count` è il valore speciale [_TRUNCATE](../../c-runtime-library/truncate.md), `mbstowcs_s` converte la parte di stringa più ampia possibile che può rientrare nel buffer di destinazione, lasciando però spazio per un carattere di terminazione Null.  
   
- Se `mbstowcs_s` converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il carattere di terminazione Null, in `*``pReturnValue`, a condizione che `pReturnValue` non sia `NULL`. Ciò si verifica anche se l'argomento `wcstr` è `NULL` e consente di determinare le dimensioni del buffer richieste. Si noti che se `wcstr` è `NULL`, `count` viene ignorato e `sizeInWords` deve essere 0.  
+ Se `mbstowcs_s` converte correttamente la stringa di origine, inserisce la dimensione in caratteri wide della stringa convertita, incluso il carattere di terminazione Null, in `*pReturnValue`, a condizione che `pReturnValue` non sia `NULL`. Ciò si verifica anche se l'argomento `wcstr` è `NULL` e consente di determinare le dimensioni del buffer richieste. Si noti che se `wcstr` è `NULL`, `count` viene ignorato e `sizeInWords` deve essere 0.  
   
- Se `mbstowcs_s` rileva un carattere multibyte non valido, inserisce 0 in `*``pReturnValue`, imposta il buffer di destinazione su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
+ Se `mbstowcs_s` rileva un carattere multibyte non valido, inserisce 0 in `*pReturnValue`, imposta il buffer di destinazione su una stringa vuota, imposta `errno` su `EILSEQ` e restituisce `EILSEQ`.  
   
  Se le sequenze a cui punta `mbstr` e `wcstr` si sovrappongono, il comportamento di `mbstowcs_s` non è definito.  
   
 > [!IMPORTANT]
 >  Verificare che `wcstr` e `mbstr` non si sovrappongano e che `count` rispecchi correttamente il numero di caratteri multibyte da convertire.  
   
- `mbstowcs_s` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbstowcs_s_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `mbstowcs_s` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbstowcs_s_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -165,8 +148,8 @@ errno_t _mbstowcs_s_l(
  Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   

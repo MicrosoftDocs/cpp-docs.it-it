@@ -34,11 +34,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8020f2004a44776ad84b36a6392c27d789e89d0c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63036262536adea68a4c44bde735a48b2f896b5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 Converte una sequenza di caratteri multibyte in una sequenza di caratteri wide corrispondente. Sono disponibili versioni più sicure di queste funzioni. Vedere [mbstowcs_s, _mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md).  
@@ -98,9 +99,9 @@ size_t _mbstowcs_l(
   
  Se l'argomento `mbstr` è `NULL` oppure se `count` è > `INT_MAX`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, errno viene impostato su `EINVAL` e la funzione restituisce -1.  
   
- `mbstowcs` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbstowcs_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `mbstowcs` usa le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. La funzione `_mbstowcs_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -109,7 +110,7 @@ size_t _mbstowcs_l(
 |`mbstowcs`|\<stdlib.h>|  
 |`_mbstowcs_l`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -207,8 +208,8 @@ Convert back to wide-character string:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   

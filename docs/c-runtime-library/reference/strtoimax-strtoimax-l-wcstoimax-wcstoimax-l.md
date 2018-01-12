@@ -44,11 +44,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b1e6ebcd650aba561e82ed1597429144ba175185
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14bbcfcdb96db3b64bd1cb06df999e0c64796773
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 Converte una stringa in un valore intero con il tipo Integer con segno supportato più grande.  
@@ -105,7 +106,7 @@ intmax_t _wcstoimax_l(
 ## <a name="remarks"></a>Note  
  La funzione `strtoimax` converte `nptr` in un valore `intmax_t`. La versione a caratteri wide di `strtoimax` è `wcstoimax`. Il relativo argomento `nptr` è una stringa di caratteri wide. In caso contrario, il comportamento di queste funzioni è identico. Entrambe le funzioni interrompono la lettura della stringa `nptr` in corrispondenza del primo carattere che non può essere riconosciuto come parte di un numero. Potrebbe trattarsi del carattere Null di terminazione o del primo carattere numerico maggiore o uguale a `base`.  
   
- L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale, wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtoimax_l` e `_wcstoimax_l` sono identiche alle funzioni corrispondenti con il suffisso `_l`, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale, wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtoimax_l` e `_wcstoimax_l` sono identiche alle funzioni corrispondenti con il suffisso `_l`, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
   
@@ -131,8 +132,8 @@ intmax_t _wcstoimax_l(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   

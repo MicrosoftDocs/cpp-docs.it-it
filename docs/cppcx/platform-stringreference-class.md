@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: bf096ef9849856e9995ff634d7aca26cd7f3f8e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstringreference-class"></a>Classe Platform::StringReference
 Tipo di ottimizzazione che puoi usare per passare dati in formato stringa dai parametri di input di `Platform::String^` ad altri metodi con un minimo di operazioni di copia.  
@@ -123,7 +124,7 @@ unsigned int Length() const
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Intero senza segno che specifica il numero di caratteri nella stringa..  
+ Intero senza segno che specifica il numero di caratteri nella stringa.  
   
 ### <a name="remarks"></a>Note  
   

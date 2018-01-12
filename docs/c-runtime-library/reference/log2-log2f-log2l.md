@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f825304439e3e1c27f5dc1e41a1ae4c311450625
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e572070471d59e91c8f10a382c2770dcc6385
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 Determina il logaritmo in base 2 binario del valore specificato.  
@@ -73,19 +74,19 @@ long double log2l(
 ## <a name="return-value"></a>Valore restituito  
  In caso di esito positivo restituisce log2 `x`.  
   
- In caso contrario, può restituire uno dei valori seguenti:  
+ In caso contrario può restituire uno dei valori seguenti:  
   
-|Problema|Valore restituito|  
+|Problema|INVIO|  
 |-----------|------------|  
 |`x` < 0|NaN|  
 |`x` = ±0|-INFINITY|  
 |`x` = 1|+0|  
-|+INFINITY|+INFINITY|  
+|+INFINITY|+INFINITO|  
 |NaN|NaN|  
 |Eerrore di dominio|NaN|  
 |Errore polo|-HUGE_VAL, -HUGE_VALF o -HUGE_VALL|  
   
- Gli errori vengono segnalati come specificato in [matherr](../../c-runtime-library/reference/matherr.md).  
+ Gli errori vengono segnalati come specificato in [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Note  
  Se x è un intero, questa funzione restituisce essenzialmente l'indice in base zero del bit 1 più significativo di `x`.  
@@ -96,9 +97,9 @@ long double log2l(
 |--------------|--------------|------------------|  
 |`log2`,                `log2f`,  `log2l`|\<math.h>|\<cmath>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [exp2, exp2f, exp2l](../../c-runtime-library/reference/exp2-exp2f-exp2l.md)   
  [log, logf, log10, log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)

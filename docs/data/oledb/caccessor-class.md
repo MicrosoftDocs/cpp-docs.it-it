@@ -1,36 +1,38 @@
 ---
-title: "Classe CAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CAccessor<T>"
-  - "ATL::CAccessor"
-  - "CAccessor"
-  - "ATL::CAccessor<T>"
-  - "ATL.CAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessor (classe)"
+title: Classe CAccessor | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CAccessor<T>
+- ATL::CAccessor
+- CAccessor
+- ATL::CAccessor<T>
+- ATL.CAccessor
+dev_langs: C++
+helpviewer_keywords: CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f3f92d86ff67cc4ebfa752e84373c4f77bf3dc55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta uno dei tipi di funzioni di accesso.  
+# <a name="caccessor-class"></a>Classe CAccessor
+Rappresenta uno dei tipi di funzione di accesso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -40,20 +42,20 @@ Rappresenta uno dei tipi di funzioni di accesso.
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  La classe di record utente.  
   
-## Note  
- Viene utilizzata quando un record in modo statico associato a un'origine dati.  Il record contiene il buffer.  Questa classe supporta più più funzioni di accesso per un rowset.  
+## <a name="remarks"></a>Note  
+ Viene utilizzato quando un record in modo statico è associato a un'origine dati. Il record contiene il buffer. Questa classe supporta più funzioni di accesso su un set di righe.  
   
  Utilizzare questo tipo di funzione di accesso quando si conosce la struttura e il tipo del database.  
   
- Se la funzione di accesso contiene i campi che indicano la memoria \(ad esempio `BSTR` o un'interfaccia\) che deve essere liberata, chiamare la funzione membro [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima che il record successivo venga letto.  
+ Se la funzione di accesso contiene campi che fanno riferimento alla memoria (ad esempio un `BSTR` o interfaccia) che deve essere liberata, chiamare la funzione membro [CAccessorRowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md) prima della successiva lettura di record.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

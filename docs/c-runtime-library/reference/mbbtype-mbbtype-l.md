@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: badaf05406cc74c4cbf0112f948360fffb93c4c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 Restituisce il tipo di byte, in base al byte precedente.  
@@ -89,7 +90,7 @@ int _mbbtype_l(
 ## <a name="remarks"></a>Note  
  La funzione `_mbbtype` determina il tipo di byte in un carattere multibyte. Se il valore di `type` è qualsiasi valore eccetto 1, `_mbbtype` testa un byte singolo valido o un byte iniziale di un carattere multibyte. Se il valore di `type` è 1, `_mbbtype` testa un byte finale valido di un carattere multibyte.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbbtype` di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbbtype_l` è identica tranne per il fatto che usa in alternativa il parametro delle impostazioni locali che gli viene passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbbtype` di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbbtype_l` è identica tranne per il fatto che usa in alternativa il parametro delle impostazioni locali che gli viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Nelle versioni precedenti, `_mbbtype` è stato denominato `chkctype`. Per un nuovo codice, usare in alternativa `_mbbtype`.  
   

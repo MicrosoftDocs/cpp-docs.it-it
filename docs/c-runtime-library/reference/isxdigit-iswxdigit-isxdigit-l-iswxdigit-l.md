@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 38d046526f391a85687d608ec64740fcac8e7658
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba714f78696cd806cbf1f200e72e09a03168d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 Determina se un intero rappresenta un carattere corrispondente a una cifra esadecimale.  
@@ -102,7 +86,7 @@ int _iswxdigit_l(
   
  Per le impostazioni locali "C", la funzione `iswxdigit` non supporta caratteri esadecimali a larghezza intera Unicode.  
   
- Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Il comportamento di `isxdigit` e `_isxdigit_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
@@ -125,5 +109,5 @@ int _iswxdigit_l(
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Numerici, booleani e valori letterali di puntatore (C++)
 Un valore letterale è un elemento del programma che rappresenta direttamente un valore. Questo articolo illustra i valori letterali di tipo Integer, a virgola mobile, booleano e puntatore. Per informazioni sui valori letterali stringa e carattere, vedere [stringa e valori letterali carattere (C++)](../cpp/string-and-character-literals-cpp.md). È inoltre possibile definire valori letterali personalizzati basati su uno qualsiasi di queste categorie. Per ulteriori informazioni vedere [valori letterali definiti dall'utente (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +106,7 @@ long long i = 24'847'458'121
   
  L'esponente può essere specificato usando **e** o **E**, che hanno lo stesso significato, seguito da un segno facoltativo (+ o -) e una sequenza di cifre.  Se un esponente è presente, il separatore decimale finale è inutile in numeri interi come `18E0`.  
   
- Valori letterali a virgola mobile come tipo predefinito **double**. Con i suffissi **f** o **l** (o **F** o **L** , il suffisso non viene fatta distinzione tra maiuscole e minuscole), il valore letterale può essere specificato come ** float** o `long double`, rispettivamente.  
+ Valori letterali a virgola mobile come tipo predefinito **double**. Con i suffissi **f** o **l** (o **F** o **L** , il suffisso non viene fatta distinzione tra maiuscole e minuscole), il valore letterale può essere specificato come  **float** o `long double`, rispettivamente.  
   
  Sebbene `long double` e **doppie** abbiano la stessa rappresentazione, non sono dello stesso tipo. Ad esempio, è possibile eseguire l'overload di funzioni quali  
   

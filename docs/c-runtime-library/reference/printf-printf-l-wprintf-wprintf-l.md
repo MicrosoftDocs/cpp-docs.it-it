@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - printf
 - _tprintf
 - wprintf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - printf function
 - printf_l function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bb6f97733d7609c63c0f9f3f559200fd9564ad5d
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ac5a99e307e73569fe165d675e90c5da2af3a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf, _printf_l, wprintf, _wprintf_l
 Stampa output formattato nel flusso di output standard. Sono disponibili versioni più sicure di queste funzioni. Vedere [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md).  
@@ -109,7 +93,7 @@ int _wprintf_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce il numero di caratteri stampati o un valore negativo se si verifica un errore. Se `format` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta `errno` su `EINVAL`. Se viene rilevata la condizione **EOF** (0xFFFF) in `argument`, la funzione restituisce -1.  
+ Restituisce il numero di caratteri stampati o un valore negativo se si verifica un errore. Se `format` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione restituisce -1 e imposta `errno` su `EINVAL`. Se viene rilevata la condizione **EOF** (0xFFFF) in `argument`, la funzione restituisce -1.  
   
  Per altre informazioni su `errno` e i codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -118,7 +102,7 @@ int _wprintf_l(
   
  `wprintf` è una versione a caratteri wide di `printf`. `format` è una stringa di caratteri wide. `wprintf` e `printf` si comportano in modo analogo, se il flusso viene aperto in modalità ANSI. `printf` non supporta attualmente l'output in un flusso UNICODE.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -249,7 +233,7 @@ Address as:   0012FF3C
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
  [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   

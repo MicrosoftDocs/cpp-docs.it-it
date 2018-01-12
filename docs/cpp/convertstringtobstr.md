@@ -4,32 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- ConvertStringToBSTR
-dev_langs:
-- C++
-helpviewer_keywords:
-- ConvertStringToBSTR function
+f1_keywords: ConvertStringToBSTR
+dev_langs: C++
+helpviewer_keywords: ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3778f84f152b9ce5dd1121d9cf01d7c1a4472a1e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a4347fdcf25373e088a8d8bc54cc3219285aa347
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Sezione specifica Microsoft**  
   
- Converte un **char \* ** valore un `BSTR`.  
+ Converte un **char \***  valore un `BSTR`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +38,7 @@ ms.lasthandoff: 09/25/2017
   
 #### <a name="parameters"></a>Parametri  
  `pSrc`  
- Oggetto **char \* ** variabile.  
+ Oggetto **char \***  variabile.  
   
 ## <a name="example"></a>Esempio  
   

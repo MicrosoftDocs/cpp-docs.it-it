@@ -1,34 +1,36 @@
 ---
-title: "CAccessorBase::IsAutoAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsAutoAccessor"
-  - "CAccessorBase.IsAutoAccessor"
-  - "CAccessorBase::IsAutoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsAutoAccessor (metodo)"
+title: 'CAccessorBase:: Isautoaccessor | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsAutoAccessor
+- CAccessorBase.IsAutoAccessor
+- CAccessorBase::IsAutoAccessor
+dev_langs: C++
+helpviewer_keywords: IsAutoAccessor method
 ms.assetid: c330da15-2947-4050-ad00-8f776adc58fb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 677eb2d2ca8d719598090e1753275e2429706b83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessorBase::IsAutoAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce true se automaticamente i dati vengono recuperati tramite la funzione di accesso durante l'operazione di spostamento.  
+# <a name="caccessorbaseisautoaccessor"></a>CAccessorBase::IsAutoAccessor
+Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,15 +39,15 @@ Restituisce true se automaticamente i dati vengono recuperati tramite la funzion
 ) const;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nAccessor`  
- \[in\] numero di zero offset per la funzione di accesso.  
+ [in] Numero di offset uguale a zero per la funzione di accesso.  
   
-## Valore restituito  
- Restituisce **true** se la funzione di accesso sia automatica o meno.  Negli altri casi, viene restituito **false**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce **true** se la funzione di accesso è un sia automatica o meno. Negli altri casi, viene restituito **false**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CAccessorBase](../../data/oledb/caccessorbase-class.md)

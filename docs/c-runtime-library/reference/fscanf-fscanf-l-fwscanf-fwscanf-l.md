@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65640154ba36b6d21319f2acf6d0ffd39402b2d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc40f4ebf4c50a5495490a83469d1b495bcd4a29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf, _fscanf_l, fwscanf, _fwscanf_l
 Leggere dati formattati da un flusso. Sono disponibili versioni più sicure di queste funzioni. Vedere [fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l](../../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md).  
@@ -110,7 +111,7 @@ int _fwscanf_l(
   
  `fwscanf` è una versione a caratteri wide di `fscanf`. L'argomento del formato per `fwscanf` è una stringa di caratteri wide. Queste funzioni si comportano in modo identico se il flusso viene aperto in modalità ANSI. `fscanf` non supporta attualmente l'input da un flusso UNICODE.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -128,7 +129,7 @@ int _fwscanf_l(
 |`fscanf`, `_fscanf_l`|\<stdio.h>|  
 |`fwscanf`, `_fwscanf_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

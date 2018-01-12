@@ -1,71 +1,73 @@
 ---
-title: "CDynamicAccessor::GetLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetLength"
-  - "ATL.CDynamicAccessor.GetLength"
-  - "CDynamicAccessor::GetLength"
-  - "ATL::CDynamicAccessor::GetLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetLength (metodo)"
+title: 'CDynamicAccessor:: GetLength | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetLength
+- ATL.CDynamicAccessor.GetLength
+- CDynamicAccessor::GetLength
+- ATL::CDynamicAccessor::GetLength
+dev_langs: C++
+helpviewer_keywords: GetLength method
 ms.assetid: 3ae8983b-b267-4cf9-bfc0-3e191f79e646
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 24a22348b873967a860c65edb5c4f6d46ab101ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicaccessorgetlength"></a>CDynamicAccessor::GetLength
 Recupera la lunghezza della colonna specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      bool GetLength(   
-   DBORDINAL nColumn,   
-   DBLENGTH* pLength    
+      bool GetLength(   
+   DBORDINAL nColumn,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const CHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const CHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const WCHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const WCHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nColumn`  
- \[in\] Numero della colonna.  I numeri di colonna partono con 1.  Un valore 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore 0 si intende la colonna del segnalibro, se presente.  
   
  `pColumnName`  
- \[in\] Un puntatore ad una stringa di caratteri che contiene il nome della colonna.  
+ [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.  
   
  `pLength`  
- \[out\] Un puntatore all'intero che contiene la lunghezza della colonna in byte.  
+ [out] Puntatore al valore integer contenente la lunghezza della colonna in byte.  
   
-## Valore restituito  
- Restituisce **true** se la colonna specificata viene trovata.  In caso contrario, la funzione restituirà **false**.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce **true** se la colonna specificata viene trovata. In caso contrario, questa funzione restituisce **false**.  
   
-## Note  
- Le prime override accettano il numero di colonne e la seconda e la terza override accettano rispettivamente il nome della colonna in ANSI o in formato Unicode.  
+## <a name="remarks"></a>Note  
+ Il primo override accetta il numero di colonna e le sostituzioni di seconda e terza richiedere il nome della colonna in formato ANSI o Unicode, rispettivamente.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CDynamicAccessor (classe)](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetLength](../../data/oledb/cdynamicaccessor-setlength.md)

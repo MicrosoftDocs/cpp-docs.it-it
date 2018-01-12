@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75d5d3d1eb362c893f3594e5d770111ddded01b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bb7d1b9f56e7cea5d476d5ece6bdfab50fbe7a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stub-ms-dos-stub-file-name"></a>/STUB (nome file stub MS-DOS)
 ```  

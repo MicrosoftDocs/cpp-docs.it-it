@@ -1,40 +1,43 @@
 ---
-title: "Riferimento a una propriet&#224; nel provider | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "provider OLE DB, proprietà"
-  - "riferimenti, proprietà nei provider"
-  - "riferimenti a proprietà nei provider"
+title: "Riferimento a una proprietà nel Provider | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- references, to properties in providers
+- referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1e39d012f126d44477bcb27f43b0a1119583a7ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Riferimento a una propriet&#224; nel provider
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Cercare il gruppo e l'ID della proprietà desiderata.  Per ulteriori informazioni, vedere [Proprietà OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) in *OLE DB Programmer's Reference* \(informazioni in lingua inglese\).  
+# <a name="referencing-a-property-in-your-provider"></a>Riferimento a una proprietà nel provider
+Trovare il gruppo di proprietà e l'ID di proprietà per la proprietà desiderata. Per ulteriori informazioni, vedere [proprietà OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) nel *riferimento per programmatori OLE DB*.  
   
- Nell'esempio che segue si ipotizza un tentativo di ottenere una proprietà dal rowset.  Il codice per l'utilizzo della sessione o del comando è simile, ma viene utilizzata un'interfaccia diversa.  
+ Nell'esempio seguente si presuppone che si sta tentando di ottenere una proprietà dal set di righe. Il codice per l'utilizzo della sessione o un comando è simile, ma usa un'interfaccia diversa.  
   
- Creare un oggetto [CDBPropSet](../../data/oledb/cdbpropset-class.md) utilizzando il gruppo di proprietà come parametro da fornire al costruttore.  Di seguito è riportato un esempio.  
+ Creare un [CDBPropSet](../../data/oledb/cdbpropset-class.md) utilizzando il gruppo di proprietà come parametro al costruttore dell'oggetto. Ad esempio:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- Chiamare [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando l'ID della proprietà e un valore da assegnare alla proprietà.  Il tipo di valore dipende dalla proprietà utilizzata.  
+ Chiamare [AddProperty](../../data/oledb/cdbpropset-addproperty.md), passando l'ID di proprietà e un valore da assegnare alla proprietà. Il tipo del valore dipende dalla proprietà in uso.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -43,7 +46,7 @@ propset.AddProperty(DBPROP_UPDATABILITY,
 DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- Utilizzare l'interfaccia `IRowset` per chiamare **GetProperties**.  Passare l'insieme di proprietà come parametro.  Di seguito viene riportato il codice finale:  
+ Utilizzare il `IRowset` interfaccia per chiamare **GetProperties**. Passare la proprietà impostata come parametro. Ecco il codice finale:  
   
 ```  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
@@ -72,5 +75,5 @@ if (pPropSet)
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli provider OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

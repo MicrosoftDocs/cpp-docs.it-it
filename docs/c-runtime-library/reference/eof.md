@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _eof
+apiname: _eof
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _eof
-dev_langs:
-- C++
+f1_keywords: _eof
+dev_langs: C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -35,30 +31,16 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d4e53bbed704b0acb1ad613bb05a0653ea305ba2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eof"></a>_eof
 Test per la fine del file (EOF).  
@@ -87,7 +69,7 @@ int _eof(
 |--------------|---------------------|---------------------|  
 |`_eof`|\<io.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

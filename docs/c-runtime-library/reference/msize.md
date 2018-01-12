@@ -34,11 +34,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e678d5ba1abcf552fa5e4576578a5a220fe50f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebc066e9ad01ff08014ed9174d0ca4915ea1868f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msize"></a>_msize
 Restituisce le dimensioni di un blocco di memoria allocato nell'heap.  
@@ -62,7 +63,7 @@ Restituisce le dimensioni di un blocco di memoria allocato nell'heap.
 ## <a name="remarks"></a>Note  
  La funzione `_msize` restituisce le dimensioni, in byte, del blocco di memoria allocato da una chiamata a `calloc`, `malloc` o `realloc`.  
   
- Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_msize` viene risolto in [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [Informazioni dettagliate sull'heap di debug CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Quando l'applicazione viene collegata a una versione di debug delle librerie di runtime C, `_msize` viene risolto in [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md). Per altre informazioni su come viene gestito l'heap durante il processo di debug, vedere [The CRT Debug Heap](/visualstudio/debugger/crt-debug-heap-details) (Informazioni dettagliate sull'heap di debug CRT).  
   
  Questa funzione convalida il relativo parametro. Se `memblock` è un puntatore Null, `_msize` richiama il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'errore viene gestito, la funzione imposta `errno` su `EINVAL` e restituisce -1.  
   
@@ -72,7 +73,7 @@ Restituisce le dimensioni di un blocco di memoria allocato nell'heap.
 |-------------|---------------------|  
 |`_msize`|\<malloc.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

@@ -68,11 +68,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0dfc872694485262386d0858e97b9835a2d507b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c9d1f893dbc024a0645e70119d1069c3383ed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o quelle che sono state passate. Queste sono le versioni più sicure di [strlen, wcslen, mbslen, mbslen_l, mbstrlen, mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).  
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  `_mbsnlen` e `_mbstrnlen` restituiscono il numero di caratteri multibyte in una stringa di caratteri multibyte. `_mbsnlen` riconosce le sequenze di caratteri multibyte in base alla tabella codici multibyte in uso o in base alle impostazioni locali passate, ma non testa la validità dei caratteri multibyte. `_mbstrnlen` testa la validità dei caratteri multibyte e riconosce le sequenze di caratteri multibyte. Se la stringa passata a `_mbstrnlen` contiene un carattere multibyte non valido, `errno` viene impostato su `EILSEQ`.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, tranne per il fatto che quelle prive del suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e le versioni con il suffisso `_l` usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni sono identiche, tranne per il fatto che quelle prive del suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali e le versioni con il suffisso `_l` usano il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -210,7 +211,7 @@ returned rather than the actual size of the string.
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   

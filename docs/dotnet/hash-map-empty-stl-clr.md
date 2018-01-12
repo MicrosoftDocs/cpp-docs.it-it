@@ -1,41 +1,42 @@
 ---
-title: "hash_map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty (membro) [STL/CLR]"
+title: 'hash_map:: Empty (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 2a145e16-a48a-4304-8fa6-5b2361693083
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6888fef76d81d5ffc56447450f3c133f26bc838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Verifica se non sono presenti elementi.  
+# <a name="hashmapempty-stlclr"></a>hash_map::empty (STL/CLR)
+Verifica se sono presenti o meno degli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 bool empty();  
 ```  
   
-## Note  
- La funzione membro restituisce true per una sequenza controllata vuota.  Equivale a [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)`() == 0`.  È possibile utilizzarla per verificare se l'hash\_map è vuoto.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce true per una sequenza controllata vuota. È equivalente a [hash_map:: Size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`. Utilizzarla per verificare se hash_map è vuoto.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## Requisiti  
- **Intestazione:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)

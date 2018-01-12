@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57e1b6b75404bf2ccef7cff76adc3d23a3609b1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ede0dac08233d82decb23064e47b61cbd9a05da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 Mapping dell'insieme di segni di che imposta l'inizio di una proprietà in una proprietà.  

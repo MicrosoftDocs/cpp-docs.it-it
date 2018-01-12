@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CxxThrowException
+apiname: _CxxThrowException
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CxxThrowException
 - _CxxThrowException
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d1c66f35a61a1b3f8577ac7a1432423906f091ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5cfe894dc20e77bf34067c16fddd74432c522bda
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 Compila il record di eccezione e chiama l'ambiente di runtime per iniziare a elaborare l'eccezione.  
@@ -68,4 +65,4 @@ extern "C" void __stdcall _CxxThrowException(
  **Origine:** Throw.cpp  
   
 ## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)
+ [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

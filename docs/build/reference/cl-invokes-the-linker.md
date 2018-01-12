@@ -1,69 +1,69 @@
 ---
-title: "Richiamo di CL da parte del linker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore cl.exe [C++], compilazione senza collegamento"
-  - "compilatore cl.exe [C++], controllo del linker"
-  - "compilazione di codice sorgente [C++], senza collegamento"
-  - "chiamata al linker dal compilatore"
-  - "LINK (strumento) [C++], chiamata dal compilatore CL"
+title: CL richiama il Linker | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cl
+dev_langs: C++
+helpviewer_keywords:
+- compiling source code [C++], without linking
+- invoking linker from the compiler
+- LINK tool [C++], invoking from CL compiler
+- cl.exe compiler [C++], compiling without linking
+- cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Richiamo di CL da parte del linker
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-CL richiama automaticamente il linker dopo la compilazione, a meno che non venga utilizzata l'opzione \/c.  CL passa al linker i nomi dei file obj creati durante la compilazione e i nomi di qualsiasi altro file specificato nella riga di comando.  Il linker utilizza le opzioni elencate nella variabile di ambiente LINK.  È possibile utilizzare l'opzione \/link per specificare le opzioni del linker nella riga di comando CL.  Con le opzioni che seguono l'opzione \/link viene eseguito l'override delle opzioni presenti nella variabile di ambiente LINK.  Le opzioni riportate nella tabella che segue consentono di disattivare il collegamento.  
+# <a name="cl-invokes-the-linker"></a>CL richiama il linker
+CL richiama automaticamente il linker dopo la compilazione a meno che non viene utilizzata l'opzione/c. CL passa al linker i nomi dei file con estensione obj creati durante la compilazione e i nomi di tutti i file specificati nella riga di comando. Il linker utilizza le opzioni elencate nella variabile di ambiente LINK. È possibile utilizzare l'opzione /link per specificare le opzioni del linker nella riga di comando di CL. Opzioni che seguono l'opzione /link prevalgono su quelle nella variabile di ambiente LINK. Le opzioni nella tabella seguente disattivare il collegamento.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|\/c|Compilazione senza collegamento|  
-|\/E, \/EP, \/P|Pre\-elaborazione senza compilazione o collegamento|  
-|\/Zg|Generazione di prototipi di funzione|  
-|\/Zs|Controllo della sintassi|  
+|------------|-----------------|  
+|/c|La compilazione senza collegamento|  
+|/ /P, /EP E,|Pre-elaborazione senza la compilazione o il collegamento|  
+|/Zg|Genera i prototipi di funzione|  
+|/Zs|Controllare la sintassi|  
   
- Per ulteriori informazioni sul collegamento, vedere [Opzioni del linker](../../build/reference/linker-options.md).  
+ Per ulteriori informazioni sul collegamento, vedere [opzioni del Linker](../../build/reference/linker-options.md).  
   
-## Esempio  
- Si supponga di compilare tre file di origine C: MAIN.c, MOD1.c e MOD2.c.  Ogni file include una chiamata a una funzione definita in un file differente:  
+## <a name="example"></a>Esempio  
+ Si supponga che si compila il file di origine C tre: Main. c, MOD1 e MOD2. Ogni file include una chiamata a una funzione definita in un file diverso:  
   
--   MAIN.c chiama la funzione `func1` in MOD1.c e la funzione `func2` in MOD2.c.  
+-   Main. c chiama la funzione `func1` MOD1 e la funzione `func2` in MOD2.  
   
--   MOD1.c chiama le funzioni della libreria standard `printf_s` e `scanf_s`.  
+-   MOD1. c chiama le funzioni della libreria standard `printf_s` e `scanf_s`.  
   
--   MOD2.c chiama le funzioni di grafica denominate `myline` e `mycircle`, che sono definite in una libreria denominata MYGRAPH.lib.  
+-   MOD2 chiama le funzioni di grafica denominate `myline` e `mycircle`, che sono definite in una libreria denominata MYGRAPH.  
   
- Per compilare questo programma, utilizzare la seguente riga di comando:  
+ Per compilare il programma, la compilazione con la riga di comando seguente:  
   
 ```  
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib  
 ```  
   
- CL compila prima i file di origine C e crea i file oggetto MAIN.obj, MOD1.obj e MOD2.obj.  Il compilatore inserisce il nome della libreria standard in ogni file obj.  Per informazioni più dettagliate, vedere [Utilizzo della libreria di runtime](../../build/reference/md-mt-ld-use-run-time-library.md).  
+ Innanzitutto, CL compila i file di origine C e crea i file oggetto Main. obj, MOD1 e MOD2. Il compilatore inserisce il nome della libreria standard in ogni file con estensione obj. Per ulteriori informazioni, vedere [utilizzo della libreria Run-Time](../../build/reference/md-mt-ld-use-run-time-library.md).  
   
- CL passa i nomi dei file obj, insieme al nome MYGRAPH.lib, al linker.  Il linker risolve i riferimenti esterni nel modo seguente:  
+ CL i nomi dei file con estensione obj, insieme al nome MYGRAPH, vengono passati al linker. Il linker risolve i riferimenti esterni nel modo seguente:  
   
-1.  In MAIN.obj, il riferimento a `func1` viene risolto utilizzando la definizione in MOD1.obj. Il riferimento a `func2` viene risolto utilizzando la definizione in MOD2.obj.  
+1.  In Main. obj, il riferimento a `func1` viene risolto utilizzando la definizione in MOD1; il riferimento a `func2` viene risolto utilizzando la definizione in MOD2.  
   
-2.  In MOD1.obj i riferimenti a `printf_s` e `scanf_s` vengono risolti utilizzando le definizioni nella libreria che il linker trova specificate all'interno di MOD1.obj.  
+2.  In MOD1, i riferimenti a `printf_s` e `scanf_s` vengono risolti utilizzando le definizioni nella libreria che il linker trova denominata all'interno di MOD1.  
   
-3.  In MOD2.obj i riferimenti a `myline` e `mycircle` vengono risolti utilizzando le definizioni in MYGRAPH.lib.  
+3.  In MOD2, i riferimenti a `myline` e `mycircle` vengono risolti utilizzando le definizioni in MYGRAPH.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)

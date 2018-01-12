@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -45,30 +43,16 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Cerca un file usando i percorsi di ambiente. Queste versioni di [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -127,9 +111,9 @@ errno_t _wsearchenv_s(
   
 |`filename`|`varname`|`pathname`|`numberOfElements`|Valore restituito|Contenuto di `pathname`|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
-|any|qualsiasi|`NULL`|any|`EINVAL`|n/d|  
+|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|N/D|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|non modificato|  
-|any|qualsiasi|any|<= 0|`EINVAL`|non modificato|  
+|qualsiasi|qualsiasi|qualsiasi|<= 0|`EINVAL`|non modificato|  
   
  Se si verifica una di queste condizioni di errore, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL` e restituiscono `EINVAL`.  
   
@@ -142,7 +126,7 @@ errno_t _wsearchenv_s(
   
  `_wsearchenv_s` è una versione a caratteri "wide" di `_searchenv_s`. Gli argomenti per `_wsearchenv_s` sono stringhe a caratteri "wide". In caso contrario, `_wsearchenv_s` e `_searchenv_s` si comportano in modo identico.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -155,7 +139,7 @@ errno_t _wsearchenv_s(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`_searchenv_s`|\<stdlib.h>|  
-|`_wsearchenv_s`|\<stdlib.h> o \<wchar.h>|  
+|`_wsearchenv_s`|\<stdlib.h> or \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   

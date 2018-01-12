@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c3f0f105b27c97a0ed775ab18ff3331e7c8627f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d2eff34518abd778ac5c19efce9ebedebf7a16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 Determina se un carattere multibyte particolare è un simbolo di punteggiatura.  
@@ -68,7 +69,7 @@ int _ismbbkprint_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_ismbbkprint` restituisce un valore diverso da zero se il valore Integer `c` è un testo non ASCII o un simbolo di punteggiatura non ASCII, oppure 0 in caso contrario. Ad esempio, solo nella tabella codici 932, `_ismbbkprint` esegue il test per i caratteri alfanumerici o la punteggiatura Katakana (intervallo: 0xA1 - 0xDF). `_ismbbkprint` usa le impostazioni locali correnti per le impostazioni del carattere dipendenti dalle impostazioni locali. `_ismbbkprint_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_ismbbkprint` restituisce un valore diverso da zero se il valore Integer `c` è un testo non ASCII o un simbolo di punteggiatura non ASCII, oppure 0 in caso contrario. Ad esempio, solo nella tabella codici 932, `_ismbbkprint` esegue il test per i caratteri alfanumerici o la punteggiatura Katakana (intervallo: 0xA1 - 0xDF). `_ismbbkprint` usa le impostazioni locali correnti per le impostazioni del carattere dipendenti dalle impostazioni locali. `_ismbbkprint_l` è identico, ma usa le impostazioni locali che gli vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   

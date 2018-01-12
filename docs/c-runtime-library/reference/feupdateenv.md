@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- feupdateenv
+apiname: feupdateenv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,35 +25,19 @@ apitype: HeaderDef
 f1_keywords:
 - feupdateenv
 - fenv/feupdateenv
-dev_langs:
-- C++
-helpviewer_keywords:
-- feupdateenv function
+dev_langs: C++
+helpviewer_keywords: feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c84e829876282a43fb9a8a17713a612e387f5216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feupdateenv"></a>feupdateenv
 Salva le eccezioni a virgola mobile attualmente generate, ripristina lo stato dell'ambiente a virgola mobile specificato e genera quindi le eccezioni a virgola mobile salvate.  
@@ -85,7 +68,7 @@ int feupdateenv(
 |--------------|--------------|------------------|  
 |`feupdateenv`|\<fenv.h>|\<cfenv>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _recalloc
+apiname: _recalloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _recalloc
 - recalloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ae78e17f66448de46e36ea7d6dc6e3121b306c68
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d1f6052e71746bb05701e0d34f10585d5533be4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recalloc"></a>_recalloc
 Combinazione di `realloc` e `calloc`. Rialloca una matrice in memoria e ne inizializza gli elementi su 0.  
@@ -97,7 +79,7 @@ void *_recalloc(
   
  `_recalloc` imposta `errno` su `ENOMEM` se l'allocazione di memoria ha esito negativo o se la quantità di memoria richiesta supera `_HEAP_MAXREQ`. Per informazioni su questo e altri codici di errore, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- `recalloc` chiama `realloc` per usare la funzione [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) di C++ per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, `realloc` deve chiamare la routine del nuovo gestore come impostato tramite [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `realloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `_recalloc` non riesce ad allocare memoria, `realloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare  
+ `recalloc` chiama `realloc` per usare la funzione [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) di C++ per impostare la nuova modalità del gestore. La nuova modalità del gestore indica se, in caso di errore, `realloc` deve chiamare la routine del nuovo gestore come impostato da [set_new_handler](../../c-runtime-library/reference/set-new-handler.md). Per impostazione predefinita, `realloc` non chiama la routine del nuovo gestore in caso di errore di allocazione della memoria. È possibile eseguire l'override di questo comportamento predefinito in modo che, quando `_recalloc` non riesce ad allocare memoria, `realloc` chiami la routine del nuovo gestore, come fa l'operatore `new` quando non riesce per lo stesso motivo. Per eseguire l'override del comportamento predefinito, chiamare  
   
 ```  
 _set_new_mode(1)  

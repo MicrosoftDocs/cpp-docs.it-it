@@ -13,18 +13,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>Cenni preliminari sulle convenzioni di chiamata x64
 Due differenze importanti tra x86 e [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] sono le funzionalità di indirizzamento a 64 bit e un set semplice di 16 bit 64 registri per uso generale. Considerato espanso registri set, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] utilizza il [fastcall](../cpp/fastcall.md) convenzione di chiamata e un modello di gestione delle eccezioni basato su RISC. Il `__fastcall` convenzione utilizza i registri per i primi quattro argomenti e lo stack frame per passare argomenti aggiuntivi.  
   
  L'opzione del compilatore seguente consente di ottimizzare l'applicazione per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/favor (ottimizzato per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (ottimizza per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>Convenzione di chiamata  
  Il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] interfaccia applicativa binaria (ABI) utilizza una convenzione di chiamata di fast quattro register per impostazione predefinita. Lo spazio viene allocato nello stack di chiamate come archivio shadow per chiamati salvare i registri. È una rigida corrispondenza univoca tra gli argomenti per una chiamata di funzione e i registri usati per gli argomenti. Qualsiasi argomento che non si adatta a 8 byte o non è 1, 2, 4 o 8 byte, deve essere passato per riferimento. Non viene eseguito alcun tentativo per distribuire un singolo argomento in più registri. Il x87 stack di registro è inutilizzato. Possono essere utilizzata dall'oggetto chiamato, ma deve essere considerato volatile tra chiamate di funzione. A virgola mobile a tutte le operazioni vengono eseguite utilizzando il 16 registri XMM. Gli argomenti interi vengono passati nei registri, ovvero RCX, RDX, R8 e R9. A virgola mobile vengono passati argomenti XMM0L, XMM1L, XMM2L e XMM3L. 16 byte argomenti vengono passati per riferimento. Passaggio dei parametri sono descritto dettagliatamente in [passaggio dei parametri](../build/parameter-passing.md). Oltre a questi registri, RAX, R10, R11, XMM4 e XMM5 sono considerati volatili. Tutti gli altri registri sono non volatili. Utilizzo dei registri è documentato in dettaglio in [registrare l'utilizzo](../build/register-usage.md) e [salvato registra chiamante/chiamato](../build/caller-callee-saved-registers.md).  

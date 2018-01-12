@@ -18,16 +18,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Programmazione con il codice runtime C e ATL
 Questa sezione illustra i vantaggi dell'uso di libreria di Run-Time C (CRT) con il collegamento statico o dinamico.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Vantaggi e compromessi del metodo usato per collegarsi a CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
  Riepiloga i vantaggi e gli svantaggi relativi collegamento statico alla libreria CRT o il collegamento in modo dinamico.  
   

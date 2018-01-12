@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>Conversioni di tipi definite dall'utente (C++)
 Oggetto *conversione* produce un nuovo valore di un tipo da un valore di un tipo diverso. *Conversioni standard* sono incorporate nel linguaggio C++ e supporto relativi tipi incorporati ed è possibile creare *conversioni definite dall'utente* per eseguire conversioni a, da oppure tra tipi definiti dall'utente.  

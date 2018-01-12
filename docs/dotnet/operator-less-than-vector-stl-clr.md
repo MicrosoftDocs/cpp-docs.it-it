@@ -1,33 +1,33 @@
 ---
-title: "operator&lt; (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< (membro) [STL/CLR]"
+title: operatore&lt; (vettore) (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 41fbd028-e937-4337-9429-57e79a993eef
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa4437304f6c2aa05c8e0785c472b5de43925cd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt; (vector) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Vettore minore di confronto.  
+# <a name="operatorlt-vector-stlclr"></a>operatore&lt; (vettore) (STL/CLR)
+Vettore di minore di confronto.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         vector<Value>% right);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  left  
  Contenitore sinistro da confrontare.  
   
  right  
- Contenitore appropriato da confrontare.  
+ Contenitore destro da confrontare.  
   
-## Note  
- La funzione di operatore restituisce true se, per la posizione `i` minima per il quale `!(``right``[i] <` `left``[i])` è valido anche che `left``[i] <` `right``[i]`.  In caso contrario, restituisce `left``->size() <` `right``->size()` di utilizzarla per verificare se `left` viene ordinato prima di `right` quando i due vettori sono elemento confrontata dall'elemento.  
+## <a name="remarks"></a>Note  
+ L'operatore funzione restituisce true se, per la posizione più bassa `i` per il quale `!(right[i] < left[i])` è anche vero che `left[i] < right[i]`. In caso contrario, restituisce `left->size() < right->size()` utilizzati per verificare se `left` viene ordinato prima `right` quando i due vettori sono confrontato elemento per elemento.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_operator_lt.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \< \[a b c\] è false**  
-**\[a b c\] \< a b \[d\] è true**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [operator\=\= \(vector\)](../dotnet/operator-equality-vector-stl-clr.md)   
- [operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)   
- [operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
- [operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)   
- [operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [operatore = = (vettore) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)   
+ [operatore! = (vettore) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)   
+ [operatore > = (vettore) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
+ [operatore > (vettore) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)   
+ [operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)

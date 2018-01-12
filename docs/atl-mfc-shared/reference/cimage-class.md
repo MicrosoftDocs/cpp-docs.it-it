@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,16 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage (classe)
 `CImage`fornisce il supporto avanzato per le bitmap, inclusa la possibilità di caricare e salvare le immagini in formato JPEG, GIF, BMP e grafica PNG (Portable Network).  
@@ -195,7 +179,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- Quando si utilizza `CImage` in un progetto MFC, tenere presente le funzioni membro del progetto prevedono un puntatore a un [CBitmap](../../mfc/reference/cbitmap-class.md) oggetto. Se si desidera utilizzare `CImage` con una funzione, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), utilizzare [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passare il `CImage` `HBITMAP`e utilizzare l'oggetto restituito `CBitmap*`.  
+ Quando si utilizza `CImage` in un progetto MFC, tenere presente le funzioni membro del progetto prevedono un puntatore a un [CBitmap](../../mfc/reference/cbitmap-class.md) oggetto. Se si desidera utilizzare `CImage` con una funzione, ad esempio [CMenu:: AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), utilizzare [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), passare il `CImage` `HBITMAP`e utilizzare il restituito`CBitmap*`.  
 
   
 ## <a name="example"></a>Esempio  
@@ -391,7 +375,7 @@ BOOL BitBlt(
  La logica coordinata y dell'angolo superiore sinistro del rettangolo di destinazione.  
   
  `dwROP`  
- L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello selezionato) per formare la destinazione. Vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)] per un elenco di altri codici di operazione raster e delle relative descrizioni.  
+ L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello selezionato) per formare la destinazione. Vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) in Windows SDK per un elenco di altri codici di operazione raster e delle relative descrizioni.  
   
  `pointDest`  
  Oggetto [punto](http://msdn.microsoft.com/library/windows/desktop/dd162805) struttura che indica l'angolo superiore sinistro del rettangolo di destinazione.  
@@ -418,7 +402,7 @@ BOOL BitBlt(
  Diverso da zero se ha esito positivo; in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Per ulteriori informazioni, vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) in Windows SDK.  
   
 ##  <a name="cimage"></a>CImage::CImage  
  Costruisce un oggetto `CImage`.  
@@ -450,7 +434,7 @@ BOOL Create(
  La larghezza del `CImage` bitmap, in pixel.  
   
  `nHeight`  
- L'altezza del `CImage` bitmap, in pixel. Se `nHeight` è positivo, il bitmap è DIB dal basso in alto e l'origine è l'angolo inferiore sinistro. Se `nHeight` è negativo, la bitmap è DIB dall'alto in basso e l'origine è l'angolo superiore sinistro.  
+ L'altezza del `CImage` bitmap, in pixel. Se `nHeight` è positivo, la bitmap è DIB dal basso in alto e l'origine è l'angolo inferiore sinistro. Se `nHeight` è negativo, la bitmap è DIB dall'alto in basso e l'origine è l'angolo superiore sinistro.  
   
  `nBPP`  
  Il numero di bit per pixel della bitmap. In genere 4, 8, 16, 24 o 32. Può essere 1 per la bitmap monocromatica o maschere.  
@@ -484,7 +468,7 @@ BOOL CreateEx(
  La larghezza del `CImage` bitmap, in pixel.  
   
  `nHeight`  
- L'altezza del `CImage` bitmap, in pixel. Se `nHeight` è positivo, il bitmap è DIB dal basso in alto e l'origine è l'angolo inferiore sinistro. Se `nHeight` è negativo, la bitmap è DIB dall'alto in basso e l'origine è l'angolo superiore sinistro.  
+ L'altezza del `CImage` bitmap, in pixel. Se `nHeight` è positivo, la bitmap è DIB dal basso in alto e l'origine è l'angolo inferiore sinistro. Se `nHeight` è negativo, la bitmap è DIB dall'alto in basso e l'origine è l'angolo superiore sinistro.  
   
  `nBPP`  
  Il numero di bit per pixel della bitmap. In genere 4, 8, 16, 24 o 32. Può essere 1 per la bitmap monocromatica o maschere.  
@@ -497,7 +481,7 @@ BOOL CreateEx(
 - **BI_BITFIELDS** il formato non compresso e la tabella dei colori è costituito da tre `DWORD` maschere di colore che specifica il rosso, verde e blu componenti, rispettivamente, di ogni pixel. Questo è valido se utilizzata con 16 e 32 bpp bitmap.  
   
  *pdwBitfields*  
- Utilizzato solo se `eCompression` è impostato su **BI_BITFIELDS**, in caso contrario deve essere **NULL**. Un puntatore a una matrice di tre `DWORD` maschere di bit, che specifica quali bit di ogni pixel vengono usati per il rosso, verde e blu del colore, i componenti, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Utilizzato solo se `eCompression` è impostato su **BI_BITFIELDS**, in caso contrario deve essere **NULL**. Un puntatore a una matrice di tre `DWORD` maschere di bit, che specifica quali bit di ogni pixel vengono usati per il rosso, verde e blu del colore, i componenti, rispettivamente. Per informazioni sulle restrizioni per i campi di bit, vedere [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) in Windows SDK.  
   
  `dwFlags`  
  Specifica se l'oggetto bitmap dispone di un canale alfa. Può essere una combinazione di zero o più dei seguenti valori:  
@@ -651,7 +635,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Note  
  Questo valore determina il numero di bit che definiscono ogni pixel e il numero massimo di colori nella bitmap.  
   
- In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere il **biBitCount** membro di [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)] per ulteriori informazioni su questo valore.  
+ In genere, i bit per pixel è 1, 4, 8, 16, 24 o 32. Vedere il **biBitCount** membro di [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) in Windows SDK per ulteriori informazioni su questo valore.  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  Recupera i valori di colore rossi, verdi e blu (RGB) da un intervallo di voci nella tavolozza della sezione DIB.  
@@ -704,7 +688,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  Una matrice di GUID, con ogni elemento che corrisponde a uno dei tipi di file nella stringa. Nell'esempio di `pszAllFilesDescription` riportato di seguito, `aguidFileTypes`[0] è `GUID_NULL` e i restanti valori della matrice sono i formati di file di immagine supportati dal sistema operativo corrente.  
   
 > [!NOTE]
->  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** in Windows SDK.  
   
  `pszAllFilesDescription`  
  Se questo parametro non è **NULL**, la stringa di filtro sarà necessario un ulteriore filtro all'inizio dell'elenco. Questo filtro avrà il valore corrente di `pszAllFilesDescription` per la descrizione e accetta i file di estensione supportati da altre utilità di esportazione nell'elenco.  
@@ -743,7 +727,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 0 per tutti i tipi sono inclusi per impostazione predefinita i file di carico,  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** per il salvataggio, questi file sono esclusi per impostazione predefinita, perché sono in genere sono necessari requisiti speciali.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** per il salvataggio, questi file sono esclusi per impostazione predefinita, perché sono in genere sono necessari requisiti speciali.  
   
  `chSeparator`  
  Il separatore utilizzato tra i formati di immagine. Vedere **osservazioni** per ulteriori informazioni.  
@@ -756,13 +740,13 @@ CImage::GetExporterFilterString(
   
  Il parametro *strExporter* ha il formato:  
   
- file description0 | \*.ext0 | filedescription1 | \*. Ext1 |... Descrizione file *n*|\*. ext *n*||  
+ file description0 &#124; \*filedescription1 .ext0 &#124; &#124; \*. Ext1 &#124;... Descrizione file  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- in ' |' è specificato il carattere di separatore da `chSeparator`. Ad esempio:  
+ in ' &#124;' è specificato il carattere di separatore da `chSeparator`. Ad esempio:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Utilizzare il separatore predefinito ' |' Se si passa la stringa a un MFC `CFileDialog` oggetto. Se si passa la stringa di un comune finestra di dialogo Salva File, utilizzare il separatore null '\0'.  
+ Utilizzare il separatore predefinito ' &#124;' Se si passa la stringa a un MFC `CFileDialog` oggetto. Se si passa la stringa di un comune finestra di dialogo Salva File, utilizzare il separatore null '\0'.  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  Recupera l'altezza, in pixel, di un'immagine.  
@@ -793,7 +777,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  Una matrice di GUID, con ogni elemento che corrisponde a uno dei tipi di file nella stringa. Nell'esempio di `pszAllFilesDescription` riportato di seguito, `aguidFileTypes`[0] è `GUID_NULL` con la matrice restante valori sono i formati di file di immagine supportati dal sistema operativo corrente.  
   
 > [!NOTE]
->  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** in Windows SDK.  
   
  `pszAllFilesDescription`  
  Se questo parametro non è **NULL**, la stringa di filtro sarà necessario un ulteriore filtro all'inizio dell'elenco. Questo filtro avrà il valore corrente di `pszAllFilesDescription` per la descrizione e accetta i file di estensione supportati da altre utilità di esportazione nell'elenco.  
@@ -832,7 +816,7 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 0 per tutti i tipi sono inclusi per impostazione predefinita i file di carico,  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** per il salvataggio, questi file sono esclusi per impostazione predefinita, perché sono in genere sono necessari requisiti speciali.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** per il salvataggio, questi file sono esclusi per impostazione predefinita, perché sono in genere sono necessari requisiti speciali.  
   
  `chSeparator`  
  Il separatore utilizzato tra i formati di immagine. Vedere **osservazioni** per ulteriori informazioni.  
@@ -842,13 +826,13 @@ CImage::GetImporterFilterString(
   
  Il parametro *strImporter* ha il formato:  
   
- file description0 | \*.ext0 | filedescription1 | \*. Ext1 |... Descrizione file *n*|\*. ext *n*||  
+ file description0 &#124; \*filedescription1 .ext0 &#124; &#124; \*. Ext1 &#124;... Descrizione file  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- in ' |' è specificato il carattere di separatore da `chSeparator`. Ad esempio:  
+ in ' &#124;' è specificato il carattere di separatore da `chSeparator`. Ad esempio:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Utilizzare il separatore predefinito ' |' Se si passa la stringa a un MFC `CFileDialog` oggetto. Utilizzare il separatore null '\0' Se si passa la stringa di un comune **Apri File** la finestra di dialogo.  
+ Utilizzare il separatore predefinito ' &#124;' Se si passa la stringa a un MFC `CFileDialog` oggetto. Utilizzare il separatore null '\0' Se si passa la stringa di un comune **Apri File** la finestra di dialogo.  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  Recupera il numero massimo di voci nella tabella dei colori.  
@@ -874,7 +858,7 @@ int GetPitch() const throw();
  Passo dell'immagine. Se il valore restituito è negativo, il bitmap è DIB dal basso in alto e l'origine è l'angolo inferiore sinistro. Se il valore restituito è positivo, la bitmap è DIB dall'alto in basso e l'origine è l'angolo superiore sinistro.  
   
 ### <a name="remarks"></a>Note  
- Il passo è la distanza, espressa in byte, tra due indirizzi di memoria che rappresentano l'inizio di una riga di bitmap e l'inizio della riga successiva di bitmap. Poiché tono è misurata in byte, il tono di un'immagine consente di determinare il formato pixel. Il tono può anche includere memoria aggiuntiva, riservata per la bitmap.  
+ Il passo è la distanza, espressa in byte, tra due indirizzi di memoria che rappresentano l'inizio di una riga di bitmap e l'inizio della riga successiva di bitmap. Perché il tono è misurata in byte, il tono di un'immagine consente di determinare il formato pixel. Il tono può anche includere memoria aggiuntiva, riservata per la bitmap.  
   
  Utilizzare `GetPitch` con [GetBits](#getbits) per trovare i singoli pixel di un'immagine.  
   
@@ -1111,7 +1095,7 @@ BOOL MaskBlt(
  La larghezza, in unità logiche, della bitmap di origine e rettangolo di destinazione.  
   
  `nDestHeight`  
- Altezza, in unità logiche, della bitmap di origine e del rettangolo di destinazione.  
+ Altezza, in unità logiche, della bitmap di origine e rettangolo di destinazione.  
   
  `xSrc`  
  La logica coordinata x dell'angolo superiore sinistro della bitmap di origine.  
@@ -1129,7 +1113,7 @@ BOOL MaskBlt(
  L'offset verticale in pixel per la bitmap di maschera specificata per il `hbmMask` parametro.  
   
  `dwROP`  
- Specifica i codici operazione raster ternario sfondo e primo piano che utilizza il metodo per controllare la combinazione di dati di origine e di destinazione. Il codice di operazione raster sfondo è archiviato nel byte più significativo della parola significativo di questo valore. il codice di operazione raster di primo piano viene archiviato in byte di ordine inferiore della parola significativo di questo valore. la parola meno significativa di questo valore viene ignorata e deve essere zero. Per una discussione di primo piano e sfondo nel contesto di questo metodo, vedere `MaskBlt` nel [!INCLUDE[winSDK](./includes/winsdk_md.md)]. Per un elenco di codici di operazione raster comuni, vedere `BitBlt` nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Specifica i codici operazione raster ternario sfondo e primo piano che utilizza il metodo per controllare la combinazione di dati di origine e di destinazione. Il codice di operazione raster sfondo è archiviato nel byte più significativo della parola significativo di questo valore. il codice di operazione raster di primo piano viene archiviato in byte di ordine inferiore della parola significativo di questo valore. la parola meno significativa di questo valore viene ignorata e deve essere zero. Per una discussione di primo piano e sfondo nel contesto di questo metodo, vedere `MaskBlt` in Windows SDK. Per un elenco di codici di operazione raster comuni, vedere `BitBlt` in Windows SDK.  
   
  `rectDest`  
  Un riferimento a un `RECT` struttura, che identifica la destinazione.  
@@ -1220,7 +1204,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Note  
  Se `hbmMask` identifica una bitmap monocromatica valida, **PlgBit** utilizza questa bitmap per mascherare i bit di dati relativi al colore dal rettangolo di origine.  
   
- Questo metodo si applica a Windows NT, le versioni 4.0 e versioni successive soltanto. Vedere [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)] per informazioni più dettagliate.  
+ Questo metodo si applica a Windows NT, le versioni 4.0 e versioni successive soltanto. Vedere [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) in Windows SDK per informazioni più dettagliate.  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  Rilascia il contesto di dispositivo.  
@@ -1272,7 +1256,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** immagine compressa A GIF.  
   
 > [!NOTE]
->  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Per un elenco completo delle costanti, vedere **costanti di formato di File di immagine** in Windows SDK.  
   
 ### <a name="return-value"></a>Valore restituito  
  `HRESULT` standard.  
@@ -1295,7 +1279,7 @@ void SetColorTable(
  L'indice della tabella del colore della prima voce da impostare.  
   
  `nColors`  
- Numero di voci della tabella colore da impostare.  
+ Il numero di voci della tabella colore da impostare.  
   
  `prgbColors`  
  Un puntatore alla matrice di [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) strutture per impostare il colore delle voci di tabella.  
@@ -1438,7 +1422,7 @@ BOOL StretchBlt(
  Altezza, in unità logiche, del rettangolo di destinazione.  
   
  `dwROP`  
- L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello selezionato) per formare la destinazione. Vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)] per un elenco di altri codici di operazione raster e delle relative descrizioni.  
+ L'operazione raster da eseguire. Codici di operazione raster definiscono esattamente come combinare i bit di origine, destinazione e il modello (come definito dal pennello selezionato) per formare la destinazione. Vedere [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) in Windows SDK per un elenco di altri codici di operazione raster e delle relative descrizioni.  
   
  `rectDest`  
  Un riferimento a un [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) struttura, che identifica la destinazione.  
@@ -1462,7 +1446,7 @@ BOOL StretchBlt(
  Diverso da zero se ha esito positivo, in caso contrario 0.  
   
 ### <a name="remarks"></a>Note  
- Per ulteriori informazioni, vedere [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) nel [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Per ulteriori informazioni, vedere [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) in Windows SDK.  
   
 ##  <a name="transparentblt"></a>CImage::TransparentBlt  
  Copia una bitmap dal contesto del dispositivo di origine in questo contesto di dispositivo corrente.  
@@ -1580,10 +1564,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
  [Esempio SimpleImage](../../visual-cpp-samples.md)   
  [Bitmap indipendente dal dispositivo](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [I componenti COM Desktop ATL](../../atl/atl-com-desktop-components.md)
- [Device-Independent Bitmap](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [I componenti COM Desktop ATL](../../atl/atl-com-desktop-components.md) [Device-Independent Bitmap](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

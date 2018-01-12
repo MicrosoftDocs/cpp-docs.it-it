@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9d04d9def767e9d674cde5b8e14c5be4fd9dcf5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f670a916af4aa347bcc6249e397cfdf004b54b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 Recupera la tangente iperbolica inversa di un numero complesso, con tagli branch all'esterno dell'intervallo [-1; + 1] lungo l'asse reale.  
@@ -91,7 +92,7 @@ _Lcomplex catanhl(
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
  [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   

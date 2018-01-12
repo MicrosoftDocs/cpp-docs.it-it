@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 638e94d9f13e488c0194a8153a4822df1c2c9c77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbda0fd8e7a3957d072bcaa95e510903fb84cb5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 Imposta i primi `n` byte di una stringa di caratteri multibyte su un carattere specificato. Queste versioni di [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -112,9 +113,9 @@ errno_t _mbsnbset_s_l(
   
  Se `str` è `NULL` o `count` è zero, questa funzione genera un'eccezione di parametro non valido, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `errno` viene impostato su `EINVAL` e la funzione restituisce `NULL`. Inoltre, se `c` non è un carattere multibyte valido, `errno` viene impostato su `EINVAL` e in alternativa viene usato uno spazio.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbset_s` di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbsnbset_s_l` è identica tranne per il fatto che usa in alternativa il parametro delle impostazioni locali che gli viene passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). La versione `_mbsnbset_s` di questa funzione usa le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali; la versione `_mbsnbset_s_l` è identica tranne per il fatto che usa in alternativa il parametro delle impostazioni locali che gli viene passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ l'utilizzo di queste funzioni viene semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando la necessità di specificare un argomento per la dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni viene semplificato dagli overload di modello; gli overload possono dedurre la lunghezza del buffer automaticamente eliminando la necessità di specificare un argomento per la dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

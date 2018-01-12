@@ -1,30 +1,33 @@
 ---
-title: "Elenco dei driver ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "driver, ODBC"
-  - "ODBC (driver)"
-  - "ODBC (driver), elenco"
+title: Elenco dei Driver ODBC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC drivers
+- ODBC drivers, list of
+- drivers, ODBC
 ms.assetid: 4e12c832-39fe-44f7-9230-5c8d37203f11
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 96a67554931ea9231ce3fa920571aed7dc33c790
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Elenco dei driver ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ include i driver ODBC per i seguenti database:  
+# <a name="odbc-driver-list"></a>Elenco dei driver ODBC
+Visual C++ include i driver ODBC per i database seguenti:  
   
 -   SQL Server  
   
@@ -32,7 +35,7 @@ Visual C\+\+ include i driver ODBC per i seguenti database:
   
 -   Microsoft Excel  
   
--   dBASE  
+-   file dBASE  
   
 -   Paradox  
   
@@ -40,7 +43,7 @@ Visual C\+\+ include i driver ODBC per i seguenti database:
   
 -   File di testo  
   
- Per informazioni sui driver ODBC disponibili presso Microsoft e altri produttori, incluso ODBC Driver Pack, rivolgersi al Servizio Supporto Tecnico Clienti Microsoft.  
+ Per informazioni sui driver ODBC disponibili da Microsoft e altre società, inclusi il supporto di Driver ODBC, contattare il supporto tecnico Microsoft.  
   
-## Vedere anche  
- [Open Database Connectivity \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>Vedere anche  
+ [Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

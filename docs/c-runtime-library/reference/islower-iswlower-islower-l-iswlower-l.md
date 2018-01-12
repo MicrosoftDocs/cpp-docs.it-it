@@ -52,11 +52,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d531b90f623c7435f6bc50d60d01cc858b13024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Determina se un intero rappresenta un carattere minuscolo.  
@@ -90,7 +91,7 @@ int _iswlower_l(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere minuscolo. `islower`Restituisce un valore diverso da zero se `c` è un carattere minuscolo (a - z). `iswlower` restituisce un valore diverso da zero se `c` è un carattere wide corrispondente a una lettera minuscola oppure se `c` fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei valori `iswcntrl`, `iswdigit`, `iswpunct` o `iswspace` è diverso da zero. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
- Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Il comportamento di `islower` e `_islower_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
@@ -114,5 +115,5 @@ int _iswlower_l(
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

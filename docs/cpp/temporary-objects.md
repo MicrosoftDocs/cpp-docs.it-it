@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="temporary-objects"></a>Oggetti temporanei
 In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi oggetti temporanei possono essere creati per i seguenti motivi:  
@@ -46,7 +47,7 @@ In alcuni casi, è necessario che il compilatore crei oggetti temporanei. Questi
   
 -   Per archiviare il risultato di un cast in un tipo definito dall'utente. Quando un oggetto di un tipo specificato viene convertito in modo esplicito nel tipo definito dall'utente, tale nuovo oggetto viene costruito come oggetto temporaneo.  
   
- Gli oggetti temporanei hanno una durata definita dal relativo punto di creazione e dal punto in cui vengono eliminati. Qualsiasi espressione che crea più di un oggetto temporaneo infine li elimina nell'ordine inverso in cui sono stati creati. I punti in cui si verifica la distruzione sono riportati nella tabella seguente.  
+ Gli oggetti temporanei hanno una durata definita dal relativo punto di creazione e dal punto in cui vengono eliminati definitivamente. Qualsiasi espressione che crea più di un oggetto temporaneo infine li elimina nell'ordine inverso in cui sono stati creati. I punti in cui si verifica la distruzione sono riportati nella tabella seguente.  
   
 ### <a name="destruction-points-for-temporary-objects"></a>Punti di eliminazione degli oggetti temporanei  
   

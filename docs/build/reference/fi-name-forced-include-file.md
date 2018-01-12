@@ -1,62 +1,63 @@
 ---
-title: "/FI (Specifica il file di inclusione da utilizzare) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.ForcedIncludes"
-  - "VC.Project.VCCLCompilerTool.ForcedIncludeFiles"
-  - "VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles"
-  - "/fi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FI (opzione del compilatore) [C++]"
-  - "FI (opzione del compilatore) [C++]"
-  - "-FI (opzione del compilatore) [C++]"
-  - "pre-elabora file di intestazione (opzione del compilatore) [C++]"
+title: -FI (il File di inclusione) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCNMakeTool.ForcedIncludes
+- VC.Project.VCCLCompilerTool.ForcedIncludeFiles
+- VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles
+- /fi
+dev_langs: C++
+helpviewer_keywords:
+- FI compiler option [C++]
+- -FI compiler option [C++]
+- /FI compiler option [C++]
+- preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3b2003ab35bf76a8ac3e70288576af821a6c8e6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /FI (Specifica il file di inclusione da utilizzare)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Fa sì che il preprocessore elabori il file di intestazione specificato.  
+# <a name="fi-name-forced-include-file"></a>/FI (Specifica il file di inclusione da utilizzare)
+Fa sì che il preprocessore elaborare il file di intestazione specificato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /FI[ ]pathname  
 ```  
   
-## Note  
- equivale a specificare il file con le virgolette doppie in una direttiva `#include` sulla prima riga di ogni file di origine specificato nella riga di comando, nella variabile di ambiente CL o in un file di comando.  Se si utilizzano più opzioni **\/FI**, i file verranno inclusi nell'ordine in cui sono elaborati da CL.  
+## <a name="remarks"></a>Note  
+ Questa opzione equivale a specificare il file con le virgolette doppie in un `#include` direttiva sulla prima riga di ogni file di origine specificato nella riga di comando, nella variabile di ambiente CL o in un file di comando. Se si utilizzano più **/FI** le opzioni, i file sono incluse nell'ordine in cui vengono elaborate dal CL.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Avanzate**.  
+3.  Fare clic su di **avanzate** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Imponi inclusioni**.  
+4.  Modificare il **Imponi inclusioni** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.  
   
-## Vedere anche  
- [Opzioni del file di output \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [File di output (/ F) opzioni](../../build/reference/output-file-f-options.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
  [Specifica del nome del percorso](../../build/reference/specifying-the-pathname.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -52,31 +50,16 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f97508221ae8056a2a997033c458f0250a678e2b
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f8f16f513d6ec56337453755a7ce982519a5155
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 Converte una stringa in long integer.  
@@ -125,7 +108,7 @@ long _wtol_l(
   
  `_wtol` è identico a `atol` con la differenza che accetta una stringa di caratteri wide.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -191,8 +174,8 @@ Overflow condition occurred.
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)   

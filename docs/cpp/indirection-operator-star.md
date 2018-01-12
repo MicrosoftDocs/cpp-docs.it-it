@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-operator-"></a>Operatore di riferimento indiretto: *
 ## <a name="syntax"></a>Sintassi  
@@ -36,7 +34,7 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="remarks"></a>Note  
- L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; ovvero converte un valore di puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo del ** \* ** operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
+ L'operatore di riferimento indiretto unario (**\***) dereferenzia un puntatore; ovvero converte un valore di puntatore in un l-value. L'operando dell'operatore di riferimento indiretto deve essere un puntatore a un tipo. Il risultato dell'espressione di riferimento indiretto è il tipo da cui il tipo di puntatore è derivato. L'utilizzo del  **\***  operatore in questo contesto è diverso dal relativo significato come operatore binario, ovvero la moltiplicazione.  
   
  Se l'operando punta a una funzione, il risultato è un indicatore di funzione. Se invece punta a un percorso di archiviazione, il risultato è un valore l-value che definisce il percorso di archiviazione.  
   

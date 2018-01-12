@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -49,31 +47,16 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi, _atoi_l, _wtoi, _wtoi_l
 Convertire una stringa in integer.  
@@ -118,7 +101,7 @@ int _wtoi_l(
   
  Oggetto `whitespace` costituito da caratteri spazio o tabulazione, verranno ignorati. `sign` è un segno più (+) o meno (-); e `digits` sono uno o più cifre.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -132,7 +115,7 @@ int _wtoi_l(
 |Routine|Intestazione obbligatoria|  
 |--------------|---------------------|  
 |`atoi`|\<stdlib.h>|  
-|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> o \<wchar.h>|  
+|`_atoi_l`, `_wtoi`, `_wtoi_l`|\<stdlib.h> or \<wchar.h>|  
   
 ## <a name="example"></a>Esempio  
  Questo programma mostra come i numeri memorizzati come stringhe possono essere convertiti in valori numerici utilizzando le funzioni `atoi`.  
@@ -183,8 +166,8 @@ Overflow condition occurred.
   
 ## <a name="see-also"></a>Vedere anche  
  [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_ecvt](../../c-runtime-library/reference/ecvt.md)   
  [_fcvt](../../c-runtime-library/reference/fcvt.md)   
  [_gcvt](../../c-runtime-library/reference/gcvt.md)   

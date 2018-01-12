@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,36 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CA2WEX::CA2WEX
 - ATLCONV/ATL::CA2WEX::m_psz
 - ATLCONV/ATL::CA2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2WEX class
+dev_langs: C++
+helpviewer_keywords: CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2wex-class"></a>Classe CA2WEX
 Questa classe viene utilizzata per le macro di conversione di stringhe `CA2TEX`, `CA2CTEX`, `CT2WEX`, e `CT2CWEX`e typedef **CA2W**.  
@@ -128,7 +110,7 @@ CA2WEX(LPCSTR psz) throw(...);
  La stringa di testo da convertire.  
   
  `nCodePage`  
- La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice per il [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] funzione [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) per altri dettagli.  
+ La tabella codici utilizzata per eseguire la conversione. Vedere la descrizione del parametro pagina codice per la funzione di Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) per altri dettagli.  
   
 ### <a name="remarks"></a>Note  
  Consente di allocare il buffer utilizzato nel processo di conversione.  
@@ -174,4 +156,3 @@ operator LPWSTR() const throw();
  [Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Classe CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

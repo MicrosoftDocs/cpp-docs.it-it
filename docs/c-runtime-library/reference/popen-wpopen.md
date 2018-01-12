@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _popen
 - _wpopen
 - _tpopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tpopen function
 - pipes, creating
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 57476fe794b255bb1822a4446c505897d1668362
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5cf1fc935bbee75eb8acc31cfd7ae0e8d92c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 Crea una pipe ed esegue un comando.  
@@ -75,16 +59,15 @@ Crea una pipe ed esegue un comando.
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      FILE *_popen(  
-const char *command,  
-const char *mode   
-);  
-FILE *_wpopen(  
-const wchar_t *command,  
-const wchar_t *mode   
-);  
+```
+FILE *_popen(
+const char *command,
+const char *mode
+);
+FILE *_wpopen(
+const wchar_t *command,
+const wchar_t *mode
+);
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -115,7 +98,7 @@ const wchar_t *mode
  Apertura in modalità testo.  
   
 > [!NOTE]
->  Se usata in un programma Windows, la funzione `_popen` restituisce un puntatore di file non valido, a causa del quale il programma smette di rispondere indefinitamente. `_popen` funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza input e output, vedere [Creating a Child Process with Redirected Input and Output](http://msdn.microsoft.com/library/windows/desktop/ms682499) (Creazione di un processo figlio con input e output reindirizzato) in [!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
+>  Se usata in un programma Windows, la funzione `_popen` restituisce un puntatore di file non valido, a causa del quale il programma smette di rispondere indefinitamente. `_popen` funziona correttamente in un'applicazione console. Per creare un'applicazione Windows che reindirizza l'input e output, vedere [creazione di un processo figlio con reindirizzato Input e Output](http://msdn.microsoft.com/library/windows/desktop/ms682499) in Windows SDK.  
   
  `_wpopen` è una versione a caratteri wide di `_popen`. L'argomento *path* per `_wpopen` è una stringa di caratteri wide. In caso contrario, `_wpopen` e `_popen` si comportano in modo identico.  
   
@@ -198,6 +181,6 @@ Process returned 0
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [_pclose](../../c-runtime-library/reference/pclose.md)   
  [_pipe](../../c-runtime-library/reference/pipe.md)

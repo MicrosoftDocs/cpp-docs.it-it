@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- code_seg_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- code_seg __declspec keyword
+f1_keywords: code_seg_cpp
+dev_langs: C++
+helpviewer_keywords: code_seg __declspec keyword
 ms.assetid: ad3c1105-15d3-4e08-b7b9-e4bd9d7b6aa0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 242dfa36d3cd0c28d1feeb2bd4a2c41d29220b40
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae69cd9e88b97a31dda86648d86e143ab9bd5d40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codeseg-declspec"></a>code_seg (__declspec)
 **Sezione specifica Microsoft**  

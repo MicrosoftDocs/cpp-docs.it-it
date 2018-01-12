@@ -1,42 +1,44 @@
 ---
-title: "Procedura: leggere contatori di prestazioni di Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contatori, interpretazione dei contatori di prestazioni Windows"
-  - "prestazioni"
-  - "contatori delle prestazioni"
-  - "contatori delle prestazioni, interpretazione dei contatori di prestazioni Windows"
-  - "monitoraggio delle prestazioni"
-  - "monitoraggio delle prestazioni, contatori delle prestazioni in Windows"
-  - "prestazioni, contatori"
+title: 'Procedura: leggere contatori di prestazioni di Windows (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: leggere contatori di prestazioni di Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Alcune applicazioni e sottosistemi Windows espongono i dati sulle prestazioni tramite il sistema di gestione delle prestazioni di Windows.  Per accedere a questi contatori è possibile utilizzare le classi <xref:System.Diagnostics.PerformanceCounterCategory> e <xref:System.Diagnostics.PerformanceCounter>, definite nello spazio dei nomi <xref:System.Diagnostics?displayProperty=fullName>.  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>Procedura: leggere contatori di prestazioni di Windows (C++/CLI)
+Alcune applicazioni e i sottosistemi Windows espongono i dati sulle prestazioni tramite il sistema delle prestazioni di Windows. Questi contatori è possibile accedere tramite il <xref:System.Diagnostics.PerformanceCounterCategory> e <xref:System.Diagnostics.PerformanceCounter> classi, che si trovano nel <xref:System.Diagnostics?displayProperty=fullName> dello spazio dei nomi.  
   
- Nell'esempio di codice riportato di seguito vengono utilizzate queste classi per recuperare e visualizzare un contatore aggiornato da Windows che indica la percentuale di tempo in cui il processore è occupato.  
+ Esempio di codice seguente utilizza queste classi per recuperare e visualizzare un contatore che viene aggiornato da Windows per indicare la percentuale di tempo che il processore è occupato.  
   
 > [!NOTE]
->  In questo esempio sono richiesti privilegi amministrativi per l'esecuzione su Windows Vista.  
+>  Per l'esecuzione di questo esempio in Windows Vista sono necessari privilegi di amministratore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +127,7 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/it-it/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Operazioni Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Introduzione al monitoraggio delle prestazioni](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Operazioni Windows (C + c++ /CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

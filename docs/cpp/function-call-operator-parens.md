@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-call-operator-"></a>Operatore di chiamata di funzione: ()
 Un'espressione di suffisso seguita dall'operatore di chiamata di funzione, **()**, specifica una chiamata di funzione.  
@@ -189,4 +187,3 @@ int main() {
  [Espressioni di suffisso](../cpp/postfix-expressions.md)   
  [Operatori C++ predefiniti, precedenza e associazione](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Chiamata di funzione](../c-language/function-call-c.md)   
-

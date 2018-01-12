@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
 - ATLCOLL/ATL::CElementTraitsBase::CopyElements
 - ATLCOLL/ATL::CElementTraitsBase::RelocateElements
-dev_langs:
-- C++
-helpviewer_keywords:
-- CElementTraitsBase class
+dev_langs: C++
+helpviewer_keywords: CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="celementtraitsbase-class"></a>Classe CElementTraitsBase
 Questa classe fornisce copia predefinita e sposta i metodi per una classe di raccolta.  
@@ -131,4 +128,3 @@ static void RelocateElements(
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

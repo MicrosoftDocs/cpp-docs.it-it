@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d21eae211bd2d01e202a516ef487c8d0df3684
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (File di listato)
 Crea un file di listato contenente codice assembler.  
@@ -47,21 +48,21 @@ Il `/FA` l'opzione del compilatore genera un file di listato dell'assembler per 
 Per impostazione predefinita, ogni file di listato Ottiene lo stesso nome di base del file di origine e presenta un'estensione di asm. Quando il codice macchina è incluso con il `c` opzione, il file di listato con estensione Cod. È possibile modificare il nome e l'estensione del file di listato e la directory in cui viene creato utilizzando il `/Fa` opzione.  
 
 ### <a name="fa-arguments"></a>/FA argomenti  
-nessuno  
+none  
 Solo la lingua dell'assembler è incluso nell'elenco.  
   
 `c`  
-Parametro facoltativo. Include codice macchina nell'elenco.  
+Facoltativo. Include codice macchina nell'elenco.  
   
 `s`  
-Parametro facoltativo. Contiene il codice sorgente nell'elenco.  
+Facoltativo. Contiene il codice sorgente nell'elenco.  
   
 `u`Parametro facoltativo. Consente di codificare il file di elenco in formato UTF-8 e include un indicatore dell'ordine di byte. Per impostazione predefinita, il file è codificato in formato ANSI. Utilizzare `u` per creare un file di listato che venga visualizzato correttamente in qualsiasi sistema, o se si utilizza Unicode file di codice sorgente come input per il compilatore.  
   
 Se entrambi `s` e `u` vengono specificati e, se un'origine dei file di codice Usa una codifica Unicode diversa da UTF-8, quindi le righe di codice nel file di ASM non vengano visualizzati correttamente.  
   
 ### <a name="fa-argument"></a>/Fa argomento  
-nessuno  
+none  
 Un *origine*ASM file viene creato per ogni file di codice sorgente nella compilazione.  
   
 *nome del file* un file di listato denominato *filename*asm viene inserito nella directory corrente. Ciò è valido solo durante la compilazione di un file di codice sorgente singolo.  

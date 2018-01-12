@@ -1,33 +1,36 @@
 ---
-title: "Procedura: caricare risorse non gestite in una matrice di byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "risorse native"
-  - "risorse native, caricamento in matrici di byte"
-  - "risorse non gestite, caricamento in matrici di byte"
+title: 'Procedura: caricare risorse non gestite in una matrice di Byte | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a179934a0a94c552ea7dc81e3f4dbdc5a4458d70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: caricare risorse non gestite in una matrice di byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento vengono illustrati alcuni modi per caricare risorse non gestite in una matrice <xref:System.Byte>.  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Procedura: caricare risorse non gestite in una matrice di byte
+In questo argomento vengono illustrati diversi modi per caricare le risorse non gestite in un <xref:System.Byte> matrice.  
   
-## Esempio  
- Se si conosce la dimensione della risorsa non gestita, è possibile preallocare una matrice CLR e quindi caricare la risorsa nella matrice utilizzando un puntatore al blocco di matrice della matrice CLR.  
+## <a name="example"></a>Esempio  
+ Se si conosce la dimensione della risorsa non gestita, è possibile preallocare una matrice CLR e quindi caricare la risorsa nella matrice mediante un puntatore al blocco di matrice della matrice CLR.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +60,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## Esempio  
- In questo esempio viene illustrato come copiare i dati da un blocco di memoria non gestita a una matrice gestita.  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>Esempio  
+ Questo esempio viene illustrato come copiare dati da un blocco di memoria non gestita a una matrice gestita.  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +84,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a1b5f7db562dc0173cda49212425b237a44c0610
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f70e928c3877bf5d660231cbe2646f6cf72575e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gettzname"></a>_get_tzname
 Recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario o del nome del fuso orario dell'ora legale.  
@@ -77,10 +78,10 @@ errno_t _get_tzname(
 |`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|Valore restituito|Contenuto di `timeZoneName`|  
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
 |Dimensioni del nome del fuso orario|`NULL`|0|0 o 1|0|non modificato|  
-|Dimensioni del nome del fuso orario|any|> 0|0 o 1|0|Nome del fuso orario|  
+|Dimensioni del nome del fuso orario|qualsiasi|> 0|0 o 1|0|Nome del fuso orario|  
 |non modificato|`NULL`|> 0|qualsiasi|`EINVAL`|non modificato|  
-|non modificato|any|zero|qualsiasi|`EINVAL`|non modificato|  
-|non modificato|any|> 0|> 1|`EINVAL`|non modificato|  
+|non modificato|qualsiasi|zero|qualsiasi|`EINVAL`|non modificato|  
+|non modificato|qualsiasi|> 0|> 1|`EINVAL`|non modificato|  
   
 ## <a name="remarks"></a>Note  
  La funzione `_get_tzname` recupera la rappresentazione in forma di stringa di caratteri del nome del fuso orario o del nome del fuso orario dell'ora legale nell'indirizzo di `timeZoneName` a seconda del valore index, insieme alle dimensioni della stringa in `pReturnValue`. Se `timeZoneName` è `NULL` e `sizeInBytes` è zero, in `pReturnValue` viene restituita solo la dimensione in byte della stringa di uno dei nomi di fuso orario. I valori index devono essere 0 per il fuso orario standard o 1 per il fuso orario dell'ora legale. Per qualsiasi altro valore di index i risultati saranno indeterminati.  
@@ -101,10 +102,10 @@ errno_t _get_tzname(
 |-------------|---------------------|  
 |`_get_tzname`|\<time.h>|  
   
- Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   

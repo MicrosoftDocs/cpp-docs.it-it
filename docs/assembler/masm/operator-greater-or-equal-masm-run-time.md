@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5b9d374600494c95107f871c7c9349a7061380c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 392e0d272465ae4d132d5642c11f45f721909142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-gt-masm-run-time"></a>operatore &gt;= (Runtime MASM)
 È maggiore o uguale a. Utilizzato solo in [. Se](../../assembler/masm/dot-if.md), [. MENTRE](../../assembler/masm/dot-while.md), o [. Ripetere](../../assembler/masm/dot-repeat.md) blocca e valutate in fase di esecuzione, non in fase di assembly.  

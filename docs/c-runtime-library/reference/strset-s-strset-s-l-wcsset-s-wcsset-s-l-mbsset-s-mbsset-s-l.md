@@ -68,11 +68,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 920aa940e817e51c89d6943879cbec0eb0efc20f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 422d5c8b5e192824283e0d2e05c826f0a343d528
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 Imposta i caratteri di una stringa su un carattere. Queste versioni di [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -139,7 +140,7 @@ errno_t _mbsset_s_l(
 ## <a name="remarks"></a>Note  
  La funzione `_strset_s` imposta tutti i caratteri di `str` su `c` (convertito in `char`), tranne il carattere di terminazione Null. `_wcsset_s` e `_mbsset_s` sono le versioni a caratteri wide e a caratteri multibyte di `_strset_s`. I tipi di dati degli argomenti e dei valori restituiti variano di conseguenza. A parte ciò, queste funzioni si comportano in modo identico.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -186,7 +187,7 @@ After:  *******************************
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbsnbset, _mbsnbset_l](../../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)   
  [memset, wmemset](../../c-runtime-library/reference/memset-wmemset.md)   

@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collection-classes"></a>Classi Collection ATL
 ATL fornisce molte classi per l'archiviazione e l'accesso ai dati. La classe a cui si decide di utilizzare dipende da diversi fattori, tra cui:  
@@ -89,8 +90,8 @@ ATL fornisce molte classi per l'archiviazione e l'accesso ai dati. La classe a c
   
 |Forma|Ordered|Indicizzazione|Inserire un<br /><br /> elemento|Ricerca<br /><br /> elemento specificato|Duplica<br /><br /> elementi|  
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
-|Elenco|Sì|No|Fast (tempo costante)|Rallentamento o (n)|Sì|  
-|Matrice|Sì|Da int (tempo costante)|Rallentamento o (n), ad eccezione dell'inserimento alla fine, in cui il tempo costante di case|Rallentamento o (n)|Sì|  
+|List|Yes|No|Fast (tempo costante)|Rallentamento o (n)|Yes|  
+|Matrice|Yes|Da int (tempo costante)|Rallentamento o (n), ad eccezione dell'inserimento alla fine, in cui il tempo costante di case|Rallentamento o (n)|Yes|  
 |Mappa|No|Chiave (tempo costante)|Fast (tempo costante)|Fast (tempo costante)|No (chiavi) Sì (valori)|  
 |Mappa rosso a nero|Sì (per chiave)|Chiave O (log n)|Veloce O (log n)|Veloce O (log n)|No|  
 |Multimap rosso a nero|Sì (per chiave)|Chiave O(log n) (più valori per ogni chiave)|Veloce O (log n)|Veloce O (log n)|Sì (più valori per ogni chiave)|  

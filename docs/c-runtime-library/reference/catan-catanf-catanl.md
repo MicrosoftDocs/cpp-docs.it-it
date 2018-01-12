@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11cfea77d86795070f4f679ff69636974e1234b3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333db8403e539d28de766809891a068717c738ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 Recupera l'arcotangente di un numero complesso con tagli branch all'esterno dell'intervallo [-1; + 1] lungo l'asse immaginaria.  
@@ -91,7 +92,7 @@ _Lcomplex catanl(
  Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   

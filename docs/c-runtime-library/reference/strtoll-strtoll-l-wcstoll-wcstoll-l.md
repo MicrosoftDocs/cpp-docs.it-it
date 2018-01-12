@@ -45,11 +45,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c0528427216f08723d67cb56018a3379562cf32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f449cd73a8536fb7dbdf46b7c7d1d45ad449cb10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 Converte una stringa in un valore `long long`.  
@@ -113,7 +114,7 @@ long long _wcstoll_l(
 |`_tcstoll`|`strtoll`|`strtoll`|`wcstoll`|  
 |`_tcstoll_l`|`_strtoll_l`|`_strtoll_l`|`_wcstoll_l`|  
   
- L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale, wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtoll_l` e `_wcstoll_l` sono identiche alle funzioni corrispondenti senza il suffisso, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ L'impostazione della categoria `LC_NUMERIC` delle impostazioni locali determina il riconoscimento del carattere di base `nptr`. Per altre informazioni, vedere [setlocale, wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. `_strtoll_l` e `_wcstoll_l` sono identiche alle funzioni corrispondenti senza il suffisso, ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Se `endptr` non è `NULL`, un puntatore al carattere che ha interrotto la lettura viene archiviato in corrispondenza della posizione a cui punta `endptr`. Se è non possibile eseguire alcuna conversione (non vengono trovate cifre valide o viene specificata una base non valida), il valore di `nptr` viene archiviato in corrispondenza della posizione a cui punta `endptr`.  
   
@@ -128,13 +129,13 @@ long long _wcstoll_l(
 |Routine|Intestazione obbligatoria|  
 |-------------|---------------------|  
 |`strtoll`, `_strtoll_l`|\<stdlib.h>|  
-|`wcstoll`, `_wcstoll_l`|\<stdlib.h> o \<wchar.h>|  
+|`wcstoll`, `_wcstoll_l`|\<stdlib.h> or \<wchar.h>|  
   
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [Funzioni da stringa a valore numerico](../../c-runtime-library/string-to-numeric-value-functions.md)   

@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac0b4cd7783cd41d480777fe8116a0facea58a28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Copia i byte tra i buffer. Queste sono versioni di [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -81,7 +82,7 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|Valore restituito|Contenuto di `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|qualsiasi|qualsiasi|0|0|Non modificato|  
+|qualsiasi|qualsiasi|qualsiasi|0|0|Non modificato|  
 |`NULL`|qualsiasi|qualsiasi|non zero|`EINVAL`|Non modificato|  
 |qualsiasi|qualsiasi|`NULL`|non zero|`EINVAL`|`dest` è azzerato|  
 |qualsiasi|< `count`|qualsiasi|non zero|`ERANGE`|`dest` è azzerato|  
@@ -98,7 +99,7 @@ errno_t wmemcpy_s(
 |`memcpy_s`|\<memory.h> o \<string.h>|  
 |`wmemcpy_s`|\<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

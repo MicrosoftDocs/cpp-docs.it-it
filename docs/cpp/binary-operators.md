@@ -4,34 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - member-selection operators [C++]
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 384ac135c7ecb63b864160723984ef5d271e1395
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15c52d48359210a21b23caa72afee7e2a3bcd8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binary-operators"></a>Operatori binari
 Nella tabella seguente viene mostrato un elenco di operatori che possono essere sottoposti a overload.  
   
 ### <a name="redefinable-binary-operators"></a>Operatori binari ridefinibili  
   
-|Operatore|Name|  
+|Operatore|nome|  
 |--------------|----------|  
 |**,**|Virgola|  
 |`!=`|Disuguaglianza|  

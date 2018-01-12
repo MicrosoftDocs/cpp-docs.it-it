@@ -1,35 +1,38 @@
 ---
-title: "Creazione di un provider semplice in sola lettura | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modelli del provider OLE DB, creazione di provider"
-  - "provider OLE DB, creazione"
+title: Creazione di un Provider semplice in sola lettura | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b5f840a6f401d8eb1bcca598d86622deb8f86cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creazione di un provider semplice in sola lettura
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dopo aver creato un provider OLE DB mediante la Creazione guidata progetto ATL e la Creazione guidata provider OLE DB ATL, è possibile aggiungere ulteriori funzionalità che si desidera supportare.  Come prima operazione per la progettazione del provider, determinare quale tipo di dati saranno inviati al consumer e a quali condizioni.  È particolarmente importante determinare se sia necessario supportare comandi, transazioni e altri oggetti facoltativi.  Un'accurata fase di progettazione iniziale renderà più rapide le fasi di implementazione e test.  
+# <a name="creating-a-simple-read-only-provider"></a>Creazione di un provider semplice in sola lettura
+Dopo avere creato un provider OLE DB utilizzando la creazione guidata progetto ATL e la creazione guidata Provider OLE DB ATL, è possibile aggiungere altre funzionalità che si desidera supportare. Iniziare a progettare il provider esaminando il tipo di dati saranno inviati al consumer e le condizioni. È particolarmente importante determinare se è necessario supportare i comandi, transazioni e altri oggetti facoltativi. Una buona progettazione di velocizzare l'implementazione e testing.  
   
- L'esempio è presentato in due parti:  
+ Nell'esempio verrà presentata in due parti:  
   
--   Nella prima parte è illustrato come [creare un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md) per la lettura di una coppia di stringhe.  
+-   Il primo Mostra parte come [creare un provider semplice in sola lettura](../../data/oledb/implementing-the-simple-read-only-provider.md) che legge una coppia di stringhe.  
   
--   Nella seconda parte è illustrato come [migliorare il provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md) tramite l'aggiunta dell'interfaccia `IRowsetLocate`.  
+-   Il secondo Mostra parte come [migliorare un provider semplice in sola lettura](../../data/oledb/enhancing-the-simple-read-only-provider.md) aggiungendo il `IRowsetLocate` interfaccia.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 493bd7606dd837199eaa95a2e8abd5536c5f5028
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-property-pages"></a>Implementazione delle pagine delle proprietà
 Pagine delle proprietà sono oggetti COM che implementano il `IPropertyPage` o **IPropertyPage2** interfaccia. ATL fornisce il supporto per l'implementazione delle pagine delle proprietà tramite il [guidata pagina delle proprietà ATL](../atl/reference/atl-property-page-wizard.md) nel [la finestra di dialogo Aggiungi classe](../ide/add-class-dialog-box.md).  

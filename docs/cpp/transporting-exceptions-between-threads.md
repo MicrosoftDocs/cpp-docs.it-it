@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>Trasporto delle eccezioni tra thread
 Visual C++ supporta *trasferimento di un'eccezione* da un thread a altro. Il trasferimento delle eccezioni consente di rilevare un'eccezione in un thread e di fare in modo che sembri generata da un altro thread. È ad esempio possibile utilizzare questa funzionalità per scrivere un'applicazione multithreading in cui il thread principale gestisce tutte le eccezioni generate dai thread secondari. Il trasferimento delle eccezioni è utile soprattutto agli sviluppatori che intendono creare sistemi o librerie di programmazione parallela. Per implementare il trasferimento delle eccezioni, Visual C++ fornisce il [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) tipo e il [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), e [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) funzioni.  
@@ -255,4 +256,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle eccezioni](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (modello di gestione delle eccezioni)](../build/reference/eh-exception-handling-model.md)   
- [/CLR (compilazione common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cc8ffa40b337765a0970e95862947155c7ae6f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d15df2f810848bb9349bc98c722ac02ff8cda17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedura: progettare la sicurezza dell'eccezione
 Uno dei vantaggi del meccanismo di eccezione è che l'esecuzione, insieme ai dati sull'eccezione, passa direttamente dall'istruzione che genera l'eccezione alla prima istruzione catch che gestisce. Il gestore può essere un numero qualsiasi di livelli nello stack di chiamate. Le funzioni chiamate tra l'istruzione try e l'istruzione throw non sono necessarie per ottenere informazioni sull'eccezione gestita.  Tuttavia, devono essere progettate in modo tale da poter uscire dall'ambito "in modo imprevisto" in qualsiasi punto in cui un'eccezione può propagarsi dal basso, ed essere eseguite senza lasciarsi dietro oggetti parzialmente creati, memoria persa o strutture di dati in stati non utilizzabili.  

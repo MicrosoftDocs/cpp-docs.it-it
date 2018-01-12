@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec8c85606f0f0ef3de67a61181ead6537fde179e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89b64794c50e381c07749984ce61579951fa02f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshaling"></a>marshalling
 La tecnica del marshalling COM consente le interfacce esposte da un oggetto in un processo da utilizzare in un altro processo. Effettuare il marshalling, COM fornisce il codice (o utilizza codice fornito dall'implementatore interfaccia) per comprimere i parametri del metodo in un formato che può essere spostato tra processi (nonché attraverso la rete per i processi in esecuzione su altri computer) e decomprimere i parametri a altra estremità. Analogamente, COM è necessario eseguire questi stessi passaggi in restituito dalla chiamata.  

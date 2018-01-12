@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd008bb5ab89a4ade8414c19b5c6197247289e9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1413430e9a5936a2339ccb9e8376e4134cfbdf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 Esegue il test di `c` per la proprietà specificata dall'argomento `desc`. Per ogni valore valido di `desc`, esiste un'equivalente routine di classificazione a caratteri wide.  
@@ -92,7 +93,7 @@ int _iswctype_l(
  Le impostazioni locali da utilizzare per qualsiasi test dipendente dalle impostazioni locali.  
   
 ## <a name="return-value"></a>Valore restituito  
- `_isctype` e `iswctype` restituiscono un valore diverso da zero se `c` dispone della proprietà specificata da `desc` nelle impostazioni locali correnti oppure 0 in caso contrario. Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_isctype` e `iswctype` restituiscono un valore diverso da zero se `c` dispone della proprietà specificata da `desc` nelle impostazioni locali correnti oppure 0 in caso contrario. Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Il comportamento di `_isctype` e `_isctype_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
@@ -112,12 +113,12 @@ int _iswctype_l(
 |`_isctype_l`|\<ctype.h>|  
 |`_iswctype_l`|\<ctype.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

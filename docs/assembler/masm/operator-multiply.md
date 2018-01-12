@@ -1,42 +1,41 @@
 ---
-title: "operator * | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator *"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* operator, syntax"
-  - "* operator"
-  - "multiplication operator [C++], syntax"
-  - "arithmetic operators [C++], multiplication"
-  - "operators [MASM], multiplication"
+title: operatore * | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: operator *
+dev_langs: C++
+helpviewer_keywords:
+- '* operator, syntax'
+- '* operator'
+- multiplication operator [C++], syntax
+- arithmetic operators [C++], multiplication
+- operators [MASM], multiplication
 ms.assetid: 6a66521c-664f-41c3-8a77-5a948df1e9ad
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79a52eed6c18b3a3aa11bf19d87ab310e25e6171
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# operator *
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce *expression1* talvolta *expression2*.  
+# <a name="operator-"></a>operatore *
+Restituisce *expression1* volte *expression2*.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 expression1 * expression2  
 ```  
   
-## Vedere anche  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a operatori](../../assembler/masm/operators-reference.md)

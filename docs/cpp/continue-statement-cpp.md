@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ae5093f26cb46b30cf01d453a51df2585bee534
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e4dd91489bfe22fca875f98110dadcb75def39d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="continue-statement-c"></a>Istruzioni continue (C++)
 Forza il trasferimento del controllo per l'espressione di controllo di inclusione più piccolo [si](../cpp/do-while-statement-cpp.md), [per](../cpp/for-statement-cpp.md), o [mentre](../cpp/while-statement-cpp.md) ciclo.  

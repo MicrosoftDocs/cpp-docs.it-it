@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
 - ATL::_U_STRINGorID
 - _U_STRINGorID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ustringorid-class"></a>Classe _U_STRINGorID
 Classe di adattatori di questo argomento consente di entrambi i nomi delle risorse ( `LPCTSTR`s) o l'ID di risorsa ( **UINT**s) deve essere passato a una funzione senza richiedere al chiamante di convertire l'ID di una stringa usando il **MAKEINTRESOURCE** (macro).  
@@ -90,4 +88,3 @@ _U_STRINGorID(LPCTSTR lpString);
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

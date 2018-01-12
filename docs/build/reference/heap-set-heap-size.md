@@ -1,63 +1,64 @@
 ---
-title: "/HEAP (Imposta la dimensione dell&#39;heap) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.HeapCommitSize"
-  - "/heap"
-  - "VC.Project.VCLinkerTool.HeapReserveSize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/HEAP (opzione del linker)"
-  - "allocazione di heap, impostazione della dimensione heap"
-  - "HEAP (opzione del linker)"
-  - "-HEAP (opzione del linker)"
+title: -HEAP (imposta la dimensione dell'Heap) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.HeapCommitSize
+- /heap
+- VC.Project.VCLinkerTool.HeapReserveSize
+dev_langs: C++
+helpviewer_keywords:
+- -HEAP linker option
+- heap allocation, setting heap size
+- /HEAP linker option
+- HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ddbbeb373a5c1c9a7b5a14d124900782048fbeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /HEAP (Imposta la dimensione dell&#39;heap)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="heap-set-heap-size"></a>/HEAP (Imposta la dimensione dell'heap)
 ```  
 /HEAP:reserve[,commit]  
 ```  
   
-## Note  
- L'opzione \/HEAP consente di impostare la dimensione in byte dell'heap.  È possibile utilizzare tale opzione solo durante la compilazione di un file exe.  
+## <a name="remarks"></a>Note  
+ L'opzione /HEAP imposta le dimensioni dell'heap in byte. Questa opzione è solo per l'utilizzo durante la compilazione di un file .exe.  
   
- L'argomento *reserve* specifica l'allocazione totale per l'heap nella memoria virtuale.  La dimensione predefinita dell'heap è pari a 1 MB.  Il linker arrotonda il valore specificato ai 4 byte più vicini.  
+ Il *riservare* argomento specifica l'allocazione totale per l'heap nella memoria virtuale. Le dimensioni dell'heap predefinito sono 1 MB. Il linker arrotonda per eccesso il valore specificato per i più vicino 4 byte.  
   
- L'argomento facoltativo `commit` viene interpretato nel sistema operativo.  In Windows NT e Windows 2000 specifica la quantità di memoria fisica da allocare alla volta.  Vincolando memoria virtuale viene riservato spazio nel file di paging.  Un valore di `commit` più alto fa risparmiare tempo quando nell'applicazione è necessario maggior spazio per l'heap, ma aumenta i requisiti di memoria e in alcuni casi il tempo di avvio.  
+ Facoltativo `commit` argomento viene interpretato dal sistema operativo. In Windows NT o Windows 2000, specifica la quantità di memoria fisica da allocare alla volta. Memoria virtuale vincolata consente lo spazio da riservare nel file di paging. Un valore più alto `commit` valore consente di risparmiare tempo quando l'applicazione richiede più spazio nell'heap, ma aumenta i requisiti di memoria ed eventualmente il tempo di avvio.  
   
- Specificare i valori *reserve* e `commit` in notazione decimale o in linguaggio C.  
+ Specificare il *riservare* e `commit` valori in notazione decimale o in linguaggio C.  
   
- Questa funzionalità è disponibile anche attraverso un file di definizione moduli con [HEAPSIZE](../../build/reference/heapsize.md).  
+ Questa funzionalità è disponibile anche tramite un file di definizione moduli con [HEAPSIZE](../../build/reference/heapsize.md).  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella **Linker**.  
+2.  Fare clic su di **Linker** cartella.  
   
-3.  Fare clic sulla pagina delle proprietà **Sistema**.  
+3.  Fare clic su di **sistema** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Dimensione heap commit**.  
+4.  Modificare il **dimensione Heap Commit** proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> e <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

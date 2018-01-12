@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1d89552bd299edc778b06bd01ee185c275c45db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-each-in"></a>for each, in
 Scorre una matrice o una raccolta. Questa parola chiave non standard è disponibile sia nei progetti C++/CLI sia nei progetti C++ nativi. Il suo utilizzo non è tuttavia consigliato. È consigliabile utilizzare uno standard [per istruzione (C++) basato su intervallo](../cpp/range-based-for-statement-cpp.md) invece.  

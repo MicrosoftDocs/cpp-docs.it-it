@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fbdeede4988ab68dd14aaba6bcd1d6d0b7998ded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70bc2d8abbcff3658bc76a01b2bb43bb789312aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-length"></a>Operatore LENGTH
 Restituisce il numero di elementi di dati *variabile* creato dall'inizializzatore di primo.  

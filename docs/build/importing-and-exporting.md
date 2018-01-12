@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b22332e9d8e31b631cf4e93f8ee6860498d64144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c0727002e264f3b0cfe39b763c29fd70725b982
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-and-exporting"></a>Importazione ed esportazione
 È possibile importare simboli pubblici in un'applicazione o esportare funzioni da una DLL tramite due metodi:  

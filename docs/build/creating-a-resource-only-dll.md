@@ -1,47 +1,49 @@
 ---
-title: "Creazione di una DLL di sole risorse | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], creazione"
-  - "DLL di sole risorse [C++], creazione"
+title: Creazione di una DLL di sole risorse | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resource-only DLLs [C++], creating
+- DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd65085c9a0ecc0479c7d22feb5587d1e94447de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creazione di una DLL di sole risorse
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Una DLL di sole risorse contiene unicamente delle risorse, come icone, bitmap, stringhe e finestre di dialogo.  L'utilizzo di una DLL di sole risorse è consigliabile per condividere lo stesso insieme di risorse tra più programmi  e per fornire a un'applicazione le risorse localizzate per più lingue \(vedere [Risorse localizzate in applicazioni MFC: DLL satellite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)\).  
+# <a name="creating-a-resource-only-dll"></a>Creazione di una DLL di sole risorse  
   
- Per creare una DLL di questo tipo, occorre creare un nuovo progetto DLL Win32 \(non MFC\) al quale aggiungere le risorse.  
+Una DLL di sole risorse è una DLL che contiene unicamente delle risorse, ad esempio le icone, bitmap, stringhe e finestre di dialogo. Uso di una DLL di sole risorse è un buon metodo per condividere lo stesso set di risorse tra più programmi. È anche un buon metodo per fornire un'applicazione con le risorse localizzate per più lingue (vedere [risorse localizzate in applicazioni MFC: DLL Satellite](../build/localized-resources-in-mfc-applications-satellite-dlls.md)).  
   
--   Selezionare Progetto Win32 nella finestra di dialogo **Nuovo progetto** e specificare un tipo di progetto DLL nella Creazione guidata progetto Win32.  
+Per creare una DLL di sole risorse, si crea un nuovo progetto di DLL Win32 (non MFC) e aggiungere le risorse del progetto.  
   
--   Creare un nuovo script di risorse contenente le risorse, ad esempio una stringa o un menu, per la DLL e salvare il file rc.  
+-   Selezionare il progetto Win32 nel **nuovo progetto** finestra di dialogo e specificare un tipo di progetto DLL nella creazione guidata progetto Win32.  
   
--   Dal menu **Progetto** scegliere **Aggiungi elemento esistente**, quindi inserire il nuovo file rc nel progetto.  
+-   Creare un nuovo script di risorsa che contiene le risorse (ad esempio, un menu o una stringa) per la DLL e salvare il file RC.  
   
--   Specificare l'opzione del linker [\/NOENTRY](../build/reference/noentry-no-entry-point.md). \/NOENTRY evita che il linker colleghi un riferimento a \_main nella DLL. Questa opzione è necessaria per creare una DLL di sole risorse.  
+-   Nel **progetto** menu, fare clic su **Aggiungi elemento esistente**e quindi inserire il nuovo file RC nel progetto.  
+  
+-   Specificare il [/NOENTRY](../build/reference/noentry-no-entry-point.md) l'opzione del linker. /NOENTRY impedisce che il linker collegato un riferimento a `_main` nella DLL; questa opzione è necessaria per creare una DLL di sole risorse.  
   
 -   Compilare la DLL.  
   
- L'applicazione che utilizza la DLL di sole risorse deve chiamare **LoadLibrary** per [collegarsi in modo esplicito alla DLL](../build/loadlibrary-and-afxloadlibrary.md).  Per accedere alle risorse, chiamare le funzioni generiche **FindResource** e **LoadResource**, che funzionano con ogni tipo di risorsa, oppure chiamare una delle seguenti funzioni specifiche delle risorse:  
+L'applicazione che utilizza la DLL di sole risorse deve chiamare [LoadLibrary](../build/loadlibrary-and-afxloadlibrary.md) per il collegamento esplicito della DLL. Per accedere alle risorse, chiamare le funzioni generiche `FindResource` e `LoadResource`, che funziona con qualsiasi tipo di risorsa oppure chiamare una delle seguenti funzioni specifiche delle risorse:  
   
 -   `FormatMessage`  
   
--   **LoadAccelerators**  
+-   `LoadAccelerators`  
   
 -   `LoadBitmap`  
   
@@ -53,11 +55,9 @@ Una DLL di sole risorse contiene unicamente delle risorse, come icone, bitmap, s
   
 -   `LoadString`  
   
- L'applicazione deve chiamare **FreeLibrary** dopo avere utilizzato le risorse.  
+L'applicazione deve chiamare `FreeLibrary` quando ha terminato usando le risorse.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="see-also"></a>Vedere anche  
   
--   [DELETE\_PENDING\_Editing Resources](http://msdn.microsoft.com/it-it/c29d31c7-2d94-40ca-8aa0-c7262883529c)  
-  
-## Vedere anche  
- [DLL in Visual C\+\+](../build/dlls-in-visual-cpp.md)
+[Uso di file di risorse](../windows/working-with-resource-files.md)  
+[DLL in Visual C++](../build/dlls-in-visual-cpp.md)

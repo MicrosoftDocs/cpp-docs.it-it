@@ -1,31 +1,32 @@
 ---
-title: "Scaricamento di una DLL a caricamento ritardato | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__FUnloadDelayLoadedDLL2"
-  - "caricamento ritardato di DLL, scaricamento"
+title: Scaricamento di una DLL a caricamento ritardato | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Scaricamento di una DLL a caricamento ritardato
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Mediante il supporto del caricamento ritardato predefinito è possibile verificare se i descrittori per il caricamento ritardato dispongono di un puntatore e di una copia della tabella di indirizzi di importazione \(IAT\) originale nel campo pUnloadIAT.  In tal caso, un puntatore al descrittore di caricamento ritardato delle importazioni verrà salvato in un elenco.  In questo modo, la funzione di supporto consente di individuare la DLL mediante il nome e di effettuarne lo scaricamento esplicito.  
+# <a name="unloading-a-delay-loaded-dll"></a>Scaricamento di una DLL a caricamento ritardato
+L'helper di caricamento ritardato predefinito consente di verificare se i descrittori di caricamento ritardato di disporre di un puntatore e una copia della tabella di indirizzi di importazione (IAT) originale nel campo pUnloadIAT. In questo caso, salverà un puntatore in un elenco al descrittore di ritardo di importazione. In questo modo la funzione di supporto trovare la DLL in base al nome di supportare lo scaricamento di DLL in modo esplicito.  
   
- Di seguito sono indicate le strutture e le funzioni associate per lo scaricamento esplicito di una DLL a caricamento ritardato.  
+ Ecco le funzioni per lo scaricamento esplicito di una DLL a caricamento ritardato e strutture associate:  
   
 ```  
 //  
@@ -52,11 +53,11 @@ ExternC
 PUnloadInfo __puiHead;  
 ```  
   
- La struttura UnloadInfo viene implementata mediante una classe C\+\+ per la quale è previsto l'utilizzo delle implementazioni **LocalAlloc** e **LocalFree** rispettivamente come operatori **new** e **delete**.  Queste opzioni sono conservate in un elenco collegato standard con intestazione \_\_puiHead.  
+ La struttura UnloadInfo viene implementata utilizzando una classe C++ che utilizza **LocalAlloc** e **LocalFree** implementazioni come proprio operatore **nuova** e operatore  **eliminare** rispettivamente. Queste opzioni vengono mantenute in un elenco collegato standard utilizzando puiHead dell'elemento head dell'elenco.  
   
- Quando viene chiamata la funzione \_\_FUnloadDelayLoadedDLL, viene effettuato un tentativo di ricerca del nome fornito nell'elenco delle DLL caricate \(è necessaria una corrispondenza esatta\).  Se la ricerca ha esito positivo, la copia della tabella IAT in pUnloadIAT viene sovrapposta alla tabella IAT in esecuzione per ripristinare i puntatori ai thunk, la libreria viene liberata mediante **FreeLibrary**, il record **UnloadInfo** corrispondente viene scollegato dall'elenco ed eliminato e infine viene restituito TRUE.  
+ Chiamata di FUnloadDelayLoadedDLL tenterà di trovare il nome è fornito nell'elenco delle DLL caricate (è necessaria una corrispondenza esatta). Se viene trovato, la copia di IAT nel pUnloadIAT viene copiata nella parte superiore della tabella IAT in esecuzione per ripristinare i puntatori ai thunk, la libreria viene liberata con **FreeLibrary**, la corrispondenza **UnloadInfo** record è stato scollegato da l'elenco eliminato e viene restituito TRUE.  
   
- Per l'argomento della funzione \_\_FUnloadDelayLoadedDLL2 viene applicata la distinzione fra maiuscole e minuscole.  È possibile, ad esempio, specificare:  
+ L'argomento di funzione FUnloadDelayLoadedDLL2 viene fatta distinzione tra maiuscole e minuscole. Ad esempio, è necessario specificare:  
   
 ```  
 __FUnloadDelayLoadedDLL2("user32.DLL");  
@@ -68,5 +69,5 @@ __FUnloadDelayLoadedDLL2("user32.DLL");
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## Vedere anche  
- [Understanding the Helper Function](http://msdn.microsoft.com/it-it/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sulla funzione di supporto](understanding-the-helper-function.md)

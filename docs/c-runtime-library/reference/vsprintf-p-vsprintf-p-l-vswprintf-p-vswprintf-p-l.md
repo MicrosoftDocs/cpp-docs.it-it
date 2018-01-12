@@ -51,11 +51,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f48a2e704c1f11517bd7d36ffb1bffc6c35fa040
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d64200b38fb206426b037c0c12d008739e0509b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 Scrive l'output formattato usando un puntatore a un elenco di argomenti, con la possibilità di specificare l'ordine in cui sono usati gli argomenti.  
@@ -116,7 +117,7 @@ int _vswprintf_p_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni accetta un puntatore a un elenco di argomenti, quindi formatta e scrive i dati specifici nella memoria a cui punta `buffer`.  
   
- Queste funzioni differiscono da `vsprintf_s` e `vswprintf_s` solo per il fatto che supportano parametri posizionali. Per altre informazioni, vedere [Parametri posizionali printf_p](../../c-runtime-library/printf-p-positional-parameters.md).  
+ Queste funzioni differiscono da `vsprintf_s` e `vswprintf_s` solo per il fatto che supportano parametri posizionali. Per altre informazioni, vedere [printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) (Parametri posizionali printf_p).  
   
  Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
@@ -138,7 +139,7 @@ int _vswprintf_p_l(
   
  \* Richiesto per la compatibilità con UNIX V.  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

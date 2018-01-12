@@ -30,11 +30,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25023a1bfa0854d628931d5de9a852cae1d88ba5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864aacbc30d9d50e1d0335d0d74c7ed63119d132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="longjmp"></a>longjmp
 Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.  
@@ -53,7 +54,7 @@ Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.
  `env`  
  Variabile in cui è archiviato l'ambiente.  
   
- *value*  
+ *valore*  
  Valore da restituire alla chiamata di `setjmp`.  
   
 ## <a name="remarks"></a>Note  
@@ -79,7 +80,7 @@ Ripristina l'ambiente dello stack e le impostazioni locali di esecuzione.
 |-------------|---------------------|  
 |`longjmp`|\<setjmp.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

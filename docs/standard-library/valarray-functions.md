@@ -25,7 +25,7 @@ f1_keywords:
 - valarray/std::tan
 - valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -45,12 +45,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: b15c90c9346ae490e51f6b28cc508164ead395b4
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-functions"></a>Funzioni &lt;valarray&gt;
 ||||  
@@ -1221,5 +1220,4 @@ The hyperbolic tangent of the initial valarray is:
   
 ## <a name="see-also"></a>Vedere anche  
  [\<valarray>](../standard-library/valarray.md)
-
 

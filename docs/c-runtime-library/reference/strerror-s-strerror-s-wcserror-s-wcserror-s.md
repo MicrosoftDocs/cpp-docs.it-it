@@ -50,11 +50,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d14c4fd98a9191e8a92d3f24dc24c19de2433e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Ottiene un messaggio di errore di sistema (`strerror_s`, `_wcserror_s`) o stampa un messaggio di errore fornito dall'utente (`_strerror_s`, `__wcserror_s`). Queste sono versioni di [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -124,8 +125,8 @@ errno_t __wcserror_s(
   
 |`buffer`|`numberOfElements`|`strErrMsg`|Contenuto di `buffer`|  
 |--------------|------------------------|-----------------|--------------------------|  
-|`NULL`|any|any|n/d|  
-|any|0|any|non modificato|  
+|`NULL`|qualsiasi|qualsiasi|N/D|  
+|qualsiasi|0|qualsiasi|non modificato|  
   
 ## <a name="remarks"></a>Note  
  La funzione `strerror_s` esegue il mapping di `errnum` a una stringa di messaggio di errore, restituendo la stringa in `buffer`. `_strerror_s` non accetta il numero di errore, ma usa il valore corrente di `errno` per determinare il messaggio appropriato. Né `strerror_s` né `_strerror_s` stampano effettivamente il messaggio. A tale scopo, è necessario chiamare una funzione di output come [fprintf](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md):  
@@ -150,7 +151,7 @@ if (( _access( "datafile",2 )) == -1 )
   
  `_strerror_s`, `_wcserror_s`, e `__wcserror_s` non fanno parte della definizione ANSI ma sono invece le estensioni Microsoft a esso. Non utilizzarli dove si desidera la portabilità; in alternativa, utilizzare `strerror_s` per la compatibilità ANSI.  
   
- In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente, eliminando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -167,7 +168,7 @@ if (( _access( "datafile",2 )) == -1 )
 |`strerror_s`, `_strerror_s`|\<string.h>|  
 |`_wcserror_s`, `__wcserror_s`|\<string.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio relativo a [perror](../../c-runtime-library/reference/perror-wperror.md).  

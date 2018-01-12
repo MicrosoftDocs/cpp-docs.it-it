@@ -38,11 +38,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6a53a704e14c3c8f8e022398b16e002c33c8328
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53c191639222df29d8a1101d4ebfa7ea44377f48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmod-fmodf"></a>fmod, fmodf
 Calcola il resto a virgola mobile.  
@@ -86,7 +87,7 @@ float fmodf(
 |--------------|---------------------|  
 |`fmod`, `fmodf`|\<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -111,7 +112,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [fabs, fabsf, fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   

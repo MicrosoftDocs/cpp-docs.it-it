@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f46da8128325cb92b83a1d0c8503b248d38c65aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14d12c14144887df5bc3be0878e9a848dcb4de9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name=""></a>@@:
 Definisce un'etichetta di codice riconoscibile solo tra *label1* e *label2*, dove *label1* è l'inizio del codice o il precedente `@@:` etichetta e *label2* è fine del codice o successivo `@@:` etichetta. Vedere [ @B ](../../assembler/masm/at-b.md) e [ @F ](../../assembler/masm/at-f.md).  

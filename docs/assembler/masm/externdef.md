@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64aa9cc69825ef1f932024bc45c051e16c99e2eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a06378b7cf1217c01f57d7994220bfe5dd585a66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="externdef"></a>EXTERNDEF
 Definisce uno o più variabili esterne, etichette o simboli denominati *nome* il cui tipo è `type`.  

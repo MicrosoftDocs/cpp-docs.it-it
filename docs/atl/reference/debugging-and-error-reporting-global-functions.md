@@ -4,39 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- functions [ATL], error reporting
+f1_keywords:
+- atlcomcli/ATL::AtlHresultFromLastError
+- atlcom/ATL::AtlReportError
+- atldef/ATL::AtlThrow
+dev_langs: C++
+helpviewer_keywords: functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6c328c82c5e2ef5ff6f413d4eb3f1b62e2b693d8
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Debug e funzioni globali di segnalazione degli errori
 Queste funzioni forniscono utili funzionalità di debug e traccia.  
@@ -154,7 +141,7 @@ HRESULT WINAPI AtlReportError(
  [in] Il percorso e il nome del file della Guida che descrive l'errore.  
   
  `hInst`  
- [in] Handle per la risorsa. Per impostazione predefinita, questo parametro è **__AtlBaseModuleModule::GetResourceInstance**, dove **__AtlBaseModuleModule** è l'istanza globale di [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) o una classe derivata da esso.  
+ [in] Handle per la risorsa. Per impostazione predefinita, questo parametro è **__AtlBaseModuleModule::GetResourceInstance**, dove **__AtlBaseModuleModule** è l'istanza globale di [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) o una classe derivato da esso.  
   
 ### <a name="return-value"></a>Valore restituito  
  Se il `hRes` parametro è diverso da zero, restituisce il valore di `hRes`. Se `hRes` è zero, le prime quattro versioni di `AtlReportError` restituire `DISP_E_EXCEPTION`. Le due ultime versioni restituiscono il risultato della macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
@@ -163,7 +150,7 @@ HRESULT WINAPI AtlReportError(
  La stringa *lpszDesc* viene utilizzato come descrizione dell'errore. Quando il client riceve il `hRes` restituzione da `AtlReportError`, il client può accedere il **IErrorInfo** struttura per informazioni dettagliate sull'errore.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_COM #52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
 >  Non utilizzare `AtlReportError` in C++ gestori catch. Alcuni override di queste funzioni utilizzano le macro di conversione di stringhe ATL internamente, che a sua volta utilizza il `_alloca` funzione internamente. Utilizzando `AtlReportError` in un blocco catch C++ gestore può causare eccezioni nei gestori catch C++.  
@@ -198,7 +185,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
  Per i progetti ATL, è possibile fornire la propria implementazione di questa funzione può essere utilizzata da ATL in caso di errore. A tale scopo, definire una propria funzione con la stessa firma `AtlThrow` e #define `AtlThrow` sarà il nome della funzione. Questa operazione deve essere eseguita prima di includere atlexcept.h (ovvero che deve essere eseguito prima di includere le intestazioni ATL poiché atlbase. h include atlexcept.h). La funzione dell'attributo `__declspec(noreturn)` per evitare gli avvisi SAL non corretti.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[&#95; NVC_ATL_Windowing](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldef.h  
@@ -226,7 +213,6 @@ inline void AtlThrowLastWin32();
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni](../../atl/reference/atl-functions.md)   
  [Macro di debug e segnalazione errori](../../atl/reference/debugging-and-error-reporting-macros.md)
-
 
 
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,37 +37,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CSimpleStringT::StringLength
 - ATLSIMPSTR/ATL::CSimpleStringT::Truncate
 - ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, CSimpleStringT
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0b60a7b5c58c33ed4d8be67e1de603ef5f711742
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplestringt-class"></a>Classe CSimpleStringT
 Questa classe rappresenta un `CSimpleStringT` oggetto.  
@@ -470,7 +454,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```  
 #### <a name="parameters"></a>Parametri  
  `nLength`  
- La dimensione esatta del `CSimpleStringT` buffer di caratteri in caratteri.  
+ Le dimensioni esatte del `CSimpleStringT` buffer di caratteri in caratteri.  
   
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `PXSTR` puntatore al buffer di caratteri (con terminazione null) dell'oggetto.  
@@ -824,7 +808,7 @@ void Preallocate( int nLength);
 ```  
 #### <a name="parameters"></a>Parametri  
  `nLength`  
- La dimensione esatta del `CSimpleStringT` buffer di caratteri in caratteri.  
+ Le dimensioni esatte del `CSimpleStringT` buffer di caratteri in caratteri.  
   
 ### <a name="remarks"></a>Note  
  Chiamare questo metodo per allocare una determinata dimensione buffer per il `CSimpleStringT` oggetto.  

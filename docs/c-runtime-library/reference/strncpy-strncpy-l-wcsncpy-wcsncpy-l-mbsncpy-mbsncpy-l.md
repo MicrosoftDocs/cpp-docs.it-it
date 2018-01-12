@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -41,8 +40,7 @@ f1_keywords:
 - _strncpy_l
 - _mbsncpy_l
 - _wcsncpy_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcsncpy_l function
 - characters [C++], copying
@@ -70,37 +68,22 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: da3d85085d7b9dbe914acd4515252b8b4637a6dc
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dd0bd262dea70d7d78e90b4b0433166a763e4290
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 Copiare i caratteri di una stringa in un'altra. Sono disponibili versioni più sicure di queste funzioni; vedere [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md).  
   
 > [!IMPORTANT]
->  `_mbsncpy` e `_mbsncpy_l` non possono essere usati nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncpy` e `_mbsncpy_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -205,9 +188,9 @@ unsigned char *_mbsncpy_l(
   
  `wcsncpy` e `_mbsncpy` sono le versioni a caratteri wide e a caratteri multibyte di `strncpy`. Gli argomenti e i valori restituiti da `wcsncpy` e `_mbsncpy` variano di conseguenza. In alternativa queste sei funzioni si comportano in modo identico.  
   
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
- In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ queste funzioni presentano overload di modello che richiamano le relative controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -299,7 +282,7 @@ Buffer overrun: s = 'ars.' (should be 'test')
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
  [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   

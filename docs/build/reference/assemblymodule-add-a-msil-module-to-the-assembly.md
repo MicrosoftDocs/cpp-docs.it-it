@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9709a98ee6528a2081f98351126cc84529b0733b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe45bd6a3225f50e1f842c6d247aae9626302a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblymodule-add-a-msil-module-to-the-assembly"></a>/ASSEMBLYMODULE (Aggiunge un modulo MSIL all'assembly)
 ```  

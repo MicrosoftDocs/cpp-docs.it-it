@@ -1,42 +1,42 @@
 ---
-title: "Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memoria, sovrascrittura"
+title: Utilizzando la Build di Debug per un controllo per la sovrascrittura di memoria | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per utilizzare la build di debug per controllare la sovrascrittura di memoria, è necessario in primo luogo compilare nuovamente il progetto per il debug.  Spostarsi quindi all'inizio della funzione `InitInstance` dell'applicazione e aggiungere la riga seguente:  
+# <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>Utilizzo della compilazione di debug per il controllo della sovrascrittura di memoria
+Per utilizzare la build di debug per controllare la sovrascrittura di memoria, è innanzitutto necessario ricompilare il progetto per il debug. Quindi, passare all'inizio di un'applicazione `InitInstance` funzione e aggiungere la riga seguente:  
   
 ```  
 afxMemDF |= checkAlwaysMemDF;  
 ```  
   
- L'allocatore di memoria di debug inserisce byte di protezione attorno a tutte le allocazioni di memoria.  Questi byte di protezione risultano tuttavia efficaci solo nel senso che se, controllandoli, vi si riscontrano modifiche, significa che si è verificata una sovrascrittura di memoria.  In caso contrario il ricorso ai byte di protezione si limita a offrire un buffer che può consentire di limitare i danni di una sovrascrittura di memoria.  
+ L'allocatore di memoria di debug inserisce byte di protezione per tutte le allocazioni di memoria. Tuttavia, questi salvaguardarsi byte non opportuno, a meno che non si verifica se sono stati modificati (che potrebbe indicare una sovrascrittura di memoria). In caso contrario, questo fornisce solo un buffer che potrebbe, infatti, consentono di ottenere immediatamente una sovrascrittura di memoria.  
   
- Con l'attivazione di `checkAlwaysMemDF` si imposta la chiamata della funzione `AfxCheckMemory` da parte di MFC ogni volta che viene effettuata una chiamata a **new** o **delete**.  Se viene rilevata una sovrascrittura di memoria, verrà generato un messaggio TRACE del seguente tipo:  
+ Attivando il `checkAlwaysMemDF`, si forzerà MFC per effettuare una chiamata al `AfxCheckMemory` funzione ogni volta che una chiamata a **nuova** o **eliminare** viene eseguita. Se è stata rilevata una sovrascrittura di memoria, verrà generato un messaggio simile al seguente:  
   
 ```  
 Damage Occurred! Block=0x5533  
 ```  
   
- Se viene visualizzato uno di questi messaggi, è necessario eseguire il codice un'istruzione alla volta per determinare dove si è verificato il problema.  Per isolare con maggior precisione il punto in cui ha avuto luogo la sovrascrittura di memoria, è possibile effettuare personalmente chiamate esplicite a `AfxCheckMemory`.  Di seguito è riportato un esempio.  
+ Se si verifica uno di questi messaggi, è necessario esaminare il codice per determinare dove si è verificato l'errore. Per isolare in modo più preciso in cui la sovrascrittura di memoria si è verificato, è possibile effettuare chiamate esplicite a `AfxCheckMemory` manualmente. Ad esempio:  
   
 ```  
 ASSERT(AfxCheckMemory());  
@@ -44,9 +44,9 @@ ASSERT(AfxCheckMemory());
     ASSERT(AfxCheckMemory());  
 ```  
   
- Se la prima istruzione ASSERT ha esito positivo e la seconda no, significa che la sovrascrittura di memoria deve essersi verificata nella funzione tra le due chiamate.  
+ Se la prima istruzione ASSERT ha esito positivo e il secondo non riesce, significa che la sovrascrittura di memoria deve si sono verificate nella funzione tra le due chiamate.  
   
- A seconda della natura dell'applicazione, è possibile appurare che `afxMemDF` causi un'esecuzione del programma talmente lenta che non sia nemmeno possibile eseguirne il test.  La variabile `afxMemDF` fa sì che venga chiamata `AfxCheckMemory` per ciascuna chiamata di new e delete.  In questo caso,è consigliabile inserire punti opportuni per le chiamate a `AfxCheckMemory`\( \) come illustrato in precedenza e tentare di isolare la sovrascrittura di memoria in questo modo.  
+ A seconda della natura dell'applicazione, si potrebbe scoprire che `afxMemDF` comporta un'esecuzione troppo lenta per testare anche del programma. Il `afxMemDF` variabile fa `AfxCheckMemory` a essere chiamato per ogni chiamata di new e delete. In tal caso, è necessario grafico a dispersione per le chiamate a `AfxCheckMemory`() come illustrato in precedenza e provare a isolare la memoria sovrascrivere in questo modo.  
   
-## Vedere anche  
- [Correzione dei problemi della build di rilascio](../../build/reference/fixing-release-build-problems.md)
+## <a name="see-also"></a>Vedere anche  
+ [Correzione dei problemi della build di versione](../../build/reference/fixing-release-build-problems.md)

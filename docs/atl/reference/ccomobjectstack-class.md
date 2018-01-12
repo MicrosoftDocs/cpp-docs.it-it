@@ -1,11 +1,10 @@
 ---
-title: Classe CComObjectStack | Documenti di Microsoft
+title: Classe CComObjectStack | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectStack::QueryInterface
 - ATLCOM/ATL::CComObjectStack::Release
 - ATLCOM/ATL::CComObjectStack::m_hResFinalConstruct
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObjectStack class
+dev_langs: C++
+helpviewer_keywords: CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 0738eae13fdca5906596194016ce22812fbfcd36
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectstack-class"></a>Classe CComObjectStack
 Questa classe crea un oggetto COM temporaneo e fornisce un'implementazione di base di **IUnknown**.  
@@ -59,7 +42,7 @@ class CComObjectStack
   
 #### <a name="parameters"></a>Parametri  
  `Base`  
- La classe derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche da qualsiasi altra interfaccia si desidera supportare nell'oggetto.  
+ La classe, derivata da [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), come anche a causa di una qualsiasi altra interfaccia che si desidera supportare nell'oggetto.  
   
 ## <a name="members"></a>Membri  
   
@@ -82,16 +65,16 @@ class CComObjectStack
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il **HRESULT** restituito durante la costruzione di `CComObjectStack` oggetto.|  
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contiene il **HRESULT** restituito durante la costruzione del `CComObjectStack` oggetto.|  
   
 ## <a name="remarks"></a>Note  
- `CComObjectStack`viene utilizzato per creare un oggetto COM temporaneo e fornire l'oggetto un'implementazione di base di **IUnknown**. In genere, l'oggetto viene utilizzato come una variabile locale all'interno di una funzione (che viene inserita nello stack). Poiché l'oggetto viene eliminato al termine della funzione, il conteggio dei riferimenti non viene eseguita per aumentare l'efficienza.  
+ `CComObjectStack`viene utilizzato per creare un oggetto COM temporaneo e fornire l'oggetto un'implementazione di base di **IUnknown**. In genere, l'oggetto viene utilizzato come una variabile locale all'interno di una funzione (che viene inserita nello stack). Poiché l'oggetto viene eliminato quando la funzione termina, il conteggio dei riferimenti non viene eseguita per aumentare l'efficienza.  
   
- Nell'esempio seguente viene illustrato come creare un oggetto COM utilizzato in una funzione:  
+ Nell'esempio seguente viene illustrato come creare un oggetto COM utilizzato all'interno di una funzione:  
   
- [!code-cpp[NVC_ATL_COM&#42;](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]  
   
- L'oggetto temporaneo `Tempobj` viene inserito nello stack e scompare automaticamente al termine della funzione.  
+ L'oggetto temporaneo `Tempobj` viene inserito nello stack e viene rimosso automaticamente quando la funzione termina.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `Base`  
@@ -122,7 +105,7 @@ CComObjectStack(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Note  
- Chiamate `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) per il `HRESULT` restituito da `FinalConstruct`. Se non è stata derivata dalla classe base [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire `FinalConstruct` metodo. Il distruttore chiama `FinalRelease`.  
+ Chiamate `FinalConstruct` e quindi imposta [m_hResFinalConstruct](#m_hresfinalconstruct) per il `HRESULT` restituito da `FinalConstruct`. Se non è stata derivata la classe base dalla [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), è necessario fornire `FinalConstruct` metodo. Il distruttore chiama `FinalRelease`.  
   
 ##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
  Distruttore.  
@@ -135,7 +118,7 @@ CComObjectStack();
  Libera tutte le risorse allocate e chiama [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
   
 ##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
- Contiene il `HRESULT` restituito dalla chiamata `FinalConstruct` durante la costruzione di `CComObjectStack` oggetto.  
+ Contiene il `HRESULT` restituito dalla chiamata `FinalConstruct` durante la costruzione del `CComObjectStack` oggetto.  
   
 ```
 HRESULT    m_hResFinalConstruct;
@@ -173,4 +156,3 @@ STDMETHOD_(ULONG, Release)();
  [CComObject (classe)](../../atl/reference/ccomobject-class.md)   
  [Classe CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

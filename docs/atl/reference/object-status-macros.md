@@ -1,40 +1,25 @@
 ---
-title: Oggetto stato macro | Documenti di Microsoft
+title: Oggetto stato macro | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords: atlcom/ATL::DECLARE_OLEMISC_STATUS
+dev_langs: C++
 ms.assetid: 727dbef2-a342-4157-9d64-a421805d9747
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 433a816b19690f22f482f26f6ab70c73ed102673
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1139c30fa5d23f3320cef76d09fb5bd86c8c4bc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-status-macros"></a>Oggetto stato macro
 Questa macro imposta flag appartenenti ai controlli ActiveX.  
@@ -58,11 +43,10 @@ DECLARE_OLEMISC_STATUS( miscstatus )
  Tutti i flag OLEMISC.  
   
 ### <a name="remarks"></a>Note  
- Questa macro viene utilizzata per impostare i flag OLEMISC per un controllo ActiveX. Fare riferimento a [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) per ulteriori dettagli.  
+ Questa macro viene usata per impostare i flag OLEMISC per un controllo ActiveX. Fare riferimento a [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) per altri dettagli.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_Windowing&#124;](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#124](../../atl/codesnippet/cpp/object-status-macros_1.h)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Macro](../../atl/reference/atl-macros.md)
-

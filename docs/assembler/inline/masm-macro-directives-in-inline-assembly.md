@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f789df759729deb3c2b548efb008ae9a27357ab2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0df9f8584b87e511c43430a5c0df7dac61805ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Direttive macro di MASM in assembly inline
 ## <a name="microsoft-specific"></a>Sezione specifica Microsoft  

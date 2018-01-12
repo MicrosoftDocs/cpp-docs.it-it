@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _ftcslen
 - strlen
 - _mbslen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcslen function
 - string length, getting
@@ -57,36 +55,22 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b5ed3069aa637faea1a09fdfd12a98abc773f7dc
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7277a52dfbc77bb41fe0603129813ee682b4bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 Ottiene la lunghezza di una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate. Sono disponibili versioni più sicure di queste funzioni. Vedere [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md).  
   
 > [!IMPORTANT]
-> Non è possibile usare  `_mbslen`, `_mbslen_l`, `_mbstrlen` e `_mbstrlen_l` in applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare `_mbslen`, `_mbslen_l`, `_mbstrlen` e `_mbstrlen_l` in applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -138,7 +122,7 @@ size_t _mbstrlen_l(
   
  `_mbslen` e `_mbslen_l` restituiscono il numero di caratteri multibyte in una stringa a caratteri multibyte, ma non testano la validità dei caratteri multibyte. `_mbstrlen` e `_mbstrlen_l` testano la validità dei caratteri multibyte e riconoscono le sequenze di caratteri multibyte. Se la stringa passata a `_mbstrlen` o `_mbstrlen_l` contiene un carattere multibyte non valido per la tabella codici, la funzione restituirà -1 e imposterà `errno` su `EILSEQ`.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -217,7 +201,7 @@ Bytes in 'ABCァD' : 6
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   

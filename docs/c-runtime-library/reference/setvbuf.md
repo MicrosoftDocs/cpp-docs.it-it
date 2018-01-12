@@ -32,11 +32,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5020a0186399ec35fb42a0479f7466318c45c18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0855982627c60c51ec5753031ae932ffd430f024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setvbuf"></a>setvbuf
 Controlla il buffering del flusso e le dimensioni del buffer.  
@@ -92,7 +93,7 @@ int setvbuf(
 |-------------|---------------------|  
 |`setvbuf`|\<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

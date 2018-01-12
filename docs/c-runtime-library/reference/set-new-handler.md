@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_new_handler
+apiname: _set_new_handler
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 581942f828bb666606b8f176ae3e2bb3454cbf98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 Trasferisce il controllo al meccanismo di gestione degli errori se l'operatore `new` non riesce ad allocare la memoria.  
@@ -128,7 +111,7 @@ _set_new_mode(1)
 |-------------|---------------------|  
 |`_set_new_handler`|\<new.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio, quando l'allocazione ha esito negativo, il controllo viene trasferito a MyNewHandler. L'argomento passato a MyNewHandler è il numero di byte richiesto. Il valore restituito da MyNewHandler è un flag che indica se deve essere ritentata l'allocazione. Un valore diverso da zero indica che deve essere ritentata allocazione e il valore zero indica che l'allocazione non è riuscita.  

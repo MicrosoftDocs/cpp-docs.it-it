@@ -1,49 +1,32 @@
 ---
-title: Classe CAutoPtrList | Documenti di Microsoft
+title: Classe CAutoPtrList | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList
 - ATLCOLL/ATL::CAutoPtrList::CAutoPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoPtrList class
+dev_langs: C++
+helpviewer_keywords: CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: b39c3c08cf2970036bf8690c46a4f3518a7a55e1
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0887b0fdaeeaf498bacdc5eec66981656f34fed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrlist-class"></a>Classe CAutoPtrList
-Questa classe fornisce metodi utili per la creazione di un elenco di puntatori intelligenti.  
+Questa classe fornisce metodi utili durante la costruzione di un elenco di puntatori intelligenti.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -69,7 +52,7 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Costruttore.|  
   
 ## <a name="remarks"></a>Note  
- Questa classe fornisce un costruttore e deriva da metodi [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) per facilitare la creazione di un oggetto elenco archiviare i puntatori intelligenti. La classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornisce una funzione simile per un oggetto matrice.  
+ Questa classe fornisce un costruttore e metodi da deriva [CAtlList](../../atl/reference/catllist-class.md) e [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) per facilitare la creazione di un oggetto elenco archiviare i puntatori intelligenti. La classe [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) fornisce una funzione simile per un oggetto matrice.  
   
  Per ulteriori informazioni, vedere [classi Collection ATL](../../atl/atl-collection-classes.md).  
   
@@ -93,10 +76,9 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
  Dimensione del blocco, con valore predefinito è 10.  
   
 ### <a name="remarks"></a>Note  
- La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Dimensioni blocco ridurre le chiamate alle routine di allocazione della memoria, ma utilizzano più risorse.  
+ La dimensione del blocco è una misura della quantità di memoria allocata quando è necessario un nuovo elemento. Blocchi di dimensioni maggiori di ridurre ulteriormente le chiamate alle routine di allocazione di memoria, ma usano più risorse.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe CAtlList](../../atl/reference/catllist-class.md)   
  [Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

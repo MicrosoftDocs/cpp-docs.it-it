@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cab9053dbcd03e515ee73b0c06f27abe896b7a84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f853b32f22da872c918fbc60137606b651390827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 Inserisce l'ultimo carattere letto dalla console.  
@@ -94,7 +95,7 @@ wint_t _ungetwch_nolock(
 ## <a name="remarks"></a>Note  
  Queste funzioni push il carattere `c` nuovamente alla console, causando `c` sia il carattere successivo letto da `_getch` o `_getche` (o `_getwch` o `_getwche`). `_ungetch` e `_ungetwch` hanno esito negativo se vengono chiamate più volte prima della lettura successiva. L'argomento `c` non può essere `EOF` (o `WEOF`).  
   
- Le versioni con suffisso `_nolock` sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
+ Le versioni con il suffisso `_nolock` sono identiche, ad eccezione del fatto che non sono protette da interferenze da parte di altri thread. Potrebbero essere più veloci perché non comportano il sovraccarico dovuto al blocco degli altri thread. Utilizzare queste funzioni solo in contesti thread-safe come applicazioni a thread singolo o dove l'ambito chiamante già gestisce l'isolamento del thread.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -155,6 +156,6 @@ Whitetoken = White
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [I/O su console e porta](../../c-runtime-library/console-and-port-i-o.md)   
+ [Console e porta I/O](../../c-runtime-library/console-and-port-i-o.md)   
  [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
  [_getch, _getwch](../../c-runtime-library/reference/getch-getwch.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 Configura le opzioni delle impostazioni locali per thread.  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  Recupera l'impostazione corrente per questo particolare thread.  
   
- Tali funzioni influiscono sul comportamento di `setlocale`, `_tsetlocale`, e `_wsetlocale`. Quando le impostazioni locali per thread sono disabilitato, qualsiasi successiva chiamata a `setlocale` o `_wsetlocale` modifica le impostazioni locali di tutti i thread che utilizzano le impostazioni locali globali. Quando le impostazioni locali per thread sono abilitate, `setlocale` o `_wsetlocale` influiscono solo sulle impostazioni locali del thread corrente.  
+ Queste funzioni influiscono sul comportamento di `setlocale`, `_tsetlocale`, `_wsetlocale`, e `_setmbcp`. Quando le impostazioni locali per ogni thread sono disabilitato, i successivo qualsiasi chiamata a `setlocale` o `_wsetlocale` modifica le impostazioni locali di tutti i thread che utilizzano le impostazioni locali globali. Quando le impostazioni locali per thread sono abilitate, `setlocale` o `_wsetlocale` influiscono solo sulle impostazioni locali del thread corrente.  
   
  Se si utilizza `_configurethreadlocale` per abilitare le impostazioni locali per thread, è consigliabile chiamare `setlocale` o `_wsetlocale` per impostare le impostazioni locali preferite in tale thread subito dopo.  
   
@@ -215,5 +198,4 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
- [Multithreading and Locales](../../parallel/multithreading-and-locales.md) (Multithreading e impostazioni locali)  
-
+ [Multithreading e impostazioni locali](../../parallel/multithreading-and-locales.md)  

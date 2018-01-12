@@ -39,11 +39,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 377f8e19268a643b0237da66ba14a82fc7b6685b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95f508b1198cd009abe0cf82cbe9a7aaf553240f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initterm-initterme"></a>_initterm, _initterm_e
 Metodi interni che procedono a una tabella di puntatori funzione e li inizializzano.  
@@ -73,4 +74,4 @@ int __cdecl _initterm_e(
  Quando questi metodi procedono a una tabella di voci di funzioni, essi ignorano le voci `NULL` e continuano.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md) (Riferimento alfabetico alle funzioni)
+ [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

@@ -4,33 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ exception handling
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9e23f99ad4c2b2a1129fa318fe6960e1c08df21d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a6cbe3489b0d45111a527102c85e6d8c207715ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-exception-handling"></a>Gestione delle eccezioni C++
 Il linguaggio C++ fornisce supporto predefinito per la generazione e l'intercettazione delle eccezioni. Durante la programmazione in C++, è quasi sempre necessario usare il supporto predefinito delle eccezioni di C++ come descritto in questa sezione.  
   
  Per abilitare la gestione del codice delle eccezioni C++, utilizzare [/EHsc](../build/reference/eh-exception-handling-model.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  Queste indicazioni sulla gestione delle eccezioni C++ includono:  
   
 -   [Try, catch e throw istruzioni](../cpp/try-throw-and-catch-statements-cpp.md)  

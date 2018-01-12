@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs
+apiname: wcsrtombs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs
-dev_langs:
-- C++
+f1_keywords: wcsrtombs
+dev_langs: C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6dfe7e2293f9544b64a0dfd7dfaa1889e65a64dc
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 Converte una stringa di caratteri wide nella relativa rappresentazione di stringa di caratteri multibyte. È disponibile una versione più sicura di questa funzione. Vedere [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md).  
@@ -104,7 +85,7 @@ size_t wcsrtombs(
   
  Se l'argomento `mbstr` è `NULL`, `wcsrtombs` restituisce le dimensioni necessarie in byte della stringa di destinazione. Se `mbstate` è Null, viene usato lo stato di conversione interno `mbstate_t`. Se la sequenza di caratteri `wchar` non ha una rappresentazione di caratteri multibyte corrispondente, viene restituito -1 e `errno` viene impostato su `EILSEQ`.  
   
- In C++, questa funzione presenta un overload di modello che richiama la relativa controparte sicura più recente. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++, questa funzione presenta un overload di modello che richiama la relativa controparte sicura più recente. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Eccezioni  
  La funzione `wcsrtombs` è multithread-safe a condizione che nessuna funzione nel thread corrente chiami `setlocale` mentre questa funzione è in esecuzione e `mbstate` non è Null.  
@@ -162,8 +143,8 @@ The string was successfuly converted.
 |`wcsrtombs`|\<wchar.h>|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
  [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   

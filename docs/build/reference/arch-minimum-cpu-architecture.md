@@ -20,11 +20,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0677ca5b2eaf10b753f129078c96aacc11326eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25aa27e65c6cd9b7a928ac7d6ba65b079b3b811f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (Architettura minima della CPU)
 Le opzioni dell'architettura specificano l'architettura per la generazione di codice. Selezionare l'architettura hardware di base che si utilizza per visualizzare le opzioni /arch per quella piattaforma di destinazione.  

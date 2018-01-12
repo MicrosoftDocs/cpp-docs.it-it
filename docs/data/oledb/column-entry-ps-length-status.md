@@ -1,32 +1,33 @@
 ---
-title: "COLUMN_ENTRY_PS_LENGTH_STATUS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_PS_LENGTH_STATUS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_PS_LENGTH_STATUS (macro)"
+title: COLUMN_ENTRY_PS_LENGTH_STATUS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_PS_LENGTH_STATUS
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_PS_LENGTH_STATUS macro
 ms.assetid: 04291671-329d-4974-b04e-36ef3f037787
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 057ff3f0ff621c70331f5baf43b141e50aa1156d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_ENTRY_PS_LENGTH_STATUS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="columnentrypslengthstatus"></a>COLUMN_ENTRY_PS_LENGTH_STATUS
 Rappresenta un'associazione sul rowset alla colonna specifica nel database.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -46,52 +47,52 @@ status
   
 ```  
   
-#### Parametri  
- Vedere [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) nel *riferimento di programmatore OLE DB*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) nel *di riferimento per programmatori OLE DB*.  
   
  `nOrdinal`  
- \[in\] Numero della colonna.  
+ [in] Numero di colonna.  
   
  `nPrecision`  
- \[in\] La precisione massima della colonna che si desidera associare.  
+ [in] Precisione massima della colonna che si desidera associare.  
   
  `nScale`  
- \[in\] La scala della colonna che si desidera associare.  
+ [in] Scala della colonna che si desidera associare.  
   
  `data`  
- \[in\] Membro dati corrispondente nel record utente.  
+ [in] Membro dati corrispondente nel record utente.  
   
  *length*  
- \[in\] La variabile da associare alla lunghezza della colonna.  
+ [in] Variabile da associare alla lunghezza della colonna.  
   
  *status*  
- \[in\] La variabile da associare allo stato della colonna.  
+ [in] Variabile da associare allo stato della colonna.  
   
-## Note  
- Consente di specificare la precisione e la scala della colonna che si desidera associare.  Utilizzare questa macro quando si desidera supportare le variabili di stato e di lunghezza.  Viene utilizzata nei seguenti posti:  
+## <a name="remarks"></a>Note  
+ Consente di specificare la precisione e la scala della colonna che si desidera associare. Utilizzare questa macro quando si desidera supportare le variabili di stato e di lunghezza. Viene utilizzata nelle seguenti posizioni:  
   
--   Tra le macro [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) e [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md).  
+-   Tra le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) e [END_COLUMN_MAP](../../data/oledb/end-column-map.md) macro.  
   
--   Tra le macro [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) e [END\_ACCESSOR](../../data/oledb/end-accessor.md).  
+-   Tra le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macro.  
   
--   Tra le macro [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) e [END\_PARAM\_MAP](../../data/oledb/end-param-map.md).  
+-   Tra le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) e [END_PARAM_MAP](../../data/oledb/end-param-map.md) macro.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Macro e funzioni globali per modelli consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)   
- [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro e funzioni globali per modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)   
+ [COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

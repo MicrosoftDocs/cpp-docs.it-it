@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2061f887c9f0b391e05ed0c3d2cf3e3c2a5434e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a1a6fd82a042ab29ad9216746dcabce9e9ed15f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-functions"></a>Funzioni virtuali
 Una funzione virtuale è una funzione membro che si prevede venga ridefinita nelle classi derivate. Quando si fa riferimento a un oggetto della classe derivata usando un puntatore o un riferimento alla classe base, è possibile chiamare una funzione virtuale per quell'oggetto ed eseguire la versione della classe derivata della funzione.  

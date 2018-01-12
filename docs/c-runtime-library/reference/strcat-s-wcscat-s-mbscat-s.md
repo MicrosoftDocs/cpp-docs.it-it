@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 37cb584538c51844cbd23eb0853ef48f548600ca
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 Aggiunge una stringa. Queste versioni di [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) includono miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,8 +107,8 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Valore restituito|Contenuto di `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` o senza terminazione|any|qualsiasi|`EINVAL`|non modificato|  
-|any|qualsiasi|`NULL`|`EINVAL`|`strDestination`[0] impostato su 0|  
+|`NULL` o senza terminazione|qualsiasi|qualsiasi|`EINVAL`|non modificato|  
+|qualsiasi|qualsiasi|`NULL`|`EINVAL`|`strDestination`[0] impostato su 0|  
 |qualsiasi|0 o troppo piccolo|qualsiasi|`ERANGE`|`strDestination`[0] impostato su 0|  
   
 ## <a name="remarks"></a>Note  
@@ -143,7 +127,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  Se `strDestination` è un puntatore Null o non ha terminazione Null oppure se `strSource` è un puntatore `NULL` oppure se la stringa di destinazione è troppo piccola, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `EINVAL` e impostano `errno` su `EINVAL`.  
   
- In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'utilizzo di queste funzioni è semplificato dagli overload dei modelli. Gli overload possono dedurre la lunghezza del buffer automaticamente (eliminando la necessità di specificare un argomento di dimensione) e possono sostituire automaticamente le funzioni precedenti e non sicure con le controparti più recenti e sicure. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di queste funzioni riempiono innanzitutto il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

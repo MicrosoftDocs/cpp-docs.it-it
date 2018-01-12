@@ -42,11 +42,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a75cc474d66a42f3faeb7444f3168c7cc3283514
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 Divide un valore a virgola mobile in parte frazionaria e parte intera.  
@@ -89,7 +90,7 @@ long double modfl(
 ## <a name="remarks"></a>Note  
  La funzione `modf` suddivide il valore a virgola mobile `x` nelle parti frazionaria e intera, ognuna delle quali ha lo stesso segno di `x`. Viene restituita la parte frazionaria con segno di `x`. La parte intera viene archiviata come valore a virgola mobile in `intptr.`  
   
- `modf` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md) per informazioni e le restrizioni sull'uso dell'implementazione SSE2.  
+ `modf` ha un'implementazione che usa Streaming SIMD Extensions 2 (SSE2). Per informazioni e per le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
  C++ consente l'overload, quindi è possibile chiamare overload di `modf` che accettino e restituiscano i parametri `float` e `long double`. In un programma C `modf` accetta sempre due valori double e restituisce un valore double.  
   
@@ -99,7 +100,7 @@ long double modfl(
 |-------------|---------------------|  
 |`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++:, \<cmath> o \<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  
@@ -131,6 +132,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

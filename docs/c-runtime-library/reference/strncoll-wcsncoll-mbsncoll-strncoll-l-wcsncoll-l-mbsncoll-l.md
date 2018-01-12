@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -69,36 +67,22 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d9498ca8aaab36e7443488a1c98b70ad4b7604d5
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 Le stringhe vengono confrontate usando informazioni specifiche delle impostazioni locali.  
   
 > [!IMPORTANT]
->  `_mbsncoll` e `_mbsncoll_l` non possono essere usati nelle applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsncoll` e `_mbsncoll_l` non possono essere usati nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -160,7 +144,7 @@ int _mbsncoll_l(
  Ognuna di queste funzioni restituisce `_NLSCMPERROR`. Per usare `_NLSCMPERROR`, includere STRING.h o MBSTRING.h. `_wcsncoll` può non riuscire se `string1` o `string2` contiene codici a caratteri wide che sono al di fuori del dominio della sequenza di ordinamento. Quando si verifica un errore, `_wcsncoll` può impostare `errno` su `EINVAL`. Per verificare un errore in una chiamata a `_wcsncoll`, impostare `errno` su 0 e quindi verificare `errno` dopo aver chiamato `_wcsncoll`.  
   
 ## <a name="remarks"></a>Note  
- Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole dei primi caratteri `count` in `string1` e `string2` in base alla tabella codici correntemente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. L'ordine del set di caratteri è dipendente dalle impostazioni locali. Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti, ma le versioni che hanno il suffisso `_l` usano le impostazioni locali che vengono passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole dei primi caratteri `count` in `string1` e `string2` in base alla tabella codici correntemente in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe. L'ordine del set di caratteri è dipendente dalle impostazioni locali. Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti, ma le versioni che hanno il suffisso `_l` usano le impostazioni locali che vengono passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Tutte queste funzioni convalidano i relativi parametri. Se `string1` o `string2` è un puntatore Null o se `count` è maggiore di `INT_MAX`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`.  
   
@@ -182,7 +166,7 @@ int _mbsncoll_l(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   

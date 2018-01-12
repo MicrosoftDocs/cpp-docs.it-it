@@ -4,48 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.provider.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Creazione guidata provider OLE DB ATL
 Questa procedura guidata crea le classi che compongono un provider OLE DB.  
   
 ## <a name="remarks"></a>Note  
- A partire da [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM in **HKEY_CURRENT_USER** anziché **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della procedura guidata ATL.  
+ A partire da Visual Studio 2008, lo script di registrazione prodotto da questa procedura guidata registrerà i componenti COM in **HKEY_CURRENT_USER** anziché **HKEY_LOCAL_MACHINE**. Per modificare questo comportamento, impostare il **Registra componente per tutti gli utenti** opzione della procedura guidata ATL.  
   
  Nella tabella seguente vengono descritte le opzioni per la creazione guidata Provider OLE DB ATL:  
   
@@ -95,5 +78,4 @@ Questa procedura guidata crea le classi che compongono un provider OLE DB.
   
 ## <a name="see-also"></a>Vedere anche  
  [Provider OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
-
 

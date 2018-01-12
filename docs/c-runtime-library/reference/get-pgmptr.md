@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_pgmptr
+apiname: _get_pgmptr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - get_pgmptr
 - _get_pgmptr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - get_pgmptr function
 - _get_pgmptr function
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 962d6198a9daeeca0a79a814da11d1d60438d18f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: cb47626c825adb6560ffbe98e4456ab60afb609a
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
 Ottiene il valore corrente della variabile globale `_pgmptr`.  

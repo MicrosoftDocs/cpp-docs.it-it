@@ -42,11 +42,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab09d3e189ea4c1990be25f2982a949d95a68359
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1daa54589ad1332f2cb85f7cc6fe03aa58d07a18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 Calcola l'arcocoseno.  
@@ -76,14 +77,14 @@ long double acosl(
  Valore compreso tra -1 e 1, per cui si desidera calcolare l'arcocoseno (il coseno inverso).  
   
 ## <a name="return-value"></a>Valore restituito  
- La funzione `acos` restituisce l'arcocoseno di `x` compreso tra 0 e π radianti.  
+ Il `acos` funzione restituisce l'arcocoseno di `x` nell'intervallo da 0 a radianti π.  
   
  Per impostazione predefinita, se `x` è minore di -1 o maggiore di 1, `acos` restituisce un valore indefinito.  
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
 |± ∞|`INVALID`|`_DOMAIN`|  
-|± QNAN,IND|nessuno|`_DOMAIN`|  
+|± QNAN,IND|none|`_DOMAIN`|  
 |&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Note  
@@ -145,7 +146,7 @@ Arccosine of 0.000000 = 1.570796
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos, cosf, cosl, cosh, coshf, coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   

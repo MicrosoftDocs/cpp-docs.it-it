@@ -1,41 +1,41 @@
 ---
-title: "/DISASM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/disasm"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DISASM (opzione dumpbin)"
-  - "DISASM (opzione dumpbin)"
-  - "-DISASM (opzione dumpbin)"
+title: -DISASM | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /disasm
+dev_langs: C++
+helpviewer_keywords:
+- -DISASM dumpbin option
+- DISASM dumpbin option
+- /DISASM dumpbin option
 ms.assetid: 5f6d1fde-50ce-486d-9c1d-9372b7f7b533
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4d55bf94f5316ebd70a13d73d042a46e1cd012d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /DISASM
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="disasm"></a>/DISASM
 ```  
 /DISASM  
 ```  
   
-## Note  
- Questa opzione consente di visualizzare il disassembly di sezioni di codice, utilizzando i simboli presenti nel file, se disponibili.  
+## <a name="remarks"></a>Note  
+ Questa opzione Visualizza disassembly di sezioni di codice, tramite simboli, se presente nel file.  
   
- L'opzione \/DISASM deve essere utilizzata solo in immagini native \(non gestite\).  
+ /DISASM deve essere utilizzato solo nelle immagini (non gestite) native.  
   
- L'unica opzione di DUMPBIN utilizzabile sui file generati con l'opzione del compilatore [\/GL](../../build/reference/gl-whole-program-optimization.md) è [\/HEADERS](../../build/reference/headers.md).  
+ Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

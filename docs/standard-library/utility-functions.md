@@ -13,7 +13,7 @@ f1_keywords:
 - utility/std::move
 - utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::exchange [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: d2b444c2de41651ac74047717ed54a7059866f86
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltutilitygt-functions"></a>Funzioni &lt;utility&gt;
 ||||  
@@ -296,7 +295,6 @@ void swap(pair<T, U>& left, pair<T, U>& right);
   
 ## <a name="see-also"></a>Vedere anche  
  [\<utility>](../standard-library/utility.md)
-
 
 
 

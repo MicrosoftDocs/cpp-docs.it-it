@@ -1,42 +1,43 @@
 ---
-title: "Causa della possibile perdita di precisione dei numeri a virgola mobile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DBL_EPSILON (costante)"
-  - "numeri a virgola mobile, precisione"
-  - "FLT_EPSILON (costante)"
+title: Motivo per cui i numeri a virgola mobile con perdita di precisione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DBL_EPSILON constant
+- FLT_EPSILON constant
+- floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Causa della possibile perdita di precisione dei numeri a virgola mobile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I valori decimali a virgola mobile in genere non hanno una rappresentazione binaria esatta  a causa del tipo di rappresentazione dei dati a virgola mobile da parte della CPU.  Per questo motivo è possibile che si verifichi una perdita di precisione e che alcune operazioni a virgola mobile generino risultati imprevisti.  
+# <a name="why-floating-point-numbers-may-lose-precision"></a>Causa della possibile perdita di precisione dei numeri a virgola mobile
+I valori decimali a virgola mobile in genere non sono una rappresentazione binaria esatta. Questo è un effetto collaterale del modo in cui la CPU rappresenta i dati a virgola mobile. Per questo motivo, si verifichi una perdita di precisione e alcune operazioni a virgola mobile possono produrre risultati imprevisti.  
   
- Questo risultato è la conseguenza di una delle seguenti possibili cause:  
+ Questo comportamento è il risultato di una delle operazioni seguenti:  
   
--   La rappresentazione binaria del numero decimale non è esatta.  
+-   La rappresentazione binaria del numero decimale potrebbe non essere esatto.  
   
--   I tipi di numeri utilizzati non corrispondono, ad esempio sono stati utilizzati sia valori di tipo float che double.  
+-   È un tipo non corrispondente tra i numeri utilizzati (ad esempio, combinazione float e double).  
   
- Per risolvere il problema, molti programmatori assicurano che il valore sia maggiore o minore del valore necessario oppure utilizzano una libreria BCD \(Binary Coded Decimal\) per garantire la precisione.  
+ Per risolvere il problema, oppure la maggior parte dei programmatori, che verificare che il valore è maggiore o minore di cosa è necessario ottenere e utilizzare una libreria Binary Coded Decimal (BCD) che manterrà la precisione.  
   
- La rappresentazione binaria di valori a virgola mobile influisce sulla precisione e sull'accuratezza dei calcoli con virgola mobile.  In Microsoft Visual C\+\+ viene utilizzato il [formato a virgola mobile IEEE](../../build/reference/ieee-floating-point-representation.md).  
+ Rappresentazione binaria di valori a virgola mobile influisce sulla precisione e accuratezza dei calcoli a virgola mobile. Microsoft Visual C++ utilizza [formato a virgola mobile IEEE](../../build/reference/ieee-floating-point-representation.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // Floating-point_number_precision.c  
@@ -63,9 +64,12 @@ int main() {
 }  
 ```  
   
-  **Tali elementi non sono uguali.  Il valore di c è 2,4679999352 o 2,468000**    
-## Commenti  
- Per EPSILON è possibile utilizzare la costante FLT\_EPSILON che per i valori float corrisponde a 1,192092896e\-07F oppure la costante DBL\_EPSILON che per i valori double corrisponde a 2,2204460492503131e\-016.  Per queste costanti è necessario includere float.h.  Queste costanti sono definite come il più piccolo numero x positivo, in modo che x\+1,0 non sia uguale a 1,0.  Dal momento che si tratta di un numero molto piccolo, per i calcoli che comprendono numeri molto grandi è consigliabile utilizzare una tolleranza definita dall'utente.  
+```Output  
+They are not equal! The value of c is  2.4679999352 or 2.468000  
+```  
   
-## Vedere anche  
+## <a name="comments"></a>Commenti  
+ Per EPSILON, è possibile utilizzare le costanti FLT_EPSILON, definita per float come 1.192092896e-07F, o DBL_EPSILON, definita per la doppia come 2, 2204460492503131e-016. È necessario includere float. h per queste costanti. Queste costanti sono definite come positivo più piccolo maggiore numero x, tale che x + 1.0 non è uguale a 1.0. Poiché si tratta di un numero molto piccolo, è consigliabile utilizzare tolleranza definita dall'utente per i calcoli che interessano un numero molto elevato.  
+  
+## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

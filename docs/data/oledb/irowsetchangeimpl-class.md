@@ -1,36 +1,39 @@
 ---
-title: "Classe IRowsetChangeImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetChangeImpl"
-  - "IRowsetChangeImpl"
-  - "ATL.IRowsetChangeImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetChangeImpl (classe)"
-  - "provider, aggiornabile"
-  - "provider aggiornabili, aggiornamento immediato"
+title: Classe IRowsetChangeImpl | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetChangeImpl
+- IRowsetChangeImpl
+- ATL.IRowsetChangeImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, updatable
+- updatable providers, immediate update
+- IRowsetChangeImpl class
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe IRowsetChangeImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'implementazione dei modelli OLE DB dell'interfaccia [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) nella specifica OLE DB.  
+# <a name="irowsetchangeimpl-class"></a>Classe IRowsetChangeImpl
+L'implementazione di modelli OLE DB del [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfaccia nella specifica OLE DB.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -43,57 +46,57 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Una classe deriva da `IRowsetChangeImpl`.  
+ Una classe derivata da `IRowsetChangeImpl`.  
   
  `Storage`  
- Record utente  
+ Record utente.  
   
  `BaseInterface`  
- La classe di base per l'interfaccia, come ad esempio `IRowsetChange`.  
+ La classe di base per l'interfaccia, ad esempio `IRowsetChange`.  
   
  `RowClass`  
- L'unità di archiviazione per il punto di controllo della riga.  
+ L'unità di archiviazione per l'handle di riga.  
   
  `MapClass`  
- L'unità di archiviazione per tutti i punti di controllo della riga utilizzati dal provider.  
+ L'unità di archiviazione per tutti gli handle di riga mantenuti dal provider.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi di interfaccia \(utilizzato con IRowsetChange\)  
-  
-|||  
-|-|-|  
-|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Righe eliminate dal rowset.|  
-|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Inserisce una riga nel rowset.|  
-|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Imposta in una riga i valori dei dati contenuti in una o più colonne.|  
-  
-### Metodo di implementazione \(callback\)  
+### <a name="interface-methods-used-with-irowsetchange"></a>Metodi di interfaccia (utilizzati con IRowsetChange)  
   
 |||  
 |-|-|  
-|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Overidden dal provider per eseguire il commit dei dati sull'archivio.|  
+|[DeleteRows](../../data/oledb/irowsetchangeimpl-deleterows.md)|Elimina le righe dal set di righe.|  
+|[InsertRow](../../data/oledb/irowsetchangeimpl-insertrow.md)|Inserisce una riga nel set di righe.|  
+|[SetData](../../data/oledb/irowsetchangeimpl-setdata.md)|Imposta i valori dei dati in una o più colonne.|  
   
-## Note  
- Questa interfaccia è responsabile dell'operazioni di lettura immediata da un archivio dati. "Immediato" indica che quando l'utente finale \(la persona consumatore\) effettua le modifiche, tali modifiche vengono immediatamente trasmesse all'archivio dati \(e non possono essere annullate\).  
+### <a name="implementation-method-callback"></a>Metodo di implementazione (Callback)  
   
- `IRowsetChangeImpl` implementa l'interfaccia OLE DB `IRowsetChange`, che consente l'aggiornamento dei valori delle colonne nelle righe esistenti e l'inserimento di nuove righe.  
+|||  
+|-|-|  
+|[FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)|Sottoposto a override dal provider per eseguire il commit nell'archivio dati.|  
   
- L'implementazione dei modelli OLE DB supporta tutti i metodi di base \(`SetData`, `InsertRow` e `DeleteRows`\).  
+## <a name="remarks"></a>Note  
+ Questa interfaccia è responsabile per le operazioni di scrittura immediata in un archivio dati. "Immediato" significa che quando l'utente finale (l'utente che utilizza il consumer) qualsiasi modifica, tali modifiche vengono immediatamente trasmesse ai dati di archiviarla e non può essere annullata.  
+  
+ `IRowsetChangeImpl`implementa OLE DB `IRowsetChange` interfaccia che consente l'aggiornamento dei valori delle colonne in righe esistenti, l'eliminazione di righe e inserendo nuove righe.  
+  
+ L'implementazione di modelli OLE DB supporta tutti i metodi di base (`SetData`, `InsertRow`, e `DeleteRows`).  
   
 > [!IMPORTANT]
->  Si consiglia di leggere la documentazione seguente PRIMA di tentare di implementare il provider:  
+>  È consigliabile leggere la documentazione seguente prima di tentare di implementare un provider:  
   
 -   [Creazione di un provider aggiornabile](../../data/oledb/creating-an-updatable-provider.md)  
   
--   Capitolo 6 di *OLE DB Programmer's Reference*  
+-   Capitolo 6 il *di riferimento per programmatori OLE DB*  
   
--   Vedere anche come la classe `RUpdateRowset` viene utilizzata nell'esempio UpdatePV  
+-   Vedere anche la `RUpdateRowset` classe viene utilizzata nell'esempio UpdatePV  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

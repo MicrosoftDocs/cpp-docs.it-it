@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7de79303e414691df7b069b55b82b2ba39f6ea1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 Elabora chiamata [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzato con altre funzioni nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.  

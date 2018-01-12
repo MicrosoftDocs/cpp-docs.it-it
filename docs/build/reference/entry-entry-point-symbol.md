@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6daafeba4376cdab679d7e93dce0605fae97a98e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (Simbolo del punto di ingresso)
 ```  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  Per impostazione predefinita, l'indirizzo iniziale è il nome di una funzione della libreria di runtime C. Il linker viene selezionata in base agli attributi del programma, come illustrato nella tabella seguente.  
   
-|Nome della funzione|Impostazione predefinita per|  
+|Nome funzione|Impostazione predefinita per|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (o **wmainCRTStartup**)|Un'applicazione che utilizza /SUBSYSTEM; chiamate `main` (o `wmain`)|  
 |**WinMainCRTStartup** (o **wWinMainCRTStartup**)|Un'applicazione che utilizza /SUBSYSTEM:**WINDOWS**; chiamate `WinMain` (o `wWinMain`), che deve essere definito da utilizzare`__stdcall`|  

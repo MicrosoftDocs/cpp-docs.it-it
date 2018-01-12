@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2ffa9ed5a25417cfcf46c5b47b55b3eecc2fe27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69d3837cc0996c0e0e0784214cfbfa6744afbf94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Creazione guidata componente ASP ATL
 Utilizzare questa pagina della finestra attiva Server pagina Creazione guidata componente ATL per specificare impostazioni facoltative per la gestione delle informazioni e lo stato correlato al componente di ASP.  

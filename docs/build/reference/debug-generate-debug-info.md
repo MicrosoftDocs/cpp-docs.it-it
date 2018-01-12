@@ -1,74 +1,84 @@
 ---
-title: "/DEBUG (Genera informazioni di debug) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateDebugInformation"
-  - "/debug"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pdb (file), generazione di informazioni di debug"
-  - "/DEBUG (opzione del linker)"
-  - "DEBUG (opzione del linker)"
-  - "-DEBUG (opzione del linker)"
-  - "debug [C++], file di informazioni di debug"
-  - "debug [C++], opzione del linker"
-  - "Genera informazioni di debug (opzione del linker)"
-  - "PDB (file)"
-  - "pdb (file), generazione di informazioni di debug"
-  - "database di programma [C++]"
+title: -DEBUG (genera informazioni di Debug) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateDebugInformation
+- /debug
+dev_langs: C++
+helpviewer_keywords:
+- DEBUG linker option
+- /DEBUG linker option
+- -DEBUG linker option
+- PDB files
+- debugging [C++], debug information files
+- generate debug info linker option
+- pdb files, generating debug info
+- .pdb files, generating debug info
+- debugging [C++], linker option
+- program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f9f424a2e71a3094c9e633cbe5779ef5d75fbe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /DEBUG (Genera informazioni di debug)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="debug-generate-debug-info"></a>/DEBUG (Genera informazioni di debug)
+```  
+/DEBUG[:{FASTLINK|FULL|NONE}]  
+```  
+  
+## <a name="remarks"></a>Note  
 
-```  
-/DEBUG  
-```  
+Il **/debug** opzione Crea informazioni di debug per il file eseguibile.    
   
-## Note  
- L'opzione \/DEBUG crea informazioni di debug per il file con estensione exe o DLL.  
+Il linker inserisce le informazioni di debug in un file di programma (PDB) di database. Aggiorna il file PDB durante le compilazioni successive del programma.  
   
- Le informazioni di debug vengono inserite in un database di programma \(PDB\).  Il file PDB viene aggiornato durante le compilazioni successive del programma.  
+Un file eseguibile (file .exe o DLL) creato per il debug contiene il nome e percorso del file PDB corrispondente. Il debugger legge il nome incorporato e utilizza il file PDB quando si esegue il debug del programma. Il linker Usa il nome di base del programma e l'estensione PDB per assegnare un nome di database di programma e incorpora il percorso in cui è stato creato. Per eseguire l'override di questa impostazione predefinita, impostare [/PDB](../../build/reference/pdb-use-program-database.md) e specificare un nome di file diverso.  
+
+Il **/debug: fastlink** opzione lascia le informazioni sui simboli privati nei prodotti singoli compilazione utilizzati per compilare l'eseguibile. Genera un file PDB limitato che indicizza nelle informazioni di debug nel file oggetto e librerie utilizzate per compilare l'eseguibile anziché eseguire una copia completa. Questa opzione è possibile collegare da due a quattro tempi di generazione del file PDB completa e viene consigliata quando si esegue il debug in locale e i prodotti di compilazione disponibili. Questo PDB limitato non può essere usato per il debug quando i prodotti di compilazione necessario non sono disponibili, ad esempio quando il file eseguibile viene distribuito in un altro computer. In un prompt dei comandi per sviluppatori, è possibile utilizzare lo strumento mspdbcmf.exe per generare un file PDB completo da questo PDB limitato. In Visual Studio, è possibile utilizzare le voci di menu progetto o di compilazione per la generazione di un file PDB completo per creare un file PDB completo per il progetto o soluzione.  
   
- Un file exe o una DLL creata per il debug contiene il nome e il percorso del file PDB corrispondente.  Durante il debug del programma viene automaticamente letto il nome incorporato e utilizzato il file PDB indicato.  Nel linker viene utilizzato il nome di base del programma e l'estensione PDB per assegnare un nome al database di programma e viene incorporato il percorso in cui è stato creato.  Per eseguire l'override di questa impostazione predefinita, impostare [\/PDB](../../build/reference/pdb-use-program-database.md) e specificare un nome file differente.  
+Il **/debug: full** opzione Sposta tutte le informazioni relative al simbolo privato da prodotti singoli compilazione (file oggetto e librerie) in un PDB singolo e può essere la parte più lunga del collegamento. Tuttavia, il file PDB completo consente di eseguire il debug dell'eseguibile quando altri prodotti di compilazione non sono disponibili, ad esempio quando viene distribuito il file eseguibile.  
   
- L'opzione [Solo numeri di riga](../../build/reference/z7-zi-zi-debug-information-format.md) \(\/Zd\) o [Compatibile C7](../../build/reference/z7-zi-zi-debug-information-format.md) \(\/Z7\) fa sì che in fase di compilazione vengano lasciate le informazioni di debug nei file obj.  È inoltre possibile utilizzare l'opzione del compilatore [Database di programma](../../build/reference/z7-zi-zi-debug-information-format.md) \(\/Zi\) per archiviare le informazioni di debug in un file PDB per il file obj.  Il file PDB dell'oggetto viene cercato nel percorso assoluto scritto nel file obj, quindi nella directory contenente il file obj.  Non è possibile specificare al linker il nome file PDB di un oggetto o la posizione.  
+Il **/debug: nessuna** opzione consente di generare un file PDB.  
   
- [\/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) è implicito quando si specifica DEBUG.  
+Quando si specifica **/debug** senza ulteriori opzioni, impostazione predefinita il linker **/debug: full** per la riga di comando e le compilazioni makefile compilazioni per il rilascio nell'IDE di Visual Studio e di debug e di rilascio Compila in Visual Studio 2015 e versioni precedenti. A partire da Visual Studio 2017, il sistema di compilazione nell'IDE per impostazione predefinita **/debug: fastlink** quando si specifica il **/debug** opzione per le build di debug. Altre impostazioni predefinite sono rimasti invariate per mantenere la compatibilità con le versioni precedenti.  
   
- \/DEBUG modifica i valori predefiniti per l'opzione [\/OPT](../../build/reference/opt-optimizations.md) da REF a NOREF e da ICF a NOICF. È quindi necessario specificare in modo esplicito \/OPT:REF o \/OPT:ICF.  
+Il compilatore [compatibile C7](../../build/reference/z7-zi-zi-debug-information-format.md) (/ Z7) opzione, il compilatore lasciare le informazioni di debug nel file obj. È inoltre possibile utilizzare il [Database di programma](../../build/reference/z7-zi-zi-debug-information-format.md) opzione del compilatore (/Zi) per archiviare le informazioni di debug in un file PDB per il file con estensione obj. Il linker Cerca file PDB dell'oggetto prima di tutto il percorso assoluto scritto nel file obj, e quindi nella directory che contiene il file con estensione obj. È possibile specificare il nome del file PDB o percorso in cui il linker di un oggetto.  
   
- Per ulteriori informazioni sui file PDB e DBG, consultare l'articolo della Knowledge Base Q121366, INFO: PDB and DBG Files \- What They Are and How They Work.  Gli articoli della Knowledge Base sono disponibili nella MSDN Library, o all'indirizzo [http:\/\/support.microsoft.com](http://support.microsoft.com/).  
+[/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) è implicito quando si specifica.  
   
- Non è possibile creare un file exe o dll contenente informazioni di debug,  che sono sempre inserite in un file pdb.  
+/DEBUG Modifica le impostazioni predefinite per il [/OPT](../../build/reference/opt-optimizations.md) opzione da REF a NOREF e da ICF a NOICF, pertanto se si desidera default originali, è necessario specificare in modo esplicito /OPT: ref o /OPT: ICF.  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+Non è possibile creare un .exe o una DLL che contiene le informazioni di debug. Eseguire il debug informazioni viene sempre inserite in un file con estensione obj o con estensione pdb.  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-2.  Selezionare la cartella **Linker**.  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-3.  Fare clic sulla pagina delle proprietà **Debug**.  
+2.  Fare clic su di **Linker** cartella.  
   
-4.  Modificare la proprietà **Genera informazioni di debug**.  
+3.  Fare clic su di **debug** pagina delle proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+4.  Modificare il **genera informazioni di Debug** proprietà per abilitare la generazione di file PDB. In questo modo /debug: fastlink per impostazione predefinita in Visual Studio 2017.  
+  
+4.  Modificare il **genera File di Database di programma completo** proprietà per abilitare /debug: full per la generazione di file PDB completa per ogni compilazione incrementale.  
+  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 1.  Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

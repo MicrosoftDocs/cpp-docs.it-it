@@ -19,16 +19,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d81cd7e569cd2baa8ab50b1904fa3ac15b36d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>thread
 
 **Sezione specifica Microsoft**  
-Il **thread** modificatore di classe di archiviazione estesi viene utilizzato per dichiarare una variabile locale di thread. Per il computer portatile equivalente in C++ 11 e versioni successivo, utilizzare il [thread_local](../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione.
+Il **thread** modificatore di classe di archiviazione estesi viene utilizzato per dichiarare una variabile locale di thread. Per il computer portatile equivalente in C++ 11 e versioni successivo, utilizzare il [thread_local](../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione per codice portabile. In Windows **thread_local** è implementato con **declspec**.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -46,13 +47,18 @@ Le dichiarazioni di variabili thread-local devono usare [sintassi degli attribut
 __declspec( thread ) int tls_i = 1;  
 ```
 
-È necessario tenere presenti queste linee guida quando si dichiarano gli oggetti e le variabili thread-local:
+Quando si utilizzano variabili di thread locali delle librerie a caricamento dinamico, è necessario tenere in considerazione i fattori che possono causare una variabile locale di thread non venga inizializzato correttamente:
+
+1) Se la variabile viene inizializzata con una chiamata di funzione (inclusi i costruttori), questa funzione verrà chiamata solo per il thread che ha causato il binario/DLL da caricare nel processo e per tali thread avviati dopo che è stata caricata il file binario o DLL. Le funzioni di inizializzazione non vengono chiamate per qualsiasi altro thread che era già in esecuzione quando la DLL è stata caricata. L'inizializzazione dinamica avviene la chiamata di funzione DllMain per DLL_THREAD_ATTACH, ma la DLL mai Ottiene se la DLL non è nel processo quando il thread inizia da messaggi. 
+
+2) Le variabili locali del thread che vengono inizializzate in modo statico con valori costanti vengono in genere inizializzate correttamente in tutti i thread. Tuttavia, a partire da dicembre 2017 è un problema noto di conformità del compilatore Microsoft C++ con i quali le variabili constexpr ricevano dinamica anziché l'inizializzazione statica.  
+  
+   Nota: Entrambi questi problemi devono essere corretti in futuro gli aggiornamenti del compilatore.
+
+
+Inoltre, è necessario rispettare queste linee guida quando si dichiarano variabili e oggetti thread-local:
 
 - È possibile applicare il **thread** attributo solo alla classe e le dichiarazioni di dati e definizioni. **thread** non può essere utilizzato in definizioni o dichiarazioni di funzione.
-
-- L'utilizzo del **thread** attributo può interferire con [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni delle DLL.
-
-- Nei sistemi XP **thread** potrebbe non funzionare correttamente se una DLL Usa dati declspec e viene caricata dinamicamente tramite LoadLibrary.
 
 - È possibile specificare il **thread** attributo solo per elementi di dati con durata di archiviazione statica. Inclusi gli oggetti dati globali (sia **statico** e **extern**), gli oggetti statici locali e i membri dati statici delle classi. È possibile dichiarare oggetti dati automatici con il **thread** attributo.
 
@@ -77,7 +83,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- Il linguaggio C standard consente di inizializzare un oggetto o una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti con estensione non statica. Sebbene il linguaggio C++ consenta in genere l'inizializzazione dinamica di un oggetto con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con gli oggetti locali di thread. Ad esempio:
+- Il linguaggio C standard consente di inizializzare un oggetto o una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti con estensione non statica. Sebbene il linguaggio C++ consenta in genere l'inizializzazione dinamica di un oggetto con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con gli oggetti thread-local. Ad esempio:
 
     ```cpp
     // declspec_thread_3.cpp

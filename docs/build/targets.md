@@ -1,33 +1,33 @@
 ---
-title: "Destinazioni | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "destinazioni, specifica in NMAKE"
+title: Destinazioni | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: targets, specifying in NMAKE
 ms.assetid: 826ee849-4278-4c6e-97c3-79a2b5fe6463
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a07947dc7de4529d8cef3aa0f104d529d0b95ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Destinazioni
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In una riga di dipendenze specificare una o più destinazioni, utilizzando nomi file, nomi di directory oppure [pseudo\-destinazioni](../build/pseudotargets.md) valide.  Separare le varie destinazioni con uno o più spazi o tabulazioni.  Per il nome delle destinazioni non viene rilevata la distinzione tra maiuscole o minuscole.  Con i nomi file è possibile utilizzare i percorsi.  Una destinazione non può avere una lunghezza superiore a 256 caratteri.  Se la destinazione che precede i due punti è definita da un unico carattere, utilizzare uno spazio di separazione per evitare che la combinazione lettera\/due punti venga interpretata come identificatore di unità.  
+# <a name="targets"></a>Destinazioni
+In una riga di dipendenze, specificare uno o più destinazioni, con qualsiasi nome file valido, il nome di directory, o [pseudo](../build/pseudotargets.md). Separare più destinazioni con uno o più spazi o tabulazioni. Le destinazioni non sono tra maiuscole e minuscole. I percorsi sono consentiti con i nomi di file. Una destinazione non può superare i 256 caratteri. Se la destinazione che precede i due punti è un carattere singolo, utilizzare uno spazio di separazione. in caso contrario, viene interpretato la combinazione di lettere virgola come identificatore di unità.  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
- [Pseudo\-destinazioni](../build/pseudotargets.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
+ [Pseudodestinazioni](../build/pseudotargets.md)  
   
- [Destinazioni multiple](../build/multiple-targets.md)  
+ [Più destinazioni](../build/multiple-targets.md)  
   
  [Dipendenze cumulative](../build/cumulative-dependencies.md)  
   
@@ -35,5 +35,5 @@ In una riga di dipendenze specificare una o più destinazioni, utilizzando nomi 
   
  [Effetti collaterali delle dipendenze](../build/dependency-side-effects.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Blocchi di descrizione](../build/description-blocks.md)

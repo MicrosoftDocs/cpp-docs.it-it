@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ff695978efb8357b5e6a8b902d283c9aead2edf5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0fd448b7c4704e10c9ed32bfacd2662d2cdf834
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data"></a>.DATA?
 Se usato con [. MODELLO](../../assembler/masm/dot-model.md), viene avviato un segmento di dati quasi per dati non inizializzati (_BSS nome segmento).  

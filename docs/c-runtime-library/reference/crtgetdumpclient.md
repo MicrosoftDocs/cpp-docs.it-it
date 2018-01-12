@@ -32,11 +32,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5f75af68e7032d8365a2748624e75ef813b932bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bd7ff7ee99af78dba98e537a1c26b74ed5ed79c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 Recupera una funzione corrente definita dall'applicazione per il dump dei blocchi di memoria del tipo `_CLIENT_BLOCK` (solo versione di debug).  
@@ -61,7 +62,7 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 |-------------|---------------------|  
 |`_CrtGetDumpClient`|\<crtdbg.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Solo le versioni di debug delle [librerie di runtime di C](../../c-runtime-library/crt-library-features.md).  

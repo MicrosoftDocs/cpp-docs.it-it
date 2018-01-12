@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b72f211d605958c345d84ae7297f5d513b7adc18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d88f85e83a88b0a1ce2bd4566e3ca479dddc1af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>Classe IOleInPlaceActiveObjectImpl
 Questa classe fornisce metodi per facilitare la comunicazione tra un controllo sul posto e il relativo contenitore.  

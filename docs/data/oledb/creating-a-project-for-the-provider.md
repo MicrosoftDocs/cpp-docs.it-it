@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0112b63384353ff37ba1153b82e346e327f50975
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 21bf153e536decee78318a9dc8a84a2383d76117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-project-for-the-provider"></a>Creazione di un progetto per il provider
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>Per creare un progetto in cui risiederà il provider OLE DB  

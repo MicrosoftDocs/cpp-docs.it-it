@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bool_cpp
 - __BOOL_DEFINED
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f2437d831ae155f916b69cc6b35d3b586be9819e
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 564d2f4849d1725d46d92562e2ce75b2ea2e2d44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bool-c"></a>bool (C++)
 Questa parola chiave è un tipo incorporato. Una variabile di questo tipo può avere valori [true](../cpp/true-cpp.md) e [false](../cpp/false-cpp.md). Le espressioni condizionali dispongono del tipo `bool` e hanno pertanto valori di tipo `bool`. Ad esempio, `i!=0` dispone ora di **true** o **false** a seconda del valore di `i`.  

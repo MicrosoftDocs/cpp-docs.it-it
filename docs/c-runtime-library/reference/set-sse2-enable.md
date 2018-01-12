@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_SSE2_enable
+apiname: _set_SSE2_enable
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _set_SSE2_enable function
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 28cbebdd46f9e6b95ff88bf159550e7ccc5f3ec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: d6db305c6674b974786cd6c17e6bf8b63b304aa2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 Abilita o disabilita l'uso di istruzioni [Streaming SIMD Extensions 2](http://msdn.microsoft.com/en-us/f98440eb-73a9-4f96-b203-ac41bb6701ea) (SSE2) nelle routine matematiche CRT. (Questa funzione non è disponibile nelle architetture x64 perché SSE2 è abilitato per impostazione predefinita).  
@@ -94,7 +91,7 @@ int _set_SSE2_enable(
 |-------------|---------------------|  
 |`_set_SSE2_enable`|\<math.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   
@@ -120,4 +117,4 @@ int main()
  `SSE2 enabled.`  
   
 ## <a name="see-also"></a>Vedere anche  
- [CRT Library Features](../../c-runtime-library/crt-library-features.md) (Funzionalità della libreria CRT)
+ [Funzionalità della libreria CRT](../../c-runtime-library/crt-library-features.md)

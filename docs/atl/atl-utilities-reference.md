@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>Riferimenti sulle utilità ATL
 ATL fornisce codice per la modifica dei percorsi e gli URL nel formato [CPathT](../atl/reference/cpatht-class.md) e [CUrl](../atl/reference/curl-class.md). Un pool di thread, [CThreadPool](../atl/reference/cthreadpool-class.md), può essere utilizzato nelle applicazioni. Questo codice è reperibile in atlpath. h e atlutil. h.  
@@ -34,7 +35,7 @@ ATL fornisce codice per la modifica dei percorsi e gli URL nel formato [CPathT](
 |[Classe CUrl](../atl/reference/curl-class.md)|Questa classe rappresenta un URL. Consente di modificare ogni elemento dell'URL indipendentemente dalle altre, se l'analisi di un URL esistente stringa o la creazione di una stringa da zero.|  
 |[Classe CWorkerThread](../atl/reference/cworkerthread-class.md)|Questa classe crea un thread di lavoro o utilizza uno esistente, è in attesa su una o più handle di oggetto kernel ed esegue una funzione di client specificato quando uno degli handle viene segnalato.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

@@ -51,11 +51,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c895deff6a855a6ccc19f9816d359476907c2f22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af774ccf790c258e1b0bc6bc5f8509eb4537607d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 Esegue test sensibili al contesto per i byte iniziali e finali della stringa con caratteri multibyte e determina se un puntatore di una data sottostringa punta a un byte iniziale o finale.  
@@ -102,7 +103,7 @@ int _ismbstrail_l(
 ## <a name="remarks"></a>Note  
  `_ismbslead` e `_ismbstrail` sono più lenti delle versioni `_ismbblead` e `_ismbbtrail` perché prendono in considerazione il contesto della stringa.  
   
- Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che presentano il suffisso `_l` sono identiche ad eccezione del fatto che, per il comportamento dipendente dalle impostazioni locali, usano le impostazioni locali passate anziché quelle correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   

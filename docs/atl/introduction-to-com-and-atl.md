@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62266dc46aec68747ba1b5c330f2736b36feb90e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1fe02283fc1f0723d86d9d18991c3af444f54db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-and-atl"></a>Introduzione a COM e ATL
 In questa sezione fornisce una breve introduzione a COM e ATL.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Introduzione a COM](../atl/introduction-to-com.md)  
  Viene fornita una panoramica del componente oggetto del modello (COM) i concetti fondamentali, incluse le interfacce **IUnknown**, il conteggio dei riferimenti, `QueryInterface`, effettuare il marshalling e aggregazione.  
   

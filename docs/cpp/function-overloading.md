@@ -4,44 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Si tratta di funzioni in overload e vengono descritte in dettaglio in Overload. Le funzioni in overload consentono ai programmatori di fornire diverse semantiche per una funzione, in base ai tipi e al numero di argomenti.  
   
- Ad esempio, un **stampa** funzione che accetta una stringa (o **char \* **) argomento esegue attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie** . L'overload consente una denominazione uniforme e impedisce ai programmatori di dover inventare nomi quali `print_sz` o `print_d`. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
+ Ad esempio, un **stampa** funzione che accetta una stringa (o **char \*** ) argomento esegue attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie** . L'overload consente una denominazione uniforme e impedisce ai programmatori di dover inventare nomi quali `print_sz` o `print_d`. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
   
 ### <a name="overloading-considerations"></a>Considerazioni sull'overload  
   
 |Elemento di dichiarazione della funzione|Usato per eseguire l'overload?|  
 |----------------------------------|---------------------------|  
 |Tipo restituito di funzione|No|  
-|Numero di argomenti|Sì|  
-|Tipo di argomenti|Sì|  
-|Presenza o assenza di puntini di sospensione|Sì|  
+|Numero di argomenti|Yes|  
+|Tipo di argomenti|Yes|  
+|Presenza o assenza di puntini di sospensione|Yes|  
 |Utilizzo dei nomi `typedef`|No|  
 |Limiti di matrice non specificati|No|  
-|**const** o `volatile` (vedere sotto)|Sì|  
+|**const** o `volatile` (vedere sotto)|Yes|  
   
  Anche se è possibile distinguere le funzioni in base al tipo restituito, non è possibile eseguirne l'overload su questa base.  `Const`o `volatile` vengono utilizzati solo come base per l'overload se utilizzati in una classe da applicare per il **questo** puntatore per la classe, non il tipo restituito dalla funzione.  In altre parole, l'overload si applica solo se il **const** o `volatile` parola chiave segue l'elenco di argomenti della funzione nella dichiarazione.  
   
@@ -183,7 +181,7 @@ F1 = Add( 3, 6 );
   
  Si noti che l'intersezione tra questi due set è vuota. Pertanto, il compilatore genera un messaggio di errore.  
   
- Per l'argomento corrispondente, una funzione con * n * argomenti predefiniti viene trattata * n *+ 1 funzioni separate, ognuna con un numero diverso di argomenti.  
+ Per l'argomento corrispondente, una funzione con  *n*  argomenti predefiniti viene trattata  *n* + 1 funzioni separate, ognuna con un numero diverso di argomenti.  
   
  I puntini di sospensione (...) fungono da caratteri jolly; corrispondono a qualsiasi argomento effettivo. In tal modo, è possibile che vengano generati molti set ambigui se non si progettano set della funzione in overload con estrema attenzione.  
   
@@ -259,7 +257,7 @@ volatile Over&
 |*nome del tipo*|*nome del tipo***&**|  
 |*nome del tipo***&**|*nome del tipo*|  
 |*nome del tipo* **]**|*nome del tipo\**|  
-|*nome del tipo* **(** *elenco di argomenti* **)**|**(** * \*-nome del tipo* **) (** *elenco di argomenti* **)**|  
+|*nome del tipo* **(** *elenco di argomenti* **)**|**(**  *\*-nome del tipo* **) (** *elenco di argomenti* **)**|  
 |*nome del tipo*|**const** *-nome del tipo*|  
 |*nome del tipo*|`volatile`*-nome del tipo*|  
 |*nome del tipo\**|**const** *-nome del tipo\**|  
@@ -269,19 +267,19 @@ volatile Over&
   
 1.  Corrispondenza esatta. Una corrispondenza esatta tra i tipi con cui viene chiamata la funzione e i tipi dichiarati nel prototipo di funzione è sempre la corrispondenza ottimale. Le sequenze di conversioni semplici vengono classificate come corrispondenze esatte. Tuttavia, le sequenze che non eseguono queste conversioni vengono considerate migliori rispetto alle sequenze che eseguono la conversione:  
   
-    -   Dal puntatore, al puntatore a **const** (`type` ** \* ** a **const** `type` ** \* ** ).  
+    -   Dal puntatore, al puntatore a **const** (`type`  **\***  a **const** `type`  **\***  ).  
   
-    -   Dal puntatore, al puntatore a `volatile` (`type` ** \* ** a `volatile` `type` ** \* **).  
+    -   Dal puntatore, al puntatore a `volatile` (`type`  **\***  a `volatile` `type`  **\*** ).  
   
-    -   Dal riferimento al riferimento a **const** (`type` ** & ** a **const** `type` ** & **).  
+    -   Dal riferimento al riferimento a **const** (`type`  **&**  a **const** `type`  **&** ).  
   
-    -   Dal riferimento al riferimento a `volatile` (`type` ** & ** a `volatile` `type` ** & **).  
+    -   Dal riferimento al riferimento a `volatile` (`type`  **&**  a `volatile` `type`  **&** ).  
   
 2.  Corrispondenza mediante le promozioni. Qualsiasi sequenza non classificata come una corrispondenza esatta che contiene solo le promozioni integrali, le conversioni da **float** a **doppie**, e conversioni semplici viene classificata come corrispondenza che usa promozioni. Sebbene non sia ottimale come una corrispondenza esatta, l'utilizzo delle promozioni è preferibile rispetto a una corrispondenza che usa le conversioni standard.  
   
 3.  Corrispondenza che usa le conversioni standard. Qualsiasi sequenza non classificata come una corrispondenza esatta o una corrispondenza che usa promozioni solo con conversioni standard e semplici viene classificata come corrispondenza che usa le conversioni standard. All'interno di questa categoria, sono necessarie le seguenti regole:  
   
-    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile alla conversione in **void \* ** o **const void \* **.  
+    -   Conversione da un puntatore a una classe derivata, a un puntatore a una classe base diretta o indiretta è preferibile alla conversione in **void \***  o **const void \*** .  
   
     -   La conversione da un puntatore a una classe derivata, a un puntatore a una classe base produce una corrispondenza migliore quanto più la classe base è vicina a una classe base diretta. Si supponga che la gerarchia di classi sia come illustrata di seguito.  
   
@@ -426,7 +424,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR`è un sinonimo del tipo **char \* **. Nell'ambito del membro, questo codice genera un errore.  
+     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR`è un sinonimo del tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
   
 -   I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.  
   

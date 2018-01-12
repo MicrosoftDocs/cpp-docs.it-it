@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,22 +25,21 @@ apitype: DLLExport
 f1_keywords:
 - wcsnicmp
 - strnicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strnicmp function
 - wcsnicmp function
 ms.assetid: 01324ee4-0bd9-43e9-b2a3-53d180270a64
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 17de96a0365212e04cc8cfb12e5b7cb84926cfa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 9be0fa7654c297314f108f1b89bc5e4a7fa408eb
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp"></a>strnicmp, wcsnicmp
 Queste funzioni POSIX sono deprecate. Usare invece le funzioni conformi a ISO C++ [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md).

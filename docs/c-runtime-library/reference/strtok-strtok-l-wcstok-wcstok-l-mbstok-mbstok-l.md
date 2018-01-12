@@ -56,11 +56,12 @@ caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e41fb5edc039b1d1bb98bfee48a234c9d4c8f62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa20ca680481ffce009a362bf0f4b21923ef572d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 Trova il token successivo in una stringa, usando le impostazioni locali correnti o le impostazioni locali specificate passate. Sono disponibili versioni più sicure di queste funzioni; vedere [strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md).  
@@ -111,7 +112,7 @@ unsigned char *_mbstok(
   
  Nella prima chiamata a `strtok` la funzione ignora i delimitatori iniziali e restituisce un puntatore al primo token in `strToken`, aggiungendo un carattere Null di terminazione al token. Possono essere suddivisi altri token dal resto di `strToken` tramite una serie di chiamate a `strtok`. Ogni chiamata a `strtok` modifica `strToken` inserendo un carattere null dopo la `token` restituito dalla chiamata. Per leggere il token successivo da `strToken`, chiamare `strtok` con un valore `NULL` per l'argomento `strToken`. Se l'argomento `strToken` è `NULL`, `strtok` cerca il token successivo nella versione modificata di `strToken`. L'argomento `strDelimit` può accettare qualsiasi valore da una chiamata alla successiva, quindi il set di delimitatori può variare.  
   
- La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La configurazione dell'impostazione della categoria `LC_CTYPE` delle impostazioni locali influisce sul valore di output. Per altre informazioni, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti per questo comportamento dipendente dalle impostazioni locali. Le versioni con il suffisso `_l` sono identiche ma usano il parametro passato relativo alle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
 >  Ogni funzione usa una variabile statica thread-local per la suddivisione della stringa in token. Più thread possono quindi chiamare contemporaneamente queste funzioni senza effetti indesiderati. Tuttavia, all'interno di un singolo thread, è molto probabile che l'esecuzione interleaved di chiamate a una di queste funzioni causi il danneggiamento dei dati e risultati non accurati. Quando si analizzano stringhe diverse, completare l'analisi di una stringa prima di iniziare ad analizzare la successiva. Tenere anche conto del potenziale pericolo quando si chiama una di queste funzioni da un ciclo in cui viene chiamata un'altra funzione. Se l'altra funzione usa una di queste funzioni, ne risulterà una sequenza interleaved di chiamate con conseguente danneggiamento dei dati.  
@@ -181,7 +182,7 @@ Tokens:
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [strcspn, wcscspn, _mbscspn, _mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _getmaxstdio
+apiname: _getmaxstdio
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], number open
 - _getmaxstdio function
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 09838423ad687ad2b6459ea605c81e08752683bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: db700e385fe59d5ff6cc7448c17444cb2b0e8796
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getmaxstdio"></a>_getmaxstdio
 Restituisce il numero dei file aperti contemporaneamente consentito a livello di I/O del flusso.  
@@ -66,7 +63,7 @@ int _getmaxstdio( void );
 |-------------|---------------------|  
 |`_getmaxstdio`|\<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

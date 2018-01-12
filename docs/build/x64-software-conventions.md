@@ -1,39 +1,40 @@
 ---
-title: "Convenzioni del software x64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, convenzioni di chiamata x64"
-  - "convenzioni di codifica x64"
+title: x64 convenzioni del software | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- x64 coding conventions
+- Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d3b016fb60670dc8674691c52d593b468e597eed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Convenzioni del software x64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione viene illustrata la metodologia della convenzione di chiamata di Visual C\+\+ per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], ovvero l'estensione a 64 bit dell'architettura x86.  
+# <a name="x64-software-conventions"></a>Convenzioni del software x64
+Questa sezione vengono descritte la metodologia di convenzione di chiamata di Visual C++ [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)], estensioni a 64 bit per x86 architettura.  
   
--   [Cenni preliminari sulle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)  
+-   [Panoramica delle convenzioni di chiamata x64](../build/overview-of-x64-calling-conventions.md)  
   
 -   [Tipi e archiviazione](../build/types-and-storage.md)  
   
--   [Utilizzo dei registri](../build/register-usage.md)  
+-   [Uso dei registri](../build/register-usage.md)  
   
 -   [Convenzione di chiamata](../build/calling-convention.md)  
   
--   [Utilizzo dello stack](../build/stack-usage.md)  
+-   [Uso dello stack](../build/stack-usage.md)  
   
 -   [Prologo ed epilogo](../build/prolog-and-epilog.md)  
   
@@ -43,9 +44,9 @@ In questa sezione viene illustrata la metodologia della convenzione di chiamata 
   
 -   [Formato immagine](../build/image-format.md)  
   
- La seguente opzione del compilatore consente di ottimizzare l'applicazione per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
+ L'opzione del compilatore seguente consente di ottimizzare l'applicazione per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [\/favor \(ottimizzato per le specifiche di architettura\)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor (ottimizza per le specifiche di architettura)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Convenzioni di chiamata](../cpp/calling-conventions.md)

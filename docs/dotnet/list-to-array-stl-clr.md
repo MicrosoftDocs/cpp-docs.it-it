@@ -1,41 +1,42 @@
 ---
-title: "list::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array (membro) [STL/CLR]"
+title: List::to_array (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ea7b90c-127b-43cd-804b-019b86b77582
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ef25a5f7dd53524b21862dc7fdb4ebee5bb6d178
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# list::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Copia la sequenza selezionata una nuova matrice.  
+# <a name="listtoarray-stlclr"></a>list::to_array (STL/CLR)
+La sequenza controllata viene copiata in una nuova matrice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Note  
- La funzione membro restituisce una matrice contenente la sequenza selezionata.  Utilizzarla per ottenere una copia della sequenza selezionata in forma di matrice.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce una matrice che contiene la sequenza controllata. È utilizzato per ottenere una copia della sequenza controllata in forma di matrice.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_list_to_array.cpp   
@@ -66,12 +67,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/list\>  
+```Output  
+a b c d  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/list >  
   
-## Vedere anche  
- [list](../dotnet/list-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)

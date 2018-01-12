@@ -1,55 +1,137 @@
 ---
-title: "Classe Platform::WeakReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform::WeakReference"
+title: 'Classe platform:: WeakReference | Documenti Microsoft'
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe Platform::WeakReference
+# <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 Rappresenta un riferimento debole a un'istanza di una classe di riferimento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
-```vb  
+```cpp 
 class WeakReference  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
   
-## Membri  
+### <a name="members"></a>Membri  
   
-### Costruttori  
-  
-|Membro|Descrizione|  
-|------------|-----------------|  
-|[Costruttore WeakReference::WeakReference](../cppcx/weakreference-weakreference-constructor-c-cx.md)|Inizializza una nuova istanza della classe WeakReference.|  
-  
-### Metodi  
+### <a name="constructors"></a>Costruttori  
   
 |Membro|Descrizione|  
 |------------|-----------------|  
-|[Metodo WeakReference::Resolve](../cppcx/weakreference-resolve-method-platform-namespace.md)|Restituisce un handle alla classe di riferimento sottostante o nullptr se l'oggetto non esiste più.|  
+|[WeakReference:: WeakReference](#ctor)|Inizializza una nuova istanza della classe WeakReference.|  
   
-### Operatori  
+### <a name="methods"></a>Metodi  
   
-|Membro|Descrizione|  
+|Member|Descrizione|  
 |------------|-----------------|  
-|[WeakReference::operator\=](../cppcx/weakreference-operator-assign.md)|Assegna un nuovo valore all'oggetto WeakReference.|  
+|[WeakReference:: Resolve](#resolve)|Restituisce un handle alla classe di riferimento sottostante o nullptr se l'oggetto non esiste più.|  
   
-## Note  
+### <a name="operators"></a>Operatori  
+  
+|Member|Descrizione|  
+|------------|-----------------|  
+|[WeakReference::operator=](#operator-assign)|Assegna un nuovo valore all'oggetto WeakReference.|  
+|[BoolType WeakReference::operator](#booltype)|Implementa il modello bool sicuro.|  
+  
+### <a name="remarks"></a>Note  
  La classe WeakReference stessa non è una classe di riferimento e pertanto non eredita da Platform::Object^ e non può essere usata nella firma di un metodo pubblico.  
+
+## <a name="operator-assign"></a>WeakReference::operator =
+Assegna un valore a WeakReference.  
   
-## Vedere anche  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+WeakReference& operator=(decltype(__nullptr));    
+WeakReference& operator=(const WeakReference& otherArg);   
+WeakReference& operator=(WeakReference&& otherArg);    
+WeakReference& operator=(const volatile ::Platform::Object^ const otherArg); 
+```  
+  
+### <a name="remarks"></a>Note  
+ L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe di riferimento è downcast a [platform:: Object](../cppcx/platform-object-class.md)^. Ripristinare il tipo originale in un secondo momento specificandolo come argomento per il parametro di tipo nel [WeakReference:: Resolve\<T >](#resolve) funzione membro.  
+  
+## <a name="booltype"></a>WeakReference::operator BoolType
+Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esplicitamente dal codice.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+BoolType BoolType()  
+```  
+
+## <a name="resolve"></a>Metodo WeakReference:: Resolve (spazio dei nomi Platform)
+Restituisce un handle alla classe di riferimento originale o `nullptr` se l'oggetto non esiste più.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+  
+template<typename T>  
+T^ Resolve() const  
+```  
+  
+### <a name="parameters"></a>Parametri  
+  
+### <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
+ Handle alla classe di riferimento a cui l'oggetto WeakReference era precedentemente associato, oppure nullptr.  
+  
+### <a name="example"></a>Esempio  
+ Si tratta della descrizione per un Esempio di codice.  
+  
+```  
+  
+Bar^ bar = ref new Bar();  
+//use bar...  
+  
+if (bar != nullptr)  
+{  
+    WeakReference wr(bar);  
+    Bar^ newReference = wr.Resolve<Bar>();  
+}  
+```  
+  
+ Si noti che il parametro di tipo è T, non T^.  
+  
+ 
+## <a name="ctor"></a>Costruttore WeakReference:: WeakReference
+Offre vari modi per creare un elemento WeakReference.  
+  
+### <a name="syntax"></a>Sintassi  
+  
+```cpp  
+WeakReference();  
+WeakReference(decltype(__nullptr));  
+WeakReference(const WeakReference& otherArg);  
+WeakReference(WeakReference&& otherArg);  
+explicit WeakReference(const volatile ::Platform::Object^ const otherArg);  
+```  
+### <a name="example"></a>Esempio  
+  
+```cpp    
+MyClass^ mc = ref new MyClass();  
+WeakReference wr(mc);  
+MyClass^ copy2 = wr.Resolve<MyClass>();    
+```  
+  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)

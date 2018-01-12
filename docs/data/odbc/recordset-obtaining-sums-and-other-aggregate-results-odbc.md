@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f69341095e2bf6ad97e3b9c3fa0535c349c47ca3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset: recupero di somme e altri risultati aggregati (ODBC)
 Questo argomento si applica alle classi ODBC MFC.  

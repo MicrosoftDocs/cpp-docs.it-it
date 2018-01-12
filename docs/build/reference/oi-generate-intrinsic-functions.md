@@ -1,76 +1,77 @@
 ---
-title: "/Oi (Genera funzioni intrinseche) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions"
-  - "/oi"
-  - "VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Oi (opzione del compilatore) [C++]"
-  - "Genera funzioni intrinseche (opzione del compilatore) [C++]"
-  - "funzioni intrinseche, generazione"
-  - "Oi (opzione del compilatore) [C++]"
-  - "-Oi (opzione del compilatore) [C++]"
+title: -Oi (genera funzioni intrinseche) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
+- /oi
+- VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions
+dev_langs: C++
+helpviewer_keywords:
+- Oi compiler option [C++]
+- intrinsic functions, generate
+- /Oi compiler option [C++]
+- -Oi compiler option [C++]
+- generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0a24830dbc67466e52f3f3c488dda7ac5b4778d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /Oi (Genera funzioni intrinseche)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Sostituisce alcune chiamate di funzione con formati intrinseci o speciali della funzione che consentono di velocizzare l'esecuzione dell'applicazione.  
+# <a name="oi-generate-intrinsic-functions"></a>/Oi (Genera funzioni intrinseche)
+Sostituisce alcune chiamate di funzione con intrinseci o speciali form della funzione che consentono l'applicazione è stato eseguito più velocemente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /Oi[-]  
 ```  
   
-## Note  
- I programmi che utilizzano le funzioni intrinseche sono più veloci in quanto non hanno il sovraccarico delle chiamate di funzione ma è possibile che siano di dimensioni maggiori a causa del codice aggiuntivo creato.  
+## <a name="remarks"></a>Note  
+ I programmi che utilizzano le funzioni intrinseche sono più veloce perché non hanno il sovraccarico delle chiamate di funzione, ma potrebbero essere più grandi a causa del codice aggiuntivo creato.  
   
- Per ulteriori informazioni sulle funzioni con formati intrinseci, vedere [intrinsic](../../preprocessor/intrinsic.md).  
+ Vedere [intrinseco](../../preprocessor/intrinsic.md) per ulteriori informazioni, in cui le funzioni hanno formati intrinseci.  
   
- **\/Oi** rappresenta soltanto una richiesta di sostituzione di alcune chiamate di funzione con formati intrinseci. Se si ottengono prestazioni migliori, il compilatore può chiamare la funzione anziché sostituire la chiamata di funzione con un formato intrinseco.  
+ **/Oi** è solo una richiesta di sostituire alcune chiamate di funzione con gli intrinseci; il compilatore può chiamare la funzione (e non sostituire la chiamata di funzione con una funzione intrinseca) se si ottengono prestazioni migliori.  
   
- **Sezione specifico x86**  
+ **x86 specifico**  
   
- Le funzioni a virgola mobile intrinseche non eseguono alcun controllo speciale sui valori di input e funzionano in intervalli di input limitati e hanno una gestione delle eccezioni e di condizioni dei limiti diverse dalle routine delle librerie con lo stesso nome.  L'utilizzo di formati intrinseci di tipo true implica la perdita della gestione delle eccezioni IEEE e la perdita delle funzionalità `_matherr` e `errno`. Quest'ultima comporta la perdita della conformità ANSI.  Tuttavia i formati intrinseci possono velocizzare in modo considerevole i programmi che utilizzano molto la virgola mobile e, per molti programmi, i problemi di conformità hanno scarso valore pratico.  
+ Le funzioni a virgola mobile intrinseche non esegue alcun controllo su valori di input speciali e pertanto funzionano in intervalli di input limitati e hanno condizioni limite le routine di libreria con lo stesso nome e la gestione delle eccezioni diverse. Utilizzo di formati intrinseci reali implica la perdita di gestione delle eccezioni IEEE e di `_matherr` e `errno` funzionalità; quest'ultimo comporta la perdita della conformità ANSI. Tuttavia, intrinseci possono velocizzare notevolmente la programmi complessi di virgola mobile e per molte applicazioni, i problemi di conformità sono di scarso valore pratico.  
   
- È possibile utilizzare l'opzione del compilatore [Za](../../build/reference/za-ze-disable-language-extensions.md) per eseguire l'override della generazione di opzioni a virgola mobile intrinseche di tipo true.  In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.  
+ È possibile utilizzare il [Za](../../build/reference/za-ze-disable-language-extensions.md) l'opzione del compilatore per eseguire l'override di generazione delle opzioni a virgola mobile intrinseche true. In tal caso le funzioni vengono generate come routine della libreria che passano gli argomenti direttamente al chip a virgola mobile anziché inserirli nello stack del programma.  
   
- **END x86 Specific**  
+ **FINE x86 specifico**  
   
- È inoltre possibile utilizzare [intrinsic](../../preprocessor/intrinsic.md) per creare funzioni intrinseche o [funzione](../../preprocessor/function-c-cpp.md) per imporre una chiamata di funzione in modo esplicito.  
+ È inoltre possibile utilizzare [intrinseco](../../preprocessor/intrinsic.md) per creare funzioni intrinseche o [funzione (C/C++)](../../preprocessor/function-c-cpp.md) per forzare in modo esplicito una chiamata di funzione.  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+2.  Fare clic sulla cartella **C/C++** .  
   
-3.  Fare clic sulla pagina delle proprietà **Ottimizzazione**.  
+3.  Fare clic su di **ottimizzazione** pagina delle proprietà.  
   
-4.  Modificare la proprietà **Attiva funzioni intrinseche**.  
+4.  Modificare il **attiva funzioni intrinseche** proprietà.  
   
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableIntrinsicFunctions%2A>.  
   
-## Vedere anche  
- [Opzioni \/O \(Ottimizza codice\)](../../build/reference/o-options-optimize-code.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Opzioni /O (Ottimizza codice)](../../build/reference/o-options-optimize-code.md)   
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
  [Intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md)

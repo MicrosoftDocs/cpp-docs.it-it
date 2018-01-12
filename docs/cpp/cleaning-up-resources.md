@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], cleaning up resources
 - exception handling [C++], cleaning up resources
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 830fd773536b9ab16aeced2b64d2a4062961bd1b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fd84fdd041a3b3715c4fbfa9b4c1d78fdf2ba464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cleaning-up-resources"></a>Pulizia di risorse
 Durante l'esecuzione del gestore terminazioni, potrebbe essere possibile non sapere quali risorse sono effettivamente allocate prima che il gestore terminazioni venga chiamato. È possibile che il blocco di istruzioni `__try` sia stato arrestato prima che tutte le risorse fossero state allocate, pertanto non tutte le risorse sono aperte.  

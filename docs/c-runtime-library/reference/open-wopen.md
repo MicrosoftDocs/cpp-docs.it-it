@@ -42,11 +42,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2362db1db1686bcf87cb171b3f29da48226d54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-wopen"></a>_open, _wopen
 Apre un file. Queste funzioni sono deprecate perché sono disponibili versioni più sicure. Vedere [_sopen_s, _wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  
@@ -94,7 +95,7 @@ int _wopen(
  `ENOENT`  
  File o percorso non trovato.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La funzione `_open` apre il file specificato da `filename` e prepara il file per la lettura o la scrittura, come specificato da `oflag`. `_wopen` è una versione a caratteri wide di `_open`; l'argomento `filename` in `_wopen` è una stringa di caratteri wide. In caso contrario, `_wopen` e `_open` si comportano in modo identico.  
@@ -247,7 +248,7 @@ Open succeeded on output file
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [I/O di basso livello](../../c-runtime-library/low-level-i-o.md)   
+ [Low-Level I/O](../../c-runtime-library/low-level-i-o.md)  (I/O di basso livello)  
  [_chmod, _wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_close](../../c-runtime-library/reference/close.md)   
  [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   

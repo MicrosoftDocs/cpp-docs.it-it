@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90a58f53aa713bcb2499e3fe720e78fd2e7e6383
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebbc91b9144a7fe8025a34e9c1476ab23b604c46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-data-using-declspecdllimport"></a>Importazione di dati tramite __declspec(dllimport)
 Nel caso di dati, utilizzando **declspec** DllImport consente di rimuovere un livello di riferimento indiretto. Quando si importano dati da una DLL, è necessario scorrere la tabella di indirizzi di importazione. Prima di **declspec**, era necessario utilizzare un livello aggiuntivo di riferimento indiretto durante l'accesso ai dati esportate dalla DLL:  

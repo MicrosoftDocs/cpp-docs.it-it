@@ -40,11 +40,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44e5773920d42c9b37e24a11b015adccc8e1be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 Converte un carattere wide nel carattere multibyte corrispondente. Questa è una versione di [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -92,7 +93,7 @@ errno_t _wctomb_s_l(
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|non modificato|  
 |qualsiasi|>`INT_MAX`|`EINVAL`|non modificato|  
-|any|troppo piccolo|`EINVAL`|non modificato|  
+|qualsiasi|troppo piccolo|`EINVAL`|non modificato|  
   
  Se si verifica una delle condizioni di errore precedenti, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, `wctomb` restituisce `EINVAL` e imposta `errno` su `EINVAL`.  
   
@@ -101,7 +102,7 @@ errno_t _wctomb_s_l(
   
  Se `wctomb_s` converte il carattere wide in un carattere multibyte, inserisce il numero di byte (che non è mai maggiore di `MB_CUR_MAX`) nel caratteri wide nel valore intero a cui punta `pRetValue`. Se `wchar` è il carattere Null wide (L'\0'), `wctomb_s` riempie `pRetValue` di 1. Se il puntatore di destinazione `mbchar` è NULL, `wctomb_s` inserisce 0 in `pRetValue`. Se la conversione non è possibile che in impostazioni locali correnti, `wctomb_s` Inserisce -1 in `pRetValue`.  
   
- `wctomb_s` usa le impostazioni locali correnti per qualsiasi informazione dipendente dalle impostazioni locali. La funzione `_wctomb_s_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `wctomb_s` usa le impostazioni locali correnti per qualsiasi informazione dipendente dalle impostazioni locali. La funzione `_wctomb_s_l` è identica, ma usa le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -110,7 +111,7 @@ errno_t _wctomb_s_l(
 |`wctomb_s`|\<stdlib.h>|  
 |`_wctomb_s_l`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Questo programma illustra il comportamento della funzione `wctomb`.  
@@ -140,8 +141,8 @@ Convert a wide character:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Data Conversion](../../c-runtime-library/data-conversion.md)  (Conversione dei dati)  
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
  [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
  [mbtowc, _mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   

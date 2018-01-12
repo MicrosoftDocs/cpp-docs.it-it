@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Win32ThreadTraits
 - ATLBASE/ATL::Win32ThreadTraits
 - ATLBASE/ATL::Win32ThreadTraits::CreateThread
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - threading [ATL], Windows threads
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf4fd3ffaf2fc4a035fdecf679ab507ebb557f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: a777b3c1ae6056fe4ae414371cbed4eee1accd86
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32threadtraits-class"></a>Classe Win32ThreadTraits
 Questa classe fornisce la funzione di creazione di un thread di Windows. Utilizzare questa classe se il thread non utilizzerà le funzioni CRT.  
@@ -106,4 +104,3 @@ static HANDLE CreateThread(
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

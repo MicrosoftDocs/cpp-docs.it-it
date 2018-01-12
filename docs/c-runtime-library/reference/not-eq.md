@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -24,21 +23,19 @@ f1_keywords:
 - not_eq
 - std::not_eq
 - std.not_eq
-dev_langs:
-- C++
-helpviewer_keywords:
-- not_eq function
+dev_langs: C++
+helpviewer_keywords: not_eq function
 ms.assetid: d87ad299-8b50-4393-a57f-06f70e1f23fb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b607037fd5281bed80288a5cb45da36684b304fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 55d31bbb9d7823161bd98d76884298f3cc089f4d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="noteq"></a>not_eq
 Alternativa all'operatore !=.  

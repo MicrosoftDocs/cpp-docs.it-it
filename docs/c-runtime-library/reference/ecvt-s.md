@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _ecvt_s
+apiname: _ecvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 81bcb9fe1306f5affa49672269890d6f5888a3ac
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 Converte un numero `double` in una stringa. Questa è una versione di [_ecvt](../../c-runtime-library/reference/ecvt.md) che include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md) (Funzionalità di sicurezza in CRT).  
@@ -112,9 +95,9 @@ errno_t _ecvt_s(
 |`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|Valore restituito|Valore in `buffer`|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
 |`NULL`|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
-|Non `NULL` (punta alla memoria valida)|<=0|any|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
-|any|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
-|any|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
+|Non `NULL` (punta alla memoria valida)|<=0|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`EINVAL`|Non modificato.|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|qualsiasi|`EINVAL`|Non modificato.|  
+|qualsiasi|qualsiasi|qualsiasi|qualsiasi|qualsiasi|`NULL`|`EINVAL`|Non modificato.|  
   
  **Problemi di sicurezza**  
   
@@ -129,7 +112,7 @@ errno_t _ecvt_s(
   
  La differenza tra `_ecvt_s` e `_fcvt_s` consiste nell'interpretazione del parametro `_Count`. `_ecvt_s` interpreta `_Count` come numero totale di cifre nella stringa di output, mentre `_fcvt_s` interpreta `_Count` come numero di cifre dopo il separatore decimale.  
   
- In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Overload di modelli sicuri](../../c-runtime-library/secure-template-overloads.md).  
+ In C++ l'uso di questa funzione è semplificato da un overload del modello. L'overload può dedurre la lunghezza del buffer automaticamente, evitando la necessità di specificare un argomento di dimensione. Per altre informazioni, vedere [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Le versioni di debug di questa funzione riempiono prima il buffer con 0xFD. Per disabilitare questo comportamento, usare [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
@@ -139,7 +122,7 @@ errno_t _ecvt_s(
 |--------------|---------------------|---------------------|  
 |`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

@@ -35,11 +35,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c46eff8faabb52f514e2711a065d7fc1fed8b75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a14fa401b2a46bbfb3d5aafcda4d05c0167b3d9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pipe"></a>_pipe
 Crea un pipe per la lettura e la scrittura.  
@@ -76,7 +77,7 @@ int _pipe(
   
 -   `EINVAL`, che indica che la matrice `pfds` è un puntatore Null o che è stato passato un valore non valido per `textmode`.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [errno, _doserrno, _sys_errlist, e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  La funzione `_pipe` crea una *pipe*, ovvero un canale di I/O artificiale usato da un programma per passare informazioni ad altri programmi. Una pipe è simile a un file perché ha un puntatore di file, un descrittore di file o entrambi, e può essere letta o scritta tramite le funzioni di input e output della libreria standard. Tuttavia, una pipe non rappresenta un file o un dispositivo specifico. Rappresenta invece uno spazio di archiviazione temporaneo in memoria, indipendente della memoria propria del programma e interamente controllato dal sistema operativo.  
@@ -344,5 +345,5 @@ This is speaker beep number 10...
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)

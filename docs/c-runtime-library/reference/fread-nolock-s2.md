@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fread_nolock_s
+apiname: _fread_nolock_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,34 +26,18 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f7f6dff1902777d5c795ac5cb29e1bcfdf3b0eb5
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a0bec6662cd661ef4a81d66027b272cc297c84fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 Legge i dati da un flusso senza bloccare altri thread. Questa versione di [fread_nolock](../../c-runtime-library/reference/fread-nolock.md) include miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -99,7 +82,7 @@ size_t _fread_nolock_s(
 |--------------|---------------------|  
 |`_fread_nolock_s`|C: \<stdio.h>; C++: \<cstdio> o \<stdio.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   

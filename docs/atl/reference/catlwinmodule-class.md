@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLBASE/ATL::CAtlWinModule::CAtlWinModule
 - ATLBASE/ATL::CAtlWinModule::AddCreateWndData
 - ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlWinModule class
+dev_langs: C++
+helpviewer_keywords: CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f2d5e28f39159b097c4e00e11518295b2872a84b
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 Questa classe fornisce supporto per i componenti di finestra ATL.  
@@ -134,4 +117,3 @@ void* ExtractCreateWndData();
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Classi Module](../../atl/atl-module-classes.md)
-

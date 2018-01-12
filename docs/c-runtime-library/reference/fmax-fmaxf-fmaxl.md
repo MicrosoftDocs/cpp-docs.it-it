@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb74fdfdcc12dce4777a51465164a3fbc6622f41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f580738ba73a7e0a8fac8662be7126edb5a9e95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax, fmaxf, fmaxl
 Determina il valore più grande tra due valori numerici specificati.  
@@ -92,9 +93,9 @@ long double fmaxl(
 ## <a name="return-value"></a>Valore restituito  
  In caso di esito positivo restituisce il valore più grande tra `x` o `y`. Il valore restituito è esatto e non dipende da alcuna forma di arrotondamento.  
   
- In caso contrario, può restituire uno dei valori seguenti:  
+ In caso contrario può restituire uno dei valori seguenti:  
   
-|Problema|Valore restituito|  
+|Problema|INVIO|  
 |-----------|------------|  
 |`x` = NaN|`y`|  
 |`y` = NaN|`x`|  
@@ -114,5 +115,5 @@ long double fmaxl(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alfabetico alle funzioni](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
+ [Alphabetical Function Reference](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  (Riferimento alfabetico alle funzioni)  
  [fmin, fminf, fminl](fmin-fminf-fminl.md)  

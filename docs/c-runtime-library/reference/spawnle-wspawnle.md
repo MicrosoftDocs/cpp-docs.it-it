@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _spawnle
 - wspawnle
 - _wspawnle
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - spawnle function
 - processes, creating
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4607528d5e7d5bdeb71c560f8f5890fe469a531e
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f66eabd1578c3d2ee3d945dc63ce0ed5ec24b431
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle, _wspawnle
 Crea ed esegue un nuovo processo.  
@@ -114,7 +98,7 @@ intptr_t _wspawnle(
  L'elenco di argomenti supera i 1024 byte.  
   
  `EINVAL`  
-L'argomento `mode` non è valido.  
+ L'argomento `mode` non è valido.  
   
  `ENOENT`  
  Il file o il percorso non è stato trovato.  
@@ -125,12 +109,12 @@ L'argomento `mode` non è valido.
  `ENOMEM`  
  Memoria insufficiente per eseguire il nuovo processo.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni crea ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e passando una matrice di puntatori alle impostazioni di ambiente.  
   
- Queste funzioni convalidano i relativi parametri. Se `cmdname` sincrono o `arg0` è una stringa vuota o un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL`e restituiscono -1. Nessun nuovo processo viene generato.  
+ Queste funzioni convalidano i relativi parametri. Se `cmdname` o `arg0` è una stringa vuota o un puntatore Null, viene richiamato il gestore di parametri non validi, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni impostano `errno` su `EINVAL`e restituiscono -1. Nessun nuovo processo viene generato.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -139,13 +123,13 @@ L'argomento `mode` non è valido.
 |`_spawnle`|\<process.h>|  
 |`_wspawnle`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio in [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _tcserror
 - _wcserror
 - tcserror
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strerror function
 - _strerror function
@@ -52,30 +50,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c79a2502fd9e52ff5e05e600c4d1a1e8e3761c8
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a268830c14025f3a9581a4ad28481a54fa9f4f71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 Ottiene un messaggio di errore dal sistema (`strerror`, `_wcserror`) o formatta una stringa di messaggio di errore fornita dall'utente (`_strerror`, `__wcserror`). Sono disponibili versioni più sicure di queste funzioni. Vedere [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](../../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md).  

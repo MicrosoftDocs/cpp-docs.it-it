@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,25 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Classe IPersistPropertyBagImpl
 Questa classe implementa **IUnknown** e consente a un oggetto salvare le proprietà in un contenitore di proprietà specificato dal client.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -96,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Note  
- Vedere [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IPersist:: GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) in Windows SDK.  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Inizializza un oggetto appena creato.  
@@ -109,7 +92,7 @@ STDMETHOD(InitNew)();
  Restituisce `S_OK`.  
   
 ### <a name="remarks"></a>Note  
- Vedere [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) in Windows SDK.  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Carica le proprietà dell'oggetto da un contenitore di proprietà specificato dal client.  
@@ -121,7 +104,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>Note  
  ATL utilizza il mapping di proprietà dell'oggetto per recuperare queste informazioni.  
   
- Vedere [IPersistPropertyBag:: Load](https://msdn.microsoft.com/library/aa768206.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IPersistPropertyBag:: Load](https://msdn.microsoft.com/library/aa768206.aspx) in Windows SDK.  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Salva le proprietà dell'oggetto in un contenitore di proprietà specificato dal client.  
@@ -136,9 +119,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>Note  
  ATL Usa il mapping di proprietà dell'oggetto per archiviare queste informazioni. Per impostazione predefinita, questo metodo consente di salvare tutte le proprietà, indipendentemente dal valore di *fSaveAllProperties*.  
   
- Vedere [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Vedere [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) in Windows SDK.  
   
 ## <a name="see-also"></a>Vedere anche  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

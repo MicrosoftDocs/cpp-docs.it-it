@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactorySingleton
 - ATLCOM/ATL::CComClassFactorySingleton::CreateInstance
 - ATLCOM/ATL::CComClassFactorySingleton::m_spObj
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactorySingleton class
+dev_langs: C++
+helpviewer_keywords: CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 55d8fb96dfce1b278763cc348c605f8e76b5f56f
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 165bc85a0b00ac8186e5a145a75c4478335b5e0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactorysingleton-class"></a>Classe CComClassFactorySingleton
 Questa classe deriva da [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) e utilizza [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) per costruire un singolo oggetto.  
@@ -79,7 +61,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="remarks"></a>Note  
  Gli oggetti ATL mediante derivazione da acquisire una class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md). Questa classe include la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), che dichiara `CComClassFactory` come la class factory predefinita. Per utilizzare `CComClassFactorySingleton`, specificare il [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) macro nella definizione di classe dell'oggetto. Ad esempio:  
   
- [!code-cpp[NVC_ATL_COM #10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `CComObjectRootBase`  
@@ -134,4 +116,3 @@ CComPtr<IUnknown> m_spObj;
  [Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

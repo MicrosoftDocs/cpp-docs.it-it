@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_raise_error
-dev_langs:
-- C++
+f1_keywords: _com_raise_error
+dev_langs: C++
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 48540910db97e7662eeaa7e8a7febf7e44df653b
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-support-classes"></a>Classi di supporto COM del compilatore
 **Sezione specifica Microsoft**  

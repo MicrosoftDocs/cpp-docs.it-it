@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebfa692f422283e69395639295b3bf2ace1741ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bff1ab29841ff2dd9973d538bb763d1fc1126a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="displaying-assertions"></a>Visualizzazione delle asserzioni
 Se il client connesso al servizio smette di rispondere, il servizio può avere dichiarato e visualizzata una finestra di messaggio che non si riesce a vedere. È possibile verificarlo utilizzando il debugger di Visual C++ per eseguire il debug del codice (vedere [tramite Gestione attività](../atl/using-task-manager.md) più indietro in questa sezione).  

@@ -1,41 +1,39 @@
 ---
-title: ".DATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".DATA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".DATA directive"
+title: . DATI | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .DATA
+dev_langs: C++
+helpviewer_keywords: .DATA directive
 ms.assetid: 32797935-9c79-46e0-bf6f-07d0c2bf1dc1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d3d4221fe3663ba3fdc7d61e57ab45c5eeadf78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# .DATA
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-una volta utilizzato con [.MODEL](../../assembler/masm/dot-model.md), ovvero un segmento di dati da per i dati inizializzati su \(\_DATA del nome del segmento\).  
+# <a name="data"></a>.DATA
+Se usato con [. MODELLO](../../assembler/masm/dot-model.md), viene avviato un segmento di dati quasi per dati inizializzati ( dati nome segmento).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 .DATA  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
- [.DATA?](../../assembler/masm/dot-data-q.md)   
- [.CONST](../../assembler/masm/dot-const.md)   
- [.FARDATA](../../assembler/masm/dot-fardata.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)   
+ [. DATI?](../../assembler/masm/dot-data-q.md)   
+ [. CONST](../../assembler/masm/dot-const.md)   
+ [. FARDATA](../../assembler/masm/dot-fardata.md)   
  [.FARDATA?](../../assembler/masm/dot-fardata-q.md)

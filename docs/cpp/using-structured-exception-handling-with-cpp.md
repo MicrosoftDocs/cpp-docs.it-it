@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 416353ea79bc4ee4e09fe72490a87b70dd6f0029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db5d067a391512d56a2d01ce3052ac3fab061f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Utilizzo della gestione strutturata delle eccezioni con C++
 La gestione delle eccezioni strutturata descritta in questi articoli funziona con file di origine in C++ e in C. Tuttavia, non è progettata specificatamente per C++ e non è consigliabile l'utilizzo. È possibile garantire maggiore portabilità del codice tramite la gestione delle eccezioni C++. Inoltre, il meccanismo di gestione delle eccezioni C++ è più flessibile, in quanto può gestire eccezioni di qualsiasi tipo.  

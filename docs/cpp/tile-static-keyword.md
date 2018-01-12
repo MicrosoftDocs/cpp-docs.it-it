@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- tile_static_CPP
-dev_langs:
-- C++
-helpviewer_keywords:
-- tile_static keyword
+f1_keywords: tile_static_CPP
+dev_langs: C++
+helpviewer_keywords: tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilestatic-keyword"></a>Parola chiave tile_static
 La parola chiave `tile_static` viene utilizzata per dichiarare una variabile a cui è possibile accedere da tutti i thread in una sezione dei thread. La durata della variabile inizia quando l'esecuzione raggiunge il punto di dichiarazione e termina quando la funzione kernel restituisce. Per ulteriori informazioni sull'utilizzo di riquadri, vedere [utilizzando riquadri](../parallel/amp/using-tiles.md).  

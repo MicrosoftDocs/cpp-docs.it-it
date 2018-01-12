@@ -1,34 +1,36 @@
 ---
-title: "Procedura: leggere un file binario (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "file binari, lettura in C++"
-  - "file [C++], binaria"
+title: 'Procedura: leggere un File binario (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], binary
+- binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: leggere un file binario (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice seguente viene illustrato come leggere i dati binari da un file, utilizzando due classi dello spazio dei nomi <xref:System.IO?displayProperty=fullName> : <xref:System.IO.FileStream> e <xref:System.IO.BinaryReader>.  <xref:System.IO.FileStream> rappresenta il file effettivo.  <xref:System.IO.BinaryReader> fornisce un'interfaccia al flusso che consente l'accesso binario.  
+# <a name="how-to-read-a-binary-file-ccli"></a>Procedura: leggere un file binario (C++/CLI)
+Esempio di codice seguente viene illustrato come leggere i dati binari da un file, utilizzando due classi dal <xref:System.IO?displayProperty=fullName> dello spazio dei nomi: <xref:System.IO.FileStream> e <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream>rappresenta il file effettivo. <xref:System.IO.BinaryReader>fornisce un'interfaccia per il flusso che consente l'accesso binario.  
   
- Nel codice di esempio viene letto un file denominato data.bin contenente interi in formato binario.  Per ulteriori informazioni su questo tipo di file, vedere [Procedura: scrivere un file binario](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
+ L'esempio di codice legge un file è denominato bin e contiene numeri interi in formato binario. Per informazioni su questo tipo di file, vedere [procedura: scrivere un File binario (C + + CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // binary_read.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## Vedere anche  
- [I\/O di file e di flussi](../Topic/File%20and%20Stream%20I-O.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [I/O di file e di flussi](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

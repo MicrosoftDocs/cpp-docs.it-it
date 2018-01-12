@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _ungettc
 - ungetwc
 - ungetc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ungetwc function
 - ungettc function
@@ -37,30 +35,16 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d266ea3d4be06994efcd7ceb8a155f8530b30ed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 Reinserisce un carattere nel flusso.  
@@ -86,12 +70,12 @@ wint_t ungetwc(
  Puntatore alla struttura `FILE` .  
   
 ## <a name="return-value"></a>Valore restituito  
- Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento di tipo carattere `c`. Se non è possibile reinserire `c` oppure se non è stato letto alcun carattere, il flusso di input rimane invariato e `ungetc` restituisce `EOF`. `ungetwc` restituisce `WEOF`. Se `stream` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, viene restituito `EOF` o `WEOF` e `errno` viene impostato su `EINVAL`.  
+ Se ha esito positivo, ognuna di queste funzioni restituisce l'argomento di tipo carattere `c`. Se non è possibile reinserire `c` oppure se non è stato letto alcun carattere, il flusso di input rimane invariato e `ungetc` restituisce `EOF`. `ungetwc` restituisce `WEOF`. Se `stream` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, viene restituito `EOF` o `WEOF` e `errno` viene impostato su `EINVAL`.  
   
  Per informazioni su questi e altri codici di errore, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
- La funzione `ungetc` reinserisce il carattere `c` in `stream` e cancella l'indicatore di fine del file. Il flusso deve essere aperto per la lettura. Una successiva operazione di lettura nel `stream` inizia con `c`. Un tentativo di inserire `EOF` nel flusso tramite `ungetc` viene ignorato.  
+ La funzione `ungetc` reinserisce il carattere `c` in `stream` e cancella l'indicatore di fine del file. Il flusso deve essere aperto per la lettura. Una successiva operazione di lettura su `stream` inizia con `c`. Un tentativo di inserire `EOF` nel flusso tramite `ungetc` viene ignorato.  
   
  I caratteri inseriti nel flusso da `ungetc` possono essere cancellati se viene chiamata la funzione `fflush`, `fseek`, `fsetpos` o `rewind` prima che il carattere venga letto dal flusso. L'indicatore di posizione del file avrà il valore esistente prima del reinserimento dei caratteri. Lo spazio di archiviazione esterno corrispondente al flusso rimane invariato. In caso di una chiamata a `ungetc` con esito positivo su un flusso di testo, l'indicatore di posizione del file non è specificato fino a quando non vengono letti o rimossi tutti i caratteri reinseriti. Per ogni chiamata `ungetc` con esito positivo successiva su un flusso binario, l'indicatore di posizione del file viene decrementato. Se il valore è 0 prima della chiamata, il valore è indefinito dopo la chiamata.  
   

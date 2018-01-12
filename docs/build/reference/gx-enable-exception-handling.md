@@ -1,65 +1,62 @@
 ---
-title: "/GX (Attiva gestione eccezioni) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GX (opzione del compilatore) [C++]"
-  - "compilatore cl.exe, gestione eccezioni"
-  - "abilitazione della gestione eccezioni (opzione del compilatore) [C++]"
-  - "gestione eccezioni, abilitazione"
-  - "GX (opzione del compilatore) [C++]"
-  - "-GX (opzione del compilatore) [C++]"
+title: -GX (Attiva gestione eccezioni) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /gx
+dev_langs: C++
+helpviewer_keywords:
+- exception handling, enabling
+- /GX compiler option [C++]
+- -GX compiler option [C++]
+- cl.exe compiler, exception handling
+- enable exception handling compiler option [C++]
+- GX compiler option [C++]
 ms.assetid: 933b43ba-de77-4ff8-a48b-7074de90bc1c
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3013b4233621e63de0230e088dfc10ff65a5705d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /GX (Attiva gestione eccezioni)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Consente la gestione sincrona delle eccezioni presupponendo che le funzioni C `extern` non producano mai un'eccezione.  
+# <a name="gx-enable-exception-handling"></a>/GX (Attiva gestione eccezioni)
+Deprecato. Consente la gestione delle eccezioni sincrona con il presupposto che le funzioni dichiarata utilizzando `extern "C"` non generano mai un'eccezione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 /GX  
 ```  
   
-## Note  
- Equivale a [\/EH \(Modello di gestione delle eccezioni\)](../../build/reference/eh-exception-handling-model.md).  
+## <a name="remarks"></a>Note  
+ **/GX** è deprecata. Utilizzare l'equivalente [/EHsc](../../build/reference/eh-exception-handling-model.md) opzione. Per un elenco di opzioni del compilatore obsolete, vedere il **deprecate o rimosse le opzioni del compilatore** sezione [opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md).  
   
- **\/GX** è attiva per impostazione predefinita quando si esegue la compilazione all'interno dell'ambiente di sviluppo.  Per impostazione predefinita, **\/GX\-** viene attivata quando si utilizzano gli strumenti della riga di comando.  
+ Per impostazione predefinita, **/EHsc**, l'equivalente di **/GX**, è disponibile quando esegue la compilazione con l'ambiente di sviluppo di Visual Studio. Quando si utilizzano gli strumenti da riga di comando, non viene specificata alcun la gestione delle eccezioni. Questo è l'equivalente di **/GX-**.  
   
- Per ulteriori informazioni, vedere [Gestione delle eccezioni C\+\+](../../cpp/cpp-exception-handling.md).  
+ Per ulteriori informazioni, vedere [gestione delle eccezioni C++](../../cpp/cpp-exception-handling.md).  
   
- **\/GX** è deprecata. Utilizzare [\/EH \(Modello di gestione delle eccezioni\)](../../build/reference/eh-exception-handling-model.md).  Per ulteriori informazioni, vedere [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/it-it/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
   
-### Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Procedura: aprire le pagine delle proprietà dei progetti](../../misc/how-to-open-project-property-pages.md).  
+2.  Nel riquadro di spostamento, scegliere **le proprietà di configurazione**, **C/C++**, **riga di comando**.  
   
-2.  Fare clic sulla cartella **C\/C\+\+**.  
+3.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive** .  
   
-3.  Fare clic sulla pagina delle proprietà **Riga di comando**.  
-  
-4.  Digitare l'opzione del compilatore nella casella **Opzioni aggiuntive**.  
-  
-### Per impostare l'opzione del compilatore a livello di codice  
+### <a name="to-set-this-compiler-option-programmatically"></a>Per impostare l'opzione del compilatore a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni del compilatore](../../build/reference/compiler-options.md)   
- [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)
+ [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
+ [/EH (modello di gestione delle eccezioni)](../../build/reference/eh-exception-handling-model.md)

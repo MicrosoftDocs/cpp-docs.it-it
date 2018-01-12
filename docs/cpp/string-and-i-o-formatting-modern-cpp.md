@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d85ba653ceba37f065816ce792a03276bf36551
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formattazione di stringhe e I/O (C++ moderno)
 C++ [iostream](../standard-library/iostream.md) sono in grado dei / o di stringa formattata. Ad esempio, il codice seguente viene illustrato come impostare cout per formattare un numero intero per l'output in formato esadecimale, innanzitutto salvataggio disattivare lo stato corrente e nuovamente l'impostazione in seguito, poiché la formattazione di stato viene passata a cout, rimane in questo modo finché non vengono modificate, non solo per una riga del codice.  

@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2eeda6539e10bd785e5b4ee63091e208ff159f43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler
 Imposta una funzione da chiamare quando CRT rileva un argomento non valido.  

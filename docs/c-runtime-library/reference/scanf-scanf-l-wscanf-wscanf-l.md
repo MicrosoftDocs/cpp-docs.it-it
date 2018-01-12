@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _wscanf_l
 - scanf
 - _tscanf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tscanf_l function
 - _tscanf_l function
@@ -49,30 +47,16 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3cfa70aa63c32abbc24254e896cdb02412f65fde
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 36b82950361a236d8c2a5dc9db955aa108cf78b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf, _scanf_l, wscanf, _wscanf_l
 Legge i dati formattati dal flusso di input standard. Sono disponibili versioni più sicure di queste funzioni. Vedere [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).  
@@ -125,7 +109,7 @@ int _wscanf_l(
   
  `wscanf` è una versione a caratteri wide di `scanf`; l'argomento `format` in `wscanf` è una stringa di caratteri wide. `wscanf` e `scanf` si comportano in modo analogo, se il flusso viene aperto in modalità ANSI. `scanf` non supporta attualmente l'input da un flusso UNICODE.  
   
- Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che utilizzano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
+ Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
@@ -184,7 +168,7 @@ The contents are: 36 92.300003 y n Wide characters
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
  [I/O di flusso](../../c-runtime-library/stream-i-o.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
  [printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
  [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   

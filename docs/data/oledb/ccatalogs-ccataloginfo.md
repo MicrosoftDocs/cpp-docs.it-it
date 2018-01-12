@@ -23,11 +23,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30ab92811c214e71534831f40e0a2fb144ed9017
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9e7a07dedbed853c270f10ddfbbe7f956f8f702b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccatalogs-ccataloginfo"></a>CCatalogs, CCatalogInfo
 Chiamare la classe typedef **CCatalogs** per implementare la relativa classe di parametro **CCatalogInfo**.  
@@ -42,7 +45,7 @@ Chiamare la classe typedef **CCatalogs** per implementare la relativa classe di 
 |Membri dati|Colonne OLE DB|  
 |------------------|--------------------|  
 |m_szName|CATALOG_NAME|  
-|m_szDescription|DESCRIZIONE|  
+|m_szDescription|DESCRIPTION|  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbsch. h  

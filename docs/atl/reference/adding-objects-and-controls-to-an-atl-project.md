@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e01b39eb7393d171b2c1fb30193810f62be85b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Aggiunta di oggetti e i controlli a un progetto ATL
 È possibile utilizzare una delle procedure guidate di codice ATL per aggiungere un oggetto o un controllo ai progetti basati su ATL o MFC. Per ogni oggetto COM o un controllo aggiungere, la procedura guidata genera file con estensione h e cpp, nonché un file con estensione RGS per il supporto del Registro di sistema basato su script. Le creazioni guidate codice ATL seguenti sono disponibili in Visual Studio:  

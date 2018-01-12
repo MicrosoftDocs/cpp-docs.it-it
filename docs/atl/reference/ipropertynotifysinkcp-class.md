@@ -1,53 +1,37 @@
 ---
-title: Classe IPropertyNotifySinkCP | Documenti di Microsoft
+title: Classe IPropertyNotifySinkCP | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IPropertyNotifySinkCP
 - atlctl/ATL::IPropertyNotifySinkCP
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connection points [C++], managing
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: feff2467d6d72e9d0a9186dc269f48eb26cbfee2
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fa15ef6706010154151c696eca320d464cdfee6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertynotifysinkcp-class"></a>Classe IPropertyNotifySinkCP
-Questa classe espone [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia come interfaccia in uscita su un oggetto collegabile.  
+Questa classe espone [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia come un'interfaccia in uscita su un oggetto collegabile.  
   
 > [!IMPORTANT]
->  Non è possibile utilizzare questa classe e i relativi membri in applicazioni eseguite in [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,15 +43,15 @@ class IPropertyNotifySinkCP
   
 #### <a name="parameters"></a>Parametri  
  `T`  
- La classe derivata da `IPropertyNotifySinkCP`.  
+ La classe, derivata da `IPropertyNotifySinkCP`.  
   
  `CDV`  
- Una classe che gestisce le connessioni tra un punto di connessione e il sink. Il valore predefinito è [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), che consente un numero illimitato di connessioni. È inoltre possibile utilizzare [CComUnkArray](../../atl/reference/ccomunkarray-class.md), che specifica un numero fisso di connessioni.  
+ Una classe che gestisce le connessioni tra un punto di connessione e il relativo sink. Il valore predefinito è [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), che consente un numero illimitato di connessioni. È inoltre possibile utilizzare [CComUnkArray](../../atl/reference/ccomunkarray-class.md), che consente di specificare un numero fisso di connessioni.  
   
 ## <a name="remarks"></a>Note  
  `IPropertyNotifySinkCP`eredita tutti i metodi tramite la relativa classe base, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).  
   
- Il [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia consente a un oggetto sink ricevere notifiche sulle modifiche delle proprietà. Classe `IPropertyNotifySinkCP` espone questa interfaccia come un'interfaccia in uscita su un oggetto collegabile. Il client deve implementare il `IPropertyNotifySink` metodi nel sink.  
+ Il [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) interfaccia consente a un oggetto sink ricevere notifiche sulle modifiche delle proprietà. Classe `IPropertyNotifySinkCP` espone questa interfaccia come un'interfaccia in uscita su un oggetto collegabile. Il client deve implementare il `IPropertyNotifySink` metodi sul sink.  
   
  Derivare la classe da `IPropertyNotifySinkCP` quando si desidera creare un punto di connessione che rappresenta il `IPropertyNotifySink` interfaccia.  
   
@@ -80,4 +64,3 @@ class IPropertyNotifySinkCP
  [Classe IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)   
  [Classe IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef188a5fc03a60c3481477d000662d595b7d4dd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e85194547b78e3d3fa3bba868be02c705fcf9a43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-points-classes"></a>Le classi di punti di connessione
 Le classi seguenti offrono il supporto per i punti di connessione:  

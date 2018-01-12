@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0a6e811e1fe074ce488b09fca29926989bc7f355
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="primary-expressions"></a>Espressioni primarie
 Le espressioni primarie sono i blocchi predefiniti di espressioni più complesse. Sono valori letterali, nomi e nomi qualificati dall'operatore di risoluzione dell'ambito (`::`).  Un'espressione primaria può avere uno dei seguenti formati:  
@@ -42,7 +40,7 @@ Le espressioni primarie sono i blocchi predefiniti di espressioni più complesse
   
  Il **questo** (parola chiave) è un puntatore a un oggetto della classe. È disponibile all'interno delle funzioni membro non statiche e fa riferimento all'istanza della classe per cui è stata richiamata la funzione. Il **questo** parola chiave non può essere utilizzata all'esterno del corpo di una funzione membro di classe.  
   
- Il tipo del **questo** puntatore è `type` ** \*const** (dove `type` è il nome della classe) all'interno di funzioni non modifica il **questo** puntatore. Nell'esempio seguente viene membro dichiarazioni di funzione e i tipi di **questo**:  
+ Il tipo del **questo** puntatore è `type`  **\*const** (dove `type` è il nome della classe) all'interno di funzioni non modifica il **questo** puntatore. Nell'esempio seguente viene membro dichiarazioni di funzione e i tipi di **questo**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

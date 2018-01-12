@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1111a94943188162793ac3270d4a21989c3850e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9856ed0cb5f4ea9a346f07c4ad98a8cf7c534f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct, iswpunct, _ispunct_l, _iswpunct_l
 Determina se un Integer rappresenta un carattere di punteggiatura.  
@@ -82,7 +83,7 @@ int _iswpunct_l(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere di punteggiatura. `ispunct` restituisce un valore diverso da zero per qualsiasi carattere stampabile che non sia uno spazio o un carattere per il quale `isalnum` sia diverso da zero. `iswpunct` restituisce un valore diverso da zero per qualsiasi carattere wide stampabile che non sia il carattere wide di spazio né un carattere wide per il quale `iswalnum` sia diverso da zero. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
- Il risultato della condizione di test per la funzione `ispunct` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Il risultato della condizione di test per la funzione `ispunct` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Il comportamento di `ispunct` e `_ispunct_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
@@ -105,5 +106,5 @@ int _iswpunct_l(
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

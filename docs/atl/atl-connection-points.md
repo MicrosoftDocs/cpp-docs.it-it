@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0ef927ad6e2a0e9b0c71e211fa525ba7fc8ea0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2063bd35627fd86c0cab82e4e50e5e8a126ddfa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-connection-points"></a>Punti di connessione ATL
 Un oggetto collegabile è un oggetto che supporta interfacce in uscita. Un'interfaccia in uscita consente all'oggetto di comunicare con un client. Per ogni interfaccia in uscita, l'oggetto collegabile espone un punto di connessione. Ogni interfaccia viene implementata da un client in un oggetto denominato sink.  
@@ -30,7 +31,7 @@ Un oggetto collegabile è un oggetto che supporta interfacce in uscita. Un'inter
   
  Ogni punto di connessione supporta il [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) interfaccia. L'oggetto collegabile espone i relativi punti di connessione al client tramite il [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) interfaccia.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Classi dei punti di connessione ATL](../atl/atl-connection-point-classes.md)  
  Descrive in breve le classi ATL che supportano i punti di connessione.  
   

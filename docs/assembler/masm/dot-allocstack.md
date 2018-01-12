@@ -1,49 +1,47 @@
 ---
-title: ".ALLOCSTACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ALLOCSTACK"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ALLOCSTACK directive"
+title: . ALLOCSTACK | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ALLOCSTACK
+dev_langs: C++
+helpviewer_keywords: .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 20d9147b2c1a95d4fc9600935111a9c0c013be21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# .ALLOCSTACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Genera un'eccezione **UWOP\_ALLOC\_SMALL** oppure  **UWOP\_ALLOC\_LARGE** con la dimensione specificata per l'offset corrente in prologo.  
+# <a name="allocstack"></a>.ALLOCSTACK
+Genera un **voce UWOP_ALLOC_SMALL** o **UWOP_ALLOC_LARGE** con le dimensioni specificate per l'offset corrente nel prologo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 .ALLOCSTACK size  
 ```  
   
-## Note  
- MASM sceglierà la codifica più efficiente per una determinata dimensione.  
+## <a name="remarks"></a>Note  
+ MASM sceglierà la codifica più efficiente per le dimensioni specificate.  
   
- .ALLOCSTACK Consente agli utenti di ml64.exe specificare come una funzione del frame rimossi e solo è valida all'interno del prologo, che si estende da [PROC](../../assembler/masm/proc.md) Dichiarazione di FRAME a  [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva.  Queste direttive non generano codice; generano solo `.xdata` e  `.pdata`.  .ALLOCSTACK Deve essere preceduto dalle istruzioni che effettivamente implementano le azioni essere rimosso.  È opportuno eseguire il wrapping delle direttive di rimuovere che il codice da rimuovere in una macro per assicurarsi che il contratto.  
+ . ALLOCSTACK consente di specificare come una funzione frame rimuove ml64.exe ed è consentita solo all'interno di prologo, che si estende dal [PROC](../../assembler/masm/proc.md) dichiarazione FRAME per il [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) direttiva. Queste direttive non generano codice. vengono generati solo `.xdata` e `.pdata`. . ALLOCSTACK deve essere preceduto da istruzioni che implementano le azioni per essere rimosso. È consigliabile eseguire il wrapping di direttive di rimozione sia il codice di che rimozione in una macro deve garantire l'accordo.  
   
- `size` l'operando deve essere un multiplo di 8.  
+ Il `size` operando deve essere un multiplo di 8.  
   
- Per ulteriori informazioni, vedere [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Per ulteriori informazioni, vedere [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Esempio  
- Di seguito viene illustrato come specificare un rimuovere\/gestore di eccezioni:  
+## <a name="sample"></a>Esempio  
+ L'esempio seguente viene illustrato come specificare un gestore di rimozione/eccezione:  
   
 ```  
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console  
@@ -73,5 +71,5 @@ text ENDS
 END  
 ```  
   
-## Vedere anche  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimento a direttive](../../assembler/masm/directives-reference.md)

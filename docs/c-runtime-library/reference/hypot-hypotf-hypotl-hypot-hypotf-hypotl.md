@@ -48,11 +48,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36a9fee91a98b224d31df6b9af58ce4caf27030a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99cf5168eba3ed03b4e91571cd50a3c6c4bf9afe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 Calcola l'ipotenusa.  
@@ -131,6 +132,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [_cabs](../../c-runtime-library/reference/cabs.md)   
  [_matherr](../../c-runtime-library/reference/matherr.md)

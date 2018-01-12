@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbe718ef448f49f02fa6742015af59fa11d75574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08f1e170fcba0b9b11c80668e3e4f2cec696a9bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-edit-control"></a>Value (controllo di modifica)
 Per utilizzare il controllo, immettere un valore, incollarlo dagli Appunti, o trascinamento della selezione, dal debugger in questo controllo di modifica. Immettere il valore in formato decimale o esadecimale e quindi fare clic su **Cerca**. Valori esadecimali devono essere preceduti da 0x; i caratteri validi sono 0-9, A-F e -f. Valori decimali possono essere preceduti dal segno meno (-). i caratteri validi sono 0-9.  

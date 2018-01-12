@@ -1,42 +1,43 @@
 ---
-title: "map::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare (membro) [STL/CLR]"
+title: Map::value_compare (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 04fab34b-c68a-4f61-97e8-a7d629b1ffed
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b64294345398afce97774996a5b68a095070b0f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# map::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il delegato di ordinamento per due valori elemento.  
+# <a name="mapvaluecompare-stlclr"></a>map::value_compare (STL/CLR)
+Il delegato di ordinamento per valori di due elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Note  
- Il tipo è un sinonimo del delegato che determina l'ordinamento degli argomenti valore.  
+## <a name="remarks"></a>Note  
+ Il tipo è un sinonimo per il delegato che determina l'ordine dei relativi argomenti di valore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_map_value_compare.cpp   
@@ -64,16 +65,19 @@ int main()
   
 ```  
   
-  **confronta\(\[L'a, 1\], \[L'a, 1\]\) \= False**  
-**confronta\(\[L'a, 1\], \[L'b, 2\]\) \= True**  
-**confronta\(\[L'b, 2\], \[L'a, 1\]\) \= False**   
-## Requisiti  
- **Intestazione:** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_compare](../dotnet/map-key-compare-stl-clr.md)   
- [map::value\_comp](../dotnet/map-value-comp-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)   
+ [Map:: value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

@@ -1,40 +1,39 @@
 ---
-title: "/EXPORTS | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/exports"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EXPORTS (opzione di dumpbin)"
-  - "EXPORTS (opzione dumpbin)"
-  - "-EXPORTS (opzione dumpbin)"
+title: -EXPORTS | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /exports
+dev_langs: C++
+helpviewer_keywords:
+- EXPORTS dumpbin option
+- -EXPORTS dumpbin option
+- /EXPORTS dumpbin option
 ms.assetid: 2971ab7e-4ee6-478b-9c85-cda42a4ce1bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94b685ff298e81d99d65654fe66b0d4e284ae363
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /EXPORTS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="exports"></a>/EXPORTS
 ```  
 /EXPORTS  
 ```  
   
-## Note  
- Questa opzione consente di visualizzare tutte le definizioni esportate da un file eseguibile o da una DLL.  
+## <a name="remarks"></a>Note  
+ Questa opzione consente di visualizzare tutte le definizioni esportate da un file eseguibile o DLL.  
   
- L'unica opzione di DUMPBIN utilizzabile sui file generati con l'opzione del compilatore [\/GL](../../build/reference/gl-whole-program-optimization.md) è [\/HEADERS](../../build/reference/headers.md).  
+ Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)

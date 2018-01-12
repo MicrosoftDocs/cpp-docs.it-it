@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,21 +20,19 @@ f1_keywords:
 - ATLCOMCLI/ATL::CComPtrBase::Release
 - ATLCOMCLI/ATL::CComPtrBase::SetSite
 - ATLCOMCLI/ATL::CComPtrBase::p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtrBase class
+dev_langs: C++
+helpviewer_keywords: CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptrbase-class"></a>Classe CComPtrBase
 Questa classe fornisce una base per le classi di puntatore intelligente utilizzo della memoria basato su COM routine.  
@@ -375,4 +372,3 @@ HRESULT SetSite(IUnknown* punkParent) throw();
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

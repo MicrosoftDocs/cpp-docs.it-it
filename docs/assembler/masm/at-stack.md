@@ -1,33 +1,31 @@
 ---
-title: "@stack | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@stack symbol"
+title: '@stack| Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@stack'
+dev_langs: C++
+helpviewer_keywords: '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6b152b654c62dfbfa28fdf637a0c72d7b507df47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# @stack
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-DGROUP per gli stack o lo STACK adiacenti per gli stack lontani \(macro di testo\).  
+# <a name="stack"></a>@stack
+DGROUP per prossimità stack o dello STACK per gli stack di far (macro di testo).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,5 +33,5 @@ DGROUP per gli stack o lo STACK adiacenti per gli stack lontani \(macro di testo
   
 ```  
   
-## Vedere anche  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti ai simboli](../../assembler/masm/symbols-reference.md)

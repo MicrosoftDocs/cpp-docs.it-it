@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4738e3f5256fe654dd64541dfd021ba2b4fce090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collections-and-enumerators"></a>Raccolte ed enumeratori ATL
 Oggetto `collection` è un oggetto COM che fornisce un'interfaccia che consente l'accesso a un gruppo di elementi di dati (dati non elaborati o altri oggetti). Un'interfaccia che segue gli standard per fornire l'accesso a un gruppo di oggetti è noto come un *interfaccia di raccolta*.  
@@ -33,7 +34,7 @@ Oggetto `collection` è un oggetto COM che fornisce un'interfaccia che consente 
   
  Sono disponibili ulteriori informazioni sulle interfacce di enumeratore leggendo sull'archetipo (ma completamente immaginaria) [IEnumXXXX](https://msdn.microsoft.com/library/ms680089.aspx) interfaccia.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Classi di raccolta e di enumeratori ATL](../atl/atl-collection-and-enumerator-classes.md)  
  Descrive brevemente e fornisce collegamenti alle classi ATL che consentono di implementano raccolte ed enumeratori.  
   

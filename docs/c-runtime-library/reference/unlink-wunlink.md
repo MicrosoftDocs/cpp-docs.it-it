@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 64e215e42433ac7d69e8005f1e44f9ae8184bec0
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8494b4a379f0e484ed98f6240dd76ccd4ef15bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 Eliminare un file.  
@@ -105,7 +89,7 @@ int _wunlink(
 |`_unlink`|\<io.h> e \<stdio.h>|  
 |`_wunlink`|\<io.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="code-example"></a>Esempio di codice  
  Questo programma usare _unlink per eliminare CRT_UNLINK. TXT.  

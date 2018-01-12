@@ -18,7 +18,7 @@ f1_keywords:
 - type_traits/std::is_trivially_move_assignable
 - type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::is_assignable
@@ -31,12 +31,11 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.translationtype: MT
-ms.sourcegitcommit: d5416662aaafdc074df11e172a76de6198025a65
 ms.openlocfilehash: 668ef9fb5f1786c3830d1ad143348c26060218ff
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttypetraitsgt-functions"></a>Funzioni &lt;type_traits&gt;
 ||||  
@@ -303,5 +302,4 @@ struct is_trivially_move_constructible;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 

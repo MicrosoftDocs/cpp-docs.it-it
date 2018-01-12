@@ -46,11 +46,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 747639550e05a0e00daadcbd72d25b31c72a7dd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 Trasformare una stringa basata sulle informazioni specifiche delle impostazioni locali.  
@@ -99,7 +100,7 @@ size_t wcsxfrm_l(
  Restituisce la lunghezza della stringa trasformata, senza contare il carattere di terminazione null. Se il valore restituito è maggiore o uguale a `count`, il contenuto di `strDest` è imprevedibile. Su un errore, ogni funzione imposta `errno` e restituisce `INT_MAX`. Per un carattere non valido, `errno` è impostato su `EILSEQ`.  
   
 ## <a name="remarks"></a>Note  
- La funzione `strxfrm` trasforma la stringa puntata da `strSource` in un nuovo formato fascicolato che viene archiviato in `strDest`. Non più di `count` caratteri, incluso il carattere null, vengono trasformati e inseriti nella stringa risultante. La trasformazione viene eseguita utilizzando l'impostazione di categoria `LC_COLLATE` delle impostazioni locali. Per altre informazioni su `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm` utilizza le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; `_strxfrm_l` è identico con la differenza che utilizza le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ La funzione `strxfrm` trasforma la stringa puntata da `strSource` in un nuovo formato fascicolato che viene archiviato in `strDest`. Non più di `count` caratteri, incluso il carattere null, vengono trasformati e inseriti nella stringa risultante. La trasformazione viene eseguita utilizzando l'impostazione di categoria `LC_COLLATE` delle impostazioni locali. Per altre informazioni su `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strxfrm` utilizza le impostazioni locali correnti per il relativo comportamento dipendente dalle impostazioni locali; `_strxfrm_l` è identico con la differenza che utilizza le impostazioni locali passate anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Dopo la trasformazione, una chiamata a `strcmp` con le due stringhe trasformate restituisce risultati identici a quelli di una chiamata a `strcoll` applicata alle due stringhe originali. Come con `strcoll` e `stricoll`, `strxfrm` gestisce automaticamente le stringhe di caratteri multibyte in modo appropriato.  
   
@@ -148,7 +149,7 @@ return( strlen( _string1 ) );
  [Conversione dei dati](../../c-runtime-library/data-conversion.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
  [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   

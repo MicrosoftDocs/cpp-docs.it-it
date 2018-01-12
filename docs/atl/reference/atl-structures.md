@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-f1_keywords:
-- vc.atl.structures
-dev_langs:
-- C++
+f1_keywords: vc.atl.structures
+dev_langs: C++
 helpviewer_keywords:
 - ATL, structures
 - structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c8f34a1957a4af4090d5e73a54f0ef00f8b76088
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-structures"></a>Strutture ATL
 
 
 Active Template Library include le seguenti strutture.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
  Contiene informazioni utilizzate per il rendering in varie destinazioni, ad esempio una stampante, metafile o controllo ActiveX.  
   
@@ -72,4 +69,3 @@ Active Template Library include le seguenti strutture.
   
  [Classi ATL](../../atl/reference/atl-classes.md)  
  Fornisce materiale di riferimento per le classi organizzate in ordine alfabetico.
-

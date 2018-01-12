@@ -46,11 +46,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 66e06a0a35980d28b03e3b0ba5b2e06ca6861e41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Determina se un intero rappresenta un carattere di controllo.  
@@ -84,7 +85,7 @@ int _iswcntrl_l(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere di controllo. `iscntrl`Restituisce un valore diverso da zero se `c` è un carattere di controllo (0x00-0x1F o 0x7F). `iswcntrl` restituisce un valore diverso da zero se `c` è un carattere wide di controllo. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
- Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano il parametro delle impostazioni locali che è stato passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano il parametro delle impostazioni locali che è stato passato anziché le impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Il comportamento di `iscntrl` e `_iscntrl_l` è indefinito se `c` non è EOF o non è compreso nell'intervallo da 0 a 0xFF, inclusi. Quando si usa una libreria di debug CRT e `c` non è uno di questi valori, le funzioni generano un'asserzione.  
   
@@ -108,5 +109,5 @@ int _iswcntrl_l(
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)

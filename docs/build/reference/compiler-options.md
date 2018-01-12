@@ -1,51 +1,52 @@
 ---
-title: "Opzioni del compilatore | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "compilatore cl.exe"
-  - "opzioni del compilatore, C++"
-  - "IPF (compilatore Visual C++)"
-  - "compilatore Visual C++ Itanium"
-  - "x64 (compilatore Visual C++)"
+title: Opzioni del compilatore | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- cl.exe compiler
+- IPF Visual C++ compiler
+- Itanium Visual C++ compiler
+- compiler options, C++
+- x64 Visual C++ compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c433abea04ff81c69fe1b73569ea7e043e6e81ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Opzioni del compilatore
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-cl.exe consente di controllare i compilatori e i linker di Microsoft C e di C\+\+. cl.exe può essere eseguito solo sui sistemi operativi che supportano Microsoft Visual Studio.  
+# <a name="compiler-options"></a>Opzioni del compilatore
+CL.exe è uno strumento che controlla il linker e i compilatori Microsoft C e C++. CL.exe può essere eseguito solo in sistemi operativi che supportano Microsoft Visual Studio.  
   
 > [!NOTE]
->  Questo strumento può essere avviato solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)],  Non è possibile avviarlo dal prompt dei comandi di sistema o da Esplora file.  
+>  È possibile avviare questo strumento solo dal prompt dei comandi di [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Non è possibile avviarlo da un prompt dei comandi di sistema o da Esplora File.  
   
- I compilatori producono file oggetto \(obj\) in formato file oggetto comune \(COFF, Common Object File Format\).  Il linker produce file eseguibili \(exe\) o librerie a collegamento dinamico \(DLL\).  
+ I compilatori producono file dell'oggetto (obj) comuni oggetto formato COFF (File). Il linker genera file eseguibili (.exe) o librerie a collegamento dinamico (DLL).  
   
- Per tutte le opzioni del compilatore viene effettuata la distinzione tra maiuscole e minuscole.  
+ Si noti che tutte le opzioni del compilatore tra maiuscole e minuscole.  
   
- Per eseguire la compilazione senza collegamento, utilizzare [\/c](../../build/reference/c-compile-without-linking.md).  
+ Per la compilazione senza collegamento, utilizzare [/c](../../build/reference/c-compile-without-linking.md).  
   
-## Ricerca di un'opzione  
- Per trovare una particolare opzione del compilatore, consultare uno degli elenchi negli argomenti riportati di seguito.  
+## <a name="finding-an-option"></a>Ricerca di un'opzione  
+ Per trovare una particolare opzione del compilatore, vedere uno degli elenchi seguenti:  
   
 -   [Opzioni del compilatore elencate in ordine alfabetico](../../build/reference/compiler-options-listed-alphabetically.md)  
   
 -   [Opzioni del compilatore elencate per categoria](../../build/reference/compiler-options-listed-by-category.md)  
   
-## Specifica delle opzioni  
- Per ogni opzione del compilatore è disponibile una sezione in cui ne viene descritta l'impostazione nell'ambiente di sviluppo.  Per informazioni su come specificare le opzioni al di fuori dell'ambiente di sviluppo, vedere:  
+## <a name="specifying-options"></a>Impostazione delle opzioni  
+ Questo argomento per ciascuna opzione del compilatore illustra come è possibile impostare nell'ambiente di sviluppo. Per informazioni su come specificare le opzioni all'esterno dell'ambiente di sviluppo, vedere:  
   
 -   [Sintassi della riga di comando del compilatore](../../build/reference/compiler-command-line-syntax.md)  
   
@@ -53,15 +54,15 @@ cl.exe consente di controllare i compilatori e i linker di Microsoft C e di C\+\
   
 -   [Variabili di ambiente CL](../../build/reference/cl-environment-variables.md)  
   
-## Strumenti di compilazione correlati  
- Utilizzare [NMAKE](../../build/nmake-reference.md) per compilare il proprio file di output.  
+## <a name="related-build-tools"></a>Strumenti di compilazione correlati  
+ Utilizzare [NMAKE](../../build/nmake-reference.md) per compilare il file di output.  
   
  Utilizzare [BSCMAKE](../../build/reference/bscmake-reference.md) per supportare la ricerca nelle classi.  
   
- Le [opzioni del linker](../../build/reference/linker-options.md) influenzano anche il modo in cui il programma viene compilato.  
+ [Opzioni del linker](../../build/reference/linker-options.md) influenzare la modalità di compilazione del programma.  
   
-## Vedere anche  
- [Riferimenti alla compilazione in C\/C\+\+](../../build/reference/c-cpp-building-reference.md)   
+## <a name="see-also"></a>Vedere anche  
+ [C/C++ Building Reference](../../build/reference/c-cpp-building-reference.md)  (Informazioni di riferimento per la compilazione in C/C++)  
  [Impostazione delle opzioni del compilatore](../../build/reference/setting-compiler-options.md)   
  [Compilazione veloce](../../build/reference/fast-compilation.md)   
- [Richiamo di CL da parte del linker](../../build/reference/cl-invokes-the-linker.md)
+ [CL richiama il linker](../../build/reference/cl-invokes-the-linker.md)

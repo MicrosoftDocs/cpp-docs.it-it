@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0ef1e7ca2587a63116ffde0b0025c77566a0dc90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 570422a3ae6884275a6a21fa3f8dd277fafe411a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memccpy"></a>_memccpy
 Copia caratteri da un buffer.  
@@ -79,7 +80,7 @@ Copia caratteri da un buffer.
 |-------------|---------------------|  
 |`_memccpy`|\<memory.h> o \<string.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="libraries"></a>Librerie  
  Tutte le versioni delle [librerie di runtime C](../../c-runtime-library/crt-library-features.md).  

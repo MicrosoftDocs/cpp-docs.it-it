@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 Formatta una stringa dell'ora.  
@@ -112,7 +95,7 @@ size_t _wcsftime_l(
  Stringa di controllo del formato.  
   
  `timeptr`  
-Struttura di dati  `tm`.  
+ Struttura di dati `tm`.  
   
  `locale`  
  Impostazioni locali da usare.  
@@ -138,7 +121,7 @@ Struttura di dati  `tm`.
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- L'argomento `format` è costituito da uno o più codici. Come in `printf`, i codici di formattazione sono preceduti da un segno di percentuale (`%`). Caratteri che non iniziano con `%` verranno copiate così a `strDest`. La categoria `LC_TIME` delle impostazioni locali correnti influisce sulla formattazione dell'output di `strftime`. Per altre informazioni su `LC_TIME`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali correnti. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ L'argomento `format` è costituito da uno o più codici. Come in `printf`, i codici di formattazione sono preceduti da un segno di percentuale (`%`). Caratteri che non iniziano con `%` verranno copiate così a `strDest`. La categoria `LC_TIME` delle impostazioni locali correnti influisce sulla formattazione dell'output di `strftime`. Per altre informazioni su `LC_TIME`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni di queste funzioni con il suffisso `_l` sono identiche, ad eccezione del fatto che usano il parametro delle impostazioni locali passato al posto delle impostazioni locali correnti. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  I codici di formattazione per `strftime` sono elencati di seguito:  
   
@@ -226,14 +209,14 @@ Struttura di dati  `tm`.
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio per [time](../../c-runtime-library/reference/time-time32-time64.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni locali](../../c-runtime-library/locale.md)   
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

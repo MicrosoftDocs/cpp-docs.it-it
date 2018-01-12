@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 41354c34fb21da7f568718489495991cbd1bae43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8d9ef7f194151fb3259712759d0c29ed157d564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursion-macros"></a>Macro di ricorsione
 Utilizzare le macro di ricorsione per chiamare in modo ricorsivo NMAKE. Le sessioni ricorsive ereditano macro della riga di comando e variabili di ambiente e le informazioni di Tools. Non ereditano le regole di inferenza definite nel makefile o **. SUFFISSI** e **. PREZIOSI** specifiche. Per passare le macro a una sessione NMAKE ricorsiva, impostare una variabile di ambiente con SET prima della chiamata ricorsiva, definire una macro nel comando per la chiamata ricorsiva o definire una macro in Tools.  

@@ -1,47 +1,32 @@
 ---
-title: Macro di messaggi di Windows | Documenti di Microsoft
+title: Macro di messaggi di Windows | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords: atlbase/ATL::WM_FORWARDMSG
+dev_langs: C++
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: be814c0a2ade7df8f7a4d6863627e79efe0a48bc
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6dde3255997b03eb827ef9e318de73b3badee23c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-messages-macros"></a>Macro di messaggi di Windows
 Questa macro inoltra i messaggi della finestra.  
   
 |||  
 |-|-|  
-|[WM_FORWARDMSG](#wm_forwardmsg)|Utilizzare per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|Usare per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione.|  
 
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** atlbase. h 
@@ -54,10 +39,10 @@ WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Diverso da zero se il messaggio è stato elaborato, zero se non.  
+ Diverso da zero se il messaggio è stato elaborato, se non lo zero.  
   
 ### <a name="remarks"></a>Note  
- Utilizzare `WM_FORWARDMSG` per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri WPARAM e LPARAM vengono utilizzati come segue:  
+ Utilizzare `WM_FORWARDMSG` per inoltrare un messaggio ricevuto da una finestra a un'altra finestra per l'elaborazione. I parametri LPARAM e WPARAM vengono utilizzati come indicato di seguito:  
   
 |Parametro|Utilizzo|  
 |---------------|-----------|  
@@ -67,8 +52,7 @@ WM_FORWARDMSG
 ### <a name="example"></a>Esempio  
  Nell'esempio seguente, `m_hWndOther` rappresenta l'altra finestra che riceve il messaggio.  
   
- [!code-cpp[NVC_ATL_Windowing&#137;](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   
 ## <a name="see-also"></a>Vedere anche  
  [Macro](../../atl/reference/atl-macros.md)
-

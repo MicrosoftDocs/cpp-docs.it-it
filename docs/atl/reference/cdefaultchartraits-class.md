@@ -1,11 +1,10 @@
 ---
-title: Classe CDefaultCharTraits | Documenti di Microsoft
+title: Classe CDefaultCharTraits | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLCOLL/ATL::CDefaultCharTraits
 - ATLCOLL/ATL::CDefaultCharTraits::CharToLower
 - ATLCOLL/ATL::CDefaultCharTraits::CharToUpper
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultCharTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 12991cfcf1ac96808a0315899d01ce3012324dc6
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 283f588af0e824801fbec13f32ae1276c13eb724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdefaultchartraits-class"></a>Classe CDefaultCharTraits
 Questa classe fornisce due funzioni statiche per la conversione dei caratteri tra lettere maiuscole e minuscole.  
@@ -82,10 +65,10 @@ static char CharToLower(char x);
   
 ### <a name="parameters"></a>Parametri  
  *x*  
- Carattere da convertire in minuscolo.  
+ Carattere da convertire in caratteri minuscoli.  
   
 ### <a name="example"></a>Esempio  
- [!code-cpp[NVC_ATL_Utilities&#132;](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
  Chiamare questa funzione per convertire un carattere in maiuscolo.  
@@ -97,8 +80,7 @@ static char CharToUpper(char x);
   
 ### <a name="parameters"></a>Parametri  
  *x*  
- Carattere da convertire in maiuscolo.  
+ Carattere da convertire in caratteri maiuscoli.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)
-

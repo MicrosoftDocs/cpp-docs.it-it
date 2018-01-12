@@ -13,10 +13,9 @@ f1_keywords:
 - utility/std::operator&lt;
 - utility/std::operator&lt;=
 - utility/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (utility)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 9f9290b171a74098af5186c17f027fcf6e34c78f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltutilitygt-operators"></a>Operatori &lt;utility&gt;
 ||||  
@@ -485,5 +483,4 @@ Pair p1 is greater than or equal to pair p4.
   
 ## <a name="see-also"></a>Vedere anche  
  [\<utility>](../standard-library/utility.md)
-
 

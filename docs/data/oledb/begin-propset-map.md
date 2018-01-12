@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PROPSET_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROPSET_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROPSET_MAP (macro)"
+title: BEGIN_PROPSET_MAP | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROPSET_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROPSET_MAP macro
 ms.assetid: c3a30618-6025-4d49-8688-a171294d2e93
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 24fe8ed41888ab2b3d303a29cd9d004f26b6c6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PROPSET_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Contrassegna l'inizio delle voci della mappa degli insiemi di proprietà.  
+# <a name="beginpropsetmap"></a>BEGIN_PROPSET_MAP
+Segni di inizio della proprietà set di voci della mappa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,26 +37,26 @@ Class
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *Classe*  
- \[in\] la classe in cui si è impostata la proprietà è specificato.  Una proprietà può essere specificato negli oggetti OLE DB:  
+ [in] La classe in cui viene specificato questo set di proprietà. Nei seguenti oggetti OLE DB, è possibile specificare un set di proprietà:  
   
--   [\<caps:sentence id\="tgt4" sentenceid\="75bbb794f21139fcd243c18fff6050d2" class\="tgtSentence"\>Oggetti origine dati\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
+-   [Oggetti origine dati](https://msdn.microsoft.com/en-us/library/ms721278.aspx)  
   
--   [\<caps:sentence id\="tgt5" sentenceid\="e423b0fba10fc83bd76e01e3eee2fd69" class\="tgtSentence"\>Oggetti sessione\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
+-   [Oggetti di sessione](https://msdn.microsoft.com/en-us/library/ms711572.aspx)  
   
--   [\<caps:sentence id\="tgt6" sentenceid\="5f6bc08c46cee6f21bfcdd08aff6e8aa" class\="tgtSentence"\>Comandi\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
+-   [Comandi](https://msdn.microsoft.com/en-us/library/ms724608.aspx)  
   
-## Esempio  
- Di seguito viene illustrata la mappa degli insiemi di proprietà di esempio:  
+## <a name="example"></a>Esempio  
+ Di seguito è riportato un esempio di mapping dei set di proprietà:  
   
- [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/CPP/begin-propset-map_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [Modelli provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [Architettura dei modelli di provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [Modelli Provider OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
+ [Architettura dei modelli Provider OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [Creazione di un provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

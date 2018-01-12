@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - taccess
 - waccess
 - _taccess
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - access function
 - _taccess function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d0968ec14a43cfbbf1169f34ac929435787bc349
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5c4d8c6d8caae8b36f372ce75b4fc91638f9e78e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-waccess"></a>_access, _waccess
 Determina se un file è di sola lettura o meno. Sono disponibili versioni più sicure. Vedere [_access_s, _waccess_s](../../c-runtime-library/reference/access-s-waccess-s.md).  
@@ -100,7 +84,7 @@ int _waccess(
  `EINVAL`  
  Parametro non valido.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Se usata con i file, la funzione `_access` determina se il file o la directory specificata esiste e ha gli attributi specificati dal valore di `mode`. Se usata con le directory, `_access` determina solo se la directory specificata esiste. In [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] e nei sistemi operativi successivi, tutte le directory hanno accesso di lettura e scrittura.  

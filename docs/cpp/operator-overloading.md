@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3844dc5b53defcb02f1dab1a97f05760d05d531f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-overloading"></a>Overload degli operatori
 La parola chiave `operator` dichiara una funzione che specifica il significato di `operator-symbol` quando viene applicato a istanze di una classe. In tal modo è possibile assegnare più significati all'operatore, che diventa quindi operatore di overload. Il compilatore distingue tra i diversi significati di un operatore esaminando i tipi degli operandi.  
@@ -173,7 +174,7 @@ int main() {
 6.8, 11.2  
 ```  
   
-## <a name="in-this-section"></a>In questa sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 1.  [Regole generali per overload di operatori](../cpp/general-rules-for-operator-overloading.md)  
   

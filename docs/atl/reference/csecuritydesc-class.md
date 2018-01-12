@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecuritydesc-class"></a>Classe CSecurityDesc
 Questa classe è un wrapper per il **SECURITY_DESCRIPTOR** struttura.  
@@ -132,7 +115,7 @@ class CSecurityDesc
   
  Le applicazioni non devono modificare il **SECURITY_DESCRIPTOR** struttura direttamente e invece deve utilizzare i metodi di classe forniti.  
   
- Per un'introduzione al modello di controllo di accesso di Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) in Windows SDK.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ATLSecurity. h  
@@ -214,7 +197,7 @@ bool GetDacl(
  Puntatore a un `CDacl` struttura in cui archiviare una copia dell'elenco DACL del descrittore di sicurezza. Se un discrezionale **ACL** esiste, il metodo imposta `pDacl` per l'indirizzo della sicurezza del descrittore del discrezionale **ACL**. Se un discrezionale **ACL** non esiste, viene memorizzato alcun valore.  
   
  `pbPresent`  
- Puntatore a un valore che indica la presenza di un discretionary **ACL** nel descrittore di sicurezza specificato. Se il descrittore di sicurezza contiene un discretionary **ACL**, questo parametro è impostato su true. Se il descrittore di sicurezza non contiene un discrezionale **ACL**, questo parametro è impostato su false.  
+ Puntatore a un valore che indica la presenza di un discrezionale **ACL** nel descrittore di sicurezza specificato. Se il descrittore di sicurezza contiene un discrezionale **ACL**, questo parametro è impostato su true. Se il descrittore di sicurezza non contiene un discrezionale **ACL**, questo parametro è impostato su false.  
   
  `pbDefaulted`  
  Puntatore a un flag impostato sul valore del flag nella SE_DACL_DEFAULTED il **SECURITY_DESCRIPTOR_CONTROL** struttura se un discrezionale **ACL** esiste per il descrittore di sicurezza. Se questo flag è impostato su true, le operazioni discrezionali **ACL** è stata recuperata da un meccanismo predefinito; se false, le operazioni discrezionali **ACL** è stato specificato in modo esplicito da un utente.  
@@ -236,7 +219,7 @@ bool GetGroup(
  Puntatore a un [IDSR](../../atl/reference/csid-class.md) (SID) che riceve una copia del gruppo di cui è archiviato nel CDacl.  
   
  `pbDefaulted`  
- Puntatore a un flag impostato sul valore del flag SE_GROUP_DEFAULTED nel **SECURITY_DESCRIPTOR_CONTROL** struttura quando il metodo restituisce.  
+ Puntatore a un flag impostato sul valore del flag nella SE_GROUP_DEFAULTED il **SECURITY_DESCRIPTOR_CONTROL** struttura quando il metodo restituisce.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se il metodo ha esito positivo, false in caso di errore.  
@@ -255,7 +238,7 @@ bool GetOwner(
  Puntatore a un [IDSR](../../atl/reference/csid-class.md) (SID) che riceve una copia del gruppo di cui è archiviato nel CDacl.  
   
  `pbDefaulted`  
- Puntatore a un flag impostato sul valore del flag SE_OWNER_DEFAULTED nel **SECURITY_DESCRIPTOR_CONTROL** struttura quando il metodo restituisce.  
+ Puntatore a un flag impostato sul valore del flag nella SE_OWNER_DEFAULTED il **SECURITY_DESCRIPTOR_CONTROL** struttura quando il metodo restituisce.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se il metodo ha esito positivo, false in caso di errore.  
@@ -288,7 +271,7 @@ bool GetSacl(
  Puntatore a un flag imposta il metodo per indicare la presenza di un sistema **ACL** nel descrittore di sicurezza specificato. Se il descrittore di sicurezza contiene un sistema **ACL**, questo parametro è impostato su true. Se il descrittore di sicurezza non contiene un sistema **ACL**, questo parametro è impostato su false.  
   
  `pbDefaulted`  
- Puntatore a un flag impostato sul valore del flag SE_SACL_DEFAULTED nel **SECURITY_DESCRIPTOR_CONTROL** struttura se un sistema **ACL** esiste per il descrittore di sicurezza.  
+ Puntatore a un flag impostato sul valore del flag nella SE_SACL_DEFAULTED il **SECURITY_DESCRIPTOR_CONTROL** struttura se un sistema **ACL** esiste per il descrittore di sicurezza.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se il metodo ha esito positivo, false in caso di errore.  
@@ -535,7 +518,7 @@ inline void SetDacl(
  Riferimento a un `CDacl` oggetto che specifica l'elenco DACL per il descrittore di sicurezza. Questo parametro non deve essere NULL. Per impostare un elenco DACL nel descrittore di sicurezza, il primo form del metodo deve essere utilizzato con `bPresent` impostato su false.  
   
  `bPresent`  
- Specifica un flag che indica la presenza di un elenco DACL nel descrittore di sicurezza. Se questo parametro è true, il metodo imposta il flag SE_DACL_PRESENT **SECURITY_DESCRIPTOR_CONTROL** strutturare e utilizza i valori di *Dacl* e `bDefaulted` parametri. Se è false, il metodo cancella il flag SE_DACL_PRESENT, e `bDefaulted` viene ignorato.  
+ Specifica un flag che indica la presenza di un elenco DACL nel descrittore di sicurezza. Se questo parametro è true, il metodo imposta il flag SE_DACL_PRESENT nel **SECURITY_DESCRIPTOR_CONTROL** struttura e utilizza i valori di *Dacl* e `bDefaulted` parametri. Se è false, il metodo cancella il flag SE_DACL_PRESENT, e `bDefaulted` viene ignorato.  
   
  `bDefaulted`  
  Specifica un flag che indica l'origine dell'elenco DACL. Se questo flag è true, l'elenco DACL è stato recuperato da un meccanismo predefinito. Se false, l'elenco DACL è stato specificato in modo esplicito da un utente. Il metodo archivia il valore in bandiera SE_DACL_DEFAULTED il **SECURITY_DESCRIPTOR_CONTROL** struttura. Se questo parametro viene omesso, il flag SE_DACL_DEFAULTED viene cancellato.  
@@ -640,4 +623,3 @@ bool ToString(
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)
-

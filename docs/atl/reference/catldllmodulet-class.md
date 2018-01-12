@@ -1,11 +1,10 @@
 ---
-title: Classe CAtlDllModuleT | Documenti di Microsoft
+title: Classe CAtlDllModuleT | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,36 +17,19 @@ f1_keywords:
 - ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
 - ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
 - ATLBASE/ATL::CAtlDllModuleT::GetClassObject
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlDllModuleT class
+dev_langs: C++
+helpviewer_keywords: CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 13cd0adb860660e06c92e8f02c07721ede391fb7
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 650924898532e352df30d7e8173620b974f30138
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catldllmodulet-class"></a>Classe CAtlDllModuleT
 Questa classe rappresenta il modulo per una DLL.  
@@ -84,9 +66,9 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |[CAtlDllModuleT::GetClassObject](#getclassobject)|Restituisce una class factory. Richiamato da [DllGetClassObject](#dllgetclassobject).|  
   
 ## <a name="remarks"></a>Note  
- `CAtlDllModuleT`rappresenta il modulo per una libreria di collegamento dinamico (DLL) e fornisce funzioni utilizzate da tutti i progetti DLL. La specializzazione di [CAtlModuleT](../../atl/reference/catlmodulet-class.md) classe include il supporto per la registrazione.  
+ `CAtlDllModuleT`rappresenta il modulo per una libreria di collegamento dinamico (DLL) e fornisce funzioni utilizzate da tutti i progetti DLL. Questa specializzazione di [CAtlModuleT](../../atl/reference/catlmodulet-class.md) classe include il supporto per la registrazione.  
   
- Per ulteriori informazioni sui moduli in ATL, vedere [classi di modulo ATL](../../atl/atl-module-classes.md).  
+ Per ulteriori informazioni sui moduli di ATL, vedere [classi di modulo ATL](../../atl/atl-module-classes.md).  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -122,7 +104,7 @@ HRESULT DllCanUnloadNow() throw();
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK se la DLL può essere scaricata o S_FALSE se non è possibile.  
+ Se non è possibile, restituisce S_OK se la DLL può essere scaricata o S_FALSE.  
   
 ##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
  Restituisce la class factory.  
@@ -139,13 +121,13 @@ HRESULT DllGetClassObject(
  Il CLSID dell'oggetto da creare.  
   
  `riid`  
- L'IID dell'interfaccia richiesta.  
+ IID dell'interfaccia richiesta.  
   
  `ppv`  
- Un puntatore al puntatore a interfaccia identificato da `riid`. Se l'oggetto non supporta questa interfaccia, `ppv` è impostato su NULL.  
+ Un puntatore al puntatore a interfaccia identificato dal `riid`. Se l'oggetto non supporta questa interfaccia, `ppv` è impostato su NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
  Il punto di ingresso facoltativo in una libreria di collegamento dinamico (DLL).  
@@ -165,7 +147,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
  Restituisce sempre TRUE.  
   
 ### <a name="remarks"></a>Note  
- La disattivazione DLL_THREAD_ATTACH e DLL_THREAD_DETACH chiamate di notifica può essere un'ottimizzazione utile per applicazioni multithreading con molte DLL, che spesso creazione ed eliminazione di thread e DLL di cui non è necessario queste notifiche a livello di thread di allegati o la disconnessione.  
+ La disabilitazione di DLL_THREAD_ATTACH e notifica DLL_THREAD_DETACH chiamate può essere un'ottimizzazione utile per applicazioni multithreading con molte DLL, che spesso creare ed eliminare i thread e DLL di cui non è necessario queste notifiche a livello di thread di allegato o la disconnessione.  
   
 ##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  Aggiunge voci al Registro di sistema per gli oggetti nella DLL.  
@@ -179,7 +161,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
  TRUE se la libreria dei tipi deve essere registrato. Il valore predefinito è TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  Rimuove le voci nel Registro di sistema per gli oggetti nella DLL.  
@@ -193,7 +175,7 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
  TRUE se la libreria dei tipi da rimuovere dal Registro di sistema. Il valore predefinito è TRUE.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  Crea un oggetto del CLSID specificato.  
@@ -210,13 +192,13 @@ HRESULT GetClassObject(
  Il CLSID dell'oggetto da creare.  
   
  `riid`  
- L'IID dell'interfaccia richiesta.  
+ IID dell'interfaccia richiesta.  
   
  `ppv`  
- Un puntatore al puntatore a interfaccia identificato da `riid`. Se l'oggetto non supporta questa interfaccia, `ppv` è impostato su NULL.  
+ Un puntatore al puntatore a interfaccia identificato dal `riid`. Se l'oggetto non supporta questa interfaccia, `ppv` è impostato su NULL.  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce S_OK esito positivo o un errore HRESULT in caso di errore.  
+ Restituisce S_OK se l'operazione riesce, o un errore HRESULT in caso di errore.  
   
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato da [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) e viene inclusa per compatibilità con le versioni precedenti.  
@@ -225,5 +207,4 @@ HRESULT GetClassObject(
  [Classe CAtlModuleT](../../atl/reference/catlmodulet-class.md)   
  [Classe CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Classi di modulo](../../atl/atl-module-classes.md)
-
+ [Classi Module](../../atl/atl-module-classes.md)

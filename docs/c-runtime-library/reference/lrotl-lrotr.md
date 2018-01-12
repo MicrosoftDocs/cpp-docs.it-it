@@ -42,11 +42,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25577b776c5a3caf0c47c3cf56a88b7de58392bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 Ruota i bit a sinistra (`_lrotl`) o a destra (`_lrotr`).  
@@ -66,7 +67,7 @@ unsigned long _lrotr(
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *value*  
+ *valore*  
  Valore da ruotare.  
   
  `shift`  
@@ -117,5 +118,5 @@ int main( void )
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [_rotl, _rotl64, _rotr, _rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)

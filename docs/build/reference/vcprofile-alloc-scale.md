@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed767299778b65a7275bbfd225daaf46ec0e98be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7b441f41106544633bd691c409fa04c989146f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 Modificare la quantità di memoria allocata per conservare i dati di profilo.  

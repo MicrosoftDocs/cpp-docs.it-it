@@ -1,34 +1,35 @@
 ---
-title: "/SUBSYSTEM (Specifica il sottosistema) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/subsystem"
-  - "VC.Project.VCLinkerTool.SubSystem"
-  - "VC.Project.VCLinkerTool.SubSystemVersion"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SUBSYSTEM (opzione del linker)"
-  - "SUBSYSTEM (opzione del linker)"
-  - "-SUBSYSTEM (opzione del linker)"
-  - "specifiche di sottosistema"
+title: -SUBSYSTEM (specifica il sottosistema) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /subsystem
+- VC.Project.VCLinkerTool.SubSystem
+- VC.Project.VCLinkerTool.SubSystemVersion
+dev_langs: C++
+helpviewer_keywords:
+- /SUBSYSTEM linker option
+- SUBSYSTEM linker option
+- -SUBSYSTEM linker option
+- subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# /SUBSYSTEM (Specifica il sottosistema)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Specifica il sottosistema)
 ```  
 /SUBSYSTEM:{BOOT_APPLICATION|CONSOLE|EFI_APPLICATION|  
             EFI_BOOT_SERVICE_DRIVER|EFI_ROM|EFI_RUNTIME_DRIVER|NATIVE|  
@@ -36,58 +37,58 @@ caps.handback.revision: 25
             [,major[.minor]]  
 ```  
   
- BOOT\_APPLICATION  
- Applicazione eseguita nell'ambiente di avvio Windows.  Per ulteriori informazioni sulle applicazioni di avvio, vedere [Informazioni sui dati di configurazione di avvio](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
+ BOOT_APPLICATION  
+ Applicazione che viene eseguita nell'ambiente di avvio di Windows. Per ulteriori informazioni sulle applicazioni di avvio, vedere [su BCD](http://msdn.microsoft.com/library/windows/desktop/aa362639).  
   
  CONSOLE  
- Applicazione in modalità carattere Win32.  Il sistema operativo fornisce una console per le applicazioni console.  Se per il codice nativo è definito `main` or `wmain`, per il codice gestito è definito `int main(array<String ^> ^)` oppure si compila completamente l'applicazione utilizzando `/clr:safe`, il valore predefinito è CONSOLE.  
+ Applicazione in modalità carattere Win32. Il sistema operativo fornisce una console per le applicazioni console. Se `main` o `wmain` è definito per il codice nativo, `int main(array<String ^> ^)` è definito per il codice gestito, oppure si compila l'applicazione completamente utilizzando `/clr:safe`, il valore predefinito è CONSOLE.  
   
- Interfaccia firmware estensibile \(EFI, Extensible Firmware Interface\)  
- Sottosistemi EFI\_\*.  Per ulteriori informazioni, vedere la specifica EFI,  ad esempio nel sito Web di Intel.  La versione minima e predefinita è la 1.0.  
+ Extensible Firmware Interface  
+ I sottosistemi EFI _ *. Vedere la specifica EFI per altre informazioni. Ad esempio, vedere il sito Web di Intel. La versione minima di versione e l'impostazione predefinita è 1.0.  
   
  NATIVE  
- Driver in modalità kernel per Windows NT.  Questa opzione è generalmente riservata per i componenti di sistema Windows.  Se è specificata l'opzione [\/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md), NATIVE rappresenterà l'impostazione predefinita.  
+ Driver in modalità kernel per Windows NT. Questa opzione è generalmente riservata per i componenti di sistema di Windows. Se [/driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) viene specificato, il valore predefinito è NATIVO.  
   
  POSIX  
- Applicazione che viene eseguita con il sottosistema POSIX in Windows NT.  
+ Applicazione che viene eseguito con il sottosistema POSIX in Windows NT.  
   
- WINDOWS  
- L'applicazione non richiede una console, probabilmente perché crea le proprie finestre per l'interazione con l'utente.  Se per il codice nativo è definito `WinMain` o `wWinMain` oppure per il codice gestito è definito `WinMain(HISTANCE *, HINSTANCE *, char *, int)` o `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`, il valore predefinito è WINDOWS.  
+ FINESTRE  
+ Applicazione non richiede una console, probabilmente perché crea le proprie finestre per l'interazione dell'utente. Se `WinMain` o `wWinMain` è definito per il codice nativo o `WinMain(HISTANCE *, HINSTANCE *, char *, int)` o `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` è definito per il codice gestito, WINDOWS è il valore predefinito.  
   
- `Major`: e `minor` \(facoltativi\)  
- Specifica la versione minima richiesta del sottosistema.  Gli argomenti sono numeri decimali compresi tra 0 e 65.535.  Per ulteriori informazioni, vedere la sezione delle osservazioni.  Non esistono limiti massimi relativamente a numeri di versione.  
+ `Major`e `minor` (facoltativo)  
+ Specificare la versione minima richiesta del sottosistema. Gli argomenti sono numeri decimali compresi nell'intervallo compreso tra 0 e 65.535. Vedere la sezione Osservazioni per ulteriori informazioni. Non esistono alcun limite superiore per i numeri di versione.  
   
-## Note  
- L'opzione \/SUBSYSTEM consente di specificare l'ambiente per l'eseguibile.  
+## <a name="remarks"></a>Note  
+ L'opzione /SUBSYSTEM specifica l'ambiente per il file eseguibile.  
   
- La scelta del sottosistema influisce sul simbolo o sulla funzione del punto di ingresso scelto dal linker.  
+ La scelta del sottosistema riguarda il simbolo del punto di ingresso (o una funzione di punto di ingresso) che verrà selezionato il linker.  
   
- Di seguito sono indicati i numeri facoltativi `major` e `minor` di versione minima e predefinita per i sottosistemi.  
+ Facoltativo minimo e predefinito `major` e `minor` numeri di versione per i sottosistemi sono i seguenti.  
   
-|Sottosistema|Minimo|Valore|  
-|------------------|------------|------------|  
-|BOOT\_APPLICATION|1.0|1.0|  
-|CONSOLE|5.01 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|6.00 \(x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
-|WINDOWS|5.01 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|6.00 \(x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
-|NATIVE \(con DRIVER:WDM\)|1.00 \(x86\) 1.10 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM\)|1.00 \(x86\) 1.10 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM\)|  
-|NATIVE \(senza \/DRIVER:WDM\)|4.00 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|4.00 \(x86\) 5.02 \([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]\) 6.02 \(ARM\)|  
+|Sottosistema|Minimo|Impostazione predefinita|  
+|---------------|-------------|-------------|  
+|BOOT_APPLICATION|1.0|1.0|  
+|CONSOLE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|FINESTRE|5.01 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|6.00 (x86, [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
+|NATIVO (/DRIVER: WDM)|1,00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|1,00 (x86) 1.10 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], ARM)|  
+|NATIVO (senza /driver: WDM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|4.00 (x86) 5.02 ([!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]) 6.02 (ARM)|  
 |POSIX|1.0|19.90|  
-|EFI\_APPLICATION, EFI\_BOOT\_SERVICE\_DRIVER, EFI\_ROM, EFI\_RUNTIME\_DRIVER|1.0|1.0|  
+|EFI_APPLICATION, IL DRIVER EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|  
   
-### Per impostare l'opzione del linker nell'ambiente di sviluppo di Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Per impostare questa opzione del linker nell'ambiente di sviluppo di Visual Studio  
   
-1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto.  Per informazioni dettagliate, vedere [Impostazione delle proprietà dei progetti Visual C\+\+](../../ide/working-with-project-properties.md).  
+1.  Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [impostazione delle proprietà dei progetti Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Selezionare la cartella Linker.  
+2.  Selezionare la cartella del Linker.  
   
-3.  Selezionare la pagina delle proprietà **Sistema**.  
+3.  Selezionare il **sistema** pagina delle proprietà.  
   
-4.  Modificare la proprietà `SubSystem`.  
+4.  Modificare il `SubSystem` proprietà.  
   
-### Per impostare l'opzione del linker a livello di codice  
+### <a name="to-set-this-linker-option-programmatically"></a>Per impostare l'opzione del linker a livello di codice  
   
 -   Vedere <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>.  
   
-## Vedere anche  
- [Impostazione delle opzioni del linker](../../build/reference/setting-linker-options.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle opzioni del Linker](../../build/reference/setting-linker-options.md)   
  [Opzioni del linker](../../build/reference/linker-options.md)

@@ -62,11 +62,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9508eacf1e361f3e87353f7ceb6dc00270982212
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88464cd717b11591b22f50d3df50f72ebb5fee02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 Le stringhe vengono confrontate usando informazioni specifiche delle impostazioni locali.  
@@ -128,7 +129,7 @@ int _mbsicoll_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni esegue un confronto senza distinzione tra maiuscole e minuscole di `string1` e `string2` in base alla tabella codici in uso. Usare queste funzioni solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto fra stringhe.  
   
- `_stricmp` è diversa da `_stricoll` in quanto il confronto `_stricmp` viene eseguito in base a `LC_CTYPE`, mentre il confronto `_stricoll` è basato sulle categorie `LC_CTYPE` e `LC_COLLATE` delle impostazioni locali. Per altre informazioni sulla categoria `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) e [Categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni con il suffisso `_l` sono identiche ma usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_stricmp` è diversa da `_stricoll` in quanto il confronto `_stricmp` viene eseguito in base a `LC_CTYPE`, mentre il confronto `_stricoll` è basato sulle categorie `LC_CTYPE` e `LC_COLLATE` delle impostazioni locali. Per altre informazioni sulla categoria `LC_COLLATE`, vedere [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) e [Categorie di impostazioni locali](../../c-runtime-library/locale-categories.md). Le versioni di queste funzioni senza il suffisso `_l` usano le impostazioni locali correnti. Le versioni con il suffisso `_l` sono identiche ma usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  Tutte queste funzioni convalidano i relativi parametri. Se `string1` o `string2` sono puntatori `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono `_NLSCMPERROR` e impostano `errno` su `EINVAL`.  
   
@@ -149,7 +150,7 @@ int _mbsicoll_l(
  Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
  [Funzioni strcoll](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   

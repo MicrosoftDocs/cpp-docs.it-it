@@ -32,16 +32,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d2b48b1454c988819953c03d6de449d8290c12d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a82f0d02cc8dc9b7c487c8cd9506a4c7d0360fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strings-atlmfc"></a>Stringhe (ATL/MFC)
 Quasi tutti i programmi di lavoro con dati di tipo stringa. Visual C++ fornisce diversi modi per gestire i dati della stringa.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Uso di CStringT](../atl-mfc-shared/using-cstringt.md)  
  Descrive la programmazione mediante la classe modello CStringT.  
   

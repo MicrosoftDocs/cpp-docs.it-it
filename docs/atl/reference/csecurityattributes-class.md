@@ -1,11 +1,10 @@
 ---
-title: Classe CSecurityAttributes | Documenti di Microsoft
+title: Classe CSecurityAttributes | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
 - ATLSECURITY/ATL::CSecurityAttributes::Set
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityAttributes class
+dev_langs: C++
+helpviewer_keywords: CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 24dfba8b6125172cc2d4ff7a32b61da412bfe2be
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecurityattributes-class"></a>Classe CSecurityAttributes
-Questa classe è un thin wrapper per la struttura di attributi di sicurezza.  
+Questa classe è un semplice wrapper per la struttura di attributi di sicurezza.  
   
 > [!IMPORTANT]
 >  Questa classe e i relativi membri non possono essere utilizzati nelle applicazioni eseguite in Windows Runtime.  
@@ -67,12 +50,12 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[CSecurityAttributes::Set](#set)|Chiamare questo metodo per impostare gli attributi di `CSecurityAttributes` oggetto.|  
+|[CSecurityAttributes:: set](#set)|Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.|  
   
 ## <a name="remarks"></a>Note  
  Il **SECURITY_ATTRIBUTES** struttura contiene un [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561) utilizzata per la creazione di un oggetto e specifica se l'handle recuperato specificando questa struttura è ereditabile.  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [il controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) in Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `SECURITY_ATTRIBUTES`  
@@ -97,8 +80,8 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  Specifica se l'handle restituito viene ereditato alla creazione di un nuovo progetto. Se questo membro è true, il nuovo processo eredita l'handle.  
   
-##  <a name="set"></a>CSecurityAttributes::Set  
- Chiamare questo metodo per impostare gli attributi di `CSecurityAttributes` oggetto.  
+##  <a name="set"></a>CSecurityAttributes:: set  
+ Chiamare questo metodo per impostare gli attributi del `CSecurityAttributes` oggetto.  
   
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -112,12 +95,11 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
  Specifica se l'handle restituito viene ereditato alla creazione di un nuovo progetto. Se questo membro è true, il nuovo processo eredita l'handle.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo viene utilizzato dal costruttore per inizializzare il `CSecurityAttributes` oggetto.  
+ Questo metodo viene utilizzato il costruttore per inizializzare il `CSecurityAttributes` oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
  [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [descrittore di sicurezza](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
- [Funzioni globali di protezione](../../atl/reference/security-global-functions.md)
-
+ [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

@@ -1,64 +1,66 @@
 ---
-title: "Classe CDBPropSet | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet"
-  - "ATL.CDBPropSet"
-  - "ATL::CDBPropSet"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDBPropSet (classe)"
+title: Classe CDBPropSet | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet
+- ATL.CDBPropSet
+- ATL::CDBPropSet
+dev_langs: C++
+helpviewer_keywords: CDBPropSet class
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2b2523e37c3015bb49d123e99f39c1ea4bdb9045
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CDBPropSet
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Eredita dalla struttura di **DBPROPSET** e aggiungere un costruttore che consente di inizializzare i campi delle chiavi nonché il metodo di accesso a `AddProperty`.  
+# <a name="cdbpropset-class"></a>Classe CDBPropSet
+Eredita il **DBPROPSET** struttura e aggiunge un costruttore che inizializza i campi chiavi, nonché `AddProperty` accedere al metodo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CDBPropSet : public tagDBPROPSET  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[AddProperty](../../data/oledb/cdbpropset-addproperty.md)|Aggiunge una proprietà alla raccolta di proprietà.|  
+|[AddProperty](../../data/oledb/cdbpropset-addproperty.md)|Aggiunge una proprietà per il set di proprietà.|  
 |[CDBPropSet](../../data/oledb/cdbpropset-cdbpropset.md)|Costruttore.|  
-|[SetGUID](../../data/oledb/cdbpropset-setguid.md)|Impostare il campo di **guidPropertySet** della struttura di **DBPROPSET**.|  
+|[SetGUID](../../data/oledb/cdbpropset-setguid.md)|Imposta il **guidPropertySet** campo il **DBPROPSET** struttura.|  
   
-### Operatori  
+### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[operator \=](../../data/oledb/cdbpropset-operator-equal.md)|Assegna il contenuto di una proprietà a un altro.|  
+|[operator =](../../data/oledb/cdbpropset-operator-equal.md)|Assegna il contenuto di una proprietà è impostata su un altro.|  
   
-## Note  
- I provider OLE DB e consumer utilizzano le strutture di **DBPROPSET** per passare matrici di strutture `DBPROP`.  Ogni struttura di `DBPROP` rappresenta una singola proprietà che può essere impostata.  
+## <a name="remarks"></a>Note  
+ Utilizzo di provider e consumer OLE DB **DBPROPSET** strutture per passare matrici di `DBPROP` strutture. Ogni `DBPROP` struttura rappresenta una singola proprietà che possono essere impostate.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Classe CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)   
- [DBPROPSET Structure](https://msdn.microsoft.com/en-us/library/ms714367.aspx)   
- [DBPROP Structure](https://msdn.microsoft.com/en-us/library/ms717970.aspx)
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Riferimenti per i modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+ [Cdbpropidset (classe)](../../data/oledb/cdbpropidset-class.md)   
+ [Struttura DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)   
+ [Struttura DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)

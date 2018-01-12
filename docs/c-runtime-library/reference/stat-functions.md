@@ -117,11 +117,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 18cfdda310149c18ef8983b10afb5c901b256510
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 Ottenere informazioni sullo stato di un file.  
@@ -189,7 +190,7 @@ int _wstat64i32(
 ## <a name="return-value"></a>Valore restituito  
  Ognuna di queste funzioni restituisce 0 se si ottengono le informazioni sullo stato dei file. Il valore restituito-1 indica un errore, nel qual caso `errno` è impostato su `ENOENT`, che indica che il nome file o percorso non può essere trovato. Un valore restituito pari a `EINVAL` indica un parametro non valido; anche `errno` è impostato su `EINVAL` in questo caso.  
   
- Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questo e su altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .  
   
  L'indicatore di data in un file può essere rappresentato se più recente rispetto alla mezzanotte del 1 gennaio 1970 e precedente alle 23.59.59 UTC del 31 dicembre 3000, a meno che non si usi `_stat32` o `_wstat32`, o non sia stato definito `_USE_32BIT_TIME_T`, nel qual caso la data può essere rappresentata solo fino alle 23.59.59 UTC del 18 gennaio 2038.  
   
@@ -274,7 +275,7 @@ int _wstat64i32(
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h> seguito da \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h> seguito da \<sys/stat.h> o \<wchar.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

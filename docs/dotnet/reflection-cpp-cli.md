@@ -21,11 +21,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cff5256d94593959c280614858cdde8be3dee9f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflection-ccli"></a>Reflection (C++/CLI)
 La reflection consente ai tipi di dati noti deve essere controllato in fase di esecuzione. La reflection consente l'enumerazione dei tipi di dati in un determinato assembly e i membri di un determinato tipo di classe o di valore possono essere individuati. Questo vale indipendentemente dal fatto che il tipo è noto o a cui fa riferimento in fase di compilazione. In questo modo la reflection di una funzionalità utile per lo sviluppo e gli strumenti di gestione di codice.  

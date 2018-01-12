@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e347683a079227226513ce82f9623860e826228
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5bf7d2b1708e74d50adb417f531c741a467ed889
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: configurazione di un'origine dati ODBC
 Per utilizzare un [origine dati](../../data/odbc/data-source-odbc.md) con un'applicazione è stata sviluppata, è necessario utilizzare Amministratore ODBC per configurarlo. Amministratore ODBC tiene traccia delle origini dati disponibili e le relative informazioni di connessione del Registro di sistema. Utilizzare l'amministratore ODBC per aggiungere, modificare ed eliminare origini dati nel **origini dati** la finestra di dialogo e per aggiungere ed eliminare i driver ODBC.  

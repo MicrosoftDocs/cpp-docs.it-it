@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - not_eq
 - '!='
 - ==
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '!= operator'
 - equality operator
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5412869204f088e321d2a41da407026f9447eb82
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2be0d4cf45bbedc5e799b07962c05f845d5f3efe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equality-operators--and-"></a>Operatori di uguaglianza: == e !=
 ## <a name="syntax"></a>Sintassi  

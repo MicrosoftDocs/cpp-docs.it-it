@@ -1,64 +1,65 @@
 ---
-title: "Assembler inline | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assembler [C++]"
-  - "assembler [C++], inline"
-  - "linguaggio dell'assembly [C++], inline"
-  - "assembler inline [C++]"
-  - "assembly inline [C++]"
+title: inline Assembler | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assembler [C++]
+- assembler [C++], inline
+- assembly language [C++], inline
+- inline assembler [C++]
+- inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bdbfdc47ad0bca868ce7594b84adfa093ef580ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Assembler inline
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inline-assembler"></a>Assembler inline
 **Sezione specifica Microsoft**  
   
- Il linguaggio assembly può essere utilizzato per diverse finalità, ad esempio per il miglioramento della velocità del programma, per la riduzione dei requisiti della memoria e per il controllo dell'hardware.  È possibile utilizzare l'assembler inline per incorporare le istruzioni in linguaggio assembly direttamente nei programmi di origine C e C\+\+ senza effettuare dei passaggi aggiuntivi di collegamento e di assembly.  L'assembler inline è incorporato nel compilatore, pertanto non è necessario utilizzare un assembler separato come Microsoft Macro Assembler \(MASM\).  
+ Il linguaggio assembly può essere utilizzato per diverse finalità, ad esempio per il miglioramento della velocità del programma, per la riduzione dei requisiti della memoria e per il controllo dell'hardware. È possibile utilizzare l'assembler inline per incorporare le istruzioni in linguaggio assembly direttamente nei programmi di origine C e C++ senza effettuare dei passaggi aggiuntivi di collegamento e di assembly. L'assembler inline è incorporato nel compilatore, pertanto non è necessario utilizzare un assembler separato come Microsoft Macro Assembler (MASM).  
   
 > [!NOTE]
->  I programmi con il codice assembler inline non sono completamente portabili in altre piattaforme hardware.  Se si sta progetta ai fini della portabilità, evitare di utilizzare l'assembler inline.  
+>  I programmi con il codice assembler inline non sono completamente portabili in altre piattaforme hardware. Se si sta progetta ai fini della portabilità, evitare di utilizzare l'assembler inline.  
   
- L'assembly inline non è supportato nei processori ARM e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  Negli argomenti riportati di seguito viene illustrato come utilizzare l'assembler inline di Visual C\/C\+\+ con i processori x86:  
+ L'assembly inline non è supportato nei processori ARM e [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)].  Negli argomenti riportati di seguito viene illustrato come utilizzare l'assembler inline di Visual C/C++ con i processori x86:  
   
--   [Panoramica sull'assembler inline](../../assembler/inline/inline-assembler-overview.md)  
+-   [Panoramica di assembler inline](../../assembler/inline/inline-assembler-overview.md)  
   
 -   [Vantaggi dell'assembly inline](../../assembler/inline/advantages-of-inline-assembly.md)  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [Utilizzo del linguaggio assembly in blocchi \_\_asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)  
+-   [Uso del linguaggio assembly in blocchi __asm](../../assembler/inline/using-assembly-language-in-asm-blocks.md)  
   
--   [Utilizzo di C o C\+\+ in blocchi \_\_asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)  
+-   [Uso di C o C++ in blocchi __asm](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)  
   
--   [Utilizzo e mantenimento dei registri nell'assembly inline](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)  
+-   [Uso e mantenimento dei registri nell'assembly inline](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)  
   
 -   [Passaggio a etichette nell'assembly inline](../../assembler/inline/jumping-to-labels-in-inline-assembly.md)  
   
--   [Chiamare le funzioni C nell'assembly inline](../../assembler/inline/calling-c-functions-in-inline-assembly.md)  
+-   [Chiamata delle funzioni C nell'assembly inline](../../assembler/inline/calling-c-functions-in-inline-assembly.md)  
   
--   [Chiamare le funzioni C\+\+ nell'assembly inline](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)  
+-   [Chiamata delle funzioni C++ nell'assembly inline](../../assembler/inline/calling-cpp-functions-in-inline-assembly.md)  
   
--   [Definizione dei blocchi \_\_asm come macro C](../../assembler/inline/defining-asm-blocks-as-c-macros.md)  
+-   [Definizione dei blocchi __asm come macro C](../../assembler/inline/defining-asm-blocks-as-c-macros.md)  
   
 -   [Ottimizzazione dell'assembly Inline](../../assembler/inline/optimizing-inline-assembly.md)  
   
  **Fine sezione specifica Microsoft**  
   
-## Vedere anche  
- [Intrinseci del compilatore e linguaggio dell'assembly](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
- [Riferimenti del linguaggio C\+\+](../../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Intrinseci del compilatore e linguaggio dell'Assembly](../../intrinsics/compiler-intrinsics-and-assembly-language.md)   
+ [Riferimenti al linguaggio C++](../../cpp/cpp-language-reference.md)

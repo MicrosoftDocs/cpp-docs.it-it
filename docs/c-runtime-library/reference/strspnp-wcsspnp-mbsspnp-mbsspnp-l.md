@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 919719e67445f242b59bf6c84a6579b449f91ae0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 314adc5ad7011d715f0c49887761390994ebc45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 Restituisce un puntatore al primo carattere in una stringa specificata non incluso un'altra stringa specificata.  
@@ -114,7 +115,7 @@ unsigned char *_mbsspnp_l(
   
  `_strspnp` e `_wcsspnp` sono versioni con caratteri a byte singolo e caratteri wide di `_mbsspnp`. Il comportamento di `_strspnp` e `_wcsspnp` è altrimenti identico a `_mbsspnp`. Sono fornite solo per questo mapping e non devono essere usate in altre circostanze. Per altre informazioni, vedere [Uso dei mapping di testo generico](../../c-runtime-library/using-generic-text-mappings.md) e [Mapping di testo generico](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsspnp_l` è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ `_mbsspnp_l` è identica, ma usa il parametro delle impostazioni locali passato. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -150,7 +151,7 @@ abbage
   
 ## <a name="see-also"></a>Vedere anche  
  [Modifica di stringhe](../../c-runtime-library/string-manipulation-crt.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Interpretazione di sequenze di caratteri multibyte](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   

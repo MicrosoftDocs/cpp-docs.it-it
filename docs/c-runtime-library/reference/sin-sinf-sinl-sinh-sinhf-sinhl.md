@@ -53,11 +53,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f91d8af5b76cb48c884c8eb4466738a544b744b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de4f4914589c5803733bdcd279b3d0a3fa00e360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin, sinf, sinl, sinh, sinhf, sinhl
 Calcola il seno e il seno iperbolico.  
@@ -103,12 +104,12 @@ long double sinhl(
 ## <a name="return-value"></a>Valore restituito  
  Le funzioni `sin` restituiscono il seno di `x`. Se `x` è maggiore o uguale a 263 o inferiore o uguale a -263, si verifica una perdita di significato nel risultato.  
   
- Le funzioni `sinh` restituiscono il seno iperbolico di `x`. Per impostazione predefinita, se il risultato è troppo grande, `sinh` imposta `errno` su `ERANGE` e restituisce ±`HUGE_VAL`.  
+ Le funzioni `sinh` restituiscono il seno iperbolico di `x`. Per impostazione predefinita, se il risultato è troppo grande, `sinh` imposta `errno` a `ERANGE` e restituisce ±`HUGE_VAL`.  
   
 |Input|Eccezione SEH|Eccezione Matherr|  
 |-----------|-------------------|-----------------------|  
 |± QNAN,IND|None|_DOMAIN|  
-|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|  
+|± ∞ (sin, sinf, sinl)|NON VALIDO|_DOMAIN|  
 |&#124;x&#124; ≥ 7.104760e+002 (sinh, sinhf, sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
  Per altre informazioni sui codici restituiti, vedere [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
@@ -160,7 +161,7 @@ cosh( 1.570796 ) = 2.509178
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [acos, acosf, acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin, asinf, asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan, atanf, atanl, atan2, atan2f, atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   

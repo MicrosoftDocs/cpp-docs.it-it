@@ -1,42 +1,44 @@
 ---
-title: "Procedura: effettuare il marshalling di stringhe ANSI utilizzando l&#39;interoperabilit&#224; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI [C++], marshalling di stringhe"
-  - "interoperabilità C++, stringhe"
-  - "marshalling dei dati [C++], stringhe"
-  - "interoperabilità [C++], stringhe"
-  - "marshalling [C++], stringhe"
+title: "Procedura: effettuare il marshalling di stringhe ANSI utilizzando l'interoperabilità C++ | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- ANSI [C++], marshaling strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e70d62fa7a94a7278080c31f6650b31b71ff35b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: effettuare il marshalling di stringhe ANSI utilizzando l&#39;interoperabilit&#224; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come passare le stringhe ANSI utilizzando l'interoperabilità C\+\+. Tuttavia, poiché le stringhe di tipo <xref:System.String> di .NET Framework sono rappresentate in formato Unicode, è necessaria prima una conversione in ANSI.  Per informazioni sull'interoperabilità con altri tipi di stringa, vedere i seguenti argomenti:  
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Procedura: Effettuare il marshalling di stringhe ANSI utilizzando l'interoperabilità C++
+Questo argomento viene illustrato come le stringhe ANSI è possono essere passato tramite l'interoperabilità C++, ma .NET Framework <xref:System.String> rappresenta le stringhe in formato Unicode, pertanto la conversione da ANSI è un passaggio aggiuntivo. Per l'interoperabilità con altri tipi di stringa, vedere gli argomenti seguenti:  
   
--   [Procedura: effettuare il marshalling di stringhe Unicode utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Procedura: Effettuare il marshalling di stringhe Unicode tramite l'interoperabilità C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Procedura: effettuare il marshalling di stringhe COM utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [Procedura: Effettuare il marshalling di stringhe COM tramite l'interoperabilità C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
- Negli esempi di codice riportati di seguito vengono utilizzate le direttive \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file. Queste funzioni, tuttavia, vengono eseguite nello stesso modo anche se definite in file diversi.  Poiché i file che contengono soltanto funzioni non gestite non devono essere necessariamente compilati con [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md), questi file possono mantenere le proprie caratteristiche di prestazioni.  
+ Utilizzo di esempi di codice seguente il [managed, unmanaged](../preprocessor/managed-unmanaged.md) direttive #pragma per implementare funzioni gestite e nello stesso file, ma gestite nello stesso modo se definiti in file separati. Poiché i file contenenti solo funzioni non gestite non richiedono la compilazione con [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), è possibile mantenere le caratteristiche di prestazioni.  
   
-## Esempio  
- Nell'esempio viene illustrato il passaggio di una stringa ANSI da una funzione gestita a una funzione non gestita mediante <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>.  Questo metodo alloca memoria sull'heap non gestito e restituisce l'indirizzo dopo l'esecuzione della conversione.  Questo significa che non è necessario alcun blocco, poiché la memoria sull'heap GC non viene passata alla funzione non gestita, e che il valore IntPtr restituito da <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> deve essere rilasciato esplicitamente. In caso contrario, si verificherà una perdita di memoria.  
+## <a name="example"></a>Esempio  
+ Nell'esempio viene illustrato come passare una stringa ANSI da una funzione gestita a una funzione non gestito mediante <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Questo metodo esegue l'allocazione di memoria nell'heap gestito e restituisce l'indirizzo dopo la conversione. Ciò significa che è necessario alcun blocco (perché memoria nell'heap GC non vengono passata alla funzione non gestita) e che l'elemento IntPtr restituito da <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> deve essere rilasciato esplicitamente o perdita dei risultati.  
   
 ```  
 // MarshalANSI1.cpp  
@@ -68,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato il marshalling dei dati necessario per l'accesso a una stringa ANSI in una funzione gestita chiamata da una funzione non gestita.  La funzione gestita, al momento della ricezione della stringa nativa, può utilizzare direttamente la stringa oppure convertirla in una stringa gestita utilizzando il metodo <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>, come indicato.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato il marshalling dei dati necessarie per accedere a una stringa ANSI in una funzione gestita che viene chiamata da una funzione non gestita. La funzione gestita, quando riceve la stringa nativa, è possibile utilizzare direttamente o convertirlo in una stringa gestita utilizzando il <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> (metodo), come illustrato.  
   
 ```  
 // MarshalANSI2.cpp  
@@ -103,5 +105,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

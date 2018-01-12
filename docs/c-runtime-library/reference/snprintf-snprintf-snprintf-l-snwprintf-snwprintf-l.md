@@ -58,11 +58,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 92e2581a5cde9f82e504875ae523df5dfeefdcc3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0441f2debf2e030702727c92a6e27bea63cb0564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 Scrive dati formattati in una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md).  
@@ -195,7 +196,7 @@ int _snwprintf_l(
 |`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
 |`_snwprintf`, `_snwprintf_l`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
   

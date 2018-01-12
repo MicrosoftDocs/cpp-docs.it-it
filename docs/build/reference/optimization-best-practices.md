@@ -1,103 +1,104 @@
 ---
-title: "Suggerimenti per l&#39;ottimizzazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Visual C++, ottimizzazione"
-  - "ottimizzazione, procedure consigliate"
+title: Suggerimenti per l'ottimizzazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, optimization
+- optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Suggerimenti per l&#39;ottimizzazione
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo documento vengono illustrate alcune procedure consigliate per l'ottimizzazione in Visual C\+\+.  Verranno descritti i seguenti argomenti:  
+# <a name="optimization-best-practices"></a>Suggerimenti per l'ottimizzazione
+Questo documento descrive alcune procedure consigliate per l'ottimizzazione in Visual C++. Vengono trattati i seguenti argomenti:  
   
--   Opzioni del compilatore e del linker  
+-   Opzioni del compilatore e del Linker  
   
-    -   Ottimizzazione PGO  
+    -   profile-guided (ottimizzazione)  
   
-    -   Livello di ottimizzazione da utilizzare  
+    -   Livello di ottimizzazione è necessario usare?  
   
     -   Opzioni in virgola mobile  
   
 -   Declspec di ottimizzazione  
   
--   Pragma di ottimizzazione  
+-   Ottimizzazione pragma  
   
--   \_\_restrict e \_\_assume  
+-   Restrict e \__assume  
   
--   Supporto di intrinseci  
+-   Supporto intrinseco  
   
 -   Eccezioni  
   
-## Opzioni del compilatore e del linker  
+## <a name="compiler-and-linker-options"></a>Opzioni del compilatore e del Linker  
   
-### Ottimizzazione PGO  
- In Visual C\+\+ è supportata l'ottimizzazione PGO.  Questa ottimizzazione utilizza i dati di profilo di esecuzioni precedenti di una versione instrumentata di un'applicazione per guidare la successiva ottimizzazione dell'applicazione.  L'utilizzo di PGO può richiedere una notevole quantità di tempo e pertanto può non essere particolarmente diffuso tra gli sviluppatori; è tuttavia consigliato per la build di rilascio finale di un prodotto.  Per ulteriori informazioni, vedere [Ottimizzazioni guidate da profilo \(PGO\)](../../build/reference/profile-guided-optimizations.md).  
+### <a name="profile-guided-optimization"></a>profile-guided (ottimizzazione)  
+ Visual C++ supporta l'ottimizzazione guidata da profilo (PGO). Questa ottimizzazione utilizza i dati di profilo delle ultime esecuzioni di una versione di un'applicazione instrumentata per unità successiva ottimizzazione dell'applicazione. Usa PGO può richiedere tempi lunghe, pertanto potrebbe non essere un elemento che gli sviluppatori, ma è consigliabile utilizzare l'ottimizzazione PGO per la compilazione di rilascio finale di un prodotto. Per ulteriori informazioni, vedere [ottimizzazioni PGO](../../build/reference/profile-guided-optimizations.md).  
   
- Inoltre sono state perfezionate l'opzione Ottimizzazione intero programma \(nota anche come Generazione codice in fase di collegamento\) e le ottimizzazioni **\/O1** e **\/O2**.  In generale, un'applicazione compilata con una di queste opzioni sarà più veloce della stessa applicazione compilata con un compilatore precedente.  
+ Inoltre, Ottimizzazione intero programma (nota anche come generazione codice in fase di collegamento) e **/O1** e **/O2** le ottimizzazioni sono state migliorate. In generale, sarà più veloce della stessa applicazione compilata con un compilatore precedente rispetto a un'applicazione compilata con una di queste opzioni.  
   
- Per ulteriori informazioni, vedere [\/GL \(Ottimizzazione intero programma\)](../../build/reference/gl-whole-program-optimization.md) e [\/O1, \/O2 \(Riduci dimensione, Ottimizza velocità\)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).  
+ Per ulteriori informazioni, vedere [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) e [/O1, /O2 (Riduci dimensione, Ottimizza velocità)](../../build/reference/o1-o2-minimize-size-maximize-speed.md).  
   
-### Livello di ottimizzazione da utilizzare  
- Se possibile, le build di rilascio finale devono essere compilate con le ottimizzazioni PGO.  Se non è possibile eseguire la compilazione con PGO, a causa di un'infrastruttura insufficiente per l'esecuzione di build instrumentate o di mancanza di accesso agli scenari, si consiglia la compilazione con Ottimizzazione intero programma.  
+### <a name="which-level-of-optimization-should-i-use"></a>Livello di ottimizzazione è necessario usare?  
+ Se possibile, le compilazioni di rilascio finale devono essere compilate con le ottimizzazioni PGO. Se non è possibile compilare con PGO, a causa di un'infrastruttura insufficiente per le build instrumentate è in esecuzione o non dispone di accesso per gli scenari, si consiglia la compilazione con Ottimizzazione intero programma.  
   
- Anche l'opzione **\/Gy** è molto utile.  Tale opzione genera un COMDAT separato per ciascuna funzione, consentendo al linker maggiore flessibilità durante la rimozione della riduzione COMDAT e dei COMDAT senza riferimenti.  L'unico svantaggio derivante dall'utilizzo di **\/Gy** è che può avere un effetto minore in fase di compilazione.  Pertanto, ne viene in genere consigliato l'utilizzo.  Per ulteriori informazioni, vedere [\/Gy \(Attiva collegamento a livello di funzione\)](../../build/reference/gy-enable-function-level-linking.md).  
+ Il **/Gy** anche l'opzione è molto utile. Genera un COMDAT separato per ogni funzione, consentendo una maggiore flessibilità al linker se si desidera rimuovere COMDAT e COMDAT senza riferimenti riduzione. Lo svantaggio solo di **/Gy** è che può avere un effetto minore in fase di compilazione. Pertanto, è consigliabile utilizzarlo. Per altre informazioni, vedere [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md).  
   
- Per il collegamento negli ambienti a 64 bit si consiglia di utilizzare l'opzione del linker **\/OPT:REF,ICF** e, negli ambienti a 32 bit, **\/OPT:REF**.  Per ulteriori informazioni, vedere [\/OPT \(Ottimizzazioni\)](../../build/reference/opt-optimizations.md).  
+ Per il collegamento negli ambienti a 64 bit, è consigliabile utilizzare il **/OPT: REF, ICF** l'opzione del linker e in ambienti a 32 bit, **/OPT: ref** è consigliato. Per ulteriori informazioni, vedere [/OPT (ottimizzazioni)](../../build/reference/opt-optimizations.md).  
   
- Si consiglia inoltre di generare simboli di debug, anche con build di rilascio ottimizzate.  Questa operazione non influisce sul codice generato e semplifica notevolmente il debug dell'applicazione, se necessario.  
+ È inoltre consigliabile per generare i simboli di debug, anche con le build di rilascio ottimizzate. Questa operazione non influisce il codice generato e rende molto più semplice eseguire il debug dell'applicazione, se necessario.  
   
-### Opzioni in virgola mobile  
- L'opzione del compilatore **\/Op** è stata rimossa e sono state aggiunte le quattro opzioni seguenti relative alle ottimizzazioni in virgola mobile:  
+### <a name="floating-point-switches"></a>Opzioni in virgola mobile  
+ Il **/Op** opzione del compilatore è stata rimossa e le opzioni del compilatore quattro seguenti gestiscono ottimizzazioni a virgola mobile sono stati aggiunti:  
   
 |||  
 |-|-|  
-|**\/fp:precise**|Rappresenta l'opzione predefinita e deve essere utilizzata nella maggior parte dei casi.|  
-|**\/fp:fast**|Consigliata nei casi in cui le prestazioni sono di fondamentale importanza, ad esempio nei giochi.  Questa opzione determinerà le prestazioni più veloci.|  
-|**\/fp:strict**|Consigliata se si desiderano un comportamento conforme allo standard IEEE ed eccezioni di virgola mobile precise.  Questa opzione determinerà le prestazioni più lente.|  
-|**\/fp:except\[\-\]**|Può essere utilizzata insieme a **\/fp:strict** o **\/fp:precise**, ma non a **\/fp:fast**.|  
+|**/fp: precise**|Questo è l'opzione predefinita e deve essere utilizzato nella maggior parte dei casi.|  
+|**Fast**|È consigliabile se le prestazioni sono di fondamentale importanza, ad esempio nei giochi. Ciò comporterà la velocità delle prestazioni.|  
+|**/fp: strict**|Consigliato se le eccezioni a virgola mobile a precisione e IEEE comportamento desiderato. Ciò comporterà la più lenta.|  
+|**/fp: except [-]**|Può essere utilizzato in combinazione con **/fp: strict** o **/fp: precise**, ma non **Fast**.|  
   
- Per ulteriori informazioni, vedere [\/fp \(Specifica il comportamento della virgola mobile\)](../../build/reference/fp-specify-floating-point-behavior.md).  
+ Per altre informazioni, vedere [/fp (Specifica il comportamento della virgola mobile)](../../build/reference/fp-specify-floating-point-behavior.md).  
   
-## Declspec di ottimizzazione  
- In questa sezione verranno esaminate due declspec utilizzabili nei programmi per il supporto delle prestazioni: `__declspec(restrict)` e `__declspec(noalias)`.  
+## <a name="optimization-declspecs"></a>Declspec di ottimizzazione  
+ In questa sezione verranno esaminati due declspec che possono essere utilizzati in programmi per le prestazioni: `__declspec(restrict)` e `__declspec(noalias)`.  
   
- La declspec `restrict` può essere applicata solo alle dichiarazioni di funzione che restituiscono un puntatore, ad esempio `__declspec(restrict) void *malloc(size_t size);`  
+ Il `restrict` declspec può essere applicata solo alle dichiarazioni di funzione che restituiscono un puntatore, ad esempio`__declspec(restrict) void *malloc(size_t size);`  
   
- La declspec `restrict` può essere utilizzata con le funzioni che restituiscono puntatori privi di alias.  Questa parola chiave viene utilizzata per l'implementazione della libreria di runtime C di `malloc` poiché non restituirà mai un valore di puntatore già in uso nel programma corrente \(a meno che non si stia effettuando un'operazione non valida, quale l'utilizzo di memoria dopo la relativa liberazione\).  
+ Il `restrict` declspec viene usata nelle funzioni che restituiscono puntatori privi di alias. Questa parola chiave viene utilizzata per l'implementazione della libreria di Runtime C di `malloc` poiché non restituirà mai un valore del puntatore che è già in uso nel programma corrente (a meno che non si esegue un'operazione non valida, ad esempio l'utilizzo di memoria dopo che è stato liberato).  
   
- La declspec `restrict` fornisce al compilatore maggiori informazioni per l'esecuzione delle relative ottimizzazioni.  Una delle cose più difficile da determinare per un compilatore è quali puntatori effettuano l'aliasing ad altri puntatori e l'utilizzo di queste informazioni offre un supporto notevole al compilatore.  
+ Il `restrict` declspec fornisce al compilatore informazioni per l'esecuzione delle ottimizzazioni del compilatore. Uno degli aspetti più difficili da un compilatore per determinare quali alias puntatori altri puntatori, e utilizzando le informazioni di notevolmente aiuta il compilatore.  
   
- È opportuno sottolineare che si tratta solo di un suggerimento per il compilatore, che non verrà necessariamente verificato da quest'ultimo.  Se il programma utilizza la declspec `restrict` in modo improprio, potrà presentare un comportamento non corretto.  
+ È importante precisare che si tratta di un suggerimento per il compilatore, non si verificherà il compilatore. Se il programma utilizza questo `restrict` declspec non corretta, il programma potrebbe provocare un comportamento errato.  
   
- Per ulteriori informazioni, vedere [restrict](../../cpp/restrict.md).  
+ Per ulteriori informazioni, vedere [limitare](../../cpp/restrict.md).  
   
- Anche la declspec `noalias` viene applicata solo alle funzioni e indica che si tratta di funzioni semi\-pure.  Una funzione semi\-pure fa riferimento o modifica solo le variabili locali, argomenti e riferimenti indiretti di primo livello di argomenti.  Questa declspec rappresenta solo un suggerimento per il compilatore e, se la funzione fa riferimento alle variabili globali o ai riferimenti indiretti di secondo livello degli argomenti del puntatore, il compilatore potrebbe generare codice che determina l'interruzione dell'applicazione.  
+ Il `noalias` declspec viene applicata solo alle funzioni e indica che la funzione è una funzione pura parzialmente. Una funzione semi-pura è quello che fa riferimento o modifica solo variabili locali, argomenti e ai riferimenti indiretti di primo livello degli argomenti. Questa declspec un suggerimento al compilatore e, se la funzione fa riferimento a variabili globali o riferimenti indiretti di secondo livello di argomenti del puntatore, il compilatore possono generare il codice che si interrompe l'applicazione.  
   
- Per ulteriori informazioni, vedere [noalias](../../cpp/noalias.md).  
+ Per altre informazioni, vedere [noalias](../../cpp/noalias.md).  
   
-## Pragma di ottimizzazione  
- Sono inoltre disponibili diversi pragma utili per consentire l'ottimizzazione del codice.  Il primo che verrà illustrato è `#pragma optimize`:  
+## <a name="optimization-pragmas"></a>Ottimizzazione pragma  
+ Sono inoltre disponibili diversi pragma utili per consentire l'ottimizzazione di codice. È il primo si parlerà `#pragma optimize`:  
   
 ```  
 #pragma optimize("{opt-list}", on | off)  
 ```  
   
- Questo pragma consente di impostare un dato livello di ottimizzazione funzione per funzione.  Si tratta di uno strumento ideale per i rari casi in cui l'applicazione si blocca quando una determinata funzione viene compilata con l'ottimizzazione.  È possibile utilizzare questo pragma per disattivare le ottimizzazioni per una singola funzione:  
+ Questo pragma consente di impostare un livello di ottimizzazione specificata in base a una funzione dalla funzione. Questa soluzione è ideale per i rari casi in cui l'applicazione si blocca quando una funzione specificata viene compilata con l'ottimizzazione. Ciò consente di disattivare le ottimizzazioni per una singola funzione:  
   
 ```  
 #pragma optimize("", off)  
@@ -105,50 +106,50 @@ int myFunc() {...}
 #pragma optimize("", on)  
 ```  
   
- Per ulteriori informazioni, vedere [optimize](../../preprocessor/optimize.md).  
+ Per ulteriori informazioni, vedere [ottimizzare](../../preprocessor/optimize.md).  
   
- L'operazione di inline rappresenta una delle ottimizzazioni più importanti eseguita dal compilatore e di seguito viene illustrata una coppia di pragma che consentono di modificare questo comportamento.  
+ Inline è uno dei più importanti ottimizzazioni che il compilatore esegue e in questo caso si parla di un paio di pragma che consentono di modificare questo comportamento.  
   
- `#pragma inline_recursion` è utile per specificare se si desidera o meno che l'applicazione sia in grado di rendere inline una chiamata ricorsiva.  Per impostazione predefinita è disattivato.  È possibile attivarlo per la ricorsione superficiale di piccole funzioni.  Per ulteriori informazioni, vedere [inline\_recursion](../../preprocessor/inline-recursion.md).  
+ `#pragma inline_recursion`è utile per specificare se si desidera che l'applicazione in grado di rendere inline una chiamata ricorsiva. Per impostazione predefinita che è off. È possibile per attivare questa opzione per la ricorsione superficiale di piccole funzioni. Per ulteriori informazioni, vedere [inline_recursion](../../preprocessor/inline-recursion.md).  
   
- Un altro pragma utile per limitare il livello di inline è `#pragma inline_depth`.  In genere è adatto nelle situazioni in cui si tenta di limitare la dimensione di un programma o di una funzione.  Per ulteriori informazioni, vedere [inline\_depth](../../preprocessor/inline-depth.md).  
+ Un altro pragma utile per limitare il livello di incorporamento è `#pragma inline_depth`. Si tratta in genere utile nelle situazioni in cui si sta tentando di limitare le dimensioni di una funzione o un programma. Per ulteriori informazioni, vedere [inline_depth](../../preprocessor/inline-depth.md).  
   
-## \_\_restrict e \_\_assume  
- In Visual C\+\+ le parole chiave seguenti consentono di ottimizzare le prestazioni: [\_\_restrict](../../cpp/extension-restrict.md) e [\_\_assume](../../intrinsics/assume.md).  
+## <a name="restrict-and-assume"></a>Restrict e \__assume  
+ Esistono un paio di parole chiave in Visual C++ che può migliorare le prestazioni: [Restrict](../../cpp/extension-restrict.md) e [assume](../../intrinsics/assume.md).  
   
- Innanzitutto, è opportuno notare che `__restrict` e `__declspec(restrict)` rappresentano due concetti distinti.  Sebbene siano correlati, presentano una semantica diversa.  `__restrict` è un qualificatore di tipo, come `const` o `volatile`, ma esclusivamente per i tipi di puntatore.  
+ In primo luogo, si noti che `__restrict` e `__declspec(restrict)` sono diverse. Mentre sono in qualche modo correlati, la semantica è diversa. `__restrict`è un qualificatore di tipo, ad esempio `const` o `volatile`, ma esclusivamente per i tipi di puntatore.  
   
- Un puntatore modificato con `__restrict` viene definito *\_\_puntatore restrict*,  ovvero un puntatore cui è possibile accedere solo attraverso il puntatore \_\_restrict.  In altre parole, non è possibile utilizzare un altro puntatore per accedere ai dati cui fa riferimento il puntatore \_\_restrict.  
+ Un puntatore che viene modificato con `__restrict` viene definito un *Restrict puntatore*. Ovvero un puntatore è un puntatore che sono accessibili solo tramite il \_limita l'indicatore di misura. In altre parole, un altro puntatore non può essere utilizzato per accedere ai dati a cui fa riferimento il \_limita l'indicatore di misura.  
   
- `__restrict` può rappresentare uno strumento efficace per l'utilità di ottimizzazione di Visual C\+\+, tuttavia è necessario utilizzarlo con estrema attenzione.  Se utilizzato in modo improprio, l'utilità di ottimizzazione potrebbe eseguire un'ottimizzazione che causerebbe l'interruzione dell'applicazione.  
+ `__restrict`può essere un potente strumento per l'ottimizzatore di Visual C++, ma utilizzarlo con cautela. Se utilizzato in modo improprio, query optimizer potrebbe eseguire un'ottimizzazione che causa l'interruzione dell'applicazione.  
   
- La parola chiave `__restrict` sostituisce l'opzione **\/Oa** delle versioni precedenti.  
+ Il `__restrict` (parola chiave) sostituisce il **/Oa** passare da versioni precedenti.  
   
- Con `__assume,` uno sviluppatore può indicare al compilatore di presupporre il valore di alcune variabili.  
+ Con `__assume`, uno sviluppatore può indicare al compilatore di presupporre il valore di una variabile.  
   
- Ad esempio `__assume(a < 5);` indica all'utilità di ottimizzazione che in una determinata riga di codice la variabile `a` è minore di 5.  Anche in questo caso si tratta solo di un suggerimento per il compilatore.  Se `a` in realtà è pari a 6 in questo punto del programma, il comportamento del programma dopo l'ottimizzazione del compilatore potrebbe non essere quello previsto.  `__assume` è particolarmente utile prima di istruzioni switch e\/o espressioni condizionali.  
+ Ad esempio `__assume(a < 5);` indica che l'utilità di ottimizzazione in una determinata riga di codice la variabile `a` è minore di 5. Nuovamente, questa è una promessa al compilatore. Se `a` è effettivamente 6 a questo punto del programma, il comportamento del programma dopo che il compilatore è ottimizzato potrebbe non essere quello previsto. `__assume`è molto utile prima di istruzioni switch e/o le espressioni condizionali.  
   
- `__assume` presenta alcuni limiti.  Innanzitutto, come per `__restrict`, si tratta solo di un suggerimento che il compilatore è libero di ignorare.  Inoltre, `__assume` attualmente funziona solo con le disuguaglianze delle variabili rispetto alle costanti.  Non propaga le disuguaglianze simboliche, ad esempio assume\(a \< b\).  
+ Esistono alcune limitazioni per `__assume`. In primo luogo, ad esempio `__restrict`, si tratta solo di un suggerimento, il compilatore è libero di ignorare. Inoltre, `__assume` attualmente funziona solo con le disuguaglianze rispetto alle costanti. Non propaga le disuguaglianze simboliche, ad esempio assume(a < b).  
   
-## Supporto di intrinseci  
- Gli intrinseci sono chiamate di funzione in cui il compilatore dispone di informazioni intrinseche sulla chiamata e, anziché chiamare una funzione in una libreria, crea il codice di tale funzione.  Il file di intestazione intrin.h situato in \<Directory\_installazione\>\\VC\\include\\intrin.h contiene tutte le funzioni intrinseche disponibili per ognuna delle tre piattaforme supportate \(x86, x64 e ARM\).  
+## <a name="intrinsic-support"></a>Supporto intrinseco  
+ Funzioni intrinseche sono funzione chiama in cui il compilatore dispone di informazioni intrinseche sulla chiamata, e invece di chiamare una funzione in una raccolta, genera codice per tale funzione. Il file di intestazione intrin.h situato in <Directory_installazione>\VC\include\intrin.h contiene tutte le funzioni intrinseche disponibili per ognuna delle tre piattaforme supportate (x86, x64 e ARM).  
   
- Gli intrinseci consentono al programmatore di approfondire i livelli di codice senza dover utilizzare un assembly.  L'utilizzo degli intrinseci presenta diversi vantaggi:  
+ Funzioni intrinseche consentono ai programmatori di approfondire i livelli nel codice senza dover usare assembly. Esistono diversi vantaggi offerti dall'utilizzo di funzioni intrinseche:  
   
-1.  Maggiore portabilità del codice:  alcuni intrinseci sono disponibili in diverse architetture di CPU.  
+1.  Il codice sia portabile. Alcune delle funzioni intrinseche sono disponibili su diverse architetture della CPU.  
   
-2.  Maggiore facilità nella lettura del codice, poiché viene scritto ancora in C\/C\+\+.  
+2.  Il codice è più facile da leggere, poiché il codice è ancora stato scritto in C/C++.  
   
-3.  Estensione al codice dei vantaggi derivanti dalle ottimizzazioni del compilatore.  Di pari passo con i miglioramenti apportati al compilatore, viene migliorata anche la generazione di codice degli intrinseci.  
+3.  Il codice ottiene il vantaggio di ottimizzazioni del compilatore. Come il compilatore, viene migliorata consente di migliorare la generazione di codice per le funzioni intrinseche.  
   
- Per ulteriori informazioni, vedere [Intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md) e [Benefits of Using Intrinsics](http://msdn.microsoft.com/it-it/57af8920-527f-44af-a741-a07cbe80bf02).  
+ Per ulteriori informazioni, vedere [intrinseci del compilatore](../../intrinsics/compiler-intrinsics.md).  
   
-## Eccezioni  
- All'utilizzo delle eccezioni è associato un calo delle prestazioni.  Alcune restrizioni vengono introdotte quando si utilizzano blocchi try che impediscono al compilatore di eseguire determinate ottimizzazioni.  Nelle piattaforme x86 si verifica un'ulteriore riduzione del livello delle prestazioni derivante dai blocchi try, a causa delle informazioni di stato aggiuntive che devono essere generate durante l'esecuzione del codice.  Nelle piattaforme a 64 bit non si verifica tale riduzione delle prestazioni da parte dei blocchi try ma, una volta generata un'eccezione, il processo di individuazione del gestore e di rimozione dello stack può essere dispendioso.  
+## <a name="exceptions"></a>Eccezioni  
+ Sulle prestazioni hit associato all'utilizzo di eccezioni. Quando si utilizzano blocchi try che impediscono al compilatore di eseguire determinate ottimizzazioni introdotte alcune restrizioni. X86 piattaforme è presente un calo delle prestazioni da provare a blocchi a causa di informazioni aggiuntive sullo stato che devono essere generati durante l'esecuzione di codice. Sulle piattaforme a 64 bit, provare a blocchi non influire negativamente sulle prestazioni da parte, ma una volta che viene generata un'eccezione, il processo di individuazione del gestore e rimozione dello stack può essere dispendiosa.  
   
- Si consiglia pertanto di evitare l'introduzione di blocchi try\/catch nel codice non realmente indispensabili.  Se è necessario utilizzare eccezioni, ricorrere se possibile a quelle sincrone.  Per ulteriori informazioni, vedere [Gestione strutturata delle eccezioni](../../cpp/structured-exception-handling-c-cpp.md).  
+ Pertanto, è consigliabile evitare di introdurre i blocchi try/catch nel codice che non lo davvero necessario. Se è necessario utilizzare eccezioni, se possibile utilizzare le eccezioni sincrone. Per altre informazioni, vedere [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).  
   
- Infine, generare eccezioni solo in casi eccezionali.  L'utilizzo di eccezioni per il flusso di controllo generale potrebbe comportare una riduzione delle prestazioni.  
+ Infine, generare eccezioni solo in casi eccezionali. Utilizzo di eccezioni per il flusso di controllo generale probabilmente renderà prestazioni risentirne.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Ottimizzazione del codice](../../build/reference/optimizing-your-code.md)

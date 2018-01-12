@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -67,30 +65,16 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 80836179c63da2f62384abd07fe2a4970d9bce55
-ms.contentlocale: it-it
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 Imposta l'ora di modifica del file.  
@@ -146,7 +130,7 @@ int _wutime64(
  `ENOENT`  
  Percorso o nome del file non trovato  
   
- Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
  La data può essere modificata per un file, se la data di modifica è successiva alla mezzanotte del 1 gennaio 1970 e precedente alla data di fine della funzione usata. `_utime` e `_wutime` usano un valore di ora a 64 bit, quindi la data di fine corrisponde alle 23.59.59 del 31 dicembre 3000, UTC. Se si definisce `_USE_32BIT_TIME_T` per forzare il comportamento precedente, la data di fine corrisponde alle 23.59.59 del 18 gennaio 2038, UTC. Le funzioni `_utime32` o `_wutime32` usano un tipo di ora a 32 bit indipendentemente dal fatto che sia definito `_USE_32BIT_TIME_T` e la data di fine è sempre quella precedente. Le funzioni `_utime64` o `_wutime64` usano sempre il tipo di ora a 64 bit e pertanto supportano sempre la data di fine successiva.  
   
@@ -183,7 +167,7 @@ int _wutime64(
 |`_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_wutime`|\<utime.h> o \<wchar.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
  Questo programma usa `_utime` per impostare l'ora di modifica dei file sull'ora corrente.  

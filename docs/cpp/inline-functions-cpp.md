@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- inline functions [C++], class members
+dev_langs: C++
+helpviewer_keywords: inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ef57fae985184595ed32dc78b2280e76ba078e56
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-functions-c"></a>Funzioni inline (C++)
 Una funzione definita nel corpo di una dichiarazione di classe è una funzione inline.  
@@ -84,7 +81,7 @@ int main()
   
  Il compilatore considera come suggerimenti le opzioni di espansione inline e le parole chiave. Non è garantito che le funzioni siano sottoposte all'espansione inline. Non è possibile forzare il compilatore all'esecuzione dell'espansione inline di una data funzione, anche con la parola chiave `__forceinline`. Durante la compilazione con **/clr**, il compilatore verrà non inline una funzione se sono presenti attributi di protezione applicati alla funzione.  
   
- Il **inline** (parola chiave) è disponibile solo in C++. Le parole chiave `__inline` `__forceinline` sono disponibili sia in C che in C++. Per garantire la compatibilità con le versioni precedenti, **inline** è un sinonimo di `__inline`.  
+ Il **inline** (parola chiave) è disponibile solo in C++. Le parole chiave `__inline``__forceinline` sono disponibili sia in C che in C++. Per garantire la compatibilità con le versioni precedenti, **inline** è un sinonimo di `__inline`.  
   
  Il **inline** parola chiave indica al compilatore che l'espansione inline è preferibile. Tuttavia, il compilatore può creare un'istanza separata della funzione (istanziare) e creare collegamenti standard di chiamate anziché inserire il codice inline. Questa situazione può verificarsi nei due casi seguenti:  
   

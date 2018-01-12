@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDacl class
+dev_langs: C++
+helpviewer_keywords: CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
-ms.contentlocale: it-it
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>Classe CDacl
 Questa classe è un wrapper per una struttura DACL (elenco di controllo di accesso discrezionali).  
@@ -91,7 +74,7 @@ class CDacl : public CAcl
   
  Utilizzare i metodi di classe forniti per creare, aggiungere, rimuovere ed eliminare le voci ACE dal `CDacl` oggetto. Vedere anche [AtlGetDacl](security-global-functions.md#atlgetdacl) e [AtlSetDacl](security-global-functions.md#atlsetdacl).  
   
- Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) nel [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Per un'introduzione al modello di controllo di accesso in Windows, vedere [controllo di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374860) in Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -138,7 +121,7 @@ bool AddAllowedAce(
  Restituisce **true** se viene aggiunto alla voce ACE di `CDacl` oggetto **false** in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Oggetto `CDacl` oggetto contiene zero o più ACE (voci di controllo di accesso) che identificano gli utenti e gruppi di utenti che è possono accedere all'oggetto. Questo metodo aggiunge una voce ACE che consente l'accesso per il `CDacl` oggetto.  
+ Oggetto `CDacl` oggetto contiene zero o più ACE (voci di controllo di accesso) che identificano gli utenti e gruppi di utenti che è possono accedere all'oggetto. Questo metodo aggiunge una voce ACE che consenta l'accesso di `CDacl` oggetto.  
   
 > [!NOTE]
 >  La seconda forma di `AddAllowedAce` è disponibile solo in Windows 2000 e versioni successive.  
@@ -272,4 +255,3 @@ void RemoveAllAces() throw();
  [Voci ACE](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)
-

@@ -33,11 +33,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4abb20ba85407e12c71ca83af7dce96eb0f9d751
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39f2a901404a9c2c34dc9147cb4ed51f070396a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 Ottiene lo stato corrente dell'heap di debug e lo memorizza in una struttura `_CrtMemState` fornita dall'applicazione (solo versione debug).  
@@ -61,7 +62,7 @@ void _CrtMemCheckpoint(
   
  Per altre informazioni sulle funzioni dello stato dell'heap e sulla struttura `_CrtMemState` , vedere [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Per altre informazioni sulle modalità di allocazione, inizializzazione e gestione dei blocchi di memoria nella versione di debug dell'heap di base, vedere [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
- Se `state` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su `EINVAL` e viene restituito il risultato della funzione.  
+ Se `state` è `NULL`, verrà richiamato il gestore di parametri non valido, come descritto in [Parameter Validation](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) viene impostato su `EINVAL` e viene restituito il risultato della funzione.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -69,7 +70,7 @@ void _CrtMemCheckpoint(
 |-------------|---------------------|  
 |`_CrtMemCheckpoint`|\<crtdbg.h>, \<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
  **Librerie:** solo versioni di debug di UCRT.  
   

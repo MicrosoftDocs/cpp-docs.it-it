@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8671ce1eefd73b2b8af506b621258e81cbed9b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snapshot"></a>Snapshot
 Uno snapshot è un oggetto recordset riflette una visualizzazione statica dei dati in fase di che creazione dello snapshot. Quando si apre lo snapshot e spostare tutti i record, il set di record contiene e i relativi valori non cambiano fino a quando lo snapshot viene rigenerato chiamando **Requery**.  

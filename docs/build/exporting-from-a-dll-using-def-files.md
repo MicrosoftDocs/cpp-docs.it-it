@@ -1,38 +1,39 @@
 ---
-title: "Esportazione da una DLL tramite i file DEF | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def (file) [C++], esportazione da DLL"
-  - "file def [C++], esportazione da DLL"
-  - "esportazione di DLL [C++], DEF (file)"
+title: Esportazione da una DLL tramite i file DEF | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- def files [C++], exporting from DLLs
+- .def files [C++], exporting from DLLs
+- exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15806c3e40d45588ec27f1351e583fc5e8e897e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Esportazione da una DLL tramite i file DEF
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un file di definizione di modulo \(def\) è un file di testo contenente una o più istruzioni di modulo che descrivono alcuni attributi di una DLL.  Se non si utilizza la parola chiave **\_\_declspec\(dllimport\)** per esportare le funzioni della DLL, è necessario utilizzare un file def.  
+# <a name="exporting-from-a-dll-using-def-files"></a>Esportazione da una DLL tramite i file DEF
+Un file di definizione moduli (def) è un file di testo che contiene uno o più istruzioni di modulo che descrivono i vari attributi di una DLL. Se non si utilizza il **dllexport** (parola chiave) per esportare le funzioni della DLL, è necessario un file def.  
   
- Un file def deve contenere almeno le seguenti istruzioni di definizione di modulo.  
+ Un file def deve contenere le istruzioni di definizione moduli seguenti:  
   
--   La prima istruzione nel file deve essere LIBRARY,  che identifica il file def come appartenente a una DLL.  L'istruzione LIBRARY è seguita dal nome della DLL.  Il linker colloca questo nome nella libreria di importazione della DLL.  
+-   La prima istruzione nel file deve essere l'istruzione di libreria. Questa istruzione identifica il file con estensione def come appartenente a una DLL. L'istruzione di libreria è seguito dal nome della DLL. Il linker inserisce il nome nella libreria di importazione della DLL.  
   
--   L'istruzione EXPORTS elenca i nomi ed eventualmente i valori ordinali delle funzioni esportate dalla DLL.  Alla funzione viene assegnato un valore ordinale facendo seguire il nome della funzione dal simbolo @ e da un numero.  Quando si specificano i valori ordinali, questi devono essere compresi nell'intervallo da 1 a N, dove N corrisponde al numero delle funzioni esportate dalla DLL.  Se si desidera esportare le funzioni in base al valore ordinale, vedere [Esportazione di funzioni da una DLL in base al numero ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) insieme a questo argomento.  
+-   L'istruzione di esportazioni Elenca i nomi e, facoltativamente, i valori ordinali delle funzioni esportate dalla DLL. La funzione si assegna un valore ordinale seguendo il nome della funzione con un simbolo di chiocciola (@) e un numero. Quando si specificano valori ordinali, devono essere compreso nell'intervallo da 1 a N, dove N è il numero di funzioni esportate dalla DLL. Se si desidera esportare funzioni tramite ordinale, vedere [esportazione di funzioni da una DLL in ordinale anziché al nome](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) nonché in questo argomento.  
   
- Una DLL che contiene ad esempio il codice per l'implementazione di una struttura ad albero di ricerca binaria è simile a quanto segue:  
+ Una DLL che contiene il codice per implementare una struttura di ricerca binario, ad esempio, potrebbe essere simile al seguente:  
   
 ```  
 LIBRARY   BTREE  
@@ -43,11 +44,11 @@ EXPORTS
    Min   @4  
 ```  
   
- Se si utilizza la [Creazione guidata DLL MFC](../mfc/reference/mfc-dll-wizard.md) per creare una DLL MFC, viene creato e aggiunto automaticamente al progetto un file def di base.  Aggiungere i nomi delle funzioni da esportare in questo file.  Per le DLL non MFC, è necessario creare manualmente il file def e aggiungerlo al progetto.  
+ Se si utilizza il [Creazione guidata DLL MFC](../mfc/reference/mfc-dll-wizard.md) per creare una DLL MFC, la procedura guidata crea un file def di base per l'utente e lo aggiunge automaticamente al progetto. Aggiungere i nomi delle funzioni da esportare in questo file. Per la DLL non MFC, è necessario creare manualmente il file. def e aggiungerlo al progetto.  
   
- Se si esportano le funzioni in un file C\+\+, è necessario inserire i nomi decorati nel file def o definire le funzioni esportate con il collegamento C standard utilizzando extern "C".  Per ottenere i nomi decorati da inserire nel file def, è possibile utilizzare lo strumento [DUMPBIN](../build/reference/dumpbin-reference.md) o l'opzione [\/MAP](../build/reference/map-generate-mapfile.md) del linker.  I nomi decorati prodotti dal compilatore sono specifici del compilatore.  Se si inseriscono i nomi decorati creati dal compilatore Visual C\+\+ in un file def, anche le applicazioni collegate alla DLL devono essere compilate utilizzando la stessa versione di Visual C\+\+, in modo che i nomi decorati nell'applicazione chiamante corrispondano ai nomi esportati nel file def della DLL.  
+ Se si siano esportando funzioni in un file C++, è necessario inserire i nomi decorati nel file con estensione def o definire le funzioni esportate con il collegamento C standard utilizzando extern "C". Se è necessario inserire i nomi decorati nel file con estensione def, è possibile ottenerle all'utilizzando il [DUMPBIN](../build/reference/dumpbin-reference.md) degli strumenti o utilizzando il linker [/Map](../build/reference/map-generate-mapfile.md) opzione. Si noti che i nomi decorati creati dal compilatore specifica del compilatore. Se si inseriscono i nomi decorati creati dal compilatore Visual C++ in un file con estensione def, anche le applicazioni che si collegano alla DLL devono essere compilate utilizzando la stessa versione di Visual C++ in modo che i nomi decorati nell'applicazione chiamante corrispondano ai nomi esportati nel de della DLL file f.  
   
- Se si compila una [DLL di estensione](../build/extension-dlls-overview.md) e si esegue l'esportazione mediante un file def, inserire il seguente codice all'inizio e alla fine dei file di intestazione che contengono le classi esportate:  
+ Se si sta compilando un [DLL di estensione](../build/extension-dlls-overview.md), e l'esportazione di un file def, inserire il codice seguente all'inizio e alla fine del file di intestazione che contengono le classi esportate:  
   
 ```  
 #undef AFX_DATA  
@@ -57,33 +58,33 @@ EXPORTS
 #define AFX_DATA  
 ```  
   
- Queste righe di codice garantiscono che le variabili MFC utilizzate internamente o aggiunte alle classi vengano esportate, o importate, dalla DLL di estensione.  Quando si deriva, ad esempio, una classe mediante `DECLARE_DYNAMIC`, la macro si espande per aggiungere una variabile membro `CRuntimeClass` alla classe.  L'omissione di queste quattro righe può comportare errori di compilazione o di collegamento della DLL o provocare un errore quando l'applicazione client si collega alla DLL.  
+ Queste righe assicurano che le variabili che vengono utilizzati internamente o che vengono aggiunte alle classi MFC sono esportati o importati dalla DLL di estensione MFC. Ad esempio, quando si deriva una classe utilizzando `DECLARE_DYNAMIC`, la macro si espande per aggiungere un `CRuntimeClass` variabile membro alla classe. Escludendo le quattro righe può comportare errori di compilazione o il collegamento errato o causa un errore durante l'applicazione client è collegato alla DLL.  
   
- Quando si compila la DLL, il linker utilizza il file def per creare un file di esportazione \(exp\) e un file di libreria di importazione \(lib\).  Il linker utilizza quindi il file di esportazione per compilare il file DLL.  Gli eseguibili che si collegano in modo implicito alla DLL si collegano alla libreria di importazione quando vengono compilati.  
+ Quando si compila la DLL, il linker Usa il file. def per creare un file di esportazione (EXP) e un file di importazione della libreria (lib). Il linker utilizza quindi il file di esportazione per compilare il file DLL. File eseguibili che si collegano al collegamento alla libreria di importazione DLL in modo implicito quando vengono generati.  
   
- I file def vengono utilizzati da MFC per esportare funzioni e classi da MFCx0.dll.  
+ Si noti che MFC utilizza i file con estensione def per esportare le funzioni e classi da MFCx0.  
   
-## Scegliere l'argomento con cui si desidera procedere  
+## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   
--   [Esportazione da una DLL utilizzando \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Esportazione da una DLL tramite dllexport](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Esportazione e importazione utilizzando AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Esportazione e importazione tramite AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Esportazione di funzioni C\+\+ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Esportazione di funzioni C++ per l'utilizzo in eseguibili in linguaggio C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Esportazione di funzioni C per l'utilizzo in eseguibili in linguaggio C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Scelta del metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
+-   [Metodo di esportazione da utilizzare](../build/determining-which-exporting-method-to-use.md)  
   
--   [Importazione in un'applicazione utilizzando \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Importazione in un'applicazione utilizzando declspec](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Inizializzare una DLL](../build/initializing-a-dll.md)  
+-   [Inizializzazione di una DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## Scegliere l'argomento su cui visualizzare maggiori informazioni  
+## <a name="what-do-you-want-to-know-more-about"></a>Scegliere l'argomento su cui visualizzare maggiori informazioni  
   
--   [File def](../build/reference/module-definition-dot-def-files.md)  
+-   [DEF (file)](../build/reference/module-definition-dot-def-files.md)  
   
--   [Regole relative alle istruzioni di definizione dei moduli](../build/reference/rules-for-module-definition-statements.md)  
+-   [Regole per le istruzioni di definizione moduli](../build/reference/rules-for-module-definition-statements.md)  
   
 -   [Nomi decorati](../build/reference/decorated-names.md)  
   
@@ -91,5 +92,5 @@ EXPORTS
   
 -   [Importazioni reciproche](../build/mutual-imports.md)  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Esportazione da una DLL](../build/exporting-from-a-dll.md)

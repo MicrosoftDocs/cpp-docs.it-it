@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a93975903451e609676baa6b32641e41221fa005
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-and-constant-definitions"></a>Struttura e definizioni di costanti
 Routine di supporto predefinito utilizza diverse strutture per comunicare con le funzioni hook e durante le eccezioni. Ecco i valori di notifica e di errore, le strutture di informazioni e il tipo di puntatore a funzione hook passati agli hook:  

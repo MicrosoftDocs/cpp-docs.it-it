@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __stdcall_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __stdcall keyword [C++]
+f1_keywords: __stdcall_cpp
+dev_langs: C++
+helpviewer_keywords: __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6c4998d3f53a76246545a6290e735f52206d70ad
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Sezione specifica Microsoft**  
@@ -47,7 +43,7 @@ return-type __stdcall function-name[(argument-list)]
 |Convenzione per il passaggio degli argomenti|Per valore, a meno che non venga passato un puntatore o un tipo di riferimento.|  
 |Responsabilità di manutenzione dello stack|La funzione chiamata determina l'estrazione dei propri argomenti dallo stack.|  
 |Convenzione della decorazione dei nomi|Un carattere di sottolineatura (_) viene aggiunto come prefisso del nome. Il nome è seguito dal simbolo @ seguito dal numero di byte (in decimale) nell'elenco di argomenti. Pertanto, la funzione dichiarata come `int func( int a, double b )` è decorata come segue: `_func@12`|  
-|Convenzione della conversione maiuscolo/minuscolo e viceversa|Nessuno|  
+|Convenzione della conversione maiuscolo/minuscolo e viceversa|nessuno|  
   
  Il [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) specifica l'opzione del compilatore `__stdcall` per tutte le funzioni dichiarate in modo non esplicito con una convenzione di chiamata diversa.  
   

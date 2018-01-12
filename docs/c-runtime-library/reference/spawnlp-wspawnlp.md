@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d0453ce194e9321393f87ed492b92cf3ae11d4bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3b68a8e404dcfce1b1cf98a092dc9bc17435ffb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 Crea ed esegue un nuovo processo.  
@@ -102,7 +103,7 @@ intptr_t _wspawnlp(
  `ENOMEM`  
  Memoria insufficiente per eseguire il nuovo processo.  
   
- Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Per altre informazioni su questi e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni crea ed esegue un nuovo processo, passando ogni argomento della riga di comando come parametro separato e usando la variabile di ambiente `PATH` per trovare il file da eseguire.  
@@ -116,13 +117,13 @@ intptr_t _wspawnlp(
 |`_spawnlp`|\<process.h>|  
 |`_wspawnlp`|\<stdio.h> o \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
  Vedere l'esempio in [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Controllo di processi e ambiente](../../c-runtime-library/process-and-environment-control.md)   
+ [Controllo processo e ambiente](../../c-runtime-library/process-and-environment-control.md)   
  [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   

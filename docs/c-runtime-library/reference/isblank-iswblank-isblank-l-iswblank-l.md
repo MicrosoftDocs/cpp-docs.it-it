@@ -38,11 +38,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 69b64f699cd98a98355aac5d64bc84c779927ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5185820e3b8bcb2b5fab1adfaee247743f2e464f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 Determina se un intero rappresenta un carattere vuoto.  
@@ -74,7 +75,7 @@ int _iswblank_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di uno spazio o un carattere di tabulazione orizzontale oppure se fa parte di un set specifico delle impostazioni locali di caratteri usati per separare le parole all'interno di una riga di testo. `isblank` restituisce un valore diverso da zero se `c` è un carattere di spazio (0x20) oppure un carattere di tabulazione orizzontale (0x09). Il risultato della condizione di test per le funzioni `isblank` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Impostazioni locali](../../c-runtime-library/locale.md).  
+ Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di uno spazio o un carattere di tabulazione orizzontale oppure se fa parte di un set specifico delle impostazioni locali di caratteri usati per separare le parole all'interno di una riga di testo. `isblank` restituisce un valore diverso da zero se `c` è un carattere di spazio (0x20) oppure un carattere di tabulazione orizzontale (0x09). Il risultato della condizione di test per le funzioni `isblank` dipende dall'impostazione della categoria `LC_CTYPE` delle impostazioni locali. Per altre informazioni, vedere [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Le versioni di queste funzioni che non hanno il suffisso `_l` usano le impostazioni locali correnti per qualsiasi comportamento dipendente dalle impostazioni locali. Le versioni che non hanno il suffisso `_l` sono identiche, con la differenza che usano le impostazioni locali passate. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   
  `iswblank` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a un carattere standard di spazio o di tabulazione orizzontale.  
   
@@ -100,5 +101,5 @@ int _iswblank_l(
   
 ## <a name="see-also"></a>Vedere anche  
  [Classificazione di caratteri](../../c-runtime-library/character-classification.md)   
- [Impostazioni locali](../../c-runtime-library/locale.md)   
+ [Locale](../../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Routine is, isw](../../c-runtime-library/is-isw-routines.md)
