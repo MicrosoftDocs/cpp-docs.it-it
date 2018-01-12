@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3224
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3224
+f1_keywords: C3224
+dev_langs: C++
+helpviewer_keywords: C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3b949a2abb602c3945ad6d3592b4eee6ddb14549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 383d7a5d4eb77efeaaabbbd2e29c3618f9a7b582
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3224"></a>Errore del compilatore C3224
 'type': nessuna classe generica in overload accetta 'number' argomenti di tipo generico  

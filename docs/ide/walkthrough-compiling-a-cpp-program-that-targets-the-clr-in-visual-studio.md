@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 152d26874af277d742b106db29a4d9dd9c254c9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>Procedura dettagliata: compilazione di un programma C++ destinato a CLR in Visual Studio
 È possibile creare programmi Visual C++ che utilizzano classi .NET e compilarle con l'ambiente di sviluppo di Visual Studio.  
@@ -77,10 +78,10 @@ ms.lasthandoff: 10/24/2017
      Il **textfile. txt** file di testo è ora disponibile nella directory del progetto. È possibile aprire questo file utilizzando blocco note.  
   
     > [!NOTE]
-    >  Scelta di CLR vuoto modello di progetto impostata automaticamente la **/clr** l'opzione del compilatore. Per verificare questa condizione, fare clic sul progetto in **Esplora** e facendo clic su **proprietà**e quindi controllare il **supporto Common Language Runtime** opzione il  **Generale** nodo di **le proprietà di configurazione**.  
+    >  Scelta di CLR vuoto modello di progetto impostata automaticamente la **/clr** l'opzione del compilatore. Per verificare questa condizione, fare clic sul progetto in **Esplora** e facendo clic su **proprietà**e quindi controllare il **supporto Common Language Runtime** opzione il ** Generale** nodo di **le proprietà di configurazione**.  
   
 ## <a name="whats-next"></a>Argomenti successivi  
- **Precedente:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **Avanti:**[procedura dettagliata: compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **Precedente:** [procedura dettagliata: compilazione di un programma C++ nativo nella riga di comando](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) & #124; **Avanti:**[procedura dettagliata: compilare un programma C nella riga di comando](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)   

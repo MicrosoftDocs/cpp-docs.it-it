@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 1) C4558 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4558"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4558"
+title: Compilatore avviso (livello 1) C4558 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4558
+dev_langs: C++
+helpviewer_keywords: C4558
 ms.assetid: 52bb0324-7bec-468c-b35b-13a08d38e578
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a9e207bb188bdfa31ef1625aa5e1b607823e755e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4558
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-valore dell'operando 'valore' non compreso nell'intervallo 'limite inferiore \- limite superiore'  
+# <a name="compiler-warning-level-1-c4558"></a>Avviso del compilatore (livello 1) C4558
+valore dell'operando 'value' non compreso nell'intervallo 'limite inferiore - limite superiore'  
   
- Il valore passato a un'istruzione di linguaggio assembly non è compreso nell'intervallo specificato per il parametro,  pertanto verrà troncato.  
+ Il valore passato a un'istruzione in linguaggio assembly è compreso nell'intervallo specificato per il parametro. Il valore verrà troncato.  
   
- Il seguente codice di esempio genera l'errore C4558:  
+ L'esempio seguente genera l'errore C4558:  
   
 ```  
 // C4558.cpp  

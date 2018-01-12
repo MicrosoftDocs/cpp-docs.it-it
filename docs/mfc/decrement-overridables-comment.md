@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0a5e8402f396c78ff02cbf5798c638f7b8b7d4f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca52bcc3846971af1811551411199785c3d4e102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="-overridables-comment"></a>// Commento sui sottoponibili a override
 Il `// Overridables` sezione di una dichiarazione di classe MFC contiene funzioni virtuali che è possibile eseguire l'override in una classe derivata quando è necessario modificare il comportamento della classe di base. Sono in genere denominate a partire da "On", sebbene non sia strettamente necessario. Funzioni di seguito sono progettate per essere sottoposto a override, spesso implementare o forniscono una sorta di "callback" o "hook". In genere, questi membri sono protetti.  

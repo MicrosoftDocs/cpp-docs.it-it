@@ -1,64 +1,63 @@
 ---
-title: "__mulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__mulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__mulh (funzione intrinseca)"
+title: __mulh | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __mulh
+dev_langs: C++
+helpviewer_keywords: __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8d2b8f9b6a697bedeccef46c37a27bfd3559c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __mulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="mulh"></a>__mulh
+**Sezione specifica Microsoft**  
   
- Restituisce i bit di livello 64 del prodotto di due interi con segno a 64 bit.  
+ Restituisce i 64 bit alti del prodotto di due interi con segno a 64 bit.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-__int64 __mulh(   
-   __int64 a,   
-   __int64 b   
+__int64 __mulh(   
+   __int64 a,   
+   __int64 b   
 );  
 ```  
   
-#### Parametri  
- \[in\] `a`  
+#### <a name="parameters"></a>Parametri  
+ [in] `a`  
  Primo numero da moltiplicare.  
   
- \[in\] `b`  
+ [in] `b`  
  Secondo numero da moltiplicare.  
   
-## Valore restituito  
- I bit di livello 64 del risultato a 128 bit di moltiplicarlo.  
+## <a name="return-value"></a>Valore restituito  
+ 64 bit alti del risultato a 128 bit della moltiplicazione.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa procedura è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // mulh.cpp  
@@ -81,8 +80,11 @@ int main()
 }  
 ```  
   
-  **0xfffffffffffffff \* 0xf0000000 \= 0xeffffffffffffff10000000**   
-## Microsoft FINALE specifico  
+```Output  
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

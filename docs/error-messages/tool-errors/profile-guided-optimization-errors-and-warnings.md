@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3704330eba9a668c3a46f0efead7c86a54b465d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2da1911c291c4d052d380cfd3d63c5b25bda5010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>Errori e avvisi di ottimizzazione GPO
 In questa sezione viene fornito un elenco di riferimento degli errori generati dagli strumenti di compilazione. Per informazioni su un determinato messaggio di errore, fare clic sul numero di errore nella finestra di Output e premere F1, digitare il numero di errore nel **cercare** dell'indice oppure fare clic sul collegamento appropriato:  

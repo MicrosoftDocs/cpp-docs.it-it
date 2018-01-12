@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb39b5089b7cd4849e5afd3eaac239c0c2ab3adf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Oggetti dati e origini dati (OLE)
 Quando si esegue un trasferimento di dati, tramite l'utilizzo di Appunti o trascinamento della selezione dei dati hanno un'origine e una destinazione. Un'applicazione fornisce i dati per la copia e la accetta un'altra applicazione per incollare. Ogni lato del trasferimento è necessario eseguire diverse operazioni sugli stessi dati per il trasferimento venga eseguita correttamente. La libreria Microsoft Foundation classe (MFC) fornisce due classi che rappresentano ogni lato di tale trasferimento:  
@@ -40,7 +41,7 @@ Quando si esegue un trasferimento di dati, tramite l'utilizzo di Appunti o trasc
   
 -   [Oggetti dati e origini dati: modifica](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Trascinamento della selezione](../mfc/drag-and-drop-ole.md)  
   
  [Appunti](../mfc/clipboard.md)  

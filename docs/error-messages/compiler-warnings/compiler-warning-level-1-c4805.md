@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4805
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4805
+f1_keywords: C4805
+dev_langs: C++
+helpviewer_keywords: C4805
 ms.assetid: 99c7b7e2-272e-4ab5-8580-17c42e62e2ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: bbe709ec83a19f6e1f2ac58059be564f9bee60a2
-ms.contentlocale: it-it
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01e16abcd1a0b94cde1f3491ca519f85982f1ecb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4805"></a>Avviso del compilatore (livello 1) C4805
 'operation': combinazione non affidabile del tipo 'type' e del tipo 'type' nell'operazione  

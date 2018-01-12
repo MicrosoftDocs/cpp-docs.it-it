@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 4) C4336 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4336"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4336"
+title: Compilatore avviso (livello 4) C4336 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4336
+dev_langs: C++
+helpviewer_keywords: C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 524d5d1aab2b63854ec334f6eb94a62e9fb127c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4336
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-importare la libreria dei tipi 'lib\_tipi1' a cui è stato fatto un riferimento incrociato prima di importare 'lib\_tipi2'  
+# <a name="compiler-warning-level-4-c4336"></a>Avviso del compilatore (livello 4) C4336
+importare il tipo con riferimenti incrociato libreria 'lib_tipi1' prima di importare 'lib_tipi2'  
   
- Si è fatto riferimento a una libreria di tipi con la direttiva [\#import](../../preprocessor/hash-import-directive-cpp.md).  Tuttavia, la libreria dei tipi conteneva un riferimento a un'altra libreria dei tipi a cui non si è fatto riferimento con `#import`.  Quest'altro file tlb è stato rilevato dal compilatore.  
+ Una libreria dei tipi è stato fatto riferimento con il [#import](../../preprocessor/hash-import-directive-cpp.md) direttiva. Tuttavia, la libreria dei tipi contiene un riferimento a un'altra libreria dei tipi che non esiste alcun riferimento con `#import`. L'altro file tlb è stato trovato dal compilatore.  
   
- Date due librerie dei tipi su disco create dai due seguenti file, compilati con midl.exe:  
+ Date due librerie sul disco creato da due file seguenti (compilati con midl.exe):  
   
 ```  
 // c4336a.idl  
@@ -43,7 +42,7 @@ library c4336aLib
 };  
 ```  
   
- La seconda libreria dei tipi è la seguente:  
+ La seconda libreria dei tipi:  
   
 ```  
 // c4336b.idl  
@@ -59,7 +58,7 @@ library C4336bLib
 };  
 ```  
   
- Il seguente codice di esempio genera l'errore C4336:  
+ L'esempio seguente genera l'errore C4336:  
   
 ```  
 // C4336.cpp  

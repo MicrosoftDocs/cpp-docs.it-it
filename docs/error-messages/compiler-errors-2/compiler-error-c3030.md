@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3030
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3030
+f1_keywords: C3030
+dev_langs: C++
+helpviewer_keywords: C3030
 ms.assetid: de92fd7e-29ba-46e8-b43b-f4b985cd74de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f443b29e1d7fb8b2913b088bee08fa90b00d0d38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 472ff7495ab0e57f7aa9d03ea060faa813e20228
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3030"></a>Errore del compilatore C3030
 'var': la variabile nella clausola/direttiva 'reduction' non può avere un tipo riferimento  

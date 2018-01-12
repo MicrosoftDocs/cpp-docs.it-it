@@ -1,36 +1,37 @@
 ---
-title: "__invlpg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__invlpg"
-  - "__invlpg_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invlpg (istruzione)"
-  - "__invlpg (funzione intrinseca)"
+title: __invlpg | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __invlpg
+- __invlpg_cpp
+dev_langs: C++
+helpviewer_keywords:
+- invlpg instruction
+- __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 919e1ff5d01dca587eff255f5a7164c41d2f04b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __invlpg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="invlpg"></a>__invlpg
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione x86 `invlpg` , che invalida il buffer lookaside di conversione \(TLB\) per la pagina associata alla memoria indicata da `Address`.  
+ Genera l'errore x86 `invlpg` (istruzione), che invalida il buffer di translation lookaside (TLB) per la pagina associata alla memoria a cui puntata `Address`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void __invlpg(  
@@ -38,24 +39,24 @@ void __invlpg(
 );  
 ```  
   
-#### Parametri  
- \[in\] `Address`  
+#### <a name="parameters"></a>Parametri  
+ [in]`Address`  
  Un indirizzo a 64 bit.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__invlpg`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- `__invlpg` intrinseco genera un'istruzione privilegiata ed è disponibile solo in modalità kernel con un livello di privilegio DI \(\) a 0.  
+## <a name="remarks"></a>Note  
+ La funzione intrinseca `__invlpg` genera un'istruzione riservata ed è disponibile solo in modalità kernel con un livello di privilegio (CPL) pari a 0.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

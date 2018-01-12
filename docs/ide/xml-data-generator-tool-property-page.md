@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bf594f6c6a647ee930b173d58bed91e0ced778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5367e5a083f9556327abd004e22ac3daff34dfb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-data-generator-tool-property-page"></a>Strumento generatore di dati XML (pagina delle proprietà)
 Il **strumento generatore di dati XML** pagina delle proprietà diventa disponibile quando si aggiunge un set di dati a un progetto.  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2743
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2743
+f1_keywords: C2743
+dev_langs: C++
+helpviewer_keywords: C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 29826dde6b9f92dd01e3a6420eed0d836660121f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2743"></a>Errore del compilatore C2743
 'type': Impossibile intercettare un tipo nativo con distruttore clrcall o costruttore di copia  

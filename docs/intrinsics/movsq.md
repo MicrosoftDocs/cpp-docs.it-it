@@ -1,69 +1,69 @@
 ---
-title: "__movsq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__movsq (funzione intrinseca)"
-  - "rep movsq (istruzione)"
-  - "movsq (istruzione)"
+title: __movsq | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsq
+dev_langs: C++
+helpviewer_keywords:
+- __movsq intrinsic
+- rep movsq instruction
+- movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 543e9289e8aed2bca21da32b26392fd5c50b8730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __movsq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="movsq"></a>__movsq
+**Sezione specifica Microsoft**  
   
- Genera un'istruzione ripetuta della stringa di spostamento \(`rep movsq`\).  
+ Genera una stringa di spostare ripetuti (`rep movsq`) (istruzione).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-void __movsq(   
-   unsigned char* Dest,   
-   unsigned char* Source,   
-   size_t Count   
+void __movsq(   
+   unsigned char* Dest,   
+   unsigned char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Parametri  
- \[out\] `Dest`  
+#### <a name="parameters"></a>Parametri  
+ [out] `Dest`  
  La destinazione dell'operazione.  
   
- \[in\] `Source`  
+ [in] `Source`  
  L'origine dell'operazione.  
   
- \[in\] `Count`  
- Il numero di quadwords da copiare.  
+ [in] `Count`  
+ Il numero di parole quadruple da copiare.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Il risultato è che i primi quadwords di `Count` operazioni da `Source` vengono copiati nella stringa di `Dest` .  
+## <a name="remarks"></a>Note  
+ Il risultato è che il primo `Count` parole quadruple a cui puntava `Source` vengono copiati il `Dest` stringa.  
   
- Questa procedura è disponibile solo come intrinseci.  
+ Questa routine è disponibile solo come funzione intrinseca.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // movsq.cpp  
@@ -86,8 +86,11 @@ int main()
 }  
 ```  
   
-  **950 850 750 650 550 450 350 250 150 50**    
-## Microsoft FINALE specifico  
+```Output  
+950 850 750 650 550 450 350 250 150 50   
+```  
   
-## Vedere anche  
+**Fine sezione specifica Microsoft**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

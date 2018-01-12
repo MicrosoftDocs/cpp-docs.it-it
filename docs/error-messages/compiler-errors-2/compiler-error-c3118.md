@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51cc783d29e8a3b63a8c9ecf50b1ea280dae9a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfa2c70051afa27e65934c684f3ac30d89c6b344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3118"></a>Errore del compilatore C3118
 'interface': le interfacce non supportano l'ereditarietà virtuale  
   
- Si è tentato di ereditare praticamente da un'interfaccia. Di seguito è riportato un esempio:  
+ Si è tentato di ereditare praticamente da un'interfaccia. Ad esempio,  
   
 ```  
 // C3118.cpp  

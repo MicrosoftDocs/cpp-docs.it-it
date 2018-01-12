@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3017
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3017
+f1_keywords: C3017
+dev_langs: C++
+helpviewer_keywords: C3017
 ms.assetid: 12ab2c2a-d0d2-4900-9cbf-39be0af590dd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 02e90c911c7210b4e2260bed1f843c0f4ecc891e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a575db4ea80c4939722cc89124fd69742f96b4f2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3017"></a>Errore del compilatore C3017
 il formato del test di terminazione nell'istruzione 'for' OpenMP non è valido  

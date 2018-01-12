@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-documentation-visual-c"></a>Documentazione XML (Visual C++)
 In Visual C++, è possibile aggiungere commenti al codice sorgente che verrà elaborato in un file XML. Questo file può quindi essere l'input a un processo che crea la documentazione per le classi nel codice.  

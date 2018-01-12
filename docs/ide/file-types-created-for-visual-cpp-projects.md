@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ece6e335360c151271187ae75d45adafb1f57c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Tipi di file creati per i progetti di Visual C++
 Questo argomento descrive tutti i tipi di file associati ai progetti di Visual C++ per le applicazioni desktop classiche. I file effettivamente inclusi nel progetto dipendono dal tipo di progetto e dalle opzioni selezionate nella procedura guidata.  
@@ -56,7 +57,7 @@ Questo argomento descrive tutti i tipi di file associati ai progetti di Visual C
   
  La tabella riportata di seguito illustra i file comuni dei progetti di Visual C++, identificandone l'estensione corrispondente.  
   
-|Estensione di file|Tipo|Contenuto|  
+|Estensione di file|Tipo|Sommario|  
 |--------------------|----------|--------------|  
 |asmx|Origine|File di distribuzione.|  
 |asp|Origine|File Active Server Page.|  

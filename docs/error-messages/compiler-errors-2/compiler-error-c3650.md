@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3650
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3650
+f1_keywords: C3650
+dev_langs: C++
+helpviewer_keywords: C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d823892e2f8e117a7be766765ccbb57a04804da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a58e0605fcdcb318b3357e142ac2b106bb8c0f7c
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3650"></a>Errore del compilatore C3650
 'metodo_interfaccia': non utilizzabile come override esplicito, deve essere una funzione membro virtuale di una classe base  

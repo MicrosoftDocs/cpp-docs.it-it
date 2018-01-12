@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2870
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2870
+f1_keywords: C2870
+dev_langs: C++
+helpviewer_keywords: C2870
 ms.assetid: 80523ee9-1fd3-4dc4-8a77-5083deb99066
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: daf7a6d7598b8f341a2b1c413d8284ec6e56a3cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 75b9189795c7351745e9624cfb9cc11259834b76
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2870"></a>Errore del compilatore C2870
 'name': la definizione dello spazio dei nomi deve comparire in ambito file o immediatamente all'interno di un'altra definizione di spazio dei nomi  

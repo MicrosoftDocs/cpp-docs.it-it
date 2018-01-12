@@ -1,34 +1,33 @@
 ---
-title: "Errore del compilatore di risorse RC2101 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC2101"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC2101"
+title: Errore del compilatore di risorse RC2101 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC2101
+dev_langs: C++
+helpviewer_keywords: RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d08e9ddb7b8cda127b1d05bfef52b52833534cb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore del compilatore di risorse RC2101
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Direttiva non valida nel file RC pre\-elaborato.  
+# <a name="resource-compiler-error-rc2101"></a>Errore del compilatore di risorse RC2101
+Direttiva non valida nel file RC pre-elaborato  
   
- Il file del compilatore di risorse contiene una direttiva **\#pragma**.  
+ Il file del compilatore di risorse contiene un **#pragma** direttiva.  
   
- Utilizzare la direttiva per il preprocessore **\#indef** insieme alla costante RC\_INVOKED che viene definita dal compilatore di risorse quando elabora un file di inclusione.  Inserire la direttiva **\#pragma** all'interno di un blocco di codice che non viene elaborato quando viene definita la costante RC\_INVOKED.  Il codice contenuto nel blocco viene elaborato solo dal compilatore C\/C\+\+ e non dal compilatore di risorse.  Nel codice seguente viene esemplificata questa tecnica:  
+ Utilizzare il **#ifndef** direttiva del preprocessore con la costante RC_INVOKED che il compilatore di risorse definisce quando elabora un file di inclusione. Sul posto di **#pragma** direttiva in un blocco di codice che non viene elaborato quando viene definita la costante RC_INVOKED. Nel blocco di codice viene elaborato solo dal compilatore C/C++ e non dal compilatore di risorse. Esempio di codice seguente viene illustrata questa tecnica:  
   
 ```  
 #ifndef RC_INVOKED  
@@ -36,6 +35,6 @@ Direttiva non valida nel file RC pre\-elaborato.
 #endif  
 ```  
   
- La direttiva per il preprocessore **\#pragma** non ha alcun significato in un file RC.  La direttiva per il preprocessore **\#include** viene utilizzata frequentemente in un file RC per includere un file di intestazione \(sia file di intestazione personalizzati basati su progetti che file di intestazione standard forniti con i prodotti Microsoft\).  In alcuni di tali file è presente la direttiva **\#pragma**.  Poiché in un file di intestazione possono essere inclusi uno o più file di intestazione, può risultare difficile individuare in file nel quale è presente la direttiva **\#pragma** che causa il problema.  
+ Il **#pragma** direttiva per il preprocessore non ha significato un. File RC. Il **#include** direttiva per il preprocessore è usata spesso in un. File RC per includere un file di intestazione (un file di intestazione personalizzato basato sul progetto o un file di intestazione standard forniti da Microsoft con uno dei suoi prodotti). Alcuni di questi file di inclusione contengono il **#pragma** direttiva. Perché un file di intestazione può includere uno o più altri file di intestazione, il file che contiene una direttiva **#pragma** direttiva potrebbe non essere immediatamente evidente.  
   
- La tecnica **\#ifndef** RC\_INVOKED consente il controllo dell'inclusione di file di intestazione all'interno di altri file di intestazione basati su progetti.
+ Il **#ifndef** RC_INVOKED consente il controllo dell'inclusione di file di intestazione nei file di intestazione basato su progetto.

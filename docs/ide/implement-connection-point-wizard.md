@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7efade7f0bd0a3c35e02439818873b923c1ac1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-connection-point-wizard"></a>Implementazione guidata punto di connessione
 Questa procedura guidata implementa un punto di connessione per un oggetto COM. Un oggetto collegabile (vale a dire un'origine) è possibile esporre un punto di connessione per le proprie interfacce o per qualsiasi interfaccia in uscita. Visual C++ e Windows forniscono librerie dei tipi che dispongono di interfacce in uscita. Ogni interfaccia in uscita può essere implementata da un client su un oggetto (vale a dire un sink).  

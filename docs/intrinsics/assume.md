@@ -1,65 +1,67 @@
 ---
-title: "__assume | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__assume"
-  - "__assume_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__assume keyword [C++]"
+title: assume | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __assume
+- __assume_cpp
+dev_langs: C++
+helpviewer_keywords: __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 890b46f044c018f68226f3698c65603f931f01fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __assume
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="assume"></a>__assume
 **Sezione specifica Microsoft**  
   
  Passa un hint all'utilità di ottimizzazione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-__assume(    expression )  
+__assume(  
+   expression  
+)  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `expression`  
  Espressione che si presuppone restituisca true.  
   
-## Note  
- L'utilità di ottimizzazione presuppone che la condizione rappresentata dal parametro `expression` sia true nel punto in cui viene visualizzata la parola chiave e rimanga true finché `expression` non viene modificato, ad esempio da un'assegnazione a una variabile.  L'uso selettivo degli hint passati all'utilità di ottimizzazione da `__assume` possono migliorare l'ottimizzazione.  
+## <a name="remarks"></a>Note  
+ L'utilità di ottimizzazione presuppone che la condizione rappresentata dal parametro `expression` sia true nel punto in cui viene visualizzata la parola chiave e rimanga true finché `expression` non viene modificato, ad esempio da un'assegnazione a una variabile. L'uso selettivo degli hint passati all'utilità di ottimizzazione da `__assume` possono migliorare l'ottimizzazione.  
   
- Se l'istruzione `__assume` viene scritta come contraddizione \(un'espressione che restituisce sempre false\), verrà sempre considerata come `__assume(0)`.  Se il codice non si comporta come previsto, verificare che il parametro `expression` definito sia valido e true, come descritto in precedenza.  Per altre informazioni sul comportamento previsto di `__assume(0)`, vedere quanto descritto più avanti.  
+ Se l'istruzione `__assume` viene scritta come contraddizione (un'espressione che restituisce sempre false), verrà sempre considerata come `__assume(0)`. Se il codice non si comporta come previsto, verificare che il parametro `expression` definito sia valido e true, come descritto in precedenza. Per altre informazioni sul comportamento previsto di `__assume(0)`, vedere quanto descritto più avanti.  
   
 > [!WARNING]
->  Un programma non deve contenere un'istruzione `__assume` non valida in un percorso raggiungibile.  Se il compilatore può raggiungere un'istruzione `__assume` non valida, il programma potrebbe causare un comportamento imprevedibile e potenzialmente pericoloso.  
+>  Un programma non deve contenere un'istruzione `__assume` non valida in un percorso raggiungibile. Se il compilatore può raggiungere un'istruzione `__assume` non valida, il programma potrebbe causare un comportamento imprevedibile e potenzialmente pericoloso.  
   
- `__assume` non è una funzione intrinseca originale.  Non deve essere dichiarata come funzione e non può essere usata in una direttiva `#pragma intrinsic`.  Anche se non viene generato alcun codice, viene interessato il codice generato dall'utilità di ottimizzazione.  
+ `__assume` non è una funzione intrinseca originale. Non deve essere dichiarata come funzione e non può essere usata in una direttiva `#pragma intrinsic`. Anche se non viene generato alcun codice, viene interessato il codice generato dall'utilità di ottimizzazione.  
   
- Usare `__assume` in [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è recuperabile.  Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.  
+ Utilizzare `__assume` in un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) solo quando l'asserzione non è ripristinabile. Non usare `__assume` in un'asserzione per cui si dispone di un codice di recupero da errori successivi perché il compilatore potrebbe ottimizzare il codice di gestione degli errori.  
   
- L'istruzione `__assume(0)` è un caso speciale.  Usare `__assume(0)` per indicare un percorso del codice che non può essere raggiunto.  L'esempio seguente illustra come usare `__assume(0)` per indicare che il caso predefinito di un'istruzione switch non può essere raggiunto.  Viene illustrato l'uso più comune di `__assume(0)`.  
+ L'istruzione `__assume(0)` è un caso speciale. Usare `__assume(0)` per indicare un percorso del codice che non può essere raggiunto. L'esempio seguente illustra come usare `__assume(0)` per indicare che il caso predefinito di un'istruzione switch non può essere raggiunto. Viene illustrato l'uso più comune di `__assume(0)`.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
 |Funzione intrinseca|Architettura|  
-|-------------------------|------------------|  
+|---------------|------------------|  
 |`__assume`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // compiler_intrinsics__assume.cpp  
@@ -93,17 +95,17 @@ int main(int p)
 }  
 ```  
   
- L'uso di `__assume(0)` indica all'utilità di ottimizzazione che il caso predefinito non può essere raggiunto.  L'esempio illustra che il programmatore conosce che gli unici input possibili per `p` sono 1 o 2.  Se viene passato un altro valore per `p`, il programma diventa non valido e causa un comportamento imprevedibile.  
+ L'uso di `__assume(0)` indica all'utilità di ottimizzazione che il caso predefinito non può essere raggiunto. L'esempio illustra che il programmatore conosce che gli unici input possibili per `p` sono 1 o 2. Se viene passato un altro valore per `p`, il programma diventa non valido e causa un comportamento imprevedibile.  
   
- A causa dell'istruzione `__assume(0)`, il compilatore non genera il codice per testare se `p` ha un valore che non è rappresentato in un'istruzione case.  Per funzionare, l'istruzione `__assume(0)` deve essere la prima istruzione nel corpo del caso predefinito.  
+ A causa dell'istruzione `__assume(0)`, il compilatore non genera il codice per testare se `p` ha un valore che non è rappresentato in un'istruzione case. Per funzionare, l'istruzione `__assume(0)` deve essere la prima istruzione nel corpo del caso predefinito.  
   
- Poiché il compilatore genera il codice in base a `__assume`, tale codice potrebbe non funzionare correttamente se l'espressione all'interno dell'istruzione `__assume` è false al runtime.  Se non si è certi che l'espressione sarà sempre true al runtime, è possibile usare la funzione `assert` per proteggere il codice.  
+ Poiché il compilatore genera il codice in base a `__assume`, tale codice potrebbe non funzionare correttamente se l'espressione all'interno dell'istruzione `__assume` è false al runtime. Se non si è certi che l'espressione sarà sempre true al runtime, è possibile usare la funzione `assert` per proteggere il codice.  
   
 ```  
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )  
 ```  
   
- Purtroppo, l'uso della funzione `assert` impedisce al compilatore di eseguire l'ottimizzazione del caso predefinito descritto precedentemente in questo documento.  In alternativa, è possibile usare una macro separata, come illustrato di seguito.  
+ Purtroppo, l'uso della funzione `assert` impedisce al compilatore di eseguire l'ottimizzazione del caso predefinito descritto precedentemente in questo documento. In alternativa, è possibile usare una macro separata, come illustrato di seguito.  
   
 ```  
 #ifdef DEBUG  
@@ -116,8 +118,8 @@ int main(int p)
       NODEFAULT;  
 ```  
   
-## Fine sezione specifica Microsoft  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [Parole chiave C\+\+](../cpp/keywords-cpp.md)
+ [Parole chiave](../cpp/keywords-cpp.md)

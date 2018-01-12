@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5741f6b09ec466c04794bf049222d344df34a85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef95c252621aa7f725098dfcd08c7b5b3620826
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wizard-support-for-other-languages"></a>Supporto della procedura guidata per altre lingue
 Quando si installa Visual Studio, l'applicazione di installazione rileva le impostazioni locali del sistema e installa uno o più modelli per la lingua appropriata. Impostazioni locali europee occidentali, ad esempio, vengono installate in lingua inglese, francese, italiano, spagnolo e tedesco. Queste lingue vengono visualizzate nel **lingua della risorsa** elenco il [tipo di applicazione](../mfc/reference/application-type-mfc-application-wizard.md) pagina della creazione guidata applicazione MFC.  
@@ -57,5 +58,5 @@ Quando si installa Visual Studio, l'applicazione di installazione rileva le impo
  Questo comportamento differisce dai sistemi impostati in modo che le impostazioni internazionali sono uguale alla versione localizzata di Visual Studio. In questo caso, verranno creato il file di progetto ANSI nella tabella codici del sistema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di file creati per i progetti Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
+ [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)   
  [Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)

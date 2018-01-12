@@ -23,14 +23,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10fa52dbf477f970cee0695aba13ec2eb5cfd90c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63e599a2a24716de2de3e23cb3a7c2342b036b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-build-step-property-page-general"></a>Pagina Istruzione di compilazione personalizzata: Generale
 Per ogni combinazione di configurazione del progetto e piattaforma di destinazione, è possibile specificare un'istruzione personalizzata da eseguire quando il progetto viene compilato.  
+
+Per la versione Linux di questa pagina, vedere [personalizzato passaggio proprietà di compilazione (C++ Linux)](../linux/prop-pages/custom-build-step-linux.md).
   
 ## <a name="uielement-list"></a>Elenco UIElement  
  **Riga di comando**  

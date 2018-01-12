@@ -1,64 +1,63 @@
 ---
-title: "Aggiunta guidata evento | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.event.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Aggiunta guidata evento [C++]"
+title: Aggiunta guidata evento | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.event.overview
+dev_langs: C++
+helpviewer_keywords: Add Event Wizard [C++]
 ms.assetid: bdd2a7bb-13d5-44d7-abc9-e785ba4e05ce
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 62ecbe7dece323ce5e99fbe32b3b936fe3661362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Aggiunta guidata evento
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile utilizzare questa procedura guidata per aggiungere un evento a un progetto di controllo ActiveX MFC.  È possibile specificare l'evento, personalizzare un evento predefinito standard o selezionarlo da un elenco di eventi predefiniti.  
+# <a name="add-event-wizard"></a>Aggiunta guidata evento
+Questa procedura guidata aggiunge un evento a un progetto controllo ActiveX MFC. È possibile specificare un evento personalizzato, è possibile personalizzare un evento in genere predefinito oppure è possibile selezionare da un elenco di eventi predefiniti.  
   
- **Nome evento**  
- Consente di specificare il nome utilizzato dai client di automazione per richiedere un evento dalla classe.  Immettere un nome o selezionarne uno dell'elenco.  
+ **Nome dell'evento**  
+ Imposta il nome usato dai client di automazione per richiedere un evento dalla classe. Immettere un nome o selezionarne uno dall'elenco.  
   
- **Tipo evento**  
- Indica il tipo di evento da aggiungere.  Disponibile solo se si seleziona dall'elenco **Nome evento**.  
+ **Tipo di evento**  
+ Indica il tipo di evento da aggiungere. Disponibile solo se si seleziona dal **nome evento** elenco.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Predefinito**|Utilizzare questa opzione per specificare che per questa classe verrà implementato un evento predefinito, ad esempio il clic su un pulsante.  Gli eventi predefiniti sono definiti nella libreria MFC.|  
-|**Personalizzato**|Utilizzare questa opzione per specificare che viene fornita un'implementazione personalizzata dell'evento.|  
+|------------|-----------------|  
+|**Azionario**|Specifica che un evento predefinito, ad esempio un pulsante, viene implementato per questa classe. Eventi predefiniti sono definiti nella libreria Microsoft Foundation classe (MFC).|  
+|**Personalizzato**|Specifica che si fornisce un'implementazione personalizzata dell'evento.|  
   
  **Nome interno**  
- Consente di impostare il nome della funzione membro che invia l'evento.  Disponibile solo per gli eventi personalizzati.  Il nome si basa sul nome fornito in **Nome evento**.  È possibile modificare il nome interno per fornire un nome diverso da quello specificato in **Nome evento**.  
+ Imposta il nome della funzione membro che invia l'evento. Disponibile solo per eventi personalizzati. Il nome è basato sul **nome evento**. Se si desidera specificare un nome diverso, è possibile modificare il nome interno **nome evento**.  
   
  **Tipo di parametro**  
- Consente di impostare il tipo per **Nome parametro**.  Selezionare il tipo desiderato dall'elenco.  
+ Imposta il tipo per il **nome del parametro**. Selezionare il tipo dall'elenco.  
   
- **Nome parametro**  
- Consente di impostare il nome di un parametro da passare attraverso l'evento.  Dopo aver digitato il nome, scegliere **Aggiungi** per aggiungerlo all'elenco dei parametri.  
+ **Nome del parametro**  
+ Imposta il nome di un parametro da passare attraverso l'evento. Dopo aver digitato il nome, è necessario fare clic su **Aggiungi** per aggiungerlo all'elenco dei parametri.  
   
- Dopo avere scelto **Aggiungi**, il nome del parametro verrà visualizzato in **Elenco parametri**.  
+ Quando si fa clic su **Aggiungi**, viene visualizzato il nome di parametro **elenco parametri**.  
   
 > [!NOTE]
->  Se si specifica un nome di parametro e si fa clic su **Fine** senza prima fare clic su **Aggiungi**, il parametro non verrà aggiunto all'evento.  Sarà necessario individuare il metodo e inserire il parametro manualmente. **Elenco parametri**  
+>  Se si specifica un nome di parametro e quindi fare clic su **fine** prima di scegliere **Aggiungi**, il parametro non viene aggiunto all'evento. È necessario trovare il metodo e inserire il parametro manualmente. **Elenco di parametri**  
   
  **Aggiungi**  
- Consente di aggiungere a **Elenco parametri** il parametro specificato in **Nome parametro** e il relativo tipo.  Fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
+ Aggiunge il parametro specificato in **nome del parametro**e il relativo tipo, a **elenco parametri**. È necessario fare clic su **Aggiungi** per aggiungere un parametro all'elenco.  
   
  **Rimuovi**  
- Consente di rimuovere dall'elenco il parametro selezionato nella casella di riepilogo **Elenco parametri**.  
+ Rimuove il parametro selezionato nella **elenco parametri** dall'elenco.  
   
- **Elenco parametri**  
- Consente di visualizzare tutti i parametri e i relativi tipi attualmente aggiunti per il metodo.  Non appena si aggiungono i parametri, **Elenco parametri** viene aggiornato con ciascun parametro e il relativo tipo.  
+ **Elenco di parametri**  
+ Visualizza tutti i parametri e i tipi aggiunti per il metodo. Quando si aggiungono parametri, la procedura guidata Aggiorna **elenco parametri** per visualizzare ogni parametro con il relativo tipo.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di un evento](../ide/adding-an-event-visual-cpp.md)

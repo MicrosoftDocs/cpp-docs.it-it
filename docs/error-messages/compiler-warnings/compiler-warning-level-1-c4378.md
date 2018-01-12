@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 1) C4378 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4378"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4378"
+title: Compilatore avviso (livello 1) C4378 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4378
+dev_langs: C++
+helpviewer_keywords: C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4378
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per eseguire gli inizializzatori è necessario ottenere i puntatori alle funzioni; si consiglia System::ModuleHandle::ResolveMethodHandle  
+# <a name="compiler-warning-level-1-c4378"></a>Avviso del compilatore (livello 1) C4378
+È necessario ottenere puntatori di funzione per eseguire gli inizializzatori; prendere in considerazione System::ModuleHandle::ResolveMethodHandle  
   
- In **\/clr** i simboli degli inizializzatori contengono token di funzione, non puntatori alle funzioni.  È necessario convertire i token in puntatori utilizzando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
+ In **/clr**, simboli degli inizializzatori contengono token di funzione, non puntatori alle funzioni.  È necessario convertire i token in puntatori utilizzando <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4378:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4378.  
   
 ```  
 // C4378.cpp  
@@ -71,8 +70,8 @@ int main () {
 }  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrato come correggere l'errore C4378.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente viene illustrato come correggere l'errore C4378.  
   
 ```  
 // C4378_b.cpp  

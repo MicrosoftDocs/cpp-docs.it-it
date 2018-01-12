@@ -1,29 +1,28 @@
 ---
-title: "Avviso del compilatore (livello 1) C4113 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4113"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4113"
+title: Compilatore (livello 1) Avviso C4113 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4113
+dev_langs: C++
+helpviewer_keywords: C4113
 ms.assetid: ec7a7c4a-d2ee-431c-89dc-31b0f9bfd975
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 23e44df0d958dc6b1e32e7f2a4a8735eefae8949
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4113
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identificatore1' differisce da 'identificatore2' nell'elenco di parametri  
+# <a name="compiler-warning-level-1-c4113"></a>Compilatore (livello 1) Avviso C4113
+'identifier1' differisce in elenchi di parametri da 'identifier2'  
   
- Un puntatore a funzione viene assegnato a un altro puntatore a funzione, ma questa operazione non concorda con gli elenchi di parametri formali delle funzioni.  L'assegnazione viene compilata senza modifiche.
+ Un puntatore a funzione viene assegnato a un altro puntatore a funzione, ma gli elenchi di parametri formali delle funzioni non concordano. L'assegnazione viene compilata senza modifiche.

@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Progetti di cartella aperti in Visual C++
 Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di aprire una cartella dei file di origine e avviare la codifica con il supporto per IntelliSense, esplorazione, refactoring, debug, immediatamente e così via. Nessun file sln o con estensione vcxproj caricato; Se necessario, è possibile specificare le attività personalizzate, nonché compilare e avviare i parametri tramite i file con estensione JSON semplice. Con tecnologia cartella aperta, Visual C++ ora può supportare non solo separate raccolte di file, ma anche praticamente qualsiasi sistema di compilazione, compreso CMake, avanzato, QMake (per i progetti Qt), gyp, SCons, Gradle, Buck, verificare e altro ancora. 
@@ -25,7 +26,7 @@ Visual Studio 2017 introduce la funzionalità "Apri cartella", che consente di a
 Per utilizzare cartella, dal menu principale selezionare *File | Aprire | Cartella* o premere *Ctrl + Maiusc + Alt + O*. Esplora soluzioni consente di visualizzare immediatamente tutti i file nella cartella. È possibile fare clic su qualsiasi file per iniziare a modificarlo. In background, Visual Studio avvia l'indicizzazione dei file per abilitare IntelliSense, la navigazione e funzionalità di refactoring. Come modificare, creare, spostare o eliminare file, Visual Studio rileva automaticamente le modifiche e aggiorna continuamente il relativo indice IntelliSense. 
   
 ## <a name="cmake-projects"></a>Progetti CMake
-CMake è integrato nell'IDE di Visual Studio come CMake Tools per Visual C++, un componente del carico di lavoro desktop C++. Per ulteriori informazioni, vedere [CMake Tools per Visual C++](cmake-tools-for-visual-cpp.md).
+CMake è integrato nell'IDE di Visual Studio come CMake Tools per Visual C++, un componente del carico di lavoro desktop C++. Per altre informazioni, vedere [CMake Tools for Visual C++](cmake-tools-for-visual-cpp.md) (Strumenti CMake per Visual C++).
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake progetti destinati a framework Qt
 È possibile utilizzare gli strumenti di CMake per Visual C++ per destinazione Qt per compilare progetti Qt oppure è possibile utilizzare l'estensione di Visual Studio Qt. Nota: A partire da agosto 2017, il [supporto Qt estensione di Visual Studio per Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/) è disponibile come una versione beta.

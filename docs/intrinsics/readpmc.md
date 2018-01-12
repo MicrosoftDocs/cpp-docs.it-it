@@ -1,62 +1,62 @@
 ---
-title: "__readpmc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readpmc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Read Performance Monitoring Counters (istruzione)"
-  - "__readpmc (funzione intrinseca)"
-  - "rdpmc (istruzione)"
+title: __readpmc | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __readpmc
+dev_langs: C++
+helpviewer_keywords:
+- Read Performance Monitoring Counters instruction
+- __readpmc intrinsic
+- rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1348982d2e22246e9e085711d6c0067cdf0df6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __readpmc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="readpmc"></a>__readpmc
+**Sezione specifica Microsoft**  
   
- Genera l'istruzione di `rdpmc` , che legge il contatore di monitoraggio delle prestazioni specificato da `counter`.  
+ Genera il `rdpmc` (istruzione), che consente la lettura di monitoraggio specificato dal contatore delle prestazioni `counter`.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-unsigned __int64 __readpmc(   
-   unsigned long counter   
+unsigned __int64 __readpmc(   
+   unsigned long counter   
 );  
 ```  
   
-#### Parametri  
- \[in\] `counter`  
- Le prestazioni di lettura di.  
+#### <a name="parameters"></a>Parametri  
+ [in] `counter`  
+ Il contatore delle prestazioni per la lettura.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Il valore del contatore delle prestazioni specificato.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__readpmc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Questa funzione intrinseca è disponibile in modalità kernel solo e la routine è disponibile solo come intrinseci.  
+## <a name="remarks"></a>Note  
+ Questa funzione intrinseca è disponibile in solo in modalità kernel e la routine è disponibile solo come funzione intrinseca.  
   
-## Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)

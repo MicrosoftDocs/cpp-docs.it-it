@@ -1,43 +1,44 @@
 ---
-title: "Propriet&#224; predefinite | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "proprietà predefinite"
-  - "proprietà predefinite, informazioni sulle proprietà predefinite"
+title: "Proprietà predefinite | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- stock properties, about stock properties
+- stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Propriet&#224; predefinite
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se si aggiunge una proprietà a un'interfaccia dispatch MFC utilizzando l'[Aggiunta guidata proprietà](../ide/idl-attributes-add-property-wizard.md), sarà possibile scegliere una proprietà predefinita dall'elenco **Nome proprietà** nella schermata [Nomi](../ide/names-add-property-wizard.md) della procedura guidata.  Di seguito sono riportate le proprietà:  
+# <a name="stock-properties"></a>Proprietà predefinite
+Se si aggiunge una proprietà in una dispinterface MFC usando il [Aggiunta guidata proprietà](../ide/idl-attributes-add-property-wizard.md), è possibile scegliere una proprietà predefinita dal **nome della proprietà** nell'elenco di [nomi](../ide/names-add-property-wizard.md) pagina del procedura guidata. Di seguito sono riportate le proprietà:  
   
 |Nome della proprietà|Descrizione|  
-|--------------------------|-----------------|  
-|**Aspetto**|Restituisce o imposta un valore che determina l'aspetto del controllo.  La proprietà **Appearance** del controllo può includere o omettere effetti di visualizzazione tridimensionali.  Si tratta di una proprietà di lettura\/scrittura di ambiente.|  
-|`BackColor`|Restituisce o imposta la proprietà `BackColor` di ambiente del controllo in un colore della tavolozza \(RGB\) o in un colore di sistema predefinito.  Per impostazione predefinita il valore corrisponde al colore di primo piano del contenitore del controllo.  Si tratta di una proprietà di lettura\/scrittura di ambiente.|  
-|`BorderStyle`|Restituisce o imposta lo stile del bordo per un controllo.  Si tratta di una proprietà di lettura\/scrittura.|  
-|**Didascalia**|Restituisce o imposta la proprietà **Caption** del controllo,  relativa al titolo della finestra.  Per **Caption** non è disponibile il tipo di implementazione **Variabile membro**.|  
-|**Enabled**|Restituisce o imposta la proprietà **Enabled** del controllo.  Un controllo attivato può rispondere a eventi generati dall'utente.|  
-|**Tipo di carattere**|Restituisce o imposta il tipo di carattere di ambiente del controllo.  Ha valore null se il controllo non presenta alcun tipo di carattere.|  
-|`ForeColor`|Restituisce o imposta la proprietà `ForeColor` di ambiente del controllo.|  
-|**hWnd**|Restituisce o imposta la proprietà **hWnd** del controllo.  Per **hWnd** non è disponibile alcun tipo di implementazione **Variabile membro**.|  
-|**ReadyState**|Restituisce o imposta la proprietà **ReadyState** del controllo.  Un controllo può essere non inizializzato, inizializzato, in fase di caricamento, interattivo o completo.  Per ulteriori informazioni, vedere [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) in *Internet SDK*.|  
-|**Text**|Restituisce o imposta il testo contenuto in un controllo.  Per **Text** non è disponibile il tipo di implementazione **Variabile membro**.|  
+|-------------------|-----------------|  
+|**Aspetto**|Restituisce o imposta un valore che determina l'aspetto del controllo. Il controllo **aspetto** proprietà possibile includono o omettono gli effetti in visualizzazione tridimensionale. Questa è una proprietà di lettura/scrittura di ambiente.|  
+|`BackColor`|Restituisce o imposta il controllo ambiente `BackColor` proprietà su un colore della tavolozza (RGB) o un colore di sistema predefiniti. Per impostazione predefinita, il relativo valore corrisponde al colore di sfondo del contenitore del controllo. Questa è una proprietà di lettura/scrittura di ambiente.|  
+|`BorderStyle`|Restituisce o imposta lo stile del bordo per un controllo. Si tratta di una proprietà di lettura/scrittura.|  
+|**Caption**|Restituisce o imposta il controllo **didascalia** proprietà. La didascalia è il titolo della finestra. **Didascalia** non ha alcun **variabile membro** tipo di implementazione.|  
+|**Enabled**|Restituisce o imposta il controllo **abilitato** proprietà. Un controllo abilitato può rispondere agli eventi generati dall'utente.|  
+|**Tipo di carattere**|Restituisce o imposta il tipo di ambiente carattere del controllo. Null se il controllo non dispone di alcun tipo di carattere.|  
+|`ForeColor`|Restituisce o imposta il controllo ambiente `ForeColor` proprietà.|  
+|**hWnd**|Restituisce o imposta il controllo **hWnd** proprietà. **hWnd** non ha alcun **variabile membro** tipo di implementazione.|  
+|**ReadyState**|Restituisce o imposta il controllo **ReadyState** proprietà. Un controllo può essere non inizializzato, inizializzato, il caricamento, interattivo o completo. Vedere [READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx) nel *Internet SDK* per ulteriori informazioni.|  
+|**per**|Restituisce o imposta il testo contenuto in un controllo. **Testo** non ha alcun **variabile membro** tipo di implementazione.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Aggiunta di una proprietà](../ide/adding-a-property-visual-cpp.md)   
  [Attributi IDL, Aggiunta guidata proprietà](../ide/idl-attributes-add-property-wizard.md)

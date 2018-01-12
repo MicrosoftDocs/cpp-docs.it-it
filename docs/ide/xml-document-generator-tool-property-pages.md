@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d6cd4359cfe4700f7decf0ec54686a4b70a183
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc09dafc0f07bc16a11dd255419440b6464456c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>Pagina delle proprietà dello strumento generatore di documenti XML
 La pagina delle proprietà dello strumento generatore di documenti XML espone la funzionalità di xdcmake.exe. xdcmake.exe unisce file xdc in un file XML quando il codice sorgente contiene commenti della documentazione e [/doc (processo di commenti relativi alla documentazione) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) è specificato. Vedere [tag consigliati per i commenti relativi alla documentazione](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) per informazioni sull'aggiunta di commenti al codice sorgente.  

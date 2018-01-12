@@ -1,36 +1,37 @@
 ---
-title: "__ll_rshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_rshift_cpp"
-  - "__ll_rshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__ll_rshift (funzione intrinseca)"
-  - "ll_rshift (funzione intrinseca)"
+title: __ll_rshift | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_rshift_cpp
+- __ll_rshift
+dev_langs: C++
+helpviewer_keywords:
+- __ll_rshift intrinsic
+- ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0bb658051a4eab579e2c0d2fbb4d6bd525381b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# __ll_rshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Specifici di Microsoft**  
+# <a name="llrshift"></a>__ll_rshift
+**Sezione specifica Microsoft**  
   
- Scorre un valore a 64 bit specificato dal primo parametro a destra da una serie di bit specificato dal secondo parametro.  
+ Sposta un valore a 64 bit specificato dal primo parametro a destra di un numero di bit specificati dal secondo parametro.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 __int64 __ll_rshift(  
@@ -39,28 +40,28 @@ __int64 __ll_rshift(
 );  
 ```  
   
-#### Parametri  
- \[in\] `Mask`  
- Il valore Integer a 64 bit per scorrere destra.  
+#### <a name="parameters"></a>Parametri  
+ [in] `Mask`  
+ Valore integer a 64 bit da spostare a destra.  
   
- \[in\] `nBit`  
- Il numero di bit da spostare, del modulo 64 su x64 e del modulo 32 per x86.  
+ [in] `nBit`  
+ Il numero di bit da spostare, modulo 64 in x64 e modulo 32 x86.  
   
-## Valore restituito  
- La maschera scorre i bit di `nBit` .  
+## <a name="return-value"></a>Valore restituito  
+ Spostata la maschera `nBit` bits.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-|Intrinseco|Architettura|  
-|----------------|------------------|  
+|Funzione intrinseca|Architettura|  
+|---------------|------------------|  
 |`__ll_rshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **File di intestazione** \<intrin.h\>  
+ **File di intestazione** \<intrin. h >  
   
-## Note  
- Se il secondo parametro è maggiore di 64 su x64 \(32 per x86\), tale numero viene utilizzato il modulo 64 \(32 in x86\) per determinare il numero di bit per lo scorrimento.  Il prefisso di `ll` indica che si tratta di un'operazione su `long long`, un altro nome per `__int64`, il tipo integrale con segno a 64 bit.  
+## <a name="remarks"></a>Note  
+ Se il secondo parametro è maggiore di 64 su x64 (32 x86), tale numero viene eseguito modulo 64 (32 x86) per determinare il numero di bit da spostare. Il `ll` prefisso indica che si tratta di un'operazione in `long long`, in un altro nome per `__int64`, il tipo integrale con segno a 64 bit.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // ll_rshift.cpp  
@@ -84,7 +85,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
 ffffffffffffff00  
@@ -93,11 +94,11 @@ fffffffffffffff0
  - 10  
 ```  
   
- **nota** se `_ull_rshift` è stato utilizzato, il byte più significativo del valore diritto\-scorso sarebbe stato zero, il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.  
+ **Nota** se `_ull_rshift` è stato utilizzato, il byte più significativo del valore spostato a destra che sarebbe stata zero, pertanto il risultato desiderato non sarebbe stato ottenuto nel caso di un valore negativo.  
   
-### Microsoft FINALE specifico  
+**Fine sezione specifica Microsoft**  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Intrinseci del compilatore](../intrinsics/compiler-intrinsics.md)   
- [\_\_ll\_lshift](../intrinsics/ll-lshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)
+ [__ll_lshift](../intrinsics/ll-lshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)

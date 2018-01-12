@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 4) C4706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4706"
+title: Compilatore avviso (livello 4) C4706 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4706
+dev_langs: C++
+helpviewer_keywords: C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 824028fb7fd6d563a7f49017eb6b35d1443490bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-assegnazione all'interno di un'espressione condizionale  
+# <a name="compiler-warning-level-4-c4706"></a>Avviso del compilatore (livello 4) C4706
+assegnazione all'interno di espressione condizionale  
   
- Il valore del test di un'espressione condizionale è il risultato di un'assegnazione.  
+ Il valore di test in un'espressione condizionale è il risultato di un'assegnazione.  
   
- Un'assegnazione dispone di un valore, collocato a sinistra dell'assegnazione, che può essere utilizzato in un'altra espressione, anche di test.  
+ Un'assegnazione ha un valore (il valore sul lato sinistro dell'assegnazione) che può essere usato dalla normativa in un'altra espressione, anche in un'espressione di test.  
   
- Il seguente codice di esempio genera l'errore C4706:  
+ L'esempio seguente genera l'errore C4706:  
   
 ```  
 // C4706a.cpp  
@@ -44,7 +43,7 @@ int main()
 }  
 ```  
   
- L'avviso viene generato anche se si raddoppiano le parentesi che racchiudono la condizione del test:  
+ L'avviso si verifica anche se si raddoppiano le parentesi che racchiudono la condizione di test:  
   
 ```  
 // C4706b.cpp  
@@ -58,7 +57,7 @@ int main()
 }  
 ```  
   
- Se si intende eseguire il test di una relazione e non effettuare un'assegnazione, utilizzare l'operatore `==`.  Nelle righe seguenti, ad esempio, viene verificato se a e b sono uguali:  
+ Se si intende testare una relazione di non effettuare un'assegnazione, utilizzare il `==` operatore. Ad esempio, la riga seguente test indica se un e b sono uguali:  
   
 ```  
 // C4706c.cpp  
@@ -72,7 +71,7 @@ int main()
 }  
 ```  
   
- Se si desidera che il valore del test sia il risultato di un'assegnazione, assicurarsi che quest'ultima non sia zero né null.  Nel codice seguente, ad esempio, l'avviso non viene generato:  
+ Se si desidera effettuare il test di valore il risultato di un'assegnazione, test per garantire che l'assegnazione è diverso da zero o non null. Il codice seguente, ad esempio, non genera questo avviso:  
   
 ```  
 // C4706d.cpp  

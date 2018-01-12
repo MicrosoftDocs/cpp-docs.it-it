@@ -1,35 +1,34 @@
 ---
-title: "Errore di compilazione progetto PRJ0004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0004"
+title: Progetto PRJ0004 errore di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0004
+dev_langs: C++
+helpviewer_keywords: PRJ0004
 ms.assetid: 1858769f-0be4-40ed-ab70-2cee550488c7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bcedbde2f8ba44d27a86c2a189adebc1405b3500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Errore di compilazione progetto PRJ0004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="project-build-error-prj0004"></a>Errore di compilazione progetto PRJ0004
 Impossibile generare la riga di comando per lo strumento "strumento".  
   
- Il modo in cui sono state specificate una o più proprietà rende non valida la sintassi della chiamata a ***strumento***:  
+ Uno o più proprietà sono state specificate in modo da rendere la sintassi della chiamata a ***strumento*** non valido:  
   
--   È possibile che siano state specificate macro sconosciute o in formato errato.  
+-   È stata specificata la macro non corretto o sconosciuta.  
   
--   È possibile che lo spazio su disco disponibile nel computer sia insufficiente.  
+-   Il computer potrebbe essere insufficiente spazio su disco.  
   
- Si consiglia di verificare le impostazioni dello strumento nella [pagina delle proprietà Riga di comando](../../ide/command-line-property-pages.md).
+ Si consiglia di rivedere le impostazioni per lo strumento esaminando il [pagina delle proprietà riga di comando](../../ide/command-line-property-pages.md).

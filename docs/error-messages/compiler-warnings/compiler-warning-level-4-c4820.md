@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 4) C4820 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4820"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4820"
+title: Compilatore avviso (livello 4) C4820 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4820
+dev_langs: C++
+helpviewer_keywords: C4820
 ms.assetid: 17aa29f4-c287-49b8-bc43-8ed82ffed5ea
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a2d0c1a99eab97ea7e598534b65520479f664c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4820
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'byte' byte di riempimento aggiunti dopo costrutto 'nome\_membro'  
+# <a name="compiler-warning-level-4-c4820"></a>Avviso del compilatore (livello 4) C4820
+'byte' byte di riempimento aggiunti dopo costrutto 'nome_membro'  
   
- Il tipo e l'ordine degli elementi hanno causato l'aggiunta di un riempimento alla fine di una struttura.  Per ulteriori informazioni sul riempimento di una struttura vedere [align](../../cpp/align-cpp.md).  
+ Il tipo e l'ordine degli elementi è dovuto al compilatore di aggiungere spaziatura interna alla fine di una struttura. Vedere [allineare](../../cpp/align-cpp.md) per ulteriori informazioni sul riempimento di una struttura.  
   
- Per impostazione predefinita, questo avviso non è attivo.  Per ulteriori informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
+ Per impostazione predefinita, questo avviso non è attivo. Per altre informazioni, vedere [Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
- Il seguente codice di esempio genera l'errore C4820:  
+ L'esempio seguente genera l'errore C4820:  
   
 ```  
 // C4820.cpp  

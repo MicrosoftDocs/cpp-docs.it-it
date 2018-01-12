@@ -1,61 +1,62 @@
 ---
-title: "Formattazione dell&#39;output di un&#39;istruzione di compilazione personalizzata o un evento di compilazione | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "eventi di compilazione [C++], formato output"
-  - "istruzioni di compilazione [C++], formato output"
-  - "compilazioni [C++], eventi di compilazione"
-  - "compilazioni [C++], istruzioni di compilazione personalizzate"
-  - "istruzioni di compilazione personalizzate [C++], formato output"
-  - "eventi (C++), compilazione"
+title: Formattazione dell'Output di un'istruzione di compilazione personalizzata o un evento di compilazione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- builds [C++], build events
+- custom build steps [C++], output format
+- events [C++], build
+- build events [C++], output format
+- build steps [C++], output format
+- builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Formattazione dell&#39;output di un&#39;istruzione di compilazione personalizzata o un evento di compilazione
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Se l'output di un'istruzione di compilazione personalizzata o di un evento di compilazione è formattato correttamente, gli utenti ottengono i seguenti vantaggi:  
+# <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Formattazione dell'output di un'istruzione di compilazione personalizzata o un evento di compilazione
+Se l'output di un'istruzione di compilazione personalizzata o un evento di compilazione è formattato correttamente, gli utenti ottengono i vantaggi seguenti:  
   
--   Avvisi ed errori sono conteggiati nella finestra **Output**.  
+-   Avvisi ed errori sono conteggiati **Output** finestra.  
   
--   L'output viene visualizzato nella finestra **Elenco attività**.  
+-   Viene visualizzato in output il **elenco attività** finestra.  
   
--   Quando si fa clic sull'output nella finestra **Output** viene visualizzato l'argomento appropriato.  
+-   Facendo clic sull'output nella **Output** finestra viene visualizzato l'argomento appropriato.  
   
--   Le operazioni F1 vengono abilitate nella finestra **Elenco attività** o nella finestra **Output**.  
+-   Sono abilitate le operazioni di F1 il **elenco attività** finestra o **Output** finestra.  
   
  Il formato dell'output deve essere:  
   
- {*filename* \(*line\#* \[, *column\#*\]\) &#124; *toolname*} **:**  
+ {*filename* (*riga #* [, *colonna #*]) &#124; *toolname*} **:**  
   
- \[*any text*\] {**error** &#124; **warning**} *code\#\#\#\#***:** *localizable string*  
+ [*qualsiasi testo*] {**errore** &#124; **avviso**} *codice # # #***:***stringa localizzabile*  
   
- \[ *any text* \]  
+ [ *qualsiasi testo* ]  
   
  Dove:  
   
--   {*a* &#124; *b*} è una scelta tra *a* o *b*.  
+-   {*un* &#124; *b*} è una scelta di *un* o *b*.  
   
--   \[`ccc`\] è una stringa o un parametro facoltativo.  
+-   [`ccc`] è un parametro stringa facoltativa.  
   
- Di seguito è riportato un esempio.  
+ Ad esempio:  
   
- C:\\*sourcefile.cpp*\(134\) : errore C2143: errore di sintassi : manca ';' prima di '}'  
+ C:\\*sourcefile.cpp*(134): errore C2143: errore di sintassi: manca ';' prima di '}'  
   
- LINK: errore irreversibile LNK1104: impossibile aprire il file '*somelib.lib*'  
+ LINK: errore irreversibile LNK1104: Impossibile aprire il file '*somelib.lib*'  
   
-## Vedere anche  
- [Informazioni sulle istruzioni di compliazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md)
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sulle istruzioni di compilazione personalizzate e sugli eventi di compilazione](../ide/understanding-custom-build-steps-and-build-events.md)

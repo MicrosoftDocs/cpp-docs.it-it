@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dee0ebbec9393bcf0cbc271e22e107ef7c93387
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ff4bd61f63790f7e59d2f6a1a03ea2802b9e158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-makefile-project-wizard"></a>Impostazioni applicazione, Creazione guidata progetto makefile
 Fornire le informazioni per il progetto. Le opzioni vengono applicate al progetto [pagina delle proprietà](../ide/working-with-project-properties.md). Dopo aver creato il progetto, è possibile visualizzare e modificare ognuna delle seguenti opzioni di **Nmake** pagina della pagina delle proprietà del progetto.  

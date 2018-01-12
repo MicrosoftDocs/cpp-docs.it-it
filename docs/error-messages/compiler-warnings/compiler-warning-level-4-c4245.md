@@ -1,34 +1,33 @@
 ---
-title: "Avviso del compilatore (livello 4) C4245 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4245"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4245"
+title: Compilatore avviso (livello 4) C4245 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4245
+dev_langs: C++
+helpviewer_keywords: C4245
 ms.assetid: 85083d53-9cc2-4d12-b58c-6dad28f15cbe
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 94308b2b19878c3c25a91bfd27658209b7635cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4245
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'conversione': conversione da 'tipo1' a 'tipo2'. Errore di corrispondenza tra signed e unsigned  
+# <a name="compiler-warning-level-4-c4245"></a>Avviso del compilatore (livello 4) C4245
+'conversion': conversione da 'type1' a 'type2', mancata corrispondenza signed e unsigned  
   
- Si è tentato di convertire una variabile **const** signed con valore negativo in `unsigned`.  
+ Si è tentato di convertire un oggetto firmato **const** che ha un valore negativo per un `unsigned`.  
   
- Il seguente codice di esempio genera l'errore C4245:  
+ L'esempio seguente genera l'errore C4245:  
   
 ```  
 // C4245.cpp  

@@ -1,35 +1,34 @@
 ---
-title: "Avviso del compilatore (livello 4) C4434 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4434"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4434"
+title: Compilatore avviso (livello 4) C4434 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4434
+dev_langs: C++
+helpviewer_keywords: C4434
 ms.assetid: 24b8785e-353a-4c37-8bed-ed61001a871d
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a9499d145263c3bbb1bd5aac948c6be9e4db48d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 4) C4434
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-un costruttore di classi deve avere accessibilità privata; conversione in accesso privato  
+# <a name="compiler-warning-level-4-c4434"></a>Avviso del compilatore (livello 4) C4434
+un costruttore di classe deve avere accessibilità privata; conversione in accesso privato  
   
- L'avviso C4434 viene visualizzato per segnalare che l'accessibilità di un costruttore statico è stata modificata.  I costruttori statici devono avere accessibilità privata perché possono solo essere chiamati da Common Language Runtime.  Per ulteriori informazioni, vedere [Costruttori statici](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).  
+ C4434 indica che il compilatore ha modificato l'accessibilità di un costruttore statico. Costruttori statici devono avere accessibilità privata, come sono concepite solo a essere chiamato da common language runtime. Per ulteriori informazioni, vedere [costruttori statici](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors).  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4434:  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4434.  
   
 ```  
 // C4434.cpp  

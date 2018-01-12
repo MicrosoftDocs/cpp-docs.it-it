@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3066
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3066
+f1_keywords: C3066
+dev_langs: C++
+helpviewer_keywords: C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2303ab6976ff47c73d15cbe68a6b0427d4ba8e6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e131d44a3a5ffbab2874f8e524d0f57ddc77faa2
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3066"></a>Errore del compilatore C3066
 Esistono diversi modi, che un oggetto di questo tipo può essere chiamato con questi argomenti  

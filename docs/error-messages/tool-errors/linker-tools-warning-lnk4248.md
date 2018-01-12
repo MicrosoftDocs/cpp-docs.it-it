@@ -1,47 +1,46 @@
 ---
-title: "Avviso degli strumenti del linker LNK4248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4248"
+title: Strumenti del linker LNK4248 avviso | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4248
+dev_langs: C++
+helpviewer_keywords: LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01053ddbbb0c7d234f6b465392f5bbe991ea329c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso degli strumenti del linker LNK4248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-token typeref \(token\) non risolto per 'tipo'; l'immagine potrebbe non essere eseguita  
+# <a name="linker-tools-warning-lnk4248"></a>Avviso degli strumenti del linker LNK4248
+token non risolto typeref (token) per 'type'. immagine non può essere eseguita  
   
- Un tipo non presenta una definizione nei metadati del codice MSIL.  
+ Un tipo non dispone di una definizione nei metadati MSIL.  
   
- L'errore LNK4248 può verificarsi quando in un modulo MSIL \(compilato con **\/clr**\) è presente una sola dichiarazione con prototipo relativa a un tipo a cui viene fatto riferimento nel modulo stesso e tale modulo è collegato a un modulo nativo in cui è presente una definizione per il tipo.  
+ Errore LNK4248 può verificarsi quando è presente solo una dichiarazione con prototipo per un tipo in un modulo MSIL (compilato con **/clr**), in cui il tipo viene fatto riferimento nel modulo e il modulo è collegato a un modulo nativo con una definizione per il tipo.  
   
- In questo caso il linker fornirà la definizione del tipo nativo nei metadati del codice MSIL e in tal modo sarà possibile specificare il comportamento corretto.  
+ In questo caso, il linker fornirà la definizione di tipo nativo nei metadati MSIL e questo può fornire il comportamento corretto.  
   
- Tuttavia, se una dichiarazione del tipo con prototipo è un tipo CLR, è possibile che la definizione del tipo nativo non sia corretta.  
+ Tuttavia, se una dichiarazione con prototipo è un tipo CLR, quindi definizione di tipo nativo del linker potrebbe non essere corretto  
   
- Per ulteriori informazioni, vedere [\/clr \(Compilazione Common Language Runtime\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-### Per correggere l'errore  
+### <a name="to-correct-this-error"></a>Per correggere l'errore  
   
-1.  Fornire la definizione del tipo nel modulo MSIL.  
+1.  Fornire la definizione di tipo nel modulo MSIL.  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore LNK4248.  Definire la struttura A da risolvere.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore LNK4248. Definire la struttura di risolvere.  
   
 ```  
 // LNK4248.cpp  
@@ -55,8 +54,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio riportato di seguito viene illustrata una definizione con prototipo di un tipo.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente è una definizione in avanti di un tipo.  
   
 ```  
 // LNK4248_2.cpp  
@@ -71,8 +70,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore LNK4248.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore LNK4248.  
   
 ```  
 // LNK4248_3.cpp  

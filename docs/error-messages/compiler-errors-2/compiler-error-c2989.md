@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2989
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2989
+f1_keywords: C2989
+dev_langs: C++
+helpviewer_keywords: C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: badfecd1c92b42a26682b714a16e24206ca05736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 447d7d21cfc1ed95c9851ef310a4cb15bcdaf53e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2989"></a>Errore del compilatore C2989
 'class': tipo di classe è già stato dichiarato come tipo non classe  
