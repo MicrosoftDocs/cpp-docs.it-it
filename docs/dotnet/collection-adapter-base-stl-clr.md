@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::base (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "base (membro) [STL/CLR]"
+title: collection_adapter::base (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::base
+dev_langs: C++
+helpviewer_keywords: base member [STL/CLR]
 ms.assetid: 44928046-3fda-4974-817f-bc61a6f11b9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 920235952f57bf82c6d8607b9732592053941b9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::base (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce l'interfaccia di cui è stato eseguito il wrapping di BCL.  
+# <a name="collectionadapterbase-stlclr"></a>collection_adapter::base (STL/CLR)
+Definisce l'interfaccia BCL sottoposta a wrapping.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 Coll^ base();  
 ```  
   
-## Note  
- La funzione membro restituisce l'handle archiviate dell'interfaccia di BCL.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce l'handle di interfaccia BCL stored.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_collection_adapter_base.cpp   
@@ -61,12 +62,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**base\(\) stessi \= True**   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+base() same = True  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
-## Vedere anche  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "queue::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front (membro) [STL/CLR]"
+title: 'Queue:: front (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: 9d7bb95f-5896-42f7-86fa-004a7a65cc94
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4726377c30300ee1a139b2a596346ea5cdc804f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# queue::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuefront-stlclr"></a>queue::front (STL/CLR)
 Accede al primo elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 reference front();  
 ```  
   
-## Note  
- La funzione membro restituisce un riferimento al primo elemento della sequenza selezionata, che deve essere non vuota.  È possibile utilizzarlo per accedere al primo elemento, quando si sa che esiste.  
+## <a name="remarks"></a>Note  
+ La funzione membro restituisce un riferimento al primo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per accedere al primo elemento, quando si è certi che esista.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_queue_front.cpp   
@@ -68,16 +69,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\(\) \= a.**  
- **x b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/queue\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [coda (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue:: back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [Queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

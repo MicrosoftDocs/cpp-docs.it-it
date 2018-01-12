@@ -1,43 +1,45 @@
 ---
-title: "Procedura: effettuare il marshalling di callback e delegati utilizzando l&#39;interoperabilit&#224; C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interoperabilità C++, callback e delegati"
-  - "callback [C++], marshalling"
-  - "marshalling dei dati [C++], callback e delegati"
-  - "delegati [C++], marshalling"
-  - "interoperabilità [C++], callback e delegati"
-  - "marshalling [C++], callback e delegati"
+title: "Procedura: effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++ | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- C++ Interop, callbacks and delegates
+- interop [C++], callbacks and delegates
+- delegates [C++], marshaling
+- marshaling [C++], callbacks and delegates
+- callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dbae96aeb7b11105a1a2aa30aa513c8d94011a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: effettuare il marshalling di callback e delegati utilizzando l&#39;interoperabilit&#224; C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato il marshalling di callback e delegati \(la versione gestita di un callback\) tra codice gestito e codice non gestito utilizzando Visual C\+\+.  
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Procedura: Effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C++
+In questo argomento viene illustrato il marshalling di callback e delegati (la versione gestita di un callback) tra codice gestito e utilizzo di Visual C++.  
   
- Negli esempi di codice riportati di seguito vengono utilizzate le direttive \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md) per implementare funzioni gestite e non gestite nello stesso file. Queste funzioni, tuttavia, possono anche essere definite in file diversi.  I file che contengono soltanto funzioni non gestite non richiedono necessariamente la compilazione con [\/clr \(Compilazione Common Language Runtime\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ Utilizzo di esempi di codice seguente il [managed, unmanaged](../preprocessor/managed-unmanaged.md) direttive #pragma per implementare funzioni gestite e nello stesso file, ma le funzioni può anche essere definite in file distinti. File che contengono solo funzioni non gestite non richiedono la compilazione con il [/clr (compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Esempio  
- Nell'esempio di codice riportato di seguito viene illustrato come configurare un'API non gestita per attivare un delegato gestito.  Viene creato un delegato gestito e viene utilizzato uno dei metodi di interoperabilità \(<xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>\) per recuperare il punto di ingresso sottostante per il delegato.  Questo indirizzo viene quindi passato alla funzione non gestita, che lo utilizza per effettuare una chiamata senza essere a conoscenza del fatto che il delegato è implementato come una funzione gestita.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato come configurare un'API non gestita per l'attivazione di un delegato gestito. Viene creato un delegato gestito e uno dei metodi di interoperabilità, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, viene utilizzato per recuperare il punto di ingresso sottostante per il delegato. Questo indirizzo viene quindi passato alla funzione non gestita, che viene chiamato con alcuna conoscenza del fatto che viene implementato come una funzione gestita.  
   
- Anche se non si tratta di un'operazione indispensabile, è possibile bloccare il delegato utilizzando [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) per impedire che venga rilocato o eliminato dal Garbage Collector.  Sebbene sia necessario assicurare la sicurezza contro l'esecuzione prematura della Garbage Collection, il blocco fornisce un livello di sicurezza maggiore rispetto a quello richiesto, poiché impedisce sia la Garbage Collection che la rilocazione.  
+ Si noti che è possibile, ma non indispensabile, è possibile bloccare il delegato utilizzando [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) per impedire che venga rilocato o eliminato dal garbage collector. È necessaria una protezione da prematura garbage collection, ma il blocco offre una protezione maggiore rispetto a quelle necessarie, impedisce la raccolta, ma anche che la rilocazione.  
   
- Se viene rilocato dalla Garbage Collection, un delegato non avrà alcun effetto sulla callback gestita sottostante, Di conseguenza, viene utilizzato il metodo<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> per aggiungere un riferimento al delegato, consentendo la rilocazione del delegato ma impedendone l'eliminazione.  L'utilizzo di GCHandle al posto di pin\_ptr riduce la potenziale frammentazione dell'heap gestito.  
+ Se un delegato viene rilocato dalla garbage collection, non influisce negativamente sulla callback gestita, in modo <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> viene utilizzato per aggiungere un riferimento al delegato, consentendo la rilocazione del delegato, ma impedendone l'eliminazione. L'utilizzo di GCHandle anziché pin_ptr riduce il rischio di frammentazione dell'heap gestito.  
   
 ```  
 // MarshalDelegate1.cpp  
@@ -85,8 +87,8 @@ int main() {
 }  
 ```  
   
-## Esempio  
- L'esempio riportato di seguito è simile all'esempio precedente. In questo caso, tuttavia, il puntatore a funzione fornito viene memorizzato dall'API non gestita e può quindi essere richiamato in qualsiasi momento, richiedendo la soppressione della Garbage Collection per un periodo di tempo arbitrario.  Per questo motivo, nell'esempio riportato di seguito viene utilizzata un'istanza globale di <xref:System.Runtime.InteropServices.GCHandle> per impedire che il delegato venga rilocato, indipendentemente dall'ambito della funzione.  Come indicato nel primo esempio, l'utilizzo di pin\_ptr non è necessario per questi esempi. Tuttavia, anche se utilizzato, non funzionerebbe correttamente poiché l'ambito di un pin\_ptr è limitato a una singola funzione.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente è simile all'esempio precedente, ma in questo caso è archiviato il puntatore a funzione fornita dall'API non gestita, pertanto può essere richiamato in qualsiasi momento, che richiedono che l'operazione di garbage collection essere eliminata per un periodo di tempo arbitrario. Di conseguenza, l'esempio seguente usa un'istanza globale di <xref:System.Runtime.InteropServices.GCHandle> per impedire che il delegato viene rilocato, indipendentemente dall'ambito della funzione. Come illustrato nel primo esempio, utilizzando pin_ptr non è necessaria per questi esempi, ma in questo caso non funzionerà comunque, come l'ambito di pin_ptr è limitato a una singola funzione.  
   
 ```  
 // MarshalDelegate2.cpp  
@@ -146,5 +148,5 @@ int main() {
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

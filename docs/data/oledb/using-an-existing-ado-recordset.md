@@ -1,32 +1,35 @@
 ---
-title: "Utilizzo di un recordset ADO esistente | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO (recordset) [C++]"
-  - "OLE DB (modelli consumer), recordset ADO"
-  - "recordset [C++], utilizzo in OLE DB"
+title: Utilizzo di un Recordset ADO esistente | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ADO recordsets [C++]
+- OLE DB consumer templates, ADO recordsets
+- recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 02f8f29c60601e22a1b005f435d3626336628a1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizzo di un recordset ADO esistente
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Per utilizzare i modelli consumer OLE DB con Active Data Objects \(ADO\), servirsi di ADO per aprire un recordset. Un recordset corrisponde a un rowset nei modelli consumer OLE DB.  Dopo aver aperto il recordset, eseguire le operazioni descritte di seguito per connettersi a un rowset OLE DB.  
+# <a name="using-an-existing-ado-recordset"></a>Utilizzo di un recordset ADO esistente
+Per combinare i modelli consumer OLE DB e Active Data Objects (ADO), utilizzare ADO per aprire un recordset (corrispondente a un set di righe dei modelli Consumer OLE DB). Quando si dispone di un recordset, eseguire le operazioni seguenti per connettersi a un set di righe OLE DB:  
   
-1.  Chiamare `QueryInterface` per i puntatori a `IRowset` e `IAccessor`.  
+1.  Chiamare `QueryInterface` per il `IRowset` e `IAccessor` puntatori.  
   
     ```  
     IRowset* lpRowset = NULL;  
@@ -36,9 +39,9 @@ Per utilizzare i modelli consumer OLE DB con Active Data Objects \(ADO\), servir
     ```  
   
     > [!NOTE]
-    >  *lpUnk* fa riferimento all'oggetto **IUnknown** del recordset ADO.  
+    >  *lpUnk* punta al **IUnknown** oggetto dell'oggetto recordset ADO.  
   
-2.  Associare la funzione di accesso e il rowset alle classi appropriate del modello consumer OLE DB.  
+2.  Collegare la funzione di accesso e un set di righe per le classi di modello consumer OLE DB appropriate.  
   
     ```  
     CRowset rs;  
@@ -49,5 +52,5 @@ Per utilizzare i modelli consumer OLE DB con Active Data Objects \(ADO\), servir
     rs.SetAccessor(accessor);  
     ```  
   
-## Vedere anche  
- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso delle funzioni di accesso](../../data/oledb/using-accessors.md)

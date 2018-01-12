@@ -1,41 +1,42 @@
 ---
-title: "hash_map::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear (membro) [STL/CLR]"
+title: 'hash_map:: Clear (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: a2782336-f130-4e27-923e-7dd43c542d30
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 78cbdc6c4f043b0ed5cdf30c86d575a01153c80a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapclear-stlclr"></a>hash_map::clear (STL/CLR)
 Rimuove tutti gli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void clear();  
 ```  
   
-## Note  
- La funzione membro effettivamente chiama [hash\_map::erase](../dotnet/hash-map-erase-stl-clr.md)`(` [hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)`(),` [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)`())`.  Utilizzarla per assicurarsi che la sequenza selezionata è vuota.  
+## <a name="remarks"></a>Note  
+ La funzione membro chiama in modo efficace [hash_map:: Erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map:: Begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `())`. Utilizzarla per garantire che la sequenza controllata vuota.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_hash_map_clear.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 0**  
- **un \[1\] \[b 2\]**  
-**size\(\) \= 0**   
-## Requisiti  
- **Intestazione:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/hash_map >  
   
-## Vedere anche  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::erase](../dotnet/hash-map-erase-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)

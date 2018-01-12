@@ -1,74 +1,76 @@
 ---
-title: "Classe CDataConnection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataConnection"
-  - "ATL.CDataConnection"
-  - "CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection (classe)"
+title: Classe CDataConnection | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataConnection
+- ATL.CDataConnection
+- CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 65e147366ecb7120a9dd2a98cde0c812d02582da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CDataConnection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdataconnection-class"></a>Classe CDataConnection
 Gestisce la connessione con l'origine dati.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CDataConnection  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Costruttore.  Crea un'istanza e inizializza un oggetto di `CDataConnection`.|  
+|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|Costruttore. Crea e Inizializza un `CDataConnection` oggetto.|  
 |[Copia](../../data/oledb/cdataconnection-copy.md)|Crea una copia di una connessione dati esistente.|  
-|[Aprire](../../data/oledb/cdataconnection-open.md)|Aprire una connessione a un'origine dati tramite una stringa di inizializzazione.|  
-|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Verrà aperta una nuova sessione della connessione corrente.|  
+|[Apri](../../data/oledb/cdataconnection-open.md)|Apre una connessione a un'origine dati utilizzando una stringa di inizializzazione.|  
+|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|Apre una nuova sessione nella connessione corrente.|  
   
-### Operatori  
+### <a name="operators"></a>Operatori  
   
 |||  
 |-|-|  
-|[BOOL dell'operatore](../../data/oledb/cdataconnection-operator-bool.md)|Determina se la sessione corrente è public o meno.|  
-|[bool dell'operatore](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|Determina se la sessione corrente è public o meno.|  
-|[operatore CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|Restituisce un riferimento all'oggetto contenuto di `CDataSource`.|  
-|[operatore CDataSource\*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|Restituisce un puntatore all'oggetto contenuto di `CDataSource`.|  
-|[operatore CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md)|Restituisce un riferimento all'oggetto contenuto di `CSession`.|  
-|[operatore CSession\*](../../data/oledb/cdataconnection-operator-csession-star.md)|Restituisce un puntatore all'oggetto contenuto di `CSession`.|  
+|[operatore BOOL](../../data/oledb/cdataconnection-operator-bool.md)|Determina se la sessione corrente è aperta o non.|  
+|[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|Determina se la sessione corrente è aperta o non.|  
+|[operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|Restituisce un riferimento all'oggetto contenuto `CDataSource` oggetto.|  
+|[operator CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|Restituisce un puntatore all'oggetto `CDataSource` contenuto.|  
+|[operatore CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md)|Restituisce un riferimento all'oggetto contenuto `CSession` oggetto.|  
+|[operatore CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|Restituisce un puntatore all'oggetto `CSession` contenuto.|  
   
-## Note  
- `CDataConnection` è una classe utile per creare i client che incapsula gli oggetti necessari \(origine dati e passare\) e parte del lavoro da eseguire durante la connessione a un'origine dati  
+## <a name="remarks"></a>Note  
+ `CDataConnection`è una classe utile per la creazione di client in quanto incapsula gli oggetti necessari (origine dati e sessione) e parte del lavoro, che è necessario eseguire quando ci si connette a un'origine dati  
   
- Senza `CDataConnection`, è necessario creare un oggetto di `CDataSource`, chiamarne il metodo di [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md), pertanto per creare un'istanza di un oggetto di [CSession](../../data/oledb/csession-class.md), chiamarne il metodo di [Apri](../../data/oledb/csession-open.md), pertanto per creare un oggetto di [CCommand](../../data/oledb/ccommand-class.md) e chiamarne il **Apri**\* metodi.  
+ Senza `CDataConnection`, è necessario creare un `CDataSource` dell'oggetto, chiamare relativo [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) (metodo), quindi creare un'istanza di un [CSession](../../data/oledb/csession-class.md) dell'oggetto, chiamare il relativo [ Aprire](../../data/oledb/csession-open.md) (metodo), quindi creare un [CCommand](../../data/oledb/ccommand-class.md) oggetto e chiamare il relativo **aprire*** metodi.  
   
- Con `CDataConnection`, è sufficiente creare un oggetto connessione, gli si passa una stringa di inizializzazione, quindi utilizzare la connessione ai controlli aperti.  Se si intende utilizzare la connessione al database ripetutamente, è consigliabile proteggere la connessione aperta e `CDataConnection` fornisce un modo pratico per eseguire questa operazione.  
+ Con `CDataConnection`, è sufficiente creare un oggetto di connessione, passare una stringa di inizializzazione, quindi utilizzare tale connessione per aprire i comandi. Se si prevede di utilizzare più volte la connessione al database, è consigliabile tenere aperta, la connessione e `CDataConnection` fornisce un modo pratico per eseguire questa operazione.  
   
 > [!NOTE]
->  Se si crea un'applicazione di database che deve gestire sessioni contemporaneamente, sarà necessario utilizzare [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).  
+>  Se si sta creando un'applicazione di database che deve gestire più sessioni, è necessario utilizzare [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

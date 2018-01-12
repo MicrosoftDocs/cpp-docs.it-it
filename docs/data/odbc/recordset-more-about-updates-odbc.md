@@ -1,111 +1,114 @@
 ---
-title: "Recordset: ulteriori informazioni sugli aggiornamenti (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ambienti multiutente, aggiornamenti a recordset"
-  - "recordset ODBC, aggiornamento"
-  - "record, aggiornamento"
-  - "recordset, aggiornamento"
-  - "scorrimento, aggiornamenti a recordset"
-  - "transazioni, aggiornamento di recordset"
-  - "aggiornamento di recordset"
+title: 'Recordset: Ulteriori informazioni su aggiornamenti (ODBC) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, updating
+- transactions, updating recordsets
+- ODBC recordsets, updating
+- multiuser environments, updates to recordsets
+- scrolling, updates to recordsets
+- updating recordsets
+- recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'argomento è relativo alle classi ODBC MFC.  
+# <a name="recordset-more-about-updates-odbc"></a>Recordset: ulteriori informazioni sugli aggiornamenti (ODBC)
+Questo argomento si applica alle classi ODBC MFC.  
   
- In questo argomento vengono fornite informazioni su:  
+ Questo argomento viene illustrato:  
   
--   [Effetti delle transazioni sugli aggiornamenti](#_core_how_transactions_affect_updates).  
+-   [Influenzano gli aggiornamenti da parte di altre operazioni, quali transazioni,](#_core_how_transactions_affect_updates).  
   
--   [Aggiornamenti effettuati in un ambiente multiutente](#_core_your_updates_and_the_updates_of_other_users).  
+-   [Gli aggiornamenti e quelli di altri utenti](#_core_your_updates_and_the_updates_of_other_users).  
   
--   [Ulteriori informazioni su Update e Delete](#_core_more_about_update_and_delete).  
+-   [Altre informazioni sulle funzioni di membro Update e Delete](#_core_more_about_update_and_delete).  
   
 > [!NOTE]
->  L'argomento è relativo agli oggetti derivati da `CRecordset` per cui il recupero di massa di righe non è ancora stato implementato.  Se si implementa il recupero di massa di righe, alcune delle informazioni riportate in questo argomento non saranno applicabili.  Non è possibile ad esempio chiamare le funzioni membro `AddNew`, **Edit**, **Delete** e **Update**, ma è possibile eseguire transazioni.  Per ulteriori informazioni sul recupero di massa di righe, vedere [Recordset: recupero di massa di record \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+>  Questo argomento si applica agli oggetti derivati da `CRecordset` in quale riga bulk recupero non è stato implementato. Se è stato implementato il recupero di massa di righe, alcune delle informazioni non si applica. Ad esempio, non è possibile chiamare il `AddNew`, **modifica**, **eliminare**, e **aggiornamento** funzioni membro; tuttavia, è possibile eseguire le transazioni. Per ulteriori informazioni sulle righe di massa, vedere [Recordset: recupero di record di massa (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
-##  <a name="_core_how_other_operations_affect_updates"></a> Effetti delle altre operazioni sugli aggiornamenti  
- Gli aggiornamenti vengono influenzati dalle transazioni in corso al momento dell'aggiornamento, nel caso in cui si chiuda o si scorra il recordset prima del completamento di una transazione.  
+##  <a name="_core_how_other_operations_affect_updates"></a>Influenzano gli aggiornamenti da parte di altre operazioni  
+ Gli aggiornamenti sono interessati dalle transazioni attive al momento dell'aggiornamento, chiudendo il recordset prima del completamento di una transazione e scorrendo prima del completamento di una transazione.  
   
-###  <a name="_core_how_transactions_affect_updates"></a> Effetti delle transazioni sugli aggiornamenti  
- Oltre al funzionamento di `AddNew`, **Edit** e **Delete**, è importante comprendere l'interazione delle funzioni membro **BeginTrans**, **CommitTrans** e **Rollback** di [CDatabase](../../mfc/reference/cdatabase-class.md) con le funzioni di aggiornamento di [CRecordset](../../mfc/reference/crecordset-class.md).  
+###  <a name="_core_how_transactions_affect_updates"></a>Effetti delle transazioni sugli aggiornamenti  
+ Oltre a informazioni sulle modalità `AddNew`, **modifica**, e **eliminare** , è importante comprendere come **BeginTrans**, **CommitTrans**, e **Rollback** funzioni membro di [CDatabase](../../mfc/reference/cdatabase-class.md) con le funzioni di aggiornamento di [CRecordset](../../mfc/reference/crecordset-class.md).  
   
- Per impostazione predefinita, le chiamate ad `AddNew` e a **Edit** influenzano l'origine dati quando si chiama **Update**.  Le chiamate a **Delete** hanno invece un effetto immediato.  È tuttavia possibile stabilire una transazione ed eseguire tali chiamate in batch.  Gli aggiornamenti non sono permanenti fino a quando non se ne esegue il commit.  È pertanto possibile eseguire il rollback anziché il commit della transazione.  
+ Per impostazione predefinita, le chiamate a `AddNew` e **modifica** influenzano l'origine dati quando si chiama **aggiornamento**. **Eliminare** chiamate avranno effetto immediatamente. Ma è possibile stabilire una transazione ed eseguire un batch di tali chiamate. Gli aggiornamenti non sono permanenti, fino a quando non si esegue il commit. Se si cambia idea, è possibile eseguire il rollback della transazione anziché il commit.  
   
- Per ulteriori informazioni sulle transazioni, vedere [Transazione \(ODBC\)](../../data/odbc/transaction-odbc.md).  
+ Per ulteriori informazioni sulle transazioni, vedere [transazione (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-###  <a name="_core_how_closing_the_recordset_affects_updates"></a> Effetti della chiusura del recordset sugli aggiornamenti  
- Se viene chiuso un recordset o il relativo oggetto `CDatabase` associato mentre è in corso una transazione, ovvero quando non è ancora stata chiamata la funzione [CDatabase::CommitTrans](../Topic/CDatabase::CommitTrans.md) o [CDatabase::Rollback](../Topic/CDatabase::Rollback.md), verrà eseguito automaticamente il rollback di transazione, a meno che il database back\-end non sia il motore di gestione di database Microsoft Jet.  
+###  <a name="_core_how_closing_the_recordset_affects_updates"></a>Chiusura del Recordset influenza gli aggiornamenti  
+ Se si chiude un recordset o a essa associati `CDatabase` oggetto, con una transazione in corso (non è stato chiamato [CDatabase:: CommitTrans](../../mfc/reference/cdatabase-class.md#committrans) o [CDatabase:: rollback](../../mfc/reference/cdatabase-class.md#rollback)), viene eseguito il rollback della transazione eseguire il backup automaticamente (a meno che il database back-end è il motore di database Microsoft Jet).  
   
 > [!CAUTION]
->  Se si utilizza il motore di database Microsoft Jet, la chiusura di un recordset all'interno di una transazione esplicita non comporta il rilascio delle righe modificate o dei blocchi inseriti finché non si esegue il commit o il rollback della transazione esplicita.  Si consiglia di aprire e chiudere sempre i recordset all'interno o all'esterno di una transazione Jet esplicita.  
+>  Se si utilizza il motore di database Microsoft Jet, la chiusura di un recordset in una transazione esplicita non comporta il rilascio delle righe che sono state modificate o blocchi che sono stati inclusi fino a quando non è stato eseguito il commit o il rollback della transazione esplicita. È consigliabile aprire e chiudere sempre i recordset all'interno o all'esterno di una transazione esplicita di Jet.  
   
-###  <a name="_core_how_scrolling_affects_updates"></a> Effetti dello scorrimento sugli aggiornamenti  
- Quando si [Recordset: scorrimento \(ODBC\)](../../data/odbc/recordset-scrolling-odbc.md) un recordset, nel buffer di modifica vengono inseriti nuovi record correnti e il record precedente non viene prima memorizzato.  Durante lo scorrimento vengono ignorati i record eliminati in precedenza.  Se si scorre un recordset dopo una chiamata ad `AddNew` o **Edit** senza chiamare prima **Update**, **CommitTrans** o **Rollback**, tutte le modifiche andranno perse senza alcun avviso quando verrà inserito un nuovo record nel buffer di modifica.  Nel buffer di modifica viene inserito il record corrente, il record memorizzato viene liberato e non viene apportata alcuna modifica all'origine dati.  Questa condizione è valida sia per `AddNew` che per **Edit**.  
+###  <a name="_core_how_scrolling_affects_updates"></a>Scorrimento influenza gli aggiornamenti  
+ Quando si [Recordset: scorrimento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) in un recordset, viene riempito il buffer di modifica con ogni nuovo record corrente (il record precedente non viene prima memorizzato). Scorrimento di record eliminato in precedenza viene ignorata. Se si scorre dopo un `AddNew` o **modifica** senza chiamare **aggiornamento**, **CommitTrans**, o **Rollback** innanzitutto tutte le modifiche Quando un nuovo record viene inserito nel buffer di modifica, vengono perse (senza alcun avviso all'utente). Il record corrente a cui viene riempito il buffer di modifica, il record memorizzato viene liberato e si verifica alcuna modifica nell'origine dati. Si applica a entrambe `AddNew` e **modifica**.  
   
-##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Aggiornamenti effettuati in un ambiente multiutente  
- Quando si utilizza un recordset per aggiornare i dati, gli aggiornamenti effettuati influenzano gli altri utenti.  In modo analogo, gli aggiornamenti effettuati dagli altri utenti per l'intera durata del recordset influenzano l'utente del recordset.  
+##  <a name="_core_your_updates_and_the_updates_of_other_users"></a>Gli aggiornamenti e gli aggiornamenti di altri utenti  
+ Quando si utilizza un recordset per aggiornare i dati, gli aggiornamenti riguardano gli altri utenti. Analogamente, l'impatto degli aggiornamenti di altri utenti nel corso della durata del recordset.  
   
- In un ambiente multiutente è possibile che alcuni utenti aprano recordset contenenti alcuni dei record selezionati nel recordset di un altro utente.  Le modifiche apportate a un record prima del relativo recupero vengono riflesse nel recordset dell'utente singolo.  I dynaset recuperano un record ogni volta che lo si scorre. In tal modo, i dynaset riflettono le modifiche apportate ogni volta che si scorre un record.  Gli snapshot invece recuperano un record la prima volta che lo si scorre, pertanto riflettono solo le modifiche apportate prima dello scorrimento iniziale del record.  
+ In un ambiente multiutente, altri utenti possono aprire recordset contenenti alcuni dei record selezionato nel recordset. Per un record prima che il recupero vengono riflesse nel recordset. Poiché i dynaset recuperano un record di ogni volta che si scorre, dynaset riflettono le modifiche ogni volta che un record. Snapshot di recuperare un record la prima volta che si scorre, pertanto riflettono solo le modifiche che si verificano prima dello scorrimento inizialmente il record.  
   
- I record aggiunti da altri utenti dopo l'apertura del recordset non vengono visualizzati nel recordset fino a quando non viene ripetuta la query.  Se il recordset è un dynaset, le modifiche apportate dagli altri utenti ai record esistenti vengono visualizzate nel dynaset dell'utente singolo quando quest'ultimo scorre i record modificati.  Se il recordset è uno snapshot, le modifiche non vengono visualizzate fino a quando non viene ripetuta la query sullo snapshot.  Se si desidera visualizzare i record aggiunti o eliminati da altri utenti in uno snapshot o quelli aggiunti da altri utenti in un dynaset, chiamare [CRecordset::Requery](../Topic/CRecordset::Requery.md) per ricompilare il recordset. Tenere presente che le eliminazioni effettuate dagli altri utenti vengono visualizzate nel dynaset. È inoltre possibile chiamare **Requery** per visualizzare i record aggiunti personalmente, ma non quelli eliminati.  
+ I record aggiunti da altri utenti dopo l'apertura del recordset non vengono visualizzati nel recordset pertanto riformulare la query. Se il recordset è un dynaset, le modifiche apportate ai record esistenti da altri utenti vengono visualizzati in dynaset durante lo scorrimento di record interessati. Se il recordset è uno snapshot, le modifiche non vengono visualizzate fino a quando non si requery lo snapshot. Se si desidera visualizzare i record aggiunti o eliminati da altri utenti in uno snapshot o i record aggiunti da altri utenti nel dynaset, chiamare [CRecordset:: Requery](../../mfc/reference/crecordset-class.md#requery) per ricompilare il recordset. Si noti che le eliminazioni di altri utenti visualizzati in dynaset. È inoltre possibile chiamare **Requery** per visualizzare i record aggiunti personalmente, ma non per vedere le eliminazioni.  
   
 > [!TIP]
->  Per imporre la memorizzazione nella cache di un intero snapshot in una sola operazione, chiamare `MoveLast` immediatamente dopo l'apertura dello snapshot.  Successivamente chiamare **MoveFirst** per iniziare a utilizzare i record.  L'utilizzo di `MoveLast` equivale allo scorrimento di tutti i record, con la differenza che, mediante tale funzione, vengono recuperati tutti contemporaneamente.  Si noti tuttavia che tale operazione può ridurre le prestazioni e può non essere necessaria per alcuni driver.  
+>  Per forzare la memorizzazione nella cache di un intero snapshot in una sola volta, chiamare `MoveLast` subito dopo l'apertura dello snapshot. Chiamare quindi **MoveFirst** di iniziare a lavorare con i record. `MoveLast`equivale a scorrimento su tutti i record, ma vengono recuperati tutti contemporaneamente. Si noti tuttavia che questo può ridurre le prestazioni e potrebbe non essere necessario per alcuni driver.  
   
- Gli effetti degli aggiornamenti eseguiti da un utente singolo sono simili a quelli degli aggiornamenti eseguiti da altri utenti.  
+ Gli effetti degli aggiornamenti per altri utenti sono simili per gli effetti per l'utente.  
   
-##  <a name="_core_more_about_update_and_delete"></a> Ulteriori informazioni su Update e Delete  
- In questa sezione vengono fornite informazioni aggiuntive relative all'utilizzo di **Update** e **Delete**.  
+##  <a name="_core_more_about_update_and_delete"></a>Ulteriori informazioni su Update e Delete  
+ Questa sezione vengono fornite informazioni aggiuntive per l'utilizzo con **aggiornamento** e **eliminare**.  
   
-### Riuscita e mancata riuscita di Update  
- Se la funzione **Update** ha esito positivo, la modalità `AddNew` o **Edit** viene terminata.  Per avviare nuovamente la modalità `AddNew` o **Edit**, chiamare `AddNew` o **Edit**.  
+### <a name="update-success-and-failure"></a>Aggiornamento completate e non riuscite  
+ Se **aggiornamento** ha esito positivo, il `AddNew` o **modifica** modalità termina. Per iniziare un `AddNew` o **modifica** modalità nuovamente, chiamare `AddNew` o **modifica**.  
   
- Se la funzione **Update** ha esito negativo, ovvero restituisce **FALSE** o genera un'eccezione, continua a essere attiva la modalità `AddNew` o **Edit**, a seconda dell'ultima funzione chiamata.  È quindi possibile effettuare una delle operazioni riportate di seguito.  
+ Se **aggiornamento** ha esito negativo (restituisce **FALSE** o genera un'eccezione), si ha sempre `AddNew` o **modifica** modalità, a seconda di quale funzione dell'ultima chiamata. È quindi possibile eseguire una delle operazioni seguenti:  
   
--   Modificare un membro dati di campo e chiamare di nuovo **Update**.  
+-   Modifica di un membro dati di campo e si tenta di **aggiornamento** nuovamente.  
   
--   Chiamare `AddNew` per reimpostare i membri dati di campo su Null, quindi impostare i valori dei membri dati di campo e chiamare di nuovo **Update**.  
+-   Chiamare `AddNew` per reimpostare i membri di dati del campo su Null, impostare i valori dei membri di dati di campo e quindi chiamare **aggiornamento** nuovamente.  
   
--   Chiamare **Edit** per caricare nuovamente i valori contenuti nel recordset prima della prima chiamata ad `AddNew` o **Edit**, quindi impostare i valori dei membri dati di campo e chiamare di nuovo **Update**.  I membri dati di campo mantengono i nuovi valori se la chiamata a **Update** ha esito positivo, ma non dopo una chiamata ad `AddNew`.  
+-   Chiamare **modifica** per ricaricare i valori contenuti nell'oggetto recordset prima della prima chiamata a `AddNew` o **modifica**, impostare i valori dei membri di dati di campo e quindi chiamare **aggiornare**nuovamente. Dopo una corretta **aggiornamento** chiamare (eccetto dopo un `AddNew` chiamare), i membri di dati di campo mantengono i nuovi valori.  
   
--   Chiamare **Move** \(anche con un parametro **AFX\_MOVE\_REFRESH** o 0\) per eliminare tutte le modifiche e terminare la modalità `AddNew` o **Edit**.  
+-   Chiamare **spostare** (inclusi **spostare** con un parametro di **AFX_MOVE_REFRESH**, oppure 0), per eliminare tutte le modifiche e terminare qualsiasi `AddNew` o **modifica** modalità attiva.  
   
-### Update e Delete  
- Questa sezione si riferisce sia ad **Update** che a **Delete**.  
+### <a name="update-and-delete"></a>Update e Delete  
+ In questa sezione si applica sia **aggiornamento** e **eliminare**.  
   
- Durante un'operazione **Update** o **Delete** è necessario aggiornare un solo record,  ovvero il record corrente, che corrisponde ai valori nei campi del recordset.  Se, per qualche ragione, non viene aggiornato alcun record o vengono aggiornati più record, viene generata un'eccezione contenente uno dei valori **RETCODE** seguenti:  
+ In un **aggiornamento** o **eliminare** operazione, è necessario aggiornare un unico record. Tale record è il record corrente, che corrisponde ai valori dei dati nei campi del recordset. Se per qualche ragione non i record vengono modificati o più di un record è interessato, viene generata un'eccezione contenente uno dei seguenti **RETCODE** valori:  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED**  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED**  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**  
   
- Quando vengono generate queste eccezioni, continua a essere attiva la modalità `AddNew` o **Edit** impostata durante la chiamata a **Update** o a **Delete**.  Di seguito sono riportati gli scenari più comuni in cui vengono generate queste eccezioni.  In genere, vengono generate le eccezioni seguenti:  
+ Quando vengono generate queste eccezioni, rimane il `AddNew` o **modifica** stato in cui trovavano quando è stato chiamato **aggiornamento** o **eliminare**. Ecco gli scenari più comuni in cui sarebbe queste eccezioni. Si è più probabile che vengano visualizzati:  
   
--   **AFX\_SQL\_ERROR\_NO\_ROWS\_AFFECTED** quando si utilizza la modalità di blocco ottimistico e il record è stato modificato da un altro utente in modo tale da impedire al framework di identificare il record corretto da aggiornare o eliminare.  
+-   **AFX_SQL_ERROR_NO_ROWS_AFFECTED** quando si utilizza la modalità di blocco ottimistico e un altro utente ha modificato il record in modo da impedisce che il framework di identificare il record corretto da aggiornare o eliminare.  
   
--   **AFX\_SQL\_ERROR\_MULTIPLE\_ROWS\_AFFECTED** quando alla tabella che si sta aggiornando non viene assegnata alcuna chiave primaria o indice univoco e non si dispone di un numero sufficiente di colonne nel recordset per identificare in modo univoco una riga di una tabella.  
+-   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** quando la tabella che si sta aggiornando non contiene alcuna chiave primaria o indice univoco e non dispone di colonne insufficiente nel recordset per identificare in modo univoco una riga della tabella.  
   
-## Vedere anche  
- [Recordset \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Recordset: selezione dei record \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [Trasferimento di campi di record \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Recordset: Selezione dei record (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [Campi di record (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [SQL](../../data/odbc/sql.md)   
  [Eccezioni: eccezioni di database](../../mfc/exceptions-database-exceptions.md)

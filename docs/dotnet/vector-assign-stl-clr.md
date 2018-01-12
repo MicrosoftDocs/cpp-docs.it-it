@@ -1,32 +1,33 @@
 ---
-title: "vector::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign (membro) [STL/CLR]"
+title: 'Vector:: Assign (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 945e2048-6c61-4701-b13c-8241cbee3fa1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 37f2f75e6274748cc3289dffd42e4debff96fc91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# vector::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorassign-stlclr"></a>vector::assign (STL/CLR)
 Sostituisce tutti gli elementi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +36,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Parametri  
- Conteggio  
+#### <a name="parameters"></a>Parametri  
+ count  
  Numero di elementi da inserire.  
   
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  right  
  Enumerazione da inserire.  
   
- val  
+ Val  
  Valore dell'elemento da inserire.  
   
-## Note  
- La prima funzione membro sostituisce la sequenza selezionata con una ripetizione degli elementi di `count` di valore `val`.  Utilizzarla per riempire il contenitore di elementi tutto con lo stesso valore.  
+## <a name="remarks"></a>Note  
+ La prima funzione membro sostituisce la sequenza controllata con una ripetizione di `count` degli elementi di valore `val`. Utilizzarla per riempire il contenitore con elementi tutti con lo stesso valore.  
   
- Se `InIt` è un tipo intero, la seconda funzione membro si comporta lo stesso di `assign((size_type)``first``, (value_type)``last``)`.  In caso contrario, sostituisce la sequenza selezionata con la sequenza `[``first``,` `last``)`.  Utilizzarla per rendere sequenza selezionata una copia un'altra sequenza.  
+ Se `InIt` è di tipo integer, la seconda funzione membro si comporta come `assign((size_type)first, (value_type)last)`. In caso contrario, sostituisce la sequenza controllata con la sequenza [`first`, `last`). È usata per garantire il controllato sequenza una copia di un'altra sequenza.  
   
- La terza funzione membro sostituisce la sequenza selezionata con la sequenza definita dall'enumeratore `right`.  Utilizzarla per rendere sequenza selezionata una copia di una sequenza descritta da un enumeratore.  
+ La terza funzione membro sostituisce la sequenza controllata con la sequenza designata dall'enumeratore `right`. Utilizzarla per creare la sequenza controllata una copia di una sequenza descritta dall'enumeratore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_assign.cpp   
@@ -96,14 +97,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **a b**  
- **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

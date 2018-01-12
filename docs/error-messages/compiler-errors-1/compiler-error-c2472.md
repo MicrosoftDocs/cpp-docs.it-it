@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41a3d78ab9652d1e88ceefe29011eb5b2225a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5267f20aaed4ebf1c320d3d960684376e29814ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2472"></a>Errore del compilatore C2472
 impossibile generare 'function' in codice gestito: '%s'; compilare con /clr per generare un'immagine mista  
@@ -49,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [/CLR (compilazione common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2726
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2726
+f1_keywords: C2726
+dev_langs: C++
+helpviewer_keywords: C2726
 ms.assetid: f0191bb7-c175-450b-bf09-a3213db96d09
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 158b915db20b94658cab09dd1bb638dcba617206
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f97067f71927491072f303bc872616640bae3367
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2726"></a>Errore del compilatore C2726
 'gcnew' può essere utilizzato solo per creare un oggetto con tipo gestito o WinRT  
@@ -49,4 +45,3 @@ int main() {
   
 }  
 ```  
-

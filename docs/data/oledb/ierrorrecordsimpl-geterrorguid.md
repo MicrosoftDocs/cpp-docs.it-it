@@ -1,34 +1,36 @@
 ---
-title: "IErrorRecordsImpl::GetErrorGUID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetErrorGUID"
-  - "IErrorRecordsImpl.GetErrorGUID"
-  - "IErrorRecordsImpl::GetErrorGUID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorGUID (metodo)"
+title: 'IErrorRecordsImpl:: Geterrorguid | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetErrorGUID
+- IErrorRecordsImpl.GetErrorGUID
+- IErrorRecordsImpl::GetErrorGUID
+dev_langs: C++
+helpviewer_keywords: GetErrorGUID method
 ms.assetid: 42c00755-50e5-401a-8246-adef9de5ced2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 00709f0b796fedd050c0836d013b10b7216f7ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetErrorGUID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ierrorrecordsimplgeterrorguid"></a>IErrorRecordsImpl::GetErrorGUID
 Ottiene l'errore GUID da un record di errore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,15 +39,15 @@ Ottiene l'errore GUID da un record di errore.
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `rCurError`  
- Un record di `ERRORINFO` in un'interfaccia di **IErrorInfo**.  
+ Un `ERRORINFO` record in un **IErrorInfo** interfaccia.  
   
-## Valore restituito  
- Un riferimento a un GUID dell'errore.  
+## <a name="return-value"></a>Valore restituito  
+ Un riferimento a un GUID per l'errore.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)

@@ -1,72 +1,75 @@
 ---
-title: "Supporto dei rowset dello schema | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB (modelli consumer), rowset schema"
-  - "provider OLE DB, rowset schema"
-  - "OLE DB, rowset schema"
-  - "rowset schema"
+title: Supporto dei rowset dello Schema | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- schema rowsets
+- OLE DB consumer templates, schema rowsets
+- OLE DB providers, schema rowsets
+- OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Supporto dei rowset dello schema
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-I rowset dello schema consentono ai consumer di ottenere informazioni su un archivio dati senza conoscerne la struttura o lo schema sottostante.  È ad esempio possibile che un archivio dati contenga tabelle organizzate in una gerarchia definita dall'utente, pertanto non sarebbe possibile conoscerne lo schema se non leggendolo. Un altro esempio è rappresentato dal fatto che nelle procedure guidate di Visual C\+\+ vengono utilizzati i rowset dello schema per generare funzioni di accesso per il consumer. Per consentire queste operazioni al consumer, l'oggetto Session del provider espone alcuni metodi sull'interfaccia [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx).  Nelle applicazioni Visual C\+\+ si utilizza la classe [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) per implementare **IDBSchemaRowset**.  
+# <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
+Set di righe dello schema consente agli utenti di ottenere informazioni su un archivio dati senza conoscere la struttura sottostante, o schema. Ad esempio, un archivio dati potrebbe essere tabelle organizzate in una gerarchia definita dall'utente, pertanto non vi sarà alcun modo per garantire informazioni dello schema, ad eccezione per leggerlo. (Ad esempio, si noti che le procedure guidate di Visual C++ rowset dello schema per generare le funzioni di accesso per il consumer.) Per consentire a tale scopo, l'oggetto del provider sessione espone i metodi nel [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaccia. Nelle applicazioni Visual C++, utilizzare il [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe per implementare **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl` supporta i seguenti metodi:  
+ `IDBSchemaRowsetImpl`supporta i metodi seguenti:  
   
--   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) che controlla la validità delle restrizioni facendo riferimento a un rowset dello schema.  
+-   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) controlla la validità delle restrizioni rispetto a un set di righe dello schema.  
   
--   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) che implementa una funzione di creazione di un oggetto COM per l'oggetto specificato dal parametro del modello.  
+-   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) implementa una funzione di creazione oggetto COM per l'oggetto specificato dal parametro di modello.  
   
--   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) che specifica le restrizioni supportate su un particolare rowset dello schema.  
+-   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) specifica le restrizioni supportate su un set di righe dello schema specifico.  
   
--   [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) che restituisce un rowset dello schema, ereditato dall'interfaccia.  
+-   [IDBSchemaRowset:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) restituisce un set di righe dello schema (ereditato dall'interfaccia).  
   
--   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) che restituisce l'elenco dei rowset dello schema accessibili da `IDBSchemaRowsetImpl::GetRowset`, ereditato dall'interfaccia.  
+-   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) restituisce un elenco di set di righe dello schema accessibili da `IDBSchemaRowsetImpl::GetRowset` (ereditato dall'interfaccia).  
   
-## Supporto della Creazione guidata provider OLE DB ATL  
- Con la Creazione guidata provider OLE DB ATL vengono create tre classi di schema nel file di intestazione della sessione:  
+## <a name="atl-ole-db-provider-wizard-support"></a>Supporto della procedura guidata Provider ATL OLE DB  
+ La creazione guidata Provider OLE DB ATL crea tre classi dello schema nel file di intestazione della sessione:  
   
--   **C** *NomeBreve* **SessionTRSchemaRowset**  
+-   **C** *ShortName* **SessionTRSchemaRowset**  
   
--   **C** *NomeBreve* **SessionColSchemaRowset**  
+-   **C** *ShortName* **SessionColSchemaRowset**  
   
--   **C** *NomeBreve* **SessionPTSchemaRowset**  
+-   **C** *ShortName* **SessionPTSchemaRowset**  
   
- Queste classi consentono di rispondere alle richieste di informazioni sullo schema effettuate dal consumer. Tenere presente che la specifica OLE DB richiede il supporto dei seguenti tre rowset dello schema:  
+ Queste classi di rispondono alle richieste consumer di informazioni sullo schema; Si noti che la specifica OLE DB è necessario che questi tre rowset dello schema supportati:  
   
--   **C** *NomeBreve* **SessionTRSchemaRowset** gestisce le richieste di informazioni sulle tabelle \(rowset dello schema `DBSCHEMA_TABLES`\).  
+-   **C** *ShortName* **SessionTRSchemaRowset** gestisce le richieste di informazioni di tabella (la `DBSCHEMA_TABLES` set di righe dello schema).  
   
--   **C** *NomeBreve* **SessionColSchemaRowset** gestisce le richieste di informazioni sulle colonne \(rowset dello schema **DBSCHEMA\_COLUMNS**\).  Con la procedura guidata vengono fornite implementazioni di esempio per queste classi per la restituzione di informazioni relative allo schema per un provider DOS.  
+-   **C** *ShortName* **SessionColSchemaRowset** gestisce le richieste di informazioni sulle colonne (la **DBSCHEMA_COLUMNS** set di righe dello schema). La procedura guidata fornisce le implementazioni di esempio per queste classi, che restituiscono informazioni sullo schema per un provider di tipo DOS.  
   
--   **C** *NomeBreve* **SessionPTSchemaRowset** gestisce le richieste di informazioni sullo schema relative al tipo di provider \(rowset dello schema **DBSCHEMA\_PROVIDER\_TYPES**\).  Con l'implementazione predefinita fornita nella procedura guidata viene restituito `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** gestisce le richieste di informazioni sullo schema relative al tipo di provider (il **DBSCHEMA_PROVIDER_TYPES** rowset dello schema). Restituisce l'implementazione predefinita fornita dalla procedura guidata `S_OK`.  
   
- È possibile personalizzare queste classi in modo che vengano gestite informazioni sullo schema appropriate al provider:  
+ È possibile personalizzare queste classi per gestire le informazioni sullo schema appropriate al provider:  
   
--   In **C***NomeBreve***SessionTRSchemaRowset** compilare i campi relativi a catalogo, tabella e descrizione \(**trData.m\_szType**, **trData.m\_szTable**, **trData.m\_szDesc**\).  Nell'esempio generato con la procedura guidata viene utilizzata una sola riga \(tabella\).  Altri provider possono restituire più tabelle.  
+-   In **C***ShortName***SessionTRSchemaRowset**, è necessario compilare i campi di descrizione del catalogo e tabella (**trData. M_sztype**, **M_sztable**, e **M_szdesc**). Nell'esempio viene generato dalla procedura guidata utilizza solo una riga (tabella). Altri provider possono restituire più di una tabella.  
   
--   In **C***NomeBreve***SessionColSchemaRowset** passare il nome della tabella come valore **DBID**.  
+-   In **C***ShortName***SessionColSchemaRowset**, si passa il nome della tabella come un **DBID**.  
   
-## Impostazione di restrizioni  
- Una particolare importanza nell'ambito del supporto dei rowset dello schema è rivestita dall'impostazione di restrizioni, che viene operata mediante `SetRestrictions`.  Le restrizioni consentono ai consumer di recuperare solo le righe corrispondenti ai criteri impostati, ad esempio di trovare tutte le colonne della tabella "MyTable".  Le restrizioni sono facoltative e se, come da impostazione predefinita, non ne viene supportata alcuna, vengono restituiti tutti i dati.  Per un esempio di provider che supporta le restrizioni, vedere [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+## <a name="setting-restrictions"></a>Impostazione delle restrizioni  
+ Un concetto importante nel supporto di set di righe dello schema dall'impostazione di restrizioni, che viene operata mediante `SetRestrictions`. Le restrizioni consentono agli utenti di recuperare solo le righe corrispondenti (ad esempio, trovare tutte le colonne nella tabella "MyTable"). Sono facoltative e, nel caso in cui nessuna sia supportata (impostazione predefinita), vengono restituiti sempre tutti i dati. Per un esempio di un provider che supporta le restrizioni, vedere il [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio.  
   
-## Impostazione di una mappa degli schemi  
- Impostare una mappa degli schemi analoga a quella riportata di seguito in Session.h nell'esempio UpdatePV:  
+## <a name="setting-up-the-schema-map"></a>Configurare il mapping dello Schema  
+ Impostare una mappa di schema, ad esempio questo ad esempio UpdatePV:  
   
 ```  
 BEGIN_SCHEMA_MAP(CUpdateSession)  
@@ -76,9 +79,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()  
 ```  
   
- Per supportare **IDBSchemaRowset** è necessario supportare `DBSCHEMA_TABLES`, **DBSCHEMA\_COLUMNS** e **DBSCHEMA\_PROVIDER\_TYPES**.  È possibile aggiungere ulteriori rowset dello schema a propria discrezione.  
+ Per supportare **IDBSchemaRowset**, è necessario supportare `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, e **DBSCHEMA_PROVIDER_TYPES**. È possibile aggiungere ulteriori rowset dello schema a propria discrezione.  
   
- Dichiarare una classe di rowset dello schema con un metodo `Execute`, quale `CUpdateSessionTRSchemaRowset` nell'esempio UpdatePV:  
+ Dichiarare una classe di rowset dello schema con un `Execute` metodo, ad esempio `CUpdateSessionTRSchemaRowset` in UpdatePV:  
   
 ```  
 class CUpdateSessionTRSchemaRowset :   
@@ -90,32 +93,32 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)  
 ```  
   
- Come si può notare, `CUpdateSession` eredita da `IDBSchemaRowsetImpl`, pertanto dispone di tutti i metodi per la gestione delle restrizioni.  Mediante `CSchemaRowsetImpl` dichiarare tre classi figlio, elencate in precedenza nella mappa degli schemi: `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset` e `CUpdateSessionPTSchemaRowset`.  Ciascuna di queste classi figlio presenta un metodo `Execute` che gestisce il rispettivo set di restrizioni, ovvero criteri di ricerca.  Ogni metodo `Execute` confronta i valori dei parametri `cRestrictions` e `rgRestrictions`.  Per una descrizione di questi parametri, vedere [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
+ Si noti che `CUpdateSession` eredita da `IDBSchemaRowsetImpl`, pertanto dispone di tutti i metodi per la gestione delle restrizioni. Utilizzando `CSchemaRowsetImpl`, dichiarare tre classi figlio (elencate nel mapping dello schema precedente): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, e `CUpdateSessionPTSchemaRowset`. Ognuna di queste classi figlio è un `Execute` metodo che gestisce il rispettivo set di restrizioni (criteri di ricerca). Ogni `Execute` metodo confronta i valori del `cRestrictions` e `rgRestrictions` parametri. Vedere la descrizione di questi parametri, [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).  
   
- Per ulteriori informazioni sulle limitazioni corrispondenti a un particolare set di righe dello schema, vedere la tabella dei GUID dei set di righe dello schema in [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) in *OLE DB Programmer's Reference* in [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)].  
+ Per ulteriori informazioni sulle restrizioni corrispondano a un set di righe dello schema specifico, consultare la tabella di righe dello schema GUID in [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) nel *riferimento per programmatori OLE DB* di Windows SDK.  
   
- Se ad esempio si supporta la restrizione **TABLE\_NAME** su `DBSCHEMA_TABLES`, si procederà come indicato di seguito.  
+ Ad esempio, se è supportato il **TABLE_NAME** restrizione sul `DBSCHEMA_TABLES`, è necessario eseguire le operazioni seguenti:  
   
- Controllare in primo luogo `DBSCHEMA_TABLES` per verificare che supporti quattro restrizioni, nell'ordine.  
+ In primo luogo, cercare `DBSCHEMA_TABLES` e che supporta quattro restrizioni (in ordine).  
   
-|Restrizione del rowset dello schema|Valore della restrizione|  
-|-----------------------------------------|------------------------------|  
-|**TABLE\_CATALOG**|0x1 \(1 binario\)|  
-|**TABLE\_SCHEMA**|0x2 \(10 binario\)|  
-|**TABLE\_NAME**|0x4 \(100 binario\)|  
-|**TABLE\_TYPE**|0x8 \(1000 binario\)|  
+|Restrizione di set di righe dello schema|Valore di restrizione|  
+|-------------------------------|-----------------------|  
+|**TABLE_CATALOG**|0x1 (binario 1)|  
+|**TABLE_SCHEMA**|0x2 (10 binario)|  
+|**TABLE_NAME**|0x4 (100 binario)|  
+|**TABLE_TYPE**|0x8 (1000 binario)|  
   
- Come si può notare, è presente un bit per ciascuna restrizione.  Dal momento che si desidera supportare solo **TABLE\_NAME**, si restituirà 0x4 nell'elemento `rgRestrictions`.  Se si supportassero **TABLE\_CATALOG** e **TABLE\_NAME**, sarebbe necessario restituire 0x5 \(101 binario\).  
+ Successivamente, si noti che esiste un bit per ogni tipo di restrizione. Poiché si desidera supportare **TABLE_NAME** solo, si restituirà 0x4 nel `rgRestrictions` elemento. Se si supporta **TABLE_CATALOG** e **TABLE_NAME**, sarebbe necessario restituire 0x5 (101 binario).  
   
- Per impostazione predefinita, nell'implementazione viene restituito 0 per qualsiasi richiesta, quindi non è supportata alcuna restrizione.  UpdatePV è un esempio di provider che supporta le restrizioni.  
+ Per impostazione predefinita, l'implementazione restituisce 0 (non supporta restrizioni) per qualsiasi richiesta. UpdatePV è riportato un esempio di un provider che supporta le restrizioni.  
   
-### Esempio  
- Il codice che segue è tratto dall'esempio [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f) che supporta i tre rowset dello schema obbligatori: `DBSCHEMA_TABLES`, **DBSCHEMA\_COLUMNS** e **DBSCHEMA\_PROVIDER\_TYPES**.  Per fornire un esempio di implementazione del supporto degli schemi nel provider, in questo argomento verranno illustrati i passaggi necessari per l'implementazione del rowset **DBSCHEMA\_TABLE**.  
+### <a name="example"></a>Esempio  
+ Questo codice è tratto dal [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio. Che supporta i tre set di righe dello schema obbligatori: `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, e **DBSCHEMA_PROVIDER_TYPES**. Come un esempio di come implementare il supporto dello schema nel provider, in questo argomento vengono illustrati l'implementazione di **DBSCHEMA_TABLE** set di righe.  
   
 > [!NOTE]
->  È possibile che il codice di esempio sia diverso e più aggiornato rispetto a quello riportato di seguito.  
+>  Il codice di esempio potrebbero essere diversi da quello riportato di seguito; è possibile che il codice di esempio come la versione più aggiornata.  
   
- Il primo passaggio per l'aggiunta del supporto degli schemi consiste nel determinare quali restrizioni si desidera supportare.  Per determinare le restrizioni disponibili per il rowset dello schema utilizzato, fare riferimento alla definizione di **IDBSchemaRowset** nella specifica OLE DB.  Dopo la definizione principale è presente una tabella contenente il nome del rowset dello schema, il numero di restrizioni e le colonne delle restrizioni.  Cercare il rowset dello schema che si desidera supportare e prendere nota del numero di restrizioni e delle colonne delle restrizioni.  `DBSCHEMA_TABLES` supporta, ad esempio, quattro restrizioni, ovvero **TABLE\_CATALOG**, **TABLE\_SCHEMA**, **TABLE\_NAME** e **TABLE\_TYPE**:  
+ Aggiunta del supporto dello schema il primo passaggio consiste nel determinare le restrizioni che si intende supportare. Per determinare le restrizioni sono disponibili per il set di righe dello schema, esaminare la specifica OLE DB per la definizione di **IDBSchemaRowset**. Dopo la definizione principale, verrà visualizzata una tabella contenente il nome del set di righe dello schema, il numero di restrizioni e le colonne di limitazione. Selezionare il set di righe dello schema che si desidera supportare e prendere nota del numero di restrizioni e le colonne di restrizione. Ad esempio, `DBSCHEMA_TABLES` supporta quattro restrizioni (**TABLE_CATALOG**, **TABLE_SCHEMA**, **TABLE_NAME**, e **TABLE_TYPE** ):  
   
 ```  
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,   
@@ -134,25 +137,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }  
 ```  
   
- Ciascuna colonna di restrizione è rappresentata da un bit.  Se si desidera supportare una restrizione, ovvero poter eseguire una query in base a essa, impostare tale bit su 1.  Se non si desidera supportare una restrizione, impostare tale bit su zero.  Nella riga di codice riportata in precedenza UpdatePV supporta le restrizioni **TABLE\_NAME** e **TABLE\_TYPE** sul rowset `DBSCHEMA_TABLES`.  Si tratta delle restrizioni terza \(maschera di bit 100\) e quarta \(maschera di bit 1000\).  La maschera di bit di UpdatePv è pertanto 1100 \(o 0x0C\):  
+ Un bit rappresenta ogni colonna di restrizione. Se si desidera supportare una restrizione (ovvero, è possibile eseguire una query da essa), impostare il bit su 1. Se non si desidera supportare una restrizione, impostare tale bit a zero. Dalla riga di codice riportato in precedenza, che supporta il **TABLE_NAME** e **TABLE_TYPE** restrizioni per il `DBSCHEMA_TABLES` set di righe. Si tratta la terza (maschera di bit 100) e la quarta restrizioni (maschera di bit 1000). Pertanto, la maschera di bit di UpdatePv è 1100 (o 0x0C):  
   
 ```  
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))  
     rgRestrictions[l] = 0x0C;  
 ```  
   
- La funzione `Execute` che segue è analoga a quelle presenti nei rowset standard.  Sono disponibili tre argomenti: `pcRowsAffected`, `cRestrictions` e `rgRestrictions`.  La variabile `pcRowsAffected` è un parametro di output con cui il provider può restituire il numero di righe nel rowset dello schema.  Il parametro `cRestrictions` è un parametro di input contenente il numero di restrizioni passate dal consumer al provider.  Il parametro `rgRestrictions` è una matrice di valori **VARIANT** contenente i valori delle restrizioni.  
+ Le operazioni seguenti `Execute` funzione è simile a quelli nei set di righe regolare. Sono disponibili tre argomenti: `pcRowsAffected`, `cRestrictions`, e `rgRestrictions`. Il `pcRowsAffected` variabile è un parametro di output che il provider può restituire il conteggio delle righe nel set di righe dello schema. Il `cRestrictions` è un parametro di input contenente il numero di restrizioni passata dal consumer al provider. Il `rgRestrictions` parametro è una matrice di **VARIANT** i valori che contengono i valori di restrizione.  
   
 ```  
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,   
                 const VARIANT* rgRestrictions)  
 ```  
   
- La variabile `cRestrictions` è basata sul numero totale di restrizioni per un rowset dello schema, indipendentemente dal fatto che il provider supporti tali restrizioni.  UpdatePv supporta due restrizioni, la terza e la quarta, pertanto in questo codice viene cercato solo una valore `cRestrictions` maggiore o uguale a tre.  
+ Il `cRestrictions` variabile è basata sul numero totale di restrizioni per un set di righe dello schema, indipendentemente dal fatto che il provider supporti tali. UpdatePv supporta due restrizioni (il terzo e quarto), questo codice cerca solo un `cRestrictions` valore maggiore o uguale a tre.  
   
- Il valore della restrizione **TABLE\_NAME** viene memorizzato in `rgRestrictions[2]`. Anche in questo caso la terza restrizione in una matrice a base zero sarà uguale a 2.  È necessario verificare che la restrizione non sia `VT_EMPTY` per poterla effettivamente supportare.  Tenere presente che **VT\_NULL** non corrisponde a `VT_EMPTY`,  ma specifica un valore di restrizione valido.  
+ Il valore per il **TABLE_NAME** restrizione viene archiviata in `rgRestrictions[2]` (nuovo, la terza restrizione in una matrice in base zero è 2). È necessario verificare che la restrizione non `VT_EMPTY` per effettivamente il suo supporto. Si noti che **VT_NULL** non è uguale a `VT_EMPTY`. **VT_NULL** specifica un valore di restrizione valido.  
   
- La definizione presente in UpdatePv per un nome di tabella è un nome di percorso completo di un file di testo.  Estrarre il valore della restrizione, quindi cercare di aprire il file per verificare che esso sia effettivamente presente.  Se il file non esiste, restituire `S_OK`.  Questa procedura potrebbe sembrare un po' complessa, ma in questo modo si consente di comunicare al consumer che non è presente alcuna tabella supportata con il nome specificato.  Il valore `S_OK` restituito indica che il codice è stato eseguito correttamente.  
+ La definizione di UpdatePv di un nome di tabella è un nome di percorso completo in un file di testo. Estrarre il valore di restrizione e quindi si tenta di aprire il file per assicurarsi che il file esista effettivamente. Se il file non esiste, restituire `S_OK`. Ciò potrebbe sembrare un bit con le versioni precedenti ma quali il codice è realtà comunicare al consumer è che non vi sono tabelle non supportate per il nome specificato. Il `S_OK` restituito indica che il codice eseguito correttamente.  
   
 ```  
 USES_CONVERSION;  
@@ -189,7 +192,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }  
 ```  
   
- Il supporto della quarta restrizione, **TABLE\_TYPE**, viene implementato in modo analogo al supporto della terza.  Controllare che il valore non sia `VT_EMPTY`.  Questa restrizione restituisce solo il tipo di tabella, **TABLE**.  Per determinare i valori validi per `DBSCHEMA_TABLES`, vedere la sezione relativa al rowset **TABLES** nell'appendice B di *OLE DB Programmer's Reference* \(informazioni in lingua inglese\).  
+ Supporto della quarta restrizione (**TABLE_TYPE**) è simile alla restrizione di terzi. Verificare che il valore non è `VT_EMPTY`. Questa restrizione restituisce solo il tipo di tabella, **tabella**. Per determinare i valori validi per il `DBSCHEMA_TABLES`, vedere l'appendice B del *riferimento per programmatori OLE DB* nel **tabelle** sezione set di righe.  
   
 ```  
 // TABLE_TYPE restriction:  
@@ -208,7 +211,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }  
 ```  
   
- A questo punto si creerà una voce di riga per il rowset.  La variabile `trData` corrisponde a **CTABLESRow**, una struttura definita nei modelli provider OLE DB.  **CTABLESRow** corrisponde alla definizione del rowset **TABLES** presente nell'appendice B della specifica OLE DB.  È possibile aggiungere una sola riga poiché è possibile supportare un'unica tabella per volta.  
+ Si tratta in cui si crea effettivamente una voce di riga per il set di righe. La variabile `trData` corrisponde a **CTABLESRow**, una struttura definita nei modelli provider OLE DB. **CTABLESRow** corrisponde alla **tabelle** definizione di set di righe nell'appendice B della specifica OLE DB. È solo una riga per aggiungere in quanto è possibile supportare una tabella alla volta.  
   
 ```  
 // Bring over the data:  
@@ -217,7 +220,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
- In UpdatePV sono impostate solo tre colonne: **TABLE\_NAME**, **TABLE\_TYPE** e **DESCRIPTION**.  È opportuno prendere nota delle colonne per le quali si restituiscono informazioni, poiché questi dati saranno necessari al momento dell'implementazione di `GetDBStatus`:  
+ UpdatePV imposta solo tre colonne: **TABLE_NAME**, **TABLE_TYPE**, e **descrizione**. È opportuno prendere nota delle colonne per cui si restituiscono informazioni, perché queste informazioni sono necessarie quando si implementa `GetDBStatus`:  
   
 ```  
     _ATLTRY  
@@ -235,7 +238,7 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }  
 ```  
   
- La funzione `GetDBStatus` è molto importante per il corretto funzionamento del rowset dello schema.  Poiché che non si restituiscono dati per tutte le colonne del rowset **TABLES**, è necessario specificare per quali colonne si restituiscono dati.  
+ Il `GetDBStatus` funzione è molto importante per il corretto funzionamento del set di righe dello schema. Poiché che non restituiscono dati per ogni colonna di **tabelle** set di righe, è necessario specificare le colonne che restituiscono dati per e che non.  
   
 ```  
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)  
@@ -256,13 +259,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }  
 ```  
   
- Poiché la funzione `Execute` restituisce i dati per i campi **TABLE\_NAME**, **TABLE\_TYPE** e **DESCRIPTION** dal rowset **TABLES**, vedere l'appendice B della specifica OLE DB e determinare se si tratta degli ordinali 3, 4 e 6, contando dall'alto in basso.  Per ognuna di queste colonne restituire **DBSTATUS\_S\_OK**.  Per tutte le altre colonne restituire **DBSTATUS\_S\_ISNULL**.  È importante restituire questo stato perché è possibile che un consumer non sia in grado di interpretare se il valore restituito è **NULL** o altri valori.  Come già precisato, **NULL** non equivale a vuoto.  
+ Poiché il `Execute` funzione restituisce i dati per il **TABLE_NAME**, **TABLE_TYPE**, e **descrizione** i campi dal **tabelle**set di righe, è possibile vedere l'appendice B della specifica OLE DB e determinare (contando dall'alto verso il basso) che sono numeri ordinali 3, 4 e 6. Per ognuna di queste colonne, restituire **DBSTATUS_S_OK**. Per tutte le altre colonne restituire **DBSTATUS_S_ISNULL**. È importante restituire lo stato, poiché un consumer potrebbe non riconoscere che il valore restituito è **NULL** o altri valori. Tenere presente che **NULL** non equivale a vuoto.  
   
- Per ulteriori informazioni sull'interfaccia del rowset dello schema OLE DB, vedere l'interfaccia [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) in OLE DB Programmer's Reference \(informazioni in lingua inglese\).  
+ Per ulteriori informazioni sull'interfaccia di set di righe dello schema OLE DB, vedere il [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) interfaccia OLE DB Programmer riferimento.  
   
- Per informazioni su come possono essere utilizzati i metodi **IDBSchemaRowset** dai consumer, vedere [Ottenimento di metadati con rowset dello schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
+ Per informazioni su come usare i consumer **IDBSchemaRowset** metodi, vedere [recupero di metadati con i rowset dello Schema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).  
   
- Per un esempio di provider in grado di supportare i rowset dello schema, vedere [UpdatePV](http://msdn.microsoft.com/it-it/c8bed873-223c-4a7d-af55-f90138c6f38f).  
+ Per un esempio di un provider che supporta i set di righe dello schema, vedere il [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Tecniche avanzate del provider](../../data/oledb/advanced-provider-techniques.md)

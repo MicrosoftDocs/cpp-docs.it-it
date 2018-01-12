@@ -1,71 +1,73 @@
 ---
-title: "Classe CNoAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CNoAccessor"
-  - "CNoAccessor"
-  - "ATL.CNoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoAccessor (classe)"
+title: Classe CNoAccessor | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CNoAccessor
+- CNoAccessor
+- ATL.CNoAccessor
+dev_langs: C++
+helpviewer_keywords: CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 799fe151b22748da25901139a5aefe67460b2484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CNoAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Può essere utilizzato come argomento di modello \(`TAccessor`\) per le classi modello, ad esempio `CCommand` e `CTable`, che richiedono un argomento della classe di funzioni di accesso.  
+# <a name="cnoaccessor-class"></a>Classe CNoAccessor
+Può essere utilizzato come argomento di modello (`TAccessor`) per le classi di modello, ad esempio `CCommand` e `CTable`, che richiedono un argomento di classe della funzione di accesso.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CNoAccessor  
 ```  
   
-## Note  
- Utilizzare `CNoAccessor` come argomento di modello quando non si desidera che la classe per supportare i parametri o colonne di output.  
+## <a name="remarks"></a>Note  
+ Utilizzare `CNoAccessor` come argomento di modello, quando non si desidera che la classe per supportare i parametri o colonne di output.  
   
- `CNoAccessor` implementa i metodi stub, ognuno dei quali corrispondono agli altri metodi della classe di funzioni di accesso:  
+ `CNoAccessor`implementa i metodi stub seguenti, ognuna delle quali corrispondono agli altri metodi di classe della funzione di accesso:  
   
--   **BindColumns** \- colonne di associazioni alle funzioni di accesso.  
+-   **BindColumns** -associa le colonne per le funzioni di accesso.  
   
--   `BindParameters` \- associazioni i parametri creati alle colonne.  
+-   `BindParameters`-Associa i parametri creati per le colonne.  
   
--   **Associa** \- Crea le associazioni.  
+-   **Associare** -consente di creare associazioni.  
   
--   **Chiudi** \- Chiude la funzione di accesso.  
+-   **Chiudi** -chiude la funzione di accesso.  
   
--   `ReleaseAccessors` \- versioni le funzioni di accesso create dalla classe.  
+-   `ReleaseAccessors`-Rilascia le funzioni di accesso creati dalla classe.  
   
--   `FreeRecordMemory` \- libera tutte le colonne del record corrente che devono essere rilasciati.  
+-   `FreeRecordMemory`-Consente di liberare tutte le colonne nel record corrente che devono essere liberate.  
   
--   `GetColumnInfo` \- ottiene le informazioni di colonna dal rowset apri.  
+-   `GetColumnInfo`-Ottiene informazioni sulle colonne dal set di righe aperto.  
   
--   `GetNumAccessors` \- recupera il numero delle funzioni di accesso create dalla classe.  
+-   `GetNumAccessors`: Recupera il numero di funzioni di accesso creato dalla classe.  
   
--   `IsAutoAccessor` \- restituisce true se automaticamente i dati vengono recuperati tramite la funzione di accesso durante l'operazione di spostamento.  
+-   `IsAutoAccessor`-Restituisce true se i dati vengono recuperati automaticamente per la funzione di accesso durante un'operazione di spostamento.  
   
--   `GetHAccessor` \- recupera l'handle della funzione di accesso di una funzione di accesso specificata.  
+-   `GetHAccessor`: Recupera l'handle della funzione di accesso di una funzione di accesso specificato.  
   
--   `GetBuffer` \- recupera il puntatore nel buffer del segnalibro.  
+-   `GetBuffer`: Recupera il puntatore al buffer di segnalibro.  
   
--   **NoBindOnNullRowset** \- impedisce l'associazione dati sui rowset vuoti.  
+-   **NoBindOnNullRowset** -impedisce l'associazione di dati nel set di righe vuoto.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

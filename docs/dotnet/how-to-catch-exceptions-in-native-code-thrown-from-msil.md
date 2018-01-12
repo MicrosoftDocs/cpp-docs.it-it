@@ -1,35 +1,38 @@
 ---
-title: "Procedura: rilevare eccezioni nel codice nativo generate da MSIL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rilevamento di eccezioni, generato da MSIL"
-  - "eccezioni, intercettazione"
-  - "MSIL, rilevamento di eccezioni nel codice nativo"
+title: 'Procedura: intercettare le eccezioni nel codice nativo generate da MSIL | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exceptions, catching
+- catching exceptions, thrown from MSIL
+- MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a740a94caf1e619e768037e15f4955c5a94cb60b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: rilevare eccezioni nel codice nativo generate da MSIL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nel codice nativo, è possibile rilevare l'eccezione nativa di C\+\+ rispetto al codice MSIL.  È possibile intercettare le eccezioni CLR con `__try` e `__except`.  
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Procedura: rilevare eccezioni nel codice nativo generate da MSIL
+Nel codice nativo, è possibile intercettare le eccezioni C++ native da codice MSIL.  È possibile intercettare le eccezioni di Common Language Runtime con `__try` e `__except`.  
   
- Per ulteriori informazioni, vedere [Gestione strutturata delle eccezioni](../cpp/structured-exception-handling-c-cpp.md) e [Gestione delle eccezioni C\+\+](../cpp/cpp-exception-handling.md).  
+ Per ulteriori informazioni, vedere [strutturata delle eccezioni (C/C++)](../cpp/structured-exception-handling-c-cpp.md) e [gestione delle eccezioni C++](../cpp/cpp-exception-handling.md).  
   
-## Esempio  
- Nell'esempio seguente viene definito un form con due funzioni, una che genera un'eccezione nativa e un altro che genera un'eccezione MSIL.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente definisce un modulo con due funzioni, una che ha generato un'eccezione nativa e un'altra che genera un'eccezione di MSIL.  
   
 ```  
 // catch_MSIL_in_native.cpp  
@@ -43,8 +46,8 @@ void Test2() {
 }  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene definito un form che rileva un controllo nativo e l'eccezione MSIL.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente definisce un modulo che memorizza nella cache un nativa e l'eccezione MSIL.  
   
 ```  
 // catch_MSIL_in_native_2.cpp  
@@ -79,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **errore**  
-**è stata rilevata un'eccezione**   
-## Vedere anche  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+```Output  
+error  
+caught an exception  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle eccezioni](../windows/exception-handling-cpp-component-extensions.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25eb1627f4024fd18dbf0d22114c2e762ab8b897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c93b2d010feb6be0160ac3253890ad7ffaa168a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="propertyinfoentryvalue"></a>PROPERTY_INFO_ENTRY_VALUE
 Rappresenta una proprietà specifica in un insieme di proprietà.  
@@ -37,7 +40,7 @@ dwPropID
  *dwPropID*  
  [in] Un valore [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) che può essere usato unitamente all'insieme di proprietà GUID per identificare una proprietà.  
   
- *value*  
+ *valore*  
  [in] Il valore della proprietà di tipo `DWORD`.  
   
 ## <a name="remarks"></a>Note  

@@ -1,48 +1,51 @@
 ---
-title: "Procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshalling dei dati [C++], callback e delegati"
-  - "interoperabilità [C++], callback e delegati"
-  - "marshalling [C++], callback e delegati"
-  - "platform invoke [C++], callback e delegati"
+title: 'Procedura: effettuare il marshalling puntatori a funzione utilizzando PInvoke | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- interop [C++], callbacks and delegates
+- platform invoke [C++], callbacks and delegates
+- marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: effettuare il marshalling di puntatori a funzione utilizzando PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come è possibile utilizzare delegati gestiti anziché puntatori a funzione in caso di interoperabilità con funzioni non gestite mediante le funzionalità P\/Invoke di .NET Framework.  Se possibile, tuttavia, si consiglia ai programmatori Visual C\+\+ di utilizzare in alternativa le funzionalità di interoperabilità di C\+\+, poiché P\/Invoke fornisce un supporto limitato per la segnalazione degli errori in fase di compilazione, non è indipendente dai tipi e può risultare difficile da implementare.  Se l'API non gestita viene fornita come DLL e il codice sorgente non è disponibile, P\/Invoke è l'unica opzione.  In caso contrario, vedere i seguenti argomenti:  
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procedura: Effettuare il marshalling di puntatori a funzione utilizzando PInvoke
+In questo argomento viene gestiti come delegati può essere utilizzato al posto di puntatori a funzione quando interagisce con funzioni non gestite tramite le funzionalità di .NET Framework P/Invoke. Tuttavia, i programmatori Visual C++ si consiglia invece di utilizzare le funzionalità di interoperabilità C++ (sempre) poiché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere gli argomenti seguenti:  
   
--   [Utilizzo delle funzionalità di interoperabilità C\+\+ \(PInvoke implicito\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [Procedura: effettuare il marshalling di callback e delegati utilizzando l'interoperabilità C\+\+](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [Procedura: Effettuare il marshalling di callback e delegati tramite l'interoperabilità C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
- Le API non gestite che accettano puntatori a funzione come argomenti possono essere chiamate da codice gestito mediante un delegato gestito anziché un puntatore alla funzione nativa.  Il compilatore effettua automaticamente il marshalling del delegato alle funzioni non gestite convertendolo in un puntatore a funzione e inserisce il codice necessario per le transizioni tra codice gestito e codice non gestito.  
+ API non gestite che accettano puntatori alle funzioni come argomenti possono essere chiamati da codice gestito con un delegato gestito al posto del puntatore a funzione nativo. Il compilatore automaticamente il marshalling del delegato a funzioni non gestite come un puntatore a funzione e inserisce il codice di transizione gestiti/non gestiti non necessario.  
   
-## Esempio  
- Il codice riportato di seguito è costituito da un modulo gestito e un modulo non gestito.  Il modulo non gestito è una DLL che definisce una funzione denominata TakesCallback che accetta un puntatore a funzione.  L'indirizzo viene utilizzato per eseguire la funzione.  
+## <a name="example"></a>Esempio  
+ Il codice seguente è costituito da una funzione non gestita e un modulo gestito. Il modulo non gestito è una DLL che definisce una funzione denominata TakesCallback che accetta un puntatore a funzione. Questo indirizzo viene utilizzato per eseguire la funzione.  
   
- Il modulo gestito definisce un delegato che viene convertito per il codice nativo in un puntatore a funzione e utilizza l'attributo <xref:System.Runtime.InteropServices.DllImportAttribute> per esporre la funzione TakesCallback nativa al codice gestito.  Nella funzione Main viene creata un'istanza del delegato che viene quindi passata alla funzione TakesCallback.  L'output del programma dimostra che questa funzione viene eseguita dalla funzione TakesCallback nativa.  
+ Il modulo gestito definisce un delegato viene sottoposto a marshalling per il codice nativo in un puntatore a funzione e che utilizza il <xref:System.Runtime.InteropServices.DllImportAttribute> attributo per esporre la funzione TakesCallback nativa al codice gestito. Nella funzione main, un'istanza del delegato è creata e passata alla funzione TakesCallback. L'output del programma viene illustrato che questa funzione viene eseguita dalla funzione TakesCallback nativa.  
   
- La funzione gestita elimina la Garbage Collection per il delegato gestito per impedire che la Garbage Collection di .NET Framework esegua una rilocazione del delegato mentre è in esecuzione la funzione nativa.  
+ La funzione gestita Elimina la garbage collection per il delegato gestito impedire l'operazione di garbage collection di .NET Framework esegua la rilocazione di delegato mentre viene eseguita la funzione nativa.  
   
- Il modulo gestito è compilato con \/clr, ma funziona anche \/clr:pure.  
+ Il modulo gestito viene compilato con /clr, ma con /clr: pure funziona anche. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
-```  
+```cpp  
 // TraditionalDll5.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -66,7 +69,7 @@ int TakesCallback(CALLBACK fp, int n) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalDelegate.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -94,7 +97,7 @@ int main() {
 }  
 ```  
   
- Nessuna parte della DLL viene esposta al codice gestito utilizzando la normale direttiva \#include.  In realtà, l'accesso alla DLL viene eseguito solo in fase di esecuzione. Di conseguenza, gli eventuali problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
+ Si noti che nessuna parte della DLL viene esposto al codice gestito utilizzando la normale #include (direttiva). In effetti, la DLL di accesso viene eseguita in fase di esecuzione, problemi con le funzioni importate con <xref:System.Runtime.InteropServices.DllImportAttribute> non verranno rilevati in fase di compilazione.  
   
-## Vedere anche  
- [Utilizzo esplicito di PInvoke in C\+\+ \(attributo DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso esplicito di PInvoke in C++ (attributo DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

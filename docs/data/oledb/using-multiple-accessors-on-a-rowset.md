@@ -1,59 +1,62 @@
 ---
-title: "Utilizzo di pi&#249; funzioni di accesso per un rowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "funzioni di accesso [C++], rowset"
-  - "BEGIN_ACCESSOR (macro)"
-  - "BEGIN_ACCESSOR (macro), funzioni di accesso multiple"
-  - "rowset [C++], funzioni di accesso multiple"
+title: "Utilizzo di più funzioni di accesso per un Rowset | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR macro
+- BEGIN_ACCESSOR macro, multiple accessors
+- rowsets [C++], multiple accessors
+- accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: eda994a3b1312c4721a185c3f4a39938df1272a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Utilizzo di pi&#249; funzioni di accesso per un rowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-L'utilizzo di più funzioni di accesso è necessario in tre scenari fondamentali.  
+# <a name="using-multiple-accessors-on-a-rowset"></a>Utilizzo di più funzioni di accesso per un rowset
+Esistono tre scenari di base in cui è necessario utilizzare più funzioni di accesso:  
   
--   **Più rowset di lettura\/scrittura.** In questo scenario è presente una tabella con una chiave primaria.  Di questa si vorrà essere in grado di leggere tutte le colonne di una riga, compresa la colonna di chiave primaria,  e di scrivere dati in tutte le colonne tranne in quella di chiave primaria, per la quale non è consentita la scrittura.  In questo caso, è necessario impostare due funzioni di accesso:  
+-   **Più set di righe di lettura/scrittura.** In questo scenario, si dispone di una tabella con una chiave primaria. Si desidera essere in grado di leggere tutte le colonne nella riga, inclusa la chiave primaria. È in grado di scrivere dati in tutte le colonne ad eccezione della chiave primaria (perché è possibile scrivere la colonna chiave primaria). In questo caso, configurare due funzioni di accesso:  
   
-    -   La funzione di accesso 0, contenente tutte le colonne.  
+    -   Funzione di accesso 0 contiene tutte le colonne.  
   
-    -   La funzione di accesso 1, contenente tutte le colonne eccetto la colonna di chiave primaria.  
+    -   Funzione di accesso 1 contiene tutte le colonne ad eccezione della chiave primaria.  
   
--   **Prestazioni.** In questo scenario, una o più colonne contengono una grande quantità di dati, ad esempio grafica, suoni o file video.  Con molta probabilità, si vorrà evitare di recuperare le colonne contenenti le maggiori quantità di dati ogni volta che ci si sposta su una riga, per non rallentare le prestazioni dell'applicazione.  
+-   **Prestazioni.** In questo scenario, una o più colonne contengono una grande quantità di dati, ad esempio, immagini, audio o video file. Ogni volta che si sposta in una riga, probabile che non si desidera recuperare la colonna con il file di dati di grandi dimensioni, poiché in tal modo rallentare le prestazioni dell'applicazione.  
   
-     È possibile impostare due funzioni di accesso distinte, la prima delle quali contiene tutte le colonne, tranne quelle in cui sono presenti grandi quantitativi di dati, e ne recupera automaticamente i dati. Essa è denominata funzione di accesso automatica.  La seconda funzione di accesso recupera solo le colonne che contengono grandi quantitativi di dati, ma non in modo automatico.  È possibile aggiornare o recuperare le grandi quantità di dati mediante altri metodi e su richiesta.  
+     È possibile configurare le funzioni di accesso separati in cui la prima delle quali contiene tutte le colonne ad eccezione di quello con grandi quantità di dati e recupera dati da queste colonne automaticamente. Questa è la funzione di accesso automatico. La seconda funzione di accesso recupera solo la colonna contenente i dati di grandi dimensioni, ma non è recuperare dati da questa colonna automaticamente. Aggiornare o recuperare i dati di grandi dimensioni su richiesta, è possibile avere altri metodi.  
   
-    -   La funzione di accesso 0 è una funzione di accesso automatica e recupera tutte le colonne tranne quelle contenenti grandi quantitativi di dati.  
+    -   Funzione di accesso 0 è automatica; Recupera tutte le colonne ad eccezione di quello con dati di grandi dimensioni.  
   
-    -   La funzione di accesso 1 non è automatica e recupera le colonne contenenti grandi quantitativi di dati.  
+    -   Funzione di accesso 1 non è una funzione di accesso automatico. Recupera la colonna con dati di grandi dimensioni.  
   
-     Utilizzare l'argomento auto per specificare se la funzione di accesso è automatica.  
+     Utilizzare l'argomento auto per specificare se la funzione di accesso è una funzione di accesso automatico.  
   
--   **Più colonne contenenti ISequentialStream.** In questo scenario sono presenti più colonne contenenti dati `ISequentialStream`.  Tuttavia, ogni funzione di accesso è limitata a un solo flusso di dati `ISequentialStream`.  Per risolvere questo problema, impostare più funzioni di accesso, ognuna contenente un puntatore a `ISequentialStream`.  
+-   **Più colonne ISequentialStream.** In questo scenario, si dispone di più di una colonna contenente `ISequentialStream` dati. Tuttavia, ogni funzione di accesso è limitato a una `ISequentialStream` flusso di dati. Per risolvere questo problema, impostare diverse funzioni di accesso, ognuna delle quali contiene uno `ISequentialStream` puntatore.  
   
- In genere, per creare le funzioni di accesso si utilizzano le macro [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) e [END\_ACCESSOR](../../data/oledb/end-accessor.md).  È anche possibile utilizzare l'attributo [db\_accessor](../../windows/db-accessor.md). Per ulteriori informazioni sulle funzioni di accesso, vedere [Record utente](../../data/oledb/user-records.md). Le macro o l'attributo specificano se la funzione di accesso è o meno una funzione di accesso automatica.  
+ In genere creare funzioni di accesso usando il [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) e [END_ACCESSOR](../../data/oledb/end-accessor.md) macro. È inoltre possibile utilizzare il [db_accessor](../../windows/db-accessor.md) attributo. (Le funzioni di accesso sono descritte dettagliatamente in [record utente](../../data/oledb/user-records.md).) Le macro o l'attributo specificare se una funzione di accesso è una funzione di accesso non automatica o automatica:  
   
--   In una funzione di accesso automatica i metodi di spostamento quali **MoveFirst**, `MoveLast`, `MoveNext` e `MovePrev` recuperano automaticamente i dati da tutte le colonne specificate.  La funzione di accesso 0 deve essere la funzione di accesso automatica.  
+-   In una funzione di accesso automatico, spostare i metodi, ad esempio **MoveFirst**, `MoveLast`, `MoveNext`, e `MovePrev` recuperare dati per automaticamente tutte le colonne specificate. Funzione di accesso 0 deve essere una funzione di accesso automatico.  
   
--   In una funzione di accesso non automatica, perché sia effettuato il recupero è necessario chiamare in modo esplicito metodi quali **Update**, **Insert**, **Fetch** o **Delete**.  Negli scenari sopra illustrati non è consigliabile recuperare tutte le colonne per ogni spostamento.  È invece possibile posizionare una o più colonne in una funzione di accesso distinta e impostare questa come funzione di accesso non automatica, come indicato più avanti.  
+-   In una funzione di accesso non automatico, il recupero non si verifica fino a quando non si chiama in modo esplicito un metodo, ad esempio **aggiornamento**, **inserire**, **recuperare**, o **eliminare**. Negli scenari descritti sopra, è possibile evitare di recuperare tutte le colonne per ogni spostamento. È possibile inserire una o più colonne in una funzione di accesso separato e assicurarsi che una funzione di accesso non automatiche, come illustrato di seguito.  
   
- Nell'esempio che segue vengono utilizzate più funzioni di accesso per leggere e scrivere nella tabella dei processi del database SQL Server denominato pubs.  Si tratta della modalità di utilizzo di più funzioni di accesso più comune, descritta precedentemente nello scenario relativo a più rowset di lettura\/scrittura.  
+ L'esempio seguente usa più funzioni di accesso in lettura e scrittura alla tabella del database pubs SQL Server utilizzando le funzioni di accesso più processi. Questo è l'utilizzo più comune di più funzioni di accesso; vedere lo scenario "set di righe più di lettura/scrittura" sopra.  
   
- La classe di record utente  imposta due funzioni di accesso: la funzione di accesso 0 contenente solo la colonna di chiave primaria, ID, e la funzione di accesso 1 contenente le altre colonne.  
+ Classe di record utente è come indicato di seguito. Imposta due funzioni di accesso: funzione di accesso 0 contiene solo la colonna chiave primaria (ID) e funzione di accesso 1 contiene altre colonne.  
   
 ```  
 class CJobs  
@@ -88,7 +91,7 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
- Il codice principale  La chiamata a `MoveNext` consente di recuperare automaticamente i dati dall'ID della colonna di chiave primaria tramite la funzione di accesso 0.  Si noti il modo in cui, verso la fine, il metodo **Insert** utilizza la funzione di accesso 1 per evitare di scrivere nella colonna di chiave primaria.  
+ Il codice principale è il seguente. La chiamata `MoveNext` recupera automaticamente i dati dall'ID della colonna chiave primaria utilizzando funzioni di accesso 0. Si noti come **inserire** metodo nella funzione di accesso di fine utilizza 1 per evitare di scrivere nella colonna chiave primaria.  
   
 ```  
 int main(int argc, char* argv[])  
@@ -165,6 +168,6 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## Vedere anche  
- [Utilizzo delle funzioni di accesso](../../data/oledb/using-accessors.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzando funzioni di accesso](../../data/oledb/using-accessors.md)   
  [Record utente](../../data/oledb/user-records.md)

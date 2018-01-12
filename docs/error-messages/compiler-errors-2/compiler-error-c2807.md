@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2807
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2807
+f1_keywords: C2807
+dev_langs: C++
+helpviewer_keywords: C2807
 ms.assetid: bd7a207a-f379-4de6-8ee8-c7cab78b3480
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a4d8954b74983ed790bdcf3d559cc23d6c38751c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5fbea2518dabf2851ff6d620095c898f7a2a35c6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2807"></a>Errore del compilatore C2807
 il secondo parametro della forma suffissa di 'operator operator' deve essere 'int'  

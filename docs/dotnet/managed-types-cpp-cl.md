@@ -16,16 +16,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 058c2c2c2c8c54a0c4c7d290326c4af453c73d05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="managed-types-ccl"></a>Tipi gestiti (C++/CL)
 La sintassi per la dichiarazione di tipi gestiti e per la creazione e utilizzo di oggetti di questi tipi è stato notevolmente modificata dalle estensioni gestite per C++ a Visual C++. Questa operazione è stata eseguita per promuovere l'integrazione nel sistema di tipi standard ISO C++. Queste modifiche sono illustrate in dettaglio nelle sezioni seguenti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Dichiarazione di un tipo classe gestito](../dotnet/declaration-of-a-managed-class-type.md)  
  Viene illustrato come dichiarare un oggetto gestito `class`, `struct`, o `interface`.  
   

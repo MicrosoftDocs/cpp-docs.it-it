@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02d5b302bd8407109bf845d80de8803ff0eb9353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f15be890b69f559e304fdab39e53a696cbb7c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-mfc-data-access"></a>Record (accesso ai dati MFC)
 Un record è una raccolta di dati che riguardano una singola entità, ad esempio un account o un cliente, archiviato in una tabella, ovvero in una riga della tabella. Un record è costituito da un gruppo di colonne contigue, dette anche campi, che contengono dati di vario tipo. In MFC un set di record selezionati da un'origine dati, definito spesso anche set di risultati secondo la terminologia dei database, viene denominato recordset. Per ulteriori informazioni, vedere [Recordset (ODBC)](../data/odbc/recordset-odbc.md).  

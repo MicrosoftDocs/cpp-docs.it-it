@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2555
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2555
+f1_keywords: C2555
+dev_langs: C++
+helpviewer_keywords: C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c66b464ac38a46716fbed972939feef1273ad03d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 64f66bf80e8e4b6ba7477691cb9675cec347807d
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2555"></a>Errore del compilatore C2555
 'class1::function1': funzione virtual in override restituito di tipo covariante e differisce non da 'classe2:: funzione2'  

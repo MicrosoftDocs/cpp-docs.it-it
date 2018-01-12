@@ -1,51 +1,53 @@
 ---
-title: "ISessionPropertiesImpl::GetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl::GetProperties"
-  - "ISessionPropertiesImpl.GetProperties"
-  - "GetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetProperties (metodo)"
+title: 'Isessionpropertiesimpl:: GetProperties | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ISessionPropertiesImpl::GetProperties
+- ISessionPropertiesImpl.GetProperties
+- GetProperties
+dev_langs: C++
+helpviewer_keywords: GetProperties method
 ms.assetid: 48726c2a-9599-4fc5-9940-a932faef91ab
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5fa22fb3045bb8ec96c21cd8e92288989bbab798
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# ISessionPropertiesImpl::GetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Restituisce l'elenco delle proprietà del gruppo di proprietà di **DBPROPSET\_SESSION** che attualmente impostato nella sessione.  
+# <a name="isessionpropertiesimplgetproperties"></a>ISessionPropertiesImpl::GetProperties
+Restituisce l'elenco delle proprietà di **DBPROPSET_SESSION** gruppo di proprietà impostate nella sessione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      STDMETHOD(GetProperties)(   
-   ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets    
+      STDMETHOD(GetProperties)(   
+   ULONG cPropertyIDSets,   
+   const DBPROPIDSET rgPropertyIDSets[],   
+   ULONG * pcPropertySets,   
+   DBPROPSET ** prgPropertySets    
 );  
 ```  
   
-#### Parametri  
- Vedere [ISessionProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723643.aspx)*in OLE DB Programmer's Reference*.  
+#### <a name="parameters"></a>Parametri  
+ Vedere [ISessionProperties::GetProperties](https://msdn.microsoft.com/en-us/library/ms723643.aspx) nel *di riferimento per programmatori OLE DB*.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)   
  [ISessionPropertiesImpl::SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)

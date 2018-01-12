@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 500e5b5e6014b7141c000a4e453341ceb5e822d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sealing-a-virtual-function"></a>Utilizzo di una funzione virtuale sealed
 La sintassi per l'utilizzo di una funzione virtuale sealed è stata modificata dalle estensioni gestite per C++ in Visual C++.  

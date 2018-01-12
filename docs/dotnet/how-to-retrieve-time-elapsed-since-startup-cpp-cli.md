@@ -1,35 +1,37 @@
 ---
-title: "Procedura: recuperare il tempo trascorso dall&#39;avvio (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "contatori, tempo trascorso"
-  - "iniziali"
-  - "iniziali, tempo trascorso da"
-  - "conteggi di graduazione"
-  - "ora, trascorso dall'avvio"
+title: 'Procedura: recuperare il tempo trascorso dall''avvio (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- time, elapsed since startup
+- counters, elapsed time
+- startup, time elapsed since
+- tick counts
+- startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: recuperare il tempo trascorso dall&#39;avvio (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Nell'esempio di codice riportato di seguito viene illustrato come determinare il numero di scatti \(tick\), ovvero il numero di millisecondi trascorsi dall'avvio di Windows.  Il valore viene memorizzato nel membro <xref:System.Environment.TickCount%2A?displayProperty=fullName> e, poiché si tratta di un valore a 32 bit, viene reimpostato su zero approssimativamente ogni 24,9 giorni.  
+# <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Procedura: recuperare il tempo trascorso dall'avvio (C++/CLI)
+Esempio di codice riportato di seguito viene illustrato come determinare il numero di segni di graduazione o numero di millisecondi trascorsi da Windows è stato avviato. Questo valore viene archiviato nel <xref:System.Environment.TickCount%2A?displayProperty=fullName> membro e, poiché si tratta di un valore a 32 bit, viene reimpostato su zero approssimativamente ogni 24,9 giorni.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // startup_time.cpp  
@@ -54,6 +56,6 @@ int main( )
 }  
 ```  
   
-## Vedere anche  
- [Operazioni Windows](../dotnet/windows-operations-cpp-cli.md)   
- [Programmazione .NET con C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [Operazioni Windows (C + c++ /CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Programmazione .NET con C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,35 +1,38 @@
 ---
-title: "Delegati ed eventi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delegate (parola chiave)"
-  - "__event (parola chiave) [C++]"
-  - "delegate (parola chiave) [C++]"
-  - "delegati [C++], aggiornamento dalle estensioni gestite per C++"
-  - "event (parola chiave) [C++]"
-  - "eventi (C++), aggiornamento dalle estensioni gestite per C++"
+title: Delegati ed eventi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __event keyword [C++]
+- delegate keyword [C++]
+- delegates [C++], upgrading from Managed Extensions for C++
+- __delegate keyword
+- events [C++], upgrading from Managed Extensions for C++
+- event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e332c24d30d0439705b6be5e0748518f6537478d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Delegati ed eventi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Il modo in cui vengono dichiarati delegati ed eventi è stato modificato in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="delegates-and-events"></a>Delegati ed eventi
+La modalità per dichiarare i delegati ed eventi è cambiato da estensioni gestite per C++ a Visual C++.  
   
- Il doppio carattere di sottolineatura non è più necessario, come illustrato nell'esempio seguente.  Di seguito è riportato un codice di esempio nelle estensioni gestite:  
+ Doppio carattere di sottolineatura non è più necessario, come illustrato nell'esempio seguente. Ecco un codice di esempio nelle estensioni gestite:  
   
 ```  
 __delegate void ClickEventHandler(int, double);  
@@ -41,7 +44,7 @@ __gc class EventSource {
 };  
 ```  
   
- Lo stesso codice nella nuova sintassi ha l'aspetto seguente:  
+ Lo stesso codice nella nuova sintassi è simile al seguente:  
   
 ```  
 delegate void ClickEventHandler( int, double );  
@@ -53,9 +56,9 @@ ref class EventSource {
 };  
 ```  
   
- Eventi e delegati sono tipi di riferimento, come risulta chiaro nella nuova sintassi grazie all'utilizzo dell'accento circonflesso \(`^`\).  Gli eventi supportano una sintassi di dichiarazione esplicita e il formato semplice nel codice precedente.  Nella forma esplicita, l'utente specifica i metodi `add`, `raise` e `remove` associati all'evento. Sono obbligatori soltanto i metodi `add` e `remove`. Il metodo `raise` è facoltativo.  
+ Gli eventi e delegati sono tipi di riferimento, risulta chiaro nella nuova sintassi grazie all'uso di una forma di accento circonflesso (`^`).  Gli eventi supportano una sintassi di dichiarazione esplicita sia il formato semplice nel codice precedente. Nella forma esplicita, l'utente specifica il `add`, `raise`, e `remove` metodi associati all'evento. (Solo il `add` e `remove` sono obbligatori metodi; `raise` è facoltativo.)  
   
- Nelle estensioni gestite, se si forniscono questi metodi, non è necessario fornire una dichiarazione di evento esplicita, ma è tuttavia necessario decidere un nome per l'evento che non è presente.  Ogni metodo viene specificato nel formato `add_EventName`, `raise_EventName` e `remove_EventName`, come nell'esempio riportato di seguito tratto dalla specifica delle estensioni gestite:  
+ Nelle estensioni gestite, se si forniscono questi metodi, non si forniscono anche una dichiarazione di evento esplicita, ma è necessario scegliere un nome per l'evento che non è presente. Ogni metodo viene specificato nel formato `add_EventName`, `raise_EventName`, e `remove_EventName`, come nell'esempio seguente, tratto dalla specifica delle estensioni gestite:  
   
 ```  
 // explicit implementations of add, remove, raise  
@@ -88,7 +91,7 @@ protected:
 };  
 ```  
   
- Nella nuova sintassi la dichiarazione risulta semplificata, come illustrato nella conversione riportata di seguito.  Un evento specifica i due o tre metodi tra parentesi graffe immediatamente dopo la dichiarazione dell'evento e il tipo delegato associato, come illustrato di seguito:  
+ La nuova sintassi semplifica la dichiarazione, come illustrato di seguito la conversione seguente. Un evento specifica due o tre metodi racchiuso tra parentesi graffe e posizionato immediatamente dopo la dichiarazione dell'evento e il tipo di delegato associato, come illustrato di seguito:  
   
 ```  
 public delegate void f( int );  
@@ -130,7 +133,7 @@ public:
 };  
 ```  
   
-## Vedere anche  
- [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [delegato](../windows/delegate-cpp-component-extensions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni di membro all'interno di una classe o interfaccia (C + c++ /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [delegato (estensioni del componente C++)](../windows/delegate-cpp-component-extensions.md)   
  [event](../windows/event-cpp-component-extensions.md)

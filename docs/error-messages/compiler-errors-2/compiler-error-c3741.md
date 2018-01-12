@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3741
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3741
+f1_keywords: C3741
+dev_langs: C++
+helpviewer_keywords: C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 34b9cb5e8bc9377efb7c04593af825eb82cf5bae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: edbdc98c4591b565edcbd0ff5eb484a115bff16e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3741"></a>Errore del compilatore C3741
 'class': deve essere una coclasse quando il parametro 'layout_dependent' di event_receiver = true  

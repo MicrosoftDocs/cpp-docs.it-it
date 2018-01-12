@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3767
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3767
+f1_keywords: C3767
+dev_langs: C++
+helpviewer_keywords: C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 731327af2c4c220a3779ddce007c6544db0a3128
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
-ms.contentlocale: it-it
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3767"></a>Errore del compilatore C3767
 funzione o funzioni candidate 'function' non è accessibile  
@@ -87,42 +83,4 @@ ref class Der : public Base {
 };  
 ```  
   
- In Visual C++ .NET 2002, il compilatore modifica la modalità di che ricerca dei simboli. In alcuni casi, verrà cercato automaticamente i simboli in uno spazio dei nomi specificato. A questo punto, Usa la ricerca dipendente dall'argomento.  
-  
- L'esempio seguente genera l'errore C3767:  
-  
-```  
-// C3767e.cpp  
-namespace N {  
-   class C {  
-      friend void FriendFunc() {}  
-      friend void AnotherFriendFunc(C* c) {}  
-   };  
-}  
-  
-int main() {  
-   using namespace N;  
-   FriendFunc();   // C3767 error  
-   C* pC = new C();  
-   AnotherFriendFunc(pC);   // found via argument-dependent lookup  
-}  
-```  
-  
- Per il codice sia valido in Visual C++ .NET 2003 e Visual C++ .NET 2002, dichiarare la funzione friend nell'ambito della classe e definirla nell'ambito dello spazio dei nomi:  
-  
-```  
-// C3767f.cpp  
-class MyClass {  
-   int m_private;  
-   friend void func();  
-};  
-  
-void func() {  
-   MyClass s;  
-   s.m_private = 0;  
-}  
-  
-int main() {  
-   func();  
-}  
-```
+ 

@@ -19,28 +19,31 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2748756a4355b8f0befcf1287f8f30f6ece8ef84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: abb869becff4f2a4af9d489736c21b66674cc112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="session-object-interfaces"></a>Interfacce dell'oggetto Session
 Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto di sessione.  
   
 |Interfaccia|Obbligatorio?|Implementata dai modelli OLE DB?|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|Obbligatorio|Sì|  
-|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|Obbligatorio|Sì|  
-|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|Obbligatorio|Sì|  
+|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|Obbligatorio|Yes|  
+|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|Obbligatorio|Yes|  
+|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|Obbligatorio|Yes|  
 |[IAlterIndex](https://msdn.microsoft.com/en-us/library/ms714943.aspx)|Facoltativo|No|  
 |[IAlterTable](https://msdn.microsoft.com/en-us/library/ms719764.aspx)|Facoltativo|No|  
 |[IBindResource](https://msdn.microsoft.com/en-us/library/ms714936.aspx)|Facoltativo|No|  
 |[ICreateRow](https://msdn.microsoft.com/en-us/library/ms716832.aspx)|Facoltativo|No|  
-|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Facoltativo|Sì|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Facoltativo|Sì|  
+|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Facoltativo|Yes|  
+|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Facoltativo|Yes|  
 |[IIndexDefinition](https://msdn.microsoft.com/en-us/library/ms711593.aspx)|Facoltativo|No|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Facoltativo|Sì|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Facoltativo|Yes|  
 |[ITableCreation](https://msdn.microsoft.com/en-us/library/ms713639.aspx)|Facoltativo|No|  
 |[ITableDefinition](https://msdn.microsoft.com/en-us/library/ms714277.aspx)|Facoltativo|No|  
 |[ITableDefinitionWithConstraints](https://msdn.microsoft.com/en-us/library/ms720947.aspx)|Facoltativo|No|  

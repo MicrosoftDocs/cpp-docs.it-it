@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::SetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor::SetString"
-  - "CDynamicStringAccessor.SetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetString (metodo)"
+title: ':: GetString | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
+dev_langs: C++
+helpviewer_keywords: SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::SetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 Imposta i dati specificati di colonna come stringa.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 HRESULT SetString(  
@@ -44,26 +46,26 @@ HRESULT SetString(
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `nColumn`  
- \[in\] numero di colonne.  I numeri di colonne iniziano con 1.  Il valore speciale di 0 si riferisce alla colonna bookmark, se disponibile.  
+ [in] Numero di colonna. Numeri di colonna iniziano con 1. Il valore speciale 0 si intende la colonna del segnalibro, se presente.  
   
  `pColumnName`  
- \[in\] puntatore A una stringa di caratteri che contiene il nome della colonna.  
+ [in] Puntatore a una stringa di caratteri che contiene il nome della colonna.  
   
  `data`  
- \[in\] puntatore Ai dati in formato stringa da scrivere nella colonna specificata.  
+ [in] Puntatore a dati di tipo stringa da scrivere nella colonna specificata.  
   
-## Valore restituito  
- Un puntatore al valore stringa alla quale per impostare la colonna specificata.  Il valore è di tipo `BaseType`, che sono `CHAR`  o `WCHAR` a seconda che `_UNICODE` è definito o meno.  
+## <a name="return-value"></a>Valore restituito  
+ Puntatore al valore stringa per cui impostare la colonna specificata. Il valore è di tipo `BaseType`, che sarà `CHAR` o `WCHAR` a seconda che `_UNICODE` è definito o non definito.  
   
-## Note  
- La seconda forma di override accetta il nome della colonna come una stringa ANSI e il terzo form override accetta il nome della colonna come stringhe Unicode.  
+## <a name="remarks"></a>Note  
+ Il secondo eseguire l'override modulo accetta il nome della colonna come una stringa ANSI e la terza forma accetta il nome della colonna come stringa Unicode.  
   
- Se `_SECURE_ATL` viene definito con un valore diverso da zero, un errore di asserzione runtime verrà generata se la stringa di `data` di input è maggiore della lunghezza massima consentita della colonna di dati a cui si fa riferimento.  In caso contrario, la stringa di input viene troncata se è maggiore della lunghezza massima consentita.  
+ Se `_SECURE_ATL` è definito per un valore diverso da zero, verrà generato un errore di asserzione di runtime se l'input `data` stringa è più lunga la lunghezza massima consentita della colonna di dati di riferimento. In caso contrario, la stringa di input verrà troncata se supera la lunghezza massima consentita.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)

@@ -1,37 +1,40 @@
 ---
-title: "Recupero dei dati | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dati [C++], recupero"
-  - "recupero"
-  - "modelli consumer OLE DB [C++], recupero dati"
-  - "rowset [C++], recupero"
+title: Recupero dei dati | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Recupero dei dati
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recuperare i dati.  A seconda del tipo di funzione di accesso in uso, potrebbe essere necessario associare le colonne.  
+# <a name="fetching-data"></a>Recupero dei dati
+Dopo aver aperto l'origine dati, sessione e oggetti set di righe, è possibile recuperare i dati. A seconda del tipo di funzione di accesso in uso, potrebbe essere necessario associare le colonne.  
   
-### Per recuperare i dati  
+### <a name="to-fetch-data"></a>Per recuperare i dati  
   
-1.  Aprire il rowset utilizzando il comando **Open** appropriato.  
+1.  Aprire il set di righe utilizzando il metodo appropriato **aprire** comando.  
   
-2.  Se si utilizza `CManualAccessor`, associare le colonne di output, se necessario.  Per eseguire questa operazione, chiamare `GetColumnInfo` e quindi creare una funzione di accesso con le associazioni, come illustrato nel seguente esempio:  
+2.  Se si utilizza `CManualAccessor`, associare le colonne di output, se non è già stato fatto. Per associare le colonne, chiamare `GetColumnInfo`e quindi creare una funzione di accesso con le associazioni, come illustrato nell'esempio seguente:  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recu
     rs.Bind();  
     ```  
   
-3.  Scrivere un ciclo `while` per recuperare i dati.  Nel ciclo chiamare `MoveNext` per spostare il cursore e verificare il valore restituito confrontandolo con S\_OK, come illustrato nel seguente esempio:  
+3.  Scrivere un `while` ciclo per recuperare i dati. Nel ciclo, chiamare `MoveNext` per far avanzare il cursore e verificare il valore restituito con S_OK, come illustrato nell'esempio seguente:  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recu
     }  
     ```  
   
-4.  All'interno del ciclo `while` è possibile recuperare i dati in base al tipo di funzione di accesso utilizzato.  
+4.  All'interno di `while` ciclo, è possibile recuperare i dati in base al tipo di funzione di accesso.  
   
-    -   Se si utilizza la classe [CAccessor](../../data/oledb/caccessor-class.md), è necessario disporre di un record utente contenente i membri dati.  Per accedere ai dati, è possibile utilizzare tali membri dati come illustrato nel seguente esempio:  
+    -   Se si utilizza il [CAccessor](../../data/oledb/caccessor-class.md) (classe), è necessario un record dell'utente che contiene i membri di dati. È possibile accedere ai dati utilizzando i membri di dati, come illustrato nell'esempio seguente:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recu
         }  
         ```  
   
-    -   Se si utilizza la classe `CDynamicAccessor` o `CDynamicParameterAccessor`, è possibile recuperare i dati tramite le funzioni di accesso `GetValue` e `GetColumn`, come illustrato nell'esempio seguente.  Se si desidera determinare il tipo di dati in uso, servirsi di `GetType`.  
+    -   Se si utilizza il `CDynamicAccessor` o `CDynamicParameterAccessor` (classe), è possibile recuperare i dati utilizzando le funzioni di accesso `GetValue` e `GetColumn`, come illustrato nell'esempio seguente. Se si desidera determinare il tipo di dati in uso, utilizzare `GetType`.  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recu
         }  
         ```  
   
-    -   Se si utilizza `CManualAccessor`, è necessario specificare dei membri dati personalizzati, associarli manualmente e accedervi direttamente, come illustrato nell'esempio seguente:  
+    -   Se si utilizza `CManualAccessor`, è necessario specificare i membri dati personalizzati, associarli manualmente e accedervi direttamente, come illustrato nell'esempio seguente:  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ Dopo avere aperto gli oggetti origine dati, sessione e rowset, è possibile recu
         }  
         ```  
   
-## Vedere anche  
- [Utilizzo dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>Vedere anche  
+ [Uso dei modelli consumer OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

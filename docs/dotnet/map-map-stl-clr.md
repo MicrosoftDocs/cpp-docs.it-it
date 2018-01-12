@@ -1,32 +1,33 @@
 ---
-title: "map::map (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::map"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "map (membro) [STL/CLR]"
+title: 'Map:: map (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::map
+dev_langs: C++
+helpviewer_keywords: map member [STL/CLR]
 ms.assetid: c91f699a-4742-4859-b2b3-c2a01a750bea
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 320c3c4223996826fe1e7b3104540baddd82da5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# map::map (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapmap-stlclr"></a>map::map (STL/CLR)
 Costruisce un oggetto contenitore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 map();  
@@ -43,79 +44,71 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### Parametri  
- innanzitutto  
- Avvio dell'intervallo da inserire.  
+#### <a name="parameters"></a>Parametri  
+ primo  
+ Inizio dell'intervallo da inserire.  
   
  last  
- Fine di intervalli da inserire.  
+ Fine dell'intervallo da inserire.  
   
  pred  
- Predicato utilizzato per ordinare la sequenza selezionata.  
+ Ordinamento di predicato per la sequenza controllata.  
   
  right  
- Oggetto o intervallo da inserire.  
+ Oggetto o un intervallo da inserire.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `map();`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato predefinito `key_compare()`dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato dell'ordinamento predefinito `key_compare()`. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `explicit map(key_compare^ pred);`  
   
- inizializza la sequenza selezionata senza elementi, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per specificare una sequenza iniziale controllata vuota, con il predicato specificato dell'ordine.  
+ Inizializza la sequenza controllata con alcun elemento, con il predicato ordinamento `pred`. È utilizzata per specificare una sequenza controllata iniziale vuota, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
  `map(map<Key, Mapped>% right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``.`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``.`[map::end](../dotnet/map-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`della mappa, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right.begin()`, `right.end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
  `map(map<Key, Mapped>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza `[``right``->`[map::begin](../dotnet/map-begin-stl-clr.md)`(),` `right``->`[map::end](../dotnet/map-end-stl-clr.md)`())`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per specificare una sequenza selezionata iniziale mediante la copia della sequenza controllata dall'oggetto `right`della mappa, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`right->begin()`, `right->end()`), con il predicato dell'ordinamento predefinito. Utilizzarlo per specificare una sequenza controllata iniziale che è una copia della sequenza controllata dall'oggetto mappa `right`, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last);`  
   
- `map(InIter first, InIter last);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `template<typename InIter>`  
+ `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`  
   
- `map(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- inizializza la sequenza selezionata con la sequenza `[``first``,` `last``)`, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza, con il predicato specificato dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza [`first`, `last`), con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza, con il predicato di ordinamento specificato.  
   
  Il costruttore:  
   
  `map(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato predefinito dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato predefinito dell'ordine.  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato dell'ordinamento predefinito. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato dell'ordinamento predefinito.  
   
  Il costruttore:  
   
- `map(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ Inizializza la sequenza controllata con la sequenza designata dall'enumeratore `right`, con il predicato ordinamento `pred`. Utilizzarla per creare la sequenza controllata una copia di un'altra sequenza descritta da un enumeratore, con il predicato di ordinamento specificato.  
   
- inizializza la sequenza selezionata con la sequenza definita dall'enumeratore `right`, con il predicato `pred`dell'ordine.  È possibile utilizzarlo per rendere sequenza selezionata una copia di un'altra sequenza descritta da un enumeratore, con il predicato specificato dell'ordine.  
+## <a name="example"></a>Esempio  
   
-## Esempio  
-  
-```  
+```cpp  
 // cliext_map_construct.cpp   
 // compile with: /clr   
 #include <cliext/map>   
@@ -189,22 +182,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **un \[1\] \[b \[2\]c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **\[c 3\] \[b \[2\]un 1\]**  
- **un \[1\] \[b \[2\]c 3\]**   
-## Requisiti  
- **Intestazione:**\<cliext\/map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+ [c 3] [b 2] [a 1]  
+ [a 1] [b 2] [c 3]  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/mappa >  
   
-## Vedere anche  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::operator\=](../dotnet/map-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [eseguire il mapping (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [Map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "vector::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back (membro) [STL/CLR]"
+title: 'Vector:: push_back (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: 4a4c302b-e29f-4b68-b759-2f831814d896
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3721f967290b540dd03d1cab2d12a4d47f3b3f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# vector::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorpushback-stlclr"></a>vector::push_back (STL/CLR)
 Aggiunge un nuovo ultimo elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## Note  
- La funzione membro inserire un elemento con valore `val` alla fine della sequenza selezionata.  Utilizzarla per aggiungere un altro elemento al vettore.  
+## <a name="remarks"></a>Note  
+ La funzione membro inserisce un elemento con valore `val` alla fine della sequenza controllata. Utilizzarlo per aggiungere un altro elemento al vettore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_vector_push_back.cpp   
@@ -58,12 +59,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Requisiti  
- **Intestazione:**\<cliext\/vector\>  
+```Output  
+a b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/vettore >  
   
-## Vedere anche  
- [vettore](../dotnet/vector-stl-clr.md)   
- [vector::pop\_back](../dotnet/vector-pop-back-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Vector (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)

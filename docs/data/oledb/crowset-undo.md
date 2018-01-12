@@ -1,69 +1,71 @@
 ---
-title: "CRowset::Undo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.Undo"
-  - "ATL::CRowset<TAccessor>::Undo"
-  - "CRowset<TAccessor>::Undo"
-  - "ATL.CRowset.Undo"
-  - "ATL.CRowset<TAccessor>.Undo"
-  - "CRowset<TAccessor>.Undo"
-  - "ATL::CRowset::Undo"
-  - "CRowset::Undo"
-  - "Undo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Undo (metodo)"
+title: 'CRowset:: Undo | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.Undo
+- ATL::CRowset<TAccessor>::Undo
+- CRowset<TAccessor>::Undo
+- ATL.CRowset.Undo
+- ATL.CRowset<TAccessor>.Undo
+- CRowset<TAccessor>.Undo
+- ATL::CRowset::Undo
+- CRowset::Undo
+- Undo
+dev_langs: C++
+helpviewer_keywords: Undo method
 ms.assetid: 1ccd70e2-3931-41c4-893e-a05d0e295410
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d56be5cbaf5f8c3393527c59319cdda4aca124e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Undo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Annulla tutte le modifiche apportate ad una riga dall'ultima raccolta o [Aggiorna](../../data/oledb/crowset-update.md).  
+# <a name="crowsetundo"></a>CRowset::Undo
+Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-      HRESULT Undo(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
+      HRESULT Undo(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW* phRow = NULL,   
+   DBROWSTATUS* pStatus = NULL    
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pcRows`  
- \[out\] Un puntatore alla posizione in cui **Annulla** restituisce il numero di righe che si è cercato di annullare se necessario.  
+ [out] Un puntatore alla posizione in cui **Annulla** restituisce il numero di righe di cui si è tentato di annullare le modifiche necessarie.  
   
  `phRow`  
- \[out\] Un puntatore alla posizione in cui **Annulla** restituisce una matrice di handle a tutte le righe le quali che si è cercato di annullare, se necessario.  
+ [out] Un puntatore alla posizione in cui **Annulla** restituisce una matrice di handle per tutte le righe che si è tentato di annullare le modifiche necessarie.  
   
  `pStatus`  
- \[out\] Un puntatore al percorso in cui **Annulla** restituisce il valore dello stato della riga.  Nessuno stato viene restituito se `pStatus` è null.  
+ [out] Un puntatore alla posizione in cui **Annulla** restituisce il valore di stato di riga. Se non viene restituito alcun stato `pStatus` è null.  
   
-## Valore restituito  
- Un `HRESULT` standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportata in tutti i provider; in questo caso, il metodo restituisce **E\_NOINTERFACE**.  È inoltre necessario impostare **DBPROP\_IRowsetScroll** a `VARIANT_TRUE` chiamare **Apri** nella tabella o il comando che contiene il rowset.  
+## <a name="remarks"></a>Note  
+ Questo metodo richiede l'interfaccia facoltativa `IRowsetUpdate`, che potrebbe non essere supportato in tutti i provider; in questo caso, il metodo restituisce **E_NOINTERFACE**. È inoltre necessario impostare **DBPROP_IRowsetUpdate** a `VARIANT_TRUE` prima di chiamare **aprire** la tabella o un comando contenente il set di righe.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [Classe CRowset](../../data/oledb/crowset-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CRowset (classe)](../../data/oledb/crowset-class.md)   
  [IRowsetUpdate::Undo](https://msdn.microsoft.com/en-us/library/ms719655.aspx)

@@ -17,16 +17,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46d08372e96ef28e45a27da4c16680645d8d50e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f072d9b23a39f82f8a8fd3e8482dffacad48d70c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-support-library"></a>libreria di supporto per C++
 La libreria di supporto C++ fornisce le classi che supportano la programmazione gestita in C++.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Panoramica del marshalling in C++](../dotnet/overview-of-marshaling-in-cpp.md)  
   
  [Classi di gestione risorse](../dotnet/resource-management-classes.md)  

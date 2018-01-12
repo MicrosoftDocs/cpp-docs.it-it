@@ -1,59 +1,61 @@
 ---
-title: "Classe CSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession"
-  - "ATL::CSession"
-  - "ATL.CSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession (classe)"
+title: Classe CSession | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession
+- ATL::CSession
+- ATL.CSession
+dev_langs: C++
+helpviewer_keywords: CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe CSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta una singola sessione di accesso al database.  
+# <a name="csession-class"></a>Classe CSession
+Rappresenta una sessione di accesso singolo database.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 class CSession  
 ```  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Metodi  
+### <a name="methods"></a>Metodi  
   
 |||  
 |-|-|  
-|[Abort](../../data/oledb/csession-abort.md)|Annulla \(termina\) la transazione.|  
-|[Chiudi](../../data/oledb/csession-close.md)|Chiudere la sessione.|  
-|[Esegui commit](../../data/oledb/csession-commit.md)|Consente di eseguire il commit della transazione.|  
+|[Interruzione](../../data/oledb/csession-abort.md)|Annulla (termina) della transazione.|  
+|[Chiudi](../../data/oledb/csession-close.md)|Chiude la sessione.|  
+|[Eseguire il commit](../../data/oledb/csession-commit.md)|Il commit della transazione.|  
 |[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Restituisce le informazioni relative a una transazione.|  
-|[Aprire](../../data/oledb/csession-open.md)|Verrà aperta una nuova sessione per l'oggetto origine dati.|  
+|[Apri](../../data/oledb/csession-open.md)|Apre una nuova sessione per l'oggetto origine dati.|  
 |[StartTransaction](../../data/oledb/csession-starttransaction.md)|Inizia una nuova transazione per questa sessione.|  
   
-## Note  
- Una o più sessioni possono essere associate a ogni connessione del provider \(origine dati, che è rappresentata da un oggetto di [CDataSource](../../data/oledb/cdatasource-class.md).  Per creare un nuovo `CSession` per `CDataSource`, chiamare [CSession::Open](../../data/oledb/csession-open.md).  Per avviare una transazione di database, `CSession` fornisce il metodo di `StartTransaction`.  Quando la transazione viene avviata, è possibile applicare a utilizzando il metodo di **Commit**, o annullilo utilizzando il metodo di **Interrompi**.  
+## <a name="remarks"></a>Note  
+ Una o più sessioni possono essere associate a ogni connessione del provider (origine dati), che è rappresentato da un [CDataSource](../../data/oledb/cdatasource-class.md) oggetto. Per creare un nuovo `CSession` per un `CDataSource`, chiamare [CSession:: Open](../../data/oledb/csession-open.md). Per iniziare una transazione di database, `CSession` fornisce il `StartTransaction` metodo. Una volta che viene avviata una transazione, è possibile eseguire il commit utilizzando il **Commit** metodo, o annullare l'operazione utilizzando il **Abort** metodo.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
- [CatDB](../../top/visual-cpp-samples.md)   
- [Modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>Vedere anche  
+ [CatDB](../../visual-cpp-samples.md)   
+ [Modelli Consumer OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Riferimenti ai modelli consumer OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2394
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2394
+f1_keywords: C2394
+dev_langs: C++
+helpviewer_keywords: C2394
 ms.assetid: 653fa9a0-29b3-48aa-bc01-82f98f717a2b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d9cdfb2ace09bfc3aae4fa4afabd0d45117a80a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c716a3562a9f99ef0094d8ca7ba5fdf2d11f15f0
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2394"></a>Errore del compilatore C2394
 'your_type' ": CLR o WinRToperator non valido. Almeno un parametro deve essere dei tipi seguenti: 'T^', 'T^%', 'T^&', dove T = 'your_type'  

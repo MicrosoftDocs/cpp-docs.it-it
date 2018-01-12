@@ -1,81 +1,82 @@
 ---
-title: "Operatori definiti dall&#39;utente (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatori definiti dall'utente in /clr"
+title: Operatori definiti dall'utente (C + + CLI) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatori definiti dall&#39;utente (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gli operatori definiti per i tipi gestiti sono consentiti come membri o membri di istanza statici, o in ambito globale.  Tuttavia, solo gli operatori statici sono accessibili tramite i metadati ai client scritti in un linguaggio diverso da Visual C\+\+.  
+# <a name="user-defined-operators-ccli"></a>Operatori definiti dall'utente (C++/CLI)
+Operatori definiti dall'utente per i tipi gestiti sono consentiti come membri statici o membri di istanza o in ambito globale. Tuttavia, solo gli operatori statici sono accessibili tramite i metadati per i client che vengono scritti in un linguaggio diverso da Visual C++.  
   
- In un tipo di riferimento, un parametro di un operatore definito static deve essere uno dei seguenti:  
+ In un tipo riferimento, uno dei parametri di un operatore definito dall'utente statico deve essere uno dei seguenti:  
   
--   Un handle \(^\) di`type` a un'istanza del tipo di inclusione.  
+-   Un handle (`type` ^) a un'istanza del tipo di inclusione.  
   
--   Un riferimento indiretto a tipo di riferimento \(^& type^% o di`type`\) all'handle a un'istanza del tipo di inclusione.  
+-   Un riferimento indiretto tipo riferimento (`type`^ & o di tipo ^ %) a un handle a un'istanza del tipo di inclusione.  
   
- In un tipo di valore, un parametro di un operatore definito static deve essere uno dei seguenti:  
+ In un tipo valore, uno dei parametri di un operatore definito dall'utente statico deve essere uno dei seguenti:  
   
--   Lo stesso tipo del tipo di valore di inclusione.  
+-   Dello stesso tipo del tipo di inclusione valore.  
   
--   Un riferimento indiretto di tipo puntatore \(^\) di`type`al tipo di inclusione.  
+-   Riferimento indiretto a un tipo puntatore (`type`^) per il tipo di inclusione.  
   
--   Un riferimento indiretto di tipo riferimento`type`\(%\) o `type`&al tipo di inclusione.  
+-   Un riferimento indiretto tipo riferimento (`type`% o `type`&) per il tipo di inclusione.  
   
--   Un riferimento indiretto a tipo di riferimento \(`type`^% o di `type`^&\) all'handle.  
+-   Un riferimento indiretto tipo riferimento (`type`^ % o `type`^ &) per l'handle.  
   
- È possibile definire i seguenti operatori:  
+ È possibile definire gli operatori seguenti:  
   
-|Operatore|Unario\/forme binarie?|  
-|---------------|----------------------------|  
-|\!|Unario|  
-|\!\=|Binary|  
-|%|Binary|  
+|Operatore|Form unario/binario?|  
+|--------------|--------------------------|  
+|!|Unario|  
+|!=|Binario|  
+|%|Binario|  
 |&|Unario e binario|  
-|&&|Binary|  
-|\*|Unario e binario|  
-|\+|Unario e binario|  
-|\+\+|Unario|  
-|,|Binary|  
-|\-|Unario e binario|  
-|\-\-|Unario|  
-|\-\>|Unario|  
-|\/|Binary|  
-|\<|Binary|  
-|\<\<|Binary|  
-|\<\=|Binary|  
-|\=|Binary|  
-|\=\=|Binary|  
-|\>|Binary|  
-|\>\=|Binary|  
-|\>\>|Binary|  
-|^|Binary|  
-|false|Unario|  
+|&&|Binario|  
+|*|Unario e binario|  
+|+|Unario e binario|  
+|++|Unario|  
+|,|Binario|  
+|-|Unario e binario|  
+|--|Unario|  
+|->|Unario|  
+|/|Binario|  
+|<|Binario|  
+|<<|Binario|  
+|\<=|Binario|  
+|=|Binario|  
+|==|Binario|  
+|>|Binario|  
+|>=|Binario|  
+|>>|Binario|  
+|^|Binario|  
+|False|Unario|  
 |true|Unario|  
-|&#124;|Binary|  
-|&#124;&#124;|Binary|  
+|&#124;|Binario|  
+|&#124;&#124;|Binario|  
 |~|Unario|  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +136,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## Esempio  
- Nell'esempio seguente viene illustrata una sintesi dell'operatore, che è disponibile solo quando si utilizza **\/clr** per compilare.  Una sintesi dell'operatore crea il form di assegnazione di un operatore binario, se non ne viene definito, dove la sinistra dell'operatore di assegnazione di un tipo CLR.  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente viene illustrato sintesi di operatori, è disponibile solo quando si utilizza **/clr** da compilare. Sintesi di operatori consente di creare il modulo di assegnazione di un operatore binario, se non è definito, in cui la parte sinistra dell'operatore di assegnazione è un tipo CLR.  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +169,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## Vedere anche  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)

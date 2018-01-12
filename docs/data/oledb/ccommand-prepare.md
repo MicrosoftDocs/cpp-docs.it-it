@@ -1,34 +1,36 @@
 ---
-title: "CCommand::Prepare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Prepare"
-  - "CCommand::Prepare"
-  - "Prepare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Prepare (metodo)"
+title: 'CCommand:: Prepare | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Prepare
+- CCommand::Prepare
+- Prepare
+dev_langs: C++
+helpviewer_keywords: Prepare method
 ms.assetid: f0e473fc-2f7a-4d29-96c2-1328dc21e702
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 68bce43b0b3fe1799cbbc51841fc1232c5527700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand::Prepare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ccommandprepare"></a>CCommand::Prepare
 Convalida e ottimizza il comando corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -37,18 +39,18 @@ Convalida e ottimizza il comando corrente.
 ) throw( );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *cExpectedRuns*  
- \[in\] numero di volte che si prevede di eseguire il comando.  
+ [in] Il numero di volte in cui che si prevede di eseguire il comando.  
   
-## Valore restituito  
- `HRESULT`standard.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard.  
   
-## Note  
- Questo metodo esegue il wrapping del metodo [ICommandPrepare::Prepare](https://msdn.microsoft.com/en-us/library/ms718370.aspx) oLE DB.  
+## <a name="remarks"></a>Note  
+ Questo metodo esegue il wrapping di metodo OLE DB [ICommandPrepare:: Prepare](https://msdn.microsoft.com/en-us/library/ms718370.aspx).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldbcli.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CCommand](../../data/oledb/ccommand-class.md)

@@ -1,31 +1,34 @@
 ---
-title: "Dichiarazione di un oggetto classe di riferimento CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tipi di riferimento, CLR"
-  - "tipi [C++], tipi di riferimento"
+title: Dichiarazione di un oggetto di classe di riferimento CLR | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- types [C++], reference types
+- reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Dichiarazione di un oggetto classe di riferimento CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La sintassi per la dichiarazione e la creazione di un'istanza di un oggetto di un tipo classe di riferimento è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="declaration-of-a-clr-reference-class-object"></a>Dichiarazione di un oggetto classe di riferimento CLR
+La sintassi per dichiarare e creare un'istanza di un oggetto di un tipo di classe di riferimento è stata modificata dalle estensioni gestite per C++ a Visual C++.  
   
- Nelle estensioni gestite un oggetto di tipo classe di riferimento viene dichiarato mediante la sintassi dei puntatori ISO\-C\+\+, con utilizzo facoltativo della parola chiave `__gc` a sinistra dell'asterisco \(`*`\).  Di seguito vengono ad esempio fornite diverse dichiarazioni di oggetti di tipo classe di riferimento nella sintassi delle estensioni gestite:  
+ Nelle estensioni gestite, un oggetto di tipo classe di riferimento viene dichiarato utilizzando la sintassi del puntatore C++ ISO, con un utilizzo facoltativo del `__gc` (parola chiave) a sinistra della stella (`*`). Ad esempio, ecco un'ampia gamma di riferimento le dichiarazioni di oggetti di tipo classe nella sintassi di estensioni gestite:  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -45,15 +48,15 @@ private:
 };  
 ```  
   
- Nella nuova sintassi un oggetto di tipo classe di riferimento viene dichiarato mediante un nuovo token dichiarativo \(`^`\) denominato formalmente *handle di rilevamento* e in modo più informale semplicemente *accento circonflesso*. La definizione "di rilevamento" indica che un tipo di riferimento è incluso nell'heap CLR e può quindi essere spostato in modo trasparente durante la compattazione dell'heap di Garbage Collection.  Un handle di rilevamento viene aggiornato in modo trasparente durante la fase di esecuzione.  Il *riferimento di rilevamento* \(`%`\) e il *puntatore interno* \(`interior_ptr<>`\) costituiscono due concetti analoghi, illustrati in [Semantica dei tipi di valore](../dotnet/value-type-semantics.md).  
+ Nella nuova sintassi, si dichiara un oggetto di tipo classe di riferimento utilizzando un nuovo token dichiarativo (`^`) denominato formalmente un *handle di rilevamento* e più informale come un *hat*. (L'aggettivo rilevamento significa che un tipo di riferimento si trova nell'heap di Common Language Runtime e può quindi essere spostato in modo trasparente durante la compattazione dell'heap di garbage collection. Un handle di rilevamento viene aggiornato in modo trasparente durante il runtime. Sono due concetti simili di *riferimento di rilevamento* (`%`) e *puntatore interno* (`interior_ptr<>`), illustrati in [la semantica dei tipi di valore](../dotnet/value-type-semantics.md).  
   
- I motivi principali per evitare il riutilizzo della sintassi dei puntatori ISO\-C\+\+ nella sintassi dichiarativa sono i seguenti:  
+ Come indicato di seguito sono riportati i motivi principali per spostare la sintassi dichiarativa per il riutilizzo della sintassi del puntatore C++ ISO:  
   
--   L'utilizzo della sintassi dei puntatori non consente di applicare gli operatori di overload direttamente a un oggetto di riferimento.  È infatti necessario chiamare l'operatore utilizzando il relativo nome interno, ad esempio `rV1->op_Addition(rV2)`, invece del più intuitivo `rV1+rV2`.  
+-   Gli operatori di overload per essere applicate direttamente a un oggetto di riferimento non consente l'utilizzo della sintassi del puntatore. Invece di chiamare l'operatore tramite il relativo nome interno, ad esempio fossero `rV1->op_Addition(rV2)` anziché più intuitiva `rV1+rV2`.  
   
--   Alcune operazioni dei puntatori, ad esempio l'aritmetica dei puntatori e il cast, non sono consentite per oggetti archiviati in un heap sottoposto a Garbage Collection.  Il concetto di handle di rilevamento può catturare in modo più efficiente la natura di un tipo di riferimento CLR.  
+-   Un numero di operazioni di puntatore, ad esempio cast e operazioni aritmetiche, non è consentito per gli oggetti archiviati in un'operazione di garbage collection heap. La nozione di un handle di rilevamento migliorato acquisisce la natura di un tipo di riferimento CLR.  
   
- Il modificatore `__gc` per un handle di rilevamento non è necessario e non è supportato.  L'utilizzo dell'oggetto non è stato modificato. È comunque possibile accedere ai membri tramite l'operatore di selezione dei membri dei puntatori \(`->`\).  Di seguito è riportato l'esempio di codice delle estensioni gestite precedente convertito nella nuova sintassi:  
+ Il `__gc` modificatore su un handle di rilevamento, è necessario e non è supportata. L'utilizzo dell'oggetto stesso non è stata modificata; comunque possibile accedere ai membri tramite l'operatore di selezione puntatore a membro (`->`). Ad esempio, ecco l'esempio di codice estensioni gestite precedente convertito nella nuova sintassi:  
   
 ```  
 public ref class Form1: public System::Windows::Forms::Form {  
@@ -72,8 +75,8 @@ private:
 };  
 ```  
   
-## Allocazione dinamica di un oggetto nell'heap CLR  
- Nelle estensioni gestite, l'esistenza di due espressioni `new` per l'allocazione tra heap nativo e heap gestito è in larga misura trasparente.  In quasi tutte le istanze, il compilatore è in grado di utilizzare il contesto per determinare se allocare memoria dall'heap nativo o dall'heap gestito.  Di seguito è riportato un esempio:  
+## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>Allocazione dinamica di un oggetto nell'heap di Common Language Runtime  
+ Nelle estensioni gestite, l'esistenza di due `new` espressioni per l'allocazione tra l'heap gestito e nativo è trasparente. In quasi tutte le istanze, il compilatore è in grado di utilizzare il contesto per determinare se eseguire l'allocazione della memoria dall'heap nativo o gestito. Ad esempio,  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  
@@ -81,7 +84,7 @@ int *pi1 = new int;           // OK: native heap
 Int32 *pi2 = new Int32;       // OK: managed heap  
 ```  
   
- Se non si desidera l'allocazione dell'heap contestuale, è possibile dirigere il compilatore con la parola chiave `__gc` o `__nogc`.  Nella nuova sintassi, la natura distinta delle due espressioni new è resa esplicita dall'introduzione della parola chiave `gcnew`.  Nella nuova sintassi, le tre dichiarazioni precedenti risultano come segue:  
+ Quando non si desidera l'allocazione dell'heap contestuale, è possibile indirizzare il compilatore con il `__gc` o `__nogc` (parola chiave). Nella nuova sintassi, la natura distinta delle due espressioni new è resa esplicita con l'introduzione del `gcnew` (parola chiave). Ad esempio, le tre dichiarazioni precedenti: come indicato di seguito nella nuova sintassi  
   
 ```  
 Button^ button1 = gcnew Button;        // OK: managed heap  
@@ -89,7 +92,7 @@ int * pi1 = new int;                   // OK: native heap
 Int32^ pi2 = gcnew Int32; // OK: managed heap  
 ```  
   
- Di seguito viene fornita l'inizializzazione nelle estensioni gestite dei membri di `Form1` dichiarati nella sezione precedente:  
+ Ecco l'inizializzazione di estensioni gestite del `Form1` i membri dichiarati nella sezione precedente:  
   
 ```  
 void InitializeComponent() {  
@@ -102,7 +105,7 @@ void InitializeComponent() {
 }  
 ```  
   
- Di seguito viene riportata la stessa inizializzazione nella nuova sintassi:  Si noti che l'accento circonflesso non è necessario per il tipo di riferimento quando costituisce la destinazione di un'espressione `gcnew`.  
+ Di seguito è la stessa inizializzazione per la nuova sintassi. Si noti che l'handle non è richiesto per il tipo di riferimento quando è la destinazione di un `gcnew` espressione.  
   
 ```  
 void InitializeComponent() {  
@@ -115,8 +118,8 @@ void InitializeComponent() {
 }  
 ```  
   
-## Riferimento di rilevamento a nessun oggetto  
- Nella nuova sintassi `0` non rappresenta un indirizzo con valore null, ma viene semplicemente trattato come Integer così come `1`, `10` o `100`.  Un nuovo token speciale rappresenta un valore null per un riferimento di rilevamento.  Nelle estensioni gestite, ad esempio, un tipo di riferimento viene inizializzato in modo da fare riferimento a nessun oggetto come segue:  
+## <a name="a-tracking-reference-to-no-object"></a>Un riferimento di rilevamento a nessun oggetto  
+ Nella nuova sintassi, `0` non rappresenta un indirizzo null ma viene considerato come un numero intero, identico `1`, `10`, o `100`. Un nuovo token speciale rappresenta un valore null per un riferimento di rilevamento. Nelle estensioni gestite, ad esempio, si inizializza un tipo di riferimento per non risolvere alcun oggetto, come indicato di seguito:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -126,7 +129,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- Nella nuova sintassi qualsiasi inizializzazione o assegnazione di un tipo di valore a `Object` determina il boxing implicito di tale tipo di valore.  Nella nuova sintassi sia `obj` che `obj2` vengono inizializzati sugli oggetti Int32 boxed a cui viene fatto riferimento, contenenti rispettivamente i valori 0 e 1.  Di seguito è riportato un esempio.  
+ Nella nuova sintassi, qualsiasi inizializzazione o assegnazione di un valore di tipo a un `Object` determina il boxing implicito di quel tipo di valore. Nella nuova sintassi, entrambe `obj` e `obj2` vengono inizializzati su Int32 oggetti boxed i valori 0 e 1, rispettivamente. Ad esempio:  
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -134,7 +137,7 @@ Object ^ obj = 0;
 Object ^ obj2 = 1;  
 ```  
   
- Per eseguire l'inizializzazione, l'assegnazione e il confronto espliciti di un handle di rilevamento a null, utilizzare la nuova parola chiave `nullptr`.  Di seguito viene fornita la revisione corretta dell'esempio originale:  
+ Pertanto, per eseguire l'inizializzazione esplicita, l'assegnazione e confronto di un handle di rilevamento a null, utilizzare la nuova parola chiave `nullptr`.  La revisione corretta dell'esempio originale è simile al seguente:  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -144,7 +147,7 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- Ciò complica il porting del codice esistente nella nuova sintassi.  Si consideri ad esempio la seguente dichiarazione di classe di valori:  
+ Ciò complica il porting del codice esistente nella nuova sintassi. Ad esempio, si consideri la dichiarazione di classe di valore seguenti:  
   
 ```  
 __value struct Holder {  
@@ -163,7 +166,7 @@ private:
 };  
 ```  
   
- Qui, `args` che `env` sono tipi di riferimento CLR.  L'inizializzazione di questi due membri su `0` nel costruttore non può restare invariata nella transizione alla nuova sintassi.  È infatti necessaria la modifica in `nullptr`:  
+ In questo caso, entrambi `args` e `env` sono tipi di riferimento CLR. L'inizializzazione di questi due membri su `0` nel costruttore non può restare invariata in transizione verso la nuova sintassi. Invece, deve essere modificati in `nullptr`:  
   
 ```  
 value struct Holder {  
@@ -183,7 +186,7 @@ private:
 };  
 ```  
   
- Analogamente, i test su tali membri con il relativo confronto con `0` devono essere modificati in modo da confrontare i membri con `nullptr`.  Di seguito viene fornita la sintassi delle estensioni gestite:  
+ Analogamente, test su tali membri confrontarli per `0` devono essere modificati per confrontare i membri con `nullptr`. Di seguito è riportata la sintassi di estensioni gestite:  
   
 ```  
 Sexpr * Loop (Sexpr* input) {  
@@ -205,7 +208,7 @@ Sexpr * Loop (Sexpr* input) {
 }  
 ```  
   
- Di seguito viene fornita la revisione, in cui ciascuna istanza di `0` viene trasformata in `nullptr`.  Lo strumento di conversione facilita questa trasformazione, automatizzando numerose o tutte le occorrenze, incluso l'utilizzo della macro `NULL`.  
+ Ecco la revisione, in ogni `0` istanza con un `nullptr`. Lo strumento di conversione facilita questa trasformazione, automatizzando numerose o tutte le occorrenze, incluso l'utilizzo del `NULL` (macro).  
   
 ```  
 Sexpr ^ Loop (Sexpr^ input) {  
@@ -227,18 +230,18 @@ Sexpr ^ Loop (Sexpr^ input) {
 }  
 ```  
   
- `nullptr` viene convertito in qualsiasi tipo di puntatore o handle di rilevamento, ma non viene promosso a tipo integrale.  Nell'insieme di inizializzazioni riportato di seguito, ad esempio, `nullptr` costituisce un valore iniziale valido solo per le prime due.  
+ Il `nullptr` viene convertito in qualsiasi tipo puntatore o rilevamento handle ma non viene promosso a un tipo integrale. Ad esempio, nella procedura riportata di inizializzazioni di `nullptr` è valida solo come un valore iniziale per i primi due.  
   
 ```  
 // OK: we set obj and pstr to refer to no object  
 Object^ obj = nullptr;  
 char*   pstr = nullptr; // 0 would also work here  
   
-// Error: no conversion of nullptr to 0 …  
+// Error: no conversion of nullptr to 0  
 int ival = nullptr;  
 ```  
   
- Analogamente, si consideri il seguente insieme di metodi di overload:  
+ Analogamente, dato un set di overload di metodi quali i seguenti:  
   
 ```  
 void f( Object^ ); // (1)  
@@ -246,26 +249,26 @@ void f( char* );   // (2)
 void f( int );     // (3)  
 ```  
   
- Una chiamata con il valore letterale `nullptr` come la seguente  
+ Una chiamata con `nullptr` letterale, ad esempio il comando seguente,  
   
 ```  
 // Error: ambiguous: matches (1) and (2)  
 f(  nullptr );  
 ```  
   
- risulta ambigua poiché `nullptr` corrisponde sia a un handle di rilevamento che a un puntatore e non viene attribuita alcuna preferenza a un tipo rispetto a un altro. Per risolvere l'ambiguità è necessario un cast esplicito.  
+ è ambiguo perché il `nullptr` corrisponde a un handle di rilevamento e a un puntatore ed è presente alcuna preferenza assegnato a un tipo per l'altro. (Questa situazione richiede un cast esplicito per evitare ambiguità tra).  
   
- Una chiamata con `0` corrisponde esattamente all'istanza \(3\)  
+ Una chiamata con `0` corrisponde esattamente all'istanza (3):  
   
 ```  
 // OK: matches (3)  
 f( 0 );  
 ```  
   
- poiché `0` è di tipo integer.  Se non fosse presente `f(int)`, la chiamata corrisponderebbe senza ambiguità a `f(char*)` tramite una conversione standard.  Nelle regole di corrispondenza, una corrispondenza esatta ha la precedenza rispetto a una conversione standard.  In assenza di una corrispondenza esatta, una conversione standard ha la precedenza rispetto al boxing implicito di un tipo di valore.  Viene così esclusa qualsiasi ambiguità.  
+ Poiché `0` è di tipo integer. Sono stati `f(int)` non è presente, la chiamata in modo non ambiguo corrisponderebbe `f(char*)` tramite una conversione standard. Le regole di corrispondenza ha la precedenza di una corrispondenza esatta su una conversione standard. In assenza di una corrispondenza esatta, una conversione standard ha la precedenza rispetto a un conversione boxing implicita di un tipo valore. Che è il motivo per cui l'assenza di ambiguità.  
   
-## Vedere anche  
- [Tipi gestiti \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [Operatore handle a oggetto \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Tipi gestiti (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
+ [Classi e struct](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [Operatore handle a oggetto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
  [nullptr](../windows/nullptr-cpp-component-extensions.md)

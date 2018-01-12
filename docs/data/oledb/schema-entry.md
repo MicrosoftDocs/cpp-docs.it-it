@@ -1,32 +1,33 @@
 ---
-title: "SCHEMA_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SCHEMA_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SCHEMA_ENTRY (macro)"
+title: SCHEMA_ENTRY | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SCHEMA_ENTRY
+dev_langs: C++
+helpviewer_keywords: SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12a4026e94ea5fe5e310e0aeec7cdad10d33d2bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# SCHEMA_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Associa un GUID da una classe.  
+# <a name="schemaentry"></a>SCHEMA_ENTRY
+Associa un GUID a una classe.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,34 +37,37 @@ Associa un GUID da una classe.
 );   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `guid`  
- Un GUID rowset dello schema.  Vedere [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)*in OLE DB Programmer's Reference* per un elenco dei rowset dello schema e dei relativi GUID.  
+ Un GUID di rowset dello schema. Vedere [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) nel *riferimento per programmatori OLE DB* per un elenco di set di righe dello schema e i relativi GUID.  
   
  *rowsetClass*  
- La classe che verrà creata per rappresentare il rowset dello schema.  
+ La classe che verrà creata per rappresentare il set di righe dello schema.  
   
-## Note  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) può quindi eseguire una query sulla mappa per un elenco di GUID, oppure per creare un rowset se viene fornito un GUID.  Il `IDBSchemaRowsetImpl` rowset dello schema viene creata è simile a `CRowsetImpl`standard \- classe derivata, a meno che deve fornire un metodo di **Esegui** che ha la seguente firma:  
+## <a name="remarks"></a>Note  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) quindi possibile eseguire una query della mappa per un elenco di GUID, o se è stato specificato un GUID, è possibile creare un set di righe. Set di righe dello schema `IDBSchemaRowsetImpl` crea è simile a uno standard `CRowsetImpl`-classe derivata, ad eccezione del fatto che è necessario fornire un **Execute** metodo che ha la firma seguente:  
   
- `HRESULT Execute (LONG* pcRowsAffected, ULONG cRestrictions,`  
+```  
+HRESULT Execute (
+    LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
   
- `const VARIANT* rgRestrictions)`  
-  
- Questa funzione di **Esegui** popola i dati del rowset.  La creazione guidata progetto ATL viene, come descritto in [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)*in OLE DB Programmer's Reference*, iniziali tre rowset dello schema nel progetto per ciascuno dei tre schemi obbligatori OLE DB:  
+ Questo **Execute** funzione inserisce i dati del set di righe. Crea la creazione guidata progetto ATL, come descritto in [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) nel *riferimento per programmatori OLE DB*, tre iniziale rowset dello schema nel progetto per ognuno dei tre schemi OLE DB obbligatori:  
   
 -   `DBSCHEMA_TABLES`  
   
--   **DBSCHEMA\_COLUMNS**  
+-   **DBSCHEMA_COLUMNS**  
   
--   **DBSCHEMA\_PROVIDER\_TYPES**  
+-   **DBSCHEMA_PROVIDER_TYPES**  
   
- La procedura guidata vengono inoltre aggiunti tre voci corrispondenti nella mappa degli schemi.  Vedere [Creare un provider di modelli OLE DB](../../data/oledb/creating-an-ole-db-provider.md) per ulteriori informazioni su come utilizzare la procedura guidata per creare un provider.  
+ La procedura guidata aggiunge anche tre voci corrispondenti nel mapping dello schema. Vedere [la creazione di un modello Provider OLE DB](../../data/oledb/creating-an-ole-db-provider.md) per ulteriori informazioni sulla creazione guidata per creare un provider.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
- [Macro per i modelli di provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)
+## <a name="see-also"></a>Vedere anche  
+ [Macro per modelli Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
+ [BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)

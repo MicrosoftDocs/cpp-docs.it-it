@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 971d87da7045e079e62d2ab3274ddc35ddbffaea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05544d3ea65ee68fc6df8731e5de084be6d460ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>Procedura: memorizzare testo negli appunti (C++/CLI)
 Nell'esempio di codice viene illustrato come utilizzare il <xref:System.Windows.Forms.Clipboard> definito nell'oggetto di <xref:System.Windows.Forms> dello spazio dei nomi per archiviare una stringa. Questo oggetto fornisce due funzioni membro: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> e <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Dati vengono archiviati negli Appunti per l'invio di qualsiasi oggetto derivato da <xref:System.Object> a <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>.  

@@ -1,32 +1,33 @@
 ---
-title: "unary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate (funzione) [STL/CLR]"
+title: unary_delegate (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate
+dev_langs: C++
+helpviewer_keywords: unary_delegate function [STL/CLR]
 ms.assetid: b3ee253c-98e8-466e-a272-505e47aed061
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: df8c3177750433c95b6a98865409d51926c327d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# unary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La classe genereic descrive un delegato di un solo argomento.  La si specifica un delegato in termini dei relativi argomenti e i tipi restituiti.  
+# <a name="unarydelegate-stlclr"></a>unary_delegate (STL/CLR)
+La classe genereic descrive un delegato di un solo argomento. Utilizzare, specificare un delegato in termini relativi tipi di argomenti e valori restituiti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 generic<typename Arg,  
@@ -34,14 +35,14 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);  
 ```  
   
-#### Parametri  
- Argomento  
- Tipo dell'argomento.  
+#### <a name="parameters"></a>Parametri  
+ Arg  
+ Il tipo di argomento.  
   
  Risultato  
  Tipo restituito.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il delegato genereic descrive una funzione di un solo argomento.  
   
  Si noti che per:  
@@ -50,7 +51,7 @@ generic<typename Arg,
   
  `unary_delegare<int, int> Fun2;`  
   
- i tipi `Fun1` e `Fun2` sono sinonimi, mentre per:  
+ i tipi di `Fun1` e `Fun2` sono sinonimi, mentre per:  
   
  `delegate int Fun1(int);`  
   
@@ -58,7 +59,7 @@ generic<typename Arg,
   
  non sono dello stesso tipo.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_unary_delegate.cpp   
@@ -82,14 +83,17 @@ int main()
   
 ```  
   
-  **hash \(L'a\) \= 5**  
-**hash \(L'b\) \= 22**   
-## Requisiti  
- **Intestazione:**\<cliext\/functional\>  
+```Output  
+hash(L'a') = 5  
+hash(L'b') = 22  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext funzionali >  
   
-## Vedere anche  
- [binary\_delegate](../dotnet/binary-delegate-stl-clr.md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

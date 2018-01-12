@@ -1,52 +1,54 @@
 ---
-title: "numeric (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/numeric>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/numeric> (intestazione) [STL/CLR]"
-  - "<numeric> (intestazione) [STL/CLR]"
-  - "funzioni numeriche [STL/CLR]"
+title: numerico (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/numeric>
+dev_langs: C++
+helpviewer_keywords:
+- numeric functions [STL/CLR]
+- <cliext/numeric> header [STL/CLR]
+- <numeric> header [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cdf9ccb65299af688fde2fbff7b3d6cedad6de96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# numeric (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Definisce le funzioni del modello contenitore che eseguono algoritmi disponibili per l'elaborazione numerica.  
+# <a name="numeric-stlclr"></a>numeric (STL/CLR)
+Definisce le funzioni di modello contenitore che eseguono algoritmi disponibili per l'elaborazione numerica.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #include <cliext/numeric>  
 ```  
   
-## Funzioni  
+## <a name="functions"></a>Funzioni  
   
 |Funzione|Descrizione|  
 |--------------|-----------------|  
-|[accumulate](../dotnet/accumulate-stl-clr.md)|Calcola la somma di tutti gli elementi compresi alcuni valori iniziali in un intervallo specificato elaborando le somme parziali successive, o calcola il risultato dei risultati parziali successivi ottenuti analogamente tramite l'utilizzo di un'operazione binaria specificata diversa da quella di somma.|  
-|[adjacent\_difference](../dotnet/adjacent-difference-stl-clr.md)|Calcola le differenze successive tra ogni elemento e il predecessore in un intervallo di input e restituisce i risultati in un intervallo di destinazione o calcola il risultato di una routine generalizzata in cui l'operazione di differenza è sostituita da un altra operazione binaria specificata.|  
-|[inner\_product](../dotnet/inner-product-stl-clr.md)|Calcola la somma del prodotti tra gli elementi di due intervalli e la aggiunge ad un valore iniziale specificato o calcola il risultato di una routine generalizzata in cui la somma e le operazioni binari del prodotto vengono sostituite da altre operazioni binarie specificate.|  
-|[partial\_sum](../dotnet/partial-sum-stl-clr.md)|Calcola una serie di somme in un intervallo di input dal primo elemento attraverso l'elemento `i`\-esimo e archivia il risultato di ciascuna somma `i`\-esima di un intervallo di destinazione o calcola il risultato di una routine generalizzata in cui l'operazione di somma viene sostituito da un'altra operazione binaria specificata.|  
+|[accumulate (STL/CLR)](../dotnet/accumulate-stl-clr.md)|Calcola la somma di tutti gli elementi in un intervallo specificato, incluso il valore iniziale, elaborando le somme parziali successive oppure calcola il risultato dei risultati parziali successivi ottenuti analogamente tramite l'uso di un'operazione binaria specificata diversa da quella di somma.|  
+|[adjacent_difference (STL/CLR)](../dotnet/adjacent-difference-stl-clr.md)|Calcola le differenze successive tra ogni elemento e il relativo predecessore in un intervallo di input e restituisce i risultati in un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di differenza viene sostituita da un'altra operazione binaria specificata.|  
+|[inner_product (STL/CLR)](../dotnet/inner-product-stl-clr.md)|Calcola la somma del prodotto tra gli elementi di due intervalli e aggiunge tale somma a un valore iniziale specificato oppure calcola il risultato di una procedura generalizzata in cui le operazioni binarie di somma e prodotto vengono sostituite da altre operazioni binarie specificate.|  
+|[partial_sum (STL/CLR)](../dotnet/partial-sum-stl-clr.md)|Calcola una serie di somme in un intervallo di input tra il primo elemento tramite il `i`elemento th e archivia il risultato di ciascuna somma nel `i`elemento th di un intervallo di destinazione oppure calcola il risultato di una procedura generalizzata in cui l'operazione di somma viene sostituita da un'altra operazione binaria specificata.|  
   
-## Requisiti  
- **Intestazione:** \<cliext\/numeric\>  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/numeric >  
   
- **Spazio dei nomi:** cliext  
+ **Namespace:** cliext  
   
-## Vedere anche  
- [Libreria STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti alla libreria STL/CLR](../dotnet/stl-clr-library-reference.md)

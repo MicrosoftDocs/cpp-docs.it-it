@@ -1,51 +1,52 @@
 ---
-title: "Procedura: creare un&#39;applicazione parzialmente attendibile rimuovendo la dipendenza dalla DLL della libreria CRT | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr (opzione del compilatore) [C++], applicazioni con attendibilità parziale"
-  - "interoperabilità [C++], applicazioni con attendibilità parziale"
-  - "interoperabilità [C++], applicazioni con attendibilità parziale"
-  - "assembly misti [C++], applicazioni con attendibilità parziale"
-  - "msvcm90[d].dll"
-  - "applicazioni con attendibilità parziale [C++]"
+title: 'Procedura: creare un''applicazione parzialmente attendibile (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- partially trusted applications [C++]
+- mixed assemblies [C++], partially trusted applications
+- msvcm90[d].dll
+- interoperability [C++], partially trusted applications
+- interop [C++], partially trusted applications
+- /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfef7eacfa9da8c55155f6e7ce43dfdb79e67e91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: creare un&#39;applicazione parzialmente attendibile rimuovendo la dipendenza dalla DLL della libreria CRT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come creare un'applicazione Common Language Runtime parzialmente attendibile con [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] rimuovendo la dipendenza da msvcm90.dll.  
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Procedura: creare un'applicazione parzialmente attendibile rimuovendo la dipendenza dalla DLL della libreria CRT
+In questo argomento viene illustrato come creare un'applicazione Common Language Runtime parzialmente attendibile tramite Visual C++ rimuovendo la dipendenza da msvcm90.  
   
- Un'applicazione Visual C\+\+ compilata con **\/clr** presenterà una dipendenza da msvcm90.dll, che fa parte della libreria di runtime C.  Quando si desidera che l'applicazione venga utilizzata in un ambiente parzialmente attendibile, CLR applicherà alcune regole di sicurezza contro l'accesso di codice alla DLL.  Sarà pertanto necessario rimuovere tale dipendenza poiché msvcm90.dll contiene codice nativo a cui non possono essere applicati criteri di sicurezza contro l'accesso di codice.  
+ Un'applicazione Visual C++ compilata con **/clr** avrà una dipendenza msvcm90, che fa parte della libreria di Runtime C. Quando si desidera che l'applicazione da utilizzare in un ambiente parzialmente attendibile, CLR applicherà alcune regole di sicurezza di accesso di codice alla DLL. Pertanto, sarà necessario rimuovere questa dipendenza poiché msvcm90 contiene codice nativo e non possono essere applicati criteri di sicurezza di accesso di codice.  
   
- Se l'applicazione non utilizza alcuna funzionalità della libreria di runtime C e si desidera rimuovere la dipendenza da questa libreria dal codice, sarà necessario utilizzare l'opzione del linker **\/NODEFAULTLIB:msvcmrt.lib** ed eseguire il collegamento a ptrustm.lib o ptrustmd.lib.  Queste librerie contengono file oggetto per l'inizializzazione e l'annullamento dell'inizializzazione di un'applicazione, delle classi di eccezioni utilizzate dal codice di inizializzazione e del codice per la gestione delle eccezioni gestite.  Con il collegamento a una di queste librerie viene rimossa qualsiasi dipendenza da msvcm90.dll.  
+ Se l'applicazione non utilizza le funzionalità della libreria di Runtime C e si desidera rimuovere la dipendenza da questa raccolta dal codice, sarà necessario utilizzare il **/NODEFAULTLIB:msvcmrt.lib** l'opzione del linker e collegamento con eseguire o ptrustmd. Queste librerie contengono file oggetto per l'inizializzazione e annullamento dell'inizializzazione di un'applicazione, le classi di eccezioni usato dal codice di inizializzazione e gestione delle eccezioni gestite. Il collegamento a una di queste librerie rimuoverà tutte le dipendenze msvcm90.  
   
 > [!NOTE]
->  Per le applicazioni che utilizzano le librerie ptrust, l'ordine di annullamento dell'inizializzazione degli assembly può variare.  Per le applicazioni normali, gli assembly vengono in genere scaricati nell'ordine inverso rispetto a quello di caricamento. Questo comportamento non è tuttavia garantito.  Per le applicazioni parzialmente attendibili, gli assembly vengono in genere scaricati nello stesso ordine in cui vengono caricati.  Anche in questo caso, tale comportamento non è garantito.  
+>  L'ordine di annullamento dell'inizializzazione di assembly potrebbero essere diversi per le applicazioni che utilizzano le librerie ptrust. Per le applicazioni normali, gli assembly vengono in genere scaricati nell'ordine inverso in cui vengono caricati, ma questo non è garantito. Per le applicazioni con attendibilità parziale, gli assembly vengono in genere scaricati nello stesso ordine in cui vengono caricati. Questa operazione, inoltre, non è garantita.  
   
-### Per creare un'applicazione mista \(\/clr\) parzialmente attendibile  
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Per creare un parzialmente attendibile mista (o clr) dell'applicazione  
   
-1.  Per rimuovere la dipendenza da msvcm90.dll, è necessario specificare che questa libreria non dovrà essere inclusa dal linker utilizzando l'opzione **\/NODEFAULTLIB:msvcmrt.lib** del linker.  Per informazioni su come eseguire questa operazione mediante l'ambiente di sviluppo di Visual Studio o a livello di codice, vedere [\/NODEFAULTLIB \(Ignora librerie\)](../build/reference/nodefaultlib-ignore-libraries.md).  
+1.  Per rimuovere la dipendenza msvcm90, è necessario specificare al linker di non includere questa raccolta usando il **/NODEFAULTLIB:msvcmrt.lib** l'opzione del linker. Per informazioni su come eseguire questa operazione usando l'ambiente di sviluppo di Visual Studio o a livello di codice, vedere [/NODEFAULTLIB (Ignora librerie)](../build/reference/nodefaultlib-ignore-libraries.md).  
   
-2.  Aggiungere una delle librerie ptrustm alle dipendenze di input del linker.  Se si compila l'applicazione in modalità di rilascio, utilizzare ptrustm.lib.  Per la modalità debug, utilizzare ptrustmd.lib.  Per informazioni su come eseguire questa operazione mediante l'ambiente di sviluppo di Visual Studio o a livello di codice, vedere [File lib come input del linker](../build/reference/dot-lib-files-as-linker-input.md).  
+2.  Aggiungere una delle librerie ptrustm alle dipendenze di input del linker. Utilizzare eseguire se si compila l'applicazione in modalità di rilascio. Per la modalità di debug, utilizzare ptrustmd. Per informazioni su come eseguire questa operazione usando l'ambiente di sviluppo di Visual Studio o a livello di codice, vedere [. LIB file come Input del Linker](../build/reference/dot-lib-files-as-linker-input.md).  
   
-## Vedere anche  
- [Assembly misti \(nativi e gestiti\)](../dotnet/mixed-native-and-managed-assemblies.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)   
  [Inizializzazione di assembly misti](../dotnet/initialization-of-mixed-assemblies.md)   
  [Supporto delle librerie per assembly misti](../dotnet/library-support-for-mixed-assemblies.md)   
- [\/link \(passaggio delle opzioni al linker\)](../build/reference/link-pass-options-to-linker.md)   
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/it-it/bd61be84-c143-409a-a75a-44253724f784)
+ [/link (passa opzioni al linker)](../build/reference/link-pass-options-to-linker.md)   

@@ -1,33 +1,35 @@
 ---
-title: "collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter (membro) [STL/CLR]"
+title: collection_adapter::collection_adapter (STL/CLR) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 190379cbfeea0f1bbf747d537f9501f076f6bb0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Costruisce un oggetto dell'adattatore.  
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter (STL/CLR)
+Costruisce un oggetto adattatore.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 collection_adapter();  
@@ -36,39 +38,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  raccolta  
- Handle di INDIRETTAMENTE dal wrapping.  
+ Handle di libreria di classi base per eseguire il wrapping.  
   
  right  
  Oggetto da copiare.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Il costruttore:  
   
  `collection_adapter();`  
   
- inizializza handle memorizzato con `nullptr`.  
+ Inizializza l'handle memorizzato con `nullptr`.  
   
  Il costruttore:  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- inizializza handle memorizzato con `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Inizializza l'handle memorizzato con `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Il costruttore:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- inizializza handle memorizzato con `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Inizializza l'handle memorizzato con `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Il costruttore:  
   
  `collection_adapter(Coll^ collection);`  
   
- inizializza handle memorizzato con con `collection`.  
+ Inizializza l'handle memorizzato con con `collection`.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -109,15 +111,18 @@ int main()
   
 ```  
   
-  **null \= Truebase\(\)**   
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Requisiti  
- **Intestazione:**\<cliext\/adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/adapter >  
   
-## Vedere anche  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

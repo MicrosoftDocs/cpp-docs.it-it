@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0843e3e9798087a1ed5d9415e8397149b0cd74f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-native-functions-from-managed-code"></a>Chiamata a funzioni native da codice gestito
 Common language runtime fornisce servizi di Platform Invoke o PInvoke, che consente al codice gestito di chiamare le funzioni di tipo C in librerie native di collegamento dinamico (DLL). Ai fini dell'interoperabilità COM con il runtime e per il meccanismo di "It Just Works", o IJW, viene utilizzato il marshalling dei dati stessi.  
@@ -191,9 +194,9 @@ int main() {
 |ULONG|unsigned long|unsigned long|UInt32|  
 |CHAR|char|char|Char|  
 |LPCSTR|Char *|Stringa ^ [in], oggetto StringBuilder ^ [in, out]|Stringa ^ [in], oggetto StringBuilder ^ [in, out]|  
-|LPCSTR|const char *|String ^|String|  
+|LPCSTR|const char *|String ^|Stringa|  
 |LPWSTR|wchar_t *|Stringa ^ [in], oggetto StringBuilder ^ [in, out]|Stringa ^ [in], oggetto StringBuilder ^ [in, out]|  
-|LPCWSTR|const wchar_t *|String ^|String|  
+|LPCWSTR|const wchar_t *|String ^|Stringa|  
 |FLOAT|float|float|Single|  
 |DOUBLE|double|double|Double|  
   

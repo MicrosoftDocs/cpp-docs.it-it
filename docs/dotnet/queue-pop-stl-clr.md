@@ -1,41 +1,42 @@
 ---
-title: "queue::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop (membro) [STL/CLR]"
+title: 'Queue:: POP (STL/CLR) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: 38f6c03b-e8f8-4663-b3d6-18314cdc8e7d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8521ea0a85b8a4997f38a6236981d85b82ecc884
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# queue::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuepop-stlclr"></a>queue::pop (STL/CLR)
 Rimuove l'ultimo elemento.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 void pop();  
 ```  
   
-## Note  
- La funzione membro rimuove l'ultimo elemento della sequenza controllata, che non deve essere vuota.  Utilizzarla per accorciare la coda di un elemento alla fine.  
+## <a name="remarks"></a>Note  
+ La funzione membro rimuove l'ultimo elemento della sequenza controllata, che deve essere non vuoto. Utilizzarla per abbreviare la coda di un elemento sul retro.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cliext_queue_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **b c**   
-## Requisiti  
- **Intestazione:** \<cliext\/queue\>  
+```Output  
+a b c  
+b c  
+```  
   
- **Spazio dei nomi:** cliext  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** \<cliext/code >  
   
-## Vedere anche  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::push](../dotnet/queue-push-stl-clr.md)
+ **Namespace:** cliext  
+  
+## <a name="see-also"></a>Vedere anche  
+ [coda (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::push (STL/CLR)](../dotnet/queue-push-stl-clr.md)

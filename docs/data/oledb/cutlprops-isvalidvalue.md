@@ -1,34 +1,36 @@
 ---
-title: "CUtlProps::IsValidValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps::IsValidValue"
-  - "CUtlProps.IsValidValue"
-  - "IsValidValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValidValue (metodo)"
+title: 'CUtlProps:: IsValidValue | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CUtlProps::IsValidValue
+- CUtlProps.IsValidValue
+- IsValidValue
+dev_langs: C++
+helpviewer_keywords: IsValidValue method
 ms.assetid: 1164556e-8d98-429c-a396-fc9a699e0e97
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06193b8c560c5ac6006698813222e698a98bccc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::IsValidValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
 Utilizzato per convalidare un valore prima di impostare una proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -38,21 +40,21 @@ Utilizzato per convalidare un valore prima di impostare una proprietà.
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `iCurSet`  
- Indice nella matrice della raccolta di proprietà; zero se è presente solo un insieme di proprietà.  
+ L'indice nella matrice di set di proprietà; zero se è impostato solo una proprietà.  
   
  `pDBProp`  
- La proprietà ID e un nuovo valore in una struttura [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx).  
+ L'ID di proprietà e un nuovo valore in un [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) struttura.  
   
-## Valore restituito  
- Un `HRESULT` standard.  Il valore di ritorno predefinito è `S_OK`.  
+## <a name="return-value"></a>Valore restituito  
+ `HRESULT` standard. Il valore predefinito valore restituito è `S_OK`.  
   
-## Note  
- Se si possiedono alcune procedure di convalida che si desidera eseguire in un valore che si sta per utilizzare per impostare una proprietà, è necessario eseguire l'override della funzione.  Ad esempio, è possibile convalidare **DBPROP\_AUTH\_PASSWORD** con una tabella di password per determinare un valore valido.  
+## <a name="remarks"></a>Note  
+ Se si dispone di qualsiasi routine di convalida da eseguire su un valore che si desidera utilizzare per impostare una proprietà, è necessario eseguire l'override di questa funzione. Ad esempio, è possibile convalidare **DBPROP_AUTH_PASSWORD** rispetto a una tabella di password per determinare un valore valido.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  **Intestazione:** atldb.h  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe CUtlProps](../../data/oledb/cutlprops-class.md)

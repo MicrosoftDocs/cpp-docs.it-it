@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 1) C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: Compilatore avviso (livello 1) C4730 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 334c53b030097dc822451b0e555a51c90e70d904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'main': le espressioni miste \_m64 e a virgola mobile possono generare codice non corretto  
+# <a name="compiler-warning-level-1-c4730"></a>Avviso del compilatore (livello 1) C4730
+'main': miste m64 e a virgola mobile espressioni possono generare codice non corretto  
   
- In una funzione vengono utilizzati i tipi [\_\_m64](../../cpp/m64.md) e **float**\/**double**.  Poiché i registri MMX e a virgola mobile condividono lo stesso spazio fisico di registro, non possono essere utilizzati contemporaneamente. L'impiego di tipi `__m64` e **float**\/**double** nella stessa funzione può provocare il danneggiamento dei dati e generare un'eccezione.  
+ Una funzione utilizza [m64](../../cpp/m64.md) e **float**/**doppie** tipi. Poiché i registri MMX e a virgola mobile condividono lo stesso fisico spazio di registro (non può essere utilizzato contemporaneamente), utilizzando `__m64` e **float**/**doppie** tipi nello stesso funzione può causare il danneggiamento dei dati, causando un'eccezione.  
   
- Per utilizzare in modo sicuro i tipi `__m64` e a virgola mobile nella stessa funzione, è necessario separare ciascuna funzione in cui è presente uno dei tipi tramite la funzione intrinseca **\_m\_empty\(\)** \(per MMX\) o **\_m\_femms\(\)** \(per 3DNow\!\).  
+ Utilizzare in modo sicuro `__m64` tipi e tipi a virgola mobile nella stessa funzione, ogni istruzione che utilizza uno dei tipi deve essere separati dal **m_empty** (per MMX) o **m_femms** (per 3DNow!) funzione intrinseca.  
   
- Il seguente codice di esempio genera l'errore C4730:  
+ L'esempio seguente genera l'errore C4730:  
   
 ```  
 // C4730.cpp  

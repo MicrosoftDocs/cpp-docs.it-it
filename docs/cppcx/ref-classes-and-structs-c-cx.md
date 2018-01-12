@@ -12,11 +12,12 @@ caps.latest.revision: "42"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f02bbb91563233e4e49537dd8f7a5290aad64b6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 C + + supporta CX definito dall'utente *le classi di riferimento* e *struct di riferimento*, definiti dall'utente *valore classi* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C + + CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base ad alcune regole specifiche e ciò ne consente il passaggio tra i componenti Windows Runtime e App UWP scritte in C++ o in altri linguaggi.  

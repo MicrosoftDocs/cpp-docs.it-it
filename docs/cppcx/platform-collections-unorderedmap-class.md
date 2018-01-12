@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f926b400e1cfa2b7b4649efcd0bac73de1faa062
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df7f97271a0173ea7844abc82978bf68aa9d90a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 Rappresenta una *mappa*non ordinata, che è una raccolta di coppie chiave-valore.  
@@ -85,7 +86,7 @@ ref class Map sealed;
   
 |||  
 |-|-|  
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |[Map:: mapchanged](#mapchanged)`event`|Si verifica quando l'oggetto Map subisce delle modifiche.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  

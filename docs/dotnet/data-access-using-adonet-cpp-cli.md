@@ -19,18 +19,21 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f243b18b2666c21a6d83eabe35ecd6ad9df5905c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-access-using-adonet-ccli"></a>Accesso ai dati tramite ADO.NET (C++/CLI)
 ADO.NET è l'API di .NET Framework per accedere ai dati e offre potenza e la facilità di utilizzo non corrispondente da soluzioni di accesso ai dati precedenti. In questa sezione vengono descritti alcuni problemi relativi ad ADO.NET che sono univoci per gli utenti di Visual C++, ad esempio il marshalling di tipi nativi.  
   
  ADO.NET viene eseguito in Common Language Runtime (CLR). Pertanto, qualsiasi applicazione che interagisce con ADO.NET deve utilizzare anche CLR. Tuttavia ciò non significa che le applicazioni native non è possibile utilizzare ADO.NET. Questi esempi verranno illustrato come interagire con un database ADO.NET dal codice nativo.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedura: Effettuare il marshalling di stringhe ANSI per ADO.NET (C++/CLI)](../dotnet/how-to-marshal-ansi-strings-for-adonet-cpp-cli.md)  
   
  [Procedura: Effettuare il marshalling di stringhe BSTR per ADO.NET (C++/CLI)](../dotnet/how-to-marshal-bstr-strings-for-adonet-cpp-cli.md)  

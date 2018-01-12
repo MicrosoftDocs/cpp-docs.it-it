@@ -1,36 +1,35 @@
 ---
-title: "Avviso del compilatore (livello 3) C4018 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4018"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4018"
+title: Compilatore (livello 3) Avviso C4018 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4018
+dev_langs: C++
+helpviewer_keywords: C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84a8efdd90a4f93e1eda779ca0e23e339099181e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 3) C4018
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'espressione': errata corrispondenza tra signed e unsigned  
+# <a name="compiler-warning-level-3-c4018"></a>Compilatore (livello 3) Avviso C4018
+'expression': mancata corrispondenza signed e unsigned  
   
- Per effettuare il confronto tra un numero con segno e uno senza segno è stato necessario convertire il valore signed in unsigned.  
+ Confronto tra un numero con e senza segno obbligatorio al compilatore di convertire il valore signed a unsigned.  
   
- È possibile evitare la visualizzazione dell'avviso eseguendo il cast dei due tipi durante il test dei tipi signed e unsigned.  
+ Questo problema può essere risolto se si esegue il cast uno dei due tipi di test tipi signed e unsigned.  
   
- Il seguente codice di esempio genera l'errore C4018:  
+ L'esempio seguente genera l'errore C4018:  
   
 ```  
 // C4018.cpp  

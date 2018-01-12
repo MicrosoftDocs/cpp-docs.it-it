@@ -1,32 +1,35 @@
 ---
-title: "L&#39;attributo di collegamento dei membri integrali di Static Const non &#232; pi&#249; Literal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "costanti, dichiarazione"
-  - "espressioni costanti integrali"
-  - "attributo effettivo [C++]"
+title: "Il collegamento statico di Const Int non è più Literal | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- literal attribute [C++]
+- constants, declaring
+- integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f34682fa780ef430d27104d3df9658f9e32ad39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# L&#39;attributo di collegamento dei membri integrali di Static Const non &#232; pi&#249; Literal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La dichiarazione di un membro costante di una classe è stata modificata in [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] rispetto alle estensioni gestite di C\+\+.  
+# <a name="static-const-int-linkage-is-no-longer-literal"></a>L'attributo di collegamento dei membri integrali di Static Const non è più Literal
+La dichiarazione di un membro costante di una classe è stata modificata dalle estensioni gestite per C++ a Visual C++.  
   
- Sebbene i membri integrali `static const` siano ancora supportati, il relativo attributo di collegamento è stato modificato.  L'attributo di collegamento precedente è stato incluso in un membro integrale di tipo literal.  Si consideri ad esempio la seguente classe di estensioni gestite:  
+ Sebbene `static const` membri integrali sono ancora supportati, il relativo attributo di collegamento è stato modificato. Il relativo attributo di collegamento precedente viene ora eseguito in un valore letterale integrale di membri. Ad esempio, si consideri la seguente classe di estensioni gestite:  
   
 ```  
 public __gc class Constants {  
@@ -35,37 +38,37 @@ public:
 };  
 ```  
   
- Tramite questo codice vengono generati i seguenti attributi sottostanti CIL per il campo \(si noti l'attributo literal\):  
+ Questo genera i seguenti attributi CIL sottostanti per il campo (si noti l'attributo letterale):  
   
 ```  
 .field public static literal int32   
 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Quando il codice viene compilato con la nuova sintassi:  
+ Mentre questo viene compilato con la nuova sintassi:  
   
 ```  
 public ref class Constants {  
 public:  
-   static const int LOG_DEBUG = 4;  
+   static const int LOG_DEBUG = 4;  
 };  
 ```  
   
- l'attributo literal non viene più generato, pertanto non viene visualizzato come costante dal runtime CLR:  
+ non genera l'attributo letterale e pertanto non viene visualizzato come una costante dal runtime CLR:  
   
 ```  
 .field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- Per ottenere lo stesso attributo literal nei diversi linguaggi, la dichiarazione deve essere modificata nel nuovo membro dati `literal` supportato, come segue:  
+ Per avere lo stesso attributo literal nei diversi linguaggio, la dichiarazione deve essere modificata per appena supportati `literal` membro dati, come indicato di seguito,  
   
 ```  
 public ref class Constants {  
 public:  
-   literal int LOG_DEBUG = 4;  
+   literal int LOG_DEBUG = 4;  
 };  
 ```  
   
-## Vedere anche  
- [Dichiarazioni di membri in una classe o interfaccia \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [literal](../windows/literal-cpp-component-extensions.md)
+## <a name="see-also"></a>Vedere anche  
+ [Dichiarazioni di membro all'interno di una classe o interfaccia (C + c++ /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [valore letterale](../windows/literal-cpp-component-extensions.md)
