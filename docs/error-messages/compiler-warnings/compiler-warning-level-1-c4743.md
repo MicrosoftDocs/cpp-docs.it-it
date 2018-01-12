@@ -1,39 +1,38 @@
 ---
-title: "Avviso del compilatore (livello 1) C4743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4743"
+title: Compilatore avviso (livello 1) C4743 | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4743
+dev_langs: C++
+helpviewer_keywords: C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7169afdf7fb4c9a03e509f0332e738a66a06f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Avviso del compilatore (livello 1) C4743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'*type*' ha una diversa dimensione in '*file1*' e '*file2*': *number* e *number* byte  
+# <a name="compiler-warning-level-1-c4743"></a>Avviso del compilatore (livello 1) C4743
+'*tipo*'ha una diversa dimensione '*file1*'e'*file2*': *numero* e *numero* byte  
   
- Una variabile esterna con riferimenti o definizione in due file ha tipi diversi nei due file ed è il compilatore determina che la dimensione della variabile in *file1* differisce dalla dimensione della variabile in *file2*.  
+ Una variabile esterna a cui fa riferimento o definiti in due file ha tipi diversi in tali file e il compilatore stabilito che la dimensione della variabile in *file1* differisce dalla dimensione della variabile in *file2*.  
   
- Esiste un caso rilevante in cui può essere generato questo avviso per C\+\+.  Se si dichiarano gli stessi tipi con nome uguale in due file diversi e tali dichiarazioni contengono funzioni virtuali e sono differenti, è possibile che venga generato l'avviso C4744 per le tabelle delle funzioni virtuali.  L'avviso viene generato perché risultano disponibili due tabelle di funzioni virtuali con dimensioni diverse per lo stesso tipo e il linker deve stabilire quale tabella incorporare nell'eseguibile.  È possibile che il programma chiami la funzione virtuale errata.  
+ È importante case quando questo avviso può essere emessi per C++. Se si dichiarano gli stessi tipi con lo stesso nome in due file diversi, se tali dichiarazioni contengono funzioni virtuali e le dichiarazioni non sono uguali, il compilatore può generare l'avviso C4744 per le tabelle di funzione virtuale. L'avviso viene generato perché sono presenti due tabelle di funzioni virtuali con dimensioni diverse per lo stesso tipo e il linker deve stabilire uno di essi per incorporare il file eseguibile.  È possibile che il programma chiami la funzione virtuale errata.  
   
- Per evitare di visualizzare l'avviso, utilizzare la stessa definizione di tipo oppure assegnare nomi diversi ai tipi o alle variabili.  
+ Per risolvere il problema, utilizzare la stessa definizione di tipo o usare nomi diversi per i tipi o variabili.  
   
-## Esempio  
- In questo esempio è inclusa una definizione del tipo.  
+## <a name="example"></a>Esempio  
+ In questo esempio contiene una definizione del tipo.  
   
 ```  
 // C4743a.cpp  
@@ -51,8 +50,8 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## Esempio  
- Nell'esempio seguente viene generato l'errore C4743.  
+## <a name="example"></a>Esempio  
+ L'esempio seguente genera l'errore C4743.  
   
 ```  
 // C4743b.cpp  
