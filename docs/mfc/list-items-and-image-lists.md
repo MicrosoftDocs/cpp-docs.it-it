@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 91c127819732fd8fef792b077f2fa146175ac91f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 525d8353c308796d70f974fa56cde3aa76c12142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-items-and-image-lists"></a>Elementi elenco ed elenchi di immagini
 Un "elemento" in un controllo elenco ([CListCtrl](../mfc/reference/clistctrl-class.md)) è costituito da un'icona, un'etichetta e possibilmente altre informazioni (negli "elementi secondari").  
@@ -30,7 +31,7 @@ Un "elemento" in un controllo elenco ([CListCtrl](../mfc/reference/clistctrl-cla
  Le icone degli elementi di un controllo elenco sono contenute negli elenchi di immagini. Un elenco di immagini contiene icone grandi utilizzate nella visualizzazione icone. Un secondo elenco di immagini, che è facoltativo, contiene le versioni più piccole delle stesse icone da utilizzare in altre visualizzazioni del controllo. Un terzo elenco facoltativo contiene le immagini di "stato", ad esempio le caselle di controllo, per la visualizzazione davanti alle icone piccole in alcune visualizzazioni. Un quarto elenco facoltativo contiene le immagini visualizzate nelle singole voci di intestazione del controllo elenco.  
   
 > [!NOTE]
->  Se un controllo visualizzazione elenco viene creato con lo stile `LVS_SHAREIMAGELISTS`, occorre provvedere all'eliminazione permanente degli elenchi di immagini quando non sono più utili. Specificare questo stile se si assegnano gli stessi elenchi di immagini a più controlli di visualizzazione di elenchi; in caso contrario, più controlli potrebbero tentare di eliminare in modo permanente lo stesso elenco di immagini.  
+>  Se un controllo visualizzazione elenco viene creato con lo stile `LVS_SHAREIMAGELISTS`, occorre provvedere all'eliminazione permanente degli elenchi di immagini quando non sono più utili. Specificare questo stile se si assegnano gli stessi elenchi di immagini a più controlli di visualizzazione di elenchi; in caso contrario, più controlli potrebbero tentare di eliminare definitivamente lo stesso elenco di immagini.  
   
  Per ulteriori informazioni sulle voci di elenco, vedere [elenchi di immagini di visualizzazione elenco](http://msdn.microsoft.com/library/windows/desktop/bb774736) e [elementi ed elementi secondari](http://msdn.microsoft.com/library/windows/desktop/bb774736) in Windows SDK. Vedere anche la classe [CImageList](../mfc/reference/cimagelist-class.md) nel *riferimenti alla libreria MFC* e [utilizzo di CImageList](../mfc/using-cimagelist.md) in questa serie di articoli.  
   

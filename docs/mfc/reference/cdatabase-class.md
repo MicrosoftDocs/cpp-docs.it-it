@@ -61,11 +61,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase (classe)
 Rappresenta una connessione a un'origine dati attraverso la quale è possibile utilizzare l'origine dati.  

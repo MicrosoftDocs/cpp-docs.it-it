@@ -123,11 +123,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8259103f719fadb0543ae91ffc3334d38affdea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (classe)
 La `CMDIChildWndEx` classe fornisce la funzionalità di Windows come finestra figlio MDI (interfaccia) a documenti multipli. Estende la funzionalità di [CMDIChildWnd (classe)](../../mfc/reference/cmdichildwnd-class.md). Il framework richiede questa classe quando un'applicazione MDI utilizza determinate classi MFC.  
@@ -190,7 +191,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare il messaggio WM_ACTIVATE.|  
 |[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Chiamato dal framework quando l'anteprima della scheda della barra delle applicazioni deve elaborare il messaggio WM_MOUSEACTIVATE.|  
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Chiamato dal framework quando è necessario per l'estensione di una mappa di bit per Windows 7 della barra delle applicazioni scheda Anteprima del figlio MDI.|  
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Chiamato dal framework per aggiornare il titolo del frame. Esegue l'override di `CMDIChildWnd::OnUpdateFrameTitle`.|  
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Chiamato dal framework per aggiornare il titolo del frame. Esegue l'override`CMDIChildWnd::OnUpdateFrameTitle`.|  
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Restituisce il riquadro che contiene il punto specificato.|  
 |`CMDIChildWndEx::PreTranslateMessage`|Usato dalla classe [CWinApp](../../mfc/reference/cwinapp-class.md) per convertire i messaggi della finestra prima che vengano inviati alle funzioni Windows [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) e [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) . Esegue l'override di [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).|  
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Ricalcola il layout della finestra.|  

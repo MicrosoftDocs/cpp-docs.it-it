@@ -1,48 +1,47 @@
 ---
-title: "function (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "function_CPP"
-  - "vc-pragma.function"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "function (pragma)"
-  - "pragma, funzione"
+title: funzione (C/C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- function_CPP
+- vc-pragma.function
+dev_langs: C++
+helpviewer_keywords:
+- function pragma
+- pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ff72fb22adf3b81e936e3591f2a60b2aa2e30fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# function (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="function-cc"></a>function (C/C++)
 Specifica la generazione delle chiamate alle funzioni specificate nell'elenco di argomenti del pragma.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 #pragma function( function1 [, function2, ...] )  
 ```  
   
-## Note  
- Se si utilizza il pragma **intrinsic** \(o \/Oi\) per indicare al compilatore di generare funzioni intrinseche \(le funzioni intrinseche vengono generare come codice inline, non come chiamate di funzione\), è possibile utilizzare il pragma **function** per forzare in modo esplicito una chiamata di funzione.  Una volta che viene rilevato un pragma funzione, verrà applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata.  L'effetto continua fino alla fine del file di origine o alla rilevazione di un pragma **intrinsic** che specifica la stessa funzione intrinseca.  Il pragma **function** può essere utilizzato solo all'esterno di una funzione a livello globale.  
+## <a name="remarks"></a>Note  
+ Se si utilizza il **intrinseco** pragma (o /Oi) per indicare al compilatore di generare funzioni intrinseche (le funzioni intrinseche vengono generate come codice inline, non come chiamate di funzione), è possibile utilizzare il **funzione** (pragma) Per forzare in modo esplicito una chiamata di funzione. Una volta che viene rilevato un pragma funzione, verrà applicato alla prima definizione di funzione che contiene una funzione intrinseca specificata. L'effetto continua fino alla fine del file di origine o alla rilevazione di un **intrinseco** pragma specificando la stessa funzione intrinseca. Il **funzione** pragma può essere utilizzato solo all'esterno di una funzione, ovvero a livello globale.  
   
- Per gli elenchi delle funzioni che hanno formati intrinseci, vedere [\#pragma intrinsic](../preprocessor/intrinsic.md).  
+ Per gli elenchi delle funzioni che hanno formati intrinseci, vedere [#pragma intrinseco](../preprocessor/intrinsic.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // pragma_directive_function.cpp  
@@ -89,7 +88,10 @@ int main() {
 }  
 ```  
   
-  **str is 'Now\*\*\*\*\*\*\*\*\*\*\*\*'**  
-**str is '\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!'**   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+str is 'Now************'  
+str is '!!!!!!!!!!!!!!!'  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

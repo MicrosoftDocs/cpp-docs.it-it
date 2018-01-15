@@ -1,11 +1,10 @@
 ---
-title: Classe message_processor | Documenti di Microsoft
+title: Classe message_processor | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,19 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs:
-- C++
-helpviewer_keywords:
-- message_processor class
+dev_langs: C++
+helpviewer_keywords: message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messageprocessor-class"></a>Classe message_processor
 La classe `message_processor` rappresenta la classe base astratta per l'elaborazione degli oggetti `message`. Non esiste garanzia sull'ordinamento dei messaggi.  
@@ -71,9 +54,9 @@ class message_processor;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[async_send](#async_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo asincrono.|  
-|[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo sincrono.|  
-|[attesa](#wait)|Quando sottoposto a override in una classe derivata, attende per completare tutte le operazioni asincrone.|  
+|[async_send](#async_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo asincrono nel blocco.|  
+|[sync_send](#sync_send)|Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo sincrono nel blocco.|  
+|[attesa](#wait)|Quando sottoposto a override in una classe derivata, attende completare tutte le operazioni asincrone.|  
   
 ### <a name="protected-methods"></a>Metodi protetti  
   
@@ -91,7 +74,7 @@ class message_processor;
   
 ##  <a name="async_send"></a>async_send 
 
- Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo asincrono.  
+ Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo asincrono nel blocco.  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
@@ -117,7 +100,7 @@ virtual void process_incoming_message() = 0;
   
 ##  <a name="sync_send"></a>sync_send 
 
- Quando sottoposto a override in una classe derivata, inserisce i messaggi il blocco in modo sincrono.  
+ Quando sottoposto a override in una classe derivata, posiziona i messaggi in modo sincrono nel blocco.  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
@@ -132,7 +115,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
   
 ##  <a name="wait"></a>attesa 
 
- Quando sottoposto a override in una classe derivata, attende per completare tutte le operazioni asincrone.  
+ Quando sottoposto a override in una classe derivata, attende completare tutte le operazioni asincrone.  
   
 ```
 virtual void wait() = 0;
@@ -144,4 +127,3 @@ virtual void wait() = 0;
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe ordered_message_processor](ordered-message-processor-class.md)
-

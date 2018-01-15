@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap (classe)
 Incapsula una bitmap GDI (Graphics Device Interface) di Windows e fornisce funzioni membro per la modifica della bitmap.  
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Note  
  Per impostazione predefinita, `LoadMappedBitmap` i colori utilizzati nei glifi pulsante verrà eseguito il mapping.  
   
- Per informazioni sulla creazione di una bitmap con mapping, vedere la funzione Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) e [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struttura in Windows SDK.  
+ Per informazioni sulla creazione di una bitmap con mapping, vedere la funzione Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) e [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) struttura in Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Carica una bitmap predefinita utilizzata da Windows.  

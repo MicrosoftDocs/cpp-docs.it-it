@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1ae32ba6acd758d958bbcc1db419a2946471b1e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwait"></a>_cwait
 Attende la conclusione di un altro processo.  
@@ -88,7 +89,7 @@ intptr_t _cwait(
 |-------------|---------------------|---------------------|  
 |`_cwait`|\<process.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità).  
+ Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Esempio  
   
@@ -160,4 +161,4 @@ Hi, Dad. It's Dave.
   
 ## <a name="see-also"></a>Vedere anche  
  [Process and Environment Control](../../c-runtime-library/process-and-environment-control.md)  (Controllo processo e ambiente)  
- [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md) (Funzioni _spawn, _wspawn)
+ [Funzioni _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)

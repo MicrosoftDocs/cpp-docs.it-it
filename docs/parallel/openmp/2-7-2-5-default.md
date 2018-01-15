@@ -1,51 +1,51 @@
 ---
-title: "2.7.2.5 default | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 2.7.2.5 predefinito | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c856df07-705c-4ad3-9105-a268dd33e939
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee328be7f9f0c4876738f8179c26e700c57702c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# 2.7.2.5 default
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**impostazione predefinita** la clausola consente di interesse gli attributi di condivisione di dati delle variabili.  La sintassi di **impostazione predefinita** la clausola è la seguente:  
+# <a name="2725-default"></a>2.7.2.5 default
+Il **predefinito** clausola consente all'utente interessano gli attributi di condivisione dei dati delle variabili. La sintassi del **predefinito** clausola è il seguente:  
   
 ```  
 default(shared | none)  
 ```  
   
- specificare **il valore predefinito \(condiviso\)** è equivalente in modo esplicito a elencare ogni variabile attualmente visibile in  **condiviso** clausola, a meno che non venga  **threadprivate** o  **e**`t`\- qualificato.  In assenza di un oggetto esplicito **impostazione predefinita** la clausola, il comportamento predefinito è la stessa come se  **il valore predefinito \(condiviso\)** sono stati specificati.  
+ Specificando **default(shared)** equivale a elencare in modo esplicito ogni variabile attualmente visibile in un **condivisa** clausola, a meno che non è **threadprivate** o **svantaggi**`t`-completo. In assenza di esplicita **predefinito** clausola, il comportamento predefinito è lo stesso come se **default(shared)** sono state specificate.  
   
- specificare **il valore predefinito \(nessuno\)** è necessario che almeno una delle seguenti devono essere true per ogni riferimento a una variabile nell'ambito lessicale del costrutto parallelo:  
+ Specifica di **default (None)** richiede che almeno uno dei seguenti deve essere true per ogni riferimento a una variabile dell'extent lessicale di un costrutto parallelo:  
   
--   La variabile in modo esplicito è elencata in una clausola dell'attributo di condivisione di dati di un costrutto che contiene il riferimento.  
+-   La variabile è elencata in modo esplicito in una clausola di attributo la condivisione dei dati di un costrutto che contiene il riferimento.  
   
--   La variabile viene dichiarata nel costrutto parallelo.  
+-   La variabile è dichiarata all'interno di un costrutto parallelo.  
   
--   la variabile è **threadprivate**.  
+-   La variabile è **threadprivate**.  
   
--   La variabile è assegnato a **const**\- tipo completo.  
+-   La variabile ha un **const**-tipo completo.  
   
--   The variable is the loop control variable for a **for** loop that immediately follows a **for** or **parallel for** directive, and the variable reference appears inside the loop.  
+-   La variabile è la variabile di controllo per un **per** ciclo che segue immediatamente un **per** o **parallela per** direttiva e il riferimento alla variabile viene visualizzato all'interno del ciclo .  
   
- Specificare una variabile in un oggetto **firstprivate**,  **lastprivate**, o  **riduzione** la clausola di una direttiva inclusa causa un riferimento implicito alla variabile nel contesto di inclusione.  Tali riferimenti implicita sono soggetti ai requisiti sopra elencati.  
+ Specifica una variabile in un **firstprivate**, **lastprivate**, o **riduzione** clausola di una direttiva racchiusa provoca un riferimento implicito alla variabile nel tipo di inclusione contesto. Tali riferimenti impliciti sono inoltre soggetti a requisiti elencati in precedenza.  
   
- Solo un singolo **impostazione predefinita** la clausola può essere specificata in un oggetto  **parallelo** direttiva.  
+ Una sola **predefinito** clausola può essere specificata in un **parallela** direttiva.  
   
- L'attributo predefinito della condivisione di dati di una variabile può essere modificato tramite **privato**,  **firstprivate**,  **lastprivate**,  **riduzione**e  **condiviso** clausole, come illustrato nel seguente esempio:  
+ Valore predefinito di una variabile possono eseguire l'override di attributi per la condivisione di dati usando il **privata**, **firstprivate**, **lastprivate**, **riduzione**, e **condivisa** clausole, come illustrato nell'esempio seguente:  
   
 ```  
 #pragma  omp  parallel  for  default(shared)  firstprivate(i)\  

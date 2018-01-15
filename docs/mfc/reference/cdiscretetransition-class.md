@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CDiscreteTransition [MFC], CDiscreteTransition
 - CDiscreteTransition [MFC], Create
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4c79d2afb95ad5be1ae2f79e02deaeb8309a748f
-ms.contentlocale: it-it
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdiscretetransition-class"></a>Classe CDiscreteTransition
 Incapsula una transizione discreta.  
@@ -139,4 +137,3 @@ UI_ANIMATION_SECONDS m_hold;
   
 ## <a name="see-also"></a>Vedere anche  
  [Classi](../../mfc/reference/mfc-classes.md)
-

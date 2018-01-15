@@ -1,30 +1,32 @@
 ---
-title: "Metodo HString::MakeReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::MakeReference"
-dev_langs: 
-  - "C++"
+title: 'Metodo hstring:: Makereference | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::MakeReference
+dev_langs: C++
 ms.assetid: 9e1fd2b2-66ad-4a50-b647-a20ab10e522f
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e2eba5756f2c18830c4c8fe7e16f2751ea61ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo HString::MakeReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Crea un oggetto di HStringReference da un parametro di stringa specificato.  
+# <a name="hstringmakereference-method"></a>Metodo HString::MakeReference
+Crea un oggetto HStringReference da un parametro di stringa specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<unsigned int sizeDest>  
@@ -37,23 +39,23 @@ template<unsigned int sizeDest>
               unsigned int len);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `sizeDest`  
- Un parametro di modello che specifica la dimensione del buffer di destinazione di HStringReference.  
+ Un parametro di modello che specifica la dimensione del buffer di HStringReference di destinazione.  
   
  `str`  
- Un riferimento a una stringa a caratteri "wide".  
+ Un riferimento a una stringa di caratteri "wide".  
   
  `len`  
- La lunghezza massima del buffer `str` del parametro da utilizzare in questa operazione.  Se il parametro `len` non viene specificato, l'intero parametro `str` viene utilizzato.  
+ La lunghezza massima del `str` buffer del parametro da utilizzare in questa operazione. Se il `len` parametro non è specificato, l'intero `str` parametro viene utilizzato.  
   
-## Valore restituito  
- Un oggetto di HStringReference il cui valore è lo stesso del parametro specificato `str`.  
+## <a name="return-value"></a>Valore restituito  
+ Un oggetto HStringReference il cui valore è lo stesso specificato `str` parametro.  
   
-## Requisiti  
- **Header:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
  **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe HString](../windows/hstring-class.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d8a1a902b5e1a7c09a0ed043f87bfa5c7819482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7109651bc250f83d8ee7e162b647ef54dd5308d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sdi-and-mdi"></a>SDI e MDI
 MFC semplifica funzionare con interfaccia a documento singolo (SDI) e applicazioni di interfaccia a documenti multipli (MDI).  

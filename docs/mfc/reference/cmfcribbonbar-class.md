@@ -199,11 +199,12 @@ caps.latest.revision: "41"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2eb20c88ec6135c698b5a4b7c7f88d487cc8f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ea33fbd2f9517734c2dcb15fd434e8ddcc36b41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 La classe `CMFCRibbonBar` implementa una barra multifunzione analoga a quella usata in Office 2007.  
@@ -289,14 +290,14 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar:: LoadFromResource](#loadfromresource)|Di overload. Carica una barra multifunzione dalle risorse dell'applicazione.|  
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||  
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||  
-|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|Esegue l'override di `CPane::OnRTLChanged`.|  
+|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|Esegue l'override`CPane::OnRTLChanged`.|  
 |[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Esegue l'override [cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||  
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||  
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||  
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||  
 |[CMFCRibbonBar::PopTooltip](#poptooltip)||  
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override di `CBasePane::PreTranslateMessage`.|  
+|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|Esegue l'override`CBasePane::PreTranslateMessage`.|  
 |[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Esegue l'override [cpane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
 |[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Rimuove tutte le categorie della barra multifunzione dalla barra multifunzione.|  
 |[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Rimuove tutti gli elementi della barra multifunzione dall'area della scheda.|  

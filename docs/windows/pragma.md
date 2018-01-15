@@ -1,32 +1,33 @@
 ---
-title: "pragma | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pragma"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragma attribute"
+title: pragma | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pragma
+dev_langs: C++
+helpviewer_keywords: pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36016ae4af32ead520c8d9919840d267e9d46211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# pragma
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genera la stringa specificata nel file generato con estensione .idl senza l'utilizzo delle virgolette.  .  
+# <a name="pragma"></a>pragma
+Genera la stringa specificata nel file IDL generato senza l'utilizzo delle virgolette. .  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,14 +36,14 @@ Genera la stringa specificata nel file generato con estensione .idl senza l'util
 ) ];  
 ```  
   
-#### Parametri  
- *pragma\_statement*  
- Il pragma che si desidera immettere file generato con estensione .idl.  
+#### <a name="parameters"></a>Parametri  
+ *pragma_statement*  
+ Il pragma che si desidera analizzare il file IDL generato.  
   
-## Note  
- **pragma** L'attributo di C\+\+ ha la stessa funzionalità di  [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **pragma** attributo C++ ha la stessa funzionalità come il [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) attributo MIDL.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // cpp_attr_ref_pragma.cpp  
@@ -58,21 +59,20 @@ __interface A
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi autonomi](../windows/stand-alone-attributes.md)   
  [pack](../preprocessor/pack.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

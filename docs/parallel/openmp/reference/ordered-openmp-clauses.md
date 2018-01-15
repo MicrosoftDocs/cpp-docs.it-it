@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c472e51502b6a934096fe5c3a3b2e17b9e1d14cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 072266b07a71599d84b6a7f39966f455d0774672
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ordered-openmp-clauses"></a>ordered (clausole OpenMP)
 Obbligatorio in un'operazione parallela [per](../../../parallel/openmp/reference/for-openmp.md) istruzione se un [ordinati](../../../parallel/openmp/reference/ordered-openmp-directives.md) direttiva viene utilizzato nel ciclo.  

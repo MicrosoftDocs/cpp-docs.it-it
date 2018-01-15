@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d4ea26a75d37e264344aaacfa660e6d66dc8d5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="model"></a>.MODEL
 Inizializza il modello di memoria programma.  
@@ -56,7 +57,7 @@ Inizializza il modello di memoria programma.
 |`stackoption`|Non utilizzato|`NEARSTACK`, `FARSTACK`|  
   
 ## <a name="code"></a>Codice  
- Per esempi relativi MASM, scaricare gli esempi del compilatore [esempi di Visual C++ e la relativa documentazione per Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=178749).  
+ Per esempi relativi MASM, scaricare gli esempi del compilatore [esempi di Visual C++ e la relativa documentazione per Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749).  
   
  Nell'esempio seguente viene illustrato l'utilizzo del `.MODEL` direttiva.  
   
@@ -94,4 +95,4 @@ end
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento a direttive](../../assembler/masm/directives-reference.md)   
- [Esempi di Visual C++ e la relativa documentazione per Visual Studio 2010](http://go.microsoft.com/fwlink/?LinkID=178749)
+ [Esempi di Visual C++ e la relativa documentazione per Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)

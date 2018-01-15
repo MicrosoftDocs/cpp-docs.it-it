@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e88c378a88200a4276b9cdbbab8e828ff403b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float4-class"></a>Classe float_4
 Rappresenta uno short vector di quattro elementi mobili.  
@@ -464,7 +465,7 @@ class float_4;
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[dimensioni (costante)](#float_4__size)||  
   

@@ -1,46 +1,29 @@
 ---
-title: Classe invalid_multiple_scheduling | Documenti di Microsoft
+title: Classe invalid_multiple_scheduling | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_multiple_scheduling class
+dev_langs: C++
+helpviewer_keywords: invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 82f1046173ba1f2eebfc74e1121b01ba0ed46b04
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa021ec655162cb75837ac1475e5cb9094f79fa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidmultiplescheduling-class"></a>Classe invalid_multiple_scheduling
 Questa classe descrive un'eccezione generata quando un oggetto `task_handle` è pianificato più volte usando il metodo `run` di un oggetto `task_group` o `structured_task_group` senza una chiamata intermedia a uno dei metodi `wait` o `run_and_wait`.  
@@ -65,7 +48,7 @@ class invalid_multiple_scheduling : public std::exception;
  `invalid_multiple_scheduling`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -91,4 +74,3 @@ invalid_multiple_scheduling() throw();
  [attesa](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [Classe structured_task_group](structured-task-group-class.md)
-

@@ -1,54 +1,55 @@
 ---
-title: "Supporto documenti compositi, Creazione guidata applicazione MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.compdoc"
-dev_langs: 
-  - "C++"
+title: Supporto documenti compositi, creazione guidata applicazione MFC | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.mfc.exe.compdoc
+dev_langs: C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9390f3849cd7511054f1248205c5d2c408cb7e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Supporto documenti compositi, Creazione guidata applicazione MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questa schermata della Creazione guidata applicazione MFC è possibile indicare il livello di supporto per documenti compositi e attivi fornito dall'applicazione.  Per supportare documenti compositi e modelli di documento, è necessario che l'applicazione supporti l'architettura documento\/visualizzazione.  
+# <a name="compound-document-support-mfc-application-wizard"></a>Supporto documenti compositi, Creazione guidata applicazione MFC
+In questa pagina della creazione guidata applicazione MFC, indicare a quale livello di applicazione fornisce il supporto documenti compositi e attivi. L'applicazione deve supportare l'architettura documento/visualizzazione per il supporto documenti compositi e modelli di documento.  
   
- Per impostazione predefinita, l'applicazione non è dotata di supporto per i documenti compositi.  Se si accetta questa impostazione, l'applicazione non sarà quindi in grado di supportare documenti attivi o file compositi.  
+ Per impostazione predefinita, l'applicazione non contiene nessun supporto documenti compositi. Se si accetta questa impostazione predefinita, l'applicazione non supporta i documenti attivi o file compositi.  
   
  **Supporto documenti compositi**  
- Determina se l'applicazione fornisce il supporto come contenitore, come server o entrambi.  Per ulteriori informazioni su questa area, vedere:  
+ Determina se l'applicazione fornisce il supporto di contenitore, il supporto del server o entrambi. Per ulteriori informazioni su quest'area, vedere:  
   
 -   [Contenitori: implementazione di un contenitore](../../mfc/containers-implementing-a-container.md)  
   
 -   [Server: implementazione di un server](../../mfc/servers-implementing-a-server.md)  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**None**|Indica che non viene fornito alcun supporto per il collegamento e l'incorporamento di oggetti \(OLE, Object Linking and Embedding\).  Per impostazione predefinita, viene creata un'applicazione non dotata di supporto per ActiveX.|  
-|**Contenitore**|Contiene oggetti collegati e incorporati.|  
-|**Server ridotto**|Indica che l'applicazione è in grado di creare e gestire oggetti documento composito.  I server ridotti non possono essere eseguiti come applicazioni autonome e supportano unicamente elementi incorporati.|  
-|**Server completo**|Indica che l'applicazione è in grado di creare e gestire oggetti documento composito.  I server completi possono essere eseguiti come applicazioni autonome e supportano gli elementi sia collegati sia incorporati.|  
-|**Contenitore\/server completo**|Indica che l'applicazione può essere costituita sia da un contenitore che da un server.  Un contenitore rappresenta un'applicazione che può integrare elementi incorporati o collegati all'interno dei propri documenti.  Un server rappresenta invece un'applicazione che può creare elementi di automazione utilizzabili dalle applicazioni contenitore.|  
+|------------|-----------------|  
+|**None**|Non indica nessun supporto per Object Linking and Embedding (OLE). Per impostazione predefinita, la creazione guidata applicazione crea un'applicazione senza il supporto di ActiveX.|  
+|**Contenitore**|Contiene gli oggetti collegati e incorporati.|  
+|**Server ridotto**|Indica l'applicazione è possibile creare e gestire gli oggetti di documenti compositi. Si noti che i server ridotti non è possibile eseguire singolarmente e supportano solo gli elementi incorporati.|  
+|**Server completo**|Indica l'applicazione è possibile creare e gestire gli oggetti di documenti compositi. Server completo sono in grado di eseguire applicazioni autonome e supportano entrambi collegati e incorporati gli elementi.|  
+|**Contenitore/server completo**|Indica che l'applicazione può essere sia un contenitore e un server. Un contenitore è un'applicazione che è possibile incorporare elementi incorporati o collegati dei propri documenti. Un server è un'applicazione che è possibile creare elementi di automazione per l'utilizzo da applicazioni contenitore.|  
   
  **Opzioni aggiuntive**  
- Indica se l'applicazione supporta i documenti attivi.  Per ulteriori informazioni su questa funzionalità, vedere [Documenti attivi](../../mfc/active-documents.md).  
+ Indica se l'applicazione supporta i documenti attivi. Vedere [documenti attivi](../../mfc/active-documents.md) per ulteriori informazioni su questa funzionalità.  
   
 |Opzione|Descrizione|  
-|-------------|-----------------|  
-|**Server documenti attivi**|Indica che l'applicazione è in grado di creare e gestire documenti attivi.  Se si seleziona questa opzione, è necessario specificare un'estensione di file per il server di documenti attivi nella casella **Estensione di file** della schermata [Stringhe modello documento](../../mfc/reference/document-template-strings-mfc-application-wizard.md) della procedura guidata.  Per ulteriori informazioni, vedere [Server di documenti attivi](../../mfc/active-document-servers.md).|  
-|**Contenitore documenti attivi**|Indica che l'applicazione può contenere documenti attivi all'interno del frame.  I documenti attivi comprendono, ad esempio, documenti di Internet Explorer o di Office, quali i file di Microsoft Word o i fogli di lavoro di Excel.  Per ulteriori informazioni, vedere [Active Document Containment](../../mfc/active-document-containment.md).|  
-|**Supporto per file compositi**|I documenti dell'applicazione contenitore non vengono serializzati utilizzando il formato dei file compositi.  Questa opzione imposta il caricamento in memoria di un intero file contenente oggetti.  Non è possibile effettuare salvataggi incrementali per i singoli oggetti.  Al momento del salvataggio di un oggetto che è stato modificato, vengono salvati tutti gli oggetti inclusi nel file.|  
+|------------|-----------------|  
+|**Server documenti attivi**|Indica l'applicazione è possibile creare e gestire documenti attivi. Se si seleziona questa opzione, è necessario specificare un'estensione di file per il server di documenti attivi nel **estensione di File** casella il [stringhe modello documento](../../mfc/reference/document-template-strings-mfc-application-wizard.md) pagina della procedura guidata. Vedere [server di documenti attivi](../../mfc/active-document-servers.md) per ulteriori informazioni.|  
+|**Contenitore documenti attivi**|Indica che l'applicazione può contenere i documenti attivi all'interno della cornice. Documenti attivi possono includere, ad esempio, Internet Explorer o documenti di Office, ad esempio i file di Microsoft Word o fogli di calcolo Excel. Vedere [Active Document Containment](../../mfc/active-document-containment.md) per ulteriori informazioni.|  
+|**Supporto per file compositi**|Non vengono serializzate documenti dell'applicazione contenitore usando il formato di file composito. Questa opzione forza il caricamento di un intero file che contiene oggetti in memoria. Non sono disponibili i salvataggi incrementali per i singoli oggetti. Se un oggetto viene modificato e salvato successivamente, vengono salvati tutti gli oggetti nel file.|  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Creazione guidata applicazione MFC](../../mfc/reference/mfc-application-wizard.md)
+

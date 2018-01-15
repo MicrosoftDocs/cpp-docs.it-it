@@ -18,20 +18,21 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 742d84300a7139e392bda19142643fe469231bdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e609c16d63974506a06d6ec553cf4be09509acb9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Effetti del Controllo dell'account utente sull'applicazione
 Il Controllo dell'account utente è una funzionalità di Windows Vista in cui gli account utente dispongono di privilegi limitati. Per informazioni dettagliate sul Controllo dell'account utente, visitare i siti seguenti:  
   
--   [Step by Step Guida per il controllo di Account utente di Windows Vista](http://go.microsoft.com/fwlink/?linkid=53781)  
+-   [Step by Step Guida per il controllo di Account utente di Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=53781)  
   
--   [Procedure consigliate e linee guida per le applicazioni in un ambiente con privilegiato minimi](http://go.microsoft.com/fwlink/?linkid=82444)  
+-   [Procedure consigliate e linee guida per le applicazioni in un ambiente con privilegiato minimi](http://go.microsoft.com/fwlink/p/?linkid=82444)  
   
--   [Per delineare e configurare controllo Account utente in Windows Vista](http://go.microsoft.com/fwlink/?LinkId=82445)  
+-   [Per delineare e configurare controllo Account utente in Windows Vista](http://go.microsoft.com/fwlink/p/?linkid=82445)  
   
 ## <a name="building-projects-after-enabling-uac"></a>Compilazione di progetti dopo aver attivato il Controllo dell'account utente  
  Se si compila un progetto Visual C++ in Windows Vista con il controllo dell'account utente disabilitato, e si decide di attivare la funzionalità in un secondo momento, è necessario cancellare i dati e ricompilare il progetto per far sì che funzioni correttamente.  

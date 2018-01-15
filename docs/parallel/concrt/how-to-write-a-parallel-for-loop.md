@@ -1,56 +1,62 @@
 ---
-title: "Procedura: Scrivere un ciclo parallel_for | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "scrittura di un ciclo parallel_for [Runtime di concorrenza]"
-  - "parallel_for (funzione), esempio"
+title: 'Procedura: scrivere un ciclo parallel_for | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- writing a parallel_for loop [Concurrency Runtime]
+- parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 60ae6b7f496f86bde91801e486315587fb693436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: Scrivere un ciclo parallel_for
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questo esempio viene illustrato come utilizzare [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) per calcolare il prodotto di due matrici.  
+# <a name="how-to-write-a-parallelfor-loop"></a>Procedura: Scrivere un ciclo parallel_for
+In questo esempio viene illustrato come utilizzare [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) per calcolare il prodotto di due matrici.  
   
-## Esempio  
- Nell'esempio seguente viene illustrata la funzione `matrix_multiply` che calcola il prodotto di due matrici quadrate.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente il `matrix_multiply` funzione che calcola il prodotto di due matrici quadrate.  
   
- [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_1.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]  
   
-## Esempio  
- Nell'esempio seguente viene illustrata la funzione `parallel_matrix_multiply` che utilizza l'algoritmo `parallel_for` per eseguire il ciclo esterno in parallelo.  
+## <a name="example"></a>Esempio  
+ Nell'esempio seguente il `parallel_matrix_multiply` funzione, che usa il `parallel_for` algoritmo per eseguire il ciclo esterno in parallelo.  
   
- [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_2.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]  
   
- In questo esempio viene eseguita la parallelizzazione solo del ciclo esterno poiché viene eseguita una quantità di lavoro sufficiente per trarre vantaggio dall'overhead dell'elaborazione in parallelo.  Se viene eseguita la parallelizzazione del ciclo interno, non si otterrà alcun vantaggio in termini di prestazioni poiché la quantità di lavoro del ciclo interno è alquanto ridotta e non supera l'overhead dell'elaborazione in parallelo.  Pertanto, la parallelizzazione del ciclo esterno è l'unico approccio ottimale per aumentare al massimo i vantaggi della concorrenza nella maggior parte dei sistemi.  
+ In questo esempio viene eseguita la parallelizzazione del ciclo esterno, solo perché consente di eseguire un lavoro sufficiente per trarre vantaggio dal sovraccarico dell'elaborazione in parallelo. Se si parallelizzare il ciclo interno, non riceverai un miglioramento delle prestazioni poiché la quantità di lavoro che esegue il ciclo interno non superare l'overhead per l'elaborazione parallela. Di conseguenza, la parallelizzazione del solo ciclo esterno è il modo migliore per ottimizzare i vantaggi della concorrenza sulla maggior parte dei sistemi.  
   
-## Esempio  
- Nell'esempio seguente, più completo, vengono confrontate le prestazioni della funzione `matrix_multiply` con quelle della funzione `parallel_matrix_multiply`.  
+## <a name="example"></a>Esempio  
+ Il seguente esempio più completo vengono confrontate le prestazioni del `matrix_multiply` funzione rispetto il `parallel_matrix_multiply` (funzione).  
   
- [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/CPP/how-to-write-a-parallel-for-loop_3.cpp)]  
+ [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]  
   
  L'output di esempio seguente è relativo a un computer con quattro processori.  
   
-  **serial: 3853**  
-**parallel: 1311**   
-## Compilazione del codice  
- Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio o incollarlo in un file denominato `parallel-matrix-multiply.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+```Output  
+serial: 3853  
+parallel: 1311  
+```  
   
- **cl.exe \/EHsc parallel\-matrix\-multiply.cpp**  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-matrix-multiply.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
-## Vedere anche  
+ **CL.exe /EHsc parallelo-matrix-multiply. cpp**  
+  
+## <a name="see-also"></a>Vedere anche  
  [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)   
- [Funzione parallel\_for](../Topic/parallel_for%20Function.md)
+ [Funzione parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
+
+

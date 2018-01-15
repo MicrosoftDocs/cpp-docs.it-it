@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bed81cc8b212b6deef13cc0c6fed013b854fb4ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4590724bfc34d0ed9136e74e85b09db6a805c50c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Confronto delle strutture di dati di sincronizzazione con l'API Windows
 In questo argomento viene confrontato il comportamento delle strutture di dati di sincronizzazione fornite dal Runtime di concorrenza a quelli forniti dall'API di Windows.  
@@ -35,11 +36,11 @@ In questo argomento viene confrontato il comportamento delle strutture di dati d
   
 |Funzionalità|`reader_writer_lock`|Blocco SRW|  
 |-------------|--------------------------|--------------|  
-|Non rientrante|Sì|Sì|  
+|Non rientrante|Yes|Yes|  
 |Possibile alzare di livello un lettore in un writer (supporto per l'aggiornamento)|No|No|  
 |Può abbassare di livello un autore di un lettore (supporto per il downgrade)|No|No|  
-|Blocco preferenza scrittura|Sì|No|  
-|Accesso FIFO ai writer|Sì|No|  
+|Blocco preferenza scrittura|Yes|No|  
+|Accesso FIFO ai writer|Yes|No|  
   
  Per ulteriori informazioni sui blocchi SRW, vedere [blocchi in lettura/scrittura (SRW)](http://msdn.microsoft.com/library/windows/desktop/aa904937) in Platform SDK.  
   

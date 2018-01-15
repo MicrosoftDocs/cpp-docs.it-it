@@ -1,49 +1,48 @@
 ---
-title: "flush (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Flush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flush OpenMP directive"
+title: Flush (/openmp) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72b69daf431ab9dfd2b5c2ed7cebdc8c5af75847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# flush (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Specifica che tutti i thread hanno la stessa visualizzazione della memoria per tutti gli oggetti condivisi.  
+# <a name="flush-openmp"></a>flush (OpenMP)
+Specifica che tutti i thread dispongono della stessa vista di memoria per tutti gli oggetti condivisi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma omp flush [(var)]  
 ```  
   
-## Note  
- dove:  
+## <a name="remarks"></a>Note  
+ dove  
   
- `var` \(facoltativo\)  
- Un elenco delimitato da virgole di variabili che rappresentano oggetti si desidera sincronizzare.  se `var` non viene specificato, deallocare la memoria viene scaricata.  
+ `var` (facoltativo)  
+ Un elenco delimitato da virgole delle variabili che rappresentano gli oggetti a cui si desidera sincronizzare. Se `var` viene omesso, viene scaricata tutta la memoria.  
   
-## Note  
- **arrossir** la direttiva non supporta clausole di OpenMP.  
+## <a name="remarks"></a>Note  
+ Il **scaricamento** direttiva non supporta clausole OpenMP.  
   
- Per ulteriori informazioni, vedere [2.6.5 flush Directive](../../../parallel/openmp/2-6-5-flush-directive.md).  
+ Per ulteriori informazioni, vedere [2.6.5 direttiva flush](../../../parallel/openmp/2-6-5-flush-directive.md).  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // omp_flush.cpp  
@@ -94,8 +93,11 @@ int main() {
 }  
 ```  
   
-  **thread 0: leggere i dati**  
-**thread 1: dati gestiti**  
-**dati \= 2**   
-## Vedere anche  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Thread 0: read data  
+Thread 1: process data  
+data = 2  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive](../../../parallel/openmp/reference/openmp-directives.md)

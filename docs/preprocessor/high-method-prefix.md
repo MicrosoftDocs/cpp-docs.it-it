@@ -1,48 +1,47 @@
 ---
-title: "high_method_prefix | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "high_method_prefix"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "high_method_prefix (attributo)"
+title: high_method_prefix | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: high_method_prefix
+dev_langs: C++
+helpviewer_keywords: high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1568acdb76fafdbe7a145009108e6a22df5ff3f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# high_method_prefix
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Sezione specifica C\+\+**  
+# <a name="highmethodprefix"></a>high_method_prefix
+**Sezione specifica C++**  
   
  Specifica un prefisso da utilizzare quando si assegna un nome alle proprietà e ai metodi di alto livello.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 high_method_prefix("Prefix")  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `Prefix`  
  Prefisso da utilizzare.  
   
-## Note  
- Per impostazione predefinita, le proprietà e i metodi di gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate senza un prefisso.  I nomi provengono dalla libreria dei tipi.  
+## <a name="remarks"></a>Note  
+ Per impostazione predefinita, le proprietà e i metodi di gestione degli errori di alto livello vengono esposti dalle funzioni membro denominate senza un prefisso. I nomi provengono dalla libreria dei tipi.  
   
- **Fine sezione specifica C\+\+**  
+ **Fine sezione specifica C++**  
   
-## Vedere anche  
- [Attributi \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Direttiva \#import](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>Vedere anche  
+ [attributi #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import (direttiva)](../preprocessor/hash-import-directive-cpp.md)

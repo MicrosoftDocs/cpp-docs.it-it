@@ -19,14 +19,15 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71d0060866b6a02de3c58ed40100dee59743749b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 387344160cf2009b19ad8de820eabc6063ae1f7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-customizing"></a>Trascinamento della selezione: personalizzazione
-L'implementazione predefinita della funzionalità di trascinamento della selezione è sufficiente per la maggior parte delle applicazioni. Tuttavia, alcune applicazioni possono richiedere una modifica di questo comportamento standard. In questo articolo vengono spiegati i passaggi necessari per modificare queste impostazioni predefinite. Inoltre, è possibile utilizzare questa tecnica per stabilire le applicazioni che non supportano i documenti compositi come origini del rilascio.  
+L'implementazione predefinita della funzionalità di trascinamento della selezione è sufficiente per la maggior parte delle applicazioni. Tuttavia, alcune applicazioni possono richiedere una modifica di questo comportamento standard. In questo articolo vengono spiegati i passaggi necessari per modificare queste impostazioni predefinite. Inoltre, è possibile utilizzare questa tecnica per stabilire le applicazioni che non supportano i documenti compositi come origini di rilascio.  
   
  Se si sta personalizzando il comportamento OLE standard del trascinamento della selezione o si dispone di un'applicazione non OLE, è necessario creare un oggetto `COleDataSource` per contenere i dati. Quando l'utente inizia un'operazione di trascinamento della selezione, il codice deve chiamare la funzione `DoDragDrop` da questo oggetto anziché da altre classi che supportano le operazioni di trascinamento della selezione.  
   

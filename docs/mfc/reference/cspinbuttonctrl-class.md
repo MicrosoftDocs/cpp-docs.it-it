@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39bf04f4cec169ec996d01d5c6d445712c9d9bd3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b00fc554c6ca677756cf6a9a9c7fa83cd9d255f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (classe)
 Fornisce la funzionalità del controllo pulsante di selezione comune di Windows.  

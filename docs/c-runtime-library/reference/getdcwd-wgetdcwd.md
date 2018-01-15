@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 03791f920619b98beec3c1bbbd33b45b550eaf7a
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 Ottiene il percorso completo della directory di lavoro corrente nell'unità specificata.  
@@ -111,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` è una versione a caratteri wide di `_getdcwd`il cui parametro `buffer` e il cui valore restituito sono stringhe a caratteri wide. In caso contrario, `_wgetdcwd` e `_getdcwd` si comportano in modo identico.  
   
- Questa funzione è comunque thread-safe anche se dipende da **GetFullPathName**, che è non thread-safe. Tuttavia, è possibile violare la thread safety se le applicazioni multithread chiamano sia questa funzione che **GetFullPathName**. Per altre informazioni, visitare [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) , quindi cercare **GetFullPathName**.  
+ Questa funzione è comunque thread-safe anche se dipende da **GetFullPathName**, che è non thread-safe. Tuttavia, è possibile violare la thread safety se le applicazioni multithread chiamano sia questa funzione che **GetFullPathName**. Per altre informazioni, visitare [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) , quindi cercare **GetFullPathName**.  
   
  La versione di questa funzione con il suffisso `_nolock` si comporta in modo identico a questa funzione con l'eccezione che non è thread-safe e non è protetta da interferenze da parte di altri thread. Per altre informazioni, vedere [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md).  
   

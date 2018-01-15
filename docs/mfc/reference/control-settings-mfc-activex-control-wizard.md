@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119c98c8cf5f5a3077afce4e706b177513113d03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Impostazioni controllo, Creazione guidata controllo ActiveX MFC
 Utilizzare questa pagina della procedura guidata per specificare la modalità di controllo per il comportamento. Ad esempio, è possibile basare il controllo sui tipi di controllo di Windows standard, ottimizzare il comportamento e l'aspetto o indicare che il controllo può fungere da contenitore per altri controlli.  
@@ -30,7 +31,7 @@ Utilizzare questa pagina della procedura guidata per specificare la modalità di
  **Creare un controllo basato su**  
  In questo elenco, è possibile selezionare il tipo di controllo da cui deve ereditare al controllo. L'elenco è un subset delle classi di controlli che sono disponibili per `CreateWindowEx` e altri controlli comuni che vengono specificati in commctrl. La selezione determina lo stile del controllo nel `PreCreateWindow` funzionare nel *ProjName*file CTRL. Per ulteriori informazioni, vedere [controlli ActiveX MFC: creazione di sottoclassi di un controllo Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).  
   
-|Controllo|Descrizione|  
+|Control|Descrizione|  
 |-------------|-----------------|  
 |**PULSANTE**|Un controllo pulsante di Windows|  
 |**CONTROLLO COMBOBOX**|Un controllo casella combinata di Windows|  
@@ -59,7 +60,7 @@ Utilizzare questa pagina della procedura guidata per specificare la modalità di
  Specifica che il controllo ha lo standard di Windows **su** nella finestra di dialogo che visualizza il numero di versione e informazioni sul copyright.  
   
 > [!NOTE]
->  Come l'utente accede alla Guida per il controllo dipende dalla modalità implementazione della Guida e se è stata integrata la Guida di controllo con il contenitore. Per ulteriori informazioni sull'integrazione della Guida, nel [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) sito Web, cercare "Aggiunta sensibile al contesto della Guida per un controllo ActiveX MFC".  
+>  Come l'utente accede alla Guida per il controllo dipende dalla modalità implementazione della Guida e se è stata integrata la Guida di controllo con il contenitore. Per ulteriori informazioni sull'integrazione della Guida, nel [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, cercare "Aggiunta sensibile al contesto della Guida per un controllo ActiveX MFC".  
   
  Quando si seleziona questa opzione, inserisce il `AboutBox` metodo nella classe del controllo di progetto di controllo (C*ProjName*CTRL) e AboutBox viene aggiunto alla mappa di invio del progetto. Questa opzione è selezionata per impostazione predefinita.  
   
@@ -82,7 +83,7 @@ Utilizzare questa pagina della procedura guidata per specificare la modalità di
  Consente al controllo di elaborare le notifiche del puntatore del mouse, se il controllo è attivo o meno. Quando si seleziona questa opzione, il `pointerInactive` flag è uno dei flag restituiti da [COleControl:: GetControlFlags](../../mfc/reference/colecontrol-class.md#getcontrolflags). Per ulteriori informazioni su come usare questa opzione, vedere [fornendo Mouse Interaction While Inactive](../../mfc/providing-mouse-interaction-while-inactive.md).  
   
  **Si comporta come un semplice controllo frame**  
- Specifica che il controllo è un contenitore per altri controlli impostando il `OLEMISC_SIMPLEFRAME` bit per il controllo. Per ulteriori informazioni sul [MSDN Library](http://go.microsoft.com/fwlink/linkid=150542) sito Web, cercare "Simple Frame Site Containment".  
+ Specifica che il controllo è un contenitore per altri controlli impostando il `OLEMISC_SIMPLEFRAME` bit per il controllo. Per ulteriori informazioni sul [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sito Web, cercare "Simple Frame Site Containment".  
   
  **Carica le proprietà in modo asincrono**  
  Consente il ripristino dei dati asincroni precedenti e avvia un nuovo caricamento della proprietà asincrona del controllo.  

@@ -1,43 +1,45 @@
 ---
-title: "Propriet&#224; Modifier dei tasti di scelta rapida | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modifier (proprietà)"
+title: "Tasti di scelta rapida Modifier (proprietà) | Documenti Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63d6a4b526fc1f2aeb2a942e682a8c7cc6f9b58c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Propriet&#224; Modifier dei tasti di scelta rapida
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Di seguito vengono riportati i valori ammessi per la proprietà Modifier nella tabella dei tasti di scelta rapida.  
+# <a name="accelerator-modifier-property"></a>Proprietà Modifier dei tasti di scelta rapida
+Di seguito sono ammessi per la proprietà modificatore nella tabella di tasti di scelta rapida.  
   
 |Valore|Descrizione|  
-|------------|-----------------|  
-|**Nessuno**|Viene premuto soltanto il tasto impostato.  Questa impostazione viene principalmente utilizzata con i valori ASCII\/ANSI da 001 a 026, che vengono interpretati come valori compresi tra ^A e ^Z \(tra CTRL\-A e CTRL\-Z\).|  
-|**Alt**|Prima del tasto impostato è necessario premere ALT.|  
-|**Ctrl**|Prima del tasto impostato è necessario premere CTRL.  Questa impostazione non è valida se la proprietà Type è impostata su ASCII.|  
-|**Spostamento**|Prima del tasto impostato è necessario premere MAIUSC.|  
-|**Ctrl\+Alt**|Prima del tasto impostato è necessario premere CTRL e ALT.  Questa impostazione non è valida se la proprietà Type è impostata su ASCII.|  
-|**Ctrl\+Shift**|Prima del tasto impostato è necessario premere CTRL e MAIUSC.  Questa impostazione non è valida se la proprietà Type è impostata su ASCII.|  
-|**Alt\+Shift**|Prima del tasto impostato è necessario premere ALT e MAIUSC.  Questa impostazione non è valida se la proprietà Type è impostata su ASCII.|  
-|**Ctrl\+Alt\+Shift**|Prima del tasto impostato è necessario premere CTRL, ALT e MAIUSC.  Questa impostazione non è valida se la proprietà Type è impostata su ASCII.|  
+|-----------|-----------------|  
+|**None**|Utente preme solo il valore di chiave. Questa impostazione viene principalmente utilizzata con i valori ASCII/ANSI 001 a 026, che viene interpretato come ^ A ^ Z (CTRL + A e CTRL-Z).|  
+|**ALT**|Utente deve premere il tasto ALT prima del valore di chiave.|  
+|**CTRL**|Utente deve premere il tasto CTRL prima del valore di chiave. Non è valida con tipo ASCII.|  
+|**MAIUSC**|Utente deve premere il tasto MAIUSC prima del valore di chiave.|  
+|**Ctrl + Alt**|È necessario premere il tasto CTRL e ALT prima del valore di chiave. Non è valida con tipo ASCII.|  
+|**CTRL + MAIUSC**|È necessario premere il tasto CTRL e MAIUSC prima del valore di chiave. Non è valida con tipo ASCII.|  
+|**ALT + MAIUSC**|È necessario premere il tasto ALT e il tasto MAIUSC prima del valore di chiave. Non è valida con tipo ASCII.|  
+|**Ctrl + Alt + Maiusc**|È necessario premere MAIUSC, CTRL e ALT prima del valore di chiave. Non è valida con tipo ASCII.|  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Impostazione delle proprietà dei tasti di scelta rapida](../windows/setting-accelerator-properties.md)   
+ [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

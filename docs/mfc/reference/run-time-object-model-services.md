@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce8ca431a8bdecf2330be67b3ac46ccc394bde91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-object-model-services"></a>Servizi modelli a oggetti runtime
 Le classi [CObject](../../mfc/reference/cobject-class.md) e [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) incapsulare diversi servizi di oggetto, incluso l'accesso alle informazioni sulle classi in fase di esecuzione, serializzazione e la creazione di oggetti dinamici. Tutte le classi derivate da `CObject` ereditare questa funzionalità.  

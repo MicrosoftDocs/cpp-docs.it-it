@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01c9084d3713244635a610ace513bac38f5a4b86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9664d126471f3bbab49ec4d6e89cef8486821077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="library-support-for-multithreading"></a>Supporto della libreria per il multithreading
 Tutte le versioni della libreria CRT supportano ora multithreading, fatta eccezione per le versioni non di blocco di alcune funzioni. Vedere [prestazioni librerie multithread](../c-runtime-library/multithreaded-libraries-performance.md) per ulteriori informazioni.  

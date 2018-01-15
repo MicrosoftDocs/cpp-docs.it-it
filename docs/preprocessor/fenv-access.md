@@ -1,43 +1,44 @@
 ---
-title: "fenv_access | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fenv_access"
-  - "fenv_access_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenv_access (pragma)"
-  - "pragma, fenv_access"
+title: fenv_access | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fenv_access
+- fenv_access_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fenv_access
+- fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 623c9cb9af1d7df137aa7ee92071e34ad99a6331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# fenv_access
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Disabilita \(Attivato\) o abilita \(Disattivato\) le ottimizzazioni che potrebbero modificare test dei flag e le variazioni delle modalità.  
+# <a name="fenvaccess"></a>fenv_access
+Disabilita (Attivato) o abilita (Disattivato) le ottimizzazioni che potrebbero modificare test dei flag e le variazioni delle modalità.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 #pragma fenv_access [ON | OFF]  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Per impostazione predefinita, `fenv_access` è disattivato.  
   
- Per ulteriori informazioni sul comportamento delle operazioni a virgola mobile, vedere [\/fp \(Specifica il comportamento della virgola mobile\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Per ulteriori informazioni sul comportamento della virgola mobile, vedere [/fp (specifica il comportamento a virgola mobile)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  I tipi di ottimizzazioni soggette a `fenv_access` sono i seguenti:  
   
@@ -49,11 +50,11 @@ Disabilita \(Attivato\) o abilita \(Disattivato\) le ottimizzazioni che potrebbe
   
  Altri pragma a virgola mobile sono i seguenti:  
   
--   [float\_control](../preprocessor/float-control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -79,9 +80,12 @@ int main() {
 }  
 ```  
   
-  **out\=9,999999776482582e\-003**   
-## Esempio  
- L'esempio seguente riguarda compilatori che creano file di output per processori Itanium.  **\/fp:precise** mantiene i risultati intermedi in precisione estesa in cui i valori maggiori di FLT\_MAX \(3,402823466e\+38F\) possono essere calcolati e il risultato della somma sarà 1,0 \(come se fosse calcolato manualmente\).  **\/fp:strict** mantiene i risultati intermedi nella precisione di origine \(mobile\) in modo che la prima addizione restituisca infinito, mantenuto in tutto l'espressione.  
+```Output  
+out=9.999999776482582e-003  
+```  
+  
+## <a name="example"></a>Esempio  
+ L'esempio seguente riguarda compilatori che creano file di output per processori Itanium. **/fp: precise** mantiene i risultati intermedi in precisione estesa in cui i valori maggiori di FLT_MAX (3.402823466 e + 38F) possono essere calcolati e risultato della somma avranno 1.0 risultato, come se fosse calcolato manualmente. **/fp: strict** mantiene i risultati intermedi nella precisione di origine (float) in modo la prima addizione restituisca infinito, mantenuto in tutto l'espressione.  
   
 ```  
 // pragma_directive_fenv_access_IPF.cpp  
@@ -104,8 +108,11 @@ int main() {
 }  
 ```  
   
-  **1.000000**   
-## Esempio  
+```Output  
+1.000000  
+```  
+  
+## <a name="example"></a>Esempio  
  Si noti che nell'esempio precedente, quando `#pragma fenv_access (on)` viene trasformato in commento l'output è diverso perché la valutazione viene eseguita in fase di compilazione, in cui non viene utilizzata la modalità di controllo.  
   
 ```  
@@ -129,6 +136,9 @@ int main() {
 }  
 ```  
   
-  **out\=1,000000000000000e\-002**   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=1.000000000000000e-002  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

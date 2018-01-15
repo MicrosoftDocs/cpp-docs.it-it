@@ -10,21 +10,19 @@ f1_keywords:
 - unordered_map/std::swap
 - unordered_map/std::swap (unordered_map)
 - unordered_map/std::swap (unordered_multimap)
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords:
-- std::swap (unordered_map/multimap)
+helpviewer_keywords: std::swap (unordered_map/multimap)
+ms.workload: cplusplus
+ms.openlocfilehash: f590a42c2cb3512520307791d92c3f7243723891
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ae6173e491fe4620734d1204a7d2e109be9367d7
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 |||  
@@ -215,5 +213,4 @@ int main()
   
 ## <a name="see-also"></a>Vedere anche  
  [<unordered_map>](../standard-library/unordered-map.md)
-
 

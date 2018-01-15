@@ -1,39 +1,39 @@
 ---
-title: "Grafica (C++ AMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Grafica (C++ AMP) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
-# Grafica (C++ AMP)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="graphics-c-amp"></a>Grafica (C++ AMP)
 C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) dello spazio dei nomi che è possibile utilizzare per accedere al supporto trama sulle GPU. Di seguito sono illustrati alcuni scenari:  
   
--   È possibile utilizzare il [trama](../../parallel/amp/reference/texture-class.md) classe come un contenitore di dati per il calcolo e sfruttare il *località spaziale* della cache della trama e i layout dell'hardware della GPU. La località spaziale è la proprietà degli elementi dati fisicamente vicini gli uni agli altri.  
+-   È possibile utilizzare il [trama](../../parallel/amp/reference/texture-class.md) classe come un contenitore di dati per il calcolo e di sfruttare il *località spaziale* della cache della trama e layout dell'hardware della GPU. La località spaziale è la proprietà degli elementi dati fisicamente vicini gli uni agli altri.  
   
 -   Il runtime consente un'efficiente interoperabilità con shader non di calcolo. Pixel, vertici, mosaico e hull shader spesso utilizzano o producono trame utilizzabili nei calcoli di C++ AMP.  
   
--   Le API grafiche di C++ AMP offrono modalità alternative per accedere ai buffer sub-word compressi. Le trame con formati che rappresentano *texel* (elementi di trama) che sono costituite da 8 bit o valori scalari di 16 bit consentono l'accesso all'archiviazione dati compressa.  
+-   Le API grafiche di C++ AMP offrono modalità alternative per accedere ai buffer sub-word compressi. Le trame con formati che rappresentano *texel* (elementi di trama) che sono composte da 8 bit o valori scalari di 16 bit consentono l'accesso per l'archiviazione dati compressa.  
   
 ## <a name="the-norm-and-unorm-types"></a>Tipi norm e unorm  
- Il `norm` e `unorm` tipi sono tipi scalari che limitano l'intervallo di `float` valori; ciò è noto come *fissaggio*. Questi tipi possono essere costruiti in modo esplicito da altri tipi scalari. Durante l'operazione di cast, viene prima eseguito il cast del valore a `float`, quindi viene eseguito il fissaggio alla relativa area consentita da norm [- 1,0… 1,0] o unorm [0,0… 1,0]. Il cast da +/- all'infinito restituisce +/-1. Il cast da NaN non è definito. Un tipo norm può essere costruito in modo implicito da un tipo unorm senza perdita di dati. L'operatore di conversione implicita a float è definito su questi tipi. Gli operatori binari sono definiti tra questi tipi e altri tipi scalari predefiniti quali `float` e `int`: +, -, *, /, ==, !=, >, \<, >=, <=. Operatori di assegnazione composti sono inoltre supportati: + =, -=, \*=, / =. L'operatore di negazione unario (-) è definito per i tipi norm.  
+ Il `norm` e `unorm` tipi sono tipi scalari che limitano l'intervallo di `float` valori; questo è noto come *fissaggio*. Questi tipi possono essere costruiti in modo esplicito da altri tipi scalari. Nel cast, il valore viene prima eseguito il cast per `float` e quindi impostato alla relativa area consentita da norm [-1.0, 1.0] o unorm [0.0, 1.0]. Il cast da +/- all'infinito restituisce +/-1. Il cast da NaN non è definito. Un tipo norm può essere costruito in modo implicito da un tipo unorm senza perdita di dati. L'operatore di conversione implicita a float è definito su questi tipi. Gli operatori binari sono definiti tra questi tipi e altri tipi scalari predefiniti quali `float` e `int`: +, -, *, /, = =,! =, >, \<, > =, < =. Sono supportati anche gli operatori di assegnazione composta: + =, -=, \*=, / =. L'operatore di negazione unario (-) è definito per i tipi norm.  
   
 ## <a name="short-vector-library"></a>Libreria Short Vector  
- La libreria Short Vector fornisce alcune delle funzionalità del [tipo vettore](http://go.microsoft.com/fwlink/p/LinkId=248500) che viene definito in HLSL e viene in genere utilizzato per definire i texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono `double`, `float`, `int`, `norm`, `uint` e `unorm`. I nomi dei tipi sono riportati nella tabella seguente. Per ciascun tipo esiste anche un `typedef` corrispondente il cui nome non contiene un carattere di sottolineatura. I tipi che includono i caratteri di sottolineatura presenti il [spazio dei nomi](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non includono i caratteri di sottolineatura presenti il [dello spazio dei nomi Concurrency::graphics::direct3d](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che siano chiaramente separati da tipi di base denominato in modo simile, ad esempio `__int8` e `__int16`.  
+ La libreria Short Vector fornisce alcune funzionalità del [tipo di vettore](http://go.microsoft.com/fwlink/p/?linkid=248500) che è definito in HLSL e viene in genere utilizzato per definire texel. Un vettore short è una struttura di dati che contiene da uno a quattro valori dello stesso tipo. I tipi supportati sono `double`, `float`, `int`, `norm`, `uint` e `unorm`. I nomi dei tipi sono riportati nella tabella seguente. Per ciascun tipo esiste anche un `typedef` corrispondente il cui nome non contiene un carattere di sottolineatura. I tipi con i caratteri di sottolineatura sono nel [Namespace Concurrency:: Graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). I tipi che non hanno i caratteri di sottolineatura sono nel [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) in modo che esse siano nettamente separate da tipi di base denominato in modo simile, ad esempio `__int8` e `__int16`.  
   
 ||Lunghezza 2|Lunghezza 3|Lunghezza 4|  
 |-|--------------|--------------|--------------|  
@@ -55,24 +55,24 @@ C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/re
   
 |Tipo di operatore|Tipi validi|  
 |-------------------|-----------------|  
-|Operatori binari|Validi per tutti i tipi: +, -, *, /,<br /><br /> Validi su tipi integer: %, ^, &#124; &, <<>>,<br /><br /> I due vettori devono presentare le stesse dimensioni e il risultato è un vettore di dimensioni equivalenti.|  
+|Operatori binari|Validi per tutti i tipi: +, -, *, /,<br /><br /> Validi su tipi integer: %, ^, &#124; &, <\<, >><br /><br /> I due vettori devono presentare le stesse dimensioni e il risultato è un vettore di dimensioni equivalenti.|  
 |Operatori relazionali|Validi per tutti i tipi: == e !=|  
-|Operatore di assegnazione composta|Validi per tutti i tipi: +=, -=, *=, /=<br /><br /> Validi su tipi integer: % =, ^ =, &#124; = & =, <\< = >> =|  
+|Operatore di assegnazione composta|Validi per tutti i tipi: +=, -=, *=, /=<br /><br /> Validi su tipi integer: % =, ^ =, &#124; = &, =, <\<= >> =|  
 |Operatori di incremento e decremento|Validi per tutti i tipi: ++, --<br /><br /> Sono validi sia il prefisso che il suffisso.|  
 |Operatore NOT bit per bit (~)|Validi per i tipi Integer.|  
 |Operatore unario|Valido per tutti i tipi tranne `unorm` e `uint`.|  
   
 ### <a name="swizzling-expressions"></a>Espressioni swizzling  
- La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. Il `identifier`, noto come un *espressione swizzling*, specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. Singoli caratteri dell'identificatore potrebbero essere: x, y, z e w; o r, g, b e un oggetto. "x" e "r" significa che il componente zero, "y" e indicano il primo componente "g" e così via. Si noti che "x" e "r" non possono essere utilizzati nello stesso identificatore. Di conseguenza, "rgba" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.  
+ La Libreria Short Vector supporta il costrutto della funzione di accesso `vector_type.identifier` per accedere ai componenti di uno short vector. Il `identifier`, che è noto come un *espressione swizzling*, specifica i componenti del vettore. L'espressione può essere un l-value o un r-value. Potrebbero essere singoli caratteri nell'identificatore: x, y, z e w; o r, g, b e un oggetto. "x" e "r" significa componente zero-esimo, "y" e il componente di Media primo "g" e così via. Si noti che "x" e "r" non possono essere utilizzati nello stesso identificatore. Di conseguenza, "rgba" e "xyzw" restituiscono lo stesso risultato. Le funzioni di accesso con un solo componente come "x" e "y" sono tipi di valore scalari. Le funzioni di accesso con più componenti sono tipi short vector. Se ad esempio si crea un vettore di `int_4` denominato `fourInts` con i valori 2, 4, 6 e 8, `fourInts.y` restituisce il numero intero 4 e `fourInts.rg` restituisce un oggetto `int_2` con i valori 2 e 4.  
   
 ## <a name="texture-classes"></a>Classi Texture  
- Molte GPU dispongono di hardware e cache ottimizzati per recuperare pixel e texel ed eseguire il rendering di immagini e texture. Il [texture \< T, N >](../../parallel/amp/reference/texture-class.md) (classe), che è una classe contenitore per oggetti texel, espone la funzionalità di trama di queste GPU. Un texel può essere:  
+ Molte GPU dispongono di hardware e cache ottimizzati per recuperare pixel e texel ed eseguire il rendering di immagini e texture. Il [trama\<T, N >](../../parallel/amp/reference/texture-class.md) (classe), che è una classe contenitore per oggetti texel, espone la funzionalità di trama di queste GPU. Un texel può essere:  
   
 -   Un tipo scalare `int`, `uint`, `float`, `double`, `norm` o `unorm`.  
   
 -   Uno short vector con due o quattro componenti. L'unica eccezione è `double_4`, che non è consentito.  
   
- L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per ulteriori informazioni sulle trame e sui texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](http://go.microsoft.com/fwlink/p/LinkId=248502).  
+ L'oggetto `texture` può avere una dimensione pari a 1, 2 o 3. L'oggetto `texture` può essere acquisito solo per riferimento nell'espressione lambda di una chiamata a `parallel_for_each`. La trama viene archiviata sulla GPU come oggetto texture Direct3D. Per ulteriori informazioni su trame e texel in Direct3D, vedere [Introduzione alle trame in Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  Il tipo di texel utilizzato può essere uno dei molti formati di trama utilizzati nella programmazione grafica. Un formato RGBA, ad esempio, potrebbe utilizzare 32 bit, con 8 bit per ciascun elemento scalare R, G, B e A. L'hardware trama di una scheda grafica può accedere ai singoli elementi in base al formato. Se ad esempio si utilizza il formato RGBA, l'hardware trama consente di estrarre ciascun elemento a 8 bit in una forma a 32 bit. In C++ AMP è possibile impostare i bit per elemento scalare del texel per poter accedere automaticamente ai singoli elementi scalari nel codice senza scorrere i bit.  
   
@@ -80,7 +80,6 @@ C++ AMP contiene numerose API nel [Concurrency:: Graphics](../../parallel/amp/re
  È possibile dichiarare un oggetto texture senza inizializzazione. Nell'esempio di codice seguente vengono dichiarati diversi oggetti texture.  
   
 ```cpp  
-  
 #include <amp.h>  
 #include <amp_graphics.h>  
 using namespace concurrency;  
@@ -106,7 +105,6 @@ void declareTextures() {
  È inoltre possibile utilizzare un costruttore per dichiarare e inizializzare un oggetto `texture`. Nell'esempio di codice seguente viene creata un'istanza di un oggetto `texture` da un vettore di oggetti `float_4`. I bit per elemento scalare sono impostati sul valore predefinito. Non è possibile utilizzare questo costruttore con `norm`, `unorm` o gli short vector di `norm` e `unorm`, poiché non presentano bit predefiniti per elemento scalare.  
   
 ```cpp  
-  
 #include <amp.h>  
 #include <amp_graphics.h>  
 #include <vector>  
@@ -128,7 +126,6 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
  È anche possibile dichiarare e inizializzare un oggetto `texture` utilizzando un overload del costruttore che accetta un puntatore ai dati di origine, le dimensioni dei dati di origine in byte e i bit per elemento scalare.  
   
 ```cpp  
- 
 void createTextureWithBPC() { *// Create the source data.  
     float source[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
@@ -146,15 +143,14 @@ void createTextureWithBPC() { *// Create the source data.
   
 |Trama|Limitazione di grandezza|  
 |-------------|---------------------|  
-|texture\<T,1>|16384|  
-|texture\<T,2>|16384|  
-|texture\<T,2>|2048|  
+|trama\<T, 1 >|16384|  
+|trama\<T, 2 >|16384|  
+|trama\<T, 2 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>Lettura da oggetti texture  
- È possibile leggere da un `texture` mediante [texture::operatorOperator](../Topic/texture::operatorOperator.md), [texture:: operator () (operatore)](../Topic/texture::operator\(\)%20Operator.md), o [metodo texture:: Get](../Topic/texture::get%20Method.md). [texture::operatorOperator](../Topic/texture::operatorOperator.md) e [texture:: operator operatore](../Topic/texture::operator\(\)%20Operator.md) restituiscono un valore, non un riferimento. Pertanto, è possibile scrivere un `texture` mediante [texture::operatorOperator](../Topic/texture::operatorOperator.md).  
+ È possibile leggere da un `texture` oggetto utilizzando [texture:: operator\[\]](reference/texture-class.md#operator_at), [texture:: operator () (operatore](reference/texture-class.md#operator_call), o [texture:: Get(metodo)](reference/texture-class.md#get). I due operatori restituiscono un valore, non un riferimento. Di conseguenza, non è possibile scrivere su un oggetto `texture` utilizzando `texture::operator\[\]`.  
   
 ```cpp  
- 
 void readTexture() {  
     std::vector<int_2> src;      
     for (int i = 0; i <16 *32; i++) {  
@@ -190,7 +186,6 @@ void readTexture() {
  Nell'esempio di codice seguente viene illustrato come archiviare i canali di trama in uno short vector e accedere ai singoli elementi scalari come proprietà dello short vector.  
   
 ```cpp  
- 
 void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
     const int image_height = 16;  
     const int image_width = 16;  
@@ -229,7 +224,8 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
 |norm, norm_2, norm_4<br /><br /> unorm, unorm_2, unorm, 4|8, 16|  
   
 ### <a name="writing-to-texture-objects"></a>Scrittura su oggetti texture  
- Utilizzare il [texture:: set](../Topic/texture::set%20Method.md) metodo per scrivere in `texture` oggetti. Un oggetto texture può essere di sola lettura o lettura/scrittura. Affinché sia possibile leggere e scrivere su un oggetto texture, devono essere soddisfatte le condizioni seguenti:  
+ Utilizzare il [texture:: set](reference/texture-class.md#set) metodo per scrivere `texture` oggetti. Un oggetto texture può essere di sola lettura o lettura/scrittura. Affinché sia possibile leggere e scrivere su un oggetto texture, devono essere soddisfatte le condizioni seguenti:  
+
   
 -   T ha un solo componente scalare. Gli short vector non sono consentiti.  
   
@@ -237,12 +233,11 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
   
 -   La proprietà `texture::bits_per_scalar_element` è 32.  
   
- Se non vengono soddisfatte tutte e tre le condizioni, l'oggetto `texture` è di sola lettura. Le prime due condizioni vengono verificate durante la compilazione. Viene generato un errore di compilazione se è presente codice che tenta di scrivere su un oggetto texture `readonly`. La condizione per `texture::bits_per_scalar_element` viene rilevato in fase di esecuzione e il runtime genera il [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) eccezione se si tenta di scrivere in una sola lettura `texture` oggetto.  
+ Se non vengono soddisfatte tutte e tre le condizioni, l'oggetto `texture` è di sola lettura. Le prime due condizioni vengono verificate durante la compilazione. Viene generato un errore di compilazione se è presente codice che tenta di scrivere su un oggetto texture `readonly`. La condizione per `texture::bits_per_scalar_element` viene rilevato in fase di esecuzione e il runtime viene generato il [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) eccezione se si tenta di scrivere un readonly `texture` oggetto.  
   
  Nell'esempio di codice seguente vengono scritti valori su un oggetto texture.  
   
 ```cpp  
- 
 void writeTexture() {  
     texture<int, 1> tex1(16);
 
@@ -257,10 +252,9 @@ void writeTexture() {
 ```  
   
 ### <a name="copying-texture-objects"></a>Copia di oggetti texture  
- È possibile eseguire copie tra oggetti texture utilizzando la [Copia](../Topic/copy%20Function.md) funzione o [copy_async](../Topic/copy_async%20Function.md) funzione, come illustrato nell'esempio di codice seguente.  
+ È possibile eseguire copie tra oggetti texture utilizzando la [copia](reference/concurrency-namespace-functions-amp.md#copy) funzione o [copy_async](reference/concurrency-namespace-functions-amp.md#copy_async) funzione, come illustrato nell'esempio di codice seguente.  
   
 ```cpp  
- 
 void copyHostArrayToTexture() { *// Copy from source array to texture object by using the copy function.  
     float floatSource[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
@@ -285,10 +279,11 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
  
 ```  
   
- È inoltre possibile copiare da una trama a un altro utilizzando il [texture:: copy_to](../Topic/texture::copy_to%20Method.md) metodo. Le due trame possono trovarsi su diversi elementi accelerator_view. Quando si esegue una copia su un oggetto `writeonly_texture_view`, i dati vengono copiati sull'oggetto `texture` sottostante. I bit per elemento scalare e l'estensione devono essere uguali sugli oggetti `texture` di destinazione e su quelli di origine. Se questi requisiti non vengono soddisfatti, durante la fase di esecuzione viene generata un'eccezione.  
+ È inoltre possibile copiare da una trama a un altro utilizzando il [texture:: copy_to](reference/texture-class.md#copy_to) metodo. Le due trame possono trovarsi su diversi elementi accelerator_view. Quando si esegue una copia su un oggetto `writeonly_texture_view`, i dati vengono copiati sull'oggetto `texture` sottostante. I bit per elemento scalare e l'estensione devono essere uguali sugli oggetti `texture` di destinazione e su quelli di origine. Se questi requisiti non vengono soddisfatti, durante la fase di esecuzione viene generata un'eccezione.  
+
   
 ## <a name="texture-view-classes"></a>Classi di visualizzazioni di trama  
- C++ AMP introduce la [classe texture_view](../../parallel/amp/reference/texture-view-class.md) in [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Visualizzazioni di trama supportano la stessa texel gli stessi tipi e la [classe texture](../../parallel/amp/reference/texture-class.md), ma a differenza delle trame, forniscono l'accesso a funzionalità hardware aggiuntive come le mipmap e il campionamento delle trame. Le visualizzazioni di trama supportano l'accesso di sola scrittura, di sola lettura e di lettura e scrittura ai dati di trama sottostanti.  
+ C++ AMP introduce il [classe texture_view](../../parallel/amp/reference/texture-view-class.md) in [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)]. Visualizzazioni di trama supportano gli stessi tipi di texel e classificazioni come il [classe texture](../../parallel/amp/reference/texture-class.md), ma a differenza delle trame, forniscono l'accesso alle funzionalità hardware aggiuntivo, ad esempio campionamento delle trame e le mipmap. Le visualizzazioni di trama supportano l'accesso di sola scrittura, di sola lettura e di lettura e scrittura ai dati di trama sottostanti.  
   
 -   L'accesso in sola lettura viene fornito dalla specializzazione del modello `texture_view<const T, N>` che supporta elementi con 1, 2 o 4 componenti, il campionamento delle trame e l'accesso dinamico a un intervallo di livelli di mipmap che vengono determinati quando viene creata un'istanza della visualizzazione.  
   
@@ -296,10 +291,10 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
   
 -   L'accesso in sola scrittura viene fornito dalla classe di modelli non specializzati `texture_view<T, N>` che, analogamente alle trame, supporta elementi con un solo componente; la visualizzazione può accedere a un livello di mipmap che viene determinato quando viene creata un'istanza della visualizzazione. Non supporta il campionamento.  
   
- Le visualizzazioni di trama sono analoghe alle visualizzazioni di matrice, ma non forniscono la funzionalità di gestione e lo spostamento dei dati automatica che la [classe array_view](../../parallel/amp/reference/array-view-class.md) fornisce la [classe array](../../parallel/amp/reference/array-class.md). Una `texture_view` è accessibile unicamente sulla visualizzazione dell'acceleratore in cui risiedono i dati della trama sottostanti.  
+ Le visualizzazioni di trama sono analoghe alle visualizzazioni di matrice, ma non forniscono la funzionalità di gestione e lo spostamento dei dati automatico che il [classe array_view](../../parallel/amp/reference/array-view-class.md) fornisce il [classe array](../../parallel/amp/reference/array-class.md). Una `texture_view` è accessibile unicamente sulla visualizzazione dell'acceleratore in cui risiedono i dati della trama sottostanti.  
   
 ### <a name="writeonlytextureview-deprecated"></a>writeonly_texture_view deprecata  
- Per [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP introduce un migliore supporto per funzionalità di trama hardware come il campionamento e le mipmap, che potrebbero non essere supportate dalla [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). La classe `texture_view` appena introdotta supporta un superset della funzionalità in `writeonly_texture_view`. Di conseguenza, `writeonly_texture_view` è deprecata.  
+ Per [!INCLUDE[vs_dev12](../../atl-mfc-shared/includes/vs_dev12_md.md)], C++ AMP introduce un supporto migliore per le funzionalità di trama hardware come il campionamento e le mipmap, che potrebbero non essere supportate dal [classe writeonly_texture_view](../../parallel/amp/reference/writeonly-texture-view-class.md). La classe `texture_view` appena introdotta supporta un superset della funzionalità in `writeonly_texture_view`. Di conseguenza, `writeonly_texture_view` è deprecata.  
   
  È consigliabile, almeno per il nuovo codice, utilizzare `texture_view` per accedere alla funzionalità fornita in precedenza da `writeonly_texture_view`. Confrontare i due esempi di codice seguenti che prevedono la scrittura su un oggetto texture con due componenti (int_2). Si noti che, in entrambi i casi, la visualizzazione `wo_tv4` deve essere acquisita per valore dall'espressione lambda. Di seguito è riportato un esempio che utilizza la nuova classe `texture_view`:  
   
@@ -335,7 +330,7 @@ void write2ComponentTexture() {
   
  Come si può notare, i due esempi di codice sono quasi identici quando si scrive sul livello di mipmap principale. Se nel codice esistente si è utilizzato `writeonly_texture_view` e non si intende migliorare tale codice, non è necessario modificarlo. Se invece si intende migliorarlo, è consigliabile riscriverlo per utilizzare `texture_view` perché i miglioramenti previsti in questa visualizzazione supportano nuove funzionalità di trama hardware. Per ulteriori informazioni sulle nuove funzionalità, continuare a leggere.  
   
- Per ulteriori informazioni sulla rimozione di `writeonly_texture_view`, vedere [Panoramica di progettazione della visualizzazione di trama in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) nel codice nativo blog sulla programmazione parallela.  
+ Per ulteriori informazioni sulla rimozione di `writeonly_texture_view`, vedere [generali sulle caratteristiche di visualizzazione di trama in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) sulla programmazione parallela in codice nativo blog.  
   
 ### <a name="instantiating-texture-view-objects"></a>Creazione di istanze di oggetti texture view  
  La dichiarazione di un oggetto `texture_view` è simile alla dichiarazione di un oggetto `array_view` associato a una `array`. Nell'esempio di codice seguente vengono dichiarati molti oggetti `texture` e oggetti `texture_view` a essi associati.  
@@ -371,8 +366,8 @@ void declareTextureViews()
   
 |Tipo|Componenti|Lettura|Write|Campionamento|Accesso alle mipmap|  
 |----------|----------------|----------|-----------|--------------|-------------------|  
-|texture_view\<const T, N>|1, 2, 4|Sì|No (1)|Sì|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|  
-|Texture_view\<T, N>|1<br /><br /> 2, 4|Sì<br /><br /> No (2)|Sì<br /><br /> Sì|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|  
+|texture_view\<const T, N >|1, 2, 4|Yes|No (1)|Yes|Sì, indicizzabile. L'intervallo viene determinato al momento della creazione delle istanze.|  
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Yes<br /><br /> No (2)|Yes<br /><br /> Yes|No (1)<br /><br /> No (1)|Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.<br /><br /> Sì, un livello. Il livello viene determinato al momento della creazione delle istanze.|  
   
  Da questa tabella, è possibile vedere che le visualizzazioni di trama in sola lettura supportano completamente le nuove funzionalità a fronte dell'impossibilità di scrivere sulla visualizzazione. Le visualizzazioni di trama che consentono la scrittura sono limitate in quanto possono accedere a un solo livello di mipmap. Le visualizzazioni di trama in lettura e scrittura sono ancora più specializzate di quelle scrivibili, poiché richiedono che il tipo di elemento della visualizzazione di trama abbia un solo componente. Si noti che il campionamento non è supportato per le visualizzazioni di trama scrivibili perché è un'operazione orientata alla lettura.  
   
@@ -406,15 +401,14 @@ void write2ComponentTexture() {
 
 }  
 ```  
+ Le visualizzazioni di trama i cui elementi sono basati su tipi a virgola mobile, ad esempio float, float_2 o float_4, possono anche essere letti utilizzando il campionamento delle trame per sfruttare il supporto hardware per varie modalità di filtro e indirizzamento. C++ AMP supporta le due modalità di filtro più comuni negli scenario di calcolo, filtro punto (più simile) e filtro lineare (media ponderata) e quattro modalità di indirizzamento, ovvero wrapping, mirroring, clamping e bordo. Per ulteriori informazioni sulle modalità di indirizzamento, vedere [enumerazione address_mode](reference/concurrency-graphics-namespace-enums.md#address_mode).  
   
- Le visualizzazioni di trama i cui elementi sono basati su tipi a virgola mobile, ad esempio float, float_2 o float_4, possono anche essere letti utilizzando il campionamento delle trame per sfruttare il supporto hardware per varie modalità di filtro e indirizzamento. C++ AMP supporta le due modalità di filtro più comuni negli scenario di calcolo, filtro punto (più simile) e filtro lineare (media ponderata) e quattro modalità di indirizzamento, ovvero wrapping, mirroring, clamping e bordo. Per ulteriori informazioni sulle modalità di filtro, vedere [enumerazione filter_mode](../Topic/filter_mode%20Enumeration.md); Per ulteriori informazioni sulle modalità di indirizzamento, vedere [enumerazione address_mode](../Topic/address_mode%20Enumeration.md).  
+ Oltre alle modalità supportate direttamente da C++ AMP, è possibile accedere ad altre modalità di filtro e modalità di indirizzamento della piattaforma sottostante utilizzando le API di interoperabilità per utilizzare un campionatore di trame creato utilizzando direttamente le API della piattaforma. Ad esempio, Direct3D supporta altre modalità di filtro, come il filtro anisotropico, e consente l'applicazione di una modalità di indirizzamento diversa a ogni dimensione di una trama. È possibile creare un campionatore di trame sulle cui coordinate sono state eseguite operazioni di wrapping verticale, mirroring orizzontale e di campionamento con filtro anisotropico mediante le API di Direct3D e utilizzare il campionatore nel codice C++ AMP tramite l'API di interoperabilità `make_sampler`. Per ulteriori informazioni vedere [campionamento delle trame in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) sulla programmazione parallela in codice nativo blog.  
   
- Oltre alle modalità supportate direttamente da C++ AMP, è possibile accedere ad altre modalità di filtro e modalità di indirizzamento della piattaforma sottostante utilizzando le API di interoperabilità per utilizzare un campionatore di trame creato utilizzando direttamente le API della piattaforma. Ad esempio, Direct3D supporta altre modalità di filtro, come il filtro anisotropico, e consente l'applicazione di una modalità di indirizzamento diversa a ogni dimensione di una trama. È possibile creare un campionatore di trame sulle cui coordinate sono state eseguite operazioni di wrapping verticale, mirroring orizzontale e di campionamento con filtro anisotropico mediante le API di Direct3D e utilizzare il campionatore nel codice C++ AMP tramite l'API di interoperabilità `make_sampler`. Per ulteriori informazioni vedere [campionamento delle trame in C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) nel codice nativo blog sulla programmazione parallela.  
-  
- Le visualizzazioni di trama supportano inoltre la lettura delle mipmap. Le visualizzazioni di trama di sola lettura, ovvero quelle che presentano un tipo di elemento const, offrono la massima flessibilità in quanto è possibile campionare in modo dinamico un intervallo di livelli di mipmap determinato al momento della creazione delle istanze e perché supportano elementi con 1, 2 o 4 componenti. Anche le visualizzazioni di trama di lettura e scrittura che contengono elementi con un solo componente supportano le mipmap, ma solo di un livello determinato al momento della creazione delle istanze. Per ulteriori informazioni, vedere [trame con mipmap](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) nel codice nativo blog sulla programmazione parallela.  
+ Le visualizzazioni di trama supportano inoltre la lettura delle mipmap. Le visualizzazioni di trama di sola lettura, ovvero quelle che presentano un tipo di elemento const, offrono la massima flessibilità in quanto è possibile campionare in modo dinamico un intervallo di livelli di mipmap determinato al momento della creazione delle istanze e perché supportano elementi con 1, 2 o 4 componenti. Anche le visualizzazioni di trama di lettura e scrittura che contengono elementi con un solo componente supportano le mipmap, ma solo di un livello determinato al momento della creazione delle istanze. Per ulteriori informazioni, vedere [trama delle mipmap](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) sulla programmazione parallela in codice nativo blog.  
   
 ### <a name="writing-to-texture-view-objects"></a>Scrittura su oggetti texture view  
- Utilizzare il [metodo texture_view:: Get](../Topic/texture_view::get%20Method.md) scrivere sottostante `texture` tramite il `texture_view` oggetto. Una visualizzazione di trama può essere di sola lettura, di lettura e scrittura o di sola scrittura. Per essere scrivibile, una visualizzazione di trama deve avere un tipo di elemento non const; per essere leggibile e scrivibile, il relativo tipo di elemento deve avere un solo componente. In caso contrario, la visualizzazione di trama è di sola lettura. È possibile accedere a un solo livello di mipmap di una trama alla volta attraverso una visualizzazione di trama e il livello viene specificato al momento della creazione delle istanze della visualizzazione.  
+ Utilizzare il [texture_view:: Get (metodo)](reference/texture-view-class.md#get) per scrivere sottostante `texture` tramite il `texture_view` oggetto. Una visualizzazione di trama può essere di sola lettura, di lettura e scrittura o di sola scrittura. Per essere scrivibile, una visualizzazione di trama deve avere un tipo di elemento non const; per essere leggibile e scrivibile, il relativo tipo di elemento deve avere un solo componente. In caso contrario, la visualizzazione di trama è di sola lettura. È possibile accedere a un solo livello di mipmap di una trama alla volta attraverso una visualizzazione di trama e il livello viene specificato al momento della creazione delle istanze della visualizzazione.  
   
  In questo esempio viene illustrato come scrivere sul secondo livello di mipmap più dettagliato di una trama con 4 livelli di mipmap. Il livello di mipmap più dettagliato è il livello 0.  
   
@@ -435,7 +429,8 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 ```  
   
 ## <a name="interoperability"></a>Interoperabilità  
- Il runtime di C++ AMP supporta l'interoperabilità tra `texture<T,1>` e [interfaccia ID3D11Texture1D](http://go.microsoft.com/fwlink/p/LinkId=248503), tra `texture<T,2>` e [interfaccia ID3D11Texture2D](http://go.microsoft.com/fwlink/p/LinkId=255317), e tra `texture<T,3>` e [interfaccia ID3D11Texture3D](http://go.microsoft.com/fwlink/p/LinkId=255377). Il [get_texture](../Topic/get_texture%20Function.md) metodo accetta un `texture` oggetto e restituisce un `IUnknown` interfaccia. Il [make_texture](../Topic/make_texture%20Function.md) metodo accetta un `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.  
+
+ Il runtime C++ AMP supporta l'interoperabilità tra `texture<T,1>` e [ID3D11Texture1D interfaccia](http://go.microsoft.com/fwlink/p/?linkId=248503), tra `texture<T,2>` e [ID3D11Texture2D interfaccia](http://go.microsoft.com/fwlink/p/?linkId=255317)e tra `texture<T,3>`e [ID3D11Texture3D interfaccia](http://go.microsoft.com/fwlink/p/?linkId=255377). Il [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) metodo accetta un `texture` oggetto e restituisce un `IUnknown` interfaccia. Il [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) metodo accetta un `IUnknown` interfaccia e un `accelerator_view` oggetto e restituisce un `texture` oggetto.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe double_2](../../parallel/amp/reference/double-2-class.md)   

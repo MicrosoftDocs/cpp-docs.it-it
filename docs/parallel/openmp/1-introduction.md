@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 766ab1b367cd3d13f26243a68caf5c207069dd4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f850e236ebfd056da93700df06ec830e5a573284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="1-introduction"></a>1. Introduzione
 Questo documento specifica una raccolta di direttive del compilatore, le funzioni della libreria e le variabili di ambiente che possono essere usate per specificare il parallelismo di memoria condivisa in programmi C e C++. La funzionalità descritta in questo documento è note come il *OpenMP C/C++ dell'interfaccia API (Application Program)*. L'obiettivo di questa specifica è di per fornire un modello di programmazione in parallelo che consente a un programma garantire la portabilità tra le architetture di memoria condivisa da diversi fornitori. L'API di C/C++ OpenMP saranno supportato dai compilatori da numerosi fornitori. Ulteriori informazioni su OpenMP, inclusi il *OpenMP Fortran Application Program Interface*, visitare il seguente sito web:  

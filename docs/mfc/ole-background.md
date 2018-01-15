@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d30559ebfd55041bee767f41f397ec87074c36d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e40fb7d2e58fa672196853e1edb9d5577c2cb14a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-background"></a>Sfondo OLE
 OLE è un meccanismo che consente agli utenti di creare e modificare i documenti che contengono gli elementi o "oggetti" creato da più applicazioni.  

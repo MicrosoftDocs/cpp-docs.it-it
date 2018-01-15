@@ -20,11 +20,12 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: be5128d8a5a8d3b6d60395633122fa3dd697435e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7116d8bd3517bb412eecf4c0ba9040ce3fe0f7b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltarraygt-functions"></a>Funzioni &lt;array&gt;
 L'intestazione \<array> include due funzioni non membro, `get` e `swap`, che operano su oggetti `array`.  

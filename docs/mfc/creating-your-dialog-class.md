@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd80d55df3ae9adc4a586d1cc5387ee6d1f53282
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2d8d62dc21aacb29f1133596c7f04251e88f1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-your-dialog-class"></a>Creazione della classe di finestre di dialogo
 Per ogni finestra di dialogo del programma, creare una nuova classe di finestra di dialogo per funzionare con la risorsa finestra di dialogo.  

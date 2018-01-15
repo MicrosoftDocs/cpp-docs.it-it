@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3dee6fb7423ba9245c1b52a8aa7b90a14d52cc9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 Il **copyprivate** clausola fornisce un meccanismo per l'utilizzo di una variabile privata per la trasmissione di un valore da un membro di un gruppo per gli altri membri. È un'alternativa all'utilizzo di una variabile condivisa per il valore quando tale variabile condivisa fornendo sarebbe difficile (ad esempio, in una ricorsione di richiedere una variabile diversa a ogni livello). Il **copyprivate** clausola può apparire solo il **singolo** direttiva.  

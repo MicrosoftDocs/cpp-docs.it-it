@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5cdc520118c0d50590927a88de816a593ea5e146
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b74c76e5cc156d106f8358fe729df0bb7026422
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-run-time-class-information"></a>Accesso alle informazioni sulle classi di runtime
 In questo articolo viene illustrato come accedere alle informazioni sulla classe di un oggetto in fase di esecuzione.  

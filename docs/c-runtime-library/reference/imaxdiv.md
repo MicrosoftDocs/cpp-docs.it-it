@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65c7b71030bff65a2806d20690554a9828871268
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a6dbcd5b25fe1a8b1b21b2e2f6ac7a8cc99cc06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imaxdiv"></a>imaxdiv
 Calcola il quoziente e il resto di due interi di qualsiasi dimensione come singola operazione.  
@@ -104,6 +105,6 @@ results in a quotient of 1079252848505, and a remainder of 5170
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Supporto delle funzioni a virgola mobile](../../c-runtime-library/floating-point-support.md)   
+ [Floating-Point Support](../../c-runtime-library/floating-point-support.md)  (Supporto delle funzioni a virgola mobile)  
  [div](../../c-runtime-library/reference/div.md)   
  [ldiv, lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)

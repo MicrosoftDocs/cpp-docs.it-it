@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dff733e83e0917ee7f55a978886605146323f845
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e0032070e20749a55a34218f7341914bc47501b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 Definisce modelli che forniscono costanti in fase di compilazione in grado di offrire informazioni sulle proprietà dei rispettivi argomenti tipo o produrre tipi trasformati.  

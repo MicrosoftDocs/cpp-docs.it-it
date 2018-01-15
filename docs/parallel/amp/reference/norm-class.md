@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d35bc7781b1a57fdc0b8b68c5d4f78046d19134
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785c214ed904d1591c5d532ec9f09d42c93dc2ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm-class"></a>Classe norm
 Rappresenta un numero di norma. Ogni elemento è mobile punto numero compreso nell'intervallo [-1.0 f, 1.0 f].  

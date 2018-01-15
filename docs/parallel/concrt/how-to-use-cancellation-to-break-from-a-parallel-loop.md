@@ -1,44 +1,50 @@
 ---
-title: "Procedura: utilizzare l&#39;annullamento per interrompere un ciclo Parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "algoritmo di ricerca parallelo, scrittura [Runtime di concorrenza]"
-  - "scrittura di algoritmi di ricerca paralleli [Runtime di concorrenza]"
+title: 'Procedura: usare l''annullamento per interrompere un ciclo Parallel | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- writing a parallel search algorithm [Concurrency Runtime]
+- parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 27c6b4a216609c788978e4b857b5996587f899f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Procedura: utilizzare l&#39;annullamento per interrompere un ciclo Parallel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>Procedura: utilizzare l'annullamento per interrompere un ciclo Parallel
+In questo esempio viene illustrato come utilizzare l'annullamento per implementare un algoritmo di ricerca parallelo di base.  
+  
+## <a name="example"></a>Esempio  
 
-In questo esempio viene illustrato come utilizzare l'annullamento per implementare un algoritmo di base di ricerca parallelo.  
+ Nell'esempio seguente viene utilizzato l'annullamento per cercare un elemento nella matrice. Il `parallel_find_any` funzione Usa il [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo e [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) funzione per cercare la posizione che contiene il valore specificato. Quando il ciclo parallelo rileva che il valore, viene chiamato il [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) metodo per annullare il lavoro futuro.  
+
+
   
-## Esempio  
- Nell'esempio seguente viene utilizzato l'annullamento per cercare un elemento in una matrice.  La funzione `parallel_find_any` utilizza l'algoritmo [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) e la funzione [concurrency::run\_with\_cancellation\_token](../Topic/run_with_cancellation_token%20Function.md) per cercare la posizione che contiene il valore specificato.  Quando il ciclo parallelo trova il valore, chiama il metodo [concurrency::cancellation\_token\_source::cancel](../Topic/cancellation_token_source::cancel%20Method.md) per annullare il lavoro futuro.  
+ [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]  
   
- [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/CPP/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]  
+
+ Il [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo agisce contemporaneamente. Pertanto, non esegue le operazioni in un ordine predeterminato. Se la matrice contiene più istanze del valore, il risultato può essere una delle relative posizioni.  
+
   
- L'algoritmo [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) agisce contemporaneamente.  Pertanto, non esegue le operazioni in un ordine predeterminato.  Se la matrice contiene più istanze del valore, il risultato può essere una delle relative posizioni.  
+## <a name="compiling-the-code"></a>Compilazione del codice  
+ Copiare il codice di esempio e incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `parallel-array-search.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
-## Compilazione del codice  
- Copiare il codice di esempio e incollarlo in un progetto di Visual Studio o incollarlo in un file denominato `parallel-array-search.cpp`, quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
+ **CL.exe /EHsc parallelo-matrice-Search. cpp**  
   
- **cl.exe \/EHsc parallel\-array\-search.cpp**  
-  
-## Vedere anche  
- [Annullamento](../../parallel/concrt/cancellation-in-the-ppl.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Annullamento nella libreria PPL](cancellation-in-the-ppl.md)   
  [Algoritmi paralleli](../../parallel/concrt/parallel-algorithms.md)   
- [Funzione parallel\_for](../Topic/parallel_for%20Function.md)   
- [Classe cancellation\_token\_source](../../parallel/concrt/reference/cancellation-token-source-class.md)
+ [Funzione parallel_for](reference/concurrency-namespace-functions.md#parallel_for)   
+ [Classe cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>Documenti attivi su Internet
 Documenti attivi forniscono un'estensione a oggetti incorporati tradizionale. Documenti attivi possono essere composti da e vengono visualizzati nell'intera area client. Si eseguire la negoziazione di menu tradizionali e può essere modificati sul posto, nonché in una finestra aperta nell'applicazione server. Anziché visualizzare come un piccolo rettangolo circondato da un bordo tratteggiato, i documenti attivi sono frame completo e sempre attiva.  

@@ -17,11 +17,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74e46aeae58e95b7d455923f6f082f5e10952826
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ad7961177133e43d3c3b8d66998ec9b0d1b8f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-resource-files"></a>Utilizzo di file di risorse
 > [!WARNING]
@@ -33,9 +36,9 @@ ms.lasthandoff: 10/24/2017
   
  È possibile aggiungere nuove risorse al progetto e modificare usando l'editor appropriato per la risorsa. La maggior parte delle procedure guidate per Visual C++ genererà automaticamente un file con estensione rc per il progetto.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](https://msdn.microsoft.com/library/f45fce5x.aspx) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](https://msdn.microsoft.com/library/xbx3z216.aspx). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [File di risorse](../windows/resource-files-visual-studio.md)  
  Descrive i file di risorse e il modo in cui sono usati nelle applicazioni desktop di Windows. Include anche collegamenti ad argomenti che illustrano come usare i file di risorse.  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 10/24/2017
  [Introduzione a Visual Studio](http://msdn.microsoft.com/en-us/99997089-56ff-4d60-81a9-447062dc98ac)  
  Descrive il set completo di strumenti per lo sviluppo che usano lo stesso ambiente di sviluppo integrato (IDE, Integrated Development Environment), in modo da permettere la condivisione di strumenti e semplificare la creazione di soluzioni in linguaggi misti.  
   
- [Comunicazioni con Microsoft](/visualstudio/ide/talk-to-us)  
+ [Talk to Us](/visualstudio/ide/talk-to-us) (Comunicazioni con Microsoft)  
  Include collegamenti a informazioni sull'uso della documentazione disponibile, su come contattare il supporto tecnico e su come usare le funzionalità di accessibilità.  
   
 ## <a name="see-also"></a>Vedere anche  

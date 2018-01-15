@@ -1,30 +1,31 @@
 ---
-title: "Metodo EventSource::InvokeAll | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll (metodo)"
+title: 'Metodo EventSource:: Invokeall | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 45835b6929ae73559c427d374430b64e7ff21a61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo EventSource::InvokeAll
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Chiama ogni gestore eventi associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando gli argomenti e i tipi di argomenti specificati.  
+# <a name="eventsourceinvokeall-method"></a>Metodo EventSource::InvokeAll
+Chiama ogni gestore dell'evento associato all'oggetto corrente [EventSource](../windows/eventsource-class.md) utilizzando gli argomenti e i tipi di argomenti specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -184,64 +185,64 @@ void InvokeAll(
   
 #### <a name="parameters"></a>Parametri  
  `T0`  
- Il tipo di argomento di gestore dell'evento di zero.  
+ Il tipo dell'argomento del gestore dell'evento di zero.  
   
  `T1`  
- Il tipo del primo argomento del gestore eventi.  
+ Il tipo del primo argomento del gestore dell'evento.  
   
  `T2`  
- Il tipo del secondo argomento del gestore eventi.  
+ Il tipo del secondo argomento del gestore dell'evento.  
   
  `T3`  
- Il tipo del terzo argomento del gestore eventi.  
+ Il tipo del terzo argomento del gestore dell'evento.  
   
  `T4`  
- Il tipo del quarto argomento del gestore eventi.  
+ Il tipo del quarto argomento del gestore dell'evento.  
   
  `T5`  
- Il tipo del quinto argomento del gestore eventi.  
+ Il tipo del quinto argomento del gestore dell'evento.  
   
  `T6`  
- Il tipo del sesto argomento del gestore eventi.  
+ Il tipo del sesto argomento del gestore dell'evento.  
   
  `T7`  
- Il tipo del settimo argomento del gestore eventi.  
+ Il tipo del settimo argomento del gestore dell'evento.  
   
  `T8`  
- Il tipo dell'ottavo argomento del gestore eventi.  
+ Il tipo dell'ottavo argomento del gestore dell'evento.  
   
  `T9`  
- Il tipo del nono argomento del gestore eventi.  
+ Il tipo del nono argomento del gestore dell'evento.  
   
  `arg0`  
- L'argomento gestore dell'evento iniziale.  
+ L'argomento del gestore dell'evento zero.  
   
  `arg1`  
- Il primo argomento del gestore eventi.  
+ Il primo argomento di gestore di evento.  
   
  `arg2`  
- Il secondo argomento del gestore eventi.  
+ Il secondo argomento di gestore di evento.  
   
  `arg3`  
- Il terzo argomento del gestore eventi.  
+ Il terzo argomento di gestore di evento.  
   
  `arg4`  
- Il quarto argomento del gestore eventi.  
+ Il quarto argomento gestore dell'evento.  
   
  `arg5`  
- Il quinto argomento del gestore eventi.  
+ Il quinto argomento gestore dell'evento.  
   
  `arg6`  
- Il sesto argomento del gestore eventi.  
+ Il sesto argomento del gestore dell'evento.  
   
  `arg7`  
- Il settimo argomento del gestore eventi.  
+ Il settimo argomento del gestore dell'evento.  
   
  `arg8`  
- L'argomento gestore dell'evento ottavo.  
+ L'argomento del gestore dell'evento ottavo.  
   
  `arg9`  
- Il nono argomento del gestore eventi.  
+ Il nono argomento del gestore dell'evento.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** Event. h  
@@ -249,4 +250,4 @@ void InvokeAll(
  **Spazio dei nomi:** Microsoft::WRL
  
  ## <a name="see-also"></a>Vedere anche
- [EventSource (classe)](../windows/eventsource-class.md)
+ [Classe EventSource](../windows/eventsource-class.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0372e407927d270fe5115fd3b5646d59049d269d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Procedura dettagliata: rimozione di lavoro da un thread dell'interfaccia utente
 Questo documento viene illustrato come utilizzare il Runtime di concorrenza per spostare il lavoro eseguito dal thread dell'interfaccia utente (UI) in un'applicazione di Microsoft Foundation Classes (MFC) per un thread di lavoro. Questo documento viene inoltre illustrato come migliorare le prestazioni di un'operazione di disegno di lunga durata.  

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a356b665800b8930c42b6ba58036e73f1142b011
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a442e6aadf7c91918cd523c29330e79c753b115c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-header-control-notifications"></a>Elaborazione delle notifiche Header-Control
 Nella classe di finestra di dialogo o una vista, utilizzare la finestra proprietà per creare un [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) funzione del gestore con un'istruzione switch per qualsiasi controllo di intestazione ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) i messaggi di notifica che si desidera gestire (vedere [Mapping di messaggi a funzioni](../mfc/reference/mapping-messages-to-functions.md)). Le notifiche vengono inviate alla finestra padre quando l'utente fa clic o doppio clic su un elemento di intestazione, trascina un divisore tra gli elementi e così via.  

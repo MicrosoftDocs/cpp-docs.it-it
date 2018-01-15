@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>Classe enable_if
 Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef annidato `enable_if<Condition,Type>::type` esiste, ed è sinonimo di `Type`, solo ed esclusivamente se `Condition` è `true`.  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- In C++ un errore di sostituzione dei parametri modello non è un errore vero e proprio, ma è detto *SFINAE* (Substitution Failure Is Not An Error). In genere `enable_if` viene usato per rimuovere candidati dalla risoluzione dell'overload, ovvero seleziona il set di overload, in modo da consentire il rifiuto di una definizione a favore di un'altra. Questo è conforme al comportamento di SFINAE. Per altre informazioni su SFINAE, vedere [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) (Un errore di sostituzione non è un errore) su Wikipedia.  
+ In C++ un errore di sostituzione dei parametri modello non è un errore vero e proprio, ma è detto *SFINAE* (Substitution Failure Is Not An Error). In genere `enable_if` viene usato per rimuovere candidati dalla risoluzione dell'overload, ovvero seleziona il set di overload, in modo da consentire il rifiuto di una definizione a favore di un'altra. Questo è conforme al comportamento di SFINAE. Per altre informazioni su SFINAE, vedere [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) (Un errore di sostituzione non è un errore) su Wikipedia.  
   
  Ecco quattro scenari di esempio:  
   

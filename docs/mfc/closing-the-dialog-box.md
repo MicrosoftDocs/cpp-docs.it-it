@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7cd57819c5ab462b0310162d3c043c5f39d2a69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4c311a8d09ac3e1329b495fc321028e9f674993
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="closing-the-dialog-box"></a>Chiusura della finestra di dialogo
 Consente di chiudere una finestra di dialogo modale quando l'utente sceglie uno dei relativi pulsanti, in genere il pulsante OK o Annulla. Se si sceglie il pulsante OK o Annulla, Windows inviare l'oggetto finestra di dialogo un **BN_CLICKED** messaggio di notifica del controllo con il pulsante dell'ID, ovvero **IDOK** o **IDCANCEL**. `CDialog`fornisce funzioni gestore predefinite per i messaggi: `OnOK` e `OnCancel`. La chiamata di gestori eventi predefiniti di `EndDialog` funzione membro per chiudere la finestra di dialogo. È inoltre possibile chiamare `EndDialog` dal codice. Per ulteriori informazioni, vedere il [EndDialog](../mfc/reference/cdialog-class.md#enddialog) funzione membro di classe `CDialog` nel *riferimenti alla libreria MFC*.  

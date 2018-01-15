@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c239aa86921f00e9f25a9960451a4c15586d74d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cfb6aae5c947d1f36019e548c72b22a3304aa12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-clients"></a>client di automazione
 Automazione rende possibile per l'applicazione possa modificare oggetti implementati in un'altra applicazione o esporli in modo che possano essere modificati. Un client di automazione è un'applicazione in grado di modificare gli oggetti esposti appartenenti a un'altra applicazione. L'applicazione che espone gli oggetti viene chiamato il server di automazione. Il client consente di modificare gli oggetti dell'applicazione server accedendo alla proprietà di tali oggetti e funzioni.  

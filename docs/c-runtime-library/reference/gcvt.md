@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _gcvt
+apiname: _gcvt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _gcvt
-dev_langs:
-- C++
+f1_keywords: _gcvt
+dev_langs: C++
 helpviewer_keywords:
 - _gcvt function
 - _CVTBUFSIZE
@@ -37,30 +33,16 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 055d1e6d996a076ca7f1a49e21abf3771fa543fb
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 22561495a972c7561f827c4b7f445bb3fa5c256f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvt"></a>_gcvt
 Converte un valore a virgola mobile in una stringa, che viene archiviata in un buffer. È disponibile una versione più sicura di questa funzione. Vedere [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).  
@@ -93,7 +75,7 @@ char *_gcvt(
   
  Un `buffer` di lunghezza `_CVTBUFSIZE` è sufficiente per qualsiasi valore a virgola mobile.  
   
- Questa funzione convalida i relativi parametri. Se `buffer` è `NULL`, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `NULL`.  
+ Questa funzione convalida i relativi parametri. Se `buffer` è `NULL`, viene richiamato il gestore dei parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, la funzione imposta `errno` su`EINVAL` e restituisce `NULL`.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -101,7 +83,7 @@ char *_gcvt(
 |-------------|---------------------|  
 |`_gcvt`|\<stdlib.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

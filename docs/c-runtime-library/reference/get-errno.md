@@ -32,11 +32,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 03f54ac06cd260859bce4be5fc028be2a2c8a6bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53adc2ce18b5442320511391f4848682520e3a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="geterrno"></a>_get_errno
 Ottiene il valore corrente della variabile globale errno.  
@@ -91,7 +92,7 @@ fyi, ENOENT = 2
 |-------------|---------------------|---------------------|  
 |`_get_errno`|\<stdlib.h>|\<errno.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibility](../../c-runtime-library/compatibility.md) (Compatibilità) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_set_errno](../../c-runtime-library/reference/set-errno.md)   

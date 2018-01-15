@@ -14,15 +14,16 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fef86892bc26ce4e1c0d4651aa5c0efcc189606f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3699c3315ba8aa4b85467adce08e95fe1501ae2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classconstreverseiterator"></a>Container Class::const_reverse_iterator
 > [!NOTE]
->  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionante dei contenitori usati nella libreria standard di C++. Per altre informazioni, vedere [C++ Standard Library Containers](../standard-library/stl-containers.md) (Contenitori della libreria standard di C++).  
+>  Questo argomento è incluso nella documentazione di Visual C++ come esempio non funzionale dei contenitori usati nella libreria standard C++. Per altre informazioni, vedere [Contenitori della libreria standard C++](../standard-library/stl-containers.md).  
   
  Descrive un oggetto che può essere usato come iteratore inverso costante per la sequenza controllata.  
   
@@ -37,4 +38,4 @@ typedef T8 const_reverse_iterator;
  Viene descritta come un sinonimo del tipo non specificato **T8** (in genere [reverse_iterator](../standard-library/container-class-reverse-iterator.md) <[const_iterator](../standard-library/container-class-const-iterator.md)`>`).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sample Container Class](../standard-library/sample-container-class.md) (Classe contenitore di esempio)
+ [Classe contenitore di esempio](../standard-library/sample-container-class.md)

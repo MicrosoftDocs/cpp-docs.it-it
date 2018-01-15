@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 16bcdf6c3ffd0c88233a01a6d3a9b71250224d9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e784858c17c01c8a538edebdb15a89863d16438
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="form-views-mfc"></a>Visualizzazioni Maschera (MFC)
 È possibile aggiungere forme a qualsiasi applicazione Visual C++ che supporti le librerie MFC, tra cui un [applicazione basata su form](../mfc/reference/creating-a-forms-based-mfc-application.md) (uno cui visualizzazione viene derivata da `CFormView`). Se non è stato inizialmente creato l'applicazione per supportare i form, Visual C++ aggiungerà questo supporto per l'utente quando si inserisce un nuovo modulo. In un'applicazione SDI o MDI, che implementa il valore predefinito [architettura documento/visualizzazione](../mfc/document-view-architecture.md), quando l'utente sceglie il `New` comando (per impostazione predefinita, nel **File** menu), Visual C++ richiede all'utente Scegliere uno dei form disponibili.  

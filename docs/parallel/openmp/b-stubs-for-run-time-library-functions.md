@@ -1,32 +1,32 @@
 ---
-title: "B. Stubs for Run-time Library Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: B. Stub per le funzioni della libreria Run-time | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# B. Stubs for Run-time Library Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-In questa sezione vengono forniti gli stub per le funzioni della libreria di runtime definite in OpenMP C\# e C\+\+ API.  Gli stub sono forniti per abilitare la portabilità alle piattaforme che non supportano il OpenMP C\# e C\+\+ API.  Su queste piattaforme, i programmi di OpenMP deve essere collegato a una libreria contenente queste funzioni dello stub.  Le funzioni dello stub si presuppone che le direttive nel programma di OpenMP sono ignorate.  Di conseguenza, emulano la semantica seriale.  
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stub per le funzioni della libreria Run-time
+In questa sezione fornisce gli stub per le funzioni della libreria run-time definite nel OpenMP C e C++ API. Gli stub vengono forniti per consentire la portabilità tra piattaforme che non supportano le API C++ OpenMP C. Su queste piattaforme, i programmi OpenMP devono essere collegati con una libreria che contiene queste funzioni stub. Le funzioni stub si presuppongono che le direttive nel programma OpenMP vengono ignorate. Di conseguenza, queste emulano la semantica seriale.  
   
 > [!NOTE]
->  La variabile di blocco che viene visualizzato nelle funzioni di blocco deve essere accessibile esclusivamente con queste funzioni.  Non deve essere inizializzata o essere modificata in caso contrario nel programma applicativo.  Gli utenti non devono formulare ipotesi sui meccanismi utilizzati dalle implementazioni di OpenMP C e C\+\+ e ai blocchi di utilizzo in base alla combinazione utilizzate da funzioni dello stub.  
+>  La variabile di blocco che viene visualizzato nelle funzioni di blocco deve essere accessibile esclusivamente tramite queste funzioni. Non deve essere inizializzato o in caso contrario è stato modificato nel programma utente. Gli utenti non devono dare per scontati meccanismi utilizzati dalle implementazioni OpenMP C e C++ per implementare i blocchi in base allo schema utilizzato dalle funzioni stub.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 #include <stdio.h>  

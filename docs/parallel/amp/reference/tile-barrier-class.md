@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
-dev_langs:
-- C++
-helpviewer_keywords:
-- tile_barrier class
+dev_langs: C++
+helpviewer_keywords: tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4bacc84c4e267ffca14290186750ae1d3bdf899f
-ms.contentlocale: it-it
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f6066422056efc17052afb11d01580abc340976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilebarrier-class"></a>Classe tile_barrier
 Sincronizza l'esecuzione del thread in esecuzione nel gruppo di thread (riquadro) con `wait` metodi. Solo il runtime può creare un'istanza di questa classe.  
@@ -133,4 +116,3 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

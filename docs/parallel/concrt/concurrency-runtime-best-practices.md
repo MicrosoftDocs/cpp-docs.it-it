@@ -18,16 +18,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47252169ab061f2318cd5a664920bdfffc44fd1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9fa2236702b47b214ea076305e0e6a1c03ce778
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-runtime-best-practices"></a>Procedure consigliate del runtime di concorrenza
 Questa sezione descrive le procedure consigliate che consentono di ottimizzare l'uso del runtime di concorrenza. Tali procedure si applicano al [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL), il [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md)e [utilità di pianificazione](../../parallel/concrt/task-scheduler-concurrency-runtime.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Procedure consigliate nella libreria PPL (Parallel Patterns Library)](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)  
  Descrive le procedure consigliate da seguire quando si usa la libreria PPL (Parallel Patterns Library).  
   

@@ -38,11 +38,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e6c96fba04fff658c30fe9378748ed2549668ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a8abd59f8871ca03eee91ad49a1a67c95878d98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdstbias"></a>_get_dstbias
 Recupera l'offset ora legale in secondi.  
@@ -76,10 +77,10 @@ Recupera l'offset ora legale in secondi.
 |-------------|---------------------|  
 |`_get_dstbias`|\<time.h>|  
   
- Per altre informazioni, vedere [Compatibilità](../../c-runtime-library/compatibility.md).  
+ Per altre informazioni, vedere [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione dell'ora](../../c-runtime-library/time-management.md)   
+ [Time Management](../../c-runtime-library/time-management.md)  (Gestione del tempo)  
  [errno, _doserrno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
  [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   

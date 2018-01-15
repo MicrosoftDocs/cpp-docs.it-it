@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84b68f4fa5ba207a9cb615877936ca08bdc2259b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae039aec64d761a82ccf71ee12965c0deb9c7aed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-c-amp"></a>Riferimento (C++ AMP)
 In questa sezione contiene informazioni di riferimento per il runtime C++ Accelerated Massive Parallelism (C++ AMP).  
@@ -27,7 +28,7 @@ In questa sezione contiene informazioni di riferimento per il runtime C++ Accele
 > [!NOTE]
 >  Lo standard del linguaggio C++ si riserva l'uso di identificatori che iniziano con un carattere di sottolineatura (`_`) per le implementazioni come le librerie. Non usare nomi che iniziano con un carattere di sottolineatura nel codice. Il comportamento degli elementi di codice i cui nomi seguono questa convenzione non è garantito ed è soggetto a modifiche nelle future versioni. Per questi motivi, tali elementi di codice vengono omessi da questa documentazione.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)  
  Fornisce classi e funzioni che consentono l'accelerazione di codice C++ su hardware parallelo di dati.  
   

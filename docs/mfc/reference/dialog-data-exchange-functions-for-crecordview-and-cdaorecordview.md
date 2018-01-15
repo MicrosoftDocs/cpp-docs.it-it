@@ -31,11 +31,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69c70c42a2b4c83933464249a1096339cf1eb98f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funzioni DDX (Dialog Data Exchange) per CRecordView e CDaoRecordView
 In questo argomento elenca le funzioni DDX_Field utilizzate per scambiare dati tra un [CRecordset](../../mfc/reference/crecordset-class.md) e [CRecordView](../../mfc/reference/crecordview-class.md) modulo o un [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) e un [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) form.  
@@ -126,7 +127,7 @@ void AFXAPI DDX_FieldCBString(
  `nIDC`  
  L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -169,7 +170,7 @@ void AFXAPI DDX_FieldCBStringExact(
  `nIDC`  
  L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -212,7 +213,7 @@ void AFXAPI DDX_FieldCheck(
  `nIDC`  
  L'ID di risorsa del controllo casella di controllo associato alla proprietà del controllo.  
   
- *value*  
+ *valore*  
  Un riferimento a una variabile membro dell'oggetto visualizzazione controllo con cui vengono scambiati i dati, la finestra di dialogo o visualizzazione form.  
   
  `pRecordset`  
@@ -293,7 +294,7 @@ void AFXAPI DDX_FieldLBString(
  `nIDC`  
  L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -336,7 +337,7 @@ void AFXAPI DDX_FieldLBStringExact(
  `nIDC`  
  L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -379,7 +380,7 @@ void AFXAPI DDX_FieldRadio(
  `nIDC`  
  L'ID del primo in un gruppo (con stile **WS_GROUP**) adiacente controlli pulsante di opzione nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -422,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  *nIDC\**  
  L'ID del primo in un gruppo (con stile **WS_GROUP**) adiacente controlli pulsante di opzione nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto.  
   
  `pRecordset`  
@@ -465,7 +466,7 @@ void AFXAPI DDX_FieldSlider(
  `nIDC`  
  L'ID di risorsa del controllo dispositivo di scorrimento.  
   
- *value*  
+ *valore*  
  Un riferimento al valore da scambiare. Questo parametro contiene o verrà utilizzato per impostare posizione del cursore corrente del controllo dispositivo di scorrimento.  
   
  `pRecordset`  
@@ -609,7 +610,7 @@ void AFXAPI DDX_FieldText(
  `nIDC`  
  L'ID di un controllo nel [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) oggetto.  
   
- *value*  
+ *valore*  
  Un riferimento a un membro di dati del campo associato `CRecordset` o `CDaoRecordset` oggetto. Il tipo di dati del valore dipende da quali versioni di overload `DDX_FieldText` utilizzare.  
   
  `pRecordset`  

@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d5bf77d2d14e8dda2f1eb02ac35d0ccaf81a8617
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01837b079ba08ea2961b141549476da11a481a0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Creazione di nuovi documenti, finestre e visualizzazioni
 Le figure seguenti è fornita una panoramica del processo di creazione di documenti, visualizzazioni e finestre cornice. Altri articoli che lo stato attivo per gli oggetti partecipanti forniscono altri dettagli.  

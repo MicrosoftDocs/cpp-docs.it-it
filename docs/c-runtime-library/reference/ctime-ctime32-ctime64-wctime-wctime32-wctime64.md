@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - _tctime64
 - _ctime64
 - ctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tctime64 function
 - _ctime32 function
@@ -59,30 +57,16 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f3d756cec6d9482cfabcbc2a336cbf5d6381a97a
-ms.contentlocale: it-it
-ms.lasthandoff: 03/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97c6f5f4c827ca315eb1de36ee8d4f19d94214bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-ctime32-ctime64-wctime-wctime32-wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 Convertono un valore di tempo in una stringa e lo regolano per le impostazioni di fuso orario locale. Sono disponibili versioni più sicure di queste funzioni. Vedere [ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md).  
@@ -136,7 +120,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  La stringa di caratteri convertita viene anche regolata in base alle impostazioni di fuso orario locale. Vedere le funzioni `time`, [ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) e [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) per informazioni sulla configurazione dell'ora locale e la funzione [tzset](../../c-runtime-library/reference/tzset.md) per informazioni dettagliate sulla definizione dell'ambiente di fuso orario e variabili globali.  
   
- Una chiamata a `ctime` consente di modificare un singolo buffer allocato in modo statico usato dalle funzioni `gmtime` e `localtime`. Ogni chiamata a una di queste funzioni elimina il risultato della chiamata precedente. `ctime` condivide un buffer statico con la funzione `asctime`. Pertanto, una chiamata a `ctime` elimina i risultati di qualsiasi chiamata precedente a `asctime`, `localtime`, o `gmtime`.  
+ Una chiamata a `ctime` consente di modificare un singolo buffer allocato in modo statico usato dalle funzioni `gmtime` e `localtime`. Ogni chiamata a una di queste routine elimina definitivamente i risultati della chiamata precedente. `ctime` condivide un buffer statico con la funzione `asctime`. Pertanto, una chiamata a `ctime` elimina i risultati di qualsiasi chiamata precedente a `asctime`, `localtime`, o `gmtime`.  
   
  `_wctime` e `_wctime64` sono la versione a caratteri wide di `ctime` e `_ctime64`; restituiscono un puntatore alla stringa di caratteri wide. In caso contrario, `_ctime64`, `_wctime` e `_wctime64` si comportano in modo identico a `ctime`.  
   
@@ -161,7 +145,7 @@ Wed Jan 02 02:03:55 1980\n\0
 |`_wctime32`|\<time.h> or \<wchar.h>|  
 |`_wctime64`|\<time.h> or \<wchar.h>|  
   
- Per altre informazioni sulla compatibilità, vedere [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
+ Per altre informazioni sulla compatibilità, vedere la sezione [Compatibilità](../../c-runtime-library/compatibility.md) nell'introduzione.  
   
 ## <a name="example"></a>Esempio  
   

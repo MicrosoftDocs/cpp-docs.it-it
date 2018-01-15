@@ -14,11 +14,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 191d368d6152f5eb8bd9bb3c7ff7e77a54182a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-algorithms"></a>Algoritmi paralleli
 Parallel Patterns Library (PPL) fornisce gli algoritmi di svolgere simultaneamente il lavoro sulle raccolte di dati. Questi algoritmi sono simili a quelle fornite dalla libreria Standard di C++.  
@@ -247,7 +248,7 @@ Parallel Patterns Library (PPL) fornisce gli algoritmi di svolgere simultaneamen
   
 |Algoritmo|Descrizione|Meccanismo di ordinamento|Stabilità di ordinamento|Requisiti di memoria|Complessità di tempo|Accesso iteratore|  
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|  
-|`parallel_sort`|Ordinamento basato sul confronto per utilizzo generale.|Basato sul confronto (crescente)|Instabile|Nessuno|O((N/P)log(N/P) + 2N((P-1)/P))|Random|  
+|`parallel_sort`|Ordinamento basato sul confronto per utilizzo generale.|Basato sul confronto (crescente)|Instabile|nessuno|O((N/P)log(N/P) + 2N((P-1)/P))|Random|  
 |`parallel_buffered_sort`|Ordinamento più veloce basato sul confronto per utilizzo generale per cui è richiesto lo spazio O(N).|Basato sul confronto (crescente)|Instabile|È necessario ulteriore spazio o (n)|O((N/P)log(N))|Random|  
 |`parallel_radixsort`|Ordinamento basato su chiave di interi per cui è richiesto lo spazio O(N).|Basato su hash|Stable|È necessario ulteriore spazio o (n)|O(N/P)|Random|  
   
@@ -327,7 +328,7 @@ Parallel Patterns Library (PPL) fornisce gli algoritmi di svolgere simultaneamen
 |[Annullamento nella libreria PPL](cancellation-in-the-ppl.md)|Viene illustrato il ruolo dell'annullamento nella libreria PPL, come annullare un lavoro parallelo e come determinare quando un gruppo di attività viene annullato.|  
 |[Gestione delle eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Viene illustrato il ruolo di gestione delle eccezioni nel Runtime di concorrenza.|  
   
-## <a name="reference"></a>Riferimento  
+## <a name="reference"></a>Riferimenti  
 
  [Funzione parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
   

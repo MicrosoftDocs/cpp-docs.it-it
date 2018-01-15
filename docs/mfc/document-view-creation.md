@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e98f6e4b1b9ecd5848c2701043aa9b0b7dcea7d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6997189f23ea7599dde0a1b19ba9f0ea350378d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-creation"></a>Creazione di documenti/visualizzazioni
 Il framework fornisce le implementazioni del `New` e **aprire** comandi (ad) la **File** menu. Creazione di un nuovo documento e la relativa finestra cornice e visualizzazione associata è un lavoro cooperativo tra l'oggetto applicazione, un modello di documento, il documento appena creato e la finestra cornice appena creato. Nella tabella seguente sono riepilogati gli oggetti creano in ciascun oggetto.  
@@ -37,7 +38,7 @@ Il framework fornisce le implementazioni del `New` e **aprire** comandi (ad) la 
 |Creator|Crea|  
 |-------------|-------------|  
 |Oggetto Application|Modello di documento|  
-|Modello di documento|Documento|  
+|Modello di documento|Document|  
 |Modello di documento|Finestra cornice|  
 |Finestra cornice|Visualizza|  
   

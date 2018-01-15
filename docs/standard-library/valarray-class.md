@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0fe6762e9e8f98895deda9ac8cbbe9a6fe3bb4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="valarray-class"></a>Classe valarray
 La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo **Type** archiviati come matrice, progettati per l'esecuzione di operazioni matematiche ad alta velocità e ottimizzati per le prestazioni di calcolo.  
@@ -69,7 +70,7 @@ La classe modello descrive un oggetto che controlla una sequenza di elementi di 
 |-|-|  
 |[valarray](#valarray)|Costruisce un oggetto `valarray` di una dimensione specifica o con elementi di un determinato valore oppure come copia di un altro oggetto `valarray` o subset di un altro oggetto `valarray`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  

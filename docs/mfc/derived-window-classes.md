@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d75a6692eadaa3a080803b9aa69d30e4b384307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="derived-window-classes"></a>Classi di finestre derivate
 È possibile creare finestre direttamente da [CWnd](../mfc/reference/cwnd-class.md), o derivare nuove classi di finestra da `CWnd`. Si tratta in genere creazione per il propria windows personalizzata. Tuttavia, la maggior parte delle finestre usate in un programma con framework vengono invece create da uno del `CWnd`-classi di finestre cornice fornite da MFC derivate.  

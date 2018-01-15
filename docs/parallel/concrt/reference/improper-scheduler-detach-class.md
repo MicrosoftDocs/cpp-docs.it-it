@@ -1,46 +1,29 @@
 ---
-title: Classe improper_scheduler_detach | Documenti di Microsoft
+title: Classe improper_scheduler_detach | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach
 - CONCRT/concurrency::improper_scheduler_detach::improper_scheduler_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- improper_scheduler_detach class
+dev_langs: C++
+helpviewer_keywords: improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 0975354279c2a7e35524890498d9d7ebab1c18d3
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 787d038c65eb6bec2813e30e9bef412205565190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improperschedulerdetach-class"></a>Classe improper_scheduler_detach
 Questa classe descrive un'eccezione generata quando il metodo `CurrentScheduler::Detach` viene chiamato su un contesto che non è stato allegato ad alcuna unità di pianificazione tramite il metodo `Attach` di un oggetto `Scheduler`.  
@@ -65,7 +48,7 @@ class improper_scheduler_detach : public std::exception;
  `improper_scheduler_detach`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** concrt  
+ **Intestazione:** concrt. h  
   
  **Spazio dei nomi:** Concurrency  
   
@@ -86,4 +69,3 @@ improper_scheduler_detach() throw();
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   
  [Classe Scheduler](scheduler-class.md)
-

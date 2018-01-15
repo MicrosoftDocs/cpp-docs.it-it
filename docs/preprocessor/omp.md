@@ -1,42 +1,43 @@
 ---
-title: "omp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.omp"
-  - "omp_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp (pragma)"
-  - "pragma, omp"
+title: omp | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.omp
+- omp_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, omp
+- omp pragma
 ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a1cea639835d6d9b99d43b081954742640ecc66f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# omp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="omp"></a>omp
 Accetta una o più direttive OpenMP, con eventuali clausole direttive facoltative.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
 #pragma omp directive  
 ```  
   
-## Note  
- Per ulteriori informazioni, vedere [Direttive OpenMP](../parallel/openmp/reference/openmp-directives.md).  
+## <a name="remarks"></a>Note  
+ Vedere [direttive OpenMP](../parallel/openmp/reference/openmp-directives.md) per ulteriori informazioni.  
   
-## Vedere anche  
- [Direttive pragma e parola chiave \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>Vedere anche  
+ [Direttive pragma e parola chiave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

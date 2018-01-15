@@ -1,5 +1,5 @@
 ---
-title: '#<a name="error-directive-cc--microsoft-docs"></a>Errore (direttiva) (C/C++) | Documenti Microsoft'
+title: '#Errore (direttiva) (C/C++) | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bb05612ed7262b9daf287793c93ccce654306d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a14786834843046fc1e6cf551eaf95d1b28a8624
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-directive-cc"></a>Direttiva #error (C/C++)
 La direttiva `#error` genera un messaggio di errore definito in fase di compilazione e quindi termina la compilazione.  

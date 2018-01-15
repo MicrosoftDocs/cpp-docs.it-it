@@ -1,11 +1,10 @@
 ---
-title: 'Namespace Concurrency:: precise_math | Documenti di Microsoft'
+title: 'Concurrency:: precise_math Namespace | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -139,37 +138,21 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc8487cf007eaf1373389b6cc6d3f4bdac09b698
-ms.contentlocale: it-it
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Spazio dei nomi Concurrency::precise_math
-Funzioni di `precise_math` dello spazio dei nomi sono conformi C99. Entrambi precisione singola e precisione doppia le versioni di ogni funzione sono incluse. Ad esempio, `acos` è la versione a precisione doppia e `acosf` è la versione a precisione singola. Queste funzioni, tra cui le funzioni e precisione singola, richiedono il supporto esteso e precisione doppia sull'acceleratore. È possibile utilizzare il [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) per determinare se è possibile eseguire queste funzioni in un tasto di scelta rapida specifico. 
+Le funzioni di `precise_math` dello spazio dei nomi sono conformi C99. Entrambi precisione singola e precisione doppia le versioni di ogni funzione sono incluse. Ad esempio, `acos` è la versione e con precisione doppia e `acosf` è la versione e con precisione singola. Queste funzioni, tra cui le funzioni e con precisione singola, richiedono il supporto esteso di e con precisione doppia nel tasto di scelta rapida. È possibile utilizzare il [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) per determinare se è possibile eseguire queste funzioni in un tasto di scelta rapida specifico. 
 
   
 ## <a name="syntax"></a>Sintassi  
@@ -208,10 +191,10 @@ namespace precise_math;
 |[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Produce un valore con la grandezza del x e il segno di y|  
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|Di overload. Calcola il coseno dell'argomento|  
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Calcola il coseno dell'argomento|  
-|[cosh](concurrency-precise-math-namespace-functions.md#cosh)|Di overload. Calcola il valore del coseno iperbolico dell'argomento|  
-|[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Calcola il valore del coseno iperbolico dell'argomento|  
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Di overload. Calcola il valore di pi greco coseno * x|  
-|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Calcola il valore di pi greco coseno * x|  
+|[cosh](concurrency-precise-math-namespace-functions.md#cosh)|Di overload. Calcola il coseno iperbolico di valore dell'argomento|  
+|[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Calcola il coseno iperbolico di valore dell'argomento|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Di overload. Calcola il coseno di valore di pi greco * x|  
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Calcola il coseno di valore di pi greco * x|  
 |[erf](concurrency-precise-math-namespace-functions.md#erf)|Di overload. Calcola la funzione di errore di x|  
 |[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Di overload. Calcola la funzione di errore complementare di x|  
 |[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Calcola la funzione di errore complementare di x|  
@@ -221,30 +204,30 @@ namespace precise_math;
 |[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Di overload. Calcola la funzione inversa di errore di x|  
 |[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Calcola la funzione inversa di errore di x|  
 |[exp](concurrency-precise-math-namespace-functions.md#exp)|Di overload. Calcola l'esponenziale in base e dell'argomento|  
-|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Di overload. Calcola la base&10; esponenziale dell'argomento|  
-|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Calcola la base&10; esponenziale dell'argomento|  
-|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Di overload. Calcola l'esponenziale dell'argomento base-2|  
-|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Calcola l'esponenziale dell'argomento base-2|  
+|[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Di overload. Viene calcolato in base 10 esponenziale dell'argomento|  
+|[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Viene calcolato in base 10 esponenziale dell'argomento|  
+|[exp2](concurrency-precise-math-namespace-functions.md#exp2)|Di overload. Calcola l'esponenziale dell'argomento di base-2|  
+|[exp2f](concurrency-precise-math-namespace-functions.md#exp2f)|Calcola l'esponenziale dell'argomento di base-2|  
 |[expf](concurrency-precise-math-namespace-functions.md#expf)|Calcola l'esponenziale in base e dell'argomento|  
 |[expm1](concurrency-precise-math-namespace-functions.md#expm1)|Di overload. Calcola l'esponenziale in base e dell'argomento, meno 1|  
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Calcola l'esponenziale in base e dell'argomento, meno 1|  
 |[fabs](concurrency-precise-math-namespace-functions.md#fabs)|Di overload. Restituisce il valore assoluto dell'argomento|  
 |[fabsf](concurrency-precise-math-namespace-functions.md#fabsf)|Restituisce il valore assoluto dell'argomento|  
-|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Di overload. Determina la differenza tra gli argomenti positiva|  
-|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Determina la differenza tra gli argomenti positiva|  
+|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Di overload. Determina la differenza tra gli argomenti positivo|  
+|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Determina la differenza tra gli argomenti positivo|  
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|Di overload. Calcola la base dell'argomento|  
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Calcola la base dell'argomento|  
 |[fma](concurrency-precise-math-namespace-functions.md#fma)|Di overload. Calcolo ( x * y) + _Z, arrotondato come un'unica operazione ternaria|  
 |[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Calcolo ( x * y) + _Z, arrotondato come un'unica operazione ternaria|  
-|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Di overload. Determinare il valore numerico massimo degli argomenti|  
-|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Determinare il valore numerico massimo degli argomenti|  
-|[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Di overload. Determinare il valore numerico minimo degli argomenti|  
-|[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Determinare il valore numerico minimo degli argomenti|  
-|[Funzione fmod (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Di overload. Calcola il resto a virgola mobile di x/y|  
+|[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Di overload. Determinare il valore numerico massimo di argomenti|  
+|[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Determinare il valore numerico massimo di argomenti|  
+|[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Di overload. Determinare il valore numerico minimo di argomenti|  
+|[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Determinare il valore numerico minimo di argomenti|  
+|[fmod (funzione) (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Di overload. Calcola il resto a virgola mobile di x/y|  
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Calcola il resto a virgola mobile di x/y|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Di overload. Classifica il valore dell'argomento come un valore NaN, infinito, normale subnormal, zero|  
-|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Di overload. Ottiene la mantissa ed esponente di x|  
-|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Ottiene la mantissa ed esponente di x|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Di overload. Classifica il valore dell'argomento come un valore NaN, infinito, normale, subnormal zero|  
+|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Di overload. Ottiene la mantissa e l'esponente di x|  
+|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Ottiene la mantissa e l'esponente di x|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Di overload. Calcola la radice quadrata della somma dei quadrati di x e y|  
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Calcola la radice quadrata della somma dei quadrati di x e y|  
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Di overload. Estrarre l'esponente di x come un valore signed integer|  
@@ -252,29 +235,29 @@ namespace precise_math;
 |[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Di overload. Determina se l'argomento ha un valore finito|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Di overload. Determina se l'argomento è infinito|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Di overload. Determina se l'argomento è NaN|  
-|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Di overload. Determina se l'argomento è una normale|  
+|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Di overload. Determina se l'argomento è un normale|  
 |[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Di overload. Calcola un numero reale compreso tra la mantissa ed esponente|  
 |[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Calcola un numero reale compreso tra la mantissa ed esponente|  
 |[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Di overload. Calcola il logaritmo naturale del valore assoluto della gamma dell'argomento|  
 |[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Calcola il logaritmo naturale del valore assoluto della gamma dell'argomento|  
 |[log](concurrency-precise-math-namespace-functions.md#log)|Di overload. Calcola il logaritmo di base e dell'argomento|  
-|[log10](concurrency-precise-math-namespace-functions.md#log10)|Di overload. Calcola il logaritmo in base&10; dell'argomento|  
-|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcola il logaritmo in base&10; dell'argomento|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Di overload. Calcola il logaritmo in base 10 dell'argomento|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Calcola il logaritmo in base 10 dell'argomento|  
 |[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Di overload. Calcola il logaritmo di base e di 1 e l'argomento|  
 |[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Calcola il logaritmo di base e di 1 e l'argomento|  
-|[log2](concurrency-precise-math-namespace-functions.md#log2)|Di overload. Calcola il logaritmo in base&2; dell'argomento|  
-|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcola il logaritmo in base&2; dell'argomento|  
-|[logb](concurrency-precise-math-namespace-functions.md#logb)|Di overload. Estrae l'esponente di x, come un valore signed integer nel formato a virgola mobile|  
-|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Estrae l'esponente di x, come un valore signed integer nel formato a virgola mobile|  
+|[log2](concurrency-precise-math-namespace-functions.md#log2)|Di overload. Calcola il logaritmo in base 2 dell'argomento|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Calcola il logaritmo in base 2 dell'argomento|  
+|[logb](concurrency-precise-math-namespace-functions.md#logb)|Di overload. Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile|  
+|[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile|  
 |[logf](concurrency-precise-math-namespace-functions.md#logf)|Calcola il logaritmo di base e dell'argomento|  
 |[modf](concurrency-precise-math-namespace-functions.md#modf)|Di overload. Divide x in frazionari e parti intere.|  
 |[modff](concurrency-precise-math-namespace-functions.md#modff)|Divide x in frazionari e parti intere.|  
-|[nan](concurrency-precise-math-namespace-functions.md#nan)|Restituisce un valore NaN non interattivo|  
-|[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Restituisce un valore NaN non interattivo|  
-|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Di overload. Consente di arrotondare l'argomento su un valore integer nel formato a virgola mobile, utilizzando la direzione di arrotondamento corrente.|  
-|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Consente di arrotondare l'argomento su un valore integer nel formato a virgola mobile, utilizzando la direzione di arrotondamento corrente.|  
-|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Di overload. Determinare il successivo valore, rappresentabile nel tipo della funzione, dopo x nella direzione di y|  
-|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Determinare il successivo valore, rappresentabile nel tipo della funzione, dopo x nella direzione di y|  
+|[nan](concurrency-precise-math-namespace-functions.md#nan)|Restituisce un NaN non interattivo|  
+|[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Restituisce un NaN non interattivo|  
+|[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Di overload. Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.|  
+|[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.|  
+|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Di overload. Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y|  
+|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y|  
 |[Phi](concurrency-precise-math-namespace-functions.md#phi)|Di overload. Restituisce la funzione distribuzione cumulativa dell'argomento|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Restituisce la funzione distribuzione cumulativa dell'argomento|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Di overload. Calcola x elevato alla potenza di y|  
@@ -291,38 +274,37 @@ namespace precise_math;
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Arrotonda x all'intero più vicino|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Di overload. Restituisce il reciproco della radice quadrata dell'argomento|  
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Restituisce il reciproco della radice quadrata dell'argomento|  
-|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Di overload. Moltiplica x da FLT_RADIX a y l'alimentazione|  
-|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Moltiplica x da FLT_RADIX a y l'alimentazione|  
-|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Di overload. Moltiplica x da FLT_RADIX a y l'alimentazione|  
-|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Moltiplica x da FLT_RADIX a y l'alimentazione|  
+|[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Di overload. Moltiplica x da FLT_RADIX per la power y|  
+|[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Moltiplica x da FLT_RADIX per la power y|  
+|[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Di overload. Moltiplica x da FLT_RADIX per la power y|  
+|[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Moltiplica x da FLT_RADIX per la power y|  
 |[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Di overload. Determina se il segno di x è negativo|  
 |[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Determina se il segno di x è negativo|  
-|[sin](concurrency-precise-math-namespace-functions.md#sin)|Di overload. Calcola il valore del seno dell'argomento|  
-|[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Di overload. Calcola un valore seno e il coseno di x|  
-|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Calcola un valore seno e il coseno di x|  
-|[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Calcola il valore del seno dell'argomento|  
-|[sinh](concurrency-precise-math-namespace-functions.md#sinh)|Di overload. Calcola il valore del seno iperbolico dell'argomento|  
-|[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Calcola il valore del seno iperbolico dell'argomento|  
-|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Di overload. Calcola il valore del seno di pi greco * x|  
-|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Calcola il valore del seno di pi greco * x|  
-|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Di overload. Calcola la radice di squre dell'argomento|  
-|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Calcola la radice di squre dell'argomento|  
-|[tan](concurrency-precise-math-namespace-functions.md#tan)|Di overload. Calcola il valore dell'argomento tangente|  
-|[tanf](concurrency-precise-math-namespace-functions.md#tanf)|Calcola il valore dell'argomento tangente|  
-|[tanh](concurrency-precise-math-namespace-functions.md#tanh)|Di overload. Calcola il valore della tangente iperbolico dell'argomento|  
-|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Calcola il valore della tangente iperbolico dell'argomento|  
-|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Di overload. Calcola il valore di pi greco tangente * x|  
-|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Calcola il valore di pi greco tangente * x|  
+|[sin](concurrency-precise-math-namespace-functions.md#sin)|Di overload. Calcola il valore seno dell'argomento|  
+|[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Di overload. Calcola un valore seno e coseno di x|  
+|[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Calcola un valore seno e coseno di x|  
+|[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Calcola il valore seno dell'argomento|  
+|[sinh](concurrency-precise-math-namespace-functions.md#sinh)|Di overload. Calcola il valore seno iperbolico dell'argomento|  
+|[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Calcola il valore seno iperbolico dell'argomento|  
+|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Di overload. Calcola il valore seno di pi greco * x|  
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Calcola il valore seno di pi greco * x|  
+|[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Di overload. Calcola la radice squre dell'argomento|  
+|[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Calcola la radice squre dell'argomento|  
+|[tan](concurrency-precise-math-namespace-functions.md#tan)|Di overload. Calcola il valore di controllo di tangente dell'argomento|  
+|[tanf](concurrency-precise-math-namespace-functions.md#tanf)|Calcola il valore di controllo di tangente dell'argomento|  
+|[tanh](concurrency-precise-math-namespace-functions.md#tanh)|Di overload. Calcola il valore di controllo di tangente iperbolico dell'argomento|  
+|[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Calcola il valore di controllo di tangente iperbolico dell'argomento|  
+|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Di overload. Calcola il valore di controllo di tangente di pi greco * x|  
+|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Calcola il valore di controllo di tangente di pi greco * x|  
 |[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Di overload. Calcola la funzione gamma di x|  
 |[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Calcola la funzione gamma di x|  
-|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Di overload. Tronca l'argomento per il componente numero intero|  
-|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronca l'argomento per il componente numero intero|  
+|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Di overload. Tronca l'argomento per il componente integer|  
+|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Tronca l'argomento per il componente integer|  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** amp_math. h  
+ **Intestazione:** amp_math.h  
   
  **Spazio dei nomi:** Concurrency  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-
