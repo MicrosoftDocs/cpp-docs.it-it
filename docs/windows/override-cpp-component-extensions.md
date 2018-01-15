@@ -1,42 +1,44 @@
 ---
-title: "override  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override keyword [C++]"
-  - "override keyword [C++]"
+title: eseguire l'override (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- overriding, override keyword [C++]
+- override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 88138001a9767bbe9752c1de0577910fca8bc914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# override  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La parola chiave sensibile al contesto `override` indica che un membro di un tipo esegue l'override di una classe base o di un membro di un interfaccia base.  
+# <a name="override--c-component-extensions"></a>override (Estensioni del componente C++)
+Tramite la parola chiave sensibile al contesto `override` viene indicato che mediante un membro di un tipo viene eseguito l'override di una classe base o di un membro di un'interfaccia base.  
   
-## Note  
- La parola chiave `override` è valida quando si compila per le piattaforme native \(opzione predefinita del compilatore\), per le piattaforme Windows Runtime \(opzione del compilatore **\/ZW**\), o per le piattaforme Common Language Runtime \(opzione del compilatore **\/clr**\).  
+## <a name="remarks"></a>Note  
+ Il `override` (parola chiave) è valido durante la compilazione per destinazioni native (opzione del compilatore predefinita), le destinazioni Windows Runtime (**/ZW** l'opzione del compilatore), o le destinazioni di common language runtime (**/clr** compilatore opzione).  
   
- Per ulteriori informazioni sugli identificatori di override, vedere le pagine relative agli [Identificatore override](../cpp/override-specifier.md) e agli [identificatori di override e compilazioni native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
+ Per ulteriori informazioni sugli identificatori di override, vedere [identificatore di override](../cpp/override-specifier.md) e [gli identificatori di Override e compilazioni Native](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).  
   
- Per ulteriori informazioni sulle parole chiave sensibili al contesto, vedere la pagina [Parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ Per ulteriori informazioni sulle parole chiave sensibili al contesto, vedere [parole chiave sensibili al contesto](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
   
-## Esempi  
+## <a name="examples"></a>Esempi  
  **Esempio**  
   
- Nell'esempio di codice seguente viene illustrato che `override` può essere utilizzato nelle compilazioni native.  
+ Esempio di codice seguente viene illustrato che `override` può essere utilizzato anche nelle compilazioni native.  
   
 ```cpp#  
 // override_keyword_1.cpp  
@@ -52,7 +54,7 @@ struct X : public I1 {
   
  **Esempio**  
   
- Nell'esempio di codice seguente viene illustrato che `override` può anche essere utilizzato nelle compilazioni Windows Runtime.  
+ Esempio di codice seguente viene illustrato che `override` può essere utilizzato nelle compilazioni di Windows Runtime.  
   
 ```cpp#  
 // override_keyword_2.cpp  
@@ -68,11 +70,11 @@ ref struct X : public I1 {
   
  **Requisiti**  
   
- Opzione del compilatore: **\/ZW**  
+ Opzione del compilatore: **/ZW**  
   
  **Esempio**  
   
- Nell'esempio di codice seguente viene illustrato che `override` può anche essere utilizzato nelle compilazioni Common Language Runtime.  
+ Esempio di codice seguente viene illustrato che `override` può essere usato nelle compilazioni di common language runtime.  
   
 ```cpp#  
 // override_keyword_3.cpp  
@@ -88,8 +90,8 @@ ref struct X : public I1 {
   
  **Requisiti**  
   
- Opzione del compilatore: **\/clr**  
+ Opzione del compilatore: **/clr**  
   
-## Vedere anche  
- [Identificatore override](../cpp/override-specifier.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Identificatore di override](../cpp/override-specifier.md)   
  [Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md)

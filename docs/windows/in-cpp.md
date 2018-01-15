@@ -1,33 +1,33 @@
 ---
-title: "in (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.in"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "in attribute"
+title: in (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.in
+dev_langs: C++
+helpviewer_keywords: in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# in (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="in-c"></a>in (C++)
 Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,30 +35,29 @@ Indica che un parametro deve essere passato dalla routine chiamante alla routine
   
 ```  
   
-## Note  
- **in** L'attributo di C\+\+ ha la stessa funzionalità di  [in](http://msdn.microsoft.com/library/windows/desktop/aa367051) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **in** attributo C++ ha la stessa funzionalità come il [in](http://msdn.microsoft.com/library/windows/desktop/aa367051) attributo MIDL.  
   
-## Esempio  
- vedere [associabile](../windows/bindable.md) per un esempio di utilizzo  **in**.  
+## <a name="example"></a>Esempio  
+ Vedere [associabili](../windows/bindable.md) per un esempio di come utilizzare **in**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|parametro di interfaccia, metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**retval**|  
+|**Si applica a**|Parametro di interfaccia, metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**retval**|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [defaultvalue](../windows/defaultvalue.md)   
- [id](../windows/id.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi dei parametri](../windows/parameter-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
+ [DefaultValue](../windows/defaultvalue.md)   
+ [ID](../windows/id.md)   
  [out](../windows/out-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

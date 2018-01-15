@@ -1,44 +1,45 @@
 ---
-title: "Metodo AsyncBase::ContinueAsyncOperation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::ContinueAsyncOperation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ContinueAsyncOperation (metodo)"
+title: 'Metodo asyncbase:: Continueasyncoperation | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::ContinueAsyncOperation
+dev_langs: C++
+helpviewer_keywords: ContinueAsyncOperation method
 ms.assetid: ce38181d-2fc3-4579-b0ce-237a3c7648bc
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7e86c4857aab7c0e1a23dcd03695d906a3d9e5e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo AsyncBase::ContinueAsyncOperation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Determina se l'operazione asincrona debba continuare o debba arrestarsi.  
+# <a name="asyncbasecontinueasyncoperation-method"></a>Metodo AsyncBase::ContinueAsyncOperation
+Determina se l'operazione asincrona deve continuare l'elaborazione o l'interruzione.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 inline bool ContinueAsyncOperation();  
 ```  
   
-## Valore restituito  
- `true` se lo stato corrente dell'operazione asincrona è *started*, che significa che l'operazione deve continuare.  In caso contrario, `false`, che significa che l'operazione dovrebbe arrestarsi.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se lo stato corrente dell'operazione asincrona è *avviato*, ovvero l'operazione deve continuare. In caso contrario, `false`, ovvero l'operazione deve interrompersi.  
   
-## Requisiti  
- **Intestazione:** async.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Async  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe AsyncBase](../windows/asyncbase-class.md)

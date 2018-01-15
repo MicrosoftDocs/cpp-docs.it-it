@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 463db89257623d9464bb1e562261362ecf1dc68c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menu-command-properties"></a>Proprietà dei comandi di menu
 Le informazioni qui di seguito sono organizzate in base alle proprietà dei menu visualizzate nella [finestra Proprietà](/visualstudio/ide/reference/properties-window) quando si seleziona un comando di menu. Le proprietà vengono elencate in ordine alfabetico, ma nella finestra Proprietà è possibile visualizzarle anche per categoria.  

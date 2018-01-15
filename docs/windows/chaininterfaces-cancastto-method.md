@@ -1,32 +1,33 @@
 ---
-title: "Metodo ChainInterfaces::CanCastTo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo (metodo)"
+title: 'Metodo chaininterfaces:: Cancastto | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 8be44875-53ed-494b-91a0-0f8e399685bb
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f614ec0eff2b448c8f20c88557f6228f85a770bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo ChainInterfaces::CanCastTo
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica se l'id di interfaccia specificato è possibile eseguire il cast a ognuna delle specializzazioni definite dai parametri di modello non di default.  
+# <a name="chaininterfacescancastto-method"></a>Metodo ChainInterfaces::CanCastTo
+Indica se l'ID di interfaccia specificato può essere convertito in ognuna delle specializzazioni definite dai parametri di modello non predefinito.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 __forceinline bool CanCastTo(  
@@ -35,20 +36,20 @@ __forceinline bool CanCastTo(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `riid`  
- Un ID di interfaccia.  
+ ID di interfaccia.  
   
  `ppv`  
- Un puntatore all'ultima interfaccia ID al quale è stato eseguito il cast correttamente.  
+ Un puntatore per l'ultimo ID di interfaccia che è stato eseguito il cast correttamente.  
   
-## Valore restituito  
- `true` se tutti i cast alle operazioni hanno avuto successo, altrimenti `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se tutte le operazioni di cast ha esito positivo. in caso contrario, `false`.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Struttura ChainInterfaces](../windows/chaininterfaces-structure.md)

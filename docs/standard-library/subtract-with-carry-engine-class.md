@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c1a284af52195db1c25d6175876d732da7255962
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 Genera una sequenza casuale usando l'algoritmo subtract-with-carry (lagged Fibonacci).  
@@ -48,7 +49,7 @@ class subtract_with_carry_engine;
  Tipo di risultato Unsigned Integer. Per informazioni sui tipi possibili, vedere [\<random>](../standard-library/random.md).  
   
  `W`  
- **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione**: `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Dimensione parola**. Dimensione di ogni parola, in bit, della sequenza di stato. **Precondizione:** `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
  **Ritardo breve**. Numero di valori Integer. **Precondizione**: `0 < S < R`  
@@ -81,7 +82,7 @@ class subtract_with_carry_engine;
  `ranlux48_base`: usato come base per `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- Per informazioni dettagliate sull'algoritmo del motore subract-with-carry, vedere l'articolo di Wikipedia [Generatore di Fibonacci ritardato](http://go.microsoft.com/fwlink/LinkId=402445).  
+ Per informazioni dettagliate sull'algoritmo del motore subract-with-carry, vedere l'articolo di Wikipedia [Generatore di Fibonacci ritardato](http://go.microsoft.com/fwlink/p/?linkid=402445).  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** \<random>  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>archiviazione thread-local
 **Sezione specifica Microsoft**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  Nella dichiarazione di variabili thread-local associate in modo statico, è necessario attenersi a queste linee guida.  
   
--   L'attributo **__declspec(thread)** può interferire con il [caricamento ritardato](../build/reference/linker-support-for-delay-loaded-dlls.md) delle importazioni delle DLL**.**  
+-   Le variabili thread-local con inizializzazione dinamica vengono inizializzate solo sul thread che causa la DLL da caricare e sui thread che sono già in esecuzione nel processo. Per altre informazioni, vedere [thread](../cpp/thread.md).  
   
 -   È possibile applicare l'attributo thread solo a dichiarazioni e definizioni di dati. Non può essere utilizzato per dichiarare o definire funzioni. Il codice seguente, ad esempio, genera un errore di compilazione:  
   

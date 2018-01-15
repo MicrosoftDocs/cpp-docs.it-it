@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivially_destructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_destructible
+f1_keywords: type_traits/std::is_trivially_destructible
+dev_langs: C++
+helpviewer_keywords: is_trivially_destructible
 ms.assetid: 3f7a787d-2448-40c5-ac51-a228318e02ce
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 47b734f531e0bc958c41afbef5f5023ca01649cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ee42d7686c51950f62cbc8fdac187d9b2609b2b3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallydestructible-class"></a>Classe is_trivially_destructible
 Verifica se il tipo è facilmente distruttibile.  
@@ -51,7 +48,6 @@ struct is_trivially_destructible;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

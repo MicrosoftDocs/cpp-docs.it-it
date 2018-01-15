@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3834e557b4060fd214be137490580412fd2902b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostream-class"></a>Classe basic_ostream
 La classe di modello descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso con elementi di tipo **Elem**, chiamati anche [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere vengono determinati dalla classe **Tr**, chiamata anche [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -515,7 +516,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
   Vedere [streamsize](../standard-library/ios-typedefs.md#streamsize) per un esempio in cui viene usato `write`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Programmazione di iostream](../standard-library/iostream-programming.md)   
  [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
 

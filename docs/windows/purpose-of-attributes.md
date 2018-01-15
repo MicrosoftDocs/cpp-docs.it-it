@@ -1,38 +1,40 @@
 ---
-title: "Purpose of Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], about attributes"
+title: Scopo degli attributi | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: attributes [C++], about attributes
 ms.assetid: 3aff8bfa-a2a3-4fcb-a2c6-1d96a2b4c68d
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed20c29d017527d5c2ce0b0c5ab8053fc75dc6ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Purpose of Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Gli attributi estendono non attualmente C\+\+ in direzioni possibili senza interrompere la struttura classica del linguaggio.  Gli attributi consentono ai provider separati \(DLL\) estendono dinamicamente la funzionalità del linguaggio.  L'obiettivo primario degli attributi è quello di semplificare la creazione di componenti COM, oltre ad aumentare il livello di produttività degli sviluppatori di componenti.  Gli attributi possono essere applicati a qualsiasi costrutto C\+\+, come le classi, i membri dati, o funzioni membro.  Ecco evidenziazione dei vantaggi forniti da questa nuova tecnologia:  
+# <a name="purpose-of-attributes"></a>Scopo degli attributi
+Gli attributi estendere C++ in direzioni non è attualmente possibile senza la classica struttura del linguaggio. Gli attributi i provider (DLL distinte) per estendere le funzionalità di linguaggio in modo dinamico. L'obiettivo principale degli attributi è per semplificare la creazione di componenti COM, oltre ad aumentare il livello di produttività dello sviluppatore. Gli attributi possono essere applicati a quasi qualsiasi costrutto C++, ad esempio classi, membri dati o le funzioni membro. Di seguito è riportato un'evidenziazione dei vantaggi offerti da questa nuova tecnologia:  
   
--   espone una convenzione di chiamata comune e semplice.  
+-   Espone una convenzione di chiamata semplice e familiare.  
   
--   Gli utilizzi di inserimento del codice, che, a differenza delle macro, è riconosciuto dal debugger.  
+-   Il codice inserito, che, a differenza delle macro, viene riconosciuta dal debugger.  
   
--   Consente la derivazione delle classi di base senza dettagli di implementazione un'operazione gravosa.  
+-   Consente una derivazione semplice dalle classi di base senza i dettagli di implementazione gravoso.  
   
--   Sostituisce una grande quantità di codice IDL necessario da un componente COM con alcuni attributi concisa.  
+-   Sostituisce la grande quantità di codice IDL richiesto da un componente COM con alcuni attributi concisi.  
   
- Ad esempio, per implementare un sink di evento semplice per una classe generica ATL, è possibile applicare [event\_receiver](../windows/event-receiver.md) attributo a una classe specifica come  `CMyReceiver`.  **event\_receiver** l'attributo viene quindi compilato dal compilatore di Visual C\+\+, che inserisce il codice appropriato nel file oggetto.  
+ Ad esempio, per implementare un sink di evento semplice per una classe generica di ATL, è possibile applicare il [event_receiver](../windows/event-receiver.md) attributo in una classe specifica, ad esempio `CMyReceiver`. Il **event_receiver** attributo viene quindi compilato dal compilatore Visual C++ che inserisce il codice appropriato nel file oggetto.  
   
 ```  
 [event_receiver(com)]  
@@ -43,7 +45,7 @@ class CMyReceiver
 }  
 ```  
   
- È quindi possibile impostare **CMyReceiver** metodi  `handler1` e  `handler2` per gestire gli eventi utilizzando la funzione intrinseca  [\_\_hook](../cpp/hook.md)\) da un'origine evento, di cui è possibile creare utilizzando  [un event\_source](../windows/event-source.md).  
+ È quindi possibile impostare il **CMyReceiver** metodi `handler1` e `handler2` per gestire gli eventi (mediante la funzione intrinseca [hook](../cpp/hook.md)) da un'origine evento, che è possibile creare utilizzando [event_source](../windows/event-source.md).  
   
-## Vedere anche  
- [Concepts](../windows/attributed-programming-concepts.md)
+## <a name="see-also"></a>Vedere anche  
+ [Concetti](../windows/attributed-programming-concepts.md)

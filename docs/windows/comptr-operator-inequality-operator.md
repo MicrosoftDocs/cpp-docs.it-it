@@ -1,31 +1,32 @@
 ---
-title: "Operatore ComPtr::operator!= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator!="
-dev_langs: 
-  - "C++"
+title: 'Comptr:: operator! = (operatore) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator!=
+dev_langs: C++
 ms.assetid: 63647240-dec7-4eb9-9272-96c07d01493c
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e2610061fcb7266ae5457935d680f7bce82797c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore ComPtr::operator!=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Indica se due oggetti ComPtr non sono uguali.  
+# <a name="comptroperator-operator"></a>Operatore ComPtr::operator!=
+Indica se due oggetti ComPtr sono diversi.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 bool operator!=(  
@@ -45,23 +46,23 @@ bool operator!=(
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `a`  
- Riferimento a un oggetto ComPtr.  
+ Un riferimento a un oggetto ComPtr.  
   
  `b`  
- Riferimento a un altro oggetto ComPtr.  
+ Un riferimento a un altro oggetto ComPtr.  
   
-## Valore restituito  
- Il primo operatore diventa `true` se l'oggetto `a` non è uguale a `b`; in caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ Restituisce l'operatore prima `true` se oggetto `a` non è uguale all'oggetto `b`; in caso contrario, `false`.  
   
- Il secondo e il terzo operatore restituiscono `true` se l'oggetto `a` non è uguale a `nullptr`; in caso contrario, `false`.  
+ Il secondo e terzo operatore yield `true` se oggetto `a` non è uguale a `nullptr`; in caso contrario, `false`.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
- [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Namespace Microsoft:: wrl](../windows/microsoft-wrl-namespace.md)   
  [Classe ComPtr](../windows/comptr-class.md)

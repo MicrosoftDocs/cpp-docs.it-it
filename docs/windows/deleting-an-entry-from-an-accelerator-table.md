@@ -1,49 +1,52 @@
 ---
-title: "Deleting an Entry From an Accelerator Table | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accelerator tables [C++], deleting entries"
-  - "keyboard shortcuts [C++], deleting entry from accelerator table"
+title: Eliminazione di una voce da una tabella di tasti di scelta rapida | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accelerator tables [C++], deleting entries
+- keyboard shortcuts [C++], deleting entry from accelerator table
 ms.assetid: cc9cd499-dc04-4fe6-9393-a3e471e115a6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f001250e8607497754411586ebe82d0f64d863f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Deleting an Entry From an Accelerator Table
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per eliminare una voce da una tabella dei tasti di scelta rapida  
+# <a name="deleting-an-entry-from-an-accelerator-table"></a>Eliminazione di una voce da una tabella dei tasti di scelta rapida
+### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Per eliminare una voce da una tabella dei tasti di scelta rapida  
   
-1.  Aprire la tabella dei tasti di scelta rapida facendo doppio clic sulla relativa icona in [Visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di tasti di scelta rapida facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
   
     > [!NOTE]
     >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Selezionare la voce che si vuole eliminare.  Tenere premuto il tasto **CTRL** o **MAIUSC** mentre si fa clic per selezionare più voci.  
+2.  Selezionare la voce che si vuole eliminare. (Tenere premuto il **CTRL** o **MAIUSC** chiave mentre si fa clic per selezionare più voci.)  
   
-3.  Fare clic con il pulsante destro del mouse e scegliere **Elimina** dal menu di scelta rapida \(o selezionare **Elimina** dal menu **Modifica**\).  
+3.  Mouse e scegliere **eliminare** dal menu di scelta rapida (o selezionare **eliminare** dal **modifica** menu).  
   
- \-oppure\-  
+ \- oppure -  
   
 -   Premere il tasto CANC.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.*  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
   
  **Requisiti**  
   
  Win32  
   
-## Vedere anche  
- [Editing Accelerator Tables](../windows/editing-accelerator-tables.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle tabelle di tasti di scelta rapida](../windows/editing-accelerator-tables.md)   
+ [Editor tasti di scelta rapida](../windows/accelerator-editor.md)

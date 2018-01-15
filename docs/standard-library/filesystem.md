@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 Includere l'intestazione &lt;filesystem> per accedere alle classi e funzioni che modificano e recuperano informazioni su percorsi, file e directory.  
@@ -96,7 +97,7 @@ using namespace std::experimental::filesystem::v1;
   
  Infine, una caratteristica importante degli oggetti percorso è che è possibile usarli ogni volta che è necessario un argomento filename nelle classi definite dell'intestazione \<fstream>.  
   
- Per altre informazioni ed esempi di codice, vedere [Esplorazione del file system (C++)](../standard-library/file-system-navigation.md).  
+ Per altre informazioni ed esempi di codice, vedere [File System Navigation (C++)](../standard-library/file-system-navigation.md) (Esplorazione del file system (C++)).  
   
 ## <a name="classes"></a>Classi  
   
@@ -111,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="structs"></a>Struct  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Struttura space_info Structure](../standard-library/space-info-structure.md)|Contiene informazioni su un volume.|  
   
@@ -123,7 +124,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>Enumerazioni  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumerazione usata con [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) che determina il comportamento nel caso in cui un file di destinazione esista già.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumerazione che specifica le opzioni per gli iteratori di directory.|  
@@ -131,7 +132,7 @@ using namespace std::experimental::filesystem::v1;
 |[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo di maschera di bit usato per trasferire le autorizzazioni e le opzioni per le autorizzazioni|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
 
 
 

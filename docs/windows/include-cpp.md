@@ -1,33 +1,33 @@
 ---
-title: "include (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.include"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "include attribute"
+title: includere (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.include
+dev_langs: C++
+helpviewer_keywords: include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31d56b56b104473ffe3edbcf8672aa8b5a92243d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# include (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Specifica uno o più file di intestazione da includere nel file generato con estensione .idl.  
+# <a name="include-c"></a>include (C++)
+Specifica uno o più file di intestazione da includere nel file IDL generato.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,17 +36,17 @@ Specifica uno o più file di intestazione da includere nel file generato con est
 ) ];  
 ```  
   
-#### Parametri  
- *header\_file*  
- Il nome di un file che si desidera sia incluso nel file generato con estensione .idl.  
+#### <a name="parameters"></a>Parametri  
+ *HEADER_FILE*  
+ Il nome di un file che si desidera incluso nel file IDL generato.  
   
-## Note  
- **importare** l'attributo di C\+\+ causa  `#include` istruzione da inserire in  `import "docobj.idl"` istruzione nel file generato con estensione .idl.  
+## <a name="remarks"></a>Note  
+ Il **includono** attributo C++ causa un `#include` istruzione inserita sotto la `import "docobj.idl"` istruzione nel file IDL generato.  
   
- **importare** L'attributo di C\+\+ ha la stessa funzionalità di  [importare](http://msdn.microsoft.com/library/windows/desktop/aa367052) Attributo MIDL.  
+ Il **includono** attributo C++ ha la stessa funzionalità come il [includono](http://msdn.microsoft.com/library/windows/desktop/aa367052) attributo MIDL.  
   
-## Esempio  
- Il codice seguente viene illustrato un esempio di come utilizzare **importare**.  Per questo esempio, il file include.h contiene una sola istruzione \#include.  
+## <a name="example"></a>Esempio  
+ Il codice seguente viene illustrato un esempio di come utilizzare **includono**. Per questo esempio, include.h il file contiene solo un #include.  
   
 ```  
 // cpp_attr_ref_include.cpp  
@@ -55,24 +55,23 @@ Specifica uno o più file di intestazione da includere nel file generato con est
 [include(cpp_attr_ref_include.h)];  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi autonomi](../windows/stand-alone-attributes.md)   
+ [importazione](../windows/import.md)   
  [importidl](../windows/importidl.md)   
  [includelib](../windows/includelib-cpp.md)   
  [importlib](../windows/importlib.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

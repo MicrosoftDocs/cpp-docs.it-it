@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,19 +15,18 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e64859c9904f3fc1df42289ff6857bb8e7cfb187
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Includere l'intestazione standard \<chrono> per definire le classi e le funzioni che rappresentano e modificano durate e istanti temporali.  
@@ -50,7 +48,7 @@ Includere l'intestazione standard \<chrono> per definire le classi e le funzioni
   
 ### <a name="structs"></a>Strutture  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Struct common_type](../standard-library/common-type-structure.md)|Descrive le specializzazioni della classe modello [common_type](../standard-library/common-type-class.md) per la creazione di istanze di `duration` e `time_point`.|  
 |[Struct duration_values](../standard-library/duration-values-structure.md)|Fornisce valori specifici per il parametro di modello `duration` `Rep`.|  
@@ -122,8 +120,7 @@ constexpr auto my_duration_unit = 108ms;
 ## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
-
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
 
 
 

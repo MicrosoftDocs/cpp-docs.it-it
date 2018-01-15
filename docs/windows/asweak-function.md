@@ -1,32 +1,33 @@
 ---
-title: "Funzione AsWeak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak (funzione)"
+title: Funzione AsWeak | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2bc994c502a806fcca0ead9a5c73aa6f8b5dd02e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Funzione AsWeak
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asweak-function"></a>AsWeak (funzione)
 Recupera un riferimento debole a un'istanza specificata.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template<  
@@ -38,23 +39,23 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Puntatore al tipo di parametro `p`.  
+ Un puntatore al tipo di parametro `p`.  
   
  `p`  
- Un' istanza di un tipo.  
+ Un'istanza di un tipo.  
   
  `pWeak`  
- Quando questa operazione viene completata, un puntatore a un riferimento debole al parametro `p`.  
+ Al termine di questa operazione, un puntatore a un riferimento debole a parametro `p`.  
   
-## Valore restituito  
- S\_OK, se l'operazione riesce, in caso contrario, un errore HRESULT che indica la causa dell'errore.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK, se l'operazione ha esito positivo. in caso contrario, un errore HRESULT che indica la causa dell'errore.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

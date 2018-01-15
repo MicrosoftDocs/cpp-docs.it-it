@@ -1,32 +1,33 @@
 ---
-title: "max_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.max_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_is attribute"
+title: max_is | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.max_is
+dev_langs: C++
+helpviewer_keywords: max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d43ed06797ed79942a43612ab4c9ae774c4fcf17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# max_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-definisce il valore massimo per un indice valido di matrice.  
+# <a name="maxis"></a>max_is
+Indica il valore massimo per un indice di matrice valida.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,35 +36,34 @@ definisce il valore massimo per un indice valido di matrice.
 ) ]  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *espressione*  
- Una o più espressioni di C.  Gli slot vuoti dell'argomento sono consentiti.  
+ Una o più espressioni del linguaggio C. Sono consentiti gli slot di argomenti vuoto.  
   
-## Note  
- **max\_is** L'attributo di C\+\+ ha la stessa funzionalità di  [max\_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **max_is** attributo C++ ha la stessa funzionalità come il [max_is](http://msdn.microsoft.com/library/windows/desktop/aa367074) attributo MIDL.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
-|**Si applica a**|Campo in `struct` o  **unione**, parametro di interfaccia, metodo di interfaccia|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**size\_is**|  
+|**Si applica a**|Campo `struct` o **unione**, parametro di interfaccia, metodo di interfaccia|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**size_is**|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Esempio  
- vedere [first\_is](../windows/first-is.md) per un esempio di come specificare una sezione di una matrice.  
+## <a name="example"></a>Esempio  
+ Vedere [first_is](../windows/first-is.md) per un esempio di come specificare una sezione di una matrice.  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [last\_is](../windows/last-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Attributi dei parametri](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [last_is](../windows/last-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

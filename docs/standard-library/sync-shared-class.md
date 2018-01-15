@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - allocators/stdext::sync_shared::allocate
 - allocators/stdext::sync_shared::deallocate
 - allocators/stdext::sync_shared::equals
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::sync_shared
 - stdext::sync_shared [C++], allocate
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ff7c75428fbe63a2ec9183c3d909d22e9f38703e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2acb3268786693fd267f56718901fe43dab7ab99
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncshared-class"></a>Classe sync_shared
 Descrive un [filtro di sincronizzazione](../standard-library/allocators-header.md) che usa un mutex per controllare l'accesso a un oggetto della cache condiviso da tutti gli allocatori.  
@@ -118,7 +116,6 @@ bool equals(const sync_shared<Cache>& Other) const;
   
 ## <a name="see-also"></a>Vedere anche  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

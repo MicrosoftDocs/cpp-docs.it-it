@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Porting da UNIX a Win32
 Per la migrazione di applicazioni da UNIX a Windows è possibile scegliere tra diverse opzioni:  
@@ -44,11 +45,11 @@ Per la migrazione di applicazioni da UNIX a Windows è possibile scegliere tra d
 ### <a name="unix-migration-guides"></a>Guide per la migrazione a UNIX  
  La guida per la migrazione di applicazioni personalizzate UNIX include informazioni tecniche sulla migrazione del codice da UNIX all'ambiente Win32.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  La guida per i progetti di migrazione UNIX costituisce un'integrazione della guida per la migrazione di applicazioni personalizzate UNIX e include informazioni di carattere generale sulla migrazione di progetti sostanziali da UNIX a Win32. Fornisce inoltre consigli sugli aspetti da considerare nelle diverse fasi della migrazione dei progetti. Questa guida è disponibile per il download all'indirizzo:  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) offre una gamma completa di servizi multipiattaforma per integrare Windows in ambienti esistenti basati su UNIX. Services for UNIX include condivisione file, amministrazione e accesso remoto, sincronizzazione delle password, gestione delle directory comuni, un set comune di utilità e una shell.  

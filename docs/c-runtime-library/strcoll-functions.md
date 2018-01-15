@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 224c30dfbc79ab91e60f7f55f4835d3f627c454c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-functions"></a>Funzioni strcoll
 Ognuna delle funzioni `strcoll` e `wcscoll`confronta due stringhe in base all'impostazione della categoria di `LC_COLLATE` della tabella codici delle impostazioni locali in uso. Ognuna delle funzioni `_mbscoll` confronta due stringhe in base all'impostazione della tabella codici multibyte delle impostazioni locali in uso. Usare le funzioni `coll` per il confronto di stringhe solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto. Usare le funzioni `cmp` corrispondenti per eseguire il test per testare solo per l'uguaglianza di stringhe.  
@@ -55,7 +56,7 @@ Ognuna delle funzioni `strcoll` e `wcscoll`confronta due stringhe in base all'im
  Dato che le funzioni `coll` collazionano le stringhe a livello lessicografico per il confronto, mentre le funzioni `cmp` testano semplicemente le stringhe per verificarne l'uguaglianza, le funzioni `coll` sono molto più lente delle versioni `cmp` corrispondenti. È quindi consigliabile usare le funzioni `coll` solo se esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e se questa differenza è di particolare interesse per il confronto delle stringhe.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Impostazioni locali](../c-runtime-library/locale.md)   
+ [Locale](../c-runtime-library/locale.md)  (Impostazioni locali)  
  [Modifica di stringhe](../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../c-runtime-library/reference/localeconv.md)   
  [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   

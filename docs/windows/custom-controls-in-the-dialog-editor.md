@@ -1,59 +1,62 @@
 ---
-title: "Custom Controls in the Dialog Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Custom Control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], templates"
-  - "custom controls [Visual Studio], dialog boxes"
-  - "custom controls [Visual Studio]"
-  - "dialog box controls, custom (user) controls"
-  - "Dialog editor, custom controls"
+title: Controlli personalizzati nell'Editor finestre | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Custom Control
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], templates
+- custom controls [Visual Studio], dialog boxes
+- custom controls [Visual Studio]
+- dialog box controls, custom (user) controls
+- Dialog editor, custom controls
 ms.assetid: f494b314-4000-4bbe-bbd0-4b18fb71ede1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c507f4d252100055d4ed7f24e9c407bf8edb82d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Custom Controls in the Dialog Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-L'editor finestre consente l'utilizzo di controlli personalizzati o utente esistenti in un modello di finestra di dialogo.  
+# <a name="custom-controls-in-the-dialog-editor"></a>Controlli personalizzati nell'editor finestre
+L'editor finestre consente di utilizzare esistente "custom" o i controlli in un modello di finestra di dialogo "user".  
   
 > [!NOTE]
->  I controlli personalizzati considerati in questo contesto non devono essere confusi con i controlli ActiveX.  in precedenza denominati anche controlli OLE personalizzati.  Non devono inoltre essere confusi con i controlli disegnati dal proprietario in Windows.  
+>  Controlli personalizzati in questo senso non devono essere confusi con i controlli ActiveX. Controlli ActiveX a volte chiamati controlli OLE. Inoltre, non confondere questi controlli con i controlli creati dal proprietario in Windows.  
   
- Questa funzionalità è stata progettata per consentire l'utilizzo di controlli diversi da quelli forniti da Windows.  In fase di esecuzione, il controllo viene associato a una classe finestra, che non corrisponde a una classe C\+\+.  Questa attività viene comunemente eseguita installando un controllo, ad esempio un controllo statico, nella finestra di dialogo.  In fase di esecuzione, nella funzione [OnInitDialog](../Topic/CDialog::OnInitDialog.md) rimuovere il controllo e sostituirlo con il controllo personalizzato.  
+ Questa funzionalità è supportata per l'utilizzo di controlli diversi da quelli forniti da Windows. In fase di esecuzione, il controllo è associato a una classe di finestra (non come una classe C++). Un modo per eseguire la stessa operazione più comune è di installare qualsiasi controllo, ad esempio un controllo statico, nella finestra di dialogo. Quindi in fase di esecuzione, nel [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) funzione, rimuovere il controllo e sostituirlo con un controllo personalizzato.  
   
- Anziché questa tecnica tradizionale,  nella maggior parte dei casi è consigliabile scrivere un controllo ActiveX o creare una sottoclasse di un controllo comune di Windows.  
+ Questa è una tecnica precedente. Oggi è consigliabile nella maggior parte dei casi per scrivere un controllo ActiveX o una sottoclasse di un controllo comune di Windows.  
   
- Per questi controlli personalizzati è possibile effettuare le seguenti operazioni:  
+ Per questi controlli personalizzati, è possibile eseguire:  
   
--   Impostazione della posizione nella finestra di dialogo.  
+-   Impostazione del percorso nella finestra di dialogo.  
   
--   Digitazione di una didascalia.  
+-   Digitare una didascalia.  
   
--   Identificazione del nome della classe Windows del controllo. È necessario che il codice dell'applicazione registri il controllo in base a questo nome.  
+-   Che identifica il nome della classe di Windows del controllo (il codice dell'applicazione deve registrare il controllo con questo nome).  
   
--   Digitazione di un valore esadecimale a 32 bit da cui viene impostato lo stile del controllo.  
+-   Digitare un valore esadecimale a 32 bit che imposta lo stile del controllo.  
   
--   Impostazione dello stile esteso.  
+-   Se si imposta lo stile esteso.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
  Win32  
   
-## Vedere anche  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Controlli delle finestre di dialogo](../windows/controls-in-dialog-boxes.md)   
  [Controlli](../mfc/controls-mfc.md)
+

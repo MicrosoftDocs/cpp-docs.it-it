@@ -1,42 +1,42 @@
 ---
-title: "Distruttore ComPtr::~ComPtr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::~ComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~ComPtr, distruttore"
+title: 'ComPtr:: ~ ComPtr distruttore | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::~ComPtr
+dev_langs: C++
+helpviewer_keywords: ~ComPtr, destructor
 ms.assetid: b5e92d05-5d96-4610-ae0b-efd93f759858
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fb4ba350a9fb0f17b7ca242f9b5106ac3b1edf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Distruttore ComPtr::~ComPtr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Annulla l'inizializzazione di un'istanza di ComPtr.  
+# <a name="comptrcomptr-destructor"></a>Distruttore ComPtr::~ComPtr
+Deinizializza un'istanza di ComPtr.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW ~ComPtr();  
 ```  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ComPtr](../windows/comptr-class.md)

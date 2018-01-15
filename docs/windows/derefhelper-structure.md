@@ -1,32 +1,33 @@
 ---
-title: "Struttura DerefHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::Details::DerefHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DerefHelper (struttura)"
+title: DerefHelper (struttura) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::Details::DerefHelper
+dev_langs: C++
+helpviewer_keywords: DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f71a49f6fb240aa6ed305e966ecac0740ffec665
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Struttura DerefHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="derefhelper-structure"></a>DerefHelper (struttura)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -40,30 +41,30 @@ template <
 struct DerefHelper<T*>;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
  Un parametro di modello.  
   
-## Note  
- Rappresenta un puntatore derefenziato al parametro di modello `T*`.  
+## <a name="remarks"></a>Note  
+ Rappresenta un puntatore dereferenziato al `T*` parametro di modello.  
   
- DerefHelper viene utilizzato in un'espressione come: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
+ DerefHelper viene utilizzato in un'espressione, ad esempio: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Typedef pubblici  
+### <a name="public-typedefs"></a>Typedef pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|`DerefType`|L'identificatore per il parametro di template derefenziato `T*`.|  
+|`DerefType`|Identificatore del parametro di modello dereferenziato `T*`.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `DerefHelper`  
   
-## Requisiti  
- **Header:** async.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Async  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,55 +1,57 @@
 ---
-title: "Moving a String from One Resource File to Another | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], moving between files"
-  - "resource script files, moving strings"
-  - "string editing, moving strings between resources"
-  - "String editor, moving strings between files"
+title: Spostamento di una stringa da un File di risorse a un'altra | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], moving between files
+- resource script files, moving strings
+- string editing, moving strings between resources
+- String editor, moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ecb999052aa23d173a6a4113007cbd8452510e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Moving a String from One Resource File to Another
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Per spostare una stringa da un file di script di risorsa a un altro  
+# <a name="moving-a-string-from-one-resource-file-to-another"></a>Spostamento di una stringa da un file di risorse a un altro
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Per spostare una stringa dal file di script di una risorsa a un altro  
   
-1.  Aprire le tabelle di stringhe in entrambi i file RC.  Per ulteriori informazioni, vedere [Visualizzazione di risorse in un file di script di risorsa all'esterno di un progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+1.  Aprire le tabelle di stringhe in entrambi i file RC. (Per ulteriori informazioni, vedere [visualizzazione di risorse in un File di Script di risorsa all'esterno di un progetto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)  
   
     > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Fare clic con il pulsante destro del mouse sulla stringa che si desidera spostare e scegliere **Taglia** dal menu di scelta rapida.  
+2.  Fare clic sulla stringa di cui si desidera spostare e scegliere **Taglia** dal menu di scelta rapida.  
   
-3.  Posizionare il cursore nella finestra **Editor stringhe** di destinazione.  
+3.  Posizionare il cursore nella destinazione **Editor stringa** finestra.  
   
-4.  Fare clic con il pulsante destro del mouse nel file RC in cui si desidera spostare la stringa e scegliere **Incolla** dal menu di scelta rapida.  
+4.  Nel file RC a cui si desidera spostare la stringa, mouse e scegliere **Incolla** dal menu di scelta rapida.  
   
     > [!NOTE]
-    >  Se la proprietà **ID** o **valore** della stringa spostata è in conflitto con un **ID** o un **valore** esistente nel file di destinazione, la proprietà **ID** o **valore** della stringa spostata verrà modificata.  Se esiste una stringa con lo stesso **ID**, verrà modificato l'**ID** della stringa spostata.  Se esiste una stringa con lo stesso **valore**, verrà modificato il **valore** della stringa spostata.  
+    >  Se il **ID** o **valore** conflitti stringa spostata a un'esistente **ID** o **valore** nel file di destinazione, entrambi i **ID** o **valore** della stringa spostata. Se esiste una stringa con lo stesso **ID**, **ID** della stringa spostata. Se esiste una stringa con lo stesso **valore**, **valore** della stringa spostata.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, ovvero quelli che utilizzano Common Language Runtime, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisiti**  
   
  Win32  
   
-## Vedere anche  
- [String Editor](../mfc/string-editor.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Personalizzazione del layout della finestra](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md)   
- [Stringhe](_win32_Strings)   
- [Informazioni sulle stringhe](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Vedere anche  
+ [Editor stringhe](../windows/string-editor.md)   
+ [File di risorse](../windows/resource-files-visual-studio.md)   
+ [Personalizzazione del layout delle finestre](/visualstudio/ide/customizing-window-layouts-in-visual-studio)   
+

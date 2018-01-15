@@ -1,57 +1,58 @@
 ---
-title: "Finding a String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], searching"
-  - "strings [C++]"
+title: Ricerca di una stringa | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], searching
+- strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Finding a String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-È possibile cercare una o più stringhe nella tabella di stringhe e utilizzare [espressioni regolari](../Topic/Using%20Regular%20Expressions%20in%20Visual%20Studio.md) con il comando **Cerca nei file** del menu **Modifica** per individuare tutte le istanze di stringhe corrispondenti a un criterio.  
+# <a name="finding-a-string"></a>Ricerca di una stringa
+È possibile eseguire la ricerca di una o più stringhe nella tabella di stringhe e utilizzare [espressioni regolari](/visualstudio/ide/using-regular-expressions-in-visual-studio) con il **Cerca nei file** comando (**modifica** menu) per individuare tutte le istanze di stringhe che corrispondono a un criterio.  
   
-### Per trovare una stringa nella tabella di stringhe  
+### <a name="to-find-a-string-in-the-string-table"></a>Per trovare una stringa nella tabella di stringhe  
   
-1.  Aprire la tabella di stringhe facendo doppio clic sulla relativa icona in [Visualizzazione risorse](../windows/resource-view-window.md).  
+1.  Aprire la tabella di stringhe facendo doppio clic sull'icona in [visualizzazione risorse](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Se il progetto non contiene già un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+    >  Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Scegliere **Trova e sostituisci** dal menu **Modifica**, quindi **Trova**.  
+2.  Nel **modifica** menu, fare clic su **Trova e sostituisci**, quindi scegliere **trovare**.  
   
-3.  Nella casella **Trova** selezionare una precedente stringa di ricerca dalla casella di riepilogo a discesa oppure digitare il testo della didascalia o l'identificatore di risorsa della stringa che si desidera trovare.  
+3.  Nel **trova** casella, selezionare una stringa di ricerca precedente dall'elenco a discesa o digitare l'identificatore didascalia di testo o della risorsa della stringa di cui si desidera trovare.  
   
-4.  Selezionare una delle opzioni di **Trova**.  
+4.  Selezionare una qualsiasi del **trovare** opzioni.  
   
-5.  Scegliere **Trova successivo**.  
+5.  Fare clic su **Trova successivo**.  
   
     > [!TIP]
-    >  Per utilizzare espressioni regolari nella ricerca nei file, utilizzare il comando **Cerca nei file**.  Digitare un'espressione regolare corrispondente a un criterio oppure fare clic sul pulsante a destra della casella **Trova** per visualizzare un elenco di espressioni di ricerca regolari.  Quando si seleziona un'espressione da questo elenco, l'espressione viene sostituita come testo di ricerca nella casella **Trova**.  Se si utilizzano espressioni regolari, assicurarsi che la casella di controllo **Usa espressioni regolari** sia selezionata.  
+    >  Per utilizzare le espressioni regolari nella ricerca nei file, utilizzare il **Cerca nei file** comando. Digitare un'espressione regolare corrispondente a un modello oppure fare clic sul pulsante a destra del **trova** casella per visualizzare un elenco di espressioni regolari di ricerca. Quando si seleziona un'espressione da questo elenco, viene sostituita come testo di ricerca nella **trova** casella. Se si usano espressioni regolari, assicurarsi di **utilizzo: espressioni regolari** casella di controllo è selezionata.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, ovvero quelli che utilizzano Common Language Runtime, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework*. Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti (quelli destinati a common language runtime), vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* . Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: Localizzazione di Windows Form](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
  **Requisiti**  
   
  Win32  
   
-## Vedere anche  
- [String Editor](../mfc/string-editor.md)   
- [Stringhe](_win32_Strings)   
- [Informazioni sulle stringhe](_win32_About_Strings_cpp)
+## <a name="see-also"></a>Vedere anche  
+ [Editor stringhe](../windows/string-editor.md)   
+

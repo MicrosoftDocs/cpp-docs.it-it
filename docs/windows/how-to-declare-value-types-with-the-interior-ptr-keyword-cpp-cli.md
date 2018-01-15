@@ -1,40 +1,42 @@
 ---
-title: "How to: Declare Value Types with the interior_ptr Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr keyword"
-  - "value types, declaring"
+title: 'Procedura: dichiarare i tipi di valore con la parola chiave interior_ptr (C + + CLI) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Un `interior_ptr` può essere utilizzato con un tipo di valore.  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Procedura: dichiarare i tipi di valori con la parola chiave interior_ptr (C++/CLI)
+Un oggetto `interior_ptr` può essere utilizzato con un tipo di valore.  
   
 > [!IMPORTANT]
->  Questa funzionalità del linguaggio è supportata dall'opzione del compilatore **\/clr**, ma non dall'opzione del compilatore di **\/ZW**.  
+>  Questa funzionalità del linguaggio è supportata per il **/clr** l'opzione del compilatore, ma non dal **/ZW** l'opzione del compilatore.  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Il seguente esempio [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] mostra come utilizzare un `interior_ptr` con un tipo di valore.  
+### <a name="description"></a>Descrizione  
+ L'esempio C + + CLI esempio viene illustrato come utilizzare un `interior_ptr` con un tipo di valore.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 1  
@@ -75,14 +77,14 @@ int main() {
 3  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- In un tipo di valore, il puntatore `this` restituisce un interior\_ptr.  
+### <a name="description"></a>Descrizione  
+ In un tipo di valore, tramite il puntatore `this` viene restituito un oggetto interior_ptr.  
   
- Nel corpo di una funzione membro non static di un tipo di valore `V`, `this` è un'espressione di tipo `interior_ptr<V>` il cui valore è l'indirizzo dell'oggetto per cui la funzione viene chiamata.  
+ Nel corpo di una funzione membro non statica di un tipo di valore `V`, `this` è un'espressione di tipo `interior_ptr<V>` il cui valore è l'indirizzo dell'oggetto per cui la funzione viene chiamata.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +98,14 @@ value struct V {
 };  
 ```  
   
-## Esempio  
+## <a name="example"></a>Esempio  
   
-### Descrizione  
- Il seguente codice di esempio mostra come utilizzare l'operatore address\-of con membri statici.  
+### <a name="description"></a>Descrizione  
+ Nell'esempio seguente viene illustrato come utilizzare l'operatore address-of con membri statici.  
   
- L'indirizzo di un membro di tipo Visual C\+\+ statico genera un puntatore nativo.  L'indirizzo di un membro statico del tipo di valore è un puntatore gestito perché il membro del tipo di valore viene allocato nell'heap di runtime e può essere spostato dal Garbage Collector.  
+ Tramite l'indirizzo di un membro di tipo Visual C++ statico viene generato un puntatore nativo.  L'indirizzo di un membro statico del tipo di valore è un puntatore gestito poiché il membro del tipo di valore viene allocato nell'heap di runtime e può essere spostato dal Garbage Collector.  
   
-### Codice  
+### <a name="code"></a>Codice  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +131,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Output  
   
 ```  
 22  
@@ -137,5 +139,5 @@ int main() {
 hello  
 ```  
   
-## Vedere anche  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>Vedere anche  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

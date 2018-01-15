@@ -1,45 +1,46 @@
 ---
-title: "Costruttore MakeAllocator::MakeAllocator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator::MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MakeAllocator, costruttore"
+title: 'Costruttore makeallocator:: Makeallocator | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator::MakeAllocator
+dev_langs: C++
+helpviewer_keywords: MakeAllocator, constructor
 ms.assetid: fc03978b-2c5f-4e92-ab6d-f71bb49895cc
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2d3122377277fc5870f95c24e946377500882179
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Costruttore MakeAllocator::MakeAllocator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="makeallocatormakeallocator-constructor"></a>Costruttore MakeAllocator::MakeAllocator
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 MakeAllocator();  
 ```  
   
-## Note  
+## <a name="remarks"></a>Note  
  Inizializza una nuova istanza della classe MakeAllocator.  
   
-## Requisiti  
- **Header:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Classe MakeAllocator](../windows/makeallocator-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [MakeAllocator (classe)](../windows/makeallocator-class.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

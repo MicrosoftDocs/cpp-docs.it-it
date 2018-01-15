@@ -37,11 +37,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d53e49ae0a28201ac32cd1eb722c9889258f23b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>Classe extreme_value_distribution
 Genera una distribuzione dei valori estremi.  
@@ -94,7 +95,7 @@ Tipo di risultato a virgola mobile. Per impostazione predefinita, `double`. Per 
   
  Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
- Per informazioni dettagliate sulla distribuzione dei valori estremi, vedere l'articolo di Wolfram MathWorld [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110) (Distribuzione dei valori estremi).  
+ Per informazioni dettagliate sulla distribuzione dei valori estremi, vedere l'articolo di Wolfram MathWorld [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110) (Distribuzione dei valori estremi).  
   
 ## <a name="example"></a>Esempio  
   

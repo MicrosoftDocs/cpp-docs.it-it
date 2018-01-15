@@ -1,32 +1,33 @@
 ---
-title: "propget | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.propget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propget attribute"
+title: propget | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.propget
+dev_langs: C++
+helpviewer_keywords: propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 62b8992b6d69147615c2f1f3f902c32fbd7abbf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# propget
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="propget"></a>propget
 Specifica una funzione di accesso della proprietà.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,28 +35,27 @@ Specifica una funzione di accesso della proprietà.
   
 ```  
   
-## Note  
- **propget** L'attributo di C\+\+ ha la stessa funzionalità di  [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **propget** attributo C++ ha la stessa funzionalità come il [propget](http://msdn.microsoft.com/library/windows/desktop/aa367145) attributo MIDL.  
   
-## Esempio  
- Vedere l'esempio relativo a [associabile](../windows/bindable.md) per un esempio di utilizzo  **propget**.  
+## <a name="example"></a>Esempio  
+ Per vedere l'esempio [associabili](../windows/bindable.md) per un esempio dell'uso di **propget**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Metodo|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|**set**,  **propputref**|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|**propput**, **propputref**|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi del metodo](../windows/method-attributes.md)   
  [propput](../windows/propput.md)   
  [propputref](../windows/propputref.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

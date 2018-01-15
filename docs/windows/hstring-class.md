@@ -1,75 +1,77 @@
 ---
-title: "Classe HString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString"
-dev_langs: 
-  - "C++"
+title: Classe HString | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString
+dev_langs: C++
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe HString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Fornisce supporto per modificare un handle HSTRING.  
+# <a name="hstring-class"></a>Classe HString
+Classe helper per la gestione della durata di HSTRING utilizzando il modello RAII.
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```cpp  
 class HString;  
 ```  
   
-## Note  
- Il [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] fornisce l'accesso alle stringhe attraverso handle di HSTRING.  La classe HString fornisce funzioni comode e operatori per semplificare l'utilizzo di un handle di HSTRING.  
+## <a name="remarks"></a>Note  
+ Windows Runtime fornisce l'accesso alle stringhe tramite handle HSTRING. La classe HString fornisce funzioni di praticità e operatori per semplificare l'utilizzo di handle HSTRING. Questa classe consente di gestire la durata del HSTRING possiede tramite un modello RAII. 
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore HString::HString](../windows/hstring-hstring-constructor.md)|Inizializza una nuova istanza della classe HString.|  
-|[Distruttore HString::HString](../windows/hstring-tilde-hstring-destructor.md)|Elimina l'istanza corrente della classe di HString.|  
+|[Distruttore HString::~HString](../windows/hstring-tilde-hstring-destructor.md)|Elimina l'istanza corrente della classe HString.|  
   
-### Membri  
-  
-|Nome|Descrizione|  
-|----------|-----------------|  
-|[Metodo HString::Set](../windows/hstring-set-method.md)|Imposta il valore dell'oggetto corrente di HString alla stringa di caratteri estesi o al parametro specifica di HString.|  
-|[Metodo HString::Attach](../windows/hstring-attach-method.md)|Associa l'oggetto specificato di HString con l'oggetto corrente di HString.|  
-|[Metodo HString::CopyTo](../windows/hstring-copyto-method.md)|Copia l'oggetto HString corrente in un oggetto HSTRING.|  
-|[Metodo HString::Detach](../windows/hstring-detach-method.md)|Rimuove l'associazione con l'oggetto HString specificato dal valore sottostante.|  
-|[Metodo HString::GetAddressOf](../windows/hstring-getaddressof-method.md)|Recupera un puntatore all'handle sottostante di HSTRING.|  
-|[Metodo HString::Get](../windows/hstring-get-method.md)|Recupera il valore dell'handle sottostante di HSTRING.|  
-|[Metodo HString::Release](../windows/hstring-release-method.md)|Elimina il valore stringa sottostante e inizializza l'oggetto corrente di HString ad un valore vuoto.|  
-|[Metodo HString::MakeReference](../windows/hstring-makereference-method.md)|Crea un oggetto di HStringReference da un parametro di stringa specificato.|  
-  
-### Operatori pubblici  
+### <a name="members"></a>Membri  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Operatore HString::Operator\=](../windows/hstring-operator-assign-operator.md)|Sposta il valore di un altro oggetto di HString all'oggetto corrente di HString.|  
-|[Operatore HString::Operator\=\=](../windows/hstring-operator-equality-operator.md)|Indica se i due parametri non sono uguali.|  
-|[Operatore HString::Operator\!\=](../windows/hstring-operator-inequality-operator.md)|Indica se i due parametri non sono uguali.|  
+|[Metodo HString::Set](../windows/hstring-set-method.md)|Imposta il valore dell'oggetto HString corrente per la stringa specificata di caratteri "wide" o il parametro HString.|  
+|[Metodo HString::Attach](../windows/hstring-attach-method.md)|Associa l'oggetto HString specificato con l'oggetto HString corrente.|  
+|[Metodo HString::CopyTo](../windows/hstring-copyto-method.md)|Copie di HString corrente dell'oggetto a un oggetto HSTRING.|  
+|[Metodo HString::Detach](../windows/hstring-detach-method.md)|Rimuove l'associazione oggetto HString specificato dal relativo valore sottostante.|  
+|[Metodo HString::GetAddressOf](../windows/hstring-getaddressof-method.md)|Recupera un puntatore all'handle HSTRING sottostante.|  
+|[Metodo HString::Get](../windows/hstring-get-method.md)|Recupera il valore dell'handle HSTRING sottostante.|  
+|[Metodo HString::Release](../windows/hstring-release-method.md)|Elimina il valore string sottostante e inizializza l'oggetto HString corrente su un valore vuoto.|  
+|[Metodo HString::MakeReference](../windows/hstring-makereference-method.md)|Crea un oggetto HStringReference da un parametro di stringa specificata.|  
   
-## Gerarchia di ereditarietà  
+### <a name="public-operators"></a>Operatori pubblici  
+  
+|Nome|Descrizione|  
+|----------|-----------------|  
+|[Operatore HString::Operator=](../windows/hstring-operator-assign-operator.md)|Sposta il valore di un altro oggetto HString all'oggetto HString corrente.|  
+|[Operatore HString::Operator==](../windows/hstring-operator-equality-operator.md)|Indica se i due parametri sono uguali.|  
+|[Operatore HString::Operator!=](../windows/hstring-operator-inequality-operator.md)|Indica se i due parametri non sono uguali.|  
+  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `HString`  
   
-## Requisiti  
- **Intestazione:** corewrappers.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** corewrappers. h  
   
- **Spazio dei nomi:** Microsoft::WRL::Wrappers  
+ **Namespace:** Microsoft::WRL::Wrappers  
   
-## Vedere anche  
- [Metodo Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)
+## <a name="see-also"></a>Vedere anche  
+ [Spazio dei nomi Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

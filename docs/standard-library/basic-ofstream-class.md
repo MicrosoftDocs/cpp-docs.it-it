@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fa5bdad26039217a52c480d747d3dac1ba2db5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 235bf7fc118f8752adefc61f5ed18ea01caec727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicofstream-class"></a>Classe basic_ofstream
 Descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`.  
@@ -172,7 +173,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>Note  
- La funzione membro chiama [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[close](../standard-library/basic-filebuf-class.md#close).  
+ La funzione membro chiama [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[chiudere](../standard-library/basic-filebuf-class.md#close).  
   
 ### <a name="example"></a>Esempio  
   Vedere [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) per un esempio di utilizzo di **close**.  
@@ -188,7 +189,7 @@ bool is_open() const;
  `true` se il file è aperto; in caso contrario, `false`.  
   
 ### <a name="remarks"></a>Note  
- La funzione membro restituisce [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
+ La funzione membro restituisce [rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
 ### <a name="example"></a>Esempio  
   
@@ -297,7 +298,7 @@ void swap(basic_ofstream& right);
   
 ## <a name="see-also"></a>Vedere anche  
  [Classe basic_ostream](../standard-library/basic-ostream-class.md)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Programmazione di iostream](../standard-library/iostream-programming.md)   
  [Convenzioni di iostream](../standard-library/iostreams-conventions.md)
 

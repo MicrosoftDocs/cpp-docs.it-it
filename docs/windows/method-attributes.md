@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8b6a0cdecc5a0416873ba5bed3eba043a2ef79a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="method-attributes"></a>Attributi del metodo
 Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o interfaccia.  
@@ -44,7 +47,7 @@ Gli attributi seguenti si applicano ai metodi in una classe, una coclasse o inte
 |[helpstringcontext](../windows/helpstringcontext.md)|Specifica l'ID di un argomento della Guida in un file hlp o chm.|  
 |[helpstringdll](../windows/helpstringdll.md)|Specifica il nome della DLL da utilizzare per eseguire la ricerca della stringa di documento (localizzazione).|  
 |[hidden](../windows/hidden.md)|Indica che l'elemento esiste ma non deve essere visualizzato in un visualizzatore per utente.|  
-|[id](../windows/id.md)|Specifica un DISPID per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).|  
+|[ID](../windows/id.md)|Specifica un DISPID per una funzione membro (una proprietà o un metodo, in un'interfaccia o interfaccia dispatch).|  
 |[immediatebind](../windows/immediatebind.md)|Indica che il database verrà informato immediatamente di tutte le modifiche a una proprietà di un oggetto con associazione a dati.|  
 |[in](../windows/in-cpp.md)|Indica che un parametro deve essere passato dalla routine chiamante alla routine chiamata.|  
 |[locale](../windows/local-cpp.md)|Consente di usare il compilatore MIDL come generatore di intestazione utilizzato nell'intestazione di interfaccia. Quando utilizzato in una singola funzione, indica una procedura locale per il quale non vengono generati stub.|  

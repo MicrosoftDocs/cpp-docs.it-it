@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::weibull_distribution::param_type::b
 - random/std::weibull_distribution::param_type::operator==
 - random/std::weibull_distribution::param_type::operator!=
-- random/std::weibull_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::weibull_distribution [C++]
 - std::weibull_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e08b64c18a44083f1af0fd899f71409c69473981
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 87677d884a80c2cc2038f759c31a725299e523f6
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="weibulldistribution-class"></a>Classe weibull_distribution
 Genera una distribuzione di Weibull.  
@@ -93,7 +90,7 @@ La classe modello descrive una distribuzione che produce valori di un tipo a vir
   
 Le funzioni di proprietà `a()` e `b()` restituiscono i valori rispettivi per i parametri di distribuzione archiviati *a* e *b*.  
   
-Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviato `param_type`.  
+Il membro di proprietà `param()` imposta o restituisce il pacchetto di parametri di distribuzione archiviati `param_type`.  
 
 Le funzioni membro `min()` e `max()` restituiscono rispettivamente il minor risultato possibile e il maggior risultato possibile.  
   
@@ -103,7 +100,7 @@ Le funzioni membro `operator()` restituiscono il successivo valore generato basa
   
 Per altre informazioni sulle classi di distribuzione e sui rispettivi membri, vedere [\<random>](../standard-library/random.md).  
   
-Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld [Weibull Distribution](http://go.microsoft.com/fwlink/LinkId=401115) (Distribuzione Weibull).  
+Per informazioni dettagliate sulla distribuzione di Weibull, vedere l'articolo di Wolfram MathWorld [Weibull Distribution](http://go.microsoft.com/fwlink/p/?linkid=401115) (Distribuzione Weibull).  
   
 ## <a name="example"></a>Esempio  
   
@@ -275,7 +272,6 @@ Questa struttura può essere passata al costruttore di classe della distribuzion
   
 ## <a name="see-also"></a>Vedere anche  
  [\<random>](../standard-library/random.md)
-
 
 
 

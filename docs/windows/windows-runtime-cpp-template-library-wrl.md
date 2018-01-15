@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
 La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli che fornisce un modo di basso livello per creare e usare i componenti Windows Runtime.  
@@ -142,5 +145,5 @@ La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli c
 |[Modello di progetto libreria di classi](../windows/wrl-class-library-project-template.md)|Viene descritto come accedere al modello di progetto Libreria di classi WRL. Questo modello consente di semplificare l'attività di utilizzo di Visual Studio per creare componenti Windows Runtime.|  
 |[API chiave per categoria](../windows/key-wrl-apis-by-category.md)|Evidenzia i tipi, funzioni e macro primario libreria modelli C++ per Windows Runtime.|  
 |[Riferimento](../windows/wrl-reference.md)|Contiene informazioni di riferimento per la libreria di modelli di Windows Runtime C++.|  
-|[Riferimento rapido (Windows Runtime e Visual C++)](http://go.microsoft.com/fwlink/?LinkId=229180)|Vengono descritti brevemente C + + funzionalità CX che supportano Windows Runtime.|  
-|[Utilizzo di componenti Windows Runtime in Visual C++](http://go.microsoft.com/fwlink/?LinkId=229155)|Viene illustrato come utilizzare C + + CX per creare un componente Windows Runtime di base.|
+|[Riferimento rapido (Windows Runtime e Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Vengono descritti brevemente C + + funzionalità CX che supportano Windows Runtime.|  
+|[Utilizzo di componenti Windows Runtime in Visual C++](http://go.microsoft.com/fwlink/p/?linkid=229155)|Viene illustrato come utilizzare C + + CX per creare un componente Windows Runtime di base.|

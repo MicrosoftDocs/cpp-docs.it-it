@@ -1,45 +1,46 @@
 ---
-title: "Costante ArgTraitsHelper::args | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraitsHelper::args"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "args (costante)"
+title: 'Costante argtraitshelper:: args | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraitsHelper::args
+dev_langs: C++
+helpviewer_keywords: args constant
 ms.assetid: 1c0efa32-c072-43e3-bbd9-a3f6aec069a2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4d0d80dc085320f2647202af6782e0d69456a2df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Costante ArgTraitsHelper::args
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="argtraitshelperargs-constant"></a>Costante ArgTraitsHelper::args
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 static const int args = Traits::args;  
 ```  
   
-## Note  
- Le guide [ArgTraitsHelper::args](../windows/argtraitshelper-args-constant.md) mantengono il conteggio del numero di parametri nel metodo di richiamata dell'interfaccia delegata.  
+## <a name="remarks"></a>Note  
+ Consente di [argtraitshelper:: args](../windows/argtraitshelper-args-constant.md) mantenere il numero di parametri al metodo Invoke di un'interfaccia del delegato.  
   
-## Requisiti  
- **Header:** event.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** Event. h  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
- [Struttura ArgTraitsHelper](../windows/argtraitshelper-structure.md)   
+## <a name="see-also"></a>Vedere anche  
+ [ArgTraitsHelper (struttura)](../windows/argtraitshelper-structure.md)   
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

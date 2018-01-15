@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3e1b51db369a5f36b4c7428083d7dde4728642c3
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>Classe error_category
 Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.  
@@ -220,7 +218,6 @@ typedef int value_type;
   
 ## <a name="see-also"></a>Vedere anche  
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

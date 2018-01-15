@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fad2e10a8e6a06069bfb4bda269962aa4268e39a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8337bbd028e6630977d744e852d44357a3067ff2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-submenu"></a>Creazione di un sottomenu
 ### <a name="to-create-a-submenu"></a>Per creare un sottomenu  
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.*  
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

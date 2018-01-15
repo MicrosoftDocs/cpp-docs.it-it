@@ -1,52 +1,56 @@
 ---
-title: "Creating a 256-Color Icon or Cursor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "256-color palette"
-  - "cursors, color"
-  - "colors, icons"
-  - "colors, cursors"
-  - "icons, color"
+title: Creazione di un cursore (Editor di immagini per le icone) o un'icona a 256 colori | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- 256-color palette
+- cursors, color
+- colors, icons
+- colors, cursors
+- icons, color
 ms.assetid: 2738089b-4fd3-4c45-96ae-6a15e4c6b780
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 11c25c808ad9d1917413a66044e052e4c49ea584
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a 256-Color Icon or Cursor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Utilizzando l'editor di immagini è possibile definire icone e cursori di grandi dimensioni \(64 x 64\) con una tavolozza da 256 colori da cui effettuare la selezione.  Una volta creata la risorsa, verrà selezionato uno stile per le immagini per le periferiche.  
+# <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Creazione di un cursore o di un'icona a 256 colori (Editor di immagini per le icone)
+Utilizzando l'editor immagini, icone e cursori possono essere dimensioni grandi dimensioni (64 x 64) con una tavolozza da 256 colori da selezionare. Dopo aver creato la risorsa, viene selezionato uno stile di immagine del dispositivo.  
   
-### Per creare un cursore o un'icona a 256 colori  
+### <a name="to-create-a-256-color-icon-or-cursor"></a>Per creare un cursore o un'icona a 256 colori  
   
-1.  Fare clic con il pulsante destro del mouse sul file RC in [Visualizzazione risorse](../windows/resource-view-window.md), quindi scegliere **Inserisci risorsa** dal menu di scelta rapida.  Se nel file RC è già presente una risorsa immagine, ad esempio un cursore, sarà sufficiente fare clic con il pulsante destro del mouse sulla cartella **Cursore** e scegliere **Inserisci cursore** dal menu di scelta rapida.  
+1.  In [visualizzazione risorse](../windows/resource-view-window.md), fare doppio clic sul file RC, quindi scegliere **Inserisci risorsa** dal menu di scelta rapida. (Se si dispone già di una risorsa immagine esistente nel file RC, ad esempio un cursore, è possibile fare semplicemente il **cursore** cartella e selezionare **Inserisci cursore** dal menu di scelta rapida.)  
   
-     **Nota** Se il progetto non contiene un file RC, vedere [Creazione di un nuovo file di script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
+     **Note** Se il progetto non contiene già un file RC, vedere la pagina relativa alla [creazione di un nuovo file script di risorsa](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Nella [finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md) selezionare **Icona** o **Cursore** e scegliere **Nuovo**.  
+2.  Nel [la finestra di dialogo Inserisci risorsa](../windows/add-resource-dialog-box.md)selezionare **icona** o **cursore** e fare clic su **New**.  
   
-3.  Scegliere **Nuovo tipo di immagine** dal menu **Immagine**.  
+3.  Nel **immagine** menu, fare clic su **nuova immagine per dispositivo**.  
   
 4.  Selezionare lo stile di immagine a 256 colori desiderato.  
   
- Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [Risorse nelle applicazioni](../Topic/Resources%20in%20Desktop%20Apps.md) nella *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, sulla visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [Procedura dettagliata: localizzazione di Windows Form](http://msdn.microsoft.com/it-it/9a96220d-a19b-4de0-9f48-01e5d82679e5) e [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Per informazioni sull'aggiunta di risorse a progetti gestiti, vedere [risorse nelle applicazioni Desktop](/dotnet/framework/resources/index) nel *Guida per gli sviluppatori di .NET Framework.* Per informazioni sull'aggiunta manuale di file di risorse a progetti gestiti, sull'accesso alle risorse, visualizzazione di risorse statiche e sull'assegnazione di stringhe di risorse alle proprietà, vedere [la creazione di file di risorse per le app Desktop](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Per informazioni sulla globalizzazione e localizzazione di risorse nelle applicazioni gestite, vedere [globalizzazione e localizzazione di applicazioni .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Requisiti**  
   
- Nessuno  
+ nessuno  
   
-## Vedere anche  
- [Using the 256\-Color Palette](../mfc/using-the-256-color-palette-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Utilizzo della tavolozza da 256 colori](../windows/using-the-256-color-palette-image-editor-for-icons.md)   
+ [Tasti di scelta rapida](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Icone e cursori: risorse immagine per i dispositivi di visualizzazione](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

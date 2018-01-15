@@ -15,11 +15,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40aa6aa0b8270cf910fe7449af32ae877544a40e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d4e083cfd0ee1a72992d3c400c4790f5cd50396
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="satype"></a>satype
 Specifica il tipo di dati di **SAFEARRAY** struttura.  
@@ -46,7 +49,7 @@ Specifica il tipo di dati di **SAFEARRAY** struttura.
 |**Si applica a**|Parametro di interfaccia, metodo di interfaccia|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi non validi**|nessuno|  
   
 ## <a name="remarks"></a>Note  
  Il **satype** attributo C++ specifica il tipo di dati di **SAFEARRAY**.  
@@ -71,4 +74,4 @@ __interface A {
  [Attributi del compilatore](../windows/compiler-attributes.md)   
  [Attributi dei parametri](../windows/parameter-attributes.md)   
  [Attributi del metodo](../windows/method-attributes.md)   
- [id](../windows/id.md)   
+ [ID](../windows/id.md)   

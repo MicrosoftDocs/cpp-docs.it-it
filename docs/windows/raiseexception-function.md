@@ -1,56 +1,56 @@
 ---
-title: "Funzione RaiseException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RaiseException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RaiseException (funzione)"
+title: Funzione RaiseException | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RaiseException
+dev_langs: C++
+helpviewer_keywords: RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 380e3792c5b2b9504bec841965e70bd47ec619d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Funzione RaiseException
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Supporta l'infrastruttura WRL e non può essere utilizzata direttamente dal proprio codice.  
+# <a name="raiseexception-function"></a>RaiseException (funzione)
+Supporta l'infrastruttura WRL e non deve essere utilizzato direttamente dal codice.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
-inline void __declspec(noreturn)  
-   RaiseException(  
+inline void __declspec(noreturn)   RaiseException(  
       HRESULT hr,   
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `hr`  
- Il codice dell'eccezione generata, ovvero HRESULT di un'operazione non riuscita.  
+ Il codice di eccezione dell'eccezione da generare; ovvero, il valore HRESULT di un'operazione non riuscita.  
   
  `dwExceptionFlags`  
- Un flag che indica un'eccezione non critica \(il valore del flag è zero\), o eccezione noncontinuable \(il valore del flag è diverso da zero\).  Per impostazione predefinita, l'eccezione è noncontinuable.  
+ Flag che indica un'eccezione critica (il valore del flag è zero) o noncontinuable eccezione (il valore del flag è diverso da zero). Per impostazione predefinita, l'eccezione è critico.  
   
-## Note  
+## <a name="remarks"></a>Note  
  Genera un'eccezione nel thread chiamante.  
   
- Per ulteriori informazioni, vedere la funzione di Windows **RaiseException**.  
+ Per ulteriori informazioni, vedere Windows **RaiseException** (funzione).  
   
-## Requisiti  
- **Header:** internal.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** FTM  
   
  **Namespace:** Microsoft::WRL::Details  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

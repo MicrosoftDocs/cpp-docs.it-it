@@ -1,41 +1,44 @@
 ---
-title: "Operatore ComPtr::operator Microsoft::WRL::Details::BoolType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: 'Operatore booltype comptr:: operator | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: cfba6521-fb30-4fb8-afb2-cfab1cb5e0b8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f98ca8068495be46b795d361c969c4feb2c24169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore ComPtr::operator Microsoft::WRL::Details::BoolType
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>Operatore ComPtr::operator Microsoft::WRL::Details::BoolType
 Indica se un ComPtr gestisce o meno la durata degli oggetti di un'interfaccia.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;  
 ```  
   
-## Valore restituito  
- Se un'interfaccia è associata a questo ComPtr, l'indirizzo del membro dati [BoolStruct::Member](../windows/boolstruct-member-data-member.md) ; in caso contrario, `nullptr`.  
+## <a name="return-value"></a>Valore restituito  
+ Se è associata a questo ComPtr, l'indirizzo di un'interfaccia di [boolstruct::](../windows/boolstruct-member-data-member.md) (membro dati); in caso contrario, `nullptr`.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
- [Classe ComPtr](../windows/comptr-class.md)   
+## <a name="see-also"></a>Vedere anche  
+ [ComPtr (classe)](../windows/comptr-class.md)   
  [Metodo ComPtr::Get](../windows/comptr-get-method.md)

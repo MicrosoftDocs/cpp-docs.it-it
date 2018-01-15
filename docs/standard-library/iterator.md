@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d0e3c65101455958772415228d5cf0d95fbd4d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iteratori di flusso, nonché diversi modelli di supporto. Gli iteratori predefiniti includono gli adattatori di inversione e di inserimento. Esistono tre classi di adattatori degli iteratori di inserimento: front, back e general. Tali classi forniscono la semantica di inserimento anziché la semantica di sovrascrittura fornita dagli iteratori delle funzioni membro del contenitore.  
@@ -107,7 +108,7 @@ Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iterator
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
 
 

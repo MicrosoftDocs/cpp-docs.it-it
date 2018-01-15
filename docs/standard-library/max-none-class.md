@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - allocators/stdext::max_none::full
 - allocators/stdext::max_none::released
 - allocators/stdext::max_none::saved
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::max_none
 - stdext::max_none [C++], allocated
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f7db35adf828d66ecf9b6474e45960d22466b444
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ffa6da15f19d3215080d7a1e5355134409765da5
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxnone-class"></a>Classe max_none
 Descrive un oggetto [classe max](../standard-library/allocators-header.md) che limita un oggetto [freelist](../standard-library/freelist-class.md) a una lunghezza massima pari a zero.  
@@ -134,7 +132,6 @@ void saved();
   
 ## <a name="see-also"></a>Vedere anche  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

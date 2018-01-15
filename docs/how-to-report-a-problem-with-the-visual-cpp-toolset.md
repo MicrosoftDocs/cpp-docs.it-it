@@ -1,23 +1,22 @@
 ---
 title: Come segnalare un problema con il set di strumenti Visual C++ | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
 
@@ -29,9 +28,9 @@ In questo documento verranno trattati gli argomenti seguenti
 
 - [Come preparare il report](#prepare) con le informazioni essenziali.
 
-- [Modi per inviare il report](#send) e caratteristiche dei singoli report.
-
 - [Come generare una procedura di riproduzione](#generate) e i diversi tipi di procedure.
+
+- [Modi per inviare il report](#send) e caratteristiche dei singoli report.
 
 I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Visual C++.
 
@@ -94,7 +93,7 @@ Per trovare facilmente queste informazioni, vedere il log di compilazione immedi
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Per segnalare i contenuti della riga di comando
 
-1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file si trova in \\...\Visual Studio Version\Projects\SolutionName\ProjectName\Config\ProjectName.tlog\CL.command.1.tlog.
+1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file si trova in \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
 
    Il file contiene i nomi dei file del codice sorgente seguiti dagli argomenti della riga di comando usati per la compilazione, disposti su singole righe.
 
@@ -221,43 +220,6 @@ La generazione di codice errato è un evento raro, che si verifica tuttavia quan
 
 Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link-repros) se si usa la Generazione codice in fase di collegamento, diversamente inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros). La Generazione codice in fase di collegamento è abilitata dall'argomento della riga di comando `/GL` per cl.exe.
 
-## <a name="send"></a> Modi per inviare il report
-
-Esistono diversi modi per inviare il report a Microsoft. È possibile usare lo [strumento Segnala un problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) predefinito di Visual Studio o inviare un messaggio di posta elettronica. La scelta dipende dal tipo di problema riscontrato, da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.
-
-> [!NOTE]
-> Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy della famiglia dei prodotti Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
-
-### <a name="send-an-email"></a>Inviare un messaggio di posta elettronica
-
-Per contattare direttamente il team di Visual C++ è anche possibile inviare il report tramite posta elettronica all'indirizzo [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com).
-
-Se si sceglie di inviare il report tramite posta elettronica, è possibile usare il modello seguente come corpo del messaggio di posta elettronica. Ricordarsi di allegare il codice sorgente o altri file, se non si includono tali informazioni nel corpo del messaggio di posta elettronica.
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>Usare lo strumento Segnala un problema
-
-Segnala un problema è uno strumento di Visual Studio che consente agli utenti di Visual Studio di segnalare una serie di problemi in pochi clic. Offre un semplice modulo in cui specificare le informazioni dettagliate sul problema rilevato e consente di inviare il report senza mai uscire dall'IDE.
-
-Segnalare il problema tramite lo strumento Segnala un problema non è la scelta più comune per i tipi di problemi che riguardano il set degli strumenti discussi in questo documento. È tuttavia una possibilità che può essere adottata se preferibile ad altre.
-
-> [!TIP]
-> Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento Segnala un problema può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.
-
 ## <a name="generate"></a> Generare una procedura di riproduzione
 
 Una procedura di riproduzione è un esempio di codice completo e indipendente, che illustra il problema segnalato. Una procedura di riproduzione **non** è un frammento di codice. Deve invece essere un esempio completo di codice che viene, o dovrebbe, essere compilato, eccezione fatta per gli errori generati dal problema che si segnala. Deve contenere tutte le direttive #include necessarie, anche per le intestazioni standard.
@@ -330,3 +292,51 @@ Infine comprimere l'intera directory della procedura di riproduzione in un file 
 Se il problema non può essere ridotto a un singolo file di origine o a una procedura di riproduzione pre-elaborata, e non è necessaria una procedura di riproduzione del collegamento per testare il problema, è possibile analizzare un progetto IDE. Il codice contenuto nel progetto deve essere minimo. Tutto il materiale sussidiario descritto in questo documento è applicabile anche in questo caso.
 
 Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'intera struttura della directory in un file con estensione zip o simile e allegarla al report.
+
+## <a name="send"></a> Modi per inviare il report
+
+Esistono diversi modi per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È anche possibile inviare un messaggio di posta elettronica con il report, tuttavia si prediligono i primi due metodi. La scelta dipende da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.
+
+> [!NOTE]
+> Indipendentemente dalla modalità di invio del report, Microsoft rispetta la privacy degli utenti. Per informazioni sul trattamento dei dati inviati a Microsoft, vedere l'[Informativa sulla privacy della famiglia dei prodotti Microsoft Visual Studio](https://www.visualstudio.com/dn948229).
+
+### <a name="use-the-report-a-problem-tool"></a>Usare lo strumento Segnala un problema
+
+**Segnala un problema** è uno strumento di Visual Studio che consente agli utenti di segnalare una serie di problemi in pochi clic. Offre un semplice modulo in cui specificare le informazioni dettagliate sul problema rilevato e consente di inviare il report senza mai uscire dall'IDE.
+
+Segnalare il problema tramite lo strumento **Segnala un problema** dall'IDE è facile e comodo. È possibile accedere dalla barra del titolo scegliendo l'icona **Commenti e suggerimenti** accanto alla casella di ricerca **Avvio veloce** oppure è possibile visualizzarlo nella barra dei menu in **Guida**  >  **Commenti e suggerimenti** > **Segnala un problema**.
+
+Quando si sceglie di segnalare un problema, eseguire la ricerca di problemi simili nella Community degli sviluppatori. Se il problema è stato segnalato in precedenza, votare a favore dell'argomento e aggiungere un commento con informazioni specifiche. Se non viene visualizzato un problema analogo, fare clic sul pulsante **Segnala un nuovo problema** nella parte inferiore della finestra di dialogo Commenti e suggerimenti di Visual Studio e seguire i passaggi per segnalare il problema.
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>Usare le pagine della community di sviluppatori di Visual Studio
+
+Le pagine della community di sviluppatori di Visual Studio sono un altro modo pratico per segnalare problemi e trovare soluzioni per Visual Studio, il compilatore C++, strumenti e librerie. Dalla pagina [relativa alle domande su Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html) è possibile segnalare problemi con l'IDE o l'installazione. Per problemi con l'uso del compilatore,del linker e altri strumenti e librerie di C++, usare la pagina relativa alle [domande su C++](https://developercommunity.visualstudio.com/spaces/62/index.html) pagina.
+
+Nel banner della community degli sviluppatori nella parte superiore di ogni pagina è presente una casella di ricerca che è possibile usare per trovare post o argomenti che segnalano problemi simili a quello in questione. In un argomento esistente possono già essere presenti soluzioni o altre informazioni utili relative al problema. Se un utente ha riportato lo stesso problema in precedenza, votare a favore del problema e immettere un commento anziché procedere con una nuova segnalazione del problema.
+
+Se il problema non è stato segnalato in precedenza, fare clic sul pulsante **Segnala un problema** accanto alla casella di ricerca nella pagina della Community degli sviluppatori. È possibile che venga richiesto di accedere al proprio account di Visual Studio e di accettare per concedere l'accesso all'app della Community degli sviluppatori al proprio profilo. Una volta connessi, si passa direttamente a una pagina in cui segnalare il problema. È possibile includere il codice della procedura di ripetizione e la riga di comando, schermate, i collegamenti alle discussioni correlate e qualsiasi altra informazione attinente e utile.
+
+### <a name="send-an-email"></a>Inviare un messaggio di posta elettronica
+
+Per contattare direttamente il team di Visual C++ è anche possibile inviare il report tramite posta elettronica all'indirizzo. È possibile contattare Microsoft all'indirizzo [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com). Usare questo metodo solo se gli altri due non sono disponibili, poiché i messaggi inviati tramite posta elettronica non vengono tracciati con la stessa accuratezza rispetto ai problemi segnalati alla Community degli sviluppatori tramite lo strumento **Segnala un problema** o tramite le pagine web, e i commenti e le soluzioni non sono visibili agli altri utenti di Visual Studio.
+
+Se si sceglie di inviare il report tramite posta elettronica, è possibile usare il modello seguente come corpo del messaggio di posta elettronica. Ricordarsi di allegare il codice sorgente o altri file, se non si includono tali informazioni nel corpo del messaggio di posta elettronica.
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento Segnala un problema può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.
+

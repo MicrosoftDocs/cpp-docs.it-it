@@ -1,76 +1,77 @@
 ---
-title: "Explicit Overrides  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override [C++]"
+title: Override esplicito (estensioni del componente C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Explicit Overrides  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-In questo argomento viene illustrato come eseguire l'override in modo esplicito di un membro di una classe o interfaccia base.  Un override \(esplicito\) denominato deve essere utilizzato solo per eseguire l'override di un metodo con un metodo derivato che ha un nome diverso.  
+# <a name="explicit-overrides--c-component-extensions"></a>Override esplicito (Estensioni del componente C++)
+In questo argomento viene illustrato come eseguire l'override esplicito di un membro di una classe di base o interfaccia. Override (esplicito) denominato deve essere utilizzato solo per eseguire l'override di un metodo con un metodo derivato ha un nome diverso.  
   
-## Tutti i runtime  
+## <a name="all-runtimes"></a>Tutti i runtime  
  **Sintassi**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **Parametri**  
   
- *overriding\-function\-declarator*  
- Il tipo restituito, il nome e la lista degli argomenti della funzione di override.  Si noti che la funzione in override non deve avere lo stesso nome della funzione sottoposta a override.  
+ *dichiaratore di funzione viene sottoposto a override*  
+ Elenco di restituzione, tipo, nome e l'argomento della funzione esegue l'override.  Si noti che la funzione esegue l'override non deve avere lo stesso nome della funzione da sottoporre a override.  
   
  *type*  
- Il tipo di base che contiene una funzione su cui eseguire l'override.  
+ Tipo di base che contiene una funzione per eseguire l'override.  
   
  *function*  
- Un elenco delimitato da virgole di uno o più nomi di funzione su cui eseguire l'override.  
+ Un elenco delimitato da virgole di uno o più nomi di funzione per eseguire l'override.  
   
- *overriding\-function\-definition*  
- Le istruzioni del corpo della funzione che definiscono la funzione di override.  
+ *definizione di funzione viene sottoposto a override*  
+ Le istruzioni di corpo di funzione che definiscono la funzione esegue l'override.  
   
- **Osservazioni**  
+ **Note**  
   
- Usare override espliciti per creare un alias per la firma di un metodo o per fornire diverse implementazioni dei metodi con la stessa firma.  
+ Utilizzare esplicita le sostituzioni per creare un alias per una firma del metodo o di fornire diverse implementazioni di metodi witht la stessa firma.  
   
- Per informazioni su come modificare il comportamento dei tipi ereditati e dei membri dei tipi ereditati, vedere [Identificatori di override](../windows/override-specifiers-cpp-component-extensions.md).  
+ Per informazioni su come modificare il comportamento di tipi ereditati e i membri ereditati, vedere [gli identificatori di Override](../windows/override-specifiers-cpp-component-extensions.md).  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows Runtime  
   
-### Requisiti  
- Opzione del compilatore: **\/ZW**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Osservazioni**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **Note**  
   
- Per informazioni sugli override espliciti nel codice nativo o nel codice compilato con **\/clr:oldSyntax**, vedere [Override espliciti](../cpp/explicit-overrides-cpp.md).  
+ Per informazioni su explicit sostituiscono in codice nativo o codice compilato con **oldSyntax**, vedere [override espliciti](../cpp/explicit-overrides-cpp.md).  
   
-### Requisiti  
- Opzione del compilatore: **\/clr**  
+### <a name="requirements"></a>Requisiti  
+ Opzione del compilatore: **/clr**  
   
-### Esempi  
+### <a name="examples"></a>Esempi  
  **Esempio**  
   
- L'esempio di codice seguente mostra un semplice override implicito e l'implementazione di un membro in un'interfaccia di base, senza l'utilizzo di override espliciti.  
+ Esempio di codice seguente viene illustrato un override di implicita, semplice e l'implementazione di un membro in un'interfaccia di base, non utilizza override espliciti.  
   
 ```  
 // explicit_override_1.cpp  
@@ -94,9 +95,13 @@ int main() {
   
  **Output**  
   
-  **X::f override of I1::f** **Esempio**  
+```Output  
+X::f override of I1::f  
+```  
   
- L'esempio di codice seguente mostra come implementare tutti i membri di interfaccia con una firma comune, utilizzando la sintassi di override esplicito.  
+ **Esempio**  
+  
+ Esempio di codice seguente viene illustrato come implementare tutti i membri di interfaccia con una firma comune, utilizzando la sintassi di override esplicito.  
   
 ```  
   
@@ -126,10 +131,14 @@ int main() {
   
  **Output**  
   
-  **Override X::f di I1::f e I2::f**  
- **Override X::f di I1::f e I2::f** **Esempio**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- Il seguente esempio di codice mostra come un override di funzione può avere un nome diverso dalla funzione che sta implementando.  
+ **Esempio**  
+  
+ Esempio di codice seguente viene illustrato come una funzione di sostituzione può avere un nome diverso dalla funzione che sta implementando.  
   
 ```  
 // explicit_override_3.cpp  
@@ -153,9 +162,13 @@ int main() {
   
  **Output**  
   
-  **X::g** **Esempio**  
+```Output  
+X::g  
+```  
   
- L'esempio di codice seguente mostra un'implementazione di interfaccia esplicita che implementa una raccolta indipendente dai tipi.  
+ **Esempio**  
+  
+ Esempio di codice seguente viene illustrata un'implementazione esplicita dell'interfaccia che implementa una raccolta di tipi sicuri.  
   
 ```  
 // explicit_override_4.cpp  
@@ -180,5 +193,5 @@ public:
 };  
 ```  
   
-## Vedere anche  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>Vedere anche  
+ [Estensioni componenti per le piattaforme runtime](../windows/component-extensions-for-runtime-platforms.md)

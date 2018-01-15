@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c87cd7df87bc6d1a641da30bfa37af83aa7a7ca7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 945e996fa24333ec39ace8160e7517f0bc4fa39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-resource-symbols"></a>Visualizzazione di simboli risorsa
 ### <a name="to-view-resource-symbols"></a>Per visualizzare i simboli risorsa  
@@ -39,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 
   
- **Requirements**  
+ **Requisiti**  
   
  Win32  
   

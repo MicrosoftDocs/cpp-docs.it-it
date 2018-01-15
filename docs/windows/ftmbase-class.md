@@ -1,32 +1,33 @@
 ---
-title: "Classe FtmBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FtmBase (classe)"
+title: Classe FtmBase | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase
+dev_langs: C++
+helpviewer_keywords: FtmBase class
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Classe FtmBase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Rappresenta un oggetto di gestore di marshalling threading free.  
+# <a name="ftmbase-class"></a>FtmBase (classe)
+Rappresenta un oggetto gestore del marshalling a thread libero.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -35,42 +36,42 @@ class FtmBase : public Microsoft::WRL::Implements<
    Microsoft::WRL::CloakedIid< IMarshal > >;  
 ```  
   
-## Note  
- Per ulteriori informazioni, vedere l'argomento "IMarshal" sezione "Interfacce COM" sotto\-argomento di "Riferimento COM" nella Libreria MSDN.  
+## <a name="remarks"></a>Note  
+ Per ulteriori informazioni, vedere l'argomento "IMarshal" nell'argomento secondario "Interfacce COM" dell'argomento "Riferimento COM" in MSDN Library.  
   
-## Membri  
+## <a name="members"></a>Membri  
   
-### Costruttori pubblici  
+### <a name="public-constructors"></a>Costruttori pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Costruttore FtmBase::FtmBase](../windows/ftmbase-ftmbase-constructor.md)|Inizializza una nuova istanza della classe FtmBase.|  
   
-### Metodi pubblici  
+### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Metodo FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabella globale dell'interfaccia \(GIT\).|  
-|[Metodo FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Rilascia forzatamente tutte le connessioni esterne verso un oggetto.  Il server dell'oggetto chiamata l'implementazione dell'oggetto di questo metodo prima dello spegnimento.|  
-|[Metodo FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Ottiene il limite superiore del numero di byte necessari per eseguire il marshalling di un puntatore a interfaccia specificato all'oggetto specificato.|  
-|[Metodo FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Ottiene il CLSID utilizzato da COM per individuare la DLL che contiene il codice per il proxy corrispondente.  COM carica questa DLL per creare un'istanza non inizializzata del proxy.|  
-|[Metodo FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Scrive in un flusso i dati necessari per inizializzare un oggetto proxy in alcuni processi client.|  
-|[Metodo FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Elimina un pacchetto di dati su cui è stato eseguito il marshalling.|  
-|[Metodo FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inizializza un proxy appena creato e restituisce un puntatore all'interfaccia di quel proxy.|  
+|[Metodo FtmBase::CreateGlobalInterfaceTable](../windows/ftmbase-createglobalinterfacetable-method.md)|Crea una tabella di interfaccia globale (GIT).|  
+|[Metodo FtmBase::DisconnectObject](../windows/ftmbase-disconnectobject-method.md)|Forzatamente rilascia tutte le connessioni esterne a un oggetto. Server l'oggetto chiama l'implementazione dell'oggetto di questo metodo prima di arrestare.|  
+|[Metodo FtmBase::GetMarshalSizeMax](../windows/ftmbase-getmarshalsizemax-method.md)|Ottenere il limite superiore al numero di byte necessari per effettuare il marshalling di puntatore a interfaccia specificato per l'oggetto specificato.|  
+|[Metodo FtmBase::GetUnmarshalClass](../windows/ftmbase-getunmarshalclass-method.md)|Ottiene il CLSID COM viene utilizzato per individuare la DLL contenente il codice per il proxy corrispondente. COM viene caricato la DLL per creare un'istanza del proxy non inizializzata.|  
+|[Metodo FtmBase::MarshalInterface](../windows/ftmbase-marshalinterface-method.md)|Scrive in un flusso di dati necessari per inizializzare un oggetto proxy in un processo client.|  
+|[Metodo FtmBase::ReleaseMarshalData](../windows/ftmbase-releasemarshaldata-method.md)|Elimina un pacchetto di dati sottoposti a marshalling.|  
+|[Metodo FtmBase::UnmarshalInterface](../windows/ftmbase-unmarshalinterface-method.md)|Inizializza un nuovo proxy e restituisce un puntatore a interfaccia a tale proxy.|  
   
-### Membri dati pubblici  
+### <a name="public-data-members"></a>Membri dati pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Membro dati FtmBase::marshaller\_](../windows/ftmbase-marshaller-data-member.md)|Mantiene un riferimento al gestore threading free di marshalling.|  
+|[Metodo dati FtmBase::marshaller_](../windows/ftmbase-marshaller-data-member.md)|Contiene un riferimento al gestore del marshalling a thread libero.|  
   
-## Gerarchia di ereditarietà  
+## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `FtmBase`  
   
-## Requisiti  
- **Header:** ftm.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** ftm.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -97,11 +97,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 57cc809cad0ef81d59e58a4fa0d582f2964fdbb8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-class"></a>Classe vector
 La classe vector della libreria standard C++ è una classe modello di contenitori sequenziali che organizzano gli elementi di un determinato tipo in una disposizione lineare e consentono l'accesso casuale veloce a qualsiasi elemento. Dovrebbero essere il contenitore preferito per una sequenza quando le prestazioni di accesso casuale sono molto richieste.  
@@ -137,7 +138,7 @@ class vector
 |-|-|  
 |[vector](#vector)|Costruisce un vettore di dimensioni specifiche, con elementi di un valore specifico, con un oggetto `allocator` specifico o come copia di un altro vettore.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -1142,7 +1143,7 @@ Allocator get_allocator() const;
  Allocatore usato dal vettore.  
   
 ### <a name="remarks"></a>Note  
- Gli allocatori per la classe vector specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.  
+ Gli allocatori per la classe vector specificano il modo in cui la classe gestisce l'archiviazione. Gli allocatori predefiniti acclusi alle classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.  
   
 ### <a name="example"></a>Esempio  
   

@@ -1,32 +1,33 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: library_block | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ab7c4c8c65d23dc252fb3ce228313fb36aa7e032
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inserisce un costrutto nel blocco di libreria IDL.  
+# <a name="libraryblock"></a>library_block
+Inserisce un costrutto all'interno del blocco di libreria IDL.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -34,11 +35,11 @@ Inserisce un costrutto nel blocco di libreria IDL.
   
 ```  
   
-## Note  
- Quando si inserisce un costrutto nel blocco di libreria, si garantisce che si trasformerà la libreria dei tipi, indipendentemente dal fatto che si è fatto riferimento.  Per impostazione predefinita, solo costrutti modificati da [coclasse](../windows/coclass.md),  [interfaccia dispatch](../windows/dispinterface.md)e  [idl\_module](../windows/idl-module.md) gli attributi vengono inserite nel blocco di libreria.  
+## <a name="remarks"></a>Note  
+ Quando si inserisce un costrutto all'interno del blocco di libreria, assicurarsi che verrà passato nella libreria dei tipi, indipendentemente dal fatto che vi fa riferimento. Per impostazione predefinita, i costrutti soli modificando il [coclasse](../windows/coclass.md), [dispinterface](../windows/dispinterface.md), e [idl_module](../windows/idl-module.md) attributi vengono posizionati nel blocco di libreria.  
   
-## Esempio  
- Nel codice seguente, un'interfaccia personalizzata viene inserito nel blocco di libreria.  
+## <a name="example"></a>Esempio  
+ Nel codice seguente, un'interfaccia personalizzata viene inserita all'interno del blocco di libreria.  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +52,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|Ovunque|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- Per ulteriori informazioni, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>Vedere anche  
+ [Attributi del compilatore](../windows/compiler-attributes.md)   
+ [Attributi autonomi](../windows/stand-alone-attributes.md)   

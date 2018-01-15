@@ -1,63 +1,65 @@
 ---
-title: "Finestra di dialogo Regola colori (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.customcolorselector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Regola colori (finestra di dialogo)"
-  - "colori, immagine"
+title: Finestra di dialogo Selettore colori personalizzata (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.customcolorselector
+dev_langs: C++
+helpviewer_keywords:
+- Custom Color Selector dialog box
+- colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Finestra di dialogo Regola colori (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Questa finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine.  Per ulteriori informazioni, vedere [Personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
+# <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Regola colori (Editor di immagini per le icone)
+Questa finestra di dialogo consente di personalizzare i colori utilizzati per l'immagine. Per ulteriori informazioni, vedere [personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md).  
   
- **Casella di visualizzazione delle sfumature**  
- Consente di modificare i valori di un colore selezionato.  Posizionare il mirino sul colore che si desidera modificare,  quindi spostare il dispositivo di scorrimento verso l'alto o verso il basso per modificarne la luminosità o i valori RGB.  
+ **Visualizzazione delle sfumature**  
+ Modifica i valori del colore selezionato. Posizionare il selettore di precisione sul colore che si desidera modificare. Quindi spostare il dispositivo di scorrimento verso l'alto o il basso per modificarne la luminosità o valori del colore RGB.  
   
- **Barra della luminosità**  
- Consente di impostare la luminosità per il colore selezionato nella casella di visualizzazione delle sfumature.  Fare clic sulla freccia bianca e trascinarla verso l'alto o verso il basso lungo la barra per ottenere rispettivamente una maggiore o una minore luminosità.  Nella casella Colore verrà visualizzato il colore selezionato e l'effetto determinato dalla luminosità impostata.  
+ **Barra luminosità**  
+ Imposta la luminosità del colore selezionato nella finestra di visualizzazione delle sfumature. Fare clic e trascinare la freccia bianca su barra luminosità maggiore o verso il basso per il minore. Si noti che la casella di colore viene visualizzato il colore selezionato e l'effetto della luminosità è impostato.  
   
  **Colore**  
- Consente di visualizzare la tonalità \(il valore del selettore dei colori\) corrispondente al colore che viene definito.  I valori sono compresi tra 0 e 240: 0 corrisponde al colore rosso, 60 al giallo, 120 al verde, 180 all'azzurro, 200 al fucsia e 240 al blu.  
+ Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 all'azzurro, 200 è magenta e 240 è blu.  
   
- **Ton**  
- Consente di visualizzare la tonalità \(il valore del selettore dei colori\) corrispondente al colore che viene definito.  I valori sono compresi tra 0 e 240: 0 corrisponde al colore rosso, 60 al giallo, 120 al verde, 180 all'azzurro, 200 al fucsia e 240 al blu.  
+ **Tonalità**  
+ Elenca la tonalità (il valore del selettore) del colore che si sta definendo. I valori compresi tra 0 e 240, dove 0 è rosso, 60 è giallo, 120 è verde, 180 all'azzurro, 200 è magenta e 240 è blu.  
   
- **Sat**  
- Consente di specificare il valore della saturazione del colore che viene definito.  La saturazione corrisponde alla quantità di colore di una tonalità specifica.  I valori sono compresi tra 0 e 240.  
+ **Giorni di sabato**  
+ Specifica il valore di saturazione del colore che si sta definendo. Saturazione è la quantità di colore una tonalità specificata. I valori compresi tra 0 e 240.  
   
- **Lum**  
- Consente di visualizzare la luminosità del colore che viene definito.  I valori sono compresi tra 0 e 240.  
+ **LUM**  
+ Elenca la luminosità del colore che si sta definendo. I valori compresi tra 0 e 240.  
   
  **Rosso**  
- Consente di specificare la quantità di rosso del colore che viene definito.  I valori sono compresi tra 0 e 255.  
+ Specifica il valore rossa del colore che si sta definendo. I valori compresi tra 0 e 255.  
   
  **Verde**  
- Consente di specificare la quantità di verde del colore che viene definito.  I valori sono compresi tra 0 e 255.  
+ Specifica il valore di colore verde del colore che si sta definendo. I valori compresi tra 0 e 255.  
   
  **Blu**  
- Consente di specificare la quantità di blu del colore che viene definito.  I valori sono compresi tra 0 e 255.  
+ Specifica il valore blu del colore che si sta definendo. I valori compresi tra 0 e 255.  
   
-## Requisiti  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
-## Vedere anche  
- [Menu Immagine](../mfc/image-menu-image-editor-for-icons.md)   
- [Customizing or Changing Colors](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
- [Finestra Colori](../windows/colors-window-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Menu immagine](../windows/image-menu-image-editor-for-icons.md)   
+ [Personalizzazione o modifica dei colori](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
+ [Finestra colori](../windows/colors-window-image-editor-for-icons.md)

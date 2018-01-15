@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: da4c8dd6a3141b16b9960720c6bb1789cd06f317
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a07538c7f3ddd58e45fc23a4fc2c9c13850f08a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-class"></a>Classe function
 Wrapper per un oggetto chiamabile.  
@@ -116,7 +117,7 @@ public:
 |-|-|  
 |[function](#function)|Costruisce un wrapper vuoto o in cui è archiviato un oggetto chiamabile di tipo arbitrario con una firma fissa.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -128,7 +129,7 @@ public:
 |-|-|  
 |[assign](#assign)|Assegna un oggetto chiamabile a questo oggetto funzione.|  
 |[swap](#swap)|Scambia due oggetti chiamabili.|  
-|[destinazione](#target)|Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.|  
+|[target](#target)|Verifica se l'oggetto chiamabile archiviato è chiamabile come specificato.|  
 |[target_type](#target_type)|Ottiene le informazioni sui tipi per l'oggetto chiamabile.|  
   
 ### <a name="operators"></a>Operatori  

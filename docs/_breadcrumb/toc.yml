@@ -23,13 +23,13 @@
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-runtime-library-reference
               items:
-                - name: Riferimento
+                - name: Riferimenti
                   tocHref: /cpp/c-runtime-library/reference/
                   topicHref: /cpp/c-runtime-library/reference/alphabetical-function-reference
             - name: Libreria standard C++
               tocHref: /cpp/standard-library/
-              topicHref: /cpp/standard-library/cpp-standard-library
-            - name: Windows
+              topicHref: /cpp/standard-library/cpp-standard-library-reference
+            - name: WINDOWS
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
               items:
@@ -37,21 +37,21 @@
                   tocHref: /cpp/atl/
                   topicHref: /cpp/atl/atl-com-desktop-components
                   items:
-                    - name: Riferimento
+                    - name: Riferimenti
                       tocHref: /cpp/atl/reference/
                       topicHref: /cpp/atl/reference/atl-classes
                 - name: MFC
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: Riferimento
+                    - name: Riferimenti
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: Classi condivise ATL/MFC
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: Riferimento
+                    - name: Riferimenti
                       tocHref: /cpp/atl-mfc-shared/reference/
                       topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-atl-and-mfc
                 - name: C++/CX

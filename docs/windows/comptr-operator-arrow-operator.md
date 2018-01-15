@@ -1,48 +1,48 @@
 ---
-title: "Operatore ComPtr::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator-> (operatore)"
+title: 'Comptr:: operator -&gt; operatore | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::operator->
+dev_langs: C++
+helpviewer_keywords: operator-> operator
 ms.assetid: 7b7faefd-d1e4-4f31-a77d-17a42e0d6b6a
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c70c37523132d06bfb04c86cf6f737109da43e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore ComPtr::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Recupera un puntatore al tipo specificato dal modello di parametro corrente.  
+# <a name="comptroperator-gt-operator"></a>Comptr:: operator -&gt; (operatore)
+Recupera un puntatore al tipo specificato dal parametro di modello corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;  
 ```  
   
-## Valore restituito  
- Puntatore al tipo specificato dal nome del tipo corrente del modello.  
+## <a name="return-value"></a>Valore restituito  
+ Puntatore al tipo specificato dal nome del tipo di modello corrente.  
   
-## Note  
- Questa funzione di supporto rimuove un inutile sovraccarico provocato utilizzando la macro di STDMETHOD.  Questa funzione genera i tipi di IUnknown privati anziché virtuali.  
+## <a name="remarks"></a>Note  
+ Questa funzione di supporto rimuove inutile causati dall'utilizzo di STDMETHOD (macro). Grazie a questa funzione IUnknown tipi privati anziché virtuale.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ComPtr](../windows/comptr-class.md)

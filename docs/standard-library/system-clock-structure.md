@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7e57faa98571c59515a9b669d0ce5d53459b103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="systemclock-structure"></a>Struttura system_clock
 Rappresenta un *tipo di clock* basato sull'orologio in tempo reale del sistema.  
@@ -65,7 +66,7 @@ struct system_clock;
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Costante system_clock::is_monotonic](#is_monotonic_constant)|Specifica se il tipo di clock è monotonico.|  
 |[Costante system_clock::is_steady](#is_steady_constant)|Specifica se il tipo di clock è costante.|  
@@ -134,6 +135,6 @@ static time_t to_time_t(const time_point& Time) noexcept;
  Oggetto [time_point](../standard-library/time-point-class.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)  (Riferimento file di intestazione)  
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [steady_clock struct](../standard-library/steady-clock-struct.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e7eed7dbb4fbd7648e02857897dc4f0c541af7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b55bf95c7abdffe8dd0a0e0071d86f06baad344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointerdefault"></a>pointer_default
 Specifica l'attributo di puntatore predefinito per tutti i puntatori, ad eccezione dei puntatori di primo livello che vengono visualizzati nell'elenco di parametri.  
@@ -34,7 +37,7 @@ Specifica l'attributo di puntatore predefinito per tutti i puntatori, ad eccezio
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *value*  
+ *valore*  
  Un valore che descrive il tipo di puntatore: **ptr**, `ref`, o **univoco**.  
   
 ## <a name="remarks"></a>Note  
@@ -52,7 +55,7 @@ Specifica l'attributo di puntatore predefinito per tutti i puntatori, ad eccezio
 |**Si applica a**|`interface`|  
 |**Ripetibile**|No|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   

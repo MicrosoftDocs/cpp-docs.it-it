@@ -15,11 +15,12 @@ caps.latest.revision: "58"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e89416c18fce65f19ff63c73ef441ee0bdb6165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 Definisce strutture per la generazione casuale di numeri, permettendo la creazione di numeri casuali distribuiti in modo uniforme.  
@@ -54,7 +55,7 @@ Definisce strutture per la generazione casuale di numeri, permettendo la creazio
   
 -   L'associazione più utile per la maggior parte delle applicazioni è costituita dal motore `mt19937` con `uniform_int_distribution`, come mostrato nell'[esempio di codice](#code) più avanti in questo articolo.  
   
- Nell'intestazione `<random>` sono disponibili molte opzioni selezionabili e qualsiasi opzione indicata è preferibile alla funzione `rand()` obsoleta di Runtime C. Per informazioni sui problemi relativi a `rand()` e sul modo in cui `<random>` li gestisce, vedere [questo video](http://go.microsoft.com/fwlink/?LinkId=397615).  
+ Nell'intestazione `<random>` sono disponibili molte opzioni selezionabili e qualsiasi opzione indicata è preferibile alla funzione `rand()` obsoleta di Runtime C. Per informazioni sui problemi relativi a `rand()` e sul modo in cui `<random>` li gestisce, vedere [questo video](http://go.microsoft.com/fwlink/p/?linkid=397615).  
   
 ##  <a name="code"></a> Esempi  
  L'esempio di codice seguente illustra come generare alcuni numeri casuali, in questo caso cinque, usando un generatore creato con un valore di inizializzazione non deterministico.  
@@ -250,13 +251,13 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 - `mt19937_64` Motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24` Motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).   
+- `ranlux24`motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
 - `ranlux24_base` Usato come base per `ranlux24`.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48` Motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).   
+- `ranlux48`motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
 - `ranlux48_base` Usato come base per `ranlux48`.   
@@ -446,15 +447,15 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
   
 |URNG|Fast|Sicuro a livello di crittografia|Compatibile con seeding|Deterministico|  
 |----------|-----------|---------------------|---------------|--------------------|  
-|`mt19937`|Sì|No|Sì|Sì<sup>*</sup>|  
+|`mt19937`|Yes|No|Yes|Sì<sup>*</sup>|  
 |`random_device`|No|Sì|No|No|  
   
  <sup>* Se è fornito un seeding noto.</sup>  
   
- Anche se lo standard C++ ISO non richiede che `random_device` sia sicuro a livello di crittografia, Visual Studio è implementato in modo da offrire questo tipo di sicurezza. La definizione "sicuro a livello di crittografia" non implica alcuna garanzia, ma fa riferimento a un livello minimo di entropia e, quindi, al livello di prevedibilità, fornito da un determinato algoritmo di creazione di sequenze casuali. Per altre informazioni, vedere l'articolo di Wikipedia relativo al [generatore di numeri pseudocasuali crittograficamente sicuro](http://go.microsoft.com/fwlink/LinkId=398017).) Poiché non è richiesto dallo standard C++ ISO, è possibile che altre piattaforme implementino `random_device` come semplice generatore di numeri pseudocasuali (non crittograficamente sicuro) e che sia possibile usarlo solo come origine di seeding per un altro generatore. Quando si usa `random_device` in codice destinato a più piattaforme, verificare la documentazione relativa alle piattaforme specifiche.  
+ Anche se lo standard C++ ISO non richiede che `random_device` sia sicuro a livello di crittografia, Visual Studio è implementato in modo da offrire questo tipo di sicurezza. La definizione "sicuro a livello di crittografia" non implica alcuna garanzia, ma fa riferimento a un livello minimo di entropia e, quindi, al livello di prevedibilità, fornito da un determinato algoritmo di creazione di sequenze casuali. Per altre informazioni, vedere l'articolo di Wikipedia relativo al [generatore di numeri pseudocasuali crittograficamente sicuro](http://go.microsoft.com/fwlink/p/?linkid=398017).) Poiché non è richiesto dallo standard C++ ISO, è possibile che altre piattaforme implementino `random_device` come semplice generatore di numeri pseudocasuali (non crittograficamente sicuro) e che sia possibile usarlo solo come origine di seeding per un altro generatore. Quando si usa `random_device` in codice destinato a più piattaforme, verificare la documentazione relativa alle piattaforme specifiche.  
   
  Per definizione, i risultati di `random_device` non sono riproducibili e, come effetto collaterale, è possibile che l'esecuzione risulti significativamente più lenta rispetto ad altri generatori URNG. La maggior parte delle applicazioni che non devono essere crittograficamente sicure usano `mt19937` o un motore simile, anche se è consigliabile eseguirne il seeding tramite una chiamata a `random_device`, come illustrato nell'[esempio di codice](#code).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
 

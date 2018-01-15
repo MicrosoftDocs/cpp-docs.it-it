@@ -1,47 +1,50 @@
 ---
-title: "Finestra di dialogo Strumento di testo (Editor di immagini per le icone) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.texttool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "testo, aggiunta a un'immagine"
-  - "Strumento Testo (finestra di dialogo)"
+title: Finestra di dialogo strumento testo (Editor di immagini per le icone) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.texttool
+dev_langs: C++
+helpviewer_keywords:
+- text, adding to an image
+- Text Tool dialog box
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Finestra di dialogo Strumento di testo (Editor di immagini per le icone)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-La finestra di dialogo **Strumento Testo** consente di aggiungere del testo a una risorsa cursore, bitmap o icona.  
+# <a name="text-tool-dialog-box-image-editor-for-icons"></a>Finestra di dialogo Strumento di testo (Editor di immagini per le icone)
+Utilizzare il **strumento testo** la finestra di dialogo per aggiungere testo a una risorsa cursore, bitmap o icona.  
   
- Per accedere a questa finestra di dialogo, aprire l'[Editor di immagini](../mfc/window-panes-image-editor-for-icons.md).  Dal menu **Immagine** selezionare **Strumenti**, quindi scegliere il comando **Strumento Testo**.  
+ Per accedere a questa finestra di dialogo, aprire il [Editor di immagini](../windows/window-panes-image-editor-for-icons.md). Selezionare **strumenti** dal **immagine** menu e quindi selezionare il **strumento testo** comando.  
   
- **Pulsante Tipo di carattere**  
- Consente di aprire la [finestra di dialogo Carattere strumento Testo](../mfc/text-tool-font-dialog-box-image-editor-for-icons.md), in cui è possibile modificare il tipo, lo stile o la dimensione del carattere del cursore.  Le modifiche vengono applicate al testo visualizzato nell'area Testo.  
+ **Pulsante tipo di carattere**  
+ Apre il [la finestra di dialogo Carattere strumento testo](../windows/text-tool-font-dialog-box-image-editor-for-icons.md), in cui è possibile modificare il tipo di carattere, stile o le dimensioni del carattere del cursore. Le modifiche vengono applicate al testo visualizzato nell'area di testo.  
   
- **Area Testo**  
- Consente di visualizzare il testo incluso nella risorsa.  Inizialmente, quest'area è vuota.  
+ **Area di testo**  
+ Visualizza il testo che viene visualizzato come parte della risorsa. Inizialmente, quest'area è vuota.  
   
 > [!NOTE]
->  Se è impostata l'opzione **Fondo trasparente**, nell'immagine verrà inserito solo il testo.  Se invece è impostata l'opzione **Sfondo opaco**, dietro al testo verrà inserito un rettangolo di delimitazione con il [colore di sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) come riempimento.  Per ulteriori informazioni, vedere [Selezione di uno sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
+>  Se **sfondo trasparente** è impostato, verrà inserito solo il testo nell'immagine. Se **sfondo opaco** è impostata, un rettangolo di delimitazione, compilato con la [colore di sfondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md), verrà inserito dietro il testo. Per ulteriori informazioni, vedere [scelta sfondo opaco o trasparente](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md).  
   
- Facendo clic con il pulsante destro del mouse nella finestra di dialogo **Strumento Testo** è possibile accedere a un menu di scelta rapida predefinito contenente un elenco di comandi standard di Windows.  
+ È possibile fare clic su di **strumento testo** finestra di dialogo per accedere a un menu di scelta rapida predefinito che contiene un elenco di comandi standard di Windows.  
   
-## Requisiti  
- Nessuno  
+## <a name="requirements"></a>Requisiti  
+ nessuno  
   
-## Vedere anche  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>Vedere anche  
+ [Modifica delle risorse grafiche](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

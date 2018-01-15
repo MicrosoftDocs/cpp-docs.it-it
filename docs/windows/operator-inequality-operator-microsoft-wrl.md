@@ -1,31 +1,32 @@
 ---
-title: "Operatore operator!= (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator!="
-dev_langs: 
-  - "C++"
+title: 'operatore! = (operatore) (Microsoft:: wrl) | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator!=
+dev_langs: C++
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5a379d367729a738f2a0a8b099a29eb6b274bacb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Operatore operator!= (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Operatore di disuguaglianza per gli oggetti [ComPtr](../windows/comptr-class.md) e [ComPtrRef](../windows/comptrref-class.md).  
+# <a name="operator-operator-microsoftwrl"></a>Operatore operator!= (Microsoft::WRL)
+Operatore di disuguaglianza per [ComPtr](../windows/comptr-class.md) e [ComPtrRef](../windows/comptrref-class.md) oggetti.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 WRL_NOTHROW bool operator!=(  
@@ -62,20 +63,20 @@ WRL_NOTHROW bool operator!=(
 );  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `a`  
- L'oggetto di sinistra.  
+ Oggetto a sinistra.  
   
  `b`  
- L'oggetto di destra.  
+ Oggetto a destra.  
   
-## Valore restituito  
- `true` se gli oggetti non sono uguali; in caso contrario, `false`.  
+## <a name="return-value"></a>Valore restituito  
+ `true`Se gli oggetti non sono uguali. in caso contrario, `false`.  
   
-## Requisiti  
- **Header:** client.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** client.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -1,32 +1,33 @@
 ---
-title: "Metodo FtmBase::MarshalInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::MarshalInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MarshalInterface (metodo)"
+title: 'Metodo ftmbase:: MarshalInterface | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::MarshalInterface
+dev_langs: C++
+helpviewer_keywords: MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo FtmBase::MarshalInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Scrive in un flusso i dati necessari per inizializzare un oggetto proxy in alcuni processi client.  
+# <a name="ftmbasemarshalinterface-method"></a>Metodo FtmBase::MarshalInterface
+Scrive in un flusso di dati necessari per inizializzare un oggetto proxy in un processo client.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHODIMP MarshalInterface(  
@@ -39,46 +40,46 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `pStm`  
- Puntatore al flusso da utilizzare durante la disposizione.  
+ Puntatore al flusso da utilizzare durante il marshalling.  
   
  `riid`  
- Riferimento all'identificatore di interfaccia del marshalling.  Questa interfaccia deve essere derivata dall'interfaccia IUnknown.  
+ Riferimento all'identificatore dell'interfaccia da cui effettuare il marshalling. Questa interfaccia deve essere derivata dall'interfaccia IUnknown.  
   
  `pv`  
- Puntatore al puntatore dell'interfaccia da marshalling, può essere NULL se il chiamante non dispone di un puntatore all'interfaccia desiderata.  
+ Puntatore al puntatore a interfaccia deve essere sottoposto a marshalling; può essere NULL se il chiamante non dispone di un puntatore a interfaccia desiderato.  
   
  `dwDestContext`  
- Contesto di destinazione in cui l'interfaccia specificata deve essere unmarshaled.  
+ Contesto di destinazione in cui l'interfaccia specificata è essere sottoposta a unmarshalling.  
   
- Specificare uno o più valori di enumerazione di MSHCTX.  
+ Specificare uno o più valori di enumerazione MSHCTX.  
   
- L'Unmarshaling può verificarsi in un altro apartment del processo corrente \(MSHCTX\_INPROC\) o in un altro processo nello stesso computer come processo corrente \(MSHCTX\_LOCAL\).  
+ Unmarshalling può verificarsi in un altro apartment del processo corrente (MSHCTX_INPROC) o in un altro processo nel processo corrente (MSHCTX_LOCAL) nello stesso computer.  
   
  `pvDestContext`  
  Riservato per utilizzi futuri; deve essere zero.  
   
  `mshlflags`  
- Specifica se i dati da disporre devono essere trasmessi al processo client — il caso tipico — oppure se devono essere scritti in una tabella globale, in cui possono essere recuperati da più client.  
+ Specifica se i dati di cui effettuare il marshalling deve essere trasmesso al processo client, ovvero il caso tipico, o scrivere in una tabella globale, in cui può essere recuperato da più client.  
   
-## Valore restituito  
- S\_OK  
- Il puntatore a interfaccia è stato schierato correttamente.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK  
+ Il puntatore di interfaccia è stato eseguito il marshalling correttamente.  
   
- E\_NOINTERFACE  
- Il tipo di interfaccia specificato non è supportato.  
+ E_NOINTERFACE  
+ L'interfaccia specificata non è supportata.  
   
- STG\_E\_MEDIUMFULL  
- Il flusso è pieno.  
+ STG_E_MEDIUMFULL  
+ Il flusso è completo.  
   
- E\_FAIL  
+ E_FAIL  
  Operazione non riuscita.  
   
-## Requisiti  
- **Header:** ftm.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** ftm.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe FtmBase](../windows/ftmbase-class.md)

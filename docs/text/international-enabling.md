@@ -1,52 +1,53 @@
 ---
-title: "Abilitazione di risorse internazionali | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "globalizzazione [C++], set di caratteri"
-  - "localizzazione [C++], set di caratteri"
-  - "MBCS [C++], abilitazione"
-  - "stringhe [C++], abilitazione di risorse internazionali"
-  - "Unicode [C++], abilitazione"
+title: Abilitazione di risorse internazionali | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- globalization [C++], character sets
+- strings [C++], international enabling
+- localization [C++], character sets
+- MBCS [C++], enabling
+- Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Abilitazione di risorse internazionali
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Per quanto riguarda la gestione dei caratteri e delle stringhe, nel tradizionale codice C e C\+\+ vengono utilizzati in genere criteri che nella maggior parte dei casi si adattano con difficoltà alle applicazioni internazionali.  La libreria MFC e quella di runtime supportano il formato Unicode o MBCS, tuttavia è necessario effettuare operazioni supplementari.  A tal fine, in questa sezione viene illustrato il significato di "abilitazione di risorse internazionali" in Visual C\+\+:  
+# <a name="international-enabling"></a>Abilitazione di risorse internazionali
+Codice C e C++ più tradizionale ipotizza la modifica di tipo stringa e carattere che non funzionano anche per le applicazioni internazionali. MFC e la libreria run-time supportano Unicode e MBCS, è ancora presente lavoro per eseguire. A tal fine, in questa sezione viene illustrato il significato di "abilitazione di risorse internazionali" in Visual C++:  
   
--   In MFC sono abilitati sia il formato Unicode che il formato MBCS grazie all'uso di tipi di dati portabili per gli elenchi di parametri delle funzioni e per i valori restituiti.  Questi tipi vengono definiti in modo appropriato mediante compilazione condizionale, a seconda che si definisca il simbolo **\_UNICODE** o **\_MBCS**, che in questo caso equivale a DBCS.  All'applicazione vengono collegate automaticamente varianti diverse delle librerie MFC, in base al simbolo definito.  
+-   Unicode e MBCS, saranno disponibili tramite i tipi di dati trasferibili in MFC elenchi di parametri di funzione e tipi restituiti. Questi tipi sono definiti in modo condizionale nei modi appropriati, a seconda se la compilazione definisce il simbolo **Unicode** o il simbolo **MBCS** (ovvero DBCS). Varianti diverse delle librerie MFC sono collegate automaticamente con l'applicazione, a seconda di quale di questi due simboli definisce la compilazione.  
   
--   Nel codice della libreria di classi vengono utilizzate le funzioni di runtime portabili e altri meccanismi per assicurare il corretto funzionamento dei formati Unicode o MBCS.  
+-   Il codice di libreria di classe Usa funzioni di runtime portabili e altri mezzi per assicurare il corretto funzionamento di Unicode e MBCS.  
   
--   Nel codice è comunque necessario gestire determinati tipi di attività di internazionalizzazione:  
+-   È comunque necessario gestire determinati tipi di attività di internazionalizzazione del codice:  
   
-    -   Utilizzare le stesse funzioni di runtime portabili che rendono MFC utilizzabile in entrambi gli ambienti.  
+    -   Utilizzare le stesse funzioni portabile in fase di esecuzione che rendono MFC in entrambi gli ambienti.  
   
-    -   Impostare il supporto di stringhe e caratteri effettivi in entrambi gli ambienti, utilizzando la macro **\_T**.  Per ulteriori informazioni, vedere [Mapping di testo generico in Tchar.h](../text/generic-text-mappings-in-tchar-h.md).  
+    -   Verificare in entrambi gli ambienti, le stringhe letterali e caratteri utilizzando la **t** (macro). Per ulteriori informazioni, vedere [mapping testo generico in Tchar. h](../text/generic-text-mappings-in-tchar-h.md).  
   
-    -   Prendere le precauzioni necessarie per l'analisi delle stringhe in formato MBCS.  Queste precauzioni non sono indispensabili per il formato Unicode.  Per ulteriori informazioni, vedere [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md).  
+    -   Adottare le precauzioni durante l'analisi di stringhe in formato MBCS. Tali precauzioni non sono necessarie in Unicode. Per ulteriori informazioni, vedere [suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md).  
   
-    -   Prestare attenzione quando si utilizzano contemporaneamente caratteri ANSI \(a 8 bit\) e Unicode \(a 16 bit\) nella stessa applicazione.  È possibile utilizzare caratteri ANSI in alcune parti del programma e caratteri Unicode in altre, ma non è possibile combinarli nella stessa stringa.  
+    -   Prestare attenzione se si combinano ANSI (8 bit) e i caratteri Unicode (16 bit) nell'applicazione. È possibile utilizzare caratteri ANSI in alcune parti del programma e i caratteri Unicode in altri, ma è possibile combinarli nella stessa stringa.  
   
-    -   Non utilizzare direttamente delle stringhe nell'applicazione,  ma trasformarle in risorse STRINGTABLE, aggiungendole al file con estensione rc dell'applicazione.  Sarà quindi possibile localizzare l'applicazione evitando modifiche o ricompilazioni del codice sorgente.  Per ulteriori informazioni sulle risorse STRINGTABLE, vedere [Editor stringhe](../mfc/string-editor.md).  
+    -   Non le stringhe hardcoded nell'applicazione. In alternativa, renderli risorse STRINGTABLE aggiungendoli al file RC dell'applicazione. L'applicazione può quindi essere localizzata senza richiedere modifiche al codice sorgente o la ricompilazione. Per ulteriori informazioni sulle risorse STRINGTABLE, vedere [Editor stringa](../windows/string-editor.md).  
   
 > [!NOTE]
->  I set di caratteri europei e MBCS comprendono alcuni caratteri, quali le lettere accentate, con codici di carattere maggiori di 0x80.  Poiché nel codice vengono utilizzati per lo più caratteri con segno, questi caratteri maggiori di 0x80 vengono estesi col segno quando vengono convertiti in `int`.  Questo fatto rappresenta un problema per l'indicizzazione della matrice poiché i caratteri con segno esteso, essendo negativi, verranno indicizzati al di fuori della matrice.  Le lingue che utilizzano il formato MBCS, come il giapponese, sono particolari.  Poiché un carattere può essere composto da uno o due byte, è sempre necessario utilizzare entrambi i byte contemporaneamente.  
+>  Set di caratteri europea e MBCS dispone di alcuni caratteri, ad esempio le lettere accentate, con i codici di carattere maggiori di 0x80. Poiché la maggior parte di codice utilizza caratteri con segno, questi caratteri maggiori 0x80 sono esteso con segno quando convertito in `int`. In questo modo un problema per l'indicizzazione di matrice di caratteri con segno esteso, essendo negativi, gli indici di fuori della matrice. Le lingue che utilizzano il formato MBCS, ad esempio giapponese, anche sono univoche. Perché un carattere può essere costituito da 1 o 2 byte, è sempre necessario utilizzare entrambi i byte nello stesso momento.  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Unicode e MBCS](../text/unicode-and-mbcs.md)   
  [Strategie di internazionalizzazione](../text/internationalization-strategies.md)

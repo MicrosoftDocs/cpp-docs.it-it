@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9bc7c0bd614206dc3c0d5e419b59d5029b8077
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashset-class"></a>Classe hash_set
 > [!NOTE]
@@ -163,7 +164,7 @@ class hash_set
 |-|-|  
 |[hash_set](#hash_set)|Costruisce un `hash_set` vuoto o che rappresenta una copia totale o parziale di un altro `hash_set`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -1312,7 +1313,7 @@ Allocator get_allocator() const;
  Per altre informazioni su `Allocator`, vedere la sezione Note dell'argomento [Classe hash_set](../standard-library/hash-set-class.md).  
   
 ### <a name="remarks"></a>Note  
- Gli allocatori per la classe hash_set specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti forniti con le classi dei contenitori della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.  
+ Gli allocatori per la classe hash_set specificano il modo in cui la classe gestisce la memoria. Gli allocatori predefiniti acclusi alle classi contenitore della libreria standard C++ sono sufficienti per la maggior parte delle esigenze di programmazione. Scrivere e usare una classe allocator personalizzata è un argomento di C++ avanzato.  
   
    
   
@@ -1518,7 +1519,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
    
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [begin](#begin) per indicazioni su come dichiarare e usare **iterator**.  
+  Vedere l'esempio per [begin](#begin) per un esempio di dichiarazione e utilizzo di **iterator**.  
   
 ##  <a name="key_comp"></a>  hash_set::key_comp  
   
@@ -2069,7 +2070,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
    
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [rbegin](#rbegin) per indicazioni su come dichiarare e usare `reverse_iterator`.  
+  Vedere l'esempio per [rbegin](#rbegin) per un esempio di dichiarazione e utilizzo di `reverse_iterator`.  
   
 ##  <a name="size"></a>  hash_set::size  
   
@@ -2133,7 +2134,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
    
   
 ### <a name="example"></a>Esempio  
-  Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`  
+  Vedere l'esempio relativo a [size](#size) per indicazioni su come dichiarare e usare `size_type`.  
   
 ##  <a name="swap"></a>  hash_set::swap  
   

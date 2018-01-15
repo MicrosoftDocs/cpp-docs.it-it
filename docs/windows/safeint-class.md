@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a031176d6636aedddbeac28c858c777c26625f5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-class"></a>Classe SafeInt
 Estende le primitive di integer per evitare l'overflow di integer e consente di confrontare i diversi tipi di valori integer.  
@@ -37,7 +40,7 @@ class SafeInt;
 |--------------|-----------------|  
 |T|Il tipo di valore integer o un parametro booleano che `SafeInt` sostituisce.|  
 |E|Tipo di dati enumerato che definisce i criteri di gestione degli errori.|  
-|U|Il tipo di valore integer o un parametro booleano per l'operando secondario.|  
+|G|Il tipo di valore integer o un parametro booleano per l'operando secondario.|  
   
 |Parametro|Descrizione|  
 |---------------|-----------------|  
@@ -55,7 +58,7 @@ class SafeInt;
   
 ### <a name="assignment-operators"></a>Operatori di assegnazione  
   
-|Nome|Sintassi|  
+|nome|Sintassi|  
 |----------|------------|  
 |=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|  
 |=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|  
@@ -64,7 +67,7 @@ class SafeInt;
   
 ### <a name="casting-operators"></a>Operatori di cast  
   
-|Nome|Sintassi|  
+|nome|Sintassi|  
 |----------|------------|  
 |bool|`operator bool() throw()`|  
 |char|`operator char() const`|  
@@ -82,7 +85,7 @@ class SafeInt;
   
 ### <a name="comparison-operators"></a>Operatori di confronto  
   
-|Nome|Sintassi|  
+|nome|Sintassi|  
 |----------|------------|  
 |<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|  
 |<|`bool operator< (SafeInt<T,E> rhs) const throw()`|  
@@ -101,7 +104,7 @@ class SafeInt;
   
 ### <a name="arithmetic-operators"></a>Operatori aritmetici  
   
-|Nome|Sintassi|  
+|nome|Sintassi|  
 |----------|------------|  
 |+|`const SafeInt<T,E>& operator+ () const throw()`|  
 |-|`SafeInt<T,E> operator- () const`|  
@@ -134,7 +137,7 @@ class SafeInt;
   
 ### <a name="logical-operators"></a>Operatori logici  
   
-|Nome|Sintassi|  
+|nome|Sintassi|  
 |----------|------------|  
 |!|`bool operator !() const throw()`|  
 |~|`SafeInt<T,E> operator~ () const throw()`|  

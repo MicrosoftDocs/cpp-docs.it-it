@@ -1,32 +1,33 @@
 ---
-title: "Metodo ActivationFactory::AddRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::AddRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRef (metodo)"
+title: 'Metodo activationfactory:: AddRef | Documenti Microsoft'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::AddRef
+dev_langs: C++
+helpviewer_keywords: AddRef method
 ms.assetid: dfe96189-ddbe-410a-9f8d-5d8ecc8cc7e6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 88fb0a09565f50f352679bb07efad094db592e05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Metodo ActivationFactory::AddRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Incrementa il conteggio dei riferimenti dell'oggetto corrente di ActivationFactory.  
+# <a name="activationfactoryaddref-method"></a>Metodo ActivationFactory::AddRef
+Incrementa il conteggio dei riferimenti dell'oggetto ActivationFactory corrente.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 STDMETHOD_(  
@@ -35,13 +36,13 @@ STDMETHOD_(
 )();  
 ```  
   
-## Valore restituito  
- S\_OK se ha avuto successo, in caso contrario un HRESULT, che descrive perchè l'operazione è fallita.  
+## <a name="return-value"></a>Valore restituito  
+ S_OK se riesce; in caso contrario, HRESULT che descrive l'errore.  
   
-## Requisiti  
- **Header:** module.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** module.h  
   
- **Namespace:** Microsoft::WRL  
+ **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Classe ActivationFactory](../windows/activationfactory-class.md)

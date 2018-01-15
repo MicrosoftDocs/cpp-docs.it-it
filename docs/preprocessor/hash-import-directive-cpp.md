@@ -1,5 +1,5 @@
 ---
-title: '#<a name="import-directive-c--microsoft-docs"></a>importare (direttiva) (C++) | Documenti Microsoft'
+title: '#importare (direttiva) (C++) | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 797ef6e17f1681e0e44af2f131e5b324a607297d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
 **Sezione specifica C++**  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/24/2017
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
 ```  
   
- -oppure-  
+ oppure  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only  

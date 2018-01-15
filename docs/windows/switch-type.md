@@ -1,32 +1,33 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: switch_type | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b41a71483bc26d1a28476f24a47395ccd6b35d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Identifica il tipo della variabile utilizzata come un'unione discriminante.  
+# <a name="switchtype"></a>switch_type
+Identifica il tipo della variabile utilizzata come l'unione discriminante.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
@@ -36,14 +37,14 @@ type
   
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `type`  
- Il tipo di opzione, può essere un numero intero, un carattere, un valore booleano, o un tipo di enumerazione.  
+ Il tipo di opzione, può essere di tipo integer, carattere, Boolean o enumerazione.  
   
-## Note  
- **switch\_type** L'attributo di C\+\+ ha la stessa funzionalità di  [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) Attributo MIDL.  
+## <a name="remarks"></a>Note  
+ Il **switch_type** attributo C++ ha la stessa funzionalità come il [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) attributo MIDL.  
   
- Gli attributi C\+\+ non supportano [unioni incapsulati](http://msdn.microsoft.com/library/windows/desktop/aa366811).  [Unioni di Nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) essere supportato solo nel formato seguente:  
+ Gli attributi di C++ non supportano [incapsulato unioni](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Unioni nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) sono supportati solo nel formato seguente:  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +63,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## Esempio  
- vedere [evento](../windows/case-cpp.md) esempio per un esempio di utilizzo  **switch\_type**.  
+## <a name="example"></a>Esempio  
+ Vedere il [case](../windows/case-cpp.md) esempio per un esempio dell'uso di **switch_type**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### contesto di attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|`typedef`|  
-|**ripetibile**|No|  
-|**attributi obbligatori**|Nessuno|  
-|**attributi non validi**|Nessuno|  
+|**Ripetibile**|No|  
+|**Attributi obbligatori**|Nessuna|  
+|**Attributi non validi**|nessuno|  
   
- per ulteriori informazioni sui contesti di attributo, vedere [Associare ai contesti](../windows/attribute-contexts.md).  
+ Per altre informazioni sui contesti di attributi, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union e Struct (attributi)](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. La classe modello [basic_ios](../standard-library/basic-ios-class.md) descrive gli elementi comuni e dipendenti dai parametri modello.  
@@ -150,7 +151,7 @@ La classe descrive le funzioni membro e di archiviazione comuni ai flussi di inp
 |-|-|  
 |[ios_base](#ios_base)|Costruisce oggetti `ios_base`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -1063,6 +1064,6 @@ testing
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Programmazione di iostream](../standard-library/iostream-programming.md)   
  [Convenzioni di iostream](../standard-library/iostreams-conventions.md)

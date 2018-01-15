@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d48e8e41d48b7a663f9dff37adc79f87f9a0c3d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Procedura: convertire vari tipi di stringhe
 In questo argomento viene illustrato come convertire vari tipi di stringa di Visual C++ in altre stringhe. I tipi di stringhe che vengono trattati includono `char *`, `wchar_t*`, [bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), e <xref:System.String?displayProperty=fullName>. In tutti i casi, viene creata una copia della stringa quando convertito nel nuovo tipo. Tutte le modifiche apportate alla nuova stringa non influirà la stringa originale e viceversa.  

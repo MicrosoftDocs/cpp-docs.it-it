@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivial
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivial
+f1_keywords: type_traits/std::is_trivial
+dev_langs: C++
+helpviewer_keywords: is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ccf641e5f5e2bd3a224b418666882fa022289cfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f4e57d84395ebce879187de37c7e2a59f33bfb1b
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istrivial-class"></a>Classe is_trivial
 Verifica se il tipo è trivial.  
@@ -51,7 +48,6 @@ struct is_trivial;
   
 ## <a name="see-also"></a>Vedere anche  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

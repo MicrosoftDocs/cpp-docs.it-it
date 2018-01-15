@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7081d1ed4c65afea2aab7eca169782ec227a258b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25a4471a0522f89fd5cf1653398e92694daf887e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>Aprire &lt;dispositivo&gt; immagine la finestra di dialogo (Editor di immagini per le icone)
 Utilizzare questa finestra di dialogo per aprire immagini per i dispositivi. Elenca le immagini di dispositivi esistenti nella risorsa corrente (immagini che fanno parte della risorsa corrente).  
@@ -28,7 +31,7 @@ Utilizzare questa finestra di dialogo per aprire immagini per i dispositivi. Ele
  Elenca le immagini incluse nella risorsa. Selezionare il tipo di immagine che si desidera aprire.  
   
 ## <a name="requirements"></a>Requisiti  
- Nessuno  
+ nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Menu immagine](../windows/image-menu-image-editor-for-icons.md)   

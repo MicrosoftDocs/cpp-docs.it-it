@@ -34,11 +34,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c74216b8b510b17327c22a087295725049c4f024
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>Classe scoped_allocator_adaptor
 Rappresenta un annidamento di allocatori.  
@@ -73,7 +74,7 @@ class scoped_allocator_adaptor;
   
 ### <a name="constructors"></a>Costruttori  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Costruisce un oggetto `scoped_allocator_adaptor`.|  
   
@@ -94,9 +95,9 @@ class scoped_allocator_adaptor;
 |`value_type`|Questo tipo è un sinonimo del tipo `value_type` associato all'allocatore `Outer`.|  
 |`void_pointer`|Questo tipo è un sinonimo del tipo `void_pointer` associato all'allocatore `Outer`.|  
   
-### <a name="structs"></a>Strutture  
+### <a name="structs"></a>Struct  
   
-|Nome|Descrizione|  
+|nome|Descrizione|  
 |----------|-----------------|  
 |[Struct scoped_allocator_adaptor::rebind](#rebind_struct)|Definisce il tipo `Outer::rebind\<Other>::other` come sinonimo di `scoped_allocator_adaptor\<Other, Inner...>`.|  
   
@@ -308,7 +309,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
  Questo metodo restituisce `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Il risultato è un nuovo oggetto `scoped_allocator_adaptor` con ogni oggetto allocatore archiviato inizializzato tramite una chiamata a `al.select_on_container_copy_construction()` per l'allocatore `al` corrispondente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione)
+ [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)
 
 
 

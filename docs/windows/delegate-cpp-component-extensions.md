@@ -17,11 +17,14 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43bab2679e958dbf8ffbd0f76b0d683636ba88de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 30fd64fd37fb30c34b5d4f5901f16143fb1cd701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delegate--c-component-extensions"></a>delegato (Estensioni del componente C++)
 Dichiara un tipo che rappresenta un puntatore a funzione.  

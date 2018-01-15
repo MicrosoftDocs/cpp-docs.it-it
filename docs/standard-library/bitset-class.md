@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2f53256a15485619268a4b1dce42395857d29a1e
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitset-class"></a>Classe bitset
 Descrive un tipo di oggetto che archivia una sequenza formata da un numero fisso di bit che forniscono un modo compatto di mantenere i flag per un set di elementi o condizioni. La classe bitset supporta operazioni su oggetti di tipo bitset che contengono una raccolta di bit e forniscono un accesso a tempo costante a ogni bit.  
@@ -117,7 +115,7 @@ class bitset
 |[operator<<](#op_lshift)|Sposta i bit in un `bitset` a sinistra di un numero di posizioni specificato e restituisce il risultato in un nuovo `bitset`.|  
 |[operator<<=](#op_lshift_eq)|Sposta i bit in un `bitset` a sinistra di un numero di posizioni specificato e restituisce il risultato nel `bitset` di destinazione.|  
 |[operator==](#op_eq_eq)|Verifica un `bitset` di destinazione per l'uguaglianza con un `bitset` specificato.|  
-|[operator>>](#op_rshift)|Sposta i bit in un `bitset` a destra di un numero di posizioni specificato e restituisce il risultato in un nuovo `bitset`.|  
+|[operator>> ](#op_rshift)|Sposta i bit in un `bitset` a destra di un numero di posizioni specificato e restituisce il risultato in un nuovo `bitset`.|  
 |[operator>>=](#op_rshift_eq)|Sposta i bit in un `bitset` a destra di un numero di posizioni specificato e restituisce il risultato nel `bitset` di destinazione.|  
 |[operator&#91;&#93;](#op_at)|Restituisce un riferimento a un bit in una posizione specificata in un `bitset` se il `bitset` è modificabile. In caso contrario, restituisce il valore del bit in tale posizione.|  
 |[operator^=](#op_xor_eq)|Esegue una combinazione bit per bit di bitset con l'operazione esclusiva `OR`.|  
@@ -1442,5 +1440,4 @@ bool test(size_t _Pos) const;
   
 ### <a name="remarks"></a>Note  
  La funzione membro genera un'eccezione [out_of_range](../standard-library/out-of-range-class.md)
-
 

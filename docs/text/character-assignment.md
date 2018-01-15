@@ -1,29 +1,30 @@
 ---
-title: "Assegnazione di caratteri | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "caratteri [C++], assegnazioni"
-  - "MBCS [C++], assegnazioni di caratteri"
+title: Assegnazione di caratteri | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], assignments
+- MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 266d3284716647fa073f76ef6ef871a3abd179bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Assegnazione di caratteri
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Si consideri l'esempio seguente, nel quale il ciclo `while` effettua l'analisi di una stringa, copiando in un'altra stringa tutti i caratteri tranne 'X':  
+# <a name="character-assignment"></a>Assegnazione di caratteri
+Si consideri l'esempio seguente, in cui il `while` ciclo analizza una stringa, la copia di tutti i caratteri tranne 'X' in un'altra stringa:  
   
 ```  
 while( *sz2 )  
@@ -35,7 +36,7 @@ while( *sz2 )
 }  
 ```  
   
- Il codice copia il byte in `sz2` nella posizione indicata da `sz1`, quindi incrementa `sz1` per ricevere il byte successivo.  Se però il carattere successivo presente in `sz2` è un carattere a byte doppio, tramite l'assegnazione a `sz1` verrà copiato solo il byte iniziale.  Nel codice seguente viene utilizzata una funzione portabile per copiare il carattere e un'altra funzione dello stesso tipo per incrementare correttamente `sz1` e `sz2`:  
+ Il codice copia i byte in corrispondenza del `sz2` al percorso a cui puntato `sz1`, quindi incrementa `sz1` per ricevere il byte successivo. Tuttavia, se il carattere successivo nella `sz2` è un carattere a byte doppio, l'assegnazione al `sz1` copiato solo il primo byte. Il codice seguente utilizza una funzione portatile per copiare in modo sicuro il carattere e un altro per incrementare `sz1` e `sz2` correttamente:  
   
 ```  
 while( *sz2 )  
@@ -51,6 +52,6 @@ while( *sz2 )
 }  
 ```  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Suggerimenti sulla programmazione MBCS](../text/mbcs-programming-tips.md)   
  [Confronto tra caratteri](../text/character-comparison.md)

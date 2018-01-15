@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: efeb0c8bc90ab3e6129e876e0fc3a2e04fdf1457
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd849e133654bd6679b7ff0225885991baed1cac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 Definisce l'oggetto priority_queue delle classi modello, nonché la coda e diversi modelli di supporto.  
@@ -51,6 +52,6 @@ Definisce l'oggetto priority_queue delle classi modello, nonché la coda e diver
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento file di intestazione](../standard-library/cpp-standard-library-header-files.md)   
- [Sicurezza dei thread nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)  (Sicurezza dei thread nella libreria standard C++)  
  [Riferimento per la libreria standard C++](../standard-library/cpp-standard-library-reference.md)
 

@@ -1,61 +1,60 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributo default"
-  - "attributi [C#], attributo default"
-  - "impostazioni predefinite, attributo default"
+title: predefinito (C++) | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="default-c"></a>default (C++)
 Indica che l'interfaccia personalizzata o dispatch definita in una coclasse rappresenta l'interfaccia di programmabilità predefinita.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  *interfaccia1*  
- L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script che creano un oggetto basato sulla classe definita con l'attributo **default**.  
+ L'interfaccia predefinita che sarà resa disponibile per gli ambienti di script che creano un oggetto basato sulla classe definita con l'attributo **default** .  
   
  Se non si specifica un'interfaccia predefinita, la prima occorrenza di un'interfaccia non di origine viene usata come predefinita.  
   
- *interfaccia2*\(facoltativo\)  
- L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](../windows/source-cpp.md).  
+ *interfaccia2*(facoltativo)  
+ L'interfaccia di origine predefinita. È necessario anche specificare questa interfaccia con l'attributo [source](../windows/source-cpp.md) .  
   
  Se non si specifica un'interfaccia di origine predefinita, viene usata come predefinita la prima interfaccia di origine.  
   
-## Note  
- L'attributo C\+\+ **default** ha la stessa funzione dell'attributo MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787). L'attributo **default** viene usato anche con l'attributo [case](../windows/case-cpp.md).  
+## <a name="remarks"></a>Note  
+ L'attributo C++ **default** ha la stessa funzione dell'attributo MIDL [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) . L'attributo **default** viene usato anche con l'attributo [case](../windows/case-cpp.md) .  
   
-## Esempio  
+## <a name="example"></a>Esempio  
  Il codice seguente mostra come viene usato **default** sulla definizione di una coclasse per specificare **ICustomDispatch** come interfaccia di programmabilità predefinita:  
   
 ```  
@@ -109,21 +108,20 @@ int main() {
   
  Anche l'attributo [source](../windows/source-cpp.md) presenta un esempio di come usare **default**.  
   
-## Requisiti  
+## <a name="requirements"></a>Requisiti  
   
-### Contesto attributo  
+### <a name="attribute-context"></a>Contesto attributo  
   
 |||  
 |-|-|  
 |**Si applica a**|**class**, `struct`, membro dati|  
 |**Ripetibile**|No|  
-|**Attributi obbligatori**|**coclass** \(quando applicato a **class** o `struct`\)|  
-|**Attributi non validi**|Nessuno|  
+|**Attributi obbligatori**|**coclass** (quando applicato a **class** o `struct`)|  
+|**Attributi non validi**|nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
-## Vedere anche  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>Vedere anche  
+ [Attributi IDL](../windows/idl-attributes.md)   
+ [Attributi di classe](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/it-it/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

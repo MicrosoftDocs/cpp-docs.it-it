@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
-ms.contentlocale: it-it
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>Flussi di input
 Un oggetto di flusso di input è un'origine di byte. Le tre classi più importanti relative ai flussi di input sono [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md) e [istringstream](../standard-library/basic-istringstream-class.md).  
@@ -50,7 +34,7 @@ Un oggetto di flusso di input è un'origine di byte. Le tre classi più importan
   
  Analogamente alla funzione di libreria `sscanf_s`, la classe `istringstream` supporta l'input da stringhe in memoria. Per estrarre dati da una matrice di caratteri che ha una terminazione null, allocare e inizializzare la stringa e quindi costruire un oggetto della classe `istringstream`.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>In questa sezione  
  [Costruzione di oggetti di flusso di input](../standard-library/constructing-input-stream-objects.md)  
   
  [Uso degli operatori di estrazione](../standard-library/using-extraction-operators.md)  
@@ -65,4 +49,3 @@ Un oggetto di flusso di input è un'origine di byte. Le tre classi più importan
   
 ## <a name="see-also"></a>Vedere anche  
  [Programmazione di iostream](../standard-library/iostream-programming.md)
-

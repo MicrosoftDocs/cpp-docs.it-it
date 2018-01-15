@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: gestione pacchetti per C++ per Windows 
 vcpkg è un'utilità di gestione di pacchetti dalla riga di comando che semplifica notevolmente l'acquisizione e installazione di librerie di terze parti in Windows. Se un progetto usa librerie di terze parti, è consigliabile usare vcpkg per installarle. vcpkg supporta sia librerie open source che proprietarie. Tutte le librerie nel catalogo pubblico di vcpkg sono state testate per la compatibilità con Visual Studio 2015 e Visual Studio 2017. A maggio 2017 il catalogo includeva più di 238 librerie e la community di C++ aggiunge continuamente altre librerie.
@@ -107,14 +108,16 @@ Richiedere a tutti i membri di un team di scaricare e compilare le librerie può
 Il catalogo pubblico viene mantenuto aggiornato con le versioni più recenti delle librerie. Per determinare quali librerie locali non sono aggiornate, usare `vcpkg update`. Quando si è pronti per aggiornare la raccolta di port alla versione più recente del catalogo pubblico, è sufficiente eseguire un'operazione git pull sul repository GitHub oppure creare un nuovo clone e mantenere quello precedente, se è ancora necessario.
 
 ### <a name="contribute-new-libraries"></a>Contribuire con nuove librerie
-È possibile includere qualsiasi libreria nella raccolta di port privata. Per suggerire una nuova libreria per il catalogo pubblico, 
-
+È possibile includere qualsiasi libreria nella raccolta di port privata. Per suggerire una nuova libreria per il catalogo pubblico,effettuare la segnalazione nella [pagina dei problemi vcpkg di GitHub](https://github.com/Microsoft/vcpkg/issues).
 
 ### <a name="remove-a-library"></a>Rimuovere una libreria
 Digitare `vcpkg remove` per rimuovere una libreria installata. Se sono presenti altre librerie dipendenti, verrà richiesto di eseguire nuovamente il comando con `--recurse`, in modo che vengano rimosse tutte le librerie downstream.
 
 ### <a name="customize-vcpkg"></a>Personalizzare vcpkg
 È possibile modificare il clone di vcpkg nei modi preferiti. Si possono creare più cloni di vcpkg e modificare i portfile in ognuno, per ottenere versioni specifiche di librerie o specificare parametri della riga di comando. Ad esempio, in un'organizzazione, è possibile che un gruppo di sviluppatori lavori a software con un set di dipendenze mentre un altro gruppo usa un set diverso. È possibile configurare due cloni di vcpkg e modificare ognuno in modo da scaricare le versioni delle librerie, le opzioni di compilazione e altri elementi in base alle specifiche esigenze. 
+
+### <a name="uninstall-vcpkg"></a>Disinstallare vcpkg
+È sufficiente eliminare la directory. 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Gerarchia delle cartelle di vcpkg
 Tutti i dati e le funzionalità di vcpkg sono inclusi in una singola gerarchia di directory, detta "istanza". Non esistono impostazioni del Registro di sistema o variabili di ambiente. In un computer può esistere un qualsiasi numero di istanze di vcpkg e non ci saranno interferenze. 

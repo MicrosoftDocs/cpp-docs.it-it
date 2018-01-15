@@ -1,32 +1,33 @@
 ---
-title: "Funzione Make | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make (funzione)"
+title: Funzione | Documenti Microsoft
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
-# Funzione Make
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Inizializza la classe specificata [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  Utilizzare questa funzione per creare un'istanza di un componente definita nello stesso modulo.  
+# <a name="make-function"></a>Funzione Make
+Inizializza la classe di Windows Runtime specificata. Utilizzare questa funzione per creare un'istanza di un componente definito nello stesso modulo.  
   
-## Sintassi  
+## <a name="syntax"></a>Sintassi  
   
 ```  
 template <  
@@ -170,74 +171,74 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### Parametri  
+#### <a name="parameters"></a>Parametri  
  `T`  
- Una classe definita dall'utente che eredita da `WRL::RuntimeClass`.  
+ Classe definita dall'utente che eredita da `WRL::RuntimeClass`.  
   
  `TArg1`  
- Tipo di argomento 1 passato alla classe di runtime specificata.  
+ Tipo di argomento 1 che viene passato alla classe di runtime specificato.  
   
  `TArg2`  
- Tipo di argomento 2 passato alla classe di runtime specificata.  
+ Tipo di argomento 2 che viene passato alla classe di runtime specificato.  
   
  `TArg3`  
- Tipo di argomento 3 passato alla classe di runtime specificata.  
+ Tipo di argomento 3 che viene passato alla classe di runtime specificato.  
   
  `TArg4`  
- Tipo di argomento 4 passato alla classe di runtime specificata.  
+ Tipo di argomento 4 che viene passato alla classe di runtime specificato.  
   
  `TArg5`  
- Tipo di argomento 5 passato alla classe di runtime specificata.  
+ Tipo di argomento 5 che viene passato alla classe di runtime specificato.  
   
  `TArg6`  
- Tipo di argomento 6 passato alla classe di runtime specificata.  
+ Tipo di argomento 6 viene passato alla classe di runtime specificato.  
   
  `TArg7`  
- Tipo di argomento 7 passato alla classe di runtime specificata.  
+ Tipo di argomento 7 che viene passato alla classe di runtime specificato.  
   
  `TArg8`  
- Tipo di argomento 8 passato alla classe di runtime specificata.  
+ Tipo di argomento 8 che viene passato alla classe di runtime specificato.  
   
  `TArg9`  
- Tipo di argomento 9 passato alla classe di runtime specificata.  
+ Tipo di argomento 9 che viene passato alla classe di runtime specificato.  
   
  `arg1`  
- Argomento 1 passato alla classe di runtime specificata.  
+ Argomento 1 che viene passato alla classe di runtime specificato.  
   
  `arg2`  
- Argomento 2 passato alla classe di runtime specificata.  
+ Argomento 2 che viene passato alla classe di runtime specificato.  
   
  `arg3`  
- Argomento 3 passato alla classe di runtime specificata.  
+ Argomento 3 che viene passato alla classe di runtime specificato.  
   
  `arg4`  
- Argomento 4 passato alla classe di runtime specificata.  
+ Argomento 4 che viene passato alla classe di runtime specificato.  
   
  `arg5`  
- Argomento 5 passato alla classe di runtime specificata.  
+ Argomento 5 che viene passato alla classe di runtime specificato.  
   
  `arg6`  
- Argomento 6 passato alla classe di runtime specificata.  
+ Argomento 6 passato alla classe di runtime specificato.  
   
  `arg7`  
- Argomento 7 passato alla classe di runtime specificata.  
+ Argomento 7 che viene passato alla classe di runtime specificato.  
   
  `arg8`  
- Argomento 8 passato alla classe di runtime specificata.  
+ Argomento 8 che viene passato alla classe di runtime specificato.  
   
  `arg9`  
- Argomento 9 passato alla classe di runtime specificata.  
+ Argomento 9 che viene passato alla classe di runtime specificato.  
   
-## Valore restituito  
+## <a name="return-value"></a>Valore restituito  
  Un oggetto `ComPtr<T>` in caso di esito positivo; in caso contrario, `nullptr`.  
   
-## Osservazioni  
- Vedere [Procedura: creare direttamente un'istanza dei componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per informazioni sulle differenze tra questa funzione e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md), e per un esempio.  
+## <a name="remarks"></a>Note  
+ Vedere [procedura: creare un'istanza direttamente i componenti WRL](../windows/how-to-instantiate-wrl-components-directly.md) per imparare le differenze tra questa funzione e [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)e per un esempio.  
   
-## Requisiti  
- **Intestazione:** implements.h  
+## <a name="requirements"></a>Requisiti  
+ **Intestazione:** h  
   
  **Spazio dei nomi:** Microsoft::WRL  
   
-## Vedere anche  
+## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

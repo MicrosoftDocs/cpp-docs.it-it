@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0e5da0114c1d652e8d45d0ea157df24562da33cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c823f6ddc688a697d82835995b2fda86a2feb44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyget-class"></a>Classe money_get
 La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni delle sequenze di tipo `CharType` in valori monetari.  
@@ -59,7 +60,7 @@ class money_get : public locale::facet;
 |-|-|  
 |[money_get](#money_get)|Costruttore per oggetti di tipo `money_get` utilizzati per estrarre i valori numerici dalle sequenze che rappresentano valori monetari.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -287,7 +288,7 @@ explicit money_get(size_t _Refs = 0);
   
 -   \>1: questi valori non definiti.  
   
- Non è possibile offrire esempi diretti, poiché il distruttore è protetto.  
+ Non è possibile fornire esempi diretti, poiché il distruttore è protetto.  
   
  Il costruttore inizializza l'oggetto di base con **locale::**[facet](../standard-library/locale-class.md#facet_class)( **_***Refs*).  
   
@@ -304,7 +305,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ## <a name="see-also"></a>Vedere anche  
  [\<locale>](../standard-library/locale.md)   
  [Classe facet](../standard-library/locale-class.md#facet_class)   
- [Thread safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety nella libreria standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

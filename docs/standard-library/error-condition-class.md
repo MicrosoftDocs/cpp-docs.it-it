@@ -23,17 +23,17 @@ helpviewer_keywords:
 - std::error_condition::category
 - std::error_condition::clear
 - std::error_condition::message
-- 
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8109db3a6607abd1792485c93a59795d432f824
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcondition-class"></a>Classe error_condition
 Rappresenta i codici di errore definiti dall'utente.  
@@ -53,7 +53,7 @@ class error_condition;
 |-|-|  
 |[error_condition](#error_condition)|Costruisce un oggetto di tipo `error_condition`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
