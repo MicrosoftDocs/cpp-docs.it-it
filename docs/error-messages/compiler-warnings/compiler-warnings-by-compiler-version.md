@@ -16,11 +16,12 @@ caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0f4a4aedc85cade0d5b7b895e5998733460a7ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore dalla versione del compilatore  
   
@@ -362,7 +363,7 @@ C4678|classe di base*dichiarazione*'è meno accessibile di'*nome*'
 C4679|'*descrizione*': Impossibile importare il membro
 C4687|'*tipo*': una classe astratta sealed non può implementare un'interfaccia '*tipo*'
 C4688|'*nome*': elenco di vincoli contiene il tipo privato '*dichiarazione*'
-C4690|[emitidl (pop)]: più estrazioni che inserimenti
+C4690|[ emitidl( pop ) ]: più estrazioni che inserimenti
 C4691|'*tipo*': tipo di riferimento previsto senza riferimenti *modulo* '*descrizione*', tipo definito in unità di conversione corrente utilizzato
 C4692|'*nome*': la firma del membro non privato contiene il tipo nativo privato '*dichiarazione*'
 C4693|'*tipo*': una classe astratta sealed non può avere i membri di istanza*nome*'

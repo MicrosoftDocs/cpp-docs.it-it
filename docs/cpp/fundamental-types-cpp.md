@@ -4,60 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- __wchar_t_cpp
-- long_double_cpp
-- unsigned
-- wchar_t_cpp
-- float_cpp
-- wchar_t
-- char
-- char_cpp
-- signed
-- __wchar_t
-- signed_cpp
-- short
-- double_cpp
-- int_cpp
-- long
-- __intn_cpp
-- short_cpp
-- double
-- unsigned_cpp
-- float
-- __intn
-- long_cpp
-- int
-- long_double
-- unsigned_int
-- __int8
-- __int8_cpp
-- __int16
-- __int16_cpp
-- __int32
-- __int32_cpp
-- __int64
-- __int64_cpp
-- __int128
 - __int128_cpp
-dev_langs:
-- C++
+- __wchar_t_cpp
+- char_cpp
+- double_cpp
+- float_cpp
+- int_cpp
+- long_cpp
+- long_double_cpp
+- short_cpp
+- signed_cpp
+- unsigned_cpp
+- unsigned_int_cpp
+- wchar_t_cpp
+dev_langs: C++
 helpviewer_keywords:
 - specifiers [C++], type
 - float keyword [C++]
 - char keyword [C++]
 - __wchar_t keyword [C++]
 - signed types [C++], summary of data types
-- Integer data type, C++ data types
+- Integer data type [C++], C++ data types
 - arithmetic operations [C++], types
 - int data type
 - unsigned types [C++], summary of data types
-- short data type
-- double data type, summary of types
+- short data type [C++]
+- double data type [C++], summary of types
 - long long keyword [C++]
 - long double keyword [C++]
 - unsigned types [C++]
@@ -66,7 +42,7 @@ helpviewer_keywords:
 - storage [C++], basic type
 - integral types, C++
 - wchar_t keyword [C++]
-- floating-point numbers, C++ data types
+- floating-point numbers [C++], C++ data types
 - long keyword [C++]
 - type specifiers [C++]
 - integral types
@@ -74,31 +50,16 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 595c2d84ad18cae0c15ddba36388f66f10fecd49
-ms.contentlocale: it-it
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types--c"></a>Tipi fondamentali (C++)
 I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola mobile e void. I tipi integrali possono gestire numeri interi. I tipi a virgola mobile possono specificare i valori che possono contenere parti frazionarie.  
@@ -115,7 +76,7 @@ I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola
   
 ### <a name="fundamental-types-of-the-c-language"></a>Tipi fondamentali del linguaggio C++  
   
-|Categoria|Tipo|Contenuto|  
+|Category|Tipo|Sommario|  
 |--------------|----------|--------------|  
 |Integrale|`char`|Il tipo `char` è un tipo integrale che generalmente contiene membri del set di caratteri di esecuzione di base, per impostazione predefinita in Microsoft C++ è ASCII.<br /><br /> Il compilatore C++ considera le variabili di tipo `char`, `signed` `char`e `unsigned` `char` come se avessero tipi differenti. Le variabili di tipo `char` vengono promosse a `int` come se fossero di tipo `signed` `char` per impostazione predefinita, a meno che non venga usata l'opzione di compilazione /J. In questo caso, sono considerate come tipo `unsigned` `char` e sono promosse a `int` senza estensione del segno.|  
 ||`bool`|Il tipo `bool` è un tipo integrale che può assumere uno dei due valori `true` o `false`. La relativa dimensione non è specificata.|  
@@ -123,7 +84,7 @@ I tipi fondamentali in C++ sono suddivisi in tre categorie: integrali, a virgola
 ||`int`|Il tipo `int` è un tipo integrale di dimensione maggiore o uguale alla dimensione del tipo `short` `int`e di dimensione minore o uguale alla dimensione del tipo `long`.<br /><br /> Gli oggetti di tipo `int` possono essere dichiarati come `signed` `int` o come `unsigned` `int`. `Signed` `int` è un sinonimo di `int`.|  
 ||`__int8`, `__int16`, `__int32`, `__int64`|Intero con dimensione `__int n`, dove `n` è la dimensione in bit della variabile di tipo intero. `__int8`, `__int16`, `__int32` e `__int64` sono parole chiave specifiche di Microsoft. Non tutti i tipi sono disponibili in tutte le architetture. `(__int128`non è supportata.)|  
 ||`long`|Il tipo `long` (o `long` `int`) è un tipo integrale che è maggiore o uguale alla dimensione del tipo `int`.<br /><br /> Gli oggetti di tipo `long` possono essere dichiarati come `signed` `long` o come `unsigned` `long`. `Signed` `long` è un sinonimo di `long`.|  
-||`long` `long`|Di dimensione maggiore di un tipo `long`senza segno.<br /><br /> Gli oggetti di tipo `long long` possono essere dichiarati come `signed` `long long` o come `unsigned` `long long`. `Signed` `long long` è un sinonimo di `long long`.|  
+||`long` `long`|Di dimensione maggiore di un tipo `long`senza segno.<br /><br /> Gli oggetti di tipo `long long` possono essere dichiarati come `signed` `long long` o come `unsigned` `long long`. `signed``long long` è un sinonimo di `long long`.|  
 ||`wchar_t`, `__wchar_t`|Una variabile di tipo `wchar_t` designa un tipo di carattere wide o multibyte. Per impostazione predefinita, `wchar_t` è un tipo nativo, ma è possibile usare [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per rendere `wchar_t` un typedef per un tipo `unsigned short`. Il tipo `__wchar_t` è un sinonimo specifico di Microsoft per il tipo `wchar_t` nativo.<br /><br /> Usare il prefisso L prima di un valore letterale carattere o stringa per designare il tipo di carattere wide.|  
 |A virgola mobile|`float`|Il tipo `float` è il tipo a virgola mobile più piccolo.|  
 ||`double`|Il tipo `double` è un tipo a virgola mobile che è maggiore o uguale a `float`, ma minore o uguale alla dimensione del tipo `long` `double`.<br /><br /> Specifico di Microsoft: la rappresentazione di `long double` e `double` è identica. Tuttavia, `long double` e `double` sono tipi distinti.|  
