@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (Conformità)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>Sintassi
 
-> / Zc:_opzione_{,_opzione_}
+> /Zc:_option_{,_option_}
 
 ## <a name="remarks"></a>Note
 
@@ -43,7 +43,7 @@ Si tratta di `/Zc` opzioni del compilatore:
 |Opzione|Comportamento|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Abilitare C++ 17 eccessiva dinamica allocazione allineata (attivato per impostazione predefinita in C++ 17).|
-|[Automatico\[-\]](zc-auto-deduce-variable-type.md)|Applicare il nuovo significato di C++ Standard per `auto` (in per impostazione predefinita).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Applicare il nuovo significato di C++ Standard per `auto` (in per impostazione predefinita).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Abilitare il collegamento esterno per `constexpr` variabili (disattivato per impostazione predefinita).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Impone C++ Standard `for` regole di ambito (in per impostazione predefinita).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Abilita implicita `noexcept` su funzioni obbligatorie (in per impostazione predefinita).|
@@ -53,9 +53,10 @@ Si tratta di `/Zc` opzioni del compilatore:
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Applicare le regole di conversione esplicita di tipi Standard di C++ (disattivato per impostazione predefinita).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Abilitare C++ 14 deallocazione con dimensione globale funzioni (in per impostazione predefinita).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Valore letterale stringa a Disable `char*` o `wchar_t*` conversione (disattivato per impostazione predefinita).|
+|[ternary\[-\]](zc-ternary.md)|Applicare le regole sui tipi di operando dell'operatore condizionale (disattivato per impostazione predefinita).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Abilitare l'inizializzazione statica locale thread-safe (in per impostazione predefinita).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Si supponga `operator new` genera un'eccezione in caso di errore (disattivato per impostazione predefinita).|
-|[trigrammi\[-\]](zc-trigraphs-trigraphs-substitution.md)|Abilita i trigrammi (obsoleti, disattivata per impostazione predefinita).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Abilita i trigrammi (obsoleti, disattivata per impostazione predefinita).|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`è un tipo nativo, non un typedef (in per impostazione predefinita).|
 
 Per altre informazioni sui problemi di conformità in Visual C++, vedere [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).

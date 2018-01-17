@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissiva-(conformità agli standard)
 
@@ -30,7 +30,7 @@ Specificare la modalità di conformità agli standard al compilatore. Utilizzare
 
 ## <a name="syntax"></a>Sintassi
 
-> **/ permissiva-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Note
 
@@ -42,7 +42,7 @@ Il **/ permissiva-** è compatibile con quasi tutti i file di intestazione del K
 
 Il **/ permissiva-** opzione imposta la [/Zc: strictstrings](../../build/reference/zc-conformance.md) e [/Zc: rvaluecast](../../build/reference/zc-conformance.md) le opzioni per il comportamento conforme. Per impostazione predefinita al comportamento non conformi. È possibile passare specifico **/Zc** opzioni dopo **/ permissiva-** nella riga di comando per eseguire l'override di questo comportamento.
 
-Nelle versioni di inizio del compilatore in Visual Studio 2017 versione 15.3, il **/ permissiva-** opzione imposta la **/Zc:ternary** opzione. Il compilatore implementa anche più i requisiti per la ricerca nome in due fasi. Quando il **/ permissiva-** opzione è impostata, il compilatore analizza definizioni di modello di funzione e della classe, che identifica i nomi dei dipendenti e non dipendente utilizzati nei modelli. In questa versione, viene eseguita l'analisi delle dipendenze solo nome.
+Nelle versioni di inizio del compilatore in Visual Studio 2017 versione 15.3, il **/ permissiva-** opzione imposta la [/Zc:ternary](../../build/reference/zc-ternary.md) opzione. Il compilatore implementa anche più i requisiti per la ricerca nome in due fasi. Quando il **/ permissiva-** opzione è impostata, il compilatore analizza definizioni di modello di funzione e della classe, che identifica i nomi dei dipendenti e non dipendente utilizzati nei modelli. In questa versione, viene eseguita l'analisi delle dipendenze solo nome.
 
 Le estensioni specifiche dell'ambiente e aree di linguaggio che lascia lo standard dall'implementazione non sono interessate da **/ permissiva-**. Ad esempio, le specifiche di Microsoft `__declspec`, convenzione di chiamata e structured exception handling parole chiave e direttive pragma specifici del compilatore o attributi non sono contrassegnati dal compilatore in **/ permissiva-** modalità.
 
