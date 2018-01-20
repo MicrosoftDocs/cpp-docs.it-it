@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ (C++ moderno)
 C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I programmi in C++ ben scritti sono veloci ed efficienti. Il linguaggio è più flessibile di altri linguaggi, in quanto è possibile utilizzarlo per creare un'ampia gamma di applicazioni: da giochi divertenti ed emozionanti, a software scientifico a elevate prestazioni, fino a driver di dispositivo, programmi incorporati e applicazioni client Windows. Per più di 20 anni C++ è stato utilizzato per risolvere problemi come questi e molti altri. Molti non sanno che un numero sempre maggiore di programmatori in C++ ha abbandonato la vecchia programmazione di tipo C per ripiegare sul moderno C++.  
@@ -50,40 +50,60 @@ C++ è uno dei linguaggi di programmazione più ampiamente adottati nel mondo. I
  Lo stesso linguaggio C++ si è evoluto. Confrontare i due frammenti di codice seguenti. Qui viene illustrato il funzionamento in C++:  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  Di seguito viene illustrato il modo in cui viene eseguita la stessa operazione nel linguaggio C++ moderno:  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- In C++ moderno non è necessario utilizzare la gestione delle eccezioni esplicita o new/delete, poiché è possibile usare puntatori intelligenti. Quando si utilizza il `auto` deduzione del tipo e [funzione lambda](../cpp/lambda-expressions-in-cpp.md), è possibile scrivere codice più rapidamente, renderlo più conciso e comprensibile. Inoltre `for_each` è meno complesso, facilmente utilizzabile e meno soggetto a errori non intenzionali rispetto a un ciclo `for`. Per scrivere l'applicazione, è possibile usare i boilerplate insieme alle righe minime di codice. È inoltre possibile rendere tale codice indipendente dalle eccezioni e dalla memoria, senza allocazione/deallocazione o codici di errore da gestire.  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ In C++ moderno non è necessario utilizzare la gestione delle eccezioni esplicita o new/delete, poiché è possibile usare puntatori intelligenti. Quando si utilizza il `auto` deduzione del tipo e [funzione lambda](../cpp/lambda-expressions-in-cpp.md), è possibile scrivere codice più rapidamente, renderlo più conciso e comprensibile. E basato su intervallo `for` ciclo è pulita, più facile da usare e meno soggetto a errori non intenzionali rispetto a un tipo C `for` ciclo. Per scrivere l'applicazione, è possibile usare i boilerplate insieme alle righe minime di codice. È inoltre possibile rendere tale codice indipendente dalle eccezioni e dalla memoria, senza allocazione/deallocazione o codici di errore da gestire.  
   
  Il linguaggio C++ moderno comprende due tipi di polimorfismo: fase di compilazione, tramite i modelli e fase di esecuzione tramite l'ereditarietà e la virtualizzazione. È possibile combinare i due tipi di polimorfismo per un grande effetto. Il modello della libreria Standard C++ `shared_ptr` utilizza metodi virtuali interni per eseguire la cancellazione di tipo apparentemente senza. Evitare tuttavia di utilizzare in modo eccessivo la virtualizzazione per il polimorfismo quando un modello costituisce la scelta migliore. I modelli possono essere molto efficaci.  
   

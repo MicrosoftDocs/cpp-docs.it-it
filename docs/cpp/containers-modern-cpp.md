@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>Contenitori (C++ moderno)  
   
@@ -41,7 +41,7 @@ Quando è necessario ottimizzare le prestazioni, utilizzare:
   
 1.  Il [matrice](../standard-library/array-class-stl.md) del tipo durante l'incorporamento è importante, ad esempio, un membro di classe.  
   
-2.  Contenitori associativi, ad esempio [unordered_map] non ordinati ((... /standard-Library/Unordered-Map-Class.MD). Questi hanno elemento inferiore overhead e ricerca a tempo costante, ma può essere difficile da usare in modo corretto ed efficiente.  
+2.  Contenitori associativi non ordinati, ad esempio [unordered_map](../standard-library/unordered-map-class.md). Questi hanno elemento inferiore overhead e ricerca a tempo costante, ma può essere difficile da usare in modo corretto ed efficiente.  
   
 3.  Ordinati `vector`. Per altre informazioni, vedere [Algoritmi](../cpp/algorithms-modern-cpp.md).  
   

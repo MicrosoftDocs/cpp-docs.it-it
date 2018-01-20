@@ -1,9 +1,6 @@
 ---
-title: -DISASM | Documenti Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: /DISASM | Microsoft Docs
+ms.date: 1/17/2018
 ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,29 +10,40 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.assetid: 5f6d1fde-50ce-486d-9c1d-9372b7f7b533
-caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: e4d55bf94f5316ebd70a13d73d042a46e1cd012d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d448b92c3436f3d2875bd8d9b8e0af6a7149e065
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="disasm"></a>/DISASM
-```  
-/DISASM  
-```  
-  
-## <a name="remarks"></a>Note  
- Questa opzione Visualizza disassembly di sezioni di codice, tramite simboli, se presente nel file.  
-  
- /DISASM deve essere utilizzato solo nelle immagini (non gestite) native.  
-  
- Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati con la [/GL](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.  
-  
-## <a name="see-also"></a>Vedere anche  
- [Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)
+
+Stampare il disassembly di sezioni di codice nell'output di DUMPBIN.
+
+## <a name="syntax"></a>Sintassi
+
+> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}  
+
+### <a name="arguments"></a>Argomenti
+
+**BYTE**  
+Include i byte di istruzione con i codici operativi interpretati e gli argomenti nell'output di disassembly. Questa è l'opzione predefinita.
+
+**NOBYTES**  
+Non include i byte di istruzione nell'output di disassembly.
+
+## <a name="remarks"></a>Note
+
+Il **opzione /DISASM** opzione Visualizza disassembly di sezioni di codice nel file. Usa i simboli di debug se sono presenti nel file.
+
+**/DISASM** deve essere utilizzato solo in immagini native e non gestite. Lo strumento equivalente per il codice gestito è [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
+
+Solo il [/HEADERS](../../build/reference/headers.md) (opzione DUMPBIN) è disponibile per l'utilizzo con i file generati dal [/GL (Ottimizzazione intero programma)](../../build/reference/gl-whole-program-optimization.md) l'opzione del compilatore.
+
+## <a name="see-also"></a>Vedere anche
+
+[Opzioni di DUMPBIN](../../build/reference/dumpbin-options.md)  
