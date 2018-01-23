@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - locale/std::wstring_convert::to_bytes
 - locale/std::wstring_convert::converted
 - locale/std::wstring_convert::state
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::cvt [C++], wstring_convert
 - std::wstring_convert [C++], byte_string
@@ -31,16 +29,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7753e2be6699bc789417d8afe9e9f49e55af7010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 926edb3f3e1a362509b0f57ef2ae930faa7321ac
-ms.contentlocale: it-it
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: it-IT
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wstringconvert-class"></a>Classe wstring_convert
 La classe modello `wstring_convert` esegue le conversioni tra una stringa di caratteri "wide" e una stringa di byte.  
@@ -80,7 +78,7 @@ class wstring_convert
 |-|-|  
 |[wstring_convert](#wstring_convert)|Costruisce un oggetto di tipo `wstring_convert`.|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Definizioni typedef  
   
 |||  
 |-|-|  
@@ -150,7 +148,7 @@ wide_string from_bytes(const char* first, const char* last);
  Oggetto stringa di caratteri "wide" risultante dalla conversione.  
   
 ### <a name="remarks"></a>Note  
- Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md)`not` è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.  
+ Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md) non è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.  
   
  Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di caratteri "wide" convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di caratteri "wide", la funzione membro restituisce l'oggetto messaggio di errore con stringa di caratteri "wide". In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).  
   
@@ -207,7 +205,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |`last`|Ultimo elemento nell'intervallo di elementi da convertire.|  
   
 ### <a name="remarks"></a>Note  
- Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md)`not` è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.  
+ Se l'oggetto [conversion state](../standard-library/wstring-convert-class.md) non è stato costruito con un valore esplicito, viene impostato sul valore predefinito (lo stato iniziale della conversione) prima dell'inizio della conversione. In caso contrario, verrà lasciato invariato.  
   
  Il numero di elementi di input convertiti correttamente viene archiviato nell'oggetto conteggio di conversione. Se non si verificano errori di conversione, la funzione membro restituisce la stringa di byte convertita. In caso contrario, se l'oggetto è stato costruito con un inizializzatore per il messaggio di errore con stringa di byte, la funzione membro restituisce l'oggetto messaggio di errore con stringa di byte. In caso contrario, la funzione membro genera un oggetto della classe [range_error](../standard-library/range-error-class.md).  
   
@@ -241,4 +239,3 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
   
 ### <a name="remarks"></a>Note  
  Il primo costruttore archivia *Pcvt_arg* nell'[oggetto di conversione](../standard-library/wstring-convert-class.md)
-
