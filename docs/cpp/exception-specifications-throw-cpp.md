@@ -1,7 +1,7 @@
 ---
-title: Specifiche di eccezioni (generazione) (C++) | Documenti Microsoft
+title: Le specifiche di eccezione (throw, noexcept) (C++) | Documenti Microsoft
 ms.custom: 
-ms.date: 01/12/2018
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: c93fdaa75155e6f0117ef1c30d4e093d5ca0e576
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: bd96f666c4733f1c9b1aff65705840a46729194c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Le specifiche di eccezione (throw, noexcept) (C++)
 
 Specifiche di eccezione sono una funzionalità del linguaggio C++ che indicano lo scopo del programmatore sui tipi di eccezioni che possono essere propagati da una funzione. È possibile specificare che una funzione può o non può uscire da un'eccezione utilizzando un *specifica di eccezione*. Il compilatore può usare queste informazioni per ottimizzare le chiamate alla funzione e la funzione di escape per terminare il programma se un'eccezione imprevista. 
 
-Prima di C++ 17 non vi sono due tipi di specifica di eccezione. Il *noexcept specifica* è una caratteristica introdotta in C++ 11. Specifica se il set di potenziali eccezioni da fare in modo che la funzione è vuoto. Il *specifica di eccezione dinamiche*, o `throw(optional_type_list)` specifica, è stata deprecata in C++ 11 e rimossa in C++ 17, ad eccezione di `throw()`, che è un alias per noexcept (true). Questa specifica di eccezione è stata progettata per fornire informazioni di riepilogo sulle eccezioni che possono essere generate da una funzione, ma in pratica è stato trovato un problema. Stato di non condizionale di una specifica di eccezione dinamiche che è risultata piuttosto utile `throw()` specifica. Ad esempio, la dichiarazione di funzione:
+Prima di C++ 17 non vi sono due tipi di specifica di eccezione. Il *noexcept specifica* è una caratteristica introdotta in C++ 11. Specifica se il set di potenziali eccezioni da fare in modo che la funzione è vuoto. Il *specifica di eccezione dinamiche*, o `throw(optional_type_list)` specifica, è stata deprecata in C++ 11 e rimossa in C++ 17, ad eccezione di `throw()`, che è un alias per `noexcept(true)`. Questa specifica di eccezione è stata progettata per fornire informazioni di riepilogo sulle eccezioni che possono essere generate da una funzione, ma in pratica è stato trovato un problema. Stato di non condizionale di una specifica di eccezione dinamiche che è risultata piuttosto utile `throw()` specifica. Ad esempio, la dichiarazione di funzione:
 
 ```cpp
 void MyFunction(int i) throw();

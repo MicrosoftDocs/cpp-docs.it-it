@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Classe Platform::Collections::VectorView
 Rappresenta una visualizzazione in sola lettura di una raccolta sequenziale di oggetti a cui è possibile accedere singolarmente attraverso l'indice. Il tipo di ciascun oggetto nella raccolta è specificato dal parametro del modello.  
@@ -54,7 +54,7 @@ template <typename T, typename E>
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Vectorview](#ctor)|Inizializza una nuova istanza della classe VectorView.|  
+|[VectorView::VectorView](#ctor)|Inizializza una nuova istanza della classe VectorView.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -64,7 +64,7 @@ template <typename T, typename E>
 |[VectorView::GetAt](#getat)|Recupera l'elemento dell'oggetto VectorView corrente indicato dall'indice specificato.|  
 |[VectorView::GetMany](#getmany)|Recupera una sequenza di elementi dall'oggetto VectorView corrente, a partire dall'indice specificato.|  
 |[VectorView::IndexOf](#indexof)|Cerca l'elemento specificato nell'oggetto VectorView corrente e, se lo trova, restituisce l'indice dell'elemento.|  
-|[Vectorview:: Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|  
+|[VectorView::Size](#size)|Restituisce il numero di elementi nell'oggetto VectorView corrente.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `VectorView`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>Vedere anche  
  [Piattaforma Namespace](platform-namespace-c-cx.md)   
- [Creazione di componenti Windows Runtime in C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [Creazione di componenti Windows Runtime in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
