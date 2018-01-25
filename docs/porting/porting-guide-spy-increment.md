@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>Guida al porting: Spy++
 Questo case study relativo al porting contiene informazioni generali sul funzionamento di un tipico progetto di porting e sui tipi di problemi che è possibile riscontrare, oltre ad alcuni suggerimenti e trucchi per la risoluzione dei problemi di porting. Questa non intende essere una guida definitiva, perché l'esperienza del porting di un progetto dipende in larga misura dalle specifiche del codice.  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- Attualmente il progetto viene creato usando MBCS (Multi-byte Character Set), dunque char è il tipo di dati carattere appropriato. Tuttavia, per facilitare l'aggiornamento del codice a UTF-16 Unicode, viene aggiornato a TCHAR, che si risolve in char o wchar_t a seconda che la proprietà **Set di caratteri** nelle impostazioni del progetto sia impostata su MBCS o su Unicode.  
+ Attualmente il progetto viene compilato usando Multi-byte Character Set, dunque `char` è il tipo di dati character appropriato. Per facilitare l'aggiornamento del codice a UTF-16 Unicode, viene tuttavia eseguito l'aggiornamento a `wchar_t`, che si risolve in  **o**  a seconda che la proprietà `TCHAR`Set di caratteri`char` nelle impostazioni del progetto sia impostata su MBCS o su Unicode.  
   
  È necessario aggiornare alcuni altri blocchi di codice.  La classe base ios è stata sostituita da ios_base e ostream è stata sostituita da basic_ostream\<T>. Si aggiungono altre due definizioni typedef e la sezione viene compilata.  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  Il problema si verifica quando una variabile è stata inizialmente dichiarata `extern`, quindi dichiarata in un secondo momento `static`. I significati di questi due identificatori di classe di archiviazione si escludono a vicenda, ma ciò è consentito come estensione Microsoft. Se si voleva che il codice fosse portabile ad altri compilatori o si voleva eseguire la compilazione con /Za (compatibilità ANSI), sarebbe stato necessario modificare le dichiarazioni in modo da avere identificatori di classe di archiviazione corrispondenti.  
   
-##  <a name="porting_to_unicode"></a> Passaggio 11. Porting da MBCS a Unicode  
- Quando ci si riferisce a Unicode in ambito Windows in genere si intende UTF-16. Altri sistemi operativi, ad esempio Linux, usano UTF-8, ma Windows in genere non lo usa. Prima di eseguire effettivamente il porting del codice MBCS in UTF-16 Unicode, potrebbe essere opportuno eliminare temporaneamente gli avvisi che informano che il formato MBCS è deprecato, per poter eseguire altre operazioni o posticipare il porting fino a un momento appropriato. Il codice corrente usa il formato MBCS e per continuare è necessario scaricare la versione MBCS di MFC.  Questa libreria piuttosto imponente è stata rimossa dall'installazione predefinita di Visual Studio, quindi deve essere scaricata separatamente. Vedere [Componente aggiuntivo DLL MBCS MFC](../mfc/mfc-mbcs-dll-add-on.md). Dopo averla scaricata e aver riavviato Visual Studio, è possibile compilarla e collegarla alla versione MBCS di MFC, ma per eliminare gli avvisi relativi a MBCS è necessario aggiungere anche NO_WARN_MBCS_MFC_DEPRECATION all'elenco di macro predefinite nella sezione Preprocessor delle proprietà del progetto oppure all'inizio del file di intestazione stdafx.h o di un altro file di intestazione comune.  
+##  <a name="porting_to_unicode"></a> Passaggio 11. Porting da MBCS a Unicode
+
+ Quando ci si riferisce a Unicode in ambito Windows in genere si intende UTF-16. Altri sistemi operativi, ad esempio Linux, usano UTF-8, ma Windows in genere non lo usa. La versione MBCS di MFC è stata deprecata in Visual Studio 2013 e 2015, ma non in Visual Studio 2017. Se si usa Visual Studio 2013 o 2015, prima di convertire effettivamente il codice MBCS in UTF-16 Unicode, potrebbe essere opportuno eliminare temporaneamente gli avvisi che informano che il formato MBCS è deprecato, per poter eseguire altre operazioni o posticipare la conversione a un momento appropriato. Il codice corrente usa il formato MBCS e per continuare è necessario installare la versione ANSI/MBCS di MFC. La libreria MFC è di dimensioni piuttosto elevate e non fa parte dell'installazione predefinita **Sviluppo di applicazioni desktop con C++** di Visual Studio. Deve essere selezionata dai componenti facoltativi nel programma di installazione. Vedere [Componente aggiuntivo DLL MBCS MFC](../mfc/mfc-mbcs-dll-add-on.md). Dopo averla scaricata e aver riavviato Visual Studio, è possibile compilarla e collegarla alla versione MBCS di MFC, ma per eliminare gli avvisi relativi a MBCS è necessario, se si usa Visual Studio 2013 o 2015, aggiungere anche **NO_WARN_MBCS_MFC_DEPRECATION** all'elenco di macro predefinite nella sezione Preprocessore delle proprietà del progetto oppure all'inizio del file di intestazione stdafx.h o di un altro file di intestazione comune.  
   
  Verranno ora presi in esame alcuni errori del linker.  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  È possibile aggiornare effettivamente il codice MBCS (Multi-byte Character Set) a Unicode. Dal momento che si tratta di un'applicazione Windows, strettamente connessa alla piattaforma desktop di Windows, verrà eseguito il porting alla codifica Unicode UTF-16 usata da Windows. Se si scrive il codice multipiattaforma o si esegue il porting di un'applicazione Windows su un'altra piattaforma, può essere opportuno considerare il porting alla codifica UTF-8, ampiamente usata sugli altri sistemi operativi.  
   
- Per il porting alla codifica UTF-16 Unicode, è necessario decidere se si vuole ancora che l'opzione compili il set MBCS.  Se si vuole che l'opzione supporti MBCS, è necessario usare la macro TCHAR come tipo di carattere, che si risolve in char o wchar_t, a seconda che durante la compilazione si sia definito _MBCS o _UNICODE. Il passaggio a TCHAR e alle versioni TCHAR delle varie API invece di wchar_t e le relative API associate significa che è possibile ripristinare una versione MBCS del codice semplicemente definendo la macro _MBCS invece di _UNICODE. Oltre a TCHAR, esiste un'ampia gamma di versioni TCHAR come typedef, macro e funzioni ampiamente usati, ad esempio, LPCTSTR invece LPCSTR e così via. Nella finestra di dialogo Proprietà del progetto, sotto **Proprietà di configurazione**, nella sezione **Generale** modificare la proprietà **Set di caratteri** da **Utilizza set di caratteri multibyte** a **Utilizza set di caratteri Unicode**. Questa impostazione incide su quale macro viene definita durante la compilazione. Esiste sia una macro UNICODE sia una macro _UNICODE. La proprietà del progetto influisce su entrambe in modo coerente. Le intestazioni di Windows usano il formato UNICODE se le intestazioni di Visual C++ come MFC usano _UNICODE, ma una è definito, l'altra è sempre definito.  
+ Per il porting alla codifica UTF-16 Unicode, è necessario decidere se si vuole ancora che l'opzione compili il set MBCS.  Se si vuole che l'opzione supporti MBCS, è necessario usare la macro TCHAR come tipo di carattere, che si risolve in `char` o `wchar_t`, a seconda che durante la compilazione si sia definito _MBCS o _UNICODE. Il passaggio a TCHAR e alle versioni TCHAR delle varie API invece di `wchar_t` e le relative API associate significa che è possibile ripristinare una versione MBCS del codice semplicemente definendo la macro _MBCS invece di _UNICODE. Oltre a TCHAR, esiste un'ampia gamma di versioni TCHAR come typedef, macro e funzioni ampiamente usati, ad esempio, LPCTSTR invece LPCSTR e così via. Nella finestra di dialogo Proprietà del progetto, sotto **Proprietà di configurazione**, nella sezione **Generale** modificare la proprietà **Set di caratteri** da **Utilizza set di caratteri multibyte** a **Utilizza set di caratteri Unicode**. Questa impostazione incide su quale macro viene definita durante la compilazione. Esiste sia una macro UNICODE sia una macro _UNICODE. La proprietà del progetto influisce su entrambe in modo coerente. Le intestazioni di Windows usano il formato UNICODE se le intestazioni di Visual C++ come MFC usano _UNICODE, ma una è definito, l'altra è sempre definito.  
   
  È disponibile un'utile [guida](http://msdn.microsoft.com/library/cc194801.aspx) al porting da MBCS a UTF-16 Unicode mediante TCHAR. È la direzione scelta per questo articolo. In primo luogo si converte la proprietà **Set di caratteri** in **Utilizza set di caratteri Unicode** e il progetto viene ricompilato.  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- La macro _T fa sì che il valore letterale stringa venga compilato come stringa char o stringa wchar_t, a seconda dell'intestazione di MBCS o UNICODE. Per sostituire tutte le stringhe con _T in Visual Studio, aprire prima **Sostituzione veloce** (tastiera: Ctrl + F) oppure **Sostituisci nei file** (tastiera: Ctrl + Maiusc + H), quindi scegliere la casella di controllo **Utilizza espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro _T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.  
+ La macro _T fa sì che il valore letterale stringa venga compilato come stringa `char` o stringa `wchar_t`, a seconda dell'impostazione di MBCS o UNICODE. Per sostituire tutte le stringhe con _T in Visual Studio, aprire prima **Sostituzione veloce** (tastiera: Ctrl + F) oppure **Sostituisci nei file** (tastiera: Ctrl + Maiusc + H), quindi scegliere la casella di controllo **Utilizza espressioni regolari**. Immettere `((\".*?\")|('.+?'))` come testo di ricerca e `_T($1)` come testo di sostituzione. Se la macro _T è già presente in alcune stringhe, questa procedura l'aggiungerà di nuovo e potrebbe anche trovare alcuni casi in cui non è disponibile, ad esempio quando si usa `#include`; di conseguenza, è preferibile usare **Sostituisci successivo** anziché **Sostituisci tutto**.  
   
  Questa funzione particolare, [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx), viene effettivamente definita nelle intestazioni di Windows e la relativa documentazione consiglia di non usarla, a causa del possibile sovraccarico del buffer. Non è specificata una dimensione per il buffer `szTmp`, quindi non esiste alcun modo per la funzione di verificare che il buffer possa contenere tutti i dati da scrivere. Vedere la sezione successiva sul porting alle funzioni CRT sicure, in cui è possibile risolvere altri problemi simili. Alla fine è stata sostituita da [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Anche se è stata usata la funzione _tcscpy, cioè la funzione strcpy TCHAR per la copia di una stringa, il buffer allocato era un buffer char. È possibile modificarla semplicemente in TCHAR.  
+ Anche se è stata usata la funzione _tcscpy, cioè la funzione strcpy TCHAR per la copia di una stringa, il buffer allocato era un buffer `char`. È possibile modificarla semplicemente in TCHAR.  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- Analogamente, sono stati modificati `LPSTR` (puntatore di tipo long a STRing) e `LPCSTR` (puntatore di tipo long a Constant STRing) rispettivamente in `LPTSTR` (puntatore di tipo long a TCHAR STRing) e `LPCTSTR` (puntatore di tipo long a Constant TCHAR STRing), quando garantito da un errore del compilatore. Si è scelto di non effettuare tali sostituzioni usando operazioni globali di ricerca e sostituzione, perché ogni situazione doveva essere esaminata singolarmente. In alcuni casi, è necessaria la versione char, ad esempio durante l'elaborazione di alcuni messaggi di Windows che usano strutture di Windows con il suffisso A. Nell'API di Windows, il suffisso A significa ASCII o ANSI (e si applica anche a MBCS) e il suffisso W significa caratteri estesi o UTF-16 Unicode. Questo modello di denominazione viene usato nelle intestazioni di Windows, ma è stato anche adottato nel codice di Spy++, quando si è reso necessario aggiungere una versione Unicode di una funzione che era già stata definita solo in una versione di MBCS.  
+ Analogamente, sono stati modificati `LPSTR` (puntatore di tipo long a STRing) e `LPCSTR` (puntatore di tipo long a Constant STRing) rispettivamente in `LPTSTR` (puntatore di tipo long a TCHAR STRing) e `LPCTSTR` (puntatore di tipo long a Constant TCHAR STRing), quando garantito da un errore del compilatore. Si è scelto di non effettuare tali sostituzioni usando operazioni globali di ricerca e sostituzione, perché ogni situazione doveva essere esaminata singolarmente. In alcuni casi, è necessaria la versione `char`, ad esempio durante l'elaborazione di alcuni messaggi di Windows che usano strutture di Windows con il suffisso A. Nell'API di Windows, il suffisso A significa ASCII o ANSI (e si applica anche a MBCS) e il suffisso W significa caratteri estesi o UTF-16 Unicode. Questo modello di denominazione viene usato nelle intestazioni di Windows, ma è stato anche adottato nel codice di Spy++, quando si è reso necessario aggiungere una versione Unicode di una funzione che era già stata definita solo in una versione di MBCS.  
   
  In alcuni casi è stato necessario sostituire un tipo in modo da usare una versione che si risolvesse correttamente (WNDCLASS anziché WNDCLASSA, ad esempio).  
   
