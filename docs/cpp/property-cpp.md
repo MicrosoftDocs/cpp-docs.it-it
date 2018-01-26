@@ -1,5 +1,5 @@
 ---
-title: "proprietà (C++) | Documenti Microsoft"
+title: property (C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: afc8fb6ad9808bf0a0139e838982a08820d2fb88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313123a75c2fbcf295d1c1d87aa423e76154091e
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="property-c"></a>property (C++)
 **Sezione specifica Microsoft**  
@@ -33,9 +33,9 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-      __declspec( property( get=get_func_name ) ) declarator  
-__declspec( property( put=put_func_name ) ) declarator  
-__declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
+   __declspec( property( get=get_func_name ) ) declarator  
+   __declspec( property( put=put_func_name ) ) declarator  
+   __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -76,5 +76,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [declspec](../cpp/declspec.md)   
+ [__declspec](../cpp/declspec.md)   
  [Parole chiave](../cpp/keywords-cpp.md)

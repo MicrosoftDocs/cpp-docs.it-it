@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>Istruzione try-except
 
@@ -50,11 +50,11 @@ Il **provare-tranne** istruzione è un'estensione Microsoft c e linguaggi C++ ch
 
 ## <a name="syntax"></a>Sintassi  
   
-> **try**   
+> **__try**   
 > {  
 >    codice controllato  
 > }  
-> **except** ( *espressione* )  
+> **__except** ( *expression* )  
 > {  
 >    codice del gestore eccezioni  
 > }  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-I tipi di puntatore `PEXCEPTION_RECORD` e `PCONTEXT` sono definiti nel file di inclusione WINNT. H e `_EXCEPTION_RECORD` e `_CONTEXT` sono definiti nel file di inclusione EXCPT. H
+I tipi di puntatore `PEXCEPTION_RECORD` e `PCONTEXT` sono definiti nel file di inclusione \<Winnt. h >, e `_EXCEPTION_RECORD` e `_CONTEXT` sono definiti nel file di inclusione \<excpt. h >
 
 È possibile utilizzare `GetExceptionCode` all'interno del gestore di eccezioni. Tuttavia, è possibile utilizzare `GetExceptionInformation` solo all'interno di espressione di filtro eccezioni. Le informazioni che indica in genere sono nello stack e non sono più disponibili quando il controllo viene trasferito al gestore di eccezioni.
 
 La funzione intrinseca `AbnormalTermination` è disponibile all'interno di un gestore di terminazione. Restituisce 0 se il corpo del **try-finally** istruzione termina in modo sequenziale. In tutti gli altri casi, restituisce 1.
 
-EXCPT.H definisce alcuni nomi alternativi per questi intrinseci:
+excpt. h definisce alcuni nomi alternativi per questi intrinseci:
 
 `GetExceptionCode`equivale a`_exception_code`
 

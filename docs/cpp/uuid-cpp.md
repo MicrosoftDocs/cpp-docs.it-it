@@ -1,5 +1,5 @@
 ---
-title: UUID (C++) | Documenti Microsoft
+title: uuid (C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ad4362b8e84d7ffb4bb090a4e513538cdb26ae25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c999b429cb789167eeb754b6f11a8b3d90c28642
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Sezione specifica Microsoft**  
@@ -33,9 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-__declspec( uuid("  
-ComObjectGUID  
-") ) declarator  
+__declspec( uuid("ComObjectGUID") ) declarator  
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -46,12 +44,12 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- Tale attributo può essere applicato in una ridichiarazione. Questo consente alle intestazioni di sistema di fornire le definizioni di interfaccia come **IUnknown**e alla ridichiarazione in un'altra intestazione (come COMDEF. H) per fornire il GUID.  
+ Tale attributo può essere applicato in una ridichiarazione. Questo consente alle intestazioni di sistema di fornire le definizioni di interfaccia come **IUnknown**e alla ridichiarazione in un'altra intestazione (ad esempio \<Comdef. h >) per fornire il GUID.  
   
  La parola chiave [uuidof](../cpp/uuidof-operator.md) possono essere applicati per recuperare la costante GUID associata a un tipo definito dall'utente.  
   
  **Fine sezione specifica Microsoft**  
   
 ## <a name="see-also"></a>Vedere anche  
- [declspec](../cpp/declspec.md)   
+ [__declspec](../cpp/declspec.md)   
  [Parole chiave](../cpp/keywords-cpp.md)

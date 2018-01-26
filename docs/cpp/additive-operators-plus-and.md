@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>Operatori di addizione: + e -
 ## <a name="syntax"></a>Sintassi  
@@ -55,21 +55,21 @@ expression - expression
   
 |Tipo|Significato|  
 |----------|-------------|  
-|*operazioni aritmetiche*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
-|*integrale*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|  
-|*scalare*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
+|*arithmetic*|I tipi integrali e mobili collettivamente sono denominati tipi "aritmetici".|  
+|*integral*|I tipi char e int di tutte le dimensioni (long e short) e le enumerazioni sono tipi "integrali".|  
+|*scalar*|Gli operandi scalari sono operandi di tipo aritmetico o di tipo puntatore.|  
   
  Le combinazioni valide per questi operatori sono:  
   
- *operazioni aritmetiche* + *aritmetico*  
+ *arithmetic* + *arithmetic*  
   
- *scalare* + *integrale*  
+ *scalar* + *integral*  
   
- *integrale* + *scalare*  
+ *integral* + *scalar*  
   
- *operazioni aritmetiche* - *aritmetico*  
+ *arithmetic* - *arithmetic*  
   
- *scalare* - *scalare*  
+ *scalar* - *scalar*  
   
  Si noti che l'addizione e la sottrazione non sono operazioni equivalenti.  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  Il codice del form `pIntArray = pIntArray + 1` si trova raramente nei programmi C++; per eseguire un incremento, sono preferibili i seguenti form: `pIntArray++` o `pIntArray += 1`.  
   
 ## <a name="pointer-subtraction"></a>Sottrazione di puntatori  
- Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard STDDEF.H).  
+ Se entrambi gli operandi sono puntatori, il risultato di una sottrazione è la differenza (in elementi di matrice) tra gli operandi. L'espressione di sottrazione restituisce un risultato integrale con segno di tipo ptrdiff_t (definito nel file di inclusione standard \<STDDEF. h >).  
   
  Uno degli operandi può essere di tipo integrale purché sia il secondo operando. Il risultato della sottrazione è dello stesso tipo del puntatore originale. Il valore della sottrazione è un puntatore al (*n* - *si*) elemento di matrice th, in cui  *n*  è l'elemento a cui fa riferimento il puntatore originale e *si* è il valore integrale del secondo operando.  
   

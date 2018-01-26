@@ -25,11 +25,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-software-exceptions"></a>Generazione di eccezioni software
 Alcuni degli errori di programma più comuni non sono contrassegnati come eccezioni dal sistema. Ad esempio, se si tenta di allocare un blocco di memoria ma non vi è memoria sufficiente, il runtime o la funzione API non genera un'eccezione ma restituisce un codice di errore.  
@@ -44,7 +44,7 @@ Alcuni degli errori di programma più comuni non sono contrassegnati come eccezi
   
 -   Utilizzare i filtri per la gestione delle eccezioni per esegue il test del codice di eccezione definito.  
   
- Il file WINERROR.H mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.  
+ Il \<Winerror. h > file Mostra il formato per i codici di eccezione. Per assicurarsi di non definire un codice che sia in conflitto con il codice di eccezione esistente, impostare il terzo bit più significativo su 1. I quattro bit più significativi dovrebbe essere impostati come illustrato nella tabella seguente.  
   
 |BITS|Impostazione binaria consigliata|Descrizione|  
 |----------|--------------------------------|-----------------|  

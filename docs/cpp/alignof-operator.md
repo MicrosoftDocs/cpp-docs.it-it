@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alignof-operator"></a>Operatore __alignof
 In C++11 è stato introdotto l'operatore `alignof`, che restituisce l'allineamento, in byte, del tipo specificato. Per garantire la massima portabilità, è consigliabile usare l'operatore alignof invece dell'operatore __alignof specifico di Microsoft.  
@@ -40,10 +40,7 @@ In C++11 è stato introdotto l'operatore `alignof`, che restituisce l'allineamen
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      __alignof(   
-   type    
-)  
+  __alignof( type )
 ```  
   
 ## <a name="remarks"></a>Note  
@@ -51,13 +48,13 @@ In C++11 è stato introdotto l'operatore `alignof`, che restituisce l'allineamen
   
 |Espressione|Valore|  
 |----------------|-----------|  
-|**alignof (char)**|1|  
-|**alignof (breve)**|2|  
-|**alignof (int)**|4|  
-|**alignof ( \__int64)**|8|  
-|**alignof (float)**|4|  
-|**alignof (double)**|8|  
-|**alignof (char\* )**|4|  
+|**__alignof( char )**|1|  
+|**__alignof( short )**|2|  
+|**__alignof( int )**|4|  
+|**__alignof( \__int64 )**|8|  
+|**__alignof( float )**|4|  
+|**__alignof( double )**|8|  
+|**__alignof( char\* )**|4|  
   
  Il valore `__alignof` è uguale al valore di `sizeof` per i tipi di base. Si consideri, in ogni caso, il seguente esempio:  
   
@@ -92,7 +89,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [__unaligned](../cpp/unaligned.md)  
   
--   [/Zp (Allineamento membri Struct)](../build/reference/zp-struct-member-alignment.md)  
+-   [/Zp (allineamento membri struct)](../build/reference/zp-struct-member-alignment.md)  
   
 -   [Esempi di allineamento della struttura](../build/examples-of-structure-alignment.md) (specifico per x64)  
   

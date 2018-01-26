@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>Classe _variant_t
 **Sezione specifica Microsoft**  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[variant_t](../cpp/variant-t-variant-t.md)|Costruisce un oggetto `_variant_t`.|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|Costruisce un oggetto `_variant_t`.|  
   
 ### <a name="operations"></a>Operazioni  
   
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[Operator =](../cpp/variant-t-operator-equal.md)|Assegna un nuovo valore a un oggetto `_variant_t` esistente.|  
-|[operatore = =,! =](../cpp/variant-t-relational-operators.md)|Confronta due oggetti `_variant_t` per verificarne l'uguaglianza o la disuguaglianza.|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|Confronta due oggetti `_variant_t` per verificarne l'uguaglianza o la disuguaglianza.|  
 |[Estrattori](../cpp/variant-t-extractors.md)|Estrarre dati da incapsulato **VARIANT** oggetto.|  
   
 **Fine sezione specifica Microsoft**  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** comutil.h  
+ **Intestazione:** \<comutil.h >  
   
  **Lib:** comsuppw.lib o comsuppwd.lib (vedere [/Zc: wchar_t (wchar_t è il tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
   

@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>Classe _com_error
 **Sezione specifica Microsoft**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[com_error](../cpp/com-error-com-error.md)|Costruisce un oggetto `_com_error`.|  
+|[_com_error](../cpp/com-error-com-error.md)|Costruisce un oggetto `_com_error`.|  
   
 ### <a name="operators"></a>Operatori  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **Fine sezione specifica Microsoft**  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** Comdef. h  
+ **Intestazione:** \<Comdef. h >  
   
  `Lib:`comsuppw.lib o comsuppwd.lib (vedere [/Zc: wchar_t (wchar_t è il tipo nativo)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) per altre informazioni)  
   

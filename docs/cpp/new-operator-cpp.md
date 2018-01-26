@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>Operatore new (C++)
 Alloca memoria per un oggetto o una matrice di oggetti di *-nome del tipo* dall'archiviazione disponibile e restituisce un puntatore opportunamente tipizzato, diverso da zero per l'oggetto.  
@@ -69,10 +69,10 @@ delete *p;
   
  L'elenco seguente descrive gli elementi di sintassi di **nuova**:  
   
- *selezione host*  
+ *placement*  
  Fornisce un modo per passare argomenti aggiuntivi se si esegue l'overload **nuova**.  
   
- *nome del tipo*  
+ *type-name*  
  Specifica il tipo da allocare; può essere un tipo incorporato o un tipo definito dall'utente. Se la specifica del tipo è complessa, è possibile racchiuderla tra parentesi per forzare l'ordine di associazione.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Quando il compilatore rileva la **nuova** operatore per allocare un oggetto di tipo `type`, effettua una chiamata a `type` **:: operatore new (sizeof (** `type` **))**  o, se non definita dall'utente `operator new` è definito, **:: operatore new (sizeof (** `type` **))**. Pertanto, il **nuova** operatore può allocare la quantità di memoria corretta per l'oggetto.  
   
 > [!NOTE]
->  L'argomento `operator new` è di tipo **size_t**. Questo tipo è definito in DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H e TIME.H.  
+>  L'argomento `operator new` è di tipo **size_t**. Questo tipo è definito in \<Direct. h >, \<malloc. h >, \<Memory. h >, \<Search. h >, \<STDDEF. h >, \<stdio. h >, \<STDLIB. h >, \<String. h >, e \<Time. h >.  
   
  Consente di specificare un'opzione nella grammatica *posizionamento* (vedere la grammatica per [nuovo operatore](../cpp/new-operator-cpp.md)). Il *posizionamento* parametro può essere utilizzato solo per le implementazioni definite dall'utente di `operator new`; permette di informazioni aggiuntive da passare al `operator new`. Un'espressione con un *posizionamento* campo, ad esempio `T *TObject = new ( 0x0040 ) T;` viene convertito in `T *TObject = T::operator new( sizeof( T ), 0x0040 );` se classe T dispone dell'operatore membro new, in caso contrario in `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

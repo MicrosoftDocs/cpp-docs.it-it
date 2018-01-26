@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a34d703783ce638991585b7e7a99b2015923182b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
@@ -56,7 +56,7 @@ I due ambiti delle funzioni `operator new` sono descritti nella tabella seguente
 |**:: operatore new**|Global|  
 |*Nome classe* **:: operatore new**|Classe|  
   
- Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito da STDDEF. H) e il tipo restituito è sempre **void \*** .  
+ Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito in \<STDDEF. h >), e il tipo restituito è sempre **void \***  .  
   
  Globale **operatore new** funzione viene chiamata quando la **nuova** operatore viene usato per allocare oggetti di tipi predefiniti, definiti dall'utente gli oggetti del tipo di classe che non contengono **operatore new** funzioni e le matrici di qualsiasi tipo. Quando il **nuova** operatore viene usato per allocare oggetti di un tipo di classe in cui un **operatore new** è definito, tale classe **operatore new** viene chiamato.  
   
