@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -17,12 +19,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -32,7 +35,7 @@ Il linguaggio di programmazione e gli strumenti di sviluppo di Visual Studio 201
 
 Questo contenuto è destinato agli sviluppatori di C++ che si occupano della scrittura dei programmi.
 
-- Coloro che cercano un package ridistribuibile di C++ e componenti di runtime per poter eseguire un programma possono visitare l' [Area download Microsoft](http://www.microsoft.com/en-us/download/) e immettere **Visual C++** nella casella di ricerca.
+- Se si cerca uno specifico package ridistribuibile di C++ e componenti di runtime per poter eseguire un programma, visitare il sito Web [Microsoft](http://www.microsoft.com/) e immettere **Visual C++ Redistributable** nella casella di ricerca. Scaricare e installare il package ridistribuibile per l'architettura del computer (ad esempio x64 se si esegue Windows a 64 bit) e la versione di Visual C++ necessaria. 
 
 - Coloro che cercano informazioni introduttive sulla programmazione di C++ possono visitare uno dei numerosi siti Web che offrono questi contenuti oppure richiedere una copia della [pubblicazione relativa alla programmazione, ai principi e alle procedure con C++ (seconda edizione)](http://stroustrup.com/Programming/) di Bjarne Stroustup, ideatore di C++. I contenuti di Visual C++ prevedono una certa familiarità con C++.
 

@@ -1,42 +1,42 @@
 ---
 title: Come segnalare un problema con il set di strumenti Visual C++ | Microsoft Docs
-ms.custom: 
-ms.date: 1/03/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp
+ms.date: 1/11/2018
+ms.technology:
+- cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
 
-Se si riscontrano problemi con il compilatore, il linker o altri strumenti di Visual C++ è necessario inviare una segnalazione a Microsoft.
+Se si riscontrano problemi con il compilatore, il linker o altri strumenti e librerie di Visual C++ è necessario inviare una segnalazione a Microsoft.
 
-Il modo migliore per segnalare un problema è inviare un report con una descrizione del problema riscontrato, informazioni dettagliate su come viene compilato il programma e parte del codice necessario per riprodurre il problema nei computer Microsoft. In questo modo è possibile verificare rapidamente se il problema sussiste solo nell'ambiente locale, determinare se ha effetto su altre versioni del compilatore e diagnosticarne la causa.
+Il modo migliore per segnalare un problema è inviare un report con una descrizione del problema riscontrato, informazioni dettagliate su come viene compilato il programma e una *procedura di riproduzione*, vale a dire un test case per riprodurre il problema nei computer Microsoft. In questo modo è possibile verificare rapidamente se il problema riguarda il codice Microsoft e non l'ambiente locale, determinare se ha effetto su altre versioni del compilatore e diagnosticarne la causa.
 
 In questo documento verranno trattati gli argomenti seguenti
 
-- [Come preparare il report](#prepare) con le informazioni essenziali.
+- [Come preparare il report](#how-to-prepare-your-report) con le informazioni essenziali.
 
-- [Come generare una procedura di riproduzione](#generate) e i diversi tipi di procedure.
+- [Come generare una procedura di riproduzione](#how-to-generate-a-repro) e i diversi tipi di procedure.
 
-- [Modi per inviare il report](#send) e caratteristiche dei singoli report.
+- [Modi per inviare il report](#ways-to-send-your-report) e caratteristiche dei singoli report.
 
 I report sono strumenti importanti per tutti gli sviluppatori. Grazie per contribuire a migliorare Visual C++.
 
-## <a name="prepare"></a> Come preparare il report
+## <a name="how-to-prepare-your-report"></a>Come preparare il report
 
-È importante creare un report esaustivo in quanto è molto difficile riprodurre il problema riscontrato nei computer utente senza avere informazioni complete. Più il report è completo, più alta è la probabilità che si possa ricreare il problema ed eseguire la diagnosi.
+È importante creare un report esaustivo in quanto è molto difficile riprodurre il problema riscontrato nei computer Microsoft senza avere informazioni complete. Più il report è completo, più alta è la probabilità che si possa ricreare il problema ed eseguire la diagnosi.
 
 Il report deve contenere almeno le informazioni seguenti
 
@@ -46,58 +46,45 @@ Il report deve contenere almeno le informazioni seguenti
 
 - Una descrizione dettagliata del problema riscontrato.
 
-- Una "procedura di riproduzione", vale a dire il codice sorgente che illustra il problema.
+- Una procedura di riproduzione: un esempio di codice sorgente completo, semplificato e indipendente, che illustra il problema.
 
-Continuare a leggere per sapere dove trovare le informazioni specifiche necessarie.
+Continuare a leggere per sapere dove trovare le informazioni specifiche necessarie e come creare una procedura di riproduzione del problema esaustiva.
 
 ### <a name="the-toolset-version"></a>Versione del set di strumenti
 
-È necessario comunicare la versione completa del set di strumenti in uso in modo che sia possibile testare la procedura di riproduzione usando lo stesso set di strumenti applicato nei computer utente. Se il problema può essere riprodotto, queste informazioni rappresentano anche un punto di partenza per capire quali altre versioni del set di strumenti presentano lo stesso problema.
+È necessario comunicare la versione completa del set di strumenti e la relativa architettura di destinazione che causa il problema in modo che sia possibile testare la procedura di riproduzione usando lo stesso set di strumenti nei computer Microsoft. Se il problema può essere riprodotto, queste informazioni rappresentano anche un punto di partenza per capire quali altre versioni del set di strumenti presentano lo stesso problema.
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Per segnalare la versione completa del compilatore in uso
 
-1. Premere WINDOWS sulla tastiera e digitare `Developer Command Prompt`.
+1. Aprire il **prompt dei comandi per gli sviluppatori** corrispondente alla versione di Visual Studio e all'architettura di configurazione usata per compilare il progetto. Ad esempio, se si usa Visual Studio 2017 in computer x64 per computer di destinazione x64, scegliere **Prompt dei comandi degli strumenti nativi x64 per VS 2017**. Per altre informazioni, vedere [Collegamenti al prompt dei comandi per gli sviluppatori](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
 
-1. Dall'elenco delle corrispondenze scegliere la versione del **prompt dei comandi per gli sviluppatori** che corrisponde alla versione di Visual Studio usata.
-
-1. Nella console **Prompt dei comandi per gli sviluppatori** immettere il comando `cl /Bv /CLR`.
+1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere il comando **cl**.
 
 L'output sarà simile al seguente:
 
 ```Output
-C:\Compiler>cl /Bv /CLR
-Microsoft (R) C/C++ Optimizing Compiler Version 18.00.40209
-for Microsoft (R) .NET Framework version 4.00.30319.34014
+C:\Users\username\Source>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-Compiler Passes:
- C:\WinCComp\binaries.x86chk\bin\i386\cl.exe:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c1xx.dll:      Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\c2.dll:        Version 18.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\link.exe:      Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\mspdb120.dll:  Version 12.00.40209.0
- C:\WinCComp\binaries.x86chk\bin\i386\1033\clui.dll: Version 18.00.40209.0
- Common Language Runtime:                            Version  4.00.30319.34014
-
-cl : Command line error D8003 : missing source filename
+usage: cl [ option... ] filename... [ /link linkoption... ]
 ```
 
 Copiare e incollare l'intero output nel report.
 
 ### <a name="the-command-line"></a>Riga di comando
 
-È necessario specificare l'intera riga di comando (cl.exe e relativi argomenti) che l'utente ha usato per compilare il codice in modo che sia possibile compilare il codice esattamente come nei computer utente. Questo passaggio è importante perché il problema riscontrato potrebbe verificarsi solo quando si compila un determinato argomento o una combinazione di argomenti.
+È necessario specificare l'esatta riga di comando (cl.exe e tutti i relativi argomenti) che l'utente ha usato per compilare il codice in modo che sia possibile compilare il codice nello stesso modo nei computer Microsoft. Questo passaggio è importante perché il problema riscontrato potrebbe verificarsi solo quando si compila un determinato argomento o una combinazione di argomenti.
 
 Per trovare facilmente queste informazioni, vedere il log di compilazione immediatamente dopo che si è verificato il problema. La riga di comando conterrà quindi esattamente gli stessi argomenti che potrebbero essere la causa del problema.
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>Per segnalare i contenuti della riga di comando
 
-1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file si trova in \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog.
+1. Individuare il file **CL.command.1.tlog** e aprirlo. Per impostazione predefinita, questo file si trova nella cartella Documenti in \\Visual Studio *versione*\\Progetti\\*NomeSoluzione*\\*NomeProgetto*\\*Configurazione*\\*NomeProgetto*TLOG\\CL.command.1.tlog, o nella cartella Utente in \\Origine\\Repository\\*NomeSoluzione*\\*NomeProgetto*\\*Configurazione*\\*NomeProgetto*TLOG\\CL.command.1.tlog. Se si usa un altro sistema di compilazione o se è stato modificato il percorso predefinito per il progetto, il file può trovarsi in una posizione diversa.
 
    Il file contiene i nomi dei file del codice sorgente seguiti dagli argomenti della riga di comando usati per la compilazione, disposti su singole righe.
 
-1. Individuare la riga che contiene il nome del file del codice sorgente in cui si verifica il problema. La riga sottostante contiene il comando cl.exe corrispondente e i relativi argomenti.
+1. Individuare la riga che contiene il nome del file del codice sorgente in cui si verifica il problema. La riga sottostante contiene gli argomenti del comando cl.exe corrispondenti.
 
 Copiare e incollare l'intera riga di comando nel report.
 
@@ -105,18 +92,37 @@ Copiare e incollare l'intera riga di comando nel report.
 
 Per poter visualizzare lo stesso errore che si verifica nei computer utente, è necessario specificare una descrizione dettagliata del problema riscontrato. È talvolta utile anche sapere cosa si stava eseguendo e cosa si prevedeva come risultato.
 
-Specificare i messaggi di errore precisi generati dal set di strumenti, una breve descrizione di ciò che si stava tentando di eseguire per comprendere il codice della procedura di riproduzione e tutti i dettagli che potrebbero essere utili per diagnosticare il problema riscontrato, ad esempio eventuali soluzioni alternative adottate. Non ripetere le informazioni già specificate in altre sezioni del report.
+Indicare esattamente i messaggi di errore generati dal set di strumenti o specificare l'esatto comportamento del runtime. Queste informazioni sono necessarie per verificare che il problema sia stato riprodotto correttamente. Includere tutto l'output del compilatore e non solo l'ultimo messaggio di errore. È necessario avere a disposizione tutti gli elementi che hanno causato il problema segnalato. Se possibile, duplicare il problema usando il compilatore da riga di comando in quanto genera un output più utile. Può succedere che l'IDE e altri sistemi di compilazione filtrino i messaggi di errore visualizzati o acquisiscano solo la prima riga di un messaggio di errore.
+
+Se il problema consiste nel fatto che il compilatore accetta il codice non valido e non genera una diagnostica, segnalarlo in questo report.
+
+Per segnalare un problema di comportamento del runtime, includere una copia esatta della stampa del programma e di ciò che dovrebbe essere visualizzato. Teoricamente queste informazioni sono disponibili nell'output dell'istruzione, ad esempio `printf("This should be 5: %d\n", actual_result);`. Segnalare anche se il programma si arresta in modo anomalo o si blocca.
+
+Aggiungere qualsiasi altro dettaglio che potrebbe contribuire a diagnosticare il problema riscontrato, ad esempio eventuali soluzioni alternative adottate. Non ripetere le informazioni già specificate in altre sezioni del report.
 
 ### <a name="the-repro"></a>Procedura di riproduzione
 
-Perché sia possibile *riprodurre* l'errore che si è verificato nei computer utente, è necessaria una procedura di riproduzione, vale a dire un esempio di codice sorgente indipendente che illustra il problema riscontrato. In base al tipo di problema riscontrato, è necessario scegliere il tipo di procedura di riproduzione da includere nel report. Senza una corretta procedura di riproduzione, è impossibile eseguire un'analisi.
+La procedura di riproduzione è un esempio di codice sorgente completo e indipendente che illustra, riproducendolo, il problema riscontrato. Da qui il suo nome. La procedura di riproduzione è necessaria perché sia possibile riprodurre l'errore nei computer Microsoft. Il codice dovrebbe essere di sé sufficiente per creare un semplice eseguibile di compilazione ed esecuzione, o dovrebbe eseguire queste due operazioni se non fosse per il problema riscontrato. La procedura di riproduzione non è un frammento di codice. Deve contenere funzioni e classi complete e tutte le direttive include necessarie, anche per le intestazioni standard.
 
-È possibile includere direttamente nel testo del report procedure di riproduzione di codice sorgente brevi e indipendenti. È invece consigliabile allegare al report procedure di riproduzione di codice più estese. Le procedure di riproduzione che non possono essere ridotte a un singolo file del codice sorgente devono essere compresse in una directory contenente tutti i file con estensione zip o simile da allegare al report. Altri dettagli aggiuntivi specifici dello scenario devono essere sempre inclusi nel testo del report, mai nel codice sorgente.
+#### <a name="what-makes-a-good-repro"></a>Procedura di riproduzione esaustiva
 
-La procedura di riproduzione migliore è la *procedura di riproduzione minima*. Si tratta di un unico file del codice sorgente indipendente (senza riferimenti a intestazioni utente) che contiene codice a sufficienza per illustrare il problema. Se possibile, è sufficiente allegare questo file del codice sorgente per segnalare tutte le informazioni necessarie.
+Una procedura di riproduzione esaustiva è:
 
-Se non fosse possibile riassumere il problema in una procedura di riproduzione minima senza dipendenze, fare riferimento alle sezioni seguenti per determinare il tipo di procedura di riproduzione da includere nel report.
+- **Minima.** È necessario che le procedure di riproduzione siano minime, ma devono comunque illustrare esattamente il problema riscontrato. Le procedure di riproduzione non devono essere complesse o realistiche. Devono illustrare solo il codice conforme allo standard o l'implementazione del compilatore documentata oppure, nel caso di mancanza di diagnostica, il codice non conforme. Sono preferibili procedure di riproduzione semplici e pertinenti, che contengono codice sufficiente a illustrare il problema. Se possibile, eliminare o semplificare il codice rimanendo conformi e lasciando inalterato il problema. Non è necessario includere esempi contatore di codice funzionante. 
 
+- **Indipendente.** È consigliabile non includere nelle procedure di riproduzione dipendenze non necessarie. Se possibile, riprodurre il problema senza usare librerie di terzi. Se possibile, riprodurre il problema senza usare codice di libreria oltre alle semplici istruzioni di output. Usare ad esempio `puts("this shouldn't compile");`, `std::cout << value;`e `printf("%d\n", value);`. È preferibile ridurre l'esempio a un singolo file di codice sorgente senza riferimento a intestazioni utente. È molto utile ridurre la quantità di codice da analizzare come possibile responsabile del problema.
+
+- **Confronto con l'ultima versione del compiler** Se possibile, per le procedure di riproduzione è necessario usare l'aggiornamento più recente dell'ultima versione del set di strumenti o la versione provvisoria più recente dell'ultimo aggiornamento o della versione principale successiva. Molto spesso è possibile che i problemi che si verificano ancora nelle versioni precedenti del set di strumenti sono stati risolti nelle versioni più recenti. Il backporting delle correzioni in versioni precedenti avviene solo in casi eccezionali.
+
+- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile. Alla fine è lo standard a determinare se il programma è corretto. Non esistono compilatori perfetti, ma quando Clang e GCC accettano il codice senza generare diagnostica e il compilatore MSVC non lo fa, è probabile che sia il compilatore Microsoft a contenere un bug. È anche possibile che vi siano differenze nel comportamento di Unix e Windows o livelli diversi di implementazione degli standard C++ e così via. Se invece tutti i compilatori rifiutano il codice, è probabile che il codice non sia corretto. Analizzare messaggi di errore diversi può aiutare l'utente a diagnosticare il problema.
+
+   In [Online C++ compilers](https://isocpp.org/blog/2013/01/online-c-compilers) (Compilatori C++ online) oppure in questo elenco dettagliato [List of Online C++ Compilers](https://arnemertz.github.io/online-compilers/) (Elenco di compilatori C++ online) in GitHub sono disponibili elenchi di compilatori online per testare e confrontare il codice. Alcuni esempi specifici sono [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) e [Coliru](http://coliru.stacked-crooked.com/). 
+
+   > [!NOTE]
+   > I siti Web dei compilatori online non sono associati a Microsoft. Molti di questi siti sono gestiti come progetti personali. È possibile che alcuni non siano disponibili quando si leggerà questo articolo. Tramite una ricerca è tuttavia possibile trovarne altri da usare.
+
+I problemi che riguardano compilatore, linker e librerie sono soliti manifestarsi in modi particolari. In base al tipo di problema riscontrato, è necessario scegliere il tipo di procedura di riproduzione da includere nel report. Senza una corretta procedura di riproduzione, è impossibile eseguire un'analisi. Di seguito sono elencati alcuni tipi di problemi riscontrabili e le istruzioni per la generazione dei tipi di procedura di riproduzione da usare per segnalare ogni singolo problema.
+ 
 #### <a name="frontend-parser-crash"></a>Arresto anomalo del front-end (parser)
 
 Gli arresti anomali del front-end si verificano durante la fase di analisi del compilatore. In genere il compilatore crea l'[errore irreversibile C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e segnala il file del codice sorgente e il numero della riga in cui si è verificato l'errore. Viene spesso indicato un file msc1.cpp, dettaglio che può essere tuttavia tralasciato.
@@ -144,13 +150,13 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information
 ```
 
-#### <a name="backend_crash"></a> Arresto anomalo del back-end (generazione del codice)
+#### <a name="backend-code-generation-crash"></a>Arresto anomalo del back-end (generazione del codice)
 
-Gli arresti anomali del back-end si verificano durante la fase di generazione del codice del compilatore. In genere il compilatore crea l'[errore irreversibile C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e non sempre segnala il file del codice sorgente e il numero della riga in cui si è verificato l'errore. Viene spesso indicato un file compiler\utc\src\p2\main.c, dettaglio che può essere tuttavia tralasciato.
+Gli arresti anomali del back-end si verificano durante la fase di generazione del codice del compilatore. In genere il compilatore genera l'[errore irreversibile C1001](error-messages/compiler-errors-1/fatal-error-c1001.md) e non sempre segnala il file del codice sorgente e il numero della riga in cui si è verificato l'errore. Viene spesso indicato il file compiler\\utc\\src\\p2\\main.c, dettaglio che può essere tuttavia tralasciato.
 
-Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link-repros) se si usa la Generazione codice in fase di collegamento, diversamente inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros). La Generazione codice in fase di collegamento è abilitata dall'argomento della riga di comando `/GL` per cl.exe.
+Per questo tipo di arresto anomalo, inviare una [procedura di riproduzione del collegamento](#link-repros) se si usa la Generazione codice in fase di collegamento, abilitata dall'argomento della riga di comando **/GL** in cl.exe. Altrimenti, inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros).
 
-Di seguito è riportato un esempio di output del compilatore per questo tipo di arresto anomalo in cui la Generazione codice in fase di collegamento **non** è in uso. Se l'output del compilatore è simile al seguente è necessario inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros).
+Di seguito è riportato un esempio di output del compilatore per un arresto anomalo del back-end in cui la Generazione codice in fase di collegamento non è in uso. Se l'output del compilatore è simile al seguente è necessario inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros).
 
 ```Output
 repro.cpp
@@ -167,14 +173,14 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-Se la riga che inizia con **INTERNAL COMPILER ERROR** specifica link.exe anziché cl.exe, significa che la Generazione codice in fase di collegamento è stata abilitata ed è necessario inviare una [procedura di riproduzione del collegamento](#link-repros). Se dal messaggio di errore del compilatore non è chiaro se la Generazione codice in fase di collegamento è stata abilitata, è possibile esaminare gli argomenti della riga di comando copiata dal log di compilazione nel passaggio precedente per l'argomento della riga di comando `/GL`.
+Se la riga che inizia con **INTERNAL COMPILER ERROR** specifica link.exe anziché cl.exe, significa che la Generazione codice in fase di collegamento è stata abilitata ed è necessario inviare una [procedura di riproduzione del collegamento](#link-repros). Se dal messaggio di errore del compilatore non è chiaro se la Generazione codice in fase di collegamento era abilitata, può essere necessario esaminare gli argomenti della riga di comando copiata dal log di compilazione nel passaggio precedente per l'argomento della riga di comando **/GL**.
 
 #### <a name="linker-crash"></a>Arresto anomalo del linker
 
 Gli arresti anomali del linker si verificano durante la fase di collegamento, dopo l'esecuzione del compilatore. In genere il linker crea l'[errore strumenti del linker LNK1000](error-messages/tool-errors/linker-tools-error-lnk1000.md).
 
 > [!NOTE]
-> Se invece l'output specifica C1001 o include la Generazione codice in fase di collegamento, fare riferimento a [Arresto anomalo del back-end (generazione del codice)](#backend_crash) per altre informazioni.
+> Se invece l'output specifica C1001 o include la Generazione codice in fase di collegamento, fare riferimento a [Arresto anomalo del back-end (generazione del codice)](#backend-code-generation-crash) per altre informazioni.
 
 Per questo tipo di arresto anomalo, inviare una [procedura di riproduzione del collegamento](#link-repros).
 
@@ -216,84 +222,76 @@ Se è abilitato il collegamento incrementale e l'arresto anomalo si è verificat
 
 #### <a name="bad-code-generation"></a>Generazione di codice errato
 
-La generazione di codice errato è un evento raro, che si verifica tuttavia quando il compilatore genera erroneamente codice non corretto che causa l'arresto anomalo dell'applicazione in fase di esecuzione anziché rilevare il problema in fase di compilazione. Se si ritiene che il problema determini la generazione di codice errato, organizzare il report come nel caso di [Arresto anomalo del back-end (generazione del codice)](#backend_crash).
+La generazione di codice errato è un evento raro, che si verifica tuttavia quando il compilatore genera erroneamente codice non corretto che causa l'arresto anomalo dell'applicazione in fase di esecuzione anziché rilevare il problema in fase di compilazione. Se si ritiene che il problema determini la generazione di codice errato, organizzare il report come nel caso di [Arresto anomalo del back-end (generazione del codice)](#backend-code-generation-crash).
 
-Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link-repros) se si usa la Generazione codice in fase di collegamento, diversamente inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros). La Generazione codice in fase di collegamento è abilitata dall'argomento della riga di comando `/GL` per cl.exe.
+Per questo tipo di arresto anomalo inviare una [procedura di riproduzione del collegamento](#link-repros) se si usa la Generazione codice in fase di collegamento, abilitata dall'argomento della riga di comando **/GL** in cl.exe. Altrimenti, inviare una [procedura di riproduzione pre-elaborata](#preprocessed-repros).
 
-## <a name="generate"></a> Generare una procedura di riproduzione
+## <a name="how-to-generate-a-repro"></a>Come generare una procedura di riproduzione
 
-Una procedura di riproduzione è un esempio di codice completo e indipendente, che illustra il problema segnalato. Una procedura di riproduzione **non** è un frammento di codice. Deve invece essere un esempio completo di codice che viene, o dovrebbe, essere compilato, eccezione fatta per gli errori generati dal problema che si segnala. Deve contenere tutte le direttive #include necessarie, anche per le intestazioni standard.
-
-Caratteristiche di una buona procedura di riproduzione
-
-- **Minima.** È necessario che le procedure di riproduzione siano minime, ma devono comunque illustrare esattamente il problema riscontrato. Le procedure di riproduzione non devono essere né complesse né realistiche, devono piuttosto essere semplici e pertinenti. Non è necessario includere anche esempi di codice funzionante, anche se possono essere aggiunti qualora siano d'ausilio. Essenziale è solo l'esempio di codice che causa il problema.
-
-- **Indipendente.** È consigliabile non includere nelle procedure di riproduzione dipendenze non necessarie. Se possibile, riprodurre il problema senza usare librerie di terzi. Se possibile, riprodurre il problema senza usare codice di libreria. `std::out` e `printf()` sono accettabili. È molto utile ridurre la quantità di codice da analizzare come possibile responsabile del problema.
-
-- **Confronto con l'ultima versione del compiler** Le procedure di riproduzione devono usare l'ultima versione del set di strumenti quando possibile. Molto spesso i problemi che potrebbero ancora verificarsi nelle versioni precedenti del set di strumenti sono stati risolti nelle versioni più recenti.
-
-- **Confronto con altri compilatori**, se pertinente. Le procedure di riproduzione che contengono codice C++ portabile devono verificare il comportamento confrontandolo con altri compilatori se possibile.
-
-   Questo passaggio consente di determinare se il codice è corretto, come quando MSVC non è in accordo con Clang e GCC, o se non è corretto, quando invece MSVC, Clang e GCC accettano che il codice generi l'errore.
+Per poter risalire alla causa del problema, è essenziale una [procedura di riproduzione esaustiva](#what-makes-a-good-repro). Prima di eseguire i passaggi descritti di seguito per tipi specifici di riproduzione, ridurre il più possibile il codice che illustra il problema. Eliminare o ridurre al minimo dipendenze, intestazioni necessarie e librerie e, se possibile, limitare le opzioni del compilatore e le definizioni del preprocessore usate.
 
 Di seguito sono disponibili le istruzioni per la generazione dei vari tipi di procedure di riproduzione che verranno usate per segnalare i diversi problemi.
 
 ### <a name="preprocessed-repros"></a>Procedure di riproduzione pre-elaborate
 
-Una procedura di riproduzione pre-elaborata è un unico file di origine che illustra un problema e che è stato generato dall'output del preprocessore C durante l'elaborazione del file di origine. Questo processo comprende le intestazioni incluse per rimuovere le dipendenze da altri file di origine e di intestazione e risolve anche macro, #ifdefs e altri comandi del preprocessore che potrebbero dipendere dall'ambiente locale.
+Una *procedura di riproduzione pre-elaborata* è un unico file di origine che illustra un problema e che è stato generato dall'output del preprocessore C tramite l'opzione del compilatore **/P** nel file di origine della procedura di riproduzione originale. Comprende le intestazioni incluse per rimuovere le dipendenze da altri file di origine e di intestazione e risolve anche macro, #ifdefs e altri comandi del preprocessore che potrebbero dipendere dall'ambiente locale.
 
 > [!NOTE]
-> Si noti che le procedure di riproduzione pre-elaborate sono la soluzione meno adatta a segnalare problemi causati probabilmente da bug presenti nell'implementazione della libreria standard. Capita spesso infatti che Microsoft decida di sostituire l'ultima implementazione non definitiva per verificare se il problema è già stato risolto. In questo caso non pre-elaborare la procedure di riproduzione. Se non è possibile ridurre il problema a un solo file di origine, comprimere il codice in un file con estensione zip, o simile, oppure usare una procedure di riproduzione del progetto IDE (vedere la sezione successiva [Altre procedure di riproduzione](#other-repros)).
+> Le procedure di riproduzione pre-elaborate non sono adatte a segnalare problemi causati probabilmente da bug presenti nell'implementazione della libreria standard. Capita spesso infatti che Microsoft decida di sostituire l'ultima implementazione non definitiva per verificare se il problema è già stato risolto. In questo caso non pre-elaborare la procedure di riproduzione. Se non è possibile ridurre il problema a un solo file di origine, comprimere il codice in un file ZIP, o simile, oppure usare una procedura di riproduzione del progetto IDE. Per altre informazioni, vedere [Altre procedure di riproduzione](#other-repros).
 
 #### <a name="to-preprocess-a-source-code-file"></a>Per pre-elaborare un file del codice sorgente
 
-1. Premere WINDOWS sulla tastiera e digitare `Developer Command Prompt`.
+1. Acquisire gli argomenti della riga di comando usati per compilare la procedura di riproduzione, come descritto in [Per segnalare i contenuti della riga di comando](#to-report-the-contents-of-the-command-line).
 
-1. Dall'elenco delle corrispondenze scegliere la versione del **prompt dei comandi per gli sviluppatori** che corrisponde alla versione di Visual Studio usata.
+1. Aprire il **prompt dei comandi per gli sviluppatori** corrispondente alla versione di Visual Studio e all'architettura di configurazione usata per compilare il progetto.
 
-1. Nella finestra della console **Prompt dei comandi per gli sviluppatori** immettere il comando `cl /P argumentsfilename.cpp`.
+1. Passare alla directory che contiene il progetto della procedura di riproduzione.
 
-Dopo aver creato il file pre-elaborato (ora nomefile.i), è consigliabile verificare che il problema sia ancora riproducibile usando il file pre-elaborato. È possibile usare l'argomento della riga di comando `/TP` per indicare a cl.exe di ignorare il passaggio del preprocessore e di tentare la compilazione come di consueto.
+1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere il comando **cl /P** *argomenti* *nomefile.cpp*, dove *argomenti* è l'elenco degli argomenti acquisiti in precedenza e *nomefile.cpp* è il nome del file di origine della procedura di riproduzione. Questo comando consente di replicare la riga di comando usata per la riproduzione, ma arresta la compilazione al passaggio del preprocessore e restituisce il codice di origine pre-elaborato in *nomefile*.i.
+
+Dopo aver generato il file pre-elaborato, è consigliabile verificare che il problema sia ancora riproducibile usando il file pre-elaborato.
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>Per confermare che l'errore è ancora riproducibile con il file pre-elaborato
 
-1. Premere WINDOWS sulla tastiera e digitare `Developer Command Prompt`.
-
-1. Dall'elenco delle corrispondenze scegliere la versione del **prompt dei comandi per gli sviluppatori** che corrisponde alla versione di Visual Studio usata.
-
-1. Nella finestra della console **Prompt dei comandi per gli sviluppatori** immettere il comando `cl arguments /TP filename.i`.
+1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere**cl** *argomenti* **/TP** *nomefile***.i** perché cl.exe compili il file pre-elaborato come file di origine C++, dove *argomenti* è l'elenco degli argomenti acquisiti in precedenza, senza gli argomenti **/D** e **/I** che sono stati rimossi perché già inclusi nel file pre.-elaborato, e dove *nomefile***.i** è il nome del file pre-elaborato.
 
 1. Verificare che il problema viene riprodotto.
 
-Alla fine allegare questa procedura di riproduzione al report.
+Infine, allegare la procedura di riproduzione pre-elaborata *nomefile*.i al report.
 
 ### <a name="link-repros"></a>Procedure di riproduzione del collegamento
 
-Una procedura di riproduzione del collegamento è una singola directory che contiene gli artefatti di compilazione che insieme illustrano un problema che si verifica in fase di collegamento, ad esempio un arresto anomalo del back-end che coinvolge la Generazione codice in fase di collegamento o un arresto anomalo del linker. La procedura di riproduzione include quegli artefatti di compilazione necessari come input per il linker perché possa riprodurre il problema. È possibile creare facilmente le procedure di riproduzione del collegamento tramite le funzionalità disponibili nel linker.
+Una *procedura di riproduzione del collegamento* è costituita da una directory di contenuti del linker specificata dalla variabile di ambiente **link\_repro**. Contiene gli elementi di compilazione che insieme contribuiscono a illustrare un problema che si verifica in fase di collegamento, ad esempio un arresto anomalo del back-end che interessa la Generazione codice in fase di collegamento oppure un arresto anomalo del linker. Gli elementi di compilazione sono necessari come input del linker in modo che il problema sia riproducibile. È possibile creare facilmente una procedura di riproduzione del collegamento usando questa variabile di ambiente per abilitare la funzionalità integrata di generazione delle procedure di riproduzione del linker.
 
 #### <a name="to-generate-a-link-repro"></a>Per generare una procedura di riproduzione del collegamento
 
-1. Aprire un prompt dei comandi e immettere il comando `mkdir directory` per creare una directory per la procedura di riproduzione del collegamento.
+1. Acquisire gli argomenti della riga di comando usati per compilare la procedura di riproduzione, come descritto in [Per segnalare i contenuti della riga di comando](#to-report-the-contents-of-the-command-line).
 
-1. Impostare la variabile di ambiente link_repro nella directory appena creata. Immettere il comando `set link_repro=directory`.
+1. Aprire il **prompt dei comandi per gli sviluppatori** corrispondente alla versione di Visual Studio e all'architettura di configurazione usata per compilare il progetto.
 
-1. Se si vuole eseguire la compilazione da Visual Studio, avviarlo dal prompt dei comandi immettendo il comando `devenv`. In questo modo il valore della variabile di ambiente link_repro sarà visibile in Visual Studio.
+1. Nella finestra della console del prompt dei comandi per gli sviluppatori passare alla directory che contiene il progetto della procedura di riproduzione.
 
-1. Compilare l'applicazione e confermare che il problema previsto si è verificato.
+1. Immettere **mkdir linkrepro** per creare una directory per la procedura di riproduzione.
 
-1. Chiudere ora Visual Studio se è stato avviato nel passaggio 3.
+1. Immettere il comando **set link\_repro=linkrepro** per impostare la variabile di ambiente **link\_repro** nella directory appena creata.
 
-1. Cancellare la variabile di ambiente link_repro. Immettere il comando `set link_repro=`
+1. Per compilare il progetto della procedura di riproduzione in Visual Studio, immettere il comando **devenv** nella finestra della console del prompt dei comandi per gli sviluppatori. In questo modo il valore della variabile di ambiente **link\_repro** sarà visibile in Visual Studio. Per compilare il progetto nella riga di comando, usare gli argomenti della riga di comando acquisiti in precedenza per duplicare la compilazione della procedura di riproduzione.
 
-Infine comprimere l'intera directory della procedura di riproduzione in un file con estensione zip o simile e allegarla al report.
+1. Compilare il progetto della procedura di riproduzione e confermare che il problema previsto si è verificato.
+
+1. Chiudere Visual Studio se è stato usato per eseguire la compilazione.
+
+1. Nella finestra della console del prompt dei comandi per gli sviluppatori immettere il comando **set link\_repro=** per cancellare la variabile di ambiente **link\_repro**.
+
+Infine comprimere l'intera directory linkrepro in un file ZIP o simile e allegare il file al report.
 
 ### <a name="other-repros"></a>Altre procedure di riproduzione
 
-Se il problema non può essere ridotto a un singolo file di origine o a una procedura di riproduzione pre-elaborata, e non è necessaria una procedura di riproduzione del collegamento per testare il problema, è possibile analizzare un progetto IDE. Il codice contenuto nel progetto deve essere minimo. Tutto il materiale sussidiario descritto in questo documento è applicabile anche in questo caso.
+Se il problema non può essere ridotto a un singolo file di origine o a una procedura di riproduzione pre-elaborata, e non è necessaria una procedura di riproduzione del collegamento per testare il problema, è possibile analizzare un progetto IDE. Valgono tuttavia tutte le indicazioni su come creare una procedura di riproduzione esaustiva. Il codice deve essere minimo e indipendente, il problema deve verificarsi negli strumenti Microsoft più recenti, ed eventualmente, il problema non deve manifestarsi in altri compilatori.
 
 Creare la procedura di riproduzione come progetto IDE minimo, comprimere l'intera struttura della directory in un file con estensione zip o simile e allegarla al report.
 
-## <a name="send"></a> Modi per inviare il report
+## <a name="ways-to-send-your-report"></a>Modi per inviare il report
 
 Esistono diversi modi per inviare il report a Microsoft. È possibile usare lo strumento predefinito di Visual Studio [Segnala un problema ](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017), o le pagine della [Community degli sviluppatori Visual Studio](https://developercommunity.visualstudio.com/). È anche possibile inviare un messaggio di posta elettronica con il report, tuttavia si prediligono i primi due metodi. La scelta dipende da come si vuole interagire con i tecnici che analizzeranno il report e se si vuole tenere traccia dello stato di avanzamento o condividere il report con la community.
 
@@ -339,4 +337,3 @@ Source code and repro steps:
 
 > [!TIP]
 > Per altri tipi di problemi che si possono verificare in Visual Studio e che non sono correlati al set di strumenti, ad esempio problemi con l'interfaccia utente, funzionalità IDE interrotte o arresti anomali generali, lo strumento Segnala un problema può essere un'ottima scelta, grazie alle sue funzionalità di screenshot e alla possibilità di registrare le azioni dell'interfaccia utente responsabili del problema riscontrato. Non segnalare mai questi altri tipi di errore tramite l'invio di messaggi di posta elettronica a compilercrash@microsoft.com.
-
