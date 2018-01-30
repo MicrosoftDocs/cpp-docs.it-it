@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Utilizzo degli operatori di inserimento e controllo del formato
 Questo argomento illustra come controllare il formato e creare gli operatori di inserimento per le classi personalizzate. L'operatore di inserimento (**<<**), che è preprogrammato per tutti i tipi di dati C++ standard, invia byte a un oggetto del flusso di output. Gli operatori di inserimento funzionano con "manipolatori" predefiniti, cioè elementi che modificano il formato predefinito di argomenti Integer.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Questo comportamento può essere aggirato manualmente, ma per rendere più pratiche le sequenze di andata e ritorno, C++14 aggiunge il manipolatore del flusso `std::quoted` in `<iomanip>`. Al momento dell'inserimento, `quoted()` racchiude la stringa con un delimitatore (virgolette doppie ' " ' per impostazione predefinita) e all'estrazione modifica il flusso per estrarre tutti i caratteri fino a quando non viene rilevato il delimitatore finale. Eventuali virgolette incorporate sono precedute da un carattere di escape ('\\\\' per impostazione predefinita).  
   
- I delimitatori sono presenti solo nell'oggetto flusso; non sono presenti nella stringa estratta, ma sono presenti nella stringa restituita da [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ I delimitatori sono presenti solo nell'oggetto flusso. non sono presenti nella stringa estratta, ma sono presenti nella stringa restituita da [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str).  
   
  Il comportamento degli spazi vuoti delle operazioni di inserimento e di estrazione è indipendente dal modo in cui una stringa è rappresentata nel codice, dunque l'operatore tra virgolette è utile indipendentemente dal fatto che la stringa di input sia un valore letterale stringa non elaborato o una stringa normale. La stringa di input, qualunque sia il formato, può avere virgolette incorporate, interruzioni di riga, tabulazioni e così via e tutti questi verranno mantenuti dal manipolatore quoted().  
   
- Per altre informazioni ed esempi di codice completi, vedere [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Per ulteriori informazioni ed esempi di codice completo, vedere [racchiuso tra virgolette](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Output Streams](../standard-library/output-streams.md) (Flussi di output)   

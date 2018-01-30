@@ -1,33 +1,38 @@
 ---
 title: Overload di funzioni | Documenti Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Overload di funzioni
-C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Si tratta di funzioni in overload e vengono descritte in dettaglio in Overload. Le funzioni in overload consentono ai programmatori di fornire diverse semantiche per una funzione, in base ai tipi e al numero di argomenti.  
+C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e il numero di argomenti. 
   
- Ad esempio, un **stampa** funzione che accetta una stringa (o **char \*** ) argomento esegue attività molto diverse rispetto a uno che accetta un argomento di tipo **doppie** . L'overload consente una denominazione uniforme e impedisce ai programmatori di dover inventare nomi quali `print_sz` o `print_d`. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
+ Ad esempio, un **stampa** funzione che accetta un **std:: String** argomento potrà eseguire attività molto diverse rispetto a uno che accetta un argomento di tipo **double**. L'overload consente di evitare di utilizzare nomi, ad esempio `print_string` o `print_double`. In fase di compilazione, il compilatore sceglie quale eseguire l'overload da utilizzare in base al tipo di argomenti passati dal chiamante.  Se si chiama **print(42.0)** il **void stampa (d double)** funzione verrà richiamata. Se si chiama **stampa ("hello world")** il **void print(std::string)** overload verrà richiamato.
+
+È possibile eseguire l'overload di funzioni membro e delle funzioni non membro. Nella tabella seguente sono illustrate quali parti di una dichiarazione di funzione C++ vengono usate per distinguere tra gruppi di funzioni con lo stesso nome nello stesso ambito.  
   
 ### <a name="overloading-considerations"></a>Considerazioni sull'overload  
   
@@ -39,9 +44,8 @@ C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambit
 |Presenza o assenza di puntini di sospensione|Yes|  
 |Utilizzo dei nomi `typedef`|No|  
 |Limiti di matrice non specificati|No|  
-|**const** o `volatile` (vedere sotto)|Yes|  
-  
- Anche se è possibile distinguere le funzioni in base al tipo restituito, non è possibile eseguirne l'overload su questa base.  `Const`o `volatile` vengono utilizzati solo come base per l'overload se utilizzati in una classe da applicare per il **questo** puntatore per la classe, non il tipo restituito dalla funzione.  In altre parole, l'overload si applica solo se il **const** o `volatile` parola chiave segue l'elenco di argomenti della funzione nella dichiarazione.  
+|**const** o`volatile`|Sì, quando applicato a una funzione intera|
+|[ref-qualifier](#ref-qualifier)|Yes|  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrato come è possibile usare l'overload.  
@@ -51,68 +55,71 @@ C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambit
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |Conversione dal Tipo|Conversione nel Tipo|  
 |-----------------------|---------------------|  
-|*nome del tipo*|*nome del tipo***&**|  
-|*nome del tipo***&**|*nome del tipo*|  
-|*nome del tipo* **]**|*nome del tipo\**|  
-|*nome del tipo* **(** *elenco di argomenti* **)**|**(**  *\*-nome del tipo* **) (** *elenco di argomenti* **)**|  
-|*nome del tipo*|**const** *-nome del tipo*|  
-|*nome del tipo*|`volatile`*-nome del tipo*|  
-|*nome del tipo\**|**const** *-nome del tipo\**|  
-|*nome del tipo\**|`volatile`*-nome del tipo\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile` *type-name*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile` *type-name\**|  
   
  La sequenza in cui vengono tentate le conversioni è la seguente:  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  L'operando sinistro degli operatori `->*` e `.*` (puntatore a membro) vengono considerati nello stesso modo degli operatori `.` e `->` (selezione dei membri) in relazione alla corrispondenza dell'argomento.  
+
+## <a name="ref-qualifiers"></a>Qualificatori di riferimento per le funzioni membro  
+Qualificatori ref consentono di eseguire l'overload di una funzione membro in base se l'oggetto a cui puntava `this` è un rvalue o lvalue.  Questa funzionalità consente di evitare operazioni di copia non necessarie in scenari in cui non si desidera fornire l'accesso di puntatore ai dati. Si supponga ad esempio di classe **C** alcuni dati nel relativo costruttore inizializza e restituisce una copia dei dati nella funzione membro **get_data()**. Se un oggetto di tipo **C** è un riferimento rvalue che sta per essere eliminato, quindi il compilatore sceglierà il **get_data() & &** overload, che consente di spostare i dati anziché copiarlo. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions-on-overloading"></a>Restrizioni sull'overload  
  Un set di funzioni in overload accettabile è regolato da numerose restrizioni:  
   
 -   È necessario che due funzioni presenti in un set di funzioni in overload abbiano elenchi di argomenti differenti.  
@@ -443,12 +489,15 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Corrispondenza di dichiarazione  
+## <a name="overloading-overriding-and-hiding"></a>L'overload, override e nascondere
+  
  Tutte le due dichiarazioni di funzione con lo stesso nome nello stesso ambito possono fare riferimento alla stessa funzione o a due funzioni discrete in overload. Se gli elenchi di argomenti delle dichiarazioni contengono argomenti di tipi equivalenti (come descritto nella sezione precedente), le dichiarazioni di funzione si riferiscono alla stessa funzione. In caso contrario, si riferiscono a due diverse funzioni selezionate usando l'overload.  
   
- L'ambito di classe viene osservato rigidamente; pertanto, una funzione dichiarata in una classe base non si trova nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome della funzione nella classe base, la funzione della classe derivata nasconde la funzione della classe base anziché causare l'overload.  
+ L'ambito di classe viene osservato rigidamente; pertanto, una funzione dichiarata in una classe base non si trova nello stesso ambito di una funzione dichiarata in una classe derivata. Se una funzione in una classe derivata viene dichiarata con lo stesso nome di una funzione virtuale nella classe base, la funzione di classe derivata *esegue l'override* la funzione di classe di base. Per ulteriori informazioni, vedere [funzioni virtuali](../cpp/virtual-functions.md).
+
+Se la funzione di classe di base non è dichiarata come 'virtual', quindi viene definita la funzione della classe derivata *nascondere* è. Si esegue l'override sia nascondere sono distinti dagli overload.  
   
- L'ambito di blocco viene osservato rigidamente; pertanto, una funzione dichiarata in un ambito di file non si trova nello stesso ambito di una funzione dichiarata localmente. Se una funzione dichiarata localmente ha lo stesso nome di una funzione dichiarata in ambito di file, la funzione dichiarata localmente nasconde la funzione con ambito di file anziché causare l'overload. Ad esempio:  
+ L'ambito del blocco viene osservato rigidamente; pertanto, una funzione dichiarata in un ambito di file non si trova nello stesso ambito di una funzione dichiarata localmente. Se una funzione dichiarata localmente ha lo stesso nome di una funzione dichiarata in ambito di file, la funzione dichiarata localmente nasconde la funzione con ambito di file anziché causare l'overload. Ad esempio:  
   
 ```  
 // declaration_matching1.cpp  
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni (C++)](../cpp/functions-cpp.md)

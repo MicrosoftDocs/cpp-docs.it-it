@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cc-preprocessor-reference"></a>Riferimenti al preprocessore C/C++
 Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come viene implementato in Microsoft C/C++. Il preprocessore esegue alcune operazioni preliminari sui file C e C++ prima che siano passati al compilatore. È possibile utilizzare il preprocessore per compilare in modo condizionale il codice, inserire file, specificare i messaggi di errore in fase di compilazione e applicare le regole specifiche del computer alle sezioni di codice.  
@@ -48,9 +51,6 @@ Il *riferimenti al preprocessore C/C++* viene illustrato il preprocessore come v
   
  [Creazione di un programma C/C++](../build/reference/c-cpp-building-reference.md)  
  Vengono forniti collegamenti agli argomenti relativi alle opzioni del compilatore e del linker.  
-  
- [Librerie di Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, tra cui ATL, MFC, OLE DB, la libreria di run-time C e la libreria Standard C++.  
   
  [Creazione e gestione di progetti Visual C++](../ide/creating-and-managing-visual-cpp-projects.md)  
  Viene descritta l'interfaccia utente di Visual Studio che consente di specificare le directory che il sistema del progetto cercherà per individuare i file per il progetto C++.

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Multithreading: terminazione dei thread
 Due situazioni normale causano un'interruzione di thread: non termina la funzione di controllo o il thread non è consentito per l'esecuzione fino al completamento. Se un elaboratore di testo utilizzato un thread in background, la funzione di controllo termina normalmente stampa viene completata correttamente. Se l'utente decide di annullare la stampa, tuttavia, il thread in background stampa deve essere interrotto in modo anomalo. In questo argomento viene illustrato come implementare ogni situazione sia come ottenere il codice di uscita di un thread dopo la terminazione.  
@@ -58,7 +62,7 @@ Due situazioni normale causano un'interruzione di thread: non termina la funzion
   
 -   Impostare il `m_bAutoDelete` un membro dati **FALSE**. In questo modo il `CWinThread` oggetto una volta terminato il thread. È quindi possibile accedere il `m_hThread` (membro dati) una volta terminato il thread. Se si utilizza questa tecnica, tuttavia, è responsabile per l'eliminazione permanente di `CWinThread` dell'oggetto poiché il framework non lo eliminerà automaticamente. Questo è il metodo preferito.  
   
--   Archiviare separatamente l'handle del thread. Dopo la creazione del thread, copiare il relativo `m_hThread` (membro dati) (mediante **:: DuplicateHandle**) a un'altra variabile e accedervi tramite la variabile. In questo modo l'oggetto viene eliminato automaticamente alla terminazione, è comunque possibile stabilire il motivo della terminazione. Assicurarsi che il thread termini prima che è possibile duplicare l'handle. Il modo più sicuro per eseguire questa operazione consiste nel passare **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), archiviare l'handle e quindi riprendere il thread chiamando [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Archiviare separatamente l'handle del thread. Dopo la creazione del thread, copiare il relativo `m_hThread` (membro dati) (mediante **:: DuplicateHandle**) a un'altra variabile e accedervi tramite la variabile. In questo modo l'oggetto viene eliminato automaticamente alla terminazione, è comunque possibile stabilire il motivo della terminazione. Assicurarsi che il thread termini prima che è possibile duplicare l'handle. Il modo più sicuro per eseguire questa operazione consiste nel passare **CREATE_SUSPENDED** a [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), archiviare l'handle e quindi riprendere il thread chiamando [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Dei metodi consente di determinare i motivi per cui un `CWinThread` oggetto terminato.  
   

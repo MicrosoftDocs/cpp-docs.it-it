@@ -1,13 +1,15 @@
 ---
 title: Funzioni (C++) | Documenti Microsoft
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 Una funzione è un blocco di codice che esegue un'operazione. Una funzione può facoltativamente definire parametri di input che permettono ai chiamanti di passare argomenti nella funzione e può facoltativamente restituire un valore come output. Le funzioni sono utili per incapsulare operazioni comuni in un singolo blocco riutilizzabile, idealmente con un nome che descrive in modo chiaro ciò che la funzione permette di ottenere. La funzione seguente accetta due numeri interi da un chiamante e restituisce la somma. `a` e `b` sono *parametri* di tipo `int`.  
@@ -50,6 +53,8 @@ int main()
  Non sono previsti limiti pratici per la lunghezza della funzione, ma una progettazione ottimale ha come obiettivo funzioni che eseguono una singola attività ben definita. È consigliabile suddividere gli algoritmi complessi in funzioni più semplici e di facile comprensione, se possibile.  
   
  Le funzioni definite a livello di ambito della classe sono chiamate funzioni membro. In C++, a differenza degli altri linguaggi, una funzione può essere definita anche a livello di ambito dello spazio dei nomi, incluso lo spazio dei nomi globale implicito. Tali funzioni vengono chiamate *funzioni disponibili* o *funzioni non membro*; sono ampiamente usate nella libreria Standard.  
+
+Le funzioni possono essere *overload*, ovvero versioni diverse di una funzione può condividere lo stesso nome se si differenziano per il numero e/o il tipo di parametri formali. Per ulteriori informazioni, vedere [overload di funzioni](../cpp/function-overloading.md).
   
 ## <a name="parts-of-a-function-declaration"></a>Parti della dichiarazione di una funzione  
  Una funzione minimo *dichiarazione* include il tipo restituito, nome funzione ed elenco di parametri (che può essere vuoto), insieme a parole chiave facoltative che forniscono istruzioni aggiuntive al compilatore. L'esempio seguente è una dichiarazione di funzione:
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (Solo funzioni membro) `static` applicato a una funzione membro significa che la funzione non è associata ad alcuna istanza di oggetto della classe.  
   
-8.  (Solo funzioni membro Non statico) Il qualificatore di riferimento, che indica al compilatore quale eseguire l'overload di una funzione deve essere scelto quando il parametro di oggetto implicito (* questo) è un riferimento rvalue e un riferimento lvalue.  
+8.  (Solo funzioni membro Non statico) Il qualificatore di riferimento, che indica al compilatore quale eseguire l'overload di una funzione deve essere scelto quando il parametro di oggetto implicito (* questo) è un riferimento rvalue e un riferimento lvalue. Per ulteriori informazioni, vedere [overload di funzioni](function-overloading.md#ref-qualifiers). 
   
  Nella figura seguente vengono illustrate le parti di una definizione di funzione. L'area ombreggiata costituisce il corpo della funzione.  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. Oltre a utilizzare il valore restituito se stesso, è possibile "restituire" valori mediante la definizione di un numero qualsiasi di parametri da utilizzare passata per riferimento in modo che la funzione può modificare o inizializzare i valori di oggetti che consente al chiamante. Per ulteriori informazioni, vedere [gli argomenti della funzione tipo-riferimento](reference-type-function-arguments.md).
+4. Oltre a utilizzare il valore restituito se stesso, è possibile "restituire" valori mediante la definizione di un numero qualsiasi di parametri da utilizzare passata per riferimento in modo che la funzione può modificare o inizializzare i valori di oggetti che consente al chiamante. Per ulteriori informazioni, vedere [gli argomenti della funzione tipo-riferimento](reference-type-function-arguments.md).  
   
 ## <a name="function-pointers"></a>Puntatori funzione  
  C++ supporta i puntatori di funzione in modo analogo al linguaggio C. Un'alternativa più indipendente dai tipi consiste in genere nell'usare un oggetto di funzione.  

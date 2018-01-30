@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++/CLI Version 2
 - upgrading Visual C++ applications, Managed Extensions for C++ to Visual C++ 2005 syntax
@@ -15,21 +17,21 @@ helpviewer_keywords:
 - Managed Extensions for C++, upgrading syntax
 - C++/CLI Version 2, managed extensions
 ms.assetid: 8ec926b5-73f6-4f0c-bcdf-5203d293849a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1dcbb3b54cbde323cda0856ca68b2281d669cb7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17474b347a6daf2d477a6ed731e13db86e068b05
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ccli-migration-primer"></a>Nozioni di base della migrazione in C++/CLI
-Si tratta di una Guida alla migrazione dei programmi Visual C++ dalle estensioni gestite per C++ a Visual C++. Per un elenco di controllo riepilogo delle modifiche sintattiche, vedere [(NOTINBUILD) delle estensioni gestite per C++ Syntax Upgrade Checklist](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada).  
+Si tratta di una Guida alla migrazione dei programmi Visual C++ dalle estensioni gestite per C++ a Visual C++. 
   
  C + + CLI estende un paradigma di programmazione dei componenti dinamici per il linguaggio standard ISO C++. Il nuovo linguaggio offre una serie di miglioramenti significativi rispetto alle estensioni gestite. In questa sezione fornisce un elenco enumerato di estensioni gestite per le funzionalità del linguaggio C++ e il relativo mapping a Visual C++ in cui tale mapping esistente e vengono illustrate tali costrutti per la quale non esiste alcun mapping.  
   

@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB templates
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 40ada455ffa5318e280860504705e1f8fb5ea4b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3078fa97d298856e302b1f835fdbec2f3d489b63
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ole-db-templates"></a>Modelli OLE DB
 I modelli OLE DB rendono più semplice l'accesso ai dati OLE DB. Visual C++ fornisce le classi di modello che implementano molte delle interfacce OLE DB comunemente utilizzate. È possibile utilizzare i modelli consumer di Visual C++ per scrivere un'applicazione OLE DB (consumer) e i modelli di provider per scrivere un'applicazione server (provider).  
@@ -64,9 +68,6 @@ I modelli OLE DB rendono più semplice l'accesso ai dati OLE DB. Visual C++ forn
   
  [Riferimento di Active Template Library (ATL)](../../atl/atl-com-desktop-components.md)  
  Viene fornito materiale di riferimento per la Libreria ATL, un insieme di classi C++ basate su modelli che semplifica la programmazione di oggetti COM.  
-  
- [Librerie di Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Vengono forniti collegamenti alle diverse librerie disponibili in Visual C++, ad esempio ATL, MFC, modelli OLE DB, la libreria di runtime del linguaggio C e la libreria standard C++.  
   
  [Debug](/visualstudio/debugger/debugging-in-visual-studio)  
  Vengono forniti collegamenti relativi all'utilizzo del debugger di Visual Studio per la correzione di errori logici nell'applicazione o nelle stored procedure.

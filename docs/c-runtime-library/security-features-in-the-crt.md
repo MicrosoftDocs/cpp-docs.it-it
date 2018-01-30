@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -31,16 +33,17 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="security-features-in-the-crt"></a>Funzionalità di sicurezza in CRT
 Molte funzioni CRT precedenti hanno versioni più sicure e recenti. Se esiste una funzione sicura, la precedente versione, meno sicura, è contrassegnata come deprecata e la nuova versione ha il suffisso `_s` ("sicura").  
@@ -65,7 +68,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
  Per queste funzioni deprecate senza overload dei modelli sicuri, è necessario considerare la possibilità di aggiornare manualmente il codice per utilizzare le versioni sicure.  
   
- Un'altra origine degli avvisi di deprecazione, indipendente dalla sicurezza, sono le funzioni POSIX. Sostituire i nomi delle funzioni POSIX con i relativi equivalenti standard. Ad esempio, modificare [access](../c-runtime-library/reference/access-crt.md) in [_access](../c-runtime-library/reference/access-waccess.md) o disabilitare gli avvisi di deprecazione correlati a POSIX definendo `_CRT_NONSTDC_NO_WARNINGS`. Per altre informazioni, vedere [Deprecated CRT Functions](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5) (Funzioni CRT deprecate).  
+ Un'altra origine degli avvisi di deprecazione, indipendente dalla sicurezza, sono le funzioni POSIX. Sostituire i nomi delle funzioni POSIX con i relativi equivalenti standard. Ad esempio, modificare [access](../c-runtime-library/reference/access-crt.md) in [_access](../c-runtime-library/reference/access-waccess.md) o disabilitare gli avvisi di deprecazione correlati a POSIX definendo `_CRT_NONSTDC_NO_WARNINGS`. Per altre informazioni, vedere [Compatibility](compatibility.md) (Compatibilità).  
   
 ## <a name="additional-security-features"></a>Funzionalità di sicurezza aggiuntive  
  Alcune delle funzionalità di sicurezza includono quanto segue:  
