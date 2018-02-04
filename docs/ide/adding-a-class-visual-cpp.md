@@ -4,33 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.adding
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.adding
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL projects, adding classes
 - classes [C++], creating
 - classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d767bd0afa85bc417cd33ce305ffe0061104bf64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ac87368f2bd38c32425799103fa3999dd11b3298
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-class-visual-c"></a>Aggiunta di una classe (Visual C++)
 Per aggiungere una classe in un progetto di Visual C++, in **Esplora**, fare clic sul progetto, fare clic su **Aggiungi**, quindi fare clic su **classe**. Verrà visualizzata la [dialogo Aggiungi classe](../ide/add-class-dialog-box.md) la finestra di dialogo.  
   
- Quando si aggiunge una classe, è necessario specificare un nome diverso da classi che già esistono in MFC o ATL. Se si specifica un nome che esiste già nella libreria di, Visual C++ viene visualizzato un messaggio che indica che il nome specificato è riservato.  
+ Quando si aggiunge una classe, è necessario specificare un nome diverso da classi che già esistono in MFC o ATL. Se si specifica un nome che esiste già nella libreria di, l'IDE visualizza un messaggio di errore.  
   
- Se il progetto di convenzione di denominazione è necessario utilizzare un nome esistente, quindi è possibile modificare nel caso di una o più lettere del nome perché Visual C++ è tra maiuscole e minuscole. Ad esempio, anche se è possibile assegnare il nome di una classe `CDocument`, è possibile specificare il nome `cdocument`.  
+ Se il progetto di convenzione di denominazione è necessario utilizzare un nome esistente, quindi è possibile modificare nel caso di una o più lettere del nome perché C++ tra maiuscole e minuscole. Ad esempio, anche se è possibile assegnare il nome di una classe `CDocument`, è possibile specificare il nome `cdocument`.  
   
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Il tipo di classe si desidera aggiungere?  
  Nel **Aggiungi classe** della finestra di dialogo quando si espande il **Visual C++** nodo nel riquadro di sinistra vengono visualizzati più raggruppamenti dei modelli installati. I gruppi includono **CLR**, **ATL**, **MFC**, e **C++**. Quando si seleziona un gruppo, nel riquadro centrale viene visualizzato un elenco dei modelli disponibili in tale gruppo. Ogni modello contiene i file e il codice sorgente che sono necessari per una classe.  

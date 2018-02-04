@@ -1,14 +1,17 @@
 ---
 title: -Yl (inserisce il riferimento PCH per la libreria di Debug) | Documenti Microsoft
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /yl
-dev_langs: C++
+f1_keywords:
+- /yl
+dev_langs:
+- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
@@ -17,16 +20,17 @@ ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6e777977f6d869d2bbc28d980f6445851e54396b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43e960906c504e5378a77d047c8eb1ab4d4594fe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (Inserisce il riferimento PCH per la libreria di debug)
 
-Il **/Yl** opzione Crea un simbolo comune per un file di intestazione precompilata e inserisce i riferimenti al simbolo in tutti i file che utilizzano l'intestazione precompilata. Questo rende disponibili le informazioni di tipo completo per i simboli di intestazione precompilata per il debugger in tutti i file che utilizzano l'intestazione precompilata. Questa opzione è attivata per impostazione predefinita. Utilizzo di questa opzione può impedire gli errori del linker causato dalla mancanza di informazioni di debug nelle librerie collegate che utilizzano intestazioni precompilate.
+Il **/Yl** opzione genera un simbolo univoco in un file di intestazione precompilata e un riferimento a questo simbolo viene inserito in tutti i file di oggetti che utilizzano l'intestazione precompilata.
 
 ## <a name="syntax"></a>Sintassi
 
@@ -37,20 +41,22 @@ Il **/Yl** opzione Crea un simbolo comune per un file di intestazione precompila
 ### <a name="arguments"></a>Argomenti
 
 *name*  
-Nome facoltativo utilizzato per definire un simbolo per i file archiviati e di cui viene fatto riferimento nell'oggetto che definiscono o si utilizzano l'intestazione precompilata.
+Nome facoltativo utilizzato come parte del simbolo univoco.
 
 *\-*  
 Disabilita in modo esplicito un trattino (-) le **/Yl** l'opzione del compilatore.
 
 ## <a name="remarks"></a>Note
 
-Il **/Yl** opzione consente al debugger di ottenere informazioni complete sui tipi in un'intestazione precompilata in ogni file che include l'intestazione precompilata. Questa opzione Crea un nome di simbolo interno, inserisce la definizione del simbolo nel file oggetto utilizzato per creare l'intestazione precompilata per il [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opzione e inserisce un riferimento al simbolo contenuto in tutti i file che includono precompilata intestazione usando il [/Yu](../../build/reference/yu-use-precompiled-header-file.md) l'opzione del compilatore. Poiché tutti i file di origine che utilizzano l'intestazione precompilata fare riferimento al simbolo denominato, il linker collega sempre il file di oggetto che definisce il simbolo e l'intestazione precompilata associata informazioni di debug. Questa opzione è attivata per impostazione predefinita.
+Il **/Yl** l'opzione del compilatore crea una definizione di simbolo univoco in un file di intestazione precompilato creato utilizzando il [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opzione. Riferimenti al simbolo vengono inseriti automaticamente in tutti i file che includono l'intestazione precompilata usando il [/Yu](../../build/reference/yu-use-precompiled-header-file.md) l'opzione del compilatore. Il **/Yl** opzione è abilitata per impostazione predefinita quando **/Yc** viene utilizzato per creare un file di intestazione precompilata.
 
-Il **/Yl**_nome_ opzione viene utilizzata per creare in modo esplicito il simbolo di identificazione per il file di intestazione precompilata. Il compilatore utilizza il *nome* argomento per creare un simbolo simile a \_ \_ @@ \_PchSym\_@00@... @*nome* , dove la stringa di caratteri rappresenta generate dal linker puntini di sospensione (...). Se viene omesso, il compilatore genera automaticamente un nome di simbolo.
+Il **/Yl**_nome_ opzione viene utilizzata per creare un simbolo identificabile nel file di intestazione precompilata. Il compilatore utilizza il *nome* argomento come parte del nome decorato simbolo viene creato, simile a \_ \_ @@ \_PchSym\_@00@... @ *nome*, in cui stringa di caratteri rappresenta i puntini di sospensione (…) generato dal compilatore univoco. Se il *nome* viene omesso, il compilatore genera un nome di simbolo automaticamente. In genere, non è necessario conoscere il nome del simbolo. Tuttavia, quando il progetto utilizza più di un file di intestazione precompilata, il **/Yl**_nome_ opzione può rivelarsi utile per determinare quale oggetto file di utilizzo di intestazione precompilata. È possibile utilizzare *nome* come una stringa di ricerca per trovare il riferimento al simbolo in un file di dump.
 
-**/Yl-** disabilita il comportamento predefinito e non è stato impostato un riferimento a un simbolo identificazione nei file oggetto che includono l'intestazione precompilata. Questa opzione potrebbe essere richiesta per i file compilati senza presente il file di intestazione precompilata.
+**/Yl-** disabilita il comportamento predefinito e non è stato impostato un simbolo di identificazione nel file di intestazione precompilata. File compilati che includono questa intestazione precompilata non si ottengono un riferimento a simbolo comune.
 
-Se si utilizza **/Yl-**, **/Yc** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) per creare una raccolta, il compilatore crea un file di intestazione precompilata che contiene le informazioni di debug vengono archiviate in un oggetto file anziché di un file con estensione pdb. [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) errori o [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) avvisi possono verificarsi nelle build che utilizzano la libreria e l'intestazione precompilata, se il file di origine utilizzato per creare l'intestazione precompilata non definisce i simboli. Il linker può escludere questo file di oggetto libreria dal collegamento, insieme alle informazioni di debug di intestazione precompilata associato, quando si esegue alcuna operazione nel file oggetto a cui fa riferimento nel client di libreria. Per risolvere il problema, specificare **/Yl** quando si utilizza **/Yc** per creare un file di intestazione precompilata e **/Yu** per utilizzarlo. Questo assicura che il file di oggetto che contiene le informazioni di debug è incluso nella compilazione.
+Quando **/Yc** viene omesso, qualsiasi **/Yl** opzione non ha alcun effetto, ma se è specificato deve corrispondere a qualsiasi **/Yl** passare quando l'opzione **/Yc** è specificato.
+
+Se si utilizza **/Yl-**, **/Yc** e [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) opzioni per compilare un file di intestazione precompilata, le informazioni di debug viene archiviato nel file oggetto per il file di origine utilizzato per creare il intestazione precompilata, anziché un file con estensione pdb separato. Se il file di questo oggetto viene quindi effettuato parte di una libreria, [LNK1211](../../error-messages/tool-errors/linker-tools-error-lnk1211.md) errori o [LNK4206](../../error-messages/tool-errors/linker-tools-warning-lnk4206.md) avvisi possono verificarsi nelle build che usano la libreria e file di intestazione precompilata, se il file di origine utilizzato per creare il file di intestazione precompilata non definisce i simboli. Il linker può escludere il file oggetto dal collegamento, con le informazioni di debug associate, quando si esegue alcuna operazione nel file oggetto a cui fa riferimento nel client di libreria. Per risolvere questo problema, specificare **/Yl** (o rimuovere il **/Yl-** opzione) quando si utilizza **/Yc** per creare il file di intestazione precompilata. In questo modo si garantisce che il file oggetto dalla raccolta che contiene le informazioni di debug Ottiene collegato nella compilazione.
 
 Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
@@ -62,7 +68,7 @@ Per ulteriori informazioni sulle intestazioni precompilate, vedere:
 
 1. Aprire la finestra di dialogo **Pagine delle proprietà** del progetto. Per informazioni dettagliate, vedere [funziona con le proprietà del progetto](../../ide/working-with-project-properties.md).
 
-1. Scegliere il **riga di comando** pagina delle proprietà di **C/C++** cartella.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **riga di comando** pagina delle proprietà.
 
 1. Aggiungere il **/Yl**_nome_ opzione del compilatore nella **opzioni aggiuntive** casella. Scegliere **OK** per salvare le modifiche.
 

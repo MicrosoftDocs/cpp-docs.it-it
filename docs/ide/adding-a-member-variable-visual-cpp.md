@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.member.variable
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.member.variable
+dev_langs:
+- C++
 helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>Aggiunta di una variabile membro (Visual C++)
 È possibile aggiungere una variabile membro a una classe mediante Visualizzazione classi. Le variabili di membro possono essere di tipo [scambio di dati e la convalida dei dati](../mfc/dialog-data-exchange-and-validation.md), oppure possono essere generici. Creazione guidata variabile membro dati è progettato specificamente per acquisire le informazioni pertinenti e usarlo per inserire gli elementi nei file di origine in posizioni appropriate. È possibile aggiungere una variabile membro dal [editor finestre](../windows/dialog-editor.md) in [visualizzazione risorse](../windows/resource-view-window.md), o da [Visualizzazione classi](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925).  

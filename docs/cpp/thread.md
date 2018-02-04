@@ -1,41 +1,44 @@
 ---
-title: thread | Documenti Microsoft
+title: thread | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: thread_cpp
-dev_langs: C++
+f1_keywords:
+- thread_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c514879368b8ea3d676635f2b922a2e1c07224
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="thread"></a>thread
 
-**Sezione specifica Microsoft**  
+**Sezione specifica Microsoft**
+
 Il **thread** modificatore di classe di archiviazione estesi viene utilizzato per dichiarare una variabile locale di thread. Per il computer portatile equivalente in C++ 11 e versioni successivo, utilizzare il [thread_local](../cpp/storage-classes-cpp.md#thread_local) identificatore classe di archiviazione per codice portabile. In Windows **thread_local** è implementato con **declspec**.
 
 ## <a name="syntax"></a>Sintassi
 
-```
-__declspec( thread ) declarator
-```
+> **declspec (thread)** *dichiaratore*  
 
 ## <a name="remarks"></a>Note
 
@@ -44,17 +47,16 @@ L'archiviazione thread-local (TLS, Thread Local Storage) rappresenta il meccanis
 Le dichiarazioni di variabili thread-local devono usare [sintassi degli attributi estesa](../cpp/declspec.md) e `__declspec` parola chiave with il **thread** (parola chiave). Nel codice seguente, ad esempio, viene dichiarata una variabile locale di thread di tipo integer e quindi inizializzata con un valore:
 
 ```cpp
-__declspec( thread ) int tls_i = 1;  
+__declspec( thread ) int tls_i = 1;
 ```
 
 Quando si utilizzano variabili di thread locali delle librerie a caricamento dinamico, è necessario tenere in considerazione i fattori che possono causare una variabile locale di thread non venga inizializzato correttamente:
 
-1) Se la variabile viene inizializzata con una chiamata di funzione (inclusi i costruttori), questa funzione verrà chiamata solo per il thread che ha causato il binario/DLL da caricare nel processo e per tali thread avviati dopo che è stata caricata il file binario o DLL. Le funzioni di inizializzazione non vengono chiamate per qualsiasi altro thread che era già in esecuzione quando la DLL è stata caricata. L'inizializzazione dinamica avviene la chiamata di funzione DllMain per DLL_THREAD_ATTACH, ma la DLL mai Ottiene se la DLL non è nel processo quando il thread inizia da messaggi. 
+1. Se la variabile viene inizializzata con una chiamata di funzione (inclusi i costruttori), questa funzione verrà chiamata solo per il thread che ha causato il binario/DLL da caricare nel processo e per tali thread avviati dopo che è stata caricata il file binario o DLL. Le funzioni di inizializzazione non vengono chiamate per qualsiasi altro thread che era già in esecuzione quando la DLL è stata caricata. L'inizializzazione dinamica avviene la chiamata di funzione DllMain per DLL_THREAD_ATTACH, ma la DLL mai Ottiene se la DLL non è nel processo quando il thread inizia da messaggi.
 
-2) Le variabili locali del thread che vengono inizializzate in modo statico con valori costanti vengono in genere inizializzate correttamente in tutti i thread. Tuttavia, a partire da dicembre 2017 è un problema noto di conformità del compilatore Microsoft C++ con i quali le variabili constexpr ricevano dinamica anziché l'inizializzazione statica.  
-  
+1. Le variabili locali del thread che vengono inizializzate in modo statico con valori costanti vengono in genere inizializzate correttamente in tutti i thread. Tuttavia, a partire da dicembre 2017 è un problema noto di conformità del compilatore Microsoft Visual C++ in base al quale le variabili constexpr ricevano dinamica anziché l'inizializzazione statica.
+
    Nota: Entrambi questi problemi devono essere corretti in futuro gli aggiornamenti del compilatore.
-
 
 Inoltre, è necessario rispettare queste linee guida quando si dichiarano variabili e oggetti thread-local:
 
@@ -85,15 +87,15 @@ Inoltre, è necessario rispettare queste linee guida quando si dichiarano variab
 
 - Il linguaggio C standard consente di inizializzare un oggetto o una variabile con un'espressione che include un riferimento a se stessa, ma solo per oggetti con estensione non statica. Sebbene il linguaggio C++ consenta in genere l'inizializzazione dinamica di un oggetto con un'espressione che include un riferimento a se stessa, questo tipo di inizializzazione non è consentito con gli oggetti thread-local. Ad esempio:
 
-    ```cpp
-    // declspec_thread_3.cpp
-    // compile with: /LD
-    #define Thread __declspec( thread )
-    int j = j;   // Okay in C++; C error
-    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
-    ```
+   ```cpp
+   // declspec_thread_3.cpp
+   // compile with: /LD
+   #define Thread __declspec( thread )
+   int j = j;   // Okay in C++; C error
+   Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
+   ```
 
-     Si noti che un **sizeof** espressione che include l'oggetto inizializzato non costituisce un riferimento a se stessa ed è consentita in C e C++.
+   Si noti che un **sizeof** espressione che include l'oggetto inizializzato non costituisce un riferimento a se stessa ed è consentita in C e C++.
 
 **Fine sezione specifica Microsoft**
 
@@ -101,4 +103,4 @@ Inoltre, è necessario rispettare queste linee guida quando si dichiarano variab
 
 [__declspec](../cpp/declspec.md)  
 [Parole chiave](../cpp/keywords-cpp.md)  
-[Archiviazione thread-local (TLS)](../parallel/thread-local-storage-tls.md)
+[Archiviazione thread-local (TLS)](../parallel/thread-local-storage-tls.md)  
