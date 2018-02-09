@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CImage
-dev_langs: C++
-helpviewer_keywords: CImage class [MFC], limitations
+f1_keywords:
+- CImage
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImage class [MFC], limitations
 ms.assetid: 4bedaab8-7dd1-4c91-ab35-b75fb56765b0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 27046704975bf8f5e28f12acbfa72e860660fdbd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/08/2018
 ---
 # <a name="cimage-limitations-with-earlier-operating-systems"></a>Limitazioni di CImage con sistemi operativi precedenti
 Molti `CImage` funzioni funzionano solo con le versioni più recenti di Windows: Windows 95/98 o Windows NT 4.0 o Windows 2000. In questo articolo vengono descritte le limitazioni di versione di alcuni metodi.  
