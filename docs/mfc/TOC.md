@@ -531,7 +531,6 @@
 ##### [Oggetti grafici](graphic-objects.md)
 ###### [Costruzione di oggetti in una e due fasi](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Selezione di un oggetto grafico in un contesto di dispositivo](selecting-a-graphic-object-into-a-device-context.md)
-###### [Limitazioni di CImage con sistemi operativi precedenti](cimage-limitations-with-earlier-operating-systems.md)
 #### [Finestre cornice](frame-windows.md)
 ##### [Classi di finestre cornice](frame-window-classes.md)
 ###### [Classi di finestre cornice create dalla Creazione guidata applicazione](frame-window-classes-created-by-the-application-wizard.md)
