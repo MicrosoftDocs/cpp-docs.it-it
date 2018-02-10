@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1485,7 +1487,7 @@ In Visual Studio 2015 e versioni successive i miglioramenti apportati in modo co
 
 #### <a name="compiler"></a>Compilatore
 
-Il compilatore Microsoft C++ supporta le seguenti funzionalità del linguaggio ISO C++11:
+Il compilatore Microsoft Visual C++ supporta le seguenti funzionalità del linguaggio ISO C++11:
 
 - Argomenti di modello predefiniti per i modelli di funzione.
 - Delega dei costruttori
@@ -1502,8 +1504,8 @@ Il compilatore Microsoft C++ supporta le seguenti funzionalità del linguaggio I
 - Valori letterali composti.
 - Inizializzatori designati.
 - Combinazione di dichiarazioni con codice.
-- La conversione di valori letterali stringa in valori modificabili può essere impedita usando la nuova opzione del compilatore /Zc:strictStrings. In C++98 la conversione dai valori letterali stringa in char\*, e dai valori letterali stringa a caratteri wide in wchar_t\*, è stata deprecata. In C++11 la conversione è stata rimossa completamente. Anche se il compilatore può essere rigorosamente conforme allo standard, è invece disponibile l'opzione /Zc:strictStrings che consente di controllare la conversione. Per impostazione predefinita, l'opzione non è attiva. Si noti che quando si utilizza questa opzione in modalità debug, STL non verrà compilato.
-- Cast di riferimento rvalue/lvalue. Con i riferimenti rvalue, C++11 è in grado di distinguere chiaramente tra lvalue e rvalue. In precedenza, il compilatore di Visual C++ non ha fornito questa opzione negli scenari di cast specifici. È stata aggiunta una nuova opzione del compilatore, /Zc:rvalueCast, per rendere il compilatore conforme a quanto indicato nel Documento di lavoro del linguaggio C++ (vedere la sezione 5.4, [expr.cast]/1). Il comportamento predefinito quando questa opzione non è specificata è uguale a quello in Visual Studio 2012.
+- La conversione di valori letterali stringa in valori modificabili può essere impedita usando la nuova opzione del compilatore **/Zc:strictStrings**. In C++98 la conversione dai valori letterali stringa in char\*, e dai valori letterali stringa a caratteri wide in wchar_t\*, è stata deprecata. In C++11 la conversione è stata rimossa completamente. Anche se il compilatore può essere rigorosamente conforme allo standard, è invece disponibile l'opzione **/Zc:strictStrings** che consente di controllare la conversione. Per impostazione predefinita, l'opzione non è attiva. Si noti che quando si utilizza questa opzione in modalità debug, STL non verrà compilato.
+- Cast di riferimento rvalue/lvalue. Con i riferimenti rvalue, C++11 è in grado di distinguere chiaramente tra lvalue e rvalue. In precedenza, il compilatore non ha fornito questa opzione negli scenari di cast specifici. È stata aggiunta una nuova opzione del compilatore, **/Zc:rvalueCast**, per rendere il compilatore conforme a quanto indicato nel Documento di lavoro del linguaggio C++ (vedere la sezione 5.4, [expr.cast]/1). Il comportamento predefinito quando questa opzione non è specificata è uguale a quello in Visual Studio 2012.
   - Nota: per le funzioni impostate come predefinite, l'uso di =default per richiedere i costruttori di spostamento membro e gli operatori di assegnazione di spostamento non è supportato.
 
 ### <a name="c99-libraries"></a>Librerie C99

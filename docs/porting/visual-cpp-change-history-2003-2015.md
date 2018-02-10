@@ -4,32 +4,38 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: breaking changes [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Cronologia delle modifiche di Visual C++ dal 2003 al 2015
-Questo articolo descrive tutte le modifiche di rilievo apportate in Visual Studio dalla versione 2003 alla 2015, in ordine cronologico inverso. I termini "nuovo comportamento" o "ora" fanno riferimento a Visual Studio 2015 e versioni successive. I termini "vecchio comportamento" e "prima" fanno riferimento a Visual Studio 2013 e alle versioni precedenti. 
- 
- Per informazioni su Visual Studio 2017, vedere [Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
- > [!NOTE]
- > Non sono state apportate modifiche binarie di rilevo tra Visual Studio 2015 e Visual Studio 2017.
 
-Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++, potrebbero verificarsi errori di compilazione e/o runtime nel codice precedentemente compilato ed eseguito correttamente. Le modifiche apportate alla nuova versione che provocano questi problemi sono note come *modifiche importanti*e in genere sono richieste dalle modifiche nel linguaggio C++ standard, nelle firme di funzione o nel layout degli oggetti in memoria.  
-  
+Questo articolo descrive tutte le modifiche di rilievo apportate in Visual Studio dalla versione 2003 alla 2015, in ordine cronologico inverso. I termini "nuovo comportamento" o "ora" fanno riferimento a Visual Studio 2015 e versioni successive. I termini "vecchio comportamento" e "prima" fanno riferimento a Visual Studio 2013 e alle versioni precedenti.
+
+Per informazioni su Visual Studio 2017, vedere [Novità di Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) e [Miglioramenti della conformità di Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
+
+> [!NOTE]
+> Non sono state apportate modifiche binarie di rilevo tra Visual Studio 2015 e Visual Studio 2017.
+
+Quando si esegue l'aggiornamento a una nuova versione di Visual Studio, potrebbero verificarsi errori di compilazione e/o runtime nel codice precedentemente compilato ed eseguito correttamente. Le modifiche apportate alla nuova versione che provocano questi problemi sono note come *modifiche importanti*e in genere sono richieste dalle modifiche nel linguaggio C++ standard, nelle firme di funzione o nel layout degli oggetti in memoria.
+
  Per evitare errori di runtime difficili da rilevare e diagnosticare, è consigliabile non collegarsi mai in modo statico a file binari compilati usando versioni diverse del compilatore. Inoltre, quando si esegue l'aggiornamento a un progetto EXE o DLL, assicurarsi di aggiornare anche le librerie collegate. Se si usano tipi CRT (runtime C) o C++ Standard Library (libreria di C++ standard), non passarli tra file binari (inclusi DLL) compilati usando versioni diverse del compilatore. Per altre informazioni, vedere [Potenziali errori di passaggio di oggetti CRT attraverso i limiti DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
  È inoltre consigliabile non scrivere mai codice che dipende da un layout specifico per un oggetto diverso da un'interfaccia COM o un oggetto POD. Se si scrive codice di questo tipo, è necessario assicurarsi che funzioni dopo l'aggiornamento. Per altre informazioni, vedere [Portabilità in base ai limiti ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
@@ -105,9 +111,8 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **La famiglia di funzioni di printf e scanf ora viene definita inline.** Le definizioni di tutte le funzioni printf e scanf sono state spostate inline in \<stdio.h>, \<conio.h> e altre intestazioni CRT. Si tratta di una modifica che comporta un errore del linker (LNK2019, simbolo esterno non risolto) per tutti i programmi che hanno dichiarato localmente queste funzioni senza includere le intestazioni CRT appropriate. Se possibile, aggiornare il codice per includere le intestazioni CRT, ovvero aggiungere #include \<stdio.h>, e le funzioni inline, ma se non si intende modificare il codice per includere questi file di intestazione, una soluzione alternativa consiste nell'aggiungere una libreria aggiuntiva all'input del linker legacy_stdio_definitions.lib.  
   
-     Per aggiungere questa libreria all'input del linker nell'IDE, aprire il menu di scelta rapida per il nodo del progetto, scegliere **Proprietà**, quindi nella finestra di dialogo **Proprietà del progetto** scegliere **Linker**e modificare **Input del Linker** per aggiungere legacy_stdio_definitions.lib all'elenco di valori delimitati da punto e virgola.  
-  
-     Se il progetto è collegato con librerie statiche compilate con una versione di Visual C++ precedente al 2015, il linker potrebbe segnalare un simbolo esterno non risolto. Questi errori potrebbero fare riferimento a definizioni stdio interne per_iob, _iob_func o importazioni correlate per determinate funzioni stdio nel formato _imp\_*. Microsoft consiglia di ricompilare tutte le librerie statiche con la versione più recente del compilatore e delle librerie di Visual C++ quando si aggiorna un progetto. Se la raccolta è una libreria di terze parti per cui l'origine non è disponibile, è consigliabile richiedere un aggiornamento binario da terze parti o incapsulare l'utilizzo di quella libreria in una DLL separata che deve essere compilata con la versione precedente del compilatore e delle librerie di Visual C++.  
+     Per aggiungere questa libreria all'input del linker nell'IDE, aprire il menu di scelta rapida per il nodo del progetto, scegliere **Proprietà**, quindi nella finestra di dialogo **Proprietà del progetto** scegliere **Linker**e modificare **Input del Linker** per aggiungere legacy_stdio_definitions.lib all'elenco di valori delimitati da punto e virgola.
+     Se il progetto è collegato con librerie statiche compilate con una versione di Visual Studio precedente al 2015, il linker potrebbe segnalare un simbolo esterno non risolto. Questi errori potrebbero fare riferimento a definizioni stdio interne per_iob, _iob_func o importazioni correlate per determinate funzioni stdio nel formato _imp\_*. Microsoft consiglia di ricompilare tutte le librerie statiche con la versione più recente delle librerie e del compilatore C++ quando si aggiorna un progetto. Se la raccolta è una libreria di terze parti per cui l'origine non è disponibile, è consigliabile richiedere un aggiornamento binario da terze parti o incapsulare l'utilizzo di quella libreria in una DLL separata che deve essere compilata con la versione precedente del compilatore e delle librerie.
   
     > [!WARNING]
     >  Se ci si collega con Windows SDK 8.1 o versione precedente, potrebbero verificarsi errori di simbolo esterno non risolto. In tal caso, è necessario risolvere l'errore aggiungendo legacy_stdio_definitions.lib all'input del linker come descritto in precedenza.  
@@ -122,7 +127,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **_cgets e _cgetws** Le funzioni [_cgets](../c-runtime-library/cgets-cgetws.md) e [_cgetws](../c-runtime-library/cgets-cgetws.md) sono state rimosse. In alternativa a queste funzioni, provare a usare [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) e [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **Formattazione di valori infiniti e NaN** Nelle versioni precedenti, valori infiniti e NaN potrebbero essere formattati usando un set di stringhe sentinella di Visual C++ specifiche.  
+-   **Formattazione di valori infiniti e NaN** Nelle versioni precedenti, valori infiniti e NaN potrebbero essere formattati usando un set di stringhe sentinella specifiche di MSVC.  
   
     -   Valori infiniti: 1.#INF  
   
@@ -132,7 +137,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
     -   NaN indefinito: 1.#IND  
   
-     Ognuno di questi elementi potrebbe essere preceduto da un segno e potrebbe essere stato formattato in modo leggermente diverso a seconda della larghezza e della precisione del campo (talvolta con effetti insoliti, ad esempio, printf ("%.2f\n", INFINITY) visualizzerà 1. #J perché #INF potrebbe essere "arrotondato" a una precisione di 2 cifre). C99 ha introdotto nuovi requisiti relativi a come devono essere formattati valori infiniti e NaN. A questo punto l'implementazione di Visual C++ è conforme a tali requisiti. Sono disponibili le nuove stringhe seguenti:  
+     Ognuno di questi elementi potrebbe essere preceduto da un segno e potrebbe essere stato formattato in modo leggermente diverso a seconda della larghezza e della precisione del campo (talvolta con effetti insoliti, ad esempio, printf ("%.2f\n", INFINITY) visualizzerà 1. #J perché #INF potrebbe essere "arrotondato" a una precisione di 2 cifre). C99 ha introdotto nuovi requisiti relativi a come devono essere formattati valori infiniti e NaN. A questo punto l'implementazione di MSVC è conforme a tali requisiti. Sono disponibili le nuove stringhe seguenti:  
   
     -   Valori infiniti: inf  
   
@@ -240,11 +245,11 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
 -   **CLOCKS_PER_SEC** La macro CLOCKS_PER_SEC ora si espande in un numero intero di tipo clock_t, come richiesto dal linguaggio C.  
   
 ####  <a name="BK_STL"></a> Libreria standard C++  
- Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. _MSC_VER è la macro che contiene il numero di versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.  
+ Per attivare nuove ottimizzazioni e controlli di debug, l'implementazione di Visual Studio della libreria standard C++ interrompe intenzionalmente la compatibilità binaria da una versione a quella successiva. Pertanto, se si usa la libreria standard C++, i file oggetto e le librerie statiche compilati usando versioni diverse non possono essere combinati in un file binario (EXE o DLL) e gli oggetti della libreria standard C++ non possono essere passati tra i file binari compilati usando versioni diverse. Tale combinazione genera errori del linker relativi a mancate corrispondenze di _MSC_VER. _MSC_VER è la macro che contiene il numero di versione principale del compilatore, ad esempio 1800 per Visual Studio 2013. Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual Studio 2008 o versioni precedenti.  
   
 -   **File di inclusione della libreria standard C++** Sono state apportate alcune modifiche alla struttura di inclusione nelle intestazioni della libreria standard C++. Le intestazioni della libreria standard C++ possono ora includersi reciprocamente in modi non specificati. In generale, è consigliabile scrivere il codice in modo che includa accuratamente tutte le intestazioni necessarie in base allo standard C++ e non si basi su quali intestazioni della libreria standard C++ includono altre intestazioni della libreria standard C++. In questo modo il codice diventa portabile tra versioni e piattaforme. Almeno due modifiche di intestazione in Visual Studio 2015 influiscono sul codice utente. Per prima cosa \<string> non include più \<iterator>. Secondo, \<tuple> ora dichiara std::array senza includere tutti i valori \<array>, cosa che può interrompere il codice attraverso la seguente combinazione di costrutti di codice: il codice include una variabile denominata "array", si ha una direttiva using "using namespace std;" e si include un'intestazione della libreria standard C++ (ad esempio \<functional>) che include \<tuple>, che ora dichiara std::array.  
   
--   **steady_clock** L'implementazione di \<chrono> di [steady_clock](../standard-library/steady-clock-struct.md) è stata modificata per soddisfare i requisiti standard C++ per tenuta e monotonicità. steady_clock ora è basato su [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e high_resolution_clock è ora un typedef per steady_clock. Di conseguenza in Visual C++ steady_clock::time_point è ora un typedef per chrono::time_point <steady_clock>; tuttavia, ciò non vale necessariamente per altre implementazioni.  
+-   **steady_clock** L'implementazione di \<chrono> di [steady_clock](../standard-library/steady-clock-struct.md) è stata modificata per soddisfare i requisiti standard C++ per tenuta e monotonicità. steady_clock ora è basato su [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) e high_resolution_clock è ora un typedef per steady_clock. Di conseguenza in Visual Studio steady_clock::time_point è ora un typedef per chrono::time_point <steady_clock>; tuttavia, ciò non vale necessariamente per altre implementazioni.  
   
 -   **allocatori e const** Sono ora necessari confronti di uguaglianza/disuguaglianza di allocatori per accettare argomenti const su entrambi i lati.  Se gli allocatori definiscono questi operatori come segue:  
   
@@ -258,9 +263,9 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **Elementi const** Lo standard C++ ha sempre rifiutato i contenitori di elementi const (ad esempio vector\<const T> o set\<const T>). In Visual C++ 2013 e versioni precedenti tali contenitori erano accettati. Nella versione corrente tali contenitori causano errori di compilazione.  
+-   **Elementi const** Lo standard C++ ha sempre rifiutato i contenitori di elementi const (ad esempio vector\<const T> o set\<const T>). In Visual Studio 2013 e versioni precedenti tali contenitori erano accettati. Nella versione corrente tali contenitori causano errori di compilazione.  
   
--   **std::allocator::deallocate** In Visual C++ 2013 e versioni precedenti, std::allocator::deallocate(p, n) ignorava l'argomento passato per n.  Lo standard C++ ha sempre richiesto che n sia uguale al valore passato come primo argomento alla chiamata di allocare che ha restituito p. Tuttavia, nella versione corrente il valore di n viene controllato. Il codice che passa gli argomenti per n che differiscono da ciò che richiede lo standard potrebbe arrestarsi in modo anomalo in fase di esecuzione.  
+-   **std::allocator::deallocate** In Visual Studio 2013 e versioni precedenti, std::allocator::deallocate(p, n) ignorava l'argomento passato per n.  Lo standard C++ ha sempre richiesto che n sia uguale al valore passato come primo argomento alla chiamata di allocare che ha restituito p. Tuttavia, nella versione corrente il valore di n viene controllato. Il codice che passa gli argomenti per n che differiscono da ciò che richiede lo standard potrebbe arrestarsi in modo anomalo in fase di esecuzione.  
   
 -   **hash_map e hash_set** I file di intestazione non standard hash_map e hash_set sono deprecati in Visual Studio 2015 e verranno rimossi in una versione futura. Usare invece unordered_map e unordered_set.  
   
@@ -316,16 +321,16 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Miglioramenti della conformità del compilatore in Visual C++ 2015  
- Quando si aggiorna il codice rispetto alle versioni precedenti, potrebbero verificarsi anche errori del compilatore dovuti ai miglioramenti apportati alla conformità in Visual C++ 2015. Tali miglioramenti non interrompono la compatibilità binaria dalle versioni precedenti di Visual C++, ma possono generare errori di compilazione mai riscontrati in precedenza. Per altre informazioni, vedere [Visual C++: novità dalla versione 2003 alla 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Miglioramenti della conformità del compilatore in Visual Studio 2015  
+ Quando si aggiorna il codice rispetto alle versioni precedenti, potrebbero verificarsi anche errori del compilatore dovuti ai miglioramenti apportati alla conformità in Visual Studio 2015. Tali miglioramenti non interrompono la compatibilità binaria dalle versioni precedenti di Visual Studio, ma possono generare errori di compilazione mai riscontrati in precedenza. Per altre informazioni, vedere [Visual C++: novità dalla versione 2003 alla 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- In Visual C++ 2015 i miglioramenti apportati in modo costante alla conformità del compilatore possono talvolta modificare il modo in cui il compilatore riconosce il codice sorgente esistente. In questo caso, si possono riscontrare errori nuovi o diversi durante la compilazione o addirittura differenze di comportamento nel codice che apparentemente in precedenza veniva compilato ed eseguito correttamente.  
+ In Visual Studio 2015 i miglioramenti apportati in modo costante alla conformità del compilatore possono talvolta modificare il modo in cui il compilatore riconosce il codice sorgente esistente. In questo caso, si possono riscontrare errori nuovi o diversi durante la compilazione o addirittura differenze di comportamento nel codice che apparentemente in precedenza veniva compilato ed eseguito correttamente.  
   
  Fortunatamente, queste differenze hanno poco o nessun impatto sulla maggior parte del codice sorgente e quando è necessario usare codice sorgente o altre modifiche per risolvere queste differenze, le correzioni sono in genere minime e semplici. Sono stati inclusi numerosi esempi di codice sorgente in precedenza accettabile per cui potevano essere necessarie modifiche *(prima)* e di correzioni da apportare per risolvere i problemi *(dopo)*.  
   
- Benché queste differenze possano influire sul codice sorgente o altri elementi di compilazione, non influiscono sulla compatibilità binaria tra gli aggiornamenti alle versioni di Visual C++. Una *modifica sostanziale*, molto più drastica, può influire sulla compatibilità binaria, ma le interruzioni della compatibilità binaria si verificano solo tra le versioni principali di Visual C++. Ad esempio tra Visual C++ 2013 e Visual C++ 2015. Per informazioni sulle modifiche sostanziali apportate tra Visual C++ 2013 e Visual C++ 2015, vedere [Modifiche della conformità di Visual C++ 2015](#VC_2015).  
+ Benché queste differenze possano influire sul codice sorgente o altri elementi di compilazione, non influiscono sulla compatibilità binaria tra gli aggiornamenti alle versioni di Visual Studio. Una *modifica sostanziale*, molto più drastica, può influire sulla compatibilità binaria, ma le interruzioni della compatibilità binaria si verificano solo tra le versioni principali di Visual Studio. Ad esempio tra Visual Studio 2013 e Visual Studio 2015. Per informazioni sulle modifiche sostanziali apportate tra Visual Studio 2013 e Visual Studio 2015, vedere [Modifiche della conformità di Visual Studio 2015](#VC_2015).  
   
--   [Miglioramenti della conformità in Visual C++ 2015](#VS_RTM)  
+-   [Miglioramenti della conformità in Visual Studio 2015](#VS_RTM)  
   
 -   [Miglioramenti della conformità in Update 1](#VS_Update1)  
   
@@ -333,7 +338,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   [Miglioramenti della conformità in Update 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a>Miglioramenti della conformità in Visual C++ 2015  
+###  <a name="VS_RTM"></a> Miglioramenti della conformità in Visual Studio 2015  
   
 -   /Zc:forScope- option  
   
@@ -376,7 +381,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
     ```  
   
-     Nelle versioni precedenti del compilatore Visual C++ questa situazione è accettabile, ma ora il compilatore genera l'errore seguente:  
+     Nelle versioni precedenti del compilatore questa situazione è accettabile, ma ora il compilatore genera l'errore seguente:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
@@ -408,7 +413,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
 -   **Parametri di modello non di tipo**  
   
-     Determinato codice che prevede parametri di modello non di tipo viene ora verificato correttamente per la compatibilità del tipo quando vengono forniti gli argomenti di modello espliciti. Ad esempio, il seguente codice veniva compilato senza errori nelle versioni precedenti di Visual C++.  
+     Determinato codice che prevede parametri di modello non di tipo viene ora verificato correttamente per la compatibilità del tipo quando vengono forniti gli argomenti di modello espliciti. Ad esempio, il seguente codice veniva compilato senza errori nelle versioni precedenti di Visual Studio.  
   
     ```cpp  
     struct S1  
@@ -574,7 +579,7 @@ Quando si esegue l'aggiornamento a una nuova versione del compilatore Visual C++
   
     ```  
   
-     Il problema si verifica a causa della corrispondenza delle firme funzione tra un operatore delete di posizionamento che è stato definito e il nuovo operatore delete con dimensione globale. Stabilire se è possibile usare un tipo diverso da size_t per qualsiasi operatore new e delete di posizionamento.  Si noti che il tipo di size_t typedef è dipendente dal compilatore; è un typedef per int senza segno in Visual C++. Una buona soluzione consiste nell'usare un tipo enumerato simile al seguente:  
+     Il problema si verifica a causa della corrispondenza delle firme funzione tra un operatore delete di posizionamento che è stato definito e il nuovo operatore delete con dimensione globale. Stabilire se è possibile usare un tipo diverso da size_t per qualsiasi operatore new e delete di posizionamento.  Si noti che il tipo di size_t typedef è dipendente dal compilatore; è un typedef per int senza segno in MSVC. Una buona soluzione consiste nell'usare un tipo enumerato simile al seguente:  
   
     ```cpp  
     enum class my_type : size_t {};  
@@ -2298,7 +2303,7 @@ C c;
   
 -   **Le funzioni membro statiche non supportano i qualificatori CV.**  
   
-     Le versioni precedenti di Visual C++ 2015 consentivano alle funzioni membro statiche di avere qualificatori CV. Questo comportamento è dovuto a una regressione in Visual C++ 2015 e Visual C++ 2015 Update 1. Visual C++ 2013 e le versioni precedenti di Visual C++ non accettano il codice scritto in questo modo. Il comportamento di Visual C++ 2015 e Visual C++ 2015 Update 1 non è corretto e non è conforme allo standard C++.  Visual Studio 2015 Update 2 non accetta il codice scritto in questo modo e genera l'errore del compilatore C2511.  
+     Le versioni precedenti di Visual Studio 2015 consentivano alle funzioni membro statiche di avere qualificatori CV. Questo comportamento è dovuto a una regressione in Visual Studio 2015 e Visual Studio 2015 Update 1. Visual Studio 2013 e le versioni precedenti del compilatore non accettano il codice scritto in questo modo. Il comportamento di Visual Studio 2015 e Visual Studio 2015 Update 1 non è corretto e non è conforme allo standard C++.  Visual Studio 2015 Update 2 non accetta il codice scritto in questo modo e genera l'errore del compilatore C2511.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
@@ -2452,7 +2457,7 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     Nelle versioni precedenti di Visual C++, le asserzioni statiche nella parte inferiore di questo esempio passano perché `std::is_convertable<>::value` è stato impostato erroneamente su `true`. Ora `std::is_convertable<>::value` è impostato correttamente su `false` causando l'esito negativo delle asserzioni statiche.  
+     Nelle versioni precedenti del compilatore, le asserzioni statiche nella parte inferiore di questo esempio passano perché `std::is_convertable<>::value` è stato impostato erroneamente su `true`. Ora `std::is_convertable<>::value` è impostato correttamente su `false` causando l'esito negativo delle asserzioni statiche.  
   
 -   **I costruttori di copia e di spostamento semplici impostati come predefiniti o eliminati rispettano gli identificatori di accesso**  
   
@@ -2505,7 +2510,7 @@ C c;
   
 -   **Deprecazione del supporto per il codice ATL con attributi** (livello 1 (/W1) attivo per impostazione predefinita)  
   
-     Le versioni precedenti del compilatore supportavano il codice ATL con attributi. Come fase successiva della rimozione del supporto per il codice ATL con attributi [avviata in Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), il codice ATL con attributi è stato deprecato. Ora il compilatore genera l'avviso C4467 per consentire l'identificazione di questo tipo di codice deprecato.  
+     Le versioni precedenti del compilatore supportavano il codice ATL con attributi. Come fase successiva della rimozione del supporto per il codice ATL con attributi [avviata in Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), il codice ATL con attributi è stato deprecato. Ora il compilatore genera l'avviso C4467 per consentire l'identificazione di questo tipo di codice deprecato.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
@@ -2683,7 +2688,7 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Modifiche della conformità di Visual C++ 2013  
+## <a name="visual-studio-2013-conformance-changes"></a>Modifiche della conformità di Visual Studio 2013  
   
 ### <a name="compiler"></a>Compilatore  
   
@@ -2740,7 +2745,7 @@ C c;
   
     ```  
   
--   Il linguaggio C++ standard non consente la specializzazione esplicita in una classe. Sebbene sia consentita da Visual C++ in alcune situazioni, nei casi come quello citato nell'esempio seguente viene generato un errore, poiché il compilatore non considera la seconda funzione come una specializzazione della prima.  
+-   Il linguaggio C++ standard non consente la specializzazione esplicita in una classe. Sebbene sia consentita dal compilatore di Microsoft Visual C++ in alcune situazioni, nei casi come quello citato nell'esempio seguente viene generato un errore, poiché il compilatore non considera la seconda funzione come una specializzazione della prima.  
   
     ```cpp  
     template < int N>  
@@ -2761,7 +2766,7 @@ C c;
   
     ```  
   
--   Visual C++ non tenta più di risolvere l'ambiguità delle due funzioni riportate nell'esempio seguente e ora restituisce un errore:  
+-   Il compilatore non tenta più di risolvere l'ambiguità delle due funzioni riportate nell'esempio seguente e ora restituisce un errore:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2833,7 +2838,7 @@ C c;
   
     ```  
   
--   È stata modificata la ricerca del nome. Il codice seguente viene risolto in modo diverso in Visual C++ in Visual Studio 2012 e Visual C++ in Visual Studio 2013:  
+-   È stata modificata la ricerca del nome. Il codice seguente viene risolto in modo diverso nel compilatore C++ in Visual Studio 2012 e Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2847,9 +2852,9 @@ C c;
   
     ```  
   
-     In Visual C++ in Visual Studio 2012 E1 nell'espressione E1::b veniva risolto in :: E1 nell'ambito globale. In Visual C++ in Visual Studio 2013 E1 nell'espressione E1::b viene risolto nella definizione typedef E2 in main() con tipo:: E2.  
+     In Visual Studio 2012 E1 nell'espressione E1::b veniva risolto in :: E1 nell'ambito globale. In Visual Studio 2013 E1 nell'espressione E1::b viene risolto nella definizione typedef E2 in main() con tipo:: E2.  
   
--   Il layout degli oggetti è stato modificato. In x64, il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se dispone di una funzione virtuale, ma non di una classe base con una funzione virtuale, il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni virtuali dopo il layout dei membri dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual C++ in Visual Studio 2013. Si consideri, ad esempio, il seguente codice:  
+-   Il layout degli oggetti è stato modificato. In x64, il layout degli oggetti di una classe può cambiare rispetto alle versioni precedenti. Se dispone di una funzione virtuale, ma non di una classe base con una funzione virtuale, il modello a oggetti del compilatore inserisce un puntatore a una tabella di funzioni virtuali dopo il layout dei membri dati. Ciò significa che il layout potrebbe non essere ottimale in tutti i casi. Nelle versioni precedenti, un'ottimizzazione per x64 tentava di migliorare automaticamente il layout, ma poiché non funzionava correttamente in situazioni di codice complesse, è stata rimossa in Visual Studio 2013. Si consideri, ad esempio, il seguente codice:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2863,7 +2868,7 @@ C c;
   
     ```  
   
--   In Visual C++ in Visual Studio 2013 il risultato di sizeof(S2) su x64 è 48, ma nelle versioni precedenti restituisce 32. Per fare in modo che restituisca 32 in Visual C++ in Visual Studio 2013 per x64, aggiungere una classe di base fittizia con una funzione virtuale:  
+-   In Visual Studio 2013 il risultato di sizeof(S2) su x64 è 48, ma nelle versioni precedenti restituisce 32. Per fare in modo che restituisca 32 nel compilatore C++ in Visual Studio 2013 per x64, aggiungere una classe di base fittizia con una funzione virtuale:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2896,9 +2901,9 @@ C c;
   
     ```  
   
-     Nei compilatori Visual C++ prima di Visual C++ in Visual Studio 2013, questo codice genera questo messaggio con avviso C4370: 'S2': il layout della classe è stato modificato rispetto alla precedente versione del compilatore per migliorare la compressione  
+     Prima di Visual Studio 2013, questo codice genera questo messaggio con avviso C4370: 'S2': il layout della classe è stato modificato rispetto alla precedente versione del compilatore per migliorare la compressione.  
   
-     Il compilatore x86 ha lo stesso problema di layout inferiore al livello ottimale in tutte le versioni di Visual C++. Ad esempio, se questo codice viene compilato per x86:  
+     Il compilatore x86 ha lo stesso problema di layout inferiore al livello ottimale in tutte le versioni del compilatore. Ad esempio, se questo codice viene compilato per x86:  
   
     ```cpp  
     struct S {  
@@ -2925,7 +2930,7 @@ C c;
     ```  
   
 ### <a name="standard-library"></a>Libreria standard  
- Visual C++ in Visual Studio 2013 rileva le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual C++ 2010, e RuntimeLibrary. Queste si verificano combinando le opzioni del compilatore /MT (versione statica), /MTd (debug statico), /MD (versione dinamica) e /MDd (debug dinamico).  
+ Il compilatore C++ in Visual Studio 2013 rileva le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual Studio 2010, e RuntimeLibrary. Queste si verificano combinando le opzioni del compilatore /MT (versione statica), /MTd (debug statico), /MD (versione dinamica) e /MDd (debug dinamico).  
   
 -   Se il codice riconosce i modelli simulati dell'alias della versione precedente, è necessario modificarlo. Ad esempio, anziché allocator_traits\<A>::rebind_alloc\<U>::other ora si deve impostare allocator_traits\<A>::rebind_alloc\<U>. Anche se ratio_add\<R1, R2>::type non è più necessario ed è ora consigliabile impostare ratio_add\<R1, R2>, il primo verrà comunque compilato, poiché ratio\<N, D> richiede un "tipo" typedef per un rapporto ridotto, che sarà dello stesso tipo se è già ridotto.  
   
@@ -2947,7 +2952,7 @@ C c;
   
 -   La libreria standard C++ non supporta /clr:oldSyntax.  
   
--   La specifica C++11 per common_type presenta delle conseguenze impreviste e indesiderate, in particolare induce common_type\<int, int>::type a restituire int&&. Visual C++ implementa quindi la Proposta per risolvere il problema 2141 del gruppo di lavoro di libreria, che fa sì che common_type\<int, int="">::type restituisca int.  
+-   La specifica C++11 per common_type presenta delle conseguenze impreviste e indesiderate, in particolare induce common_type\<int, int>::type a restituire int&&. Il compilatore implementa quindi la Proposta per risolvere il problema 2141 del gruppo di lavoro di libreria, che fa sì che common_type\<int, int="">::type restituisca int.  
   
      Come effetto collaterale di questa modifica, il case di identità non funziona più (common_type\<T> non restituisce sempre il tipo T). Ciò è conforme alla Proposta, ma interrompe il codice basato sul comportamento precedente.  
   
@@ -2962,7 +2967,7 @@ C c;
   
 ### <a name="mfc-and-atl"></a>MFC e ATL  
   
--  **Solo Visual Studio 2013**: la libreria MFC per MBCS non è inclusa in Visual Studio perché il formato Unicode è estremamente diffuso e l'utilizzo di MBCS si è ridotto significativamente. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Se tuttavia è necessario continuare a usare la libreria MFC per MBCS, è possibile scaricarla dall'Area download di MSDN in [Libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  Nota: la DLL MBCS è inclusa nei componenti di configurazione di Visual C++ in Visual Studio 2015 e versioni successive.
+-  **Solo Visual Studio 2013**: la libreria MFC per MBCS non è inclusa in Visual Studio perché il formato Unicode è estremamente diffuso e l'utilizzo di MBCS si è ridotto significativamente. Questa modifica mantiene inoltre MFC più allineato a Windows SDK stesso, poiché molti dei nuovi controlli e messaggi sono solo Unicode. Se tuttavia è necessario continuare a usare la libreria MFC per MBCS, è possibile scaricarla dall'Area download di MSDN in [Libreria MFC multibyte per Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). Il pacchetto ridistribuibile di Visual C++ include ancora questa libreria.  Nota: la DLL MBCS è inclusa nei componenti di configurazione di C++ in Visual Studio 2015 e versioni successive.
   
 -   L'accessibilità per la barra multifunzione MFC è stata modificata.  Anziché un'architettura a un livello ora viene usata un'architettura gerarchica. È possibile continuare a usare il vecchio comportamento chiamando CRibbonBar::EnableSingleLevelAccessibilityMode().  
   
@@ -3043,19 +3048,19 @@ C c;
   
 -   A seguito di una modifica importante tra gli standard C++98/03 e C++11, usando argomenti di modello espliciti per la chiamata a make_pair(), come inmake_pair\<int, int>(x, y), in genere non viene eseguita la compilazione in Visual C++ in Visual Studio 2012. La soluzione consiste nel chiamare sempre make_pair() senza argomenti di modello espliciti, come in make_pair(x, y). Se si indicano argomenti di modello espliciti, viene vanificato lo scopo della funzione. Se è necessario controllare con precisione il tipo risultante, usare pair anziché make_pair, come in pair\<short, short >(int1, int2).  
   
--   Un'altra modifica sostanziale tra gli standard C++98/03 e C++11: quando A è implicitamente convertibile in B e B è implicitamente convertibile in C, ma A non è implicitamente convertibile in C, C++98/03 e Visual C++2010 consentono la conversione di pair\<A, X > (in modo implicito o esplicito) in pair\<C, X >. L'altro tipo, X, non interessa in questa sede e non è specifico per il primo tipo nella coppia. Poiché C++11 e Visual C++ in Visual Studio 2012 rilevano che A non è implicitamente convertibile in C, rimuovono la conversione della coppia dalla risoluzione dell'overload. Questa modifica è positiva per molti scenari. Ad esempio, l'overload di func(const pair\<int, int>&) e func(const pair\<string, string>&) e la chiamata di func() con pair\<const char *, const char \*> eseguono la compilazione con questa modifica. Tuttavia, la modifica interrompe il codice che si basava su conversioni di coppia aggressive. In genere, tale codice può essere corretto eseguendo una parte della conversione in modo esplicito, ad esempio passando make_pair(static_cast\<B>(a), x) a una funzione che prevede pair\<C, X >.  
+-   Un'altra modifica sostanziale tra gli standard C++98/03 e C++11: quando A è implicitamente convertibile in B e B è implicitamente convertibile in C, ma A non è implicitamente convertibile in C, C++98/03 e Visual C++2010 consentono la conversione di pair\<A, X > (in modo implicito o esplicito) in pair\<C, X >. L'altro tipo, X, non interessa in questa sede e non è specifico per il primo tipo nella coppia. Poiché C++11 e il compilatore C++ in Visual Studio 2012 rilevano che A non è implicitamente convertibile in C, rimuovono la conversione della coppia dalla risoluzione dell'overload. Questa modifica è positiva per molti scenari. Ad esempio, l'overload di func(const pair\<int, int>&) e func(const pair\<string, string>&) e la chiamata di func() con pair\<const char *, const char \*> eseguono la compilazione con questa modifica. Tuttavia, la modifica interrompe il codice che si basava su conversioni di coppia aggressive. In genere, tale codice può essere corretto eseguendo una parte della conversione in modo esplicito, ad esempio passando make_pair(static_cast\<B>(a), x) a una funzione che prevede pair\<C, X >.  
   
--   Visual C++ 2010 simulava i modelli variadic, ad esempio make_shared\<T>(arg1, arg2, argN), fino a un limite massimo di 10 argomenti, contrassegnando overload e specializzazioni con macchine di precompilazione. In Visual C++ in Visual Studio 2012 questo limite viene ridotto a 5 argomenti per migliorare i tempi di compilazione e il consumo di memoria del compilatore per la maggior parte degli utenti. Tuttavia, è possibile impostare il limite precedente definendo in modo esplicito _VARIADIX_MAX come 10, a livello di progetto.  
+-   Visual C++ 2010 simulava i modelli variadic, ad esempio make_shared\<T>(arg1, arg2, argN), fino a un limite massimo di 10 argomenti, contrassegnando overload e specializzazioni con macchine di precompilazione. In Visual Studio 2012 questo limite viene ridotto a 5 argomenti per migliorare i tempi di compilazione e il consumo di memoria del compilatore per la maggior parte degli utenti. Tuttavia, è possibile impostare il limite precedente definendo in modo esplicito _VARIADIX_MAX come 10, a livello di progetto.  
   
 -   C++ 11 17.6.4.3.1 [macro.names]/2 impedisce l'impostazione delle macro delle parole chiave quando sono incluse le intestazioni della libreria standard di C++. Le intestazioni ora generano errori del compilatore se rilevano parole chiave con macro impostate. La definizione di _ALLOW_KEYWORD_MACROS consente la compilazione del codice ma ne è fortemente sconsigliato l'uso. Come eccezione, l'uso di new con macro impostate è consentito per impostazione predefinita, poiché le intestazioni nel complesso si difendono usando #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Defining _ENFORCE_BAN_OF_MACRO_NEW esegue esattamente l'operazione indicata nel nome.  
   
--   Per implementare varie ottimizzazioni e controlli di debug, l'implementazione della libreria standard di C++ interrompe intenzionalmente la compatibilità binaria tra le versioni di Visual Studio (2005, 2008, 2010, 2012). Se si usa la libreria standard di C++, viene impedita la combinazione di file oggetto e librerie statiche compilati usando versioni diverse in un unico file binario (EXE o DLL) e non è consentito passare gli oggetti della libreria standard di C++ tra i file binari compilati usando versioni diverse. La combinazione di librerie statiche e file oggetto (usando la libreria standard di C++) compilati usando Visual C++ 2010 con quelli compilati usando Visual C++ in Visual Studio 2012 genera errori del linker per mancata corrispondenza in _MSC_VER, dove _MSC_VER è la macro che contiene la versione principale del compilatore (1700 per Visual C++ in Visual Studio 2012). Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.  
+-   Per implementare varie ottimizzazioni e controlli di debug, l'implementazione della libreria standard di C++ interrompe intenzionalmente la compatibilità binaria tra le versioni di Visual Studio (2005, 2008, 2010, 2012). Se si usa la libreria standard di C++, viene impedita la combinazione di file oggetto e librerie statiche compilati usando versioni diverse in un unico file binario (EXE o DLL) e non è consentito passare gli oggetti della libreria standard di C++ tra i file binari compilati usando versioni diverse. La combinazione di librerie statiche e file oggetto (usando la libreria standard di C++) compilati usando Visual C++ 2010 con quelli compilati usando il compilatore C++ in Visual Studio 2012 genera errori del linker per mancata corrispondenza in _MSC_VER, dove _MSC_VER è la macro che contiene la versione principale del compilatore (1700 per Visual C++ in Visual Studio 2012). Questo controllo non consente di rilevare la combinazione DLL e altre combinazioni inerenti a Visual C++ 2008 o versioni precedenti.  
   
--   Oltre a rilevare le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual C++ 2010, Visual C++ in Visual Studio 2012 rileva le mancate corrispondenze nella libreria di runtime. Queste si verificano se vengono combinate le opzioni del compilatore /MT (versione statica), /MTd (debug statico), /MD (versione dinamica) e /MDd (debug dinamico).  
+-   Oltre a rilevare le mancate corrispondenze in _ITERATOR_DEBUG_LEVEL, implementato in Visual C++ 2010, il compilatore C++ in Visual Studio 2012 rileva le mancate corrispondenze nella libreria di runtime. Queste si verificano se vengono combinate le opzioni del compilatore /MT (versione statica), /MTd (debug statico), /MD (versione dinamica) e /MDd (debug dinamico).  
   
 -   operator\<(), operator>(), operator\<=() e operator>=() in precedenza erano disponibili per le famiglie di contenitori std::unordered_map andstdext::hash_map, sebbene implementarli non fosse effettivamente utile. Questi operatori non standard sono stati rimossi in Visual C++ in Visual Studio 2012. Inoltre, l'implementazione di operator==() e operator!=() per la famiglia thestd::unordered_map è stata estesa per coprire la famiglia stdext::hash_map. Si consiglia di evitare l'uso della famiglia thestdext::hash_map nel nuovo codice.  
   
--   C++ 11 22.4.1.4 [locale.codecvt] specifica che codecvt::length() e codecvt::do_length() devono usare parametri stateT& modificabili, ma Visual C++ 2010 usava l'elemento const stateT&. Visual C++ in Visual Studio 2012 accetta stateT& come definito dallo standard. Questa differenza è significativa se si tenta di eseguire l'override della funzione virtuale do_length().  
+-   C++ 11 22.4.1.4 [locale.codecvt] specifica che codecvt::length() e codecvt::do_length() devono usare parametri stateT& modificabili, ma Visual C++ 2010 usava l'elemento const stateT&. Il compilatore C++ in Visual Studio 2012 accetta stateT& come definito dallo standard. Questa differenza è significativa se si tenta di eseguire l'override della funzione virtuale do_length().  
   
 ### <a name="crt"></a>CRT  
   

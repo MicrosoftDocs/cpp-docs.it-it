@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Aggiornare il codice a Universal CRT
 
@@ -42,7 +43,7 @@ Quando si aggiornano i progetti Visual C++, se è stata impostata la proprietà 
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Distribuzione e ridistribuzione della libreria Universal CRT
   
-Poiché la libreria UCRT ora è un componente del sistema operativo Microsoft Windows, è inclusa come parte del sistema operativo in Windows 10 ed è disponibile in Windows Update per i sistemi operativi precedenti, da Windows Vista a Windows 8.1. Una versione ridistribuibile è disponibile per Windows XP. Come componente del sistema operativo, gli aggiornamenti e la manutenzione della libreria UCRT vengono gestiti da Windows Update indipendentemente dalle versioni del compilatore di Visual Studio e Visual C++. Poiché la libreria UCRT è un componente di Windows, per migliorare la sicurezza e semplificare gli aggiornamenti, riducendo la dimensione dell'immagine, è consigliabile usare una distribuzione centrale della libreria UCRT per l'applicazione.  
+Poiché la libreria UCRT ora è un componente del sistema operativo Microsoft Windows, è inclusa come parte del sistema operativo in Windows 10 ed è disponibile in Windows Update per i sistemi operativi precedenti, da Windows Vista a Windows 8.1. Una versione ridistribuibile è disponibile per Windows XP. Come componente del sistema operativo, gli aggiornamenti e la manutenzione della libreria UCRT vengono gestiti da Windows Update indipendentemente dalle versioni del compilatore di Visual Studio e Microsoft C++. Poiché la libreria UCRT è un componente di Windows, per migliorare la sicurezza e semplificare gli aggiornamenti, riducendo la dimensione dell'immagine, è consigliabile usare una distribuzione centrale della libreria UCRT per l'applicazione.  
   
 È possibile usare la libreria UCRT in qualsiasi versione di Windows supportata da Visual Studio 2015 o Visual Studio 2017. La libreria può essere ridistribuita usando un pacchetto vcredist per le versioni supportate di Windows diverse da Windows 10. I pacchetti vcredist includono i componenti UCRT e li installano automaticamente nei sistemi operativi Windows su cui non sono installati per impostazione predefinita. Per altre informazioni, vedere [Ridistribuzione di file Visual C++](../ide/redistributing-visual-cpp-files.md).  
   

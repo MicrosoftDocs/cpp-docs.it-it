@@ -12,15 +12,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 697b5dc087aa61280922d5574001838ea5ff1dcb
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Come segnalare un problema con il set di strumenti Visual C++
 
-Se si riscontrano problemi con il compilatore, il linker o altri strumenti e librerie di Visual C++ è necessario inviare una segnalazione a Microsoft.
+Se si riscontrano problemi con il compilatore, il linker o altri strumenti e librerie di Microsoft Visual C++ è necessario inviare una segnalazione a Microsoft.
 
 Il modo migliore per segnalare un problema è inviare un report con una descrizione del problema riscontrato, informazioni dettagliate su come viene compilato il programma e una *procedura di riproduzione*, vale a dire un test case per riprodurre il problema nei computer Microsoft. In questo modo è possibile verificare rapidamente se il problema riguarda il codice Microsoft e non l'ambiente locale, determinare se ha effetto su altre versioni del compilatore e diagnosticarne la causa.
 

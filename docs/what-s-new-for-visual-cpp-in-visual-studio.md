@@ -1,22 +1,24 @@
 ---
 title: "Novità di Visual C++ in Visual Studio | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Novità di Visual C++ in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-In [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] sono stati inclusi numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi segnalati per il compilatore e gli strumenti, molti inviati dai clienti tramite le opzioni [Segnala un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Invia un suggerimento](https://visualstudio.uservoice.com/) in **Commenti e suggerimenti**. Microsoft ringrazia i clienti per le segnalazioni inviate. Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] introduce numerosi aggiornamenti e correzioni per l'ambiente Visual C++. Sono stati corretti più di 250 bug e problemi segnalati per il compilatore e gli strumenti, molti inviati dai clienti tramite le opzioni [Segnala un problema](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) e [Invia un suggerimento](https://visualstudio.uservoice.com/) in **Commenti e suggerimenti**. Microsoft ringrazia i clienti per le segnalazioni inviate. Per altre informazioni sulle novità in tutto Visual Studio, visitare la pagina [Novità in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ Questa versione include aggiornamenti al compilatore C++ e alla libreria standar
 
    **Visual Studio 2017 versione 15.3**:
 
-   L'opzione **/std:c++17** abilita il set di funzionalità C++17 implementate dal compilatore Visual C++. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17. Per abilitare queste funzionalità, usare **/std:c++latest**.
+   L'opzione **/std:c++17** abilita il set di funzionalità C++17 implementate dal compilatore. Questa opzione disabilita il supporto del compilatore e della libreria standard per le funzionalità modificate o nuove nelle versioni del documento di lavoro, nonché degli aggiornamenti per i difetti dello standard C++ dopo C++17. Per abilitare queste funzionalità, usare **/std:c++latest**.
 
    **Visual Studio 2017 versione 15.5**:
 
-   Il compilatore Visual C++ supporta il 75% circa delle nuove funzionalità di C++17, inclusi binding strutturati, espressioni lambda `constexpr`, `if constexpr`, variabili inline, espressioni di riduzione e aggiunta di `noexcept` al sistema di tipi. Queste funzionalità sono disponibili con l'opzione **/std:c++17**. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
+   Il compilatore supporta il 75% circa delle nuove funzionalità di C++17, inclusi binding strutturati, espressioni lambda `constexpr`, `if constexpr`, variabili inline, espressioni di riduzione e aggiunta di `noexcept` al sistema di tipi. Queste funzionalità sono disponibili con l'opzione **/std:c++17**. Per altre informazioni, vedere [Miglioramenti della conformità di C++ in Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
 - [/permissive-](build/reference/permissive-standards-conformance.md): consente di abilitare tutte le opzioni del compilatore relative alla conformità allo standard e di disabilitare la maggior parte delle estensioni del compilatore specifiche di Microsoft (ma non `__declspec(dllimport)`, ad esempio). Questa opzione è disattivata per impostazione predefinita ma verrà attivata per impostazione predefinita in futuro.
 
