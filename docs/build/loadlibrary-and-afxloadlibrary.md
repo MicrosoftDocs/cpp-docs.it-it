@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary e AfxLoadLibrary
 Elabora chiamata [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (o [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) per il collegamento esplicito a una DLL. Se la funzione ha esito positivo, associa la DLL specificata nello spazio degli indirizzi del processo chiamante e restituisce un handle alla DLL che può essere utilizzato con altre funzioni nel collegamento esplicito, ad esempio, `GetProcAddress` e `FreeLibrary`.  
@@ -39,7 +43,7 @@ Elabora chiamata [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) 
  Se Windows non è possibile caricare la DLL, il processo può tentare di correggere l'errore. Ad esempio, il processo potrebbe informare l'utente dell'errore e chiedere all'utente di specificare un percorso diverso per la DLL.  
   
 > [!IMPORTANT]
->  Se il codice deve essere eseguito in Windows NT 4, Windows 2000 o Windows XP (precedente a SP1), assicurarsi di specificare il percorso completo di tutte le DLL. In questi sistemi operativi, la directory corrente viene cercata innanzitutto quando vengono caricati i file. Se non si specifica il percorso del file, è possibile caricare un file non è quello previsto.  
+>  Assicurarsi di specificare il percorso completo di tutte le DLL. La directory corrente viene cercata innanzitutto quando vengono caricati i file. Se non si specifica il percorso del file, è possibile caricare un file non è quello previsto.  
   
 ## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.  
   

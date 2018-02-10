@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Supporto per MBCS in Visual C++
-Durante l'esecuzione su una versione del sistema operativo Windows 2000 o Windows XP, il sistema di sviluppo di Visual C++ (incluso l'editor del codice sorgente integrato, debugger e strumenti da riga di comando) è abilitata per MBCS, fatta eccezione per la memoria (finestra).  
+Durante l'esecuzione su una versione di Windows, il sistema di sviluppo di Visual C++ (inclusi gli strumenti editor, debugger e riga di comando del codice sorgente integrato) è abilitata per MBCS, fatta eccezione per la memoria (finestra).  
   
  Finestra memoria non interpreta i byte di dati come caratteri MBCS, anche se è possibile interpretati come caratteri ANSI o Unicode. Caratteri ANSI sono sempre di dimensioni pari a 1 byte e i caratteri Unicode sono di dimensioni pari a 2 byte. Con MBCS, caratteri possono essere 1 o 2 byte di dimensioni e la relativa interpretazione dipende la tabella codici è in uso. Per questo motivo, è difficile per la finestra di memoria da visualizzare in modo affidabile i caratteri MBCS. Finestra memoria non è in grado di byte che è l'inizio di un carattere. Lo sviluppatore può visualizzare i valori di byte in memoria (finestra) e cercare il valore nelle tabelle per determinare la rappresentazione di caratteri. Questo è possibile perché lo sviluppatore sa che l'indirizzo iniziale di una stringa in base al codice sorgente.  
   

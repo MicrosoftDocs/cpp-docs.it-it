@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - WINSOCK.DLL
 - sockets [MFC], programming models
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdade770449b7ae5db9db9a170198b81cbeaf970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>Windows Sockets in MFC
 > [!NOTE]
@@ -51,9 +54,6 @@ ms.lasthandoff: 12/21/2017
   
 ##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>DLL di Windows Sockets  
  I sistemi operativi Microsoft Windows fornisce le librerie di collegamento dinamico (DLL) di Windows Sockets. Visual C++ fornisce i file di intestazione appropriati e le librerie e la specifica Windows Sockets.  
-  
-> [!NOTE]
->  In Windows NT e Windows 2000, il supporto di Windows Sockets per applicazioni a 16 bit si basa su WINSOCK. DLL. Per le applicazioni a 32 bit, il supporto è in WSOCK32. DLL. Le API fornite sono identiche ad eccezione del fatto che le versioni a 32 bit i parametri sono estesi a 32 bit. In Win32, viene fornito sia thread-safe.  
   
  Per ulteriori informazioni sui socket di Windows, vedere:  
   

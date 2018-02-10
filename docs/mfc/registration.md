@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Registrazione
 Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene presentato un elenco di tipi di oggetti da selezionare. Tale elenco viene dal database di registrazione del sistema, che contiene le informazioni fornite da tutte le applicazioni server. Quando si registra un server, le voci che inserisce nel database di sistema di registrazione (il Registro di sistema) viene descritto ogni tipo di oggetto che fornisce, file estensioni e il percorso a se stesso, tra le altre informazioni.  
@@ -44,12 +47,12 @@ Quando un utente tenta di inserire un elemento OLE in un'applicazione, OLE viene
 > [!NOTE]
 >  MFC (applicazioni) generate automaticamente dalla creazione guidata applicazione effettuano la registrazione quando vengono eseguiti come applicazioni autonome.  
   
- Se si desidera registrare l'applicazione durante l'installazione, utilizzare il programma di RegEdit.exe. (In Windows 95, Windows 98 e Windows ME, RegEdit trova nella directory di Windows. In Windows NT e Windows 2000, RegEdit trova nella directory System32 di Windows.) Se si include un programma di installazione con l'applicazione, avere eseguito il programma di installazione "RegEdit /S *appname*reg". (Il flag /S indica un'operazione automatica, vale a dire non viene visualizzata la finestra di dialogo reporting corretto completamento del comando). In caso contrario, chiedere all'utente di eseguire RegEdit manualmente.  
+ Se si desidera registrare l'applicazione durante l'installazione, utilizzare il programma di RegEdit.exe. Se si include un programma di installazione con l'applicazione, avere eseguito il programma di installazione "RegEdit /S *appname*reg". (Il flag /S indica un'operazione automatica, vale a dire non viene visualizzata la finestra di dialogo reporting corretto completamento del comando). In caso contrario, chiedere all'utente di eseguire RegEdit manualmente.  
   
 > [!NOTE]
 >  Il file con estensione reg creato dalla creazione guidata applicazione non include il percorso completo del file eseguibile. Il programma di installazione è necessario modificare il file. reg per includere il percorso completo del file eseguibile o modificare la variabile di ambiente PATH per includere la directory di installazione.  
   
- RegEdit unisce il contenuto del file di testo con estensione reg in database di registrazione. Per verificare che il database o per il ripristino, utilizzare l'editor del Registro di sistema. Prestare attenzione per evitare l'eliminazione di voci OLE fondamentali. (In Windows 95, Windows 98 e Windows ME, l'editor del Registro di sistema è RegEdit.exe. In Windows NT e Windows 2000, è RegEdit32.exe).  
+ RegEdit unisce il contenuto del file di testo con estensione reg in database di registrazione. Per verificare che il database o per il ripristino, utilizzare l'editor del Registro di sistema. Prestare attenzione per evitare l'eliminazione di voci OLE fondamentali.  
   
 ##  <a name="_core_server_initialization"></a>Inizializzazione del server  
  Quando si crea un'applicazione server con la creazione guidata applicazione, la procedura guidata termina automaticamente per consentire tutte le attività di inizializzazione. Questa sezione vengono descritte le operazioni da eseguire se si scrive un'applicazione server manualmente.  

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Classi di finestre di dialogo
 Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di finestra di dialogo. Poiché una finestra di dialogo è un tipo speciale di finestra, `CDialog` è derivato da `CWnd`. Derivare le classi di finestra di dialogo da `CDialog` o utilizzare una delle classi di finestra di dialogo comune per le finestre di dialogo standard, ad esempio l'apertura o salvataggio di un file, stampa, la selezione di un tipo di carattere o un colore, avvia un'operazione di ricerca e sostituzione o l'esecuzione di varie correlate a OLE operazioni.  
@@ -51,14 +55,14 @@ Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di f
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
  Fornisce una finestra di dialogo standard per la selezione di un tipo di carattere.  
   
- [CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)  
+ [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
  Fornisce una finestra di dialogo standard per un'operazione di ricerca e sostituzione.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
  Fornisce una finestra di dialogo standard per la stampa di un file.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Fornisce una finestra delle proprietà di stampa di Windows 2000.  
+ Fornisce una finestra delle proprietà di stampa Windows.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Incapsula i servizi forniti nella finestra di dialogo Imposta pagina comune Windows con supporto aggiuntivo per l'impostazione e modifica dei margini di stampanti.  
@@ -69,31 +73,31 @@ Classe `CDialog` e le relative classi derivate incapsulano la funzionalità di f
  [COleDialog](../mfc/reference/coledialog-class.md)  
  Utilizzata dal framework per contenere le implementazioni comuni per tutte le finestre di dialogo OLE. Tutte le classi di finestra di dialogo nella categoria dell'interfaccia utente derivano da questa classe di base. `COleDialog`non può essere utilizzata direttamente.  
   
- [Classe COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
+ [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  Consente di visualizzare la finestra di dialogo Inserisci oggetto, l'interfaccia utente standard per l'inserimento di nuovi OLE elementi collegati o incorporati.  
   
- [Classe COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
+ [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
  Consente di visualizzare la finestra di dialogo Incolla speciale, l'interfaccia utente standard per l'implementazione del comando di modifica Incolla speciale.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
  Consente di visualizzare la finestra di dialogo Modifica collegamenti, l'interfaccia utente standard per la modifica di informazioni sugli elementi collegati.  
   
- [Classe COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
+ [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
  Consente di visualizzare la finestra di dialogo Cambia icona, l'interfaccia utente standard per modificare l'icona associata a OLE incorporato o un elemento collegato.  
   
- [Classe COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
+ [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
  Consente di visualizzare la finestra di dialogo Converti, l'interfaccia utente standard per la conversione di elementi OLE da un tipo a un altro.  
   
  [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
  Incapsula la finestra di dialogo Windows comune delle proprietà OLE. Finestre di dialogo comuni OLE proprietà forniscono un modo semplice per visualizzare e modificare le proprietà di un elemento del documento OLE in modo coerente con gli standard di Windows.  
   
- [Classe COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
+ [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
  Consente di visualizzare la finestra di dialogo aggiornamento, l'interfaccia utente standard per l'aggiornamento di tutti i collegamenti in un documento. Nella finestra di dialogo contiene un indicatore di stato per indicare come chiudere la procedura di aggiornamento fino al completamento.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
  Consente di visualizzare la finestra di dialogo Modifica origine, l'interfaccia utente standard per la modifica della destinazione o origine di un collegamento.  
   
- [Classe COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
+ [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
  Consente di visualizzare le finestre di dialogo Server occupato e Server non risponde, l'interfaccia utente standard per la gestione delle chiamate alle applicazioni occupate. In genere visualizzati automaticamente dal [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementazione.  
   
 ## <a name="property-sheet-classes"></a>Classi della finestra delle proprietà  

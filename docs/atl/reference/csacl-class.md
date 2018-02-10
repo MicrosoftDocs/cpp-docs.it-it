@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>Classe CSacl
 Questa classe è un wrapper per una struttura SACL (elenco di controllo di accesso di sistema).  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Costruttore.|  
-|[CSacl:: ~ CSacl](#dtor)|Distruttore.|  
+|[CSacl::~CSacl](#dtor)|Distruttore.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ATLSecurity. h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  Aggiunge una voce di controllo di accesso (ACE) di controllo per il `CSacl` oggetto.  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  Restituisce **true** se viene aggiunto alla voce ACE di `CSacl` oggetto **false** in caso di errore.  
   
 ### <a name="remarks"></a>Note  
- Oggetto `CSacl` oggetto contiene le voci di controllo di accesso (ACE) che specificano i tipi di tentativi di accesso che generano record di controllo nel registro eventi di sicurezza. Questo metodo aggiunge tale voce per il `CSacl` oggetto. La seconda forma di `AddAuditAce` è disponibile solo in Windows 2000 e versioni successive.  
+ Oggetto `CSacl` oggetto contiene le voci di controllo di accesso (ACE) che specificano i tipi di tentativi di accesso che generano record di controllo nel registro eventi di sicurezza. Questo metodo aggiunge tale voce per il `CSacl` oggetto.  
   
  Vedere [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) per una descrizione dei vari flag che possono essere impostate nel `AceFlags` parametro.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  Costruttore.  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Note  
  Il `CSacl` oggetto può essere creato facoltativamente utilizzando un oggetto esistente **ACL** struttura. Verificare che questo parametro è un elenco di controllo di accesso di sistema (SACL) e non un elenco di controllo di accesso discrezionali (DACL). Nelle build di debug, se viene fornito un elenco DACL si verificherà un'asserzione. Nelle build di rilascio vengono ignorate le voci di un elenco DACL.  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  Distruttore.  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Note  
  Il distruttore libera le risorse acquisite dall'oggetto, incluse tutte le voci di controllo di accesso (ACE).  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Restituisce il numero di voci di controllo di accesso (ACE) nei `CSacl` oggetto.  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di voci ACE presenti nel `CSacl` oggetto.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Operatore di assegnazione.  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un riferimento aggiornato `CSacl` oggetto. Verificare che il **ACL** parametro è effettivamente un controllo di accesso elenco di sistema (SACL) e non un elenco di controllo di accesso discrezionali (DACL). Nelle build di debug, si verificherà un'asserzione e nelle build di rilascio di **ACL** parametro verrà ignorato.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  Rimuove una voce ACE specifica (voce di controllo di accesso) il **CSacl** oggetto.  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Note  
  Questo metodo è derivato da [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Rimuove tutte le voci di controllo di accesso (ACE) contenute nel `CSacl` oggetto.  
   
 ```

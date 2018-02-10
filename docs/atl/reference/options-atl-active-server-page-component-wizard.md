@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Opzioni, Creazione guidata componente ASP ATL
 Utilizzare questa pagina della Active Server pagina Creazione guidata componente ATL per aumentare l'efficienza e supporto per gli errori per l'oggetto.  
@@ -38,7 +43,7 @@ Utilizzare questa pagina della Active Server pagina Creazione guidata componente
 |**Apartment**|Specifica che l'oggetto utilizza il threading apartment. Apartment di thread equivalente a una singola. Ogni oggetto di un componente del modello di threading apartment viene assegnato un apartment per il relativo thread per tutta la durata dell'oggetto. Tuttavia, più thread possono essere utilizzati per più oggetti. Ogni apartment è correlato a un thread specifico e ha un message pump di Windows (impostazione predefinita).<br /><br /> Vedere [apartment a thread singolo](http://msdn.microsoft.com/library/windows/desktop/ms680112) per ulteriori informazioni.|  
 |**Entrambi**|Specifica che l'oggetto può utilizzare apartment o modello di threading free, a seconda di quale tipo di un thread creato.|  
 |**Disponibile**|Specifica che l'oggetto viene utilizzato come modello di threading free. Modello di threading Free è equivalente a un modello di apartment con multithreading. Vedere [apartment con multithreading](http://msdn.microsoft.com/library/windows/desktop/ms693421) per ulteriori informazioni.|  
-|**Neutro** (solo Windows 2000)|Specifica che l'oggetto segue le linee guida per apartment con multithreading, ma può essere eseguito su qualsiasi tipo di thread.|  
+|**Neutral**|Specifica che l'oggetto segue le linee guida per apartment con multithreading, ma può essere eseguito su qualsiasi tipo di thread.|  
   
  **Aggregazione**  
  Indica se l'oggetto utilizza [aggregazione](http://msdn.microsoft.com/library/windows/desktop/ms686558). L'oggetto aggregato sceglie interfacce da esporre ai client e le interfacce sono esposte come se l'oggetto aggregato state implementate. I client dell'oggetto di aggregazione comunicano solo con l'oggetto aggregato.  

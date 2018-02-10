@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Classi di finestre di dialogo comuni
 Oltre alla classe [CDialog](../mfc/reference/cdialog-class.md), MFC fornisce diverse classi derivate da `CDialog` che incapsulano le finestre di dialogo di uso comune, come illustrato nella tabella seguente. Le finestre di dialogo incapsulate vengono chiamate "finestre di dialogo comuni" e fanno parte della libreria di finestra di dialogo comune Windows (COMMDLG. DLL). Le risorse modello di finestra di dialogo e codice di queste classi sono incluse nelle finestre delle finestre di dialogo comuni che fanno parte di Windows 3.1 e versioni successive.  
@@ -38,10 +41,10 @@ Oltre alla classe [CDialog](../mfc/reference/cdialog-class.md), MFC fornisce div
 |--------------------------|-------------|  
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|Consente di selezionare i colori utente.|  
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|Consente di selezionare un nome di file per aprire o salvare utente.|  
-|[CFindReplaceDialog.](../mfc/reference/cfindreplacedialog-class.md)|Consente di avviare una ricerca o sostituzione in un file di testo utente.|  
+|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Consente di avviare una ricerca o sostituzione in un file di testo utente.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Consente di specificare un tipo di carattere utente.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Consente di specificare le informazioni per un processo di stampa utente.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Finestra delle proprietà di stampa di Windows 2000.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Finestra delle proprietà di stampa Windows.|  
   
  Per ulteriori informazioni sulle classi di finestra di dialogo comuni, vedere i singoli nomi delle classi nel *riferimenti alla libreria MFC*. MFC fornisce inoltre una serie di classi di finestra di dialogo standard utilizzate per OLE. Per informazioni su queste classi, vedere la classe base, [COleDialog](../mfc/reference/coledialog-class.md)nella *riferimenti alla libreria MFC*.  
   

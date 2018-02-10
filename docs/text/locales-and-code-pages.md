@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>Impostazioni locali e tabelle codici
 Un ID impostazioni locali riflette le convenzioni locali e una lingua per una determinata area geografica. Una lingua può essere parlata in più di un paese, ad esempio il portoghese è parlato sia in Brasile che in Portogallo. Per contro, è possibile che in un paese siano parlate più lingue ufficiali. Ad esempio, Canada ha due lingue: inglese e francese. Pertanto, Canada dispone di due diverse impostazioni locali: inglese (Canada) e francese (Canada). Alcune categorie dipendenti dalle impostazioni locali includono la formattazione delle date e il formato di visualizzazione dei valori monetari.  
@@ -44,7 +47,7 @@ Un ID impostazioni locali riflette le convenzioni locali e una lingua per una de
   
  Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md).  
   
- La libreria di run-time C è disponibili due tipi di tabelle codici interne: locali e multibyte. È possibile modificare la tabella codici corrente durante l'esecuzione del programma (vedere la documentazione per il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funzioni). Inoltre, la libreria run-time potrebbe ottenere e utilizzare il valore della tabella codici del sistema operativo. In Windows 2000, la tabella codici del sistema operativo è la tabella codici "ANSI di sistema predefinito". Questa tabella codici è costante per la durata dell'esecuzione del programma.  
+ La libreria di run-time C è disponibili due tipi di tabelle codici interne: locali e multibyte. È possibile modificare la tabella codici corrente durante l'esecuzione del programma (vedere la documentazione per il [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) e [setmbcp](../c-runtime-library/reference/setmbcp.md) funzioni). Inoltre, la libreria run-time potrebbe ottenere e utilizzare il valore della tabella codici del sistema operativo, che è una costante per la durata dell'esecuzione del programma.  
   
  Quando cambia la tabella codici delle impostazioni locali, il comportamento del set di funzioni a quello impostato per la tabella codici scelto dipende dalla lingua. Per impostazione predefinita, tutte le funzioni dipendente dalle impostazioni locali dall'iniziano dell'esecuzione con una tabella codici delle impostazioni locali univoca per le impostazioni locali "C". È possibile modificare la tabella codici delle impostazioni locali interno (così come altre proprietà specifiche delle impostazioni locali) chiamando il `setlocale` (funzione). Una chiamata a `setlocale`(LC_ALL, "") imposta le impostazioni locali a quello indicato da impostazioni locali dell'utente del sistema operativo.  
   

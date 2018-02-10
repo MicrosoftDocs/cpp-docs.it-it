@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,19 +22,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs: C++
-helpviewer_keywords: CTokenPrivileges class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 Questa classe è un wrapper per il **TOKEN_PRIVILEGES** struttura.  
@@ -79,7 +83,7 @@ class CTokenPrivileges
 |[CTokenPrivileges::operator =](#operator_eq)|Operatore di assegnazione.|  
   
 ## <a name="remarks"></a>Note  
- Un [token di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) è un oggetto che descrive il contesto di sicurezza di un processo o thread e viene allocato per ogni utente connesso a un sistema di Windows NT o Windows 2000.  
+ Un [token di accesso](http://msdn.microsoft.com/library/windows/desktop/aa374909) è un oggetto che descrive il contesto di sicurezza di un processo o thread e viene allocato per ogni utente connesso a un sistema di Windows.  
   
  Il token di accesso viene utilizzato per descrivere i privilegi di sicurezza diversi concessi a ogni utente. Privilegio è costituito da un numero a 64 bit, denominato identificatore univoco locale ( [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)) e una stringa del descrittore.  
   
@@ -90,7 +94,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** ATLSecurity. h  
   
-##  <a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>  CTokenPrivileges::Add  
  Aggiunge uno o più dei privilegi per il `CTokenPrivileges` oggetto token di accesso.  
   
 ```
@@ -111,7 +115,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Il primo form di questo metodo restituisce true se i privilegi vengono aggiunte correttamente, false in caso contrario.  
   
-##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges  
  Costruttore.  
   
 ```
@@ -130,7 +134,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>Note  
  Il `CTokenPrivileges` oggetto può essere creato facoltativamente utilizzando un **TOKEN_PRIVILEGES** struttura o definita in precedenza `CTokenPrivileges` oggetto.  
   
-##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges  
  Distruttore.  
   
 ```
@@ -140,7 +144,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>Note  
  Il distruttore libera tutte le risorse allocate.  
   
-##  <a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>  CTokenPrivileges::Delete  
  Elimina un privilegio dal `CTokenPrivileges` oggetto token di accesso.  
   
 ```
@@ -155,9 +159,9 @@ bool Delete(LPCTSTR pszPrivilege) throw();
  Restituisce true se il privilegio è stata eliminata, false in caso contrario.  
   
 ### <a name="remarks"></a>Note  
- Questo metodo è utile come strumento per la creazione di un token con restrizioni in Windows 2000.  
+ Questo metodo è utile come strumento per la creazione di token con restrizioni.  
   
-##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll  
  Elimina tutti i privilegi dal `CTokenPrivileges` oggetto token di accesso.  
   
 ```
@@ -167,7 +171,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>Note  
  Elimina contenuti in tutti i privilegi di `CTokenPrivileges` oggetto token di accesso.  
   
-##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames  
  Recupera i nomi visualizzati per i privilegi contenuti nel `CTokenPrivileges` oggetto token di accesso.  
   
 ```
@@ -183,7 +187,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  Questo metodo recupera un nome visualizzabile: ad esempio, se il nome dell'attributo è SE_REMOTE_SHUTDOWN_NAME, il nome visualizzabile è "Arresto forzato da un sistema remoto". Per ottenere il nome del sistema, utilizzare [CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes).  
   
-##  <a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>  CTokenPrivileges::GetCount  
  Restituisce il numero di voci di privilegi di `CTokenPrivileges` oggetto.  
   
 ```
@@ -193,7 +197,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di privilegi contenuti nel `CTokenPrivileges` oggetto.  
   
-##  <a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>  CTokenPrivileges::GetLength  
  Restituisce la lunghezza del `CTokenPrivileges` oggetto.  
   
 ```
@@ -203,7 +207,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il numero di byte necessari per contenere un **TOKEN_PRIVILEGES** struttura è rappresentato dal `CTokenPrivileges` oggetto, incluse tutte le voci di privilegio contiene.  
   
-##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes  
  Recupera gli identificatori univoci locale (LUID) e i flag di attributo dal `CTokenPrivileges` oggetto.  
   
 ```
@@ -222,7 +226,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>Note  
  Questo metodo enumererà tutti i privilegi contenuti nel `CTokenPrivileges` oggetto del token di accesso e inserire i singoli LUID e, facoltativamente, i flag di attributo in oggetti di matrice.  
   
-##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes  
  Recupera il nome e l'attributo flag dal `CTokenPrivileges` oggetto.  
   
 ```
@@ -243,7 +247,7 @@ void GetNamesAndAttributes(
   
  Questo metodo recupera il nome dell'attributo, anziché il nome visualizzabile: ad esempio, se il nome dell'attributo è SE_REMOTE_SHUTDOWN_NAME, il nome del sistema è "SeRemoteShutdownPrivilege". Per ottenere il nome visualizzabile, utilizzare il metodo [CTokenPrivileges::GetDisplayNames](#getdisplaynames).  
   
-##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  Restituisce un puntatore al **TOKEN_PRIVILEGES** struttura.  
   
 ```
@@ -253,7 +257,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un puntatore al [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630) struttura.  
   
-##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege  
  Recupera l'attributo associato al nome di un determinato privilegio.  
   
 ```
@@ -272,7 +276,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce true se l'attributo viene recuperato correttamente, false in caso contrario.  
   
-##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>  CTokenPrivileges::operator =  
  Operatore di assegnazione.  
   
 ```
@@ -303,7 +307,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ## <a name="see-also"></a>Vedere anche  
  [Esempio di sicurezza](../../visual-cpp-samples.md)   
  [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
- [IDENTIFICATORE UNIVOCO LOCALE](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
+ [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   
  [LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)   
  [Cenni preliminari sulla classe](../../atl/atl-class-overview.md)   
  [Funzioni globali di sicurezza](../../atl/reference/security-global-functions.md)

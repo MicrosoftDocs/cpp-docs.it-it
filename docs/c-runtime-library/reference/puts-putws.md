@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,7 +28,8 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e05b0560032d79e5e69a1cafe8669c79160b8e1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e2b57f785ac43866aedfe4bf9dbca59353ca3b51
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="puts-putws"></a>puts, _putws
 Scrive una stringa in **stdout**.  
@@ -77,7 +80,7 @@ int _putws(
   
  `_putws` è la versione a caratteri wide di `puts`; se il flusso viene aperto in modalità ANSI, le due funzioni si comportano in modo identico. `puts` non supporta attualmente l'output in un flusso UNICODE.  
   
- In Windows 2000 e versioni successive, **_putwch** scrive caratteri Unicode usando le impostazioni locali della console correnti.  
+  **putwch** scrive i caratteri Unicode utilizzando l'impostazione delle impostazioni locali di CONSOLE corrente.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   
