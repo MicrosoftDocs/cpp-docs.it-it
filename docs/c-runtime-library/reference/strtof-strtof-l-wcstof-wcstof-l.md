@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strtof_l
 - wcstof
@@ -36,7 +37,8 @@ f1_keywords:
 - wcstof
 - corecrt_wstdlib/_wcstof_l
 - _wcstof_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _strtof_l function
 - _tcstof function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fdfe3a202d18aa1634a2ef692088264ff8fe188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 35ee9dd81cb2509e161846870d23b7a995ac5807
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof, _strtof_l, wcstof, _wcstof_l
 Converte le stringhe in un valore a virgola mobile e precisione singola.  
@@ -93,7 +96,7 @@ float wcstof_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- `strtof`Restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, in cui la funzione case restituisce + /-`HUGE_VALF`. Il segno di `HUGE_VALF` corrisponde al segno del valore che non può essere rappresentato. `strtof` restituisce 0 se è non possibile eseguire alcuna conversione oppure se si verifica un overflow.  
+ `strtof` Restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, in cui la funzione case restituisce + /-`HUGE_VALF`. Il segno di `HUGE_VALF` corrisponde al segno del valore che non può essere rappresentato. `strtof` restituisce 0 se è non possibile eseguire alcuna conversione oppure se si verifica un overflow.  
   
  `wcstof` restituisce i valori in modo analogo a `strtof`. Per entrambe le funzioni, `errno` viene impostato su `ERANGE` in caso di overflow o underflow e viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md).  
   

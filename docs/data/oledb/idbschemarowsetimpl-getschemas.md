@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,34 +16,33 @@ f1_keywords:
 - ATL::IDBSchemaRowsetImpl<SessionClass>::GetSchemas
 - IDBSchemaRowsetImpl.GetSchemas
 - IDBSchemaRowsetImpl::GetSchemas
-dev_langs: C++
-helpviewer_keywords: GetSchemas method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetSchemas method
 ms.assetid: fbe725a6-3acd-45f8-bcaf-10a6c1239cd2
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce07c59eb9dd806d2f297591e8f3b389b3f4ce54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55ccad037b072e4d731462bbf89ff48b186bf068
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="idbschemarowsetimplgetschemas"></a>IDBSchemaRowsetImpl::GetSchemas
 Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      STDMETHOD ( GetSchema s )(  
-   ULONG * pcSchemas,  
+```cpp
+      STDMETHOD (GetSchema s )(ULONG * pcSchemas,  
    GUID ** prgSchemas,  
-   ULONG** prgRest  
-);  
+   ULONG** prgRest);  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -66,6 +66,6 @@ Restituisce un elenco di set di righe dello schema accessibili da [IDBSchemaRows
 ## <a name="see-also"></a>Vedere anche  
  [IDBSchemaRowsetImpl (classe)](../../data/oledb/idbschemarowsetimpl-class.md)   
  [Membri di classe IDBSchemaRowsetImpl](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [IDBSchemaRowsetImpl:: GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)   
- [IDBSchemaRowset:: GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx)   
+ [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)   
+ [IDBSchemaRowset::GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx)   
  [Classi Rowset dello schema e classi Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

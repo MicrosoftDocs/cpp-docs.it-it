@@ -1,45 +1,40 @@
 ---
-title: COLUMN_NAME_TYPE_SIZE | Documenti Microsoft
+title: COLUMN_NAME_TYPE_SIZE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_SIZE
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_SIZE macro
+f1_keywords:
+- COLUMN_NAME_TYPE_SIZE
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_SIZE macro
 ms.assetid: b10f8ef9-78ce-4ec9-b4cc-4278271a46dd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b18e79dd38c61ae6ddd25e697af04a5c25f014dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d771a505aeabbf7096ad4bdafa967025927fa8ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametypesize"></a>COLUMN_NAME_TYPE_SIZE
 Rappresenta un'associazione sul rowset alla colonna specifica nel set di righe. Simile a [COLUMN_NAME](../../data/oledb/column-name.md), ad eccezione del fatto che questa macro accetta anche il tipo di dati e dimensioni.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-COLUMN_NAME_TYPE_SIZE(  
-pszName  
-,   
-wType  
-,   
-nLength  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)  
   
 ```  
   

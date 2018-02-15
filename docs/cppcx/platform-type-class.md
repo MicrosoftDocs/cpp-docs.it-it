@@ -6,23 +6,26 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
 - VCCORLIB/Platform::Type::FullName
-dev_langs: C++
-helpviewer_keywords: Platform::Type Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c292426b9d04fd5b3d9785224f9b2d48f129f0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type (classe)
 Contiene le informazioni di runtime su un tipo, in particolare un nome di stringa e un codice del tipo. Ottenute chiamando [Object:: GetType](../cppcx/platform-object-class.md#gettype) su qualsiasi oggetto o o tramite il [typeid](../windows/typeid-cpp-component-extensions.md) operatore su un nome di classe o struttura.  
@@ -50,7 +53,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type:: FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (.) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|  
+|[Type::FullName](#fullname)|Restituisce una classe [Platform::String](../cppcx/platform-string-class.md)^ che rappresenta il nome completo del tipo e usa il punto (.) come separatore, non:: (doppio carattere due punti), ad esempio, `MyNamespace.MyClass`.|  
   
 ## <a name="conversion-operators"></a>Operatori di conversione  
   
@@ -111,7 +114,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>Note  
  È l'equivalente del metodo GetTypeCode membro il `typeid` proprietà.
 
-## <a name="tostring"></a>Metodo Type::ToString
+## <a name="tostring">Metodo Type::ToString</a>
 Recupera un nome del tipo.  
   
 ### <a name="syntax"></a>Sintassi  

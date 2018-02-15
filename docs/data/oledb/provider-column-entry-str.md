@@ -1,38 +1,40 @@
 ---
-title: PROVIDER_COLUMN_ENTRY_STR | Documenti Microsoft
+title: PROVIDER_COLUMN_ENTRY_STR | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_STR
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_STR macro
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_STR
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_STR macro
 ms.assetid: f1c27dd6-9ab8-4821-8685-d4dd15e76e88
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fc45826fed148b2d3d7990ce512bc9a1861fdff0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e5f4d21d0ffae232a3e4b313c4156ed18311288
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="providercolumnentrystr"></a>PROVIDER_COLUMN_ENTRY_STR
 Rappresenta una colonna specifica è supportata dal provider.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_STR(  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_STR(name  
 , ordinal, member )  
 ```  
   

@@ -1,28 +1,32 @@
 ---
-title: BEGIN_ACCESSOR_MAP | Documenti Microsoft
+title: BEGIN_ACCESSOR_MAP | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BEGIN_ACCESSOR_MAP
-dev_langs: C++
-helpviewer_keywords: BEGIN_ACCESSOR_MAP macro
+f1_keywords:
+- BEGIN_ACCESSOR_MAP
+dev_langs:
+- C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR_MAP macro
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ff08fd95e9e84d47562a5fafb8bf7be04e41ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b12932cb65adda391944cab5a8a4df053e2c9be4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="beginaccessormap"></a>BEGIN_ACCESSOR_MAP
 Contrassegna l'inizio delle voci della mappa delle funzioni di accesso.  
@@ -30,13 +34,7 @@ Contrassegna l'inizio delle voci della mappa delle funzioni di accesso.
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-BEGIN_ACCESSOR_MAP(  
-x  
-,   
-num  
- )  
-  
+BEGIN_ACCESSOR_MAP(x, num)  
 ```  
   
 #### <a name="parameters"></a>Parametri  

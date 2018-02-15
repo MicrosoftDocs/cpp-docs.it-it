@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Utilità di pianificazione (runtime di concorrenza)
 Negli argomenti contenuti in questa parte della documentazione vengono descritte le funzionalità principali dell'utilità di pianificazione del runtime di concorrenza. L'Utilità di pianificazione è utile quando si vuole ottimizzare le prestazioni del codice esistente che usa il runtime di concorrenza.  
   
 > [!IMPORTANT]
->  L'utilità di pianificazione non è disponibile in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Per ulteriori informazioni, vedere [la creazione di operazioni asincrone in C++ per applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  L'utilità di pianificazione non è disponibile da un'app della piattaforma UWP (Universal Windows). Per ulteriori informazioni, vedere [creazione di operazioni asincrone in C++ per App UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
 >   
 >  In Visual Studio 2015 e versioni successive, il [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) classe e i tipi correlati in ppltasks. h usano il pool di thread di Windows come utilità di pianificazione. Questo argomento non si applica più ai tipi definiti in ppltasks.h. Gli algoritmi paralleli come parallel_for continuano a usare il runtime di concorrenza come utilità di pianificazione predefinita.  
   

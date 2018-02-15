@@ -1,38 +1,40 @@
 ---
-title: PROVIDER_COLUMN_ENTRY_GN | Documenti Microsoft
+title: PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_GN
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_GN macro
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_GN
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b9899efec9ef3a96ad5ab6377c2451cc8c722a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 203f339dc031f4a21f16181043b051c4eaa5ec35
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
 Rappresenta una colonna specifica è supportata dal provider.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_GN (  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_GN (name  
 , ordinal, flags, colSize, dbtype, precision, scale, guid )  
 ```  
   

@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>Scelta di un metodo di distribuzione
 A meno che l'applicazione Visual C++ è indipendente e può essere distribuita tramite un comando di copia, è consigliabile utilizzare Windows Installer per la distribuzione. Windows Installer supporta l'installazione, il ripristino e la disinstallazione, oltre all'aggiornamento atomico dei file, delle dipendenze e delle voci del Registro di sistema dell'applicazione.  
@@ -45,7 +45,7 @@ A meno che l'applicazione Visual C++ è indipendente e può essere distribuita t
 ## <a name="redistributing-visual-c-libraries"></a>Ridistribuzione delle librerie di Visual C++  
  Nelle distribuzioni è possibile ridistribuire qualsiasi versione di una libreria di Visual C++ concessa in licenza per la ridistribuzione. Di seguito sono descritti tre modi per distribuirla:  
   
--   Distribuzione centrale tramite pacchetti ridistribuibili, che consente di installare le librerie di Visual C++ come DLL condivise nella directory %windir%\system32\\. (L'installazione in questa cartella richiede diritti di amministratore). È possibile creare uno script o un programma di installazione che esegua il pacchetto ridistribuibile prima dell'installazione dell'applicazione nel computer di destinazione. I pacchetti ridistribuibili sono disponibili per le piattaforme x86, x64 e ARM (VCRedist_x86.exe, VCRedist_x64.exe o VCRedist_arm.exe). Visual Studio include i pacchetti in % ProgramFiles (x86) %\Microsoft Visual Studio `version`\vc\redist\\`locale ID`\\. È inoltre possibile scaricare dal [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Nell'area download, cercare il "Visual C++ Redistributable Package *versione di Visual Studio e aggiornamento*" che corrisponde all'applicazione. Se ad esempio si è utilizzato l'aggiornamento 4 di Visual Studio 2012 per compilare l'applicazione, cercare "Visual C++ Redistributable Package 2012 update 4"). Per informazioni sull'utilizzo di un pacchetto ridistribuibile, vedere [procedura dettagliata: distribuzione di un Visual C++ applicazione mediante Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
+-   Distribuzione centrale tramite pacchetti ridistribuibili, che consente di installare le librerie di Visual C++ come DLL condivise nella directory %windir%\system32\\. (L'installazione in questa cartella richiede diritti di amministratore). È possibile creare uno script o un programma di installazione che esegua il pacchetto ridistribuibile prima dell'installazione dell'applicazione nel computer di destinazione. I pacchetti ridistribuibili sono disponibili per le piattaforme x86, x64 e ARM (VCRedist_x86.exe, VCRedist_x64.exe o VCRedist_arm.exe). Visual Studio include i pacchetti in % ProgramFiles (x86) %\Microsoft Visual Studio `version`\vc\redist\\`locale ID`\\. È inoltre possibile scaricare dal [Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793). (Utilizzare la casella di ricerca nell'area Download per la ricerca di "Visual C++ Redistributable Package *versione di Visual Studio e aggiornamento*" che corrisponde all'applicazione. Ad esempio, se si utilizza Visual Studio 2015 update 3 per compilare l'applicazione, quindi cercare "Visual C++ Redistributable Package 2015 update 3".) Per informazioni sull'utilizzo di un pacchetto ridistribuibile, vedere [procedura dettagliata: distribuzione di un Visual C++ applicazione mediante Visual C++ Redistributable Package](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).  
   
 -   Distribuzione centrale tramite modelli unione, ognuno dei quali installa una determinata libreria di Visual C++ come DLL condivisa nella directory %windir%\system32\\. (L'installazione in questa cartella richiede diritti di amministratore). I modelli merge diventano parte del file del programma di installazione MSI dell'applicazione. I modelli unione ridistribuibili di Visual C++ sono inclusi in Visual Studio, in \Programmi Files (x86) \Common moduli\\. Per ulteriori informazioni, vedere [ridistribuzione da tramite modelli unione](../ide/redistributing-components-by-using-merge-modules.md).  
   

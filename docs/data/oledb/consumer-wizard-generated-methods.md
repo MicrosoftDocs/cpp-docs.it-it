@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OpenAll method
 - attribute-injected classes and methods
@@ -21,38 +23,39 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>Metodi generati mediante la Creazione guidata consumer
 La creazione guidata Consumer OLE DB ATL e la creazione guidata applicazione MFC genera alcune funzioni di cui è necessario essere consapevoli. Si noti che alcuni metodi vengono implementati in modo diverso in progetti con attributi, pertanto vi sono alcune considerazioni; ogni case è descritto di seguito. Per informazioni sulla visualizzazione di codice inserito, vedere [Debug del codice inserito](/visualstudio/debugger/how-to-debug-injected-code).  
   
--   `OpenAll`Apre l'origine dati, set di righe e attiva i segnalibri, se sono disponibili.  
+-   `OpenAll` Apre l'origine dati, set di righe e attiva i segnalibri, se sono disponibili.  
   
--   `CloseAll`Chiude tutti i rowset aperti e rilascia tutte le esecuzioni di comandi.  
+-   `CloseAll` Chiude tutti i rowset aperti e rilascia tutte le esecuzioni di comandi.  
   
--   `OpenRowset`viene chiamato da OpenAll per aprire i set di righe o set di righe del consumer.  
+-   `OpenRowset` viene chiamato da OpenAll per aprire i set di righe o set di righe del consumer.  
   
--   `GetRowsetProperties`Recupera un puntatore all'insieme con è possono impostare le proprietà di proprietà del set di righe.  
+-   `GetRowsetProperties` Recupera un puntatore all'insieme con è possono impostare le proprietà di proprietà del set di righe.  
   
--   `OpenDataSource`Apre l'origine dati utilizzando la stringa di inizializzazione specificato nella **proprietà di Data Link** la finestra di dialogo.  
+-   `OpenDataSource` Apre l'origine dati utilizzando la stringa di inizializzazione specificato nella **proprietà di Data Link** la finestra di dialogo.  
   
--   `CloseDataSource`Chiude l'origine dati in modo appropriato.  
+-   `CloseDataSource` Chiude l'origine dati in modo appropriato.  
   
 ## <a name="openall-and-closeall"></a>OpenAll e CloseAll  
   
 ```  
 HRESULT OpenAll();   
+
 void CloseAll();  
 ```  
   
@@ -101,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** chiama questo metodo per aprire il set di righe o di un set di righe del consumer. In genere, non è necessario chiamare `OpenRowset` a meno che non si desidera lavorare con più origini dati, le sessioni/rowset. `OpenRowset`viene dichiarata nel file di intestazione classe di comando o di tabella:  
+ **OpenAll** chiama questo metodo per aprire il set di righe o di un set di righe del consumer. In genere, non è necessario chiamare `OpenRowset` a meno che non si desidera lavorare con più origini dati, le sessioni/rowset. `OpenRowset` viene dichiarata nel file di intestazione classe di comando o di tabella:  
   
 ```  
 // OLE DB Template version:  
@@ -141,7 +144,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- Questo metodo recupera un puntatore al set di proprietà del set di righe. è possibile utilizzare l'indicatore di misura per impostare le proprietà come illustrato di seguito. `GetRowsetProperties`viene utilizzato come indicato di seguito nella classe di record utente. È possibile modificare il codice per impostare le proprietà del set di righe aggiuntive:  
+ Questo metodo recupera un puntatore al set di proprietà del set di righe. è possibile utilizzare l'indicatore di misura per impostare le proprietà come illustrato di seguito. `GetRowsetProperties` viene utilizzato come indicato di seguito nella classe di record utente. È possibile modificare il codice per impostare le proprietà del set di righe aggiuntive:  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -160,6 +163,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
   
 ```  
 HRESULT OpenDataSource();   
+
 void CloseDataSource();  
 ```  
   

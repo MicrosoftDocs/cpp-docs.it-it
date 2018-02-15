@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
-dev_langs: C++
-helpviewer_keywords: VectorViewIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b572d829c21c37457fc9fdab5f745616a6318ff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Classe Platform::Collections::VectorViewIterator
 Fornisce un iteratore STL per oggetti derivati da Windows Runtime`IVectorView` interfaccia.  
@@ -54,7 +58,7 @@ class VectorViewIterator;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Vectorviewiterator:: Vectorviewiterator](#ctor)|Inizializza una nuova istanza della classe VectorViewIterator.|  
+|[VectorViewIterator::VectorViewIterator](#ctor)|Inizializza una nuova istanza della classe VectorViewIterator.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -64,7 +68,7 @@ class VectorViewIterator;
 |[Operatore VectorViewIterator::operator--](#operator-decrement)|Decrementa l'oggetto VectorViewIterator corrente.|  
 |[Operatore VectorViewIterator::operator!=](#operator-inequality)|Indica se l'oggetto VectorViewIterator corrente è diverso dall'oggetto VectorViewIterator specificato.|  
 |[Operatore VectorViewIterator::operator*](#operator-dereference)|Recupera un riferimento all'elemento specificato dall'oggetto VectorViewIterator corrente.|  
-|[Vectorviewiterator:: operator\[\]](#operator-at)|Recupera un riferimento all'elemento che è distanziato dall'oggetto VectorViewIterator corrente dello spostamento specificato.|  
+|[VectorViewIterator::operator\[\]](#operator-at)|Recupera un riferimento all'elemento che è distanziato dall'oggetto VectorViewIterator corrente dello spostamento specificato.|  
 |[Operatore VectorViewIterator::operator+](#operator-plus)|Restituisce un oggetto VectorViewIterator che fa riferimento all'elemento distanziato dello spostamento specificato dall'oggetto VectorViewIterator specificato.|  
 |[Operatore VectorViewIterator::operator++](#operator-increment)|Incrementa l'oggetto VectorViewIterator corrente.|  
 |[Operator VectorViewIterator::operator+=](#operator-plus-assign)|Incrementa l'oggetto VectorViewIterator corrente dello spostamento specificato.|  
@@ -84,7 +88,7 @@ class VectorViewIterator;
   
  **Spazio dei nomi:** Platform::Collections  
 
-## <a name="operator-arrow"></a>Vectorviewiterator:: operator -&gt; (operatore)
+## <a name="operator-arrow"></a>  Vectorviewiterator:: operator -&gt; (operatore)
 Recupera l'indirizzo dell'elemento a cui viene fatto riferimento dall'oggetto VectorViewIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -100,7 +104,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>Vectorviewiterator:: operator - (operatore)
+## <a name="operator-decrement"></a>  Vectorviewiterator:: operator - (operatore)
 Decrementa l'oggetto VectorViewIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -120,7 +124,7 @@ VectorViewIterator operator--(int);
   
 
 
-## <a name="operator-dereference"></a>Vectorviewiterator:: operator * (operatore)
+## <a name="operator-dereference"></a>  VectorViewIterator::operator* Operator
 Recupera un riferimento all'elemento specificato dall'oggetto VectorViewIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -134,7 +138,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Vectorviewiterator:: operator = = (operatore)
+## <a name="operator-equality"></a>  VectorViewIterator::operator== Operator
 Indica se l'oggetto VectorViewIterator corrente è uguale all'oggetto VectorViewIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -148,11 +152,11 @@ bool operator==(const VectorViewIterator& other) const;
  Altro oggetto VectorViewIterator.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se l'oggetto VectorViewIterator corrente è uguale a `other`; in caso contrario, `false`.  
+ `true` Se l'oggetto VectorViewIterator corrente è uguale a `other`; in caso contrario, `false`.  
   
 
 
-## <a name="operator-greater-than"></a>Vectorviewiterator:: operator&gt; (operatore)
+## <a name="operator-greater-than"></a>  Vectorviewiterator:: operator&gt; (operatore)
 Indica se l'oggetto VectorViewIterator corrente è maggiore dell'oggetto VectorViewIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -171,7 +175,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>Vectorviewiterator:: operator&gt;= (operatore)
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator:: operator&gt;= (operatore)
 Indica se l'oggetto VectorViewIterator corrente è maggiore o uguale all'oggetto VectorViewIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -190,7 +194,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Vectorviewiterator:: operator + + (operatore)
+## <a name="operator-increment"></a>  Vectorviewiterator:: operator + + (operatore)
 Incrementa l'oggetto VectorViewIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -211,7 +215,7 @@ VectorViewIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Vectorviewiterator:: operator! = (operatore)
+## <a name="operator-inequality"></a>  VectorViewIterator::operator!= Operator
 Indica se l'oggetto VectorViewIterator corrente è diverso dall'oggetto VectorViewIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -225,11 +229,11 @@ bool operator!=(const VectorViewIterator& other) const;
  Altro oggetto VectorViewIterator.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se l'oggetto VectorViewIterator corrente non è uguale a `other`; in caso contrario, `false`.  
+ `true` Se l'oggetto VectorViewIterator corrente non è uguale a `other`; in caso contrario, `false`.  
   
 
 
-## <a name="operator-less-than"></a>Vectorviewiterator:: operator&lt; (operatore)
+## <a name="operator-less-than"></a>  Vectorviewiterator:: operator&lt; (operatore)
 Indica se l'oggetto VectorIterator corrente è minore dell'oggetto VectorIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -247,7 +251,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>Vectorviewiterator:: operator&lt;= (operatore)
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator:: operator&lt;= (operatore)
 Indica se l'oggetto VectorIterator corrente è minore o uguale all'oggetto VectorIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -262,11 +266,11 @@ bool operator<=(const VectorViewIterator& other) const;
  Altro oggetto VectorIterator.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se l'oggetto VectorIterator corrente è minore o uguale a `other`; in caso contrario, `false`.  
+ `true` Se l'oggetto VectorIterator corrente è minore o uguale a `other`; in caso contrario, `false`.  
   
 
 
-## <a name="operator-minus"></a>Vectorviewiterator:: operator-(operatore)
+## <a name="operator-minus"></a>  Vectorviewiterator:: operator-(operatore)
 Sottrae un numero specificato di elementi dall'iteratore corrente creando un nuovo iteratore o un iteratore specificato dall'iteratore corrente creando il numero di elementi tra gli iteratori.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -290,7 +294,7 @@ difference_type operator-(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-plus-equals"></a>Vectorviewiterator:: operator + = operatore
+## <a name="operator-plus-equals"></a>  VectorViewIterator::operator+= Operator
 Incrementa l'oggetto VectorViewIterator corrente dello spostamento specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -308,7 +312,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>Vectorviewiterator:: operator + (operatore)
+## <a name="operator-plus"></a>  VectorViewIterator::operator+ Operator
 Restituisce un oggetto VectorViewIterator che fa riferimento all'elemento distanziato dello spostamento specificato dall'oggetto VectorViewIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -341,7 +345,7 @@ inline VectorViewIterator<T> operator+
   
 
 
-## <a name="operator-minus-assign"></a>Vectorviewiterator:: operator-= (operatore)
+## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= Operator
 Decrementa l'oggetto VectorIterator corrente dello spostamento specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -359,7 +363,7 @@ VectorViewIterator& operator-=(difference_type n);
   
 
 
-## <a name="operator-at"></a>Vectorviewiterator:: operator\[\]
+## <a name="operator-at"></a>  VectorViewIterator::operator\[\]
 Recupera un riferimento all'elemento che è distanziato dall'oggetto VectorViewIterator corrente dello spostamento specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -377,7 +381,7 @@ reference operator[](difference_type n) const;
   
 
 
-## <a name="ctor"></a>Vectorviewiterator:: Vectorviewiterator costruttore
+## <a name="ctor"></a>  Vectorviewiterator:: Vectorviewiterator costruttore
 Inizializza una nuova istanza della classe VectorViewIterator.  
   
 ### <a name="syntax"></a>Sintassi  

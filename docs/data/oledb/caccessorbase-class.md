@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CAccessorBase
-dev_langs: C++
-helpviewer_keywords: CAccessorBase class
+f1_keywords:
+- CAccessorBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessorBase class
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f57c771f0d129683bde0629f9c28cfbaa897ee4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="caccessorbase-class"></a>Classe CAccessorBase
-Tutte le funzioni di accesso nei modelli OLE DB derivano da questa classe. `CAccessorBase`consente a un set di righe per la gestione di più funzioni di accesso. Fornisce inoltre l'associazione per i parametri e colonne di output.  
+Tutte le funzioni di accesso nei modelli OLE DB derivano da questa classe. `CAccessorBase` consente a un set di righe per la gestione di più funzioni di accesso. Fornisce inoltre l'associazione per i parametri e colonne di output.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 // Replace with syntax  
 ```  
   

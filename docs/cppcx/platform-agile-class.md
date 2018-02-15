@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
 - AGILE/Platform::Platform::Agile::Agile
@@ -14,19 +14,22 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs: C++
-helpviewer_keywords: Platform::Agile
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformagile-class"></a>Classe Platform::Agile
 Rappresenta un oggetto con MashalingBehavior=Standard come oggetto Agile, che riduce fortemente le probabilità che si verifichino eccezioni di threading di runtime. `Agile<T>` consente all'oggetto non Agile di chiamare o essere chiamato dallo stesso thread o da un thread differente. Per ulteriori informazioni, vedere [Threading e marshalling](../cppcx/threading-and-marshaling-c-cx.md).  
@@ -53,7 +56,7 @@ class Agile;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Agile:: Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|  
+|[Agile::Agile](#ctor)|Inizializza una nuova istanza della classe Agile.|  
 |[Distruttore Agile::~Agile](#dtor)|Eliminata l'istanza corrente della classe Agile.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
@@ -86,7 +89,7 @@ class Agile;
   
  **Intestazione:** agile.h  
 
-## <a name="ctor"></a>Costruttore Agile:: Agile
+## <a name="ctor"></a>  Costruttore Agile:: Agile
 Inizializza una nuova istanza della classe Agile.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -113,7 +116,7 @@ Agile(Agile<T>&& object);
 ### <a name="remarks"></a>Note  
  La prima versione di questo costruttore rappresenta il costruttore predefinito. Nella seconda versione viene inizializzata la nuova classe Agile dell'istanza dall'oggetto specificato dal parametro `object`. La terza versione rappresenta il costruttore di copia. La quarta versione rappresenta il costruttore di spostamento. Questo costruttore non può generare eccezioni.  
 
-## <a name="dtor"></a>Agile:: ~ Agile distruttore
+## <a name="dtor"></a>  Agile:: ~ Agile distruttore
 Eliminata l'istanza corrente della classe Agile.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -126,7 +129,7 @@ Eliminata l'istanza corrente della classe Agile.
 ### <a name="remarks"></a>Note  
  Questo distruttore rilascia inoltre l'oggetto rappresentato dall'oggetto Agile corrente.  
   
-## <a name="get"></a>Metodo Agile:: Get
+## <a name="get"></a>   Metodo Agile:: Get
 Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -142,7 +145,7 @@ Restituisce un handle all'oggetto rappresentato dall'oggetto Agile corrente.
   
  Il tipo di valore restituito effettivo è un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myAgileTvariable->Get();`.  
   
-## <a name="getaddressof"></a>Metodo Agile:: getaddressof
+## <a name="getaddressof"></a>  Metodo Agile:: getaddressof
 Reinizializza l'oggetto Agile corrente e restituisce l'indirizzo di un handle a un oggetto di tipo `T`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -163,7 +166,7 @@ throw();
 ### <a name="remarks"></a>Note  
  Questa operazione rilascia la rappresentazione corrente di un oggetto di tipo `T`, se presente; reinizializza i membri di dati dell'oggetto Agile, acquisisce il contesto di threading corrente e restituisce l'indirizzo di una variabile di handle a un oggetto che può rappresentare un oggetto non agile. Affinché un'istanza della classe Agile rappresentare un oggetto, utilizzare l'operatore di assegnazione ([Agile:: operator =](#operator-assign)) per assegnare l'oggetto per l'istanza della classe Agile.  
 
-## <a name="getaddressofforinout"></a>Metodo Agile:: getaddressofforinout
+## <a name="getaddressofforinout"></a>  Metodo Agile:: getaddressofforinout
 Restituisce l'indirizzo di un handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -184,7 +187,7 @@ T^* GetAddressOfForInOut()  throw();
 ### <a name="remarks"></a>Note  
  Questa operazione acquisisce il contesto di threading corrente e successivamente restituisce l'indirizzo di un handle all'oggetto sottostante.  
 
-## <a name="release"></a>Metodo Agile:: Release
+## <a name="release"></a>  Metodo Agile:: Release
 Rimuove l'oggetto e il contesto sottostanti dell'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -198,7 +201,7 @@ void Release() throw();
 ### <a name="remarks"></a>Note  
  Se esistono, l'oggetto e il contesto sottostanti dell'oggetto Agile corrente vengono rimossi, quindi il valore dell'oggetto Agile viene impostato su null.  
 
-## <a name="operator-arrow"></a>Agile:: operator -&gt; (operatore)
+## <a name="operator-arrow"></a>  Agile:: operator -&gt; (operatore)
 Recupera un handle all'oggetto rappresentato dall'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -214,7 +217,7 @@ const throw();
   
  Questo operatore restituisce un tipo interno riservato. Un modo pratico per contenere il valore restituito consiste nell'assegnarlo a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo.  
 
-## <a name="operator-assign"></a>Agile:: operator = (operatore)
+## <a name="operator-assign"></a>  Agile:: operator = (operatore)
 Assegna l'oggetto specificato all'oggetto Agile corrente.  
   
 ## <a name="syntax"></a>Sintassi  

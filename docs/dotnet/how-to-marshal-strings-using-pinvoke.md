@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>Procedura: Effettuare il marshalling di stringhe utilizzando PInvoke
 In questo argomento viene illustrato come funzioni native che accettano stringhe di tipo C possono essere chiamate utilizzando la stringa CLR digitare sfruttando il supporto per .NET Framework Platform Invoke. I programmatori di Visual C++ si consiglia invece di utilizzare le funzionalità di interoperabilità C++ (sempre) poiché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare. Se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione, ma in caso contrario vedere [utilizzando l'interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
@@ -36,8 +38,6 @@ In questo argomento viene illustrato come funzioni native che accettano stringhe
   
 ## <a name="example"></a>Esempio  
  Il codice seguente è costituito da un e un modulo non gestito. Il modulo non gestito è una DLL che definisce una funzione denominata TakesAString che accetta una stringa ANSI C sotto forma di char *. Il modulo gestito è un'applicazione della riga di comando che importa la funzione TakesAString, ma definisce che accetti un System. String gestito anziché char\*. Il <xref:System.Runtime.InteropServices.MarshalAsAttribute> attributo viene utilizzato per indicare come deve essere effettuato il marshalling stringa gestita quando viene chiamato TakesAString.  
-  
- Il modulo gestito viene compilato con /clr, ma con /clr: pure funziona anche.  
   
 ```  
 // TraditionalDll2.cpp  

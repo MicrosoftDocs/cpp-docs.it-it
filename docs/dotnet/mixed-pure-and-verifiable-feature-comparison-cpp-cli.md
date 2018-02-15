@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - safe assemblies [C++], vs. pure
 - mixed assemblies [C++], vs. pure
@@ -24,18 +26,18 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3ee9fbed3fd82fd450fd179683fd119cb1630034
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac5e094dd252ec908f352bcc1b19c923513debfb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Confronto tra le modalità mista, pura e verificabile (C++/CLI)
 In questo argomento vengono confrontate le funzionalità tra le diverse **/clr** le modalità di compilazione. Per altre informazioni, vedere [/clr (Compilazione Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -46,13 +48,13 @@ In questo argomento vengono confrontate le funzionalità tra le diverse **/clr**
   
 |Funzionalità|Misto (o clr)|Pure (o /CLR: pure)|Sicuro (o /CLR: safe)|Informazioni correlate|  
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|Libreria CRT|È supportato|È supportato||[Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)|  
+|Libreria CRT|È supportato|deprecated||[Routine di runtime per categoria](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|È supportato|||[Applicazioni Desktop MFC](../mfc/mfc-desktop-applications.md) &#124; [Preliminari sulla classe](../atl/atl-class-overview.md)|  
 |Funzioni non gestite|È supportato|||[Assembly misti (nativi e gestiti)](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|Dati non gestiti|È supportato|È supportato||[Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|Chiamabile da funzioni non gestite|È supportato|||[Procedura: migrare a /clr: pure (C + c++ /CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|Supporta la chiamata di funzioni non gestite|È supportato|Solo le funzioni di tipo C|P/Invoke solo|[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Supporta la Reflection|Solo le DLL|È supportato|È supportato|[Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
+|Dati non gestiti|È supportato|deprecated||[Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Chiamabile da funzioni non gestite|È supportato||||  
+|Supporta la chiamata di funzioni non gestite|È supportato|deprecated|deprecated|[Uso delle funzionalità di interoperabilità C++ (PInvoke implicito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Supporta la Reflection|Solo le DLL|deprecated|deprecated|[Reflection (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Codice pure e verificabile (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

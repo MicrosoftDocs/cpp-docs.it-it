@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 s.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::begin
 - VCCORLIB/Platform::WriteOnlyArray::Data
@@ -14,19 +14,22 @@ f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::FastPass
 - VCCORLIB/Platform::WriteOnlyArray::Length
 - VCCORLIB/Platform::WriteOnlyArray::set
-dev_langs: C++
-helpviewer_keywords: Platform::WriteOnlyArray Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d63072e3190929f5191f3d515b73dbd6a6a75040
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 694da2015788e402983c2e2144582d9461749a11
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (classe)
 Rappresenta una matrice unidimensionale usata come parametro di input quando il chiamante passa una matrice che verrà riempita dal metodo.  
@@ -131,7 +134,7 @@ property bool FastPass{
   
 
 
-## <a name="get"></a>Writeonlyarray:: Get (metodo)
+## <a name="get"></a>  Writeonlyarray:: Get (metodo)
 Restituisce l'elemento in corrispondenza dell'indice specificato.  
   
 ### <a name="syntax"></a>Sintassi  

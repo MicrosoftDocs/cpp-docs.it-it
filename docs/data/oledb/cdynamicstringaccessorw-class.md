@@ -4,39 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CDynamicStringAccessorW
-dev_langs: C++
-helpviewer_keywords: CDynamicStringAccessorW class
+f1_keywords:
+- CDynamicStringAccessorW
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicStringAccessorW class
 ms.assetid: 9b7fd5cc-3a9b-4b57-b907-f1e35de2c98f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 90c97da001d6c8cfb10ddff2a61069adeccc8112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4230451743144bdf85a875c3daa981f5ca30f9f6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicstringaccessorw-class"></a>Classe CDynamicStringAccessorW
 Consente di accedere a un'origine dati quando si ha alcuna conoscenza dello schema del database (struttura sottostante).  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;  
 ```  
   
 ## <a name="remarks"></a>Note  
  Entrambi richiedono che il provider recuperi tutti i dati dall'archivio dati come dati di tipo stringa, ma `CDynamicStringAccessor` richiede i dati stringa Unicode.  
   
- `CDynamicStringAccessorW`eredita **GetString** e `SetString` da `CDynamicStringAccessor`. Quando si utilizzano questi metodi in un `CDynamicStringAccessorW` oggetto ***BaseType*** è **WCHAR**.  
+ `CDynamicStringAccessorW` eredita **GetString** e `SetString` da `CDynamicStringAccessor`. Quando si utilizzano questi metodi in un `CDynamicStringAccessorW` oggetto ***BaseType*** è **WCHAR**.  
   
 ## <a name="requirements"></a>Requisiti  
  **Intestazione**: atldbcli.h  

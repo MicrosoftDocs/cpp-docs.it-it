@@ -1,10 +1,11 @@
 ---
-title: 'CRowset:: MoveToBookmark | Documenti Microsoft'
+title: CRowset::MoveToBookmark | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,33 +17,32 @@ f1_keywords:
 - CRowset::MoveToBookmark
 - CRowset.MoveToBookmark
 - CRowset<TAccessor>::MoveToBookmark
-dev_langs: C++
-helpviewer_keywords: MoveToBookmark method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08e570d6d2cbc8c5943ce0591c280b74be573e2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e443cace051fc0d5c08381222f0cd6aa53bec8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
 Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di un offset specificato (`lSkip`) da tale segnalibro.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      HRESULT MoveToBookmark(   
-   const CBookmarkBase& bookmark,   
-   LONG lSkip = 0    
-) throw( );  
+```cpp
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,   
+   LONG lSkip = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -65,8 +65,8 @@ Recupera la riga contrassegnata da un segnalibro o la riga in corrispondenza di 
   
 ## <a name="see-also"></a>Vedere anche  
  [CRowset (classe)](../../data/oledb/crowset-class.md)   
- [CRowset:: MoveNext](../../data/oledb/crowset-movenext.md)   
- [CRowset:: MoveFirst](../../data/oledb/crowset-movefirst.md)   
- [IRowsetLocate:: GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
- [CRowset:: MovePrev](../../data/oledb/crowset-moveprev.md)   
+ [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
+ [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
+ [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
+ [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

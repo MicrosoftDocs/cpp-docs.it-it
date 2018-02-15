@@ -1,44 +1,40 @@
 ---
-title: COLUMN_NAME_PS | Documenti Microsoft
+title: COLUMN_NAME_PS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_PS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_PS macro
+f1_keywords:
+- COLUMN_NAME_PS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_PS macro
 ms.assetid: 681795d5-0a95-4c8d-b188-2e6ed121ffaa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 230ccfcffd35e41af59c1bd397ddba0b1b9aa0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4013f3eb2fe49569a351220a27f52889c04cefd1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnameps"></a>COLUMN_NAME_PS
 Rappresenta un'associazione sul rowset alla colonna specifica nel set di righe. Simile a [COLUMN_NAME](../../data/oledb/column-name.md), ad eccezione del fatto che questa macro accetta anche precisione e scala.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-COLUMN_NAME_PS(  
-pszName  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data )  
+```cpp
+COLUMN_NAME_PS(pszName, nPrecision, nScale, data )  
 ```  
   
 #### <a name="parameters"></a>Parametri  

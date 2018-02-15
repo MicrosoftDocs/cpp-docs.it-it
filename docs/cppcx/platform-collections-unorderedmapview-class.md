@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Classe Platform::Collections::UnorderedMapView
 Rappresenta una visualizzazione di sola lettura in una *mappa*, che rappresenta una raccolta di coppie chiave-valore.  
@@ -58,9 +60,9 @@ ref class UnorderedMapView sealed;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|  
-|[Unorderedmapview:: Haskey](#haskey)|Determina se l'oggetto UnorderedMapView corrente contiene la chiave specificata.|  
-|[Unorderedmapview:: lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto UnorderedMapView corrente.|  
+|[UnorderedMapView::First](#first)|Restituisce un iteratore che viene inizializzato al primo elemento nella visualizzazione della mappa.|  
+|[UnorderedMapView::HasKey](#haskey)|Determina se l'oggetto UnorderedMapView corrente contiene la chiave specificata.|  
+|[UnorderedMapView::Lookup](#lookup)|Recupera l'elemento in corrispondenza della chiave specificata nell'oggetto UnorderedMapView corrente.|  
 |[Unorderedmapview:: Size](#size)|Restituisce il numero di elementi nell'oggetto UnorderedMapView corrente.|  
 |[Unorderedmapview:: Split](#split)|Divide un oggetto UnorderedMapView originale in due oggetti UnorderedMapView.|  
   

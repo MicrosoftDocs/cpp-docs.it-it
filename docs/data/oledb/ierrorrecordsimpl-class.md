@@ -4,39 +4,39 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ATL::IErrorRecordsImpl
 - ATL.IErrorRecordsImpl
 - IErrorRecordsImpl
-dev_langs: C++
-helpviewer_keywords: IErrorRecordsImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- IErrorRecordsImpl class
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e69db8c89a60b7dee543bbdf87997514ba5f0cd7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ierrorrecordsimpl-class"></a>Classe IErrorRecordsImpl
 Implementa OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) interfaccia, aggiunta di record a e il recupero di record da un membro dati ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) di tipo **CAtlArray <** `RecordClass`**>**.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
-template <  
-   class T,   
-   class RecordClass = ATLERRORINFO  
->  
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template <class T, class RecordClass = ATLERRORINFO>  
 class IErrorRecordsImpl : public IErrorRecords  
 ```  
   

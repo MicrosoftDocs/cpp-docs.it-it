@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - IRowsetLocate class, provider support for bookmarks
 - OLE DB provider templates, bookmarks
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>Supporto dei bookmark nel provider
 Nell'esempio di questo argomento viene aggiunto il `IRowsetLocate` interfaccia per la `CMyProviderRowset` classe. Nella quasi totalità dei casi, si avvia tramite l'aggiunta di un'interfaccia a un oggetto COM esistente. È quindi possibile testare aggiungendo ulteriori chiamate dai modelli consumer. Nell'esempio viene illustrato come:  
@@ -41,7 +43,7 @@ Nell'esempio di questo argomento viene aggiunto il `IRowsetLocate` interfaccia p
   
  Aggiunta di `IRowsetLocate` interfaccia è leggermente diversa dalla maggior parte delle interfacce. Per allineare le vtable, OLE DB modelli del provider hanno un parametro di modello per gestire l'interfaccia derivata. Il codice seguente viene illustrato il nuovo elenco di ereditarietà:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -49,18 +51,18 @@ Nell'esempio di questo argomento viene aggiunto il `IRowsetLocate` interfaccia p
 class CMyProviderRowset : public CRowsetImpl< CMyProviderRowset,   
       CTextData, CMyProviderCommand, CAtlArray<CTextData>,   
       CSimpleRow,   
-          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> >  
+          IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>>  
 ```  
   
- Il quarto, quinto e sesto vengono aggiunti i parametri. In questo esempio Usa le impostazioni predefinite per il quarto e quinto parametro specifica ma `IRowsetLocateImpl` come sesto parametro. `IRowsetLocateImpl`è una classe di modelli OLE DB che accetta due parametri: questi collegare il `IRowsetLocate` interfaccia per il `CMyProviderRowset` classe. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quella successiva. Solo il `IRowsetLocate` e `IRowsetScroll` interfacce devono essere gestiti in questo modo.  
+ Il quarto, quinto e sesto vengono aggiunti i parametri. In questo esempio Usa le impostazioni predefinite per il quarto e quinto parametro specifica ma `IRowsetLocateImpl` come sesto parametro. `IRowsetLocateImpl` è una classe di modelli OLE DB che accetta due parametri: questi collegare il `IRowsetLocate` interfaccia per il `CMyProviderRowset` classe. Per aggiungere la maggior parte delle interfacce, è possibile ignorare questo passaggio e passare a quella successiva. Solo il `IRowsetLocate` e `IRowsetScroll` interfacce devono essere gestiti in questo modo.  
   
  È quindi necessario specificare il `CMyProviderRowset` chiamare `QueryInterface` per il `IRowsetLocate` interfaccia. Aggiungere la riga `COM_INTERFACE_ENTRY(IRowsetLocate)` alla mappa. La mappa dell'interfaccia per `CMyProviderRowset` dovrebbe essere visualizzata come illustrato nel codice seguente:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate> > _RowsetBaseClass;  
+typedef CRowsetImpl< CMyProviderRowset, CTextData, CMyProviderCommand, CAtlArray<CTextData>, CSimpleRow, IRowsetLocateImpl<CMyProviderRowset, IRowsetLocate>> _RowsetBaseClass;  
   
 BEGIN_COM_MAP(CMyProviderRowset)  
    COM_INTERFACE_ENTRY(IRowsetLocate)  
@@ -74,7 +76,7 @@ END_COM_MAP()
   
  Per gestire il **IColumnsInfo::** chiamare, eliminare il **PROVIDER_COLUMN** eseguire il mapping di `CTextData` classe. La macro PROVIDER_COLUMN_MAP definisce una funzione `GetColumnInfo`. È necessario definire la propria `GetColumnInfo` (funzione). La dichiarazione di funzione dovrebbe essere simile al seguente:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -92,7 +94,7 @@ class CTextData
   
  Implementare quindi il `GetColumnInfo` funzione nel file MyProviderRS. cpp, come indicato di seguito:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
   
@@ -161,13 +163,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }  
 ```  
   
- `GetColumnInfo`Controlla prima se una proprietà denominata **DBPROP_IRowsetLocate** è impostata. Proprietà per ognuna delle interfacce facoltative oggetto set di righe OLE DB. Se il consumer deve utilizzare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi controllare questa proprietà e operazioni particolari basati su di esso.  
+ `GetColumnInfo` Controlla prima se una proprietà denominata **DBPROP_IRowsetLocate** è impostata. Proprietà per ognuna delle interfacce facoltative oggetto set di righe OLE DB. Se il consumer deve utilizzare una di queste interfacce facoltative, imposta una proprietà su true. Il provider può quindi controllare questa proprietà e operazioni particolari basati su di esso.  
   
  Nell'implementazione, ottenere la proprietà utilizzando il puntatore all'oggetto del comando. Il `pThis` puntatore rappresenta la classe di rowset o di comando. Perché vengono utilizzati modelli, è necessario passare questo come un `void` puntatore o il codice non viene compilato.  
   
  Specificare una matrice statica per contenere le informazioni di colonna. Se il consumer non desidera che la colonna del segnalibro, risulta sprecata una voce nella matrice. Questa matrice, è possibile allocare in modo dinamico, ma è necessario assicurarsi che venga eliminata correttamente. In questo esempio definisce e utilizza le macro ADD_COLUMN_ENTRY e ADD_COLUMN_ENTRY_EX per inserire le informazioni nella matrice. È possibile aggiungere le macro per il file MyProviderRS. H, come illustrato nel codice seguente:  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
@@ -198,13 +200,13 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
   
  Per testare il codice del consumer, è necessario apportare alcune modifiche per il `OnRun` gestore. La prima modifica alla funzione è di aggiungere il codice per aggiungere una proprietà per il set di proprietà. Il codice imposta il **DBPROP_IRowsetLocate** proprietà su true, comunicare al provider che si desidera che la colonna del segnalibro. Il `OnRun` il codice di gestore deve essere come segue:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // TestProv Consumer Application in TestProvDlg.cpp  
   
 void CTestProvDlg::OnRun()   
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -229,7 +231,8 @@ void CTestProvDlg::OnRun()
       DBCOMPARE compare;  
       if (ulCount == 2)  
          tempBookmark = table.bookmark;  
-      HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
+
+HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,  
                  &compare);  
       if (FAILED(hr))  
          ATLTRACE(_T("Compare failed: 0x%X\n"), hr);  
@@ -251,7 +254,7 @@ void CTestProvDlg::OnRun()
   
  È anche necessario aggiornare il record utente nel consumer. Aggiungere una voce nella classe per gestire un segnalibro e una voce di **COLUMN_MAP**:  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   

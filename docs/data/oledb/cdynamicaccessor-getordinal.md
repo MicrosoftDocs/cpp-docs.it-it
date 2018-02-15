@@ -1,10 +1,11 @@
 ---
-title: 'CDynamicAccessor:: GetOrdinal | Documenti Microsoft'
+title: CDynamicAccessor::GetOrdinal | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,37 +14,35 @@ f1_keywords:
 - CDynamicAccessor::GetOrdinal
 - ATL.CDynamicAccessor.GetOrdinal
 - GetOrdinal
-dev_langs: C++
-helpviewer_keywords: GetOrdinal method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetOrdinal method
 ms.assetid: 2095b71c-a7a4-4034-89a1-77a78cb9633f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b86ce9f5b27e7dc51cbebdbbd24b90dd9effa5fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e95532fcf200d92135e1e52a20c5929922e52d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicaccessorgetordinal"></a>CDynamicAccessor::GetOrdinal
 Recupera il numero di colonna dato il nome di una colonna.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      bool GetOrdinal(  
-   const CHAR* pColumnName,  
-   DBORDINAL* pOrdinal   
-) const throw( );  
-bool GetOrdinal(  
-   const WCHAR* pColumnName,  
-   DBORDINAL* pOrdinal   
-) const throw( );  
+```cpp
+      bool GetOrdinal(const CHAR* pColumnName,  
+   DBORDINAL* pOrdinal) const throw();  
+
+bool GetOrdinal(const WCHAR* pColumnName,  
+   DBORDINAL* pOrdinal) const throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  

@@ -6,25 +6,28 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
 - VCCORLIB/Platform::Exception::CreateException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::Exception Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception (classe)
 Rappresenta gli errori che si verificano durante l'esecuzione dell'applicazione. Le classi di eccezione personalizzate non possono essere derivate da `Platform::Exception`. Se devi utilizzare un'eccezione personalizzata, puoi utilizzare `Platform::COMException` e specificare un valore HRESULT specifico dell'applicazione.  
@@ -51,7 +54,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 |Member|Descrizione|  
 |------------|-----------------|  
-|[Exception:: CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
+|[Exception::CreateException](#createexception)|Crea un'eccezione che rappresenta il valore HRESULT specificato.|  
   
 ### <a name="properties"></a>Proprietà  
  La classe Exception presenta inoltre le proprietà seguenti.  
@@ -70,7 +73,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
  **Metadati:** platform.winmd  
 
-## <a name="createexception"></a>Exception:: CreateException (metodo)
+## <a name="createexception"></a> Exception:: CreateException (metodo)
 Crea Platform::Exception^ da un valore HRESULT specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -97,7 +100,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message)
   
 
 
-## <a name="ctor"></a>Costruttore Exception:: Exception
+## <a name="ctor"></a>  Costruttore Exception:: Exception
 Inizializza una nuova istanza della classe Exception.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -117,7 +120,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>Proprietà Exception
+## <a name="hresult"></a>  Proprietà Exception
 Valore HRESULT corrispondente all'eccezione.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -134,7 +137,7 @@ public:property int HResult {    int get();}
   
 
 
-## <a name="message"></a>Proprietà Exception
+## <a name="message"></a> Proprietà Exception
 Messaggio in cui viene descritto l'errore.  
   
 ### <a name="syntax"></a>Sintassi  

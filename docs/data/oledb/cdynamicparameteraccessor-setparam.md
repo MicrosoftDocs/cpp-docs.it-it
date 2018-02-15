@@ -1,10 +1,11 @@
 ---
-title: 'CDynamicParameterAccessor:: SetParam | Documenti Microsoft'
+title: CDynamicParameterAccessor::SetParam | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,42 +17,39 @@ f1_keywords:
 - CDynamicParameterAccessor:SetParam
 - CDynamicParameterAccessor::SetParam<ctype>
 - CDynamicParameterAccessor::SetParam
-dev_langs: C++
-helpviewer_keywords: SetParam method
+dev_langs:
+- C++
+helpviewer_keywords:
+- SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c6868c9ced5524dcd218d61206c3993ccadd7f8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
 Imposta il buffer del parametro utilizzando i dati (non di tipo stringa) specificati.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      template < class   
-      ctype >  
-bool SetParam(  
-   DBORDINAL nParam,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK  
-) throw( );  
-template < class ctype >  
-bool SetParam(  
-   TCHAR* pParamName,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK  
-) throw( );  
+```cpp
+template <class ctype>
+bool SetParam(DBORDINAL nParam,  
+               constctype* pData,  
+               DBSTATUS status = DBSTATUS_S_OK) throw();  
+
+template <class ctype>  
+bool SetParam(TCHAR* pParamName,  
+               const ctype* pData,  
+               DBSTATUS status = DBSTATUS_S_OK) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  

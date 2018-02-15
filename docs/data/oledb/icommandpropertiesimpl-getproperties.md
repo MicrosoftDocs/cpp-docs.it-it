@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
 - GetProperties
-dev_langs: C++
-helpviewer_keywords: GetProperties method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetProperties method
 ms.assetid: 1bee5f1b-bd08-435a-956a-e4cebcdf5d5e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d870ae3fe50cf8264f213a744e6520cdf74ab71c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91b990ef20c2f9060207163093e448255287448f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
 Restituisce tutti i set di proprietà richiesta tramite il mapping di proprietà del comando.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      STDMETHOD(GetProperties)(   
-   const ULONG cPropertyIDSets,   
+```cpp
+      STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,   
    const DBPROPIDSET rgPropertyIDSets[],   
    ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets    
-);  
+   DBPROPSET ** prgPropertySets);  
 ```  
   
 #### <a name="parameters"></a>Parametri  

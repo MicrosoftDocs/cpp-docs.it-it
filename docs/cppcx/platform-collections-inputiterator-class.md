@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Classe Platform::Collections::InputIterator
 Fornisce l'oggetto InputIterator della libreria di modelli Standard per le raccolte derivate da Windows Runtime.  
@@ -72,7 +76,7 @@ class InputIterator;
   
  **Spazio dei nomi:** Platform::Collections  
 
-## <a name="ctor"></a>Costruttore inputiterator:: Inputiterator
+## <a name="ctor"></a>  Costruttore inputiterator:: Inputiterator
 Inizializza una nuova istanza della classe InputIterator.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>Inputiterator:: operator -&gt; (operatore)
+## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
 Recupera l'indirizzo dell'elemento specificato dall'oggetto InputIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>Inputiterator:: operator * (operatore)
+## <a name="operator-dereference"></a>  InputIterator::operator* Operator
 Recupera un riferimento all'elemento specificato dall'oggetto InputIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Inputiterator:: operator = = (operatore)
+## <a name="operator-equality"></a>  InputIterator::operator== Operator
 Indica se l'oggetto InputIterator corrente è uguale all'oggetto InputIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -134,7 +138,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Inputiterator:: operator + + (operatore)
+## <a name="operator-increment"></a>  InputIterator::operator++ Operator
 Incrementa l'oggetto InputIterator corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Inputiterator:: operator! = (operatore)
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 Indica se l'oggetto InputIterator corrente è diverso dall'oggetto InputIterator specificato.  
   
 ### <a name="syntax"></a>Sintassi  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,7 +15,8 @@ f1_keywords:
 - vc-attr.db_command
 - vc-attr.db_table
 - vc-attr.db_source
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -25,18 +27,18 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 584b83c4b3aa9ea5fd2f98fd59969ab46ce712ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec5eed15f9837637cff51c47c4b000b7e30eeb25
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Semplificazione dell'accesso ai dati con gli attributi del database
 In questo argomento viene illustrato l'utilizzo degli attributi del database per semplificare le operazioni di database.  
@@ -54,7 +56,7 @@ In questo argomento viene illustrato l'utilizzo degli attributi del database per
 -   Il **db_table** chiamata nella versione con gli attributi è equivalente alla dichiarazione di modello seguenti:  
   
     ```  
-    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 -   Il **db_column** chiamate nella versione attributi equivalgono alla mappa delle colonne (vedere `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) nella dichiarazione del modello.  
@@ -66,11 +68,11 @@ In questo argomento viene illustrato l'utilizzo degli attributi del database per
  Per informazioni sugli attributi descritti in questo argomento, vedere [attributi del Consumer OLE DB](../../windows/ole-db-consumer-attributes.md).  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Tabella e utilizzando gli attributi di dichiarazione di funzione di accesso  
- Il codice seguente chiama `db_source` e **db_table** sulla classe di tabella. `db_source`Specifica l'origine dati e la connessione da utilizzare. **db_table** inserisce il codice del modello appropriato per dichiarare una classe di tabella. **db_column** specifica la mappa delle colonne e inserisce la dichiarazione di funzione di accesso. È possibile utilizzare gli attributi del consumer OLE DB in qualsiasi progetto che supporti ATL.  
+ Il codice seguente chiama `db_source` e **db_table** sulla classe di tabella. `db_source` Specifica l'origine dati e la connessione da utilizzare. **db_table** inserisce il codice del modello appropriato per dichiarare una classe di tabella. **db_column** specifica la mappa delle colonne e inserisce la dichiarazione di funzione di accesso. È possibile utilizzare gli attributi del consumer OLE DB in qualsiasi progetto che supporti ATL.  
   
  Ecco la dichiarazione di funzioni di accesso e di tabella utilizzando gli attributi:  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and accessor declaration using attributes  
 // authors.h  
@@ -106,7 +108,7 @@ public:
 ## <a name="table-and-accessor-declaration-using-templates"></a>Dichiarazione di funzione di accesso mediante modelli e di tabella  
  Ecco la dichiarazione di funzioni di accesso e di tabella utilizzando i modelli.  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and user record class declaration using templates  
 // authors.h  
@@ -134,7 +136,8 @@ public:
    HRESULT OpenDataSource()  
    {  
       CDataSource _db;  
-      HRESULT hr;  
+
+HRESULT hr;  
       hr = _db.OpenFromInitializationString(L"your connection string");  
       if (FAILED(hr))  
       {  
@@ -160,12 +163,12 @@ public:
       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, m_dwYearBornLength, m_dwYearBornStatus)  
    END_COLUMN_MAP()  
 };  
-class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
 {  
 public:  
    HRESULT OpenAll()  
    {  
-      HRESULT hr;  
+HRESULT hr;  
       hr = OpenDataSource();  
       if (FAILED(hr))  
          return hr;  
@@ -192,7 +195,7 @@ public:
    }  
    HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
    {  
-      HRESULT hr = Open(m_session, "Authors", pPropSet);  
+HRESULT hr = Open(m_session, "Authors", pPropSet);  
 #ifdef _DEBUG  
       if(FAILED(hr))  
          AtlTraceErrorRecords(hr);  

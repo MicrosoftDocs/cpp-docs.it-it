@@ -1,10 +1,11 @@
 ---
-title: 'CRowset:: UpdateAll | Documenti Microsoft'
+title: CRowset::UpdateAll | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,33 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs: C++
-helpviewer_keywords: UpdateAll method
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7dc38544641043f95d24cf9a8f9cf40ccca1dbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 Trasmette le modifiche apportate a tutte le righe dall'ultimo recupero in sospeso o **aggiornamento** chiamare su di esso.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
    HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
-) throw( );  
+   DBROWSTATUS** ppStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -58,7 +58,7 @@ Trasmette le modifiche apportate a tutte le righe dall'ultimo recupero in sospes
  [out] Un puntatore alla posizione in cui **aggiornamento** restituisce il valore di stato di riga. Se non viene restituito alcun stato `ppStatus` è null.  
   
 ## <a name="remarks"></a>Note  
- Trasmette le modifiche in sospeso apportate a tutte le righe, poiché tali righe sono state ultimo recupero o aggiornata mediante [aggiornamento](../../data/oledb/crowset-update.md) o `UpdateAll`. `UpdateAll`aggiornerà tutte le righe che sono stata modificata, indipendentemente dal fatto se si conosce ancora l'handle per tali (vedere `pphRow`) o non.  
+ Trasmette le modifiche in sospeso apportate a tutte le righe, poiché tali righe sono state ultimo recupero o aggiornata mediante [aggiornamento](../../data/oledb/crowset-update.md) o `UpdateAll`. `UpdateAll` aggiornerà tutte le righe che sono stata modificata, indipendentemente dal fatto se si conosce ancora l'handle per tali (vedere `pphRow`) o non.  
   
  Ad esempio, se è stato utilizzato **inserire** per inserire cinque righe in un set di righe, è possibile chiamare **aggiornare** cinque volte oppure chiamare `UpdateAll` una volta per aggiornarli tutti.  
   
@@ -72,6 +72,6 @@ Trasmette le modifiche apportate a tutte le righe dall'ultimo recupero in sospes
   
 ## <a name="see-also"></a>Vedere anche  
  [CRowset (classe)](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset:: SetData](../../data/oledb/crowset-setdata.md)   
+ [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset::SetData](../../data/oledb/crowset-setdata.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d65bce2b262b7582f9194eb8047d71ce06f3ca16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-an-updatable-provider"></a>Creazione di un provider aggiornabile
 Visual C++ supporta provider aggiornabile o i provider che è possibile aggiornare (scrivere) nell'archivio dati. In questo argomento viene illustrato come creare provider aggiornabili utilizzando i modelli OLE DB.  
@@ -36,7 +38,7 @@ Visual C++ supporta provider aggiornabile o i provider che è possibile aggiorna
 > [!NOTE]
 >  UpdatePV è un esempio di un provider aggiornabile. UpdatePV è uguale a MyProv, ma con supporto aggiornabile.  
   
-##  <a name="vchowmakingprovidersupdatable"></a>Rendendo provider aggiornabili  
+##  <a name="vchowmakingprovidersupdatable"></a> Rendendo provider aggiornabili  
  La chiave per la creazione di un provider aggiornabile è comprendere quali operazioni si desidera che il provider esegua all'archivio dati e come si vuole che il provider per eseguire tali operazioni. In particolare, il problema principale è che gli aggiornamenti all'archivio dati devono essere eseguita immediatamente o posticipata (batch) fino a quando non viene eseguito un comando di aggiornamento.  
   
  È innanzitutto necessario decidere se ereditare da `IRowsetChangeImpl` o `IRowsetUpdateImpl` nella classe del set di righe. In base all'implementazione scelta, saranno interessate le funzionalità dei tre metodi: `SetData`, **InsertRows**, e `DeleteRows`.  
@@ -146,7 +148,7 @@ Visual C++ supporta provider aggiornabile o i provider che è possibile aggiorna
   
      Ad esempio di come vengono impostate le proprietà, vedere la proprietà di mappa **CUpdateCommand** (in rowset) in [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f).  
   
-##  <a name="vchowwritingtothedatasource"></a>Scrittura all'origine dati  
+##  <a name="vchowwritingtothedatasource"></a> Scrittura all'origine dati  
  Per leggere dall'origine dati, chiamare il **Execute** (funzione). Per scrivere l'origine dati, chiamare il `FlushData` (funzione). (In senso generale, scaricamento mezzi per salvare le modifiche apportate a una tabella o indice su disco).  
   
 ```  
@@ -160,13 +162,13 @@ FlushData(HROW, HACCESSOR);
 ### <a name="when-to-flush"></a>Quando lo scaricamento  
  La chiamata di modelli di provider `FlushData` ogni volta che i dati devono essere scritte nell'archivio dati; ciò in genere (ma non sempre) si verifica come risultato di chiamate alle funzioni seguenti:  
   
--   **IRowsetChange:: DeleteRows**  
+-   **IRowsetChange::DeleteRows**  
   
--   **IRowsetChange:: SetData**  
+-   **IRowsetChange::SetData**  
   
 -   **IRowsetChange::** (se è disponibile nuovi dati da inserire nella riga)  
   
--   **IRowsetUpdate:: Update**  
+-   **IRowsetUpdate::Update**  
   
 ### <a name="how-it-works"></a>Come funziona  
  Il consumer effettua una chiamata che richiede uno scaricamento (ad esempio **aggiornamento**) e la chiamata viene passata al provider, che esegue sempre le operazioni seguenti:  
@@ -217,7 +219,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  Nell'esempio seguente come `FlushData` viene implementato nel `RUpdateRowset` classe il [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) esempio (vedere rowset nel codice di esempio):  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
 ...  
@@ -308,7 +310,7 @@ HRESULT FlushData(HROW, HACCESSOR)
  Esaminare il codice nel [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) ; esempio viene illustrato come è possibile gestire un provider **NULL** dati. Nell'esempio UpdatePV, il provider Archivia **NULL** dati scrivendo la stringa "NULL" nell'archivio dati. Quando legge **NULL** archiviano i dati dai dati, della stringa e quindi svuota il buffer, la creazione di un **NULL** stringa. Include inoltre un override di `IRowsetImpl::GetDBStatus` in cui viene restituito **DBSTATUS_S_ISNULL** se tale valore è vuoto.  
   
 ### <a name="marking-nullable-columns"></a>Contrassegno delle colonne che ammettono valori null  
- Se si implementano anche rowset dello schema (vedere `IDBSchemaRowsetImpl`), l'implementazione deve essere specificato nella **DBSCHEMA_COLUMNS** set di righe (in genere contrassegnati nel provider da **C***xxx* **SchemaColSchemaRowset**) che la colonna è nullable.  
+ Se si implementano anche rowset dello schema (vedere `IDBSchemaRowsetImpl`), l'implementazione deve essere specificato nella **DBSCHEMA_COLUMNS** set di righe (in genere contrassegnati nel provider da **C***xxx*** SchemaColSchemaRowset**) che la colonna è nullable.  
   
  È inoltre necessario specificare che tutte le colonne che ammettono valori null contengono il **DBCOLUMNFLAGS_ISNULLABLE** nella versione del valore di `GetColumnInfo`.  
   
@@ -316,7 +318,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  L'esempio seguente mostra come **CommonGetColInfo** funzione è implementata **CUpdateCommand** (vedere UpProvRS) in UpdatePV. Si noti come le colonne hanno **DBCOLUMNFLAGS_ISNULLABLE** per le colonne che ammettono valori null.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////////  
 // CUpdateCommand (in UpProvRS.cpp)  
   
@@ -412,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>Flag di colonna  
- Se si supportano i valori predefiniti le colonne, è necessario impostare utilizzando i metadati di  **\<**  *classe provider***> SchemaRowset** classe. Impostare *m_bColumnHasDefault* = `VARIANT_TRUE`.  
+ Se si supportano i valori predefiniti le colonne, è necessario impostare utilizzando i metadati di  **\< ***classe provider***> SchemaRowset** classe. Set *m_bColumnHasDefault* = `VARIANT_TRUE`.  
   
  Inoltre necessario impostare i flag di colonna, vengono specificati utilizzando il **DBCOLUMNFLAGS** tipo enumerato. I flag di colonna vengono descritte le caratteristiche della colonna.  
   
@@ -428,6 +430,7 @@ trData[0].m_nNumericPrecision = 10;
 trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
                             DBCOLUMNFLAGS_ISFIXEDLENGTH;  
 lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+
 m_rgRowData.Add(trData[0]);  
 ```  
   

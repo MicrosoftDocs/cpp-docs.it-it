@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedura: attivare e utilizzare un componente Windows Runtime mediante WRL
 Questo documento viene illustrato come utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per inizializzare il Runtime di Windows e come attivare e utilizzare un componente Windows Runtime.  
@@ -39,7 +41,7 @@ Questo documento viene illustrato come utilizzare la libreria di modelli C++ (WR
  I seguenti passaggi viene utilizzata la `Windows::Foundation::IUriRuntimeClass` interfaccia per illustrare come creare una factory di attivazione per un componente Windows Runtime, creare un'istanza del componente e recuperare un valore della proprietà. È inoltre illustrato come inizializzare il Runtime di Windows. Segue un esempio completo.  
   
 > [!IMPORTANT]
->  Sebbene in genere, si utilizza la libreria di modelli C++ di Windows Runtime in un'app Universal Windows Platform, questo esempio Usa un'applicazione console a scopo illustrativo. Le funzioni come `wprintf_s` non sono disponibili da un'app Universal Windows Platform. Per ulteriori informazioni sui tipi e funzioni che è possibile utilizzare in un'app Universal Windows Platform, vedere [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) e [Win32 e COM per Windows Store apps](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Sebbene in genere, si utilizza la libreria di modelli C++ di Windows Runtime in un'app di Windows della piattaforma UWP (Universal), in questo esempio Usa un'applicazione console a scopo illustrativo. Le funzioni come `wprintf_s` non sono disponibili da un'app UWP. Per ulteriori informazioni sui tipi e funzioni che è possibile utilizzare in un'app UWP, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) e [Win32 e COM per App UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Per attivare e utilizzare un componente Windows Runtime  
   
@@ -88,7 +90,7 @@ Questo documento viene illustrato come utilizzare la libreria di modelli C++ (WR
 ## <a name="compiling-the-code"></a>Compilazione del codice  
  Per compilare il codice, copiarlo e quindi incollarlo in un progetto di Visual Studio oppure incollarlo in un file denominato `wrl-consume-component.cpp` , quindi eseguire il comando seguente in una finestra del prompt dei comandi di Visual Studio.  
   
- **file runtimeobject.lib cpp utilizzare wrl CL.exe**  
+ **cl.exe wrl-consume-component.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Libreria di modelli di Windows Runtime C++ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

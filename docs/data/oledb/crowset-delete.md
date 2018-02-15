@@ -1,10 +1,11 @@
 ---
-title: 'CRowset:: Delete | Documenti Microsoft'
+title: CRowset::Delete | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,30 +17,31 @@ f1_keywords:
 - CRowset<TAccessor>.Delete
 - CRowset<TAccessor>::Delete
 - ATL.CRowset<TAccessor>.Delete
-dev_langs: C++
-helpviewer_keywords: Delete method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 525e89bd49a7bf67ac20a2f580241e7ff982c71b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05d503a4fb04fa50c6c91371a471c141e2cf2b50
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetdelete"></a>CRowset::Delete
 Chiamate [IRowsetChange:: DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) per eliminare la riga corrente dal set di righe.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-HRESULT Delete( ) const throw( );  
+```cpp
+HRESULT Delete() const throw();  
   
 ```  
   

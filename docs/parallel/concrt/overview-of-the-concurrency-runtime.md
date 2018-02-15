@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Cenni preliminari sul runtime di concorrenza
 Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illustra i vantaggi del runtime di concorrenza, quando usarlo e che modo i relativi componenti interagiscono tra loro e con il sistema operativo e le applicazioni.  
@@ -42,7 +45,7 @@ Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illust
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime"></a>Motivo per cui un Runtime di concorrenza è importante  
+##  <a name="runtime">Motivo per cui un Runtime di concorrenza è importante</a>  
  Un runtime di concorrenza fornisce uniformità e prevedibilità alle applicazioni e ai componenti dell'applicazione eseguiti simultaneamente. Due esempi dei vantaggi del Runtime di concorrenza sono *pianificazione cooperativa delle attività* e *il blocco cooperativo*.  
   
  Il runtime di concorrenza usa un'utilità di pianificazione cooperativa che implementa un algoritmo di acquisizione del lavoro per distribuire il lavoro tra le risorse di elaborazione in modo efficiente. Si consideri, ad esempio, un'applicazione che dispone di due thread entrambi gestiti dallo stesso runtime. Se un thread termina l'attività pianificata, può scaricare il lavoro dall'altro thread. Questo meccanismo bilancia il carico di lavoro complessivo dell'applicazione.  
@@ -59,7 +62,7 @@ Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illust
  ![Architettura del Runtime di concorrenza](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  Le componenti Utilità di pianificazione e Gestione risorse non sono disponibili in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] o quando si usa la classe dell'attività o altri tipi in ppltasks.h.  
+>  I componenti di utilità di pianificazione e Gestione risorse non sono disponibili da un'app della piattaforma UWP (Universal Windows) o quando si utilizza la classe dell'attività o altri tipi in ppltasks. h.  
   
  Il Runtime di concorrenza è altamente *componibile*, vale a dire, è possibile combinare le funzionalità esistenti per eseguire altre operazioni. Il runtime di concorrenza compone molte funzionalità, ad esempio gli algoritmi paralleli, dai componenti di livello inferiore.  
   
@@ -95,7 +98,7 @@ Questo documento fornisce i cenni preliminari sul runtime di concorrenza. Illust
   
  [[Torna all'inizio](#top)]  
   
-##  <a name="lambda"></a>Espressioni Lambda C++  
+##  <a name="lambda">Espressioni Lambda C++</a>  
  Molti dei tipi e degli algoritmi definiti dal runtime di concorrenza vengono implementati come modelli C++.  Alcuni di questi tipi e algoritmi accettano come parametro una routine che esegue il lavoro. Questo parametro può essere una funzione lambda, un oggetto funzione o un puntatore a funzione. Queste entità sono anche denominate per *le funzioni lavoro* o *routine lavoro*.  
   
  Le espressioni lambda rappresentano una nuova e importante funzionalità del linguaggio di Visual C++ perché forniscono una modalità succinta per definire le funzioni lavoro per l'elaborazione in parallelo. Gli oggetti funzione e i puntatori a funzione consentono di usare il runtime di concorrenza con il codice esistente. Tuttavia, è consigliabile usare le espressioni lambda quando si scrive nuovo codice per i vantaggi offerti in termini di produttività e sicurezza.  

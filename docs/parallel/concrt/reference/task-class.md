@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +18,22 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs: C++
-helpviewer_keywords: task class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 350207512ee31d6c55b127984387e3e9af7912b2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
 Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. Possono anche essere composte con altre attività usando le continuazioni ( `then`), join e ( `when_all`) e choice ( `when_any`) pattern.  
@@ -65,7 +69,7 @@ class task;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[attività](#ctor)|Di overload. Costruisce un oggetto `task`.|  
+|[task](#ctor)|Di overload. Costruisce un oggetto `task`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
@@ -74,9 +78,9 @@ class task;
 |[get](#get)|Di overload. Restituisce il risultato generato da questa attività. Se l'attività non è in uno stato terminale, una chiamata a `get` attenderà il completamento dell'attività. Questo metodo non restituisce un valore quando viene chiamato su un'attività con un `result_type``void`.|  
 |[is_apartment_aware](#is_apartment_aware)|Determina se l'attività annulla il wrapping di un'interfaccia `IAsyncInfo` di Windows Runtime o discende da tale attività.|  
 |[is_done](#is_done)|Determina se l'attività è stata completata.|  
-|[utilità di pianificazione](#scheduler)|Restituisce l'utilità di pianificazione per questa attività|  
-|[quindi](#then)|Di overload. Aggiunge un'attività di continuazione a questa attività.|  
-|[attesa](#wait)|Attende che l'attività raggiunga uno stato finale. È possibile che tramite `wait` l'attività venga eseguita inline, se tutte le dipendenze di attività vengono soddisfatte e non è già stato selezionato per l'esecuzione da un processo di lavoro in background.|  
+|[scheduler](#scheduler)|Restituisce l'utilità di pianificazione per questa attività|  
+|[then](#then)|Di overload. Aggiunge un'attività di continuazione a questa attività.|  
+|[wait](#wait)|Attende che l'attività raggiunga uno stato finale. È possibile che tramite `wait` l'attività venga eseguita inline, se tutte le dipendenze di attività vengono soddisfatte e non è già stato selezionato per l'esecuzione da un processo di lavoro in background.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -97,7 +101,7 @@ class task;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="get"></a>Ottieni 
+##  <a name="get"></a> get 
 
  Restituisce il risultato generato da questa attività. Se l'attività non è in uno stato terminale, una chiamata a `get` attenderà il completamento dell'attività. Questo metodo non restituisce un valore quando viene chiamato su un'attività con un `result_type``void`.  
   
@@ -114,9 +118,9 @@ void get() const;
  Se l'attività viene annullata, una chiamata a `get` genererà un [task_canceled](task-canceled-class.md) eccezione. Se l'attività ha rilevato un'eccezione diversa o un'eccezione è stata propagata a essa da un'attività precedente, una chiamata a `get` genererà questa eccezione.  
   
 > [!IMPORTANT]
->  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare [concurrency::task::wait](#wait) o `get` ( `wait` chiamate `get`) nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questi metodi di bloccare il thread corrente e può provocare l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il `get` metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività, poiché il risultato è immediatamente disponibile.  
+>  In un'app di Windows della piattaforma UWP (Universal), non chiamare [concurrency::task::wait](#wait) o `get` ( `wait` chiamate `get`) nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questi metodi di bloccare il thread corrente e può provocare l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il `get` metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività, poiché il risultato è immediatamente disponibile.  
   
-##  <a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a> is_apartment_aware 
 
  Determina se l'attività annulla il wrapping di un'interfaccia `IAsyncInfo` di Windows Runtime o discende da tale attività.  
   
@@ -127,7 +131,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se l'attività annulla il wrapping di un'interfaccia `IAsyncInfo` o discende da tale attività, in caso contrario `false`.  
   
-##  <a name="is_done"></a>Task:: is_done (Runtime di concorrenza) (metodo)  
+##  <a name="is_done"></a>  Task:: is_done (Runtime di concorrenza) (metodo)  
  Determina se l'attività è stata completata.  
   
 ```
@@ -140,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Note  
  La funzione restituisce true se l'attività è stata completata o annullata (con o senza eccezione utente).  
   
-##  <a name="operator_neq"></a>operatore! = 
+##  <a name="operator_neq"></a> operatore! = 
 
  Determina se due oggetti `task` rappresentano attività interne diverse.  
   
@@ -156,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti si riferiscono ad attività sottostanti diverse e `false` in caso contrario.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Sostituisce il contenuto di un oggetto `task` con un altro.  
   
@@ -175,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Note  
  Dato che `task` si comporta come un puntatore intelligente, dopo un'operazione di assegnazione di copia, questo oggetto `task` rappresenta la stessa attività effettiva di `_Other`.  
   
-##  <a name="operator_eq_eq"></a>operatore = = 
+##  <a name="operator_eq_eq"></a> operatore = = 
 
  Determina se due oggetti `task` rappresentano la stessa attività interna.  
   
@@ -191,7 +195,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti si riferiscono alla stessa attività sottostante e `false` in caso contrario.  
   
-##  <a name="scheduler"></a>Task:: Scheduler (Runtime di concorrenza) (metodo)  
+##  <a name="scheduler"></a>  Task:: Scheduler (Runtime di concorrenza) (metodo)  
  Restituisce l'utilità di pianificazione per questa attività  
   
 ```
@@ -201,7 +205,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>Valore restituito  
  Un puntatore all'utilità di pianificazione  
   
-##  <a name="ctor"></a>attività 
+##  <a name="ctor"></a> Attività 
 
  Costruisce un oggetto `task`.  
   
@@ -228,7 +232,7 @@ task(
  Tipo del parametro dal quale deve essere costruita l'attività.  
   
  `_Param`  
- Parametro dal quale deve essere costruita l'attività. Può essere un'espressione lambda, un oggetto funzione, un oggetto `task_completion_event<result_type>` o un Windows::Foundation::IAsyncInfo se si utilizzano attività nell'applicazione Windows Store. L'espressione lambda o l'oggetto funzione devono essere equivalenti a `std::function<X(void)>`, dove X può essere una variabile di tipo `result_type`, `task<result_type>`, o Windows::Foundation::IAsyncInfo nelle applicazioni Windows Store.  
+ Parametro dal quale deve essere costruita l'attività. Potrebbe trattarsi di un'espressione lambda, un oggetto funzione, un `task_completion_event<result_type>` oggetto o un Windows::Foundation::IAsyncInfo se si utilizzano attività nell'app di Windows Runtime. L'oggetto di espressione lambda o funzione deve essere un tipo equivalente a `std::function<X(void)>`, dove X può essere una variabile di tipo `result_type`, `task<result_type>`, o un Windows::Foundation::IAsyncInfo nelle app di Windows Runtime.  
   
  `_TaskOptions`  
  Le opzioni dell'attività includono il token di annullamento, l'utilità di pianificazione e così via  
@@ -247,11 +251,11 @@ task(
   
  `task` si comporta come un puntatore intelligente e viene passato in modo sicuro per valore. È possibile accedervi da più thread senza la necessità di blocchi.  
   
- Gli overload del costruttore che accettano un'interfaccia di Windows::Foundation::IAsyncInfo o un'espressione lambda che restituisce tale interfaccia, sono disponibili solo per le applicazioni Windows Store.  
+ L'overload del costruttore che accettano un'interfaccia Windows::Foundation::IAsyncInfo o un'espressione lambda che restituisce un'interfaccia, sono disponibili solo per App di Windows Runtime.  
   
  Per ulteriori informazioni, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="then"></a>quindi 
+##  <a name="then"></a> quindi 
 
  Aggiunge un'attività di continuazione a questa attività.  
   
@@ -302,17 +306,17 @@ __declspec(
  Token di annullamento da associare all'attività di continuazione. Un'attività di continuazione creata senza un token di annullamento erediterà il token della relativa attività antecedente.  
   
  `_ContinuationContext`  
- Variabile che specifica la posizione in cui deve essere eseguita la continuazione. Questa variabile è utile solo quando viene utilizzata in un'applicazione in stile Windows Store. Per ulteriori informazioni, vedere [task_continuation_context](task-continuation-context-class.md)  
+ Variabile che specifica la posizione in cui deve essere eseguita la continuazione. Questa variabile è utile solo quando utilizzato in un'app UWP. Per ulteriori informazioni, vedere [task_continuation_context](task-continuation-context-class.md)  
   
 ### <a name="return-value"></a>Valore restituito  
  L'attività di continuazione appena creata. Il tipo di risultato dell'attività restituita è determinato da ciò che viene restituito da `_Func`.  
   
 ### <a name="remarks"></a>Note  
- Gli overload di `then` che accettano un'espressione lambda o functor che restituisce un'interfaccia Windows::Foundation::IAsyncInfo, sono disponibili solo per le applicazioni Windows Store.  
+ Gli overload di `then` che accettano un'espressione lambda o functor che restituisce un'interfaccia Windows::Foundation::IAsyncInfo, sono disponibili solo per App di Windows Runtime.  
   
  Per ulteriori informazioni sull'utilizzo delle continuazioni di attività per comporre operazioni asincrone, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="wait"></a>attesa 
+##  <a name="wait"></a> attesa 
 
  Attende che l'attività raggiunga uno stato finale. È possibile che tramite `wait` l'attività venga eseguita inline, se tutte le dipendenze di attività vengono soddisfatte e non è già stato selezionato per l'esecuzione da un processo di lavoro in background.  
   
@@ -326,7 +330,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Note  
   
 > [!IMPORTANT]
->  In un [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] app, non chiamare `wait` nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il [concurrency::task::get](#get) metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività.  
+>  In un'app di Windows della piattaforma UWP (Universal), non chiamare `wait` nel codice che viene eseguito in apartment In caso contrario, il runtime genera [invalid_operation](invalid-operation-class.md) poiché questo metodo blocca il thread corrente e l'applicazione potrebbe non rispondere. Tuttavia, è possibile chiamare il [concurrency::task::get](#get) metodo per ricevere il risultato dell'attività precedente in una continuazione basata su attività.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)

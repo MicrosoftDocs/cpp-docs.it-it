@@ -1,10 +1,11 @@
 ---
-title: 'CRowset:: Insert | Documenti Microsoft'
+title: CRowset::Insert | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,33 +17,32 @@ f1_keywords:
 - ATL.CRowset.Insert
 - CRowset::Insert
 - ATL::CRowset::Insert
-dev_langs: C++
-helpviewer_keywords: Insert method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Insert method
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75dfe26fa04f8e639b3d391a9dc703a9a98c70c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d23396664788f6509b64f9aae88eb9674586fbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetinsert"></a>CRowset::Insert
 Crea e Inizializza una nuova riga usando i dati dalla funzione di accesso.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      HRESULT Insert(   
-   int nAccessor = 0,   
-   bool bGetHRow = false    
-) throw( );  
+```cpp
+HRESULT Insert(int nAccessor = 0,   
+   bool bGetHRow = false) throw();  
 ```  
   
 #### <a name="parameters"></a>Parametri  

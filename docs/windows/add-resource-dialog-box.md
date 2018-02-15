@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.editors.insertresource
-dev_langs: C++
+f1_keywords:
+- vc.editors.insertresource
+dev_langs:
+- C++
 helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fde90f5d7c7822155e36b77c74cd80cdf56b10d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-resource-dialog-box"></a>Aggiungi risorsa (finestra di dialogo)
 Usare questa finestra di dialogo per aggiungere risorse a un progetto di applicazione desktop di Windows in C++.  
   
 > [!NOTE]
->  Queste informazioni non si applicano alle risorse in app di Windows Store. Per ulteriori informazioni su questo, vedere [definizione delle risorse dell'App](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4).  
+>  Queste informazioni non si applicano alle risorse nelle App Universal Windows Platform. Per ulteriori informazioni su questo, vedere [risorse dell'App e il sistema di gestione risorse](/windows/uwp/app-resources/).  
   
  **Tipo di risorsa**  
  Specifica il tipo di risorsa che si vuole creare.  

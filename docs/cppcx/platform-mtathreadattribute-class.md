@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::MTAThreadAttribute::Equals
 - VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
 - VCCORLIB/Platform::MTAThreadAttribute::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::MTAThreadAttribute Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 626d80a40c24f81b8723c4e1b8d916f5a3ba2bd6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute (classe)
 Indica che il modello di threading per un'applicazione è un apartment a thread multipli (MTA).  
@@ -61,7 +64,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 
 
-## <a name="ctor"></a>MTAThreadAttribute (costruttore)
+## <a name="ctor"></a> MTAThreadAttribute (costruttore)
 Inizializza una nuova istanza della classe MTAThreadAttribute.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -72,7 +75,7 @@ public:MTAThreadAttribute()
   
 
 
-## <a name="equals"></a>MTAThreadAttribute::Equals
+## <a name="equals"></a> MTAThreadAttribute::Equals
 Determina se l'oggetto specificato è uguale all'oggetto corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -90,7 +93,7 @@ public:virtual override bool Equals(  Object^ obj)
   
 
 
-## <a name="gethashcode"></a>MTAThreadAttribute::GetHashCode
+## <a name="gethashcode"></a> MTAThreadAttribute::GetHashCode
 Restituisce il codice hash per l'istanza.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="tostring"></a>MTAThreadAttribute::ToString
+## <a name="tostring"></a> MTAThreadAttribute::ToString
 Restituisce una stringa che rappresenta l'oggetto corrente.  
   
 ### <a name="syntax"></a>Sintassi  

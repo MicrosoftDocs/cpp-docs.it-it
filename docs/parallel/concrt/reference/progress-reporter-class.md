@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,19 +13,22 @@ f1_keywords:
 - PPLTASKS/concurrency::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::progress_reporter
 - PPLTASKS/concurrency::progress_reporter::report
-dev_langs: C++
-helpviewer_keywords: progress_reporter class
+dev_langs:
+- C++
+helpviewer_keywords:
+- progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1dcdba2e5242dcd750eea42b61575ebea921d7b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aaac198ab17c33330cbc63d951bfbee97c1d4e94
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="progressreporter-class"></a>Classe progress_reporter
 La classe del reporter dello stato di avanzamento consente la segnalazione di notifiche di stato di un tipo specifico. Ogni oggetto progress_reporter è associato a una particolare operazione o azione asincrona.  
@@ -55,7 +59,7 @@ class progress_reporter;
 |[report](#report)|Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.|  
   
 ## <a name="remarks"></a>Note  
- Questo tipo è disponibile solo per le applicazioni Windows Store.  
+ Questo tipo è disponibile solo per App di Windows Runtime.  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
  `progress_reporter`  
@@ -65,13 +69,13 @@ class progress_reporter;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a> progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="report"></a>report 
+##  <a name="report"></a> Report 
 
  Invia un rapporto di stato all'operazione asincrona o all'operazione a cui è associato questo reporter dello stato di avanzamento.  
   

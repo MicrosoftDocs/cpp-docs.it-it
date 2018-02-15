@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>Parallelismo delle attività (runtime di concorrenza)
 Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un processo specifico e in genere eseguita in parallelo con altre attività. Un'attività può essere scomposta in attività aggiuntive più precise, organizzate in un *gruppo di attività*.  
@@ -81,7 +84,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
 - [Programmazione efficiente](#robust)  
   
-##  <a name="lambdas"></a>Utilizzo di espressioni Lambda  
+##  <a name="lambdas">Utilizzo di espressioni Lambda</a>  
  Poiché presentano una sintassi concisa, le espressioni lambda sono comunemente usate per definire il lavoro eseguito da attività e gruppi di attività. Ecco alcuni suggerimenti sull'utilizzo:  
   
 -   Poiché in genere le attività vengono eseguite su thread in background, tenere tenga presente la durata degli oggetti quando si acquisiscono variabili nelle espressioni lambda. Quando si acquisisce una variabile in base al valore, una copia della variabile viene eseguita nel corpo dell'espressione lambda. Quando l'acquisizione viene fatta in base al riferimento, la copia non viene eseguita. Pertanto, verificare che la durata di qualsiasi variabile acquisita in base al riferimento sia maggiore di quella dell'attività che la usa.  
@@ -98,7 +101,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
  Per altre informazioni sulle espressioni lambda, vedere [Espressioni lambda in C++](../../cpp/lambda-expressions-in-cpp.md).  
   
-##  <a name="task-class"></a>La classe di attività  
+##  <a name="task-class">La classe di attività</a>  
  È possibile utilizzare il [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) classe per comporre le attività in un set di operazioni dipendenti. Questo modello di composizione è supportato dalla nozione di *continuazioni*. Una continuazione consente di codice da eseguire quando il precedente o *attività precedente*, al completamento dell'attività. Il risultato dell'attività precedente viene passato come input a una o più attività di continuazione. Quando viene completata un'attività antecedente, viene pianificata l'esecuzione di tutte le attività di continuazione in attesa. Ogni attività di continuazione riceve una copia del risultato dell'attività precedente. A loro volta, tali attività di continuazione possono essere attività antecedenti per altre continuazioni e creano, pertanto, una catena di attività. Le continuazioni consentono di creare catene di lunghezza arbitraria delle attività che presentano dipendenze specifiche tra di esse. Inoltre, un'attività può partecipare all'annullamento prima dell'avvio di un'attività o in modo cooperativo mentre è in esecuzione. Per ulteriori informazioni su questo modello di annullamento, vedere [annullamento nella libreria PPL](cancellation-in-the-ppl.md).  
   
  `task` task è una classe modello. Il parametro di tipo `T` è il tipo del risultato prodotto dall'attività. Questo tipo può essere `void` se l'attività non restituisce un valore. `T` non può usare il modificatore `const`.  
@@ -124,9 +127,9 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
  Per un esempio che utilizza `task`, [Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), annullamento, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md). (La classe `task_completion_event` è descritta più avanti in questo documento).  
   
 > [!TIP]
->  Per acquisire dettagli specifici delle attività in [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] App, vedere [programmazione asincrona in C++](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31) e [la creazione di operazioni asincrone in C++ per applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
+>  Per ulteriori dettagli specifici di attività nelle App UWP, vedere [programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) e [creazione di operazioni asincrone in C++ per App UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).  
   
-##  <a name="continuations"></a>Attività di continuazione  
+##  <a name="continuations">Attività di continuazione</a>  
  Nella programmazione asincrona è molto comune che un'operazione asincrona, al completamento, richiami una seconda operazione e vi passi i dati. A tale scopo, si usano in genere i metodi di callback. Nel Runtime di concorrenza, la stessa funzionalità viene fornita da *attività di continuazione*. Un'attività di continuazione (nota anche semplicemente come continuazione) è un'attività asincrona richiamata da un'altra attività, è noto come il *attività precedente*, al completamento dell'attività precedente. Usando le continuazioni è possibile:  
   
 -   Passare dati dall'attività precedente alla continuazione.  
@@ -135,7 +138,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
 -   Annullare una continuazione prima che venga avviata o in modo cooperativo mentre è in esecuzione.  
   
--   Fornire suggerimenti sul modo in cui pianificare la continuazione. (Ciò è valido solo per le app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]. Per ulteriori informazioni, vedere [la creazione di operazioni asincrone in C++ per applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
+-   Fornire suggerimenti sul modo in cui pianificare la continuazione. (Si applica solo app della piattaforma UWP (Universal Windows). Per ulteriori informazioni, vedere [creazione di operazioni asincrone in C++ per App UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).)  
   
 -   Richiamare più continuazioni dalla stessa attività precedente.  
   
@@ -159,21 +162,21 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- Una continuazione può restituire anche un'altra attività. Se non è specificato un annullamento, questa attività viene eseguita prima della successiva continuazione. Questa tecnica è nota come *annullamento del wrapping asincrono*. L'annullamento del wrapping asincrono è utile quando si vuole eseguire il lavoro aggiuntivo in background senza che l'attività corrente blocchi il thread corrente. (Ciò accade frequentemente nelle applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)], dove le continuazioni possono essere eseguite sul thread UI). L'esempio seguente riporta tre attività. La prima attività restituisce un'altra attività che viene eseguita prima di un'attività di continuazione.  
+ Una continuazione può restituire anche un'altra attività. Se non è specificato un annullamento, questa attività viene eseguita prima della successiva continuazione. Questa tecnica è nota come *annullamento del wrapping asincrono*. L'annullamento del wrapping asincrono è utile quando si vuole eseguire il lavoro aggiuntivo in background senza che l'attività corrente blocchi il thread corrente. (Questo è comune nelle App UWP, dove le continuazioni è possono eseguire sul thread UI). L'esempio seguente riporta tre attività. La prima attività restituisce un'altra attività che viene eseguita prima di un'attività di continuazione.  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  Quando una continuazione di un'attività restituisce un'attività annidata di tipo `N`, l'attività risultante ha il tipo `N`, non `task<N>`, e viene completata al completamento dell'attività annidata. In altre parole, la continuazione annulla il wrapping dell'attività annidata.  
   
-##  <a name="value-versus-task"></a>Basato su un valore e continuazioni basate su attività  
+##  <a name="value-versus-task">Basato su un valore e continuazioni basate su attività</a>  
  Dato un oggetto `task` il cui tipo restituito è `T`, è possibile specificare un valore di tipo `T` o `task<T>` alle relative attività di continuazione. Una continuazione che accetta il tipo `T` è noto come un *continuazione basata su valore*. Una continuazione basata su valore viene programmata per essere eseguita quando l'attività antecedente viene completata senza errori e non viene annullata. Una continuazione che accetta il tipo `task<T>` come relativo parametro è nota come un *basato su attività di continuazione*. Una continuazione basata sulle attività è sempre pianificata per l'esecuzione quando l'attività precedente viene completata, anche quando l'attività precedente viene annullata o genera un'eccezione. È quindi possibile chiamare `task::get` per ottenere il risultato dell'attività precedente. Se l'attività precedente è stata annullata, `task::get` genera [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). Se l'attività precedente ha generato un'eccezione, `task::get` genera nuovamente tale eccezione. Una continuazione basata sulle attività non è contrassegnata come annullata quando la relativa attività precedente viene annullata.  
   
-##  <a name="composing-tasks"></a>Composizione di attività  
+##  <a name="composing-tasks">Composizione di attività</a>  
  Questa sezione viene descritto il [Concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all) e [Concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all) funzioni che consentono di creare più attività per implementare modelli comuni.  
 
   
-###  <a name="when-all"></a>La funzione when_all  
+###  <a name="when-all">La funzione when_all</a>  
  La funzione `when_all` crea un'attività che viene completata dopo il completamento di un set di attività. Questa funzione restituisce un std::[vettore](../../standard-library/vector-class.md) oggetto che contiene il risultato di ogni attività nel set. Nell'esempio di base riportato di seguito viene usato `when_all` per creare un'attività che rappresenta il completamento di altre tre attività.  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- Si consideri un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] che usa C++ e XAML e scrive un set di file sul disco. Nell'esempio seguente viene illustrato come usare `when_all` e `observe_all_exceptions` per garantire l'osservanza di tutte le eccezioni da parte del programma.  
+ Si consideri un'app UWP che usa C++ e XAML e scrive un set di file su disco. Nell'esempio seguente viene illustrato come usare `when_all` e `observe_all_exceptions` per garantire l'osservanza di tutte le eccezioni da parte del programma.  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
 > [!TIP]
 
-> `when_all` è una funzione non bloccante che produce `task` come risultato. A differenza di [Task:: Wait](reference/task-class.md#wait), è opportuno chiamare questa funzione in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app nel thread ASTA (Application STA).  
+> `when_all` è una funzione non bloccante che produce `task` come risultato. A differenza di [Task:: Wait](reference/task-class.md#wait), è consigliabile chiamare questa funzione in un'app UWP nel thread ASTA (Application STA).  
 
   
-###  <a name="when-any"></a>La funzione when_any  
+###  <a name="when-any">La funzione when_any</a>  
  La funzione `when_any` crea un'attività che viene completata al completamento della prima attività di un set di attività. Questa funzione restituisce un [std:: Pair](../../standard-library/pair-structure.md) oggetto che contiene il risultato dell'attività completata e l'indice di tale attività nel set.  
   
  La funzione `when_any` è particolarmente utile nei seguenti scenari:  
@@ -249,9 +252,9 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  Come con `when_all`, `when_any` non è bloccante ed è sicuro da chiamare in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] nel thread ASTA.  
+>  Come con `when_all`, `when_any` non è bloccante ed è sicuro chiamare in un'app UWP nel thread ASTA.  
   
-##  <a name="delayed-tasks"></a>Esecuzione posticipata di attività  
+##  <a name="delayed-tasks">Esecuzione posticipata di attività</a>  
  A volte è necessario ritardare l'esecuzione di un'attività fino a soddisfare una condizione oppure avviare un'attività in risposta a un evento esterno. Ad esempio, nella programmazione asincrona potrebbe essere necessario avviare un'attività in risposta a un evento di completamento I/O.  
   
  È possibile procedere in due modi: usare una continuazione o avviare un'attività e attendere un evento nella funzione lavoro dell'attività. In alcuni casi, tuttavia, non è possibile usare una di queste tecniche. Ad esempio, per creare una continuazione, è necessario avere l'attività antecedente. Tuttavia, se non si dispone dell'attività precedente, è possibile creare un *evento di completamento attività* e concatenare tale evento all'attività precedente quando diventa disponibile. Inoltre, poiché un'attività in attesa blocca anche un thread, è possibile usare eventi di completamento di attività per eseguire il lavoro quando un'operazione asincrona viene completata e quindi libera un thread.  
@@ -260,7 +263,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
  Per un esempio che utilizza `task_completion_event` per implementare un'attività che viene completata dopo un ritardo, vedere [procedura: creare un'attività che viene completata dopo un ritardo](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md).  
   
-##  <a name="task-groups"></a>Gruppi di attività  
+##  <a name="task-groups">Gruppi di attività</a>  
  Oggetto *gruppo di attività* organizza una raccolta di attività. I gruppi di attività inseriscono le attività in una coda di acquisizione del lavoro. L'utilità di pianificazione rimuove le attività da questa coda eseguendole nelle risorse di elaborazione disponibili. Dopo avere aggiunto le attività a un gruppo di attività, è possibile attendere il completamento di tutte le attività o l'annullamento delle attività che non sono ancora state avviate.  
   
  La libreria PPL Usa la [Concurrency:: task_group](reference/task-group-class.md) e [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) classi che rappresentano gruppi di attività e [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) classe per rappresentare le attività eseguite in tali gruppi. La classe `task_handle` incapsula il codice che esegue il lavoro. Come la classe `task`, questa funzione di lavoro ha il formato di una funzione lambda, di un puntatore a funzione o di un oggetto funzione. In genere non è necessario usare direttamente gli oggetti `task_handle`, ma è possibile passare le funzioni lavoro a un gruppo di attività, che crea e gestisce gli oggetti `task_handle`.  
@@ -277,7 +280,7 @@ Nel Runtime di concorrenza, un *attività* è un'unità di lavoro che esegue un 
   
  Il runtime fornisce inoltre un modello di gestione delle eccezioni che consente di generare un'eccezione da un'attività e di gestire tale eccezione durante l'attesa del completamento del gruppo di attività associato. Per ulteriori informazioni su questo modello di gestione delle eccezioni, vedere [eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
-##  <a name="comparing-groups"></a>Confronto tra task_group e structured_task_group  
+##  <a name="comparing-groups">Confronto tra task_group e structured_task_group</a>  
  Sebbene sia consigliabile usare `task_group` o `parallel_invoke` anziché la classe `structured_task_group`, in alcuni casi può essere opportuno usare `structured_task_group`, ad esempio quando si scrive un algoritmo parallelo che esegue un numero variabile di attività o che richiede il supporto per l'annullamento. In questa sezione vengono illustrate le differenze tra le classi `task_group` e `structured_task_group`.  
   
  La classe `task_group` è thread-safe. È possibile pertanto aggiungere attività a un oggetto `task_group` da più thread e attendere o annullare un oggetto `task_group` da più thread. La costruzione e la distruzione di un oggetto `structured_task_group` devono essere eseguite nello stesso ambito lessicale. Inoltre, tutte le operazioni su un oggetto `structured_task_group` devono essere eseguite nello stesso thread. L'eccezione a questa regola è la [structured_task_group](reference/structured-task-group-class.md#cancel) e [is_canceling](reference/structured-task-group-class.md#is_canceling) metodi. Un'attività figlio può chiamare questi metodi per annullare il gruppo di attività padre o verificarne l'annullamento in qualsiasi momento.  
@@ -313,7 +316,7 @@ Message from task: 42
   
  Per esempi completi che illustrano come usare il `parallel_invoke` algoritmo, vedere [procedura: usare parallel_invoke per scrivere una Routine di ordinamento parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) e [come: usare parallel_invoke per eseguire operazioni in parallelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). Per un esempio completo che usa il `task_group` classe per l'implementazione di future asincrone, vedere [procedura dettagliata: implementazione di future](../../parallel/concrt/walkthrough-implementing-futures.md).  
   
-##  <a name="robust"></a>Programmazione efficiente  
+##  <a name="robust">Programmazione efficiente</a>  
  Prima di usare le attività, i gruppi di attività e gli algoritmi paralleli, assicurarsi di aver compreso il ruolo dell'annullamento e della gestione delle eccezioni. Ad esempio, in un albero di lavoro parallelo l'annullamento di un'attività impedisce l'esecuzione delle attività figlio. Ciò può comportare problemi se una delle attività figlio esegue un'operazione importante per l'applicazione, ad esempio liberare una risorsa. Inoltre, se un'attività figlio genera un'eccezione, questa può propagarsi tramite un distruttore di oggetti e causare un comportamento indefinito nell'applicazione. Per un esempio che illustra questi punti, vedere il [comprendere come eccezione eccezioni influiscono sull'oggetto eliminazione e annullamento](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction) sezione nelle procedure consigliate del documento della libreria PPL. Per ulteriori informazioni di annullamento e i modelli di gestione delle eccezioni nella libreria PPL, vedere [annullamento](../../parallel/concrt/cancellation-in-the-ppl.md) e [eccezioni](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
 ## <a name="related-topics"></a>Argomenti correlati  

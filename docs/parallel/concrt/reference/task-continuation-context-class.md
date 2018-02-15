@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,22 +16,25 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs: C++
-helpviewer_keywords: task_continuation_context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1b78688493bbb8d8bdad0696a7c8fcf467519000
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="taskcontinuationcontext-class"></a>Classe task_continuation_context
-La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile usare questa classe solo da un'app di Windows Store. Per le app non di Windows Store, il contesto di esecuzione della continuazione attività è determinato dal runtime e non è configurabile.  
+La classe `task_continuation_context` consente di specificare dove eseguire una continuazione. È utile solo utilizzare questa classe da un'app di Windows Runtime. Per le app non di Windows Runtime, il contesto di esecuzione della continuazione attività è determinato dal runtime e non è configurabile.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,7 +64,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **Spazio dei nomi:** Concurrency  
 
-## <a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a> get_current_winrt_context
  Restituisce un oggetto del contesto di continuazione di attività che rappresenta il contesto del thread corrente WinRT.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -80,7 +84,7 @@ static task_continuation_context get_current_winrt_context();
  Questo metodo è simile al `use_current` (metodo), ma è disponibile anche nel codice C++ nativo senza C + + supporto delle estensioni CX. Si è destinato agli utenti avanzati utilizzato da scrittura C + + codice di libreria indipendente dalla CX nativa e i chiamanti di Windows Runtime. A meno che questa funzionalità è necessaria, è consigliabile la `use_current` metodo, che è disponibile solo per C + + client CX.  
   
   
-##  <a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a> use_arbitrary 
 
  Crea un contesto di continuazione delle attività che consente al runtime di scegliere il contesto di esecuzione per una continuazione.  
   
@@ -94,11 +98,11 @@ static task_continuation_context use_arbitrary();
 ### <a name="remarks"></a>Note  
  Quando viene utilizzato il contesto di continuazione la continuazione verrà eseguita in un contesto in cui che il runtime sceglie anche se l'attività precedente è un apartment a conoscenza.  
   
- `use_arbitrary`Consente di disattivare il comportamento predefinito per una continuazione per un'attività di conoscenza apartment creata in un STA.  
+ `use_arbitrary` Consente di disattivare il comportamento predefinito per una continuazione per un'attività di conoscenza apartment creata in un STA.  
   
- Questo metodo è disponibile solo per le applicazioni Windows Store.  
+ Questo metodo è disponibile solo per App di Windows Runtime.  
   
-##  <a name="use_current"></a>use_current 
+##  <a name="use_current"></a> use_current 
 
  Restituisce un oggetto del contesto di continuazione di attività che rappresenta il contesto di esecuzione corrente.  
   
@@ -114,9 +118,9 @@ static task_continuation_context use_current();
   
  Il valore restituito da `use_current` può essere utilizzato per indicare che la continuazione deve essere eseguito nel contesto acquisito (vs STA MTA) indipendentemente dal fatto che l'attività precedente è un apartment compatibile con il Runtime. Un'attività è un'attività che annulla il wrapping Windows Runtime apartment `IAsyncInfo` interfaccia o un'attività che discende da tale attività.  
   
- Questo metodo è disponibile solo per le applicazioni Windows Store.  
+ Questo metodo è disponibile solo per App di Windows Runtime.  
   
-##  <a name="use_default"></a>use_default 
+##  <a name="use_default"></a> use_default 
 
  Crea il contesto di continuazione di attività predefinito.  
   
@@ -128,13 +132,13 @@ static task_continuation_context use_default();
  Il contesto di continuazione predefinite.  
   
 ### <a name="remarks"></a>Note  
- Viene utilizzato il contesto predefinito se non si specifica un contesto di continuazione quando si chiama il `then` metodo. In applicazioni di Windows per Windows 7 e versioni precedenti, nonché le applicazioni desktop in Windows 8 e versioni successive, il runtime determina cui continuazioni di attività non verranno eseguita. Tuttavia, in un'app di Windows Store, il contesto di continuazione predefinite per una continuazione per un'attività di supporto apartment è apartment dove `then` viene richiamato.  
+ Viene utilizzato il contesto predefinito se non si specifica un contesto di continuazione quando si chiama il `then` metodo. In applicazioni di Windows per Windows 7 e versioni precedenti, nonché le applicazioni desktop in Windows 8 e versioni successive, il runtime determina cui continuazioni di attività non verranno eseguita. Tuttavia, in un'app di Windows Runtime, il contesto di continuazione predefinite per una continuazione per un'attività di supporto apartment è apartment dove `then` viene richiamato.  
   
  Un'attività è un'attività che annulla il wrapping Windows Runtime apartment `IAsyncInfo` interfaccia o un'attività che discende da tale attività. Di conseguenza, se si pianifica una continuazione per un'attività di supporto apartment in un Apartment di Runtime di Windows, la continuazione verrà eseguita in tale STA.  
   
  Una continuazione di un'attività di conoscenza apartment non verrà eseguiti in un contesto in cui che il Runtime sceglie.  
 
-## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a> task_continuation_context::use_synchronous_execution  
 Restituisce un oggetto del contesto di continuazione di attività che rappresenta il contesto di esecuzione sincrona.  
   
 ## <a name="syntax"></a>Sintassi  

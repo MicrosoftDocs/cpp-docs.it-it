@@ -4,35 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROPERTY_INFO_ENTRY_EX
-dev_langs: C++
-helpviewer_keywords: PROPERTY_INFO_ENTRY_EX macro
+f1_keywords:
+- PROPERTY_INFO_ENTRY_EX
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROPERTY_INFO_ENTRY_EX macro
 ms.assetid: af32dfcd-4c50-449d-af3b-48d21bd67a04
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0aae37cad8119133c468c1f635abca6ff69c5757
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3af47bb5cae4a008d8df9ca26ff1f671c25c0398
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="propertyinfoentryex"></a>PROPERTY_INFO_ENTRY_EX
 Rappresenta una proprietà specifica in un insieme di proprietà.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-PROPERTY_INFO_ENTRY_EX(  
-dwPropID  
+```cpp
+PROPERTY_INFO_ENTRY_EX(dwPropID  
 , vt, dwFlags, value, options )  
 ```  
   

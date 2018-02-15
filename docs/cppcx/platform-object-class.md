@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Classe Platform::Object
-Fornisce il comportamento comune per le classi e gli struct di riferimento nelle app Windows Store. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.  
+Fornisce il comportamento comune per le classi e struct di riferimento nelle app di Windows Runtime. Tutte le istanze delle classi e degli struct di riferimento sono implicitamente convertibili a Platform::Object^ e possono eseguire l'override del relativo metodo ToString virtuale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,14 +46,14 @@ public ref class Object : Object
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Object:: Object](#ctor)|Inizializza una nuova istanza della classe Object.|  
+|[Object::Object](#ctor)|Inizializza una nuova istanza della classe Object.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
   
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[Object:: Equals](#equals)|Determina se l'oggetto specificato è uguale all'oggetto corrente.|  
-|[Object:: GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|  
+|[Object::GetHashCode](#gethashcode)|Restituisce il codice hash per l'istanza.|  
 |[Object:: ReferenceEquals](#referenceequals)|Determina se le istanze di Object specificate rappresentano la stessa istanza.|  
 |[ToString](#tostring)|Restituisce una stringa che rappresenta l'oggetto corrente. È possibile eseguirne l'override.|  
 |[GetType](#gettype)|Ottiene un oggetto [Platform::Type](../cppcx/platform-type-class.md) che descrive l'istanza corrente.|  
@@ -66,7 +69,7 @@ public ref class Object : Object
  **Spazio dei nomi:** Platform  
 
   
-## <a name="equals"></a>Metodo Object:: Equals
+## <a name="equals"></a> Metodo Object:: Equals
 Determina se l'oggetto specificato è uguale all'oggetto corrente.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Metodo Object:: GetHashCode
+## <a name="gethashcode"></a>  Metodo Object:: GetHashCode
 Restituisce il valore di identità `IUnknown`* per questa istanza se è un oggetto COM, oppure un valore hash calcolato se non è un oggetto COM.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Metodo Object:: GetType
+## <a name="gettype"></a>  Metodo Object:: GetType
 Restituisce un [platform:: Type](../cppcx/platform-type-class.md) oggetto che descrive il tipo di runtime di un oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -133,7 +136,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
  [Spazio dei nomi Platform](../cppcx/platform-namespace-c-cx.md)   
  [Tipo System] (.. /cppcx/Type-System-c-CX.MD
   
-## <a name="ctor"></a>Costruttore Object:: Object
+## <a name="ctor"></a>  Costruttore Object:: Object
 Inizializza una nuova istanza della classe Object.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -142,7 +145,7 @@ Inizializza una nuova istanza della classe Object.
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Metodo Object:: ReferenceEquals
+## <a name="referenceequals"></a>  Metodo Object:: ReferenceEquals
 Determina se le istanze di Object specificate rappresentano la stessa istanza.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti sono uguali; in caso contrario, `false`.  
  
-## <a name="tostring"></a>Metodo Object:: ToString (C + + CX)
+## <a name="tostring"></a>  Metodo Object:: ToString (C + + CX)
 Restituisce una stringa che rappresenta l'oggetto corrente.  
   
 ### <a name="syntax"></a>Sintassi  

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>Cast (C++/CX)
 Quattro diversi operatori cast si applicano ai tipi di Windows Runtime: [operatore static_cast](../cpp/static-cast-operator.md), [operatore dynamic_cast](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, e [ Operatore reinterpret_cast](../cpp/reinterpret-cast-operator.md). `safe_cast` e `static_cast` generano un'eccezione se la conversione non può essere eseguita. L'operatore [static_cast](../cpp/static-cast-operator.md) esegue inoltre il controllo dei tipi in fase di compilazione. `dynamic_cast` restituisce `nullptr` se risulta impossibile convertire il tipo. Sebbene `reinterpret_cast` restituisca un valore non Null, potrebbe non essere valido. Per questo motivo, è consigliabile non utilizzare `reinterpret_cast` a meno che tu non sappia che il cast riuscirà. Inoltre, è consigliabile non utilizzare cast di tipo C in C + + CX codice, in quanto sono identici a `reinterpret_cast`.  
@@ -61,7 +62,7 @@ Windows Runtime è un'astrazione su COM, che utilizza i codici di errore HRESULT
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- Utilizzare `dynamic_cast` quando si esegue il cast di un oggetto (in particolare, `^`) a un tipo più derivato, si prevede che la destinazione oggetto talvolta potrebbe essere `nullptr` o che il cast non riesca e desideri gestire tale condizione come un normale codice percorso invece di un'eccezione. Ad esempio, nel modello di progetto **Applicazione vuota Windows Store** il metodo `OnLaunched` in `app.xamp.cpp` usa `dynamic_cast` per verificare se nella finestra dell'applicazione è presente contenuto. Non si tratta di un errore se non dispone di contenuto. Condizione prevista. `Windows::Current::Content` è `Windows::UI::XAML::UIElement` e la conversione viene eseguita a un `Windows::UI.XAML::Controls::Frame`, ovvero un tipo più derivato nella gerarchia dell'ereditarietà.  
+ Utilizzare `dynamic_cast` quando si esegue il cast di un oggetto (in particolare, `^`) a un tipo più derivato, si prevede che la destinazione oggetto talvolta potrebbe essere `nullptr` o che il cast non riesca e desideri gestire tale condizione come un normale codice percorso invece di un'eccezione. Ad esempio, nel **App vuota (Windows universale)** modello di progetto, il `OnLaunched` metodo in `app.xamp.cpp` utilizza `dynamic_cast` per verificare se nella finestra dell'applicazione include contenuto. Non si tratta di un errore se non dispone di contenuto. Condizione prevista. `Windows::Current::Content` è `Windows::UI::XAML::UIElement` e la conversione viene eseguita a un `Windows::UI.XAML::Controls::Frame`, ovvero un tipo più derivato nella gerarchia dell'ereditarietà.  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

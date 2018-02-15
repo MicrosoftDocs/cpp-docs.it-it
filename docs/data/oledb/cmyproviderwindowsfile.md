@@ -1,35 +1,38 @@
 ---
-title: CMyProviderWindowsFile | Documenti Microsoft
+title: CMyProviderWindowsFile | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-La procedura guidata crea una classe che contiene una riga di dati. In questo caso, viene chiamato `CMyProviderWindowsFile`. Nell'esempio di codice per `CMyProviderWindowsFile` viene generato dalla procedura guidata e sono elencati tutti i file in una directory tramite il **WIN32_FIND_DATA** struttura. `CMyProviderWindowsFile`eredita il **WIN32_FIND_DATA** struttura:  
+La procedura guidata crea una classe che contiene una riga di dati. In questo caso, viene chiamato `CMyProviderWindowsFile`. Nell'esempio di codice per `CMyProviderWindowsFile` viene generato dalla procedura guidata e sono elencati tutti i file in una directory tramite il **WIN32_FIND_DATA** struttura. `CMyProviderWindowsFile` eredita il **WIN32_FIND_DATA** struttura:  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`viene chiamato il [classe di record utente](../../data/oledb/user-record.md) poiché contiene anche una mappa che descrive le colonne nel set di righe del provider. In questa mappa contiene una voce per ogni campo nel set di righe utilizzando la macro PROVIDER_COLUMN_ENTRY. Le macro di specificare il nome di colonna, ordinale e offset a una voce di struttura. Le voci della colonna provider nel codice precedente contengano gli offset nel **WIN32_FIND_DATA** struttura. Quando il consumer chiama **IRowset:: GetData**, i dati vengono trasferiti in un buffer contiguo. Anziché ricorrere a operazioni aritmetica dei puntatori, la mappa consente di specificare un membro dati.  
+ `CMyProviderWindowsFile` viene chiamato il [classe di record utente](../../data/oledb/user-record.md) poiché contiene anche una mappa che descrive le colonne nel set di righe del provider. In questa mappa contiene una voce per ogni campo nel set di righe utilizzando la macro PROVIDER_COLUMN_ENTRY. Le macro di specificare il nome di colonna, ordinale e offset a una voce di struttura. Le voci della colonna provider nel codice precedente contengano gli offset nel **WIN32_FIND_DATA** struttura. Quando il consumer chiama **IRowset:: GetData**, i dati vengono trasferiti in un buffer contiguo. Anziché ricorrere a operazioni aritmetica dei puntatori, la mappa consente di specificare un membro dati.  
   
- Il `CMyProviderRowset` classe contiene inoltre il `Execute` metodo. `Execute`è che legge effettivamente i dati dall'origine nativa. Il codice seguente illustra il generato dalla procedura guidata `Execute` metodo. La funzione utilizza Win32 **FindFirstFile** e `FindNextFile` API per recuperare informazioni sui file nella directory e inserirle in istanze del `CMyProviderWindowsFile` classe.  
+ Il `CMyProviderRowset` classe contiene inoltre il `Execute` metodo. `Execute` è che legge effettivamente i dati dall'origine nativa. Il codice seguente illustra il generato dalla procedura guidata `Execute` metodo. La funzione utilizza Win32 **FindFirstFile** e `FindNextFile` API per recuperare informazioni sui file nella directory e inserirle in istanze del `CMyProviderWindowsFile` classe.  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

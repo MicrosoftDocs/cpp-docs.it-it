@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Classi e struct di riferimento (C++/CX)
 C + + supporta CX definito dall'utente *le classi di riferimento* e *struct di riferimento*, definiti dall'utente *valore classi* e *struct di valore*. Queste strutture di dati sono contenitori primari tramite i quali C + + CX supporta il sistema di tipi Windows Runtime. I relativi contenuti vengono emessi nei metadati in base ad alcune regole specifiche e ciò ne consente il passaggio tra i componenti Windows Runtime e App UWP scritte in C++ o in altri linguaggi.  
@@ -100,7 +101,7 @@ C + + supporta CX definito dall'utente *le classi di riferimento* e *struct di r
   
  Il comportamento non è definito se tenti di accedere ai membri di una classe il cui distruttore è già stato eseguito; ciò potrebbe provocare un arresto anomalo del programma. La chiamata a `delete t` su un tipo senza un distruttore pubblico non ha alcun effetto. Anche la chiamata a `delete this` su un tipo o una classe base con un distruttore `private` o `protected private` noto dalla gerarchia dei tipi non ha alcun effetto.  
   
- Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable`è C + + proiezione CX di `Windows::Foundation::IClosable`. Non implementare mai tali interfacce in modo esplicito.  
+ Quando dichiari un distruttore pubblico, il compilatore genera il codice in modo che la classe di riferimento implementi `Platform::IDisposable` e il distruttore implementi il metodo `Dispose` . `Platform::IDisposable` è C + + proiezione CX di `Windows::Foundation::IClosable`. Non implementare mai tali interfacce in modo esplicito.  
   
 ## <a name="inheritance"></a>Ereditarietà  
  Platform::Object è la classe di base universale per tutte le classi di riferimento. Tutte le classi di riferimento sono implicitamente convertibili in Platform::Object e possono eseguire l'override di [Object::ToString](../cppcx/platform-object-class.md#tostring). Tuttavia, il modello di ereditarietà di Windows Runtime non deve in genere il modello di ereditarietà. in C + + CX ciò significa che una classe di riferimento pubblica definita dall'utente non può essere utilizzato come classe base.  

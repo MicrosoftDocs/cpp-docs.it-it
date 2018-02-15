@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0b34c0d36c33652ecbef3a1af745015d92fc05f3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-reference-ccx"></a>Riferimento rapido (C++/CX)
-Windows Runtime supporta le app Universal Windows Platform eseguite solo in un ambiente con sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite attraverso il [!INCLUDE[win8_appstore_long](../cppcx/includes/win8-appstore-long-md.md)]. C + + CX semplificano la scrittura di App per Windows Runtime. In questo articolo è un riferimento rapido. Per informazioni più complete, vedere [Type System](../cppcx/type-system-c-cx.md) e [estensioni componenti per le piattaforme Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
+Windows Runtime supporta le app Universal Windows Platform (UWP) eseguite solo in un ambiente con sistema operativo attendibile, utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuite tramite Microsoft Store. C + + CX semplificano la scrittura di App per Windows Runtime. In questo articolo è un riferimento rapido. Per informazioni più complete, vedere [Type System](../cppcx/type-system-c-cx.md) e [estensioni componenti per le piattaforme Runtime](http://go.microsoft.com/fwlink/p/?linkid=228720).  
   
- Quando si compila dalla riga di comando, utilizzare il **/ZW** l'opzione del compilatore per compilare un'app della piattaforma Windows universale o un componente di Windows Runtime. Per accedere alle dichiarazioni di Windows Runtime, che sono definite nei file di metadati (con estensione winmd) di Windows Runtime, specificare il `#using` direttiva o **/FU** l'opzione del compilatore. Quando si crea un progetto per un'app Universal Windows Platform, Visual Studio per impostazione predefinita queste opzioni vengono impostate e aggiunge i riferimenti a tutte le librerie di Runtime di Windows.  
+ Quando si compila dalla riga di comando, utilizzare il **/ZW** l'opzione del compilatore per compilare un'app UWP o un componente Windows Runtime. Per accedere alle dichiarazioni di Windows Runtime, che sono definite nei file di metadati (con estensione winmd) di Windows Runtime, specificare il `#using` direttiva o **/FU** l'opzione del compilatore. Quando si crea un progetto per un'app UWP, Visual Studio per impostazione predefinita queste opzioni vengono impostate e aggiunge i riferimenti a tutte le librerie di Runtime di Windows.  
   
 ## <a name="quick-reference"></a>Riferimento rapido  
   
@@ -50,7 +51,7 @@ Windows Runtime supporta le app Universal Windows Platform eseguite solo in un a
 |dichiarazione di struttura|`struct` *identifier* `{}`<br /><br /> (struttura POD)|`value class` *identifier* `{}`<br /><br /> `value struct` *identifier* `{}`|Dichiara uno struct POD con accessibilità privata predefinita.<br /><br /> Una classe di valore può essere rappresentata nei metadati di Windows, ma non una classe C++ standard.<br /><br /> Dichiara uno struct POD con accessibilità pubblica predefinita.<br /><br /> Uno struct di valore può essere rappresentato nei metadati di Windows, ma non uno struct C++ standard.|  
 |dichiarazione di interfaccia|classe astratta che contiene solo le funzioni virtuali pure.|`interface class` *identifier* `{}`<br /><br /> `interface struct` *identifier* `{}`|Dichiara un'interfaccia con accessibilità privata predefinita.<br /><br /> Dichiara un'interfaccia con accessibilità pubblica predefinita.|  
 |delegato|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[parameters]* `);`|Dichiara un oggetto che può essere chiamato come una chiamata di funzione.|  
-|event|Non applicabile|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> oppure<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> oppure<br /><br /> `auto`*token-identifier* = *obj*. *identificatore dell'evento*`::add(`*delegato identificatore*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> oppure<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Dichiara un oggetto evento, che memorizza una raccolta di gestori eventi (delegati) che vengono chiamati quando si verifica un evento.<br /><br /> Crea un gestore eventi.<br /><br /> Aggiunge un gestore eventi.<br /><br /> L'aggiunta di un gestore eventi restituisce un token di evento (*token-identifier*). Se vuoi rimuovere in modo esplicito il gestore eventi, devi salvare il token di evento per un utilizzo successivo.<br /><br /> Rimuove un gestore eventi.<br /><br /> Per rimuovere un gestore eventi, devi specificare il token di evento salvato al momento dell'aggiunta del gestore eventi.|  
+|event|Non applicabile|`event` *delegate-type-identifier* *event-identifier* `;`<br /><br /> *delegate-type-identifier* *delegate-identifier* = `ref new`*delegate-type-identifier*`( this`*[, parameters]*`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> oppure<br /><br /> `EventRegistrationToken` *token-identifier* = *obj*`.`*event-identifier*`+=`*delegate-identifier*`;`<br /><br /> oppure<br /><br /> `auto` *token-identifier* = *obj*. *event-identifier*`::add(`*delegate-identifier*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> oppure<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|Dichiara un oggetto evento, che memorizza una raccolta di gestori eventi (delegati) che vengono chiamati quando si verifica un evento.<br /><br /> Crea un gestore eventi.<br /><br /> Aggiunge un gestore eventi.<br /><br /> L'aggiunta di un gestore eventi restituisce un token di evento (*token-identifier*). Se vuoi rimuovere in modo esplicito il gestore eventi, devi salvare il token di evento per un utilizzo successivo.<br /><br /> Rimuove un gestore eventi.<br /><br /> Per rimuovere un gestore eventi, devi specificare il token di evento salvato al momento dell'aggiunta del gestore eventi.|  
 |proprietà|Non applicabile|`property` *T* *identifier*;<br /><br /> `property` *T* *identifier* `[` *indice* `];`<br /><br /> `property` *T* `default[` *indice* `];`|Dichiara che è possibile accedere a una funzione membro dell'oggetto o della classe con la stessa sintassi utilizzata per accedere a un membro di dati o un elemento di matrice indicizzata.<br /><br /> Dichiara una proprietà nella funzione membro dell'oggetto o della classe.<br /><br /> Dichiara una proprietà indicizzata in una funzione membro dell'oggetto.<br /><br /> Dichiara una proprietà indicizzata nella funzione membro della classe.|  
 |Tipi con parametri|modelli|`generic <typename` *T* `> interface class` *identifier* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|Dichiara una classe di interfaccia con parametri.<br /><br /> Dichiara un delegato con parametri.|  
 |Tipi valore nullable|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|Consente alle variabili dei tipi scalari e degli struct di valore di avere un valore `nullptr`.|  

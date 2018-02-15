@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opzioni del compilatore e del linker (C++/CX)
 Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linker supportano la compilazione di App per Windows Runtime.  
@@ -39,7 +40,7 @@ Una variabile di ambiente, C + +, opzioni del compilatore CX e opzioni del linke
 |Opzione|Descrizione|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|Contrassegna il file eseguibile come eseguibile in appcontainer (solo).|  
-|/ WINMD [: {N &#124; SOLO}]|Genera un file WINMD e un file binario associato. Questa opzione deve essere passata al linker per l'emissione di un file WINMD.<br /><br /> **NO**: non emette un file WINMD, bensì un file binario.<br /><br /> **ONLY**: emette un file WINMD, ma non un file binario.|  
+|/WINMD[:{NO&#124;ONLY}]|Genera un file WINMD e un file binario associato. Questa opzione deve essere passata al linker per l'emissione di un file WINMD.<br /><br /> **NO**: non emette un file WINMD, bensì un file binario.<br /><br /> **ONLY**: emette un file WINMD, ma non un file binario.|  
 |/WINMDFILE:*filename*|Nome del file WINMD da emettere, anziché il nome file WINMD predefinito. Se sono specificati più nomi file nella riga di comando, viene usato l'ultimo nome.|  
 |/WINMDDELAYSIGN[:NO]|Firma parzialmente il file WINMD e posiziona la chiave pubblica nel file binario.<br /><br /> **NO**: (impostazione predefinita) non firma il file WINMD.<br /><br /> /WINMDDELAYSIGN non ha alcun effetto a meno che non sia specificato anche /WINMDKEYFILE o /WINMDKEYCONTAINER.|  
 |/WINMDKEYCONTAINER:*name*|Specifica un contenitore di chiavi per firmare un assembly. Il parametro *name* corrisponde al contenitore di chiavi usato per firmare il file di metadati.|  

@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>Supporto dei set di righe dello schema
 Set di righe dello schema consente agli utenti di ottenere informazioni su un archivio dati senza conoscere la struttura sottostante, o schema. Ad esempio, un archivio dati potrebbe essere tabelle organizzate in una gerarchia definita dall'utente, pertanto non vi sarà alcun modo per garantire informazioni dello schema, ad eccezione per leggerlo. (Ad esempio, si noti che le procedure guidate di Visual C++ rowset dello schema per generare le funzioni di accesso per il consumer.) Per consentire a tale scopo, l'oggetto del provider sessione espone i metodi nel [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) interfaccia. Nelle applicazioni Visual C++, utilizzare il [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) classe per implementare **IDBSchemaRowset**.  
   
- `IDBSchemaRowsetImpl`supporta i metodi seguenti:  
+ `IDBSchemaRowsetImpl` supporta i metodi seguenti:  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) controlla la validità delle restrizioni rispetto a un set di righe dello schema.  
   
@@ -57,11 +59,11 @@ Set di righe dello schema consente agli utenti di ottenere informazioni su un ar
   
 -   **C** *ShortName* **SessionColSchemaRowset** gestisce le richieste di informazioni sulle colonne (la **DBSCHEMA_COLUMNS** set di righe dello schema). La procedura guidata fornisce le implementazioni di esempio per queste classi, che restituiscono informazioni sullo schema per un provider di tipo DOS.  
   
--   **C** *ShortName* **SessionPTSchemaRowset** gestisce le richieste di informazioni sullo schema relative al tipo di provider (il **DBSCHEMA_PROVIDER_TYPES** rowset dello schema). Restituisce l'implementazione predefinita fornita dalla procedura guidata `S_OK`.  
+-   **C** *ShortName* **SessionPTSchemaRowset** gestisce le richieste di informazioni sullo schema relative al tipo di provider (il **DBSCHEMA_PROVIDER_TYPES** dello schema set di righe). Restituisce l'implementazione predefinita fornita dalla procedura guidata `S_OK`.  
   
  È possibile personalizzare queste classi per gestire le informazioni sullo schema appropriate al provider:  
   
--   In **C***ShortName***SessionTRSchemaRowset**, è necessario compilare i campi di descrizione del catalogo e tabella (**trData. M_sztype**, **M_sztable**, e **M_szdesc**). Nell'esempio viene generato dalla procedura guidata utilizza solo una riga (tabella). Altri provider possono restituire più di una tabella.  
+-   In **C***ShortName***SessionTRSchemaRowset**, è necessario compilare i campi di descrizione del catalogo e tabella (**trData. M_sztype**, **M_sztable** , e **M_szdesc**). Nell'esempio viene generato dalla procedura guidata utilizza solo una riga (tabella). Altri provider possono restituire più di una tabella.  
   
 -   In **C***ShortName***SessionColSchemaRowset**, si passa il nome della tabella come un **DBID**.  
   
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

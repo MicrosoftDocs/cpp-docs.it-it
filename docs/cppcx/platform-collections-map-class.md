@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Classe Platform::Collections::Map
 
@@ -103,7 +106,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 |||
 |-|-|
 |nome|Descrizione|
-|[Map:: mapchanged](#mapchanged-event.md)`event`|Si verifica quando l'oggetto Map subisce delle modifiche.|
+|[Map:: mapchanged](#mapchanged-event.md) `event`|Si verifica quando l'oggetto Map subisce delle modifiche.|
 
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà
 
@@ -115,7 +118,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="clear"></a>Metodo Map:: Clear
+## <a name="clear"></a>  Metodo Map:: Clear
 
 Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.
 
@@ -125,7 +128,7 @@ Rimuove tutte le coppie chiave-valore dall'oggetto Map corrente.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Metodo Map:: First
+## <a name="first"></a>  Metodo Map:: First
 
 Restituisce un iteratore che specifica il primo elemento nella mappa o `nullptr` se la mappa è vuota.
 
@@ -144,7 +147,7 @@ Iteratore che specifica il primo elemento nella mappa.
 
 Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myMap->First();`.
 
-## <a name="getview"></a>Metodo Map:: GetView
+## <a name="getview"></a>  Metodo Map:: GetView
 
 Restituisce una visualizzazione di sola lettura della mappa corrente. vale a dire un [Mapview](../cppcx/platform-collections-mapview-class.md), che implementa il [Windows::Foundation::Collections::IMapView\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfaccia.
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Oggetto `MapView`.
 
-## <a name="haskey"></a>Metodo Map:: haskey
+## <a name="haskey"></a>  Metodo Map:: haskey
 
 Determina se l'oggetto Map corrente contiene la chiave specificata.
 
@@ -177,7 +180,7 @@ Chiave usata per individuare l'elemento Map. Il tipo di *chiave* è typename *K*
 
 `true` se la chiave viene trovata; in caso contrario, `false`.
 
-## <a name="insert"></a>Metodo Map:: Insert
+## <a name="insert"></a>  Metodo Map:: Insert
 
 Aggiunge la coppia chiave-valore all'oggetto Map corrente.
 
@@ -197,9 +200,9 @@ Valore della coppia chiave-valore. Il tipo di *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true`Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde *chiave* e parte del valore di tale elemento è impostata su *valore*. `false`Se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e *chiave* e *valore* i parametri vengono applicati a una coppia chiave-valore e successivamente aggiunti all'oggetto Map corrente.
+`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde *chiave* e parte del valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e *chiave* e *valore* i parametri vengono applicati a una coppia chiave-valore e successivamente aggiunti all'oggetto Map corrente.
 
-## <a name="lookup"></a>Metodo Map:: lookup
+## <a name="lookup"></a>  Metodo Map:: lookup
 
 Recupera il valore di tipo V associato alla chiave specificata di tipo K, se la chiave esiste.
 
@@ -222,7 +225,7 @@ Il valore che è associato il *chiave*. Il tipo del valore restituito è typenam
 
 Se la chiave non esiste, quindi un [platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md) viene generata un'eccezione.
 
-## <a name="ctor"></a>Costruttore Map:: Map
+## <a name="ctor"></a>  Costruttore Map:: Map
 
 Inizializza una nuova istanza della classe Map.
 
@@ -256,7 +259,7 @@ Iteratore di input del primo elemento in un intervallo di elementi utilizzato pe
 *last*  
 Iteratore di input del primo elemento dopo un intervallo di elementi utilizzato per inizializzare l'oggetto Map corrente.
 
-## <a name="mapchanged"></a>Evento Map:: mapchanged
+## <a name="mapchanged"></a>  Evento Map:: mapchanged
 
 Generato quando un elemento viene inserito o rimosso dalla mappa.
 
@@ -272,9 +275,9 @@ Oggetto [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windo
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
-Applicazioni Windows Store che utilizzano c# o Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
+App di Windows Runtime che utilizzano c# o Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
 
-## <a name="remove"></a>Metodo Map:: Remove
+## <a name="remove"></a>  Metodo Map:: Remove
 
 Elimina la coppia chiave-valore specificata dall'oggetto Map corrente.
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
-## <a name="size"></a>Metodo Map:: Size
+## <a name="size"></a>  Metodo Map:: Size
 
 Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementi nella mappa.
 

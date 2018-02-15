@@ -1,35 +1,38 @@
 ---
-title: Creazione di operazioni asincrone in C++ per App di Windows 8. x | Documenti Microsoft
+title: Creazione di operazioni asincrone in C++ per App UWP | Documenti Microsoft
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff845e9766cadb1af2e018b3ab56097d74e8c6bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="creating-asynchronous-operations-in-c-for-windows-8x-apps"></a>Creazione di operazioni asincrone in C++ per App di Windows 8. x
-Questo documento illustra alcuni punti chiave da ricordare quando si usa il runtime di concorrenza per produrre operazioni asincrone basate sul pool di thread d Windows in un'applicazione di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .  
+# <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Creazione di operazioni asincrone in C++ per App UWP
+Questo documento illustra alcuni punti chiave da tenere presenti quando si utilizza la classe task per produrre operazioni asincrone basate sul pool di thread di Windows in un'app di Windows Runtime UWP (Universal).  
   
- L'uso della programmazione asincrona è un componente chiave del modello di app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] , poiché permette alle app di rimanere attive per l'inserimento dell'input da parte dell'utente. È possibile avviare un'attività di lunga durata senza bloccare il thread dell'interfaccia utente e ricevere i risultati dell'attività in un secondo momento. È anche possibile annullare attività e ricevere notifiche di stato come attività in esecuzione in background. Nel documento [Programmazione asincrona in C++](http://msdn.microsoft.com/library/windows/apps/hh780559.aspx) vengono fornite informazioni generali sul modello asincrono disponibile in Visual C++ per creare app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Questo documento illustra come utilizzare e creare catene di operazioni asincrone di Windows Runtime. In questa sezione viene descritto come utilizzare i tipi in ppltasks. h per produrre operazioni asincrone che possono essere utilizzate da un altro componente Windows Runtime e viene eseguito come controllare il lavoro asincrono. È consigliabile anche leggere la pagina [Modelli di programmazione asincrona e suggerimenti in Hilo (app per Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx) per informazioni sull'uso della classe dell'attività per implementare operazioni asincrone in Hilo, un'app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] scritta in C++ e XAML.  
+ L'utilizzo della programmazione asincrona è un componente chiave nel modello di app di Windows Runtime perché consente alle app di rimanere attiva all'input dell'utente. È possibile avviare un'attività di lunga durata senza bloccare il thread dell'interfaccia utente e ricevere i risultati dell'attività in un secondo momento. È anche possibile annullare attività e ricevere notifiche di stato come attività in esecuzione in background. Il documento [programmazione asincrona in C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) viene fornita una panoramica del modello asincrono disponibile in Visual C++ per creare App UWP. Questo documento illustra come utilizzare e creare catene di operazioni asincrone di Windows Runtime. In questa sezione viene descritto come utilizzare i tipi in ppltasks. h per produrre operazioni asincrone che possono essere utilizzate da un altro componente Windows Runtime e viene eseguito come controllare il lavoro asincrono. Considerare anche lettura [modelli di programmazione asincrona e suggerimenti in Hilo (applicazioni Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx) per informazioni su come è possibile usare la classe task per implementare operazioni asincrone in Hilo, un'app di Windows Runtime in C++ e XAML.  
   
 > [!NOTE]
->  È possibile usare la [libreria PPL (Parallel Patterns Library)](../../parallel/concrt/parallel-patterns-library-ppl.md) e la [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) in un'app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Non è tuttavia possibile usare l'Utilità di pianificazione o Gestione risorse. Questo documento illustra le funzionalità aggiuntive offerte dalla libreria PPL e disponibili solo per app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] , non per le app desktop.  
+>  È possibile utilizzare il [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) e [libreria di agenti asincroni](../../parallel/concrt/asynchronous-agents-library.md) in un'app UWP. Non è tuttavia possibile usare l'Utilità di pianificazione o Gestione risorse. Questo documento vengono descritte funzionalità aggiuntive offerte dalla libreria PPL che sono disponibili solo per un'app UWP e non per un'applicazione desktop.  
   
 ## <a name="key-points"></a>Punti chiave  
 
@@ -42,7 +45,7 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
 -   Il comportamento della funzione `create_async` dipende dal tipo restituito della funzione lavoro che viene passata ad essa. Una funzione lavoro che restituisce un'attività ( `task<T>` o `task<void>`) viene eseguita in modo sincrono nel contesto che ha chiamato `create_async`. Una funzione lavoro che restituisce `T` o `void` viene eseguita in un contesto arbitrario.  
   
--   È possibile usare il metodo [concurrency::task::then](reference/task-class.md#then) per creare una catena di attività eseguite una dopo l'altra. In un'app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] il contesto predefinito per le continuazioni di un'attività dipende dal modo in cui è stata costruita l'attività. Se l'attività è stata creata passando un'azione asincrona al costruttore di attività oppure passando un'espressione lambda che restituisce un'azione asincrona, il contesto predefinito per tutte le continuazioni dell'attività sarà il contesto corrente. Se l'attività non viene costruita da un'azione asincrona, verrà usato per impostazione predefinita un contesto arbitrario per le continuazioni dell'attività. È possibile eseguire l'override del contesto predefinito con la classe [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .  
+-   È possibile usare il metodo [concurrency::task::then](reference/task-class.md#then) per creare una catena di attività eseguite una dopo l'altra. In un'app UWP, il contesto predefinito per le continuazioni di un'attività dipende dal modo in cui è stata costruita l'attività. Se l'attività è stata creata passando un'azione asincrona al costruttore di attività oppure passando un'espressione lambda che restituisce un'azione asincrona, il contesto predefinito per tutte le continuazioni dell'attività sarà il contesto corrente. Se l'attività non viene costruita da un'azione asincrona, verrà usato per impostazione predefinita un contesto arbitrario per le continuazioni dell'attività. È possibile eseguire l'override del contesto predefinito con la classe [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .  
 
   
 ## <a name="in-this-document"></a>Contenuto del documento  
@@ -53,22 +56,22 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
 -   [Controllo del thread di esecuzione](#exethread)  
   
--   [Esempio: controllo dell'esecuzione in un'app Windows Store con C++ e XAML](#example-app)  
+-   [Esempio: Controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML](#example-app)  
   
 ##  <a name="create-async"></a> Creazione di operazioni asincrone  
  È possibile usare il modello di attività e continuazione nella libreria PPL (Parallel Patterns Library) per definire le attività in background, oltre ad attività aggiuntive eseguite al completamento dell'attività precedente. Questa funzionalità viene fornita dalla classe [concurrency::task](../../parallel/concrt/reference/task-class.md) . Per altre informazioni su questo modello e sulla classe `task` , vedere [Task Parallelism](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
- Il Runtime di Windows è un'interfaccia di programmazione che è possibile utilizzare per creare [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] App eseguite solo in un ambiente di sistema speciali. Queste app usano funzioni, tipi di dati e dispositivi autorizzati e vengono distribuite da [!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)]. Windows Runtime è rappresentato dal *Application Binary Interface* (ABI). L'interfaccia ABI è un contratto binario sottostante che rende disponibili in linguaggi di programmazione quali Visual C++ APIs di Windows Runtime.  
+ Il Runtime di Windows è un'interfaccia di programmazione che è possibile utilizzare per creare App UWP che funzionano solo in un ambiente di sistema speciali. Tali App utilizzano funzioni autorizzate, tipi di dati e dispositivi e vengono distribuiti da Microsoft Store. Windows Runtime è rappresentato dal *Application Binary Interface* (ABI). L'interfaccia ABI è un contratto binario sottostante che rende disponibili in linguaggi di programmazione quali Visual C++ APIs di Windows Runtime.  
   
  Tramite il Runtime di Windows, è possibile usare le funzionalità migliori dei diversi linguaggi di programmazione e combinarle in un'unica app. È ad esempio possibile creare l'interfaccia utente in JavaScript ed eseguire la logica app che richiede attività di calcolo complesse in un componente C++. La possibilità di eseguire queste operazioni che richiedono attività di calcolo complesse in background è un fattore essenziale per mantenere reattiva l'interfaccia utente. Poiché la `task` classe è specifica per C++, è necessario utilizzare un'interfaccia di Windows Runtime per comunicare operazioni asincrone ad altri componenti (che potrebbero essere scritti in linguaggi diversi da C++). Windows Runtime offre quattro interfacce che è possibile utilizzare per rappresentare le operazioni asincrone:  
   
  [Windows::Foundation::IAsyncAction](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)  
  Rappresenta un'azione asincrona.  
   
- [Windows::Foundation::IAsyncActionWithProgress\<TProgress >](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
+ [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](http://msdn.microsoft.com/library/windows/apps/br206581.aspx)  
  Rappresenta un'azione asincrona che segnala lo stato di avanzamento.  
   
- [Windows::Foundation::IAsyncOperation\<TResult >](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
+ [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  Rappresenta un'operazione asincrona che restituisce un risultato.  
   
  [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
@@ -81,7 +84,7 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
  Il tipo restituito di `create_async` viene determinato dal tipo dei rispettivi argomenti. Se, ad esempio, la funzione lavoro non restituisce alcun valore e non segnala lo stato, `create_async` restituirà `IAsyncAction`. Se la funzione lavoro non restituisce alcun valore ma segnala lo stato, `create_async` restituirà `IAsyncActionWithProgress`. Per segnalare lo stato, fornire un oggetto [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) come parametro per la funzione lavoro. La possibilità di segnalare lo stato permette di segnalare la quantità di lavoro eseguita e la quantità rimanente, ad esempio sotto forma di percentuale. Permette anche di segnalare i risultati non appena disponibili.  
   
- Le interfacce `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`e `IAsyncActionOperationWithProgress<TProgress, TProgress>` forniscono un metodo `Cancel` che permette di annullare l'operazione asincrona. La classe `task` può essere usata con i token di annullamento. Quando si usa un token di annullamento per annullare il lavoro, il runtime non avvia nuovo lavoro che sottoscrive tale token. Il lavoro già attivo è in grado di monitorare l'annullamento e arrestarsi quando possibile. Questo meccanismo è descritto in modo più dettagliato nel documento [Cancellation in the PPL](cancellation-in-the-ppl.md). È possibile connettere l'annullamento di attività con Windows Runtime`Cancel` metodi in due modi. È prima di tutto possibile definire la funzione lavoro passata a `create_async` in modo che accetti un oggetto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Quando viene chiamato il metodo `Cancel` , il token di annullamento viene annullato e le normali regole di annullamento vengono applicate all'oggetto `task` sottostante che supporta la chiamata a `create_async` . Se non si specifica un oggetto `cancellation_token` , l'oggetto `task` sottostante ne definirà uno implicitamente. Definire un oggetto `cancellation_token` quando è necessario rispondere in modo cooperativo all'annullamento nella funzione lavoro. La sezione [esempio: controllo dell'esecuzione in un'applicazione Windows Store con C++ e XAML](#example-app) viene illustrato un esempio di come eseguire l'annullamento in un [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app con c# e XAML che utilizza un componente Windows Runtime C++ personalizzato.  
+ Le interfacce `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`e `IAsyncActionOperationWithProgress<TProgress, TProgress>` forniscono un metodo `Cancel` che permette di annullare l'operazione asincrona. La classe `task` può essere usata con i token di annullamento. Quando si usa un token di annullamento per annullare il lavoro, il runtime non avvia nuovo lavoro che sottoscrive tale token. Il lavoro già attivo è in grado di monitorare l'annullamento e arrestarsi quando possibile. Questo meccanismo è descritto in modo più dettagliato nel documento [Cancellation in the PPL](cancellation-in-the-ppl.md). È possibile connettere l'annullamento di attività con Windows Runtime`Cancel` metodi in due modi. È prima di tutto possibile definire la funzione lavoro passata a `create_async` in modo che accetti un oggetto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Quando viene chiamato il metodo `Cancel` , il token di annullamento viene annullato e le normali regole di annullamento vengono applicate all'oggetto `task` sottostante che supporta la chiamata a `create_async` . Se non si specifica un oggetto `cancellation_token` , l'oggetto `task` sottostante ne definirà uno implicitamente. Definire un oggetto `cancellation_token` quando è necessario rispondere in modo cooperativo all'annullamento nella funzione lavoro. La sezione [esempio: controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML](#example-app) viene illustrato un esempio di come eseguire l'annullamento in un'app Universal Windows Platform (UWP) con c# e XAML che utilizza Windows Runtime C++ personalizzato componente.  
   
 > [!WARNING]
 >  In una catena di continuazioni di attività è sempre necessario pulire lo stato e quindi chiamare [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) quando il token di annullamento viene annullato. Se si esce prima di chiamare `cancel_current_task`, l'operazione passa allo stato completato invece che allo stato annullato.  
@@ -116,7 +119,7 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
  Ogni metodo esegue prima di tutto la convalida per assicurare che i parametri di input non siano negativi. Se un valore di input è negativo, il metodo genera un'eccezione [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). La gestione degli errori viene illustrata più avanti in questa sezione.  
   
- Per utilizzare questi metodi da un'app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] , usare il modello **Applicazione vuota (XAML)** di Visual C# per aggiungere un secondo progetto alla soluzione Visual Studio. Questo esempio assegna al progetto il nome `Primes`. Dal progetto `Primes` aggiungere un riferimento al progetto `PrimesLibrary` .  
+ Per utilizzare questi metodi da un'app UWP, utilizzare Visual c# **App vuota (XAML)** modello per aggiungere un secondo progetto alla soluzione Visual Studio. Questo esempio assegna al progetto il nome `Primes`. Dal progetto `Primes` aggiungere un riferimento al progetto `PrimesLibrary` .  
   
  Aggiungere il codice seguente a MainPage.xaml. Questo codice definisce l'interfaccia utente, in modo da permettere la chiamata del componente C++ e la visualizzazione dei risultati.  
   
@@ -126,7 +129,7 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
  [!code-cs[concrt-windowsstore-primes#4](../../parallel/concrt/codesnippet/csharp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_5.cs)]  
   
- Questi metodi usano le parole chiave `async` e `await` per aggiornare l'interfaccia utente dopo il completamento delle operazioni asincrone. Per informazioni sui modelli asincroni disponibili per C# e Visual Basic, vedere [Asynchronous patterns in Windows Store apps with C#](http://msdn.microsoft.com/library/windows/apps/hh464924.aspx) (Modelli asincroni nelle app di Windows Store con C#) e [Asynchronous patterns in Windows Store apps with VB](http://msdn.microsoft.com/library/windows/apps/hh464924.aspx)(Modelli asincroni nelle app di Windows Store con VB).  
+ Questi metodi usano le parole chiave `async` e `await` per aggiornare l'interfaccia utente dopo il completamento delle operazioni asincrone. Per informazioni sulla codifica asincrona nelle App UWP, vedere [Threading e programmazione asincrona](/windows/uwp/threading-async).  
   
  I metodi `getPrimesCancellation` e `cancelGetPrimes` interagiscono per permettere all'utente di annullare l'operazione. Quando l'utente sceglie il **Annulla** pulsante, il `cancelGetPrimes` chiamate al metodo [IAsyncOperationWithProgress\<TResult, TProgress >:: Cancel](http://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) per annullare l'operazione. Il Runtime di concorrenza, che gestisce l'operazione asincrona sottostante, genera un tipo di eccezione interna che viene rilevato da Windows Runtime per comunicare che l'annullamento è completata. Per ulteriori informazioni sul modello di annullamento, vedere [annullamento](../../parallel/concrt/cancellation-in-the-ppl.md).  
   
@@ -135,14 +138,14 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
  La figura seguente mostra l'app `Primes` dopo che ogni opzione è stata selezionata.  
   
- ![App di Windows Store Primes](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
+ ![App di Windows Runtime Primes](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")  
   
  Per esempi in cui viene usato `create_async` per creare attività asincrone che possono essere utilizzate da altri linguaggi, vedere [Utilizzo di C++ nell'esempio di utilità di ottimizzazione dei viaggi di Bing Mappe](http://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) e [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(Operazioni asincrone di Windows 8 in C++ con PPL).  
   
 ##  <a name="exethread"></a> Controllo del thread di esecuzione  
  Il Runtime di Windows utilizza il modello di threading COM. In questo modello gli oggetti vengono ospitati in diversi apartment, in base al modo in cui gestiscono la rispettiva sincronizzazione. Gli oggetti thread-safe vengono ospitati nell'apartment a thread multipli (MTA, Multi-Threaded Apartment). Gli oggetti a cui deve accedere un singolo thread vengono ospitati in un apartment a thread singolo (STA, Single-Threaded Apartment).  
   
- In un'app che ha un'interfaccia utente, il thread ASTA (Application STA) è responsabile per la distribuzione dei messaggi della finestra ed è l'unico thread nel processo in grado di aggiornare i controlli dell'interfaccia utente ospitati nell'apartment a thread singolo. Questo comportamento ha due conseguenze. Per abilitare l'app in modo che rimanga reattiva, è prima di tutto necessario che tutte le operazioni a utilizzo elevato di CPU e le operazioni I/O non vengano eseguite nel thread ASTA. È quindi necessario eseguire di nuovo il marshaling dei thread di background nel thread ASTA per aggiornare l'interfaccia utente. In un'app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] in C++, `MainPage` e altre pagine XAML vengono eseguite sul thread ATSA. Le continuazioni delle attività dichiarate nel thread ASTA vengono quindi eseguite in tale thread per impostazione predefinita. Sarà quindi possibile aggiornare i controlli direttamente nel corpo della continuazione. Se tuttavia si annida un'attività in un'altra attività, eventuali continuazioni in tale attività annidata verranno eseguite nell'apartment a thread multipli. È quindi necessario valutare se specificare in modo esplicito il contesto in cui devono essere eseguite le continuazioni.  
+ In un'app che ha un'interfaccia utente, il thread ASTA (Application STA) è responsabile per la distribuzione dei messaggi della finestra ed è l'unico thread nel processo in grado di aggiornare i controlli dell'interfaccia utente ospitati nell'apartment a thread singolo. Questo comportamento ha due conseguenze. Per abilitare l'app in modo che rimanga reattiva, è prima di tutto necessario che tutte le operazioni a utilizzo elevato di CPU e le operazioni I/O non vengano eseguite nel thread ASTA. È quindi necessario eseguire di nuovo il marshaling dei thread di background nel thread ASTA per aggiornare l'interfaccia utente. In un'applicazione C++ UWP, `MainPage` e altre pagine XAML vengono eseguite sul thread ATSA. Le continuazioni delle attività dichiarate nel thread ASTA vengono quindi eseguite in tale thread per impostazione predefinita. Sarà quindi possibile aggiornare i controlli direttamente nel corpo della continuazione. Se tuttavia si annida un'attività in un'altra attività, eventuali continuazioni in tale attività annidata verranno eseguite nell'apartment a thread multipli. È quindi necessario valutare se specificare in modo esplicito il contesto in cui devono essere eseguite le continuazioni.  
   
  Un'attività creata da un'operazione asincrona, ad esempio `IAsyncOperation<TResult>`, usa una semantica speciale che permette di ignorare i dettagli relativi al threading. Anche se è possibile che un'operazione venga eseguita in un thread in background o che non sia supportata da alcun thread, per impostazione predefinita le rispettive continuazioni verranno eseguite nell'apartment che ha avviato le operazioni di continuazione, ovvero l'apartment che ha chiamato `task::then`). È possibile usare la classe [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) per controllare il contesto di esecuzione di una continuazione. Usare questi metodi di helper statici per creare oggetti `task_continuation_context` :  
   
@@ -154,19 +157,19 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
  È possibile passare un oggetto `task_continuation_context` al metodo [task::then](reference/task-class.md#then) per controllare in modo esplicito il contesto di esecuzione della continuazione oppure passare l'attività a un altro apartment e quindi chiamare il metodo `task::then` per controllare in modo implicito il contesto di esecuzione.  
   
 > [!IMPORTANT]
->  Poiché il thread principale dell'interfaccia utente delle app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] in esecuzione nell'apartment a thread singolo, le continuazioni create in tale apartment verranno eseguite per impostazione predefinita nell'apartment a thread singolo. Le continuazioni create nell'apartment a thread multipli verranno di conseguenza eseguite nell'apartment a thread multipli.  
+>  Poiché il thread dell'interfaccia utente principale dell'App UWP eseguito in Apartment, le continuazioni create in tale Apartment per impostazione predefinita eseguiti in apartment Le continuazioni create nell'apartment a thread multipli verranno di conseguenza eseguite nell'apartment a thread multipli.  
   
  La sezione seguente illustra un'app che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. L'operazione finale, l'aggiornamento dell'interfaccia utente, si verifica nel thread dell'interfaccia utente.  
   
 > [!IMPORTANT]
->  Questo comportamento è specifico per le app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] . Per le app desktop non è possibile controllare la posizione in cui vengono eseguite le continuazioni. L'Utilità di pianificazione sceglie invece un thread di lavoro in cui eseguire ogni continuazione.  
+>  Questo comportamento è specifico per le app UWP. Per le app desktop non è possibile controllare la posizione in cui vengono eseguite le continuazioni. L'Utilità di pianificazione sceglie invece un thread di lavoro in cui eseguire ogni continuazione.  
   
 > [!IMPORTANT]
 
 >  Non chiamare [concurrency::task::wait](reference/task-class.md#wait) nel corpo di una continuazione che viene eseguita nell'apartment a thread singolo. In caso contrario, il runtime genera [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) poiché questo metodo blocca il thread corrente e può provocare la mancata risposta da parte dell'app. È tuttavia possibile chiamare il metodo [concurrency::task::get](reference/task-class.md#get) per ricevere il risultato dell'attività antecedente in una continuazione basata su attività.  
   
-##  <a name="example-app"></a> Esempio: controllo dell'esecuzione in un'applicazione [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] con C++ e XAML  
- Si consideri un'app XAML C++ che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. Per creare questa app, in Visual Studio creare prima di tutto un progetto [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]**Applicazione vuota (XAML)** e denominarlo `CommonWords`. Nel manifesto dell'app specificare la capacità **Raccolta documenti** per permettere all'app di accedere alla cartella Documenti. Aggiungere anche il tipo di file di testo (con estensione txt) alla sezione relativa alle dichiarazioni nel manifesto dell'app. Per altre informazioni sulle funzionalità e sulle dichiarazioni delle app, vedere [Pacchetti di app e distribuzione](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
+##  <a name="example-app">Esempio: Controllo dell'esecuzione in un'App di Windows Runtime con C++ e XAML</a>  
+ Si consideri un'app XAML C++ che legge un file da disco, individua le parole più comuni in tale file e quindi mostra i risultati nell'interfaccia utente. Per creare questa app, avviare, in Visual Studio, creando un **App vuota (Windows universale)** del progetto e denominarla `CommonWords`. Nel manifesto dell'app specificare la capacità **Raccolta documenti** per permettere all'app di accedere alla cartella Documenti. Aggiungere anche il tipo di file di testo (con estensione txt) alla sezione relativa alle dichiarazioni nel manifesto dell'app. Per altre informazioni sulle funzionalità e sulle dichiarazioni delle app, vedere [Pacchetti di app e distribuzione](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx).  
   
  Aggiornare l'elemento `Grid` in MainPage.xaml per includere un elemento `ProgressRing` e un elemento `TextBlock` . L'elemento `ProgressRing` indica che l'operazione è in corso e `TextBlock` mostra i risultati del calcolo.  
   
@@ -197,7 +200,7 @@ Questo documento illustra alcuni punti chiave da ricordare quando si usa il runt
   
  La figura seguente mostra i risultati dell'app `CommonWords` .  
   
- ![Applicazione CommonWords di Windows Store](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")  
+ ![Applicazione CommonWords di Windows Runtime](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")  
   
  In questo esempio è possibile supportare l'annullamento poiché gli oggetti `task` che supportano `create_async` usano un token di annullamento implicito. Definire la funzione lavoro in modo che accetti un oggetto `cancellation_token` se l'attività deve rispondere all'annullamento in modo cooperativo. Per altre informazioni sull'annullamento nella libreria PPL, vedere [Cancellation in the PPL](cancellation-in-the-ppl.md).  
   

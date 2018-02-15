@@ -1,28 +1,32 @@
 ---
-title: DEFINE_COMMAND | Documenti Microsoft
+title: DEFINE_COMMAND | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: DEFINE_COMMAND
-dev_langs: C++
-helpviewer_keywords: DEFINE_COMMAND macro
+f1_keywords:
+- DEFINE_COMMAND
+dev_langs:
+- C++
+helpviewer_keywords:
+- DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cd2acfee6bb0f28acc774774e446e9efd4a5637b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f95fafbd9a63c5bf31add8bad1a8757bdcb60ae1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 Specifica il comando che verrà utilizzato per creare il set di righe quando si usa il [CCommand](../../data/oledb/ccommand-class.md) classe. Accetta solo i tipi di stringa che corrisponde al tipo di applicazione specificata (ANSI o Unicode).  
@@ -32,13 +36,8 @@ Specifica il comando che verrà utilizzato per creare il set di righe quando si 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-DEFINE_COMMAND(  
-x  
-,   
-szCommand  
- )  
+```cpp
+DEFINE_COMMAND(x, szCommand)  
   
 ```  
   
