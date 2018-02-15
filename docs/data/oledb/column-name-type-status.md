@@ -1,45 +1,40 @@
 ---
-title: COLUMN_NAME_TYPE_STATUS | Documenti Microsoft
+title: COLUMN_NAME_TYPE_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_TYPE_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_TYPE_STATUS macro
+f1_keywords:
+- COLUMN_NAME_TYPE_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_TYPE_STATUS macro
 ms.assetid: 72ad3728-5b3e-4131-9f38-835d776529d9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b59516be279c36167a42c514dabd8c3a05eac96d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40a0456955fb81810d12a2b9bd7ca2e4dd8605f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnametypestatus"></a>COLUMN_NAME_TYPE_STATUS
 Rappresenta un'associazione sul rowset alla colonna specifica nel set di righe. Simile a [COLUMN_NAME](../../data/oledb/column-name.md), ad eccezione del fatto che questa macro accetta anche lo stato di tipo e di colonna di dati.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-COLUMN_NAME_TYPE_STATUS(  
-pszName  
-,   
-wType  
-,   
-status  
-,   
-data  
- )  
+```cpp
+COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)  
   
 ```  
   

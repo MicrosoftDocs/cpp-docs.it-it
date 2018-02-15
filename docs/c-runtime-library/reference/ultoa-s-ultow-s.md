@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultow_s
 - _ultoa_s
@@ -28,7 +29,8 @@ f1_keywords:
 - ultoa_s
 - ultow_s
 - _ultoa_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ultoa_s function
 - converting integers
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - ultow_s function
 ms.assetid: 606ce905-6752-46ac-a15a-bdc22920e1d4
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1785204bc6043973fac4eeb490b8e072e3ec4a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1e6b882e8e4017410e0f377aaf4b49b658b39afa
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
 Converte un Unsigned Long Integer in una stringa. Queste sono versioni di [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md) con miglioramenti per la sicurezza, come descritto in [Funzionalità di sicurezza in CRT](../../c-runtime-library/security-features-in-the-crt.md).  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: realloc
+ms.topic: reference
+apiname:
+- realloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,7 +28,8 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +41,17 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 525b0f0877471b5bfd6d9fa16551b21908f229a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e378f907c864f534173f746404f853ffa415c70c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="realloc"></a>realloc
 Riallocare blocchi di memoria.  

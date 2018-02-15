@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - abs
 - _abs64
@@ -35,7 +36,8 @@ f1_keywords:
 - llabs
 - math/llabs
 - cmath/abs
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - absolute values
 - abs function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1dc1e7532c715a045c2b76c3be2ef915f82693a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 Calcola il valore assoluto dell'argomento.  

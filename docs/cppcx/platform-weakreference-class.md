@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: Platform::WeakReference
+ms.topic: reference
+f1_keywords:
+- Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8666896b0e3414dca8f4cd1f8c4e2f34e9b98050
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformweakreference-class"></a>Classe Platform::WeakReference
 Rappresenta un riferimento debole a un'istanza di una classe di riferimento.  
@@ -55,7 +57,7 @@ class WeakReference
 ### <a name="remarks"></a>Note  
  La classe WeakReference stessa non è una classe di riferimento e pertanto non eredita da Platform::Object^ e non può essere usata nella firma di un metodo pubblico.  
 
-## <a name="operator-assign"></a>WeakReference::operator =
+## <a name="operator-assign"></a> WeakReference::operator =
 Assegna un valore a WeakReference.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -70,7 +72,7 @@ WeakReference& operator=(const volatile ::Platform::Object^ const otherArg);
 ### <a name="remarks"></a>Note  
  L'ultimo overload nell'elenco precedente consente di assegnare una classe di riferimento a una variabile WeakReference. In questo caso la classe di riferimento è downcast a [platform:: Object](../cppcx/platform-object-class.md)^. Ripristinare il tipo originale in un secondo momento specificandolo come argomento per il parametro di tipo nel [WeakReference:: Resolve\<T >](#resolve) funzione membro.  
   
-## <a name="booltype"></a>WeakReference::operator BoolType
+## <a name="booltype"></a> WeakReference::operator BoolType
 Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esplicitamente dal codice.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -79,7 +81,7 @@ Implementa il modello bool sicuro per la classe WeakReference. Non chiamarlo esp
 BoolType BoolType()  
 ```  
 
-## <a name="resolve"></a>Metodo WeakReference:: Resolve (spazio dei nomi Platform)
+## <a name="resolve"></a> Metodo WeakReference:: Resolve (spazio dei nomi Platform)
 Restituisce un handle alla classe di riferimento originale o `nullptr` se l'oggetto non esiste più.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -113,7 +115,7 @@ if (bar != nullptr)
  Si noti che il parametro di tipo è T, non T^.  
   
  
-## <a name="ctor"></a>Costruttore WeakReference:: WeakReference
+## <a name="ctor"></a> Costruttore WeakReference:: WeakReference
 Offre vari modi per creare un elemento WeakReference.  
   
 ### <a name="syntax"></a>Sintassi  

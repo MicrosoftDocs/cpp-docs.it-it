@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: mbrlen
+ms.topic: reference
+apiname:
+- mbrlen
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,20 +23,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: mbrlen
-dev_langs: C++
-helpviewer_keywords: mbrlen function
+f1_keywords:
+- mbrlen
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f94a79bb5304ed1ebfe9b7c2241b28497c8c4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c5c110c1fc5917614514b4e4fd7e474569026207
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbrlen"></a>mbrlen
 Determina il numero di byte necessari per completare un carattere multibyte nelle impostazioni locali correnti, con la possibilità di ricominciare nel mezzo di un carattere multibyte.  

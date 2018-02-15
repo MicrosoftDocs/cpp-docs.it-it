@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6b83039a054e19e62cbbe87befbe08dd7997e51
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Scelta del formato dei file di input con estensione netmodule
 Un file con estensione obj MSIL (compilato con [/clr](../../build/reference/clr-common-language-runtime-compilation.md)) può essere utilizzato anche come file con estensione netmodule.  i file obj contengono i metadati e i simboli nativi.  I file con estensione netmodule contengono solo metadati.  
@@ -26,7 +29,7 @@ Un file con estensione obj MSIL (compilato con [/clr](../../build/reference/clr-
  È possibile passare un file con estensione obj MSIL a qualsiasi altro compilatore di Visual Studio tramite l'opzione del compilatore /addmodule, ma tenere presente che il file con estensione obj diventa parte dell'assembly risultante e deve essere distribuito con l'assembly.  Ad esempio, Visual c# e Visual Basic hanno l'opzione del compilatore /addmodule.  
   
 > [!NOTE]
->  Nella maggior parte dei casi, sarà necessario passare al linker il file con estensione obj dalla compilazione che ha creato il modulo .NET.  Unica eccezione è se è stato creato con il file netmodule [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md).  Il passaggio di un file di modulo MSIL con estensione netmodule o dll al linker può causare l'errore LNK1107.  
+>  Nella maggior parte dei casi, sarà necessario passare al linker il file con estensione obj dalla compilazione che ha creato il modulo .NET.  Il passaggio di un file di modulo MSIL con estensione netmodule o dll al linker può causare l'errore LNK1107.  
   
  I file con estensione obj, con i file con estensione h associati, a cui si fa riferimento mediante #include nell'origine, consentono alle applicazioni C++ di utilizzare i tipi nativi nel modulo, mentre in un file con estensione netmodule, solo i tipi gestiti possono essere utilizzati da un'applicazione C++.  Se si tenta di passare un file con estensione obj #using, informazioni sui tipi nativi non sarà disponibile. #includere file h del file con estensione obj.  
   
@@ -41,8 +44,6 @@ Un file con estensione obj MSIL (compilato con [/clr](../../build/reference/clr-
 -   Se i moduli verranno utilizzati per compilare una libreria nativa (non gestita), utilizzare i file obj come input di modulo per il linker e generare un file di libreria lib.  
   
 -   Se i moduli verranno utilizzati per compilare una libreria gestita e ciascun input di modulo del linker sarà verificabile (ovvero creato con /clr:safe), utilizzare come input di modulo del linker i file con estensione obj e generare un file di libreria con estensione dll (assembly) o netmodule (modulo).  
-  
--   Se i moduli verranno utilizzati per compilare una libreria gestita e verrà creato con tutti gli input di modulo per il linker **/clr: pure** o **/CLR: safe**, utilizzare i file obj come input di modulo per il linker e generare una (. dll assembly) o. netmodule (modulo) se si desidera esporre i tipi gestiti dalla libreria. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015. Se si desidera esporre tipi gestiti dalla libreria e si desidera anche applicazioni C++ per utilizzare i tipi nativi nella libreria, la libreria sarà costituito da file obj per i moduli del componente librerie (è inoltre necessario spedire i file con estensione h per ogni modulo pertanto è possibile farvi riferimento con #include dal codice sorgente).  
   
 -   Se i moduli verranno utilizzati per compilare una libreria gestita e verrà creato uno o più input di moduli per il linker con /clr, utilizzare i file obj come input di modulo per il linker e generare un file DLL (assembly).  Se si desidera esporre tipi gestiti dalla libreria e si desidera anche applicazioni C++ per utilizzare i tipi nativi nella libreria, la libreria sarà costituito da file obj per i moduli del componente librerie (è inoltre necessario spedire i file con estensione h per ogni modulo pertanto è possibile farvi riferimento con #include dal codice sorgente).  
   

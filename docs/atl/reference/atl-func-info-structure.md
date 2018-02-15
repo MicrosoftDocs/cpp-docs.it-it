@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
 - ATL::_ATL_FUNC_INFO
 - ATL._ATL_FUNC_INFO
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1bbff1fa040454fc8288053938bb439d505b461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atlfuncinfo-structure"></a>Le strutture ATL_FUNC_INFO struttura
 Contiene informazioni sul tipo utilizzati per descrivere una proprietà o metodo in un'interfaccia dispatch.  
@@ -43,7 +46,7 @@ struct _ATL_FUNC_INFO {
   
 ## <a name="members"></a>Membri  
  **cc**  
- Convenzione di chiamata. Quando si usa questa struttura con il [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (classe), il membro deve essere **CC_STDCALL**. `CC_CDECL`è l'unica opzione è supportata in Windows CE per il `CALLCONV` campo il `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato in questo modo il comportamento corrispondente non è definito.  
+ Convenzione di chiamata. Quando si usa questa struttura con il [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) (classe), il membro deve essere **CC_STDCALL**. `CC_CDECL` è l'unica opzione è supportata in Windows CE per il `CALLCONV` campo il `_ATL_FUNC_INFO` struttura. Qualsiasi altro valore non è supportato in questo modo il comportamento corrispondente non è definito.  
   
  **vtReturn**  
  Il tipo variant della funzione di valore restituito.  
@@ -72,7 +75,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="see-also"></a>Vedere anche  
  [Strutture](../../atl/reference/atl-structures.md)   
  [IDispEventSimpleImpl (classe)](../../atl/reference/idispeventsimpleimpl-class.md)   
- [MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
+ [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)
 
 
 

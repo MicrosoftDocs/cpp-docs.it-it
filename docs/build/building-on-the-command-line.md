@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>Compilare il codice C/C++ nella riga di comando
 
@@ -82,7 +85,7 @@ File di comando aggiuntive sono disponibili per impostare le architetture di com
 >   
 > Il file vcvarsall.bat varia anche da versione a versione. Se la versione corrente di Visual C++ è installata in un computer che dispone anche di una versione precedente di Visual C++, non eseguire vcvarsall.bat o un altro file di comando da diverse versioni nella stessa finestra del prompt dei comandi.  
  
-Il modo più semplice per specificare un'architettura di compilazione specifica in una finestra di comando esistente è utilizzare il file vcvarsall.bat. È possibile utilizzare vcvarsall.bat per impostare le variabili di ambiente per configurare la riga di comando per la compilazione nativa a 32 o 64 bit, o per la compilazione incrociata per x86, x64 o processori ARM; per Windows Store, piattaforma Windows universale o piattaforme Desktop di Windows; Per specificare quali SDK di Windows da utilizzare; e per specificare la versione del set di strumenti della piattaforma. Se non sono forniti argomenti, il file vcvarsall.bat Configura le variabili di ambiente per usare il compilatore nativo a 32 bit corrente per x86 destinazioni Windows Desktop. Tuttavia, è possibile utilizzare per configurare qualsiasi di nativo o tra gli strumenti di compilazione. Se si specifica una configurazione del compilatore che non è installata o non è disponibile nell'architettura del computer, viene visualizzato un messaggio di errore. Questa tabella mostra gli argomenti di architettura supportata:  
+Il modo più semplice per specificare un'architettura di compilazione specifica in una finestra di comando esistente è utilizzare il file vcvarsall.bat. È possibile utilizzare vcvarsall.bat per impostare le variabili di ambiente per configurare la riga di comando per la compilazione nativa a 32 o 64 bit, o per la compilazione incrociata per x86, x64 o processori ARM; destinazione Microsoft Store, piattaforma Windows universale o piattaforme Desktop di Windows; Per specificare quali SDK di Windows da utilizzare; e per specificare la versione del set di strumenti della piattaforma. Se non sono forniti argomenti, il file vcvarsall.bat Configura le variabili di ambiente per usare il compilatore nativo a 32 bit corrente per x86 destinazioni Windows Desktop. Tuttavia, è possibile utilizzare per configurare qualsiasi di nativo o tra gli strumenti di compilazione. Se si specifica una configurazione del compilatore che non è installata o non è disponibile nell'architettura del computer, viene visualizzato un messaggio di errore. Questa tabella mostra gli argomenti di architettura supportata:  
   
 |Argomento di vcvarsall.bat architettura|Compilatore|Architettura del computer host|Architettura dell'output di compilazione|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
@@ -176,7 +179,7 @@ Fornisce collegamenti ad articoli in cui vengono descritte le modalità di utili
   
 ## <a name="related-sections"></a>Sezioni correlate  
 
-[/MD, /MT, /LD (utilizzo della libreria Run-Time)](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD, /MT, /LD (uso della libreria di runtime)](../build/reference/md-mt-ld-use-run-time-library.md)  
 Descrive come usare queste opzioni del compilatore per l'utilizzo di una libreria di runtime di debug o di rilascio.  
   
 [Opzioni del compilatore C/C++](../build/reference/compiler-options.md)  

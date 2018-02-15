@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -29,7 +30,8 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 54c7aa7fda123e811f23c2cc4b9e8d81f76966df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d81daed9666825446ab3a4a42ca0a9806531e2c2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 Copia la data di sistema corrente in un buffer. Sono disponibili versioni più sicure di queste funzioni. Vedere [_strdate_s, _wstrdate_s](../../c-runtime-library/reference/strdate-s-wstrdate-s.md).  

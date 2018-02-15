@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _aligned_msize_dbg
+ms.topic: reference
+apiname:
+- _aligned_msize_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,20 +22,24 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: _aligned_msize_dbg
-dev_langs: C++
-helpviewer_keywords: _aligned_msize_dbg
+f1_keywords:
+- _aligned_msize_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7f09b6429b8ffd4ecb34af1213ebb62100238af8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0c26a876f6ef4f77d4f9c649a3993fe666cb6f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 Restituisce le dimensioni di un blocco di memoria allocato nell'heap (solo versione di debug).  

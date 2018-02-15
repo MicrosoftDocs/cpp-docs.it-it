@@ -1,29 +1,34 @@
 ---
-title: CommandHandler | Documenti Microsoft
+title: CommandHandler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: CommandHandler
-dev_langs: C++
-helpviewer_keywords: CommandHandler function
+ms.topic: reference
+f1_keywords:
+- CommandHandler
+dev_langs:
+- C++
+helpviewer_keywords:
+- CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c17d9e731eaee9c6e1a1c584e61db6c9826cf8d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2750f1e089ce5b6b3ef34325276a508ea0b80ddb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler`viene identificata dal terzo parametro della funzione di `COMMAND_HANDLER` macro della mappa del messaggio.  
+`CommandHandler` viene identificata dal terzo parametro della funzione di `COMMAND_HANDLER` macro della mappa del messaggio.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +47,7 @@ ms.lasthandoff: 12/21/2017
  `wNotifyCode`  
  Il codice di notifica.  
   
- *database interno di Windows*  
+ *wID*  
  Identificatore della voce di menu, controllo o i tasti di scelta rapida.  
   
  *hWndCtl*  

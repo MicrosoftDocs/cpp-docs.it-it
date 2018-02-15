@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: localeconv
+ms.topic: reference
+apiname:
+- localeconv
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,23 +22,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords: localeconv
-dev_langs: C++
+f1_keywords:
+- localeconv
+dev_langs:
+- C++
 helpviewer_keywords:
 - lconv type
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cbd897b353f8a915fb4a29d61d0954b9b5a7f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e93e21505a661deb470e4b31c8807ef5133a774
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="localeconv"></a>localeconv
 Ottiene informazioni dettagliate sulle impostazioni locali.  
@@ -113,11 +118,11 @@ I membri `char` della struttura sono numeri non negativi piccoli, non caratteri.
   
 I valori di `grouping` e `mon_grouping` vengono interpretati in base alle regole seguenti:  
   
-- `CHAR_MAX`-Non eseguire un'ulteriore raggruppamento.  
+- `CHAR_MAX` -Non eseguire un'ulteriore raggruppamento.  
   
 - 0 - utilizzare l'elemento precedente per ognuna delle cifre rimanenti.  
   
-- *n*-Numero di cifre che costituiscono il gruppo corrente. Viene esaminato l'elemento successivo per determinare le dimensioni del gruppo successivo di cifre prima del gruppo corrente.  
+- *n* -Numero di cifre che costituiscono il gruppo corrente. Viene esaminato l'elemento successivo per determinare le dimensioni del gruppo successivo di cifre prima del gruppo corrente.  
   
 I valori per `int_curr_symbol` vengono interpretati in base alle regole seguenti:  
   

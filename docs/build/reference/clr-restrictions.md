@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>Limitazioni di /clr
 Tenere presente le restrizioni seguenti sull'utilizzo di **/clr**:  
@@ -60,11 +64,7 @@ Tenere presente le restrizioni seguenti sull'utilizzo di **/clr**:
   
     -   **/ZI**  
   
--   La combinazione del `_STATIC_CPPLIB` definizione del preprocessore (`/D_STATIC_CPPLIB`) e **/clr** o **/clr: pure** opzione del compilatore non è supportata. Ciò accade in quanto la definizione causerebbe l'applicazione a cui collegare lo statica multithread della libreria Standard C++, che non è supportato. Per ulteriori informazioni, vedere il [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) argomento.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) non è supportato con **/CLR: safe** o **/clr: pure**. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
-  
--   Le librerie MFC e ATL non sono supportate dalla compilazione in modalità pure (**/clr: pure**). È possibile utilizzare **/clr: pure** con la libreria Standard C++ e CRT se si compila anche con **/MD** o **/MDd**.  
+-   La combinazione del `_STATIC_CPPLIB` definizione del preprocessore (`/D_STATIC_CPPLIB`) e **/clr** opzione del compilatore non è supportata. Ciò accade in quanto la definizione causerebbe l'applicazione a cui collegare lo statica multithread della libreria Standard C++, che non è supportato. Per ulteriori informazioni, vedere il [/MD, /MT, /LD (utilizzo della libreria Run-Time)](../../build/reference/md-mt-ld-use-run-time-library.md) argomento.  
   
 -   Quando si utilizza **/Zi** con **/clr**, sono presenti le implicazioni sulle prestazioni. Per ulteriori informazioni, vedere [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ Tenere presente le restrizioni seguenti sull'utilizzo di **/clr**:
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md) viene ignorato durante la compilazione con **/clr**, a meno che non è una funzione in `#pragma` [non gestito](../../preprocessor/managed-unmanaged.md) o se la funzione deve essere compilata come nativa, nel qual caso il compilatore Genera avviso C4793, che è disattivato per impostazione predefinita.  
+-   [/GS](../../build/reference/gs-buffer-security-check.md) viene ignorato durante la compilazione con **/clr**, a meno che non è una funzione in `#pragma` [non gestito](../../preprocessor/managed-unmanaged.md) o se la funzione deve essere compilata come nativa, nel qual caso il compilatore genererà avviso C4793, che è disattivato per impostazione predefinita.  
   
 -   Vedere [/ENTRY](../../build/reference/entry-entry-point-symbol.md) per i requisiti di firma di funzione di un'applicazione gestita.  
   
@@ -84,8 +84,6 @@ Tenere presente le restrizioni seguenti sull'utilizzo di **/clr**:
 -   Funzioni che accettano un numero variabile di argomenti (varargs) verranno generate come funzioni native. Verrà effettuato il marshalling di qualsiasi tipo di dati gestiti nella posizione dell'argomento variabile per i tipi nativi. Si noti che <xref:System.String?displayProperty=fullName> tipi sono stringhe a caratteri wide in realtà, ma viene effettuato il marshalling di stringhe di caratteri a byte singolo. Pertanto se un identificatore printf %S (wchar_t *), effettuerà il marshalling in una stringa %s invece.  
   
 -   Quando si usa la macro va_arg, si potrebbero ottenere risultati imprevisti durante la compilazione con **/clr: pure**.  Per ulteriori informazioni, vedere [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Se l'applicazione passa un argomento di tipo [va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) a una funzione dichiarata per accettare un numero variabile di argomenti e l'applicazione viene compilata con **/clr: pure**, CLR genera <xref:System.NotSupportedException>. Se **/clr** viene utilizzato invece le funzioni interessate sono compilate in codice nativo e garantire la corretta esecuzione. Se **/CLR: safe** viene utilizzata, viene generato un errore di diagnostica.  
   
 -   Deve essere chiamata da codice gestito, qualsiasi funzione che analizzare lo stack per ottenere informazioni sui parametri (argomenti); il livello di P/Invoke provoca tali informazioni per essere ulteriormente verso il basso dello stack.  Ad esempio, non compilare proxy/stub con **/clr**.  
   
@@ -100,8 +98,6 @@ Tenere presente le restrizioni seguenti sull'utilizzo di **/clr**:
     -   Le funzioni che seguono il `#pragma unmanaged` direttiva. (Si noti che l'operazione inversa, `#pragma managed`, è anche supportata.)  
   
     -   Una funzione che contiene riferimenti a tipi allineati, ovvero tipi dichiarati utilizzando `__declspec(align(...))`.  
-  
--   Non è possibile utilizzare il [supporto COM del compilatore](../../cpp/compiler-com-support.md) classi con **/clr: pure** o **/CLR: safe**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)

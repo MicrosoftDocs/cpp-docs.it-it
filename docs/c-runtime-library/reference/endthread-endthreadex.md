@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _endthread
 - _endthreadex
@@ -28,7 +29,8 @@ f1_keywords:
 - endthreadex
 - _endthreadex
 - endthread
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _endthread function
 - endthread function
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5abe2f0aa2f62048fefb2f79614e018fbdb51e08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 794dc5c4bbaf9653c5b6bbb08ea3e0a60ca438c4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 Termina un thread. `_endthread` termina un thread creato da `_beginthread` e  `_endthreadex` termina un thread creato da `_beginthreadex`.  

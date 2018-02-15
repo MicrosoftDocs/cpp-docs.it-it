@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data marshaling [C++], structures
 - platform invoke [C++], structures
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5bfca720a97ac8462afa970e54f13e0bd74a7808
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ebda5f17b94fa28a5eb5222ccc991119ec4f81a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>Procedura: Effettuare il marshalling di strutture tramite PInvoke
 In questo documento viene illustrato come funzioni native che accettano stringhe di tipo C possono essere chiamate da funzioni gestite che forniscono un'istanza di <xref:System.String> tramite P/Invoke. Sebbene sia consigliabile utilizzare la funzionalità di interoperabilità C++ anziché P/Invoke perché P/Invoke fornisce minimo in fase di compilazione segnalazione errori, non è indipendente dai tipi e può essere difficile da implementare, se l'API non gestita viene fornito come una DLL e il codice sorgente non è disponibile, P/Invoke è l'unica opzione. In caso contrario, vedere i seguenti documenti:  
@@ -48,8 +50,6 @@ In questo documento viene illustrato come funzioni native che accettano stringhe
   
 ## <a name="example"></a>Esempio  
  Il codice seguente è costituito da una funzione non gestita e un modulo gestito. Il modulo non gestito è una DLL che definisce una struttura denominata posizione e una funzione denominata GetDistance che accetta due istanze della struttura di percorso. Il secondo modulo è un'applicazione della riga di comando gestita che importa la funzione GetDistance, ma definisce in termini di un equivalente gestito della struttura di percorso, MLocation. In pratica sarebbe probabilmente essere utilizzato lo stesso nome per entrambe le versioni della struttura; Tuttavia, un nome diverso è usato per dimostrare che il prototipo DllImport è definito in termini la versione gestita.  
-  
- Il modulo gestito viene compilato con /clr, ma con /clr: pure funziona anche. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015.  
   
  Si noti che nessuna parte della DLL viene esposto al codice gestito utilizzando la normale #include (direttiva). In effetti, la DLL avviene in fase di esecuzione, in modo non verranno rilevati problemi con le funzioni importate con DllImport in fase di compilazione.  
   

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>Integrazione WRL (C++/CX)
 
@@ -31,7 +32,7 @@ Per ulteriori informazioni sulla creazione e utilizzo [!INCLUDE[cppwrl_short](in
 
 Frammento di codice seguente viene illustrato come utilizzare WRL e [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] utilizzare [!INCLUDE[wrt](includes/wrt-md.md)] classi ed esaminare un file di metadati.
 
-L'esempio è tratto da un frammento di codice nel [forum per la compilazione di Windows Store app](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
+L'esempio è tratto da un frammento di codice nel forum di App di compilazione Microsoft Store. L'autore del frammento di codice presenta le seguenti dichiarazioni di non responsabilità e condizioni:
 
 1. Il linguaggio C++ non fornisce API specifiche che si riflettono sui tipi [!INCLUDE[wrt](includes/wrt-md.md)] , ma i file di metadati di Windows (.winmd) per un tipo sono pienamente compatibili con i file di metadati CLR. Windows fornisce la nuova API di individuazione dei metadati (RoGetMetaDataFile) per ottenere il file .winmd per un determinato tipo. Tuttavia, queste API sono limitate all'uso da parte degli sviluppatori C++ perché non è possibile creare istanze di una classe.
 

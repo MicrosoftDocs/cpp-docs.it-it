@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -32,7 +33,8 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84b2293114acd31d0baf1f3a595deba9247d6120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 004186bc7ea74cb6ab2c39d25a9b3d3efeb556fe
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 Determina se un Integer rappresenta un carattere di cifra decimale.  
@@ -86,7 +89,7 @@ int _iswdigit_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere di cifra decimale. `isdigit`Restituisce un valore diverso da zero se `c` è una cifra decimale (0 - 9). `iswdigit` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a un carattere di cifra decimale. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
+ Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere di cifra decimale. `isdigit` Restituisce un valore diverso da zero se `c` è una cifra decimale (0 - 9). `iswdigit` restituisce un valore diverso da zero se `c` è un carattere wide che corrisponde a un carattere di cifra decimale. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
  Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   

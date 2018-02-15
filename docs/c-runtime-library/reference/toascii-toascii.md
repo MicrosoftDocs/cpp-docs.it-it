@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: __toascii
+ms.topic: reference
+apiname:
+- __toascii
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,23 +28,25 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 25e11878772b4c8f7afb07f7297ca80a2a5a0130
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cf4c29934d22d3f20d79650faa406f217ffdd4c6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -64,7 +68,7 @@ Carattere da convertire.
 
 ## <a name="return-value"></a>Valore restituito
 
-`__toascii`Converte il valore di *c* per il functoid da ASCII a 7 bit intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
+`__toascii` Converte il valore di *c* per il functoid da ASCII a 7 bit intervallo e restituisce il risultato. Non esiste alcuno valore restituito riservato per indicare un errore.
 
 ## <a name="remarks"></a>Note
 

@@ -1,12 +1,13 @@
 ---
-title: _get_FMA3_enable, _set_FMA3_enable | Documenti Microsoft
+title: _get_FMA3_enable, _set_FMA3_enable | Microsoft Docs
 ms.custom: 
 ms.date: 6/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _get_FMA3_enable
 - _set_FMA3_enable
@@ -21,21 +22,23 @@ f1_keywords:
 - _set_FMA3_enable
 - math/_get_FMA3_enable
 - math/_set_FMA3_enable
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e0a2810a8d6602efb689896cfe35cf61338eb24f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4875306575d58b1baf341a5ed3c2a919c995c704
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable, _set_FMA3_enable
 Ottiene o imposta un flag che specifica se le funzioni di libreria a virgola mobile matematiche trascendenti utilizzano FMA3 istruzioni nel codice compilato per X64 piattaforme.  

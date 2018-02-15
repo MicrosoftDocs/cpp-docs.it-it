@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Riferimenti alla riga di comando dell'assembler ARM
 Questo articolo fornisce informazioni della riga di comando dell'assembler ARM Microsoft, *armasm*, che consente di compilare in linguaggio assembly ARMv7 Thumb nell'implementazione Microsoft del comune oggetto formato COFF (File). Il linker può collegare il codice COFF con codice oggetto a cui viene generato dall'assembler ARM o dal compilatore C, insieme alle librerie di oggetti creati da Gestione librerie.  
@@ -35,25 +38,25 @@ armasm [[options]] -o objectfile sourcefile
   
 #### <a name="parameters"></a>Parametri  
  `options`  
- -errori`filename`  
+ -errori `filename`  
  Reindirizzare i messaggi di errore e avviso per `filename`.  
   
- -i`dir[;dir]`  
+ -i `dir[;dir]`  
  Aggiungere la directory specificata per il percorso di ricerca.  
   
- -predefinire`directive`  
+ -predefinire `directive`  
  Specificare una direttiva SETA, SETL o set predefinire un simbolo. Esempio: **armasm.exe-predefinire "Conteggio SETA 150" source.asm**. Per ulteriori informazioni, vedere il [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Disabilitare tutti i messaggi di avviso.  
   
- -ignorare`warning`  
+ -ignorare `warning`  
  Disabilitare l'avviso specificato. Per i valori possibili, vedere la sezione informazioni sugli avvisi.  
   
  -Guida in linea  
  Stampa il messaggio della Guida della riga di comando.  
   
- -computer`machine`  
+ -computer `machine`  
  Specificare il tipo di computer per impostare nell'intestazione PE.  I valori possibili per `machine` sono:  
 **ARM**: imposta il tipo di computer per IMAGE_FILE_MACHINE_ARMNT. Questa è l'impostazione predefinita.   
 **THUMB**: imposta il tipo di computer per IMAGE_FILE_MACHINE_THUMB.  
@@ -61,7 +64,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  Generare stile ARMv7 blocchi IT.  Per impostazione predefinita, compatibile con ARMv8 vengono generati blocchi IT.  
   
- -tramite`filename`  
+ -via `filename`  
  Leggere altri argomenti della riga di comando da `filename`.  
   
  -16  
@@ -73,7 +76,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Genera informazioni di debug.  
   
- -errorReport:`option`  
+ -errorReport: `option`  
  Specificare come interno dell'assembler gli errori vengono segnalati a Microsoft.  I valori possibili per `option` sono:   
 **Nessuna**: non inviare rapporti.   
 **prompt dei comandi**, richiedere all'utente di inviare report immediatamente.   

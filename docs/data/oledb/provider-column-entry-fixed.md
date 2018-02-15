@@ -1,38 +1,40 @@
 ---
-title: PROVIDER_COLUMN_ENTRY_FIXED | Documenti Microsoft
+title: PROVIDER_COLUMN_ENTRY_FIXED | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_FIXED
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_FIXED macro
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_FIXED
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_FIXED macro
 ms.assetid: 71f9c9aa-56a0-488b-96ba-5c72da9c71d0
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6362feced77174238a773678de11a781b0729211
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f374f5e7d4a2dfd24cdd3b2067b0bda935ce438f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="providercolumnentryfixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 Rappresenta una colonna specifica è supportata dal provider.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_FIXED(  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_FIXED(name  
 , ordinal, dbtype, member )  
 ```  
   

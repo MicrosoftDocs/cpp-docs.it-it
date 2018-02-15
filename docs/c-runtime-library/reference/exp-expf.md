@@ -1,12 +1,13 @@
 ---
-title: EXP, expf, soluz | Documenti Microsoft
+title: exp, expf, expl | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - expf
 - expl
@@ -29,7 +30,8 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -37,18 +39,19 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0702b99990728bdb732654fdd1eacbefa373dda6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 95d84c81b8f6cc5ea99cd6153da73ea0e96167b8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="exp-expf-expl"></a>EXP, expf, soluz
+# <a name="exp-expf-expl"></a>exp, expf, expl
 Calcola l'esponenziale.  
   
 ## <a name="syntax"></a>Sintassi  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0ab65644f4a7bcb93ceb2156a5354a81358e47c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0e2c83f9c5d6ccc39b9eadda8f561c63ff91117f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 Confronta `n` byte di due stringhe di caratteri multibyte usando le informazioni della tabella codici multibyte.  
   
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -117,7 +120,7 @@ int _mbsnbicoll_l(
 ## <a name="remarks"></a>Note  
  Ognuna di queste funzioni collaziona, al massimo, i primi `count` byte in `string1` e `string2`, quindi restituisce un valore che indica la relazione tra le sottostringhe risultanti di `string1` e `string2`. Se il byte finale nella sottostringa di `string1` o `string2` è un byte di apertura, non viene incluso nel confronto. Queste funzioni confrontano solo i caratteri completati nelle sottostringhe. `_mbsnbicoll` è una versione di `_mbsnbcoll` che non fa distinzione tra maiuscole e minuscole. Come `_mbsnbcmp` e `_mbsnbicmp`, `_mbsnbcoll` e `_mbsnbicoll` collazionano le due stringhe di caratteri multibyte in base all'ordine lessicografico specificato dalla [tabella codici](../../c-runtime-library/code-pages.md) multibyte in uso.  
   
- Per alcune tabelle codici e i set di caratteri corrispondenti, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ciò non è vero nelle impostazioni locali "C". L'ordine dei caratteri nel set di caratteri ASCII è lo stesso dell'ordine lessicografico dei caratteri. Tuttavia, in alcune pagine di un'altra tabella, ad esempio, il carattere 'a' (valore 0x61) precede il carattere 'ä' (valore 0xE4) nel tipo di carattere impostato, ma il carattere 'ä' precede il carattere 'a' livello lessicografico. Per eseguire un confronto lessicografico delle stringhe in base ai byte in questo caso, usare `_mbsnbcoll` anziché `_mbsnbcmp`. Per controllare solo l'uguaglianza delle stringhe, usare `_mbsnbcmp`.  
+ Per alcune tabelle codici e i set di caratteri corrispondenti, l'ordine dei caratteri nel set di caratteri può differire dall'ordine lessicografico dei caratteri. Ciò non è vero nelle impostazioni locali "C". L'ordine dei caratteri nel set di caratteri ASCII è lo stesso dell'ordine lessicografico dei caratteri. In alcune tabelle codici europee, tuttavia, il carattere "a" (valore 0x61) precede il carattere "ä" (valore 0xE4) nel set di caratteri, ma il carattere "ä" precede lessicograficamente il carattere "a". Per eseguire un confronto lessicografico delle stringhe in base ai byte in questo caso, usare `_mbsnbcoll` anziché `_mbsnbcmp`. Per controllare solo l'uguaglianza delle stringhe, usare `_mbsnbcmp`.  
   
  Dato che le funzioni `coll` collazionano le stringhe a livello lessicografico per il confronto, mentre le funzioni `cmp` testano semplicemente le stringhe per verificarne l'uguaglianza, le funzioni `coll` sono molto più lente delle versioni `cmp` corrispondenti. È quindi consigliabile usare le funzioni `coll` solo quando esiste una differenza nella tabella codici corrente tra l'ordine del set di caratteri e l'ordine lessicografico dei caratteri e quando questa differenza è di particolare interesse per il confronto.  
   

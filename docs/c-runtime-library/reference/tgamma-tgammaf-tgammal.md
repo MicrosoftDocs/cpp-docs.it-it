@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7525da71d114179d40b937816f9ebe08d5a892a9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 Determina la funzione gamma del valore specificato.  
@@ -89,7 +91,7 @@ long double tgammal(
   
 |Problema|INVIO|  
 |-----------|------------|  
-|x = ± 0|±INFINITY|  
+|x = ±0|±INFINITY|  
 |x = intero negativo|NaN|  
 |x =  -INFINITY|NaN|  
 |x = +INFINITY|+INFINITO|  

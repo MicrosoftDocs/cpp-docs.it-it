@@ -4,35 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: PROVIDER_COLUMN_ENTRY_LENGTH
-dev_langs: C++
-helpviewer_keywords: PROVIDER_COLUMN_ENTRY_LENGTH macro
+f1_keywords:
+- PROVIDER_COLUMN_ENTRY_LENGTH
+dev_langs:
+- C++
+helpviewer_keywords:
+- PROVIDER_COLUMN_ENTRY_LENGTH macro
 ms.assetid: b4a67246-c049-4622-bb65-242cc8cae4be
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f0d4ed3eeff7d60aa91849d62446d17765ce52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb42c78d5e90e56f2186145621d064671f40fef5
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="providercolumnentrylength"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 Rappresenta una colonna specifica è supportata dal provider.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-PROVIDER_COLUMN_ENTRY_LENGTH(  
-name  
+```cpp
+PROVIDER_COLUMN_ENTRY_LENGTH(name  
 , ordinal, size, member )  
 ```  
   

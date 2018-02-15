@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: AUTOCLIK sample [MFC]
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 791655047eaf07732e1e006e8cc3ea8e7dec4727
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="running-remote-automation-using-autoclik-and-autodriv"></a>Esecuzione dell'automazione remota con AUTOCLIK e AUTODRIV
 AUTOCLIK è una semplice applicazione di esempio di server automazione che è possibile utilizzare come base da cui per ulteriori informazioni su automazione remota. AUTODRIV è una semplice applicazione client di automazione che controlla AUTOCLIK. È possibile utilizzarli per dimostrare l'automazione remota.  

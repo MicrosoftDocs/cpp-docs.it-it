@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
-La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli che fornisce un modo di basso livello per creare e usare i componenti Windows Runtime.  
+La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che offre un approccio di base per creare e usare componenti Windows Runtime.  
   
 ## <a name="benefits"></a>Vantaggi  
  La libreria di modelli di Windows Runtime C++ consente di implementare più facilmente e utilizzare i componenti del modello COM (Component Object). Vengono illustrate le tecniche di gestione come il conteggio dei riferimenti per gestire la durata degli oggetti e verificare i valori `HRESULT` per determinare se un'operazione ha avuto esito positivo o negativo. Per utilizzare correttamente la libreria di modelli di Windows Runtime C++, è necessario seguire attentamente queste regole e tecniche.  
@@ -45,7 +47,7 @@ La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli c
  Di seguito sono riportate alcune risorse che consentono di ottenere subito a lavorare con la libreria di modelli di Windows Runtime C++.  
   
  [La libreria Windows Runtime (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- In questo video di Channel 9, acquisire ulteriori informazioni come la libreria di modelli di Windows Runtime C++ consente che scrivere App Universal Windows Platform e come creare e utilizzare i componenti Windows Runtime.  
+ In questo video di Channel 9, acquisire ulteriori informazioni come la libreria di modelli di Windows Runtime C++ consente che scrivere app di piattaforma UWP (Universal Windows) e come creare e utilizzare i componenti Windows Runtime.  
   
  [Procedura: attivare e utilizzare un componente Windows Runtime](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  Di seguito viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per inizializzare il Runtime di Windows e attivare e utilizzare un componente Windows Runtime.  
@@ -57,10 +59,10 @@ La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli c
  Viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per sottoscrivere e gestire gli eventi di un oggetto Windows Runtime.  
   
  [Procedura dettagliata: Creazione di un componente di Runtime di base di Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Di seguito viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente Windows Runtime di base che somma due numeri. Viene inoltre illustrato come generare eventi e utilizzare il componente da un'app Universal Windows Platform che utilizza JavaScript.  
+ Di seguito viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente Windows Runtime di base che somma due numeri. Viene inoltre illustrato come generare eventi e utilizzare il componente da un'app UWP che utilizza JavaScript.  
   
- [Procedura dettagliata: creazione di un'applicazione Windows Store mediante WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- Informazioni su come creare un'app Universal Windows Platform che usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
+ [Procedura dettagliata: Creazione di un'app UWP mediante WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ Informazioni su come creare un'app UWP che usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Procedura: creare un componente COM classico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  Viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente COM di base e un metodo di base per registrare e utilizzare il componente COM da un'applicazione desktop.  
@@ -72,10 +74,10 @@ La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli c
  Viene illustrato come utilizzare i componenti personalizzati di Windows Runtime da WRL creando un file IDL dai metadati di .winmd.  
   
  [Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- Viene illustrato come utilizzare il [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un'app Universal Windows Platform.  
+ Viene illustrato come utilizzare il [IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908) e [IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71) interfacce insieme alle attività per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.  
   
  [Esempio di ottimizzazione dei viaggi di Bing mappe](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- Usa il `HttpRequest` classe definita in [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app Universal Windows Platform completa.  
+ Usa il `HttpRequest` classe definita in [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) nel contesto di un'app UWP completa.  
   
  [Creazione di un componente DLL Windows Runtime con C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  Viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente DLL in processo e utilizzarlo da C + + CX, JavaScript e c#.  
@@ -89,7 +91,7 @@ La libreria di modelli C++ (WRL) di Windows Runtime è una libreria di modelli c
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Libreria di modelli di C++ di Windows Runtime, confrontata con ATL  
  Libreria di modelli di Windows Runtime C++ la libreria ATL (Active Template) è simile quanto possibile utilizzarlo per creare piccoli e veloci oggetti COM. Libreria modelli C++ per Windows Runtime e ATL condividono i concetti di definizione di oggetti in moduli, registrazione esplicita delle interfacce e aprire la creazione di oggetti tramite le factory. Potrebbe essere familiarità con la libreria di modelli di Windows Runtime C++ se si ha dimestichezza con ATL.  
   
- Libreria modelli C++ per Windows Runtime supporta le funzionalità COM necessaria per le app Universal Windows Platform. Di conseguenza, differisce da ATL in quanto non include il supporto diretto alle funzionalità COM come:  
+ Libreria modelli C++ per Windows Runtime supporta le funzionalità COM necessaria per App UWP. Di conseguenza, differisce da ATL in quanto non include il supporto diretto alle funzionalità COM come:  
   
 -   aggregazione  
   

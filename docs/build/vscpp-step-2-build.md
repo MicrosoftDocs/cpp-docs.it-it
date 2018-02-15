@@ -4,19 +4,22 @@ description: Installare il supporto di Visual Studio per Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilare ed eseguire un progetto di applicazione console C++
 
@@ -83,6 +86,8 @@ Se le sottolineature rosse vengono visualizzati in qualsiasi elemento nell'edito
 ### <a name="run-your-code-in-a-command-window-issues"></a>Eseguire il codice in una finestra di comando problemi
 
 È anche possibile accedere alla cartella di Debug della soluzione dalla riga di comando per eseguire l'app. È possibile eseguire l'app da altre directory senza specificare il percorso per l'app. Tuttavia, è possibile copiare l'app in un'altra directory ed eseguirlo da tale posizione.
+
+Se non viene visualizzato **copia come percorso** nel menu di scelta rapida, chiudere il menu e quindi tenere premuto il tasto MAIUSC mentre si apre di nuovo. Questo è solo per comodità. È inoltre possibile copiare il percorso della cartella dalla barra di ricerca di Esplora File e incollarlo il **eseguire** finestra di dialogo, quindi immettere il nome dell'eseguibile alla fine. È un po' di tipizzazione più, ma ha lo stesso risultato.
 
 [Indietro.](#run-your-code-in-a-command-window)
 

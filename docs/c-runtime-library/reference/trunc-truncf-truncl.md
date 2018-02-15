@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -33,22 +33,24 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 911636e4fa843afa1220dc99e1f679d5bfe88d7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b97cc80701ef7f099fd7df177b40a935cce30a52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 Restituisce l'intero più prossimo minore o uguale al valore a virgola mobile specificato.  
@@ -89,7 +91,7 @@ long double truncl(
   
 |Problema|INVIO|  
 |-----------|------------|  
-|`x`= ±INFINITY|x|  
+|`x` = ±INFINITY|x|  
 |`x` =  ±0|x|  
 |`x` = NaN|NaN|  
   

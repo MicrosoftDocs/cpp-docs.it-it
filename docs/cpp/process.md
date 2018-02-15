@@ -1,42 +1,45 @@
 ---
-title: processo | Documenti Microsoft
+title: process | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: process_cpp
-dev_langs: C++
+f1_keywords:
+- process_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - __declspec keyword [C++], process
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6754adcb348cb6eb061e32fc58e78f43663b1a90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c50948d613a40a03d0249e1930943ef61c855b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="process"></a>processo
-Specifica che il processo dell'applicazione gestita deve includere una sola copia di una variabile globale specifica, di una variabile membro statica o di una variabile locale statica condivisa tra tutti i domini dell'applicazione presenti nel processo. Questa viene usata principalmente da utilizzare durante la compilazione con **/clr: pure**, perché in **/clr: pure** sono variabili globali e statiche per ogni dominio applicazione, per impostazione predefinita. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015. Durante la compilazione con **/clr**, sono variabili globali e statiche per processo per impostazione predefinita (non è necessario utilizzare `__declspec(process)`.  
+Specifica che il processo dell'applicazione gestita deve includere una sola copia di una variabile globale specifica, di una variabile membro statica o di una variabile locale statica condivisa tra tutti i domini dell'applicazione presenti nel processo. Questo è stato principalmente per essere utilizzato durante la compilazione con **/clr: pure**, che ora è deprecata e verrà rimossa in una versione futura del compilatore. Durante la compilazione con **/clr**, sono variabili globali e statiche per processo per impostazione predefinita (non è necessario utilizzare `__declspec(process)`.  
   
  Solo una variabile globale, una variabile membro statica o una variabile locale statica di tipo nativo può essere contrassegnata con `__declspec(process)`.  
   
- Durante la compilazione con **/clr: pure**, le variabili contrassegnate come processo devono inoltre essere dichiarate come `const`. In questo modo le variabili in base al processo non vengono modificate in un dominio dell'applicazione e restituiscono risultati imprevisti in un altro dominio della stessa. Il principale utilizzo previsto di `__declspec(process)` consiste nell'abilitare l'inizializzazione in fase di compilazione di una variabile globale, una variabile membro statica o una variabile locale statica in **/clr: pure**.  
   
- `process`è valido solo durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md) o **/clr: pure** e non è valido durante la compilazione con **/CLR: safe**.  
+ `process` è valido solo durante la compilazione con [/clr](../build/reference/clr-common-language-runtime-compilation.md).  
   
  Se si desidera che ogni dominio dell'applicazione per la propria copia di una variabile globale, utilizzare [appdomain](../cpp/appdomain.md).  
   
  Vedere [domini applicazione e Visual C++](../dotnet/application-domains-and-visual-cpp.md) per ulteriori informazioni.  
   
 ## <a name="see-also"></a>Vedere anche  
- [declspec](../cpp/declspec.md)   
+ [__declspec](../cpp/declspec.md)   
  [Parole chiave](../cpp/keywords-cpp.md)

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _creat
 - _wcreat
@@ -29,7 +30,8 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0355f28ada6313e201b8d761813767135ee3cbf8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creat-wcreat"></a>_creat, _wcreat
 Crea un nuovo file. `_creat` e `_wcreat` sono stati deprecati; usare invece [sopen_s, wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md).  

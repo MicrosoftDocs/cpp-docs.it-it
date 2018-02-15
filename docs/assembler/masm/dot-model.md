@@ -1,26 +1,31 @@
 ---
-title: . MODELLO | Documenti Microsoft
+title: .MODEL | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: .MODEL
-dev_langs: C++
-helpviewer_keywords: .MODEL directive
+ms.topic: reference
+f1_keywords:
+- .MODEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b61cb1b04be84a52b4a455ed1b216727514e1432
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="model"></a>.MODEL
 Inizializza il modello di memoria programma.  
@@ -41,9 +46,9 @@ Inizializza il modello di memoria programma.
  `stackoption`  
  Parametro facoltativo.  
   
- `stackoption`non viene usato se `memorymodel` è `FLAT`.  
+ `stackoption` non viene usato se `memorymodel` è `FLAT`.  
   
- Specifica di `NEARSTACK` raggruppa il segmento di stack in un singolo segmento fisico (`DGROUP`) insieme ai dati. Lo stack di registri di segmento (`SS`) viene utilizzato per contenere lo stesso indirizzo del Registro di segmento di dati (`DS`). `FARSTACK`gruppo non lo stack con `DGROUP`; pertanto `SS` non è uguale a `DS`.  
+ Specifica di `NEARSTACK` raggruppa il segmento di stack in un singolo segmento fisico (`DGROUP`) insieme ai dati. Lo stack di registri di segmento (`SS`) viene utilizzato per contenere lo stesso indirizzo del Registro di segmento di dati (`DS`). `FARSTACK` gruppo non lo stack con `DGROUP`; pertanto `SS` non è uguale a `DS`.  
   
 ## <a name="remarks"></a>Note  
  .`MODEL` non viene utilizzato in [MASM per x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  

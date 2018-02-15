@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,32 +14,31 @@ f1_keywords:
 - RestartPosition
 - ATL::IRowsetImpl::RestartPosition
 - IRowsetImpl.RestartPosition
-dev_langs: C++
-helpviewer_keywords: RestartPosition method
+dev_langs:
+- C++
+helpviewer_keywords:
+- RestartPosition method
 ms.assetid: 14de66ef-8d2c-4404-adb6-3f6c74ac6cf1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8ed3217a635f8a0b9af5e2c94fff325e07bff61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cfdf198b68b3587146ebc4a666ac2e596d05aba
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetimplrestartposition"></a>IRowsetImpl::RestartPosition
 Riposiziona posizione del recupero successivo per la posizione iniziale. vale a dire la posizione quando il set di righe è stato inizialmente creato.  
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
-  
-      STDMETHOD( RestartPosition )(  
-   HCHAPTER /* hReserved */   
-);  
+```cpp
+      STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);  
 ```  
   
 #### <a name="parameters"></a>Parametri  

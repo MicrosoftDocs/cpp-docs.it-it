@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: __security_init_cookie
+ms.topic: reference
+apiname:
+- __security_init_cookie
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,23 +25,25 @@ apitype: DLLExport
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - security cookie [C++]
 - __security_init_cookie function
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ee0657393ec8322889b527c21a36c13b9e032325
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7c51e02a36df9a54d2f301eafc24a0181e97153f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="securityinitcookie"></a>__security_init_cookie
 Inizializza il cookie di sicurezza globale.  

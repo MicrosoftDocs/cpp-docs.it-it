@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 Scrivere dati formattati su una stringa con la possibilità di specificare l'ordine dei parametri utilizzati nella stringa di formato.  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` è una versione a caratteri "wide" di `_sprintf_p`. Gli argomenti puntatori per `_swprintf_p` sono stringhe a caratteri "wide". Il rilevamento degli errori di codifica in `_swprintf_p` può essere diverso da quello di `_sprintf_p`. `_swprintf_p` e `fwprintf_p` si comportano in modo identico con la differenza che `_swprintf_p` scrive l'output in una stringa anziché in una destinazione di tipo `FILE` e `_swprintf_p` richiede il parametro `count` per specificare il numero massimo di caratteri da scrivere. Le versioni di queste funzioni con il suffisso `_l` sono identiche ad eccezione per il fatto che usano il parametro delle impostazioni locali passato al posto di quelle del thread corrente.  
   
- `_sprintf_p` restituisce il numero di byte archiviato in `buffer`, senza contare il carattere di terminazione `NULL`. `_swprintf_p`Restituisce il numero di caratteri wide archiviati nel `buffer`, senza contare la terminazione `NULL` carattere wide. Se `buffer` o `format` è un puntatore Null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
+ `_sprintf_p` restituisce il numero di byte archiviato in `buffer`, senza contare il carattere di terminazione `NULL`. `_swprintf_p` Restituisce il numero di caratteri wide archiviati nel `buffer`, senza contare la terminazione `NULL` carattere wide. Se `buffer` o `format` è un puntatore Null o se la stringa di formato contiene caratteri di formattazione non validi, viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Se l'esecuzione può continuare, queste funzioni restituiscono -1 e impostano `errno` su `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico  
   

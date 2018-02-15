@@ -4,41 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetImpl class
+f1_keywords:
+- IRowsetImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54b9fd321c4240e9ba02cc63d809a492ffa4d439
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetimpl-class"></a>Classe IRowsetImpl
 Fornisce un'implementazione dell'interfaccia `IRowset`.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
-   >  
->  
+      RowClass*>>  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
@@ -69,7 +71,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|Costruttore. Non è chiamato direttamente dall'utente.|  
 |[RefRows](../../data/oledb/irowsetimpl-refrows.md)|Chiamato da [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) e [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Non è chiamato direttamente dall'utente.|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|Rilascia le righe.|  
-|[Esecuzione di RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Riposiziona posizione del recupero successivo per la posizione iniziale. vale a dire la posizione quando il set di righe è stato inizialmente creato.|  
+|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|Riposiziona posizione del recupero successivo per la posizione iniziale. vale a dire la posizione quando il set di righe è stato inizialmente creato.|  
 |[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|Imposta i flag di stato per il campo specificato.|  
   
 ### <a name="data-members"></a>Membri di dati  

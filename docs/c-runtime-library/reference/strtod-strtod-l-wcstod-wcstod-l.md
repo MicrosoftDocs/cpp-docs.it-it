@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 10/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstod
 - _wcstod_l
@@ -35,7 +36,8 @@ f1_keywords:
 - corecrt_wstdlib/wcstod
 - stdlib/_strtod_l
 - corecrt_wstdlib/_wcstod_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstod_l function
 - tcstod_l function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fe18737b52ba2b04e3ee09813c6b48b6ebdf0363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod, _strtod_l, wcstod, _wcstod_l
 
@@ -100,13 +103,13 @@ Impostazioni locali da usare.
 
 ## <a name="return-value"></a>Valore restituito
 
-`strtod`Restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, in cui la funzione case restituisce + /-`HUGE_VAL`. Il segno di `HUGE_VAL` corrisponde al segno del valore che non può essere rappresentato. `strtod` restituisce 0 se è non possibile eseguire alcuna conversione oppure se si verifica un overflow.
+`strtod` Restituisce il valore del numero a virgola mobile, tranne quando la rappresentazione causerebbe un overflow, in cui la funzione case restituisce + /-`HUGE_VAL`. Il segno di `HUGE_VAL` corrisponde al segno del valore che non può essere rappresentato. `strtod` restituisce 0 se è non possibile eseguire alcuna conversione oppure se si verifica un overflow.
 
 `wcstod` restituisce i valori in modo analogo a `strtod`. Per entrambe le funzioni, `errno` viene impostato su `ERANGE` in caso di overflow o underflow e viene richiamato il gestore di parametri non validi, come descritto in [Convalida dei parametri](../../c-runtime-library/parameter-validation.md). Per altre informazioni su questo e altri codici restituiti, vedere [_doserrno, errno, _sys_errlist e _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Note
 
-Ogni funzione converte la stringa di input *nptr* per un `double`. Il `strtod` funzione converte *nptr* su un valore a precisione doppia. `strtod`Interrompe la lettura della stringa *nptr* con il primo carattere non riconosciuto come parte di un numero. Questo può essere il carattere Null di terminazione. `wcstod`è una versione a caratteri wide di `strtod`; relativo *nptr* argomento è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
+Ogni funzione converte la stringa di input *nptr* per un `double`. Il `strtod` funzione converte *nptr* su un valore a precisione doppia. `strtod` Interrompe la lettura della stringa *nptr* con il primo carattere non riconosciuto come parte di un numero. Questo può essere il carattere Null di terminazione. `wcstod` è una versione a caratteri wide di `strtod`; relativo *nptr* argomento è una stringa di caratteri "wide". A parte ciò, queste funzioni si comportano in modo identico.
 
 ### <a name="generic-text-routine-mappings"></a>Mapping di routine di testo generico
 
@@ -119,7 +122,7 @@ Il `LC_NUMERIC` impostazione della categoria di impostazioni locali correnti det
 
 Se *endptr* non `NULL`, un puntatore al carattere che ha interrotto l'analisi è archiviato in una posizione a cui puntata *endptr*. Se è non possibile eseguire alcuna conversione sono state trovate le cifre non valide o è stato specificato un base non valido, il valore di *nptr* è archiviato in una posizione a cui puntata *endptr*.
 
-`strtod`prevista *nptr* in modo che punti a una stringa di uno dei formati seguenti:
+`strtod` prevista *nptr* in modo che punti a una stringa di uno dei formati seguenti:
 
 [*whitespace*] [*sign*] {*cifre* [*radice* *cifre*] &#124; *radice* *cifre*} [{**e** &#124; **E**} [*sign*] *cifre*]  
 [*whitespace*] [*sign*] {**0x** &#124; **0x**} {*cifre esadecimali* [*radice* *cifre esadecimali*] &#124; *radice* *cifre esadecimali*} [{**p** &#124; **P**} [*sign*] *cifre esadecimali*]  

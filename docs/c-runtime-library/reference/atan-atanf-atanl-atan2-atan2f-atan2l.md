@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -34,7 +35,8 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36e90d781c4cc4512f4869247c296b69b19c1f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5da2b1bcc38c1b41a35de30e589f9660f19f78da
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 Calcola l'arcotangente di `x` (`atan`, `atanf` e `atanl`) o l'arcotangente di `y`/`x` (`atan2`, `atan2f` e `atan2l`).  
@@ -104,7 +107,7 @@ long double atan2l(
  Qualsiasi numero.  
   
 ## <a name="return-value"></a>Valore restituito  
- `atan`Restituisce l'arcotangente di `x` nell'intervallo - π/2 per π/2 radianti. `atan2`Restituisce l'arcotangente di `y/x` nell'intervallo - π in radianti π. Se `x` è 0, `atan` restituisce 0. Se entrambi i parametri di `atan2` sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.  
+ `atan` Restituisce l'arcotangente di `x` nell'intervallo - π/2 per π/2 radianti. `atan2` Restituisce l'arcotangente di `y/x` nell'intervallo - π in radianti π. Se `x` è 0, `atan` restituisce 0. Se entrambi i parametri di `atan2` sono 0, la funzione restituisce 0. Tutti i risultati sono in radianti.  
   
  `atan2` usa i segni di entrambi i parametri per determinare il quadrante del valore restituito.  
   
@@ -113,7 +116,7 @@ long double atan2l(
 |± `QNAN`,`IND`|none|`_DOMAIN`|  
   
 ## <a name="remarks"></a>Note  
- La funzione `atan` calcola l'arcotangente (la funzione inversa della tangente) di `x`. `atan2`Calcola l'arcotangente `y` / `x` (se `x` è uguale a 0, `atan2` restituisce π/2 se `y` è positivo, - π/2 se `y` è negativo o 0 se `y` è 0.)  
+ La funzione `atan` calcola l'arcotangente (la funzione inversa della tangente) di `x`. `atan2` Calcola l'arcotangente `y` / `x` (se `x` è uguale a 0, `atan2` restituisce π/2 se `y` è positivo, - π/2 se `y` è negativo o 0 se `y` è 0.)  
   
  `atan` ha un'implementazione che usa SSE2 (Streaming SIMD Extensions 2). Per informazioni e le restrizioni sull'uso dell'implementazione SSE2, vedere [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   

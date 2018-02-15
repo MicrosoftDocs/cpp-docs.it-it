@@ -1,26 +1,31 @@
 ---
-title: SEGMENTO | Documenti Microsoft
+title: SEGMENT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SEGMENT
-dev_langs: C++
-helpviewer_keywords: SEGMENT directive
+ms.topic: reference
+f1_keywords:
+- SEGMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="segment"></a>SEGMENT
 Definisce un segmento di programma chiamato *nome* la presenza di attributi di segmento  
@@ -45,14 +50,14 @@ name ENDS
 |**DWORD**|Indirizzo successivo disponibile parola doppia (4 byte per ogni parola doppia).|  
 |**PARA**|Indirizzo successivo disponibile paragrafo (16 byte per ogni paragrafo).|  
 |**PAGE**|Indirizzo pagina disponibile successiva (256 byte per pagina).|  
-|**ALLINEA**(*n*)|Successivo disponibile  *n* indirizzo byte th. Per ulteriori informazioni vedere la sezione Osservazioni.|  
+|**ALIGN**(*n*)|Successivo disponibile  *n* indirizzo byte th. Per ulteriori informazioni vedere la sezione Osservazioni.|  
   
  Se questo parametro viene omesso, **PARA** viene utilizzato per impostazione predefinita.  
   
  *combine*  
- **Pubblica**, **STACK**, **comuni**, **memoria**, **in***indirizzo*, **Privato**  
+ **Pubblica**, **STACK**, **comuni**, **memoria**, **in * * * indirizzo*, **privato**  
   
- *Utilizzare*  
+ *use*  
  **USE16**, **USE32**, **FLAT**  
   
  `characteristics`  
@@ -66,7 +71,7 @@ name ENDS
  Non supportato con **/omf**.  
   
  `class`  
- Indica come devono essere combinati e ordinati nel file assemblato segmenti. I valori tipici sono, `'DATA'`, `'CODE'`, `'CONST'` e`'STACK'`  
+ Indica come devono essere combinati e ordinati nel file assemblato segmenti. I valori tipici sono, `'DATA'`, `'CODE'`, `'CONST'` e `'STACK'`  
   
 ## <a name="remarks"></a>Note  
  Per `ALIGN(n)`, `n` può essere qualsiasi potenza di 2 da 1 a 8192; non è supportata con **/omf**.  

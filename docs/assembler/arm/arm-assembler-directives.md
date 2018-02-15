@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-directives"></a>Direttive assembly ARM
 La maggior parte, l'assembler ARM Microsoft utilizza il linguaggio assembly ARM, documentato nel capitolo 7 del [Guida degli strumenti dell'assembler ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Tuttavia, l'implementazione Microsoft di alcune direttive dell'assembly diversi da direttive assembly ARM. In questo articolo vengono illustrate le differenze.  
@@ -34,7 +37,7 @@ La maggior parte, l'assembler ARM Microsoft utilizza il linguaggio assembly ARM,
  ATTR  
  Non supportato.  
   
- ORGANIZZAZIONE16  
+ CODE16  
  Non è supportato perché implica la sintassi Thumb di pre-registrazione accesso utenti, che non consente l'assembler ARM Microsoft.  Utilizzare la direttiva THUMB, con la sintassi di registrazione accesso utenti.  
   
  COMUNI  
@@ -43,7 +46,7 @@ La maggior parte, l'assembler ARM Microsoft utilizza il linguaggio assembly ARM,
  DCDO  
  Non supportato.  
   
- SN DN, QN,  
+ DN, QN, SN  
  Specifica di un tipo o una corsia dell'alias di registro non è supportata.  
   
  VOCE  
@@ -57,7 +60,7 @@ La maggior parte, l'assembler ARM Microsoft utilizza il linguaggio assembly ARM,
 EXPORTsym {[type]}  
 ```  
   
- `sym`è il simbolo da esportare.  `[type]`, se specificato, può essere `[DATA]` per indicare che il simbolo punta ai dati o `[FUNC]` per indicare che il simbolo punta al codice.  
+ `sym` è il simbolo da esportare.  `[type]`, se specificato, può essere `[DATA]` per indicare che il simbolo punta ai dati o `[FUNC]` per indicare che il simbolo punta al codice.  
   
  GLOBALE è un sinonimo per l'esportazione.  
   
@@ -75,13 +78,13 @@ EXPORTsym {[type]}
 IMPORT sym{, WEAK alias{, TYPE t}}  
 ```  
   
- `sym`è il nome del simbolo da importare.  
+ `sym` è il nome del simbolo da importare.  
   
  Se debole `alias` è specificato, indica che `sym` è un esterno debole. Se non viene trovata alcuna definizione per tale in fase di collegamento, è possibile associare invece tutti i riferimenti `alias`.  
   
  Se tipo `t` non viene specificato, `t` indica come il linker deve tentare di risolvere `sym`.  Questi valori per `t` sono possibili:   
-1-non eseguire la ricerca della libreria di`sym`  
-2: eseguire una ricerca di libreria`sym`  
+1-non eseguire la ricerca della libreria di `sym`  
+2: eseguire una ricerca di libreria `sym`  
 3-`sym` è un alias per `alias` (impostazione predefinita)  
   
  EXTERN è un sinonimo per l'importazione, con la differenza che `sym` vengono importati solo se sono presenti riferimenti a esso nell'assembly corrente.  
@@ -98,8 +101,8 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  PRESERVE8  
  Non supportato.  
   
- RILOCAZIONE  
- `RELOC n`può solo seguire un'istruzione o una direttiva di definizione dati. Non vi è alcun "simbolo anonimo" che può essere ripristinato.  
+ RELOC  
+ `RELOC n` può solo seguire un'istruzione o una direttiva di definizione dati. Non vi è alcun "simbolo anonimo" che può essere ripristinato.  
   
  RICHIEDI  
  Non supportato.  

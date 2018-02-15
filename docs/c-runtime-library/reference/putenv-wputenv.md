@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv, _wputenv
 Crea, modifica o rimuove variabili di ambiente. Sono disponibili versioni più sicure di queste funzioni. Vedere [_putenv_s, _wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md).  
   
 > [!IMPORTANT]
->  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per altre informazioni, vedere l'articolo relativo alle [funzioni CRT non supportate con /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Non è possibile usare questa API nelle applicazioni eseguite in Windows Runtime. Per ulteriori informazioni, vedere [funzioni CRT non supportate nelle App Universal Windows Platform](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -91,7 +94,7 @@ int _wputenv(
   
  Non modificare direttamente una voce di ambiente. Usare invece `_putenv` o `_wputenv` per modificarla. In particolare, liberare direttamente gli elementi della matrice globale `_environ[]` potrebbe causare un indirizzamento di memoria non valido.  
   
- `getenv` e `_putenv` usano la variabile globale `_environ` per accedere e modificare la tabella dell'ambiente; `_wgetenv` e `_wputenv` usano `_wenviron`. `_putenv`e `_wputenv` potrebbe modificare il valore di `_environ` e `_wenviron`, pertanto l'invalidamento il `_envp` argomento `main` e `_wenvp` argomento `wmain`. È di conseguenza preferibile usare `_environ` o `_wenviron` per accedere alle informazioni dell'ambiente. Per altre informazioni sulla relazione tra `_putenv` e `_wputenv` e le variabili globali, vedere [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
+ `getenv` e `_putenv` usano la variabile globale `_environ` per accedere e modificare la tabella dell'ambiente; `_wgetenv` e `_wputenv` usano `_wenviron`. `_putenv` e `_wputenv` potrebbe modificare il valore di `_environ` e `_wenviron`, pertanto l'invalidamento il `_envp` argomento `main` e `_wenvp` argomento `wmain`. È di conseguenza preferibile usare `_environ` o `_wenviron` per accedere alle informazioni dell'ambiente. Per altre informazioni sulla relazione tra `_putenv` e `_wputenv` e le variabili globali, vedere [_environ, _wenviron](../../c-runtime-library/environ-wenviron.md).  
   
 > [!NOTE]
 >  Le famiglie di funzioni `_putenv` e `_getenv` non sono thread-safe. `_getenv` potrebbe restituire un puntatore di stringa mentre `_putenv` sta modificando la stringa, causando errori casuali. Assicurarsi che le chiamate alle funzioni siano sincronizzate.  

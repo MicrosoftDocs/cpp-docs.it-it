@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>.File con estensione netmodule come input del linker
 link.exe ora accetta file MSIL con estensione obj e netmodule come input. Il file di output generato dal linker sarà un assembly o un file con estensione netmodule senza dipendenza di runtime da uno dei file con estensione obj o netmodule che sono stati introdotti nel linker.  
   
  i file netmodule vengono creati dal compilatore Visual C++ con [/LN (creazione di un modulo MSIL)](../../build/reference/ln-create-msil-module.md) o dal linker con [/NOASSEMBLY (Crea un modulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md). file obj vengono sempre creati in una compilazione di Visual C++. Per altri compilatori di Visual Studio, utilizzare il **/target: module** l'opzione del compilatore.  
   
- Nella maggior parte dei casi, è necessario passare al linker i file con estensione obj e la compilazione di Visual C++ che ha creato il file netmodule, a meno che non è stato creato il file netmodule con [/clr (compilazione Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md). Netmodule MSIL utilizzato come input per il linker deve essere MSIL pure, che può essere generata dal compilatore Visual C++ utilizzando **/CLR: safe**. Le opzioni del compilatore **/clr:pure** e **/clr:safe** sono deprecate in Visual Studio 2015. Per impostazione predefinita, i compilatori di Visual Studio .NET producono moduli MSIL pure.  
+  È necessario passare al linker i file con estensione obj e la compilazione di Visual C++ che ha creato il file netmodule. Il passaggio di un file netmodule non è più supportato perché il **/clr: pure** e **/CLR: safe** opzioni del compilatore sono deprecate in Visual Studio 2015 e verrà rimossa in una versione futura del compilatore.   
   
  Per informazioni su come richiamare il linker dalla riga di comando, vedere [sintassi della riga di comando del Linker](../../build/reference/linker-command-line-syntax.md), [codice C/C++ di compilazione nella riga di comando](../../build/building-on-the-command-line.md), e [impostare il percorso e le variabili di ambiente Le compilazioni da riga di comando](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Passaggio di un file con estensione netmodule o DLL al linker che è stato compilato dal compilatore Visual C++ con **/clr** o con **/clr: pure** può comportare un errore del linker. Per ulteriori informazioni, vedere [scegliendo il formato del file di Input. netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Passaggio di un file con estensione netmodule o DLL al linker che è stato compilato dal compilatore Visual C++ con **/clr** può comportare un errore del linker. Per ulteriori informazioni, vedere [scegliendo il formato del file di Input. netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- Il linker accetta file obj nativi, nonché i file con estensione obj MSIL compilati con **/clr**, **/clr: pure**, o **/CLR: safe**. Quando si passano i file obj misti nella stessa compilazione, verificabilità del file di output risultante, per impostazione predefinita, sarà uguale al livello più basso di verificabilità dei moduli di input. Ad esempio, se si passa un file obj pure e safe al linker, il file di output sarà puro. [/CLRIMAGETYPE (Specifica tipo di immagine CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) consente di specificare un livello di verificabilità più, se è necessario.  
+ Il linker accetta file obj nativi, nonché i file con estensione obj MSIL compilati con **/clr**. Quando si passano i file obj misti nella stessa compilazione, verificabilità del file di output risultante, per impostazione predefinita, sarà uguale al livello più basso di verificabilità dei moduli di input. 
   
  Se si dispone di un'applicazione composta da due o più assembly e si desidera che l'applicazione sia contenuta in uno solo, è necessario ricompilare gli assembly e collegare i file con estensione obj o netmodule per produrre un singolo assembly.  
   

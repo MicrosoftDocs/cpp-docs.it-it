@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower, iswlower, _islower_l, _iswlower_l
 Determina se un intero rappresenta un carattere minuscolo.  
@@ -89,7 +92,7 @@ int _iswlower_l(
  Impostazioni locali da usare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere minuscolo. `islower`Restituisce un valore diverso da zero se `c` è un carattere minuscolo (a - z). `iswlower` restituisce un valore diverso da zero se `c` è un carattere wide corrispondente a una lettera minuscola oppure se `c` fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei valori `iswcntrl`, `iswdigit`, `iswpunct` o `iswspace` è diverso da zero. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
+ Ognuna di queste routine restituisce un valore diverso da zero se `c` è una rappresentazione particolare di un carattere minuscolo. `islower` Restituisce un valore diverso da zero se `c` è un carattere minuscolo (a - z). `iswlower` restituisce un valore diverso da zero se `c` è un carattere wide corrispondente a una lettera minuscola oppure se `c` fa parte di un set definito dall'implementazione di caratteri wide per cui nessuno dei valori `iswcntrl`, `iswdigit`, `iswpunct` o `iswspace` è diverso da zero. Ognuna di queste routine restituisce 0 se `c` non soddisfa la condizione di test.  
   
  Le versioni di queste funzioni che hanno il suffisso `_l` utilizzano le impostazioni locali passate anziché le impostazioni locali correnti per il comportamento dipendente dalle impostazioni locali. Per altre informazioni, vedere [Locale](../../c-runtime-library/locale.md).  
   

@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-f1_keywords: vc.atl.structures
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- vc.atl.structures
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL, structures
 - structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c8f34a1957a4af4090d5e73a54f0ef00f8b76088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f071f9db47334721212d2fe5b13bed31e25f0c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-structures"></a>Strutture ATL
 
@@ -42,7 +46,7 @@ Active Template Library include le seguenti strutture.
  [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
  Utilizzato da codice COM correlato in ATL.  
   
- [STRUTTURE ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
+ [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
  Contiene informazioni sul tipo utilizzati per descrivere una proprietà o metodo in un'interfaccia dispatch.  
   
  [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)  

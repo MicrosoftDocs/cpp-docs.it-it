@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa, _ultow
 Converte un Unsigned Long Integer in una stringa. Sono disponibili versioni più sicure di queste funzioni. Vedere [_ultoa_s, _ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md).  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  Ognuna di queste funzioni restituisce un puntatore a `str`. Non vi è restituzione di errori.  
   
 ## <a name="remarks"></a>Note  
- La funzione `_ultoa` converte `value` in una stringa di caratteri con terminazione Null e archivia il risultato (fino a 33 byte) in `str`. Non viene eseguito alcun controllo di overflow. `radix`Specifica la base di `value`; `radix` deve essere compreso nell'intervallo 2-36. `_ultow` è una versione a caratteri wide di `_ultoa`.  
+ La funzione `_ultoa` converte `value` in una stringa di caratteri con terminazione Null e archivia il risultato (fino a 33 byte) in `str`. Non viene eseguito alcun controllo di overflow. `radix` Specifica la base di `value`; `radix` deve essere compreso nell'intervallo 2-36. `_ultow` è una versione a caratteri wide di `_ultoa`.  
   
 > [!IMPORTANT]
 >  Per evitare sovraccarichi del buffer, verificare che il buffer `str` sia sufficientemente grande da contenere le cifre convertite oltre al carattere Null finale.  

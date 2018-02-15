@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Classe Platform::Collections::UnorderedMap
 
@@ -102,7 +104,7 @@ Per ulteriori informazioni, vedere [raccolte](../cppcx/collections-c-cx.md).
 
 **Spazio dei nomi:** Platform::Collections
 
-## <a name="clear"></a>Metodo unorderedmap:: Clear
+## <a name="clear"></a>  Metodo unorderedmap:: Clear
 
 Rimuove tutte le coppie chiave-valore dall'oggetto UnorderedMap corrente.
 
@@ -112,7 +114,7 @@ Rimuove tutte le coppie chiave-valore dall'oggetto UnorderedMap corrente.
 virtual void Clear();
 ```
 
-## <a name="first"></a>Metodo unorderedmap:: First
+## <a name="first"></a>  Metodo unorderedmap:: First
 
 Restituisce un iteratore che specifica il primo [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento nella mappa non ordinata.
 
@@ -132,7 +134,7 @@ Iteratore che specifica il primo elemento nella mappa.
 
 Un modo pratico per contenere l'iteratore restituito da First () consiste nell'assegnare il valore restituito a una variabile dichiarata con la **auto** parola chiave di deduzione del tipo. Ad esempio `auto x = myUnorderedMap->First();`.
 
-## <a name="getview"></a>Metodo unorderedmap:: GetView
+## <a name="getview"></a>  Metodo unorderedmap:: GetView
 
 Restituisce una visualizzazione di sola lettura dell'elemento UnorderedMap corrente; vale a dire un [Platform::Collections::UnorderedMapView classe](../cppcx/platform-collections-unorderedmapview-class.md) che implementa il [Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx) interfaccia.
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 Oggetto `UnorderedMapView`.
 
-## <a name="haskey"></a>Metodo unorderedmap:: Haskey
+## <a name="haskey"></a>  Metodo unorderedmap:: Haskey
 
 Determina se l'oggetto UnorderedMap corrente contiene la chiave specificata.
 
@@ -190,9 +192,9 @@ Valore della coppia chiave-valore. Il tipo di *valore* è typename *V*.
 
 ### <a name="return-value"></a>Valore restituito
 
-`true`Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde *chiave* e parte del valore di tale elemento è impostata su *valore*. `false`Se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e *chiave* e *valore* i parametri vengono applicati a una coppia chiave-valore e successivamente aggiunti all'oggetto UnorderedMap corrente.
+`true` Se la chiave di un elemento esistente nell'oggetto Map corrente corrisponde *chiave* e parte del valore di tale elemento è impostata su *valore*. `false` Se nessun elemento esistente nell'oggetto Map corrente corrisponde *chiave* e *chiave* e *valore* i parametri vengono applicati a una coppia chiave-valore e successivamente aggiunti all'oggetto UnorderedMap corrente.
 
-## <a name="lookup"></a>Metodo unorderedmap:: lookup
+## <a name="lookup"></a>  Metodo unorderedmap:: lookup
 
 Recupera il valore di tipo V associato alla chiave specificata di tipo K.
 
@@ -229,9 +231,9 @@ Oggetto [MapChangedEventHandler\<K, V >](http://msdn.microsoft.com/library/windo
 
 ## <a name="net-framework-equivalent"></a>Equivalente .NET Framework
 
-App di Windows Store che usa c# e Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
+App di Windows Runtime che usa c# e Visual Basic il progetto IMap\<K, V > come IDictionary\<K, V >.
 
-## <a name="remove"></a>Metodo unorderedmap:: Remove
+## <a name="remove"></a>  Metodo unorderedmap:: Remove
 
 Elimina la coppia chiave-valore specificata dall'oggetto UnorderedMap corrente.
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 Chiave della coppia chiave-valore. Il tipo di *chiave* è typename *K*.
 
-## <a name="size"></a>Metodo unorderedmap:: Size
+## <a name="size"></a>  Metodo unorderedmap:: Size
 
 Restituisce il numero di [Windows::Foundation::Collections::IKeyValuePair\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementi in UnorderedMap.
 

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _RTC_SetErrorFuncW
+ms.topic: reference
+apiname:
+- _RTC_SetErrorFuncW
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,7 +25,8 @@ apitype: DLLExport
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorFuncW function
@@ -31,16 +34,17 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4cd751c88e5af3fde5c0f5415520a2c634a1958e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f586823ffcab1e8d602375c9d955c78ac64c043f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 Definisce una funzione come gestore per la segnalazione dei controlli degli errori di runtime (RTC).  
