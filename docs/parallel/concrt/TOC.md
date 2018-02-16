@@ -2,7 +2,7 @@
 # [Panoramica del runtime di concorrenza](overview-of-the-concurrency-runtime.md)
 # [Gestione delle eccezioni nel runtime di concorrenza](exception-handling-in-the-concurrency-runtime.md)
 # [Strumenti di diagnostica in parallelo (runtime di concorrenza)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Creazione di operazioni asincrone in C++ per le applicazioni Windows Store](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Creazione di operazioni asincrone in C++ per app UWP](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Confronto tra runtime di concorrenza e altri modelli di concorrenza](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Migrazione da OpenMP al runtime di concorrenza](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Procedura: Convertire un ciclo OpenMP parallel for per l'uso del runtime di concorrenza](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
