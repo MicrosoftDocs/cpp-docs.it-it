@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configurazione di programmi per Windows XP
 
 Poiché Visual Studio supporta più set di strumenti della piattaforma, è possibile assegnare i sistemi operativi e librerie di runtime che non sono supportate dal set di strumenti predefinito. Ad esempio, passando il set di strumenti della piattaforma, è possibile utilizzare C++ 11, C++ 14 e miglioramenti di C++ 17 lingue supportati dal compilatore Visual C++ in Visual Studio per creare App destinate [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. È possibile inoltre utilizzare set di strumenti della piattaforma meno recenti per gestire il codice legacy binario compatibile e comunque sfruttare le funzionalità più recenti dell'IDE di Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Installare il set di strumenti della piattaforma Windows XP
-
 Per ottenere il set di strumenti della piattaforma e ai componenti di destinazione [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] in Visual Studio 2017, eseguire il programma di installazione Visual Studio. Quando si installa inizialmente Visual Studio o quando si sceglie **modifica** per modificare un'installazione esistente, assicurarsi che il **sviluppo di applicazioni Desktop con C++** carico di lavoro è selezionata. Nell'elenco dei componenti facoltativi per il carico di lavoro, scegliere **il supporto di Windows XP per C++**, quindi scegliere **installare** o **modifica**.
 
 ## <a name="windows-xp-targeting-experience"></a>Esperienza destinata a Windows XP
@@ -65,7 +64,7 @@ A causa delle differenze nel supporto di piattaforme e librerie, l'esperienza di
 
 - **Funzionalità del linguaggio C++**
 
-   Solo funzionalità del linguaggio C++ implementata in Visual Studio 2012 sono supportate nelle App che usano il v110\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2013 sono supportate nelle App che usano il v120\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2012 sono supportate nelle App che usano il v140\_xp set strumenti della piattaforma. Visual Studio utilizza il compilatore corrispondente al momento della compilazione utilizzando i set di strumenti della piattaforma meno recenti. Utilizzare il set di strumenti della piattaforma Windows XP più recente per sfruttare i vantaggi delle funzionalità del linguaggio C++ aggiuntive implementate in tale versione del compilatore.
+   Solo funzionalità del linguaggio C++ implementata in Visual Studio 2012 sono supportate nelle App che usano il v110\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2013 sono supportate nelle App che usano il v120\_xp set strumenti della piattaforma. Solo funzionalità del linguaggio C++ implementata in Visual Studio 2015 sono supportate nelle App che usano il v140\_xp set strumenti della piattaforma. Visual Studio utilizza il compilatore corrispondente al momento della compilazione utilizzando i set di strumenti della piattaforma meno recenti. Utilizzare il set di strumenti della piattaforma Windows XP più recente per sfruttare i vantaggi delle funzionalità del linguaggio C++ aggiuntive implementate in tale versione del compilatore.
 
 - **Debug remoto**
 
