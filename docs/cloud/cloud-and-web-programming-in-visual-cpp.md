@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-azure
+ms.technology:
+- cpp-azure
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aaf02f645ae61c75fb4ede3f5bc8e820039d1cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c04939aea508afed60b32ae51d627a1f5d902fd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programmazione Web e cloud in Visual C++
 In C++, esistono diverse opzioni per la connessione al Web e al cloud.  
   
  [Servizi mobili di Windows Azure](http://www.windowsazure.com/develop/mobile/)  
- Fornisce API native che è possibile usare in app di Windows Store e app desktop di Windows per connettersi a Servizi mobili di Microsoft Azure. Benché la maggior parte degli esempi nel sito Web sia in C#, è possibile usare anche C++. Per altre informazioni, vedere [Guida introduttiva: Aggiunta di un servizio mobile con C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).  
+ Fornisce API native che è possibile utilizzare nelle app di piattaforma UWP (Universal Windows) o App desktop di Windows per connettersi a servizi mobili di Azure. Benché la maggior parte degli esempi nel sito Web sia in C#, è possibile usare anche C++. Per altre informazioni, vedere [Guida introduttiva: Aggiunta di un servizio mobile con C++](http://msdn.microsoft.com/library/windows/apps/dn263181.aspx).  
 
  [Libreria Client di archiviazione di Microsoft Azure per C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)  
  La libreria Client di archiviazione di Azure per C++ fornisce un'API completa per l'utilizzo di archiviazione di Azure, inclusi, a titolo esemplificativo, le seguenti operazioni:
@@ -52,11 +55,11 @@ Supporta Windows Desktop (7 +), Windows Server (2012 +), piattaforma universale 
  Classe client HTTP di Windows Runtime modellata sulla classe .NET Framework con lo stesso nome nello spazio dei nomi System.Web. `HttpClient` supporta completamente il caricamento e il download asincrono su HTTP e i filtri pipeline, che permettono l'inserimento di gestori HTTP personalizzati nella pipeline. Windows SDK include filtri di esempio per reti a consumo, autenticazione OAuth e altro ancora. Per le app destinate solo a Universal Windows Platform, è consigliabile utilizzare la `Windows::Web:HttpClient` classe. 
   
 [Interfaccia IXMLHTTPRequest2](http://msdn.microsoft.com/library/windows/apps/hh831151.aspx)  
- Fornisce un'interfaccia COM nativa che è possibile usare in app di Windows Store o app desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per ulteriori informazioni, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).  
+ Fornisce un'interfaccia COM nativa che è possibile utilizzare nelle app di Windows Runtime o App desktop di Windows per connettersi a Internet su HTTP ed eseguire GET, PUT e altri comandi HTTP. Per ulteriori informazioni, vedere [procedura dettagliata: connessione tramite attività e richieste HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).  
   
 [Internet di Windows (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)  
  API Windows che è possibile usare in app desktop di Windows per connettersi a Internet.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visual C++](../visual-cpp-in-visual-studio.md)   
- [Connessione a reti e servizi web (applicazioni Windows Store scritte in c# /Visual Basic/C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/br229573.aspx)
+ [Le reti e servizi web](/windows/uwp/networking/)

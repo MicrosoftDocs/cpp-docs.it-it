@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Avvisi del compilatore disattivati per impostazione predefinita
 
-Il compilatore include avvisi che sono disattivati per impostazione predefinita perché la maggior parte degli sviluppatori non desiderano visualizzarli. È tuttavia possibile abilitare questi avvisi utilizzando una delle opzioni seguenti.
+Il compilatore include avvisi che sono disattivati per impostazione predefinita, in quanto la maggior parte degli sviluppatori non desiderano visualizzarli. In alcuni casi, essi rappresentano una scelta stilistica, sono idiomi comuni nel codice precedente o sfruttare i vantaggi di un'estensione Microsoft del linguaggio. In altri casi, indicano un'area in cui i programmatori spesso rendono presupposti non corretti, che potrebbero causare un comportamento imprevisto o non definito. Alcuni di questi avvisi potrebbero essere molto poco significativi nelle intestazioni di libreria.
 
-**avviso #pragma (impostazione predefinita:** *numero_avviso* **)**  
-L'avviso specificato (*numero_avviso*) è abilitata al livello predefinito. La documentazione dell'avviso contiene il livello predefinito dell'avviso.
+È possibile abilitare questi avvisi utilizzando una delle opzioni seguenti:
 
-**avviso #pragma (** *warning_level* **:** *numero_avviso* **)**  
-L'avviso specificato (*numero_avviso*) è abilitata al livello specificato (*warning_level*).
+- **avviso #pragma (impostazione predefinita:** *numero_avviso* **)**  
+   L'avviso specificato (*numero_avviso*) è abilitata al livello predefinito. La documentazione dell'avviso contiene il livello predefinito dell'avviso.
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ Parete** Abilita tutti gli avvisi che sono disattivate per impostazione predefinita.
+- **avviso #pragma (** *warning_level* **:** *numero_avviso* **)**  
+   L'avviso specificato (*numero_avviso*) è abilitata al livello specificato (*warning_level*).
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ Parete** Abilita tutti gli avvisi che sono disattivate per impostazione predefinita. Se si utilizza questa opzione, è possibile disattivare gli avvisi tramite il [/wd](../build/reference/compiler-option-warning-level.md) opzione.
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   In questo modo avviso  *nnnn*  livello *l*.
 
 I seguenti avvisi sono disabilitati per impostazione predefinita.
 
@@ -131,6 +136,7 @@ I seguenti avvisi sono disabilitati per impostazione predefinita.
 |C5032 (livello 4)|rilevato #pragma warning non corrispondente warning (POP) #pragma|
 |C5035|utilizzo della funzionalità '*funzionalità*' funzione *funzione* verrà compilato come codice guest|
 |C5036 (livello 1)|varargs funzione di conversione di puntatore durante la compilazione con /hybrid:x86arm64 '*type1*'a'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|membro dati '*member1*'initialized dopo il membro dati'*member2*'|
 
 Questi avvisi sono disattivati, a meno che il [/ permissiva-](../build/reference/permissive-standards-conformance.md) è impostata l'opzione del compilatore:
 

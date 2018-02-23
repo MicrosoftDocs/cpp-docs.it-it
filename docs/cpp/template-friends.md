@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-robots: noindex,nofollow
-ms.workload: cplusplus
-ms.openlocfilehash: a02dfeb83096281bf189eda0150b7a559a25f416
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eba3a938389c9110a1b0490dd9c274db453cdcda
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="template-friends"></a>Elementi friend di modelli
 
-Modelli di classe possono avere [amici](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). Una classe o un modello di classe oppure una funzione o un modello di funzione può rappresentare un elemento friend per una classe modello. Gli elementi friend possono anche essere specializzazioni di un modello di classe o di funzione, ma non specializzazioni parziali.  
+Modelli di classe possono avere [amici](friend-cpp.md). Una classe o un modello di classe oppure una funzione o un modello di funzione può rappresentare un elemento friend per una classe modello. Gli elementi friend possono anche essere specializzazioni di un modello di classe o di funzione, ma non specializzazioni parziali.  
   
 **C++ 11**: un parametro di tipo può essere dichiarato come friend utilizzando il modulo `friend T;`.  
   

@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>Runtime di concorrenza
 Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele affidabili, scalabili ed efficienti. Innalza il livello di astrazione in modo da evitare di dover gestire i dettagli dell'infrastruttura correlati alla concorrenza. È anche possibile usarlo per specificare i criteri di pianificazione che soddisfano le richieste di qualità del servizio delle applicazioni. Queste risorse permettono di iniziare a usare il runtime di concorrenza.  
@@ -67,13 +70,13 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
 |[Annullamento nella libreria PPL](cancellation-in-the-ppl.md)|Descrive il ruolo dell'annullamento nella libreria PPL, ad esempio come avviare e rispondere alle richieste di annullamento.|  
 |[Procedura: Usare l'annullamento per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [Procedura: Usare la gestione delle eccezion per interrompere un ciclo Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Illustra due modi per annullare un lavoro con dati in parallelo.|  
   
-## <a name="windows-store-apps"></a>App di Windows Store  
+## <a name="universal-windows-platform-apps"></a>App della piattaforma UWP (Universal Windows Platform)  
   
 |||  
 |-|-|  
-|[Creazione di operazioni asincrone in C++ per le applicazioni Windows Store](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Illustra alcuni punti chiave da ricordare quando si usa il runtime di concorrenza per produrre operazioni asincrone in un'app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Illustra come combinare le attività della libreria PPL con le interfacce `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` per inviare richieste HTTP GET e POST ad un servizio web in un'app [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] .|  
-|[Esempi di app di Windows Store](http://code.msdn.microsoft.com/windowsapps)|Contiene codici di esempio scaricabili e app demo per Windows 8 [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|  
+|[Creazione di operazioni asincrone in C++ per app UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Vengono descritti alcuni punti chiave da tenere presenti quando si usa il Runtime di concorrenza per produrre operazioni asincrone in un'app UWP.|  
+|[Procedura dettagliata: connessione tramite attività e richieste HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Viene illustrato come combinare attività della libreria PPL con le `IXMLHTTPRequest2` e `IXMLHTTPRequest2Callback` interfacce per inviare richieste HTTP GET e POST a un servizio web in un'app UWP.|  
+|[Esempi di app di Windows Runtime](http://code.msdn.microsoft.com/windowsapps)|Contiene i codici di esempio scaricabili e demo App per Windows 8. x. Gli esempi in C++ usano le funzionalità del runtime di concorrenza come attività della libreria PPL per elaborare i dati in background per mantenere l'esperienza utente reattiva.|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programmazione del flusso di dati nella libreria di agenti asincroni  
   
@@ -108,7 +111,7 @@ Il runtime di concorrenza per C++ consente di scrivere applicazioni parallele af
   
 |||  
 |-|-|  
-|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni su come è stato usato il runtime di concorrenza per implementare le operazioni asincrone in Hilo, un'app di [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] scritta in C++ e XAML.|  
+|[Modelli di programmazione asincrona e suggerimenti in Hilo (app di Windows Store scritte in C++ e XAML)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Informazioni sull'uso del Runtime di concorrenza per implementare operazioni asincrone in Hilo, un'app di Windows Runtime in C++ e XAML.|  
 |[Esempi di codice per il Runtime di concorrenza e la libreria in Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Fornisce le applicazioni di esempio e utilità che illustrano il runtime di concorrenza.|  
 |[Programmazione parallela in codice nativo blog](http://go.microsoft.com/fwlink/p/?linkid=183873)|Fornisce altri articoli dettagliati del blog sulla programmazione in parallelo nel runtime di concorrenza.|  
 |[Elaborazione parallela in codice nativo e C++ forum](http://go.microsoft.com/fwlink/p/?linkid=183874)|Consente di partecipare alle discussioni della community sul runtime di concorrenza.|  

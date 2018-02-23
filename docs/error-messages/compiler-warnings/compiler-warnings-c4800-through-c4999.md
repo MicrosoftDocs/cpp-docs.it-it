@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Del compilatore C4800 avvisi tramite C5999
 
@@ -245,6 +243,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso C5035 del compilatore|utilizzo della funzionalità '*funzionalità*' funzione *funzione* verrà compilato come codice guest|
 |Avviso del compilatore (livello 1) C5036|varargs funzione di conversione di puntatore durante la compilazione con /hybrid:x86arm64 '*type1*'a'*type2*'|
 |Avviso del compilatore C5037 (errore)|'*funzione membro*': una definizione out-of-line di un membro di un modello di classe non può avere argomenti predefiniti|
+|[Avviso C5038 del compilatore](c5038.md)|membro dati '*member1*'initialized dopo il membro dati'*member2*'|
 |Avviso C5039 del compilatore|'*funzione*': puntatore o riferimento a potenzialmente generare funzione passato alla funzione extern C sotto - /EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito.|
 |Avviso C5040 del compilatore|le specifiche di eccezione dinamiche sono valide solo in C++ 14 e versioni precedenti; considerando come noexcept (false)|
 |Avviso C5041 del compilatore|'*definizione*': definizione out-of-line per un membro dati statici constexpr non è necessario ed è deprecato in C++ 17|

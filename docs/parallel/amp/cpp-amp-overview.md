@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>Cenni preliminari su C++ AMP
-C++ Accelerated Massive Parallelism (C++ AMP) accelera l'esecuzione del codice C++, sfruttando la possibilità di hardware di dati in parallelo, ad esempio un'unità di elaborazione grafica (GPU) su una scheda grafica discreta. Se si utilizza C++ AMP, è possibile codificare gli algoritmi di dati multidimensionali in modo che può essere accelerata esecuzione con parallelismo in hardware eterogeneo. Il modello di programmazione C++ AMP include le matrici multidimensionali, l'indicizzazione, il trasferimento di memoria, affiancamento e una libreria di funzioni matematiche. È possibile utilizzare le estensioni del linguaggio C++ AMP per controllare la modalità di spostamento dati dalla CPU per la GPU e viceversa, in modo che è possibile migliorare le prestazioni.  
+C++ Accelerated Massive Parallelism (C++ AMP) accelera l'esecuzione del codice C++, sfruttando la possibilità di hardware di dati in parallelo, ad esempio un'unità di elaborazione grafica (GPU) su una scheda grafica discreta. Se si utilizza C++ AMP, è possibile codificare gli algoritmi di dati multidimensionali in modo che può essere accelerata esecuzione con parallelismo in hardware eterogeneo. Il modello di programmazione C++ AMP include le matrici multidimensionali, l'indicizzazione, il trasferimento di memoria, l'affiancamento e una libreria di funzioni matematiche. È possibile utilizzare le estensioni del linguaggio C++ AMP per controllare la modalità di spostamento dati dalla CPU per la GPU e viceversa, in modo che è possibile migliorare le prestazioni.  
   
 ## <a name="system-requirements"></a>Requisiti di sistema  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] o [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], o [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   11.0 livello di funzionalità di DirectX 11 o versione successiva hardware  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Memoria condivisa a matrice e array_view  
  Condiviso è la memoria che è possibile accedere tramite la CPU e i tasti di scelta rapida. L'utilizzo della memoria condivisa, Elimina o riduce notevolmente il sovraccarico di copiare dati tra la CPU e i tasti di scelta rapida. Anche se la memoria è condivisa, non è possibile accedere contemporaneamente sia la CPU e i tasti di scelta rapida e in caso contrario, un comportamento indefinito.  
   
- `array`Per specificare un controllo accurato l'utilizzo della memoria condivisa, se il tasto di scelta rapida associato supporta, è possono utilizzare gli oggetti. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dall'acceleratore [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) proprietà, che restituisce `true` quando la memoria condivisa è supportata. Se è supportata la memoria condivisa, il valore predefinito [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) per la memoria è determinato allocazioni nel tasto di scelta rapida per il `default_cpu_access_type` proprietà. Per impostazione predefinita, `array` e `array_view` oggetti eseguire nello stesso `access_type` del database primario associato `accelerator`.  
+ `array` Per specificare un controllo accurato l'utilizzo della memoria condivisa, se il tasto di scelta rapida associato supporta, è possono utilizzare gli oggetti. Se un tasto di scelta rapida supporta la memoria condivisa è determinato dall'acceleratore [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) proprietà, che restituisce `true` quando la memoria condivisa è supportata. Se è supportata la memoria condivisa, il valore predefinito [enumerazione access_type](reference/concurrency-namespace-enums-amp.md#access_type) per la memoria è determinato allocazioni nel tasto di scelta rapida per il `default_cpu_access_type` proprietà. Per impostazione predefinita, `array` e `array_view` oggetti eseguire nello stesso `access_type` del database primario associato `accelerator`.  
   
  Impostando il [membro dati Array:: cpu_access_type](reference/array-class.md#cpu_access_type) proprietà di un `array` in modo esplicito, è possibile con granularità fine esercizio controllare su memoria condivisa come viene utilizzato, in modo che è possibile ottimizzare l'app per le prestazioni dell'hardware caratteristiche in base agli schemi di accesso di memoria del kernel relativo calcolo. Un `array_view` riflette lo stesso `cpu_access_type` come il `array` che è associato; oppure, se viene costruito il array_view senza un'origine dati, il relativo `access_type` riflette l'ambiente che provoca innanzitutto allocare spazio di archiviazione. Vale a dire, se vi si accede prima dall'host (CPU), quindi si comporta come se si creati su un'origine dati di CPU e condivisioni di `access_type` del `accelerator_view` associati dall'acquisizione; tuttavia, se è accessibile a un `accelerator_view`, quindi si comporta come se fosse creato tramite un `array` creato su tale `accelerator_view` e condivide il `array`del `access_type`.  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [Breve libreria Vector](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f): definisce un set di tipi short vector di lunghezza 2, 3 e 4 basati su `int`, `uint`, `float`, `double`, [norm](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>Applicazioni [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]  
- Ad esempio altre librerie di C++, è possibile utilizzare C++ AMP nel [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] app. Questi articoli viene descritto come includere codice AMP C++ nelle App che viene creato utilizzando C++, c#, Visual Basic o JavaScript:  
+## <a name="universal-windows-platform-uwp-apps"></a>App di Windows universale Platform (UWP)  
+ Ad esempio altre librerie di C++, è possibile utilizzare C++ AMP nelle App UWP. Questi articoli viene descritto come includere codice AMP C++ nelle App che viene creato utilizzando C++, c#, Visual Basic o JavaScript:  
   
-- [Uso di C++ AMP nelle app di Windows Store](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [Uso di C++ AMP in app UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [Procedura dettagliata: Creazione di un componente Windows Runtime di base in C++ e chiamata da JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

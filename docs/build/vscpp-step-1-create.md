@@ -1,22 +1,25 @@
 ---
 title: Creare un progetto di applicazione console C++ | Documenti Microsoft
-description: Installare il supporto di Visual Studio per Visual C++
+description: Creare un'applicazione console Hello World in Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e44d9c097461b118cae72b47dff2ab15757aed64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76975054aad3173fef99a2e0f6c5ca1c642dea86
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="create-a-c-console-app-project"></a>Creare un progetto di applicazione console C++
 

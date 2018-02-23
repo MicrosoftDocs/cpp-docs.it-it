@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>CException (classe)
 Classe di base per tutte le eccezioni nella libreria Microsoft Foundation Class.  
@@ -64,7 +67,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|Classe di base per le eccezioni MFC critiche con risorse|  
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Condizione di eccezione di argomento non valido|  
 |[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Eccezione di memoria insufficiente|  
-|[Eccezione CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Richiesta per un'operazione non supportata|  
+|[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Richiesta per un'operazione non supportata|  
 |[Eccezione CArchiveException](../../mfc/reference/carchiveexception-class.md)|Eccezione specifiche dell'archivio|  
 |[CFileException](../../mfc/reference/cfileexception-class.md)|Eccezione di file specifico|  
 |[CResourceException](../../mfc/reference/cresourceexception-class.md)|Risorse di Windows non trovata o non creabile|  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception">CException::CException</a>  
  Questa funzione membro costruisce una `CException` oggetto.  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>Note  
  In genere non è necessario chiamare questo costruttore direttamente. Una funzione che genera un'eccezione deve creare un'istanza di un `CException`-classe derivata e chiamare il relativo costruttore, oppure deve utilizzare uno dei MFC generare, ad esempio funzioni, [AfxThrowFileException](exception-processing.md#afxthrowfileexception), per generare un tipo predefinito. Questa documentazione viene fornita solo per completezza.  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>  CException::Delete  
  Questa funzione controlla se il **CException** è stato creato l'oggetto sull'heap, e in caso affermativo, chiama il **eliminare** operatore per l'oggetto.  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>  CException::ReportError  
  Chiamare questa funzione membro per il testo di errore di report in una finestra di messaggio all'utente.  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>Parametri  
  `nType`  
- Specifica lo stile della finestra di messaggio. Applicare qualsiasi combinazione del [stili message-box](message-box-styles.md) nella casella. Se non si specifica questo parametro, il valore predefinito è **MB_OK**.  
+ Specifica lo stile della finestra di messaggio. Applicare qualsiasi combinazione del [stili message-box](styles-used-by-mfc.md#message-box-styles) nella casella. Se non si specifica questo parametro, il valore predefinito è **MB_OK**.  
   
  *nMessageID*  
  Specifica l'ID di risorsa (voce di stringa) di un messaggio da visualizzare se l'oggetto eccezione non dispone di un messaggio di errore. Viene visualizzato se è 0, il messaggio "Nessun messaggio di errore è disponibile".  

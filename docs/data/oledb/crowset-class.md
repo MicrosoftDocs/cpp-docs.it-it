@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL::CRowset
 - ATL::CRowset<TAccessor>
 - ATL.CRowset
-dev_langs: C++
-helpviewer_keywords: CRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: ef4ec2851365d9fbabab6819a0883b6a9b660f28
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowset-class"></a>Classe CRowset
 Incapsula un oggetto set di righe OLE DB e diverse relative interfacce e fornisce metodi di modifica per i dati di set di righe.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CRowset  
 ```  
@@ -62,7 +65,7 @@ class CRowset
 |[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|Restituisce lo stato di tutte le righe.|  
 |[Inserisci](../../data/oledb/crowset-insert.md)|Crea e inserisce una nuova riga utilizzando [IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx).|  
 |[IsSameRow](../../data/oledb/crowset-issamerow.md)|Confronta la riga specificata con la riga corrente.|  
-|[Metodo MoveFirst](../../data/oledb/crowset-movefirst.md)|Riposiziona il percorso di recupero successivo per la posizione iniziale.|  
+|[MoveFirst](../../data/oledb/crowset-movefirst.md)|Riposiziona il percorso di recupero successivo per la posizione iniziale.|  
 |[MoveLast](../../data/oledb/crowset-movelast.md)|Passa all'ultimo record.|  
 |[Metodo MoveNext](../../data/oledb/crowset-movenext.md)|Recupera i dati dalla riga successiva sequenza o un numero specificato di posizioni successive alla riga successiva.|  
 |[MovePrev](../../data/oledb/crowset-moveprev.md)|Passa al record precedente.|  
@@ -70,7 +73,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|Recupera le righe a partire da una posizione decimale nel set di righe.|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|Chiamate [IRowset:: ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) per rilasciare l'handle di riga corrente.|  
 |[SetData](../../data/oledb/crowset-setdata.md)|Imposta i valori dei dati in una o più colonne di una riga utilizzando [IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx).|  
-|[Annulla](../../data/oledb/crowset-undo.md)|Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|  
+|[Undo](../../data/oledb/crowset-undo.md)|Annullare le modifiche apportate a una riga dall'ultimo recupero o [aggiornamento](../../data/oledb/crowset-update.md).|  
 |[Aggiornamento](../../data/oledb/crowset-update.md)|Consente di trasmettere le modifiche apportate alla riga corrente dopo l'ultimo recupero o l'aggiornamento in sospeso.|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|Consente di trasmettere le modifiche apportate a tutte le righe l'ultima operazione di recupero o l'aggiornamento in sospeso.|  
   

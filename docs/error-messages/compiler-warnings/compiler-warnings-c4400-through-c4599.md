@@ -1,7 +1,8 @@
 ---
 title: C4400 avvisi del compilatore tramite C4599 | Documenti Microsoft
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 avvisi del compilatore tramite C4599
 
@@ -165,7 +184,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*funzione*': funzione firma contiene il tipo '*tipo*'; Gli oggetti di C++ sono non è sicuro passare tra codice pure e misto o nativo.|
 |Avviso C4413 del compilatore|'classname::member': membro di riferimento viene inizializzato con una password temporanea che non viene mantenuto dopo la chiusura del costruttore|
 |[Avviso del compilatore (livello 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*funzione*': salto short a funzione convertito in near|
-|Avviso del compilatore (livello 1) C4415|duplicato declspec (code_seg ('*nome*'))|
+|Avviso del compilatore (livello 1) C4415|duplicate __declspec(code_seg('*name*'))|
 |Avviso del compilatore (livello 1) C4416|__declspec(code_seg(...)) contiene una stringa vuota: ignorato|
 |Avviso del compilatore (livello 1) C4417|creazione di un'istanza di modello espliciti non può avere __declspec(code_seg(...)): ignorato|
 |Avviso del compilatore (livello 1) C4418|__declspec(code_seg(...)) ignorato per un'enumerazione|
@@ -214,7 +233,13 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|direttive pragma di controllo a virgola mobile ignorati in /clr|
 |[Avviso del compilatore (livello 4) C4471](compiler-warning-level-4-c4471.md)|'*enumerazione*': una dichiarazione con prototipo di un'enumerazione senza ambita deve avere un tipo sottostante (presupposto int)|
 |Avviso del compilatore (livello 1) C4472|'*identificatore*' è un'enumerazione nativa: aggiungere un identificatore di accesso (privato/pubblico) per dichiarare un ' WinRT &#124; gestito ' enum|
-|Avviso C4480 del compilatore|utilizzata estensione non standard: specifica del tipo sottostante di enum '*enumerazione*'|
+|[Avviso del compilatore (livello 1) C4473](c4473.md)|'*funzione*': argomenti insufficienti passati per la stringa di formato|
+|Avviso del compilatore (livello 3) C4474|'*funzione*': troppi argomenti passati per la stringa di formato|
+|Avviso del compilatore (livello 3) C4475|'*funzione*': modificatore di lunghezza '*modificatore*'non può essere utilizzato con caratteri di campo di tipo'*carattere*' nell'identificatore di formato|
+|Avviso del compilatore (livello 3) C4476|'*funzione*': carattere del campo del tipo sconosciuto '*carattere*' nell'identificatore di formato|
+|[Avviso del compilatore (livello 1) C4477](c4477.md)|'*funzione*': stringa di formato '*stringa*'richiede un argomento di tipo'*tipo*', ma l'argomento variadic *numero* è di tipo '*tipo*'|
+|Avviso del compilatore (livello 1) C4478|'*funzione*': non è possibile combinare i segnaposto posizionali e non posizionali nella stessa stringa di formato|
+|Avviso C4480 (errore) del compilatore|utilizzata estensione non standard: specifica del tipo sottostante di enum '*enumerazione*'|
 |[Avviso del compilatore (livello 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|utilizzata estensione non standard: identificatore di override '*parola chiave*'|
 |C4482 avviso del compilatore|utilizzata estensione non standard: enum '*enumerazione*' utilizzato nel nome qualificato|
 |Avviso del compilatore (livello 1, errore) C4483|Errore di sintassi: prevista la parola chiave C++|
@@ -229,6 +254,10 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1, errore) C4492|'*function1*': il metodo di classe di riferimento di base di corrispondenze '*function2*', ma non è contrassegnato 'override'|
 |Avviso del compilatore (livello 3, errore) C4493|Espressione DELETE non ha alcun effetto poiché il distruttore di '*tipo*' non dispone di accessibilità 'public'|
 |Avviso del compilatore (livello 1) C4494|'*funzione*': ignorato allocator la funzione di tipo restituito non è un puntatore o riferimento|
+|Avviso C4495 del compilatore|utilizzata estensione non standard super': sostituire con il nome di classe di base esplicito|
+|Avviso C4496 del compilatore|utilizzata estensione non standard 'for each': sostituire con l'istruzione ranged-for|
+|Avviso C4497 del compilatore|utilizzata estensione non standard 'sealed': sostituirla con 'final'|
+|Avviso C4498 del compilatore|utilizzata estensione non standard: '*estensione*'|
 |Avviso del compilatore (livello 4) C4499|"*funzione*': una specializzazione esplicita non può avere una classe di archiviazione (ignorata)"|
 |[Avviso del compilatore (livello 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*specifiche di collegamento*' richiede l'uso della parola chiave 'extern' e deve precedere tutti gli altri identificatori|
 |[Avviso del compilatore (livello 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*identificatore*': lunghezza nome decorato superata, nome troncato|

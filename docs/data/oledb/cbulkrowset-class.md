@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - ATL::CBulkRowset<TAccessor>
 - CBulkRowset
 - ATL.CBulkRowset<TAccessor>
-dev_langs: C++
-helpviewer_keywords: CBulkRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CBulkRowset class
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26ed8c0a3f58ae046ad3e4766b7e009023759be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 990178bf1a98ccd522755ce82eae229558fb7747
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cbulkrowset-class"></a>Classe CBulkRowset
 Recupera e modifica di righe su cui lavorare sui dati in blocco tramite il recupero di più handle di riga con una singola chiamata.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 template <class TAccessor>  
 class CBulkRowset : public CRowset<TAccessor>  
 ```  
@@ -51,7 +54,7 @@ class CBulkRowset : public CRowset<TAccessor>
 |-|-|  
 |[AddRefRows](../../data/oledb/cbulkrowset-addrefrows.md)|Incrementa il conteggio dei riferimenti.|  
 |[CBulkRowset](../../data/oledb/cbulkrowset-cbulkrowset.md)|Costruttore.|  
-|[Metodo MoveFirst](../../data/oledb/cbulkrowset-movefirst.md)|Recupera la prima riga di dati, eseguire un recupero di massa nuovo se necessario.|  
+|[MoveFirst](../../data/oledb/cbulkrowset-movefirst.md)|Recupera la prima riga di dati, eseguire un recupero di massa nuovo se necessario.|  
 |[MoveLast](../../data/oledb/cbulkrowset-movelast.md)|Passa all'ultima riga.|  
 |[Metodo MoveNext](../../data/oledb/cbulkrowset-movenext.md)|Recupera la riga successiva di dati.|  
 |[MovePrev](../../data/oledb/cbulkrowset-moveprev.md)|Passa alla riga precedente.|  
