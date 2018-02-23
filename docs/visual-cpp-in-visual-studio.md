@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ in Visual Studio
 
@@ -75,7 +75,7 @@ Informazioni su come ottenere assistenza, segnalare bug e fornire suggerimenti p
 ## <a name="writing-applications-in-c"></a>Scrittura di applicazioni in C++
 
 [App di Windows universale](windows/universal-windows-apps-cpp.md)  
-Guide e contenuto di riferimento di Windows Dev Center. Per informazioni sullo sviluppo di app Windows Store, vedere [Sviluppare app di Windows Store con Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=248364) e [Roadmap per app di Windows Store scritte in C++](http://go.microsoft.com/fwlink/p/?LinkId=244654).
+Guide e contenuto di riferimento di Windows Dev Center. Per informazioni sullo sviluppo di app UWP, vedere [Introduzione alla piattaforma UWP (Universal Windows Platform)](/windows/uwp/get-started/universal-application-platform-guide) e [Creare la prima app UWP in C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Applicazioni desktop (C++)](windows/desktop-applications-visual-cpp.md)  
 Informazioni sulla creazione di applicazioni desktop con ciclo di messaggi e callback.
@@ -131,7 +131,7 @@ Algoritmi paralleli e asincroni eseguiti sulla CPU.
 Algoritmi paralleli in modalità massiccia eseguiti sulla GPU.
 
 [Libreria di modelli di Windows Runtime (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] .
+App e componenti UWP (Universal Windows Platform).
 
 [Programmazione .NET con C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 Programmazione per Common Language Runtime (CLR).

@@ -1,14 +1,17 @@
 ---
 title: Piattaforme Windows (CRT) | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility [C++], C run-time libraries
@@ -17,22 +20,25 @@ helpviewer_keywords:
 - operating systems [C++]
 - Unicode [C++], Win32 platforms
 ms.assetid: 0aacaf45-6dc4-4908-bd52-57abac7b39f6
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f43ac8951eae91925bddb752423d5719086ab2ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1a5e7898cad7120333bd0549a44931d9e23640c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-platforms-crt"></a>Piattaforme Windows (CRT)
-Le librerie di runtime C per [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] supportano [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)], Windows Vista, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) per x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) per x64 e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) sia per x86 che per x64. Tutti questi sistemi operativi supportano l'API (Application Programming Interface) Windows e forniscono supporto Unicode. Qualsiasi applicazione Win32 poi, può usare un set MBCS (Multibyte Character Set).  
-  
+
+Le librerie run-time di C per Visual Studio supportano le versioni correnti di Windows e Windows Server, [!INCLUDE[win8](../build/reference/includes/win8_md.md)], [!INCLUDE[winserver8](../build/reference/includes/winserver8_md.md)], [!INCLUDE[win7](../build/includes/win7_md.md)], [!INCLUDE[winsvr08](../build/reference/includes/winsvr08_md.md)] e Windows Vista e facoltativamente supportano [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 3 (SP3) per x86, [!INCLUDE[winxp](../build/includes/winxp_md.md)] Service Pack 2 (SP2) per x64 e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] Service Pack 2 (SP2) per x86 e x64. Tutti questi sistemi operativi supportano l'API Windows (Win32) e offrono il supporto Unicode. Qualsiasi applicazione Win32 poi, può usare un set MBCS (Multibyte Character Set).
+
 > [!NOTE]
->  [!INCLUDE[vs_dev11_long](../build/includes/vs_dev11_long_md.md)] non supporta lo sviluppo [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. È necessario installare [!INCLUDE[vs2012_upd01](../c-runtime-library/includes/vs2012_upd01_md.md)] per aggiungere il supporto per [!INCLUDE[winxp](../build/includes/winxp_md.md)] e [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)].  
-  
-## <a name="see-also"></a>Vedere anche  
- [Compatibilità](../c-runtime-library/compatibility.md)
+> L'installazione predefinita del carico di lavoro **Sviluppo di applicazioni desktop con C++** in Visual Studio 2017 non include il supporto per lo sviluppo di [!INCLUDE[winxp](../build/includes/winxp_md.md)] e di [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]. È necessario installare il componente facoltativo **Supporto Windows XP per C++** per abilitare un set di strumenti della piattaforma Windows XP.
+
+## <a name="see-also"></a>Vedere anche
+
+[Compatibilità](../c-runtime-library/compatibility.md)  

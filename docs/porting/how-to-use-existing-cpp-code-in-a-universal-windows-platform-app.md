@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedura: utilizzare codice C++ esistente in un'app della piattaforma UWP (Universal Windows Platform)
 Il modo più semplice per eseguire il programma desktop nell'ambiente UWP consiste probabilmente nell'usare le tecnologie Desktop Bridge, tra cui Desktop App Converter, che consente di comprimere l'applicazione esistente come app UWP senza dover modificare il codice. Per altre informazioni, vedere [Portare un'app desktop sulla piattaforma UWP (Universal Windows Platform) con Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root).
@@ -27,7 +30,7 @@ Questo argomento illustra anche come convertire le librerie C++ (librerie static
   
  Le app UWP vengono eseguite in un ambiente protetto e, di conseguenza, molte chiamate API Win32, COM e CRT che potrebbero compromettere la sicurezza della piattaforma non sono consentite. Il compilatore è in grado di rilevare tali chiamate e generare un errore se viene utilizzata l'opzione /ZW. È possibile utilizzare il Kit di certificazione app nell'applicazione per rilevare il codice che chiama le API non consentite. Vedere [Uso del Kit di certificazione app Windows](https://msdn.microsoft.com/library/windows/apps/hh694081.aspx).  
   
- Se il codice sorgente è disponibile per la libreria, è possibile eliminare le chiamate API non consentite. Per informazioni dettagliate, incluso un elenco delle API consentite o vietate, vedere [API Win32 e COM per app di Windows Runtime (sistema)](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) e [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](https://msdn.microsoft.com/library/windows/apps/jj606124.aspx). Sono disponibili alcune alternative in [Alternative alle API Windows nelle app di Windows Store](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx).  
+ Se il codice sorgente è disponibile per la libreria, è possibile eliminare le chiamate API non consentite. Per informazioni dettagliate, incluso un elenco delle API consentite o vietate, vedere [API Win32 e COM per app di Windows Runtime (sistema)](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) e [Funzioni CRT non supportate nelle app della piattaforma UWP (Universal Windows Platform)](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md). Alcune alternative sono disponibili in [Alternatives to Windows APIs in UWP apps](/uwp/win32-and-com/alternatives-to-windows-apis-uwp) (Alternative alle API di Windows nelle app UWP).  
   
  Se si tenta di aggiungere un riferimento da un progetto Universal Windows a una libreria desktop classica, viene visualizzato un messaggio di errore che indica che la libreria non è compatibile. Nel caso di una libreria statica, è possibile collegare la libreria semplicemente aggiungendo la libreria (file .lib) all'input del linker, proprio come si farebbe con un'applicazione Win32. Per le librerie in cui è disponibile solo un binario, questa è l'unica opzione. Una libreria statica è collegata al file eseguibile dell'app, ma una DLL Win32 utilizzata in un'app UWP deve essere inserita nel pacchetto dell'app includendola nel progetto e contrassegnandola come Contenuto. Per caricare una DLL Win32 in un'app UWP, è anche necessario chiamare la funzione [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx) anziché LoadLibrary o LoadLibraryEx.  
   
@@ -39,9 +42,9 @@ Questo argomento illustra anche come convertire le librerie C++ (librerie static
   
  Se si vuole convertire una libreria COM esistente in piattaforma UWP (Universal Windows Platform), è necessario convertirla in un componente Windows Runtime usando la [Libreria modelli C++ per Windows Runtime](../windows/windows-runtime-cpp-template-library-wrl.md). WRL non supporta tutte le funzionalità di ATL e OLE, pertanto la fattibilità di una porta dipende da quanto il codice COM dipende dalle funzionalità COM, ATL e OLE richieste dal componente.  
   
- Si tratta di vari metodi in cui è possibile utilizzare il codice C++ esistente in progetti di Universal Windows Platform. Alcuni metodi non richiedono che il codice venga ricompilato con le estensioni del componente (C++/CX) abilitate (ovvero, l'opzione /ZW), mentre altri sì, pertanto se si desidera conservare il codice in C++ standard o preservare un ambiente di compilazione Win32 classico per una parte del codice, è possibile farlo, con opzioni di architettura appropriate. Ad esempio, tutto il codice contenente interfaccia utente e tipi di Universal Windows Platform che devono essere esposti a chiamanti C#, Visual Basic e JavaScript dovrebbe trovarsi nei progetti dell'app Windows e del componente Windows Runtime. Il codice che deve essere utilizzato solo nel codice C++ (tra cui C++/CX), può trovarsi in un progetto che compila con l'opzione /WX o in un progetto C++ standard. È possibile utilizzare codice solo binario collegandolo sotto forma di libreria statica o all'interno di un pacchetto con app come contenuto e caricato in una DLL solo se non utilizza API proibite.  
+ Si tratta di vari metodi in cui è possibile usare il codice C++ esistente in progetti UWP. Alcuni metodi non richiedono che il codice venga ricompilato con le estensioni del componente (C++/CX) abilitate (ovvero, l'opzione /ZW), mentre altri sì, pertanto se si desidera conservare il codice in C++ standard o preservare un ambiente di compilazione Win32 classico per una parte del codice, è possibile farlo, con opzioni di architettura appropriate. Ad esempio, tutto il codice contenente interfaccia utente e tipi di UWP che devono essere esposti a chiamanti C#, Visual Basic e JavaScript dovrebbe trovarsi nei progetti dell'app Windows e del componente Windows Runtime. Il codice che deve essere utilizzato solo nel codice C++ (tra cui C++/CX), può trovarsi in un progetto che compila con l'opzione /WX o in un progetto C++ standard. È possibile utilizzare codice solo binario collegandolo sotto forma di libreria statica o all'interno di un pacchetto con app come contenuto e caricato in una DLL solo se non utilizza API proibite.  
   
- Indipendentemente da quale di questi scenari di sviluppo viene scelto, è necessario considerare una serie di definizioni di macro che è possibile utilizzare nel codice per poter compilare il codice in modo condizionale, sia nella versione desktop classica Win32 che in Universal Windows Platform.  
+ Indipendentemente da quale di questi scenari di sviluppo viene scelto, è necessario considerare una serie di definizioni di macro che è possibile usare nel codice per poter compilare il codice in modo condizionale, sia nella versione desktop classica Win32 che in UWP.  
   
 ```cpp  
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)  
@@ -50,17 +53,17 @@ Questo argomento illustra anche come convertire le librerie C++ (librerie static
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
 ```  
   
- Queste istruzioni rispettivamente si applicano alle app di Windows Store, Windows Phone Store, a entrambe o a nessuna delle due (solo desktop Win32 classico). Queste macro sono disponibili solo in Windows SDK 8.1 e versioni successive, pertanto se il codice deve essere compilato con le versioni precedenti di Windows SDK o per altre piattaforme diverse da Windows, è necessario prendere in considerazione il fatto che nessuna di queste venga definita.  
+ Queste istruzioni rispettivamente si applicano alle app UWP, Windows Phone Store, a entrambe o a nessuna delle due (solo la versione desktop classica Win32). Queste macro sono disponibili solo in Windows SDK 8.1 e versioni successive, quindi se il codice deve essere compilato con le versioni precedenti di Windows SDK o per altre piattaforme diverse da Windows, è necessario prendere in considerazione il fatto che nessuna di queste venga definita.  
   
  Questo argomento contiene le seguenti procedure.  
   
-1.  [Uso di una DLL Win32 DLL in un'app UWP](#BK_Win32DLL)  
+1.  [Uso di una DLL Win32 in un'app UWP](#BK_Win32DLL)  
   
 2.  [Uso di una libreria statica C++ nativa in un'app UWP](#BK_StaticLib)  
   
 3.  [Conversione di una libreria C++ in un componente Windows Runtime](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL"></a>Uso di una DLL Win32 in un'app UWP  
+##  <a name="BK_Win32DLL"></a> Uso di una DLL Win32 in un'app UWP  
  Per una migliore protezione e affidabilità, le app Universal Windows vengono eseguite in un ambiente di runtime con restrizioni. Per questo motivo, non è possibile semplicemente utilizzare qualsiasi DLL nativa in un'applicazione desktop Windows classica. Se si dispone di codice sorgente per una DLL, è possibile trasferire il codice in modo da poterlo utilizzare in UWP. È innanzitutto necessario modificare alcune impostazioni di progetto e i metadati del file di progetto per identificare il progetto come progetto UWP. È necessario compilare il codice della libreria utilizzando l'opzione /ZW, che abilita C++/CX. Alcune chiamate API non sono consentite nelle app UWP a causa di più severi controlli associati a tale ambiente. Vedere [Win32 e COM per app di Windows Runtime e app UWP (Universal Windows Platform)](https://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
  La procedura seguente si applica al caso in cui si dispone di una DLL nativa che espone le funzioni tramite dllexport.  

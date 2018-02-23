@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++: novità dalla versione 2003 alla 2015
 
@@ -1545,16 +1545,16 @@ Questo supporto migliorato per gli standard ISO C/C++ può richiedere modifiche 
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>Miglioramenti dell'ottimizzazione PGO
 
 - Miglioramenti delle prestazioni da una riduzione nel working set di applicazioni ottimizzate tramite PGO.
-- Nuova ottimizzazione PGO per lo sviluppo di applicazioni Windows Store.
+- Nuova ottimizzazione PGO per lo sviluppo di app di Windows Runtime.
 
-### <a name="windows-store-app-development-support"></a>Supporto per lo sviluppo di app di Windows Store
+### <a name="windows-runtime-app-development-support"></a>Supporto per lo sviluppo di app di Windows Runtime
 
-- **Supporto per tipi boxed in struct di valore.** Ora è possibile definire i tipi di valore usando campi che è possibile impostare come null, ad esempio IBox<int>^, anziché int. Ciò significa che i campi possono avere un valore oppure essere uguali a nullptr.
+- **Supporto per tipi boxed in struct di valore.** Ora è possibile definire i tipi di valore usando campi che è possibile impostare come Null, ad esempio IBox\<int>^, anziché int. Ciò significa che i campi possono avere un valore oppure essere uguali a nullptr.
 - **Informazioni dettagliate sulle eccezioni.** C++/CX supporta il nuovo modello di errore Windows che consente di acquisire e propagare informazioni dettagliate sulle eccezioni tramite l'interfaccia applicativa binaria (ABI); sono inclusi gli stack di chiamate e le stringhe di messaggio personalizzate.
 - **Object::ToString() ora è virtuale.** È ora possibile eseguire l'override di ToString in tipi di riferimento di Windows Runtime definiti dall'utente.
 - **Supporto per le API deprecate.** Le API pubbliche di Windows Runtime possono ora essere contrassegnate come deprecate ed essere dotate di un messaggio personalizzato che viene visualizzato come avviso di compilazione. Possono inoltre fornire linee guida sulla migrazione.
 - **Miglioramenti del debugger.** Supporto per il debug di interoperabilità JavaScript/nativo, la diagnostica delle eccezioni di Windows Runtime e il debug del codice asincrono (sia in Windows Runtime che nella libreria PPL).
-  - Nota: oltre alle funzionalità e ai miglioramenti specifici di C++ descritti in questa sezione, altri miglioramenti in Visual Studio consentono di scrivere meglio le app di Windows Store.
+  - Nota: oltre alle funzionalità e ai miglioramenti specifici di C++ descritti in questa sezione, altri miglioramenti in Visual Studio consentono di scrivere meglio le app di Windows Runtime.
 
 ### <a name="diagnostics-enhancements"></a>Miglioramenti della diagnostica
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Supporto per lo sviluppo di app di Windows Store
+### <a name="windows-runtime-app-development-support"></a>Supporto per lo sviluppo di app di Windows Runtime
 
-- **Modello di interfaccia utente nativo basato su XAML**. Per le app Windows Store, è possibile usare il nuovo modello di interfaccia utente nativo basato su XAML.
-- **Estensioni di componenti Visual C++**. Queste estensioni semplificano l'uso degli oggetti Windows Runtime, che sono una parte essenziale delle app di Windows Store. Per altre informazioni, vedere la guida di orientamento per le app di Windows Store che usano C++ e i riferimenti al linguaggio Visual C++ (C++/CX)
-- **Giochi DirectX**. È possibile sviluppare giochi coinvolgenti usando il nuovo supporto di DirectX per le app di Windows Store.
-- **Interoperabilità XAML/DirectX**. Le app di Windows Store che usano sia XAML sia DirectX ora interagiscono in modo efficiente.
+- **Modello di interfaccia utente nativo basato su XAML**. Per le app di Windows Runtime, è possibile usare il nuovo modello di interfaccia utente nativo basato su XAML.
+- **Estensioni di componenti Visual C++**. Queste estensioni semplificano l'uso degli oggetti Windows Runtime, che sono una parte essenziale delle app di Windows Runtime. Per altre informazioni, vedere [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Roadmap per le app di Windows Runtime che usano C++) e [Riferimenti al linguaggio Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Giochi DirectX**. È possibile sviluppare giochi coinvolgenti usando il nuovo supporto di DirectX per le app di Windows Runtime.
+- **Interoperabilità XAML/DirectX**. Le app di Windows Runtime che usano sia XAML sia DirectX ora interagiscono in modo efficiente.
 - **Sviluppo DLL del componente Windows Runtime**. Lo sviluppo della DLL del componente consente di estendere l'ambiente di Windows Runtime.
 
 ### <a name="compiler-and-linker"></a>Compilatore e linker
@@ -1941,7 +1941,7 @@ Il compilatore include modifiche di rilievo in questa versione.
 - Compilatori nativi e incrociati a 64 bit.
 - Aggiunta l'opzione del compilatore /analyze (analisi codice enterprise).
 - Aggiunta l'opzione del compilatore /bigobj.
-- Aggiunte le opzioni /clr:pure, /clr:safe e /clr:oldSyntax.
+- Aggiunte le opzioni /clr:pure, /clr:safe e /clr:oldSyntax. (Deprecate in seguito in Visual Studio 2015).
 - Opzioni del compilatore deprecate: molte opzioni del compilatore sono state deprecate in questa versione. Per altre informazioni, vedere Opzioni obsolete del compilatore.
 - Ridotto il doppio thunking nel codice /clr. Per altre informazioni, vedere Doppio thunk (C++).
 - Non è più possibile usare /EH (modello di gestione delle eccezioni) o /EHs per rilevare un'eccezione generata con un elemento diverso da un'istruzione throw. Usare /EHa.
