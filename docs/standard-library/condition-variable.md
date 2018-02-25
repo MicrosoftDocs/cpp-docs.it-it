@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <condition_variable>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <condition_variable>
+dev_langs:
+- C++
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: baabac0a4461c659a3e70c2c26bcb971f0e1c738
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bd3d3bd6ef4976f5f9c55d1905b02314a88438d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 Definisce le classi [condition_variable](../standard-library/condition-variable-class.md) e [condition_variable_any](../standard-library/condition-variable-any-class.md) che vengono usate per creare oggetti che attendono che una condizione diventi true.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::current_exception
 - exception/std::get_terminate
@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: ea24d26ed840d1c7222abbbf9fce2bc18c2a7a5f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-functions"></a>Funzioni &lt;exception&gt;
 ||||  

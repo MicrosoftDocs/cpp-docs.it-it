@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bad_target
 - CONCRT/concurrency::bad_target
 - CONCRT/concurrency::bad_target::bad_target
-dev_langs: C++
-helpviewer_keywords: bad_target class
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37cba64767d492559a52e9bf84c132b5f5ba1b50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 178d8519516790be3cdb2d9178cc8ffdf144ea23
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="badtarget-class"></a>Classe bad_target
 Questa classe descrive un'eccezione generata quando un blocco della messaggistica riceve un puntatore a una destinazione non valida per l'operazione eseguita.  
@@ -55,7 +59,7 @@ class bad_target : public std::exception;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="ctor"></a>bad_target 
+##  <a name="ctor"></a> bad_target 
 
  Costruisce un oggetto `bad_target`.  
   

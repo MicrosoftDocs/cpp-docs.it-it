@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -55,7 +56,8 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -105,16 +107,17 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ca9848ba0ad3f5be1584e299a8a2d2b69f472425
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bd49b0ce1ca80c1a006975df085c332f0ef99ad2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="list-class"></a>Classe list
 La classe list della libreria standard C++ è una classe modello di contenitori sequenziali che gestiscono gli elementi in una disposizione lineare e consentono inserimenti ed eliminazioni efficienti in qualsiasi posizione all'interno della sequenza. La sequenza viene archiviata come elenco collegato bidirezionale di elementi, ognuno dei quali contiene un membro dello stesso tipo *Type*.  

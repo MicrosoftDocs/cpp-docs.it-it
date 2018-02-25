@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 49f86150afe9116909a137e97a0e04d5a7d54bac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="testing-the-read-only-provider"></a>Test di un provider in sola lettura
 Per testare un provider, è necessario un consumer. È utile se il consumer può corrispondere a con il provider. I modelli consumer OLE DB sono wrapper di OLE DB e corrispondano con gli oggetti COM di provider. Poiché l'origine viene fornito con i modelli consumer, è facile eseguire il debug di un provider con essi. I modelli consumer sono inoltre un modo molto ridotti e più rapido per sviluppare applicazioni consumer.  

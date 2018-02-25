@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -16,7 +17,8 @@ f1_keywords:
 - iterator/std::move_iterator::pointer
 - iterator/std::move_iterator::reference
 - iterator/std::move_iterator::base
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::move_iterator [C++]
 - std::move_iterator [C++], iterator_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 54691a7d25e9229143e17476d5e0e09c6732e69e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 55f3062c44b02741093402b4e40cad6c9036ccf3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moveiterator-class"></a>Classe move_iterator
 Il modello di classe `move_iterator` è un wrapper di un iteratore. move_iterator offre lo stesso comportamento dell'iteratore di cui esegue il wrapping (archivia), con la differenza che trasforma l'operatore di dereferenziazione dell'iteratore archiviato in un riferimento rvalue, trasformando una copia in uno spostamento. Per altre informazioni sui riferimenti rvalue, vedere [Dichiaratore di riferimento rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  

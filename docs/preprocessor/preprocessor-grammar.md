@@ -4,59 +4,62 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor-grammar"></a>Grammatica del preprocessore
 **#define***identificatore* *token-string*consenso esplicito    
   
- *#***definire***identificatore*[**(** *identificatore*opt**,** *...*  **,** *identificatore*opt **)**] *token-string*consenso esplicito    
+ *#* **definire***identificatore*[**(** *identificatore*opt**,** *...*  **,** *identificatore*opt **)**] *token-string*consenso esplicito    
   
- **definito (***identificatore* **)**   
+ **defined(**  *identifier* **)**  
   
- **definito***identificatore*   
+ **defined**  *identifier*  
   
- `#include`**"***path-spec***"**  
+ `#include` **"***path-spec***"**  
   
- `#include` **\<**  *path-spec***>**  
+ `#include` **\<***path-spec***>**  
   
- **#line***sequenza di cifre***"** *filename* **"**consenso esplicito      
+ **#line**  *digit-sequence*  **"** *filename* **"**opt  
   
- *#***undef***identificatore*   
+ *#* **undef***identificatore*   
   
- **#error***token di stringa*   
+ **#error**  *token-string*  
   
- **#pragma***token di stringa*   
+ **#pragma**  *token-string*  
   
  *condizionale* :  
  *Se parte elif-parti*opt*parte else*opt*endif riga*  
   
  *Se parte* :  
- *Se linetext*  
+ *if-linetext*  
   
  *Se-line* :  
- **#if***espressione costante*   
+ **#if**  *constant-expression*  
   
- **#ifdef***identificatore*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***identificatore*   
+ **#ifndef**  *identifier*  
   
  *elif parti* :  
  *testo della riga di elif*  
@@ -64,10 +67,10 @@ ms.lasthandoff: 12/21/2017
  *testo della riga di elif elif parti*  
   
  *elif riga* :  
- **#elif***espressione costante*   
+ **#elif**  *constant-expression*  
   
  *parte else* :  
- *Else linetext*  
+ *else-linetext*  
   
  *riga else* :  
  `#else`  

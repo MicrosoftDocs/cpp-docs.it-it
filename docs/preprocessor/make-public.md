@@ -1,30 +1,33 @@
 ---
-title: make_public | Documenti Microsoft
+title: make_public | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.make_public
 - make_public_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b28c6cd71e8d8ac1165ff6e3afe95ab1f6d4de0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 484462d5a705297f65e82f70fccc23a81eeb719e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="makepublic"></a>make_public
 Indica che un tipo nativo deve avere accessibilità pubblica dell'assembly.  

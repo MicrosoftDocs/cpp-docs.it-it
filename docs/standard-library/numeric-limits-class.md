@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - limits/std::numeric_limits
 - limits/std::numeric_limits::denorm_min
@@ -41,7 +42,8 @@ f1_keywords:
 - limits/std::numeric_limits::signaling_NaN
 - limits/std::numeric_limits::tinyness_before
 - limits/std::numeric_limits::traps
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::numeric_limits [C++]
 - std::numeric_limits [C++], denorm_min
@@ -77,16 +79,17 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ccd200c1ee710100bbf3390033ca97381b5dddf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2aa716b9c052611aceb0c4677457fbce91bb743d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="numericlimits-class"></a>Classe numeric_limits
 La classe modello descrive le proprietà aritmetiche dei tipi numerici predefiniti.  

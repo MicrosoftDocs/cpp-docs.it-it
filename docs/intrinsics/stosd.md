@@ -1,29 +1,33 @@
 ---
-title: __stosd | Documenti Microsoft
+title: __stosd | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __stosd
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __stosd
+dev_langs:
+- C++
 helpviewer_keywords:
 - stosd instruction
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76764c29da9d654d0b1883d5475d69043a35cb44
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="stosd"></a>__stosd
 **Sezione specifica Microsoft**  

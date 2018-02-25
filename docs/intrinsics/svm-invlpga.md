@@ -1,28 +1,32 @@
 ---
-title: __svm_invlpga | Documenti Microsoft
+title: __svm_invlpga | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __svm_invlpga
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __svm_invlpga
+dev_langs:
+- C++
 helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f3206fa7f67fcd676b1490c6fad3be9a03c1ea40
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0343222a08b1ab192be733a1f583cc287a9d3377
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Sezione specifica Microsoft**  

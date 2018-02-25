@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -22,19 +23,22 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs: C++
-helpviewer_keywords: tiled_index class
+dev_langs:
+- C++
+helpviewer_keywords:
+- tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledindex-class"></a>Classe tiled_index
 Fornisce un indice in un [tiled_extent](tiled-extent-class.md) oggetto. Questa classe dispone di proprietà per accedere agli elementi di origine riquadro locale e di origine globale. Per ulteriori informazioni sugli spazi affiancati, vedere [utilizzando riquadri](../../../parallel/amp/using-tiles.md).  
@@ -122,7 +126,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **Spazio dei nomi:** Concurrency  
 
 
-## <a name="tiled_index__ctor"></a>Costruttore tiled_index  
+## <a name="tiled_index__ctor">Costruttore tiled_index</a>  
 Inizializza una nuova istanza della classe `tiled_index`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -144,13 +148,13 @@ tiled_index(
  Globale [indice](index-class.md) di costruito `tiled_index`.  
   
  `_Local`  
- Locale [indice](index-class.md) di costruito`tiled_index`  
+ Locale [indice](index-class.md) di costruito `tiled_index`  
   
  `_Tile`  
- Il riquadro [indice](index-class.md) di costruito`tiled_index`  
+ Il riquadro [indice](index-class.md) di costruito `tiled_index`  
   
  `_Tile_origin`  
- Riquadro origine [indice](index-class.md) di costruito`tiled_index`  
+ Riquadro origine [indice](index-class.md) di costruito `tiled_index`  
   
  `_Barrier`  
  Il [tile_barrier](tile-barrier-class.md) oggetto costruito `tiled_index`.  
@@ -167,7 +171,7 @@ tiled_index(
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Inizializza una nuova istanza di `tile_index` classe copiando specificato `tiled_index` oggetto.|  
 
 
-## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
 Restituisce un [extent](extent-class.md) oggetto che presenta i valori di `tiled_index` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -179,7 +183,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 ## <a name="return-value"></a>Valore restituito  
  Un `extent` oggetto che presenta i valori di `tiled_index` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.  
 
-## <a name="tiled_index__barrier"></a>barriera   
+## <a name="tiled_index__barrier"></a>  barrier   
 Archivia un [tile_barrier](tile-barrier-class.md) oggetto che rappresenta una barriera nel tile corrente del thread.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -188,7 +192,7 @@ Archivia un [tile_barrier](tile-barrier-class.md) oggetto che rappresenta una ba
 const tile_barrier barrier;  
 ```  
 
-## <a name="tiled_index__global"></a>globale   
+## <a name="tiled_index__global"></a>  global   
 Archivia un [indice](index-class.md) oggetto di rango 1, 2 o 3 che rappresenta l'indice di un oggetto globale.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -197,7 +201,7 @@ Archivia un [indice](index-class.md) oggetto di rango 1, 2 o 3 che rappresenta l
 const index<rank> global;  
 ```  
   
-## <a name="tiled_index__local"></a>locale   
+## <a name="tiled_index__local"></a>  local   
 Archivia un [indice](index-class.md) oggetto dell'indice di priorità 1, 2 o 3 che rappresenta l'oggetto relativo alla sezione corrente di un [tiled_extent](tiled-extent-class.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -206,7 +210,7 @@ Archivia un [indice](index-class.md) oggetto dell'indice di priorità 1, 2 o 3 c
 const index<rank> local;  
 ```  
   
-## <a name="tiled_index__rank"></a>numero di dimensioni   
+## <a name="tiled_index__rank"></a>  rank   
 Archivia il rango di `tiled_index` oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -215,7 +219,7 @@ Archivia il rango di `tiled_index` oggetto.
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>riquadro   
+## <a name="tiled_index__tile"></a>  tile   
 Archivia un [indice](index-class.md) oggetto di dimensioni pari a 1, 2 o 3 che rappresenta le coordinate del riquadro corrente di un [tiled_extent](tiled-extent-class.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -224,7 +228,7 @@ Archivia un [indice](index-class.md) oggetto di dimensioni pari a 1, 2 o 3 che r
 const index<rank> tile;  
 ```  
   
-## <a name="tiled_index__tile_dim0"></a>tile_dim0  
+## <a name="tiled_index__tile_dim0"></a>  tile_dim0  
 Archivia la lunghezza della dimensione più significativa.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -233,7 +237,7 @@ Archivia la lunghezza della dimensione più significativa.
 static const int tile_dim0 = _Dim0;  
 ```  
    
-## <a name="tiled_index__tile_dim1"></a>tile_dim1   
+## <a name="tiled_index__tile_dim1"></a>  tile_dim1   
 Archivia la lunghezza della dimensione avanti-a-la maggior parte significativa.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -241,7 +245,7 @@ Archivia la lunghezza della dimensione avanti-a-la maggior parte significativa.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tiled_index__tile_dim2"></a>tile_dim2   
+## <a name="tiled_index__tile_dim2"></a>  tile_dim2   
 Archivia la lunghezza della dimensione meno significativa.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -249,7 +253,7 @@ Archivia la lunghezza della dimensione meno significativa.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tiled_index__tile_origin"></a>tile_origin   
+## <a name="tiled_index__tile_origin"></a>  tile_origin   
 Archivia un [indice](index-class.md) oggetto coordinate rango 1, 2 o 3 che rappresenta l'oggetto globale dell'origine del riquadro corrente all'interno di un [tiled_extent](tiled-extent-class.md) oggetto.  
   
 ## <a name="syntax"></a>Sintassi  
@@ -257,7 +261,7 @@ Archivia un [indice](index-class.md) oggetto coordinate rango 1, 2 o 3 che rappr
 ```  
 const index<rank> tile_origin  
 ```  
-## <a name="tile_extent"></a>tile_extent
+## <a name="tile_extent"></a>  tile_extent
   Ottiene un [extent](extent-class.md) oggetto contenente i valori del `tiled_index` gli argomenti di modello `tiled_index` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ## <a name="syntax"></a>Sintassi  

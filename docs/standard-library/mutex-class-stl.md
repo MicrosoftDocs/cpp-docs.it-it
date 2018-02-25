@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::mutex
 - mutex/std::mutex::mutex
@@ -14,9 +15,10 @@ f1_keywords:
 - mutex/std::mutex::native_handle
 - mutex/std::mutex::try_lock
 - mutex/std::mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7999d055-f74f-4303-810f-8d3c9cde2f69
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -27,12 +29,13 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: 1c1039ceae802984762dbb1aaf50c259bf8a2e95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: acc1d6625bcf8d76f88e8571cba34ef974856177
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mutex-class-c-standard-library"></a>Classe mutex (libreria standard C++)
 Rappresenta un *tipo mutex*. Gli oggetti di questo tipo possono essere utilizzati per gestire l'esclusione reciproca in un programma.  
@@ -66,7 +69,7 @@ class mutex;
   
  **Spazio dei nomi:** std  
   
-##  <a name="lock"></a>mutex:: lock
+##  <a name="lock"></a>  mutex::lock
  Blocca il thread chiamante finché il thread non ottiene la proprietà di `mutex`.  
   
 ```cpp  
@@ -93,7 +96,7 @@ constexpr mutex() noexcept;
 ### <a name="remarks"></a>Note  
  Se l'oggetto è bloccato quando il distruttore viene eseguito, il comportamento non è definito.  
   
-##  <a name="native_handle"></a>mutex:: native_handle
+##  <a name="native_handle"></a>  mutex::native_handle
  Restituisce il tipo specifico dell'implementazione che rappresenta l'handle mutex. L'handle del mutex può essere usato in modi specifici dell'implementazione.  
   
 ```
@@ -103,7 +106,7 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>Valore restituito  
  `native_handle_type` viene definito come `Concurrency::critical_section *` di cui viene eseguito il cast come `void *`.  
   
-##  <a name="try_lock"></a>mutex::try_lock
+##  <a name="try_lock"></a>  mutex::try_lock
  Tenta di ottenere proprietà di `mutex` senza bloccare.  
   
 ```cpp  
@@ -116,7 +119,7 @@ bool try_lock();
 ### <a name="remarks"></a>Note  
  Se il thread chiamante è già proprietario di `mutex`, il comportamento non è definito.  
   
-##  <a name="unlock"></a>mutex:: Unlock
+##  <a name="unlock"></a>  mutex::unlock
  Rilascia la proprietà di `mutex`.  
   
 ```cpp  

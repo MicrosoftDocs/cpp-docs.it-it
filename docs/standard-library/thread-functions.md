@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::get_id
 - thread/std::sleep_for
@@ -13,7 +13,7 @@ f1_keywords:
 - thread/std::swap
 - thread/std::yield
 ms.assetid: bb1aa1ef-fe3f-4e2c-8b6e-e22dbf2f5a19
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::get_id [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: dd073f48eb926e8fec0017f63ab77a91eb65acff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 54e4c09c7db5fb29cdfb067b47d8584451277d4a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt-functions"></a>Funzioni &lt;thread&gt;
 ||||  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::max_unbounded
 - allocators/stdext::max_unbounded::allocated
@@ -14,7 +15,8 @@ f1_keywords:
 - allocators/stdext::max_unbounded::full
 - allocators/stdext::max_unbounded::released
 - allocators/stdext::max_unbounded::saved
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::max_unbounded
 - stdext::max_unbounded [C++], allocated
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a06cc5f05812d662dc22fa7609680e3b5a45c97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96a4d8a295353f56f2c6b027f72e6353698afdf2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="maxunbounded-class"></a>Classe max_unbounded
 Descrive un oggetto [classe max](../standard-library/allocators-header.md) che non limita la lunghezza massima di un oggetto [freelist](../standard-library/freelist-class.md).  

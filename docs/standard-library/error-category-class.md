@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::error_category
 - system_error/std::error_category::value_type
@@ -14,7 +15,8 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3befee5318756471e0eee6b975bdfb65f61c0391
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="errorcategory-class"></a>Classe error_category
 Rappresenta la base comune astratta per gli oggetti che descrive una categoria di codici di errore.  

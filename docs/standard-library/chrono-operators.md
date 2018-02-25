@@ -5,16 +5,17 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: chrono/std::operator modulo
+ms.topic: reference
+f1_keywords:
+- chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 27e47127369c78c331cc052d934f4d62d6d00707
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltchronogt-operators"></a>Operatori &lt;chrono&gt;
 ||||  

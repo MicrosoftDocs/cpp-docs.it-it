@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iosfwd/std::istringstream
 - iosfwd/std::ostringstream
@@ -16,13 +16,13 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-caps.latest.revision: "9"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 4839391754e3cfc1c3b621296eef0bf8958097c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 760326f866ad63b978f53c624982bce9e14b0f59
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsstreamgt-typedefs"></a>Typedef &lt;sstream&gt;
 ||||  

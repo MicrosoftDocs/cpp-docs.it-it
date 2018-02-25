@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2892f3df9375a220902588ff37e73c5b9e8b1719
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-overview"></a>Panoramica sulla libreria standard C++
 Tutte le entità di libreria di C++ sono dichiarate o definite in una o più intestazioni standard. Questa implementazione include due intestazioni aggiuntive, `<hash_map>` e `<hash_set>`, che non sono necessarie per lo Standard C++. Per un elenco completo di intestazioni supportate da questa implementazione, vedere [Header Files Reference](../standard-library/cpp-standard-library-header-files.md) (Riferimento file di intestazione).  

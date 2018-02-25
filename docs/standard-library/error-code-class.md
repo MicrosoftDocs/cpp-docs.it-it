@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::error_code
 - system_error/std::error_code::value_type
@@ -16,7 +17,8 @@ f1_keywords:
 - system_error/std::error_code::default_error_condition
 - system_error/std::error_code::message
 - system_error/std::error_code::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::error_code
 - std::error_code::value_type
@@ -26,16 +28,17 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b9521790906c591c3b459cc5efd70fe0ba021ccf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="errorcode-class"></a>Classe error_code
 Rappresenta gli errori di sistema di basso livello che sono specifici dell'implementazione.  

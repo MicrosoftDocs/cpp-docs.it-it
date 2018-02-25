@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::money_put
 - xlocmon/std::money_put::char_type
@@ -14,7 +15,8 @@ f1_keywords:
 - xlocmon/std::money_put::string_type
 - xlocmon/std::money_put::do_put
 - xlocmon/std::money_put::put
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::money_put [C++]
 - std::money_put [C++], char_type
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd47afe55f1e2625dfe216afd6ef98cbcba7b21f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 33554a3c3422a06693a7daee60c1ccaa47bd00c7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneyput-class"></a>Classe money_put
 La classe modello descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per controllare le conversioni dei valori monetari in sequenze di tipo `CharType`.  
@@ -198,7 +201,7 @@ explicit money_put(size_t _Refs = 0);
   
 -   1: la durata dell'oggetto deve essere gestita manualmente.  
   
--   \>1: questi valori non definiti.  
+-   \> 1: questi valori non definiti.  
   
  Non è possibile fornire esempi diretti, poiché il distruttore è protetto.  
   

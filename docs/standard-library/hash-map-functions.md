@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-caps.latest.revision: "9"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 4b98135f1b72c66938d00f16649d011a27369473
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.openlocfilehash: 4240316aadf964b972c46a00c6ee4a09cc4626d6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lthashmapgt-functions"></a>Funzioni &lt;hash_map&gt;
 |||  

@@ -1,28 +1,32 @@
 ---
-title: __svm_skinit | Documenti Microsoft
+title: __svm_skinit | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __svm_skinit
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __svm_skinit
+dev_langs:
+- C++
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e02bafc9319a6a3a4c5e07b46c9da6586f440d59
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 918bd300e11c52b7b4139cfc80b12a5de2b828a4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="svmskinit"></a>__svm_skinit
 **Sezione specifica Microsoft**  

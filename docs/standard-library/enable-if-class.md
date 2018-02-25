@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::enable_if
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::enable_if
+dev_langs:
+- C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 627fd8fa2050141c570f6448bb3cf98142bb6ffc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="enableif-class"></a>Classe enable_if
 Crea un'istanza di un tipo in modo condizionale per la risoluzione dell'overload SFINAE. Il typedef annidato `enable_if<Condition,Type>::type` esiste, ed è sinonimo di `Type`, solo ed esclusivamente se `Condition` è `true`.  

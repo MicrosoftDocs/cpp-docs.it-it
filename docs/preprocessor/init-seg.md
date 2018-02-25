@@ -1,31 +1,34 @@
 ---
-title: init_seg | Documenti Microsoft
+title: init_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **Sezione specifica C++**  
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  Le opzioni per il **init_seg** pragma sono:  
   
- **compilatore**  
+ **compiler**  
  Riservato per l'inizializzazione della libreria di runtime di Microsoft C Gli oggetti in questo gruppo sono costruiti per primi.  
   
- **LIB**  
+ **lib**  
  Disponibile per le inizializzazioni dei fornitori della libreria di classi di terze parti. Gli oggetti di questo gruppo sono costruiti dopo quelli contrassegnati come **compilatore** ma prima degli altri.  
   
- **utente**  
+ **user**  
  Disponibile per qualsiasi utente. Gli oggetti in questo gruppo sono costruiti per ultimi.  
   
- *nome della sezione*  
+ *section-name*  
  Consente la specifica esplicita della sezione di inizializzazione. Gli oggetti specificati dall'utente *-nome della sezione* non vengono costruiti in modo implicito; tuttavia, gli indirizzi vengono inseriti nella sezione denominata da *-nome della sezione*.  
   
  Il nome della sezione fornita conterrà i puntatori a funzioni di supporto che costruiranno gli oggetti globali dichiarati in tale modulo dopo il pragma.  
   
  Per un elenco di nomi di non utilizzare durante la creazione di una sezione, vedere [/sezione](../build/reference/section-specify-section-attributes.md).  
   
- *nome di funzione*  
+ *func-name*  
  Specifica una funzione da chiamare invece di `atexit` al termine del programma. Questa funzione di supporto chiama inoltre [atexit](../c-runtime-library/reference/atexit.md) con un puntatore al distruttore per l'oggetto globale. Se si specifica un identificatore di funzione nel pragma del modulo,  
   
 ```  

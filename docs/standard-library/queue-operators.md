@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::operator!=
 - queue/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - queue/std::operator&lt;
 - queue/std::operator&lt;=
 - queue/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (queue)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: c3d30f04ad3b8f330c70b75ca21bdab44913f336
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 3590d1421364179a57fc72bee93939e4871ae24c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltqueuegt-operators"></a>Operatori &lt;queue&gt;
 ||||  

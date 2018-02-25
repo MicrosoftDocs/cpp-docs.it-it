@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::operator!=
 - utility/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - utility/std::operator&lt;
 - utility/std::operator&lt;=
 - utility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (utility)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 9f9290b171a74098af5186c17f027fcf6e34c78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 407e08934c4469776feb34d0f18b20b457d208d9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-operators"></a>Operatori &lt;utility&gt;
 ||||  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::allocator_base
 - allocators/stdext::allocators::allocator_base
@@ -25,7 +26,8 @@ f1_keywords:
 - allocators/stdext::allocator_base::deallocate
 - allocators/stdext::allocator_base::destroy
 - allocators/stdext::allocator_base::max_size
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::allocator_base [C++]
 - stdext::allocators [C++], allocator_base
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf1127a6ec3e921e19c9626cc51197eb2a87d6ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d99f12abb1ff9d0d26f40d41888e6db27ca48996
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatorbase-class"></a>Classe allocator_base
 Definisce la classe base e le funzioni comuni necessari per creare un allocatore definito dall'utente da un filtro di sincronizzazione.  

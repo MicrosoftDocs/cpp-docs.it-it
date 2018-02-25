@@ -5,22 +5,24 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators"></a>spazio dei nomi Concurrency operatori
 ||||  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>operatore &#124; &#124; (Operatore)  
+##  <a name="operator_lor"></a>  operatore &#124; &#124; (Operatore)  
  Crea un'attività che verrà completata correttamente quando una delle attività fornite come argomenti verranno completate correttamente.  
   
 ```  
@@ -72,7 +74,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>Note  
  Se entrambe le attività vengono annullate o se vengono generate eccezioni, lo stato dell'attività restituita sarà impostato su annullato e una delle eventuali eccezioni verrà generata quando si chiama `get()` o `wait()` sull'attività in questione.  
   
-##  <a name="operator_amp_amp"></a>operatore&amp; &amp; (operatore)  
+##  <a name="operator_amp_amp"></a>  operatore&amp; &amp; (operatore)  
  Crea un'attività che verrà completata correttamente quando entrambe le attività fornite come argomenti verranno completate.  
   
 ```  
@@ -121,7 +123,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>Note  
  Se una delle attività viene annullata o viene generata un'eccezione, l'attività restituita verrà completata in anticipo, nello stato annullato, e l'eccezione, se ne è presente una, verrà generata in caso di chiamata a `get()` o `wait()` sull'attività in questione.  
   
-##  <a name="operator_eq_eq"></a>operatore Operator = =  
+##  <a name="operator_eq_eq"></a>  operatore Operator = =  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è uguale all'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -148,14 +150,14 @@ inline bool operator== (
  Oggetto di tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il vettore simultaneo sul lato sinistro dell'operatore è uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
+ `true` Se il vettore simultaneo sul lato sinistro dell'operatore è uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
  Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
-##  <a name="operator_neq"></a>operatore! = (operatore)  
+##  <a name="operator_neq"></a>  operator!= Operator  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore non è uguale all'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -182,14 +184,14 @@ inline bool operator!= (
  Oggetto di tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se i vettori simultanei non sono uguali. `false` se i vettori simultanei sono uguali.  
+ `true` Se i vettori simultanei non sono uguali. `false` se i vettori simultanei sono uguali.  
   
 ### <a name="remarks"></a>Note  
  Due vettori simultanei sono uguali se hanno lo stesso numero di elementi e i rispettivi elementi hanno gli stessi valori. In caso contrario, non sono uguali.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
-##  <a name="operator_lt"></a>operatore&lt; (operatore)  
+##  <a name="operator_lt"></a>  operatore&lt; (operatore)  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore dell'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -216,14 +218,14 @@ inline bool operator<(
  Oggetto di tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il vettore simultaneo sul lato sinistro dell'operatore è minore di vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
+ `true` Se il vettore simultaneo sul lato sinistro dell'operatore è minore di vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
  Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
-##  <a name="operator_lt_eq"></a>operatore&lt;= (operatore)  
+##  <a name="operator_lt_eq"></a>  operatore&lt;= (operatore)  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è minore o uguale all'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -250,14 +252,14 @@ inline bool operator<= (
  Oggetto di tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
+ `true` Se il vettore simultaneo sul lato sinistro dell'operatore è minore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
  Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
-##  <a name="operator_gt"></a>operatore&gt; (operatore)  
+##  <a name="operator_gt"></a>  operatore&gt; (operatore)  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore dell'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -291,7 +293,7 @@ inline bool operator>(
   
  Questo metodo non è indipendente dalla concorrenza rispetto agli altri metodi che potrebbero modificare i vettori simultanei `_A` o `_B`.  
   
-##  <a name="operator_gt_eq"></a>operatore&gt;= (operatore)  
+##  <a name="operator_gt_eq"></a>  operatore&gt;= (operatore)  
  Verifica se l'oggetto `concurrent_vector` sul lato sinistro dell'operatore è maggiore o uguale all'oggetto `concurrent_vector` sul lato destro.  
   
 ```  
@@ -318,7 +320,7 @@ inline bool operator>= (
  Oggetto di tipo `concurrent_vector`.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
+ `true` Se il vettore simultaneo sul lato sinistro dell'operatore è maggiore o uguale al vettore simultaneo sul lato destro dell'operatore; in caso contrario `false`.  
   
 ### <a name="remarks"></a>Note  
  Il comportamento di questo operatore è identico all'operatore equivalente per il `vector` classe il `std` dello spazio dei nomi.  

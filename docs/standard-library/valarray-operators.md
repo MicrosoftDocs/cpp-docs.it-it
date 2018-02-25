@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -25,9 +25,10 @@ f1_keywords:
 - valarray/std::operator^
 - valarray/std::operator|
 - valarray/std::operator||
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (valarray), std::operator&amp; (valarray)
@@ -38,11 +39,11 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 25b2ed8601e2b83adfec8eae3146ef986a2929a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt-operators"></a>Operatori &lt;valarray&gt;
 ||||  

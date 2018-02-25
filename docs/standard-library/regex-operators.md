@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - regex/std::operator!=
 - regex/std::operator>
@@ -14,15 +14,16 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 40dd9bb9a674542d216ced2bb53b65efeb5d34a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltregexgt-operators"></a>Operatori &lt;regex&gt;
 ||||  

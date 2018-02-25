@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 09/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -17,19 +18,22 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs: C++
-helpviewer_keywords: iostream header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 430981da5ec304bf832e759d40870ee88f3e6557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 774e99f99e01c9eb0fbdcad0100d12212e19831e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 Dichiara gli oggetti che controllano la lettura e la scrittura nei flussi standard. Si tratta spesso dell'unica intestazione che è necessario includere per eseguire operazioni di input e output da un programma C++.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float4-class"></a>Classe float_4
 Rappresenta uno short vector di quattro elementi mobili.  
@@ -329,7 +332,7 @@ class float_4;
 |float_4::get_wzxy||  
 |float_4::get_wzy||  
 |float_4::get_wzyx||  
-|float_4::get_X||  
+|float_4::get_x||  
 |float_4::get_xw||  
 |float_4::get_xwy||  
 |float_4::get_xwyz||  
@@ -377,14 +380,14 @@ class float_4;
 |float_4::get_zywx||  
 |float_4::get_zyx||  
 |float_4::get_zyxw||  
-|float_4:: ref_a||  
-|float_4:: ref_b||  
-|float_4:: ref_g||  
-|float_4:: ref_r||  
-|float_4:: ref_w||  
-|float_4:: ref_x||  
-|float_4:: ref_y||  
-|float_4:: ref_z||  
+|float_4::ref_a||  
+|float_4::ref_b||  
+|float_4::ref_g||  
+|float_4::ref_r||  
+|float_4::ref_w||  
+|float_4::ref_x||  
+|float_4::ref_y||  
+|float_4::ref_z||  
 |float_4::set_w||  
 |float_4::set_wx||  
 |float_4::set_wxy||  
@@ -401,7 +404,7 @@ class float_4;
 |float_4::set_wzxy||  
 |float_4::set_wzy||  
 |float_4::set_wzyx||  
-|float_4::set_X||  
+|float_4::set_x||  
 |float_4::set_xw||  
 |float_4::set_xwy||  
 |float_4::set_xwyz||  
@@ -455,13 +458,13 @@ class float_4;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |float_4::operator-||  
-|float_4::operator:||  
-|float_4::operator * =||  
-|float_4::operator / =||  
-|float_4::operator + +||  
-|+ = float_4::operator||  
-|float_4::operator =||  
-|float_4::operator =||  
+|float_4::operator--||  
+|float_4::operator*=||  
+|float_4::operator/=||  
+|float_4::operator++||  
+|float_4::operator+=||  
+|float_4::operator=||  
+|float_4::operator-=||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -477,78 +480,78 @@ class float_4;
 |float_4::ab||  
 |float_4::abg||  
 |float_4::abgr||  
-|float_4::ABR||  
+|float_4::abr||  
 |float_4::abrg||  
-|float_4::AG||  
+|float_4::ag||  
 |float_4::agb||  
 |float_4::agbr||  
 |float_4::agr||  
 |float_4::agrb||  
 |float_4::ar||  
-|float_4::ARB||  
-|float_4::ARBG||  
+|float_4::arb||  
+|float_4::arbg||  
 |float_4::arg||  
-|float_4::ARGB||  
+|float_4::argb||  
 |float_4::b||  
-|float_4::BA||  
+|float_4::ba||  
 |float_4::bag||  
 |float_4::bagr||  
 |float_4::bar||  
 |float_4::barg||  
-|float_4::BG||  
-|float_4::BGA||  
+|float_4::bg||  
+|float_4::bga||  
 |float_4::bgar||  
-|float_4::BGR||  
+|float_4::bgr||  
 |float_4::bgra||  
 |float_4::br||  
-|float_4::BRA||  
+|float_4::bra||  
 |float_4::brag||  
 |float_4::brg||  
 |float_4::brga||  
 |float_4::g||  
-|float_4::GA||  
-|float_4::Gab||  
+|float_4::ga||  
+|float_4::gab||  
 |float_4::gabr||  
-|float_4::Gar||  
+|float_4::gar||  
 |float_4::garb||  
-|float_4::GB||  
-|float_4::GBA||  
+|float_4::gb||  
+|float_4::gba||  
 |float_4::gbar||  
-|float_4::GBR||  
+|float_4::gbr||  
 |float_4::gbra||  
-|float_4::GR||  
+|float_4::gr||  
 |float_4::gra||  
-|float_4::Grab||  
+|float_4::grab||  
 |float_4::grb||  
 |float_4::grba||  
 |float_4::r||  
 |float_4::ra||  
 |float_4::rab||  
 |float_4::rabg||  
-|float_4::Rag||  
+|float_4::rag||  
 |float_4::ragb||  
-|float_4::RB||  
+|float_4::rb||  
 |float_4::rba||  
 |float_4::rbag||  
-|float_4::RBG||  
+|float_4::rbg||  
 |float_4::rbga||  
-|float_4::RG||  
+|float_4::rg||  
 |float_4::rga||  
 |float_4::rgab||  
-|float_4::RGB||  
-|float_4::RGBA||  
+|float_4::rgb||  
+|float_4::rgba||  
 |float_4::w||  
-|float_4::WX||  
+|float_4::wx||  
 |float_4::wxy||  
 |float_4::wxyz||  
 |float_4::wxz||  
 |float_4::wxzy||  
-|float_4::wY||  
+|float_4::wy||  
 |float_4::wyx||  
 |float_4::wyxz||  
 |float_4::wyz||  
 |float_4::wyzx||  
-|float_4::wZ||  
+|float_4::wz||  
 |float_4::wzx||  
 |float_4::wzxy||  
 |float_4::wzy||  
@@ -559,12 +562,12 @@ class float_4;
 |float_4::xwyz||  
 |float_4::xwz||  
 |float_4::xwzy||  
-|float_4::XY||  
+|float_4::xy||  
 |float_4::xyw||  
 |float_4::xywz||  
-|float_4::XYZ||  
+|float_4::xyz||  
 |float_4::xyzw||  
-|float_4::XZ||  
+|float_4::xz||  
 |float_4::xzw||  
 |float_4::xzwy||  
 |float_4::xzy||  
@@ -575,28 +578,28 @@ class float_4;
 |float_4::ywxz||  
 |float_4::ywz||  
 |float_4::ywzx||  
-|float_4::YX||  
+|float_4::yx||  
 |float_4::yxw||  
 |float_4::yxwz||  
 |float_4::yxz||  
 |float_4::yxzw||  
-|float_4::YZ||  
+|float_4::yz||  
 |float_4::yzw||  
 |float_4::yzwx||  
 |float_4::yzx||  
 |float_4::yzxw||  
 |float_4::z||  
-|float_4::ZW||  
+|float_4::zw||  
 |float_4::zwx||  
 |float_4::zwxy||  
 |float_4::zwy||  
 |float_4::zwyx||  
-|float_4::ZX||  
+|float_4::zx||  
 |float_4::zxw||  
 |float_4::zxwy||  
 |float_4::zxy||  
 |float_4::zxyw||  
-|float_4::ZY||  
+|float_4::zy||  
 |float_4::zyw||  
 |float_4::zywx||  
 |float_4::zyx||  
@@ -610,7 +613,7 @@ class float_4;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>float_4 
+##  <a name="ctor"></a> float_4 
 
  Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
@@ -681,7 +684,7 @@ explicit inline float_4(
  `_Other`  
  Oggetto utilizzato per inizializzare.  
   
-##  <a name="float_4__size"></a>dimensioni 
+##  <a name="float_4__size"></a> Dimensioni 
 
 ```  
 static const int size = 4;  

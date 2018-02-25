@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
@@ -20,7 +21,8 @@ f1_keywords:
 - memory/std::shared_ptr::operator*
 - memory/std::shared_ptr::operator=
 - memory/std::shared_ptr::operator->
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::shared_ptr [C++]
 - std::shared_ptr [C++], element_type
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ef826862d49b5661b57faf3db1322cd91b273f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedptr-class"></a>Classe shared_ptr
 Esegue il wrapping di un puntatore intelligente con conteggio dei riferimenti attorno a un oggetto allocato in modo dinamico.  

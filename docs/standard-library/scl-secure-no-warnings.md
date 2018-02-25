@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 288af808dfa714c10eeba1f11738cf9db31d70d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 285e54a2eab4d116df81c3e10c597c6dbb6dd9cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 Se si chiama uno dei metodi potenzialmente non sicuri inclusi nella libreria standard C++, verrà generato l'[Avviso del compilatore (livello 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Per disabilitare questo avviso, definire la macro **_SCL_SECURE_NO_WARNINGS** nel codice:  

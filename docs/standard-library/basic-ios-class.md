@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ios/std::basic_ios
 - ios/std::basic_ios::char_type
@@ -34,7 +35,8 @@ f1_keywords:
 - ios/std::basic_ios::tie
 - ios/std::basic_ios::widen
 - ios/std::basic_ios::explicit operator bool
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ios [C++]
 - std::basic_ios [C++], char_type
@@ -62,16 +64,17 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e7068c2b94637a859c35c662350c27f157103e37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bbcfb2f315c9b453d49b2bbdb5be60a6dbc8f6f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicios-class"></a>Classe basic_ios
 La classe di modello descrive le funzioni membro e di archiviazione comuni a entrambi i flussi di input (della classe di modello [basic_istream](../standard-library/basic-istream-class.md)) e di output (della classe di modello [basic_ostream](../standard-library/basic-ostream-class.md)) che dipendono dai parametri di modello. La classe [ios_base](../standard-library/ios-base-class.md) descrive gli elementi comuni e non dipendenti dai parametri di modello. Un oggetto della classe **basic_ios\<class Elem, class Traits>** semplifica il controllo di un flusso con elementi di tipo **Elem**, le cui caratteristiche dei caratteri sono determinate dalla classe **Traits**.  

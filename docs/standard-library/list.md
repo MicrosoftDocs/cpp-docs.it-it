@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <list>
 - std::<list>
-dev_langs: C++
-helpviewer_keywords: list header
+dev_langs:
+- C++
+helpviewer_keywords:
+- list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 313ce96bd86a732749b5437d5e839bf2bfbe35ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 823eb5c7d9fb36a7f3cb6dfa70efab6c6f451f8a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 Definisce l'elenco di classi modello del contenitore e diversi modelli di supporto.  

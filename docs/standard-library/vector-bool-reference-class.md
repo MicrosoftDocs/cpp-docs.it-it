@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vector/vector<bool>::reference
-dev_langs: C++
-helpviewer_keywords: vector<bool> reference class
+ms.topic: reference
+f1_keywords:
+- vector/vector<bool>::reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5ebca8cefef2aa53d2726d734932363d54426247
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56101a717c56a3999ad32648de8f9ae75d7439d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vectorltboolgtreference-class"></a>Classe vector&lt;bool&gt;::reference
 La classe `vector<bool>::reference` è una classe proxy fornita dalla [classe vector\<bool>](../standard-library/vector-bool-class.md) per simulare `bool&`.  

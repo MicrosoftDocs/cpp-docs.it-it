@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: utility/std::tuple_element
-dev_langs: C++
-helpviewer_keywords: std::tuple_element
+ms.topic: reference
+f1_keywords:
+- utility/std::tuple_element
+dev_langs:
+- C++
+helpviewer_keywords:
+- std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ee15ab3327ec879856a3e777fb906c01989d63c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e108f012dbad9e82f85bca08a7e6086734cf001
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tupleelement-class"></a>Classe tuple_element
 Esegue il wrapping di un elemento `tuple` . Le specializzazioni eseguono il wrapping di elementi `array` e `pair`.  

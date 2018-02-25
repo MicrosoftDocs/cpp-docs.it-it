@@ -5,24 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::swap
 - unordered_map/std::swap (unordered_map)
 - unordered_map/std::swap (unordered_multimap)
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::swap (unordered_map/multimap)
-ms.workload: cplusplus
-ms.openlocfilehash: f590a42c2cb3512520307791d92c3f7243723891
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::swap (unordered_map/multimap)
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 000bb8465d56c8b35fb6fae30ff2641a8c101e7e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltunorderedmapgt-functions"></a>Funzioni &lt;unordered_map&gt;
 |||  

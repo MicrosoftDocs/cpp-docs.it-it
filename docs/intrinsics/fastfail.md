@@ -1,24 +1,27 @@
 ---
-title: __fastfail | Documenti Microsoft
+title: __fastfail | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: efdd067376d8e1430ed8636c0a77afe950858e9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3669170bf888cc41fa7706aac6af3a9c3fb08bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fastfail"></a>__fastfail
 **Sezione specifica Microsoft**  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>Classe deque
 Organizza gli elementi di un determinato tipo in una disposizione lineare e, come un vettore, consente l'accesso casuale veloce a qualsiasi elemento e l'inserimento e l'eliminazione efficienti sul retro del contenitore. Tuttavia, a differenza di un vettore, la classe `deque` supporta anche l'inserimento e l'eliminazione efficiente davanti al contenitore.  
@@ -121,7 +124,7 @@ class deque
  Tipo di dati degli elementi da archiviare nella deque.  
   
  `Allocator`  
- Tipo che rappresenta l'oggetto allocatore memorizzato che incapsula i dettagli sull'allocazione e sulla deallocazione della deque e della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator\<Type>***.*  
+ Tipo che rappresenta l'oggetto allocatore memorizzato che incapsula i dettagli sull'allocazione e sulla deallocazione della deque e della memoria. Questo argomento è facoltativo e il valore predefinito è **allocatore\<tipo > * * *.*  
   
 ## <a name="remarks"></a>Note  
  La scelta del tipo di contenitore deve essere basata in genere sul tipo di ricerca e di inserimento richiesti dall'applicazione. I [vettori](../standard-library/vector-class.md) devono essere il contenitore preferito per la gestione di una sequenza quando l'accesso casuale a un elemento è ridotto e gli inserimenti o le eliminazioni degli elementi sono necessari solo alla fine di una sequenza. Le prestazioni del contenitore elenco sono superiori quando il numero di inserimenti ed eliminazioni efficienti (in tempo costante) in qualsiasi posizione all'interno della sequenza è limitato. Tali operazioni al centro della sequenza richiedono copie di elementi e assegnazioni proporzionali al numero di elementi della sequenza (tempo lineare).  

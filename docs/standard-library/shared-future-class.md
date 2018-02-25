@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>Classe shared_future
 Descrive un *oggetto restituito asincrono*. Diversamente da un oggetto [future](../standard-library/future-class.md), un *provider asincrono* può essere associato a un numero qualsiasi di oggetti `shared_future`.  
@@ -64,8 +67,8 @@ class shared_future;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[get](#get)|Recupera il risultato archiviato nello *stato asincrono associato*.|  
-|[valido](#valid)|Specifica se l'oggetto non è vuoto.|  
-|[attesa](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|  
+|[valid](#valid)|Specifica se l'oggetto non è vuoto.|  
+|[wait](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|  
 |[wait_for](#wait_for)|Blocca finché lo stato asincrono associato non è ready o finché non trascorre il periodo di tempo specificato.|  
 |[wait_until](#wait_until)|Blocca finché lo stato asincrono associato non è ready o fino al momento specificato.|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **Spazio dei nomi:** std  
   
-##  <a name="get"></a>shared_future:: Get
+##  <a name="get"></a>  shared_future::get
  Recupera il risultato archiviato nello *stato asincrono associato*.  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  Il quarto costruttore crea un oggetto `shared_future` con lo stesso stato asincrono associato di `Right`.  
   
-##  <a name="valid"></a>shared_future:: Valid
+##  <a name="valid"></a>  shared_future::valid
  Specifica se l'oggetto ha uno *stato asincrono associato*.  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>Valore restituito  
  `true` se l'oggetto ha uno stato asincrono associato; in caso contrario, `false`.  
   
-##  <a name="wait"></a>shared_future:: Wait
+##  <a name="wait"></a>  shared_future:: Wait
  Blocca il thread corrente finché lo *stato asincrono associato* non è *ready*.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>Note  
  Uno stato asincrono associato è ready solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  Blocca il thread corrente finché lo stato asincrono associato non è *ready* o finché non è trascorso un periodo di tempo specificato.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>Note  
  Uno stato asincrono associato è *ready* solo se il provider asincrono ha archiviato un valore restituito o un'eccezione.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  Blocca il thread corrente finché lo stato asincrono associato non è *ready* o fino a un determinato momento.  
   
 ```

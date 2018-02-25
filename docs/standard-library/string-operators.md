@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::operator!=
 - string/std::operator&gt;
@@ -16,9 +16,10 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (string)
@@ -28,11 +29,11 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: caa6cad7f0801b5459bd2999ae38a3da52c00469
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: e3aa2d80c41ebf7efe1bab42219cdbbb281c0122
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt-operators"></a>Operatori &lt;string&gt;
 ||||  

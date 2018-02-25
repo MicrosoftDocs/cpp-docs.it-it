@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multiset [C++]
 - std::multiset [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8953fd24b62784e36f12fb96e3005e21a86bc62
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multiset-class"></a>Classe multiset
 La classe multiset della libreria standard C++ viene usata per l'archiviazione e il recupero dei dati da una raccolta in cui i valori degli elementi contenuti non devono essere univoci e vengono usati come valori delle chiavi in base ai quali i dati sono ordinati automaticamente. Non è possibile modificare direttamente il valore della chiave di un elemento di un multiset. È invece necessario eliminare i valori precedenti e inserire gli elementi che presentano nuovi valori.  
@@ -124,7 +127,7 @@ class multiset
  In C++ 14 è possibile abilitare la ricerca eterogenea specificando il predicato `std::less<>` o `std::greater<>` che non ha alcun parametro di tipo. Per altre informazioni, vedere [Ricerca eterogenea nei contenitori associativi](../standard-library/stl-containers.md#sequence_containers).  
   
  `Allocator`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del multiset e alla deallocazione della memoria. Il valore predefinito è **allocator***\<Key>.*  
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione del multiset e alla deallocazione della memoria. Il valore predefinito è **allocatore * * *\<chiave >.*  
   
 ## <a name="remarks"></a>Note  
  La classe multiset della libreria standard C++ è:  

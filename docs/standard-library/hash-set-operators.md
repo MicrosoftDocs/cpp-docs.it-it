@@ -5,19 +5,20 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e5205240d4f0bbfbf41423ee73a737e7d2bd0667
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.openlocfilehash: 42abce765c2b6ac5a8497cd9559622bf7d12586c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lthashsetgt-operators"></a>Operatori &lt;hash_set&gt;
 ||||  

@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3ef6eead006b6e069a9b672d78700ff85aa2f8ef
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 La libreria di runtime di Visual C++ rileva l'uso non corretto dell'iteratore, esegue un'asserzione e visualizza una finestra di dialogo in fase di esecuzione. Per abilitare il supporto degli iteratori di debug, è necessario usare le versioni di debug della libreria standard C++ e della libreria di runtime C per compilare il programma. Per altre informazioni, vedere [Funzionalità libreria CRT](../c-runtime-library/crt-library-features.md). Per informazioni sull'uso degli iteratori verificati, vedere [Iteratori verificati](../standard-library/checked-iterators.md).  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -16,7 +17,8 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 Classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento iniziale di un tipo di contenitore sottostante, che è sempre il più grande o quello con la priorità più elevata. È possibile aggiungere nuovi elementi all'oggetto priority_queue e controllarne o rimuoverne l'elemento iniziale.  
@@ -56,7 +59,7 @@ class priority_queue
  Tipo del contenitore sottostante usato per implementare l'oggetto priority_queue.  
   
  *Compare*  
- Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario **less***\<***typename** *Container***::value_type***>* rappresenta il valore predefinito.  
+ Tipo che fornisce un oggetto funzione in grado di confrontare i valori di due elementi come chiavi di ordinamento per determinarne l'ordine relativo nell'oggetto priority_queue. Questo argomento è facoltativo e il predicato binario **meno***\<***typename** *contenitore***:: value_type*** >* è il valore predefinito.  
   
 ## <a name="remarks"></a>Note  
  Gli elementi della classe **Type** stipulata nel primo parametro di modello di un oggetto queue sono sinonimi di [value_type](#value_type) e devono corrispondere al tipo di elemento della classe di contenitori sottostante **Container** stipulata dal secondo parametro di modello. La classe **Type** deve essere assegnabile, in modo che sia possibile copiare oggetti di quel tipo e assegnare valori alle variabili di quel tipo.  

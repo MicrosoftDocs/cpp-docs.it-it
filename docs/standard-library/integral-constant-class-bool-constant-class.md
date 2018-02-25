@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - type_traits/std::integral_constant
 - XTR1COMMON/std::integral_constant
 - type_traits/std::bool_constant
 - XTR1COMMON/std::bool_constant
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f694e763bb9fce65a703e8852e3f875a646f10c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eeb576ec7f845efaeca2a0b7f6a55503c7b298da
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>Classe integral_constant, classe bool_constant
 Crea una costante integrale da un tipo e da un valore.  

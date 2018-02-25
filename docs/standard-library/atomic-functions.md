@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_compare_exchange_strong
 - atomic/std::atomic_compare_exchange_strong_explicit
@@ -37,7 +37,7 @@ f1_keywords:
 - atomic/std::atomic_thread_fence
 - atomic/std::kill_dependency
 ms.assetid: 5c53b4f8-6ff5-47d7-beb2-2d6ee3c6ea89
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -71,12 +71,13 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 232333280ae44838b0afd41bf0e00255d8a78dc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 56b28ab071c2094d336678f2e66e0c2ed1ab32dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltatomicgt-functions"></a>Funzioni &lt;atomic&gt;
 ||||  

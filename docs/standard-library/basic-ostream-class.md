@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -16,7 +17,8 @@ f1_keywords:
 - ostream/std::basic_ostream::swap
 - ostream/std::basic_ostream::tellp
 - ostream/std::basic_ostream::write
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ostream [C++]
 - std::basic_ostream [C++], flush
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c9890fcbcebb86357d344b13c346a849cad4bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicostream-class"></a>Classe basic_ostream
 La classe di modello descrive un oggetto che controlla l'inserimento di elementi e oggetti codificati in un buffer di flusso con elementi di tipo **Elem**, chiamati anche [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere vengono determinati dalla classe **Tr**, chiamata anche [traits_type](../standard-library/basic-ios-class.md#traits_type).  

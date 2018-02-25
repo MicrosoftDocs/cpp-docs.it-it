@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::error_condition
 - system_error/std::error_condition::value_type
@@ -15,7 +16,8 @@ f1_keywords:
 - system_error/std::error_condition::clear
 - system_error/std::error_condition::message
 - system_error/std::error_condition::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::error_condition
 - std::error_condition::value_type
@@ -24,16 +26,17 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0af9f7fe79cd9e7db76b42a287c25f5a1b45d80c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="errorcondition-class"></a>Classe error_condition
 Rappresenta i codici di errore definiti dall'utente.  

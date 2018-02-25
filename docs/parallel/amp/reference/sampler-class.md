@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sampler
 - AMP_GRAPHICS/sampler
@@ -17,18 +18,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43aa9b68d2369ff2a0ade4bb4cb122b2481d3cd4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sampler-class"></a>Classe sampler
 La classe campionatore aggrega le informazioni di configurazione di campionamento da usare per campionamento delle trame.  
@@ -77,7 +80,7 @@ class sampler;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>campionatore 
+##  <a name="ctor"></a> campionatore 
 
  Costruisce un'istanza di [classe sampler](sampler-class.md).  
   
@@ -134,7 +137,7 @@ sampler(// [6] move constructor
  [6] costruttore di spostamento  
  Il `sampler` oggetti da spostare nel nuovo `sampler` istanza.  
   
-##  <a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a> address_mode 
 
  Ottiene la modalità di indirizzamento del `sampler` oggetto.  
   
@@ -142,7 +145,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="border_color"></a>border_color 
+##  <a name="border_color"></a> border_color 
 
  Ottiene il colore del bordo di `sampler` oggetto.  
   
@@ -150,7 +153,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a> filter_mode 
 
  Ottiene la modalità di filtro del `sampler` oggetto.  
   
@@ -158,7 +161,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a> get_address_mode 
 
  Restituisce la modalità di filtro è configurata per questo `sampler`.  
   
@@ -169,7 +172,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>Valore restituito  
  La modalità di indirizzamento che è configurata per il campionatore.  
   
-##  <a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a> get_border_color 
 
  Restituisce il colore del bordo che è configurato per questo `sampler`.  
   
@@ -180,7 +183,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valore restituito  
  Float_4 che contiene il colore del bordo.  
   
-##  <a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a> get_filter_mode 
 
  Restituisce la modalità di filtro è configurata per questo `sampler`.  
   
@@ -191,7 +194,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valore restituito  
  La modalità di filtro che è configurata per il campionatore.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Assegna il valore di un altro oggetto campionatore di un campionatore esistente.  
   

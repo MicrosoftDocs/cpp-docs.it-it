@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::ostream_iterator
 - iterator/std::ostream_iterator::char_type
 - iterator/std::ostream_iterator::ostream_type
 - iterator/std::ostream_iterator::traits_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ostream_iterator [C++]
 - std::ostream_iterator [C++], char_type
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 83ec130d9a6273d56e107707b033968d96c0b778
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c857ef1dc58bf1494e340382fbb56081374eaaab
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ostreamiterator-class"></a>Classe ostream_iterator
 La classe modello ostream_iterator descrive un oggetto iteratore di output che consente di scrivere elementi consecutivi nel flusso di output con l'estrazione **operator <<**.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - streambuf/std::basic_streambuf
 - streambuf/std::basic_streambuf::char_type
@@ -53,7 +54,8 @@ f1_keywords:
 - streambuf/std::basic_streambuf::underflow
 - streambuf/std::basic_streambuf::xsgetn
 - streambuf/std::basic_streambuf::xsputn
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_streambuf [C++]
 - std::basic_streambuf [C++], char_type
@@ -101,16 +103,17 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd79ff07ff5e70c3d2d95482c5676df72dd41612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 924a0b48736d327c571941ebd7d640ab3f4b30bb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicstreambuf-class"></a>Classe basic_streambuf
 Descrive una classe base astratta per la derivazione di un buffer di flusso, che controlla la trasmissione di elementi verso e da una rappresentazione specifica di un flusso.  

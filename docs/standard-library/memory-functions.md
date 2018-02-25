@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -32,9 +32,10 @@ f1_keywords:
 - memory/std::uninitialized_fill_n
 - memory/std::get_temporary_buffer
 - memory/std::return_temporary_buffer
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -84,12 +85,13 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: c8b8b3f311861fe8a98d66cef02e3d1c2c11d787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 070b6c9e532f1148484a3b7381c7ae13015b0a67
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmemorygt-functions"></a>Funzioni &lt;memory&gt;
 ||||  
@@ -358,7 +360,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="get_deleter"></a>get_deleter
+##  <a name="get_deleter"></a>  get_deleter
  Ottiene Deleter da shared_ptr.  
   
 ```  

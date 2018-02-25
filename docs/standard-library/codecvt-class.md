@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::codecvt
 - xlocale/std::codecvt::extern_type
@@ -26,7 +27,8 @@ f1_keywords:
 - xlocale/std::codecvt::max_length
 - xlocale/std::codecvt::out
 - xlocale/std::codecvt::unshift
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::codecvt [C++]
 - std::codecvt [C++], extern_type
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b456472fc28b473da29169acb899a1a8a142c095
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="codecvt-class"></a>Classe codecvt
 Classe modello che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali. Tale classe è in grado di controllare le conversioni tra una sequenza di valori utilizzata per codificare i caratteri all'interno del programma e una sequenza di valori utilizzata per codificare i caratteri all'esterno del programma.  
@@ -211,7 +214,7 @@ explicit codecvt(size_t _Refs = 0);
   
 -   1: la durata dell'oggetto deve essere gestita manualmente.  
   
--   \>1: questi valori non definiti.  
+-   \> 1: questi valori non definiti.  
   
  Il costruttore inizializza la `locale::facet` oggetto di base con **internazionali::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   

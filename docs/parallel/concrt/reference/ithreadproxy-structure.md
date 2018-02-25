@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>Struttura IThreadProxy
 Astrazione per un thread di esecuzione. A seconda della chiave di criteri `SchedulerType` dell'utilità di pianificazione che si crea, Gestione risorse concederà un proxy del thread appoggiato da un thread Win32 normale o un thread UMS in modalità utente. I thread UMS sono supportati su sistemi operativi a 64 bit con Windows versione 7 e successive.  
@@ -43,10 +47,10 @@ struct IThreadProxy;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IThreadProxy:: GetID](#getid)|Restituisce un identificatore univoco per il proxy del thread.|  
-|[IThreadProxy::](#switchout)|Rimuove l'associazione tra il contesto e la radice del processore virtuale sottostante.|  
-|[IThreadProxy:: SwitchTo](#switchto)|Esegue un cambio di contesto cooperativo dal contesto attualmente in esecuzione a un altro.|  
-|[IThreadProxy:: YieldToSystem](#yieldtosystem)|Determina che il thread chiamante ceda l'esecuzione a un altro thread pronto per l'esecuzione sul processore corrente. Il sistema operativo seleziona il thread successivo da eseguire.|  
+|[IThreadProxy::GetId](#getid)|Restituisce un identificatore univoco per il proxy del thread.|  
+|[IThreadProxy::SwitchOut](#switchout)|Rimuove l'associazione tra il contesto e la radice del processore virtuale sottostante.|  
+|[IThreadProxy::SwitchTo](#switchto)|Esegue un cambio di contesto cooperativo dal contesto attualmente in esecuzione a un altro.|  
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|Determina che il thread chiamante ceda l'esecuzione a un altro thread pronto per l'esecuzione sul processore corrente. Il sistema operativo seleziona il thread successivo da eseguire.|  
   
 ## <a name="remarks"></a>Note  
  Proxy del thread sono associati ai contesti di esecuzione rappresentati dall'interfaccia `IExecutionContext` come mezzo per l'invio di lavoro.  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="getid"></a>Metodo IThreadProxy:: GetID  
+##  <a name="getid"></a>  Metodo IThreadProxy:: GetID  
  Restituisce un identificatore univoco per il proxy del thread.  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Un identificatore univoco di tipo integer.  
   
-##  <a name="switchout"></a>Metodo IThreadProxy::  
+##  <a name="switchout"></a>  Metodo IThreadProxy::  
  Rimuove l'associazione tra il contesto e la radice del processore virtuale sottostante.  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Una radice del processore virtuale reinizializzata non è diversa da una radice del processore virtuale nuova concessa all'utilità di pianificazione da Gestione Risorse. È possibile utilizzarla per l'esecuzione attivandola con un contesto di esecuzione utilizzando `IVirtualProcessorRoot::Activate`.  
   
- `SwitchOut`deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti.  
+ `SwitchOut` deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti.  
   
  Nelle librerie e nelle intestazioni fornite con Visual Studio 2010, questo metodo non accettava un parametro e non consentiva la reinizializzazione della radice del processore virtuale. Per mantenere il comportamento precedente, viene fornito il valore del parametro predefinito di `Blocking`.  
   
-##  <a name="switchto"></a>Metodo IThreadProxy:: SwitchTo  
+##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
  Esegue un cambio di contesto cooperativo dal contesto attualmente in esecuzione a un altro.  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  Utilizzare il valore `Nesting` quando si desidera scollegare temporaneamente questo proxy thread dalla radice del processore virtuale in cui viene eseguito e l'utilità di pianificazione viene inviato il lavoro. La chiamata `SwitchTo` con il parametro `switchState` impostato su `Nesting` causerà il contesto di esecuzione `pContext` per avviare l'esecuzione e l'oggetto proxy del thread, inoltre, continua l'esecuzione senza la necessità di una radice del processore virtuale. Il proxy del thread viene considerato hanno lasciato l'utilità di pianificazione finché non viene chiamato il [IThreadProxy::](#switchout) metodo in un secondo momento nel tempo. Il `IThreadProxy::SwitchOut` metodo potrebbe bloccare il proxy del thread fino a quando non è disponibile per la sua ripianificazione una radice del processore virtuale.  
   
- `SwitchTo`deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti. La funzione genera `invalid_argument` se il parametro `pContext` è impostato su `NULL`.  
+ `SwitchTo` deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti. La funzione genera `invalid_argument` se il parametro `pContext` è impostato su `NULL`.  
   
-##  <a name="yieldtosystem"></a>Metodo IThreadProxy:: YieldToSystem  
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
  Determina che il thread chiamante ceda l'esecuzione a un altro thread pronto per l'esecuzione sul processore corrente. Il sistema operativo seleziona il thread successivo da eseguire.  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>Note  
  Quando viene chiamato da un proxy del thread supportato da un thread di Windows normale, `YieldToSystem` si comporta esattamente come la funzione `SwitchToThread`. Tuttavia, quando viene chiamato dal thread (UMS) pianificabili in modalità utente, il `SwitchToThread` funzione delega l'attività di prelievo al thread successivo per eseguire l'utilità di pianificazione in modalità di utente, non il sistema operativo. Per ottenere l'effetto desiderato del passaggio a un altro thread pronto nel sistema, utilizzare `YieldToSystem`.  
   
- `YieldToSystem`deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti.  
+ `YieldToSystem` deve essere chiamato per il `IThreadProxy` interfaccia che rappresenta il thread attualmente in esecuzione o i risultati sono indefiniti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

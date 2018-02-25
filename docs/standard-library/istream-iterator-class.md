@@ -4,31 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/std::istream_iterator
 - iterator/std::istream_iterator::char_type
 - iterator/std::istream_iterator::istream_type
 - iterator/std::istream_iterator::traits_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::istream_iterator [C++]
 - std::istream_iterator [C++], char_type
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef5ba7c445325131ad620efcbb6061a0fa49039a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f8e2e368adae0d4a995521da65021a4193ec28a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="istreamiterator-class"></a>Classe istream_iterator
 Descrive un oggetto iteratore di input. Estrae gli oggetti della classe `Type` da un flusso di input, a cui accede tramite un oggetto archiviato di tipo `pointer` a `basic_istream`< `CharType`, `Traits`>.  

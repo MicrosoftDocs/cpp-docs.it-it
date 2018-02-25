@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -50,20 +51,22 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_for
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cdfa90b137da2e1a4c7460dfa54663ddb9a3581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7d657a95822d66d34a6173cc775f99c80411f12
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 Il &lt;shared_mutex > intestazione vengono fornite le primitive di sincronizzazione per la protezione dei dati condivisa che è possibile accedere da più thread. Oltre a fornire il controllo di accesso esclusivo, le classi mutex consentono anche la proprietà condivisa da più thread per l'accesso non esclusivo. I mutex condivisi consentono di controllare le risorse che possono essere lette da più thread, ma devono essere scritte esclusivamente da un unico thread, senza causare una race condition.
 
@@ -226,7 +229,7 @@ private:
 
 ## <a name="functions"></a>Funzioni
 
-###  <a name="function_swap"></a>swap
+###  <a name="function_swap"></a> swap
 
 Scambia gli oggetti `shared_lock`.
 

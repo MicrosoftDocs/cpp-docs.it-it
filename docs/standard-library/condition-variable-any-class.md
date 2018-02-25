@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition_variable_any
 - condition_variable/std::condition_variable_any::condition_variable_any
@@ -15,9 +16,10 @@ f1_keywords:
 - condition_variable/std::condition_variable_any::wait
 - condition_variable/std::condition_variable_any::wait_for
 - condition_variable/std::condition_variable_any::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c3acad50f9dec8e3384d0b811045f95843f40b92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 26572eed562150baff68f124fea7255283d0c133
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariableany-class"></a>Classe condition_variable_any
 Usare la classe `condition_variable_any` per l'attesa di un evento che ha un qualsiasi tipo `mutex`.  
@@ -59,7 +62,7 @@ class condition_variable_any;
 |----------|-----------------|  
 |[notify_all](#notify_all)|Sblocca tutti i thread in attesa dell'oggetto `condition_variable_any`.|  
 |[notify_one](#notify_one)|Sblocca uno dei thread in attesa dell'oggetto `condition_variable_any`.|  
-|[attesa](#wait)|Blocca un thread.|  
+|[wait](#wait)|Blocca un thread.|  
 |[wait_for](#wait_for)|Blocca un thread e imposta un intervallo di tempo dopo il quale il thread viene sbloccato.|  
 |[wait_until](#wait_until)|Blocca un thread e imposta un tempo massimo dopo il quale il thread viene sbloccato.|  
   

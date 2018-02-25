@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
@@ -54,7 +55,8 @@ f1_keywords:
 - unordered_map/std::unordered_map::swap
 - unordered_map/std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::hash_function
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unordered_map
 - std::unordered_map::allocator_type
@@ -145,16 +147,17 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fbb8b5b30f1666735fc4eebca0c1d0b335c1986b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: db73f5d2d064d96696d3d6e320855bb9d939af47
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorderedmap-class"></a>Classe unordered_map
 La classe modello descrive un oggetto che controlla una sequenza di elementi di lunghezza diversa di tipo `std::pair<const Key, Ty>`. La sequenza viene ordinata in modo debole da una funzione hash, che esegue il partizionamento della sequenza in un set ordinato di sottosequenze denominate bucket. In ogni bucket una funzione di confronto determina se una coppia di elementi ha un ordinamento equivalente. In ogni elemento sono archiviati due oggetti, una chiave di ordinamento e un valore. La sequenza viene rappresentata in modo da consentire la ricerca, l'inserimento e la rimozione di un elemento arbitrario mediante una serie di operazioni che possono essere indipendenti dal numero di elementi della sequenza (tempo costante), almeno quando tutti i bucket sono più o meno lunghi uguali. Nella peggiore delle ipotesi, quando tutti gli elementi si trovano in un unico bucket, il numero di operazioni è proporzionale al numero di elementi della sequenza (tempo lineare). Inoltre, l'inserimento di un elemento non invalida gli iteratori e la rimozione di un elemento invalida solo gli iteratori che fanno riferimento all'elemento rimosso.  
@@ -209,7 +212,7 @@ class unordered_map;
 |[at](#at)|Trova un elemento con la chiave specificata.|  
 |[begin](#begin)|Indica l'inizio della sequenza controllata.|  
 |[bucket](#bucket)|Ottiene il numero di bucket relativo a un valore della chiave.|  
-|[valore di bucket_count](#bucket_count)|Ottiene il numero di bucket.|  
+|[bucket_count](#bucket_count)|Ottiene il numero di bucket.|  
 |[bucket_size](#bucket_size)|Ottiene le dimensioni di un bucket.|  
 |[cbegin](#cbegin)|Indica l'inizio della sequenza controllata.|  
 |[cend](#cend)|Designa la fine della sequenza controllata.|  

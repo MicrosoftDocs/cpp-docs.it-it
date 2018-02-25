@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - section_CPP
 - vc-pragma.section
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 10f5783c6712852bfb53f457cea174f699c01ea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="section"></a>section
 Crea una sezione in un file obj.  
@@ -51,19 +54,19 @@ Crea una sezione in un file obj.
  **write**  
  Consente operazioni di scrittura sui dati.  
   
- **eseguire**  
+ **Eseguire**  
  Consente l'esecuzione di codice.  
   
- **condiviso**  
+ **shared**  
  Condivide la sezione tra tutti i processi che caricano l'immagine.  
   
  **nopage**  
  Contrassegna la sezione come non paginabile; utile per i driver di dispositivo Win32.  
   
- **NoCache**  
+ **nocache**  
  Contrassegna la sezione come non memorizzabile nella cache; utile per i driver di dispositivo Win32.  
   
- **Ignora**  
+ **discard**  
  Contrassegna la sezione come annullabile; utile per i driver di dispositivo Win32.  
   
  **remove**  

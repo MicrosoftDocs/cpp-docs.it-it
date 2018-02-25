@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xlocale/std::ctype_byname
-dev_langs: C++
-helpviewer_keywords: ctype_byname class
+ms.topic: reference
+f1_keywords:
+- xlocale/std::ctype_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 552e482933def86bfd9812a725ddc4553f4f8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c9163ddcb30d1c79bb8e69240702423f27130f0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctypebyname-class"></a>Classe ctype_byname
 Classe modello derivata che descrive un oggetto che può essere usato come facet ctype delle impostazioni locali specificate, consentendo la classificazione dei caratteri e la relativa conversione tra maiuscole e minuscole e tra set di caratteri nativi e set specificati dalle impostazioni locali.  

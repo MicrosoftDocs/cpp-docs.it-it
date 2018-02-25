@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: regex/std::match_results
-dev_langs: C++
-helpviewer_keywords: match_results class
+ms.topic: reference
+f1_keywords:
+- regex/std::match_results
+dev_langs:
+- C++
+helpviewer_keywords:
+- match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f0fa4ea48a9947492ee4ce53f33450d1944d6d3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1174b4d3536fcb5abb42c98a680b5172abfa68db
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="matchresults-class"></a>Classe match_results
 Contiene una sequenza delle sottocorrispondenze.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - set/std::operator!=
 - set/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - set/std::operator&lt;
 - set/std::operator&lt;=
 - set/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b4256ebc-c449-4688-95db-fced42d20d4d
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (set)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: 5bae2e375833cae5d775085519e145a4dab69eab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d5058b75af8b26b6e7ddc9a8a7b487b0cd8b8e91
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsetgt-operators"></a>Operatori &lt;set&gt;
 ||||  

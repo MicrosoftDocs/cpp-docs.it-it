@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
@@ -14,7 +15,8 @@ f1_keywords:
 - random/std::subtract_with_carry_engine::min
 - random/std::subtract_with_carry_engine::max
 - random/std::subtract_with_carry_engine::seed
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::subtract_with_carry_engine [C++]
 - std::subtract_with_carry_engine [C++], default_seed
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8de1c19ac793dd78ee55a15bc1156408936174bc
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 32dbf113691960dc9f9d6e77d0448a587486481a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="subtractwithcarryengine-class"></a>Classe subtract_with_carry_engine
 Genera una sequenza casuale usando l'algoritmo subtract-with-carry (lagged Fibonacci).  

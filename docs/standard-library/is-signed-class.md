@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::is_signed
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::is_signed
+dev_langs:
+- C++
 helpviewer_keywords:
 - is_signed class
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2edb40d2fc204b6b949e7616a7ef5579c95fdd6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1213147153a10f5bdf187c5560e429f791be154f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="issigned-class"></a>Classe is_signed
 Verificare se il tipo è un intero con segno.  

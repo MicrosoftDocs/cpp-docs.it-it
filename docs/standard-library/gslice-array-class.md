@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: valarray/std::gslice_array
-dev_langs: C++
-helpviewer_keywords: gslice_array class
+ms.topic: reference
+f1_keywords:
+- valarray/std::gslice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c030885dd0ab6b9c102167e9702dce02589973b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f47b1ce767a2090e718406585d2c40db2c4c8bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="gslicearray-class"></a>Classe gslice_array
 Classe modello ausiliaria interna che supporta oggetti sezione generale fornendo operazioni tra matrici di subset definite dalla sezione generale di un oggetto valarray.  

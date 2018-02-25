@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::thread
 - thread/std::thread::id Class
@@ -18,9 +19,10 @@ f1_keywords:
 - thread/std::thread::joinable
 - thread/std::thread::native_handle
 - thread/std::thread::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,12 +36,13 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 2e2d9d1bd19b34cd4b542d0325b06ad57e1a7c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a681e61888653c0abada81c5b35ff3b96b75200
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-class"></a>Classe thread
 Definisce un oggetto usato per verificare e gestire un thread di esecuzione all'interno di un'applicazione.  
@@ -73,7 +76,7 @@ class thread;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Disconnetti](#detach)|Dissocia il thread associato dall'oggetto `thread`.|  
+|[detach](#detach)|Dissocia il thread associato dall'oggetto `thread`.|  
 |[get_id](#get_id)|Restituisce l'identificatore univoco del thread associato.|  
 |[hardware_concurrency](#hardware_concurrency)|Statico. Restituisce una stima del numero di contesti di thread hardware.|  
 |[join](#join)|Si blocca fino al completamento del thread associato.|  
@@ -92,7 +95,7 @@ class thread;
   
  **Spazio dei nomi:** std  
   
-##  <a name="detach"></a>thread:: Detach
+##  <a name="detach"></a>  thread::detach
  Dissocia il thread associato. Il sistema operativo diventa responsabile del rilascio di risorse di thread al termine delle operazioni.  
   
 ```
@@ -106,7 +109,7 @@ void detach();
   
  Se il thread associato all'oggetto chiamante non è valido la funzione genera un oggetto `system_error` con codice di errore `no_such_process`.  
   
-##  <a name="get_id"></a>thread:: get_id
+##  <a name="get_id"></a>  thread::get_id
  Restituisce un identificatore univoco per il thread associato.  
   
 ```
@@ -116,7 +119,7 @@ id get_id() const noexcept;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [thread::id](#id_class) che identifica in modo univoco il thread associato. Se all'oggetto non è associato alcun thread, viene restituito `thread::id()`.  
   
-##  <a name="hardware_concurrency"></a>thread:: hardware_concurrency
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
  Metodo statico che restituisce una stima del numero di contesti di thread hardware.  
   
 ```
@@ -140,7 +143,7 @@ class thread::id {
   
  Tutti gli oggetti `thread::id` costruiti in modo predefinito risultano uguali.  
   
-##  <a name="join"></a>thread:: join
+##  <a name="join"></a>  thread:: join
  Si blocca fino al completamento del thread di esecuzione associato all'oggetto chiamante.  
   
 ```
@@ -150,7 +153,7 @@ void join();
 ### <a name="remarks"></a>Note  
  Se la chiamata ha esito positivo, le chiamate successive a [get_id](#get_id) per l'oggetto chiamante restituiscono un oggetto [thread::id](#id_class) predefinito che non risulta uguale al `thread::id` di alcun thread esistente. Se le chiamata ha esito negativo, il valore restituito da `get_id` rimane invariato.  
   
-##  <a name="joinable"></a>thread:: joinable
+##  <a name="joinable"></a>  thread:: joinable
  Specifica se il thread associato è *sottoponibile a join*.  
   
 ```
@@ -163,7 +166,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>Note  
  Un oggetto thread è *sottoponibile a join* se `get_id() != id()`.  
   
-##  <a name="native_handle"></a>thread:: native_handle
+##  <a name="native_handle"></a>  thread::native_handle
  Restituisce il tipo specifico dell'implementazione che rappresenta l'handle del thread. L'handle del thread può essere usato in modi specifici dell'implementazione.  
   
 ```
@@ -192,7 +195,7 @@ thread& operator=(thread&& Other) noexcept;
   
  Dopo l'associazione, `Other` viene impostato su uno stato costruito in modo predefinito.  
   
-##  <a name="swap"></a>thread:: swap
+##  <a name="swap"></a>  thread::swap
  Scambia lo stato dell'oggetto con quello di un oggetto `thread` specificato.  
   
 ```

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - filesystem/std::experimental::filesystem::_Directory_iterator::_Directory_iterator
@@ -18,9 +19,10 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator::operator*
 - filesystem/std::experimental::filesystem::directory_iterator::operator-&gt;
 - filesystem/std::experimental::filesystem::directory_iterator::operator++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dca2ecf8-3e69-4644-a83d-705061e10cc8
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -36,12 +38,13 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator*
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
-ms.workload: cplusplus
-ms.openlocfilehash: 2c490c3a56cfcff17d965a9cd635a92fff7f5a95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 27152fc2ebc7944e4b96dce75937ac3c3b04616d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="directoryiterator-class"></a>Classe directory_iterator
 Descrive un iteratore di input sequenziato attraverso i nomi file in una directory. Per un iteratore X, l'espressione *X restituisce un oggetto della classe directory_entry che esegue il wrapping di un nome file e tutto ciò che si conosce sul relativo stato.  

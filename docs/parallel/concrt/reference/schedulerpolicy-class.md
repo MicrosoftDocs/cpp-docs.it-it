@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
@@ -14,19 +15,22 @@ f1_keywords:
 - concrt/concurrency::SchedulerPolicy::GetPolicyValue
 - concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
 - concrt/concurrency::SchedulerPolicy::SetPolicyValue
-dev_langs: C++
-helpviewer_keywords: SchedulerPolicy class
+dev_langs:
+- C++
+helpviewer_keywords:
+- SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerpolicy-class"></a>Classe SchedulerPolicy
 La classe `SchedulerPolicy` contiene un set di coppie chiave/valore, uno per ogni elemento dei criteri, che controllano il comportamento di un'istanza dell'utilità di pianificazione.  
@@ -71,7 +75,7 @@ class SchedulerPolicy;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a> GetPolicyValue 
 
  Recupera il valore della chiave di criteri specificato come il `key` parametro.  
   
@@ -89,7 +93,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>Note  
  Il metodo genererà [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) per una chiave di criteri non validi.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Assegna i criteri dell'utilità di pianificazione di un altro criterio di pianificazione.  
   
@@ -107,7 +111,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>Note  
  Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a> SchedulerPolicy 
 
  Costruisce un nuovo criterio dell'utilità di pianificazione e la popola con i valori per [chiavi dei criteri](concurrency-namespace-enums.md) supportato dal Runtime di concorrenza le utilità di pianificazione e Gestione risorse.  
   
@@ -136,7 +140,7 @@ SchedulerPolicy(
   
  Il terzo costruttore è un costruttore di copia. Spesso, il modo più semplice per definire nuovi criteri dell'utilità di pianificazione consiste nel copiare i criteri esistenti e nel modificarli tramite i metodi `SetPolicyValue` o `SetConcurrencyLimits`.  
   
-##  <a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a> ~SchedulerPolicy 
 
  Elimina un criterio di pianificazione.  
   
@@ -144,7 +148,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits 
 
  Consente di impostare contemporaneamente il `MinConcurrency` e `MaxConcurrency` criteri sul `SchedulerPolicy` oggetto.  
   
@@ -166,7 +170,7 @@ void SetConcurrencyLimits(
   
  Il metodo può anche generare [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) per altri valori non validi.  
   
-##  <a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a> SetPolicyValue 
 
  Imposta il valore della chiave di criteri specificato come il `key` parametro e restituisce il valore precedente.  
   

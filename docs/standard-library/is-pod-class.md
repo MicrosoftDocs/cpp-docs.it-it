@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: type_traits/std::is_pod
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- type_traits/std::is_pod
+dev_langs:
+- C++
 helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4f6410ca3f8a011cce3673eec28b616bfb4a96aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4311e319593da7f893c8f8bff635e34972c3dca3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ispod-class"></a>Classe is_pod
 Verifica se il tipo è POD.  

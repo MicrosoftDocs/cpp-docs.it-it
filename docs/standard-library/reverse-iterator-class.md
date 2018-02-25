@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::reverse_iterator::reference
 - iterator/std::reverse_iterator::base
 - iterator/std::reverse_iterator::operator_star
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reverse_iterator [C++]
 - std::reverse_iterator [C++], difference_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72f9bc378c37eed6660091f04dfabc01bc5d4c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reverseiterator-class"></a>Classe reverse_iterator
 La classe modello è un adattatore di iteratore che descrive un oggetto iteratore inverso che si comporta come un iteratore ad accesso casuale o bidirezionale solo in senso inverso. Consente l'attraversamento all'indietro di un intervallo.  
@@ -57,7 +60,7 @@ class reverse_iterator
   
  L'intervallo dell'iteratore [*prima*, *ultimo*), dove la parentesi quadra sinistra indica l'inclusione di *prima* e la parentesi destra indica il inclusione di elementi senza *ultimo* stesso. Sono inclusi gli stessi elementi della sequenza inversa [ **rev** - *prima*, **rev** - *ultimo*) in modo Se *ultimo* è l'elemento di uno, il successivo in una sequenza, quindi il primo elemento **rev** - *prima* nei punti di sequenza inversa da \*(*ultimo* - 1). L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:  
   
- &\*( **reverse_iterator** ( *si* )) = = &\*( *si* - 1).  
+ &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).  
   
  In pratica, questo significa che in tale sequenza inversa reverse_iterator farà riferimento all'elemento immediatamente successivo (a destra) all'elemento a cui ha fatto riferimento l'iteratore nella sequenza originale. Quindi, se un iteratore ha puntato all'elemento 6 della sequenza (2, 4, 6, 8), `reverse_iterator` punterà all'elemento 4 della sequenza inversa (8, 6, 4, 2).  
   
@@ -114,7 +117,7 @@ RandomIterator base() const;
 ### <a name="remarks"></a>Note  
  L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:  
   
- &\*( `reverse_iterator` ( *si* )) = = &\*( *si* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  In pratica, questo significa che in tale sequenza inversa l'oggetto `reverse_iterator` farà riferimento all'elemento immediatamente successivo (a destra) all'elemento a cui ha fatto riferimento l'iteratore nella sequenza originale. Quindi, se un iteratore ha puntato all'elemento 6 della sequenza (2, 4, 6, 8), `reverse_iterator` punterà all'elemento 4 della sequenza inversa (8, 6, 4, 2).  
   
@@ -932,7 +935,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 ### <a name="remarks"></a>Note  
  L'identità che collega tutti gli iteratori inversi ai relativi iteratori sottostanti è:  
   
- &\*( `reverse_iterator` ( *si* )) = = &\*( *si* - 1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  In pratica, questo significa che in tale sequenza inversa reverse_iterator farà riferimento all'elemento immediatamente successivo (a destra) all'elemento a cui ha fatto riferimento l'iteratore nella sequenza originale. Quindi, se un iteratore ha puntato all'elemento 6 della sequenza (2, 4, 6, 8), `reverse_iterator` punterà all'elemento 4 della sequenza inversa (8, 6, 4, 2).  
   

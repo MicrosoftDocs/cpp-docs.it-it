@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 08/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <random>
-dev_langs: C++
-helpviewer_keywords: random header
+ms.topic: reference
+f1_keywords:
+- <random>
+dev_langs:
+- C++
+helpviewer_keywords:
+- random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5bef9205fd583dd66a0f3cfe791ff95a861435c0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: af48357ff276df90333d066cf6585a031b572914
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 Definisce strutture per la generazione casuale di numeri, permettendo la creazione di numeri casuali distribuiti in modo uniforme.  
@@ -251,13 +256,13 @@ Questo codice illustra due sequenze casuali: la creazione di una sequenza casual
 - `mt19937_64` Motore Mersenne Twister a 64 bit (Matsumoto e Nishimura, 2000).   
  `typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,      31, 0xb5026f5aa96619e9ULL,      29, 0x5555555555555555ULL,      17, 0x71d67fffeda60000ULL,      37, 0xfff7eee000000000ULL,      43, 6364136223846793005ULL> mt19937_64;`  
   
-- `ranlux24`motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).   
+- `ranlux24` motore RANLUX a 24 bit (Martin Lüscher e Fred James, 1994).   
  `typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;`  
   
 - `ranlux24_base` Usato come base per `ranlux24`.   
  `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
-- `ranlux48`motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).   
+- `ranlux48` motore RANLUX a 48 bit (Martin Lüscher e Fred James, 1994).   
  `typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;`  
   
 - `ranlux48_base` Usato come base per `ranlux48`.   

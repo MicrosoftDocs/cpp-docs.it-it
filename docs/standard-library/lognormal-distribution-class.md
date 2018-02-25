@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::lognormal_distribution
 - random/std::lognormal_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::lognormal_distribution [C++]
 - std::lognormal_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 03eda021ea5ff1e1515cf58cfb19cb4f332a6938
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lognormaldistribution-class"></a>Classe lognormal_distribution
 Genera una distribuzione lognormale.  

@@ -5,20 +5,20 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - istream/std::iostream
 - istream/std::istream
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: cc53eb1fed0dfc562ddb59ad239d716dd6057ebd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 866950a000556392a9c44122c32775e0f9d59422
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltistreamgt-typedefs"></a>Typedef &lt;istream&gt;
 ||||  

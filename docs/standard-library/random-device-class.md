@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -21,16 +23,17 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e12c446ec97bc4cf9d2f2caff642b0ed6fb210d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5cb39aa4158f69b1c6e168742e6c7a2b3dcdc97
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="randomdevice-class"></a>Classe random_device
 Genera una sequenza casuale da un dispositivo esterno.  
@@ -63,7 +66,7 @@ public:
   
 |||  
 |-|-|  
-|[random_device](#random_device)|[entropia](#entropy)|  
+|[random_device](#random_device)|[entropy](#entropy)|  
 |[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>Note  

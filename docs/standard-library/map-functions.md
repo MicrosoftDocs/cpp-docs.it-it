@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-caps.latest.revision: "6"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7972ff0d03f0c7b2378f87c311db633dff2a5d13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 29fa327fe892cba8c7cd9d9f4f428baa130ded29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-functions"></a>Funzioni &lt;map&gt;
 |||  

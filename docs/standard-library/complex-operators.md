@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::operator!=
 - xcomplex/std::operator&gt;&gt;
@@ -15,19 +15,20 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 130bd3bec74ec3ea31c9baca0dfef9fef4a57399
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-operators"></a>Operatori &lt;complex&gt;
 ||||  

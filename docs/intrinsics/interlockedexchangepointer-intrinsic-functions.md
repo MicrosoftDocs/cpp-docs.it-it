@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -16,7 +17,8 @@ f1_keywords:
 - _InterlockedExchangePointer
 - _InterlockedExchangePointer_acq_cpp
 - _InterlockedExchangePointer_HLEAcquire
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _InterlockedExchangePointer_rel intrinsic
 - _InterlockedExchangePointer_HLERelease intrinsic
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba9b7ac5c20c7b4bd4c43db3d76fbb5cfcb331c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c02d81376a6f923e086933f619f6ef13fcfa5b0a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funzioni intrinseche _InterlockedExchangePointer
 **Sezione specifica Microsoft**  
@@ -86,9 +89,9 @@ void * _InterlockedExchangePointer_HLERelease(
   
 |Funzione intrinseca|Architettura|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin. h >|  
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin. h >|  
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] con supporto HLE|\<h >|  
+|`_InterlockedExchangePointer`|x86, ARM [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|  
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] con supporto HLE|\<immintrin.h>|  
   
  Nell'architettura x86 `_InterlockedExchangePointer` è una macro che chiama `_InterlockedExchange`.  
   

@@ -5,21 +5,22 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - type_traits/std::false_type
 - xtr1common/std::false_type
 - type_traits/std::true_type
 - xtr1common/std::true_type
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: edd81913357c8402d93f2712ef0120179a22968f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 2c66e7420a06c7af41b42ceb6f3b8c91c4aaa4eb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttypetraitsgt-typedefs"></a>Typedef &lt;type_traits&gt;
 |||  

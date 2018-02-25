@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iomanip/std::get_money
 - iomanip/std::get_time
@@ -19,7 +19,7 @@ f1_keywords:
 - iomanip/std::setprecision
 - iomanip/std::setw
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::get_money [C++]
@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 8ea88bd5f1400eab0fe3cdbf09321e152412e1e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 6d36261e237d2a9c4ee7afddd0cb57d60cb5e12c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 ||||  

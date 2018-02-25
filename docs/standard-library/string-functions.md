@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - string/std::getline
 - string/std::stod
@@ -20,7 +20,7 @@ f1_keywords:
 - string/std::to_string
 - string/std::to_wstring
 ms.assetid: 1a4ffd11-dce5-4cc6-a043-b95de034c7c4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -37,12 +37,13 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 9b1d77b464ea9e9ab4ca6e9511836c490c1c622a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e40a0fb4c46a9be68893f16490e23ac4d5e5a7e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstringgt-functions"></a>Funzioni &lt;string&gt;
 ||||  

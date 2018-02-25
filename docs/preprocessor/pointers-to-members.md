@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pointers_to_members_CPP
 - vc-pragma.pointers_to_members
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - class members, pointers to
 - pragmas, pointers_to_members
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4e034a268a6ff3c3fc04da4e50a4477324ec1880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **Sezione specifica C++**  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 |Argomento|Commenti|  
 |--------------|--------------|  
-|**dell'ereditarietà singola**|La rappresentazione più generale è un puntatore a una funzione membro a ereditarietà singola. Genera un errore se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è multiplo o virtuale.|  
+|**single_inheritance**|La rappresentazione più generale è un puntatore a una funzione membro a ereditarietà singola. Genera un errore se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è multiplo o virtuale.|  
 |**multiple_inheritance**|La rappresentazione più generale è un puntatore a una funzione membro a ereditarietà multipla. Genera un errore se il modello di ereditarietà di una definizione di classe per cui viene dichiarato un puntatore a un membro è virtuale.|  
 |**virtual_inheritance**|La rappresentazione più generale è un puntatore a una funzione membro a ereditarietà virtuale. Non genera mai un errore. Si tratta dell'argomento predefinito quando **#pragma pointers_to_members (full_generality)** viene utilizzato.|  
   

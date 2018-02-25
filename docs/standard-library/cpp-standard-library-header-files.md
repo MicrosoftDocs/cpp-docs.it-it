@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8fca748d3192fcecbec5194822cd302ad78a296e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20e03c52147fddd6ac15de88df7f051109005cb2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-header-files"></a>File di intestazione libreria standard C++
 File di intestazione della libreria standard di C++ e delle relative estensioni per categoria.  

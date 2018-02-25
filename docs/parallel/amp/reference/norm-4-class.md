@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
 - amp_short_vectors/Concurrency::graphics::norm_4::agrb
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::get_wzy
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm4-class"></a>Classe norm_4
 Rappresenta uno short vector di quattro numeri normali.  
@@ -329,7 +332,7 @@ class norm_4;
 |norm_4::get_wzxy||  
 |norm_4::get_wzy||  
 |norm_4::get_wzyx||  
-|norm_4::get_X||  
+|norm_4::get_x||  
 |norm_4::get_xw||  
 |norm_4::get_xwy||  
 |norm_4::get_xwyz||  
@@ -401,7 +404,7 @@ class norm_4;
 |norm_4::set_wzxy||  
 |norm_4::set_wzy||  
 |norm_4::set_wzyx||  
-|norm_4::set_X||  
+|norm_4::set_x||  
 |norm_4::set_xw||  
 |norm_4::set_xwy||  
 |norm_4::set_xwyz||  
@@ -455,13 +458,13 @@ class norm_4;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |norm_4::operator-||  
-|norm_4::operator:||  
-|norm_4::operator * =||  
-|norm_4::operator / =||  
-|norm_4::operator + +||  
-|+ = norm_4::operator||  
-|norm_4::operator =||  
-|norm_4::operator =||  
+|norm_4::operator--||  
+|norm_4::operator*=||  
+|norm_4::operator/=||  
+|norm_4::operator++||  
+|norm_4::operator+=||  
+|norm_4::operator=||  
+|norm_4::operator-=||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -477,78 +480,78 @@ class norm_4;
 |norm_4::ab||  
 |norm_4::abg||  
 |norm_4::abgr||  
-|norm_4::ABR||  
+|norm_4::abr||  
 |norm_4::abrg||  
-|norm_4::AG||  
+|norm_4::ag||  
 |norm_4::agb||  
 |norm_4::agbr||  
 |norm_4::agr||  
 |norm_4::agrb||  
 |norm_4::ar||  
-|norm_4::ARB||  
-|norm_4::ARBG||  
+|norm_4::arb||  
+|norm_4::arbg||  
 |norm_4::arg||  
-|norm_4::ARGB||  
+|norm_4::argb||  
 |norm_4::b||  
-|norm_4::BA||  
+|norm_4::ba||  
 |norm_4::bag||  
 |norm_4::bagr||  
 |norm_4::bar||  
 |norm_4::barg||  
-|norm_4::BG||  
-|norm_4::BGA||  
+|norm_4::bg||  
+|norm_4::bga||  
 |norm_4::bgar||  
-|norm_4::BGR||  
+|norm_4::bgr||  
 |norm_4::bgra||  
 |norm_4::br||  
-|norm_4::BRA||  
+|norm_4::bra||  
 |norm_4::brag||  
 |norm_4::brg||  
 |norm_4::brga||  
 |norm_4::g||  
-|norm_4::GA||  
-|norm_4::Gab||  
+|norm_4::ga||  
+|norm_4::gab||  
 |norm_4::gabr||  
-|norm_4::Gar||  
+|norm_4::gar||  
 |norm_4::garb||  
-|norm_4::GB||  
-|norm_4::GBA||  
+|norm_4::gb||  
+|norm_4::gba||  
 |norm_4::gbar||  
-|norm_4::GBR||  
+|norm_4::gbr||  
 |norm_4::gbra||  
-|norm_4::GR||  
+|norm_4::gr||  
 |norm_4::gra||  
-|norm_4::Grab||  
+|norm_4::grab||  
 |norm_4::grb||  
 |norm_4::grba||  
 |norm_4::r||  
 |norm_4::ra||  
 |norm_4::rab||  
 |norm_4::rabg||  
-|norm_4::Rag||  
+|norm_4::rag||  
 |norm_4::ragb||  
-|norm_4::RB||  
+|norm_4::rb||  
 |norm_4::rba||  
 |norm_4::rbag||  
-|norm_4::RBG||  
+|norm_4::rbg||  
 |norm_4::rbga||  
-|norm_4::RG||  
+|norm_4::rg||  
 |norm_4::rga||  
 |norm_4::rgab||  
-|norm_4::RGB||  
-|norm_4::RGBA||  
+|norm_4::rgb||  
+|norm_4::rgba||  
 |norm_4::w||  
-|norm_4::WX||  
+|norm_4::wx||  
 |norm_4::wxy||  
 |norm_4::wxyz||  
 |norm_4::wxz||  
 |norm_4::wxzy||  
-|norm_4::wY||  
+|norm_4::wy||  
 |norm_4::wyx||  
 |norm_4::wyxz||  
 |norm_4::wyz||  
 |norm_4::wyzx||  
-|norm_4::wZ||  
+|norm_4::wz||  
 |norm_4::wzx||  
 |norm_4::wzxy||  
 |norm_4::wzy||  
@@ -559,12 +562,12 @@ class norm_4;
 |norm_4::xwyz||  
 |norm_4::xwz||  
 |norm_4::xwzy||  
-|norm_4::XY||  
+|norm_4::xy||  
 |norm_4::xyw||  
 |norm_4::xywz||  
-|norm_4::XYZ||  
+|norm_4::xyz||  
 |norm_4::xyzw||  
-|norm_4::XZ||  
+|norm_4::xz||  
 |norm_4::xzw||  
 |norm_4::xzwy||  
 |norm_4::xzy||  
@@ -575,28 +578,28 @@ class norm_4;
 |norm_4::ywxz||  
 |norm_4::ywz||  
 |norm_4::ywzx||  
-|norm_4::YX||  
+|norm_4::yx||  
 |norm_4::yxw||  
 |norm_4::yxwz||  
 |norm_4::yxz||  
 |norm_4::yxzw||  
-|norm_4::YZ||  
+|norm_4::yz||  
 |norm_4::yzw||  
 |norm_4::yzwx||  
 |norm_4::yzx||  
 |norm_4::yzxw||  
 |norm_4::z||  
-|norm_4::ZW||  
+|norm_4::zw||  
 |norm_4::zwx||  
 |norm_4::zwxy||  
 |norm_4::zwy||  
 |norm_4::zwyx||  
-|norm_4::ZX||  
+|norm_4::zx||  
 |norm_4::zxw||  
 |norm_4::zxwy||  
 |norm_4::zxy||  
 |norm_4::zxyw||  
-|norm_4::ZY||  
+|norm_4::zy||  
 |norm_4::zyw||  
 |norm_4::zywx||  
 |norm_4::zyx||  
@@ -610,7 +613,7 @@ class norm_4;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>norm_4 
+##  <a name="ctor"></a> norm_4 
 
  Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
@@ -702,7 +705,7 @@ explicit inline norm_4(
  `_Other`  
  Oggetto utilizzato per inizializzare.  
   
-##  <a name="norm_4__size"></a>dimensioni 
+##  <a name="norm_4__size"></a> Dimensioni 
 
 ```  
 static const int size = 4;  

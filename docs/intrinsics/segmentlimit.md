@@ -1,28 +1,32 @@
 ---
-title: __segmentlimit | Documenti Microsoft
+title: __segmentlimit | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __segmentlimit
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __segmentlimit
+dev_langs:
+- C++
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7c93923a3fdbb2a5e62163b41c83be30d0a54e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7f0e4ed3eab3d533c0b7e948cf89a1921388c181
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="segmentlimit"></a>__segmentlimit
 **Sezione specifica Microsoft**  

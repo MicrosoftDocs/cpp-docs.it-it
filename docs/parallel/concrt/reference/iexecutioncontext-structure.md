@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionContext
 - CONCRTRM/concurrency::IExecutionContext
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
 - CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
-dev_langs: C++
-helpviewer_keywords: IExecutionContext structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9e3edffb10aad7b5793907c8c95ad5028f4d1d23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cd8b00f24970e6bbc7f582f795c26ccb96461028
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutioncontext-structure"></a>Struttura IExecutionContext
 Un'interfaccia a un contesto di esecuzione che può essere in esecuzione su un processore virtuale specificato e il cui contesto può essere cambiato cooperativamente.  
@@ -44,11 +48,11 @@ struct IExecutionContext;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IExecutionContext:: dispatch](#dispatch)|Il metodo che viene chiamato quando inizia l'esecuzione di un particolare contesto di esecuzione di un proxy del thread. Deve essere la routine principale di lavoro dell'utilità di pianificazione.|  
-|[IExecutionContext:: GetID](#getid)|Restituisce un identificatore univoco per il contesto di esecuzione.|  
-|[IExecutionContext:: GetProxy](#getproxy)|Restituisce un'interfaccia per il proxy del thread che sta eseguendo il contesto.|  
-|[IExecutionContext:: GetScheduler](#getscheduler)|Restituisce un'interfaccia per l'utilità di pianificazione a cui appartiene questo contesto di esecuzione.|  
-|[IExecutionContext:: SetProxy](#setproxy)|Associa questo contesto di esecuzione di un proxy del thread. Il proxy thread associato richiama questo metodo poco prima di iniziare l'esecuzione del contesto di `Dispatch` metodo.|  
+|[IExecutionContext::Dispatch](#dispatch)|Il metodo che viene chiamato quando inizia l'esecuzione di un particolare contesto di esecuzione di un proxy del thread. Deve essere la routine principale di lavoro dell'utilità di pianificazione.|  
+|[IExecutionContext::GetId](#getid)|Restituisce un identificatore univoco per il contesto di esecuzione.|  
+|[IExecutionContext::GetProxy](#getproxy)|Restituisce un'interfaccia per il proxy del thread che sta eseguendo il contesto.|  
+|[IExecutionContext::GetScheduler](#getscheduler)|Restituisce un'interfaccia per l'utilità di pianificazione a cui appartiene questo contesto di esecuzione.|  
+|[IExecutionContext::SetProxy](#setproxy)|Associa questo contesto di esecuzione di un proxy del thread. Il proxy thread associato richiama questo metodo poco prima di iniziare l'esecuzione del contesto di `Dispatch` metodo.|  
   
 ## <a name="remarks"></a>Note  
  Se si implementa un'utilità di pianificazione personalizzata che si interfaccia con Gestione risorse del Runtime di concorrenza, sarà necessario implementare la `IExecutionContext` interfaccia. I thread creati da Gestione risorse di operare per conto dell'utilità di pianificazione tramite l'esecuzione di `IExecutionContext::Dispatch` metodo.  
@@ -61,7 +65,7 @@ struct IExecutionContext;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="dispatch"></a>Metodo IExecutionContext:: dispatch  
+##  <a name="dispatch"></a>  Metodo IExecutionContext:: dispatch  
  Il metodo che viene chiamato quando inizia l'esecuzione di un particolare contesto di esecuzione di un proxy del thread. Deve essere la routine principale di lavoro dell'utilità di pianificazione.  
   
 ```
@@ -72,7 +76,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  Puntatore allo stato in cui è stato inviato il contesto di esecuzione. Per ulteriori informazioni sullo stato di distribuzione, vedere [DispatchState](dispatchstate-structure.md).  
   
-##  <a name="getid"></a>Metodo IExecutionContext:: GetID  
+##  <a name="getid"></a>  Metodo IExecutionContext:: GetID  
  Restituisce un identificatore univoco per il contesto di esecuzione.  
   
 ```
@@ -87,7 +91,7 @@ virtual unsigned int GetId() const = 0;
   
  Un identificatore ottenuto da un'origine diversa potrebbe causare un comportamento indefinito.  
   
-##  <a name="getproxy"></a>Metodo IExecutionContext:: GetProxy  
+##  <a name="getproxy"></a>  Metodo IExecutionContext:: GetProxy  
  Restituisce un'interfaccia per il proxy del thread che sta eseguendo il contesto.  
   
 ```
@@ -100,7 +104,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>Note  
  Verrà richiamato il gestore delle risorse di `SetProxy` metodo in un contesto di esecuzione, con un `IThreadProxy` interfaccia come parametro, prima di inserire il `Dispatch` metodo nel contesto del. È necessario archiviare in questo argomento e restituirlo nelle chiamate a `GetProxy()`.  
   
-##  <a name="getscheduler"></a>Metodo IExecutionContext:: GetScheduler  
+##  <a name="getscheduler"></a>  Metodo IExecutionContext:: GetScheduler  
  Restituisce un'interfaccia per l'utilità di pianificazione a cui appartiene questo contesto di esecuzione.  
   
 ```
@@ -113,7 +117,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>Note  
  È necessario inizializzare il contesto di esecuzione con un valore valido `IScheduler` interfaccia prima di utilizzarlo come parametro per i metodi forniti da Gestione risorse.  
   
-##  <a name="setproxy"></a>Metodo IExecutionContext:: SetProxy  
+##  <a name="setproxy"></a>  Metodo IExecutionContext:: SetProxy  
  Associa questo contesto di esecuzione di un proxy del thread. Il proxy thread associato richiama questo metodo poco prima di iniziare l'esecuzione del contesto di `Dispatch` metodo.  
   
 ```

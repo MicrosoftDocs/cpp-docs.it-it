@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::bind
 - xfunctional/std::bind1st
@@ -24,7 +25,8 @@ f1_keywords:
 - xfunctional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bind [C++]
 - std::bind1st
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cce36b764002232f89c5cbcf09e7a6a8e8a8107f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0401f97cbaa30cd0489227008195568748d24b80
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfunctionalgt-functions"></a>Funzioni &lt;functional&gt;
 ||||  

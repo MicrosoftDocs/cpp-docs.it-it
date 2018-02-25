@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_multiset
 - hash_set/stdext::hash_multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_multiset::swap
 - hash_set/stdext::hash_multiset::upper_bound
 - hash_set/stdext::hash_multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multiset
 - stdext::hash_multiset::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 132ea24bd65ae4bf79922c811c03ef9cc7c13c42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 78fb4998754bc7a4b30a63de166973909d21b68f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultiset-class"></a>Classe hash_multiset
 > [!NOTE]
@@ -122,10 +125,10 @@ class hash_multiset
  Tipo di dati degli elementi da archiviare in hash_multiset.  
   
  `Traits`  
- Tipo che include due oggetti funzione, uno della classe compare, che è un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash corrispondente a un predicato unario che esegue il mapping di valori delle chiavi degli elementi a valori Unsigned Integer di tipo **size_t**. Questo argomento è facoltativo e il valore predefinito è `hash_compare`*<Key,* **less***\<Key> >*.  
+ Tipo che include due oggetti funzione, uno della classe compare, che è un predicato binario in grado di confrontare due valori di elemento come chiavi di ordinamento per determinarne l'ordine relativo, e una funzione hash corrispondente a un predicato unario che esegue il mapping di valori delle chiavi degli elementi a valori Unsigned Integer di tipo **size_t**. Questo argomento è facoltativo e il `hash_compare` *< chiave,* **meno * * *\<chiave >>* è il valore predefinito.  
   
  `Allocator`  
- Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione dell'hash_multiset e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è **allocator***\<Key>.*  
+ Tipo che rappresenta l'oggetto allocatore archiviato che incapsula i dettagli relativi all'allocazione dell'hash_multiset e alla deallocazione della memoria. Questo argomento è facoltativo e il valore predefinito è **allocatore * * *\<chiave >.*  
   
 ## <a name="remarks"></a>Note  
  L'hash_multiset è:  
@@ -146,7 +149,7 @@ class hash_multiset
   
  L'hash_multiset deve essere il contenitore associativo da preferire quando le condizioni che consentono di associare i valori alle relative chiavi vengono soddisfatte dall'applicazione. Un hash_multiset può contenere più elementi che possono essere usati come chiavi di ordinamento, pertanto le chiavi non sono univoche. Un modello relativo a questo tipo di struttura è ad esempio un elenco ordinato di parole in cui tali parole possono essere presenti più volte. Se non sono consentite più occorrenze delle parole, la struttura di contenitore appropriata è rappresentata da un hash_multiset. Se le definizioni univoche sono state allegate come valori all'elenco di parole chiave univoche, un hash_map rappresenta una struttura appropriata per contenere questi dati. Se invece le definizioni non sono univoche, è opportuno scegliere come contenitore un hash_multimap.  
   
- L'oggetto hash_multiset ordina la sequenza che controlla chiamando un oggetto di tratti hash archiviato di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe `hash_compare`*<Key,* **less***\<Key> >.* In particolare, per tutti i valori *Key* di tipo **Key**, la chiamata **Trait**( *Key*) genera una distribuzione di valori di tipo **size_t**.  
+ L'oggetto hash_multiset ordina la sequenza che controlla chiamando un oggetto di tratti hash archiviato di tipo [value_compare](#value_compare). È possibile accedere a questo oggetto archiviato chiamando la funzione membro [key_comp](#key_comp). Un oggetto funzione di questo tipo deve comportarsi come un oggetto della classe `hash_compare` *< chiave,* **meno * * *\<chiave >>.* In particolare, per tutti i valori *Key* di tipo **Key**, la chiamata **Trait**( *Key*) genera una distribuzione di valori di tipo **size_t**.  
   
  In genere, gli elementi devono essere confrontabili come "minore di" per stabilire questo ordine: in modo che, dati qualsiasi due elementi, sia possibile determinare che sono equivalenti (ovvero che uno non è minore dell'altro) o che uno è minore dell'altro. Di conseguenza, l'ordinamento viene eseguito tra gli elementi non equivalenti. A un livello più tecnico, la funzione di confronto è un predicato binario che provoca un ordinamento di tipo "strict weak" nel senso matematico standard. Un predicato binario *f*( *x*, *y*) è un oggetto funzione che dispone di due oggetti argomento x e y e di un valore restituito true o false. Un ordinamento imposto a un oggetto hash_multiset è un ordinamento di tipo "strict weak" se il predicato binario è irriflessivo, antisimmetrico e transitivo e se l'equivalenza è transitiva, in cui due oggetti x e y vengono definiti equivalenti quando sia *f*( *x*, *y*) che *f*( *y*, *x*) sono false. Se la condizione di uguaglianza più forte tra le chiavi sostituisce quella di equivalenza, l'ordinamento diventa totale, in quanto tutti gli elementi vengono ordinati l'uno rispetto all'altro e le chiavi accoppiate saranno indistinguibili l'una dall'altra.  
   

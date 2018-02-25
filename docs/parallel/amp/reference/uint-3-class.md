@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::get_xz
 - amp_short_vectors/Concurrency::graphics::uint_3::set_yzx
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::yxz
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2f5211440d0180b3ad05e8d172c4dea8c35b2844
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 434089802bcb054bf07c7b20a48bc384d06693e3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uint3-class"></a>Classe uint_3
 Rappresenta uno short vector di tre interi senza segno.  
@@ -117,7 +120,7 @@ class uint_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|uint_3::get_X||  
+|uint_3::get_x||  
 |uint_3::get_xy||  
 |uint_3::get_xyz||  
 |uint_3::get_xz||  
@@ -138,7 +141,7 @@ class uint_3;
 |uint_t::ref_x||  
 |uint_t::ref_y||  
 |uint_t::ref_z||  
-|uint_3::set_X||  
+|uint_3::set_x||  
 |uint_3::set_xy||  
 |uint_3::set_xyz||  
 |uint_3::set_xz||  
@@ -158,20 +161,20 @@ class uint_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|uint_3::operator:||  
-|% uint_3::operator =||  
-|uint_3::operator & =||  
-|uint_3::operator * =||  
-|uint_3::operator / =||  
-|uint_3::operator ^ =||  
-|uint_3::operator &#124; =||  
-|uint_3::operator ~||  
-|uint_3::operator + +||  
-|+ = uint_3::operator||  
-|uint_3::operator <\<=||  
-|uint_3::operator =||  
-|uint_3::operator =||  
-|uint_3::operator >> =||  
+|uint_3::operator--||  
+|uint_3::operator%=||  
+|uint_3::operator&=||  
+|uint_3::operator*=||  
+|uint_3::operator/=||  
+|uint_3::operator^=||  
+|uint_3::operator&#124;=||  
+|uint_3::operator~||  
+|uint_3::operator++||  
+|uint_3::operator+=||  
+|uint_3::operator<\<=||  
+|uint_3::operator=||  
+|uint_3::operator-=||  
+|uint_3::operator>>=||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -184,34 +187,34 @@ class uint_3;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |uint_3::b||  
-|uint_3::BG||  
-|uint_3::BGR||  
+|uint_3::bg||  
+|uint_3::bgr||  
 |uint_3::br||  
 |uint_3::brg||  
 |uint_3::g||  
-|uint_3::GB||  
-|uint_3::GBR||  
-|uint_3::GR||  
+|uint_3::gb||  
+|uint_3::gbr||  
+|uint_3::gr||  
 |uint_3::grb||  
 |uint_3::r||  
-|uint_3::RB||  
-|uint_3::RBG||  
-|uint_3::RG||  
-|uint_3::RGB||  
+|uint_3::rb||  
+|uint_3::rbg||  
+|uint_3::rg||  
+|uint_3::rgb||  
 |uint_3::x||  
-|uint_3::XY||  
-|uint_3::XYZ||  
-|uint_3::XZ||  
+|uint_3::xy||  
+|uint_3::xyz||  
+|uint_3::xz||  
 |uint_3::xzy||  
 |uint_3::y||  
-|uint_3::YX||  
+|uint_3::yx||  
 |uint_3::yxz||  
-|uint_3::YZ||  
+|uint_3::yz||  
 |uint_3::yzx||  
 |uint_3::z||  
-|uint_3::ZX||  
+|uint_3::zx||  
 |uint_3::zxy||  
-|uint_3::ZY||  
+|uint_3::zy||  
 |uint_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -222,7 +225,7 @@ class uint_3;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="ctor"></a>uint_3 
+##  <a name="ctor"></a> uint_3 
 
  Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
@@ -289,7 +292,7 @@ explicit inline uint_3(
  `_Other`  
  Oggetto utilizzato per inizializzare.  
   
-##  <a name="uint_3__size"></a>dimensioni 
+##  <a name="uint_3__size"></a> Dimensioni 
 
 ```  
 static const int size = 3;  

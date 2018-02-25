@@ -1,25 +1,29 @@
 ---
-title: '&lt;thread&gt; | Documenti Microsoft'
+title: '&lt;thread&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <thread>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <thread>
+dev_langs:
+- C++
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0847d92d890026ce6cfb963b022a3859370877fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fa16f2f06a55122619741c5889f41ce3d6b53c1e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 Includere l'intestazione standard \<thread > per definire la classe `thread` e varie funzioni di supporto.  

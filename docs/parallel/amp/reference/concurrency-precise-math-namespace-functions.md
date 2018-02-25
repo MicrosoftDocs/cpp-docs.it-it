@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -94,18 +94,20 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funzioni dello spazio dei nomi Concurrency:: precise_math
 ||||  
@@ -131,7 +133,7 @@ ms.lasthandoff: 12/21/2017
 |[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|  
 |[fmodf](#fmodf)|[fpclassify](#fpclassify)|[frexp](#frexp)|  
 |[frexpf](#frexpf)|[hypot](#hypot)|[hypotf](#hypotf)|  
-|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isFinite](#isfinite)|  
+|[ilogb](#ilogb)|[ilogbf](#ilogbf)|[isfinite](#isfinite)|  
 |[isinf](#isinf)|[isnan](#isnan)|[isnormal](#isnormal)|  
 |[ldexp](#ldexp)|[ldexpf](#ldexpf)|[lgamma](#lgamma)|  
 |[lgammaf](#lgammaf)|[log](#log)|[log10](#log10)|  
@@ -140,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[logbf](#logbf)|[logf](#logf)|[modf](#modf)|  
 |[modff](#modff)|[nan](#nan)|[nanf](#nanf)|  
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|  
-|[nextafterf](#nextafterf)|[Phi](#phi)|[phif](#phif)|  
+|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|  
 |[pow](#pow)|[powf](#powf)|[probit](#probit)|  
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|  
 |[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|  
@@ -173,7 +175,7 @@ inline double acos(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcocoseno dell'argomento  
   
-##  <a name="acosf"></a>acosf  
+##  <a name="acosf"></a>  acosf  
  Calcola l'arcoseno dell'argomento  
   
 ```  
@@ -187,7 +189,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcocoseno dell'argomento  
   
-##  <a name="acosh"></a>Acosh  
+##  <a name="acosh"></a>  acosh  
  Calcola il coseno iperbolico inverso dell'argomento  
   
 ```  
@@ -204,7 +206,7 @@ inline double acosh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno iperbolico inverso dell'argomento  
   
-##  <a name="acoshf"></a>acoshf  
+##  <a name="acoshf"></a>  acoshf  
  Calcola il coseno iperbolico inverso dell'argomento  
   
 ```  
@@ -235,7 +237,7 @@ inline double asin(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcoseno dell'argomento  
   
-##  <a name="asinf"></a>asinf  
+##  <a name="asinf"></a>  asinf  
  Calcola l'arcoseno dell'argomento  
   
 ```  
@@ -249,7 +251,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcoseno dell'argomento  
   
-##  <a name="asinh"></a>Asinh  
+##  <a name="asinh"></a>  asinh  
  Calcola il seno iperbolico inverso dell'argomento  
   
 ```  
@@ -266,7 +268,7 @@ inline double asinh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno iperbolico inverso dell'argomento  
   
-##  <a name="asinhf"></a>asinhf  
+##  <a name="asinhf"></a>  asinhf  
  Calcola il seno iperbolico inverso dell'argomento  
   
 ```  
@@ -321,7 +323,7 @@ inline double atan2(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcotangente di y/x  
   
-##  <a name="atan2f"></a>atan2f  
+##  <a name="atan2f"></a>  atan2f  
  Calcola l'arcotangente di y/x  
   
 ```  
@@ -340,7 +342,7 @@ inline float atan2f(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcotangente di y/x  
   
-##  <a name="atanf"></a>atanf  
+##  <a name="atanf"></a>  atanf  
  Calcola l'arcotangente dell'argomento  
   
 ```  
@@ -354,7 +356,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore dell'arcotangente dell'argomento  
   
-##  <a name="atanh"></a>Atanh  
+##  <a name="atanh"></a>  atanh  
  Calcola la tangente iperbolica inversa dell'argomento  
   
 ```  
@@ -371,7 +373,7 @@ inline double atanh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente iperbolico inverso dell'argomento  
   
-##  <a name="atanhf"></a>atanhf  
+##  <a name="atanhf"></a>  atanhf  
  Calcola la tangente iperbolica inversa dell'argomento  
   
 ```  
@@ -385,7 +387,7 @@ inline float atanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente iperbolico inverso dell'argomento  
   
-##  <a name="cbrt"></a>cbrt  
+##  <a name="cbrt"></a>  cbrt  
  Calcola la radice cubica reale dell'argomento  
   
 ```  
@@ -402,7 +404,7 @@ inline double cbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice cubica reale dell'argomento  
   
-##  <a name="cbrtf"></a>cbrtf  
+##  <a name="cbrtf"></a>  cbrtf  
  Calcola la radice cubica reale dell'argomento  
   
 ```  
@@ -416,7 +418,7 @@ inline float cbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice cubica reale dell'argomento  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  Calcola il limite massimo dell'argomento  
   
 ```  
@@ -433,7 +435,7 @@ inline double ceil(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite massimo dell'argomento  
   
-##  <a name="ceilf"></a>ceilf  
+##  <a name="ceilf"></a>  ceilf  
  Calcola il limite massimo dell'argomento  
   
 ```  
@@ -447,7 +449,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il limite massimo dell'argomento  
   
-##  <a name="copysign"></a>copysign  
+##  <a name="copysign"></a>  copysign  
  Produce un valore con la grandezza del x e il segno di y  
   
 ```  
@@ -471,7 +473,7 @@ inline double copysign(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore con la grandezza del x e il segno di y  
   
-##  <a name="copysignf"></a>copysignf  
+##  <a name="copysignf"></a>  copysignf  
  Produce un valore con la grandezza del x e il segno di y  
   
 ```  
@@ -507,7 +509,7 @@ inline double cos(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di coseno dell'argomento  
   
-##  <a name="cosf"></a>cosf  
+##  <a name="cosf"></a>  cosf  
  Calcola il coseno dell'argomento  
   
 ```  
@@ -538,7 +540,7 @@ inline double cosh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno iperbolico dell'argomento  
   
-##  <a name="coshf"></a>coshf  
+##  <a name="coshf"></a>  coshf  
  Calcola il coseno iperbolico di valore dell'argomento  
   
 ```  
@@ -552,7 +554,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore del coseno iperbolico dell'argomento  
   
-##  <a name="cospi"></a>cospi  
+##  <a name="cospi"></a>  cospi  
  Calcola il coseno di valore di pi greco * x  
   
 ```  
@@ -569,7 +571,7 @@ inline double cospi(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il coseno di valore di pi greco * x  
   
-##  <a name="cospif"></a>cospif  
+##  <a name="cospif"></a>  cospif  
  Calcola il coseno di valore di pi greco * x  
   
 ```  
@@ -583,7 +585,7 @@ inline float cospif(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il coseno di valore di pi greco * x  
   
-##  <a name="erf"></a>Erf  
+##  <a name="erf"></a>  erf  
  Calcola la funzione di errore di x  
   
 ```  
@@ -600,7 +602,7 @@ inline double erf(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione di errore di x  
   
-##  <a name="erfc"></a>ErfC  
+##  <a name="erfc"></a>  erfc  
  Calcola la funzione di errore complementare di x  
   
 ```  
@@ -617,7 +619,7 @@ inline double erfc(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione di errore complementare di x  
   
-##  <a name="erfcf"></a>erfcf  
+##  <a name="erfcf"></a>  erfcf  
  Calcola la funzione di errore complementare di x  
   
 ```  
@@ -631,7 +633,7 @@ inline float erfcf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione di errore complementare di x  
   
-##  <a name="erfcinv"></a>erfcinv  
+##  <a name="erfcinv"></a>  erfcinv  
  Calcola la funzione inversa di errore complementare di x  
   
 ```  
@@ -648,7 +650,7 @@ inline double erfcinv(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione inversa di errore complementare di x  
   
-##  <a name="erfcinvf"></a>erfcinvf  
+##  <a name="erfcinvf"></a>  erfcinvf  
  Calcola la funzione inversa di errore complementare di x  
   
 ```  
@@ -662,7 +664,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione inversa di errore complementare di x  
   
-##  <a name="erff"></a>erff  
+##  <a name="erff"></a>  erff  
  Calcola la funzione di errore di x  
   
 ```  
@@ -676,7 +678,7 @@ inline float erff(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione di errore di x  
   
-##  <a name="erfinv"></a>erfinv  
+##  <a name="erfinv"></a>  erfinv  
  Calcola la funzione inversa di errore di x  
   
 ```  
@@ -693,7 +695,7 @@ inline double erfinv(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione inversa di errore di x  
   
-##  <a name="erfinvf"></a>erfinvf  
+##  <a name="erfinvf"></a>  erfinvf  
  Calcola la funzione inversa di errore di x  
   
 ```  
@@ -707,7 +709,7 @@ inline float erfinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione inversa di errore di x  
   
-##  <a name="exp10"></a>exp10  
+##  <a name="exp10"></a>  exp10  
  Viene calcolato in base 10 esponenziale dell'argomento  
   
 ```  
@@ -724,7 +726,7 @@ inline double exp10(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base 10 esponenziale dell'argomento  
   
-##  <a name="exp10f"></a>exp10f  
+##  <a name="exp10f"></a>  exp10f  
  Viene calcolato in base 10 esponenziale dell'argomento  
   
 ```  
@@ -738,7 +740,7 @@ inline float exp10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base 10 esponenziale dell'argomento  
   
-##  <a name="expm1"></a>expm1  
+##  <a name="expm1"></a>  expm1  
  Calcola l'esponenziale in base e dell'argomento, meno 1  
   
 ```  
@@ -755,7 +757,7 @@ inline double expm1(double exponent) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento, meno 1  
   
-##  <a name="expm1f"></a>expm1f  
+##  <a name="expm1f"></a>  expm1f  
  Calcola l'esponenziale in base e dell'argomento, meno 1  
   
 ```  
@@ -786,7 +788,7 @@ inline double exp(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento  
   
-##  <a name="expf"></a>expf  
+##  <a name="expf"></a>  expf  
  Calcola l'esponenziale in base e dell'argomento  
   
 ```  
@@ -800,7 +802,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponenziale in base e dell'argomento  
   
-##  <a name="exp2"></a>EXP2  
+##  <a name="exp2"></a>  exp2  
  Calcola l'esponenziale dell'argomento di base-2  
   
 ```  
@@ -817,7 +819,7 @@ inline double exp2(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base 2 esponenziale dell'argomento  
   
-##  <a name="exp2f"></a>exp2f  
+##  <a name="exp2f"></a>  exp2f  
  Calcola l'esponenziale dell'argomento di base-2  
   
 ```  
@@ -831,7 +833,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base 2 esponenziale dell'argomento  
   
-##  <a name="fabs"></a>fabs  
+##  <a name="fabs"></a>  fabs  
  Restituisce il valore assoluto dell'argomento  
   
 ```  
@@ -848,7 +850,7 @@ inline double fabs(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore assoluto dell'argomento  
   
-##  <a name="fabsf"></a>fabsf  
+##  <a name="fabsf"></a>  fabsf  
  Restituisce il valore assoluto dell'argomento  
   
 ```  
@@ -862,7 +864,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore assoluto dell'argomento  
 
-## <a name="fdim"></a>fdim  
+## <a name="fdim"></a> fdim  
 Calcola la differenza tra gli argomenti positivo.
 ```  
 inline float fdim(
@@ -875,13 +877,13 @@ inline double fdim(
 ) restrict(amp);
 ``` 
 ### <a name="parameters"></a>Parametri
-`_X`Valore a virgola mobile `_Y` valore a virgola mobile
+`_X` Valore a virgola mobile `_Y` valore a virgola mobile
 
 
 ### <a name="return-value"></a>Valore restituito
 La differenza tra x e y se x è maggiore di y; in caso contrario, + 0.
  
-## <a name="fdimf"></a>fdimf  
+## <a name="fdimf"></a> fdimf  
 Calcola la differenza tra gli argomenti positivo.
 ```
 inline float fdimf(
@@ -890,12 +892,12 @@ inline float fdimf(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>Parametri
-`_X`Valore a virgola mobile `_Y` valore a virgola mobile
+`_X` Valore a virgola mobile `_Y` valore a virgola mobile
 
 ### <a name="return-value"></a>Valore restituito
 La differenza tra x e y se x è maggiore di y; in caso contrario, + 0. 
   
-##  <a name="floor"></a>floor  
+##  <a name="floor"></a>  floor  
  Calcola la base dell'argomento  
   
 ```  
@@ -912,7 +914,7 @@ inline double floor(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base dell'argomento  
   
-##  <a name="floorf"></a>floorf  
+##  <a name="floorf"></a>  floorf  
  Calcola la base dell'argomento  
   
 ```  
@@ -926,7 +928,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la base dell'argomento  
 
-## <a name="a-namefma-fma"></a><a name="fma">FMA  
+## <a name="a-namefma-fma"></a><a name="fma"> fma  
 Calcola il prodotto del primo e il secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
 ```
 inline float fma(
@@ -942,14 +944,14 @@ inline double fma(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>Parametri
-`_X`Il primo argomento a virgola mobile.
-`_Y`Il secondo argomento a virgola mobile.
-`_Z`Il terzo argomento a virgola mobile.
+`_X` Il primo argomento a virgola mobile.
+`_Y` Il secondo argomento a virgola mobile.
+`_Z` Il terzo argomento a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
 Il risultato dell'espressione ( x * y) + _Z. Il calcolo dell'intero viene eseguito come una singola operazione. vale a dire le sottoespressioni vengono calcolate a precisione infinita, e solo il risultato finale viene arrotondato. 
 
-## <a name="fmaf"></a>fmaf  
+## <a name="fmaf"></a> fmaf  
 Calcola il prodotto del primo e il secondo argomento specificato, quindi aggiunge il terzo argomento specificato per il risultato. il calcolo dell'intero viene eseguito come un'unica operazione.
 ```
 inline float fmaf(
@@ -959,14 +961,14 @@ inline float fmaf(
 ) restrict(amp);
 ```  
 ### <a name="parameters"></a>Parametri
-`_X`Il primo argomento a virgola mobile.
-`_Y`Il secondo argomento a virgola mobile.
-`_Z`Il terzo argomento a virgola mobile.
+`_X` Il primo argomento a virgola mobile.
+`_Y` Il secondo argomento a virgola mobile.
+`_Z` Il terzo argomento a virgola mobile.
 
 ### <a name="return-value"></a>Valore restituito
 Il risultato dell'espressione ( x * y) + _Z. Il calcolo dell'intero viene eseguito come una singola operazione. vale a dire le sottoespressioni vengono calcolate a precisione infinita, e solo il risultato finale viene arrotondato.
   
-##  <a name="fmax"></a>Fmax  
+##  <a name="fmax"></a>  fmax  
  Determinare il valore numerico massimo di argomenti  
   
 ```  
@@ -990,7 +992,7 @@ inline double fmax(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico massimo di argomenti  
   
-##  <a name="fmaxf"></a>fmaxf  
+##  <a name="fmaxf"></a>  fmaxf  
  Determinare il valore numerico massimo di argomenti  
   
 ```  
@@ -1009,7 +1011,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico massimo di argomenti  
   
-##  <a name="fmin"></a>Fmin  
+##  <a name="fmin"></a>  fmin  
  Determinare il valore numerico minimo di argomenti  
   
 ```  
@@ -1033,7 +1035,7 @@ inline double fmin(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico minimo di argomenti  
   
-##  <a name="fminf"></a>fminf  
+##  <a name="fminf"></a>  fminf  
  Determinare il valore numerico minimo di argomenti  
   
 ```  
@@ -1052,7 +1054,7 @@ inline float fminf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore numerico minimo di argomenti  
   
-##  <a name="fmod"></a>fmod (funzione) (C++ AMP)  
+##  <a name="fmod"></a>  fmod (funzione) (C++ AMP)  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato.  
   
 ```  
@@ -1076,7 +1078,7 @@ inline double fmod(
 ### <a name="return-value"></a>Valore restituito  
  Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
   
-##  <a name="fmodf"></a>fmodf  
+##  <a name="fmodf"></a>  fmodf  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato.  
   
 ```  
@@ -1095,7 +1097,7 @@ inline float fmodf(
 ### <a name="return-value"></a>Valore restituito  
  Il resto della `_X` diviso `_Y`; ovvero, il valore di `_X`  -  `_Y`  *n* , dove  *n*  è un numero intero tale che la grandezza del `_X`  -  `_Y`  *n*  è minore della grandezza di `_Y`.  
   
-##  <a name="fpclassify"></a>fpclassify  
+##  <a name="fpclassify"></a>  fpclassify  
  Classifica il valore dell'argomento come un valore NaN, infinito, normale, subnormal zero  
   
 ```  
@@ -1112,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore della macro numero classificazione appropriato per il valore dell'argomento.  
   
-##  <a name="frexp"></a>frexp  
+##  <a name="frexp"></a>  frexp  
  Ottiene la mantissa e l'esponente di x  
   
 ```  
@@ -1136,7 +1138,7 @@ inline double frexp(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il x mantissa  
   
-##  <a name="frexpf"></a>frexpf  
+##  <a name="frexpf"></a>  frexpf  
  Ottiene la mantissa e l'esponente di x  
   
 ```  
@@ -1155,7 +1157,7 @@ inline float frexpf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il x mantissa  
   
-##  <a name="hypot"></a>hypot  
+##  <a name="hypot"></a>  hypot  
  Calcola la radice quadrata della somma dei quadrati di x e y  
   
 ```  
@@ -1179,7 +1181,7 @@ inline double hypot(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice quadrata della somma dei quadrati di x e y  
   
-##  <a name="hypotf"></a>hypotf  
+##  <a name="hypotf"></a>  hypotf  
  Calcola la radice quadrata della somma dei quadrati di x e y  
   
 ```  
@@ -1198,7 +1200,7 @@ inline float hypotf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice quadrata della somma dei quadrati di x e y  
   
-##  <a name="ilogb"></a>ilogb  
+##  <a name="ilogb"></a>  ilogb  
  Estrarre l'esponente di x come un valore signed integer  
   
 ```  
@@ -1215,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponente di x come un valore signed integer  
   
-##  <a name="ilogbf"></a>ilogbf  
+##  <a name="ilogbf"></a>  ilogbf  
  Estrarre l'esponente di x come un valore signed integer  
   
 ```  
@@ -1229,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponente di x come un valore signed integer  
   
-##  <a name="isfinite"></a>isFinite  
+##  <a name="isfinite"></a>  isfinite  
  Determina se l'argomento ha un valore finito  
   
 ```  
@@ -1246,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento è un valore finito  
   
-##  <a name="isinf"></a>isinf  
+##  <a name="isinf"></a>  isinf  
  Determina se l'argomento è infinito  
   
 ```  
@@ -1263,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento è un valore infinito  
   
-##  <a name="isnan"></a>isNaN  
+##  <a name="isnan"></a>  isnan  
  Determina se l'argomento è NaN  
   
 ```  
@@ -1280,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore NaN  
   
-##  <a name="isnormal"></a>isnormal  
+##  <a name="isnormal"></a>  isnormal  
  Determina se l'argomento è un normale  
   
 ```  
@@ -1297,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se l'argomento ha un valore normale  
   
-##  <a name="ldexp"></a>ldexp  
+##  <a name="ldexp"></a>  ldexp  
  Calcola un numero reale compreso tra la mantissa specificata e un esponente.  
   
 ```  
@@ -1321,7 +1323,7 @@ inline double ldexp(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>ldexpf  
+##  <a name="ldexpf"></a>  ldexpf  
  Calcola un numero reale compreso tra la mantissa specificata e un esponente.  
   
 ```  
@@ -1340,7 +1342,7 @@ inline float ldexpf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce x * 2 ^ _Exp  
   
-##  <a name="lgamma"></a>lgamma  
+##  <a name="lgamma"></a>  lgamma  
  Calcola il logaritmo naturale del valore assoluto della gamma dell'argomento  
   
 ```  
@@ -1364,7 +1366,7 @@ inline double lgamma(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo naturale del valore assoluto della gamma dell'argomento  
   
-##  <a name="lgammaf"></a>lgammaf  
+##  <a name="lgammaf"></a>  lgammaf  
  Calcola il logaritmo naturale del valore assoluto della gamma dell'argomento  
   
 ```  
@@ -1417,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
   
-##  <a name="log10f"></a>log10f  
+##  <a name="log10f"></a>  log10f  
  Calcola il logaritmo in base 10 dell'argomento  
   
 ```  
@@ -1431,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
   
-##  <a name="log1p"></a>log1p  
+##  <a name="log1p"></a>  log1p  
  Calcola il logaritmo di base e di 1 e l'argomento  
   
 ```  
@@ -1448,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo di base e di 1 e l'argomento  
   
-##  <a name="log1pf"></a>log1pf  
+##  <a name="log1pf"></a>  log1pf  
  Calcola il logaritmo di base e di 1 e l'argomento  
   
 ```  
@@ -1462,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo di base e di 1 e l'argomento  
   
-##  <a name="log2"></a>LOG2  
+##  <a name="log2"></a>  log2  
  Calcola il logaritmo in base 2 dell'argomento  
   
 ```  
@@ -1479,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
   
-##  <a name="log2f"></a>log2f  
+##  <a name="log2f"></a>  log2f  
  Calcola il logaritmo in base 2 dell'argomento  
   
 ```  
@@ -1493,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo in base 10 dell'argomento  
   
-##  <a name="logb"></a>logb  
+##  <a name="logb"></a>  logb  
  Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile  
   
 ```  
@@ -1510,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponente di x con segno  
   
-##  <a name="logbf"></a>logbf  
+##  <a name="logbf"></a>  logbf  
  Estrae l'esponente di x, come un valore intero con segno in formato a virgola mobile  
   
 ```  
@@ -1524,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'esponente di x con segno  
   
-##  <a name="logf"></a>logf  
+##  <a name="logf"></a>  logf  
  Calcola il logaritmo di base e dell'argomento  
   
 ```  
@@ -1538,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il logaritmo di base e dell'argomento  
   
-##  <a name="modf"></a>modf  
+##  <a name="modf"></a>  modf  
  Divide le parti intere e l'argomento specificato in frazionari.  
   
 ```  
@@ -1556,13 +1558,13 @@ inline double modf(
  `_X`  
  Valore a virgola mobile  
   
- `_Iptr`(parametro) out  
+ `_Iptr` (parametro) out  
  La parte intera di `_X`, come un valore a virgola mobile.  
   
 ### <a name="return-value"></a>Valore restituito  
  La parte decimale con segno del `_X`.  
   
-##  <a name="modff"></a>modff  
+##  <a name="modff"></a>  modff  
  Divide le parti intere e l'argomento specificato in frazionari.  
   
 ```  
@@ -1581,7 +1583,7 @@ inline float modff(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la parte decimale con segno del `_X`.  
   
-##  <a name="nan"></a>NaN  
+##  <a name="nan"></a>  nan  
  Restituisce un NaN non interattivo  
   
 ```  
@@ -1595,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un NaN non interattivo, se disponibile, con il contenuto indicato in x  
   
-##  <a name="nanf"></a>nanf  
+##  <a name="nanf"></a>  nanf  
  Restituisce un NaN non interattivo  
   
 ```  
@@ -1609,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un NaN non interattivo, se disponibile, con il contenuto indicato in x  
   
-##  <a name="nearbyint"></a>nearbyint  
+##  <a name="nearbyint"></a>  nearbyint  
  Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.  
   
 ```  
@@ -1626,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore intero arrotondato.  
   
-##  <a name="nearbyintf"></a>nearbyintf  
+##  <a name="nearbyintf"></a>  nearbyintf  
  Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.  
   
 ```  
@@ -1640,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore intero arrotondato.  
   
-##  <a name="nextafter"></a>nextafter  
+##  <a name="nextafter"></a>  nextafter  
  Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y  
   
 ```  
@@ -1664,7 +1666,7 @@ inline double nextafter(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il successivo valore rappresentabile nel tipo della funzione, dopo x nella direzione di y  
   
-##  <a name="nextafterf"></a>nextafterf  
+##  <a name="nextafterf"></a>  nextafterf  
  Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y  
   
 ```  
@@ -1683,7 +1685,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il successivo valore rappresentabile nel tipo della funzione, dopo x nella direzione di y  
   
-##  <a name="phi"></a>Phi  
+##  <a name="phi"></a>  phi  
  Restituisce la funzione distribuzione cumulativa dell'argomento  
   
 ```  
@@ -1700,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione distribuzione cumulativa dell'argomento  
   
-##  <a name="phif"></a>phif  
+##  <a name="phif"></a>  phif  
  Restituisce la funzione distribuzione cumulativa dell'argomento  
   
 ```  
@@ -1737,7 +1739,7 @@ inline double pow(
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="powf"></a>powf  
+##  <a name="powf"></a>  powf  
  Calcola x elevato alla potenza di y  
   
 ```  
@@ -1755,7 +1757,7 @@ inline float powf(
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="probit"></a>probit  
+##  <a name="probit"></a>  probit  
  Restituisce la funzione distribuzione cumulativa inversa dell'argomento  
   
 ```  
@@ -1772,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione distribuzione cumulativa inversa dell'argomento  
   
-##  <a name="probitf"></a>probitf  
+##  <a name="probitf"></a>  probitf  
  Restituisce la funzione distribuzione cumulativa inversa dell'argomento  
   
 ```  
@@ -1786,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la funzione distribuzione cumulativa inversa dell'argomento  
   
-##  <a name="rcbrt"></a>rcbrt  
+##  <a name="rcbrt"></a>  rcbrt  
  Restituisce il reciproco della radice cubica dell'argomento  
   
 ```  
@@ -1803,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice cubica dell'argomento  
   
-##  <a name="rcbrtf"></a>rcbrtf  
+##  <a name="rcbrtf"></a>  rcbrtf  
  Restituisce il reciproco della radice cubica dell'argomento  
   
 ```  
@@ -1817,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice cubica dell'argomento  
   
-##  <a name="remainder"></a>resto  
+##  <a name="remainder"></a>  resto  
  Calcola il resto: y REM x  
   
 ```  
@@ -1841,7 +1843,7 @@ inline double remainder(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce y REM x  
   
-##  <a name="remainderf"></a>remainderf  
+##  <a name="remainderf"></a>  remainderf  
  Calcola il resto: y REM x  
   
 ```  
@@ -1860,7 +1862,7 @@ inline float remainderf(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce y REM x  
   
-##  <a name="remquo"></a>remquo  
+##  <a name="remquo"></a>  remquo  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Anche calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
   
 ```  
@@ -1883,13 +1885,13 @@ inline double remquo(
  `_Y`  
  Il secondo argomento a virgola mobile.  
   
- `_Quo`(parametro) out  
+ `_Quo` (parametro) out  
  L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei bit frazionario di `_X` diviso per i bit di frazionari `_Y`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto di `_X` diviso `_Y`.  
   
-##  <a name="remquof"></a>remquof  
+##  <a name="remquof"></a>  remquof  
  Calcola il resto del primo argomento specificato diviso per il secondo argomento specificato. Anche calcola il quoziente del separatore del primo argomento specificato diviso per il separatore del secondo argomento specificato e restituisce il quoziente utilizzando il percorso specificato nel terzo argomento.  
   
 ```  
@@ -1906,13 +1908,13 @@ inline float remquof(
  `_Y`  
  Il secondo argomento a virgola mobile.  
   
- `_Quo`(parametro) out  
+ `_Quo` (parametro) out  
  L'indirizzo di un intero che viene utilizzato per restituire il quoziente dei bit frazionario di `_X` diviso per i bit di frazionari `_Y`.  
   
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il resto di `_X` diviso `_Y`.  
   
-##  <a name="round"></a>arrotondamento  
+##  <a name="round"></a>  Funzione round  
  Arrotonda x all'intero più vicino  
   
 ```  
@@ -1929,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'intero più vicino di x  
   
-##  <a name="roundf"></a>roundf  
+##  <a name="roundf"></a>  roundf  
  Arrotonda x all'intero più vicino  
   
 ```  
@@ -1943,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce l'intero più vicino di x  
   
-##  <a name="rsqrt"></a>rsqrt  
+##  <a name="rsqrt"></a>  rsqrt  
  Restituisce il reciproco della radice quadrata dell'argomento  
   
 ```  
@@ -1960,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice quadrata dell'argomento  
   
-##  <a name="rsqrtf"></a>rsqrtf  
+##  <a name="rsqrtf"></a>  rsqrtf  
  Restituisce il reciproco della radice quadrata dell'argomento  
   
 ```  
@@ -1974,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il reciproco della radice quadrata dell'argomento  
   
-##  <a name="scalb"></a>scalb  
+##  <a name="scalb"></a>  scalb  
  Moltiplica x da FLT_RADIX per la power y  
   
 ```  
@@ -1996,9 +1998,9 @@ inline double scalb(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * (FLT_RADIX ^ y)  
+ Returns _X * (FLT_RADIX ^ _Y)  
   
-##  <a name="scalbf"></a>scalbf  
+##  <a name="scalbf"></a>  scalbf  
  Moltiplica x da FLT_RADIX per la power y  
   
 ```  
@@ -2015,9 +2017,9 @@ inline float scalbf(
  Valore a virgola mobile  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * (FLT_RADIX ^ y)  
+ Returns _X * (FLT_RADIX ^ _Y)  
   
-##  <a name="scalbn"></a>scalbn  
+##  <a name="scalbn"></a>  scalbn  
  Moltiplica x da FLT_RADIX per la power y  
   
 ```  
@@ -2039,9 +2041,9 @@ inline double scalbn(
  Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * (FLT_RADIX ^ y)  
+ Returns _X * (FLT_RADIX ^ _Y)  
   
-##  <a name="scalbnf"></a>scalbnf  
+##  <a name="scalbnf"></a>  scalbnf  
  Moltiplica x da FLT_RADIX per la power y  
   
 ```  
@@ -2058,9 +2060,9 @@ inline float scalbnf(
  Valore Integer  
   
 ### <a name="return-value"></a>Valore restituito  
- Restituisce x * (FLT_RADIX ^ y)  
+ Returns _X * (FLT_RADIX ^ _Y)  
   
-##  <a name="signbit"></a>signbit  
+##  <a name="signbit"></a>  signbit  
  Determina se il segno di x è negativo  
   
 ```  
@@ -2077,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un valore diverso da zero se e solo se il segno di x è negativo  
   
-##  <a name="signbitf"></a>signbitf  
+##  <a name="signbitf"></a>  signbitf  
  Determina se il segno di x è negativo  
   
 ```  
@@ -2108,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno dell'argomento  
   
-##  <a name="sinf"></a>sinf  
+##  <a name="sinf"></a>  sinf  
  Calcola il valore seno dell'argomento  
   
 ```  
@@ -2122,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno dell'argomento  
   
-##  <a name="sincos"></a>sincos  
+##  <a name="sincos"></a>  sincos  
  Calcola un valore seno e coseno di x  
   
 ```  
@@ -2148,7 +2150,7 @@ inline void sincos(
  `_C`  
  Restituisce il coseno di valore di x  
   
-##  <a name="sincosf"></a>sincosf  
+##  <a name="sincosf"></a>  sincosf  
  Calcola un valore seno e coseno di x  
   
 ```  
@@ -2185,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno iperbolico dell'argomento  
   
-##  <a name="sinhf"></a>sinhf  
+##  <a name="sinhf"></a>  sinhf  
  Calcola il valore seno iperbolico dell'argomento  
   
 ```  
@@ -2199,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno iperbolico dell'argomento  
   
-##  <a name="sinpi"></a>sinpi  
+##  <a name="sinpi"></a>  sinpi  
  Calcola il valore seno di pi greco * x  
   
 ```  
@@ -2216,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore seno di pi greco * x  
   
-##  <a name="sinpif"></a>sinpif  
+##  <a name="sinpif"></a>  sinpif  
  Calcola il valore seno di pi greco * x  
   
 ```  
@@ -2247,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce la radice squre dell'argomento  
   
-##  <a name="sqrtf"></a>sqrtf  
+##  <a name="sqrtf"></a>  sqrtf  
  Calcola la radice squre dell'argomento  
   
 ```  
@@ -2278,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente dell'argomento  
   
-##  <a name="tanf"></a>tanf  
+##  <a name="tanf"></a>  tanf  
  Calcola il valore di controllo di tangente dell'argomento  
   
 ```  
@@ -2309,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente iperbolico dell'argomento  
   
-##  <a name="tanhf"></a>tanhf  
+##  <a name="tanhf"></a>  tanhf  
  Calcola il valore di controllo di tangente iperbolico dell'argomento  
   
 ```  
@@ -2323,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente iperbolico dell'argomento  
   
-##  <a name="tanpi"></a>tanpi  
+##  <a name="tanpi"></a>  tanpi  
  Calcola il valore di controllo di tangente di pi greco * x  
   
 ```  
@@ -2340,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente di pi greco * x  
   
-##  <a name="tanpif"></a>tanpif  
+##  <a name="tanpif"></a>  tanpif  
  Calcola il valore di controllo di tangente di pi greco * x  
   
 ```  
@@ -2354,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il valore di controllo di tangente di pi greco * x  
   
-##  <a name="tgamma"></a>tgamma  
+##  <a name="tgamma"></a>  tgamma  
  Calcola la funzione gamma di x  
   
 ```  
@@ -2371,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il risultato della funzione gamma di x  
   
-##  <a name="tgammaf"></a>tgammaf  
+##  <a name="tgammaf"></a>  tgammaf  
  Calcola la funzione gamma di x  
   
 ```  
@@ -2385,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il risultato della funzione gamma di x  
   
-##  <a name="trunc"></a>trunc  
+##  <a name="trunc"></a>  trunc  
  Tronca l'argomento per il componente integer  
   
 ```  
@@ -2402,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Restituisce il componente integer dell'argomento  
   
-##  <a name="truncf"></a>truncf  
+##  <a name="truncf"></a>  truncf  
  Tronca l'argomento per il componente integer  
   
 ```  

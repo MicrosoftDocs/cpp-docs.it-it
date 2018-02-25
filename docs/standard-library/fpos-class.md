@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
 - iosfwd/std::fpos::state
 - iosfwd/std::fpos::operator streamoff
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::fpos [C++]
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0647a5d4a9720b5628d5d540f055013bd40b8b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d65ede65d1cd1b0d8cadb39ec18af42a007c023c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="fpos-class"></a>Classe fpos
 La classe modello descrive un oggetto che può archiviare tutte le informazioni necessarie per ripristinare un indicatore di posizione del file arbitrario all'interno di qualsiasi flusso. Un oggetto di classe fpos\< **St**> di fatto archivia almeno due oggetti membro:  

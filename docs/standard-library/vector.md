@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <vector>
-dev_langs: C++
-helpviewer_keywords: vector header
+ms.topic: reference
+f1_keywords:
+- <vector>
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0ac628b660c37c4d281c1b889ccf5a3628240573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94038dcbda6c35723fabbaee153902ec48e45c71
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 Definisce il vettore della classe modello del contenitore e diversi modelli di supporto.  

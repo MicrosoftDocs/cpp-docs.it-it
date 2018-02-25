@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="regular-expressions-c"></a>Espressioni regolari (C++)
 La libreria standard C++ supporta più grammatiche dell'espressione regolare. Questo argomento illustra le variazioni di grammatica disponibile quando si utilizzano espressioni regolari.  
@@ -155,7 +158,7 @@ Zero o più flag possono essere combinati con la grammatica per specificare il c
   
  Esempi:  
   
--   "a"? corrisponde alla sequenza di destinazione "" e la sequenza di destinazione "a", ma non alla sequenza di destinazione "aa".  
+-   "a?" corrisponde alla sequenza di destinazione "" e la sequenza di destinazione "a", ma non alla sequenza di destinazione "aa".  
   
 -   "a+" corrisponde alla sequenza di destinazione "a", alla sequenza di destinazione "aa" e così via, ma non corrisponde alla sequenza di destinazione "".  
   

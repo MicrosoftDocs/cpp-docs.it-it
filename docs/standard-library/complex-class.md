@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::complex [C++], value_type
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a4fe9411d306e08f16df138786d6d55e4ea1647c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc697726709f0c5dd7640af0b52b3f8176538267
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complex-class"></a>Classe complex
 La classe modello descrive un oggetto che archivia due oggetti di tipo **Type**. Uno rappresenta la parte reale di un numero complesso, l'altro la parte immaginaria.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::recursive_timed_mutex
 - mutex/std::recursive_timed_mutex::recursive_timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::recursive_timed_mutex::try_lock_for
 - mutex/std::recursive_timed_mutex::try_lock_until
 - mutex/std::recursive_timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 59cc2d5c-ed80-45f3-a0a8-05652a8ead7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: 9ed5930eca492d6793ab08c39b6af8b45a9124c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ec98e8c357bf1f40fdc608873dbbb18f0f5f18f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recursivetimedmutex-class"></a>Classe recursive_timed_mutex
 Rappresenta un *tipo mutex programmato*. Gli oggetti di questo tipo vengono usati per gestire l'esclusione reciproca con un blocco a tempo limitato all'interno di un programma. A differenza degli oggetti di tipo [timed_mutex](../standard-library/timed-mutex-class.md), l'effetto della chiamata di metodi di blocco per oggetti `recursive_timed_mutex` è ben definito.  

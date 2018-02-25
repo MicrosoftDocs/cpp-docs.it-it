@@ -1,28 +1,32 @@
 ---
-title: '&lt;stack&gt; | Documenti Microsoft'
+title: '&lt;stack&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <stack>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <stack>
+dev_langs:
+- C++
 helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b9a3c05e5df8290972c1b94b6576361a9bb3d9c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cb9e26a3f2a5eaf3e1175a6f1b58ae7e9b5f4efd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 Definisce lo stack della classe modello e due modelli di supporto.  

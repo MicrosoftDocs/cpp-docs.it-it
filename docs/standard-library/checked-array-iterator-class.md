@@ -4,32 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
 - iterator/stdext::checked_array_iterator::pointer
 - iterator/stdext::checked_array_iterator::reference
 - iterator/stdext::checked_array_iterator::base
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::checked_array_iterator [C++], difference_type
 - stdext::checked_array_iterator [C++], pointer
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8384c61f9a56f4196d940566cd2b18336bd4d853
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checkedarrayiterator-class"></a>Classe checked_array_iterator
 La classe `checked_array_iterator` consente di trasformare una matrice o un puntatore in un iteratore verificato. Usare questa classe come wrapper (con la funzione [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)) per i puntatori o le matrici non elaborati in modo da fornire un controllo e gestire gli avvisi relativi ai puntatori non verificati anziché disattivarli globalmente. Se necessario, è possibile usare la versione non verificata della classe [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md).  

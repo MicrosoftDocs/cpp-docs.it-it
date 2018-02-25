@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmap-class"></a>Classe hash_map
 > [!NOTE]
@@ -518,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>Note  
  Un tipo `const_iterator` non può essere usato per modificare il valore di un elemento.  
   
- Il tipo `const_iterator` definito da hash_map punta a elementi che sono oggetti di [value_type](#value_type), ovvero di tipo `pair`*\<***const Key, Type***>*, dove il primo membro è la chiave dell'elemento e il secondo membro è il punto di riferimento mappato incluso nell'elemento.  
+ Il `const_iterator` definito dai punti di hash_map agli elementi che sono oggetti di [value_type](#value_type), che è di tipo `pair`  *\< ***chiave const, tipo*** >* , il cui primo membro è la chiave per l'elemento e il cui secondo membro è il riferimento con mapping utilizzato dall'elemento.  
   
  Per dereferenziare un `const_iterator` `cIter` punta a un elemento in un hash_map, utilizzare il  **->**  operatore.  
   
@@ -2711,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>Note  
- `value_type` viene dichiarato come `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* e non come `pair`**\<key_type, mapped_type>** perché le chiavi di un contenitore associativo non possono essere modificate usando un riferimento o un iteratore non costante.  
+ `value_type` è dichiarato come `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * e non `pair`  **\<key_type, mapped_type >** perché le chiavi di un contenitore associativo non possono essere modificate utilizzando un iteratore non costante o riferimento.  
   
   
 ### <a name="example"></a>Esempio  

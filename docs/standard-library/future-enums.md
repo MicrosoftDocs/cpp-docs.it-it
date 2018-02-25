@@ -5,24 +5,24 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future_errc
 - future/std::future_status
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 835abafde46858bd108dfa648a246345bd254eaf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: eebca67270d208f1e8aa233ece80818bdc40f7f1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfuturegt-enums"></a>Enumerazioni &lt;future&gt;
 ||||  
 |-|-|-|  
-|[future_errc](#future_errc)|[future_status](#future_status)|[avvio veloce](#launch)|  
+|[future_errc](#future_errc)|[future_status](#future_status)|[Avvio veloce](#launch)|  
   
 ##  Enumerazione <a name="future_errc"></a>  future_errc  
  Fornisce i nomi simbolici per tutti gli errori segnalati dalla classe [future_error](../standard-library/future-error-class.md).  

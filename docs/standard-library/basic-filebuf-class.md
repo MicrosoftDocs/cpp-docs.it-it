@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_filebuf
 - fstream/std::basic_filebuf::char_type
@@ -26,7 +27,8 @@ f1_keywords:
 - fstream/std::basic_filebuf::sync
 - fstream/std::basic_filebuf::uflow
 - fstream/std::basic_filebuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_filebuf [C++]
 - std::basic_filebuf [C++], char_type
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicfilebuf-class"></a>Classe basic_filebuf
 Descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`, verso e da una sequenza di elementi archiviati in un file esterno.  
@@ -463,7 +466,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  Se la funzione non può essere eseguita correttamente, restituisce **traits_type::eof**. In caso contrario, restituisce **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Note  
- Se _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetto tenta di inserire l'elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) nel buffer di output. Questa operazione può essere eseguita in vari modi:  
+ Se _ * Meta ***! = traits_type::**[eof](../standard-library/char-traits-struct.md#eof), la funzione membro virtuale protetta incentrati inserire l'elemento **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type) (\_ *Meta*) nel buffer di output. Questa operazione può essere eseguita in vari modi:  
   
 -   Se è disponibile una posizione di scrittura, la funzione può archiviare l'elemento in tale posizione e incrementare il puntatore successivo per il buffer di output.  
   

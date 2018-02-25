@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
-dev_langs: C++
-helpviewer_keywords: scheduler_worker_creation_error class
+dev_langs:
+- C++
+helpviewer_keywords:
+- scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 93652274432e5ae84bc7336f233f1cdfd278dc00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c04a6b3c55920739a8c9bce70a147951edbf935a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerworkercreationerror-class"></a>Classe scheduler_worker_creation_error
 Questa classe descrive un'eccezione generata a causa di un errore nella creazione di un contesto di esecuzione del lavoro nel runtime di concorrenza.  
@@ -57,7 +61,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="ctor"></a>scheduler_worker_creation_error 
+##  <a name="ctor"></a> scheduler_worker_creation_error 
 
  Costruisce un oggetto `scheduler_worker_creation_error`.  
   

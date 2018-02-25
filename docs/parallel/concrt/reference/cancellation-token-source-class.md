@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source
@@ -14,19 +15,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs: C++
-helpviewer_keywords: cancellation_token_source class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02669609e25fc772f1efa49f55045eaddbaad6b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtokensource-class"></a>Classe cancellation_token_source
 La classe `cancellation_token_source` rappresenta la possibilità di annullare una determinata operazione annullabile.  
@@ -50,7 +54,7 @@ class cancellation_token_source;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Annulla](#cancel)|Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che utilizza il token viene annullato al momento della chiamata e genera un'eccezione nel punto di interruzione successivo.|  
+|[cancel](#cancel)|Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che utilizza il token viene annullato al momento della chiamata e genera un'eccezione nel punto di interruzione successivo.|  
 |[create_linked_source](#create_linked_source)|Di overload. Crea un `cancellation_token_source` che viene annullato quando il token fornito viene annullato.|  
 |[get_token](#get_token)|Restituisce un token di annullamento associato a questa origine. Il token restituito può essere sottoposto a polling per l'annullamento o fornire un callback se e quando si verifica l'annullamento.|  
   
@@ -70,13 +74,13 @@ class cancellation_token_source;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="dtor"></a>~ cancellation_token_source 
+##  <a name="dtor"></a> ~cancellation_token_source 
 
 ```
 ~cancellation_token_source();
 ```  
   
-##  <a name="cancel"></a>Annulla 
+##  <a name="cancel"></a> Annulla 
 
  Annulla il token. Qualsiasi `task_group`, `structured_task_group` o `task` che utilizza il token viene annullato al momento della chiamata e genera un'eccezione nel punto di interruzione successivo.  
   
@@ -84,7 +88,7 @@ class cancellation_token_source;
 void cancel() const;
 ```  
   
-##  <a name="ctor"></a>cancellation_token_source 
+##  <a name="ctor"></a> cancellation_token_source 
 
  Costruisce un nuovo `cancellation_token_source`. L'origine può essere utilizzata per contrassegnare l'annullamento di una determinata operazione annullabile.  
   
@@ -99,7 +103,7 @@ cancellation_token_source(cancellation_token_source&& _Src);
 ### <a name="parameters"></a>Parametri  
  `_Src`  
   
-##  <a name="create_linked_source"></a>create_linked_source 
+##  <a name="create_linked_source"></a> create_linked_source 
 
  Crea un `cancellation_token_source` che viene annullato quando il token fornito viene annullato.  
   
@@ -125,7 +129,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 ### <a name="return-value"></a>Valore restituito  
  `cancellation_token_source` che viene annullato quando il token fornito dal parametro `_Src` viene annullato.  
   
-##  <a name="get_token"></a>get_token 
+##  <a name="get_token"></a> get_token 
 
  Restituisce un token di annullamento associato a questa origine. Il token restituito può essere sottoposto a polling per l'annullamento o fornire un callback se e quando si verifica l'annullamento.  
   
@@ -136,7 +140,7 @@ cancellation_token get_token() const;
 ### <a name="return-value"></a>Valore restituito  
  Token di annullamento associato a questa origine.  
   
-##  <a name="operator_neq"></a>operatore! = 
+##  <a name="operator_neq"></a> operatore! = 
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
 ```
 cancellation_token_source& operator= (const cancellation_token_source& _Src);
@@ -160,7 +164,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_eq_eq"></a>operatore = = 
+##  <a name="operator_eq_eq"></a> operatore = = 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;

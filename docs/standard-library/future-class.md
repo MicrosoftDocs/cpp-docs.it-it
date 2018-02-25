@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::future
 - future/std::future::future
@@ -16,9 +17,10 @@ f1_keywords:
 - future/std::future::wait
 - future/std::future::wait_for
 - future/std::future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 1de870da42504494e672cff4272fd230d1346114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f54b265e98d8375b20ca5b7cf484290083d1d59c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="future-class"></a>Classe future
 Descrive un *oggetto restituito asincrono*.  
@@ -64,9 +67,9 @@ class future;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[get](#get)|Recupera il risultato archiviato nello stato asincrono associato.|  
-|[Condividi](#share)|Converte l'oggetto in `shared_future`.|  
-|[valido](#valid)|Specifica se l'oggetto non è vuoto.|  
-|[attesa](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|  
+|[share](#share)|Converte l'oggetto in `shared_future`.|  
+|[valid](#valid)|Specifica se l'oggetto non è vuoto.|  
+|[wait](#wait)|Blocca il thread corrente finché lo stato asincrono associato non è ready.|  
 |[wait_for](#wait_for)|Blocca finché lo stato asincrono associato non è ready o finché non trascorre il periodo di tempo specificato.|  
 |[wait_until](#wait_until)|Blocca finché lo stato asincrono associato non è ready o fino al momento specificato.|  
   

@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: container classes [C++]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3666bf4ee03149a9c00ec93d9fc1dc536ce2d080
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d528f53747979da7b95d8d3298a43ea717007a5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sample-container-class"></a>Classe contenitore di esempio
 > [!NOTE]
@@ -33,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Se l'espressione **~Ty** genera un'eccezione, lo stato risultante dell'oggetto contenitore non è definito.  
   
--   Se il contenitore archivia un oggetto allocatore *al* e *al* genera un'eccezione diversa dal risultato di una chiamata ad *al***.allocate**, lo stato risultante dell'oggetto contenitore non è definito.  
+-   Se il contenitore è un oggetto allocatore archiviato *al*, e *al* genera un'eccezione diversa da in seguito a una chiamata a * * al**.allocate**, lo stato risultante del contenitore oggetto non è definito.  
   
 -   Se il contenitore archivia un oggetto funzione *comp*per determinare come ordinare la sequenza controllata e *comp* genera un'eccezione di qualsiasi tipo, lo stato risultante dell'oggetto contenitore non è definito.  
   

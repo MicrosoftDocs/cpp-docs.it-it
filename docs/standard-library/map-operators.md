@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::operator!=
 - map/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: d98e67ea5a65279a5bb618552bec4358bc48a445
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-operators"></a>Operatori &lt;map&gt;
 ||||  

@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 1b69623aa9eccfca57667d4f33546512799b172f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a776ccd0299c3acc43763a381ce337c67bc6c134
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlimitsgt-enums"></a>Enumerazioni &lt;limits&gt;
 |||  

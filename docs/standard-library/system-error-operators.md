@@ -5,19 +5,20 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: ed01a5abeb54f5071968555b563849e2cd4ac1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 84cac348fcc2c9577b3a0e1f72ac56a4bbabf90f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsystemerrorgt-operators"></a>Operatori &lt;system_error&gt;
 ||||  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - multitype_join
 - AGENTS/concurrency::multitype_join
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::multitype_join::reserve
 - AGENTS/concurrency::multitype_join::unlink_target
 - AGENTS/concurrency::multitype_join::unlink_targets
-dev_langs: C++
-helpviewer_keywords: multitype_join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 62d91f878a8330b6e4fe60f7e24ad25c779b868d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multitypejoin-class"></a>Classe multitype_join
 Un blocco della messaggistica `multitype_join` è un blocco multi-origine, a destinazione singola, che combina messaggi di diverso tipo da ciascuna delle sue origini e offre una tupla dei messaggi combinati alle sue destinazioni.  
@@ -52,7 +56,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
  Il `tuple` il tipo di payload dei messaggi uniti e propagati dal blocco.  
   
  `_Jtype`  
- Il tipo di `join` blocco è `greedy` o`non_greedy`  
+ Il tipo di `join` blocco è `greedy` o `non_greedy`  
   
 ## <a name="members"></a>Membri  
   
@@ -73,9 +77,9 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[accettare](#accept)|Accetta un messaggio offerto da questo `multitype_join` blocco, trasferendo la proprietà al chiamante.|  
+|[accept](#accept)|Accetta un messaggio offerto da questo `multitype_join` blocco, trasferendo la proprietà al chiamante.|  
 |[acquire_ref](#acquire_ref)|Acquisisce un conteggio dei riferimenti su questo `multitype_join` blocco della messaggistica, per evitare l'eliminazione.|  
-|[Utilizzare](#consume)|Utilizza un messaggio offerto in precedenza il `multitype_join` blocco della messaggistica e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
+|[consume](#consume)|Utilizza un messaggio offerto in precedenza il `multitype_join` blocco della messaggistica e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.|  
 |[link_target](#link_target)|Un blocco di destinazione è collegato a questo `multitype_join` blocco della messaggistica.|  
 |[release](#release)|Rilascia una prenotazione corretta del messaggio precedente.|  
 |[release_ref](#release_ref)|Rilascia un conteggio dei riferimenti su questo `multiple_join` blocco della messaggistica.|  
@@ -96,7 +100,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="accept"></a>accettare 
+##  <a name="accept"></a> Accettare 
 
  Accetta un messaggio offerto da questo `multitype_join` blocco, trasferendo la proprietà al chiamante.  
   
@@ -116,7 +120,7 @@ virtual message<_Destination_type>* accept(
 ### <a name="return-value"></a>Valore restituito  
  Puntatore al messaggio che il chiamante dispone ora di proprietà di.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  Acquisisce un conteggio dei riferimenti su questo `multitype_join` blocco della messaggistica, per evitare l'eliminazione.  
   
@@ -131,7 +135,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato da un `ITarget` oggetto collegato a questa origine durante la `link_target` metodo.  
   
-##  <a name="consume"></a>Utilizzare 
+##  <a name="consume"></a> Utilizzare 
 
  Utilizza un messaggio offerto in precedenza il `multitype_join` blocco della messaggistica e riservato correttamente dalla destinazione del trasferimento della proprietà al chiamante.  
   
@@ -154,7 +158,7 @@ virtual message<_Destination_type>* consume(
 ### <a name="remarks"></a>Note  
  Il `consume` è simile al metodo `accept`, ma deve sempre essere preceduto da una chiamata a `reserve` restituito `true`.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  Un blocco di destinazione è collegato a questo `multitype_join` blocco della messaggistica.  
   
@@ -166,7 +170,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Un puntatore a un `ITarget` blocco collegamento a `multitype_join` blocco della messaggistica.  
   
-##  <a name="ctor"></a>multitype_join 
+##  <a name="ctor"></a> multitype_join 
 
  Costruisce un blocco della messaggistica `multitype_join` .  
   
@@ -207,7 +211,7 @@ multitype_join(
   
  Il costruttore di spostamento non viene eseguito durante un blocco. Ciò significa che l'utente deve assicurarsi che non ci siano attività leggere in corso al momento dello spostamento. In caso contrario, possono verificarsi situazioni di race condition che possono portare a eccezioni oppure a uno stato incoerente.  
   
-##  <a name="dtor"></a>~ multitype_join 
+##  <a name="dtor"></a> ~multitype_join 
 
  Elimina definitivamente il `multitype_join` blocco della messaggistica.  
   
@@ -215,7 +219,7 @@ multitype_join(
 ~multitype_join();
 ```  
   
-##  <a name="release"></a>versione 
+##  <a name="release"></a> versione 
 
  Rilascia una prenotazione corretta del messaggio precedente.  
   
@@ -232,7 +236,7 @@ virtual void release(
  `_PTarget`  
  Un puntatore al blocco di destinazione che viene eseguita la chiamata di `release` metodo.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  Rilascia un conteggio dei riferimenti su questo `multiple_join` blocco della messaggistica.  
   
@@ -247,7 +251,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 ### <a name="remarks"></a>Note  
  Questo metodo viene chiamato da un `ITarget` oggetto che non è collegato da questa origine. Blocco di origine è autorizzato a rilasciare le risorse riservate per il blocco di destinazione.  
   
-##  <a name="reserve"></a>riserva 
+##  <a name="reserve"></a> riserva 
 
  Riserva un messaggio precedentemente offerto da questo `multitype_join` blocco della messaggistica.  
   
@@ -265,12 +269,12 @@ virtual bool reserve(
  Un puntatore al blocco di destinazione che viene eseguita la chiamata di `reserve` metodo.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il messaggio è stato riservato, `false` in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.  
+ `true` Se il messaggio è stato riservato, `false` in caso contrario. Le prenotazioni possono avere esito negativo per vari motivi, ad esempio: il messaggio era già riservato o accettato da un'altra destinazione, le prenotazioni potrebbero essere negate dall'origine e così via.  
   
 ### <a name="remarks"></a>Note  
  Dopo aver chiamato `reserve`, se ha esito positivo, è necessario chiamare `consume` o `release` per assumere o rilasciare il possesso del messaggio, rispettivamente.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  Consente di scollegare un blocco di destinazione dal `multitype_join` blocco della messaggistica.  
   
@@ -282,7 +286,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
  `_PTarget`  
  Un puntatore a un `ITarget` blocco scollegare da questo `multitype_join` blocco della messaggistica.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  Consente di scollegare tutte le destinazioni da questo `multitype_join` blocco della messaggistica.  
   

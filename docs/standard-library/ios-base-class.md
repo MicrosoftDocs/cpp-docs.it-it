@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::ios_base
 - ios/std::ios_base::event_callback
@@ -60,7 +61,8 @@ f1_keywords:
 - xiosbase/std::ios_base::unsetf
 - xiosbase/std::ios_base::width
 - xiosbase/std::ios_base::xalloc
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::ios_base [C++]
 - std::ios_base [C++], event_callback
@@ -115,16 +117,17 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d1182cdbaf33b2ab09ecbf133df52186246fbf5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iosbase-class"></a>Classe ios_base
 La classe descrive le funzioni membro e di archiviazione comuni ai flussi di input e di output che non dipendono dai parametri di modello. La classe modello [basic_ios](../standard-library/basic-ios-class.md) descrive gli elementi comuni e dipendenti dai parametri modello.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::operator!=
 - xutility/std::operator&gt;
@@ -15,9 +15,10 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -25,11 +26,11 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8d045aa1f32d3613eb4ed11af63a29e80e37b738
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt-operators"></a>Operatori &lt;iterator&gt;
 ||||  

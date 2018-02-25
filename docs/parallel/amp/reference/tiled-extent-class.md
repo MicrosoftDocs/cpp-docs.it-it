@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - tiled_extent
 - AMP/tiled_extent
@@ -18,18 +19,20 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim1
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tiledextent-class"></a>Classe tiled_extent
 Oggetto `tiled_extent` oggetto è un `extent` oggetto di uno a tre dimensioni che suddivide l'area di extent in una, due o riquadri tridimensionale.  
@@ -80,8 +83,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Restituisce un `extent` acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.|  
-|[riempimento](#pad)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati backup in divisibile per le dimensioni del riquadro.|  
-|[troncare](#truncate)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso in divisibile per le dimensioni del riquadro.|  
+|[pad](#pad)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati backup in divisibile per le dimensioni del riquadro.|  
+|[truncate](#truncate)|Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso in divisibile per le dimensioni del riquadro.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -115,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **Spazio dei nomi:** Concurrency  
 
-## <a name="ctor"></a> costruttore tiled_extent  
+## <a name="ctor">Costruttore tiled_extent</a>  
 Inizializza una nuova istanza della classe `tiled_extent`.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -137,7 +140,7 @@ tiled_extent(
 
   
 
-## <a name="get_tile_extent"></a> get_tile_extent   
+## <a name="get_tile_extent"> </a>  get_tile_extent   
 Restituisce un `extent` acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -150,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  Un `extent` oggetto che acquisisce le dimensioni di questo `tiled_extent` istanza.  
   
 
-## <a name="pad"></a> riempimento   
+## <a name="pad"> </a>  pad   
 Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati backup in divisibile per le dimensioni del riquadro.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -161,7 +164,7 @@ tiled_extent pad() const;
   
 ### <a name="return-value"></a>Valore restituito  
  Il nuovo `tiled_extent` oggetto, in base al valore. 
-## <a name="truncate"></a> truncate   
+## <a name="truncate"> </a>  troncare   
 Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso in divisibile per le dimensioni del riquadro.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -173,7 +176,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>Valore restituito  
  Restituisce un nuovo `tiled_extent` oggetto con gli extent modificati verso il basso in divisibile per le dimensioni del riquadro.  
 
-## <a name="operator_eq"></a> operator =   
+## <a name="operator_eq"> </a>  operator=   
 Copia il contenuto dell'oggetto specificato `tiled_index` specificato in questo oggetto.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -190,7 +193,7 @@ tiled_extent&  operator= (
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `tiled_index` istanza.  
 
-## <a name="tile_dim0"></a> tile_dim0   
+## <a name="tile_dim0"> </a>  tile_dim0   
 Archivia la lunghezza della dimensione più significativa.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -199,7 +202,7 @@ Archivia la lunghezza della dimensione più significativa.
 static const int tile_dim0 = _Dim0;  
 ```  
   
-## <a name="tile_dim1"></a> tile_dim1   
+## <a name="tile_dim1"> </a>  tile_dim1   
 Archivia la lunghezza della dimensione avanti-a-la maggior parte significativa.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -207,7 +210,7 @@ Archivia la lunghezza della dimensione avanti-a-la maggior parte significativa.
 ```  
 static const int tile_dim1 = _Dim1;  
 ```  
-## <a name="tile_dim2"></a> tile_dim2   
+## <a name="tile_dim2"> </a>  tile_dim2   
 Archivia la lunghezza della dimensione meno significativa.  
   
 ### <a name="syntax"></a>Sintassi  
@@ -215,7 +218,7 @@ Archivia la lunghezza della dimensione meno significativa.
 ```  
 static const int tile_dim2 = _Dim2;  
 ```  
-## <a name="tile_extent"></a> tile_extent   
+## <a name="tile_extent"> </a>  tile_extent   
   Ottiene un `extent` acquisisce i valori dell'oggetto di `tiled_extent` gli argomenti di modello `_Dim0`, `_Dim1`, e `_Dim2`.  
   
 ### <a name="syntax"></a>Sintassi  

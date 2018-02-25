@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - algorithm/std::adjacent_find
 - algorithm/std::all_of
@@ -105,9 +105,10 @@ f1_keywords:
 - algorithm/std::count_if
 - algorithm/std::partition_copy
 - algorithm/std::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -210,12 +211,13 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.workload: cplusplus
-ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 ||||  
@@ -4089,7 +4091,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(`[min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
+ `(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`.  
   
 ### <a name="remarks"></a>Note  
  La prima funzione di modello restituisce  

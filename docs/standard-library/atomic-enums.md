@@ -5,17 +5,19 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: atomic/std::memory_order
+ms.topic: reference
+f1_keywords:
+- atomic/std::memory_order
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
-caps.latest.revision: "11"
-helpviewer_keywords: std::memory_order
+caps.latest.revision: 
+helpviewer_keywords:
+- std::memory_order
 manager: ghogen
-ms.openlocfilehash: 4d0c60a908d795d8bf9fa7643471c6c9f29cc1cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 5f5c286375699d233d1bc9dadd3f44992309fa0a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltatomicgt-enums"></a>Enumerazioni &lt;atomic&gt;
   

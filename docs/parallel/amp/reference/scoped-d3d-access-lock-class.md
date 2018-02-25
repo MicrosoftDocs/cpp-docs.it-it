@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>Classe scoped_d3d_access_lock
 Wrapper RAII per un blocco di accesso D3D su un oggetto accelerator_view.  
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** Concurrency:: Direct3D  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  Costruisce un oggetto `scoped_d3d_access_lock`. Il blocco viene rilasciato quando l'oggetto esce dall'ambito.  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  Accetta un blocco di accesso D3D esistente da un altro `scoped_d3d_access_lock` oggetto. Costruzione non è bloccata.  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  Rilascia il blocco di accesso D3D su associato `accelerator_view` oggetto.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>operator = 
+## <a name="operator_eq"></a> operator = 
 
 Acquisisce la proprietà di un blocco di accesso D3D da un altro `scoped_d3d_access_lock` oggetto, il rilascio del blocco precedente.  
  

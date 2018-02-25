@@ -1,28 +1,32 @@
 ---
-title: __vmx_vmwrite | Documenti Microsoft
+title: __vmx_vmwrite | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __vmx_vmwrite
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __vmx_vmwrite
+dev_langs:
+- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 00bc9fe617144db7de3425c5732b3f655b30c790
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 08cd68256e1219df36ce6f9ea22165938fba44af
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 **Sezione specifica Microsoft**  

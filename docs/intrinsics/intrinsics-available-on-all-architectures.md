@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: cl.exe compiler, intrinsics
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a97d2469fdec35c73e830d4a616a9e4487ffef86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1cf9854229e6451a31f62b3df6e6d3babda011e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Funzioni intrinseche disponibili in tutte le architetture
 Gli intrinseci seguenti sono disponibili con le architetture x86, AMD64 e ARM:  
@@ -125,7 +129,7 @@ Gli intrinseci seguenti sono disponibili con le architetture x86, AMD64 e ARM:
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|math.h|  
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|  
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|  
-|[soluz](../c-runtime-library/reference/exp-expf.md)|math.h|  
+|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|  
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|  
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|  
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|  
@@ -183,5 +187,5 @@ Gli intrinseci seguenti sono disponibili con le architetture x86, AMD64 e ARM:
   
 ## <a name="see-also"></a>Vedere anche  
  [Oggetti intrinseci ARM](../intrinsics/arm-intrinsics.md)   
- [x86 elenco oggetti intrinseci](../intrinsics/x86-intrinsics-list.md)   
+ [x86 Intrinsics List](../intrinsics/x86-intrinsics-list.md)   
  [Elenco intrinseci x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array/std::array::operator!=
 - array/std::array::operator<
@@ -13,15 +13,16 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 4a42ddf39044e97ca6297cfbc5a55810981f7778
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltarraygt-operators"></a>Operatori &lt;array&gt;
 L'intestazione \<array> include queste funzioni modello di confronto non membro `array`.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -20,7 +21,8 @@ f1_keywords:
 - valarray/std::valarray::size
 - valarray/std::valarray::sum
 - valarray/std::valarray::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::valarray [C++]
 - std::valarray [C++], value_type
@@ -35,16 +37,17 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3a335ffe93f0a695643c84b60cbc581ea5545da9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1325bcdbf00e217391ac7df4f583750b1fba4090
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="valarray-class"></a>Classe valarray
 La classe modello descrive un oggetto che controlla una sequenza di elementi di tipo **Type** archiviati come matrice, progettati per l'esecuzione di operazioni matematiche ad alta velocità e ottimizzati per le prestazioni di calcolo.  
@@ -1189,7 +1192,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
  Riferimento a un elemento o al relativo valore in corrispondenza di un indice o un subset specificato.  
   
 ### <a name="remarks"></a>Note  
- L'operatore membro è sottoposto a overload per fornire diversi modi per selezionare sequenze di elementi tra quelle controllate da *\****this**. Il primo gruppo di cinque operatori membro funziona insieme a diversi overload di [operator=](#op_eq) (e altri operatori di assegnazione) per consentire la sostituzione selettiva (sezionamento) della sequenza controllata. Gli elementi selezionati devono esistere.  
+ L'operatore membro viene sottoposto a overload per fornire i diversi modi per selezionare le sequenze di elementi tra quelli controllati da *\****questo**. Il primo gruppo di cinque operatori membro funziona insieme a diversi overload di [operator=](#op_eq) (e altri operatori di assegnazione) per consentire la sostituzione selettiva (sezionamento) della sequenza controllata. Gli elementi selezionati devono esistere.  
   
  Durante la compilazione tramite [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definito come 1 o 2, si verificherà un errore di runtime se si tenta di accedere a un elemento non incluso nei limiti dell'oggetto valarray.  Per altre informazioni, vedere [Iteratori verificati](../standard-library/checked-iterators.md).  
   

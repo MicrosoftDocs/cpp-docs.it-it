@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>Classe combinable
 L'oggetto `combinable<T>` ha lo scopo di fornire copie di dati di thread privato, per eseguire calcoli secondari locali per thread senza blocco durante algoritmi paralleli. Alla fine dell'operazione parallela, è possibile unire i sub-calcoli del thread privato in un risultato finale. Questa classe può essere usata in sostituzione di una variabile condivisa e può determinare un miglioramento delle prestazioni qualora vi fosse invece molto conflitto su tale variabile condivisa.  
@@ -49,7 +53,7 @@ class combinable;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[classe combinable](#ctor)|Di overload. Costruisce un nuovo oggetto `combinable`.|  
+|[combinable](#ctor)|Di overload. Costruisce un nuovo oggetto `combinable`.|  
 |[~ Distruttore combinable](#dtor)|Elimina un oggetto `combinable`.|  
   
 ### <a name="public-methods"></a>Metodi pubblici  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|Cancella i risultati intermedi calcolo da un utilizzo precedente.|  
 |[combine](#combine)|Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato.|  
 |[combine_each](#combine_each)|Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato una volta per ogni calcolo secondario locale di thread. Il risultato finale verrà accumulato dall'oggetto funzione.|  
-|[locale](#local)|Di overload. Restituisce un riferimento al calcolo secondario del thread privato.|  
+|[local](#local)|Di overload. Restituisce un riferimento al calcolo secondario del thread privato.|  
   
 ### <a name="public-operators"></a>Operatori pubblici  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="clear"></a>deselezionare 
+##  <a name="clear"></a> Cancella 
 
  Cancella i risultati intermedi calcolo da un utilizzo precedente.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>classe combinable 
+##  <a name="ctor"></a> classe combinable 
 
  Costruisce un nuovo oggetto `combinable`.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  Il terzo costruttore rappresenta il costruttore di copia.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~combinable 
 
  Elimina un oggetto `combinable`.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>combinare 
+##  <a name="combine"></a> combinare 
 
  Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>Valore restituito  
  Il risultato finale della combinazione di tutti i calcoli secondari thread privato.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  Calcola un valore finale dal set di calcoli secondari locali del thread chiamando il funtore combinato una volta per ogni calcolo secondario locale di thread. Il risultato finale verrà accumulato dall'oggetto funzione.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  Il funtore che viene usato per combinare un calcolo secondario. La firma è `void (T)` o `void (const T&)`e deve essere associative e commutative.  
   
-##  <a name="local"></a>locale 
+##  <a name="local"></a> Locale 
 
  Restituisce un riferimento al calcolo secondario del thread privato.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento al calcolo secondario del thread privato.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Assegna a un `combinable` oggetto da un altro `combinable` oggetto.  
   

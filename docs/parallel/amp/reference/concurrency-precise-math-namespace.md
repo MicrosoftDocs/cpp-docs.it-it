@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
 - AMP_MATH/Concurrency::acosf
@@ -138,18 +139,20 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Spazio dei nomi Concurrency::precise_math
 Le funzioni di `precise_math` dello spazio dei nomi sono conformi C99. Entrambi precisione singola e precisione doppia le versioni di ogni funzione sono incluse. Ad esempio, `acos` è la versione e con precisione doppia e `acosf` è la versione e con precisione singola. Queste funzioni, tra cui le funzioni e con precisione singola, richiedono il supporto esteso di e con precisione doppia nel tasto di scelta rapida. È possibile utilizzare il [Accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) per determinare se è possibile eseguire queste funzioni in un tasto di scelta rapida specifico. 
@@ -232,7 +235,7 @@ namespace precise_math;
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Calcola la radice quadrata della somma dei quadrati di x e y|  
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Di overload. Estrarre l'esponente di x come un valore signed integer|  
 |[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Estrarre l'esponente di x come un valore signed integer|  
-|[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Di overload. Determina se l'argomento ha un valore finito|  
+|[isfinite](concurrency-precise-math-namespace-functions.md#isfinite)|Di overload. Determina se l'argomento ha un valore finito|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Di overload. Determina se l'argomento è infinito|  
 |[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Di overload. Determina se l'argomento è NaN|  
 |[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Di overload. Determina se l'argomento è un normale|  
@@ -258,7 +261,7 @@ namespace precise_math;
 |[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Arrotonda un valore intero in formato a virgola mobile, la direzione di arrotondamento corrente utilizzando l'argomento.|  
 |[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Di overload. Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y|  
 |[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Determinare il valore rappresentabile successivo, il tipo della funzione, dopo x nella direzione di y|  
-|[Phi](concurrency-precise-math-namespace-functions.md#phi)|Di overload. Restituisce la funzione distribuzione cumulativa dell'argomento|  
+|[phi](concurrency-precise-math-namespace-functions.md#phi)|Di overload. Restituisce la funzione distribuzione cumulativa dell'argomento|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Restituisce la funzione distribuzione cumulativa dell'argomento|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Di overload. Calcola x elevato alla potenza di y|  
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|Calcola x elevato alla potenza di y|  

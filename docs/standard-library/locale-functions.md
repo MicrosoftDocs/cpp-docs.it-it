@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - locale/std::has_facet
 - locale/std::isalnum
@@ -23,7 +23,7 @@ f1_keywords:
 - locale/std::toupper
 - locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
-caps.latest.revision: "15"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::has_facet [C++]
@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 28274279da6422edf7e92e4aca9a6425cd21a9e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8f038a52d996fb33564e073b07beba501cc053cb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt-functions"></a>Funzioni &lt;locale&gt;
 ||||  
