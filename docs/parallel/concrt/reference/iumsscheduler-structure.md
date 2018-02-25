@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs: C++
-helpviewer_keywords: IUMSScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsscheduler-structure"></a>Struttura IUMSScheduler
 Interfaccia a un'astrazione di un'utilità di pianificazione di lavoro che vuole che Gestione risorse del runtime di concorrenza passi thread UMS pianificabili in modalità utente. Gestione risorse usa questa interfaccia per comunicare con le utilità di pianificazione dei thread UMS.  L'interfaccia `IUMSScheduler` eredita dall'interfaccia `IScheduler`.  
@@ -40,7 +44,7 @@ struct IUMSScheduler : public IScheduler;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.|  
   
 ## <a name="remarks"></a>Note  
  Se si implementa un'utilità di pianificazione personalizzata che comunica con il gestore delle risorse e si desidera che i thread UMS vengano passati all'utilità di pianificazione anziché i thread Win32 normale, è necessario fornire un'implementazione del `IUMSScheduler` interfaccia. Inoltre, è necessario impostare il valore dei criteri per le chiavi dei criteri dell'utilità di pianificazione `SchedulerKind` da `UmsThreadDefault`. Se i criteri specificano i thread UMS, il `IScheduler` interfaccia che viene passato come parametro per il [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) metodo deve essere un `IUMSScheduler` interfaccia.  
@@ -59,7 +63,7 @@ struct IUMSScheduler : public IScheduler;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="setcompletionlist"></a>Metodo IUMSScheduler:: SetCompletionList  
+##  <a name="setcompletionlist"></a>  Metodo IUMSScheduler:: SetCompletionList  
  Assegna un `IUMSCompletionList` interfaccia a un'utilità di pianificazione di thread UMS.  
   
 ```

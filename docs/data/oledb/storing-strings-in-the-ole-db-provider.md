@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 523193d7fa5f18d3d0956d39ca68cdc5d34131b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 018bf17cbd4106b4b76ec58ab524d8da6f14b62d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Memorizzazione di stringhe in un provider OLE DB
 In MyProviderRS. H, la creazione guidata Provider OLE DB ATL crea un record utente predefinito denominato `CWindowsFile`. Per gestire le due stringhe, modificare `CWindowsFile` o aggiungere un record utente personalizzato, come illustrato nel codice seguente:  

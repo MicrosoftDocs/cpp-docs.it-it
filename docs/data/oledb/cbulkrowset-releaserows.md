@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ReleaseRows
 - ATL.CBulkRowset<TAccessor>.ReleaseRows
@@ -29,11 +29,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c7bad4e9517c93ccdd173b76350edf8fea41eb5e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7c59d2d8009a199f2c2f5a8f3731cf6c40d8bd56
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 Chiamate [IRowset:: ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) per decrementare il conteggio dei riferimenti per tutte le righe attualmente recuperate dal rowset di massa.  

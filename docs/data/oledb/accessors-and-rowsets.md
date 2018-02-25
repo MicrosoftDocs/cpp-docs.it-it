@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>Funzioni di accesso e rowset
 Per impostare e recuperare i dati, modelli OLE DB utilizzano una funzione di accesso e un set di righe tramite il [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Questa classe può gestire più funzioni di accesso di tipo diverso.  
   
 ## <a name="accessor-types"></a>Tipi di funzione di accesso  
- Tutte le funzioni di accesso derivano da [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`Fornisce i parametri e associazione di colonna.  
+ Tutte le funzioni di accesso derivano da [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` Fornisce i parametri e associazione di colonna.  
   
  La figura seguente illustra i tipi di funzione di accesso.  
   
  ![Tipi di funzione di accesso](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Classi di funzione di accesso  
   
--   [CAccessor](../../data/oledb/caccessor-class.md) usare questa funzione di accesso quando si conosce la struttura del database in fase di progettazione. `CAccessor`associa in modo statico un record del database che contiene il buffer per l'origine dati.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) usare questa funzione di accesso quando si conosce la struttura del database in fase di progettazione. `CAccessor` associa in modo statico un record del database che contiene il buffer per l'origine dati.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) utilizzare questa funzione di accesso quando non si conosce la struttura del database in fase di progettazione. `CDynamicAccessor`chiamate `IColumnsInfo::GetColumnInfo` per ottenere le informazioni di colonna di database. Crea e gestisce una funzione di accesso e il buffer.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) utilizzare questa funzione di accesso quando non si conosce la struttura del database in fase di progettazione. `CDynamicAccessor` chiamate `IColumnsInfo::GetColumnInfo` per ottenere le informazioni di colonna di database. Crea e gestisce una funzione di accesso e il buffer.  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) utilizzare questa funzione di accesso per gestire i tipi di comando sconosciuto. Quando si preparano i comandi, `CDynamicParameterAccessor` possibile ottenere informazioni sui parametri dal `ICommandWithParameters` interfaccia, se il provider supporta `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), e [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) classi da utilizzare quando si ha alcuna conoscenza dello schema del database. `CDynamicStringAccessorA`Recupera i dati sotto forma di stringhe ANSI; `CDynamicStringAccessorW` recupera i dati come stringhe Unicode.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), e [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) classi da utilizzare quando si ha alcuna conoscenza dello schema del database. `CDynamicStringAccessorA` Recupera i dati sotto forma di stringhe ANSI; `CDynamicStringAccessorW` recupera i dati come stringhe Unicode.  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) con questa classe, è possibile utilizzare tutti i tipi di dati che si desidera se il provider può convertire il tipo. Gestisce sia le colonne di risultati e i parametri del comando.  
   

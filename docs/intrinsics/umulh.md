@@ -1,26 +1,31 @@
 ---
-title: __umulh | Documenti Microsoft
+title: __umulh | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __umulh
-dev_langs: C++
-helpviewer_keywords: __umulh intrinsic
+ms.topic: reference
+f1_keywords:
+- __umulh
+dev_langs:
+- C++
+helpviewer_keywords:
+- __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 57d1a4cc5d06f9a2053dbf3b2e27d79b1ee18b1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a3c9ebcf5e512f75e6e9fc66d5019273e1626f6a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="umulh"></a>__umulh
 **Sezione specifica Microsoft**  

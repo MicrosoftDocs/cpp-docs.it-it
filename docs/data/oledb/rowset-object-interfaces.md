@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - interfaces, OLE DB
 - OLE DB, interfaces
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41ed76120029ac8ae82f6be6c6634f08b3912bc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 211fb5bbd0a950eff5f954d1c23b3dc993badb0d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="rowset-object-interfaces"></a>Interfacce dell'oggetto Rowset
 Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite da OLE DB per un oggetto set di righe.  
@@ -40,7 +42,7 @@ Nella tabella seguente mostra le interfacce obbligatorie e facoltative definite 
 |[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)|Obbligatorio|Yes|  
 |[IChapteredRowset](https://msdn.microsoft.com/en-us/library/ms718180.aspx)|Facoltativo|No|  
 |[IColumnsInfo2](https://msdn.microsoft.com/en-us/library/ms712953.aspx)|Facoltativo|No|  
-|[Interfaccia IColumnsRowset](https://msdn.microsoft.com/en-us/library/ms722657.aspx)|Facoltativo|No|  
+|[IColumnsRowset](https://msdn.microsoft.com/en-us/library/ms722657.aspx)|Facoltativo|No|  
 |[IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857)|Facoltativo|Sì (tramite ATL)|  
 |[IDBAsynchStatus](https://msdn.microsoft.com/en-us/library/ms709832.aspx)|Facoltativo|No|  
 |[IGetRow](https://msdn.microsoft.com/en-us/library/ms718047.aspx)|Facoltativo|No|  

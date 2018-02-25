@@ -1,16 +1,18 @@
 ---
-title: '#<a name="ifdef-and-ifndef-directives-cc--microsoft-docs"></a>Direttive ifdef e #ifndef (C/C++) | Documenti Microsoft'
+title: '#Direttive ifdef e #ifndef (C/C++) | Documenti Microsoft'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '#ifndef'
 - '#ifdef'
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#ifdef directive'
 - preprocessor, directives
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - ifndef directive (#ifndef)
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a56212dc0943c79152b8485bea3a3082bfa73d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8f1a10e9d8437b71591efc9ce2915c9f485e0c4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>Direttive #ifdef e #ifndef (C/C++)
 Il **#ifdef** e **#ifndef** direttive eseguono la stessa attività come il `#if` direttiva quando viene utilizzata con **definito**( *identificatore* ).  

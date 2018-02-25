@@ -1,29 +1,33 @@
 ---
-title: __writemsr | Documenti Microsoft
+title: __writemsr | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __writemsr
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __writemsr
+dev_langs:
+- C++
 helpviewer_keywords:
 - Write Model Specific Register instruction
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9a4b60fcc303afcb0c645561009279dd9fced8db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9cff9e7cb7073a93f242b5669bc128376257aab3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="writemsr"></a>__writemsr
 **Sezione specifica Microsoft**  

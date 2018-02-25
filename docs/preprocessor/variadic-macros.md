@@ -1,33 +1,36 @@
 ---
-title: Macro Variadic | Documenti Microsoft
+title: Variadic Macros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e3832ab334d31b50edbe0cc1fd5dccbffb61bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="variadic-macros"></a>Macro variadic
 Le macro variadic sono macro di tipo funzione che contengono un numero variabile di argomenti.  
   
 ## <a name="remarks"></a>Note  
- Per utilizzare le macro variadic, i puntini di sospensione può essere specificata come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` può essere utilizzato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__`viene sostituito da tutti gli argomenti corrispondenti sui puntini di sospensione, incluse le virgole tra di essi.  
+ Per utilizzare le macro variadic, i puntini di sospensione può essere specificata come argomento formale finale in una definizione di macro e l'identificatore di sostituzione `__VA_ARGS__` può essere utilizzato nella definizione per inserire gli argomenti aggiuntivi.  `__VA_ARGS__` viene sostituito da tutti gli argomenti corrispondenti sui puntini di sospensione, incluse le virgole tra di essi.  
   
  Lo standard C specifica che almeno un argomento deve essere passato ai puntini di sospensione per garantire che la macro non risolva un'espressione con una virgola finale.  L'implementazione Visual C++ tronca una virgola finale se ai puntini di sospensione non è stato passato alcun argomento.  
   

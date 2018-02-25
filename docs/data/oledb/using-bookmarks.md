@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-bookmarks"></a>Utilizzo dei bookmark
 Prima di aprire il set di righe, è necessario indicare al provider che si desidera utilizzare i segnalibri. A tale scopo, impostare il **DBPROP_BOOKMARKS** proprietà **true** nel set delle proprietà. Il provider recupera i segnalibri come colonna zero, pertanto è necessario utilizzare la macro speciale `BOOKMARK_ENTRY` e `CBookmark` classe se si utilizza una funzione di accesso statica. `CBookmark` è una classe di modello in cui l'argomento è la lunghezza in byte del buffer del segnalibro. La lunghezza del buffer necessaria per un segnalibro dipende dal provider. Se si utilizza il provider OLE DB ODBC, come illustrato nell'esempio seguente, il buffer deve essere 4 byte.  

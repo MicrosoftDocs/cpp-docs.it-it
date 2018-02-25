@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>Record utente
 Per utilizzare una funzione di accesso statica (ovvero, una funzione di accesso derivata da **CAccessor)**, il consumer deve includere un record utente. Il record dell'utente è una classe C++ che contiene gli elementi di dati per gestire l'input o output. La creazione guidata Consumer OLE DB ATL genera un record utente per il consumer. È possibile aggiungere metodi per il record utente per attività facoltative, ad esempio gestione dei comandi.  
   
- Il codice seguente viene illustrato un esempio di record che gestisce i comandi. Nel record utente, `BEGIN_COLUMN_MAP` rappresenta un set di righe di dati passato al consumer da un provider. `BEGIN_PARAM_MAP`rappresenta un set di parametri del comando. Questo esempio viene utilizzato un [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci di mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Il `COLUMN_ENTRY` macro corrispondono al `PROVIDER_COLUMN_ENTRY` macro sul lato del provider.  
+ Il codice seguente viene illustrato un esempio di record che gestisce i comandi. Nel record utente, `BEGIN_COLUMN_MAP` rappresenta un set di righe di dati passato al consumer da un provider. `BEGIN_PARAM_MAP` rappresenta un set di parametri del comando. Questo esempio viene utilizzato un [CCommand](../../data/oledb/ccommand-class.md) classe per gestire i parametri del comando. I membri di dati nelle voci di mappa rappresentano gli offset in un blocco contiguo di memoria per ogni istanza della classe. Il `COLUMN_ENTRY` macro corrispondono al `PROVIDER_COLUMN_ENTRY` macro sul lato del provider.  
   
  Per ulteriori informazioni sul **COLUMN_MAP** e **PARAM_MAP** macro, vedere [macro per i modelli Consumer OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md).  
   

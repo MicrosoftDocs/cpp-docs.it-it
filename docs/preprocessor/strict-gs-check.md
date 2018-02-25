@@ -1,28 +1,32 @@
 ---
-title: strict_gs_check | Documenti Microsoft
+title: strict_gs_check | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - strict_gs_check
 - strict_gs_check_CPP
-dev_langs: C++
-helpviewer_keywords: strict_gs_check pragma
+dev_langs:
+- C++
+helpviewer_keywords:
+- strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c355bd385a997e8ff3fd9ec323d50bb33b9c6fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 76b06f33626dfa237c81e6a23f343bb25ffb7c78
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 Questo pragma fornisce controllo di sicurezza avanzato.  

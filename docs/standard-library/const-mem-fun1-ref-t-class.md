@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::const_mem_fun1_ref_t
-dev_langs: C++
-helpviewer_keywords: const_mem_fun1_ref_t class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::const_mem_fun1_ref_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d95b81ca5618cabd32af90836a67f29bf9b1923b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21d27d61880eb2e1841c7871c4ce82fb87de0b31
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constmemfun1reft-class"></a>Classe const_mem_fun1_ref_t
 Classe di adattatori che consente a una funzione membro **const** che accetta un singolo argomento di essere chiamata come oggetto funzione binaria, una volta inizializzata con un argomento di riferimento.  

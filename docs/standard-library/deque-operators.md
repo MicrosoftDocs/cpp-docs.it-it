@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::operator!=
 - deque/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - deque/std::operator&lt;
 - deque/std::operator&lt;=
 - deque/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (deque)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (deque)
 - std::operator&lt;= (deque)
 - std::operator== (deque)
-ms.openlocfilehash: 81645c8f645a3c3a09ef641b2fce003260bcd5f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: dfceefe986ae065b6ef85abe7ebd4c5d908f3d46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltdequegt-operators"></a>Operatori &lt;deque&gt;
 ||||  

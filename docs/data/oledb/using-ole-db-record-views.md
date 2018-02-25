@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB record views
 - COleDBRecordView class, overview
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03e88eaafa82e346c720810bf567d867a9cd6096
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa7cfd6fba45c3d221d22fc7b8938addeef09d1a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-ole-db-record-views"></a>Utilizzo delle visualizzazioni di record OLE DB
 Se si desidera visualizzare i dati di set di righe OLE DB in un'applicazione MFC, è necessario utilizzare la classe MFC [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md). Creare un oggetto visualizzazione di record da `COleDBRecordView` consente di visualizzare i record del database nei controlli MFC. La visualizzazione di record è direttamente connessa a un oggetto OLE DB Rowset creato da una visualizzazione di form finestra di dialogo di `CRowset` classe modello. Ottenere un handle all'oggetto set di righe è semplice:  
@@ -39,7 +41,7 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();  
 ```  
   
- La vista visualizza i campi del `CRowset` oggetto nei controlli della finestra di dialogo. Il `COleDBRecordView` oggetto utilizza Dialog Data Exchange (DDX) e le funzionalità di spostamento incorporata `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, e `MoveLast`) per automatizzare lo spostamento dei dati tra i controlli sul form e i campi del set di righe. `COleDBRecordView`tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente e fornisce un [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) metodo per aggiornare il record corrente prima di passare a un altro.  
+ La vista visualizza i campi del `CRowset` oggetto nei controlli della finestra di dialogo. Il `COleDBRecordView` oggetto utilizza Dialog Data Exchange (DDX) e le funzionalità di spostamento incorporata `CRowset` (**MoveFirst**, `MoveNext`, `MovePrev`, e `MoveLast`) per automatizzare lo spostamento dei dati tra i controlli sul form e i campi del set di righe. `COleDBRecordView` tiene traccia della posizione dell'utente nel set di righe in modo che la visualizzazione di record può aggiornare l'interfaccia utente e fornisce un [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) metodo per aggiornare il record corrente prima di passare a un altro.  
   
  È possibile utilizzare le funzioni DDX con **COleDbRecordView** per ottenere i dati direttamente dal recordset del database e visualizzarlo in un controllo di finestra di dialogo. È consigliabile utilizzare il **DDX _\***  metodi (ad esempio `DDX_Text`), non il **DDX_Field\***  funzioni (ad esempio `DDX_FieldText`) con **COleDbRecordView** .  
   

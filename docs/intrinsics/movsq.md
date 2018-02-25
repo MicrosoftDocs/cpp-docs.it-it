@@ -1,29 +1,33 @@
 ---
-title: __movsq | Documenti Microsoft
+title: __movsq | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __movsq
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __movsq
+dev_langs:
+- C++
 helpviewer_keywords:
 - __movsq intrinsic
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 543e9289e8aed2bca21da32b26392fd5c50b8730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba5a5099d37e3446e74d168d006ace149d78c73d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="movsq"></a>__movsq
 **Sezione specifica Microsoft**  

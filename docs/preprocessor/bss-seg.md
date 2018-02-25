@@ -1,30 +1,33 @@
 ---
-title: bss_seg | Documenti Microsoft
+title: bss_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.bss_seg
 - bss_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dd1e24127129ef833cfd4906085eabbf1e5c380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4c253cd24bd8246469532cd283e97be4b21f46d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bssseg"></a>bss_seg
 Specifica il segmento in cui le variabili non inizializzate vengono archiviate nel file obj.  
@@ -52,7 +55,7 @@ Specifica il segmento in cui le variabili non inizializzate vengono archiviate n
   
  *Identificatore* consente a più record con un singolo **pop** comando.  
   
- *"segment-name"*(facoltativo)  
+ *"segment-name"*(optional)  
  Nome di un segmento. Se usato con **pop**, viene visualizzato lo stack e *nome segmento* diventa il nome del segmento attivo.  
   
  *"classe del segmento"* (facoltativo)  

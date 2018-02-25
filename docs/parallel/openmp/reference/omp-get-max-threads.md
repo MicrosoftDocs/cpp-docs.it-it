@@ -1,26 +1,31 @@
 ---
-title: omp_get_max_threads | Documenti Microsoft
+title: omp_get_max_threads | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: omp_get_max_threads
-dev_langs: C++
-helpviewer_keywords: omp_get_max_threads OpenMP function
+ms.topic: reference
+f1_keywords:
+- omp_get_max_threads
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_get_max_threads OpenMP function
 ms.assetid: f47c3725-3e40-469f-8bc8-a1e47f264cc3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0308d18647805b058c7c75ed268418bec50caba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3caf2054cee2092ab55a4a65160b4621c3b597d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
 Restituisce un valore integer che è uguale o maggiore del numero di thread che sarà disponibile se un'area parallela senza [num_threads](../../../parallel/openmp/reference/num-threads.md) sono state definite in tale punto nel codice.  

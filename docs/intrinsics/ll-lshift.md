@@ -1,30 +1,33 @@
 ---
-title: __ll_lshift | Documenti Microsoft
+title: __ll_lshift | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __ll_lshift_cpp
 - __ll_lshift
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 958ade238317d1577bd93d373b9e8ce4aa1f4234
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: df8aed34d31fe1675dc13d0c040c1a9f0b1f208e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Sezione specifica Microsoft**  

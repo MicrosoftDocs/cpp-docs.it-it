@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>Modello a oggetti OLE DB
 Il modello a oggetti OLE DB comprende gli oggetti o i componenti seguenti. I primi quattro oggetti o componenti elencati (origini dati, le sessioni, comandi e i set di righe) consentono di connettersi a un'origine dati e visualizzarli. Il resto, a partire da funzioni di accesso, riguardano l'utilizzo con i dati quando viene visualizzato.  
@@ -55,7 +57,7 @@ Il modello a oggetti OLE DB comprende gli oggetti o i componenti seguenti. I pri
 ## <a name="accessors"></a>Funzioni di accesso  
  Solo OLE DB viene utilizzato il concetto di funzioni di accesso. Una funzione di accesso descrive l'archiviazione dei dati in un consumer. Contiene un set di associazioni (chiamata di una mappa delle colonne) tra i campi di set di righe (colonne) e i membri di dati dichiarato del consumer.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>Transazioni  
+##  <a name="vcconoledbcomponents_transactions"></a> Transazioni  
  Oggetti transazione vengono utilizzati durante il commit o annullare le transazioni annidate in diverso da quello più basso. Una transazione è un'unità di lavoro indivisibile definita dalla proprietà ACID. È l'acronimo ACID:  
   
 -   Atomicità: non può essere suddivisa in unità di lavoro più piccole.  

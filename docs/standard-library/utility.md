@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <utility>
-dev_langs: C++
-helpviewer_keywords: utility header
+ms.topic: reference
+f1_keywords:
+- <utility>
+dev_langs:
+- C++
+helpviewer_keywords:
+- utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4cbb348ec11c9c4f832c993ad1e4799c8a39aad2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 278ffaf44fa65d8a3545463ac64c22cb6994cca7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 Definisce i tipi, le funzioni e gli operatori della libreria standard C++ che semplificano la costruzione e la gestione di coppie di oggetti, utili quando è necessario considerare due oggetti come se fossero uno solo.  

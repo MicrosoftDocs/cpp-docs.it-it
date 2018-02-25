@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: amp_math/Concurrency::fast_math
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- amp_math/Concurrency::fast_math
+dev_langs:
+- C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Spazio dei nomi Concurrency::fast_math
 Le funzioni di `fast_math` dello spazio dei nomi sono offre una precisione inferiore, supportano sola e con precisione singola (`float`) e chiamare le funzioni intrinseche di DirectX. Esistono due versioni di ogni funzione, ad esempio `cos` e `cosf`. Entrambe le versioni accettano e restituiscono un `float`, ma ogni chiama intrinseco di DirectX stesso.  
@@ -66,7 +70,7 @@ namespace fast_math;
 |[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Calcola il resto a virgola mobile di x/y|  
 |[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Ottiene la mantissa e l'esponente di x|  
 |[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Ottiene la mantissa e l'esponente di x|  
-|[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Determina se l'argomento ha un valore finito|  
+|[isfinite](concurrency-fast-math-namespace-functions.md#isfinite)|Determina se l'argomento ha un valore finito|  
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Determina se l'argomento è infinito|  
 |[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Determina se l'argomento è NaN|  
 |[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Calcola un numero reale compreso tra la mantissa ed esponente|  

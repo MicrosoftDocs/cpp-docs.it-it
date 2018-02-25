@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 518cd5e67c734de48d7f021e558c7c4c3a718cdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Aggiunta di un'interfaccia al provider
 Determinare quale oggetto a cui si desidera aggiungere l'interfaccia a (in genere dati origine, il set di righe, comando o sessione oggetti creati dalla creazione guidata Provider OLE DB). È possibile che l'oggetto che è necessario aggiungere l'interfaccia sia quello che attualmente non supporta il provider. In tal caso, eseguire la creazione guidata Provider OLE DB ATL per creare l'oggetto. Fare clic sul progetto in visualizzazione classi, fare clic su **Aggiungi classe** dal **Aggiungi** menu e quindi fare clic su **Provider OLE DB ATL**. È possibile inserire il codice dell'interfaccia in una directory distinta e quindi copiare i file di progetto del provider.  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -22,18 +23,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="texture-class"></a>Classe texture
 Una trama è di tipo data aggregata su un `accelerator_view` nel dominio dell'extent. È una raccolta di variabili, uno per ogni elemento in un dominio di extent. Ogni variabile contiene un valore corrispondente al tipo primitivo di C++ ( `unsigned int`, `int`, `float`, `double`), un tipo scalare ( `norm`, o `unorm`), o un tipo short vector.  
@@ -84,8 +87,8 @@ class texture;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operator)](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
-|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
+|[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
+|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
 |[operator=](#operator_eq)|Copia l'oggetto specificato [trama](texture-class.md) questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
@@ -112,7 +115,7 @@ class texture;
   
  **Namespace:** Concurrency:: Graphics  
   
-##  <a name="dtor"></a>~ texture 
+##  <a name="dtor"></a> ~ texture 
 
  Elimina definitivamente il `texture` oggetto.  
   
@@ -120,7 +123,7 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  Ottiene il [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la trama da copiare.  
   
@@ -128,7 +131,7 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  Copie di `texture` oggetto nella destinazione, eseguendo una copia completa.  
   
@@ -147,7 +150,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  Tipo degli elementi nella trama.  
   
-##  <a name="data"></a>dati 
+##  <a name="data"></a> data 
 
  Restituisce un puntatore di CPU per i dati non elaborati di questo tipo di trama.  
   
@@ -161,7 +164,7 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a dati non elaborati della trama.  
   
-##  <a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a> depth_pitch 
 
  Ottiene il numero di byte tra ogni sezione di profondità in una trama 3D di gestione temporanea nella CPU.  
   
@@ -169,7 +172,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a>Ottieni 
+##  <a name="get"></a> get 
 
  Restituisce il valore dell'elemento in corrispondenza dell'indice specificato.  
   
@@ -184,7 +187,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  Valore dell'elemento in corrispondenza dell'indice specificato.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  Restituisce il accelerator_view che rappresenta la destinazione preferita per la trama da copiare.  
   
@@ -195,7 +198,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ### <a name="return-value"></a>Valore restituito  
  Il [accelerator_view](accelerator-view-class.md) che rappresenta la destinazione preferita per la trama da copiare.  
   
-##  <a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
  Restituisce il numero di byte tra ogni sezione di profondità in 3D trama sulla CPU di gestione temporanea.  
   
@@ -206,7 +209,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valore restituito  
  Il numero di byte tra ogni sezione di profondità in 3D trama sulla CPU di gestione temporanea.  
   
-##  <a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a> get_row_pitch 
 
  Restituisce il numero di byte tra ogni riga in una trama di gestione temporanea 2 dimensioni, o tra ogni riga di una sezione di profondità in 3D trama di gestione temporanea.  
   
@@ -217,7 +220,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 ### <a name="return-value"></a>Valore restituito  
  Il numero di byte tra ogni riga in una trama di gestione temporanea 2 dimensioni, o tra ogni riga di una sezione di profondità in 3D trama di gestione temporanea.  
   
-##  <a name="operator_call"></a>operator) 
+##  <a name="operator_call"></a> operator) 
 
  Restituisce il valore dell'elemento specificato dai parametri.  
   
@@ -260,7 +263,7 @@ const value_type operator() (
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento specificato dai parametri.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  Restituisce l'elemento in corrispondenza dell'indice specificato.  
   
@@ -281,7 +284,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>Valore restituito  
  L'elemento in corrispondenza dell'indice specificato.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Copia l'oggetto specificato [trama](texture-class.md) questo oggetto.  
   
@@ -301,7 +304,7 @@ texture& operator= (
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `texture` oggetto.  
   
-##  <a name="rank"></a>numero di dimensioni 
+##  <a name="rank"></a> Numero di dimensioni 
 
  Ottiene il rango di `texture` oggetto.  
   
@@ -309,7 +312,7 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a> row_pitch 
 
  Ottiene il numero di byte tra ogni riga in un 2D o 3D gestione temporanea trama sulla CPU.  
   
@@ -317,7 +320,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a>set 
+##  <a name="set"></a> Set 
 
  Imposta il valore dell'elemento in corrispondenza dell'indice specificato.  
   
@@ -337,7 +340,7 @@ void set(
  `value`  
  Nuovo valore dell'elemento.  
   
-##  <a name="ctor"></a>trama 
+##  <a name="ctor"></a> trama 
 
  Inizializza una nuova istanza della classe `texture`.  
   

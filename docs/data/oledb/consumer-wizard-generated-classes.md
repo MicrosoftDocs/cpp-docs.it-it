@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca753008e1a976daf2cda187c05607b718966c31
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 194c71fda245663e648298af17a6ceb874aef4d5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="consumer-wizard-generated-classes"></a>Classi generate mediante la Creazione guidata consumer
 Quando si usa la Creazione guidata consumer OLE DB ATL per generare un consumer, si può scegliere di usare i modelli OLE DB o gli attributi OLE DB. In entrambi i casi, verrà generata una classe di comando e una classe di record utente. La classe di comando contiene codice che consente di aprire l'origine dati e il set di dati specificati nella procedura guidata. La classe di record utente contiene una mappa delle colonne per la tabella di database selezionata. Tuttavia, il codice generato in ciascuno dei casi sarà differente:  

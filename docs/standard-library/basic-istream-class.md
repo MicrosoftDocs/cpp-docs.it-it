@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
@@ -23,7 +24,8 @@ f1_keywords:
 - istream/std::basic_istream::sync
 - istream/std::basic_istream::tellg
 - istream/std::basic_istream::unget
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_istream [C++]
 - std::basic_istream [C++], gcount
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cef43fa717e5b4c11257b3f44ef2bb76af2d9ba7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicistream-class"></a>Classe basic_istream
 Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso con elementi di tipo `Elem`, chiamato anche [char_type](../standard-library/basic-ios-class.md#char_type), i cui tratti di carattere sono determinati dalla classe *Tr*, chiamata anche [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -439,7 +442,7 @@ Type 'abcdef': abcdef
 def  
 ```  
   
-##  <a name="op_gt_gt"></a>base\_istream::operator >>
+##  <a name="op_gt_gt"></a>  basic\_istream::operator>>
   
 Chiama una funzione nel flusso di input o legge dati formattati dal flusso di input.  
   

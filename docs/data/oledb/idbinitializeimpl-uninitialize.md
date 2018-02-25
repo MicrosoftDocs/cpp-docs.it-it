@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IDBInitializeImpl.Uninitialize
 - Uninitialize
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 73196ef933424e23ddfadeecac567a0c878f6858
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e8641fa149eb63a356969a581eef117f34ff05d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
 Posizioni dei dati di origine oggetto in uno stato non inizializzato da liberare le risorse interne, ad esempio il supporto della proprietà.  

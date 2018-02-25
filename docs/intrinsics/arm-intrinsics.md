@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
 - armintr/_arm_uxtb
@@ -1933,33 +1934,35 @@ f1_keywords:
 - arm_neon/vrsra_n_s32
 - arm_neon/vabdl_u16
 - arm_neon/vsliq_n_s32
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arm-intrinsics"></a>Oggetti intrinseci ARM
 Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per l'architettura ARM. Per ulteriori informazioni su ARM, vedere il [manuali di riferimento dell'architettura ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) e [Guida degli strumenti dell'Assembler ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) nel sito Web del centro informazioni ARM.  
   
-##  <a name="top"></a>NEON  
+##  <a name="top"></a> NEON  
  Le estensioni dei set di istruzioni vettoriali NEON per ARM forniscono funzionalità SIMD (Single Instruction Multiple Data) simili a quelle dei set di istruzioni vettoriali MMX e SSE comuni ai processori delle architetture x86 e x64.  
   
  Le funzioni intrinseche NEON sono supportate, come previsto nel file di intestazione `arm_neon.h`. Il supporto del compilatore Visual C++ per le funzioni intrinseche NEON è simile a quello del compilatore ARM, documentato nell'appendice G del [riferimenti al compilatore di versione 4.1, toolchain del compilatore ARM](http://go.microsoft.com/fwlink/p/?LinkId=251083) nel sito Web del centro informazioni ARM.  
   
  La differenza principale tra il compilatore Visual C++ e il compilatore ARM consiste nel fatto che il compilatore Visual C++ aggiunge le varianti `_ex` delle istruzioni vettoriali di caricamento e archiviazione `vldX` e `vstX`. Le varianti `_ex` accettano un parametro aggiuntivo che specifica l'allineamento dell'argomento del puntatore ma a parte ciò sono identiche alle relative controparti non `_ex`.  
   
-##  <a name="A"></a>Elenco delle funzioni intrinseche specifiche di ARM  
+##  <a name="A"></a> Elenco delle funzioni intrinseche specifiche di ARM  
   
 |Nome funzione|Istruzione|Prototipo di funzione|  
 |-------------------|-----------------|------------------------|  
@@ -1974,10 +1977,10 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|Int64 _arm_smlalbb (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlalbt|SMLALBT|Int64 _arm_smlalbt (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlaltb|SMLALTB|Int64 _arm_smlaltb (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlaltt|SMLALTT|Int64 _arm_smlaltt (\__int64 _RdHiLo _Rn int, int _Rm)|  
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|  
@@ -2056,9 +2059,9 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
 |_arm_smlald|SMLALD|Int64 _arm_smlald (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlaldx|SMLALDX|Int64 _arm_smlaldx (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlsld|SMLSLD|Int64 _arm_smlsld (\__int64 _RdHiLo _Rn int, int _Rm)|  
-|_arm_smlsldx|SMLSLDX|Int64 _arm_smlsldx (\__int64 _RdHiLo _Rn int, int _Rm)|  
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|  
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|  
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|  
@@ -2083,10 +2086,10 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
 |__iso_volatile_load32||Int32 \__iso_volatile_load32 (const volatile \__int32 *)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
 |__iso_volatile_load64||Int64 \__iso_volatile_load64 (const volatile \__int64 *)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
 |__iso_volatile_load8||int8 \__iso_volatile_load8 (const volatile \__int8 *)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
-|__iso_volatile_store16||void __iso_volatile_store16 (volatile \__int16 *, \__int16)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
-|__iso_volatile_store32||void __iso_volatile_store32 (volatile \__int32 *, \__int32)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
-|__iso_volatile_store64||void __iso_volatile_store64 (volatile \__int64 *, \__int64)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
-|__iso_volatile_store8||void __iso_volatile_store8 (volatile \__int8 *, \__int8)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
+|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 *, \__int16)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
+|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 *, \__int32)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
+|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 *, \__int64)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
+|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 *, \__int8)<br /><br /> Per ulteriori informazioni, vedere [funzioni intrinseche iso_volatile_load/store](#IsoVolatileLoadStore).|  
 |__ldrexd|LDREXD|Int64 \__ldrexd (const volatile \__int64 *)|  
 |__prefetch|PLD|cdecl void \__prefetch(const void *)<br /><br /> Fornisce un hint di memoria `PLD` al sistema per l'accesso alla memoria in corrispondenza o in prossimità dell'indirizzo specificato. Alcuni sistemi possono scegliere di ottimizzare tale criterio di accesso alla memoria per migliorare le prestazioni di runtime. Tuttavia, dal punto di vista del linguaggio C++, la funzione non ha alcun effetto osservabile e potrebbe non eseguire alcuna operazione.|  
 |__rdpmccntr64||Int64 senza segno \__rdpmccntr64(void)|  
@@ -2097,8 +2100,8 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
 |__wfe|WFE|void __wfe(void)|  
 |__wfi|WFI|void __wfi(void)|  
 |_AddSatInt|QADD|int _AddSatInt(int, int)|  
-|_CopyDoubleFromInt64||Double _CopyDoubleFromInt64 (\__int64)|  
-|_CopyFloatFromInt32||float _CopyFloatFromInt32 (\__int32)|  
+|_CopyDoubleFromInt64||double _CopyDoubleFromInt64(\__int64)|  
+|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|  
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
@@ -2129,7 +2132,7 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
   
  [[NEON](#top)]  
   
-###  <a name="BarrierRestrictions"></a>Restrizioni della barriera di memoria  
+###  <a name="BarrierRestrictions"></a> Restrizioni della barriera di memoria  
  Le funzioni intrinseche `__dmb` (barriera di memoria dati), `__dsb` (barriera di sincronizzazione dei dati) e `__isb` (barriera di sincronizzazione istruzioni) usano i seguenti valori predefiniti per specificare la restrizione di barriera di memoria in termini di condivisione del dominio e tipo di accesso interessati dall'operazione.  
   
 |Valore di restrizione|Descrizione|  
@@ -2145,7 +2148,7 @@ Il compilatore Visual C++ rende disponibili le seguenti funzioni intrinseche per
   
  Per la funzione intrinseca `__isb`, l'unica restrizione attualmente valida è _ARM_BARRIER_SY. Tutti gli altri valori sono riservati dall'architettura.  
   
-###  <a name="IsoVolatileLoadStore"></a>funzioni intrinseche iso_volatile_load/store  
+###  <a name="IsoVolatileLoadStore"></a> funzioni intrinseche iso_volatile_load/store  
  Queste funzioni intrinseche eseguono in modo esplicito le operazioni di caricamento e archiviazione non soggette alle ottimizzazioni del compilatore.  
   
 ```  
@@ -2187,7 +2190,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
   
  Per ulteriori informazioni sul **/volatile:iso** argomento della riga di comando, vedere [/volatile (interpretazione della parola chiave volatile)](../build/reference/volatile-volatile-keyword-interpretation.md).  
   
-###  <a name="MoveFromCo"></a>Movefromcoprocessor, movefromcoprocessor2  
+###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2  
  Queste funzioni intrinseche leggono i dati dai coprocessori ARM tramite le istruzioni di trasferimento dei dati del coprocessore.  
   
 ```  
@@ -2236,7 +2239,7 @@ int _MoveFromCoprocessor2(
   
  `_MoveFromCoprocessor` usa l'istruzione MRC; `_MoveFromCoprocessor2` usa MRC2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.  
   
-###  <a name="MoveFromCo64"></a>Movefromcoprocessor64  
+###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64  
  Legge i dati dai coprocessori ARM tramite le istruzioni di trasferimento dei dati del coprocessore.  
   
 ```  
@@ -2269,7 +2272,7 @@ unsigned __int64 _MoveFromCoprocessor64(
   
  `_MoveFromCoprocessor64` usa l'istruzione MRRC. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.  
   
-###  <a name="MoveToCo"></a>Movetocoprocessor, movetocoprocessor2  
+###  <a name="MoveToCo"></a> _MoveToCoprocessor, _MoveToCoprocessor2  
  Queste funzioni intrinseche scrivono i dati nei coprocessori ARM tramite le istruzioni di trasferimento dei dati del coprocessore.  
   
 ```  
@@ -2323,7 +2326,7 @@ void _MoveToCoprocessor2(
   
  `_MoveToCoprocessor` usa l'istruzione MCR; `_MoveToCoprocessor2` usa MCR2. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.  
   
-###  <a name="MoveToCo64"></a>Movetocoprocessor64  
+###  <a name="MoveToCo64"></a> _MoveToCoprocessor64  
  Queste funzioni intrinseche scrivono i dati nei coprocessori ARM tramite le istruzioni di trasferimento dei dati del coprocessore.  
   
 ```  
@@ -2357,7 +2360,7 @@ void _MoveFromCoprocessor64(
   
  `_MoveFromCoprocessor64` usa l'istruzione MCRR. I parametri corrispondono ai campi di bit che sono codificati direttamente nella parola dell'istruzione. L'interpretazione dei parametri è dipendente dal coprocessore. Per altre informazioni, vedere il manuale del coprocessore in questione.  
   
-##  <a name="I"></a>Supporto ARM per le funzioni intrinseche di altre architetture  
+##  <a name="I"></a> Supporto ARM per le funzioni intrinseche di altre architetture  
  La tabella seguente elenca le funzioni intrinseche di altre architetture supportate sulle piattaforme ARM. Dove il comportamento di una funzione intrinseca in ARM differisce dal comportamento in altre architetture hardware, vengono indicati dettagli aggiuntivi.  
   
 |Nome funzione|Prototipo di funzione|  
@@ -2423,7 +2426,7 @@ void _MoveFromCoprocessor64(
   
 -   **Nessuna**: non è supportato  
   
-###  <a name="nf_suffix"></a>Suffisso NF (nessun limite)  
+###  <a name="nf_suffix"></a> Suffisso NF (nessun limite)  
  Il suffisso `_nf` o "nessun limite" indica che l'operazione non si comporta come qualsiasi tipo di barriera di memoria. Si differenzia dagli altri tre formati (normale, `_acq` e `_rel`), che si comportano tutti come un tipo di barriera. Un possibile uso dei formati `_nf` è quello di gestire un contatore di statistiche aggiornato da più thread contemporaneamente ma il cui valore non viene però usato durante l'esecuzione di più thread.  
   
 ### <a name="list-of-interlocked-intrinsics"></a>Elenco delle funzioni intrinseche interlocked  
@@ -2432,9 +2435,9 @@ void _MoveFromCoprocessor64(
 |-------------------|------------------------|  
 |_InterlockedAdd|long _InterlockedAdd(long _volatile *, long)|  
 |_InterlockedAdd64|interlockedadd64 Int64 (\__int64 volatile *, \__int64)|  
-|_InterlockedAdd64_acq|Int64 _InterlockedAdd64_acq (\__int64 volatile *, \__int64)|  
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedAdd64_nf|Int64 _InterlockedAdd64_nf (\__int64 volatile *, \__int64)|  
-|_InterlockedAdd64_rel|Int64 _InterlockedAdd64_rel (\__int64 volatile *, \__int64)|  
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel(\__int64 volatile *, \__int64)|  
 |_InterlockedAdd_acq|long _InterlockedAdd_acq(long volatile *, long)|  
 |_InterlockedAdd_nf|long _InterlockedAdd_nf(long volatile *, long)|  
 |_InterlockedAdd_rel|long _InterlockedAdd_rel(long volatile *, long)|  
@@ -2444,7 +2447,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedAnd16_nf|short _InterlockedAnd16_nf(short volatile *, short)|  
 |_InterlockedAnd16_rel|short _InterlockedAnd16_rel(short volatile *, short)|  
 |_InterlockedAnd64|Int64 _ interlockedand64 (\__int64 volatile *, \__int64)|  
-|_InterlockedAnd64_acq|Int64 _InterlockedAnd64_acq (\__int64 volatile *, \__int64)|  
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq(\__int64 volatile *, \__int64)|  
 |_InterlockedAnd64_nf|Int64 _InterlockedAnd64_nf (\__int64 volatile *, \__int64)|  
 |_InterlockedAnd64_rel|Int64 _InterlockedAnd64_rel (\__int64 volatile *, \__int64)|  
 |_InterlockedAnd8|char _InterlockedAnd8(char volatile *, char)|  
@@ -2460,7 +2463,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange16_nf|short _InterlockedCompareExchange16_nf(short volatile *, short, short)|  
 |_InterlockedCompareExchange16_rel|short _InterlockedCompareExchange16_rel(short volatile *, short, short)|  
 |_InterlockedCompareExchange64|Int64 _InterlockedCompareExchange64 (\__int64 volatile *, \__int64, \__int64)|  
-|_InterlockedCompareExchange64_acq|Int64 _InterlockedCompareExchange64_acq (\__int64 volatile *, \__int64, \__int64)|  
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq(\__int64 volatile *, \__int64, \__int64)|  
 |_InterlockedCompareExchange64_nf|Int64 _InterlockedCompareExchange64_nf (\__int64 volatile *, \__int64, \__int64)|  
 |_InterlockedCompareExchange64_rel|Int64 _InterlockedCompareExchange64_rel (\__int64 volatile *, \__int64, \__int64)|  
 |_InterlockedCompareExchange8|char _InterlockedCompareExchange8(char volatile *, char, char)|  
@@ -2491,7 +2494,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchange16_acq|short _InterlockedExchange16_acq(short volatile * _Target, short)|  
 |_InterlockedExchange16_nf|short _InterlockedExchange16_nf(short volatile * _Target, short)|  
 |_InterlockedExchange64|Int64 _InterlockedExchange64 (\__int64 volatile * target, \__int64)|  
-|_InterlockedExchange64_acq|Int64 _InterlockedExchange64_acq (\__int64 volatile * target, \__int64)|  
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq(\__int64 volatile * _Target, \__int64)|  
 |_InterlockedExchange64_nf|Int64 _InterlockedExchange64_nf (\__int64 volatile * target, \__int64)|  
 |_InterlockedExchange8|char _InterlockedExchange8(char volatile * _Target, char)|  
 |_InterlockedExchange8_acq|char _InterlockedExchange8_acq(char volatile * _Target, char)|  
@@ -2501,10 +2504,10 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd16_acq|short _InterlockedExchangeAdd16_acq(short volatile *, short)|  
 |_InterlockedExchangeAdd16_nf|short _InterlockedExchangeAdd16_nf(short volatile *, short)|  
 |_InterlockedExchangeAdd16_rel|short _InterlockedExchangeAdd16_rel(short volatile *, short)|  
-|_InterlockedExchangeAdd64|Int64 _ interlockedexchangeadd64 (\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_acq|Int64 _InterlockedExchangeAdd64_acq (\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_nf|Int64 _InterlockedExchangeAdd64_nf (\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_rel|Int64 _InterlockedExchangeAdd64_rel (\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel(\__int64 volatile *, \__int64)|  
 |_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8(char volatile *, char)|  
 |_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq(char volatile *, char)|  
 |_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf(char volatile *, char)|  
@@ -2534,10 +2537,10 @@ void _MoveFromCoprocessor64(
 |_InterlockedOr16_acq|short _InterlockedOr16_acq(short volatile *, short)|  
 |_InterlockedOr16_nf|short _InterlockedOr16_nf(short volatile *, short)|  
 |_InterlockedOr16_rel|short _InterlockedOr16_rel(short volatile *, short)|  
-|_InterlockedOr64|Int64 _ interlockedor64 (\__int64 volatile *, \__int64)|  
-|_InterlockedOr64_acq|Int64 _InterlockedOr64_acq (\__int64 volatile *, \__int64)|  
-|_InterlockedOr64_nf|Int64 _InterlockedOr64_nf (\__int64 volatile *, \__int64)|  
-|_InterlockedOr64_rel|Int64 _InterlockedOr64_rel (\__int64 volatile *, \__int64)|  
+|_InterlockedOr64|__int64 _InterlockedOr64(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel(\__int64 volatile *, \__int64)|  
 |_InterlockedOr8|char _InterlockedOr8(char volatile *, char)|  
 |_InterlockedOr8_acq|char _InterlockedOr8_acq(char volatile *, char)|  
 |_InterlockedOr8_nf|char _InterlockedOr8_nf(char volatile *, char)|  
@@ -2550,10 +2553,10 @@ void _MoveFromCoprocessor64(
 |_InterlockedXor16_acq|short _InterlockedXor16_acq(short volatile *, short)|  
 |_InterlockedXor16_nf|short _InterlockedXor16_nf(short volatile *, short)|  
 |_InterlockedXor16_rel|short _InterlockedXor16_rel(short volatile *, short)|  
-|_InterlockedXor64|Int64 _ interlockedxor64 (\__int64 volatile *, \__int64)|  
-|_InterlockedXor64_acq|Int64 _InterlockedXor64_acq (\__int64 volatile *, \__int64)|  
-|_InterlockedXor64_nf|Int64 _InterlockedXor64_nf (\__int64 volatile *, \__int64)|  
-|_InterlockedXor64_rel|Int64 _InterlockedXor64_rel (\__int64 volatile *, \__int64)|  
+|_InterlockedXor64|__int64 _InterlockedXor64(\__int64 volatile *, \__int64)|  
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel(\__int64 volatile *, \__int64)|  
 |_InterlockedXor8|char _InterlockedXor8(char volatile *, char)|  
 |_InterlockedXor8_acq|char _InterlockedXor8_acq(char volatile *, char)|  
 |_InterlockedXor8_nf|char _InterlockedXor8_nf(char volatile *, char)|  

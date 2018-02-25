@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: AMP_GRAPHICS/Concurrency
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- AMP_GRAPHICS/Concurrency
+dev_langs:
+- C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Spazio dei nomi Concurrency::graphics
 Lo spazio dei nomi di grafica fornisce tipi e funzioni che sono progettate per la programmazione grafica.  

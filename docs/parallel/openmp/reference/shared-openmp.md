@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: Shared
-dev_langs: C++
-helpviewer_keywords: shared OpenMP clause
+ms.topic: reference
+f1_keywords:
+- Shared
+dev_langs:
+- C++
+helpviewer_keywords:
+- shared OpenMP clause
 ms.assetid: 7887dc95-67a2-462f-a3a2-8e0632bf5d04
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 26f8618a0340216215c3432576b6adbba3e70f80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 90491e6e8b415c79e21b4fa518f7e60327ac823e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="shared-openmp"></a>shared (OpenMP)
 Specifica che una o più variabili devono essere condivisa tra tutti i thread.  
@@ -40,7 +45,7 @@ shared(var)
 ## <a name="remarks"></a>Note  
  È possibile condividere le variabili tra i thread con il [copyprivate](../../../parallel/openmp/reference/copyprivate.md) clausola.  
   
- `shared`si applica alle direttive seguenti:  
+ `shared` si applica alle direttive seguenti:  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

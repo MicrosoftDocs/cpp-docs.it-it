@@ -1,33 +1,36 @@
 ---
-title: _BitScanForward, _BitScanForward64 | Documenti Microsoft
+title: _BitScanForward, _BitScanForward64 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
 - _BitScanForward64_cpp
 - _BitScanForward64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _BitScanForward intrinsic
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: eec7487b88b58e3d2a3cceff78893dbd82f3acf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb9f45a0cf518265a1eb40a12a976ec0c1e5b9d1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Sezione specifica Microsoft**  
@@ -64,7 +67,7 @@ unsigned char _BitScanForward64(
   
 |Funzione intrinseca|Architettura|  
 |---------------|------------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward`|x86, ARM [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **File di intestazione** \<intrin. h >  

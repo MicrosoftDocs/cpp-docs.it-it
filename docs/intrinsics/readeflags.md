@@ -1,26 +1,31 @@
 ---
-title: __readeflags | Documenti Microsoft
+title: __readeflags | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __readeflags
-dev_langs: C++
-helpviewer_keywords: __readeflags intrinsic
+ms.topic: reference
+f1_keywords:
+- __readeflags
+dev_langs:
+- C++
+helpviewer_keywords:
+- __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc75f84ba3c47ae9406743cefb3506721f3d5f4b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f94ba1be2faed16276ac088c3b6ecf3cf375f186
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readeflags"></a>__readeflags
 Legge che registrare lo stato di programma e un controllo (contenuto).  

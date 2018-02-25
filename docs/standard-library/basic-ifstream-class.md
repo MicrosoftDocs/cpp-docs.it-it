@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - fstream/std::basic_ifstream
 - fstream/std::basic_ifstream::close
@@ -14,7 +15,8 @@ f1_keywords:
 - fstream/std::basic_ifstream::open
 - fstream/std::basic_ifstream::rdbuf
 - fstream/std::basic_ifstream::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ifstream [C++]
 - std::basic_ifstream [C++], close
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9c923d4c3de5410ac65f9706d875300b0d07cbb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicifstream-class"></a>Classe basic_ifstream
 Descrive un oggetto che controlla l'estrazione di elementi e oggetti codificati da un buffer di flusso della classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> con elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`.  

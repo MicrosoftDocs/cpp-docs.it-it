@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>Struttura ITopologyNode
 Interfaccia a un nodo di topologia come definito da Gestione risorse. Un nodo contiene una o più risorse di esecuzione.  
@@ -44,11 +48,11 @@ struct ITopologyNode;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|Restituisce il numero di risorse di esecuzione raggruppate in questo nodo.|  
-|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|Restituisce la prima risorsa di esecuzione raggruppata sotto questo nodo nell'ordine dell'enumerazione.|  
-|[Itopologynode:: GetID](#getid)|Restituisce il gestore delle risorse dell'identificatore univoco per questo nodo.|  
-|[Itopologynode:: GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza del nodo di topologia successivo nell'ordine dell'enumerazione.|  
-|[Itopologynode:: Getnumanode](#getnumanode)|Restituisce il Windows assegnato il numero di nodi NUMA a cui appartiene il nodo del gestore delle risorse.|  
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Restituisce il numero di risorse di esecuzione raggruppate in questo nodo.|  
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Restituisce la prima risorsa di esecuzione raggruppata sotto questo nodo nell'ordine dell'enumerazione.|  
+|[ITopologyNode::GetId](#getid)|Restituisce il gestore delle risorse dell'identificatore univoco per questo nodo.|  
+|[ITopologyNode::GetNext](#getnext)|Restituisce un'interfaccia in corrispondenza del nodo di topologia successivo nell'ordine dell'enumerazione.|  
+|[ITopologyNode::GetNumaNode](#getnumanode)|Restituisce il Windows assegnato il numero di nodi NUMA a cui appartiene il nodo del gestore delle risorse.|  
   
 ## <a name="remarks"></a>Note  
  Questa interfaccia viene generalmente utilizzata per analizzare la topologia del sistema, come rilevato dal gestore delle risorse.  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="getexecutionresourcecount"></a>Metodo itopologynode:: Getexecutionresourcecount  
+##  <a name="getexecutionresourcecount"></a>  Metodo itopologynode:: Getexecutionresourcecount  
  Restituisce il numero di risorse di esecuzione raggruppate in questo nodo.  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Numero di risorse di esecuzione raggruppate in questo nodo.  
   
-##  <a name="getfirstexecutionresource"></a>Metodo itopologynode:: Getfirstexecutionresource  
+##  <a name="getfirstexecutionresource"></a>  Metodo itopologynode:: Getfirstexecutionresource  
  Restituisce la prima risorsa di esecuzione raggruppata sotto questo nodo nell'ordine dell'enumerazione.  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Prima risorsa di esecuzione raggruppata sotto questo nodo nell'ordine dell'enumerazione.  
   
-##  <a name="getid"></a>Metodo itopologynode:: GetID  
+##  <a name="getid"></a>  Metodo itopologynode:: GetID  
  Restituisce il gestore delle risorse dell'identificatore univoco per questo nodo.  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  Il numero di nodi può essere ottenuto dalla funzione [GetProcessorNodeCount](concurrency-namespace-functions.md).  
   
-##  <a name="getnext"></a>Metodo itopologynode:: GetNext  
+##  <a name="getnext"></a>  Metodo itopologynode:: GetNext  
  Restituisce un'interfaccia in corrispondenza del nodo di topologia successivo nell'ordine dell'enumerazione.  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Interfaccia in corrispondenza del nodo successivo nell'ordine dell'enumerazione. Se non sono disponibili altri nodi nell'ordine dell'enumerazione della topologia del sistema, tramite questo metodo verrà restituito il valore `NULL`.  
   
-##  <a name="getnumanode"></a>Metodo itopologynode:: Getnumanode  
+##  <a name="getnumanode"></a>  Metodo itopologynode:: Getnumanode  
  Restituisce il Windows assegnato il numero di nodi NUMA a cui appartiene il nodo del gestore delle risorse.  
   
 ```

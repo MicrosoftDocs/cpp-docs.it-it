@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs: C++
-helpviewer_keywords: iterator header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0216c90a922050d4a752b4dbbd1209b26892ba05
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 Definisce le primitive degli iteratori, gli iteratori predefiniti e gli iteratori di flusso, nonché diversi modelli di supporto. Gli iteratori predefiniti includono gli adattatori di inversione e di inserimento. Esistono tre classi di adattatori degli iteratori di inserimento: front, back e general. Tali classi forniscono la semantica di inserimento anziché la semantica di sovrascrittura fornita dagli iteratori delle funzioni membro del contenitore.  

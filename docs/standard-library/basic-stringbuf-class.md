@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sstream/std::basic_stringbuf
 - sstream/std::basic_stringbuf::allocator_type
@@ -21,7 +22,8 @@ f1_keywords:
 - sstream/std::basic_stringbuf::seekpos
 - sstream/std::basic_stringbuf::str
 - sstream/std::basic_stringbuf::underflow
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_stringbuf [C++]
 - std::basic_stringbuf [C++], allocator_type
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 472d63a58c9a44682e942a5ebb6ebdcc7c7b1d2f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicstringbuf-class"></a>Classe basic_stringbuf
 Descrive un buffer del flusso che controlla la trasmissione di elementi di tipo `Elem`, i cui tratti di carattere sono determinati dalla classe `Tr`, verso e da una sequenza di elementi archiviati in un oggetto matrice.  

@@ -1,28 +1,32 @@
 ---
-title: _ReadWriteBarrier | Documenti Microsoft
+title: _ReadWriteBarrier | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _ReadWriteBarrier
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _ReadWriteBarrier
+dev_langs:
+- C++
 helpviewer_keywords:
 - ReadWriteBarrier intrinsic
 - _ReadWriteBarrier intrinsic
 ms.assetid: dd9f58b5-8bb6-494e-bb0f-9fe184f3908d
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2235c2089dd23a0572e960b995958c9e1740e108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: acc177ad5f98405571a418f849d35fa98242e0f2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readwritebarrier"></a>_ReadWriteBarrier
 **Sezione specifica Microsoft**  

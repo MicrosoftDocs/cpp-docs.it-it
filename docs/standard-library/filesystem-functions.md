@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::absolute
 - FILESYSTEM/std::experimental::filesystem::canonical
@@ -48,9 +49,10 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::system_complete
 - FILESYSTEM/std::experimental::filesystem::temp_directory_path
 - FILESYSTEM/std::experimental::filesystem::u8path
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: be3cb821-4728-4d47-ab78-858fa8aa5045
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -95,12 +97,13 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.workload: cplusplus
-ms.openlocfilehash: edd850087249769fce9e96110dfa29ca37450b0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c3fd7eabba97ff7e32cad06ad1d5460f94b329d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltfilesystemgt-functions"></a>Funzioni &lt;filesystem&gt;
 Queste funzioni disponibili nell'intestazione [\<filesystem>](../standard-library/filesystem.md) eseguono operazioni di modifica e query su percorsi, file, collegamenti simbolici, directory e volumi. Per altre informazioni ed esempi di codice, vedere [Esplorazione del file system (C++)](../standard-library/file-system-navigation.md).  

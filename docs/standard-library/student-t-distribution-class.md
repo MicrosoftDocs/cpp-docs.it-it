@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::student_t_distribution
 - random/std::student_t_distribution::result_type
@@ -17,7 +18,8 @@ f1_keywords:
 - random/std::student_t_distribution::min
 - random/std::student_t_distribution::max
 - random/std::student_t_distribution::param_type
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::student_t_distribution [C++]
 - std::student_t_distribution [C++], result_type
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f611d9c7093006a5212c68096aecd4b723086e4c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 744f5294830bdf19d4ace2b1c2925380684f3c92
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="studenttdistribution-class"></a>Classe student_t_distribution
 Genera una distribuzione Student-*t*.  

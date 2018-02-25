@@ -1,29 +1,33 @@
 ---
-title: '&lt;impostazioni locali&gt; | Documenti Microsoft'
+title: '&lt;locale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 Definisce le classi modello e le funzioni che possono essere utilizzate dai programmi C++ per incapsulare e modificare le diverse convenzioni culturali relative alla rappresentazione e alla formattazione dei dati numerici, monetari e di calendario, inclusi il supporto per l'internazionalizzazione della classificazione dei caratteri e l'ordinamento delle stringhe.  
@@ -65,7 +69,7 @@ Definisce le classi modello e le funzioni che possono essere utilizzate dai prog
 |[collate](../standard-library/collate-class.md)|Classe modello di ordinamento che fornisce un facet che gestisce le convenzioni di ordinamento delle stringhe.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet di ordinamento delle impostazioni locali specificate, consentendo il recupero di informazioni relative alle convenzioni di ordinamento delle stringhe specifiche di un'area culturale.|  
 |[ctype](../standard-library/ctype-class.md)|Classe modello che fornisce un facet utilizzato per classificare i caratteri, eseguire la conversione dalle lettere maiuscole e minuscole e tra il set di caratteri nativi e il set utilizzato dalle impostazioni locali.|  
-|[CType\<char >](../standard-library/ctype-char-class.md)|Una classe che è una specializzazione esplicita della classe modello **ctype\<CharType**> al tipo `char`, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|Una classe che è una specializzazione esplicita della classe modello **ctype\<CharType**> al tipo `char`, che descrive un oggetto che può essere utilizzato come facet delle impostazioni locali per caratterizzare le varie proprietà di un carattere di tipo `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|Classe base della classe ctype utilizzata per definire i tipi di enumerazione utilizzati per classificare o verificare i caratteri singolarmente o all'interno di intervalli completi.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|Classe modello derivata che descrive un oggetto che può essere utilizzato come facet ctype delle impostazioni locali specificate, consentendo la classificazione dei caratteri e la relativa conversione tra maiuscole e minuscole e tra set di caratteri nativi e set specificati dalle impostazioni locali.|  
 |[locale](../standard-library/locale-class.md)|Classe che descrive un oggetto delle impostazioni locali che incapsula le informazioni specifiche delle impostazioni locali come set di facet che definiscono collettivamente un ambiente localizzato specifico.|  

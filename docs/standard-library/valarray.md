@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <valarray>
-dev_langs: C++
-helpviewer_keywords: valarray header
+ms.topic: reference
+f1_keywords:
+- <valarray>
+dev_langs:
+- C++
+helpviewer_keywords:
+- valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 917dfbf870959b6934eaa49cbaab05e27304fb77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 18cc075c2acb4b15c4131aa1926775d63d34928f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 Definisce la classe modello valarray e numerose funzioni e classi modello.  

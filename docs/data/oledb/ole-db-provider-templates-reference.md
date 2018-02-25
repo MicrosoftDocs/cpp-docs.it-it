@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>Riferimenti ai modelli del provider OLE DB
 Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppate nelle categorie seguenti. Il materiale di riferimento include anche informazioni sul [macro per i modelli di Provider OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
@@ -42,7 +46,7 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
  Fornisce un'implementazione standard di set di righe OLE DB senza ereditarietà multipla di molte delle interfacce di implementazione. L'unico metodo per cui è necessario fornire l'implementazione è **Execute**.  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- Fornisce un'implementazione predefinita per l'handle di riga, viene utilizzata la `IRowsetImpl` classe. Un handle di riga è logicamente un identificatore univoco per una riga di risultati. `IRowsetImpl`Crea un nuovo `CSimpleRow` per ogni riga richiesti `IRowsetImpl::GetNextRows`.  
+ Fornisce un'implementazione predefinita per l'handle di riga, viene utilizzata la `IRowsetImpl` classe. Un handle di riga è logicamente un identificatore univoco per una riga di risultati. `IRowsetImpl` Crea un nuovo `CSimpleRow` per ogni riga richiesti `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB Provider richiede che implementano un **HACCESSOR**, che è un tag a una matrice di **DBBINDING** strutture. Fornisce **HACCESSOR**che sono gli indirizzi del **BindType** strutture. Obbligatoria sui set di righe e i comandi.  
@@ -63,7 +67,7 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
  Implementa OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) interfaccia che consente l'aggiornamento dei valori delle colonne in righe esistenti, l'eliminazione di righe e inserendo nuove righe.  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- Questa classe eredita da [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) ed esegue l'override [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`esegue le stesse funzioni come `IObjectWithSite` ma consente anche di proprietà OLE DB **DBPROPCANSCROLLBACKWARDS** e **DBPROPCANFETCHBACKWARDS**.  
+ Questa classe eredita da [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) ed esegue l'override [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl` esegue le stesse funzioni come `IObjectWithSite` ma consente anche di proprietà OLE DB **DBPROPCANSCROLLBACKWARDS** e **DBPROPCANFETCHBACKWARDS**.  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  Implementa il **IRowsetIdentity** interfaccia, che consente di confrontare sia due righe di dati siano identiche o meno.  
@@ -103,7 +107,7 @@ Le classi e interfacce per i modelli di Provider OLE DB possono essere raggruppa
  Crea ed elimina la connessione al consumer. Interfaccia obbligatoria in oggetti origine dati e l'interfaccia facoltativa sugli enumeratori.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`è un'interfaccia obbligatoria per gli oggetti origine dati e un'interfaccia facoltativa per gli enumeratori. Tuttavia, se espone un enumeratore **IDBInitialize**, deve esporre `IDBProperties` (le proprietà dell'origine dati).  
+ `IDBProperties` è un'interfaccia obbligatoria per gli oggetti origine dati e un'interfaccia facoltativa per gli enumeratori. Tuttavia, se espone un enumeratore **IDBInitialize**, deve esporre `IDBProperties` (le proprietà dell'origine dati).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  Ottiene un puntatore a interfaccia per l'oggetto origine dati. Interfaccia obbligatoria nella sessione.  

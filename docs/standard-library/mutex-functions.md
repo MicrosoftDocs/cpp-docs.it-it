@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::adopt_lock
 - mutex/std::call_once
@@ -13,7 +13,7 @@ f1_keywords:
 - mutex/std::lock
 - mutex/std::try_to_lock
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::adopt_lock [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.openlocfilehash: a81d134a4fb49f9123dbed5b4146976d5c676379
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 8fcee8ec1313a153764c94a709e32b3a6109b576
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Funzioni e variabili &lt;mutex&gt;
 ||||  

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>Direttiva #import (C++)
 **Sezione specifica C++**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Note  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>Ordine di ricerca per nome di file  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> Ordine di ricerca per nome di file  
  *nome del file* può essere preceduto da una specifica di directory. Il nome file deve essere il nome di un file esistente. La differenza tra le due forme di sintassi è costituita dall'ordine in cui il preprocessore cerca i file della libreria dei tipi quando il percorso è specificato in modo incompleto.  
   
 |Forma di sintassi|Operazione|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |Formato con virgolette|Indica al preprocessore di cercare i file della libreria dei tipi innanzitutto nella directory del file contenente l'istruzione `#import`, quindi nelle directory dei file che includono (`#include`) tali file. Il preprocessore effettua quindi la ricerca nei percorsi indicati di seguito.|  
 |Formato con parentesi angolari|Indica al preprocessore di cercare i file della libreria dei tipi nei percorsi seguenti:<br /><br /> 1.  Il **percorso** elenco dei percorsi delle variabili di ambiente<br />2.  Il **LIB** elenco dei percorsi delle variabili di ambiente<br />3.  Il percorso specificato dal parametro (altre directory di inclusione) opzione del compilatore, ma il compilatore sta cercando di una libreria dei tipi di riferimento da un'altra libreria dei tipi con il [no_registry](../preprocessor/no-registry.md) attributo.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>Specifica l'ID di localizzazione e del numero di versione  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> Specifica l'ID di localizzazione e del numero di versione  
  Quando si specifica un ProgID, è anche possibile specificare i relativi ID di localizzazione e numero di versione. Ad esempio:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Se non si specifica un numero di versione, viene utilizzata la versione più recente.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>File di intestazione creati durante l'importazione  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> File di intestazione creati durante l'importazione  
  `#import` crea due file di intestazione che ricostruiscono il contenuto della libreria dei tipi nel codice sorgente C++. Il file di intestazione principale è simile a quello prodotto dal compilatore MIDL (Microsoft Interface Definition Language), ma con ulteriori dati e codice generato dal compilatore. Il [file di intestazione principale](#_predir_the_primary_type_library_header_file) ha lo stesso nome di base della libreria dei tipi, oltre a una. Estensione TLH. Il file di intestazione secondario è costituito dallo stesso nome di base della libreria dei tipi seguito dall'estensione TLI. Contiene le implementazioni per le funzioni membro generate dal compilatore ed è incluso (`#include`) nel file di intestazione principale.  
   
  Se si importa una proprietà dispinterface che utilizza i parametri byref, #import non genererà declspec ([proprietà](../cpp/property-cpp.md)) istruzione per la funzione.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  La direttiva `#import` partecipa anche alla ricompilazione minima e può essere inserita in un file di intestazione precompilato. Vedere [la creazione di file di intestazione precompilata](../build/reference/creating-precompiled-header-files.md) per ulteriori informazioni.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>File di intestazione di libreria di tipi primaria  
+###  <a name="_predir_the_primary_type_library_header_file"></a> File di intestazione di libreria di tipi primaria  
  Il file di intestazione principale della libreria dei tipi è costituito da sette sezioni:  
   
 -   Boilerplate di intestazione: include i commenti, l'istruzione `#include` per COMDEF.H (che definisce alcune macro standard utilizzate nell'intestazione) e altre informazioni varie sull'installazione.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  Per ulteriori informazioni, vedere l'articolo della Knowledge Base "I metodi wrapper #import potrebbero causare una violazione di accesso" (Q242527) o "Errori del compilatore quando si utilizza #import con XML" (Q269194). È possibile trovare articoli della Knowledge Base nel supporto di MSDN Library o all'indirizzo [supporto Microsoft](https://support.microsoft.com/).  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>attributi #import  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> attributi #import  
  `#import` può includere facoltativamente uno o più attributi. Questi attributi indicano al compilatore di modificare il contenuto delle intestazioni della libreria dei tipi. Una barra rovesciata (**\\**) può essere utilizzato per includere altre righe in un singolo simbolo `#import` istruzione. Ad esempio:  
   
 ```  

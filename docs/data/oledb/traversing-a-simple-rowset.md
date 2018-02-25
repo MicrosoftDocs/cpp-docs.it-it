@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2dc0c58414587316a9a63d08bf2116d4159fca20
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>Scorrimento di un rowset semplice
 Nell'esempio seguente viene illustrato un accesso semplice e rapido database che non implica i comandi. Il codice del consumer, in un progetto ATL, recupera i record da una tabella denominata *artisti* in Microsoft Access, database utilizzando il Provider Microsoft OLE DB per ODBC. Il codice crea un [CTable](../../data/oledb/ctable-class.md) oggetto della tabella con una funzione di accesso basato sulla classe di record utente `CArtists`. Apre una connessione, apre una sessione sulla connessione e la tabella viene aperta nella sessione.  

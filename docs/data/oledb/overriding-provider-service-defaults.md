@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>Override delle impostazioni predefinite dei servizi di un provider
 Il valore del Registro di sistema del provider per **OLEDB_SERVICES** viene restituito come valore predefinito per il [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) proprietà di inizializzazione sull'oggetto origine dati.  
@@ -33,9 +35,9 @@ Il valore del Registro di sistema del provider per **OLEDB_SERVICES** viene rest
 |Servizi predefiniti attivati|Valore della proprietà DBPROP_INIT_OLEDBSERVICES|Valore nella stringa di connessione|  
 |------------------------------|------------------------------------------------|--------------------------------|  
 |Tutti i servizi (impostazione predefinita)|**DBPROPVAL_OS_ENABLEALL**|"Servizi OLE DB = -1."|  
-|Tutti tranne Pooling e AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|"Servizi OLE DB = -4;"|  
+|Tutti tranne Pooling e AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"Servizi OLE DB = -4;"|  
 |Tutti tranne Client Cursor|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"Servizi OLE DB = -5;"|  
-|Tutti tranne Pooling, AutoEnlistment e posizione del cursore Client|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~ DBPROPVAL_OS_CLIENTCURSOR**|"Servizi OLE DB = -7;"|  
+|Tutti tranne Pooling, AutoEnlistment e posizione del cursore Client|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"Servizi OLE DB = -7;"|  
 |Nessun servizio|~**DBPROPVAL_OS_ENABLEALL**|"Servizi OLE DB = 0;"|  
   
  Se la voce del Registro di sistema non esiste per il provider, il componente non verranno aggregati gli oggetti del provider e verrà richiamato alcun servizio, anche se richiesto esplicitamente dall'utente.  

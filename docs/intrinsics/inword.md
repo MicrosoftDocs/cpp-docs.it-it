@@ -1,30 +1,33 @@
 ---
-title: __inword | Documenti Microsoft
+title: __inword | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __indword_cpp
 - __indword
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 98d05ad6b424d12c911e726f04f0e0971c3df392
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce8e17fc3ac65980c40b3063e98b0df1b098248f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="inword"></a>__inword
 **Sezione specifica Microsoft**  

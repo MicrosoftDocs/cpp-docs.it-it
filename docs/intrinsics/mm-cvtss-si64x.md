@@ -1,28 +1,32 @@
 ---
-title: _mm_cvtss_si64x | Documenti Microsoft
+title: _mm_cvtss_si64x | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _mm_cvtss_si64x
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _mm_cvtss_si64x
+dev_langs:
+- C++
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0f55ecac0a9f6318b5d60a372003e548ce41c713
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 247f7a452d350cc061f323b7889268e766288f4b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 **Sezione specifica Microsoft**  

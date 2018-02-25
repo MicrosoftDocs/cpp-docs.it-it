@@ -1,28 +1,32 @@
 ---
-title: _mm_stream_sd | Documenti Microsoft
+title: _mm_stream_sd | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _mm_stream_sd
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _mm_stream_sd
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mm_stream_sd intrinsic
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: da88116f58c6e33d35a69ebb6ac2433a8fe8f4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e5d9d5a4d984e09ef8e77a4b7128d266d05f6b64
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
 **Sezione specifica Microsoft**  
@@ -89,7 +93,7 @@ d[0] = -1, d[1] = 1
 ```  
   
 **Fine sezione specifica Microsoft**  
- Copyright 2007 dispositivi Micro avanzate, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
+ Copyright 2007 by Advanced Micro Devices, Inc. Tutti i diritti sono riservati. Riprodotto con l'autorizzazione di Advanced Micro dispositivi, Inc.  
   
 ## <a name="see-also"></a>Vedere anche  
  [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   

@@ -1,29 +1,33 @@
 ---
-title: __readpmc | Documenti Microsoft
+title: __readpmc | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __readpmc
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __readpmc
+dev_langs:
+- C++
 helpviewer_keywords:
 - Read Performance Monitoring Counters instruction
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1348982d2e22246e9e085711d6c0067cdf0df6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa479f2b37198911ba1140cf551dd736b6e118d4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readpmc"></a>__readpmc
 **Sezione specifica Microsoft**  

@@ -1,32 +1,35 @@
 ---
-title: commento (C/C++) | Documenti Microsoft
+title: comment (C/C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 Inserisce un record di commento in un file oggetto o in un file eseguibile.  
@@ -41,7 +44,7 @@ Inserisce un record di commento in un file oggetto o in un file eseguibile.
 ## <a name="remarks"></a>Note  
  Il *del tipo di commento* è uno degli identificatori predefiniti, descritti di seguito, che specifica il tipo di record di commento. L'elemento `commentstring` facoltativo è un valore letterale stringa che fornisce informazioni aggiuntive per alcuni tipi di commento. Poiché `commentstring` è una stringa letterale, rispetta tutte le regole per i valori letterali stringa rispetto a caratteri di escape, virgolette incorporate (**"**) e concatenazione.  
   
- **compilatore**  
+ **compiler**  
  Inserisce il nome e il numero di versione del compilatore nel file oggetto. Questo record di commento viene ignorato dal linker. Se si fornisce un parametro `commentstring` per questo tipo di record, il compilatore genera un avviso.  
   
  **exestr**  
@@ -49,7 +52,7 @@ Inserisce un record di commento in un file oggetto o in un file eseguibile.
   
  `exestr` è deprecato e verrà rimosso nelle versioni future. Il linker non elabora il record di commento.  
   
- **LIB**  
+ **lib**  
  Inserisce un record di ricerca nella libreria nel file oggetto. Questo tipo di commento deve essere seguito da un parametro `commentstring` contenente il nome (ed eventualmente il percorso) della libreria in cui il linker esegue la ricerca. Il nome della libreria segue i record di ricerca di libreria predefinita nel file oggetto; il linker cerca questa libreria come se si fosse stata denominata nella riga di comando fornite che la libreria non è specificata con [/nodefaultlib](../build/reference/nodefaultlib-ignore-libraries.md). È possibile inserire più record di ricerca nella libreria nello stesso file di origine. Ogni record viene visualizzato nel file oggetto nello stesso ordine in cui è stato individuato nel file di origine.  
   
  Se l'ordine di libreria predefinita e una libreria aggiunta è importante, la compilazione con il [/Zl](../build/reference/zl-omit-default-library-name.md) commutatore impedirà il nome della libreria predefinita venga inserito nel modulo di oggetto. Un secondo pragma di commento può quindi essere utilizzato per inserire il nome della libreria predefinita dopo la libreria aggiunta. Le librerie elencate con tali pragma verranno visualizzate nel modulo di oggetto nello stesso ordine in cui vengono trovate nel codice sorgente.  
@@ -65,17 +68,17 @@ Inserisce un record di commento in un file oggetto o in un file eseguibile.
   
 -   [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
   
--   [/ ESPORTAZIONE](../build/reference/export-exports-a-function.md)  
+-   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
 -   [/INCLUDE](../build/reference/include-force-symbol-references.md)  
   
 -   [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/ UNIONE](../build/reference/merge-combine-sections.md)  
+-   [/MERGE](../build/reference/merge-combine-sections.md)  
   
 -   [O DELLA SEZIONE](../build/reference/section-specify-section-attributes.md)  
   
- **utente**  
+ **user**  
  Inserisce un commento generale nel file oggetto. Il parametro `commentstring` contiene il testo del commento. Questo record di commento viene ignorato dal linker.  
   
  Il pragma seguente indica al linker di eseguire la ricerca della libreria EMAPI.LIB durante il collegamento. Il linker esegue la ricerca prima nella directory di lavoro, quindi nel percorso specificato nella variabile di ambiente LIB.  

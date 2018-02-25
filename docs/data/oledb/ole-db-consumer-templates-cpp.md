@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - databases [C++], OLE DB templates
 - OLE DB consumers [C++], data access
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>Modelli consumer OLE DB (C++)
 I modelli consumer OLE DB supportano la specifica di OLE DB versione 2.6. Si noti tuttavia che, pur essendo stati testati con OLE DB 2.6, non supportano tutte le interfacce disponibili nella specifica. I modelli consumer consentono di ridurre notevolmente la quantità di codice da scrivere per implementare un consumer OLE DB. I vantaggi connessi al loro uso sono i seguenti:  

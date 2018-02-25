@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - random/std::normal_distribution
 - random/std::normal_distribution::reset
@@ -21,7 +22,8 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -33,16 +35,17 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bd2fcbd4b607df958aba3c1e3635b7a48f3837d8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a3d4de1e2316c2a406d6e2a3278c60c214201aa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="normaldistribution-class"></a>Classe normal_distribution
 Genera una distribuzione normale.  

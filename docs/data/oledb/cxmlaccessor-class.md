@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CXMLAccessor
 - CXMLAccessor
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 00d9caa5c49d47eb005e85bdd715864651634a5a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1d8d42599e9fe87355dc5392e1a473aa0a9c1e1d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cxmlaccessor-class"></a>Classe CXMLAccessor
 Consente di accedere alle origini dati come dati stringa quando non si dispone di alcuna conoscenza dello schema dell'archivio dati (struttura sottostante).  

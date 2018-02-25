@@ -1,28 +1,32 @@
 ---
-title: __svm_vmrun | Documenti Microsoft
+title: __svm_vmrun | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __svm_vmrun
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- __svm_vmrun
+dev_langs:
+- C++
 helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 000e798dce3fba367a8666d4b5c97bd25fd53253
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 988a045bc957d5920fee7e3e659d7a0b4f02d8d2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 **Sezione specifica Microsoft**  

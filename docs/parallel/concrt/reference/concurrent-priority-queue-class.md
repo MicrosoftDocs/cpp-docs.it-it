@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue
@@ -18,19 +19,22 @@ f1_keywords:
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::size
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::swap
 - CONCURRENT_PRIORITY_QUEUE/concurrency::concurrent_priority_queue::try_pop
-dev_langs: C++
-helpviewer_keywords: concurrent_priority_queue class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 16a9114278cd9559a0a21191faeb87ee34b5a5df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentpriorityqueue-class"></a>Classe concurrent_priority_queue
 La classe `concurrent_priority_queue` è un contenitore che consente a più thread di inserire e togliere elementi contemporaneamente. Gli elementi vengono prelevati secondo un ordine di priorità dove la priorità è determinata da una funzione fornita come argomento del modello.  
@@ -102,7 +106,7 @@ template <typename T,
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="clear"></a>deselezionare 
+##  <a name="clear"></a> Cancella 
 
  Cancella tutti gli elementi nella coda di priorità simultanea. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -111,9 +115,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>Note  
- `clear`non è indipendente dalla concorrenza. È necessario assicurarsi che nessun altro thread sta chiamando metodi sulla coda di priorità simultanea quando si chiama questo metodo. `clear`libera la memoria.  
+ `clear` non è indipendente dalla concorrenza. È necessario assicurarsi che nessun altro thread sta chiamando metodi sulla coda di priorità simultanea quando si chiama questo metodo. `clear` libera la memoria.  
   
-##  <a name="ctor"></a>concurrent_priority_queue 
+##  <a name="ctor"></a> concurrent_priority_queue 
 
  Costruisce una coda di priorità simultanea.  
   
@@ -177,7 +181,7 @@ concurrent_priority_queue(
   
  Il sesto e il settimo costruttore specificano uno spostamento della coda di priorità `_Src`.  
   
-##  <a name="empty"></a>vuoto 
+##  <a name="empty"></a> vuoto 
 
  Testa se la coda di priorità simultanea è vuota nel momento in cui questo metodo viene chiamato. Questo metodo è indipendente dalla concorrenza.  
   
@@ -186,9 +190,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se la coda di priorità era vuota nel momento in cui è stata chiamata la funzione, `false` in caso contrario.  
+ `true` Se la coda di priorità era vuota nel momento in cui è stata chiamata la funzione, `false` in caso contrario.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Restituisce una copia dell'allocatore utilizzato per costruire la coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.  
   
@@ -199,7 +203,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valore restituito  
  Una copia dell'allocatore utilizzato per costruire il `concurrent_priority_queue` oggetto.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Assegna il contenuto di un altro `concurrent_priority_queue` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -216,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `concurrent_priority_queue` oggetto.  
   
-##  <a name="push"></a>push 
+##  <a name="push"></a> Push 
 
  Aggiunge un elemento alla coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.  
   
@@ -230,7 +234,7 @@ void push(value_type&& _Elem);
  `_Elem`  
  L'elemento da aggiungere alla coda di priorità simultanea.  
   
-##  <a name="size"></a>dimensioni 
+##  <a name="size"></a> Dimensioni 
 
  Restituisce il numero di elementi presenti nella coda di priorità simultanea. Questo metodo è indipendente dalla concorrenza.  
   
@@ -244,7 +248,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  La dimensione restituita è garantita da includere tutti gli elementi aggiunti dalle chiamate alla funzione `push`. Tuttavia, potrebbe non riflettere i risultati di operazioni simultanee in sospeso.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> swap 
 
  Scambia il contenuto di due code di priorità simultanee. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -256,7 +260,7 @@ void swap(concurrent_priority_queue& _Queue);
  `_Queue`  
  Il `concurrent_priority_queue` oggetto scambiare contenuti con.  
   
-##  <a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a> try_pop 
 
  Rimuove e restituisce l'elemento con la priorità più elevata dalla coda se quest'ultima non è vuota. Questo metodo è indipendente dalla concorrenza.  
   
@@ -269,7 +273,7 @@ bool try_pop(reference _Elem);
  Un riferimento a una variabile che verrà popolato con l'elemento di priorità più elevata, se la coda non vuota.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se è stato estratto un valore, `false` in caso contrario.  
+ `true` Se è stato estratto un valore, `false` in caso contrario.  
   
 ## <a name="see-also"></a>Vedere anche  
  [concorrenza Namespace](concurrency-namespace.md)   

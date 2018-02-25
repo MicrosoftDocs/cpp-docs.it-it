@@ -1,32 +1,35 @@
 ---
-title: __emul, __emulu | Documenti Microsoft
+title: __emul, __emulu | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __emulu_cpp
 - __emul
 - __emul_cpp
 - __emulu
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8592633b0b2356f5a3e9bbdefb509a8f1d1a878d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba97b1160b9b0bff9e6014d73d1c79bf4627139c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Sezione specifica Microsoft**  
@@ -66,9 +69,9 @@ unsigned __int64 __emulu(
  **File di intestazione** \<intrin. h >  
   
 ## <a name="remarks"></a>Note  
- `__emul`accetta due valori con segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.  
+ `__emul` accetta due valori con segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero con segno a 64 bit.  
   
- `__emulu`accetta due valori integer senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
+ `__emulu` accetta due valori integer senza segno a 32 bit e restituisce il risultato della moltiplicazione come valore intero senza segno a 64 bit.  
   
 ## <a name="example"></a>Esempio  
   

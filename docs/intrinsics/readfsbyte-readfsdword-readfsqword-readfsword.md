@@ -1,18 +1,20 @@
 ---
-title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Documenti Microsoft
+title: __readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __readfsword
 - __readfsdword
 - __readfsbyte
 - __readfsqword
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __readfsword intrinsic
 - readfsword intrinsic
@@ -23,16 +25,17 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 611b8481f58c7c89909af8d383d81e574f428eca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d7430e8ebdf86acb7db2d8605d63c4d94f18dd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 **Sezione specifica Microsoft**  

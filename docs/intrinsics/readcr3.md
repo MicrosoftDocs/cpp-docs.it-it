@@ -1,26 +1,31 @@
 ---
-title: __readcr3 | Documenti Microsoft
+title: __readcr3 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __readcr3
-dev_langs: C++
-helpviewer_keywords: __readcr3 intrinsic
+ms.topic: reference
+f1_keywords:
+- __readcr3
+dev_langs:
+- C++
+helpviewer_keywords:
+- __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa8f72ececb77c4898a0ee9f48d8264968d85bd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aef03e30f35b8721bc7290832eb7af51b3e99483
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readcr3"></a>__readcr3
 **Sezione specifica Microsoft**  

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor
 - ATL::CDynamicParameterAccessor
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5eaea3f682fc31c825849ba4d3b5b48166f085ef
-ms.sourcegitcommit: 8ae12a602244a5853e941e5e8806e3545d876844
+ms.openlocfilehash: 18f53ca6d95d215ad41c6b2501245be0e470bbb1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (classe)
 

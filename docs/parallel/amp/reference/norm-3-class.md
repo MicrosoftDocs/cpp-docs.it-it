@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
 - amp_short_vectors/Concurrency::graphics::norm_3::operator=
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3145aa734b37a965430810727962f3f13e5fe49f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm3-class"></a>Classe norm_3
 Rappresenta uno short vector di tre numeri normali.  
@@ -117,7 +120,7 @@ class norm_3;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|norm_3::get_X||  
+|norm_3::get_x||  
 |norm_3::get_xy||  
 |norm_3::get_xyz||  
 |norm_3::get_xz||  
@@ -132,13 +135,13 @@ class norm_3;
 |norm_3::get_zxy||  
 |norm_3::get_zy||  
 |norm_3::get_zyx||  
-|norm_3:: ref_b||  
-|norm_3:: ref_g||  
-|norm_3:: ref_r||  
-|norm_3:: ref_x||  
-|norm_3:: ref_y||  
-|norm_3:: ref_z||  
-|norm_3::set_X||  
+|norm_3::ref_b||  
+|norm_3::ref_g||  
+|norm_3::ref_r||  
+|norm_3::ref_x||  
+|norm_3::ref_y||  
+|norm_3::ref_z||  
+|norm_3::set_x||  
 |norm_3::set_xy||  
 |norm_3::set_xyz||  
 |norm_3::set_xz||  
@@ -159,13 +162,13 @@ class norm_3;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |norm_3::operator-||  
-|norm_3::operator:||  
-|norm_3::operator * =||  
-|norm_3::operator / =||  
-|norm_3::operator + +||  
-|+ = norm_3::operator||  
-|norm_3::operator =||  
-|norm_3::operator =||  
+|norm_3::operator--||  
+|norm_3::operator*=||  
+|norm_3::operator/=||  
+|norm_3::operator++||  
+|norm_3::operator+=||  
+|norm_3::operator=||  
+|norm_3::operator-=||  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
   
@@ -178,34 +181,34 @@ class norm_3;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |norm_3::b||  
-|norm_3::BG||  
-|norm_3::BGR||  
+|norm_3::bg||  
+|norm_3::bgr||  
 |norm_3::br||  
 |norm_3::brg||  
 |norm_3::g||  
-|norm_3::GB||  
-|norm_3::GBR||  
-|norm_3::GR||  
+|norm_3::gb||  
+|norm_3::gbr||  
+|norm_3::gr||  
 |norm_3::grb||  
 |norm_3::r||  
-|norm_3::RB||  
-|norm_3::RBG||  
-|norm_3::RG||  
-|norm_3::RGB||  
+|norm_3::rb||  
+|norm_3::rbg||  
+|norm_3::rg||  
+|norm_3::rgb||  
 |norm_3::x||  
-|norm_3::XY||  
-|norm_3::XYZ||  
-|norm_3::XZ||  
+|norm_3::xy||  
+|norm_3::xyz||  
+|norm_3::xz||  
 |norm_3::xzy||  
 |norm_3::y||  
-|norm_3::YX||  
+|norm_3::yx||  
 |norm_3::yxz||  
-|norm_3::YZ||  
+|norm_3::yz||  
 |norm_3::yzx||  
 |norm_3::z||  
-|norm_3::ZX||  
+|norm_3::zx||  
 |norm_3::zxy||  
-|norm_3::ZY||  
+|norm_3::zy||  
 |norm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -216,7 +219,7 @@ class norm_3;
   
  **Namespace:** Concurrency:: Graphics  
 
-## <a name="ctor"></a>Costruttore norm_3
+## <a name="ctor">Costruttore norm_3</a>
 Predefinito, costruttore inizializza tutti gli elementi con 0.  
   
 ## <a name="syntax"></a>Sintassi  

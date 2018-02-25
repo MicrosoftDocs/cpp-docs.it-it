@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vector/std::vector<bool>::reference::flip
-dev_langs: C++
-helpviewer_keywords: reference::flip method
+ms.topic: reference
+f1_keywords:
+- vector/std::vector<bool>::reference::flip
+dev_langs:
+- C++
+helpviewer_keywords:
+- reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87ff43b6164ce12dc71334c6cc6f8f8728776e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d8e91ad188852e12a687e1ad9454fb16675cf3d5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 Inverte il valore booleano di un elemento [vector\<bool>](../standard-library/vector-bool-class.md) a cui viene fatto riferimento.  

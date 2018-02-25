@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <algorithm>
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- <algorithm>
+dev_langs:
+- C++
 helpviewer_keywords:
 - algorithm header [C++]
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
-ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c443fcbd779ace9047b6bd2b1ec45622fe3b899
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 Definisce le funzioni di modello del contenitore di libreria standard C++ che eseguono algoritmi.  

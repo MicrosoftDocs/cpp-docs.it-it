@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
@@ -17,7 +18,8 @@ f1_keywords:
 - functional/std::reference_wrapper::type
 - functional/std::reference_wrapper::get
 - functional/std::reference_wrapper::operator()
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reference_wrapper [C++]
 - std::reference_wrapper [C++]
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 87608912712f201d4731deac53d7a59fdddf41d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0751f1fde7d49d11ecaab5628ac02f322628b5c8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="referencewrapper-class"></a>Classe reference_wrapper
 Esegue il wrapping di un riferimento  

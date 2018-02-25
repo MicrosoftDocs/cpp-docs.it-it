@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _SECURE_SCL_THROWS
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _SECURE_SCL_THROWS
+dev_langs:
+- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8997741b4290214aa8f147aa7b841424467e296b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c3ba2f1c1914001da8d295f5a3729979cdefe95
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 Gli iteratori verificati garantiscono che i limiti del contenitore non vengano sovrascritti. Gli iteratori verificati si applicano sia alle build di rilascio che alle build di debug. Per altre informazioni sull'uso degli iteratori di debug quando si esegue la compilazione in modalità di debug, vedere [Supporto degli iteratori di debug](../standard-library/debug-iterator-support.md).  
