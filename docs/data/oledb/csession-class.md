@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CSession
 - ATL::CSession
 - ATL.CSession
-dev_langs: C++
-helpviewer_keywords: CSession class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5f2a764aaa7e10b957955dc11ee35ee44f9472
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csession-class"></a>Classe CSession
 Rappresenta una sessione di accesso singolo database.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
+## <a name="syntax"></a>Sintassi
+
+```cpp
 class CSession  
 ```  
   
@@ -42,7 +45,7 @@ class CSession
   
 |||  
 |-|-|  
-|[Interruzione](../../data/oledb/csession-abort.md)|Annulla (termina) della transazione.|  
+|[Abort](../../data/oledb/csession-abort.md)|Annulla (termina) della transazione.|  
 |[Chiudi](../../data/oledb/csession-close.md)|Chiude la sessione.|  
 |[Eseguire il commit](../../data/oledb/csession-commit.md)|Il commit della transazione.|  
 |[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Restituisce le informazioni relative a una transazione.|  
