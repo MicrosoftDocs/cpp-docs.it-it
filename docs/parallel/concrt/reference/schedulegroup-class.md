@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>Classe ScheduleGroup
 Rappresenta un'astrazione per un gruppo di pianificazione. I gruppi di pianificazione organizzano un set di lavoro correlato che trae vantaggio da una chiusura pianificata a livello temporaneo, eseguendo un'altra attività nello stesso gruppo prima di spostarsi in un altro gruppo, o a livello spaziale, eseguendo più elementi all'interno dello stesso gruppo sullo stesso nodo NUMA o sul socket fisico.  
@@ -49,7 +53,7 @@ class ScheduleGroup;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[ID](#id)|Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.|  
+|[Id](#id)|Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.|  
 |[Riferimento](#reference)|Incrementa il conteggio riferimenti del gruppo di pianificazione.|  
 |[Rilascio](#release)|Decrementa il conteggio dei riferimenti del gruppo di pianificazione.|  
 |[ScheduleTask](#scheduletask)|Pianifica un'attività leggera all'interno del gruppo di pianificazione.|  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="id"></a>ID 
+##  <a name="id"></a> Id 
 
  Restituisce un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>Valore restituito  
  Un identificatore per il gruppo di pianificazione che è univoco all'interno di utilità di pianificazione a cui appartiene il gruppo.  
   
-##  <a name="operator_delete"></a>operatore delete 
+##  <a name="operator_delete"></a> operatore delete 
 
  Oggetto `ScheduleGroup` oggetto sia distrutto internamente dal runtime quando vengono rilasciati tutti i riferimenti esterni a esso. Non è possibile eliminarlo in modo esplicito.  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  Un puntatore all'oggetto da eliminare.  
   
-##  <a name="reference"></a>Riferimento 
+##  <a name="reference"></a> Riferimento 
 
  Incrementa il conteggio riferimenti del gruppo di pianificazione.  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>Note  
  Viene in genere utilizzato per gestire la durata del gruppo di pianificazione per la composizione. Quando il conteggio dei riferimenti di un gruppo di pianificazione scende a zero, il gruppo di pianificazione viene eliminato dal runtime. Un gruppo di pianificazione creato utilizzando il [CurrentScheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) metodo, o [Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup) metodo inizia con un conteggio dei riferimenti di uno.  
   
-##  <a name="release"></a>Versione 
+##  <a name="release"></a> versione 
 
  Decrementa il conteggio dei riferimenti del gruppo di pianificazione.  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  Un gruppo di pianificazione è associato a un'istanza di utilità di pianificazione specifica. È necessario assicurarsi che tutti i riferimenti al gruppo di pianificazione vengano rilasciati prima del rilascio di tutti i riferimenti all'utilità di pianificazione, poiché questi ultimi potrebbero provocare la distruzione dell'utilità di pianificazione. In caso contrario potrebbe un comportamento indefinito.  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  Pianifica un'attività leggera all'interno del gruppo di pianificazione.  
   

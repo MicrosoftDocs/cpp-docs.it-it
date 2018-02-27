@@ -4,47 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CCommand
 - CCommand
 - ATL.CCommand
-dev_langs: C++
-helpviewer_keywords: CCommand class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4c53d7b27c98e0509cd434bf6eac2412b9c1a1a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ccommand-class"></a>Classe CCommand
 Fornisce i metodi per impostare ed eseguire un comando.  
   
-## <a name="syntax"></a>Sintassi  
-  
-```  
-template <  
-   class TAccessor = CNoAccessor,  
-   template < typename T > class TRowset = CRowset,  
-   class TMultiple = CNoMultipleResults   
->  
+## <a name="syntax"></a>Sintassi
+
+```cpp
+template <class TAccessor = CNoAccessor,  
+          template <typename T> class TRowset = CRowset,  
+          class TMultiple = CNoMultipleResults>  
 class CCommand :   
-   public CAccessorRowset <  
-      TAccessor,   
-      TRowset   
-   >,  
-   public CCommandBase,  
-   public TMultiple  
+           public CAccessorRowset <TAccessor, TRowset>,  
+           public CCommandBase,  
+           public TMultiple  
 ```  
   
 #### <a name="parameters"></a>Parametri  
@@ -76,7 +74,7 @@ class CCommand :
 |[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Ottiene un elenco di parametri, i relativi nomi e tipi del comando.|  
 |[Preparare](../../data/oledb/ccommand-prepare.md)|Convalida e ottimizza il comando corrente.|  
 |[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Rilascia la funzione di accesso parametro se necessario, quindi rilascia il comando.|  
-|[Funzione SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Specifica il tipo nativo di ogni parametro di comando.|  
+|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Specifica il tipo nativo di ogni parametro di comando.|  
 |[Unprepare](../../data/oledb/ccommand-unprepare.md)|Rimuove il piano di esecuzione corrente dei comandi.|  
   
 ## <a name="remarks"></a>Note  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - event
 - CONCRT/concurrency::event
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="event-class"></a>Classe event
 Un evento di reimpostazione manuale che tiene conto in modo esplicito del runtime di concorrenza.  
@@ -52,7 +56,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|Reimposta l'evento a uno stato non segnalato.|  
 |[set](#set)|Segnala l'evento.|  
-|[attesa](#wait)|Attende l'evento venga segnalato.|  
+|[wait](#wait)|Attende l'evento venga segnalato.|  
 |[wait_for_multiple](#wait_for_multiple)|Attende più eventi vengano segnalati.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
@@ -72,7 +76,7 @@ class event;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="ctor"></a>evento 
+##  <a name="ctor"></a> Evento 
 
  Costruisce un nuovo evento.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="dtor"></a>~ evento 
+##  <a name="dtor"></a> ~ evento 
 
  Elimina definitivamente un evento.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>Note  
  È previsto che non sono presenti thread in attesa dell'evento quando viene eseguito il distruttore. Se si consente all'evento di eseguire la distruzione quando i thread sono ancora in attesa si verificherà un comportamento non definito.  
   
-##  <a name="reset"></a>reimpostazione 
+##  <a name="reset"></a> Reimpostazione 
 
  Reimposta l'evento a uno stato non segnalato.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>set 
+##  <a name="set"></a> Set 
 
  Segnala l'evento.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>Note  
  Segnalare l'evento potrebbe causare un numero arbitrario di contesti in attesa che l'evento diventi eseguibile.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  Valore indicante un'attesa che non deve terminare mai.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>attesa 
+##  <a name="wait"></a> attesa 
 
  Attende l'evento venga segnalato.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  Se è stato soddisfatto l'attesa, il valore `0` sia restituito; in caso contrario, il valore `COOPERATIVE_WAIT_TIMEOUT` per indicare che il tempo di attesa scaduto senza che l'evento che diventa segnalato.  
   
 > [!IMPORTANT]
->  In un'applicazione [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], non chiamare `wait` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
+>  In un'app di Windows della piattaforma UWP (Universal), non chiamare `wait` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  Attende più eventi vengano segnalati.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  Se il parametro `_FWaitAll` è impostata sul valore `true` per indicare che tutti gli eventi devono diventare segnalati per soddisfare l'attesa, l'indice restituito dalla funzione non esegue alcun significato speciale il fatto che non è il valore `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
->  In un'applicazione [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)], non chiamare `wait_for_multiple` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
+>  In un'app di Windows della piattaforma UWP (Universal), non chiamare `wait_for_multiple` sul thread ASTA poiché tramite questa chiamata potrebbe bloccarsi il thread corrente e l'applicazione potrebbe non rispondere.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Spazio dei nomi concurrency](concurrency-namespace.md)

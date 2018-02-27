@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_unordered_set
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::key_eq
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::swap
 - CONCURRENT_UNORDERED_SET/concurrency::concurrent_unordered_set::unsafe_erase
-dev_langs: C++
-helpviewer_keywords: concurrent_unordered_set class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dfbdcac3bd4d16b96b2ce961b102dfa8c2deea6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 223a34c3cbc651f933b4ee7421030077ba8f878c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentunorderedset-class"></a>Classe concurrent_unordered_set
 La `concurrent_unordered_set` classe è un contenitore indipendente dalla concorrenza che controlla una sequenza di lunghezza variabile di elementi di tipo K. La sequenza viene rappresentata in modo indipendente dalla concorrenza accodamento, accesso agli elementi, accesso iteratori e operazioni traversali di iterazione.  
@@ -122,7 +126,7 @@ template <typename K,
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="begin"></a>iniziare 
+##  <a name="begin"></a> begin 
 
  Restituisce un iteratore che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -135,7 +139,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore al primo elemento nel contenitore simultaneo.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  Restituisce un iteratore const che punta al primo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -146,7 +150,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore const che punta al primo elemento nel contenitore simultaneo.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  Restituisce un iteratore const che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -157,7 +161,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore const che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo.  
   
-##  <a name="clear"></a>deselezionare 
+##  <a name="clear"></a> Cancella 
 
  Cancella tutti gli elementi nel contenitore simultaneo. Questa funzione non è sicuro di concorrenza.  
   
@@ -165,7 +169,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_unordered_set 
+##  <a name="ctor"></a> concurrent_unordered_set 
 
  Costruisce un set non ordinato simultaneo.  
   
@@ -232,7 +236,7 @@ concurrent_unordered_set(
   
  Tramite l'ultimo costruttore viene specificato uno spostamento del set non ordinato simultaneo `_Uset`.  
   
-##  <a name="count"></a>conteggio 
+##  <a name="count"></a> Conteggio 
 
  Conta il numero di elementi corrispondenti a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -247,7 +251,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero di volte numero di volte in cui che la chiave presente nel contenitore.  
   
-##  <a name="empty"></a>vuoto 
+##  <a name="empty"></a> vuoto 
 
  Verifica se sono presenti o meno degli elementi. Questo metodo è concorrenza-safe.  
   
@@ -256,12 +260,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se è vuoto, il contenitore simultaneo `false` in caso contrario.  
+ `true` Se è vuoto, il contenitore simultaneo `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Indica se il contenitore simultaneo è vuoto è possibile modificare in presenza di istruzioni INSERT simultanee, immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
-##  <a name="end"></a>fine 
+##  <a name="end"></a> Fine 
 
  Restituisce un iteratore che punta alla posizione successiva all'ultimo elemento nel contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -274,7 +278,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore alla posizione successiva all'ultimo elemento nel contenitore simultaneo.  
   
-##  <a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a> equal_range 
 
  Trova un intervallo che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -298,7 +302,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>Note  
  È possibile per gli inserimenti simultanei a causa di altre chiavi deve essere inserito dopo l'iteratore begin e prima dell'iteratore di fine.  
   
-##  <a name="find"></a>Trova 
+##  <a name="find"></a> find 
 
  Trova un elemento che corrisponde a una chiave specificata. Questa funzione è concorrenza-safe.  
   
@@ -315,7 +319,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta alla posizione del primo elemento che corrisponde la chiave specificata o l'iteratore `end()` se tale elemento non esiste.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  Restituisce l'oggetto allocatore archiviato per questo contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -326,7 +330,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>Valore restituito  
  L'oggetto allocatore archiviato per questo contenitore simultaneo.  
   
-##  <a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a> hash_function 
 
  Restituisce l'oggetto della funzione hash archiviato.  
   
@@ -337,7 +341,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto della funzione hash archiviato.  
   
-##  <a name="insert"></a>inserimento 
+##  <a name="insert"></a> Inserimento 
 
  Aggiunge gli elementi per il `concurrent_unordered_set` oggetto.  
   
@@ -398,7 +402,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  Il comportamento delle ultime due funzioni membro è uguale a quello delle prime due, con la differenza che `value` viene utilizzato per costruire il valore inserito.  
   
-##  <a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a> key_eq 
 
  Restituisce l'oggetto funzione di confronto di uguaglianza stored.  
   
@@ -409,7 +413,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>Valore restituito  
  L'oggetto di funzione di confronto di uguaglianza stored.  
   
-##  <a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a> load_factor 
 
  Calcola e restituisce il fattore di carico corrente del contenitore. Il fattore di carico è il numero di elementi nel contenitore diviso per il numero di bucket.  
   
@@ -420,7 +424,7 @@ float load_factor() const;
 ### <a name="return-value"></a>Valore restituito  
  Il fattore di carico per il contenitore.  
   
-##  <a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a> max_load_factor 
 
  Ottiene o imposta il fattore di carico massimo del contenitore. Il fattore di carico massimo è il numero massimo di elementi che possono essere in un bucket prima che il contenitore di aumento delle dimensioni dalla tabella interna.  
   
@@ -436,7 +440,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>Valore restituito  
  La prima funzione membro restituisce il fattore di carico massimo archiviato. La seconda funzione membro non restituisce un valore, ma genera un [out_of_range](../../../standard-library/out-of-range-class.md) eccezione se il fattore di carico fornito non è valido...  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  Restituisce la dimensione massima del contenitore simultaneo, determinato dall'allocatore. Questo metodo è concorrenza-safe.  
   
@@ -450,7 +454,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>Note  
  Questo valore limite superiore effettivamente può essere superiore a ciò che effettivamente può contenere il contenitore.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Assegna il contenuto di un altro `concurrent_unordered_set` questo oggetto. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -470,7 +474,7 @@ concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
 ### <a name="remarks"></a>Note  
  Dopo l'eliminazione di tutti gli elementi esistenti in un set non ordinato simultaneo, tramite `operator=` il contenuto di `_Uset` viene copiato o spostato nel set non ordinato simultaneo.  
   
-##  <a name="rehash"></a>rehash 
+##  <a name="rehash"></a> rehash 
 
  Ricompila la tabella hash.  
   
@@ -487,7 +491,7 @@ void rehash(size_type _Buckets);
   
  Genera un [out_of_range](../../../standard-library/out-of-range-class.md) eccezione se il numero di bucket non è valido (0 o maggiore del numero massimo di bucket).  
   
-##  <a name="size"></a>dimensioni 
+##  <a name="size"></a> Dimensioni 
 
  Restituisce il numero di elementi in questo contenitore simultaneo. Questo metodo è concorrenza-safe.  
   
@@ -501,7 +505,7 @@ size_type size() const;
 ### <a name="remarks"></a>Note  
  In presenza di operazioni di inserimento simultanee, il numero di elementi presenti nel contenitore simultaneo potrebbe cambiare immediatamente dopo la chiamata a questa funzione, prima che il valore restituito venga letto.  
   
-##  <a name="swap"></a>swap 
+##  <a name="swap"></a> swap 
 
  Scambia il contenuto di due `concurrent_unordered_set` oggetti. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -513,7 +517,7 @@ void swap(concurrent_unordered_set& _Uset);
  `_Uset`  
  Oggetto `concurrent_unordered_set` con cui eseguire lo scambio.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  Restituisce un iteratore al primo elemento nel contenitore per un bucket specifico.  
   
@@ -530,7 +534,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
   
-##  <a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
  Restituisce l'indice di bucket con una chiave specifica di mapping a questo contenitore.  
   
@@ -545,7 +549,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>Valore restituito  
  L'indice di bucket per la chiave in questo contenitore.  
   
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count 
 
  Restituisce il numero corrente di bucket in questo contenitore.  
   
@@ -556,7 +560,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>Valore restituito  
  Il numero corrente di bucket in questo contenitore.  
   
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
  Restituisce il numero di elementi in un bucket specifico di questo contenitore.  
   
@@ -571,7 +575,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>Valore restituito  
  Il numero corrente di bucket in questo contenitore.  
   
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
  Restituisce un iteratore al primo elemento nel contenitore per un bucket specifico.  
   
@@ -586,7 +590,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
   
-##  <a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a> unsafe_cend 
 
  Restituisce un iteratore alla posizione successiva all'ultimo elemento in un bucket specifico.  
   
@@ -601,7 +605,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta all'inizio del bucket.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  Restituisce un iteratore all'ultimo elemento nel contenitore per un bucket specifico.  
   
@@ -618,7 +622,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>Valore restituito  
  Un iteratore che punta alla fine del bucket.  
   
-##  <a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a> unsafe_erase 
 
  Rimuove gli elementi dal `concurrent_unordered_set` in posizioni specificate. Questo metodo non è indipendente dalla concorrenza.  
   
@@ -652,7 +656,7 @@ iterator unsafe_erase(
   
  La terza funzione membro rimuove gli elementi nell'intervallo delimitato dal [equal_range](#equal_range)(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
  Restituisce il numero massimo di bucket in questo contenitore.  
   

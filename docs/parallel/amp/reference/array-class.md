@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array
 - AMP/array
@@ -25,19 +26,22 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs: C++
-helpviewer_keywords: array class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="array-class"></a>Classe array
 Rappresenta un contenitore di dati utilizzato per spostare i dati a un tasto di scelta rapida.  
@@ -83,8 +87,8 @@ friend class array;
 |Nome|Descrizione|  
 |----------|-----------------|  
 |[operatore std:: Vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` per convertire in modo implicito la matrice in un std::[vettore](../../../standard-library/vector-class.md) oggetto.|  
-|[operator)](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
-|[operator]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
+|[operator()](#operator_call)|Restituisce il valore dell'elemento specificato dai parametri.|  
+|[operator[]](#operator_at)|Restituisce l'elemento in corrispondenza dell'indice specificato.|  
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `array` specificato in questo oggetto.|  
   
 ### <a name="public-constants"></a>Costanti pubbliche  
@@ -127,7 +131,7 @@ friend class array;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="dtor"></a>~ array 
+##  <a name="dtor"></a> ~array 
 
  Elimina definitivamente il `array` oggetto.  
   
@@ -135,7 +139,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a> accelerator_view 
 
  Ottiene il [accelerator_view](accelerator-view-class.md) oggetto che rappresenta il percorso in cui la matrice viene allocata. Questa proprietà è accessibile solo sulla CPU.  
   
@@ -143,7 +147,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="ctor"></a>matrice 
+##  <a name="ctor"></a> Matrice 
 
  Inizializza una nuova istanza di [classe array](array-class.md). È presente alcun costruttore predefinito per `array<T,N>`. Tutti i costruttori vengono eseguiti sulla CPU solo. Non possono essere eseguite in una destinazione di Direct3D.  
   
@@ -446,7 +450,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  Il tipo di dati degli elementi copiati.  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  Ottiene il secondo [accelerator_view](accelerator-view-class.md) oggetto passato come parametro quando viene chiamato un costruttore di gestione temporanea per creare un'istanza di `array` oggetto.  
   
@@ -454,7 +458,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  Copia il contenuto del `array` a un altro `array`.  
   
@@ -470,7 +474,7 @@ void copy_to(
  `_Dest`  
  Il [array_view](array-view-class.md) oggetto da copiare.  
   
-##  <a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a> cpu_access_type 
 
  Ottiene il access_type CPU consentito per questa matrice.  
   
@@ -478,7 +482,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="data"></a>dati 
+##  <a name="data"></a> data 
 
  Restituisce un puntatore a dati non elaborati del `array`.  
   
@@ -491,7 +495,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>Valore restituito  
  Puntatore a dati non elaborati della matrice.  
   
-##  <a name="extent"></a>extent 
+##  <a name="extent"></a> extent 
 
  Ottiene il [extent](extent-class.md) oggetto che definisce la forma del `array`.  
   
@@ -499,7 +503,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a> get_accelerator_view 
 
  Restituisce il [accelerator_view](accelerator-view-class.md) oggetto che rappresenta il percorso in cui il `array` oggetto viene allocato. Questa proprietà è accessibile solo sulla CPU.  
   
@@ -510,7 +514,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>Valore restituito  
  Il `accelerator_view` oggetto che rappresenta il percorso in cui il `array` oggetto viene allocato.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  Ottiene il secondo [accelerator_view](accelerator-view-class.md) oggetto passato come parametro quando viene chiamato un costruttore di gestione temporanea per creare un'istanza di `array` oggetto.  
   
@@ -521,7 +525,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>Valore restituito  
  Il secondo [accelerator_view](accelerator-view-class.md) oggetto passato al costruttore di gestione temporanea.  
   
-##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a> get_cpu_access_type 
 
  Restituisce il access_type CPU che è consentito per questa matrice.  
   
@@ -531,7 +535,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  Restituisce il [extent](extent-class.md) oggetto del `array`.  
   
@@ -542,7 +546,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>Valore restituito  
  Il `extent` oggetto del `array`.  
   
-##  <a name="operator_vec"></a>operatore std:: Vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a> operatore std:: Vector&lt;value_type&gt; 
 
  Usa `copy(*this, vector)` per convertire in modo implicito la matrice a un oggetto std:: Vector.  
   
@@ -557,7 +561,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>Valore restituito  
  Un oggetto di tipo `vector<T>` che contiene una copia dei dati contenuti nella matrice.  
   
-##  <a name="operator_call"></a>operator) 
+##  <a name="operator_call"></a> operator) 
 
  Restituisce il valore dell'elemento specificato dai parametri.  
   
@@ -598,7 +602,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valore restituito  
  Il valore dell'elemento specificato dai parametri.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  Restituisce l'elemento in corrispondenza dell'indice specificato.  
   
@@ -623,7 +627,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>Valore restituito  
  L'elemento in corrispondenza dell'indice specificato.  
   
-##  <a name="operator_eq"></a>operator = 
+##  <a name="operator_eq"></a> operator = 
 
  Copia il contenuto dell'oggetto specificato `array` oggetto.  
   
@@ -646,14 +650,14 @@ array& operator= (
 ### <a name="return-value"></a>Valore restituito  
  Un riferimento a questo `array` oggetto.  
   
-##  <a name="rank"></a>numero di dimensioni 
+##  <a name="rank"></a> Numero di dimensioni 
 
  Archivia il rango di `array`.  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 Reinterpreta array tramite un array_view unidimensionale, a cui facoltativamente può avere un tipo di valore diverso di matrice di origine.
 
@@ -667,7 +671,7 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ``` 
   
 ### <a name="parameters"></a>Parametri  
-`_Value_type2`Il tipo di dati dei dati restituiti.
+`_Value_type2` Il tipo di dati dei dati restituiti.
 
 ### <a name="return-value"></a>Valore restituito
 Un array_view o un oggetto const array_view che è basato su una matrice, con il tipo di elemento reinterpretato da T ElementType e il numero di dimensioni ridotte da N a 1.
@@ -687,7 +691,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="section"></a>sezione 
+##  <a name="section"></a> Sezione 
 
  Restituisce una sottosezione del `array` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata.  
   
@@ -789,7 +793,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>Valore restituito  
  Restituisce una sottosezione del `array` oggetto che si trova l'origine specificata e, facoltativamente, che ha l'estensione specificata. Quando solo il `index` oggetto è specificato, la sottosezione contiene tutti gli elementi nella griglia associato con gli indici che superano gli indici degli elementi di `index` oggetto.  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  Reinterpreta questa matrice come un [array_view](array-view-class.md) di un numero di dimensioni diversa.  
   

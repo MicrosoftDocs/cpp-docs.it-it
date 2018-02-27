@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="collections-ccx"></a>Raccolte (C++/CX)
 In C + + programma CX, è possibile utilizzare liberamente di contenitori di libreria di modelli standard (STL, Standard Template Library) o qualsiasi altro tipo di raccolta definita dall'utente. Tuttavia, quando si passano le raccolte e viceversa attraverso l'interfaccia di Windows Runtime applicazione binaria (ABI), ad esempio, per un controllo XAML o a un client JavaScript, è necessario utilizzare i tipi di raccolta di Windows Runtime.  
@@ -64,7 +65,7 @@ In C + + programma CX, è possibile utilizzare liberamente di contenitori di lib
    
   
 ## <a name="vectorproxy-elements"></a>Elementi VectorProxy  
- [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) consentono l'uso di `range for` cicli e algoritmi come [std:: Sort](../standard-library/algorithm-functions.md#sort) con un [IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) contenitore. Tuttavia, gli elementi `IVector` non sono accessibili attraverso la dereferenziazione del puntatore C++, ma solo attraverso i metodi [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) e [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Di conseguenza, questi iteratori utilizzano le classi proxy `Platform::Details::VectorProxy<T>` e `Platform::Details::ArrowProxy<T>` per fornire l'accesso ai singoli elementi attraverso gli operatori `*`, `->`e `[]` , come richiesto da STL. In linea puramente teorica, dato un elemento `IVector<Person^> vec`, il tipo di `*begin(vec)` è `VectorProxy<Person^>`. L'oggetto proxy, tuttavia, è quasi sempre trasparente al codice utente. Questi oggetti proxy non sono documentati in quanto riservati al solo uso interno da parte degli iteratori, è tuttavia utile conoscere il funzionamento del meccanismo.  
+ [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) e [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) consentono l'uso di `range for` cicli e algoritmi come [std:: Sort](../standard-library/algorithm-functions.md#sort) con un [ IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) contenitore. Tuttavia, gli elementi `IVector` non sono accessibili attraverso la dereferenziazione del puntatore C++, ma solo attraverso i metodi [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) e [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Di conseguenza, questi iteratori utilizzano le classi proxy `Platform::Details::VectorProxy<T>` e `Platform::Details::ArrowProxy<T>` per fornire l'accesso ai singoli elementi attraverso gli operatori `*`, `->`e `[]` , come richiesto da STL. In linea puramente teorica, dato un elemento `IVector<Person^> vec`, il tipo di `*begin(vec)` è `VectorProxy<Person^>`. L'oggetto proxy, tuttavia, è quasi sempre trasparente al codice utente. Questi oggetti proxy non sono documentati in quanto riservati al solo uso interno da parte degli iteratori, è tuttavia utile conoscere il funzionamento del meccanismo.  
   
  Quando usi un ciclo `range for` sui contenitori `IVector` , usa `auto&&` per consentire l'associazione corretta della variabile iteratore agli elementi `VectorProxy` . Se usi `auto` o `auto&`, viene generato il messaggio di avviso del compilatore C4239 nel cui testo è specificato `VectoryProxy` .  
   
@@ -135,10 +136,10 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|Funzioni|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Archivia internamente [Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) e int.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md)([Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Archivia internamente [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ e int.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Archivia internamente [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ e T.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Archivia internamente [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ e T.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Archivia internamente [Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) e int.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md)([Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (Archivia internamente [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ e int.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Archivia internamente [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ e T.)|[iniziare](../cppcx/begin-function.md)/ [fine](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Archivia internamente [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ e T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IMap\<K,V>](http://msdn.microsoft.com/library/windows/apps/br226042.aspx).|  
 |[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (Archivia internamente [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ e T.)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>Eventi di modifica della raccolta  

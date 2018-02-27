@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs: C++
-helpviewer_keywords: complex header
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e23707a342e666e49a15c47e0dc82c4e882176cd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 Definisce la classe di modello del contenitore **complesso** e i relativi modelli di supporto.  
@@ -48,13 +52,13 @@ Definisce la classe di modello del contenitore **complesso** e i relativi modell
   
 -   L'inverso additivo per un numero complesso (*un*, *b*) è (-*un*-*b*) e l'inverso moltiplicativo per tutti questi numeri complessi ad eccezione di (0, 0) è  
   
-     (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
  Mediante la rappresentazione di un numero complesso *z* = (*un*, *b*) nel formato *z* = *un*  +  *bi*, dove *si*<sup>2</sup> = -1, le regole per l'algebra del set di numeri reali può essere applicata per il set di numeri complessi e i relativi componenti. Ad esempio:  
   
-  (1 + 2*si*) \* (2 + 3*si*)  
-  = 1 \* (2 + 3*si*) + 2*si* \* (2 + 3*si*)  
-  = (2 + 3*si*) + (4*si* + 6*si*<sup>2</sup>)  
+  (1 + 2*i*) \* (2 + 3*i*)  
+  = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
+  = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
   = (2 - 6) + (3 + 4)*i*  
   = -4 + 7*i*  
   
@@ -130,7 +134,7 @@ Definisce la classe di modello del contenitore **complesso** e i relativi modell
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Restituisce: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Restituisce `complex<double>{0.0, static_cast<double>(d)}`.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Restituisce `complex<float>{0.0f, static_cast<float>(d)}`.|  
   

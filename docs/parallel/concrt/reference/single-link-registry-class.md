@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_link_registry
 - AGENTS/concurrency::single_link_registry
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: single_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singlelinkregistry-class"></a>Classe single_link_registry
 L'oggetto `single_link_registry` è un `network_link_registry` che gestisce solo un singolo blocco di origine o di destinazione.  
@@ -59,7 +63,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|Aggiunge un collegamento per il `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Restituisce un iteratore al primo elemento nel file di `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Begin](network-link-registry-class.md#begin).)|  
-|[contiene](#contains)|Ricerche di `single_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
+|[contains](#contains)|Ricerche di `single_link_registry` oggetto per un blocco specificato. (Esegue l'override [network_link_registry:: Contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|Conta il numero di elementi di `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Rimuove un collegamento dal `single_link_registry` oggetto. (Esegue l'override [network_link_registry:: Remove](network-link-registry-class.md#remove).)|  
   
@@ -73,7 +77,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="add"></a>aggiungere 
+##  <a name="add"></a> Aggiungere 
 
  Aggiunge un collegamento per il `single_link_registry` oggetto.  
   
@@ -88,7 +92,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>Note  
  Il metodo genera un [invalid_link_target](invalid-link-target-class.md) eccezione se è già presente un collegamento in questo registro di sistema.  
   
-##  <a name="begin"></a>iniziare 
+##  <a name="begin"></a> begin 
 
  Restituisce un iteratore al primo elemento nel file di `single_link_registry` oggetto.  
   
@@ -102,7 +106,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>Note  
  Lo stato finale è indicato da un `NULL` collegamento.  
   
-##  <a name="contains"></a>contiene 
+##  <a name="contains"></a> contiene 
 
  Ricerche di `single_link_registry` oggetto per un blocco specificato.  
   
@@ -115,9 +119,9 @@ virtual bool contains(_EType _Link);
  Un puntatore a un blocco di cui eseguire la ricerca nel `single_link_registry` oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il collegamento è stato trovato, `false` in caso contrario.  
+ `true` Se il collegamento è stato trovato, `false` in caso contrario.  
   
-##  <a name="count"></a>conteggio 
+##  <a name="count"></a> Conteggio 
 
  Conta il numero di elementi di `single_link_registry` oggetto.  
   
@@ -128,7 +132,7 @@ virtual size_t count();
 ### <a name="return-value"></a>Valore restituito  
  Il numero di elementi di `single_link_registry` oggetto.  
   
-##  <a name="remove"></a>rimuovere 
+##  <a name="remove"></a> Rimuovere 
 
  Rimuove un collegamento dal `single_link_registry` oggetto.  
   
@@ -141,9 +145,9 @@ virtual bool remove(_EType _Link);
  Un puntatore a un blocco da rimuovere, se trovato.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il collegamento è stato trovato e rimosso, `false` in caso contrario.  
+ `true` Se il collegamento è stato trovato e rimosso, `false` in caso contrario.  
   
-##  <a name="ctor"></a>single_link_registry 
+##  <a name="ctor"></a> single_link_registry 
 
  Costruisce un oggetto `single_link_registry`.  
   
@@ -151,7 +155,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a>~ single_link_registry 
+##  <a name="dtor"></a> ~single_link_registry 
 
  Elimina definitivamente il `single_link_registry` oggetto.  
   

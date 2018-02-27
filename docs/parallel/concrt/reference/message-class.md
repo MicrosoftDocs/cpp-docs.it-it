@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message
 - AGENTS/concurrency::message
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs: C++
-helpviewer_keywords: message class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="message-class"></a>Classe message
 Busta del messaggio di base contenente il payload dei dati passati tra blocchi della messaggistica.  
@@ -83,7 +87,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a> add_ref 
 
  Aggiunge il numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.  
   
@@ -94,7 +98,7 @@ long add_ref();
 ### <a name="return-value"></a>Valore restituito  
  Il nuovo valore del conteggio dei riferimenti.  
   
-##  <a name="ctor"></a>Messaggio 
+##  <a name="ctor"></a> Messaggio 
 
  Costruisce un oggetto `message`.  
   
@@ -126,7 +130,7 @@ message(
 ### <a name="remarks"></a>Note  
  Il costruttore che accetta un puntatore a un `message` oggetto come argomento viene generata una [invalid_argument](../../../standard-library/invalid-argument-class.md) eccezione se il parametro `_Msg` è `NULL`.  
   
-##  <a name="dtor"></a>~ messaggio 
+##  <a name="dtor"></a> ~ messaggio 
 
  Elimina definitivamente il `message` oggetto.  
   
@@ -134,7 +138,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a> msg_id 
 
  Restituisce l'ID del `message` oggetto.  
   
@@ -145,7 +149,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>Valore restituito  
  Il `runtime_object_identity` del `message` oggetto.  
   
-##  <a name="payload"></a>payload 
+##  <a name="payload"></a> payload 
 
  Il payload del `message` oggetto.  
   
@@ -153,7 +157,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a> remove_ref 
 
  Sottrae dal numero di riferimento per il `message` oggetto. Utilizzato per i blocchi di messaggi che necessitano di conteggio dei riferimenti per determinare la durata dei messaggi.  
   

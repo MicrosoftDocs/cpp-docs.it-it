@@ -1,14 +1,17 @@
 ---
-title: MFC COM | Documenti Microsoft
+title: MFC COM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 Un subset di MFC è progettato per il supporto COM, mentre la maggior parte della libreria ATL (Active Template) è progettata per la programmazione COM. Negli argomenti di questa sezione viene descritto il supporto di MFC per COM.  
@@ -53,7 +57,7 @@ Un subset di MFC è progettato per il supporto COM, mentre la maggior parte dell
   
 -   [Automazione](../mfc/automation.md) (precedentemente nota come automazione OLE) rende possibile un'applicazione possa modificare oggetti implementati in un'altra applicazione o "esporli" in modo che possano essere modificati.  
   
-     L'oggetto automatizzato potrebbe essere locale o [remoto](../mfc/remote-automation.md) (in un altro computer accessibile in rete). L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM.  
+     L'oggetto automatizzato potrebbe essere locale o remoto (in un altro computer accessibile in rete). L'automazione è disponibile sia per gli oggetti OLE che per gli oggetti COM.  
   
 -   Questa sezione vengono fornite informazioni su come scrivere componenti COM tramite MFC, ad esempio, in [punti di connessione](../mfc/connection-points.md).  
   
@@ -65,8 +69,6 @@ Un subset di MFC è progettato per il supporto COM, mentre la maggior parte dell
  [Contenimento dei documenti attivi](../mfc/active-document-containment.md)  
   
  [Automazione](../mfc/automation.md)  
-  
- [Automazione remota](../mfc/remote-automation.md)  
   
  [Punti di connessione](../mfc/connection-points.md)  
   

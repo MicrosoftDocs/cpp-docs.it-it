@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_assignment
 - AGENTS/concurrency::single_assignment
@@ -22,19 +23,22 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs: C++
-helpviewer_keywords: single_assignment class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singleassignment-class"></a>Classe single_assignment
 Un blocco della messaggistica `single_assignment` è un `propagator_block` multi-origine, a destinazione singola, in grado di archiviare un unico `message` scrivibile una volta.  
@@ -101,7 +105,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  Accetta un messaggio offerto da questo `single_assignment` blocco della messaggistica, restituendo una copia del messaggio al chiamante.  
   
@@ -119,7 +123,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Note  
  Il `single_assignment` messaggistica blocco restituisce copie del messaggio alle sue destinazioni, anziché trasferire la proprietà del messaggio attualmente a disposizione.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  Utilizza un messaggio offerto in precedenza il `single_assignment` e riservato dalla destinazione, la restituzione di una copia del messaggio al chiamante.  
   
@@ -137,7 +141,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>Note  
  Simile a `accept`, ma è sempre preceduto da una chiamata a `reserve`.  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  Controlla se questo `single_assignment` blocco della messaggistica è ancora stato inizializzato con un valore.  
   
@@ -146,9 +150,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il blocco ha ricevuto un valore, `false` in caso contrario.  
+ `true` Se il blocco ha ricevuto un valore, `false` in caso contrario.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  Un callback di notifica che una nuova destinazione è stata collegata a questo `single_assignment` blocco della messaggistica.  
   
@@ -160,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  Puntatore alla destinazione appena collegato.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  Passare in modo asincrono un messaggio da un `ISource` questo blocco `single_assignment` blocco della messaggistica. Viene richiamato dal `propagate` metodo, quando viene chiamato da un blocco di origine.  
   
@@ -180,7 +184,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [message_status](concurrency-namespace-enums.md) indicazione dei quali ha deciso di destinazione con il messaggio.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  Posizioni di `message` `_PMessage` in questo `single_assignment` blocco della messaggistica e offrire a tutte le destinazioni collegate.  
   
@@ -192,7 +196,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
  `_PMessage`  
  Un puntatore a un `message` da questo `single_assignment` blocco della messaggistica ha assunto la proprietà.  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  Rilascia una prenotazione messaggio precedente.  
   
@@ -204,7 +208,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  Il `runtime_object_identity` del `message` dell'oggetto viene rilasciato.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  Riserva un messaggio precedentemente offerto da questo `single_assignment` blocco della messaggistica.  
   
@@ -217,12 +221,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  Il `runtime_object_identity` del `message` viene riservato dell'oggetto.  
   
 ### <a name="return-value"></a>Valore restituito  
- `true`Se il messaggio è stato riservato, `false` in caso contrario.  
+ `true` Se il messaggio è stato riservato, `false` in caso contrario.  
   
 ### <a name="remarks"></a>Note  
  Dopo aver `reserve` viene chiamato se restituisce `true`, `consume` o `release` deve essere chiamato per assumere o rilasciare la proprietà del messaggio.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  Riprende la propagazione dopo una prenotazione è stata rilasciata.  
   
@@ -230,7 +234,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  Passare in modo sincrono un messaggio da un `ISource` questo blocco `single_assignment` blocco della messaggistica. Viene richiamato dal `send` metodo, quando viene chiamato da un blocco di origine.  
   
@@ -250,7 +254,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>Valore restituito  
  Oggetto [message_status](concurrency-namespace-enums.md) indicazione dei quali ha deciso di destinazione con il messaggio.  
   
-##  <a name="ctor"></a>single_assignment 
+##  <a name="ctor"></a> single_assignment 
 
  Costruisce un `single_assignment` blocco della messaggistica.  
   
@@ -290,7 +294,7 @@ single_assignment(
   
  Il tipo `filter_method` è un funtore con firma `bool (T const &)` che viene richiamato da questo `single_assignment` blocco della messaggistica per determinare se è necessario accettare un messaggio offerto.  
   
-##  <a name="dtor"></a>~ single_assignment 
+##  <a name="dtor"></a> ~single_assignment 
 
  Elimina definitivamente il `single_assignment` blocco della messaggistica.  
   
@@ -298,7 +302,7 @@ single_assignment(
 ~single_assignment();
 ```  
   
-##  <a name="value"></a>valore 
+##  <a name="value"></a> valore 
 
  Ottiene un riferimento al payload del messaggio viene archiviato corrente di `single_assignment` blocco della messaggistica.  
   
