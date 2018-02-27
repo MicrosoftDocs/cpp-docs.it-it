@@ -1,124 +1,150 @@
 ---
 title: Gli avvisi del compilatore dalla versione del compilatore | Documenti Microsoft
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 01/31/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-cpp
+ms.technology:
+- devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.assetid: 886c5a66-088c-4a4b-908b-aa3ec189e595
-caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52513b156ee8c86d8358be84a27c28d15eb86641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
-# <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore dalla versione del compilatore  
-  
-Il compilatore può esclusione di avvisi che sono stati introdotti dopo una versione è possibile specificare utilizzando la [/WV.](../../build/reference/compiler-option-warning-level.md) l'opzione del compilatore. Ciò è utile per la gestione del processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera evitare temporaneamente nuovi avvisi. Questa opzione non elimina i nuovi messaggi di errore. Si consiglia di non si elimina tutti i nuovi avvisi in modo permanente. È consigliabile compilare sempre al massimo livello di avviso regolare, __/W4__e rimuovere il __/WV.__ opzione nella compilazione appena possibile.  
-  
+# <a name="compiler-warnings-by-compiler-version"></a>Avvisi del compilatore dalla versione del compilatore
+
+Il compilatore può eliminare gli avvisi introdotti dopo una versione specificata utilizzando il [/WV.](../../build/reference/compiler-option-warning-level.md) l'opzione del compilatore. Ciò è utile per la gestione del processo di compilazione quando si introduce una nuova versione del set di strumenti e si desidera evitare temporaneamente nuovi avvisi. Questa opzione non elimina i nuovi messaggi di errore. Si consiglia di non si elimina tutti i nuovi avvisi in modo permanente. È consigliabile compilare sempre al massimo livello di avviso regolare, __/W4__e rimuovere il __/WV.__ opzione nella compilazione appena possibile. 
+
 Queste versioni del compilatore introdotti nuovi avvisi:
 
-| Prodotto | Numero di versione del compilatore |  
-|-|-|  
-| Visual C++ 2002 | 13.00.9466 |  
-| Visual C++ 2003 | 13.10.3077 |  
-| Visual C++ 2005 | 14.00.50727.762 |  
-| Visual C++ 2008 | 15.00.21022.08 |  
-| Visual C++ 2010 | 16.00.40219.01 |  
-| Visual C++ 2012 | 17.00.51106.1 |  
-| Visual C++ 2013 | 18.00.21005.1 |  
-| Visual C++ 2015 RTM | 19.00.23026.0 |  
-| Visual C++ 2015 Update 1 | 19.00.23506.0 |  
-| Visual C++ 2015 Update 2 | 19.00.23918.0 |  
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |  
-| Visual C++ 2017 RTM | 19.10.24903.0 |  
-| Visual C++ 2017 Update 1 | 19.10.25017.0 |  
-  
-È possibile specificare solo il numero principale, i numeri principali e secondari o la versione principale e secondario e numeri di build per il __/WV.__ opzione, che elimina tutti gli avvisi per le versioni maggiore del numero specificato. Per eliminare gli avvisi introdotti in Visual C++ 2015 Update 2 e versioni successive, ad esempio, è possibile utilizzare __/Wv:19.00.23900__. Per eliminare tutti gli avvisi in Visual C++ 2013 e versioni successive, è possibile utilizzare __/WV: 18__.  
-  
+| Prodotto | Numero di versione del compilatore |
+|-|-|
+| Visual C++ 2002 | 13.00.9466 |
+| Visual C++ 2003 | 13.10.3077 |
+| Visual C++ 2005 | 14.00.50727.762 |
+| Visual C++ 2008 | 15.00.21022.08 |
+| Visual C++ 2010 | 16.00.40219.01 |
+| Visual C++ 2012 | 17.00.51106.1 |
+| Visual C++ 2013 | 18.00.21005.1 |
+| Visual C++ 2015 RTM | 19.00.23026.0 |
+| Visual C++ 2015 Update 1 | 19.00.23506.0 |
+| Visual C++ 2015 Update 2 | 19.00.23918.0 |
+| Visual C++ 2015 Update 3 | 19.00.24215.1 |
+| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual C++ 2017 versione 15.1 | 19.10.25017.0 |
+| Visual C++ 2017 versione 15.3 | 19.11.25506.0 |
+| Visual C++ 2017 versione 15,5 | 19.12.25827.0 |
+
+È possibile specificare solo il numero principale, i numeri principali e secondari o la versione principale e secondario e numeri di build per il __/WV.__ opzione. Il compilatore segnala tutti gli avvisi che corrispondono alle versioni che iniziano con il numero specificato ed Elimina tutti gli avvisi per le versioni maggiore del numero specificato. Ad esempio, __/Wv:17__ segnala tutti gli avvisi introdotti in o prima di qualsiasi versione di Visual Studio 2012 ed Elimina tutti gli avvisi introdotti da qualsiasi compilatore da Visual Studio 2013 (versione 18) o versione successiva. Per eliminare gli avvisi introdotti in Visual Studio 2015 update 2 e versioni successive, è possibile utilizzare __/Wv:19.00.23506__. Utilizzare __/Wv:19.11__ per segnalare tutti gli avvisi introdotti in qualsiasi versione di Visual Studio precedenti a Visual Studio 2017 versione 15,5, ma non visualizza avvisi introdotti in Visual Studio 2017 15,5 e versioni successive.
+
 Le sezioni seguenti elencano gli avvisi introdotti da ogni versione di Visual C++ che è possibile eliminare utilizzando il __/WV.__ l'opzione del compilatore. Il __/WV.__ opzione non è possibile esclusione di avvisi che non sono elencati, che le versioni specificate del compilatore precedenti.
-  
-## <a name="warnings-introduced-in-visual-c-2017-update-1"></a>Avvisi introdotti in Visual C++ 2017 Update 1
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.10.25000__.  
-  
-|||  
-|-|-|  
-C4597|un comportamento indefinito: *descrizione*  
-C4604|'*tipo*': passaggio di argomento per valore attraverso il limite nativo e gestito richiede il costruttore di copia valida. In caso contrario non è definito il comportamento di runtime  
-C4749|supportato in modo condizionale: *descrizione*  
-C4768|gli attributi di declspec prima specifica di collegamento vengono ignorati  
-C4834|eliminazione di un valore restituito di funzione con l'attributo 'nodiscard'  
+
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Avvisi introdotti in Visual C++ 2017 versione 15,5 (versione del compilatore 19.12.25827.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.11__.
+
+|||
+|-|-|
+C5044|Un argomento per l'opzione della riga di comando *opzione* punta a un percorso '*percorso*' non esiste
+
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Avvisi introdotti in Visual C++ 2017 versione 15.3 (versione del compilatore 19.11.25506.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.10__.
+
+|||
+|-|-|
+C4843|'*type1*': un gestore di eccezioni di riferimento al tipo di matrice o una funzione non è raggiungibile, utilizzare '*type2*' invece
+C4844|' esportazione modulo *nome_modulo*;' è ora la sintassi preferita per un modulo di interfaccia di dichiarazione
+C5039|'*funzione*': puntatore o riferimento a potenzialmente generare funzione passato alla funzione extern C sotto - /EHc. Se questa funzione genera un'eccezione, può verificarsi un comportamento indefinito.
+C5040|le specifiche di eccezione dinamiche sono valide solo in C++ 14 e versioni precedenti; considerando come noexcept (false)
+C5041|'*definizione*': definizione out-of-line per un membro dati statici constexpr non è necessario ed è deprecato in C++ 17
+C5042|'*dichiarazione*': le dichiarazioni di funzione nell'ambito del blocco non possono essere specificato come 'inline' in C++ standard, rimuovere l'identificatore 'inline'
+C5043|'*specifica*': specifica di eccezione non corrisponde alla dichiarazione precedente
+
+## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Avvisi introdotti in Visual C++ 2017 versione 15.1 (versione del compilatore 19.10.25017.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.10.24903__.
+
+|||
+|-|-|
+C4597|un comportamento indefinito: *descrizione*
+C4604|'*tipo*': passaggio di argomento per valore attraverso il limite nativo e gestito richiede il costruttore di copia valida. In caso contrario non è definito il comportamento di runtime
+C4749|supportato in modo condizionale: *descrizione*
+C4768|gli attributi di declspec prima specifica di collegamento vengono ignorati
+C4834|eliminazione di un valore restituito di funzione con l'attributo 'nodiscard'
 C4841|estensione non standard: *estensione*
-C4842|il risultato di 'offsetof' applicato a un tipo con ereditarietà multipla non è garantito la coerenza tra le versioni del compilatore  
-C4869|'nodiscard' può essere applicato solo alle classi, enumerazioni e funzioni con tipo restituito non void  
-C5033|'*-classe di archiviazione*' non è più una classe di archiviazione supportati  
-C5034|utilizzo di funzione intrinseca '*intrinseco*' funzione *funzione* verrà compilato come codice guest  
-C5035|utilizzo della funzionalità '*funzionalità*' funzione *funzione* verrà compilato come codice guest  
-C5036|varargs funzione di conversione di puntatore durante la compilazione con /hybrid:x86arm64 '*type1*'a'*type2*'  
-C5037|'*funzione membro*': una definizione out-of-line di un membro di un modello di classe non può avere argomenti predefiniti  
-  
-## <a name="warnings-introduced-in-visual-c-2017-rtm"></a>Avvisi introdotti in Visual C++ 2017 RTM  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.10__.  
-  
-|||  
-|-|-|  
+C4842|il risultato di 'offsetof' applicato a un tipo con ereditarietà multipla non è garantito la coerenza tra le versioni del compilatore
+C4869|'nodiscard' può essere applicato solo alle classi, enumerazioni e funzioni con tipo restituito non void
+C5033|'*-classe di archiviazione*' non è più una classe di archiviazione supportati
+C5034|utilizzo di funzione intrinseca '*intrinseco*' funzione *funzione* verrà compilato come codice guest
+C5035|utilizzo della funzionalità '*funzionalità*' funzione *funzione* verrà compilato come codice guest
+C5036|varargs funzione di conversione di puntatore durante la compilazione con /hybrid:x86arm64 '*type1*'a'*type2*'
+C5037|'*funzione membro*': una definizione out-of-line di un membro di un modello di classe non può avere argomenti predefiniti
+C5038|membro dati '*member1*'initialized dopo il membro dati'*member2*'
+
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Avvisi introdotti in Visual C++ 2017 RTM (versione del compilatore 19.10.24903)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00__.
+
+|||
+|-|-|
 C4468|'fallthrough': attributo deve essere seguito da un'etichetta case o un'etichetta predefinita
 C4698|'*funzionalità*' è solo a scopo di valutazione e è soggette a modifiche o aggiornamenti in futuro la rimozione.
 C4839|utilizzo non standard ' classe*classe*' come argomento a una funzione variadic
 C4840|utilizzo non portabili di classe*classe*' come argomento a una funzione variadic
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-3"></a>Avvisi introdotti in Visual C++ 2015 Update 3  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.24000__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Avvisi introdotti in Visual C++ 2015 Update 3 (versione del compilatore 19.00.24215.1)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.23918__.
+
+|||
+|-|-|
 C4467|utilizzo di attributi ATL è deprecato
 C4596|'*nome*': il nome completo non valido nella dichiarazione di membro
 C4598|' #include \< *intestazione*\>': il numero di intestazione *numero* nel *origine* non corrisponde a *origine* in cui posizione
 C4599|'*argomento*': *origine* argomento number *numero* non corrisponde a *origine*
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-2"></a>Avvisi introdotti in Visual C++ 2015 Update 2  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.23900__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Avvisi introdotti in Visual C++ 2015 Update 2 (versione del compilatore 19.00.23918.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.23506__.
+
+|||
+|-|-|
 C4466|Non è stato possibile eseguire elisione dell'heap della coroutine
 C4595|'*classe*': non membro operator new o delete funzioni non possono essere dichiarate inline
 C4828|Il file contiene un carattere a partire dall'offset 0 x*valore* che non è valido nel set di caratteri di origine corrente (tabella codici *numero*).
 C4868|compilatore non può imporre l'ordine di valutazione da sinistra a destra nell'elenco di inizializzatori tra parentesi graffe
-  
-## <a name="warnings-introduced-in-visual-c-2015-update-1"></a>Avvisi introdotti in Visual C++ 2015 Update 1  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.23500__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Avvisi introdotti in Visual C++ 2015 Update 1 (versione del compilatore 19.00.23506.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19.00.23026__.
+
+|||
+|-|-|
 C4426|flag di ottimizzazione modificati dopo l'inclusione dell'intestazione, potrebbe essere dovuto a optimize () #pragma
 C4654|Includere codice inserito prima dell'intestazione precompilata riga verrà ignorata. Aggiungere codice all'intestazione precompilata.
 C5031|#pragma warning (POP): probabile mancata corrispondenza, visualizzazione dello stato di avviso inserito nel file diverso
 C5032|rilevato #pragma warning non corrispondente warning (POP) #pragma
-  
-## <a name="warnings-introduced-in-visual-c-2015-rtm"></a>Avvisi introdotti in Visual C++ 2015 RTM  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:19__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Avvisi introdotti in Visual C++ 2015 RTM (versione del compilatore 19.00.23026.0)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/WV: 18__.
+
+|||
+|-|-|
 C4427|'*errore*': overflow nella divisione delle costanti, un comportamento non definito
 C4438|'*tipo*': non può essere chiamato in modo sicuro in /Await: clrcompat modalità. Se '*tipo*' chiamate a CLR potrebbero risultare danneggiamento dell'intestazione CLR
 C4455|' operatore *nome*': gli identificatori di suffisso letterale che non iniziano con un carattere di sottolineatura sono riservati
@@ -128,12 +154,12 @@ C4458|dichiarazione di '*nome*' nasconde il membro della classe
 C4459|dichiarazione di '*nome*' nasconde una dichiarazione globale
 C4462|'*tipo*': Impossibile determinare il GUID del tipo. Il programma potrebbe bloccarsi in fase di esecuzione.
 C4463|overflow; l'assegnazione di *valore* campo di bit che può contenere solo valori da *valore* a *valore*
-C4473|'*descrizione*': argomenti insufficienti passati per la stringa di formato
-C4474|'*descrizione*': troppi argomenti passati per la stringa di formato
-C4475|'*descrizione*': modificatore di lunghezza '*modificatore*'non può essere utilizzato con caratteri di campo di tipo'*carattere*' nell'identificatore di formato
-C4476|'*descrizione*': carattere del campo del tipo sconosciuto '*carattere*' nell'identificatore di formato
-C4477|'*descrizione*': stringa di formato '*stringa*'richiede un argomento di tipo'*tipo*', ma l'argomento variadic *numero* è di tipo '*tipo*'
-C4478|'*descrizione*': non è possibile combinare i segnaposto posizionali e non posizionali nella stessa stringa di formato
+C4473|'*funzione*': argomenti insufficienti passati per la stringa di formato
+C4474|'*funzione*': troppi argomenti passati per la stringa di formato
+C4475|'*funzione*': modificatore di lunghezza '*modificatore*'non può essere utilizzato con caratteri di campo di tipo'*carattere*' nell'identificatore di formato
+C4476|'*funzione*': carattere del campo del tipo sconosciuto '*carattere*' nell'identificatore di formato
+C4477|'*funzione*': stringa di formato '*stringa*'richiede un argomento di tipo'*tipo*', ma l'argomento variadic *numero* è di tipo '*tipo*'
+C4478|'*funzione*': non è possibile combinare i segnaposto posizionali e non posizionali nella stessa stringa di formato
 C4494|'*tipo*': ignorato allocator la funzione di tipo restituito non è un puntatore o riferimento
 C4495|utilizzata estensione non standard super': sostituire con il nome di classe di base esplicito
 C4496|utilizzata estensione non standard 'for each': sostituire con l'istruzione ranged-for
@@ -171,13 +197,13 @@ C5027|'*tipo*': spostare l'operatore di assegnazione è stato definito in modo i
 C5028|'*nome*': l'allineamento specificato nella dichiarazione precedente (*numero*) non specificato nella definizione
 C5029|utilizzata estensione non standard: gli attributi di allineamento in C++ si applicano a variabili, membri dati e solo i tipi di tag
 C5030|attributo '*attributo*' non è riconosciuto
-  
-## <a name="warnings-introduced-in-visual-c-2013"></a>Avvisi introdotti in Visual C++ 2013  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/WV: 18__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Avvisi introdotti in Visual C++ 2013 (versione del compilatore 18.00.21005.1)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:17__.
+
+|||
+|-|-|
 C4301|'*tipo*': funzione virtual in override differisce da solo '*dichiarazione*' da un qualificatore const/volatile
 C4316|'*tipo*': oggetto allocato nell'heap potrebbe non essere allineato *numero*
 C4380|'*tipo*': non è possibile deprecare un costruttore predefinito
@@ -200,15 +226,15 @@ C4981|Warbird: funzione '*dichiarazione*' contrassegnata come forceinline non re
 C4990|Warbird: *messaggio*
 C4991|Warbird: funzione '*dichiarazione*' contrassegnata come forceinline non resa inline perché il livello di protezione di inline è maggiore dell'elemento padre
 C4992|Warbird: funzione '*dichiarazione*' contrassegnata come forceinline non resa inline perché contiene assembly inline che non possono essere protetti
-  
-## <a name="warnings-introduced-in-visual-c-2012"></a>Avvisi introdotti in Visual C++ 2012  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:17__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Avvisi introdotti in Visual C++ 2012 (versione del compilatore 17.00.51106.1)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:16__.
+
+|||
+|-|-|
 C4330|attributo '*attributo*'per la sezione'*sezione*' ignorato
-C4415|duplicato declspec (code_seg ('*nome*'))
+C4415|duplicate __declspec(code_seg('*name*'))
 C4416|__declspec(code_seg(...)) contiene una stringa vuota: ignorato
 C4417|creazione di un'istanza di modello espliciti non può avere __declspec(code_seg(...)): ignorato
 C4418|__declspec(code_seg(...)) ignorato per un'enumerazione
@@ -236,20 +262,20 @@ C4695|#pragma execution_character_set: '*argomento*' non è un argomento support
 C4703|variabile puntatore locale potenzialmente non inizializzata '*nome*' utilizzato
 C4728|Opzione /Yl-ignorata perché è necessario il riferimento PCH
 C4745|accesso volatile di '*nome*' non può essere applicata a causa della dimensione
-C4746|accesso volatile di '*nome*' è soggetto a /volatile:\<iso\|MS > impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store
+C4746|accesso volatile di '*nome*' è soggetto a /volatile:\<iso\|ms > impostazione; considerare l'utilizzo di funzioni intrinseche iso_volatile_load/store
 C4872|divisione a virgola mobile per zero rilevato durante la compilazione del grafico chiamate per il Concurrency:: parallel_for_each in: '*descrizione*'
 C4880|esegue il cast da '*tipo*'a'*tipo*': cast di constness da un puntatore o riferimento lontano può comportare un comportamento non definito in una funzione con restrizioni amp
 C4881|il costruttore e/o il distruttore non verrà richiamato per la variabile tile_static '*tipo*'
 C4966|'*descrizione*' dispone di un'annotazione code_seg con nome segmento non supportato, annotazione ignorato
 C4988|'*tipo*': variabile dichiarata di fuori ambito di classe/funzione
 C4989|'*descrizione*': tipo con definizioni in conflitto.
-  
-## <a name="warnings-introduced-in-visual-c-2010"></a>Avvisi introdotti in Visual C++ 2010  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:16__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Avvisi introdotti in Visual C++ 2010 (versione del compilatore 16.00.40219.01)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:15__.
+
+|||
+|-|-|
 C4352|'*nome*': funzione intrinseca già definita
 C4573|l'utilizzo di '*tipo*' richiede il compilatore deve acquisire 'this' ma non lo consente la modalità di acquisizione predefinita corrente
 C4574|'*nome*'è definito per essere ' 0': si intendeva usare ' #if *nome*'?
@@ -259,13 +285,13 @@ C4752|trovare Intel (r) Advanced Vector Extensions; è consigliabile utilizzare 
 C4837|rilevato trigramma: '? *carattere*'sostituito da'*carattere*'
 C4986|'*dichiarazione*': specifica di eccezione non corrisponde alla dichiarazione precedente
 C4987|utilizzata estensione non standard: 'throw (...)'
-  
-## <a name="warnings-introduced-in-visual-c-2008"></a>Avvisi introdotti in Visual C++ 2008  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:15__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Avvisi introdotti in Visual C++ 2008 (versione del compilatore 15.00.21022.08)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:14__.
+
+|||
+|-|-|
 C4396|'*tipo*': non è possibile utilizzare l'identificatore inline quando una dichiarazione friend fa riferimento a una specializzazione di un modello di funzione
 C4413|'*dichiarazione*': membro di riferimento viene inizializzato con una password temporanea che non viene mantenuto dopo la chiusura del costruttore
 C4491|'*descrizione*': è un formato di versione IDL non valido
@@ -274,13 +300,13 @@ C4627|'*descrizione*': ignorato durante la ricerca dell'utilizzo di intestazione
 C4750|'*descrizione*': funzione con alloca () resa inline in un ciclo
 C4910|'*tipo*': 'dllexport' e 'extern' sono incompatibili in un'istanza esplicita
 C4985|'*dichiarazione*': attributi non presenti nella dichiarazione precedente.
-  
-## <a name="warnings-introduced-in-visual-c-2005"></a>Avvisi introdotti in Visual C++ 2005  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:14__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Avvisi introdotti in Visual C++ 2005 (versione del compilatore 14.00.50727.762)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:13__.
+
+|||
+|-|-|
 C4000|Avviso sconosciuto scegliere supporto tecnico dal menu della Guida di Visual C++ o aprire il file della Guida di supporto tecnico per ulteriori informazioni
 C4272|'*tipo*': è contrassegnato come declspec; durante l'importazione di una funzione, specificare la convenzione di chiamata nativa.
 C4333|'*espressione*': shift a destra misura eccessiva. perdita di dati
@@ -363,7 +389,7 @@ C4678|classe di base*dichiarazione*'è meno accessibile di'*nome*'
 C4679|'*descrizione*': Impossibile importare il membro
 C4687|'*tipo*': una classe astratta sealed non può implementare un'interfaccia '*tipo*'
 C4688|'*nome*': elenco di vincoli contiene il tipo privato '*dichiarazione*'
-C4690|[ emitidl( pop ) ]: più estrazioni che inserimenti
+C4690|[ emitidl ( pop ) ]: più estrazioni che inserimenti
 C4691|'*tipo*': tipo di riferimento previsto senza riferimenti *modulo* '*descrizione*', tipo definito in unità di conversione corrente utilizzato
 C4692|'*nome*': la firma del membro non privato contiene il tipo nativo privato '*dichiarazione*'
 C4693|'*tipo*': una classe astratta sealed non può avere i membri di istanza*nome*'
@@ -417,13 +443,13 @@ C4965|boxing implicito dell'integer 0; utilizzare nullptr o un cast esplicito
 C4970|costruttore di delegato: oggetto di destinazione ignorato poiché '*dichiarazione*' è statico
 C4971|Ordine argomenti: \<oggetto di destinazione >, \<funzione di destinazione > per il costruttore di delegato è obsoleto, utilizzare \<funzione di destinazione >, \<oggetto di destinazione >
 C4972|La modifica o il trattamento diretto del risultato di una operazione di unboxing come lvalue non è verificabile
-  
-## <a name="warnings-introduced-in-visual-c-2003"></a>Avvisi introdotti in Visual C++ 2003  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:13.10__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Avvisi introdotti in Visual C++ 2003 (versione del compilatore 13.10.3077)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:13.00.9466__.
+
+|||
+|-|-|
 C4343|ottimizzare #pragma (*descrizione*, impostata su off) esegue l'override dell'opzione /Og
 C4344|modifica del comportamento: utilizzo dei risultati di argomenti di modello espliciti nella chiamata a '*dichiarazione*'
 C4346|'*tipo*': nome dipendente non è un tipo
@@ -453,16 +479,16 @@ C4951|'*descrizione*' è stato modificato dopo la raccolta dei dati di profilo d
 C4952|'*descrizione*': dati di profilo non trovato nel database di programma '*descrizione*'
 C4953|Inline '*descrizione*' è stato modificato dopo la raccolta dei dati di profilo dati di profilo non utilizzati
 C4954|'*descrizione*': profilatura non eseguita (contiene un'espressione switch Int64)
-  
-## <a name="warnings-introduced-in-visual-c-2002"></a>Avvisi introdotti in Visual C++ 2002  
-  
-Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:13__.  
-  
-|||  
-|-|-|  
+
+## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Avvisi introdotti in Visual C++ 2002 (versione del compilatore 13.00.9466)
+
+Questi avvisi e tutti gli avvisi nelle versioni più recenti vengono eliminati utilizzando l'opzione del compilatore __/Wv:12__.
+
+|||
+|-|-|
 C4096|'*tipo*': non è un'interfaccia COM di interfaccia, non verrà inviata all'IDL
 C4097|parametro pragma previsto: 'restore' o 'off'
-C4165:|'HRESULT' viene convertito in 'bool'; continuare che questo è ciò che si desidera?
+C4165|'HRESULT' viene convertito in 'bool'; continuare che questo è ciò che si desidera?
 C4183|'*nome*': tipo restituito mancante; si presuppone che sia una funzione membro restituisce 'int'
 C4199|*description*
 C4255|'*nome*': nessun prototipo di funzione dato: conversione (')' in '(void)'
@@ -507,7 +533,7 @@ C4338|#pragma *descrizione*: sezione standard '*sezione*' viene utilizzato
 C4339|'*tipo*': rilevato l'utilizzo di un tipo non definito nei metadati CLR o WinRT - uso di questo tipo può causare un'eccezione di runtime
 C4353|utilizzata estensione non standard: costante 0 come espressione di funzione.  Utilizzare invece NOOP' funzione intrinseca
 C4370|'*dichiarazione*': il layout della classe è stato modificato da una versione precedente del compilatore per migliorare la compressione
-C4371|'*dichiarazione*': il layout della classe sia stato modificato da una versione precedente del compilatore per migliorare la compressione del membro '*tipo*'
+C4371|'*dichiarazione*': il layout della classe sia stato modificato da una versione precedente del compilatore per migliorare la compressione del membro '*membro*'
 C4373|'*tipo*': funzione virtuale esegue l'override*dichiarazione*', le versioni precedenti del compilatore non hanno eseguito l'override se i parametri si differenziavano solo per i qualificatori const/volatile
 C4387|'*descrizione*': è stata considerata
 C4389|'*espressione*': mancata corrispondenza signed e unsigned
@@ -602,8 +628,8 @@ C4995|'*nome*': nome contrassegnato come obsoleto #pragma
 C4996|'*problema*': *descrizione*
 C4997|'*tipo*': la coclasse non implementa un'interfaccia COM o una pseudo-interfaccia
 C4998|PREVISIONE DISATTESA: *descrizione*(*numero*)
-  
-## <a name="see-also"></a>Vedere anche  
-[Opzione del compilatore /WV.](../../build/reference/compiler-option-warning-level.md)  
-[Avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md)  
-[warning](../../preprocessor/warning.md)  
+
+## <a name="see-also"></a>Vedere anche
+[L'opzione del compilatore /WV.](../../build/reference/compiler-option-warning-level.md)
+[avvisi del compilatore disattivati per impostazione predefinita](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+[avviso](../../preprocessor/warning.md)
