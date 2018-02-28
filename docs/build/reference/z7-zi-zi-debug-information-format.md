@@ -34,11 +34,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6e3de89c5336cda98960b67b80932df8f67d183
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
+ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato informazioni di debug)
 
@@ -50,7 +50,7 @@ Specifica il tipo di informazioni di debug create per il programma e indica se q
 
 ## <a name="remarks"></a>Note
 
-Le opzioni di formato informazioni di debug sono descritte nelle sezioni seguenti.  
+Quando il codice viene compilato e compilato in modalità di debug, il compilatore genera i nomi dei simboli per funzioni e variabili, le informazioni sul tipo e percorsi di numeri di riga per l'utilizzo dal debugger. Queste informazioni di debug sui simboli possono essere incluse nei file oggetto (file con estensione obj) generati dal compilatore, o in un file PDB (file con estensione pdb) separato per il file eseguibile.  Le opzioni di formato informazioni di debug sono descritte nelle sezioni seguenti.  
   
 ### <a name="none"></a>nessuno
 
@@ -58,25 +58,28 @@ Per impostazione predefinita, se è specificata alcuna opzione di formato di inf
   
 ### <a name="z7"></a>/Z7
 
-Il **/Z7** opzione produce un *file oggetto*, un file con estensione obj, contenente informazioni di debug complete sui simboli per l'utilizzo con il debugger. Le informazioni sul debug simbolico includono i nomi e i tipi di variabili, nonché le funzioni e i numeri di riga. Non *file PDB*, un file con estensione pdb, viene generato.
+Il **/Z7** opzione produce file oggetto che contiene informazioni di debug complete sui simboli per l'utilizzo con il debugger. Questi file oggetto e il file eseguibile compilato può essere notevolmente superiore rispetto ai file senza informazioni di debug. Le informazioni sul debug simbolico includono i nomi e i tipi di variabili, nonché le funzioni e i numeri di riga. Non viene generato alcun file PDB.
 
-Per i distributori di librerie di terze parti, è disponibile un vantaggio di non disporre di un file PDB. Tuttavia, i file oggetto per le intestazioni precompilate sono necessari durante la fase di collegamento e per il debug. Se sono presenti solo tipi di informazioni (e nessun codice) nei file oggetto pch, è necessario utilizzare anche il [/Yl (inserisce il riferimento PCH per la libreria di Debug)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opzione, abilitata per impostazione predefinita.
+Per i server di distribuzione delle versioni di debug delle librerie di terze parti, è disponibile un vantaggio di non disporre di un file PDB. Tuttavia, i file oggetto per le intestazioni precompilate sono necessari durante la fase di collegamento di libreria e per il debug. Se sono presenti solo tipi di informazioni (e nessun codice) nel file pch, è necessario utilizzare anche il [/Yl (inserisce il riferimento PCH per la libreria di Debug)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opzione, è abilitata per impostazione predefinita, quando si compila la libreria.
+
+Il [/Gm (Abilita ricompilazione minima)](../../build/reference/gm-enable-minimal-rebuild.md) opzione non è disponibile quando **/Z7** specificato.
 
 ### <a name="zi"></a>/ZI
 
-Il **/Zi** opzione produce un file PDB che contiene informazioni sul tipo e informazioni sul debug simbolici da utilizzare con il debugger. Le informazioni sul debug simbolico includono i nomi e i tipi di variabili, nonché le funzioni e i numeri di riga.
+Il **/Zi** opzione produce un file PDB separato che contiene tutte le informazioni sui simboli debug per l'utilizzo con il debugger. Le informazioni di debug non sono incluso nei file oggetto o file eseguibile, che li rende molto più piccolo.
 
 Utilizzo di **/Zi** non influisce sulle ottimizzazioni. Tuttavia, **/Zi** implica **/debug**; vedere [/DEBUG (genera informazioni di Debug)](../../build/reference/debug-generate-debug-info.md) per ulteriori informazioni.
 
-Quando **/Zi** viene specificato, le informazioni sul tipo viene inseriti nel file PDB e non nel file oggetto.
-
-È possibile utilizzare [/Gm (Abilita ricompilazione minima)](../../build/reference/gm-enable-minimal-rebuild.md) con **/Zi**, ma **/Gm** non è disponibile quando **/Z7** specificato.
 
 Quando si specificano entrambi **/Zi** e **/clr**, <xref:System.Diagnostics.DebuggableAttribute> attributo non viene inserito nei metadati dell'assembly. Se si desidera, è necessario specificarlo nel codice sorgente. Questo attributo potrà avere effetto sulle prestazioni di runtime dell'applicazione. Per ulteriori informazioni su come **attributo Debuggable** attributo influisce sulle prestazioni e su come è possibile modificare l'impatto sulle prestazioni, vedere [semplificazione del Debug di un'immagine](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
+Il compilatore assegna il file PDB *progetto*con estensione pdb. Se si compila un file all'esterno di un progetto, il compilatore crea un file PDB denominato VC*x*file PDB, dove *x* è una concatenazione del numero di versione principale e secondario della versione del compilatore in uso. Il compilatore incorpora il nome del file PDB e identificazione della firma timestamp in ogni file oggetto creato con questa opzione, che fa riferimento il debugger per la posizione delle informazioni sui simboli e numero di riga. Il nome e la firma nel file PDB deve corrispondere il file eseguibile per i simboli da caricare nel debugger. Il debugger WinDBG può caricare i simboli non corrispondenti tramite il `.symopt+0x40` comando. Visual Studio non dispone di un'opzione simile per caricare i simboli non corrispondenti.
+
+Se si crea una raccolta di oggetti che sono stati compilati utilizzando **/Zi**, il file con estensione pdb associato deve essere disponibile quando la libreria è collegata a un programma. Pertanto, se si distribuisce la libreria, è necessario distribuire il file PDB. Per creare una raccolta che contiene le informazioni di debug senza utilizzare file PDB, è necessario selezionare il **/Z7** opzione. Se si usano le opzioni di intestazioni precompilate, informazioni di debug per l'intestazione precompilata e il resto del codice sorgente viene inserita nel file PDB.
+
 ### <a name="zi"></a>/ZI
 
-Il **/ZI** opzione produce un file PDB in un formato che supporta il [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) funzionalità. Se si desidera utilizzare il debug di Modifica e continuazione, è necessario utilizzare questa opzione. La funzionalità Modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi di conformità del compilatore, le dimensioni del codice e delle prestazioni. Poiché la maggior parte delle ottimizzazioni non sono compatibili con modifica e continuazione, l'utilizzo **/ZI** disabilita qualsiasi `#pragma optimize` istruzioni nel codice. Il **/ZI** opzione è incompatibile con uso di anche il [&#95; &#95; RIGA &#95; &#95; la macro](../../preprocessor/predefined-macros.md). Il codice compilato con **/ZI** non è possibile utilizzare **&#95; &#95; RIGA &#95; &#95;**  come argomento di modello non di tipo, sebbene **&#95; &#95; RIGA &#95; &#95;**  possono essere usati in espansioni della macro.
+Il **/ZI** ed è simile al **/Zi**, ma genera un file PDB in un formato che supporta il [modifica e continuazione](/visualstudio/debugger/edit-and-continue-visual-cpp) funzionalità. Per utilizzare Modifica e continuazione le funzionalità di debug, è necessario utilizzare questa opzione. La funzionalità Modifica e continuazione è utile per la produttività degli sviluppatori, ma può causare problemi in conformità di dimensioni, prestazioni e del compilatore di codice. Poiché la maggior parte delle ottimizzazioni non sono compatibili con modifica e continuazione, l'utilizzo **/ZI** disabilita qualsiasi `#pragma optimize` istruzioni nel codice. Il **/ZI** opzione è incompatibile con uso di anche il [&#95; &#95; RIGA &#95; &#95; la macro](../../preprocessor/predefined-macros.md); il codice compilato con **/ZI** non è possibile utilizzare **&#95; &#95; RIGA &#95; &#95;**  come argomento di modello non di tipo, sebbene **&#95; &#95; RIGA &#95; &#95;**  può essere usato in espansioni della macro.
 
 Il **/ZI** opzione impone entrambi il [/Gy (Attiva collegamento a livello di funzione)](../../build/reference/gy-enable-function-level-linking.md) e [/FC (completo percorso del File di codice sorgente nella diagnostica)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) le opzioni da utilizzare nella compilazione.
 
@@ -84,12 +87,6 @@ Il **/ZI** opzione impone entrambi il [/Gy (Attiva collegamento a livello di fun
 
 > [!NOTE]
 > Il **/ZI** opzione disponibile solo nei compilatori destinati a processori x86 e x64; l'opzione del compilatore non è disponibile nei compilatori destinati a processori ARM.
-
-Il compilatore assegna il file PDB *progetto*con estensione pdb. Se si compila un file all'esterno di un progetto, il compilatore crea un file PDB denominato VC*x*0.pdb, in cui *x* è il numero di versione principale della versione di Visual Studio in uso. Il compilatore incorpora il nome del file PDB in ogni file obj creato utilizzando questa opzione, puntando il debugger alla posizione delle informazioni sui simboli e sul numero di riga. Quando si utilizza questa opzione, i file obj sono inferiori, perché le informazioni di debug vengono archiviate nel file PDB anziché nei file obj.
-
-Se si crea una libreria da oggetti compilati utilizzando questa opzione, il file pdb associato deve essere disponibile quando la libreria viene collegata a un programma. In questo modo, se si distribuisce la libreria, è necessario distribuire il file PDB.
-
-Per creare una libreria che contiene le informazioni di debug senza utilizzare file PDB, è necessario selezionare compatibile C del compilatore 7.0 (**/Z7**) opzione. Se si usano le opzioni di intestazioni precompilate, informazioni di debug per l'intestazione precompilata e il resto del codice sorgente viene inserita nel file PDB. Il **/Yd** opzione viene ignorata quando viene specificata l'opzione di Database di programma.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
