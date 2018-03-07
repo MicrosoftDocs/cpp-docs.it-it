@@ -1,7 +1,7 @@
 ---
 title: Costanti Integer C | Microsoft Docs
 ms.custom: 
-ms.date: 02/01/2018
+ms.date: 02/27/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -19,90 +19,117 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c23e90d235e1ad2a8cca577c5cfbf2be55b52b6
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0f28b41c54b14c9e673d3fb8e7bb4947206cfd3
+ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="c-integer-constants"></a>Costanti Integer C
 
-Un "costante Integer" è un numero decimale (base 10), ottale (base 8) o esadecimale (base 16) che rappresenta un valore integrale. Utilizzare le costanti Integer per rappresentare i valori interi non modificabili.
+Un *costante Integer* è un numero decimale (base 10), ottale (base 8) o esadecimale (base 16) che rappresenta un valore integrale. Utilizzare le costanti Integer per rappresentare i valori interi non modificabili.
 
 ## <a name="syntax"></a>Sintassi
 
-*integer-constant*:  
-&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub>  
-&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub>  
-&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>  
+*integer-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *integer-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub><br/>
 
-*decimal-constant*:  
-&nbsp;&nbsp;*nonzero-digit*  
-&nbsp;&nbsp;*decimal-constant* *digit*  
+*decimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*<br/>
 
-*octal-constant*:  
-&nbsp;&nbsp;**0**  
-&nbsp;&nbsp;*octal-constant* *octal-digit*  
+*octal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*<br/>
 
-*hexadecimal-constant*:  
-&nbsp;&nbsp;**0x**  *hexadecimal-digit*  
-&nbsp;&nbsp;**0X**  *hexadecimal-digit*  
-&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*  
+*hexadecimal-constant*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-prefix* *hexadecimal-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*<br/>
 
-*nonzero-digit*: uno tra  
-&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**  
+*hexadecimal-prefix*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**<br/>
 
-*octal-digit*: uno tra  
-&nbsp;&nbsp;**0 1 2 3 4 5 6 7**  
+*nonzero-digit*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**<br/>
 
-*hexadecimal-digit*: uno tra  
-&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**  
-&nbsp;&nbsp;**a b c d e f**  
-&nbsp;&nbsp;**A B C D E F**  
-  
-*integer-suffix*:  
-&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub>  
-&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub>  
-&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<sub>opt</sub>
+*octal-digit*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7**<br/>
 
-*unsigned-suffix*: uno tra  
-&nbsp;&nbsp;**u U**  
+*hexadecimal-digit*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**a b c d e f**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**A B C D E F**<br/>
 
-*long-suffix*: uno tra  
-&nbsp;&nbsp;**l L**  
-  
-*64-bit-integer-suffix*: uno tra &nbsp;&nbsp;**i64 I64**  
+*integer-suffix*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *long-long-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unsigned-suffix* *64-bit-integer-suffix*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*long-long-suffix* *unsigned-suffix*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*64-bit-integer-suffix*<br/>
+
+*unsigned-suffix*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**u U**<br/>
+
+*long-suffix*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**l L**<br/>
+
+*long-long-suffix*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**ll LL**<br/>
+
+*64-bit-integer-suffix*: uno tra<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**i64 I64**<br/>
+
+I suffissi **i64** e **I64** sono specifici di Microsoft.
 
 Le costanti Integer sono positive a meno che non siano precedute da un segno meno (**-**). Il segno meno viene interpretato come operatore di negazione aritmetico unario. Per informazioni su questo operatore, vedere [Operatori aritmetici unari](../c-language/unary-arithmetic-operators.md).
 
 Se una costante Integer inizia con **0x** o **0X**, è esadecimale. Se inizia con la cifra **0**, è ottale. In caso contrario, si presume che sia decimale.
 
-Le righe seguenti sono equivalenti:
+Le costanti Integer seguenti sono equivalenti:
 
 ```C
+28
 0x1C   /* = Hexadecimal representation for decimal 28 */
 034    /* = Octal representation for decimal 28 */
 ```
 
-Nessuno spazio vuoto può separare le cifre di una costante Integer. In questi esempi vengono illustrate le costanti decimali, ottali ed esadecimali valide.
+Nessuno spazio vuoto può separare le cifre di una costante Integer. Questi esempi illustrano alcune costanti decimali, ottali ed esadecimali valide.
 
 ```C
-/* Decimal Constants */
-10
-132
-32179
+    /* Decimal Constants */
+    int                 dec_int    = 28;
+    unsigned            dec_uint   = 4000000024u;
+    long                dec_long   = 2000000022l;
+    unsigned long       dec_ulong  = 4000000000ul;
+    long long           dec_llong  = 9000000000LL;
+    unsigned long long  dec_ullong = 900000000001ull;
+    __int64             dec_i64    = 9000000000002I64;
+    unsigned __int64    dec_ui64   = 90000000000004ui64;
 
-/* Octal Constants */
-012
-0204
-076663
+    /* Octal Constants */
+    int                 oct_int    = 024;
+    unsigned            oct_uint   = 04000000024u;
+    long                oct_long   = 02000000022l;
+    unsigned long       oct_ulong  = 04000000000UL;
+    long long           oct_llong  = 044000000000000ll;
+    unsigned long long  oct_ullong = 044400000000000001Ull;
+    __int64             oct_i64    = 04444000000000000002i64;
+    unsigned __int64    oct_ui64   = 04444000000000000004uI64;
 
-/* Hexadecimal Constants */
-0xa or 0xA
-0x84
-0x7dB3 or 0X7DB3
+    /* Hexadecimal Constants */
+    int                 hex_int    = 0x2a;
+    unsigned            hex_uint   = 0XA0000024u;
+    long                hex_long   = 0x20000022l;
+    unsigned long       hex_ulong  = 0XA0000021uL;
+    long long           hex_llong  = 0x8a000000000000ll;
+    unsigned long long  hex_ullong = 0x8A40000000000010uLL;
+    __int64             hex_i64    = 0x4a44000000000020I64;
+    unsigned __int64    hex_ui64   = 0x8a44000000000040Ui64;
 ```
 
 ## <a name="see-also"></a>Vedere anche
 
-[Costanti C](../c-language/c-constants.md)  
+[Costanti C](../c-language/c-constants.md)<br/>
