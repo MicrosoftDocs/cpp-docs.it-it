@@ -19,14 +19,14 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>Aggregati e unioni
-Altri tipi, ad esempio matrici, strutture e unioni presentano requisiti più vincolanti di allineamento che garantiscono coerenza unione e aggregazione archiviazione e recupero dei dati. Di seguito sono riportate le definizioni per la matrice, struttura e unione:  
+Altri tipi, ad esempio matrici, strutture e unioni, hanno requisiti di allineamento più vincolanti per garantire coerenza unione e aggregazione archiviazione e recupero dei dati. Di seguito sono riportate le definizioni per la matrice, struttura e unione:  
   
  Matrice  
  Contiene un gruppo ordinato di oggetti dati adiacenti. Ogni oggetto viene definito un elemento. Tutti gli elementi all'interno di una matrice hanno lo stesso tipo di dati e dimensioni.  
@@ -46,15 +46,15 @@ Altri tipi, ad esempio matrici, strutture e unioni presentano requisiti più vin
 |**UINT8**|`unsigned char`|Byte|  
 |**INT16**|**short**|Word|  
 |**UINT16**|**unsigned short**|Word|  
-|**INT32**|**int, long**|Double Word|  
-|**UINT32**|**valore unsigned int, long senza segno**|Double Word|  
-|**INT64**|`__int64`|Parola quadrupla|  
-|**UINT64**|**unsigned __int64**|Parola quadrupla|  
-|**FP32 (precisione singola)**|**float**|Double Word|  
-|**FP64 (precisione doppia)**|**double**|Parola quadrupla|  
-|**PUNTATORE**|**\***|Parola quadrupla|  
-|`__m64`|**m64 struct**|Parola quadrupla|  
-|`__m128`|**m128 struct**|Octaword|  
+|**INT32**|**int, long**|Doubleword|  
+|**UINT32**|**valore unsigned int, long senza segno**|Doubleword|  
+|**INT64**|`__int64`|Quadword|  
+|**UINT64**|**unsigned __int64**|Quadword|  
+|**FP32 (precisione singola)**|**float**|Doubleword|  
+|**FP64 (precisione doppia)**|**double**|Quadword|  
+|**PUNTATORE**|**\***|Quadword|  
+|`__m64`|**struct __m64**|Quadword|  
+|`__m128`|**struct __m128**|Octaword|  
   
  Si applicano le regole di allineamento di aggregazione seguenti:  
   
