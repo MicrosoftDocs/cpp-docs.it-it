@@ -1,7 +1,7 @@
 ---
 title: "Pagina delle proprietà Directory VC + + | Documenti Microsoft"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC + + pagina delle proprietà Directory (Windows)
 
@@ -42,23 +42,25 @@ Per la versione Linux di questa pagina, vedere [directory di VC + + (C++ Linux)]
 
 Per l'accesso di **directory di VC + +** pagina delle proprietà:
 
-1. nel menu principale scegliere **Visualizza | Esplora soluzioni**
-1. Fare doppio clic sul nodo del progetto (non la soluzione di primo livello) e scegliere **proprietà**
-1. nel riquadro a sinistra del **pagine delle proprietà** finestra di dialogo espandere **le proprietà di configurazione** e selezionare **directory di VC + +**.  
+1. Se il **Esplora** finestra non è visibile, quindi nel menu principale scegliere **vista** > **Esplora**.
+1. Fare clic su un nodo di progetto (non la soluzione di primo livello) e scegliere **proprietà**.
+1. Nel riquadro sinistro della finestra di **pagine delle proprietà** nella finestra di dialogo **proprietà di configurazione** > **directory di VC + +**.  
 
-Le proprietà di directory di VC + + si applicano a un progetto, non il nodo della soluzione di primo livello:
+Proprietà di directory di VC + + si applicano a un progetto, non il nodo della soluzione di primo livello. Se non viene visualizzato **directory di VC + +** in **le proprietà di configurazione**, selezionare un nodo di progetto C++ nel **Esplora** finestra: 
 
 ![Selezionare il nodo del progetto](media/vcppdir.png "selezionare il nodo del progetto per visualizzare le proprietà di directory di VC + +")
 
-Se non viene visualizzato sulla pagina delle proprietà, accertarsi di avere il nodo del progetto selezionato in **Esplora**. Si noti che un **directory di VC + +** pagina delle proprietà per i progetti multipiattaforma ha un aspetto diverso. Per i progetti non di Windows, vedere [directory di VC + + (C++ Linux)](../linux/prop-pages/directories-linux.md) o. 
+Si noti che il **directory di VC + +** pagina delle proprietà per i progetti multipiattaforma ha un aspetto diverso. Per informazioni specifiche per i progetti C++ Linux, vedere [directory di VC + + (C++ Linux)](../linux/prop-pages/directories-linux.md). 
  
 Se non si ha familiarità con *le proprietà del progetto* in Visual Studio, potrebbe essere utile leggere prima [funziona con le proprietà del progetto](working-with-project-properties.md). 
  
-Le impostazioni predefinite per le directory di VC + + dipendono dal tipo di progetto. Per i progetti desktop includono i percorsi di strumenti VC + + per un particolare set di strumenti della piattaforma e il percorso di Windows SDK. È possibile modificare il **set strumenti della piattaforma** e **versione di Windows SDK** sul **proprietà di configurazione – generale** pagina. Per visualizzare i valori per la directory di:
+Le impostazioni predefinite per **directory di VC + +** proprietà dipendono dal tipo di progetto. Per i progetti desktop includono i percorsi di strumenti di C++ per un particolare set di strumenti della piattaforma e il percorso di Windows SDK. È possibile modificare il **set strumenti della piattaforma** e **versione di Windows SDK** sul **le proprietà di configurazione** > **generale** pagina. 
 
-1. nel riquadro di destra la **directory di VC + +** pagina, selezionare una riga. Ad esempio, **Directory librerie**
-1. Fare clic sul pulsante freccia in giù a destra
-1. Scegliere **modifica**.
+Per visualizzare i valori per la directory di:
+
+1. Selezionare una delle proprietà di **directory di VC + +** pagina. Ad esempio, scegliere **Directory librerie**.
+1. Scegliere il pulsante freccia in giù alla fine del campo di valore della proprietà.
+1. Nel menu a discesa, scegliere **modifica**.
 
 ![Modifica Directory librerie](media/vcppdir_libdir_edit.png "finestra di dialogo per modificare i percorsi di libreria")
 
@@ -74,7 +76,7 @@ Come illustrato in precedenza, molti dei percorsi ereditati vengono fornite come
 
 ![Visualizzare i valori delle macro](media/vcppdir_libdir_macros.png "finestra di dialogo per modificare le macro")
 
-Nota: L'elenco verrà compilato durante la digitazione. Non premere **invio**.
+Nota: L'elenco viene popolato durante la digitazione. Non premere **invio**.
 
 Per ulteriori informazioni sui motivi per cui è necessario utilizzarli anziché i percorsi a livello di codice quando possibile e macro, vedere [funziona con le proprietà del progetto](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros). 
 
@@ -90,22 +92,25 @@ Per ulteriori informazioni, vedere questi post di blog: [directory di VC + +](ht
 
 È anche possibile specificare altre directory, come segue.  
   
-**Directory file eseguibili**  
+**Directory file eseguibili**<br/>
 Directory in cui cercare file eseguibili. Corrisponde alla **percorso** variabile di ambiente.
 
-**Directory di inclusione**  
+**Directory di inclusione**<br/>
 Cartelle in cui cercare file di inclusione a cui viene fatto riferimento nel codice sorgente. Corrisponde alla **INCLUDE** variabile di ambiente.
 
-**Directory riferimenti**  
+**Directory riferimenti**<br/>
  Directory in cui cercare gli assembly e i file di modulo (metadati) che fanno riferimento a codice sorgente tramite la [#using](../preprocessor/hash-using-directive-cpp.md) direttiva. Corrisponde alla **LIBPATH** variabile di ambiente.
 
-**Directory delle librerie**  
-Directory in cui cercare i file delle librerie (LIB), incluse le librerie di runtime. Corrisponde alla **LIB** variabile di ambiente. Questa impostazione non riguarda i file con estensione obj. Per collegare un file con estensione obj, nel [Linker](../ide/linker-property-pages.md)**generale** pagina delle proprietà, seleziona **dipendenze libreria aggiuntiva** e quindi specificare il percorso relativo del file.
+**Directory delle librerie**<br/>
+Directory in cui cercare i file delle librerie (LIB), incluse le librerie di runtime. Corrisponde alla **LIB** variabile di ambiente. Questa impostazione non riguarda i file con estensione obj. Per collegare un file con estensione obj, nel **le proprietà di configurazione** > **Linker** > **generale** pagina delle proprietà, seleziona  **Dipendenze libreria aggiuntiva** e quindi specificare il percorso relativo del file. Per ulteriori informazioni, vedere [pagine delle proprietà Linker](../ide/linker-property-pages.md).
 
-**Directory di origine**  
+**Directory di libreria WinRT**<br/>
+Directory per cercare i file di libreria WinRT per usare in app di piattaforma UWP (Universal Windows). 
+
+**Directory di origine**<br/>
 Directory in cui cercare file di origine da utilizzare per IntelliSense.
 
-**Escludi directory**  
+**Escludi directory**<br/>
 Directory in cui non cercare le dipendenze di compilazione.
 
 ## <a name="sharing-the-settings"></a>Condivisione delle impostazioni

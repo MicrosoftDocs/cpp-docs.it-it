@@ -1,12 +1,9 @@
 ---
-title: unaligned | Documenti Microsoft
+title: __unaligned | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/09/2018
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
@@ -15,61 +12,39 @@ dev_langs:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da662cf9cbe17539381766d37255e63d958fb7b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9f30e2b268be6f9398cf0af40d66b786c7cdca9
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="unaligned"></a>__unaligned
-Quando si dichiara un puntatore con il modificatore `__unaligned`, il compilatore presuppone che il puntatore faccia riferimento a dati non allineati. Di conseguenza, per un'applicazione da eseguire in un computer della famiglia di processori Itanium, il compilatore genera codice che legge i dati non allineati un byte alla volta.  
-  
-## <a name="remarks"></a>Note  
- Il `__unaligned` modificatore è valido per il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] e [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)] compilatori, ma influisce solo su applicazioni destinate a un computer con processori Itanium. Questo modificatore descrive l'allineamento solo dei dati indirizzati poiché si presuppone che il puntatore sia allineato.  
-  
- Il [!INCLUDE[vcpritanium](../cpp/includes/vcpritanium_md.md)] processore genera un errore di allineamento quando accede ai dati disallineati e il tempo di elaborazione dell'errore rallenta le prestazioni. Utilizzare il modificatore `__unaligned` per indicare al processore di leggere i dati byte alla volta ed evitare l'errore. Questo modificatore non è necessario per [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] applicazioni perché il [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] processore gestisce i dati disallineati senza generare un errore.  
-  
- Per ulteriori informazioni sull'allineamento, vedere:  
-  
--   [align](../cpp/align-cpp.md)  
-  
--   [Operatore __alignof](../cpp/alignof-operator.md)  
-  
--   [pack](../preprocessor/pack.md)  
-  
--   [/Zp (Allineamento membri Struct)](../build/reference/zp-struct-member-alignment.md)  
-  
--   [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md)  
-  
-## <a name="example"></a>Esempio  
-  
-```  
-// unaligned_keyword.cpp  
-// compile with: /c  
-// processor: x64 IPF  
-#include <stdio.h>  
-int main() {  
-   char buf[100];  
-  
-   int __unaligned *p1 = (int*)(&buf[37]);  
-   int *p2 = (int *)p1;  
-  
-   *p1 = 0;   // ok  
-  
-   __try {  
-      *p2 = 0;  // throws an exception  
-   }  
-   __except(1) {  
-      puts("exception");  
-   }  
-}  
-```  
-  
-## <a name="see-also"></a>Vedere anche  
- [Parole chiave](../cpp/keywords-cpp.md)
+
+**Sezione specifica Microsoft**. Quando si dichiara un puntatore con il modificatore `__unaligned`, il compilatore presuppone che il puntatore faccia riferimento a dati non allineati. Di conseguenza, appropriata per la piattaforma di codice viene generato per la gestione di operazioni di lettura non allineati e scrive tramite il puntatore.
+
+## <a name="remarks"></a>Note
+
+Questo modificatore descrive l'allineamento dei dati a cui punta il puntatore; si presuppone che il puntatore stesso essere allineati.
+
+La necessità di `__unaligned` parola chiave si differenzia dall'ambiente e della piattaforma. Errore per contrassegnare i dati in modo appropriato può provocare problemi comprese tra prestazioni e gli errori hardware. Il `__unaligned` modificatore non è valido per x86 piattaforma.
+
+Per ulteriori informazioni sull'allineamento, vedere:
+
+- [align](../cpp/align-cpp.md)
+
+- [Operatore __alignof](../cpp/alignof-operator.md)
+
+- [pack](../preprocessor/pack.md)
+
+- [/Zp (allineamento membri struct)](../build/reference/zp-struct-member-alignment.md)
+
+- [Esempi di allineamento di strutture](../build/examples-of-structure-alignment.md)
+
+## <a name="see-also"></a>Vedere anche
+
+[Parole chiave](../cpp/keywords-cpp.md)
