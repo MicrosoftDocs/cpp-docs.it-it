@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Problemi di compatibilità C++ tra Visual Studio 2015 e Visual Studio 2017
 
@@ -34,7 +34,8 @@ Esistono due eccezioni a questa regola. In questi casi non è garantita la compa
 
 1) Quando le librerie statiche o i file oggetto vengono compilati con l'opzione del compilatore /GL.  
 
-2) Quando l'applicazione utilizza librerie ridistribuibili il cui numero di versione è minore di quello del set di strumenti usato per compilare l'applicazione. In altre parole, se si compila un programma con il set di strumenti della piattaforma v141, le librerie ridistribuibili utilizzate dall'applicazione devono essere compilate con v141 o versione successiva.  
+2) Quando si utilizzano librerie create con un set di strumenti la cui versione è successiva a quella del set di strumenti usato per compilare e collegare l'applicazione. Ad esempio, un programma compilato e collegato con il set di strumenti 19.12 può utilizzare librerie compilate con le versioni da 19.0 a 19.12. Il collegamento di programmi 19.x con librerie prodotte da Visual Studio 2013 o versione precedente non è supportato.
+
 
 ## <a name="see-also"></a>Vedere anche  
 
