@@ -1,6 +1,6 @@
 ---
 title: /Zc:ternary (applicare regole di operatore condizionale) | Documenti Microsoft
-ms.date: 1/12/2018
+ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (applicare regole di operatore condizionale)
 
@@ -33,7 +33,7 @@ Abilitare l'applicazione di regole Standard di C++ per i tipi e const o volatile
 
 Visual Studio versione 15.3 Abilita il supporto del compilatore per l'operatore condizionale (o ternario) standard C++ (**?:**) comportamento. Lo Standard C++ richiede entrambi gli operandi di essere del tipo stesso e cv-qualifica, per un solo operando sia convertibile in modo non ambiguo per lo stesso tipo e cv-qualificazione di altro o per uno o entrambi gli operandi di un'espressione throw. Nelle versioni precedenti di Visual Studio versione 15,5, il compilatore ha consentito conversioni che sono considerate ambigue dallo standard. Quando il **/Zc:ternary** è specificata l'opzione, il compilatore è conforme allo standard e accetta il codice che non soddisfano le regole per i tipi corrispondenti e cv-qualifica del secondo e terzo operando.
 
-Il **/Zc:ternary** opzione è disattivata per impostazione predefinita. Utilizzare **/Zc:ternary** per abilitare il comportamento conforme, o **/Zc:ternary-** specificare in modo esplicito il comportamento precedente del compilatore non conformi. Il [/ permissiva-](permissive-standards-conformance.md) opzione Abilita **/Zc:ternary**. 
+Il **/Zc:ternary** opzione è disattivata per impostazione predefinita. Utilizzare **/Zc:ternary** per abilitare il comportamento conforme, o **/Zc:ternary-** specificare in modo esplicito il comportamento precedente del compilatore non conformi. Il [/ permissiva-](permissive-standards-conformance.md) opzione Abilita in modo implicito questa opzione, ma può essere sottoposto a override utilizzando **/Zc:ternary-**.
 
 ### <a name="examples"></a>Esempi
 

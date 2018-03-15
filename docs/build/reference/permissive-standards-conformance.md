@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>/ permissiva-(conformità agli standard)
 
@@ -37,7 +37,7 @@ Specificare la modalità di conformità agli standard al compilatore. Utilizzare
 
 ## <a name="remarks"></a>Note
 
-È possibile utilizzare il **/ permissiva-** l'opzione del compilatore per specificare il comportamento del compilatore conformi agli standard. Questa opzione Disabilita permissivi comportamenti e imposta il [/Zc](../../build/reference/zc-conformance.md) opzioni del compilatore per una rigida conformità. Nell'IDE, questa opzione consente inoltre il codice non conforme di IntelliSense motore sottolineato. 
+È possibile utilizzare il **/ permissiva-** l'opzione del compilatore per specificare il comportamento del compilatore conformi agli standard. Questa opzione Disabilita permissivi comportamenti e imposta il [/Zc](../../build/reference/zc-conformance.md) opzioni del compilatore per una rigida conformità. Nell'IDE, questa opzione consente inoltre il codice non conforme di IntelliSense motore sottolineato.
 
 Per impostazione predefinita, il **/ permissiva-** opzione è impostata in nuovi progetti creati dalla versione di Visual Studio 2017 15,5 e versioni successive. Non è impostata per impostazione predefinita nelle versioni precedenti. Quando l'opzione è impostata, il compilatore genera diagnostica errori o avvisi quando i costrutti di linguaggio non standard vengono rilevati nel codice, inclusi alcuni errori comuni in pre-C + + 11 codice.
 
@@ -416,7 +416,7 @@ Nelle versioni precedenti di Visual Studio 2017 versione 15,5, utilizzare questa
 
 1. Aprire il progetto **pagine delle proprietà** la finestra di dialogo.
 
-1. In **le proprietà di configurazione**, espandere il **C/C++** cartella e scegliere il **riga di comando** pagina delle proprietà.
+1. Selezionare il **le proprietà di configurazione** > **C/C++** > **riga di comando** pagina delle proprietà.
 
 1. Immettere il **/ permissiva-** opzione del compilatore nella **opzioni aggiuntive** casella. Scegliere **OK** o **applica** per salvare le modifiche.
 
