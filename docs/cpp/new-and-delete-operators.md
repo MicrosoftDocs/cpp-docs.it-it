@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>Operatori new e delete
 
@@ -38,7 +38,7 @@ C++ supporta l'allocazione dinamica e la deallocazione di oggetti utilizzando il
   
  Per un elenco dei file della libreria che costituiscono la libreria di Runtime C e la libreria Standard di C++, vedere [funzionalità della libreria CRT](../c-runtime-library/crt-library-features.md).  
   
-##  <a id="new_operator"></a> L'operatore new  
+##  <a id="new_operator"> </a> L'operatore new  
  Quando un'istruzione come la seguente viene rilevata in un programma, viene convertita in una chiamata alla funzione `operator new`:  
   
 ```cpp  
@@ -57,7 +57,7 @@ I due ambiti delle funzioni `operator new` sono descritti nella tabella seguente
 |Operatore|Ambito|  
 |--------------|-----------|  
 |**:: operatore new**|Global|  
-|*Nome classe* **:: operatore new**|Classe|  
+|*nome della classe* **:: operatore new**|Classe|  
   
  Il primo argomento di **operatore new** deve essere di tipo **size_t** (un tipo definito in \<STDDEF. h >), e il tipo restituito è sempre **void \***  .  
   
@@ -144,7 +144,7 @@ int main() {
   
  È possibile gestire le richieste di allocazione di memoria non riuscite: scrivere una routine di ripristino personalizzato per gestire questo errore, quindi registrare la funzione chiamando il [set_new_handler](../c-runtime-library/reference/set-new-handler.md) funzione di runtime.  
   
-##  <a id="delete_operator"></a> L'operatore delete  
+##  <a id="delete_operator"> </a> L'operatore delete  
  Memoria allocata in modo dinamico mediante il **nuova** operatore può essere liberato mediante il **eliminare** operatore. L'operatore delete chiama la **operatore delete** (funzione), che libera memoria al pool disponibili. Utilizzo di **eliminare** operatore anche fa sì che il distruttore della classe (se presente) da chiamare.  
   
  Vi sono globali e con ambito classe **operatore delete** funzioni. Un solo **operatore delete** funzione può essere definita per una determinata classe, se definito, in quanto viene nascosta globale **operatore delete** (funzione). Globale **operatore delete** funzione viene sempre chiamata per le matrici di qualsiasi tipo.  

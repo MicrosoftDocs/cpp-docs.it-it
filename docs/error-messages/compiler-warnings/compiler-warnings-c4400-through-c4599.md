@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>C4400 avvisi del compilatore tramite C4599
 
@@ -177,7 +175,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*identificatore*': identificatore è una parola riservata|
 |[Avviso del compilatore (livello 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|ignorato operando su direttiva|
 |[Avviso del compilatore (livello 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|eseguire il cast tra puntatore diversi per le rappresentazioni di membro, compilatore potrebbe generare codice non corretto|
-|[Avviso del compilatore (livello 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonimo 'struct &#124; union' non ha dichiarato alcun membro dati|
+|[Avviso del compilatore (livello 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|anonimo ' struct&#124;union' non ha dichiarato alcun membro dati|
 |[Avviso del compilatore (livello 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|dimensione istruzione non valida|
 |[Avviso del compilatore (livello 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|dimensione operando non valida|
 |[Avviso del compilatore (livello 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*identificatore*': il simbolo punta al Registro di spostamento|
@@ -210,7 +208,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4442|terminatore null incorporato nell'argomento di Annotation.  Valore verrà troncato.|
 |Avviso del compilatore (livello 1) C4443|parametro pragma previsto: '0', '1' o '2'|
 |Avviso del compilatore (livello 3) C4444|'*identificatore*': unaligned' di livello superiore non è implementata in questo contesto|
-|[Avviso del compilatore (livello 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*funzione*': in un ' WinRT &#124; gestito ' tipo di un metodo virtuale non può essere privato|
+|[Avviso del compilatore (livello 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*funzione*': in un ' WinRT&#124;gestito ' tipo di un metodo virtuale non può essere privato|
 |Avviso del compilatore (livello 1) C4446|'*tipo*': Impossibile mappare il membro '*nome1*' in questo tipo, a causa di conflitti con il nome del tipo. Il metodo è stato rinominato in '*nome2*'|
 |Avviso del compilatore (livello 1) C4447|firma di 'main' trovata senza modello di threading. È consigliabile utilizzare ' int main (Platform:: Array\<platform:: String ^ > ^ args)'.|
 |Avviso C4448 del compilatore|'*tipo*1' non dispone di un'interfaccia predefinita specificata nei metadati. Prelievo: '*type2*', che potrebbe non riuscire in fase di esecuzione.|
@@ -225,14 +223,14 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |[Avviso del compilatore (livello 4) C4457](compiler-warning-level-4-c4457.md)|dichiarazione di '*identificatore*' parametro della funzione verrà nascosto|
 |[Avviso del compilatore (livello 4) C4458](compiler-warning-level-4-c4458.md)|dichiarazione di '*identificatore*' nasconde il membro della classe|
 |[Avviso del compilatore (livello 4) C4459](compiler-warning-level-4-c4459.md)|dichiarazione di '*identificatore*' nasconde una dichiarazione globale|
-|[Avviso del compilatore (livello 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; gestiti ' operatore '*operatore*', contiene un parametro passato per riferimento. ' WinRT &#124; gestiti ' operatore '*operatore*'ha una semantica diversa da quella dell'operatore C++'*cpp_operator*', probabilmente si intendeva passare per valore?|
+|[Avviso del compilatore (livello 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;gestito ' operatore '*operatore*', contiene un parametro passato per riferimento. ' WinRT&#124;gestito ' operatore '*operatore*'ha una semantica diversa da quella dell'operatore C++'*cpp_operator*', si intendeva passare per valore?|
 |[Avviso del compilatore (livello 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': questa classe ha un finalizzatore '! *finalizzatore*' ma non un distruttore ' ~*dtor*'|
 |[Del compilatore (livello 1, errore) Avviso C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*tipo*': Impossibile determinare il GUID del tipo. Il programma potrebbe bloccarsi in fase di esecuzione.|
 |[Avviso del compilatore (livello 4) C4463](compiler-warning-level-4-c4463.md)|overflow; l'assegnazione di '*valore*'campo di bit che può contenere solo valori da'*min_value*'a'*max_value*'|
-|Avviso del compilatore (livello 4) C4464|il percorso include relativo contiene '... '|
+|[Avviso del compilatore (livello 4) C4464](../../error-messages/compiler-warnings/c4464.md)|il percorso include relativo contiene '... '|
 |[Avviso del compilatore (livello 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|direttive pragma di controllo a virgola mobile ignorati in /clr|
 |[Avviso del compilatore (livello 4) C4471](compiler-warning-level-4-c4471.md)|'*enumerazione*': una dichiarazione con prototipo di un'enumerazione senza ambita deve avere un tipo sottostante (presupposto int)|
-|Avviso del compilatore (livello 1) C4472|'*identificatore*' è un'enumerazione nativa: aggiungere un identificatore di accesso (privato/pubblico) per dichiarare un ' WinRT &#124; gestito ' enum|
+|Avviso del compilatore (livello 1) C4472|'*identificatore*' è un'enumerazione nativa: aggiungere un identificatore di accesso (privato/pubblico) per dichiarare un ' WinRT&#124;gestito ' enum|
 |[Avviso del compilatore (livello 1) C4473](c4473.md)|'*funzione*': argomenti insufficienti passati per la stringa di formato|
 |Avviso del compilatore (livello 3) C4474|'*funzione*': troppi argomenti passati per la stringa di formato|
 |Avviso del compilatore (livello 3) C4475|'*funzione*': modificatore di lunghezza '*modificatore*'non può essere utilizzato con caratteri di campo di tipo'*carattere*' nell'identificatore di formato|

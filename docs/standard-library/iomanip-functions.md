@@ -34,10 +34,10 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 6d36261e237d2a9c4ee7afddd0cb57d60cb5e12c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltiomanipgt-functions"></a>Funzioni &lt;iomanip&gt;
 ||||  

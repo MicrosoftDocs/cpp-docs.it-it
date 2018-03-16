@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>Classe basic_string
 Le sequenze controllate da un oggetto della classe modello `basic_string` sono rappresentate dalla classe stringa C++ standard e in genere vengono definite stringhe, ma non devono essere confuse con le stringhe in formato C con terminazione Null usate nella libreria standard C++. La stringa C++ standard è un contenitore che consente l'uso di stringhe come tipi normali, ad esempio come operazioni di confronto e concatenazione, iteratori, algoritmi della libreria standard C++ e copia e assegnazione con Managed Memory dell'allocatore della classe. Se è necessario convertire una stringa C++ standard in una stringa in formato C con terminazione Null, usare il membro [basic_string::c_str](#c_str).  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  Un riferimento al carattere della stringa in corrispondenza della posizione specificata dall'indice di parametro.  
   
 ### <a name="remarks"></a>Note  
- Il primo elemento della stringa ha un indice pari a zero e gli elementi seguenti sono indicizzati consecutivamente da integer positivo, in modo che una stringa di lunghezza  *n*  ha un  *n* th elemento indicizzato in base al numero *n -* 1.  
+ Il primo elemento della stringa ha un indice pari a zero e gli elementi seguenti sono indicizzati consecutivamente da numeri interi positivi, in modo che una stringa di lunghezza *n* dispone di un' *n*elemento th indicizzati in base al numero *n -* 1.  
   
  Il membro [operator&#91;&#93;](#op_at) è più veloce della funzione membro **at** nel concedere l'accesso in lettura e scrittura agli elementi di una stringa.  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  Un riferimento al carattere della stringa in corrispondenza della posizione specificata dall'indice di parametro.  
   
 ### <a name="remarks"></a>Note  
- Il primo elemento della stringa ha un indice pari a zero e gli elementi seguenti sono indicizzati consecutivamente da integer positivo, in modo che una stringa di lunghezza  *n*  ha un  *n*  elemento th indicizzati in base al numero  *n*  - 1.  
+ Il primo elemento della stringa ha un indice zero e agli elementi seguenti vengono assegnati indici basati su interi positivi consecutivi in modo che una stringa di lunghezza *n* includa un elemento *n* indicizzato con il numero *n* - 1.  
   
  `operator[]` è più veloce della funzione membro [at](#at) nel concedere l'accesso in lettura e scrittura agli elementi di una stringa.  
   

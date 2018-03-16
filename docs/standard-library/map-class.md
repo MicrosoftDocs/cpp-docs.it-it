@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="map-class"></a>Classe map
 Utilizzato per l'archiviazione e il recupero di dati da una raccolta in cui ogni elemento è costituito da una coppia che contiene sia un valore dati che una chiave di ordinamento. Il valore della chiave è univoco e viene utilizzato per l'ordinamento automatico dei dati.  

@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>Overload di funzioni
 C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambito. Questi sono denominati *overload* funzioni. Le funzioni in overload consentono di fornire diverse semantiche per una funzione, a seconda del tipo e il numero di argomenti. 
@@ -44,7 +44,7 @@ C++ consente la specifica di più funzioni con lo stesso nome nello stesso ambit
 |Presenza o assenza di puntini di sospensione|Yes|  
 |Utilizzo dei nomi `typedef`|No|  
 |Limiti di matrice non specificati|No|  
-|**const** o`volatile`|Sì, quando applicato a una funzione intera|
+|**const** o `volatile`|Sì, quando applicato a una funzione intera|
 |[ref-qualifier](#ref-qualifier)|Yes|  
   
 ## <a name="example"></a>Esempio  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  Si noti che l'intersezione tra questi due set è vuota. Pertanto, il compilatore genera un messaggio di errore.  
   
- Per l'argomento corrispondente, una funzione con  *n*  argomenti predefiniti viene trattata  *n* + 1 funzioni separate, ognuna con un numero diverso di argomenti.  
+ Per la corrispondenza all'argomento, una funzione con *n* argomenti predefiniti viene trattata *n*+ 1 funzioni separate, ognuna con un numero diverso di argomenti.  
   
  I puntini di sospensione (...) fungono da caratteri jolly; corrispondono a qualsiasi argomento effettivo. In tal modo, è possibile che vengano generati molti set ambigui se non si progettano set della funzione in overload con estrema attenzione.  
   
@@ -301,7 +301,7 @@ Grafico indicante le conversioni preferite
   
  La regola precedente è valida solo insieme a un determinato percorso di derivazione. Esaminare il grafico illustrato nella seguente figura.  
   
- ![Più &#45; ereditarietà che mostra le conversioni preferite](../cpp/media/vc391t2.gif "vc391T2")  
+ ![Multi&#45;ereditarietà che mostra le conversioni preferite](../cpp/media/vc391t2.gif "vc391T2")  
 Grafico dell'ereditarietà multipla indicante le conversioni preferite  
   
  La conversione dal tipo `C*` al tipo `B*` è preferibile rispetto alla conversione dal tipo `C*` al tipo `A*`. Il motivo è che si trovano nello stesso percorso e `B*` è più vicino. Tuttavia, la conversione dal tipo `C*` al tipo `D*` non è preferibile alla conversione al tipo `A*`; non esiste alcuna preferenza poiché le conversioni seguono percorsi diversi.  
@@ -407,7 +407,7 @@ obj.name
   
  L'operando sinistro degli operatori `->*` e `.*` (puntatore a membro) vengono considerati nello stesso modo degli operatori `.` e `->` (selezione dei membri) in relazione alla corrispondenza dell'argomento.  
 
-## <a name="ref-qualifiers"></a>Qualificatori di riferimento per le funzioni membro  
+## <a name="ref-qualifiers"></a> Qualificatori di riferimento per le funzioni membro  
 Qualificatori ref consentono di eseguire l'overload di una funzione membro in base se l'oggetto a cui puntava `this` è un rvalue o lvalue.  Questa funzionalità consente di evitare operazioni di copia non necessarie in scenari in cui non si desidera fornire l'accesso di puntatore ai dati. Si supponga ad esempio di classe **C** alcuni dati nel relativo costruttore inizializza e restituisce una copia dei dati nella funzione membro **get_data()**. Se un oggetto di tipo **C** è un riferimento rvalue che sta per essere eliminato, quindi il compilatore sceglierà il **get_data() & &** overload, che consente di spostare i dati anziché copiarlo. 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR`è un sinonimo del tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
+     Le due funzioni precedenti hanno elenchi di argomenti identici. `PSTR` è un sinonimo del tipo **char \*** . Nell'ambito del membro, questo codice genera un errore.  
   
 -   I tipi enumerati sono tipi distinti e possono essere usati per distinguere le funzioni in overload.  
   

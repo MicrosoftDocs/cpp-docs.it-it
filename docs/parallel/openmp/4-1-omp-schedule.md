@@ -18,13 +18,13 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
-**OMP_SCHEDULE** si applica solo a **per** e **parallela per** direttive con il tipo di pianificazione **runtime**. Le dimensioni di tipo e il blocco di pianificazione per tutti i cicli di questo tipo possono impostare in fase di esecuzione impostando la variabile di ambiente per uno dei tipi di pianificazione riconosciuto e facoltativa *chunk_size*.  
+**OMP_SCHEDULE** si applica solo al **per** e **parallele per** direttive con il tipo di pianificazione **runtime**. Le dimensioni di tipo e il blocco di pianificazione per tutti i cicli di questo tipo possono impostare in fase di esecuzione impostando la variabile di ambiente per uno dei tipi di pianificazione riconosciuto e facoltativa *chunk_size*.  
   
  Per **per** e **parallela per** direttive che dispongono di un tipo di pianificazione diverso da **runtime**, **OMP_SCHEDULE** viene ignorato. Il valore predefinito per questa variabile di ambiente è definito dall'implementazione. Se l'opzione facoltativa *chunk_size* è impostata, il valore deve essere positivo. Se *chunk_size* non è impostato, si presuppone un valore pari a 1, tranne nel caso di un **statico** pianificazione. Per un **statico** pianificazione, le dimensioni del blocco predefinito sono impostata per lo spazio di iterazione ciclo diviso per il numero di thread applicato al ciclo.  
   

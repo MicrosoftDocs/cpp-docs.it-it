@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="schedulerptr-structure"></a>Struttura scheduler_ptr
 Rappresenta un puntatore a un'utilità di pianificazione. Questa classe esiste per consentire di specificare una durata condivisa utilizzando shared_ptr o semplicemente un riferimento normale utilizzando il puntatore raw.  
@@ -76,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="operator_bool">scheduler_ptr:: operator bool</a>   
+##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  Verificare se il puntatore dell'utilità di pianificazione è diverso da null  
   
 ' ' operatore bool() const.

@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1c006c18b9e00e5c79ff686dfb31fa9ccf56fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t Extractors
 **Sezione specifica Microsoft**  
@@ -60,9 +60,9 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>Note  
   
--   **operatore Interface\***  restituisce il puntatore a interfaccia incapsulato, che può essere **NULL**.  
+-   **operatore Interface\***  restituisce un puntatore a interfaccia incapsulato, che può essere **NULL**.  
   
--   **operatore Interface &** restituisce un riferimento al puntatore a interfaccia incapsulato e genera un errore se il puntatore **NULL**.  
+-   **operatore Interface &** restituisce un riferimento a puntatore a interfaccia incapsulato e genera un errore se il puntatore **NULL**.  
   
 -   **operatore\***  consente a un oggetto del puntatore intelligente di agire come se fosse l'effettiva interfaccia incapsulata una volta dereferenziato.  
   

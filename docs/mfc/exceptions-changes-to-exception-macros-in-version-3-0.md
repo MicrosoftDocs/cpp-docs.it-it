@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Eccezioni: modifiche alle macro eccezioni nella versione 3.0
 Questo è un argomento avanzato.  
@@ -39,7 +39,7 @@ Questo è un argomento avanzato.
   
 -   [Rigenerazione di un'eccezione](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>Tipi di eccezione e la Macro CATCH  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Tipi di eccezione e la Macro CATCH  
  Nelle versioni precedenti di MFC, la **CATCH** macro utilizzata informazioni sul tipo di runtime MFC per determinare un tipo di eccezione, viene determinato il tipo di eccezione, in altre parole, sito di rilevamento. Con le eccezioni C++, tuttavia, il tipo di eccezione viene sempre determinato al sito di generazione dal tipo dell'oggetto eccezione che viene generata un'eccezione. In questo modo le incompatibilità nel raro caso in cui il tipo del puntatore all'oggetto generato differisce dal tipo dell'oggetto.  
   
  L'esempio seguente illustra la conseguenza di questa differenza tra MFC versione 3.0 e versioni precedenti:  
@@ -60,7 +60,7 @@ Questo è un argomento avanzato.
   
  Per risolvere questo problema, spostare l'espressione throw dalla funzione al codice chiamante e genera un'eccezione del tipo effettivo nota al compilatore che al momento che della generazione dell'eccezione.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>Rigenerazione di un'eccezione  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Rigenerazione di un'eccezione  
  Un blocco catch non può generare lo stesso puntatore di eccezione che viene individuato.  
   
  Ad esempio, questo codice è valido nelle versioni precedenti, ma avrà risultati imprevisti dalla versione 3.0:  

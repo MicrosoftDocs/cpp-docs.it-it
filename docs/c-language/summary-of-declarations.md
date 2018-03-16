@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="summary-of-declarations"></a>Riepilogo di dichiarazioni
 `declaration`:  

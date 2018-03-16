@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarators"></a>Cenni preliminari sui dichiaratori
 I dichiaratori sono componenti di una dichiarazione che specifica i nomi di oggetti o funzioni. I dichiaratori specificano anche se l'oggetto denominato è un oggetto, un puntatore, un riferimento o una matrice o meno.  Mentre i dichiaratori non specificano il tipo di base, modificano tuttavia le informazioni sul tipo nel tipo di base per specificare i tipi derivati come puntatori, riferimenti e matrici.  Applicato alle funzioni, il dichiaratore funziona con l'identificatore di tipo per specificare completamente il tipo restituito di una funzione come oggetto, puntatore o riferimento. (Gli identificatori, descritti in [dichiarazioni e definizioni](declarations-and-definitions-cpp.md), trasferiscono proprietà come tipo e classe di archiviazione. I modificatori, descritti in questa sezione e in [modificatori specifici Microsoft](../cpp/microsoft-specific-modifiers.md), modificano i dichiaratori.) Nella figura seguente viene illustrata una dichiarazione completa di `MyFunction` e vengono indicati i componenti della dichiarazione.  
@@ -117,7 +117,7 @@ int* (X::* pmf)(); // pointer to member function returning pointer to int
   
  Vedere anche [i puntatori ai membri](../cpp/pointers-to-members.md).  
   
- **Funzioni e gli oggetti nella stessa dichiarazione**  
+ **Funzioni e oggetti nella stessa dichiarazione**  
   
  Le funzioni e gli oggetti possono essere dichiarati nella stessa dichiarazione nel modo seguente:  
   

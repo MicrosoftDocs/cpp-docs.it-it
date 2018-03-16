@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>Conversioni standard
 Il linguaggio C++ definisce le conversioni tra i relativi tipi fondamentali. Inoltre, definisce le conversioni per i tipi derivati puntatore, riferimento e puntatore a membro. Queste conversioni sono definite "conversioni standard". (Per ulteriori informazioni sui tipi, tipi standard e tipi derivati, vedere [tipi](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  Le promozioni a mantenimento del valore e le promozioni che mantengono il segno producono, in genere, gli stessi risultati. Possono, però, produrre risultati diversi qualora l'oggetto promosso sia uno dei seguenti:  
   
--   Un operando di  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o**>=**  
+-   Un operando di  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , o **>=**  
   
      Questi operatori si basano sul segno per determinare il risultato. Di conseguenza, le promozioni a mantenimento del valore e le promozioni che mantengono il segno portano a risultati diversi, se applicate a tali operandi.  
   
--   L'operando sinistro del  **>>**  o**>>=**  
+-   L'operando sinistro del  **>>**  o **>>=**  
   
      Questi operatori trattano le quantità con segno e quelle senza segno in maniera differente, quando si esegue un'operazione di spostamento. Nel caso delle quantità con segno, spostare una quantità a destra comporta la propagazione del bit di segno verso le posizioni di bit vuote. Nel caso delle quantità senza segno, le posizioni di bit vuote vengono riempite con zero.  
   
@@ -199,7 +199,7 @@ int main() {
   
  L'accessibilità di una classe base dipende dal tipo di ereditarietà usato nella derivazione. Esaminare l'ereditarietà illustrata nella seguente figura.  
   
- ![Accessibilità della classe di base di ereditarietà grafico che Mostra &#45;](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![Grafica dell'ereditarietà con base&#45;classe accessibilità](../cpp/media/vc38xa1.gif "vc38XA1")  
 Grafico dell'ereditarietà per l'illustrazione dell'accessibilità delle classi base  
   
  Nella tabella seguente viene illustrata l'accessibilità della classe base per la situazione illustrata nella figura.  

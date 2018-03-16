@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: utilizzo di più file di risorse e di intestazione in Visual C++
 > [!NOTE]
@@ -46,23 +46,23 @@ ms.lasthandoff: 12/21/2017
   
  Questa nota è strutturata in modo da rispondere alle domande elencate in precedenza come segue:  
   
-- **Panoramica di come Visual C++ gestisce i file di risorse e file di intestazione** viene fornita una panoramica di come il comando Set include risorse in Visual C++ consente di usare più file di risorse e i file di intestazione nello stesso progetto.  
+- **Panoramica del modo in cui Visual C++ gestisce i file di risorse e file di intestazione** viene fornita una panoramica del modo in cui il comando Inclusioni risorsa in Visual C++ consente di usare più file di risorse e file di intestazione nello stesso progetto.  
   
-- **Analisi del creato dalla creazione guidata applicazioni. RC e. File H** esamina i file di risorse e di intestazione più usati da un'applicazione creata dalla creazione guidata applicazioni. Questi file vengono utilizzati come modello per ulteriori file di risorse e di intestazione che potrebbero essere aggiunti al progetto.  
+- **Analisi dei creato dalla creazione guidata applicazioni. RC e. File H** esamina i file di risorse e di intestazione più usati da un'applicazione creata dalla creazione guidata applicazioni. Questi file vengono utilizzati come modello per ulteriori file di risorse e di intestazione che potrebbero essere aggiunti al progetto.  
   
-- **Inclusione di file di intestazione aggiuntivi** descrive dove è possibile includere più file di intestazione e fornisce dettagli come effettuare questa operazione.  
+- **Inclusione di file di intestazione aggiuntivi** descrive dove si potrebbe desiderare di includere più file di intestazione e fornisce dettagli come eseguire questa operazione.  
   
-- **Condivisione di un File di intestazione tra due. File RC** viene illustrato come è possibile condividere tra più di un file di intestazione. File RC in progetti diversi o eventualmente nello stesso progetto.  
+- **Condividendo un File di intestazione tra due. File RC** viene illustrato come è possibile condividere un file di intestazione tra più. RC (file) in progetti diversi o eventualmente nello stesso progetto.  
   
-- **Utilizzo di più file di risorse nello stesso progetto** descrive in cui si desidera suddividere il progetto in più. RC di file e fornisce dettagli come effettuare questa operazione.  
+- **Utilizzo di più file di risorse nello stesso progetto** descrive dove si potrebbe voler suddividere il progetto in più. RC di file e fornisce dettagli come eseguire questa operazione.  
   
 - **Applicazione dei file di Visual C++ Non modificabili** viene descritto come è possibile assicurarsi che Visual C++ non modifichi e riformatti accidentalmente una risorsa personalizzata.  
   
-- **Gestione di simboli condivisi da più di Visual C++ modificate. File RC** viene descritto come condividere gli stessi simboli tra più. RC (file) e come evitare l'assegnazione di valori numerici di ID duplicati.  
+- **Gestione di simboli condivisi da più Visual C++ modificate. File RC** viene descritto come condividere gli stessi simboli tra più. RC (file) e su come evitare di assegnare valori numerici di ID duplicati.  
   
 - **Gestione delle dipendenze tra. RC. CPP, e. File H** viene descritto come Visual C++ consente di evitare la ricompilazione non necessari. File CPP dipendenti da file di simboli di risorsa.  
   
-- **Funzionamento di Visual C++ gestisce Set include informazioni** forniti dettagli tecnici sul modo Visual C++ tiene traccia di più (annidati). RC (file) e più file di intestazione sono # include da un. File RC.  
+- **Funzionamento di Visual C++ gestisce Set include informazioni** forniti dettagli tecnici sul modo in cui Visual C++ tiene traccia di più (annidati). RC (file) e più file di intestazione sono # include da un. File RC.  
   
  **Panoramica di Visual C++ gestisce i file di risorse e file di intestazione**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  Visual C++ Salva in un. I tre tipi di sopra del file RC informazioni inclusioni impostazione (File di intestazione simboli, direttive per simboli in sola lettura e direttive in fase di compilazione) in #include *e* nelle risorse TEXTINCLUDE. Vengono descritte le risorse TEXTINCLUDE, un dettaglio di implementazione che non è in genere necessario gestire, in [come Visual C++ gestisce informazioni di inclusioni impostazione](#_mfcnotes_tn035_set_includes).  
   
- **Analisi del creato dalla creazione guidata applicazioni. RC e. File H**  
+ **Analisi dei creato dalla creazione guidata applicazioni. RC e. File H**  
   
  L'analisi del codice dell'applicazione generato dalla Creazione guidata applicazioni consente di comprendere in che modo Visual C++ gestisce i file di risorse e i file di intestazione. Gli estratti di codice esaminati di seguito provengono da un'applicazione MYAPP prodotta dalla Creazione guidata applicazioni utilizzando le opzioni predefinite.  
   
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H definisce i simboli standard, ad esempio `ID_FILE_NEW`, utilizzati dal framework e in modo specifico in AFXRES.RC. AFXRES.H include (tramite #include) inoltre WINRES.H che contiene un sottoinsieme di WINDOWS.H richiesto dai file RC generati da Visual C++, nonché da AFXRES.RC. I simboli definiti in AFXRES.H sono disponibili quando si modifica il file di risorse dell'applicazione (MYAPP.RC). Ad esempio, `ID_FILE_NEW` viene utilizzato per la voce di menu File Nuovo nella risorsa di menu di MYAPP.RC. Non è possibile modificare o eliminare questi simboli definiti dal framework.  
   
-## <a name="_mfcnotes_tn035_including"></a>Inclusi i file di intestazione aggiuntivi  
+## <a name="_mfcnotes_tn035_including"></a> Inclusi i file di intestazione aggiuntivi  
   
  L'applicazione creata dalla Creazione guidata applicazioni include solo due file di intestazione: RESOURCE.H e AFXRES.H. Solo RESOURCE.H è specifico dell'applicazione. Potrebbe essere necessario includere file di intestazione di sola lettura aggiuntivi nei seguenti casi:  
   
@@ -164,7 +164,7 @@ RESOURCE.H     SECOND.H
     AFXPRINT.RC 
 ```  
   
- **Condivisione di un File di intestazione tra due. RC (file)**  
+ **Condividendo un File di intestazione tra due. RC (file)**  
   
  È possibile condividere un file di intestazione tra due file RC inclusi in progetti diversi o eventualmente nello stesso progetto. A tale scopo, applicare semplicemente la tecnica delle direttive di sola lettura sopra descritta in entrambi i file RC. Nel caso in cui i due file RC siano destinati ad applicazioni diverse (progetti diversi), il risultato è illustrato nel diagramma seguente:  
   
@@ -233,7 +233,7 @@ RESOURCE.H     AFXRES.H
   
  Quando Visual C++ compila il. File RC, definisce **APSTUDIO_INVOKED** nonché **RC_INVOKED**. Se la struttura di file creata dalla Creazione guidata applicazioni è danneggiata e Visual C++ legge la riga #error precedente, viene segnalato un errore irreversibile e la lettura del file RC viene interrotta.  
   
- **Gestione di simboli condivisi da più di Visual C++ modificate. RC (file)**  
+ **Gestione di simboli condivisi da più Visual C++ modificate. RC (file)**  
   
  Quando si dividono le risorse in più file RC che si desidera modificare separatamente in Visual C++, si verificano due problemi:  
   
@@ -266,7 +266,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **Aps_next_resource_value** è il valore di simbolo successivo che verrà utilizzato per una risorsa finestra di dialogo, una risorsa di menu e così via. L'intervallo valido per i valori dei simboli risorsa è compreso tra 1 e 0x6FFF.  
+ **Aps_next_resource_value** è il valore di simbolo successivo che verrà utilizzato per una risorsa finestra di dialogo, risorse di menu e così via. L'intervallo valido per i valori dei simboli risorsa è compreso tra 1 e 0x6FFF.  
   
  **Aps_next_command_value** è il valore di simbolo successivo che verrà utilizzato per l'identificazione di un comando. L'intervallo valido per i valori dei simboli di comando è compreso tra 0x8000 e 0xDFFF.  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ aggiunge sempre la riga di commento //{{NO_DEPENDENCIES}} a un file RC al momento del salvataggio. In alcuni casi, aggirare la dipendenza di compilazione da RESOURCE.H può generare errori di runtime non rilevati in fase di collegamento. Ad esempio, se si utilizza il visualizzatore simboli per modificare il valore numerico assegnato a un simbolo per una risorsa, la risorsa non verrà rilevata e caricata correttamente in fase di esecuzione dell'applicazione, se il file di .CPP che fa riferimento alla risorsa non viene ricompilato. In questi casi, si deve ricompilano in modo esplicito. File CPP interessati dalle modifiche dei simboli nella risorsa. H o selezionare **Ricompila tutto**. Se è necessario modificare spesso i valori dei simboli per un determinato gruppo di risorse, verrà probabilmente risulta più semplice e sicuro suddividere questi simboli in un file di intestazione di sola lettura, come descritto nella sezione precedente [inclusi File di intestazione aggiuntivi](#_mfcnotes_tn035_including).  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>La modalità di Visual C++ gestisce Set include informazioni * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> La modalità di Visual C++ gestisce Set include informazioni * *  
   
  Come descritto in precedenza, il menu comando Inclusioni impostazione del menu File consente di specificare tre tipi di informazioni:  
   

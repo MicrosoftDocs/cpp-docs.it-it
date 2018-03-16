@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: R
-dev_langs: C++
+f1_keywords:
+- R
+dev_langs:
+- C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -22,16 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -84,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>Valori letterali carattere  
  Un *valore letterale carattere* è costituito da un carattere costante. È rappresentato dal carattere racchiuso tra virgolette singole. Esistono cinque tipi di valori letterali carattere:  
   
--   Valori letterali carattere ordinario di tipo `char`, ad esempio`'a'`  
+-   Valori letterali carattere ordinario di tipo `char`, ad esempio `'a'`  
   
--   Valori letterali carattere UTF-8 di tipo `char`, ad esempio`u8'a'`  
+-   Valori letterali carattere UTF-8 di tipo `char`, ad esempio `u8'a'`  
   
 -   Valori letterali carattere wide di tipo `wchar_t`, ad esempio `L'a'`  
   
--   Valori letterali carattere UTF-16 di tipo `char16_t`, ad esempio`u'a'`  
+-   Valori letterali carattere UTF-16 di tipo `char16_t`, ad esempio `u'a'`  
   
--   Valori letterali carattere UTF-32 di tipo `char32_t`, ad esempio`U'a'`  
+-   Valori letterali carattere UTF-32 di tipo `char32_t`, ad esempio `U'a'`  
   
  Il carattere utilizzato per un valore letterale carattere può essere qualsiasi carattere, tranne la barra rovesciata caratteri riservati ('\\'), virgoletta singola (') o nuova riga. I caratteri riservati possono essere specificati con una sequenza di escape. È possibile specificare i caratteri usando nomi di caratteri universali, a condizione che le dimensioni del tipo siano sufficienti a contenere il carattere.  
   
@@ -401,5 +405,5 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
   
 ## <a name="see-also"></a>Vedere anche  
  [Character Sets](../cpp/character-sets2.md)   
- [Numerici, booleani e valori letterali di puntatore](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
+ [Numerici, booleani e puntatore valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)

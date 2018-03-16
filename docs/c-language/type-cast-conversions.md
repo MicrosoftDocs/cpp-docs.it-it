@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="type-cast-conversions"></a>Conversioni di cast di tipo
 È possibile utilizzare i cast di tipo per convertire i tipi in modo esplicito.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |A virgola mobile|Qualsiasi tipo aritmetico|  
 |Puntatore a un oggetto o (**void \***)|Qualsiasi tipo Integer (**void \***), un puntatore a un oggetto o un puntatore a funzione|  
 |Puntatore a funzione|Qualsiasi tipo di integrale (void *), un puntatore a un oggetto o un puntatore a funzione|  
-|Una struttura, un'unione o una matrice|nessuno|  
+|Una struttura, un'unione o una matrice|Nessuno|  
 |Tipo void|Qualsiasi tipo|  
   
  È possibile eseguire il cast di un identificatore al tipo `void`. Tuttavia, se il tipo specificato in un'espressione cast-tipo non è `void`, l'identificatore di cui viene eseguito il cast al tipo non può essere un'espressione `void`. È possibile eseguire il cast di qualsiasi espressione a `void`, ma non è possibile eseguire il cast di un'espressione di tipo `void` in alcun altro tipo. Ad esempio, una funzione con il tipo restituito `void` non può avere il relativo cast restituito a un altro tipo.  

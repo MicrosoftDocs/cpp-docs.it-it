@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestori per intervalli della mappa messaggi
 In questo articolo viene illustrato come eseguire il mapping di un intervallo di messaggi a una funzione del gestore singolo messaggio (invece di mapping di un messaggio alla funzione solo uno).  
@@ -66,7 +66,7 @@ In questo articolo viene illustrato come eseguire il mapping di un intervallo di
   
 -   [Esempio per un intervallo di ID di controllo](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>La scrittura della voce della mappa messaggi  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> La scrittura della voce della mappa messaggi  
  Nel. CPP file, aggiungere la voce della mappa messaggi, come illustrato nell'esempio seguente:  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ In questo articolo viene illustrato come eseguire il mapping di un intervallo di
   
      La terza macro `ON_CONTROL_RANGE`, accetta un parametro aggiuntivo prima: una notifica del controllo dei messaggi, ad esempio **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a>Dichiarazione di funzione del gestore  
+##  <a name="_core_declaring_the_handler_function"></a> Dichiarazione di funzione del gestore  
  Aggiungere la dichiarazione di funzione del gestore nel. File H. Il codice seguente viene illustrato come questo potrebbe apparire come illustrato di seguito:  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ In questo articolo viene illustrato come eseguire il mapping di un intervallo di
   
  Per ulteriori informazioni sui requisiti dei parametri per le funzioni del gestore di aggiornamento, vedere [per un intervallo di ID dei comandi di esempio](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>Esempio di un ID di comando dell'intervallo  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Esempio di un ID di comando dell'intervallo  
  Quando possibile utilizzare gli intervalli è un esempio per la gestione dei comandi come comando Zoom nell'esempio MFC [HIERSVR](../visual-cpp-samples.md). Questo comando esegue lo zoom della visualizzazione, scalabilità tra 25 e 300% delle dimensioni normali. Classe di visualizzazione HIERSVR viene utilizzato un intervallo per gestire i comandi di Zoom con una voce della mappa messaggi simili a questo:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ In questo articolo viene illustrato come eseguire il mapping di un intervallo di
   
  Aggiornare le funzioni del gestore per singoli comandi richiede in genere un solo parametro, `pCmdUI`, di tipo **CCmdUI\***. A differenza delle funzioni di gestione, le funzioni per intervalli della mappa messaggi non richiedono un parametro aggiuntivo, `nID`, di tipo **UINT**. L'ID di comando, è necessario specificare il comando effettivamente scelto dall'utente, è presente nel `CCmdUI` oggetto.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>Esempio di ID di controllo di intervallo  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Esempio di un ID di controllo di intervallo  
  Un altro caso interessante è mapping di messaggi di notifica del controllo per un intervallo di ID di controllo a un singolo gestore. Si supponga che l'utente può fare clic su uno dei pulsanti di 10. Per eseguire il mapping di tutti i pulsanti di 10 a un unico gestore, la voce della mappa messaggi sarebbe simile al seguente:  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

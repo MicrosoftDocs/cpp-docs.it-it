@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>Funzioni &lt;algorithm&gt;
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- Partizioni di un intervallo di elementi, individuare correttamente la  *n* elemento della sequenza nell'intervallo in modo che tutti gli elementi davanti a è minore o uguale a esso e tutti gli elementi successivi in sequenza una Re maggiore o uguale a esso.  
+ Esegue la partizione di un intervallo di elementi, individuando correttamente l'*ennesimo* elemento della sequenza nell'intervallo in modo che tutti gli elementi che lo precedono siano minori o uguali a esso e che tutti gli elementi che lo seguono nella sequenza siano maggiori o uguali.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>Note  
  L'intervallo cui viene fatto riferimento deve essere valido. Tutti i puntatori devono essere dereferenziabili e, all'interno della sequenza, l'ultima posizione deve essere raggiungibile dalla prima per incremento.  
   
- Il `nth_element` algoritmo non garantisce che sul lato di elementi di intervalli secondari del  *n* elemento th vengono ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.  
+ L'algoritmo `nth_element` non garantisce che gli elementi negli intervalli secondari in entrambi i lati dell'*ennesimo* elemento vengano ordinati. Offre meno garanzie rispetto a `partial_sort`, che ordina gli elementi nell'intervallo sotto un elemento selezionato, e può essere usato come alternativa rapida a `partial_sort` quando l'ordinamento dell'intervallo minore non è necessario.  
   
  Gli elementi sono equivalenti, ma non necessariamente uguali, se nessuno di essi è minore di un altro.  
   

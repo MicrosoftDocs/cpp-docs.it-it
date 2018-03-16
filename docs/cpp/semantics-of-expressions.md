@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>Semantica delle espressioni
 Le espressioni vengono valutate in base alla precedenza e al raggruppamento dei relativi operatori ([Precedenza e associatività](../cpp/cpp-built-in-operators-precedence-and-associativity.md) in [convenzioni lessicali](../cpp/lexical-conventions.md), Mostra le relazioni di C++ gli operatori impongono sulle espressioni.)  
@@ -68,7 +68,7 @@ Ordine di valutazione delle espressioni
   
  Quando per raggruppare le sottoespressioni vengono usate le parentesi, queste alterano la precedenza e anche l'ordine in cui l'espressione viene valutata, come illustrato di seguito.  
   
- ![Ordine di valutazione di un'espressione con parentesi](../cpp/media/vc38zv2.gif "vc38ZV2")  
+ ![Ordine di valutazione dell'espressione tra parentesi](../cpp/media/vc38zv2.gif "vc38ZV2")  
 Ordine di valutazione dell'espressione con parentesi  
   
  Le espressioni come quelle nella figura riportata sopra vengono valutate esclusivamente per i relativi effetti collaterali (in questo caso, per trasferire le informazioni del dispositivo di uscita di output standard).  
@@ -80,10 +80,10 @@ Ordine di valutazione dell'espressione con parentesi
   
 |Tipo previsto|Tipi consentiti|  
 |-------------------|-------------------|  
-|*type*|`const`*tipo*<br /> `volatile`*tipo*<br /> *tipo*&<br /> `const`*tipo*&<br /> `volatile`*tipo*&<br /> `volatile const`*tipo*<br /> `volatile const`*tipo*&|  
-|*tipo*\*|*tipo*\*<br /> `const`*tipo*\*<br /> `volatile`*tipo*\*<br /> `volatile const`*tipo*\*|  
-|`const`*tipo*|*type*<br /> `const`*tipo*<br />`const`*tipo*&|  
-|`volatile`*tipo*|*type*<br /> `volatile`*tipo*<br /> `volatile`*tipo*&|  
+|*type*|`const` *tipo*<br /> `volatile` *tipo*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *tipo*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *tipo*|*type*<br /> `const` *tipo*<br />`const` *type*&|  
+|`volatile` *tipo*|*type*<br /> `volatile` *tipo*<br /> `volatile` *type*&|  
   
  Poiché le regole precedenti possono essere sempre usate in combinazione, qualora sia previsto un puntatore, è possibile fornire un puntatore di tipo const a un oggetto di tipo volatile.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   L'operando sinistro dell'operatore logico AND (&&). L'operando sinistro dell'operatore logico AND viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico AND venga valutato.  
   
--   Operando sinistro dell'operatore logico OR (&#124; &#124;). L'operando sinistro dell'operatore logico OR viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico OR venga valutato.  
+-   Operando sinistro dell'operatore logico OR (&#124;&#124;). L'operando sinistro dell'operatore logico OR viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Non è certo che l'operando destro dell'operatore logico OR venga valutato.  
   
 -   L'operando sinistro dell'operatore virgola. L'operando sinistro dell'operatore virgola viene valutato completamente e, prima di continuare, tutti gli effetti collaterali vengono eseguiti. Entrambi gli operandi dell'operatore virgola vengono sempre valutati.  
   

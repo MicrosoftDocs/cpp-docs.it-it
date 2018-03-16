@@ -4,18 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SQLConfigDataSource
-dev_langs: C++
+f1_keywords:
+- SQLConfigDataSource
+dev_langs:
+- C++
 helpviewer_keywords:
 - ODBC data sources, configuring
 - SQLConfigDataSource method example
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -23,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origine dati: configurazione di un'origine dati ODBC a livello di codice
 In questo argomento viene illustrato come configurare i nomi di origine dati Open Database Connectivity (ODBC) a livello di codice. Questo offre flessibilità per accedere ai dati senza forzare l'utente da utilizzare in modo esplicito l'amministratore ODBC o in altri programmi per specificare i nomi delle origini dati.  
@@ -37,7 +40,7 @@ In questo argomento viene illustrato come configurare i nomi di origine dati Ope
   
  Tuttavia, DBMS più consentono la creazione dell'origine dati a livello di codice. Alcune origini dati gestiscono una specifica di directory per i database. Vale a dire, una directory è l'origine dati e ogni tabella all'interno dell'origine dati viene archiviato in un file separato (nel caso di file dBASE, ogni tabella è un file con estensione dbf). I driver per altri database ODBC, ad esempio Microsoft Access e SQL Server, richiedono che vengano soddisfatti alcuni criteri specifici prima di poter stabilire un'origine dati. Ad esempio, quando si utilizza il driver ODBC di SQL Server, è necessario aver stabilito un computer SQL Server.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>Esempio di SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_example"></a> Esempio SQLConfigDataSource  
  L'esempio seguente usa il **:: SQLConfigDataSource** funzione API ODBC per creare una nuova origine dati di Excel denominato nuova origine dati di Excel:  
   
 ```  
@@ -61,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  Anche se è Impossibile scrivere queste informazioni direttamente il Registro di sistema senza utilizzare **:: SQLConfigDataSource**, qualsiasi applicazione che esegue questa operazione si basa sulla tecnica corrente utilizzato dalla gestione di Driver per mantenere i dati. Se una revisione recente di gestione Driver ODBC implementa i record delle informazioni sulle origini dati in modo diverso, qualsiasi applicazione che utilizza questa tecnica viene interrotta. È in genere consigliabile utilizzare una funzione API, se disponibile. Ad esempio, il codice può essere trasferito da 16 a 32 bit se si utilizza il **:: SQLConfigDataSource** funzione, in quanto la funzione esegue correttamente il file Odbc.ini o al Registro di sistema.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Parametri di SQLConfigDataSource  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> Parametri SQLConfigDataSource  
  Di seguito vengono descritti i parametri del **:: SQLConfigDataSource** (funzione). Molte delle informazioni da cui proviene l'API ODBC *di riferimento per programmatori* fornito con Visual C++ versione 1.5 e successive.  
   
-###  <a name="_core_function_prototype"></a>Prototipo di funzione  
+###  <a name="_core_function_prototype"></a> Prototipo di funzione  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -72,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>Note  
   
-####  <a name="_core_parameters_and_usage"></a>Parametri e utilizzo  
+####  <a name="_core_parameters_and_usage"></a> Utilizzo e parametri  
  *hwndParent*  
  La finestra specificata come proprietario di finestre di dialogo Gestione Driver ODBC o il driver ODBC crea per ottenere informazioni aggiuntive da parte dell'utente sulla nuova origine dati. Se il `lpszAttributes` parametro fornisce informazioni sufficienti, verrà visualizzata una finestra di dialogo. Il *hwndParent* parametro potrebbe essere **NULL**.  
   

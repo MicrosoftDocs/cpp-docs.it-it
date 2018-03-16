@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="priorityqueue-class"></a>Classe priority_queue
 Classe di adattatori di contenitori di modelli che fornisce una restrizione di funzionalità, limitando l'accesso all'elemento iniziale di un tipo di contenitore sottostante, che è sempre il più grande o quello con la priorità più elevata. È possibile aggiungere nuovi elementi all'oggetto priority_queue e controllarne o rimuoverne l'elemento iniziale.  

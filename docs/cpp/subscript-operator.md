@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: '[]'
-dev_langs: C++
+f1_keywords:
+- '[]'
+dev_langs:
+- C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>Operatore di indice inferiore:
 ## <a name="syntax"></a>Sintassi  
@@ -47,9 +51,9 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- Nell'esempio precedente l'espressione `nArray[2]` è identica a `2[nArray]`. Il motivo è che il risultato di un'espressione di indice *e1***[** *e2* **]** è dato da:  
+ Nell'esempio precedente l'espressione `nArray[2]` è identica a `2[nArray]`. Il motivo è che il risultato di un'espressione di indice *e1 * * * [** *e2* **]** si ottengono con:  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
  Non è l'indirizzo restituito dall'espressione *e2* byte dall'indirizzo *e1*. Piuttosto, l'indirizzo è ridimensionato per ottenere l'oggetto successivo nella matrice *e2*. Ad esempio:  
   
@@ -63,7 +67,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, *expression1***[***expression2***]**, viene valutata per prima. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. Operatore di riferimento indiretto (**\***) viene applicata dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale risolve un tipo di matrice.  
+ Le espressioni di indice sono associate da sinistra a destra. L'espressione di indice più a sinistra, * expression1***[***expression2 ***]**, viene valutato per primo. L'indirizzo risultante dall'aggiunta di *expression1* ed *expression2* forma un'espressione puntatore; quindi *expression3* viene aggiunta a quest'espressione puntatore per formare una nuova espressione puntatore e così via finché non è stata aggiunta l'ultima espressione di indice. Operatore di riferimento indiretto (**\***) viene applicata dopo l'ultima espressione di indice viene valutata, a meno che il valore del puntatore finale risolve un tipo di matrice.  
   
  Le espressioni con più indici fanno riferimento a elementi di "matrici multidimensionali". Una matrice multidimensionale è una matrice i cui elementi sono matrici. Ad esempio, il primo elemento di una matrice tridimensionale è una matrice con due dimensioni. Nell'esempio seguente viene dichiarata e inizializzata una matrice bidimensionale di caratteri semplice:  
   

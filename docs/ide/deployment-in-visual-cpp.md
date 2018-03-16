@@ -1,12 +1,9 @@
 ---
 title: Distribuzione in Visual C++ | Documenti Microsoft
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Distribuzione in Visual C++
 
@@ -49,6 +45,8 @@ Poiché la distribuzione centrale tramite moduli unione o un pacchetto ridistrib
 ## <a name="local-deployment"></a>Distribuzione locale
 
 Nella distribuzione locale i file di libreria vengono installati nella cartella dell'applicazione insieme al file eseguibile. Versioni diverse di librerie ridistribuibili di Visual C++ possono essere installate nella stessa cartella poiché il nome del file di ogni versione include il numero di versione. Ad esempio, la versione 12 della libreria di runtime C++ è msvcp120.dll e la versione 14 è msvcp140.dll.
+
+Una raccolta può essere distribuita in più DLL aggiuntiva, nota come *punto librerie*. Ad esempio, alcune funzionalità della libreria standard rilasciate in Visual Studio 2017 versione 15,6 è stato aggiunto in msvcp140_1.dll, a preverve la compatibilità ABI msvcp140.dll. Se si usa Visual Studio 2017 15,6 (set di strumenti 14.13), o un set di strumenti successive da Visual Studio 2017, potrebbe essere necessario distribuire localmente queste librerie punto, nonché la libreria principale. Queste librerie punto separato quindi eseguito il rollback nella successiva versione principale della libreria di base, quando viene modificato l'interfaccia ABI.
 
 Poiché Microsoft non è automaticamente localmente aggiornamento distribuito librerie di Visual C++, non è consigliabile la distribuzione locale di queste librerie. Se si decide di utilizzare la distribuzione locale delle librerie ridistribuibili, è consigliabile implementare il proprio metodo di aggiornamento automatico delle librerie distribuite localmente.
 

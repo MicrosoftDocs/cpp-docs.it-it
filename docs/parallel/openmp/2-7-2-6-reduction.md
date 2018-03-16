@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 684067eae668398e71ca4ace0cc136e3210e0dbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
@@ -44,17 +44,17 @@ dove:
 *x*  
 Una delle variabili di riduzione specificate nella `list`.
 
-*elenco di variabili*  
+*variable-list*  
 Un elenco delimitato da virgole di variabili di riduzione scalare.
 
 *expr*  
 Un'espressione con un tipo scalare che non fa riferimento a *x*.
 
-*Op*  
-Non un operatore di overload, ma uno dei +, &#42; -, &amp;, ^, &#124; &amp; &amp;, o &#124; &#124;.
+*op*  
+Non un operatore di overload, ma uno dei +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, o &#124; &#124;.
 
 *binop*  
-Non un operatore di overload, ma uno dei +, &#42; -, &amp;, ^, o &#124;.
+Non un operatore di overload, ma uno dei +, &#42;, -, &amp;, ^, o &#124;.
 
 Di seguito è riportato un esempio del `reduction` clausola:  
   
@@ -69,7 +69,7 @@ for (i=0; i<n; i++) {
   
 Come illustrato nell'esempio, un operatore può essere nascosta all'interno di una chiamata di funzione. L'utente deve prestare attenzione che l'operatore specificato nel `reduction` clausola corrisponde all'operazione di riduzione.
 
-Anche se l'operando destro della &#124; &#124; operatore non ha effetti collaterali in questo esempio, sono consentiti, ma deve essere utilizzate con cautela. In questo contesto, un effetto collaterale che verrà sicuramente non si verificano durante l'esecuzione sequenziale del ciclo può verificarsi durante l'esecuzione parallela. Questa differenza può verificarsi perché l'ordine di esecuzione delle iterazioni è indeterminato.
+Anche se l'operando destro del &#124; &#124; operatore non ha effetti collaterali in questo esempio, sono consentiti, ma deve essere utilizzate con cautela. In questo contesto, un effetto collaterale che verrà sicuramente non si verificano durante l'esecuzione sequenziale del ciclo può verificarsi durante l'esecuzione parallela. Questa differenza può verificarsi perché l'ordine di esecuzione delle iterazioni è indeterminato.
 
 L'operatore viene utilizzato per determinare il valore iniziale di tutte le variabili private usato dal compilatore per la riduzione e per determinare l'operatore di finalizzazione. Specificare in modo esplicito l'operatore consente l'istruzione di riduzione di fuori di extent del costrutto lessicale. Un numero qualsiasi di `reduction` clausole possono essere specificate nella direttiva, ma una variabile può sembrare in uno `reduction` clausola per tale direttiva.
 
