@@ -36,7 +36,7 @@ I seguenti file vengono creati quando si aggiunge il tipo della Guida HTML di su
 |Makehtmlhelp.bat|*ProjName*|File di origine|Utilizzato dal sistema per compilare il progetto della Guida quando si compila il progetto.|  
 |Afxcore.htm|*ProjName*\hlp|Argomenti della Guida HTML|Contiene gli argomenti della Guida standard per i comandi MFC standard e gli oggetti sullo schermo. Aggiungere argomenti della Guida personalizzati per questo file.|  
 |Afxprint.htm|*ProjName*\hlp|Argomenti della Guida HTML|Contiene gli argomenti della Guida per i comandi di stampa.|  
-|*.jpg; \*.gif|*ProjName*\hlp\Images|File di risorse|Contiene le immagini per gli argomenti di file della Guida generato diversi.|  
+|\*.jpg; \*.gif|*ProjName*\hlp\Images|File di risorse|Contiene le immagini per gli argomenti di file della Guida generato diversi.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di file creati per i progetti di Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
