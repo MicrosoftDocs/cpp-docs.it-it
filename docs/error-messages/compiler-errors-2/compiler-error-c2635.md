@@ -28,7 +28,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-error-c2635"></a>Errore del compilatore C2635
-non è possibile convertire un 'identifier1 *' per un ' identifier2\*'; la conversione da una classe base virtuale è implicita  
+non è possibile convertire un 'identifier1*' per un ' identifier2\*'; la conversione da una classe base virtuale è implicita  
   
  La conversione richiede un cast da un `virtual` classe di base per una classe derivata, non è consentita.  
   

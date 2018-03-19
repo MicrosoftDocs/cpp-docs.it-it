@@ -249,7 +249,7 @@ Gli articoli in questa sezione della documentazione illustrano un subset dei mes
 |Avviso del compilatore (livello 1) C4176|'subcomponent': sottocomponente sconosciuto per #pragma component browser|
 |Avviso del compilatore (livello 1) C4177|#pragma 'pragma' deve essere utilizzato solo nell'ambito globale o dello spazio dei nomi|
 |Avviso del compilatore (livello 1) C4178|la costante di case 'constant' è troppo grande per il tipo dell'espressione switch|
-|Avviso del compilatore (livello 4) C4179|' / / *': analizzato come '/' e ' /\*': confusione con standard ' / /' commenti|
+|Avviso del compilatore (livello 4) C4179|'//*': analizzato come '/' e ' /\*': confusione con standard ' / /' commenti|
 |Avviso del compilatore (livello 1) C4180|il qualificatore applicato al tipo della funzione è privo di significato. È stato ignorato.|
 |Avviso C4181 del compilatore|qualificatore applicato al tipo del riferimento. ignorato|
 |Avviso del compilatore (livello 1) C4182|#include il livello di nidificazione è 'nest_count'; possibile ricorsione infinita possibile ricorsione infinita|

@@ -30,7 +30,7 @@ ms.lasthandoff: 03/16/2018
 # <a name="compiler-warning-level-1-c4138"></a>Avviso del compilatore (livello 1) C4138
 trovato '*/' all'esterno di un commento  
   
- Il delimitatore di chiusura commento non è preceduto da un delimitatore di apertura commento. Il compilatore prevede la presenza di uno spazio tra l'asterisco (**\***) e la barra (/).  
+ Il delimitatore di chiusura commento non è preceduto da un delimitatore di apertura commento. Il compilatore prevede la presenza di uno spazio tra l'asterisco (**\****) e la barra (/).  
   
 ## <a name="example"></a>Esempio  
   

@@ -28,6 +28,6 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warning-level-1-c4179"></a>Avviso del compilatore (livello 1) C4179
-' / / *': analizzato come '/' e ' /\*': confusione con standard ' / /' commenti  
+'//*': analizzato come '/' e ' /\*': confusione con standard ' / /' commenti  
   
  **//\*** è un delimitatore di commento non corretto. Usare **//** o **/\*** .
