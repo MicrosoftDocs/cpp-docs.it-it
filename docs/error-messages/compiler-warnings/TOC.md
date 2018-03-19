@@ -303,6 +303,7 @@
 ## [Avviso del compilatore (livello 1) C4461](compiler-warning-level-1-c4461.md)
 ## [Avviso del compilatore (livello 1) C4462](compiler-warning-level-1-c4462.md)
 ## [Avviso del compilatore (livello 4) C4463](compiler-warning-level-4-c4463.md)
+## [Avviso del compilatore (livello 4) C4464](c4464.md)
 ## [Avviso del compilatore (livello 1) C4470](compiler-warning-level-1-c4470.md)
 ## [Avviso del compilatore (livello 4) C4471](compiler-warning-level-4-c4471.md)
 ## [Avviso del compilatore (livello 1) C4473](c4473.md)
