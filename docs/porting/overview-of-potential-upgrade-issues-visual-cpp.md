@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Panoramica dei potenziali problemi di aggiornamento (Visual C++)
 
@@ -37,9 +37,11 @@ I formati di file obj e lib sono definiti in modo completo e vengono modificati 
 
 C++ non dispone di un'interfaccia binaria dell'applicazione (ABI) stabile. Visual Studio gestisce un'ABI C++ stabile per tutte le versioni secondarie di una versione principale. Ad esempio, Visual Studio 2017 e tutti i relativi aggiornamenti sono compatibili a livello binario. Tuttavia l'ABI non è necessariamente compatibile tra versioni principali di Visual Studio (ad eccezione delle versioni 2015 e 2017, che _sono_ compatibili a livello binario). In altri termini è possibile che vengano apportate modifiche di rilievo al layout di tipo, alla decorazione dei nomi, alla gestione delle eccezioni e ad altre parti dell'ABI C++. Pertanto, se è presente un file oggetto che include simboli esterni con collegamento a C++, tale file oggetto potrebbe non collegarsi correttamente con file oggetto creati con un'altra versione principale del set di strumenti. In questo caso, "potrebbe non collegarsi" può dare risultati diversi: il collegamento può non riuscire affatto (ad esempio in caso di modifica della decorazione dei nomi), il collegamento può riuscire e possono verificarsi errori in fase di runtime (ad esempio in caso di modifica del layout di tipo) o come accade in molti casi il collegamento può funzionare e non originare alcun errore. Si noti anche che sebbene l'ABI C++ non sia stabile, l'ABI C e il subset dell'ABI C++ necessaria per COM sono stabili.
 
+Se si effettua il collegamento a una libreria di importazione, in fase di esecuzione si potranno usare tutte le versioni successive delle librerie ridistribuibili di Visual Studio che mantengono la compatibilità ABI. Ad esempio, se l'app viene compilata e collegata usando il set di strumenti di Visual Studio 2015 Update 3, è possibile usare qualsiasi componente ridistribuibile di Visual Studio 2017 poiché le librerie 2015 e 2017 conservano la compatibilità binaria con le versioni precedenti. Non è vero invece il contrario: non è possibile usare un componente ridistribuibile per una versione precedente del set di strumenti usato per compilare il codice, anche se ha un ABI compatibile.
+
 ### <a name="libraries"></a>Librerie
 
-Se si compila un file di origine usando una versione particolare dei file di intestazione delle librerie di Visual Studio C++ (usando #include per le intestazioni), il file oggetto risultante deve essere collegato con la stessa versione delle librerie. Se ad esempio il file di origine viene compilato con \<immintrin.h> di Visual Studio 2017, è necessario collegarlo con la libreria vcruntime di Visual Studio 2017. In modo analogo, se il file di origine viene compilato con \<iostream> di Visual Studio 2017 è necessario collegarlo con la libreria standard C++ di Visual Studio 2017, msvcprt. L'uso di elementi di versioni diverse non è supportato.
+Se si compila un file di origine usando una versione particolare dei file di intestazione delle librerie di Visual Studio C++ (usando #include per le intestazioni), il file oggetto risultante deve essere collegato con la stessa versione delle librerie. Se ad esempio il file di origine viene compilato con \<immintrin.h> di Visual Studio 2015 Update 3, è necessario collegarlo con la libreria vcruntime di Visual Studio 2015 Update 3. Analogamente, se il file di origine viene compilato con \<iostream> di Visual Studio 2017 versione 15.5, è necessario collegarlo con la libreria standard C++ di Visual Studio 2017 versione 15.5, msvcprt. L'uso di elementi di versioni diverse non è supportato.
 
 Per la libreria standard C++ l'uso di elementi di versioni diverse è stato esplicitamente disattivato con l'introduzione di `#pragma detect_mismatch` nelle intestazioni standard a partire da Visual Studio 2010. Se si prova a collegare file oggetto incompatibili o di creare un collegamento con una libreria standard non adatta, il collegamento non funziona.
 

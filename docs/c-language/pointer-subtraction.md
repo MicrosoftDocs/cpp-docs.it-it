@@ -19,16 +19,16 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd1190d09ea75073eb199f766dd1fd87291975be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d40cbac5e9320ee335fa4c8090aa11d5157ae3
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-subtraction"></a>Sottrazione di puntatori
 **ANSI 3.3.6, 4.1.1** Il tipo di Integer necessario per mantenere la differenza tra due puntatori agli elementi della stessa matrice, **ptrdiff_t**  
   
- **ptrdiff_t** è un **signed int**.  
+ Il typedef `ptrdiff_t` è un valore `int` sulla piattaforma x86 a 32 bit. Nelle piattaforme a 64 bit il typedef `ptrdiff_t` è un valore `__int64`.
   
 ## <a name="see-also"></a>Vedere anche  
  [Matrici e puntatori](../c-language/arrays-and-pointers.md)
