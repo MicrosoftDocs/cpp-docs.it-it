@@ -1,34 +1,31 @@
 ---
 title: 'Procedura: attivare e utilizzare un componente Windows Runtime mediante WRL | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5c430ca0dd63c4cbe46986147617ccbd752597ab
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Procedura: attivare e utilizzare un componente Windows Runtime mediante WRL
 Questo documento viene illustrato come utilizzare la libreria di modelli C++ (WRL) di Windows Runtime per inizializzare il Runtime di Windows e come attivare e utilizzare un componente Windows Runtime.  
-  
-> [!NOTE]
->  In questo esempio viene attivato un componente Windows Runtime incorporato. Per informazioni su come creare componenti personalizzati che è possibile attivare in modo simile, vedere [procedura dettagliata: creazione di un componente Windows Runtime base](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
  Per utilizzare un componente, è necessario acquistare un puntatore a interfaccia per il tipo implementato dal componente. E poiché la tecnologia sottostante di Windows Runtime è il modello COM (Component Object), è necessario seguire le regole COM per gestire un'istanza del tipo. Ad esempio, è necessario mantenere il *conteggio dei riferimenti* che determina quando il tipo viene eliminato dalla memoria.  
   

@@ -1,31 +1,36 @@
 ---
 title: Libreria modelli C++ per Windows Runtime (WRL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Libreria di modelli di Windows Runtime C++ (WRL)
-La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che offre un approccio di base per creare e usare componenti Windows Runtime.  
+La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che offre un approccio di base per creare e usare componenti Windows Runtime.
+
+> [!NOTE]
+> WRL ora è stata sostituita da C + + WinRT, una standard C + + 17 language proiezione for Windows Runtime APIs. C + + WinRT è disponibile in Windows 10 SDK dalla versione 1803 in poi. C + + WinRT implementato interamente nel file di intestazione è progettato per fornire l'accesso di prima classe per l'API di Windows moderne.
+
+> Con C + + WinRT, è possibile utilizzare e modificare usando qualsiasi conforme agli standard C + + 17 compilatore APIs di Windows Runtime. C + + WinRT è in genere offre prestazioni migliori e produce file binari inferiori rispetto a un'altra opzione di lingua per Windows Runtime. Continueremo supportare C + + CX e WRL, ma è consigliabile che le nuove applicazioni utilizzare C + c++ WinRT. Per altre informazioni, vedere [C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).   
   
 ## <a name="benefits"></a>Vantaggi  
  La libreria di modelli di Windows Runtime C++ consente di implementare più facilmente e utilizzare i componenti del modello COM (Component Object). Vengono illustrate le tecniche di gestione come il conteggio dei riferimenti per gestire la durata degli oggetti e verificare i valori `HRESULT` per determinare se un'operazione ha avuto esito positivo o negativo. Per utilizzare correttamente la libreria di modelli di Windows Runtime C++, è necessario seguire attentamente queste regole e tecniche.  
@@ -58,10 +63,7 @@ La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che of
  [Procedura: gestire gli eventi](../windows/how-to-handle-events-using-wrl.md)  
  Viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per sottoscrivere e gestire gli eventi di un oggetto Windows Runtime.  
   
- [Procedura dettagliata: Creazione di un componente di Runtime di base di Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- Di seguito viene illustrato come utilizzare la libreria di modelli di Windows Runtime C++ per creare un componente Windows Runtime di base che somma due numeri. Viene inoltre illustrato come generare eventi e utilizzare il componente da un'app UWP che utilizza JavaScript.  
-  
- [Procedura dettagliata: Creazione di un'app UWP mediante WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [Procedura dettagliata: creazione di un'app UWP tramite WRL e Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  Informazioni su come creare un'app UWP che usa [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
   
  [Procedura: creare un componente COM classico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
@@ -144,7 +146,6 @@ La libreria modelli C++ per Windows Runtime (WRL) è una libreria modello che of
   
 |||  
 |-|-|  
-|[Modello di progetto libreria di classi](../windows/wrl-class-library-project-template.md)|Viene descritto come accedere al modello di progetto Libreria di classi WRL. Questo modello consente di semplificare l'attività di utilizzo di Visual Studio per creare componenti Windows Runtime.|  
 |[API chiave per categoria](../windows/key-wrl-apis-by-category.md)|Evidenzia i tipi, funzioni e macro primario libreria modelli C++ per Windows Runtime.|  
 |[Riferimento](../windows/wrl-reference.md)|Contiene informazioni di riferimento per la libreria di modelli di Windows Runtime C++.|  
 |[Riferimento rapido (Windows Runtime e Visual C++)](http://go.microsoft.com/fwlink/p/?linkid=229180)|Vengono descritti brevemente C + + funzionalità CX che supportano Windows Runtime.|  

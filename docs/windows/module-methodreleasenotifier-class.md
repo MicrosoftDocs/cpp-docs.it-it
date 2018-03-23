@@ -1,12 +1,12 @@
 ---
 title: 'Classe Module:: methodreleasenotifier | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 204fe04b9c4df566ae50dacbe4981d5b902203d5
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Classe Module::MethodReleaseNotifier
 Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto del modulo corrente. Il gestore dell'evento è specificato da un oggetto e il relativo membro puntatore al metodo.  
@@ -34,9 +34,7 @@ Richiama un gestore eventi quando viene rilasciato l'ultimo oggetto del modulo c
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  
   
@@ -71,7 +69,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
  `MethodReleaseNotifier`  
   
 ## <a name="requirements"></a>Requisiti  
- **Intestazione:** module.h  
+ **Intestazione:** Implements  
   
  **Spazio dei nomi:** Microsoft::WRL
  

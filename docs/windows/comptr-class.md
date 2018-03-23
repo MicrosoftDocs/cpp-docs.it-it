@@ -1,12 +1,12 @@
 ---
 title: Classe ComPtr | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - ComPtr class
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36ecb5fdf292873c18df8f6b2f032865f44bafd2
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 Crea un tipo di *puntatore intelligente* che rappresenta l'interfaccia specificata dal parametro di modello. ComPtr mantiene automaticamente un conteggio dei riferimenti per il puntatore di interfaccia sottostante e rilascia l'interfaccia quando il conteggio dei riferimenti va a zero.  
@@ -34,14 +34,10 @@ Crea un tipo di *puntatore intelligente* che rappresenta l'interfaccia specifica
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-template <  
-   typename T  
->  
+template <typename T>  
 class ComPtr;  
   
-template<  
-   class U  
->  
+template<class T>  
 friend class ComPtr;  
 ```  
   
