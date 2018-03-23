@@ -1,12 +1,12 @@
 ---
 title: Implements (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc-attr.implements
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 Specifica le interfacce di invio che sono obbligate a essere membri della coclasse IDL.  
@@ -42,14 +42,14 @@ Specifica le interfacce di invio che sono obbligate a essere membri della coclas
 ```  
   
 #### <a name="parameters"></a>Parametri  
- **interfacce**  
- Un elenco delimitato da virgole delle interfacce che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per specificare una singola interfaccia **implementa (***interface_name***)**.  
+ **interfaces**  
+ Un elenco delimitato da virgole delle interfacce che sarà un membro della coclasse IDL. Un metodo a sintassi abbreviata per la specifica di una singola interfaccia è **implementa (***interface_name***)**.  
   
- **dispatch**  
- Un elenco delimitato da virgole di dispinterface che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per la specifica di un'interfaccia sola dispatch **implementa (dispinterfaces** *= dispinterface_name***)**.  
+ **dispinterfaces**  
+ Un elenco delimitato da virgole di dispinterface che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per la specifica di un'interfaccia sola dispatch **implementa (dispinterfaces** * = dispinterface_name ***)**.  
   
 ## <a name="remarks"></a>Note  
- Per impostazione predefinita, vengono aggiunti solo a interfacce COM che sono classi di base della coclasse nella coclasse IDL. **implementa** consente di forzare le altre interfacce possono essere membri di coclasse IDL.  
+ Per impostazione predefinita, vengono aggiunti solo a interfacce COM che sono classi di base della coclasse nella coclasse IDL. **implementa** consente di forzare le altre interfacce da inserire come membri coclasse IDL.  
   
 ## <a name="requirements"></a>Requisiti  
   
@@ -60,7 +60,7 @@ Specifica le interfacce di invio che sono obbligate a essere membri della coclas
 |**Si applica a**|**class**, `struct`|  
 |**Ripetibile**|Yes|  
 |**Attributi obbligatori**|Nessuna|  
-|**Attributi non validi**|nessuno|  
+|**Attributi non validi**|Nessuno|  
   
  Per altre informazioni, vedere [Contesti di attributi](../windows/attribute-contexts.md).  
   
@@ -486,7 +486,7 @@ public:
       if (pDispParams == 0) {  
          return DISP_E_BADVARTYPE;  
       }  
-      if (pDispParams->cArgs > 0) {  
+      if (pDispParams->cArgs> 0) {  
          return DISP_E_BADPARAMCOUNT;  
       }  
       if (pVarResult != 0) {  
