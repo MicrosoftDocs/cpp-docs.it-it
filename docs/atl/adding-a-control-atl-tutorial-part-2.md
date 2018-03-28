@@ -1,27 +1,27 @@
 ---
 title: Aggiunta di un controllo (ATL esercitazione, parte 2) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Aggiunta di un controllo (Esercitazione di ATL, parte 2)
 In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo ed eseguirne il test in una pagina Web.  
@@ -32,9 +32,9 @@ In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo e
   
 1.  In visualizzazione classi, fare clic sul progetto poligono.  
   
-2.  Scegliere **Aggiungi** nel menu di scelta rapida e fare clic su **classe** nel sottomenu.  
+2.  Scegliere **Add** nel menu di scelta rapida e fare clic su **nuovo elemento** nel sottomenu.  
   
-     Il **Aggiungi classe** viene visualizzata la finestra di dialogo. Della struttura ad albero a sinistra, sono elencate le categorie di un oggetto diverso.  
+     Verrà visualizzata la finestra di dialogo **Aggiungi nuovo elemento**. Della struttura ad albero a sinistra, sono elencate le categorie di un oggetto diverso.  
   
 3.  Fare clic su di **ATL** cartella.  
   
@@ -86,7 +86,7 @@ In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo e
 |File|Descrizione|  
 |----------|-----------------|  
 |PolyCtl. H|Contiene la maggior parte dell'implementazione della classe C++ `CPolyCtl`.|  
-|PolyCtl|Contiene le parti restanti della `CPolyCtl`.|  
+|PolyCtl.cpp|Contiene le parti restanti della `CPolyCtl`.|  
 |PolyCtl.rgs|Un file di testo che contiene lo script del Registro di sistema utilizzato per registrare il controllo.|  
 |PolyCtl|Una pagina Web contenente un riferimento al controllo appena creato.|  
   
@@ -113,7 +113,7 @@ In questo passaggio, verrà di aggiungere un controllo al progetto, compilarlo e
   
  Successivamente, si aggiungerà una proprietà personalizzata per il controllo.  
   
- [Al passaggio 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [Al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [Al passaggio 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [al passaggio 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esercitazione](../atl/active-template-library-atl-tutorial.md)
