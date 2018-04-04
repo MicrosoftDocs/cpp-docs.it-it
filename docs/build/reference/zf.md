@@ -1,6 +1,6 @@
 ---
-title: "/Zf (generazione più velocemente PDB) | Documenti Microsoft"
-ms.date: 02/22/2018
+title: /Zf (generazione più velocemente PDB) | Documenti Microsoft
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf (generazione più velocemente PDB)
 
@@ -34,7 +34,7 @@ Il **/Zf** opzione Abilita il supporto del compilatore per la generazione dei fi
 
 Poiché il **/Zf** opzione si applica solo alla generazione del file PDB, è necessario il [/Zi](z7-zi-zi-debug-information-format.md) o [/ZI](z7-zi-zi-debug-information-format.md) opzione.
 
-Il **/Zf** opzione è disponibile a partire da Visual Studio 2017 versione 15.1 ed è disattivata per impostazione predefinita.
+Il **/Zf** opzione è disponibile a partire da Visual Studio 2017 versione 15.1, in cui è disattivata per impostazione predefinita. A partire da Visual Studio 2017 versione 15.7 Preview 3, questa opzione è attivata per impostazione predefinita quando il **/Zi** oppure **/ZI** opzione è abilitata.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Per impostare l'opzione del compilatore nell'ambiente di sviluppo di Visual Studio
 
@@ -46,5 +46,5 @@ Il **/Zf** opzione è disponibile a partire da Visual Studio 2017 versione 15.1 
 
 ## <a name="see-also"></a>Vedere anche
 
-[Opzioni del compilatore elencate in ordine alfabetico](compiler-options-listed-alphabetically.md)  
-[/MP (compilazione con più processi)](mp-build-with-multiple-processes.md)  
+[Opzioni del compilatore elencate in ordine alfabetico](compiler-options-listed-alphabetically.md)<br/>
+[/MP (compilazione con più processi)](mp-build-with-multiple-processes.md)<br/>

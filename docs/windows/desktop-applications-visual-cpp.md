@@ -1,28 +1,28 @@
 ---
 title: Applicazioni desktop (Visual C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>Applicazioni desktop (Visual C++)
 Oggetto *applicazione desktop* in C++ è un'applicazione nativa che è possibile accedere al set completo di API Windows e viene eseguito in una finestra o nella console di sistema. Applicazioni desktop c++ è possono eseguire in Windows XP e Windows 10 (anche se è non è più ufficialmente supportata di Windows XP e sono presenti molte API di Windows che sono stati introdotti da allora).   Un'applicazione desktop è diverso da un'app di Windows della piattaforma UWP (Universal), che può essere eseguita nei PC che eseguono Windows 10, nonché su XBox, Windows Phone, Surface Hub e altri dispositivi. Per ulteriori informazioni sui desktop Visual Studio. Le applicazioni UWP, vedere [scegliere la tecnologia](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -54,7 +54,7 @@ Oggetto *applicazione desktop* in C++ è un'applicazione nativa che è possibile
 |Titolo|Descrizione|  
 |-----------|-----------------|  
 |[Sviluppo per Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Contiene informazioni sull'API Windows e COM. Alcune API Windows e DLL di terze parti vengono implementate come oggetti COM.|  
-|[Hilo: Sviluppo di applicazioni per Windows 7 in C++](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Descrive come creare un'applicazione desktop di Windows rich-client, che usa librerie di animazioni Windows e Direct2D per creare un'interfaccia utente basata su sequenze.  Questa esercitazione non è stata aggiornata poiché Windows 7, ma ancora fornisce un'introduzione throough alla programmazione di Win32.|  
+|[Hilo: Sviluppo di applicazioni per Windows 7 in C++](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Descrive come creare un'applicazione desktop di Windows rich-client, che usa librerie di animazioni Windows e Direct2D per creare un'interfaccia utente basata su sequenze.  Questa esercitazione non è stata aggiornata poiché Windows 7 ma ancora fornisce un'introduzione approfondita per la programmazione Win32.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Descrive le funzionalità principali di Visual C++ in Visual Studio e i collegamenti al resto della documentazione di Visual C++.|  
   
 ## <a name="see-also"></a>Vedere anche  
