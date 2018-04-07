@@ -1,31 +1,35 @@
 ---
 title: 'Operatore address-of: &amp; | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
-f1_keywords: '&'
-dev_langs: C++
+f1_keywords:
+- '&'
+dev_langs:
+- C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="address-of-operator-amp"></a>Operatore address-of:&amp;
+# <a name="address-of-operator-amp"></a>Operatore address-of: &amp;
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -33,11 +37,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>Note  
- L'operatore address-of unario (**&**) accetta l'indirizzo del relativo operando. L'operando dell'operatore address-of può essere un indicatore di funzione o un valore l-value che definisce un oggetto che non è un campo di bit e non è dichiarato con l'identificatore della classe di archiviazione **register**.  
+ L'operatore address-of unario (**&**) accetta l'indirizzo del relativo operando. L'operando dell'operatore address-of può essere un indicatore di funzione o un l-value che definisce un oggetto che non è un campo di bit.  
   
  L'operatore address-of può essere applicato solo a variabili di tipo fondamentale, struttura, classe o di unione dichiarate a livello di file oppure a riferimenti a matrice con indice. In queste espressioni, un'espressione costante che non include l'operatore address-of può essere aggiunta o sottratta dall'espressione address-of.  
   
- Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Se ad esempio l'operando è di tipo `char`, il risultato dell'espressione è di tipo puntatore a `char`. L'operatore address-of, applicato a **const** o `volatile` gli oggetti, restituisce **const** `type`  **\***  o `volatile` `type`  **\*** , dove `type` è il tipo dell'oggetto originale.  
+ Se applicato a funzioni oppure a valori l-value, il risultato dell'espressione è un tipo puntatore (valore r-value) derivato dal tipo dell'operando. Se ad esempio l'operando è di tipo `char`, il risultato dell'espressione è di tipo puntatore a `char`. L'operatore address-of, applicato a **const** o `volatile` gli oggetti, restituisce **const** `type` **\*** o `volatile` `type` **\***, dove `type` è il tipo dell'oggetto originale.  
   
  Quando l'operatore address-of viene applicato a un [nome completo](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), il risultato dipende dal fatto che il *nome qualificato* specifica un membro statico. Se il membro è statico, il risultato è un puntatore al tipo specificato nella dichiarazione del membro. Se il membro non è statico, il risultato è un puntatore a membro *nome* della classe indicata da *qualified-class-name*. (Vedere [espressioni primarie](../cpp/primary-expressions.md) per altre informazioni su *qualified-class-name*.) Nel frammento di codice seguente viene illustrato come il risultato sia diverso a seconda che il membro sia statico o meno:  
   

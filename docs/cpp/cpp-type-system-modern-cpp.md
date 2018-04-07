@@ -1,37 +1,37 @@
 ---
 title: Il sistema di tipi C++ (C++ moderno) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>Sistema di tipi C++ (C++ moderno)
 Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è necessario che a ogni variabile, argomento di funzione e valore restituito di una funzione siano associati tipi. A ogni espressione (compresi i valori letterali) viene inoltre assegnato un tipo in modo implicito prima della restituzione di un risultato. Alcuni esempi di tipi `int` per archiviare i valori integrali, `double` per archiviare valori a virgola mobile (noto anche come *scalare* tipi di dati), la classe della libreria Standard o [std:: basic_string](../standard-library/basic-string-class.md) per archiviare testo. È possibile creare un tipo personalizzato definendo una `class` o uno `struct`. Il tipo specifica la quantità di memoria che verrà allocata per la variabile (o risultato dell'espressione), i tipi di valori che è possibile archiviare in tale variabile, la modalità di interpretazione di questi valori (come schemi di bit) e le operazioni che è possibile eseguire su di essi. In questo articolo viene offerta una panoramica informale delle principali funzionalità del sistema di tipi C++.  
   
 ## <a name="terminology"></a>Terminologia  
- **Variabile**: il collegamento simbolico nome di una quantità di dati in modo che il nome può essere utilizzato per accedere ai dati di cui fa riferimento nell'ambito del codice in cui è definito. In C++, *variabile* è in genere utilizzato per fare riferimento alle istanze di tipi di dati scalare, mentre le istanze di altri tipi sono in genere definite *oggetti*.  
+ **Variabile**: il collegamento simbolico nome di una quantità di dati in modo che il nome può essere utilizzato per accedere ai dati di cui fa riferimento in tutto l'ambito del codice in cui è definito. In C++, *variabile* è in genere utilizzato per fare riferimento alle istanze di tipi di dati scalare, mentre le istanze di altri tipi sono in genere definite *oggetti*.  
   
  **Oggetto**: per semplicità e coerenza, in questo articolo viene utilizzato il termine *oggetto* per fare riferimento a qualsiasi istanza di una classe o struttura, e quando viene usato in senso generale include tutti i tipi, anche le variabili scalari.  
   
- **Tipo POD** (dati non aggiornati): questa categoria informale di tipi di dati in C++ fa riferimento a tipi che sono scalari (vedere la sezione tipi fondamentali) o *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).  
+ **Tipo POD** (dati non aggiornati): questa categoria informale di tipi di dati in C++ fa riferimento a tipi che sono scalari (vedere la sezione tipi fondamentali) o vengono *classi POD*. Una classe POD non contiene membri dati statici che non siano anche POD e non contiene costruttori, distruttori e operatori di assegnazione definiti dall'utente. Una classe POD non include funzioni virtuali, né una classe base e né membri dati non statici privati o protetti. I tipi POD vengono spesso utilizzati per lo scambio di dati esterni, ad esempio con un modulo scritto nel linguaggio C (che presenta solo tipi POD).  
   
 ## <a name="specifying-variable-and-function-types"></a>Specificare tipi di funzione e di variabile  
  C++ è un *fortemente tipizzati* linguaggio e è inoltre *tipizzate staticamente*; ogni oggetto dispone di un tipo e che non cambia mai (non confondere con gli oggetti dati statici).   
@@ -44,7 +44,7 @@ Il concetto di *tipo* è molto importante in C++. Per poter essere compilati è 
   
  Nell'esempio seguente vengono illustrate alcune dichiarazioni di variabile semplici con alcune descrizioni per ognuna. Nell'esempio viene inoltre illustrato il modo in cui il compilatore utilizza le informazioni sul tipo per consentire o meno operazioni successive sulla variabile.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  Di seguito vengono mostrate le dimensioni relative dei tipi predefiniti:  
   
- ![Dimensione in byte di compilazione &#45; nei tipi](../cpp/media/built-intypesizes.png "predefiniti inTYpeSizes")  
+ ![Dimensione in byte di compilazione&#45;nei tipi](../cpp/media/built-intypesizes.png "inTYpeSizes predefiniti")  
   
  Nella tabella seguente sono elencati i tipi fondamentali di uso più comune:  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>qualificatore di tipo const  
  Qualsiasi tipo predefinito o definito dall'utente può essere qualificato tramite la parola chiave const. Le funzioni membro possono inoltre essere qualificate da `const`ed essere in overload con `const`. Non è possibile modificare il valore di un tipo `const` dopo l'inizializzazione.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  La prima cosa da sapere è che dichiarare una variabile di puntatore non elaborato comporta l'allocazione della sola memoria necessaria per archiviare un indirizzo di posizione in memoria a cui farà riferimento il puntatore quando verrà dereferenziato. Allocazione della memoria per il valore dati stesso (detto anche *archivio di backup*) non è ancora allocato. In altre parole, dichiarando una variabile di puntatore non elaborato si crea una variabile di indirizzo di memoria, non una variabile dati effettivi. Dereferenziare una variabile di puntatore senza verificare che contenga un indirizzo valido a un archivio di backup causa un comportamento non definito (in genere un errore irreversibile) nel programma. Nell'esempio seguente viene illustrato questo tipo di errore:  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Nell'esempio viene dereferenziato un tipo di puntatore senza avere allocato memoria per archiviare i dati di tipo integer effettivi o aver assegnato a esso un indirizzo di memoria valido. Nel codice seguente vengono corretti questi errori:  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -151,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  Tuttavia, è facile dimenticare di eliminare un allocati dinamicamente object-specialmente in codice complesso, provocando un bug di risorse denominato un *perdita di memoria*. Per questo motivo, l'utilizzo dei puntatori non elaborati è fortemente sconsigliato nel linguaggio C++ moderno. È quasi sempre consigliabile eseguire il wrapping di un puntatore non elaborato in un [puntatore intelligente](../cpp/smart-pointers-modern-cpp.md), che la memoria venga rilasciata automaticamente quando viene richiamato il relativo distruttore (quando il codice esce dall'ambito del puntatore intelligente); utilizzando i puntatori intelligenti è praticamente Elimina un'intera classe di bug nei programmi C++. Nell'esempio seguente si supponga che `MyClass` sia un tipo definito dall'utente avente un metodo pubblico `DoSomeWork();`  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
