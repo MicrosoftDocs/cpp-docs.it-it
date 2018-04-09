@@ -23,11 +23,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a78f3bf043c08586916a1776806b0a759beb827
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="functions-c"></a>Funzioni (C++)
 
@@ -310,6 +310,35 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
+<<<<<<< HEAD
+4. Oltre a utilizzare il valore restituito se stesso, è possibile "restituire" valori mediante la definizione di un numero qualsiasi di parametri da utilizzare passata per riferimento in modo che la funzione può modificare o inizializzare i valori di oggetti che consente al chiamante. Per ulteriori informazioni, vedere [gli argomenti della funzione tipo-riferimento](reference-type-function-arguments.md).  
+  
+## <a name="function-pointers"></a>Puntatori funzione  
+ C++ supporta i puntatori di funzione in modo analogo al linguaggio C. Un'alternativa più indipendente dai tipi consiste in genere nell'usare un oggetto di funzione.  
+  
+ Si consiglia di utilizzare `typedef` per dichiarare un alias per il tipo puntatore a funzione se si dichiara una funzione che restituisce un tipo puntatore a funzione.  Esempio:  
+  
+```  
+typedef int (*fp)(int);  
+fp myFunction(char* s); // function returning function pointer  
+```  
+  
+ Se questa operazione non viene eseguita, la sintassi corretta per la dichiarazione di funzione può essere dedotta dalla sintassi del dichiaratore per il puntatore a funzione sostituendo l'identificatore (`fp` nell'esempio precedente) con il nome e l'elenco di argomenti delle funzioni, come illustrato di seguito:  
+  
+```  
+int (*myFunction(char* s))(int);  
+```  
+  
+ La dichiarazione precedente equivale alla dichiarazione effettuata mediante l'elemento typedef precedente.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Overload di funzioni](../cpp/function-overloading.md)   
+ [Funzioni con elenchi di argomenti variabili](../cpp/functions-with-variable-argument-lists-cpp.md)   
+ [Funzioni impostate come predefinite ed eliminate in modo esplicito](../cpp/explicitly-defaulted-and-deleted-functions.md)   
+ [Ricerca del nome dipendente dall'argomento (Koenig) nelle funzioni](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
+ [Argomenti predefiniti](../cpp/default-arguments.md)   
+ [Funzioni inline](../cpp/inline-functions-cpp.md)
+=======
 ## <a name="returning-multiple-values-from-a-function"></a>Restituzione di più valori da una funzione
 
 Sono disponibili vari modi per restituire più valori da una funzione:
@@ -446,3 +475,4 @@ La dichiarazione precedente equivale alla dichiarazione effettuata mediante l'el
 - [Ricerca del nome dipendente dall'argomento nelle funzioni (Koenig)](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [Argomenti predefiniti](../cpp/default-arguments.md)
 - [Funzioni inline](../cpp/inline-functions-cpp.md)
+>>>>>>> master
