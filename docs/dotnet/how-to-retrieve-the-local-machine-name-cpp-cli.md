@@ -1,19 +1,21 @@
 ---
 title: 'Procedura: recuperare il nome del computer locale (C + + CLI) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - computer name, retrieving
 - machine name, retrieving
 - computer name
 ms.assetid: 6c7acb9a-3f9b-43b2-a756-bd4fb859e697
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

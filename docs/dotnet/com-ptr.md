@@ -1,17 +1,21 @@
 ---
 title: COM | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: ptr
-dev_langs: C++
-helpviewer_keywords: com::ptr
+f1_keywords:
+- ptr
+dev_langs:
+- C++
+helpviewer_keywords:
+- com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

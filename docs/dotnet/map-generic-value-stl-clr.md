@@ -1,17 +1,21 @@
 ---
 title: Map::generic_value (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::map::generic_value
-dev_langs: C++
-helpviewer_keywords: generic_value member [STL/CLR]
+f1_keywords:
+- cliext::map::generic_value
+dev_langs:
+- C++
+helpviewer_keywords:
+- generic_value member [STL/CLR]
 ms.assetid: bd42ec86-fb9e-4c0d-8cae-7187a8742a94
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

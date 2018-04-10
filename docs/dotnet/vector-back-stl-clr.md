@@ -1,17 +1,21 @@
 ---
 title: 'Vector:: back (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::vector::back
-dev_langs: C++
-helpviewer_keywords: back member [STL/CLR]
+f1_keywords:
+- cliext::vector::back
+dev_langs:
+- C++
+helpviewer_keywords:
+- back member [STL/CLR]
 ms.assetid: 5edb3fcc-74c5-4f04-b8dd-edab49ba45a0
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

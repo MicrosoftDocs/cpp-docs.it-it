@@ -1,17 +1,21 @@
 ---
 title: binary_delegate_noreturn (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::binary_delegate_noreturn
-dev_langs: C++
-helpviewer_keywords: binary_delegate_noreturn function [STL/CLR]
+f1_keywords:
+- cliext::binary_delegate_noreturn
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_delegate_noreturn function [STL/CLR]
 ms.assetid: 055c7e9d-e5c3-48fe-9327-3f6316e8a51e
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

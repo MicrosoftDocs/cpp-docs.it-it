@@ -1,17 +1,21 @@
 ---
 title: hash_multimap::make_value (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_multimap::make_value
-dev_langs: C++
-helpviewer_keywords: make_value member [STL/CLR]
+f1_keywords:
+- cliext::hash_multimap::make_value
+dev_langs:
+- C++
+helpviewer_keywords:
+- make_value member [STL/CLR]
 ms.assetid: 300fb6ec-98c8-48d5-8626-0646878a8462
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

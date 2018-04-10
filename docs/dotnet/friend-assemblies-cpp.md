@@ -1,16 +1,19 @@
 ---
 title: Assembly Friend (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: friend assemblies, Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
 manager: ghogen

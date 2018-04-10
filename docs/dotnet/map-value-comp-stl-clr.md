@@ -1,17 +1,21 @@
 ---
 title: 'Map:: value_comp (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::map::value_comp
-dev_langs: C++
-helpviewer_keywords: value_comp member [STL/CLR]
+f1_keywords:
+- cliext::map::value_comp
+dev_langs:
+- C++
+helpviewer_keywords:
+- value_comp member [STL/CLR]
 ms.assetid: b0e53052-f3cc-48c8-8e29-1b151c23860a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,17 +1,21 @@
 ---
 title: 'hash_multimap:: key_comp (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_multimap::key_comp
-dev_langs: C++
-helpviewer_keywords: key_comp member [STL/CLR]
+f1_keywords:
+- cliext::hash_multimap::key_comp
+dev_langs:
+- C++
+helpviewer_keywords:
+- key_comp member [STL/CLR]
 ms.assetid: 221d0bfe-19ad-4c34-9b10-77921be32459
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

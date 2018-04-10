@@ -1,17 +1,21 @@
 ---
 title: operatore! = (elenco) (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::list::operator!=
-dev_langs: C++
-helpviewer_keywords: operator!= member [STL/CLR]
+f1_keywords:
+- cliext::list::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator!= member [STL/CLR]
 ms.assetid: aa4e1461-8137-43df-a99c-fbec8dd3269f
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

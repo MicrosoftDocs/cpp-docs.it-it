@@ -1,21 +1,24 @@
 ---
 title: auto_gcroot::Release | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - msclr::auto_gcroot::release
 - auto_gcroot::release
 - auto_gcroot.release
 - msclr.auto_gcroot.release
-dev_langs: C++
-helpviewer_keywords: release method
+dev_langs:
+- C++
+helpviewer_keywords:
+- release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen

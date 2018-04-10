@@ -1,16 +1,19 @@
 ---
 title: 'Procedura: utilizzare safe_cast in C + + CLI | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: safe_cast keyword [C++], upcasting
+dev_langs:
+- C++
+helpviewer_keywords:
+- safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,17 +1,21 @@
 ---
 title: 'multiset:: upper_bound (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::multiset::upper_bound
-dev_langs: C++
-helpviewer_keywords: upper_bound member [STL/CLR]
+f1_keywords:
+- cliext::multiset::upper_bound
+dev_langs:
+- C++
+helpviewer_keywords:
+- upper_bound member [STL/CLR]
 ms.assetid: 4a5af99f-a2a1-45be-9b01-c0055d4d0e35
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

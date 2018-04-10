@@ -1,17 +1,21 @@
 ---
 title: 'hash_set:: difference_type (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_set::difference_type
-dev_langs: C++
-helpviewer_keywords: difference_type member [STL/CLR]
+f1_keywords:
+- cliext::hash_set::difference_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- difference_type member [STL/CLR]
 ms.assetid: 56c6edee-4d58-4be4-9824-0f26c02a0cfa
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

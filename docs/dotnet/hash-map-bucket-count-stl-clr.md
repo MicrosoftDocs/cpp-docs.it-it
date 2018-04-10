@@ -1,17 +1,21 @@
 ---
 title: hash_map::bucket_count (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_map::bucket_count
-dev_langs: C++
-helpviewer_keywords: bucket_count member [STL/CLR]
+f1_keywords:
+- cliext::hash_map::bucket_count
+dev_langs:
+- C++
+helpviewer_keywords:
+- bucket_count member [STL/CLR]
 ms.assetid: 67cbcb76-1edd-44a0-8779-fa61410c3aff
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,20 +1,22 @@
 ---
-title: "Procedura: diagnosticare e risolvere i problemi di compatibilità di Assembly (C + + CLI) | Documenti Microsoft"
-ms.custom: 
+title: 'Procedura: diagnosticare e risolvere i problemi di compatibilità di Assembly (C + + CLI) | Documenti Microsoft'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - versioning, diagnosing conflicts
 - versioning
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,17 +1,21 @@
 ---
 title: deque::generic_container (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::deque::generic_container
-dev_langs: C++
-helpviewer_keywords: generic_container member [STL/CLR]
+f1_keywords:
+- cliext::deque::generic_container
+dev_langs:
+- C++
+helpviewer_keywords:
+- generic_container member [STL/CLR]
 ms.assetid: 5003a9a8-c207-4074-be2b-36cb9887f9d4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen

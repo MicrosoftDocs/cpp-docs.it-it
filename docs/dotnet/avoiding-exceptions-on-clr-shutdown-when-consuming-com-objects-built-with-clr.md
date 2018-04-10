@@ -1,13 +1,15 @@
 ---
 title: Evitare le eccezioni generate da oggetti COM compilati con clr-| Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], CLR shutdown exceptions
 - /clr compiler option [C++], CLR shutdown exceptions
@@ -16,7 +18,7 @@ helpviewer_keywords:
 - interoperability [C++], CLR shutdown exceptions
 - CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen

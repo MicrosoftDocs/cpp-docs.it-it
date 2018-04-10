@@ -1,17 +1,21 @@
 ---
 title: priority_queue::difference_type (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::priority_queue::difference_type
-dev_langs: C++
-helpviewer_keywords: difference_type member [STL/CLR]
+f1_keywords:
+- cliext::priority_queue::difference_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- difference_type member [STL/CLR]
 ms.assetid: 4bedce11-244c-428b-b5e2-e6bbf5674803
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen

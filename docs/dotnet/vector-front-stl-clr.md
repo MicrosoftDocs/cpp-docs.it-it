@@ -1,17 +1,21 @@
 ---
 title: 'Vector:: front (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::vector::front
-dev_langs: C++
-helpviewer_keywords: front member [STL/CLR]
+f1_keywords:
+- cliext::vector::front
+dev_langs:
+- C++
+helpviewer_keywords:
+- front member [STL/CLR]
 ms.assetid: 37a36157-8220-4d5b-85b5-c6a63211a322
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen

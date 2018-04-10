@@ -1,17 +1,21 @@
 ---
 title: 'hash_multiset:: Erase (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_multiset::erase
-dev_langs: C++
-helpviewer_keywords: erase member [STL/CLR]
+f1_keywords:
+- cliext::hash_multiset::erase
+dev_langs:
+- C++
+helpviewer_keywords:
+- erase member [STL/CLR]
 ms.assetid: bddd329d-aece-4b93-8355-005351c3aa45
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

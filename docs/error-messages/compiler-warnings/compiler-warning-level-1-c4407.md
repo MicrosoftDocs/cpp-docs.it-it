@@ -1,21 +1,26 @@
 ---
 title: Compilatore avviso (livello 1) C4407 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
-f1_keywords: C4407
-dev_langs: C++
-helpviewer_keywords: C4407
+f1_keywords:
+- C4407
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 736b5f99115d6e2a39ee77005c7b3248ac191453
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

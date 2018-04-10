@@ -1,11 +1,12 @@
 ---
 title: Gestione delle notifiche di personalizzazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - TBN_CUSTHELP
@@ -28,7 +29,8 @@ f1_keywords:
 - NM_RCLICK
 - TBN_BEGINADJUST
 - NM_CLICK
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - TBN_ENDADJUST notification [MFC]
 - TBNOTIFY notification [MFC]
@@ -54,11 +56,12 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

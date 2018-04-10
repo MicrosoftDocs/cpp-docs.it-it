@@ -1,17 +1,21 @@
 ---
 title: Copia (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::copy
-dev_langs: C++
-helpviewer_keywords: copy function [STL/CLR]
+f1_keywords:
+- cliext::copy
+dev_langs:
+- C++
+helpviewer_keywords:
+- copy function [STL/CLR]
 ms.assetid: f6738535-fde6-446e-a797-bf2b457c2bff
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen

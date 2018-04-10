@@ -1,21 +1,26 @@
 ---
 title: Errore del compilatore C3170 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
-f1_keywords: C3170
-dev_langs: C++
-helpviewer_keywords: C3170
+f1_keywords:
+- C3170
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 150f543ec2f75e8d21e40f822f342adef6be06c6
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

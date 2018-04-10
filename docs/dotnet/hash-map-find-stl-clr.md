@@ -1,17 +1,21 @@
 ---
 title: 'hash_map:: Find (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_map::find
-dev_langs: C++
-helpviewer_keywords: find member [STL/CLR]
+f1_keywords:
+- cliext::hash_map::find
+dev_langs:
+- C++
+helpviewer_keywords:
+- find member [STL/CLR]
 ms.assetid: 53ff8d57-2ea4-485e-9419-aed5e3f5affb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen

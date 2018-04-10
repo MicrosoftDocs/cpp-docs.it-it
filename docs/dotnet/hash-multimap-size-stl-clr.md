@@ -1,17 +1,21 @@
 ---
 title: 'hash_multimap:: Size (STL/CLR) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_multimap::size
-dev_langs: C++
-helpviewer_keywords: size member [STL/CLR]
+f1_keywords:
+- cliext::hash_multimap::size
+dev_langs:
+- C++
+helpviewer_keywords:
+- size member [STL/CLR]
 ms.assetid: 6937c980-5952-48bf-b411-81ab03b2f940
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen

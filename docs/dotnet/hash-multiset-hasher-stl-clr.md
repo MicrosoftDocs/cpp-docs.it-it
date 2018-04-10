@@ -1,17 +1,21 @@
 ---
 title: hash_multiset::hasher (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::hash_multiset::hasher
-dev_langs: C++
-helpviewer_keywords: hasher member [STL/CLR]
+f1_keywords:
+- cliext::hash_multiset::hasher
+dev_langs:
+- C++
+helpviewer_keywords:
+- hasher member [STL/CLR]
 ms.assetid: c68c59ae-bc9e-4caf-9240-04eb65273517
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

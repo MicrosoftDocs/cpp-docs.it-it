@@ -1,20 +1,23 @@
 ---
 title: coda (STL/CLR) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
-f1_keywords: cliext::queue
-dev_langs: C++
+f1_keywords:
+- cliext::queue
+dev_langs:
+- C++
 helpviewer_keywords:
 - <queue> header [STL/CLR]
 - queue class [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
 manager: ghogen

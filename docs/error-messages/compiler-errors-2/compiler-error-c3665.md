@@ -1,21 +1,26 @@
 ---
 title: Errore del compilatore C3665 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
-f1_keywords: C3665
-dev_langs: C++
-helpviewer_keywords: C3665
+f1_keywords:
+- C3665
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: a7a8b5a93c4ed3a003eb23824e9b7207c7e26f8d
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

@@ -1,13 +1,15 @@
 ---
 title: Le operazioni grafiche (C + + CLI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - GDI+ [C++]
 - .NET Framework [C++], graphics
@@ -15,7 +17,7 @@ helpviewer_keywords:
 - GDI+ [C++], about graphics operations
 - graphics [C++], .NET Framework and
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
