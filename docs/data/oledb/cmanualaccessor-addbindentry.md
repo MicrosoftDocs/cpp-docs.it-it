@@ -1,12 +1,12 @@
 ---
 title: 'CManualAccessor:: AddBindEntry | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
@@ -19,7 +19,7 @@ dev_langs:
 helpviewer_keywords:
 - AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
