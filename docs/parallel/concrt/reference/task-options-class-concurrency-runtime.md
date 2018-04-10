@@ -1,29 +1,29 @@
 ---
 title: Classe task_options (Runtime di concorrenza) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ppltasks/concurrency::task_options
 dev_langs:
 - C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6ad83e9e0a871ddc2d8f2c767cb0690da1e6f349
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Classe task_options (runtime di concorrenza)
 Rappresenta le opzioni consentite per la creazione di un'attività  
@@ -62,7 +62,7 @@ class task_options;
   
  **Spazio dei nomi:** Concurrency  
   
-##  <a name="get_cancellation_token">task_options:: get_cancellation_token (Runtime di concorrenza) (metodo)</a>  
+##  <a name="get_cancellation_token"></a>  task_options:: get_cancellation_token (Runtime di concorrenza) (metodo)  
  Restituisce il token di annullamento  
   
 ```
@@ -71,7 +71,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="get_continuation_context">task_options:: get_continuation_context (Runtime di concorrenza) (metodo)</a>  
+##  <a name="get_continuation_context"></a>  task_options:: get_continuation_context (Runtime di concorrenza) (metodo)  
  Restituisce il contesto di continuazione  
   
 ```
@@ -80,7 +80,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="get_scheduler">task_options:: get_scheduler (Runtime di concorrenza) (metodo)</a>  
+##  <a name="get_scheduler"></a>  task_options:: get_scheduler (Runtime di concorrenza) (metodo)  
  Restituisce l'utilità di pianificazione  
   
 ```
@@ -89,7 +89,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="has_cancellation_token">task_options:: has_cancellation_token (Runtime di concorrenza) (metodo)</a>  
+##  <a name="has_cancellation_token"></a>  task_options:: has_cancellation_token (Runtime di concorrenza) (metodo)  
  Indica se un token di annullamento è stato specificato dall'utente  
   
 ```
@@ -98,7 +98,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="has_scheduler">task_options:: has_scheduler (Runtime di concorrenza) (metodo)</a>  
+##  <a name="has_scheduler"></a>  task_options:: has_scheduler (Runtime di concorrenza) (metodo)  
  Indica se un'utilità di pianificazione è stata specificata dall'utente  
   
 ```
@@ -107,7 +107,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>Valore restituito  
   
-##  <a name="set_cancellation_token">task_options:: set_cancellation_token (Runtime di concorrenza) (metodo)</a>  
+##  <a name="set_cancellation_token"></a>  task_options:: set_cancellation_token (Runtime di concorrenza) (metodo)  
  Imposta il token specificato nelle opzioni  
   
 ```
@@ -117,7 +117,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>Parametri  
  `_Token`  
   
-##  <a name="set_continuation_context">task_options:: set_continuation_context (Runtime di concorrenza) (metodo)</a>  
+##  <a name="set_continuation_context"></a>  task_options:: set_continuation_context (Runtime di concorrenza) (metodo)  
  Imposta il contesto di continuazione specificato nelle opzioni  
   
 ```
@@ -127,7 +127,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 ### <a name="parameters"></a>Parametri  
  `_ContinuationContext`  
   
-##  <a name="ctor">task_options:: task_options (Runtime di concorrenza) costruttore</a>  
+##  <a name="ctor"></a>  task_options:: task_options (Runtime di concorrenza) costruttore  
  Elenco predefinito delle opzioni di creazione di attività  
   
 ```

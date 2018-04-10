@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>Modifiche al sistema di compilazione
 Il sistema MSBuild è utilizzato per compilare progetti Visual C++. Tuttavia, in Visual Studio 2008 e le versioni precedenti, il sistema VCBuild è stato utilizzato. Alcuni tipi di file e i concetti che dipendono da VCBuild non esistono o sono rappresentati in modo diverso nel sistema corrente. Questo documento vengono illustrate le differenze nel sistema di compilazione corrente.  
@@ -59,7 +59,7 @@ Il sistema MSBuild è utilizzato per compilare progetti Visual C++. Tuttavia, in
   
  Nella versione corrente, specificando il valore di una proprietà come concatenazione di uno o più valori letterali e macro di proprietà è supportata l'ereditarietà. Il **$ (Inherit)** e **$ (NoInherit)** macro non sono supportate.  
   
- Nell'esempio seguente, un elenco delimitato da punto e virgola viene assegnato a una proprietà in una pagina delle proprietà. L'elenco è costituito da concatenazione dei parametri di  *\<valore >* letterale e il valore della `MyProperty` proprietà, a cui si accede tramite la notazione (macro), **$(**  *MyProperty***)**.  
+ Nell'esempio seguente, un elenco delimitato da punto e virgola viene assegnato a una proprietà in una pagina delle proprietà. L'elenco è costituito da concatenazione dei parametri di  *\<valore >* letterale e il valore della `MyProperty` proprietà, di cui si accede tramite la notazione (macro), **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  

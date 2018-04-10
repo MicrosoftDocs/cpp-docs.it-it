@@ -1,12 +1,12 @@
 ---
 title: concorrenza Namespace | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 
+caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace"></a>Spazio dei nomi concurrency
 Lo spazio dei nomi `Concurrency` fornisce classi e funzioni che consentono l'accesso al runtime di concorrenza, un framework di programmazione simultanea per C++. Per altre informazioni, vedere [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Runtime di concorrenza).  
@@ -227,7 +227,7 @@ namespace concurrency;
 |[Funzione run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Esegue un oggetto funzione immediatamente e in modo sincrono nel contesto di uno specifico token di annullamento.|  
 |[Funzione Send](concurrency-namespace-functions.md#send)|Di overload. Un'operazione di invio sincrona che attende fino a quando la destinazione accetta o rifiuta il messaggio.|  
 |[Funzione set_ambient_scheduler (Runtime di concorrenza)](concurrency-namespace-functions.md#set_ambient_scheduler)||  
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|Di overload. Limita le risorse di esecuzione usate dai thread di lavoro interni del runtime di concorrenza al set di affinità specificato.<br /><br /> È valido chiamare questo metodo solo prima della creazione di Gestione risorse o tra due cicli di vita di Gestione risorse. Può essere chiamato più volte a condizione che Gestione risorse non esista al momento della chiamata. Dopo aver impostato un limite di affinità, rimane attiva fino alla successiva chiamata al metodo `set_task_execution_resources`.<br /><br /> La maschera di affinità fornita non deve essere un sottoinsieme della maschera di affinità del processo. L'affinità del processo verrà aggiornata, se necessario.|  
+|[Funzione set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Di overload. Limita le risorse di esecuzione usate dai thread di lavoro interni del runtime di concorrenza al set di affinità specificato.<br /><br /> È valido chiamare questo metodo solo prima della creazione di Gestione risorse o tra due cicli di vita di Gestione risorse. Può essere chiamato più volte a condizione che Gestione risorse non esista al momento della chiamata. Dopo aver impostato un limite di affinità, rimane attiva fino alla successiva chiamata al metodo `set_task_execution_resources`.<br /><br /> La maschera di affinità fornita non deve essere un sottoinsieme della maschera di affinità del processo. L'affinità del processo verrà aggiornata, se necessario.|  
 |[Funzione swap](concurrency-namespace-functions.md#swap)|Scambia gli elementi di due oggetti `concurrent_vector`.|  
 |[Funzione task_from_exception (Runtime di concorrenza)](concurrency-namespace-functions.md#task_from_exception)||  
 |[Funzione task_from_result (Runtime di concorrenza)](concurrency-namespace-functions.md#task_from_result)||  
@@ -274,7 +274,7 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|Un GUID di categoria che descrive eventi ETW generati dal runtime di concorrenza che sono direttamente correlati a processori virtuali.|  
   
 ## <a name="requirements"></a>Requisiti  
- **Header:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
+ **Intestazione:** Agents. h, concrt. h, internal_concurrent_hash., concrtrm, internal_split_ordered_list, concurrent_priority_queue, h, concurrent_queue, concurrent_unordered_map, internal_split_ordered_ List.h, PPL, pplcancellation_token.h, h, pplinterface, ppltasks. h  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento](reference-concurrency-runtime.md)

@@ -1,12 +1,12 @@
 ---
 title: Classe del contesto | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Classe Context
 Rappresenta un'astrazione per un contesto di esecuzione.  
@@ -189,7 +189,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>Valore restituito  
  Se un'utilità di pianificazione è associata al contesto di chiamata e un gruppo di attività è in esecuzione un'attività inline in tale contesto, un valore che indica se questo gruppo di attività si trova nel mezzo di un annullamento attivo (o sarà a breve); in caso contrario, il valore `false`.  
   
-##  <a name="issynchronouslyblocked">IsSynchronouslyBlocked</a> 
+##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked 
 
  Determina se il contesto è bloccato in modo sincrono. Viene considerato un contesto bloccato in modo sincrono se eseguito in modo esplicito un'azione che ha portato a blocco.  
   
@@ -217,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  Un puntatore all'oggetto da eliminare.  
   
-##  <a name="oversubscribe">Abilitare l'oversubscription</a> 
+##  <a name="oversubscribe"></a> Abilitare l'oversubscription 
 
  Inserisce un processore virtuale aggiuntivo in un'utilità di pianificazione per la durata di un blocco di codice quando viene richiamato in un contesto di esecuzione in uno dei processori virtuali in tale utilità di pianificazione.  
   
@@ -240,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>Valore restituito  
  Se il contesto corrente è connesso a un'utilità di pianificazione si lavora su un gruppo di pianificazione, un identificatore per l'utilità di pianificazione di gruppi e che il contesto corrente sta lavorando; in caso contrario, il valore `-1`.  
   
-##  <a name="unblock">Sbloccare</a> 
+##  <a name="unblock"></a> Unblock 
 
  Sblocca il contesto e fa sì che diventi eseguibile.  
   

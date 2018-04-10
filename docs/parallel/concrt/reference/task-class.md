@@ -1,12 +1,12 @@
 ---
 title: Classe Task (Runtime di concorrenza) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +23,17 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>Classe task (runtime di concorrenza)
 Classe `task` Parallel Patterns Library (PPL). Un oggetto `task` rappresenta il lavoro che può essere eseguito in modo asincrono e contemporaneamente con altre attività e il lavoro parallelo prodotto da algoritmi paralleli nel runtime di concorrenza. Produce un risultato di tipo `_ResultType` dopo il corretto completamento. Le attività di tipo `task<void>` non producono risultati. È possibile attendere il completamento di un'attività e annullarla indipendentemente da altre attività. Possono anche essere composte con altre attività usando le continuazioni ( `then`), join e ( `when_all`) e choice ( `when_any`) pattern.  
@@ -144,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>Note  
  La funzione restituisce true se l'attività è stata completata o annullata (con o senza eccezione utente).  
   
-##  <a name="operator_neq"></a> operatore! = 
+##  <a name="operator_neq"></a> operator!= 
 
  Determina se due oggetti `task` rappresentano attività interne diverse.  
   
@@ -160,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>Valore restituito  
  `true` se i due oggetti si riferiscono ad attività sottostanti diverse e `false` in caso contrario.  
   
-##  <a name="operator_eq"></a> operator = 
+##  <a name="operator_eq"></a> operator= 
 
  Sostituisce il contenuto di un oggetto `task` con un altro.  
   
@@ -179,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>Note  
  Dato che `task` si comporta come un puntatore intelligente, dopo un'operazione di assegnazione di copia, questo oggetto `task` rappresenta la stessa attività effettiva di `_Other`.  
   
-##  <a name="operator_eq_eq"></a> operatore = = 
+##  <a name="operator_eq_eq"></a> operator== 
 
  Determina se due oggetti `task` rappresentano la stessa attività interna.  
   
@@ -255,7 +255,7 @@ task(
   
  Per ulteriori informazioni, vedere [parallelismo delle attività](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
-##  <a name="then"></a> quindi 
+##  <a name="then"></a> then 
 
  Aggiunge un'attività di continuazione a questa attività.  
   

@@ -1,12 +1,12 @@
 ---
 title: 'Sintassi per la specifica del formato: funzioni printf e wprintf | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintassi per la specifica del formato: funzioni printf e wprintf
 
@@ -85,7 +85,7 @@ I tipi Integer come `short`, `int`, `long`, `long long` e le loro varianti `unsi
 |**G**|A virgola mobile|Identico al formato **g** salvo per il fatto che l'esponente è introdotto da **E**anziché da **e** (quando necessario).|
 |**a**|A virgola mobile|Valore a virgola mobile a precisione doppia esadecimale con segno e con formato [-]0x*h.hhhh*__p±__*dd*, dove *h.hhhh* sono le cifre esadecimali (in minuscolo) della mantissa, mentre *dd* sono una o più cifre dell'esponente. La precisione indica il numero di cifre dopo il punto.|
 |**A**|A virgola mobile|Valore a virgola mobile a precisione doppia esadecimale con segno e con formato [-]0X*h.hhhh*__P±__*dd*, dove *h.hhhh* sono le cifre esadecimali (in maiuscolo) della mantissa, mentre *dd* sono una o più cifre dell'esponente. La precisione indica il numero di cifre dopo il punto.|
-|**n**|Puntatore a intero|Numero di caratteri che viene scritto correttamente fino al flusso o nel buffer. Questo valore viene archiviato nel valore intero in cui l'indirizzo viene fornito come argomento. Le dimensioni del numero intero al quale si fa riferimento possono essere controllate da un prefisso di indicazione delle dimensioni dell'argomento. L'identificatore **n** è disattivato per impostazione predefinita. Per informazioni vedere l'importante nota sulla sicurezza.|
+|**n**|Puntatore a intero|Numero di caratteri che viene scritto correttamente fino al flusso o nel buffer. Questo valore viene archiviato nel valore intero in cui l'indirizzo viene fornito come argomento. Le dimensioni del numero intero al quale si fa riferimento possono essere controllate da un prefisso di indicazione delle dimensioni dell'argomento. L'identificatore **n** è disattivato per impostazione predefinita. Per informazioni vedere l'importante la nota sulla sicurezza.|
 |**p**|Tipo di puntatore|Visualizza l'argomento come indirizzo nelle cifre esadecimali.|
 |**s**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri a byte singolo o multibyte; una volta usato con le funzioni `wprintf`, specifica una stringa di carattere wide. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
 |**S**|Stringa|Una volta usato con funzioni `printf`, specifica una stringa di caratteri wide; una volta usato con le funzioni `wprintf`, specifica una stringa di caratteri a un byte singolo o multibyte. I caratteri vengono visualizzati fino al primo carattere Null o fino a quando non viene raggiunto il valore *precisione*.|
@@ -134,7 +134,7 @@ Il primo campo facoltativo in una specifica di conversione contiene *direttive f
 |----------|-------------|-------------|
 |**-**|Allinea a sinistra il risultato entro la larghezza del campo specificata.|Allinea a destra.|
 |**+**|Usa un segno (+ o -) come prefisso del valore di output se si tratta di un tipo con segno.|Il segno viene visualizzato solo per i valori con segno negativo (-).|
-|**0**|Se *larghezza* è preceduto da **0**, vengono aggiunti zeri iniziali fino a ottenere la larghezza minima. Se appaiono sia **0** sia  **-** , **0** viene ignorato. Se **0** è specificato per un formato intero (**i**, **u**, **x**, **X**, **o**, **d**) ed è anche presente una specifica di precisione quale `%04.d`, **0** viene ignorato. Se **0** è specificato per il formato a virgola mobile **a** o **A**, gli zeri iniziali vengono posizionati prima della mantissa, dopo il prefisso `0x` o `0X`.|Nessun riempimento.|
+|**0**|Se *larghezza* è preceduto da **0**, vengono aggiunti zeri iniziali fino a ottenere la larghezza minima. Se appaiono sia **0** sia **-**, **0** viene ignorato. Se **0** è specificato per un formato intero (**i**, **u**, **x**, **X**, **o**, **d**) ed è anche presente una specifica di precisione quale `%04.d`, **0** viene ignorato. Se **0** è specificato per il formato a virgola mobile **a** o **A**, gli zeri iniziali vengono posizionati prima della mantissa, dopo il prefisso `0x` o `0X`.|Nessun riempimento.|
 |**blank** (' ')|Usare uno spazio come prefisso del valore di output se questo è provvisto di segno e positivo. Lo spazio viene ignorato se appaiono sia il flag blank sia il flag +.|Non viene visualizzato alcuno spazio.|
 |**#**|Quando viene usato con il formato **o**, **x** o **X**, il flag **#** usa rispettivamente 0, 0x o 0X, come prefisso di qualsiasi valore di output diverso da zero.|Non viene visualizzato alcuno spazio.|
 ||Quando è usato con il formato **e**, **E**, **f**, **F**, **a** o **A** il flag **#** impone la presenza di un separatore decimale nel valore di output.|Il separatore decimale viene visualizzato solo se è seguito da cifre.|

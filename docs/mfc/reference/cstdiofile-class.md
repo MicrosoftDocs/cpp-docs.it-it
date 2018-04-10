@@ -1,12 +1,12 @@
 ---
 title: Classe CStdioFile | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Classe CStdioFile
 Rappresenta un file di flusso di runtime C quando viene aperto dalla funzione di runtime [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>Requisiti  
  **Intestazione:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  Costruisce e inizializza un oggetto `CStdioFile`.  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  Il `m_pStream` (membro dati) è il puntatore a un file aperto restituito dalla funzione di runtime C `fopen`.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>Note  
  È **NULL** se il file non è mai stato aperto o chiuso.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  Di overload. Apri sono progettato per l'utilizzo con il valore predefinito `CStdioFile` costruttore.  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  Stringa che rappresenta il percorso del file desiderato. Il percorso può essere relativo o assoluto.  
   
  `nOpenFlags`  
- La condivisione e modalità di accesso. Specifica l'azione da eseguire all'apertura del file. È possibile combinare opzioni bitwise-OR (&#124;) utilizzando operatore. Sono richieste l'autorizzazione di un accesso e all'opzione di una condivisione le modalità modeCreate e modeNoInherit sono facoltative.  
+ La condivisione e modalità di accesso. Specifica l'azione da eseguire all'apertura del file. È possibile combinare le opzioni tramite l'OR (&#124;) (operatore). Sono richieste l'autorizzazione di un accesso e all'opzione di una condivisione le modalità modeCreate e modeNoInherit sono facoltative.  
   
  `pError`  
  Un puntatore a un oggetto eccezione di file esistente che verrà visualizzato lo stato di un'operazione non riuscita.  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>Note  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  Legge i dati di testo in un buffer, fino a un limite di `nMax`caratteri -1, dal file di cui è associato il `CStdioFile` oggetto.  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>Esempio  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  Riposiziona il puntatore in un file aperto in precedenza.  
   
 ```  
@@ -237,7 +237,7 @@ virtual ULONGLONG Seek(
  `nFrom`  
  Modalità di spostamento di puntatore. Deve essere uno dei valori seguenti:  
   
-- `CFile::begin`: Spostare il puntatore del file `lOff` inoltrare i byte dall'inizio del file.  
+- `CFile::begin`: Spostare il puntatore del file `lOff` inoltrare byte dall'inizio del file.  
   
 - `CFile::current`: Spostare il puntatore del file `lOff` byte dalla posizione corrente nel file.  
   
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  Scrive i dati da un buffer per il file associato il `CStdioFile` oggetto.  
   
 ```  

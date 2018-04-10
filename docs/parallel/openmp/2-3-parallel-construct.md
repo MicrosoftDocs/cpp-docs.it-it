@@ -1,27 +1,27 @@
 ---
 title: 2.3 costrutto parallel | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 Costrutto parallel
 La direttiva seguente definisce un'area parallela, che è un'area del programma che deve essere eseguito da più thread in parallelo. Ciò è fondamentale che inizia l'esecuzione parallela.  
@@ -32,21 +32,21 @@ La direttiva seguente definisce un'area parallela, che è un'area del programma 
   
  Il *clausola* è uno dei seguenti:  
   
- **Se (** *espressione scalare* **)**  
+ **if(** *scalar-expression* **)**  
   
- **private (** *elenco variabili* **)**  
+ **private (** *variabile-list* **)**  
   
- **firstprivate (** *elenco variabili* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **predefinito (condiviso &#124; none)**  
+ **default(shared &#124; none)**  
   
- **condiviso (** *elenco variabili* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *elenco variabili* **)**  
+ **copyin(** *variable-list* **)**  
   
- **riduzione (** *operatore* **:***elenco variabili* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *espressione integer* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  Quando un thread incontra un costrutto parallelo, viene creato un gruppo di thread se viene soddisfatta una delle seguenti condizioni:  
   
@@ -96,15 +96,15 @@ La direttiva seguente definisce un'area parallela, che è un'area del programma 
   
 ## <a name="cross-references"></a>Riferimenti:  
   
--   **privato**, **firstprivate**, **predefinito**, **condivisa**, **copyin**, e **riduzione**clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.  
+-   **private**, **firstprivate**, **predefinito**, **condivisa**, **copyin**, e **riduzione**clausole, vedere [sezione 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) nella pagina 25.  
   
--   **OMP_NUM_THREADS** variabile di ambiente, [sezione 4.2](../../parallel/openmp/4-2-omp-num-threads.md) nella pagina 48.  
+-   **OMP_NUM_THREADS** variabile di ambiente [sezione 4.2](../../parallel/openmp/4-2-omp-num-threads.md) nella pagina 48.  
   
 -   **omp_set_dynamic** funzione della libreria, vedere [sezione 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) nella pagina 39.  
   
 -   **OMP_DYNAMIC** vedere variabile di ambiente [sezione 4.3](../../parallel/openmp/4-3-omp-dynamic.md) nella pagina 49.  
   
--   **omp_set_nested** funzione, vedere [sezione 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) nella pagina 40.  
+-   **omp_set_nested** function, vedere [sezione 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) nella pagina 40.  
   
 -   **OMP_NESTED** vedere variabile di ambiente [sezione 4.4](../../parallel/openmp/4-4-omp-nested.md) nella pagina 49.  
   

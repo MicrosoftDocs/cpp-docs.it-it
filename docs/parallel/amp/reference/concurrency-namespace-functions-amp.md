@@ -1,10 +1,10 @@
 ---
 title: Funzioni dello spazio dei nomi Concurrency (AMP) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +20,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funzioni dello spazio dei nomi Concurrency (AMP)
 ||||  
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
  `true` se l'operazione riesce; in caso contrario, `false`.  
   
 
-##  <a name="atomic_exchange">Funzione atomic_exchange (C++ AMP)</a>  
+##  <a name="atomic_exchange"></a>  Funzione atomic_exchange (C++ AMP)  
  Imposta il valore del percorso di destinazione come operazione atomica.  
   
 ```  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  Il valore originale del percorso di destinazione.  
   
 
-##  <a name="atomic_fetch_add">Funzione atomic_fetch_add (C++ AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  Funzione atomic_fetch_add (C++ AMP)  
  Aggiungere atomicamente un valore per il valore di una posizione di memoria.  
   
 ```  
@@ -152,7 +152,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>Valore restituito  
  Il valore originale della posizione di memoria.  
   
-##  <a name="atomic_fetch_and">Funzione atomic_fetch_and (C++ AMP)</a>  
+##  <a name="atomic_fetch_and"></a>  Funzione atomic_fetch_and (C++ AMP)  
  Esegue in modo atomico un'operazione con AND bit per bit di un valore e il valore di una posizione di memoria.  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>Valore restituito  
  Il valore originale archiviato in corrispondenza della posizione del percorso specificato.  
   
-##  <a name="atomic_fetch_or">Funzione atomic_fetch_or (C++ AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  Funzione atomic_fetch_or (C++ AMP)  
  Esegue in modo atomico un'operazione OR bit per bit con un valore e il valore di una posizione di memoria.  
   
 ```  
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>Valore restituito  
  Il valore originale della posizione di memoria.  
   
-##  <a name="atomic_fetch_sub">Funzione atomic_fetch_sub (C++ AMP)</a>  
+##  <a name="atomic_fetch_sub"></a>  Funzione atomic_fetch_sub (C++ AMP)  
  Sottrae atomicamente un valore da una posizione di memoria.  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>Valore restituito  
  Il valore originale della posizione di memoria.  
   
-##  <a name="atomic_fetch_xor">Funzione atomic_fetch_xor (C++ AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  Funzione atomic_fetch_xor (C++ AMP)  
  Esegue un'operazione XOR bit per bit di un valore e una posizione di memoria in modo atomico.  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Un oggetto tile_barrier  
   
-##  <a name="parallel_for_each">parallel_for_each (funzione) (C++ AMP)</a>  
+##  <a name="parallel_for_each"></a>  parallel_for_each (funzione) (C++ AMP)  
  Esegue una funzione all'interno del dominio di calcolo. Per ulteriori informazioni, vedere [C++ AMP Panoramica](../../../parallel/amp/cpp-amp-overview.md).  
   
 ```  

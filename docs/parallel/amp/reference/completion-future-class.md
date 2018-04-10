@@ -1,12 +1,12 @@
 ---
 title: Classe completion_future | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - completion_future
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="completionfuture-class"></a>Classe completion_future
 Rappresenta un futuro corrisponde a un'operazione asincrona di C++ AMP.  
@@ -68,7 +68,7 @@ class completion_future;
   
 |Nome|Descrizione|  
 |----------|-----------------|  
-|[operatore std::shared_future\<void >](#operator_shared_future)|Converte in modo implicito il `completion_future` l'oggetto in un `std::shared_future` oggetto.|  
+|[operator std::shared_future\<void>](#operator_shared_future)|Converte in modo implicito il `completion_future` l'oggetto in un `std::shared_future` oggetto.|  
 |[operator=](#operator_eq)|Copia il contenuto dell'oggetto specificato `completion_future` specificato in questo oggetto.|  
   
 ## <a name="inheritance-hierarchy"></a>Gerarchia di ereditarietà  
@@ -131,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>Valore restituito  
  Oggetto `std::shared_future`.  
   
-## <a name="operator_eq"></a> operator = 
+## <a name="operator_eq"></a> operator= 
 
 Copia il contenuto dell'oggetto specificato `completion_future` specificato in questo oggetto.  
   
@@ -156,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|Copia il contenuto dell'oggetto specificato `completion_future` oggetto in questo profilo, utilizzando una copia completa.|  
 |`completion_future& operator=(completion_future&& _Other);`|Copia il contenuto dell'oggetto specificato `completion_future` oggetto in questo profilo, l'utilizzo di un'assegnazione di spostamento.|  
   
-## <a name="then"></a> quindi 
+## <a name="then"></a> then 
 
 Concatena un oggetto funzione di callback per la `completion_future` oggetto da eseguire al termine dell'esecuzione dell'operazione asincrona associata.  
   
