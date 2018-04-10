@@ -1,11 +1,12 @@
 ---
 title: Macro di categoria | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,13 +31,15 @@ f1_keywords:
 - atlenc/ATL::UUDecodeGetRequiredLength
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

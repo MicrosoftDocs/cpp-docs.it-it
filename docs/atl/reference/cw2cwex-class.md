@@ -1,25 +1,29 @@
 ---
 title: Classe CW2CWEX | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-windows
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
 - ATLCONV/ATL::CW2CWEX
 - ATLCONV/ATL::CW2CWEX::CW2CWEX
 - ATLCONV/ATL::CW2CWEX::m_psz
-dev_langs: C++
-helpviewer_keywords: CW2CWEX class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT

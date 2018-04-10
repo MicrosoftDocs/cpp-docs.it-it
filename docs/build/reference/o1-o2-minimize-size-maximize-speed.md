@@ -1,16 +1,18 @@
 ---
-title: "-/O1, /O2 (Riduci dimensione, Ottimizza velocità) | Documenti Microsoft"
-ms.custom: 
+title: -/O1, /O2 (Riduci dimensione, Ottimizza velocità) | Documenti Microsoft
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /o2
 - /o1
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - maximize speed compiler option [C++]
 - minimize size compiler option [C++]
@@ -23,11 +25,12 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: f880b3cb806efa63299bf6cfa4aab4c72df23817
 ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
