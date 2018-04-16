@@ -46,7 +46,7 @@ Specifica le interfacce di invio che sono obbligate a essere membri della coclas
  Un elenco delimitato da virgole delle interfacce che sarà un membro della coclasse IDL. Un metodo a sintassi abbreviata per la specifica di una singola interfaccia è **implementa (***interface_name***)**.  
   
  **dispinterfaces**  
- Un elenco delimitato da virgole di dispinterface che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per la specifica di un'interfaccia sola dispatch **implementa (dispinterfaces** * = dispinterface_name ***)**.  
+ Un elenco delimitato da virgole di dispinterface che sarà un membro della coclasse IDL. È un metodo a sintassi abbreviata per la specifica di un'interfaccia sola dispatch **implementa(dispinterfaces** *= dispinterface_name***)**.  
   
 ## <a name="remarks"></a>Note  
  Per impostazione predefinita, vengono aggiunti solo a interfacce COM che sono classi di base della coclasse nella coclasse IDL. **implementa** consente di forzare le altre interfacce da inserire come membri coclasse IDL.  
