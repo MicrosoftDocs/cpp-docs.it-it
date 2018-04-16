@@ -1,12 +1,12 @@
 ---
 title: setlocale | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - setlocale_CPP
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - pragmas, setlocale
 - setlocale pragma
 ms.assetid: e60b43d9-fbdf-4c4e-ac85-805523a13b86
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -30,7 +30,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 02/23/2018
 ---
 # <a name="setlocale"></a>setlocale
-Definisce le impostazioni locali (paese/area e la lingua) da utilizzare quando si traducono le costanti a caratteri "wide" e valori letterali stringa.  
+Definisce le impostazioni locali (paese/area geografica e la lingua) da utilizzare quando si traducono le costanti a caratteri "wide" e valori letterali stringa.  
   
 ## <a name="syntax"></a>Sintassi  
   

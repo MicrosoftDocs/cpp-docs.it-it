@@ -1,12 +1,12 @@
 ---
 title: Nomi di impostazioni locali, lingue e stringhe relative a paese/area geografica | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.strings
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -45,7 +45,7 @@ L'argomento *locale* delle funzioni `setlocale` e `_create_locale` può essere i
   
  Il formato *language*[*_country_region*[.*code_page*]] viene archiviato nell'impostazione delle impostazioni locali di una categoria quando si usa una stringa lingua, o una stringa lingua e una stringa paese/area geografica, per creare le impostazioni locali. Il set delle stringhe lingua supportate è descritto in [Language Strings](../c-runtime-library/language-strings.md), mentre l'elenco delle stringhe paese/area geografica supportate è riportato in [Country/Region Strings](../c-runtime-library/country-region-strings.md). Se la lingua specificata non è associata al paese specificato, nelle impostazioni locali viene archiviata la lingua predefinita del paese specificato. Questo formato non è consigliabile per le stringhe delle impostazioni locali incorporate nel codice o serializzate nell'archiviazione perché tali stringhe hanno molte più probabilità di subire modifiche in seguito a un aggiornamento del sistema operativo rispetto al formato del nome delle impostazioni locali.  
   
- La tabella codici è la tabella codici ANSI/OEM associata alle impostazioni locali. La tabella codici viene determinata automaticamente quando le impostazioni locali vengono specificate in base alla lingua o alla lingua e al paese. Il valore speciale `.ACP` specifica la tabella codici ANSI per il paese/regione. Il valore speciale `.OCP` specifica la tabella codici OEM per il paese/regione. Se ad esempio si specifica `"Greek_Greece.ACP"` come valore delle impostazioni locali, queste ultime vengono archiviate come `Greek_Greece.1253` , vale a dire la tabella codici ANSI per la lingua greca. Se invece si specifica `"Greek_Greece.OCP"` , le impostazioni locali vengono archiviate come `Greek_Greece.737` , vale a dire la tabella codici OEM per la lingua greca. Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md). Per un elenco delle tabelle codici supportate in Windows, vedere l'articolo relativo agli [identificatori delle tabelle codici](http://msdn.microsoft.com/library/windows/desktop/dd317756.aspx).  
+ La tabella codici è la tabella codici ANSI/OEM associata alle impostazioni locali. La tabella codici viene determinata automaticamente quando le impostazioni locali vengono specificate in base alla lingua o alla lingua e al paese. Il valore speciale `.ACP` specifica la tabella codici ANSI per il paese/regione. Il valore speciale `.OCP` specifica la tabella codici OEM per il paese/area geografica. Se ad esempio si specifica `"Greek_Greece.ACP"` come valore delle impostazioni locali, queste ultime vengono archiviate come `Greek_Greece.1253` , vale a dire la tabella codici ANSI per la lingua greca. Se invece si specifica `"Greek_Greece.OCP"` , le impostazioni locali vengono archiviate come `Greek_Greece.737` , vale a dire la tabella codici OEM per la lingua greca. Per altre informazioni sulle tabelle codici, vedere [Code Pages](../c-runtime-library/code-pages.md). Per un elenco delle tabelle codici supportate in Windows, vedere l'articolo relativo agli [identificatori delle tabelle codici](http://msdn.microsoft.com/library/windows/desktop/dd317756.aspx).  
   
  Se si utilizza esclusivamente la tabella codici per specificare le impostazioni locali, vengono utilizzati il paese e la lingua predefinita del sistema. Se ad esempio si specifica `".1254"` (ANSI - Turco) come valore delle impostazioni locali in un sistema configurato per la lingua Inglese (Stati Uniti), le impostazioni locali vengono archiviate come `English_United States.1254`. Questo formato non è consigliabile perché potrebbe generare un comportamento non coerente.  
   
