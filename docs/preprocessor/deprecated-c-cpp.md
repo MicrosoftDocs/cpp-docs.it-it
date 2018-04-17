@@ -1,12 +1,12 @@
 ---
 title: obsoleto (C/C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5df80fffb5b9cdeabfe19d5a5de6eb771d35d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 Il **deprecato** consente di pragma si indica che una funzione, tipo o qualsiasi altro identificatore potrà non essere più supportato in future versioni o non devono più essere utilizzati.  
 > [!NOTE]
-> Per informazioni su C++ 14 `[[deprecated]]` attributo e fornite istruzioni su come usare tale attributo vs i pragma declspec Microsoft, vedere [gli attributi Standard di C++](../cpp/attributes2.md) attributo.
+> Per informazioni su C++ 14 `[[deprecated]]` attributo e fornite istruzioni su come usare tale attributo vs i pragma declspec Microsoft, vedere [gli attributi Standard di C++](../cpp/attributes.md) attributo.
   
 ## <a name="syntax"></a>Sintassi  
   

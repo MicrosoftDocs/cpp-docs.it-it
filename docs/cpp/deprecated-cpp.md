@@ -1,12 +1,12 @@
 ---
 title: obsoleto (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiarazione deprecata. Per informazioni su C++ 14 `[[deprecated]]` attributo e indicazioni su quando usare tale attributo e il declspec specifiche di Microsoft o il pragma, vedere [gli attributi Standard di C++](attributes2.md).
+Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiarazione deprecata. Per informazioni su C++ 14 `[[deprecated]]` attributo e indicazioni su quando usare tale attributo e il declspec specifiche di Microsoft o il pragma, vedere [gli attributi Standard di C++](attributes.md).
 
  Con le eccezioni riportate di seguito, il **deprecato** dichiarazione offre le stesse funzionalità come il [deprecato](../preprocessor/deprecated-c-cpp.md) pragma:  
   
@@ -39,7 +39,7 @@ Questo argomento vengono illustrate le specifiche di Microsoft declspec dichiara
   
 -   Le macro possono essere contrassegnate solo come deprecate con il **deprecato** pragma.  
   
- Se il compilatore rileva l'utilizzo di standard o un identificatore deprecato [ `[[deprecated]]` ](attributes2.md) attributo, un [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) viene generato l'avviso.  
+ Se il compilatore rileva l'utilizzo di standard o un identificatore deprecato [ `[[deprecated]]` ](attributes.md) attributo, un [l'avviso C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) viene generato l'avviso.  
   
 ## <a name="example"></a>Esempio  
  Nel seguente codice di esempio viene illustrato come contrassegnare funzioni come deprecate e come specificare un messaggio che verrà visualizzato in fase di compilazione, quando viene utilizzata la funzione deprecata.  
@@ -82,5 +82,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [declspec](../cpp/declspec.md)   
+ [__declspec](../cpp/declspec.md)   
  [Parole chiave](../cpp/keywords-cpp.md)

@@ -1,12 +1,12 @@
 ---
 title: Convenzioni lessicali | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 dev_langs:
 - C++
@@ -14,40 +14,40 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c132def87ce2ba2fbe72f8a4696071ab62fda82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 894baf715113ebdf8dbead6600f9c906784fbd37
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lexical-conventions"></a>Convenzioni lessicali
-In questa sezione vengono descritti gli elementi fondamentali di un programma C++. Usare questi elementi, denominati elementi lessicali o token per creare istruzioni, definizioni, dichiarazioni e così via, che consentono di creare programmi completi. I seguenti elementi lessicali sono discussi in questa sezione:  
-  
--   [Set di caratteri](../cpp/character-sets2.md)  
-  
--   [Token](../cpp/tokens-cpp.md)  
-  
--   [Commenti](../cpp/comments-cpp.md)  
-  
--   [Identificatori](../cpp/identifiers-cpp.md)  
-  
--   [Parole chiave](../cpp/keywords-cpp.md)  
-  
--   [Segni di punteggiatura](../cpp/punctuators-cpp.md)  
-  
--   [Valori letterali numerici, booleani e puntatore](../cpp/numeric-boolean-and-pointer-literals-cpp.md)  
-  
--   [Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md)  
-  
--   [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)  
-  
- Questa sezione include anche un argomento relativo alla [panoramica della conversione dei file](../cpp/cpp-built-in-operators-precedence-and-associativity.md) .  
-  
-## <a name="see-also"></a>Vedere anche  
- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+In questa sezione vengono descritti gli elementi fondamentali di un programma C++. Usare questi elementi, denominati elementi lessicali o token per creare istruzioni, definizioni, dichiarazioni e così via, che consentono di creare programmi completi. I seguenti elementi lessicali sono discussi in questa sezione:
+
+- [Cenni preliminari sulla conversione di file](overview-of-file-translation.md)
+- [Set di caratteri](../cpp/character-sets.md)
+
+- [Token](../cpp/tokens-cpp.md)
+
+- [Commenti](../cpp/comments-cpp.md)
+
+- [Identificatori](../cpp/identifiers-cpp.md)
+
+- [Parole chiave](../cpp/keywords-cpp.md)
+
+- [Segni di punteggiatura](../cpp/punctuators-cpp.md)
+
+- [Valori letterali numerici, booleani e puntatore](../cpp/numeric-boolean-and-pointer-literals-cpp.md)
+
+- [Stringa e valori letterali carattere](../cpp/string-and-character-literals-cpp.md)
+
+- [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)
+
+## <a name="see-also"></a>Vedere anche
+- [Riferimenti al linguaggio C++](../cpp/cpp-language-reference.md)
+- [Programma e collegamento](program-and-linkage-cpp.md)

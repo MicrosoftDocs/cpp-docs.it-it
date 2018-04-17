@@ -1,12 +1,12 @@
 ---
 title: Espressioni regolari (C++) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>Espressioni regolari (C++)
 La libreria standard C++ supporta più grammatiche dell'espressione regolare. Questo argomento illustra le variazioni di grammatica disponibile quando si utilizzano espressioni regolari.  
@@ -93,7 +93,7 @@ Zero o più flag possono essere combinati con la grammatica per specificare il c
   
  In `ECMAScript` un elemento può anche essere quanto segue:  
   
--   Un *gruppo non Capture* nel formato "(: *sottoespressione* )". Corrisponde alla sequenza di caratteri nella sequenza di destinazione a cui corrisponde il modello racchiuso tra i delimitatori.  
+-   Un *gruppo non capture* nel formato "(?: *sottoespressione* )". Corrisponde alla sequenza di caratteri nella sequenza di destinazione a cui corrisponde il modello racchiuso tra i delimitatori.  
   
 -   Un *escape formato file* limitato nel formato "\f", "\n", "\r", "\t" o "\v". Questi caratteri corrispondono rispettivamente a un avanzamento modulo, una nuova riga, un ritorno a capo, una tabulazione orizzontale e una tabulazione verticale nella sequenza di destinazione.  
   
@@ -115,7 +115,7 @@ Zero o più flag possono essere combinati con la grammatica per specificare il c
   
  Esempi:  
   
--   "(:a)" corrisponde alla sequenza di destinazione "a", ma "(:a)\1" non è valido perché non esiste alcun gruppo Capture 1.  
+-   "(?: a)" corrisponde alla sequenza di destinazione "a", ma "(?:a)\1" non è valido perché non esiste alcun gruppo Capture 1.  
   
 -   "(=a)a" corrisponde alla sequenza di destinazione "a". L'asserzione positiva corrisponde alla sequenza iniziale "a" nella sequenza di destinazione e la "a" finale nell'espressione regolare corrisponde alla sequenza iniziale "a" nella sequenza di destinazione.  
   
@@ -162,7 +162,7 @@ Zero o più flag possono essere combinati con la grammatica per specificare il c
   
 -   "a+" corrisponde alla sequenza di destinazione "a", alla sequenza di destinazione "aa" e così via, ma non corrisponde alla sequenza di destinazione "".  
   
- In `ECMAScript` tutti i formati del numero di ripetizioni possono essere seguiti dal carattere '', che definisce una *ripetizione non-greedy*.  
+ In `ECMAScript`, tutti i formati di numero di ripetizioni possono essere seguiti dal carattere '?', che definisce un *ripetizione non-greedy*.  
   
 ### <a name="concatenation"></a>Concatenazione  
  Gli elementi delle espressioni regolari, con o senza *numeri di ripetizioni*, possono essere concatenati per formare espressioni regolari più lunghe. L'espressione risultante corrisponde a una sequenza di destinazione che è una concatenazione delle sequenze a cui corrispondono i singoli elementi. Ad esempio, "a{2,3}b" corrisponde alla sequenza di destinazione "aab" e alla sequenza di destinazione "aaab", ma non corrisponde alla sequenza di destinazione "ab" o alla sequenza di destinazione "aaaab".  
@@ -365,7 +365,7 @@ Zero o più flag possono essere combinati con la grammatica per specificare il c
  Un'asserzione confine di parola negativa corrisponde se la posizione corrente nella stringa di destinazione non si trova subito dopo un *confine di parola*.  
   
 ### <a name="non-capture-group"></a>Gruppo non Capture  
- Un gruppo non Capture contrassegna il proprio contenuto come singola unità nella grammatica dell'espressione regolare, ma non etichetta il testo di destinazione. Ad esempio, "(a)(:b)\*(c)" corrisponde al testo di destinazione "abbc" e associa il gruppo capture 1 alla sottosequenza "un"e gruppo capture 2 alla sottosequenza "c".  
+ Un gruppo non Capture contrassegna il proprio contenuto come singola unità nella grammatica dell'espressione regolare, ma non etichetta il testo di destinazione. Ad esempio, "(a)(?:b)\*(c)" corrisponde al testo di destinazione "abbc" e associa il gruppo capture 1 alla sottosequenza "un"e gruppo capture 2 alla sottosequenza "c".  
   
 ### <a name="non-greedy-repetition"></a>Ripetizione non-greedy  
  In una ripetizione non-greedy viene utilizzata la sottosequenza più breve della sequenza di destinazione corrispondente al modello. In una ripetizione greedy viene utilizzata quella più lunga. Ad esempio, "(a+) (un\*b)" corrisponde alla sequenza di destinazione "aaab". Quando viene utilizzata una ripetizione non-greedy, tale ripetizione associa il gruppo Capture 1 alla sottosequenza "a" all'inizio della sequenza di destinazione e il gruppo Capture 2 alla sottosequenza "aab" alla fine della sequenza di destinazione. Quando viene utilizzata una corrispondenza greedy, associa il gruppo Capture 1 alla sottosequenza "aaa" e il gruppo Capture 2 alla sottosequenza "b".  

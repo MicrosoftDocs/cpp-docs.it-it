@@ -1,12 +1,12 @@
 ---
 title: Compilatore (livello 3) avviso C4996 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Compilatore (livello 3) avviso C4996
 
-Il compilatore ha rilevato una dichiarazione deprecata. **Questo avviso è sempre un messaggio intenzionale dall'autore della libreria o del file di intestazione inclusi che non è necessario utilizzare il simbolo deprecato senza conoscere le conseguenze.** All'effettivo messaggio di avviso è specificato il modificatore di deprecazione o attributo nel sito della dichiarazione. 
+Il compilatore ha rilevato una dichiarazione deprecata. **Questo avviso non è sempre un messaggio intenzionale dall'autore della libreria o del file di intestazione inclusi che non è necessario utilizzare il simbolo deprecato senza conoscere le conseguenze.** All'effettivo messaggio di avviso è specificato il modificatore di deprecazione o attributo nel sito della dichiarazione. 
 
 Questi sono alcuni comuni messaggi C4996 generati dalla libreria di Runtime C e la libreria Standard, ma non un elenco completo. Seguire i collegamenti o leggere le soluzioni per risolvere il problema oppure per disattivare l'avviso. 
 
@@ -37,13 +37,13 @@ Questi sono alcuni comuni messaggi C4996 generati dalla libreria di Runtime C e 
 
 - [Questa funzione o variabile potrebbe non essere sicuro. È consigliabile utilizzare *safe_version* invece. Per disabilitare la deprecazione, usare \_CRT\_sicura\_n\_gli avvisi.  Vedere la Guida online per i dettagli.](#unsafe-crt-library-functions)
 
-- [' std::*nome_funzione*::\_Unchecked\_iteratori::\_Deprecate' tutte le chiamate a std::*nome_funzione*con parametri che possono essere potenzialmente non sicuri: questa chiamata si basa sul chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D_SCL_SECURE_NO_WARNINGS. Vedere la documentazione sull'utilizzo degli "iteratori verificati" di Visual C++](#unsafe-standard-library-functions)
+- [' std::*nome_funzione*::\_Unchecked\_iteratori::\_Deprecate' chiamare per std::*nome_funzione*con parametri che potrebbero essere rischioso - questa chiamata si basa su il chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D_SCL_SECURE_NO_WARNINGS. Vedere la documentazione sull'utilizzo degli "iteratori verificati" di Visual C++](#unsafe-standard-library-functions)
 
 - [Questa funzione o variabile è stata sostituita dalla funzionalità di libreria o sistema operativo più recente. È consigliabile utilizzare *new_item* invece. Vedere la Guida online per i dettagli.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Causa
 
-L'avviso C4996 si verifica quando il compilatore rileva una funzione o una variabile contrassegnata come [deprecato](../../cpp/deprecated-cpp.md) utilizzando un `__declspec(deprecated)` modificatore, o quando si tenta di accedere a una funzione, membro della classe o typedef con C++ 14 [ \[ \[deprecato\] \] ](../../cpp/attributes2.md) attributo. È possibile utilizzare il `__declspec(deprecated)` modificatore o `[[deprecated]]` attributo manualmente le librerie o file di intestazione per avvertire i client su funzioni obsolete, variabili, i membri o typedef.
+L'avviso C4996 si verifica quando il compilatore rileva una funzione o una variabile contrassegnata come [deprecato](../../cpp/deprecated-cpp.md) utilizzando un `__declspec(deprecated)` modificatore, o quando si tenta di accedere a una funzione, membro della classe o typedef con C++ 14 [ \[ \[deprecato\] \] ](../../cpp/attributes.md) attributo. È possibile utilizzare il `__declspec(deprecated)` modificatore o `[[deprecated]]` attributo manualmente le librerie o file di intestazione per avvertire i client su funzioni obsolete, variabili, i membri o typedef.
 
 ## <a name="remarks"></a>Note
 
@@ -79,7 +79,7 @@ Ecco alcune delle origini di C4996 avvisi ed errori comuni.
 
 ### <a name="posix-function-names"></a>Nomi delle funzioni POSIX
 
-**Il nome POSIX per questo elemento è stato deprecato. Utilizzare invece il nome conforme allo standard ISO C e C++:** *nuovo_nome*. **Per ulteriori informazioni, vedere.**
+**Il nome POSIX per questo elemento è stato deprecato. Utilizzare invece il nome conforme allo standard ISO C e C++:** *nuovo_nome*. **Vedere la Guida online per informazioni dettagliate.**
 
 Microsoft ha rinominato alcune funzioni POSIX in CRT per conformità con C99 e C++ 03 regole per i nomi di funzione globale definito dall'implementazione. Solo i nomi POSIX originali sono deprecati, non le funzioni. Nella maggior parte dei casi, il carattere di sottolineatura iniziale è stato aggiunto al nome della funzione POSIX per creare un nome conforme allo standard. Il compilatore genera un avviso di deprecazione per il nome della funzione originale e suggerisce un nome preferito.
 
@@ -100,7 +100,7 @@ Per disattivare gli avvisi di deprecazione per queste funzioni, definire la macr
 
 ### <a name="unsafe-standard-library-functions"></a>Utilizzo delle funzioni della libreria Standard
 
-__' std::__*nome_funzione*__::\_Unchecked\_iteratori::\_Deprecate' tutte le chiamate a std::__*nome_funzione* **con parametri che possono essere potenzialmente non sicuri: questa chiamata si basa sul chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D\_SCL\_sicura\_n\_gli avvisi. Vedere la documentazione sull'utilizzo degli "iteratori verificati" di Visual C++**
+__' std::__*nome_funzione*__::\_Unchecked\_iteratori::\_Deprecate' chiamare per std::__*nome_funzione* **con parametri che potrebbero essere rischioso - questa chiamata si basa sul chiamante per verificare che i valori passati siano corretti. Per disabilitare questo avviso, utilizzare -D\_SCL\_sicura\_n\_gli avvisi. Vedere la documentazione sull'utilizzo degli "iteratori verificati" di Visual C++**
 
 Questo avviso viene visualizzato nelle build di debug perché alcune funzioni di modello della libreria Standard C++ non verificano la correttezza dei parametri. Nella maggior parte dei casi, questo è perché non sono sufficienti informazioni sono disponibili per la funzione di controllo dei limiti di contenitore o perché gli iteratori possono essere utilizzati in modo non corretto con la funzione. Questo avviso consente di identificare questi utilizzi di funzione, perché potrebbe trattarsi di un'origine di problemi di sicurezza grave nel programma. Per altre informazioni, vedere [Checked Iterators](../../standard-library/checked-iterators.md).
 

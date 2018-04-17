@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ Uno o più parametri che devono essere un tipo di valore letterale e devono esse
 
 ## <a name="return-value"></a>Valore restituito
 
+
  Una funzione o variabile constexpr deve restituire un [tipo di valore letterale](trivial-standard-layout-and-pod-types.md#literal_types).
 
 ## <a name="constexpr-variables"></a>Variabili constexpr
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>Funzioni constexpr
+## <a name="constexpr_functions"></a> funzioni constexpr
 
 Un **constexpr** (funzione) è uno cui valore restituito può essere calcolato in fase di compilazione quando si utilizza codice richiede.  Quando gli argomenti rappresentino **constexpr** valori e il codice consumer richiede il valore restituito in fase di compilazione, ad esempio per inizializzare un **constexpr** variabile o fornire un argomento di modello non di tipo, il produce una costante in fase di compilazione. Quando viene chiamato con non -**constexpr** argomenti, o quando il relativo valore non è necessario in fase di compilazione, viene prodotto un valore in fase di esecuzione come una normale funzione.  (Questo doppio comportamento evita di dover scrivere **constexpr** e non-**constexpr** versioni della stessa funzione.)
 

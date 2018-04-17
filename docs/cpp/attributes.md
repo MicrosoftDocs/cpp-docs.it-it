@@ -1,19 +1,19 @@
 ---
 title: Gli attributi Standard di C++ | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attributes-in-c"></a>Attributi in C++
 
@@ -39,17 +39,17 @@ In C++ 11, gli attributi forniscono un modo standardizzato di annotare i costrut
 void Foo(int);
 ```
 
-Attributi che rappresentano un'alternativa alle estensioni specifiche del fornitore, ad esempio le direttive #pragma, __declspec() (Visual C++), standard o &#95; &#95; attributo &#95; &#95; (GNU). Tuttavia, è necessario comunque utilizzare i costrutti specifici del fornitore per la maggior parte dei casi. Lo standard attualmente specifica gli attributi seguenti che dovrebbe riconoscere un compilatore conforme:
+Attributi che rappresentano un'alternativa standardizzata alle estensioni specifiche del fornitore, ad esempio le direttive #pragma, elencandone (Visual C++), o &#95; &#95;attributo&#95; &#95; (GNU). Tuttavia, è necessario comunque utilizzare i costrutti specifici del fornitore per la maggior parte dei casi. Lo standard attualmente specifica gli attributi seguenti che dovrebbe riconoscere un compilatore conforme:
 
-- `[[noreturn]]`Specifica che una funzione non restituisce mai; in altre parole genera sempre un'eccezione. Il compilatore può modificare le regole di compilazione per `[[noreturn]]` entità.
+- `[[noreturn]]` Specifica che una funzione non restituisce mai; in altre parole genera sempre un'eccezione. Il compilatore può modificare le regole di compilazione per `[[noreturn]]` entità.
 
-- `[[carries_dependency]]`Specifica che la funzione propaga dipendenza dei dati rispetto alla sincronizzazione dei thread di ordinamento. L'attributo può essere applicato a uno o più parametri, per specificare che l'argomento passato comporta una dipendenza nel corpo della funzione. L'attributo può essere applicato alla funzione stessa, per specificare che il valore restituito contiene una dipendenza dalla funzione. Il compilatore può usare queste informazioni per generare il codice più efficiente.
+- `[[carries_dependency]]` Specifica che la funzione propaga dipendenza dei dati rispetto alla sincronizzazione dei thread di ordinamento. L'attributo può essere applicato a uno o più parametri, per specificare che l'argomento passato comporta una dipendenza nel corpo della funzione. L'attributo può essere applicato alla funzione stessa, per specificare che il valore restituito contiene una dipendenza dalla funzione. Il compilatore può usare queste informazioni per generare il codice più efficiente.
 
-- `[[deprecated]]`**Visual Studio 2015 e versioni successiva:** specifica che una funzione non deve essere utilizzato e potrebbe non essere disponibile nelle future versioni di un'interfaccia di raccolta. Il compilatore può usare per generare un messaggio informativo quando il codice client tenta di chiamare la funzione. Può essere applicato alla dichiarazione di una classe, un nome di typedef, una variabile, un membro dati non statici, una funzione, uno spazio dei nomi, un'enumerazione, un enumeratore o una specializzazione di modello.  
+- `[[deprecated]]` **Visual Studio 2015 e versioni successiva:** specifica che una funzione non dovrà essere utilizzato e potrebbe non essere disponibile nelle future versioni di un'interfaccia di raccolta. Il compilatore può usare per generare un messaggio informativo quando il codice client tenta di chiamare la funzione. Può essere applicato alla dichiarazione di una classe, un nome di typedef, una variabile, un membro dati non statici, una funzione, uno spazio dei nomi, un'enumerazione, un enumeratore o una specializzazione di modello.  
 
-- `[[fallthrough]]`**2017 e versioni successiva di visual Studio:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo può essere utilizzato nel contesto di [passare](switch-statement-cpp.md) istruzioni come hint per la compilatore (o chiunque legga il codice) che deve essere il comportamento di fallthrough. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo da questo attributo non è il comportamento del compilatore alcun effetto.
+- `[[fallthrough]]` **Visual Studio 2017 e versioni successiva:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) il `[[fallthrough]]` attributo può essere utilizzato nel contesto del [passare](switch-statement-cpp.md) istruzioni come hint per il compilatore (o chiunque legga il codice) che deve essere il comportamento di fallthrough. Il compilatore Visual C++ attualmente non avvisa in caso di fallthrough comportamento, in modo da questo attributo non è il comportamento del compilatore alcun effetto.
 
-- `[[nodiscard]]`**Visual Studio 2017 15.3 e versioni successive:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che un valore restituito dalla funzione non deve essere eliminato. Genera avviso C4834, come illustrato in questo esempio:
+- `[[nodiscard]]` **Visual Studio 2017 15.3 e versioni successive:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che un valore restituito dalla funzione non può essere eliminato. Genera avviso C4834, come illustrato in questo esempio:
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ Attributi che rappresentano un'alternativa alle estensioni specifiche del fornit
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 15.3 e versioni successive:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che una variabile, funzione, classe, typedef, specializzazione di modello, enum o membro dati non statici può intenzionalmente non può essere utilizzato. Il compilatore non un avviso quando lo si contrassegna un'entità `[[maybe_unused]]` non viene utilizzato. Un'entità che viene dichiarata senza l'attributo può essere ridichiarata in un secondo momento con l'attributo e viceversa. Un'entità è considerata contrassegnati dopo la prima dichiarazione che è contrassegnato come viene analizzato e per il resto della traduzione dell'unità di conversione corrente.
+- `[[maybe_unused]]` **Visual Studio 2017 15.3 e versioni successive:** (disponibile con [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) specifica che variabile, funzione, classe, typedef, membro dati non statici, enum o specializzazione di modello intenzionalmente non può essere utilizzata. Il compilatore non un avviso quando lo si contrassegna un'entità `[[maybe_unused]]` non viene utilizzato. Un'entità che viene dichiarata senza l'attributo può essere ridichiarata in un secondo momento con l'attributo e viceversa. Un'entità è considerata contrassegnati dopo la prima dichiarazione che è contrassegnato come viene analizzato e per il resto della traduzione dell'unità di conversione corrente.
 
 ## <a name="microsoft-specific-attributes"></a>Attributi specifici di Microsoft
 
-- `[[gsl::suppress(rules)]]`Questo attributo specifica Microsoft viene utilizzato per l'eliminazione di avvisi da programmi che applicano [linee guida per il supporto della libreria (GSL)](https://github.com/Microsoft/GSL) regole nel codice. Ad esempio, si consideri il frammento di codice:
+- `[[gsl::suppress(rules)]]` Questo attributo specifica Microsoft viene utilizzato per l'eliminazione di avvisi da programmi che applicano [linee guida per il supporto della libreria (GSL)](https://github.com/Microsoft/GSL) regole nel codice. Ad esempio, si consideri il frammento di codice:
 
     ```cpp
     void main()

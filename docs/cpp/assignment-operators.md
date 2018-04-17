@@ -1,37 +1,35 @@
 ---
 title: Operatori di assegnazione | Documenti Microsoft
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>Operatori di assegnazione
 ## <a name="syntax"></a>Sintassi  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>Note  
- Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono due tipi di operazioni di assegnamento: assegnamento semplice, in cui il valore del secondo operando è memorizzato nell'oggetto specificato dal primo operando, e assegnazione composta, dove un'operazione aritmetica, un'operazione di spostamento o un'operazione bit per bit viene eseguita prima di memorizzare il risultato. Tutti gli operatori di assegnamento nella tabella seguente, ad eccezione dell'operatore =, sono operatori di assegnamento composti.  
+ Gli operatori di assegnamento consentono di memorizzare un valore nell'oggetto definito dall'operando sinistro. Esistono tre tipi di operazioni di assegnamento: 
+
+1. assegnazione semplice, in cui il valore del secondo operando viene archiviato nell'oggetto specificato dal primo operando. 1. assegnazione composta, in cui un'operazione aritmetica, MAIUSC o operazione bit per bit viene eseguita prima di archiviare il risultato.
+1. in quali risorse vengono trasferite senza copiare, spostare assegnazione (per i tipi di classe).
+
+
+Tutti gli operatori di assegnazione nella tabella riportata di seguito tranne la = e & & = gli operatori sono operatori di assegnazione composta.  
   
 ### <a name="assignment-operators"></a>Operatori di assegnazione  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|Esegue uno spostamento a destra del valore del primo operando di un numero di bit specificati dal valore del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |**&=**|Ottiene l'AND bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
 |`^=`|Ottiene l'OR esclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
-|`&#124;=`|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|  
+|`&#124;=`|Ottiene l'OR inclusivo bit per bit del primo e del secondo operando e memorizza il risultato nell'oggetto specificato dal primo operando.|
+|**&&=**| Operatore di assegnazione di spostamento (classe solo per i tipi). Se il secondo operando è un rvalue, spostare le risorse per il primo operando (senza copiarli). Vedere [spostare i costruttori e operatori di assegnazione di spostamento](move-constructors-and-move-assignment-operators-cpp.md) per altre informazioni.|
   
  **Parole chiave per gli operatori**  
   

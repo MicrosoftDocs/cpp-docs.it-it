@@ -1,12 +1,12 @@
 ---
 title: Stringa e valori letterali carattere (C++) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>Stringa e valori letterali carattere (C++)
 C++ supporta diversi tipi di stringa e di carattere e permette di esprimere i valori letterali di ogni tipo. Nel codice sorgente, si esprime il contenuto dei valori letterali carattere e stringa usando un set di caratteri. I nomi di caratteri universali e i caratteri di escape consentono di esprimere qualsiasi stringa usando solo il set di caratteri di origine di base. Un valore letterale stringa non elaborata permette di evitare l'uso di caratteri di escape e può essere usato per esprimere tutti i tipi di valori letterali stringa. È anche possibile creare valori letterali std::string senza dover eseguire ulteriori passaggi di costruzione o conversione.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per altre informazioni sul set di caratteri di origine di base, sui nomi di caratteri universali e sull'uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [Character Sets](../cpp/character-sets2.md).  
+ I valori letterali stringa non hanno prefisso o prefissi `u8`, `L`, `u`e  `U` per indicare rispettivamente le codifiche di caratteri narrow (a byte singolo o multibyte), UTF-8, caratteri wide (UCS-2 o UTF-16), UTF-16 e UTF-32. Un valore letterale stringa non elaborata può avere i prefissi `R`, `u8R`, `LR`, `uR` e `UR` per gli equivalenti della versione non elaborata di queste codifiche.  Per creare valori std::string temporanei o statici, è possibile usare valori letterali stringa o valori letterali stringa non elaborata con un suffisso `s` . Per altre informazioni, vedere la sezione Valori letterali stringa riportata di seguito. Per ulteriori informazioni sul carattere di origine di base impostata, nomi di caratteri universali e uso di caratteri dalle tabelle codici estese nel codice sorgente, vedere [set di caratteri](../cpp/character-sets.md).  
   
 ## <a name="character-literals"></a>Valori letterali carattere  
  Un *valore letterale carattere* è costituito da un carattere costante. È rappresentato dal carattere racchiuso tra virgolette singole. Esistono cinque tipi di valori letterali carattere:  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  I nomi di caratteri universali non possono codificare i valori nell'intervallo di punti di codice surrogati D800-DFFF. Per le coppie di surrogati Unicode, specificare il nome di carattere universale usando `\UNNNNNNNN`, dove NNNNNNNN è il punto di codice a otto cifre per il carattere. Il compilatore genera una coppia di surrogati se richiesto.  
   
- In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [Character Sets](../cpp/character-sets2.md). Per altre informazioni su Unicode, vedere [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
+ In C++03 il linguaggio consentiva solo la rappresentazione di un subset di caratteri con i rispettivi nomi di caratteri universali e consentiva alcuni nomi di caratteri universali che non rappresentano effettivamente caratteri Unicode validi. Questo problema è stato risolto nello standard C++11. In C++11, sia i valori letterali carattere sia i valori letterali stringa possono usare i nomi di caratteri universali.  Per altre informazioni sui nomi di caratteri universali, vedere [set di caratteri](../cpp/character-sets.md). Per altre informazioni su Unicode, vedere [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx). Per altre informazioni sulle coppie di surrogati, vedere la pagina relativa alle [coppie di surrogati e ai caratteri supplementari](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx).  
   
 ## <a name="string-literals"></a>Valori letterali stringa  
  Un valore letterale stringa rappresenta una sequenza di caratteri che insieme formano una stringa con terminazione null. I caratteri devono essere racchiusi tra virgolette doppie. Sono disponibili i seguenti tipi di valori letterali stringa:  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Character Sets](../cpp/character-sets2.md)   
+ [Set di caratteri](../cpp/character-sets.md)   
  [Numerici, booleani e puntatore valori letterali](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [Valori letterali definiti dall'utente](../cpp/user-defined-literals-cpp.md)

@@ -1,12 +1,12 @@
 ---
 title: Errore del compilatore C3851 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C3851
@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5f0cca8f3c1dfc4b3b35d494ebf73459a74d03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 792d13ece8b864b3d8d7e251bf530f685a02ccf7
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-error-c3851"></a>Errore del compilatore C3851
 'char': non è possibile usare nomi di caratteri universali per indicare caratteri nel set di caratteri di base  
   
- Nel codice compilato come C++, non è possibile usare un nome di carattere universale che rappresenta un carattere nel set di caratteri di origine di base esterno al valore letterale di stringa o carattere. Per altre informazioni, vedere [Character Sets](../../cpp/character-sets2.md). Nel codice compilato come C, non è possibile usare nomi di caratteri universali per i caratteri compresi nell'intervallo 0x20-0x7f, inclusivo, ad eccezione di 0x24 ('$'), 0x40 ('@'), o 0x60 ('`').  
+ Nel codice compilato come C++, non è possibile usare un nome di carattere universale che rappresenta un carattere nel set di caratteri di origine di base esterno al valore letterale di stringa o carattere. Per altre informazioni, vedere [set di caratteri](../../cpp/character-sets.md). Nel codice compilato come C, non è possibile usare nomi di caratteri universali per i caratteri compresi nell'intervallo 0x20-0x7f, inclusivo, ad eccezione di 0x24 ('$'), 0x40 ('@'), o 0x60 ('`').  
   
  Gli esempi seguenti generano l'errore C3851 e mostrano come correggerlo:  
   
